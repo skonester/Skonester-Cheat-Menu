@@ -61,13 +61,9 @@
 
 # Background
 
-The original **Daddy Pika’s Cheat Menu**, a legendary mod for *Crusader Kings III*, was built for earlier game versions but became unstable on 1.13 and above.  
+The original **Daddy Pika’s Cheat Menu**, a legendary mod for *Crusader Kings III*, was built for earlier game versions but became unstable on 1.13 and above.  I started developing the Daddy Pika fork during the **Roads to Power** era.  
 
-I started developing this fork during the **Roads to Power** era — not because I wanted another cheat mod, but because I love CK3 and wanted to keep this project alive.  
-
-I don’t need donation points; please support the larger CK3 projects that make this game truly great.  
-
-This fork continues **Zhuge’s** work from the Chinese CK3 community for **English players**. Zhuge has mastered Daddy Pika’s base code, and my goal is to maintain a **stable, bilingual English/Russian fork** for long-term use.  
+This fork continues **Zhuge’s** work from the Chinese CK3 community for **English and Russian players**. Zhuge has mastered Daddy Pika’s base code, and my goal is to maintain a **stable, bilingual English/Russian fork** for long-term use.  
 link to Zhuge's mod https://steamcommunity.com/sharedfiles/filedetails/?id=2939268227
 
 Some players simply need a reliable, functional cheat menu that stays compatible through updates — that’s why this project exists, and why it’s open for others to build on.  

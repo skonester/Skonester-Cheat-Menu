@@ -1,0 +1,16 @@
+﻿dlc_zhuge = {
+    # 唯一的DLC键值，用于识别
+    key = "zhugecet"
+
+    # DLC类型为major
+    type = major
+
+    # 高优先级，确保在大多数DLC/Mod之前被识别或加载
+    priority = 6666
+
+    # 标记为fake_dlc，以便脚本识别这是一个“假DLC / Mod”
+    # 请勿随意修改或删除，否则IsFakeDlc等逻辑会失效
+    features = {
+        fake_dlc
+    }
+}

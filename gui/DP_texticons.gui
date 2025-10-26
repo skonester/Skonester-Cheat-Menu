@@ -1,0 +1,19 @@
+texticon = {
+	icon = tyranny_icon
+	iconsize = {
+		texture = "gfx/interface/icons/icon_tyranny.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = weight_icon
+	iconsize = {
+		texture = "gfx/interface/icons/icon_weight.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}

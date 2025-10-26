@@ -1,0 +1,75 @@
+﻿# Make a character to super general
+bone_super_general_01 = {
+	index = 1007
+	advantage = 1
+	siege_phase_time = -0.1
+	siege_morale_loss = 0.1
+	supply_duration = 0.1
+	supply_limit_mult = 0.1
+	supply_capacity_mult = 0.1
+	retreat_losses = -0.1
+	no_water_crossing_penalty = yes
+	raid_speed = 1
+	birth = 0
+	random_creation = 0
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_bone_super_general_01_desc
+			}
+			desc = trait_bone_super_general_01_character_desc
+		}
+	}
+}
+
+bone_super_general_02 = {
+	index = 1008
+	advantage = 5
+	siege_phase_time = -0.5
+	siege_morale_loss = 0.5
+	supply_duration = 0.5
+	supply_limit_mult = 0.5
+	supply_capacity_mult = 0.5
+	retreat_losses = -0.5
+	no_water_crossing_penalty = yes
+	raid_speed = 5
+	birth = 0
+	random_creation = 0
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_bone_super_general_02_desc
+			}
+			desc = trait_bone_super_general_02_character_desc
+		}
+	}
+}
+
+bone_super_general_03 = {
+	index = 1009
+	advantage = 10
+	siege_phase_time = -1
+	siege_morale_loss = 1
+	supply_duration = 1
+	supply_limit_mult = 1
+	supply_capacity_mult = 1
+	retreat_losses = -1
+	no_water_crossing_penalty = yes
+	raid_speed = 10
+	birth = 0
+	random_creation = 0
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_bone_super_general_03_desc
+			}
+			desc = trait_bone_super_general_03_character_desc
+		}
+	}
+}

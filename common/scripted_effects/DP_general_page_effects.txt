@@ -1,0 +1,3230 @@
+﻿########################
+### New Page Effects ###
+########################
+
+### INNOVATION SELECT MENU ###
+
+tribal_innovation_select_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = tribal_innovation_select_pg_2 
+				}
+				remove_character_flag = tribal_innovation_select_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = tribal_innovation_select_pg_1 
+				}
+				remove_character_flag = tribal_innovation_select_pg_1
+				add_character_flag = tribal_innovation_select_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = tribal_innovation_select_pg_1
+			}
+		}
+	}
+}
+
+tribal_innovation_select_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = tribal_innovation_select_pg_2 
+				}
+				remove_character_flag = tribal_innovation_select_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = tribal_innovation_select_pg_1 
+				}
+				remove_character_flag = tribal_innovation_select_pg_1
+				add_character_flag = tribal_innovation_select_pg_2
+			}
+			if = {
+				limit = { 
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = tribal_innovation_select_pg_1
+			}
+		}
+	}
+}
+
+remove_tribal_innovation_select_pgs = {
+	if = {
+		limit = {
+			has_character_flag = tribal_innovation_select_pg_1
+		}
+		remove_character_flag = tribal_innovation_select_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = tribal_innovation_select_pg_2
+		}
+		remove_character_flag = tribal_innovation_select_pg_2
+	}
+}
+
+### INNOVATION SELECT EARLY MEDIVAL ###
+
+early_medival_innovation_select_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = early_medival_innovation_select_pg_2 
+				}
+				remove_character_flag = early_medival_innovation_select_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = early_medival_innovation_select_pg_1 
+				}
+				remove_character_flag = early_medival_innovation_select_pg_1
+				add_character_flag = early_medival_innovation_select_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = early_medival_innovation_select_pg_1
+			}
+		}
+	}
+}
+
+early_medival_innovation_select_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = early_medival_innovation_select_pg_2 
+				}
+				remove_character_flag = early_medival_innovation_select_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = early_medival_innovation_select_pg_1 
+				}
+				remove_character_flag = early_medival_innovation_select_pg_1
+				add_character_flag = early_medival_innovation_select_pg_2
+			}
+			if = {
+				limit = { 
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = early_medival_innovation_select_pg_1
+			}
+		}
+	}
+}
+
+remove_early_medival_innovation_select_pgs = {
+	if = {
+		limit = {
+			has_character_flag = early_medival_innovation_select_pg_1
+		}
+		remove_character_flag = early_medival_innovation_select_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = early_medival_innovation_select_pg_2
+		}
+		remove_character_flag = early_medival_innovation_select_pg_2
+	}
+}
+
+### INNOVATION SELECT HIGH MEDIVAL ###
+
+high_medival_innovation_select_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = high_medival_innovation_select_pg_2 
+				}
+				remove_character_flag = high_medival_innovation_select_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = high_medival_innovation_select_pg_1 
+				}
+				remove_character_flag = high_medival_innovation_select_pg_1
+				add_character_flag = high_medival_innovation_select_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = high_medival_innovation_select_pg_1
+			}
+		}
+	}
+}
+
+high_medival_innovation_select_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = high_medival_innovation_select_pg_2 
+				}
+				remove_character_flag = high_medival_innovation_select_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = high_medival_innovation_select_pg_1 
+				}
+				remove_character_flag = high_medival_innovation_select_pg_1
+				add_character_flag = high_medival_innovation_select_pg_2
+			}
+			if = {
+				limit = { 
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = high_medival_innovation_select_pg_1
+			}
+		}
+	}
+}
+
+remove_high_medival_innovation_select_pgs = {
+	if = {
+		limit = {
+			has_character_flag = high_medival_innovation_select_pg_1
+		}
+		remove_character_flag = high_medival_innovation_select_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = high_medival_innovation_select_pg_2
+		}
+		remove_character_flag = high_medival_innovation_select_pg_2
+	}
+}
+
+### INNOVATION SELECT LATE MEDIVAL ###
+
+late_medival_innovation_select_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = late_medival_innovation_select_pg_2 
+				}
+				remove_character_flag = late_medival_innovation_select_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = late_medival_innovation_select_pg_1 
+				}
+				remove_character_flag = late_medival_innovation_select_pg_1
+				add_character_flag = late_medival_innovation_select_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = late_medival_innovation_select_pg_1
+			}
+		}
+	}
+}
+
+late_medival_innovation_select_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = late_medival_innovation_select_pg_2 
+				}
+				remove_character_flag = late_medival_innovation_select_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = late_medival_innovation_select_pg_1 
+				}
+				remove_character_flag = late_medival_innovation_select_pg_1
+				add_character_flag = late_medival_innovation_select_pg_2
+			}
+			if = {
+				limit = { 
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = late_medival_innovation_select_pg_1
+			}
+		}
+	}
+}
+
+remove_late_medival_innovation_select_pgs = {
+	if = {
+		limit = {
+			has_character_flag = late_medival_innovation_select_pg_1
+		}
+		remove_character_flag = late_medival_innovation_select_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = late_medival_innovation_select_pg_2
+		}
+		remove_character_flag = late_medival_innovation_select_pg_2
+	}
+}
+
+### INNOVATION SELECT REGIONAL TRIBAL ###
+
+tribal_regional_innovation_select_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = tribal_regional_innovation_select_pg_2 
+				}
+				remove_character_flag = tribal_regional_innovation_select_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = tribal_regional_innovation_select_pg_1 
+				}
+				remove_character_flag = tribal_regional_innovation_select_pg_1
+				add_character_flag = tribal_regional_innovation_select_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = tribal_regional_innovation_select_pg_1
+			}
+		}
+	}
+}
+
+tribal_regional_innovation_select_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = tribal_regional_innovation_select_pg_2 
+				}
+				remove_character_flag = tribal_regional_innovation_select_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = tribal_regional_innovation_select_pg_1 
+				}
+				remove_character_flag = tribal_regional_innovation_select_pg_1
+				add_character_flag = tribal_regional_innovation_select_pg_2
+			}
+			if = {
+				limit = { 
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = tribal_regional_innovation_select_pg_1
+			}
+		}
+	}
+}
+
+remove_tribal_regional_innovation_select_pgs = {
+	if = {
+		limit = {
+			has_character_flag = tribal_regional_innovation_select_pg_1
+		}
+		remove_character_flag = tribal_regional_innovation_select_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = tribal_regional_innovation_select_pg_2
+		}
+		remove_character_flag = tribal_regional_innovation_select_pg_2
+	}
+}
+
+### INNOVATION SELECT REGIONAL EARLY MEDIVAL ###
+
+early_regional_innovation_select_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = early_regional_innovation_select_pg_2 
+				}
+				remove_character_flag = early_regional_innovation_select_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = early_regional_innovation_select_pg_1 
+				}
+				remove_character_flag = early_regional_innovation_select_pg_1
+				add_character_flag = early_regional_innovation_select_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = early_regional_innovation_select_pg_1
+			}
+		}
+	}
+}
+
+early_regional_innovation_select_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = early_regional_innovation_select_pg_2 
+				}
+				remove_character_flag = early_regional_innovation_select_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = early_regional_innovation_select_pg_1 
+				}
+				remove_character_flag = early_regional_innovation_select_pg_1
+				add_character_flag = early_regional_innovation_select_pg_2
+			}
+			if = {
+				limit = { 
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = early_regional_innovation_select_pg_1
+			}
+		}
+	}
+}
+
+remove_early_regional_innovation_select_pgs = {
+	if = {
+		limit = {
+			has_character_flag = early_regional_innovation_select_pg_1
+		}
+		remove_character_flag = early_regional_innovation_select_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = early_regional_innovation_select_pg_2
+		}
+		remove_character_flag = early_regional_innovation_select_pg_2
+	}
+}
+
+### INNOVATION SELECT REGIONAL HIGH MEDIVAL ###
+
+high_regional_innovation_select_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = high_regional_innovation_select_pg_2 
+				}
+				remove_character_flag = high_regional_innovation_select_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = high_regional_innovation_select_pg_1 
+				}
+				remove_character_flag = high_regional_innovation_select_pg_1
+				add_character_flag = high_regional_innovation_select_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = high_regional_innovation_select_pg_1
+			}
+		}
+	}
+}
+
+high_regional_innovation_select_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = high_regional_innovation_select_pg_2 
+				}
+				remove_character_flag = high_regional_innovation_select_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = high_regional_innovation_select_pg_1 
+				}
+				remove_character_flag = high_regional_innovation_select_pg_1
+				add_character_flag = high_regional_innovation_select_pg_2
+			}
+			if = {
+				limit = { 
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = high_regional_innovation_select_pg_1
+			}
+		}
+	}
+}
+
+remove_high_regional_innovation_select_pgs = {
+	if = {
+		limit = {
+			has_character_flag = high_regional_innovation_select_pg_1
+		}
+		remove_character_flag = high_regional_innovation_select_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = high_regional_innovation_select_pg_2
+		}
+		remove_character_flag = high_regional_innovation_select_pg_2
+	}
+}
+
+### INNOVATION SELECT REGIONAL LATE MEDIVAL ###
+
+late_regional_innovation_select_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = late_regional_innovation_select_pg_2 
+				}
+				remove_character_flag = late_regional_innovation_select_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = late_regional_innovation_select_pg_1 
+				}
+				remove_character_flag = late_regional_innovation_select_pg_1
+				add_character_flag = late_regional_innovation_select_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = late_regional_innovation_select_pg_1
+			}
+		}
+	}
+}
+
+late_regional_innovation_select_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = late_regional_innovation_select_pg_2 
+				}
+				remove_character_flag = late_regional_innovation_select_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = late_regional_innovation_select_pg_1 
+				}
+				remove_character_flag = late_regional_innovation_select_pg_1
+				add_character_flag = late_regional_innovation_select_pg_2
+			}
+			if = {
+				limit = { 
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = late_regional_innovation_select_pg_1
+			}
+		}
+	}
+}
+
+remove_late_regional_innovation_select_pgs = {
+	if = {
+		limit = {
+			has_character_flag = late_regional_innovation_select_pg_1
+		}
+		remove_character_flag = late_regional_innovation_select_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = late_regional_innovation_select_pg_2
+		}
+		remove_character_flag = late_regional_innovation_select_pg_2
+	}
+}
+
+### TRAITS MENU ###
+### At the moment this is here just in case, if someone wanted to add additional pages of traits, mod traits for example
+
+trait_menu_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_pg_2 
+				}
+				remove_character_flag = trait_menu_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_pg_1 
+				}
+				remove_character_flag = trait_menu_pg_1
+				add_character_flag = trait_menu_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = trait_menu_pg_1
+			}
+		}
+	}
+}
+
+trait_menu_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_pg_2 
+				}
+				remove_character_flag = trait_menu_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_pg_1 
+				}
+				remove_character_flag = trait_menu_pg_1
+				add_character_flag = trait_menu_pg_2
+			}
+			if = {
+				limit = { 
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = trait_menu_pg_1
+			}
+		}
+	}
+}
+
+go_back_trait_menu_flags = {
+	if = {
+		limit = {
+			has_character_flag = last_event_11
+		}
+		remove_character_flag = last_event_11
+		scope:char_editor_actor = {
+			trigger_event = dp_char_editor.11
+		}
+	}
+}
+
+remove_all_trait_menu_go_back_flags = {
+	#Last Event Clearing
+	if = { limit = { has_character_flag = last_event_11 } remove_character_flag = last_event_11 }
+	#Page Flag Clearing
+
+}
+
+remove_trait_menu_pgs = {
+	if = {
+		limit = {
+			has_character_flag = trait_menu_pg_1
+		}
+		remove_character_flag = trait_menu_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = trait_menu_pg_2
+		}
+		remove_character_flag = trait_menu_pg_2
+	}
+}
+
+
+### TRAITS MENU PERSONALITY ###
+
+trait_menu_personality_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_personality_pg_5
+				}
+				remove_character_flag = trait_menu_personality_pg_5
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_personality_pg_4
+				}
+				remove_character_flag = trait_menu_personality_pg_4
+				add_character_flag = trait_menu_personality_pg_5
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_personality_pg_3
+				}
+				remove_character_flag = trait_menu_personality_pg_3
+				add_character_flag = trait_menu_personality_pg_4
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_personality_pg_2 
+				}
+				remove_character_flag = trait_menu_personality_pg_2
+				add_character_flag = trait_menu_personality_pg_3
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_personality_pg_1 
+				}
+				remove_character_flag = trait_menu_personality_pg_1
+				add_character_flag = trait_menu_personality_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = trait_menu_personality_pg_1
+			}
+		}
+	}
+}
+
+trait_menu_personality_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_personality_pg_2 
+				}
+				remove_character_flag = trait_menu_personality_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_personality_pg_3 
+				}
+				remove_character_flag = trait_menu_personality_pg_3
+				add_character_flag = trait_menu_personality_pg_2
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_personality_pg_4 
+				}
+				remove_character_flag = trait_menu_personality_pg_4
+				add_character_flag = trait_menu_personality_pg_3
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_personality_pg_5 
+				}
+				remove_character_flag = trait_menu_personality_pg_5
+				add_character_flag = trait_menu_personality_pg_4
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_personality_pg_1 
+				}
+				remove_character_flag = trait_menu_personality_pg_1
+				add_character_flag = trait_menu_personality_pg_5
+			}
+			if = {
+				limit = { 
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = trait_menu_personality_pg_1
+			}
+		}
+	}
+}
+
+remove_trait_menu_personality_pgs = {
+	if = {
+		limit = {
+			has_character_flag = trait_menu_personality_pg_1
+		}
+		remove_character_flag = trait_menu_personality_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = trait_menu_personality_pg_2
+		}
+		remove_character_flag = trait_menu_personality_pg_2
+	}
+	if = {
+		limit = {
+			has_character_flag = trait_menu_personality_pg_3
+		}
+		remove_character_flag = trait_menu_personality_pg_3
+	}
+	if = {
+		limit = {
+			has_character_flag = trait_menu_personality_pg_4
+		}
+		remove_character_flag = trait_menu_personality_pg_4
+	}
+	if = {
+		limit = {
+			has_character_flag = trait_menu_personality_pg_5
+		}
+		remove_character_flag = trait_menu_personality_pg_5
+	}
+}
+
+### TRAIT MENU FAME TRAITS ###
+
+trait_menu_fame_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_fame_pg_3
+				}
+				remove_character_flag = trait_menu_fame_pg_3
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_fame_pg_2 
+				}
+				remove_character_flag = trait_menu_fame_pg_2
+				add_character_flag = trait_menu_fame_pg_3
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_fame_pg_1 
+				}
+				remove_character_flag = trait_menu_fame_pg_1
+				add_character_flag = trait_menu_fame_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = trait_menu_fame_pg_1
+			}
+		}
+	}
+}
+
+trait_menu_fame_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_fame_pg_2 
+				}
+				remove_character_flag = trait_menu_fame_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_fame_pg_3 
+				}
+				remove_character_flag = trait_menu_fame_pg_3
+				add_character_flag = trait_menu_fame_pg_2
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_fame_pg_1 
+				}
+				remove_character_flag = trait_menu_fame_pg_1
+				add_character_flag = trait_menu_fame_pg_3
+			}
+			if = {
+				limit = { 
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = trait_menu_fame_pg_1
+			}
+		}
+	}
+}
+
+remove_trait_menu_fame_pgs = {
+	if = {
+		limit = {
+			has_character_flag = trait_menu_fame_pg_1
+		}
+		remove_character_flag = trait_menu_fame_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = trait_menu_fame_pg_2
+		}
+		remove_character_flag = trait_menu_fame_pg_2
+	}
+	if = {
+		limit = {
+			has_character_flag = trait_menu_fame_pg_3
+		}
+		remove_character_flag = trait_menu_fame_pg_3
+	}
+}
+
+### TRAIT MENU INFAMY TRAITS ###
+
+trait_menu_infamy_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_infamy_pg_2 
+				}
+				remove_character_flag = trait_menu_infamy_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_infamy_pg_1 
+				}
+				remove_character_flag = trait_menu_infamy_pg_1
+				add_character_flag = trait_menu_infamy_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = trait_menu_infamy_pg_1
+			}
+		}
+	}
+}
+
+trait_menu_infamy_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_infamy_pg_2 
+				}
+				remove_character_flag = trait_menu_infamy_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_infamy_pg_1 
+				}
+				remove_character_flag = trait_menu_infamy_pg_1
+				add_character_flag = trait_menu_infamy_pg_2
+			}
+			if = {
+				limit = { 
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = trait_menu_infamy_pg_1
+			}
+		}
+	}
+}
+
+remove_trait_menu_infamy_pgs = {
+	if = {
+		limit = {
+			has_character_flag = trait_menu_infamy_pg_1
+		}
+		remove_character_flag = trait_menu_infamy_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = trait_menu_infamy_pg_2
+		}
+		remove_character_flag = trait_menu_infamy_pg_2
+	}
+}
+
+### TRAIT MENU LIFESTYLE TRAITS ###
+
+trait_menu_lifestyle_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_lifestyle_pg_2 
+				}
+				remove_character_flag = trait_menu_lifestyle_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_lifestyle_pg_1 
+				}
+				remove_character_flag = trait_menu_lifestyle_pg_1
+				add_character_flag = trait_menu_lifestyle_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = trait_menu_lifestyle_pg_1
+			}
+		}
+	}
+}
+
+trait_menu_lifestyle_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_lifestyle_pg_2 
+				}
+				remove_character_flag = trait_menu_lifestyle_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_lifestyle_pg_1 
+				}
+				remove_character_flag = trait_menu_lifestyle_pg_1
+				add_character_flag = trait_menu_lifestyle_pg_2
+			}
+			if = {
+				limit = { 
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = trait_menu_lifestyle_pg_1
+			}
+		}
+	}
+}
+
+remove_trait_menu_lifestyle_pgs = {
+	if = {
+		limit = {
+			has_character_flag = trait_menu_lifestyle_pg_1
+		}
+		remove_character_flag = trait_menu_lifestyle_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = trait_menu_lifestyle_pg_2
+		}
+		remove_character_flag = trait_menu_lifestyle_pg_2
+	}
+}
+
+### TRAIT MENU LEARNED TRAITS XP ###
+
+trait_menu_learned_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { has_character_flag = trait_menu_learned_pg_1 }
+				remove_character_flag = trait_menu_learned_pg_1
+				add_character_flag = trait_menu_learned_pg_2
+			}
+			else_if = {
+				limit = { has_character_flag = trait_menu_learned_pg_2 }
+				remove_character_flag = trait_menu_learned_pg_2
+				add_character_flag = trait_menu_learned_pg_3
+			}
+			else_if = {
+				limit = { has_character_flag = trait_menu_learned_pg_3 }
+				remove_character_flag = trait_menu_learned_pg_3
+				add_character_flag = trait_menu_learned_pg_1
+			}
+		}
+	}
+}
+
+
+trait_menu_learned_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_learned_pg_2 
+				}
+				remove_character_flag = trait_menu_learned_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_learned_pg_1 
+				}
+				remove_character_flag = trait_menu_learned_pg_1
+				add_character_flag = trait_menu_learned_pg_2
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_learned_pg_2 
+				}
+				remove_character_flag = trait_menu_learned_pg_2
+				add_character_flag = trait_menu_learned_pg_3
+			}
+			if = {
+				limit = { 
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = trait_menu_learned_pg_1
+			}
+		}
+	}
+}
+
+remove_trait_menu_learned_pgs = {
+	if = {
+		limit = {
+			has_character_flag = trait_menu_learned_pg_1
+		}
+		remove_character_flag = trait_menu_learned_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = trait_menu_learned_pg_2
+		}
+		remove_character_flag = trait_menu_learned_pg_2
+	}
+	if = {
+		limit = {
+			has_character_flag = trait_menu_learned_pg_3
+		}
+		remove_character_flag = trait_menu_learned_pg_3
+	}
+}
+
+### 出身特质菜单 ###
+
+trait_menu_birth_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_birth_pg_2 
+				}
+				remove_character_flag = trait_menu_birth_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_birth_pg_1 
+				}
+				remove_character_flag = trait_menu_birth_pg_1
+				add_character_flag = trait_menu_birth_pg_2
+			}
+			if = {
+				limit = { 
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = trait_menu_birth_pg_1
+			}
+		}
+	}
+}
+
+
+trait_menu_birth_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+		
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_birth_pg_2 
+				}
+				remove_character_flag = trait_menu_birth_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_birth_pg_1 
+				}
+				remove_character_flag = trait_menu_birth_pg_1
+				add_character_flag = trait_menu_birth_pg_2
+			}
+		
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = trait_menu_birth_pg_1
+			}
+		}
+	}
+}
+
+
+remove_trait_menu_birth_pgs = {
+	if = {
+		limit = {
+			has_character_flag = trait_menu_birth_pg_1
+		}
+		remove_character_flag = trait_menu_birth_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = trait_menu_birth_pg_2
+		}
+		remove_character_flag = trait_menu_birth_pg_2
+	}
+}
+
+### TRAIT MENU COMMANDER TRAITS ###
+
+trait_menu_commander_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_commander_pg_3
+				}
+				remove_character_flag = trait_menu_commander_pg_3
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_commander_pg_2 
+				}
+				remove_character_flag = trait_menu_commander_pg_2
+				add_character_flag = trait_menu_commander_pg_3
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_commander_pg_1 
+				}
+				remove_character_flag = trait_menu_commander_pg_1
+				add_character_flag = trait_menu_commander_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = trait_menu_commander_pg_1
+			}
+		}
+	}
+}
+
+trait_menu_commander_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_commander_pg_2 
+				}
+				remove_character_flag = trait_menu_commander_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_commander_pg_3 
+				}
+				remove_character_flag = trait_menu_commander_pg_3
+				add_character_flag = trait_menu_commander_pg_2
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_commander_pg_1 
+				}
+				remove_character_flag = trait_menu_commander_pg_1
+				add_character_flag = trait_menu_commander_pg_3
+			}
+			if = {
+				limit = { 
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = trait_menu_commander_pg_1
+			}
+		}
+	}
+}
+
+remove_trait_menu_commander_pgs = {
+	if = {
+		limit = {
+			has_character_flag = trait_menu_commander_pg_1
+		}
+		remove_character_flag = trait_menu_commander_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = trait_menu_commander_pg_2
+		}
+		remove_character_flag = trait_menu_commander_pg_2
+	}
+	if = {
+		limit = {
+			has_character_flag = trait_menu_commander_pg_3
+		}
+		remove_character_flag = trait_menu_commander_pg_3
+	}
+}
+
+### Culture Menu ###
+
+culture_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = culture_pg_5
+				}
+				remove_character_flag = culture_pg_5
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = culture_pg_4
+				}
+				remove_character_flag = culture_pg_4
+				add_character_flag = culture_pg_5
+			}
+			if = {
+				limit = {
+					has_character_flag = culture_pg_3
+				}
+				remove_character_flag = culture_pg_3
+				add_character_flag = culture_pg_4
+			}
+			if = {
+				limit = {
+					has_character_flag = culture_pg_2
+				}
+				remove_character_flag = culture_pg_2
+				add_character_flag = culture_pg_3
+			}
+			if = {
+				limit = {
+					has_character_flag = culture_pg_1
+				}
+				remove_character_flag = culture_pg_1
+				add_character_flag = culture_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = culture_pg_1
+			}
+		}
+	}
+}
+
+culture_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = culture_pg_2
+				}
+				remove_character_flag = culture_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = culture_pg_3
+				}
+				remove_character_flag = culture_pg_3
+				add_character_flag = culture_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = culture_pg_4
+				}
+				remove_character_flag = culture_pg_4
+				add_character_flag = culture_pg_3
+			}
+			if = {
+				limit = {
+					has_character_flag = culture_pg_5
+				}
+				remove_character_flag = culture_pg_5
+				add_character_flag = culture_pg_4
+			}
+			if = {
+				limit = {
+					has_character_flag = culture_pg_1
+				}
+				remove_character_flag = culture_pg_1
+				add_character_flag = culture_pg_5
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = culture_pg_1
+			}
+		}
+	}
+}
+
+remove_culture_pgs = {
+	if = {
+		limit = {
+			has_character_flag = culture_pg_1
+		}
+		remove_character_flag = culture_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = culture_pg_2
+		}
+		remove_character_flag = culture_pg_2
+	}
+	if = {
+		limit = {
+			has_character_flag = culture_pg_3
+		}
+		remove_character_flag = culture_pg_3
+	}
+	if = {
+		limit = {
+			has_character_flag = culture_pg_4
+		}
+		remove_character_flag = culture_pg_4
+	}
+	if = {
+		limit = {
+			has_character_flag = culture_pg_5
+		}
+		remove_character_flag = culture_pg_5
+	}
+}
+
+indo_aryan_culture_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = indo_aryan_culture_pg_2
+				}
+				remove_character_flag = indo_aryan_culture_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = indo_aryan_culture_pg_1
+				}
+				remove_character_flag = indo_aryan_culture_pg_1
+				add_character_flag = indo_aryan_culture_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = indo_aryan_culture_pg_1
+			}
+		}
+	}
+}
+
+indo_aryan_culture_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = indo_aryan_culture_pg_2
+				}
+				remove_character_flag = indo_aryan_culture_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = indo_aryan_culture_pg_1
+				}
+				remove_character_flag = indo_aryan_culture_pg_1
+				add_character_flag = indo_aryan_culture_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = indo_aryan_culture_pg_1
+			}
+		}
+	}
+}
+
+remove_indo_aryan_culture_pgs = {
+	if = {
+		limit = {
+			has_character_flag = indo_aryan_culture_pg_1
+		}
+		remove_character_flag = indo_aryan_culture_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = indo_aryan_culture_pg_2
+		}
+		remove_character_flag = indo_aryan_culture_pg_2
+	}
+}
+
+turkic_culture_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = turkic_culture_pg_3
+				}
+				remove_character_flag = turkic_culture_pg_3
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = turkic_culture_pg_2
+				}
+				remove_character_flag = turkic_culture_pg_2
+				add_character_flag = turkic_culture_pg_3
+			}
+			if = {
+				limit = {
+					has_character_flag = turkic_culture_pg_1
+				}
+				remove_character_flag = turkic_culture_pg_1
+				add_character_flag = turkic_culture_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = turkic_culture_pg_1
+			}
+		}
+	}
+}
+
+turkic_culture_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = turkic_culture_pg_3
+				}
+				remove_character_flag = turkic_culture_pg_3
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = turkic_culture_pg_2
+				}
+				remove_character_flag = turkic_culture_pg_2
+				add_character_flag = turkic_culture_pg_3
+			}
+			if = {
+				limit = {
+					has_character_flag = turkic_culture_pg_1
+				}
+				remove_character_flag = turkic_culture_pg_1
+				add_character_flag = turkic_culture_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = turkic_culture_pg_1
+			}
+		}
+	}
+}
+
+remove_turkic_culture_pgs = {
+	if = {
+		limit = {
+			has_character_flag = turkic_culture_pg_1
+		}
+		remove_character_flag = turkic_culture_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = turkic_culture_pg_2
+		}
+		remove_character_flag = turkic_culture_pg_2
+	}
+	if = {
+		limit = {
+			has_character_flag = turkic_culture_pg_3
+		}
+		remove_character_flag = turkic_culture_pg_3
+	}
+}
+
+remove_all_culture_pgs = {
+	remove_culture_pgs = yes
+	remove_indo_aryan_culture_pgs = yes
+	remove_turkic_culture_pgs = yes
+}
+### Religion Menu ###
+
+religion_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = religion_pg_4
+				}
+				remove_character_flag = religion_pg_4
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = religion_pg_3
+				}
+				remove_character_flag = religion_pg_3
+				add_character_flag = religion_pg_4
+			}
+			if = {
+				limit = {
+					has_character_flag = religion_pg_2
+				}
+				remove_character_flag = religion_pg_2
+				add_character_flag = religion_pg_3
+			}
+			if = {
+				limit = {
+					has_character_flag = religion_pg_1
+				}
+				remove_character_flag = religion_pg_1
+				add_character_flag = religion_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = religion_pg_1
+			}
+		}
+	}
+}
+
+religion_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = religion_pg_2
+				}
+				remove_character_flag = religion_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = religion_pg_3
+				}
+				remove_character_flag = religion_pg_3
+				add_character_flag = religion_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = religion_pg_4
+				}
+				remove_character_flag = religion_pg_4
+				add_character_flag = religion_pg_3
+			}
+			if = {
+				limit = {
+					has_character_flag = religion_pg_1
+				}
+				remove_character_flag = religion_pg_1
+				add_character_flag = religion_pg_4
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = religion_pg_1
+			}
+		}
+	}
+}
+
+remove_religion_pgs = {
+	if = {
+		limit = {
+			has_character_flag = religion_pg_1
+		}
+		remove_character_flag = religion_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = religion_pg_2
+		}
+		remove_character_flag = religion_pg_2
+	}
+	if = {
+		limit = {
+			has_character_flag = religion_pg_3
+		}
+		remove_character_flag = religion_pg_3
+	}
+	if = {
+		limit = {
+			has_character_flag = religion_pg_4
+		}
+		remove_character_flag = religion_pg_4
+	}
+}
+
+christianity_religion_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = christianity_religion_pg_2
+				}
+				remove_character_flag = christianity_religion_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = christianity_religion_pg_1
+				}
+				remove_character_flag = christianity_religion_pg_1
+				add_character_flag = christianity_religion_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = christianity_religion_pg_1
+			}
+		}
+	}
+}
+
+christianity_religion_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = christianity_religion_pg_2
+				}
+				remove_character_flag = christianity_religion_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = christianity_religion_pg_1
+				}
+				remove_character_flag = christianity_religion_pg_1
+				add_character_flag = christianity_religion_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = christianity_religion_pg_1
+			}
+		}
+	}
+}
+
+remove_christianity_religion_pgs = {
+	if = {
+		limit = {
+			has_character_flag = christianity_religion_pg_1
+		}
+		remove_character_flag = christianity_religion_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = christianity_religion_pg_2
+		}
+		remove_character_flag = christianity_religion_pg_2
+	}
+}
+
+islam_religion_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = islam_religion_pg_3
+				}
+				remove_character_flag = islam_religion_pg_3
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = islam_religion_pg_2
+				}
+				remove_character_flag = islam_religion_pg_2
+				add_character_flag = islam_religion_pg_3
+			}
+			if = {
+				limit = {
+					has_character_flag = islam_religion_pg_1
+				}
+				remove_character_flag = islam_religion_pg_1
+				add_character_flag = islam_religion_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = islam_religion_pg_1
+			}
+		}
+	}
+}
+
+islam_religion_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = islam_religion_pg_2
+				}
+				remove_character_flag = islam_religion_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = islam_religion_pg_3
+				}
+				remove_character_flag = islam_religion_pg_3
+				add_character_flag = islam_religion_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = islam_religion_pg_1
+				}
+				remove_character_flag = islam_religion_pg_1
+				add_character_flag = islam_religion_pg_3
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = islam_religion_pg_1
+			}
+		}
+	}
+}
+
+remove_islam_religion_pgs = {
+	if = {
+		limit = {
+			has_character_flag = islam_religion_pg_1
+		}
+		remove_character_flag = islam_religion_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = islam_religion_pg_2
+		}
+		remove_character_flag = islam_religion_pg_2
+	}
+	if = {
+		limit = {
+			has_character_flag = islam_religion_pg_3
+		}
+		remove_character_flag = islam_religion_pg_3
+	}
+}
+
+remove_all_religion_pgs = {
+	remove_religion_pgs = yes
+	remove_christianity_religion_pgs = yes
+	remove_islam_religion_pgs = yes
+}
+
+### Modifier Menu ###
+### Prestige ###
+
+prestige_modifier_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = prestige_modifier_pg_3
+				}
+				remove_character_flag = prestige_modifier_pg_3
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = prestige_modifier_pg_2
+				}
+				remove_character_flag = prestige_modifier_pg_2
+				add_character_flag = prestige_modifier_pg_3
+			}
+			if = {
+				limit = {
+					has_character_flag = prestige_modifier_pg_1
+				}
+				remove_character_flag = prestige_modifier_pg_1
+				add_character_flag = prestige_modifier_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = prestige_modifier_pg_1
+			}
+		}
+	}
+}
+
+prestige_modifier_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = prestige_modifier_pg_2
+				}
+				remove_character_flag = prestige_modifier_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = prestige_modifier_pg_3
+				}
+				remove_character_flag = prestige_modifier_pg_3
+				add_character_flag = prestige_modifier_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = prestige_modifier_pg_1
+				}
+				remove_character_flag = prestige_modifier_pg_1
+				add_character_flag = prestige_modifier_pg_3
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = prestige_modifier_pg_1
+			}
+		}
+	}
+}
+
+remove_prestige_modifier_pgs = {
+	if = {
+		limit = {
+			has_character_flag = prestige_modifier_pg_1
+		}
+		remove_character_flag = prestige_modifier_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = prestige_modifier_pg_2
+		}
+		remove_character_flag = prestige_modifier_pg_2
+	}
+	if = {
+		limit = {
+			has_character_flag = prestige_modifier_pg_3
+		}
+		remove_character_flag = prestige_modifier_pg_3
+	}
+}
+
+### PIETY ###
+
+piety_modifier_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = piety_modifier_pg_3
+				}
+				remove_character_flag = piety_modifier_pg_3
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = piety_modifier_pg_2
+				}
+				remove_character_flag = piety_modifier_pg_2
+				add_character_flag = piety_modifier_pg_3
+			}
+			if = {
+				limit = {
+					has_character_flag = piety_modifier_pg_1
+				}
+				remove_character_flag = piety_modifier_pg_1
+				add_character_flag = piety_modifier_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = piety_modifier_pg_1
+			}
+		}
+	}
+}
+piety_modifier_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = piety_modifier_pg_2
+				}
+				remove_character_flag = piety_modifier_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = piety_modifier_pg_3
+				}
+				remove_character_flag = piety_modifier_pg_3
+				add_character_flag = piety_modifier_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = piety_modifier_pg_1
+				}
+				remove_character_flag = piety_modifier_pg_1
+				add_character_flag = piety_modifier_pg_3
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = piety_modifier_pg_1
+			}
+		}
+	}
+}
+
+remove_piety_modifier_pgs = {
+	if = {
+		limit = {
+			has_character_flag = piety_modifier_pg_1
+		}
+		remove_character_flag = piety_modifier_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = piety_modifier_pg_2
+		}
+		remove_character_flag = piety_modifier_pg_2
+	}
+	if = {
+		limit = {
+			has_character_flag = piety_modifier_pg_3
+		}
+		remove_character_flag = piety_modifier_pg_3
+	}
+}
+
+### INCOME ###
+
+income_modifier_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = income_modifier_pg_2
+				}
+				remove_character_flag = income_modifier_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = income_modifier_pg_1
+				}
+				remove_character_flag = income_modifier_pg_1
+				add_character_flag = income_modifier_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = income_modifier_pg_1
+			}
+		}
+	}
+}
+income_modifier_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = income_modifier_pg_2
+				}
+				remove_character_flag = income_modifier_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = income_modifier_pg_1
+				}
+				remove_character_flag = income_modifier_pg_1
+				add_character_flag = income_modifier_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = income_modifier_pg_1
+			}
+		}
+	}
+}
+
+remove_income_modifier_pgs = {
+	if = {
+		limit = {
+			has_character_flag = income_modifier_pg_1
+		}
+		remove_character_flag = income_modifier_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = income_modifier_pg_2
+		}
+		remove_character_flag = income_modifier_pg_2
+	}
+}
+
+### OPINION ###
+
+opinion_modifier_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = opinion_modifier_pg_6
+				}
+				remove_character_flag = opinion_modifier_pg_6
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = opinion_modifier_pg_5
+				}
+				remove_character_flag = opinion_modifier_pg_5
+				add_character_flag = opinion_modifier_pg_6
+			}
+			if = {
+				limit = {
+					has_character_flag = opinion_modifier_pg_4
+				}
+				remove_character_flag = opinion_modifier_pg_4
+				add_character_flag = opinion_modifier_pg_5
+			}
+			if = {
+				limit = {
+					has_character_flag = opinion_modifier_pg_3
+				}
+				remove_character_flag = opinion_modifier_pg_3
+				add_character_flag = opinion_modifier_pg_4
+			}
+			if = {
+				limit = {
+					has_character_flag = opinion_modifier_pg_2
+				}
+				remove_character_flag = opinion_modifier_pg_2
+				add_character_flag = opinion_modifier_pg_3
+			}
+			if = {
+				limit = {
+					has_character_flag = opinion_modifier_pg_1
+				}
+				remove_character_flag = opinion_modifier_pg_1
+				add_character_flag = opinion_modifier_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = opinion_modifier_pg_1
+			}
+		}
+	}
+}
+opinion_modifier_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = opinion_modifier_pg_2
+				}
+				remove_character_flag = opinion_modifier_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = opinion_modifier_pg_3
+				}
+				remove_character_flag = opinion_modifier_pg_3
+				add_character_flag = opinion_modifier_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = opinion_modifier_pg_4
+				}
+				remove_character_flag = opinion_modifier_pg_4
+				add_character_flag = opinion_modifier_pg_3
+			}
+			if = {
+				limit = {
+					has_character_flag = opinion_modifier_pg_5
+				}
+				remove_character_flag = opinion_modifier_pg_5
+				add_character_flag = opinion_modifier_pg_4
+			}
+			if = {
+				limit = {
+					has_character_flag = opinion_modifier_pg_6
+				}
+				remove_character_flag = opinion_modifier_pg_6
+				add_character_flag = opinion_modifier_pg_5
+			}
+			if = {
+				limit = {
+					has_character_flag = opinion_modifier_pg_1
+				}
+				remove_character_flag = opinion_modifier_pg_1
+				add_character_flag = opinion_modifier_pg_6
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = opinion_modifier_pg_1
+			}
+		}
+	}
+}
+
+remove_opinion_modifier_pgs = {
+	if = {
+		limit = {
+			has_character_flag = opinion_modifier_pg_1
+		}
+		remove_character_flag = opinion_modifier_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = opinion_modifier_pg_2
+		}
+		remove_character_flag = opinion_modifier_pg_2
+	}
+	if = {
+		limit = {
+			has_character_flag = opinion_modifier_pg_3
+		}
+		remove_character_flag = opinion_modifier_pg_3
+	}
+	if = {
+		limit = {
+			has_character_flag = opinion_modifier_pg_4
+		}
+		remove_character_flag = opinion_modifier_pg_4
+	}
+		if = {
+		limit = {
+			has_character_flag = opinion_modifier_pg_5
+		}
+		remove_character_flag = opinion_modifier_pg_5
+	}
+		if = {
+		limit = {
+			has_character_flag = opinion_modifier_pg_6
+		}
+		remove_character_flag = opinion_modifier_pg_6
+	}
+}
+
+### HEALTH ###
+
+health_modifier_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = health_modifier_pg_3
+				}
+				remove_character_flag = health_modifier_pg_3
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = health_modifier_pg_2
+				}
+				remove_character_flag = health_modifier_pg_2
+				add_character_flag = health_modifier_pg_3
+			}
+			if = {
+				limit = {
+					has_character_flag = health_modifier_pg_1
+				}
+				remove_character_flag = health_modifier_pg_1
+				add_character_flag = health_modifier_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = health_modifier_pg_1
+			}
+		}
+	}
+}
+health_modifier_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = health_modifier_pg_2
+				}
+				remove_character_flag = health_modifier_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = health_modifier_pg_3
+				}
+				remove_character_flag = health_modifier_pg_3
+				add_character_flag = health_modifier_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = health_modifier_pg_1
+				}
+				remove_character_flag = health_modifier_pg_1
+				add_character_flag = health_modifier_pg_3
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = health_modifier_pg_1
+			}
+		}
+	}
+}
+
+remove_health_modifier_pgs = {
+	if = {
+		limit = {
+			has_character_flag = health_modifier_pg_1
+		}
+		remove_character_flag = health_modifier_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = health_modifier_pg_2
+		}
+		remove_character_flag = health_modifier_pg_2
+	}
+	if = {
+		limit = {
+			has_character_flag = health_modifier_pg_3
+		}
+		remove_character_flag = health_modifier_pg_3
+	}
+}
+
+### INTRIGUE ###
+
+intrigue_modifier_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = intrigue_modifier_pg_4
+				}
+				remove_character_flag = intrigue_modifier_pg_4
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = intrigue_modifier_pg_3
+				}
+				remove_character_flag = intrigue_modifier_pg_3
+				add_character_flag = intrigue_modifier_pg_4
+			}
+			if = {
+				limit = {
+					has_character_flag = intrigue_modifier_pg_2
+				}
+				remove_character_flag = intrigue_modifier_pg_2
+				add_character_flag = intrigue_modifier_pg_3
+			}
+			if = {
+				limit = {
+					has_character_flag = intrigue_modifier_pg_1
+				}
+				remove_character_flag = intrigue_modifier_pg_1
+				add_character_flag = intrigue_modifier_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = intrigue_modifier_pg_1
+			}
+		}
+	}
+}
+intrigue_modifier_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = intrigue_modifier_pg_2
+				}
+				remove_character_flag = intrigue_modifier_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = intrigue_modifier_pg_3
+				}
+				remove_character_flag = intrigue_modifier_pg_3
+				add_character_flag = intrigue_modifier_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = intrigue_modifier_pg_4
+				}
+				remove_character_flag = intrigue_modifier_pg_4
+				add_character_flag = intrigue_modifier_pg_3
+			}
+			if = {
+				limit = {
+					has_character_flag = intrigue_modifier_pg_1
+				}
+				remove_character_flag = intrigue_modifier_pg_1
+				add_character_flag = intrigue_modifier_pg_4
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = intrigue_modifier_pg_1
+			}
+		}
+	}
+}
+
+remove_intrigue_modifier_pgs = {
+	if = {
+		limit = {
+			has_character_flag = intrigue_modifier_pg_1
+		}
+		remove_character_flag = intrigue_modifier_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = intrigue_modifier_pg_2
+		}
+		remove_character_flag = intrigue_modifier_pg_2
+	}
+	if = {
+		limit = {
+			has_character_flag = intrigue_modifier_pg_3
+		}
+		remove_character_flag = intrigue_modifier_pg_3
+	}
+	if = {
+		limit = {
+			has_character_flag = intrigue_modifier_pg_4
+		}
+		remove_character_flag = intrigue_modifier_pg_4
+	}
+}
+
+### AUTHORITY ###
+
+authority_modifier_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = authority_modifier_pg_2
+				}
+				remove_character_flag = authority_modifier_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = authority_modifier_pg_1
+				}
+				remove_character_flag = authority_modifier_pg_1
+				add_character_flag = authority_modifier_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = authority_modifier_pg_1
+			}
+		}
+	}
+}
+authority_modifier_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = authority_modifier_pg_2
+				}
+				remove_character_flag = authority_modifier_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = authority_modifier_pg_1
+				}
+				remove_character_flag = authority_modifier_pg_1
+				add_character_flag = authority_modifier_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = authority_modifier_pg_1
+			}
+		}
+	}
+}
+
+remove_authority_modifier_pgs = {
+	if = {
+		limit = {
+			has_character_flag = authority_modifier_pg_1
+		}
+		remove_character_flag = authority_modifier_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = authority_modifier_pg_2
+		}
+		remove_character_flag = authority_modifier_pg_2
+	}
+}
+
+### AI BEHAVIOR ###
+
+ai_behavior_modifier_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = ai_behavior_modifier_pg_2
+				}
+				remove_character_flag = ai_behavior_modifier_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = ai_behavior_modifier_pg_1
+				}
+				remove_character_flag = ai_behavior_modifier_pg_1
+				add_character_flag = ai_behavior_modifier_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = ai_behavior_modifier_pg_1
+			}
+		}
+	}
+}
+ai_behavior_modifier_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = ai_behavior_modifier_pg_2
+				}
+				remove_character_flag = ai_behavior_modifier_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = ai_behavior_modifier_pg_1
+				}
+				remove_character_flag = ai_behavior_modifier_pg_1
+				add_character_flag = ai_behavior_modifier_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = ai_behavior_modifier_pg_1
+			}
+		}
+	}
+}
+
+remove_ai_behavior_modifier_pgs = {
+	if = {
+		limit = {
+			has_character_flag = ai_behavior_modifier_pg_1
+		}
+		remove_character_flag = ai_behavior_modifier_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = ai_behavior_modifier_pg_2
+		}
+		remove_character_flag = ai_behavior_modifier_pg_2
+	}
+}
+
+### GOVERNING ###
+
+governing_modifier_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = governing_modifier_pg_3
+				}
+				remove_character_flag = governing_modifier_pg_3
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = governing_modifier_pg_2
+				}
+				remove_character_flag = governing_modifier_pg_2
+				add_character_flag = governing_modifier_pg_3
+			}
+			if = {
+				limit = {
+					has_character_flag = governing_modifier_pg_1
+				}
+				remove_character_flag = governing_modifier_pg_1
+				add_character_flag = governing_modifier_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = governing_modifier_pg_1
+			}
+		}
+	}
+}
+governing_modifier_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = governing_modifier_pg_2
+				}
+				remove_character_flag = governing_modifier_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = governing_modifier_pg_3
+				}
+				remove_character_flag = governing_modifier_pg_3
+				add_character_flag = governing_modifier_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = governing_modifier_pg_1
+				}
+				remove_character_flag = governing_modifier_pg_1
+				add_character_flag = governing_modifier_pg_3
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = governing_modifier_pg_1
+			}
+		}
+	}
+}
+
+remove_governing_modifier_pgs = {
+	if = {
+		limit = {
+			has_character_flag = governing_modifier_pg_1
+		}
+		remove_character_flag = governing_modifier_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = governing_modifier_pg_2
+		}
+		remove_character_flag = governing_modifier_pg_2
+	}
+	if = {
+		limit = {
+			has_character_flag = governing_modifier_pg_3
+		}
+		remove_character_flag = governing_modifier_pg_3
+	}
+}
+
+### PROVINCIAL ###
+
+provincial_modifier_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = provincial_modifier_pg_4
+				}
+				remove_character_flag = provincial_modifier_pg_4
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = provincial_modifier_pg_3
+				}
+				remove_character_flag = provincial_modifier_pg_3
+				add_character_flag = provincial_modifier_pg_4
+			}
+			if = {
+				limit = {
+					has_character_flag = provincial_modifier_pg_2
+				}
+				remove_character_flag = provincial_modifier_pg_2
+				add_character_flag = provincial_modifier_pg_3
+			}
+			if = {
+				limit = {
+					has_character_flag = provincial_modifier_pg_1
+				}
+				remove_character_flag = provincial_modifier_pg_1
+				add_character_flag = provincial_modifier_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = provincial_modifier_pg_1
+			}
+		}
+	}
+}
+
+provincial_modifier_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = provincial_modifier_pg_2
+				}
+				remove_character_flag = provincial_modifier_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = provincial_modifier_pg_3
+				}
+				remove_character_flag = provincial_modifier_pg_3
+				add_character_flag = provincial_modifier_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = provincial_modifier_pg_4
+				}
+				remove_character_flag = provincial_modifier_pg_4
+				add_character_flag = provincial_modifier_pg_3
+			}
+			if = {
+				limit = {
+					has_character_flag = provincial_modifier_pg_1
+				}
+				remove_character_flag = provincial_modifier_pg_1
+				add_character_flag = provincial_modifier_pg_4
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = provincial_modifier_pg_1
+			}
+		}
+	}
+}
+
+remove_provincial_modifier_pgs = {
+	if = {
+		limit = {
+			has_character_flag = provincial_modifier_pg_1
+		}
+		remove_character_flag = provincial_modifier_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = provincial_modifier_pg_2
+		}
+		remove_character_flag = provincial_modifier_pg_2
+	}
+	if = {
+		limit = {
+			has_character_flag = provincial_modifier_pg_3
+		}
+		remove_character_flag = provincial_modifier_pg_3
+	}
+	if = {
+		limit = {
+			has_character_flag = provincial_modifier_pg_4
+		}
+		remove_character_flag = provincial_modifier_pg_4
+	}
+}
+
+### MILITARY ###
+
+military_modifier_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = military_modifier_pg_7
+				}
+				remove_character_flag = military_modifier_pg_7
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = military_modifier_pg_6
+				}
+				remove_character_flag = military_modifier_pg_6
+				add_character_flag = military_modifier_pg_7
+			}
+			if = {
+				limit = {
+					has_character_flag = military_modifier_pg_5
+				}
+				remove_character_flag = military_modifier_pg_5
+				add_character_flag = military_modifier_pg_6
+			}
+			if = {
+				limit = {
+					has_character_flag = military_modifier_pg_4
+				}
+				remove_character_flag = military_modifier_pg_4
+				add_character_flag = military_modifier_pg_5
+			}
+			if = {
+				limit = {
+					has_character_flag = military_modifier_pg_3
+				}
+				remove_character_flag = military_modifier_pg_3
+				add_character_flag = military_modifier_pg_4
+			}
+			if = {
+				limit = {
+					has_character_flag = military_modifier_pg_2
+				}
+				remove_character_flag = military_modifier_pg_2
+				add_character_flag = military_modifier_pg_3
+			}
+			if = {
+				limit = {
+					has_character_flag = military_modifier_pg_1
+				}
+				remove_character_flag = military_modifier_pg_1
+				add_character_flag = military_modifier_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = military_modifier_pg_1
+			}
+		}
+	}
+}
+
+military_modifier_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = military_modifier_pg_2
+				}
+				remove_character_flag = military_modifier_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = military_modifier_pg_3
+				}
+				remove_character_flag = military_modifier_pg_3
+				add_character_flag = military_modifier_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = military_modifier_pg_4
+				}
+				remove_character_flag = military_modifier_pg_4
+				add_character_flag = military_modifier_pg_3
+			}
+			if = {
+				limit = {
+					has_character_flag = military_modifier_pg_5
+				}
+				remove_character_flag = military_modifier_pg_5
+				add_character_flag = military_modifier_pg_4
+			}
+			if = {
+				limit = {
+					has_character_flag = military_modifier_pg_6
+				}
+				remove_character_flag = military_modifier_pg_6
+				add_character_flag = military_modifier_pg_5
+			}
+			if = {
+				limit = {
+					has_character_flag = military_modifier_pg_7
+				}
+				remove_character_flag = military_modifier_pg_7
+				add_character_flag = military_modifier_pg_6
+			}
+			if = {
+				limit = {
+					has_character_flag = military_modifier_pg_1
+				}
+				remove_character_flag = military_modifier_pg_1
+				add_character_flag = military_modifier_pg_7
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = military_modifier_pg_1
+			}
+		}
+	}
+}
+
+remove_military_modifier_pgs = {
+	if = {
+		limit = {
+			has_character_flag = military_modifier_pg_1
+		}
+		remove_character_flag = military_modifier_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = military_modifier_pg_2
+		}
+		remove_character_flag = military_modifier_pg_2
+	}
+	if = {
+		limit = {
+			has_character_flag = military_modifier_pg_3
+		}
+		remove_character_flag = military_modifier_pg_3
+	}
+	if = {
+		limit = {
+			has_character_flag = military_modifier_pg_4
+		}
+		remove_character_flag = military_modifier_pg_4
+	}
+	if = {
+		limit = {
+			has_character_flag = military_modifier_pg_5
+		}
+		remove_character_flag = military_modifier_pg_5
+	}
+	if = {
+		limit = {
+			has_character_flag = military_modifier_pg_6
+		}
+		remove_character_flag = military_modifier_pg_6
+	}
+	if = {
+		limit = {
+			has_character_flag = military_modifier_pg_7
+		}
+		remove_character_flag = military_modifier_pg_7
+	}
+}
+
+modifier_forward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = modifier_pg_2
+				}
+				remove_character_flag = modifier_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = modifier_pg_1
+				}
+				remove_character_flag = modifier_pg_1
+				add_character_flag = modifier_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = modifier_pg_1
+			}
+		}
+	}
+}
+modifier_backward = {
+	hidden_effect = {
+		scope:char_editor = {
+			if = {
+				limit = {
+					has_character_flag = modifier_pg_2
+				}
+				remove_character_flag = modifier_pg_2
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = modifier_pg_1
+				}
+				remove_character_flag = modifier_pg_1
+				add_character_flag = modifier_pg_2
+			}
+			if = {
+				limit = {
+					has_character_flag = need_pg_1
+				}
+				remove_character_flag = need_pg_1
+				add_character_flag = modifier_pg_1
+			}
+		}
+	}
+}
+
+remove_modifier_pgs = {
+	if = {
+		limit = {
+			has_character_flag = modifier_pg_1
+		}
+		remove_character_flag = modifier_pg_1
+	}
+	if = {
+		limit = {
+			has_character_flag = modifier_pg_2
+		}
+		remove_character_flag = modifier_pg_2
+	}
+}
+
+### CHARACTER EDITOR RETURN TO MODIFIER PAGE ###
+
+dp_char_editor_go_back_modifier = {
+	if = {
+		limit = {
+			has_character_flag = last_event_51
+		}
+		remove_character_flag = last_event_51
+		#add_character_flag = opinion_modifier_pg_1
+		scope:char_editor_actor = {
+			trigger_event = dp_char_editor.51
+		}
+	}
+	else_if = {
+		limit = {
+			has_character_flag = last_event_52
+		}
+		remove_character_flag = last_event_52
+		#add_character_flag = prestige_modifier_pg_1
+		scope:char_editor_actor = {
+			trigger_event = dp_char_editor.52
+		}
+	}
+	else_if = {
+		limit = {
+			has_character_flag = last_event_53
+		}
+		remove_character_flag = last_event_53
+		#add_character_flag = piety_modifier_pg_1
+		scope:char_editor_actor = {
+			trigger_event = dp_char_editor.53
+		}
+	}
+	else_if = {
+		limit = {
+			has_character_flag = last_event_54
+		}
+		remove_character_flag = last_event_54
+		#add_character_flag = income_modifier_pg_1
+		scope:char_editor_actor = {
+			trigger_event = dp_char_editor.54
+		}
+	}
+	else_if = {
+		limit = {
+			has_character_flag = last_event_55
+		}
+		remove_character_flag = last_event_55
+		#add_character_flag = health_modifier_pg_1
+		scope:char_editor_actor = {
+			trigger_event = dp_char_editor.55
+		}
+	}
+	else_if = {
+		limit = {
+			has_character_flag = last_event_56
+		}
+		remove_character_flag = last_event_56
+		#add_character_flag = intrigue_modifier_pg_1
+		scope:char_editor_actor = {
+			trigger_event = dp_char_editor.56
+		}
+	}
+	else_if = {
+		limit = {
+			has_character_flag = last_event_57
+		}
+		remove_character_flag = last_event_57
+		#add_character_flag = provincial_modifier_pg_1
+		scope:char_editor_actor = {
+			trigger_event = dp_char_editor.57
+		}
+	}
+	else_if = {
+		limit = {
+			has_character_flag = last_event_58
+		}
+		remove_character_flag = last_event_58
+		#add_character_flag = governing_modifier_pg_1
+		scope:char_editor_actor = {
+			trigger_event = dp_char_editor.58
+		}
+	}
+	else_if = {
+		limit = {
+			has_character_flag = last_event_59
+		}
+		remove_character_flag = last_event_59
+		#add_character_flag = governing_modifier_pg_1
+		scope:char_editor_actor = {
+			trigger_event = dp_char_editor.59
+		}
+	}
+	else_if = {
+		limit = {
+			has_character_flag = last_event_60
+		}
+		remove_character_flag = last_event_60
+		#add_character_flag = military_modifier_pg_1
+		scope:char_editor_actor = {
+			trigger_event = dp_char_editor.60
+		}
+	}
+	else_if = {
+		limit = {
+			has_character_flag = last_event_61
+		}
+		remove_character_flag = last_event_61
+		scope:char_editor_actor = {
+			trigger_event = dp_char_editor.61
+		}
+	}
+}
+
+### 清理所有修改器页面和最后一个事件标志 ###
+remove_all_modifier_go_back_flags = {
+	if = { limit = { has_character_flag = last_event_51 } remove_character_flag = last_event_51 }
+	if = { limit = { has_character_flag = last_event_52 } remove_character_flag = last_event_52 }
+	if = { limit = { has_character_flag = last_event_53 } remove_character_flag = last_event_53 }
+	if = { limit = { has_character_flag = last_event_54 } remove_character_flag = last_event_54 }
+	if = { limit = { has_character_flag = last_event_55 } remove_character_flag = last_event_55 }
+	if = { limit = { has_character_flag = last_event_56 } remove_character_flag = last_event_56 }
+	if = { limit = { has_character_flag = last_event_57 } remove_character_flag = last_event_57 }
+	if = { limit = { has_character_flag = last_event_58 } remove_character_flag = last_event_58 }
+	if = { limit = { has_character_flag = last_event_59 } remove_character_flag = last_event_59 }
+	if = { limit = { has_character_flag = last_event_60 } remove_character_flag = last_event_60 }
+	if = { limit = { has_character_flag = last_event_61 } remove_character_flag = last_event_61 }
+	remove_opinion_modifier_pgs = yes
+	remove_prestige_modifier_pgs = yes
+	remove_piety_modifier_pgs = yes
+	remove_income_modifier_pgs = yes
+	remove_health_modifier_pgs = yes
+	remove_intrigue_modifier_pgs = yes
+	remove_provincial_modifier_pgs = yes
+	remove_authority_modifier_pgs = yes
+	remove_governing_modifier_pgs = yes
+	remove_military_modifier_pgs = yes
+}

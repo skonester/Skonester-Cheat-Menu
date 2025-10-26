@@ -1,0 +1,934 @@
+#巡盐御史任期计数
+yanfadao_quarterly_pulse = {
+	trigger = {
+		has_title = title:e_greatming
+		any_living_character = {
+			has_court_position = court_yanfadao_position
+			has_character_modifier = yushi_xunyan
+			exists = var:ren_qi
+			var:ren_qi < 12
+		}
+	}
+	effect = {
+		every_living_character = {
+			limit = {
+				has_court_position = court_yanfadao_position
+				has_character_modifier = yushi_xunyan
+				exists = var:ren_qi
+				var:ren_qi < 12
+			}
+			change_variable = {
+				name = ren_qi
+				add = 1
+			}
+		}
+	}
+}
+
+#军功计数
+jungongjishu_yearly_pulse = {
+	trigger = {
+		exists = top_liege
+		top_liege = {
+			has_title = title:e_greatming
+		}
+		is_male = yes
+		is_adult = yes
+		OR = {
+			AND = {
+				is_ruler = yes
+				has_government = weisuozhi_government
+			}
+			has_court_position = court_zhongjun_position
+			has_court_position = court_zuojun_position
+			has_court_position = court_youjun_position
+			has_court_position = court_qianjun_position
+			has_court_position = court_houjun_position
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_variable = jungong
+				}
+			}
+			set_variable = {
+				name = jungong
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				is_at_war = yes
+				NOT = {
+					is_at_war_with = top_liege
+				}
+				any_character_war = {
+					is_war_leader = root.top_liege
+					is_participant = root
+				}
+			}
+			change_variable = {
+				name = jungong
+				add = 1
+			}
+		}
+
+		if = {
+			limit = {
+				highest_held_title_tier = tier_kingdom
+			}
+			change_variable = {
+				name = jungong
+				add = 1.5
+			}
+		}
+		else_if = {
+			limit = {
+				highest_held_title_tier = tier_duchy
+			}
+			change_variable = {
+				name = jungong
+				add = 1
+			}
+		}
+		else_if = {
+			limit = {
+				highest_held_title_tier = tier_county
+			}
+			change_variable = {
+				name = jungong
+				add = 0.5
+			}
+		}
+		else_if = {
+			limit = {
+				highest_held_title_tier = tier_barony
+			}
+			change_variable = {
+				name = jungong
+				add = 0.25
+			}
+		}
+
+		if = {
+			limit = {
+				is_landed = yes
+				OR = {
+					has_court_position = court_zhongjun_position
+					has_court_position = court_zuojun_position
+					has_court_position = court_youjun_position
+					has_court_position = court_qianjun_position
+					has_court_position = court_houjun_position
+				}
+			}
+			change_variable = {
+				name = jungong
+				add = 0.5
+			}
+		}
+		else_if = {
+			limit = {
+				is_landed = no
+				OR = {
+					has_court_position = court_zhongjun_position
+					has_court_position = court_zuojun_position
+					has_court_position = court_youjun_position
+					has_court_position = court_qianjun_position
+					has_court_position = court_houjun_position
+				}
+			}
+			change_variable = {
+				name = jungong
+				add = 2
+			}
+		}
+	}
+}
+
+#战斗主将、骑士军功、HQ计数
+commander_jungong_pulse = {
+	trigger = {
+		exists = side_commander
+		side_commander = {
+			OR = {
+				AND = {
+					exists = top_liege
+					top_liege = {
+						has_title = title:e_greatming
+					}
+				}
+				has_title = title:e_greatming
+			}
+		}
+	}
+	effect = {
+		side_commander = {
+			if = {
+				limit = {
+					NOT = {
+						has_title = title:e_greatming
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_variable = jungong
+						}
+					}
+					set_variable = {
+						name = jungong
+						value = 2
+					}
+				}
+				else = {
+					change_variable = {
+						name = jungong
+						add = 2
+					}
+				}
+			}
+			else = {
+				HQ_change = {
+					CHANGE = 2
+					CHECK = 202301102000
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_side_knight = {
+					exists = top_liege
+					top_liege = {
+						has_title = title:e_greatming
+					}
+					NOR = {
+						has_trait = slave
+						has_trait = bamian_gezhi
+						has_trait = shouma
+					}
+				}
+			}
+			every_side_knight = {
+				limit = {
+					exists = top_liege
+					top_liege = {
+						has_title = title:e_greatming
+					}
+					NOR = {
+						has_trait = slave
+						has_trait = bamian_gezhi
+						has_trait = shouma
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_variable = jungong
+						}
+					}
+					set_variable = {
+						name = jungong
+						value = 0.5
+					}
+				}
+				else = {
+					change_variable = {
+						name = jungong
+						add = 0.5
+					}
+				}
+			}
+		}
+	}
+}
+
+#破城将领军功
+pocheng_jungong = {
+	trigger = {
+		OR = {
+			has_title = title:e_greatming
+			AND = {
+				exists = top_liege
+				exists = liege
+				top_liege = { 
+					has_title = title:e_greatming 
+				}
+				liege = { 
+					OR = { 
+						has_government = sansizhi_government 
+						has_government = weisuozhi_government 
+						has_government = zongfan_government 
+					} 
+				}
+				NOR = {
+					is_at_war_with = top_liege
+				}
+			}
+		}
+	}
+	effect = {
+		scope:barony.title_province = {
+			every_army_in_location = {
+				limit = {
+					army_owner = {
+						OR = {
+							has_title = title:e_greatming
+							AND = {
+								exists = top_liege
+								top_liege = {
+									has_title = title:e_greatming
+								}
+							}
+						}
+					}
+				}
+				#军队指挥官军功
+				army_commander ?= {
+					save_scope_as = Siege_army_commander
+					if = {
+						limit = {
+							exists = top_liege
+							top_liege = {
+								has_title = title:e_greatming
+							}
+							NOR = { 
+								exists = var:jungong 
+								has_title = title:e_greatming
+							}
+						}
+						set_variable = { 
+							name = jungong 
+							value = 0 
+						} 
+					}
+					if = {
+						limit = {
+							exists = top_liege
+							top_liege = {
+								has_title = title:e_greatming
+							}
+							NOR = { 
+								has_title = title:e_greatming
+							}
+						}
+						change_variable = {
+							name = jungong 
+							add = {
+								value = 2
+								divide = {
+									value = 0
+									scope:barony.title_province = {
+										every_army_in_location = {
+											limit = {
+												army_owner = {
+													OR = {
+														has_title = title:e_greatming
+														AND = {
+															exists = top_liege
+															top_liege = {
+																has_title = title:e_greatming
+															}
+														}
+													}
+												}
+											}
+											add = 1
+										}
+									}
+								}
+							}
+						}
+						if = {
+							limit = {
+								scope:county = {
+									holder.highest_held_title_tier >= tier_duchy
+									this = holder.capital_county
+								}
+								scope:barony = {
+									holder.highest_held_title_tier >= tier_duchy
+									is_capital_barony = yes
+								}
+							}
+							create_character_memory = {
+								type = GM_Siege_completion_memory
+							}
+							scope:new_memory = {
+								set_variable = {
+									name = Siege_location
+									value = scope:barony
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							has_title = title:e_greatming
+						}
+						set_variable = {
+							name = temp_huangquan
+							value = {
+								value = 1
+								divide = {
+									value = 0
+									scope:barony.title_province = {
+										every_army_in_location = {
+											limit = {
+												army_owner = {
+													OR = {
+														has_title = title:e_greatming
+														AND = {
+															exists = top_liege
+															top_liege = {
+																has_title = title:e_greatming
+															}
+														}
+													}
+												}
+											}
+											add = 1
+										}
+									}
+								}
+							}
+						}
+						HQ_change = {
+							CHANGE = var:temp_huangquan
+							CHECK = 437639088
+						}
+						remove_variable = temp_huangquan
+					}
+				}
+				#军队所有者及骑士军功
+				army_owner = {
+					save_scope_as = Siege_army_owner
+					if = {
+						limit = {
+							exists = top_liege
+							top_liege = {
+								has_title = title:e_greatming
+							}
+							NOR = { 
+								exists = var:jungong 
+								has_title = title:e_greatming
+							}
+						}
+						set_variable = { 
+							name = jungong 
+							value = 0 
+						} 
+					}
+					else_if = {
+						limit = {
+							has_title = title:e_greatming
+							employs_court_position = court_JY_RZ_position
+							any_court_position_holder = {
+								type = court_JY_RZ_position
+								NOR = {
+									exists = var:jungong
+								}
+							}
+						}
+						random_court_position_holder = {
+							type = court_JY_RZ_position
+							set_variable = {
+								name = jungong
+								value = 0
+							}
+						}
+					}
+
+					if = {
+						limit = {
+							exists = top_liege
+							top_liege = {
+								has_title = title:e_greatming
+							}
+							NOR = {
+								has_title = title:e_greatming
+							}
+						}
+						change_variable = {
+							name = jungong 
+							add = {
+								value = 1
+								divide = {
+									value = 0
+									scope:barony.title_province = {
+										every_army_in_location = {
+											limit = {
+												army_owner = {
+													OR = {
+														has_title = title:e_greatming
+														AND = {
+															exists = top_liege
+															top_liege = {
+																has_title = title:e_greatming
+															}
+														}
+													}
+												}
+											}
+											add = 1
+										}
+									}
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							has_title = title:e_greatming
+							employs_court_position = court_JY_RZ_position
+						}
+						random_court_position_holder = {
+							type = court_JY_RZ_position
+							change_variable = {
+								name = jungong 
+								add = {
+									value = 1
+									divide = {
+										value = 0
+										scope:barony.title_province = {
+											every_army_in_location = {
+												limit = {
+													army_owner = {
+														OR = {
+															has_title = title:e_greatming
+															AND = {
+																exists = top_liege
+																top_liege = {
+																	has_title = title:e_greatming
+																}
+															}
+														}
+													}
+												}
+												add = 1
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+
+					if = {
+						limit = {
+							any_knight = {
+								exists = top_liege
+								top_liege = {
+									has_title = title:e_greatming
+								}
+								exists = location
+								location = scope:barony.title_province
+								exists = scope:Siege_army_commander
+								knight_army = scope:Siege_army_commander.commanding_army
+							}
+						}
+						every_knight = {
+							limit = {
+								exists = top_liege
+								top_liege = {
+									has_title = title:e_greatming
+								}
+								is_in_army = yes
+								exists = location
+								location = scope:barony.title_province
+								exists = scope:Siege_army_commander
+								knight_army = scope:Siege_army_commander.commanding_army
+							}
+							if = {
+								limit = {
+									scope:county = {
+										holder.highest_held_title_tier >= tier_duchy
+										this = holder.capital_county
+									}
+									scope:barony = {
+										holder.highest_held_title_tier >= tier_duchy
+										is_capital_barony = yes
+									}
+								}
+								create_character_memory = {
+									type = GM_Siege_completion_Knight_memory
+									participants = {
+										Siege_army_commander = scope:Siege_army_commander
+									}
+								}
+								scope:new_memory = {
+									set_variable = {
+										name = Siege_location
+										value = scope:barony
+									}
+								}
+							}
+							if = {
+								limit = {
+									exists = top_liege
+									top_liege = {
+										has_title = title:e_greatming
+									}
+									NOR = { 
+										exists = var:jungong 
+										has_title = title:e_greatming
+									}
+								}
+								set_variable = { 
+									name = jungong 
+									value = 0 
+								} 
+							}
+							change_variable = {
+								name = jungong
+								add = {
+									value = 3
+									divide = {
+										scope:barony.title_province = {
+											every_army_in_location = {
+												limit = {
+													army_owner = {
+														OR = {
+															has_title = title:e_greatming
+															AND = {
+																exists = top_liege
+																top_liege = {
+																	has_title = title:e_greatming
+																}
+															}
+														}
+													}
+												}
+												army_owner = {
+													every_knight = {
+														limit = {
+															exists = top_liege
+															top_liege = {
+																has_title = title:e_greatming
+															}
+															is_in_army = yes
+															exists = location
+															location = scope:barony.title_province
+															exists = scope:Siege_army_commander
+															knight_army = scope:Siege_army_commander.commanding_army
+														}
+														add = 1
+													}
+												}
+											}
+										}
+										min = 1
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#进攻战争胜利，HQ计数
+huangquan_war_won_attacker = {
+	trigger = {
+		OR = {
+			scope:attacker = {
+				has_title = title:e_greatming
+			}
+			scope:defender = {
+				has_title = title:e_greatming
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				scope:attacker = {
+					has_title = title:e_greatming
+				}
+			}
+			scope:attacker = {
+				HQ_change = {
+					CHANGE = 10
+					CHECK = 202301102000
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:defender = {
+					has_title = title:e_greatming
+				}
+			}
+			scope:defender = {
+				HQ_change = {
+					CHANGE = -20
+					CHECK = 202301102000
+				}
+			}
+		}
+	}
+}
+
+#防守战争胜利，HQ计数
+huangquan_war_won_defender = {
+	trigger = {
+		OR = {
+			scope:attacker = {
+				has_title = title:e_greatming
+			}
+			scope:defender = {
+				has_title = title:e_greatming
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				scope:defender = {
+					has_title = title:e_greatming
+				}
+			}
+			scope:defender = {
+				HQ_change = {
+					CHANGE = 5
+					CHECK = 202301102000
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:attacker = {
+					has_title = title:e_greatming
+				}
+			}
+			scope:attacker = {
+				HQ_change = {
+					CHANGE = -20
+					CHECK = 202301102000
+				}
+			}
+		}
+	}
+}
+
+#战败主将、骑士军功、HQ计数
+commander_jungong_pulse_loser = {
+	trigger = {
+		exists = side_commander
+		side_commander = {
+			OR = {
+				AND = {
+					exists = top_liege
+					top_liege = {
+						has_title = title:e_greatming
+					}
+				}
+				has_title = title:e_greatming
+			}
+		}
+	}
+	effect = {
+		side_commander = {
+			if = {
+				limit = {
+					NOT = {
+						has_title = title:e_greatming
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_variable = jungong
+						}
+					}
+					set_variable = {
+						name = jungong
+						value = -4
+					}
+				}
+				else = {
+					change_variable = {
+						name = jungong
+						subtract = 4
+					}
+				}
+			}
+			else = {
+				HQ_change = {
+					CHANGE = -5
+					CHECK = 202301102000
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_side_knight = {
+					exists = top_liege
+					top_liege = {
+						has_title = title:e_greatming
+					}
+					NOR = {
+						has_trait = slave
+						has_trait = bamian_gezhi
+						has_trait = shouma
+					}
+				}
+			}
+			every_side_knight = {
+				limit = {
+					exists = top_liege
+					top_liege = {
+						has_title = title:e_greatming
+					}
+					NOR = {
+						has_trait = slave
+						has_trait = bamian_gezhi
+						has_trait = shouma
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_variable = jungong
+						}
+					}
+					set_variable = {
+						name = jungong
+						value = -1
+					}
+				}
+				else = {
+					change_variable = {
+						name = jungong
+						subtract = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+#功勋计数
+gongxunjishu_yearly_pulse = {
+	trigger = {
+		exists = top_liege
+		top_liege = {
+			has_title = title:e_greatming
+		}
+		OR = {
+			AND = {
+				is_ruler = yes
+				OR = {
+					has_government = sansizhi_government
+					has_government = weisuozhi_government
+				}
+			}
+			AND = {
+				is_ruler = no
+				liuguan_jiuqin_trigger = yes
+			}
+			has_trait = daxueshi
+			is_councillor = yes
+		}
+	}
+	effect = {
+		root = {
+			if = {
+				limit = {
+					NOT = {
+						has_variable = gongxun
+					}
+				}
+				set_variable = {
+					name = gongxun
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					has_trait = daxueshi
+				}
+				change_variable = {
+					name = gongxun
+					add = 4
+				}
+			}
+			else_if = {
+				limit = {
+					liuguan_jiuqin_trigger = yes
+				}
+				change_variable = {
+					name = gongxun
+					add = 3
+				}
+			}
+			else_if = {
+				limit = {
+					is_councillor = yes
+					liege = {
+						highest_held_title_tier = tier_empire
+					}
+				}
+				change_variable = {
+					name = gongxun
+					add = 2
+				}
+			}
+			else_if = {
+				limit = {
+					is_councillor = yes
+					liege = {
+						highest_held_title_tier = tier_kingdom
+					}
+				}
+				change_variable = {
+					name = gongxun
+					add = 1.5
+				}
+			}
+			else_if = {
+				limit = {
+					is_councillor = yes
+					liege = {
+						highest_held_title_tier = tier_duchy
+					}
+				}
+				change_variable = {
+					name = gongxun
+					add = 1
+				}
+			}
+			else_if = {
+				limit = {
+					is_councillor = yes
+					liege = {
+						highest_held_title_tier = tier_county
+					}
+				}
+				change_variable = {
+					name = gongxun
+					add = 0.5
+				}
+			}
+		}
+	}
+}
+#HQ值季度计数
+huangquan_quarterly_pulse = {
+	trigger = {
+		root = {
+			has_title = title:e_greatming
+            is_ai = yes
+		}
+	}
+	effect = {
+		root = {
+			HQ_change = {
+				CHANGE = huang_quan_score
+				CHECK = 202301102000
+			}
+		}
+	}
+}

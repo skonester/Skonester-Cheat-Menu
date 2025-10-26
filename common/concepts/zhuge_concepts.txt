@@ -1,0 +1,5 @@
+concept_wanderer = {
+    name = wanderer
+    icon = "learning"  # 可换成你自己的图标定义
+    description = wanderer_concept_desc
+}

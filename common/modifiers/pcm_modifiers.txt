@@ -1,0 +1,7 @@
+﻿#pcm_dynasty_super_modifier = {
+#icon = super.dds
+#}
+
+pcm_house_super_modifier = {
+icon = super.dds
+}

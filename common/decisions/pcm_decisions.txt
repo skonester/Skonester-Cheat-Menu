@@ -1,0 +1,458 @@
+﻿pcm_money_decision = {
+	decision_group_type = pcm
+	picture = { reference = gfx/interface/illustrations/decisions/pcm_decision.dds }
+	title = pcm_money_decision_title
+    desc = pcm_money_decision_desc
+    selection_tooltip = pcm_money_decision_tooltip
+    confirm_text = pcm_money_decision_ct
+
+	is_shown = {
+		is_ai = no
+		has_character_flag = pcm_show_decision_flag
+	}
+
+	effect = {
+        add_gold = 100000
+		add_prestige = 100000
+		add_piety = 100000
+		root.dynasty = {
+			add_dynasty_prestige = 100000
+		}
+	}
+    ai_will_do = { base = 0 }
+	ai_check_interval = 0
+}
+
+pcm_convert_subrealm_to_culture_decision = {
+	decision_group_type = pcm
+	picture = { reference = gfx/interface/illustrations/decisions/pcm_decision.dds }
+	title = pcm_subrealm_to_culture_decision_title
+    desc = pcm_subrealm_to_culture_decision_desc
+    selection_tooltip = pcm_subrealm_to_culture_decision_tooltip
+    confirm_text = pcm_subrealm_to_culture_decision_ct
+
+	is_shown = {
+		is_ai = no
+		has_character_flag = pcm_show_decision_flag
+	}
+
+	effect = {
+		every_sub_realm_county = {
+			limit = { NOT = { culture = root.culture } }
+			set_county_culture = root.culture
+		}
+		every_vassal_or_below = {
+			limit = { NOT = { culture = root.culture } }
+			set_culture = root.culture
+		}
+		every_child = {
+			limit = { NOT = { culture = root.culture} }
+			set_culture = root.culture
+		}
+		every_consort = {
+			limit = { NOT = { culture = root.culture } }
+			set_culture = root.culture
+		}
+		every_close_family_member = {
+			limit = { NOT = { culture = root.culture } }
+			set_culture = root.culture
+		}
+		every_heir = {
+			limit = { NOT = { culture = root.culture } }
+			set_culture = root.culture
+		}
+		house = {
+			every_house_member = {
+				limit = {
+					is_alive = yes
+					NOT = { culture = root.culture }
+				}
+				set_culture = root.culture
+			}
+		}
+	}
+    ai_will_do = { base = 0 }
+	ai_check_interval = 0
+}
+
+pcm_convert_subrealm_to_religion_decision = {
+	decision_group_type = pcm
+	picture = { reference = gfx/interface/illustrations/decisions/pcm_decision.dds }
+	title = pcm_convert_subrealm_to_religion_decision_title
+    desc = pcm_convert_subrealm_to_religion_decision_desc
+    selection_tooltip = pcm_convert_subrealm_to_religion_decision_tooltip
+    confirm_text = pcm_convert_subrealm_to_religion_decision_ct
+
+	is_shown = {
+		is_ai = no
+		has_character_flag = pcm_show_decision_flag
+	}
+
+	effect = {
+		every_sub_realm_county = {
+			limit = { NOT = { faith = root.faith } }
+			set_county_faith = root.faith
+		}
+		every_vassal_or_below = {
+			limit = { NOT = { faith = root.faith } }
+			set_character_faith_with_conversion = root.faith
+		}
+		every_child = {
+			limit = { NOT = { faith = root.faith } }
+			set_character_faith_with_conversion = root.faith
+		}
+		every_consort = {
+			limit = { NOT = { faith = root.faith } }
+			set_character_faith_with_conversion = root.faith
+		}
+		house = {
+			every_house_member = {
+				limit = {
+					is_alive = yes
+					NOT = { faith = root.faith }
+				}
+				set_character_faith_with_conversion = root.faith
+			}
+		}
+	}
+
+    ai_will_do = { base = 0 }
+	ai_check_interval = 0
+}
+
+pcm_show_decision = {
+    decision_group_type = pcm
+	picture = { reference = gfx/interface/illustrations/decisions/pcm_show_decision.dds }
+	title = pcm_show_decision_title
+    desc = pcm_show_decision_desc
+    selection_tooltip = pcm_show_decision_tooltip
+    confirm_text = pcm_show_decision_ct
+
+    is_shown = {
+		is_ai = no
+	    NOT = { has_character_flag = pcm_show_decision_flag }
+    }
+
+    effect = {
+        add_character_flag = pcm_show_decision_flag
+    }
+	
+    ai_will_do = { base = 0 }
+	ai_check_interval = 0
+}
+
+pcm_hide_decision = {
+    decision_group_type = pcm
+	picture = { reference = gfx/interface/illustrations/decisions/pcm_hide_decision.dds }
+	title = pcm_hide_decision_title
+    desc = pcm_hide_decision_desc
+    selection_tooltip = pcm_hide_decision_tooltip
+    confirm_text = pcm_hide_decision_ct
+
+    is_shown = {
+		is_ai = no
+	    has_character_flag = pcm_show_decision_flag
+    }
+
+    effect = {
+        remove_character_flag = pcm_show_decision_flag
+    }
+    ai_will_do = { base = 0 }
+	ai_check_interval = 0
+}
+
+pcm_cure_pox_decision = {
+	decision_group_type = pcm
+	picture = { reference = gfx/interface/illustrations/decisions/pcm_decision.dds }
+	title = pcm_cure_pox_decision_title
+    desc = pcm_cure_pox_decision_desc
+    selection_tooltip = pcm_cure_pox_decision_tooltip
+    confirm_text = pcm_cure_pox_decision_ct
+
+	is_shown = {
+		is_ai = no
+		has_character_flag = pcm_show_decision_flag
+	}
+
+	effect = {
+		every_vassal_or_below = {
+			remove_trait = lovers_pox
+			remove_trait = great_pox
+			remove_trait = early_great_pox
+			remove_trait = ill
+			remove_trait = pneumonic
+			remove_trait = leper
+			remove_trait = gout_ridden
+			remove_trait = consumption
+			remove_trait = cancer
+			remove_trait = typhus
+			remove_trait = bubonic_plague
+			remove_trait = smallpox
+			remove_trait = measles
+			remove_trait = dysentery
+			remove_trait = ergotism
+			remove_trait = sickly
+		}
+		every_child = {
+			remove_trait = lovers_pox
+			remove_trait = great_pox
+			remove_trait = early_great_pox
+			remove_trait = ill
+			remove_trait = pneumonic
+			remove_trait = leper
+			remove_trait = gout_ridden
+			remove_trait = consumption
+			remove_trait = cancer
+			remove_trait = typhus
+			remove_trait = bubonic_plague
+			remove_trait = smallpox
+			remove_trait = measles
+			remove_trait = dysentery
+			remove_trait = ergotism
+			remove_trait = sickly
+		}
+		every_consort = {
+			remove_trait = lovers_pox
+			remove_trait = great_pox
+			remove_trait = early_great_pox
+			remove_trait = ill
+			remove_trait = pneumonic
+			remove_trait = leper
+			remove_trait = gout_ridden
+			remove_trait = consumption
+			remove_trait = cancer
+			remove_trait = typhus
+			remove_trait = bubonic_plague
+			remove_trait = smallpox
+			remove_trait = measles
+			remove_trait = dysentery
+			remove_trait = ergotism
+			remove_trait = sickly
+		}
+		house = {
+			every_house_member = {
+				remove_trait = lovers_pox
+				remove_trait = great_pox
+				remove_trait = early_great_pox
+				remove_trait = ill
+				remove_trait = pneumonic
+				remove_trait = leper
+				remove_trait = gout_ridden
+				remove_trait = consumption
+				remove_trait = cancer
+				remove_trait = typhus
+				remove_trait = bubonic_plague
+				remove_trait = smallpox
+				remove_trait = measles
+				remove_trait = dysentery
+				remove_trait = ergotism
+				remove_trait = sickly
+			}
+		}
+	}
+
+    ai_will_do = { base = 0 }
+	ai_check_interval = 0
+}
+
+pcm_cure_all_decision = {
+	decision_group_type = pcm
+	picture = { reference = gfx/interface/illustrations/decisions/pcm_decision.dds }
+	title = pcm_cure_all_decision_title
+    desc = pcm_cure_all_decision_desc
+    selection_tooltip = pcm_cure_all_decision_tooltip
+    confirm_text = pcm_cure_all_decision_ct
+
+	is_shown = {
+		is_ai = no
+		has_character_flag = pcm_show_decision_flag
+	}
+
+	effect = {
+		every_vassal_or_below = {
+			remove_trait = lovers_pox
+			remove_trait = great_pox
+			remove_trait = early_great_pox
+			remove_trait = ill
+			remove_trait = pneumonic
+			remove_trait = leper
+			remove_trait = gout_ridden
+			remove_trait = consumption
+			remove_trait = cancer
+			remove_trait = typhus
+			remove_trait = bubonic_plague
+			remove_trait = smallpox
+			remove_trait = measles
+			remove_trait = dysentery
+			remove_trait = ergotism
+			remove_trait = sickly
+			remove_trait = wounded_1
+			remove_trait = wounded_2
+			remove_trait = wounded_3
+			remove_trait = maimed
+			remove_trait = one_eyed
+			remove_trait = one_legged
+			remove_trait = disfigured
+			remove_trait = infirm
+			remove_trait = incapable
+			remove_trait = blind
+		}
+		every_child = {
+			remove_trait = lovers_pox
+			remove_trait = great_pox
+			remove_trait = early_great_pox
+			remove_trait = ill
+			remove_trait = pneumonic
+			remove_trait = leper
+			remove_trait = gout_ridden
+			remove_trait = consumption
+			remove_trait = cancer
+			remove_trait = typhus
+			remove_trait = bubonic_plague
+			remove_trait = smallpox
+			remove_trait = measles
+			remove_trait = dysentery
+			remove_trait = ergotism
+			remove_trait = sickly
+			remove_trait = wounded_1
+			remove_trait = wounded_2
+			remove_trait = wounded_3
+			remove_trait = maimed
+			remove_trait = one_eyed
+			remove_trait = one_legged
+			remove_trait = disfigured
+			remove_trait = infirm
+			remove_trait = incapable
+			remove_trait = blind
+		}
+		every_consort = {
+			remove_trait = lovers_pox
+			remove_trait = great_pox
+			remove_trait = early_great_pox
+			remove_trait = ill
+			remove_trait = pneumonic
+			remove_trait = leper
+			remove_trait = gout_ridden
+			remove_trait = consumption
+			remove_trait = cancer
+			remove_trait = typhus
+			remove_trait = bubonic_plague
+			remove_trait = smallpox
+			remove_trait = measles
+			remove_trait = dysentery
+			remove_trait = ergotism
+			remove_trait = sickly
+			remove_trait = wounded_1
+			remove_trait = wounded_2
+			remove_trait = wounded_3
+			remove_trait = maimed
+			remove_trait = one_eyed
+			remove_trait = one_legged
+			remove_trait = disfigured
+			remove_trait = infirm
+			remove_trait = incapable
+			remove_trait = blind
+		}
+		house = {
+			every_house_member = {
+				remove_trait = lovers_pox
+				remove_trait = great_pox
+				remove_trait = early_great_pox
+				remove_trait = ill
+				remove_trait = pneumonic
+				remove_trait = leper
+				remove_trait = gout_ridden
+				remove_trait = consumption
+				remove_trait = cancer
+				remove_trait = typhus
+				remove_trait = bubonic_plague
+				remove_trait = smallpox
+				remove_trait = measles
+				remove_trait = dysentery
+				remove_trait = ergotism
+				remove_trait = sickly
+				remove_trait = wounded_1
+				remove_trait = wounded_2
+				remove_trait = wounded_3
+				remove_trait = maimed
+				remove_trait = one_eyed
+				remove_trait = one_legged
+				remove_trait = disfigured
+				remove_trait = infirm
+				remove_trait = incapable
+				remove_trait = blind
+			}
+		}
+	}
+    ai_will_do = { base = 0 }
+	ai_check_interval = 0
+}
+
+pcm_cure_inbred_decision = {
+	decision_group_type = pcm
+	picture = { reference = gfx/interface/illustrations/decisions/pcm_decision.dds }
+	title = pcm_cure_inbred_decision_title
+    desc = pcm_cure_inbred_decision_desc
+    selection_tooltip = pcm_cure_inbred_decision_tooltip
+    confirm_text = pcm_cure_inbred_decision_ct
+
+	is_shown = {
+		is_ai = no
+		has_character_flag = pcm_show_decision_flag
+	}
+
+	effect = {
+		every_vassal_or_below = {
+			remove_trait = clubfooted
+			remove_trait = hunchbacked
+			remove_trait = dwarf
+			remove_trait = giant
+			remove_trait = spindly
+			remove_trait = scaly
+			remove_trait = wheezing
+			remove_trait = bleeder
+			remove_trait = infertile
+			remove_trait = inbred
+		}
+		every_child = {
+			remove_trait = clubfooted
+			remove_trait = hunchbacked
+			remove_trait = dwarf
+			remove_trait = giant
+			remove_trait = spindly
+			remove_trait = scaly
+			remove_trait = wheezing
+			remove_trait = bleeder
+			remove_trait = infertile
+			remove_trait = inbred
+		}
+		every_consort = {
+			remove_trait = clubfooted
+			remove_trait = hunchbacked
+			remove_trait = dwarf
+			remove_trait = giant
+			remove_trait = spindly
+			remove_trait = scaly
+			remove_trait = wheezing
+			remove_trait = bleeder
+			remove_trait = infertile
+			remove_trait = inbred
+		}
+		house = {
+			every_house_member = {
+				remove_trait = clubfooted
+				remove_trait = hunchbacked
+				remove_trait = dwarf
+				remove_trait = giant
+				remove_trait = spindly
+				remove_trait = scaly
+				remove_trait = wheezing
+				remove_trait = bleeder
+				remove_trait = infertile
+				remove_trait = inbred
+			}
+		}
+	}
+    ai_will_do = { base = 0 }
+	ai_check_interval = 0
+}

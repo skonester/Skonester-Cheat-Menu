@@ -1,0 +1,5 @@
+﻿### 宝物 ###
+guoxi1 = { #国玺
+	icon = "chuanguoxi.dds"
+	asset = ep1_generic_jewelry_01_a_entity
+}

@@ -1,0 +1,31 @@
+﻿zhuge_huangzu_baowu = {
+	icon = learning_positive
+	legitimacy_gain_mult = 6.66
+	short_reign_duration_mult = -1
+	long_reign_bonus_mult = 0.25
+	martial = 10
+	diplomacy = 10
+	intrigue = 10
+	learning = 10
+	stewardship = 10
+	prowess = 10
+	fertility = 0.5
+	#type = dynasty
+}
+
+zhuge_huangzu = {
+	icon = legitimacy_positive
+	legitimacy_gain_mult = 6
+	prestige = 0.1
+	martial = 10
+	diplomacy = 10
+	intrigue = 10
+	learning = 10
+	stewardship = 10
+	prowess = 10
+	dread_gain_mult = 0.2
+	monthly_prestige = 10
+	vassal_opinion = 30
+	dynasty_house_opinion = 30
+	fertility = -0.3
+}

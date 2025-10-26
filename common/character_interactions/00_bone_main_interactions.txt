@@ -1,0 +1,283 @@
+﻿open_bone_cheat_interactions = {
+	category = interaction_category_cheat_menu
+	icon = on
+	desc = bone_cheat_interactions_desc
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			NOT = {
+				has_character_flag = bone_cheat_interactions_flag
+			}
+		}
+	}
+	on_send = {
+		scope:actor = {
+			add_character_flag = bone_cheat_interactions_flag
+		}
+	}
+}
+close_bone_cheat_interactions = {
+	category = interaction_category_cheat_menu
+	icon = off
+	desc = bone_cheat_interactions_desc
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			has_character_flag = bone_cheat_interactions_flag
+		}
+	}
+	on_send = {
+		scope:actor = {
+			remove_character_flag = bone_cheat_interactions_flag
+		}
+	}
+}
+bone_add_to_court = {
+	category = interaction_category_cheat_menu
+	icon = on
+	desc = bone_add_to_court_desc
+	common_interaction = no
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:recipient = {
+			is_landed = no
+			NOT = {
+				is_courtier_of = scope:actor
+			}
+		}
+		scope:actor = {
+			is_ai = no
+			has_character_flag = bone_cheat_interactions_flag
+			is_landed = yes
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			add_courtier = scope:recipient
+		}
+	}
+}
+bone_add_gold_and_prestige = {
+	category = interaction_category_cheat_menu
+	icon = on
+	desc = bone_add_gold_and_prestige_desc
+	common_interaction = no
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		scope:recipient = {
+			is_landed = yes
+		}
+		scope:actor = {
+			is_ai = no
+			has_character_flag = bone_cheat_interactions_flag
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			add_gold = 1000
+			add_prestige_no_experience = 1000
+		}
+	}
+}
+bone_start_pregnancy_interaction = {
+	category = interaction_category_cheat_menu
+	icon = lady2
+	desc = bone_start_pregnancy_interaction_desc
+	common_interaction = no
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			has_character_flag = bone_cheat_interactions_flag
+		}
+		scope:recipient = { 
+			is_adult = yes 
+			is_pregnant = no
+		}
+		scope:actor = { 
+			is_adult = yes
+			is_pregnant = no
+		 }
+		OR = {
+			AND = {
+				scope:recipient = { is_female = yes }
+				scope:actor = { is_male = yes }
+			}
+			AND = {
+				scope:recipient = { is_male = yes }
+				scope:actor = { is_female = yes }
+			}
+		}
+	}
+	on_accept = {
+		scope:actor = { trigger_event = debug.0002 }
+	}
+	auto_accept = yes
+}
+bone_add_weak_hook_interaction = {
+	category = interaction_category_cheat_menu
+	icon = on
+	desc = bone_add_weak_hook_interaction_desc
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = {
+			is_ai = no
+			has_character_flag = bone_cheat_interactions_flag
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			add_hook = {
+				target = scope:recipient
+				type = favor_hook
+			}
+		}
+	}
+}
+bone_add_strong_hook_interaction = {
+	category = interaction_category_cheat_menu
+	icon = on
+	desc = bone_add_strong_hook_interaction_desc
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = {
+			is_ai = no
+			has_character_flag = bone_cheat_interactions_flag
+		}
+	}
+	on_accept = {
+		scope:actor = {
+			add_hook = {
+				target = scope:recipient
+				type = strong_test_hook
+			}
+		}
+	}
+}
+bone_slay_character_interaction = {
+	category = interaction_category_cheat_menu
+	icon = on
+	desc = bone_slay_character_interaction_desc
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	interface_priority = -1
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			has_character_flag = bone_cheat_interactions_flag
+		}
+	}
+	on_accept = {
+		random_independent_ruler = {
+			save_scope_as = rando
+		}
+		scope:recipient = {
+			death = {
+				death_reason = death_assassination
+				killer = scope:rando
+			}
+		}
+	}
+	auto_accept = yes
+}
+bone_take_title_interaction = {
+	category = interaction_category_cheat_menu
+	icon = on
+	desc = bone_take_title_interaction_desc
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		NOT = {scope:recipient = scope:actor}
+		scope:recipient = { 
+			is_landed = yes 
+		}
+		scope:actor = {
+			is_ai = no
+			has_character_flag = bone_cheat_interactions_flag
+		}
+	}
+	auto_accept = yes
+	on_accept = {
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		scope:recipient.primary_title = {
+			change_title_holder = {
+				holder = scope:actor
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+	}
+}
+bone_change_religion = {
+	category = interaction_category_cheat_menu
+	icon = on
+	desc = bone_change_religion_desc
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		NOT = { scope:actor.faith = scope:recipient.faith }
+		scope:actor = {
+			is_ai = no
+			has_character_flag = bone_cheat_interactions_flag
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			set_character_faith = scope:actor.faith
+		}
+	}
+}
+bone_change_culture = {
+	category = interaction_category_cheat_menu
+	icon = on
+	desc = bone_change_culture_desc
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		NOT = { scope:actor.culture = scope:recipient.culture }
+		scope:actor = {
+			is_ai = no
+			has_character_flag = bone_cheat_interactions_flag
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			set_culture = scope:actor.culture
+		}
+	}
+}

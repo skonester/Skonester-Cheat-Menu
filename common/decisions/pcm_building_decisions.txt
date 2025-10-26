@@ -1,0 +1,1528 @@
+﻿## Building decisions are separated to make it easy moving it to separate mod
+## use pcm_b_ prefix
+
+pcm_b_add_building_slot_7_sub_realm_decision = {
+	decision_group_type = pcm
+	picture = {	reference = gfx/interface/illustrations/decisions/pcm_b_decision.dds }
+	sort_order = 312
+	title = pcm_b_add_building_slot_7_sub_realm_decision_title
+ 	desc = pcm_b_add_building_slot_7_sub_realm_decision_desc
+    selection_tooltip = pcm_b_add_building_slot_7_sub_realm_decision_tooltip
+    confirm_text = pcm_b_add_building_slot_7_sub_realm_decision_ct
+
+    is_shown = {
+		is_ai = no
+	    has_character_flag = pcm_b_show_decision_flag
+    }
+
+	effect = {
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = { building_slots = 7}
+					add_province_modifier = extra_building_slot
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = { building_slots = 6}
+					add_province_modifier = extra_building_slot
+					add_province_modifier = extra_building_slot
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = { building_slots = 5}
+					add_province_modifier = extra_building_slot
+					add_province_modifier = extra_building_slot
+					add_province_modifier = extra_building_slot
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = { building_slots = 4}
+					add_province_modifier = extra_building_slot
+					add_province_modifier = extra_building_slot
+					add_province_modifier = extra_building_slot
+					add_province_modifier = extra_building_slot
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = { building_slots = 3}
+					add_province_modifier = extra_building_slot
+					add_province_modifier = extra_building_slot
+					add_province_modifier = extra_building_slot
+					add_province_modifier = extra_building_slot
+					add_province_modifier = extra_building_slot
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = { building_slots = 2}
+					add_province_modifier = extra_building_slot
+					add_province_modifier = extra_building_slot
+					add_province_modifier = extra_building_slot
+					add_province_modifier = extra_building_slot
+					add_province_modifier = extra_building_slot
+					add_province_modifier = extra_building_slot
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = { building_slots = 1}
+					add_province_modifier = extra_building_slot
+					add_province_modifier = extra_building_slot
+					add_province_modifier = extra_building_slot
+					add_province_modifier = extra_building_slot
+					add_province_modifier = extra_building_slot
+					add_province_modifier = extra_building_slot
+					add_province_modifier = extra_building_slot
+				}
+			}
+		}
+	}
+    ai_will_do = { base = 0 }
+	ai_check_interval = 0
+}
+
+pcm_b_max_all_buildings_sub_realm_decision = {
+	decision_group_type = pcm
+	picture = {	reference = gfx/interface/illustrations/decisions/pcm_b_decision.dds }
+	sort_order = 310
+	title = pcm_b_max_all_buildings_sub_realm_decision_title
+    desc = pcm_b_max_all_buildings_sub_realm_decision_desc
+    selection_tooltip = pcm_b_max_all_buildings_sub_realm_decision_tooltip
+    confirm_text = pcm_b_max_all_buildings_sub_realm_decision_ct
+
+    is_shown = {
+		is_ai = no
+	    has_character_flag = pcm_b_show_decision_flag
+    }
+
+	effect = {
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						has_building = tribe_01				
+					}				
+					add_building = tribe_02
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+						has_building = castle_01
+						has_building = castle_02
+						has_building = castle_03				
+						}
+					}
+					add_building = castle_04
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+						has_building = city_01
+						has_building = city_02
+						has_building = city_03
+						}
+					}
+					add_building = city_04
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							has_building = temple_01
+							has_building = temple_02
+							has_building = temple_03
+						}
+					}
+					add_building = temple_04
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							has_building = guild_halls_01
+							has_building = guild_halls_02
+							has_building = guild_halls_03
+							has_building = guild_halls_04
+							has_building = guild_halls_05
+							has_building = guild_halls_06
+							has_building = guild_halls_07
+						}
+					}
+					add_building = guild_halls_08
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							has_building = common_tradeport_01
+							has_building = common_tradeport_02
+							has_building = common_tradeport_03
+							has_building = common_tradeport_04
+							has_building = common_tradeport_05
+							has_building = common_tradeport_06
+							has_building = common_tradeport_07
+						}
+					}
+					add_building = common_tradeport_08
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							has_building = military_academy_01 
+							has_building = military_academy_02
+						}
+					}
+					add_building = military_academy_03 
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							has_building = march_01
+							has_building = march_02
+						}
+					}
+					add_building = march_03
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							has_building = siege_works_01
+							has_building = siege_works_02
+						}
+					}
+					add_building = siege_works_03
+				}
+			}
+		}
+		if = {							
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = royal_armory_01
+							has_building = royal_armory_02
+						}	
+					}		
+					add_building = royal_armory_03		
+				}			
+			}				
+		}
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = jousting_lists_01
+							has_building = jousting_lists_02
+						}	
+					}		
+					add_building = jousting_lists_03		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = blacksmiths_01
+							has_building = blacksmiths_02
+						}	
+					}		
+					add_building = blacksmiths_03		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = archery_ranges_01
+							has_building = archery_ranges_02
+						}	
+					}		
+					add_building = archery_ranges_03		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = tax_assessor_01
+							has_building = tax_assessor_02
+						}	
+					}		
+					add_building = tax_assessor_03		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = leisure_palace_01
+							has_building = leisure_palace_02
+						}	
+					}		
+					add_building = leisure_palace_03		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = royal_forest_01
+							has_building = royal_forest_02
+						}	
+					}		
+					add_building = royal_forest_03		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = alhambra_01
+						}	
+					}		
+					add_building = alhambra_02		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = citadel_of_aleppo_01
+						}	
+					}		
+					add_building = citadel_of_aleppo_02		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = hagia_sophia_01
+						}	
+					}		
+					add_building = hagia_sophia_02		
+				}			
+			}				
+		}
+		if = {		
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = longhouses_01
+						}	
+					}		
+					add_building = longhouses_02		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = war_camps_01
+						}	
+					}		
+					add_building = war_camps_02		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = palisades_01
+						}	
+					}		
+					add_building = palisades_02		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = market_villages_01
+						}	
+					}		
+					add_building = market_villages_02		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = kutna_hora_mines_01
+							has_building = kutna_hora_mines_02
+							has_building = kutna_hora_mines_03
+						}	
+					}		
+					add_building = kutna_hora_mines_04		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = rammelsberg_mines_01
+							has_building = rammelsberg_mines_02
+							has_building = rammelsberg_mines_03
+						}	
+					}		
+					add_building = rammelsberg_mines_04		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = kremnica_mines_01
+							has_building = kremnica_mines_02
+							has_building = kremnica_mines_03
+						}	
+					}		
+					add_building = kremnica_mines_04		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = falun_mines_01
+							has_building = falun_mines_02
+							has_building = falun_mines_03
+						}	
+					}		
+					add_building = falun_mines_04		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = schwaz_mines_01
+							has_building = schwaz_mines_02
+							has_building = schwaz_mines_03
+						}	
+					}		
+					add_building = schwaz_mines_04		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = argentiera_mines_01
+							has_building = argentiera_mines_02
+							has_building = argentiera_mines_03
+						}	
+					}		
+					add_building = argentiera_mines_04		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = kollur_mines_01
+							has_building = kollur_mines_02
+							has_building = kollur_mines_03
+						}	
+					}		
+					add_building = kollur_mines_04		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = siderokausia_mines_01
+							has_building = siderokausia_mines_02
+							has_building = siderokausia_mines_03
+						}	
+					}		
+					add_building = siderokausia_mines_04		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = mali_mines_01
+							has_building = mali_mines_02
+							has_building = mali_mines_03
+						}	
+					}		
+					add_building = mali_mines_04		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = hall_of_heroes_01
+							has_building = hall_of_heroes_02
+							has_building = hall_of_heroes_03
+							has_building = hall_of_heroes_04
+						}	
+					}		
+					add_building = hall_of_heroes_05		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = monastic_schools_01
+							has_building = monastic_schools_02
+							has_building = monastic_schools_03
+							has_building = monastic_schools_04
+							has_building = monastic_schools_05
+							has_building = monastic_schools_06
+							has_building = monastic_schools_07
+						}	
+					}		
+					add_building = monastic_schools_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = pastures_01
+							has_building = pastures_02
+							has_building = pastures_03
+							has_building = pastures_04
+							has_building = pastures_05
+							has_building = pastures_06
+							has_building = pastures_07
+						}	
+					}		
+					add_building = pastures_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = hunting_grounds_01
+							has_building = hunting_grounds_02
+							has_building = hunting_grounds_03
+							has_building = hunting_grounds_04
+							has_building = hunting_grounds_05
+							has_building = hunting_grounds_06
+							has_building = hunting_grounds_07
+						}	
+					}		
+					add_building = hunting_grounds_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = orchards_01
+							has_building = orchards_02
+							has_building = orchards_03
+							has_building = orchards_04
+							has_building = orchards_05
+							has_building = orchards_06
+							has_building = orchards_07
+						}	
+					}		
+					add_building = orchards_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = farm_estates_01
+							has_building = farm_estates_02
+							has_building = farm_estates_03
+							has_building = farm_estates_04
+							has_building = farm_estates_05
+							has_building = farm_estates_06
+							has_building = farm_estates_07
+						}	
+					}		
+					add_building = farm_estates_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = military_camps_01
+							has_building = military_camps_02
+							has_building = military_camps_03
+							has_building = military_camps_04
+							has_building = military_camps_05
+							has_building = military_camps_06
+							has_building = military_camps_07
+						}	
+					}		
+					add_building = military_camps_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = regimental_grounds_01
+							has_building = regimental_grounds_02
+							has_building = regimental_grounds_03
+							has_building = regimental_grounds_04
+							has_building = regimental_grounds_05
+							has_building = regimental_grounds_06
+							has_building = regimental_grounds_07
+						}	
+					}		
+					add_building = regimental_grounds_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = ramparts_01
+							has_building = ramparts_02
+							has_building = ramparts_03
+							has_building = ramparts_04
+							has_building = ramparts_05
+							has_building = ramparts_06
+							has_building = ramparts_07
+						}	
+					}		
+					add_building = ramparts_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = curtain_walls_01
+							has_building = curtain_walls_02
+							has_building = curtain_walls_03
+							has_building = curtain_walls_04
+							has_building = curtain_walls_05
+							has_building = curtain_walls_06
+							has_building = curtain_walls_07
+						}	
+					}		
+					add_building = curtain_walls_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = watchtowers_01
+							has_building = watchtowers_02
+							has_building = watchtowers_03
+							has_building = watchtowers_04
+							has_building = watchtowers_05
+							has_building = watchtowers_06
+							has_building = watchtowers_07
+						}	
+					}		
+					add_building = watchtowers_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = cereal_fields_01
+							has_building = cereal_fields_02
+							has_building = cereal_fields_03
+							has_building = cereal_fields_04
+							has_building = cereal_fields_05
+							has_building = cereal_fields_06
+							has_building = cereal_fields_07
+						}	
+					}		
+					add_building = cereal_fields_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = outposts_01
+							has_building = outposts_02
+							has_building = outposts_03
+							has_building = outposts_04
+							has_building = outposts_05
+							has_building = outposts_06
+							has_building = outposts_07
+						}	
+					}		
+					add_building = outposts_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = barracks_01
+							has_building = barracks_02
+							has_building = barracks_03
+							has_building = barracks_04
+							has_building = barracks_05
+							has_building = barracks_06
+							has_building = barracks_07
+						}	
+					}		
+					add_building = barracks_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = camel_farms_01
+							has_building = camel_farms_02
+							has_building = camel_farms_03
+							has_building = camel_farms_04
+							has_building = camel_farms_05
+							has_building = camel_farms_06
+							has_building = camel_farms_07
+						}	
+					}		
+					add_building = camel_farms_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = logging_camps_01
+							has_building = logging_camps_02
+							has_building = logging_camps_03
+							has_building = logging_camps_04
+							has_building = logging_camps_05
+							has_building = logging_camps_06
+							has_building = logging_camps_07
+						}	
+					}		
+					add_building = logging_camps_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = peat_quarries_01
+							has_building = peat_quarries_02
+							has_building = peat_quarries_03
+							has_building = peat_quarries_04
+							has_building = peat_quarries_05
+							has_building = peat_quarries_06
+							has_building = peat_quarries_07
+						}	
+					}		
+					add_building = peat_quarries_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = hill_farms_01
+							has_building = hill_farms_02
+							has_building = hill_farms_03
+							has_building = hill_farms_04
+							has_building = hill_farms_05
+							has_building = hill_farms_06
+							has_building = hill_farms_07
+						}	
+					}		
+					add_building = hill_farms_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = elephant_pens_01
+							has_building = elephant_pens_02
+							has_building = elephant_pens_03
+							has_building = elephant_pens_04
+							has_building = elephant_pens_05
+							has_building = elephant_pens_06
+							has_building = elephant_pens_07
+						}	
+					}		
+					add_building = elephant_pens_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = plantations_01
+							has_building = plantations_02
+							has_building = plantations_03
+							has_building = plantations_04
+							has_building = plantations_05
+							has_building = plantations_06
+							has_building = plantations_07
+						}	
+					}		
+					add_building = plantations_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = quarries_01
+							has_building = quarries_02
+							has_building = quarries_03
+							has_building = quarries_04
+							has_building = quarries_05
+							has_building = quarries_06
+							has_building = quarries_07
+						}	
+					}		
+					add_building = quarries_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = hill_forts_01
+							has_building = hill_forts_02
+							has_building = hill_forts_03
+							has_building = hill_forts_04
+							has_building = hill_forts_05
+							has_building = hill_forts_06
+							has_building = hill_forts_07
+						}	
+					}		
+					add_building = hill_forts_08		
+				}			
+			}				
+		}					
+	}
+	ai_will_do = { base = 0 }
+	ai_check_interval = 0
+}
+
+pcm_b_lucky_7_sub_realm_decision = {
+	decision_group_type = pcm
+	picture = {	reference = gfx/interface/illustrations/decisions/pcm_b_decision.dds }
+	sort_order = 311
+	title = pcm_b_lucky_7_sub_realm_decision_title
+    desc = pcm_b_lucky_7_sub_realm_decision_desc
+    selection_tooltip = pcm_b_lucky_7_sub_realm_decision_tooltip
+    confirm_text = pcm_b_lucky_7_sub_realm_decision_ct
+
+    is_shown = {
+		is_ai = no
+	    has_character_flag = pcm_b_show_decision_flag
+    }
+
+	effect = {
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							has_building_or_higher = city_01
+							has_building_or_higher = castle_01
+							has_building_or_higher = temple_01
+						}
+						OR = {
+							terrain = farmlands
+							terrain = plains
+							terrain = drylands
+							terrain = desert
+							terrain = oasis
+							terrain = floodplains
+							terrain = steppe
+							terrain = mountains
+							terrain = desert_mountains
+							terrain = wetlands
+							terrain = forest
+							terrain = taiga
+							terrain = jungle
+							terrain = hills							
+						}
+						NOT = { has_building = military_camps_08 }
+					}
+					add_building = military_camps_08
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							has_building_or_higher = city_01
+							has_building_or_higher = castle_01
+							has_building_or_higher = temple_01
+						}
+						OR = {
+							terrain = farmlands
+							terrain = plains
+							terrain = steppe
+							terrain = desert
+							terrain = drylands
+							terrain = oasis
+							terrain = mountains
+							terrain = desert_mountains
+							terrain = hills
+							terrain = floodplains
+							AND = {
+								terrain = jungle
+								NOT = { geographical_region = world_innovation_elephants }
+							}
+						}
+						NOT = { has_building = pastures_08 }
+					}
+					add_building = pastures_08
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							has_building_or_higher = city_01
+							has_building_or_higher = castle_01
+							has_building_or_higher = temple_01
+						}
+						OR = {
+							terrain = plains
+							terrain = drylands
+							terrain = steppe
+							terrain = hills
+							terrain = taiga
+							terrain = forest
+							terrain = jungle
+							terrain = wetlands
+						}
+						NOT = { has_building = hunting_grounds_08 }
+					}
+					add_building = hunting_grounds_08
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							has_building_or_higher = city_01
+							has_building_or_higher = castle_01
+							has_building_or_higher = temple_01
+						}
+						OR = {
+							terrain = floodplains
+							terrain = oasis
+						}
+						NOT = { has_building = orchards_08 }
+					}
+					add_building = orchards_08
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							has_building_or_higher = city_01
+							has_building_or_higher = castle_01
+							has_building_or_higher = temple_01
+						}
+						terrain = farmlands
+						NOT = { has_building = farm_estates_08 }
+					}
+					add_building = farm_estates_08
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							has_building_or_higher = city_01
+							has_building_or_higher = castle_01
+							has_building_or_higher = temple_01
+						}
+						OR = {
+							terrain = floodplains
+							terrain = farmlands
+						}
+						NOT = { has_building = regimental_grounds_08 }
+					}
+					add_building = regimental_grounds_08
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							#has_building_or_higher = city_01
+							has_building_or_higher = castle_01
+							#has_building_or_higher = temple_01
+						}
+						OR = {
+							terrain = taiga
+							terrain = forest
+						}
+						NOT = { has_building = ramparts_08 }
+					}
+					add_building = ramparts_08
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							has_building_or_higher = castle_01
+						}
+						OR = {
+							terrain = farmlands
+							terrain = plains
+							terrain = wetlands
+						}
+						NOT = { has_building = curtain_walls_08 }
+					}
+					add_building = curtain_walls_08
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							#has_building_or_higher = city_01
+							has_building_or_higher = castle_01
+							#has_building_or_higher = temple_01
+						}
+						OR = {
+							terrain = desert
+							terrain = drylands
+							terrain = oasis
+							terrain = floodplains
+							terrain = jungle
+							terrain = steppe
+						}
+						NOT = { has_building = watchtowers_08 }
+					}
+					add_building = watchtowers_08
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							has_building_or_higher = city_01
+							has_building_or_higher = castle_01
+							has_building_or_higher = temple_01
+						}
+						OR = {
+							terrain = farmlands
+							terrain = plains
+							terrain = drylands
+							terrain = floodplains
+						}
+						NOT = { has_building = cereal_fields_08 }
+					}
+					add_building = cereal_fields_08
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							has_building_or_higher = city_01
+							has_building_or_higher = castle_01
+							has_building_or_higher = temple_01
+						}
+						OR = {
+							terrain = steppe
+							terrain = wetlands
+							terrain = taiga
+							terrain = forest
+							terrain = jungle
+							terrain = mountains
+							terrain = desert_mountains
+							terrain = desert
+						}
+						NOT = { has_building = outposts_08 }
+					}
+					add_building = outposts_08
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							has_building_or_higher = city_01
+							has_building_or_higher = castle_01
+							has_building_or_higher = temple_01
+						}
+						OR = {
+							terrain = farmlands
+							terrain = plains
+							terrain = drylands
+							terrain = hills
+							terrain = mountains
+							terrain = forest
+							terrain = taiga
+							terrain = jungle
+							terrain = wetlands
+							terrain = steppe
+						}
+						NOT = { has_building = barracks_08 }
+					}
+					add_building = barracks_08
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							has_building_or_higher = city_01
+							has_building_or_higher = castle_01
+							has_building_or_higher = temple_01
+						}
+						OR = {
+							terrain = desert
+							terrain = desert_mountains
+							terrain = oasis
+							terrain = floodplains
+						}
+						NOT = { has_building = camel_farms_08 }
+					}
+					add_building = camel_farms_08
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							has_building_or_higher = city_01
+							has_building_or_higher = castle_01
+							has_building_or_higher = temple_01
+						}
+						OR = {
+							terrain = taiga
+							terrain = forest
+							terrain = jungle
+						}
+						NOT = { has_building = logging_camps_08 }
+					}
+					add_building = logging_camps_08
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							has_building_or_higher = city_01
+							has_building_or_higher = castle_01
+							has_building_or_higher = temple_01
+						}
+						terrain = wetlands
+						NOT = { has_building = peat_quarries_08 }
+					}
+					add_building = peat_quarries_08
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							has_building_or_higher = city_01
+							has_building_or_higher = castle_01
+							has_building_or_higher = temple_01
+						}
+						terrain = hills
+						NOT = { has_building = hill_farms_08 }
+					}
+					add_building = hill_farms_08
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							has_building_or_higher = city_01
+							has_building_or_higher = castle_01
+							has_building_or_higher = temple_01
+						}
+						terrain = jungle
+						geographical_region = world_innovation_elephants
+						NOT = { has_building = elephant_pens_08 }
+					}
+					add_building = elephant_pens_08
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							has_building_or_higher = city_01
+							has_building_or_higher = castle_01
+							has_building_or_higher = temple_01
+						}
+						OR = {
+							terrain = drylands
+							terrain = desert
+							terrain = oasis
+						}
+						NOT = { has_building = plantations_08 }
+					}
+					add_building = plantations_08
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							has_building_or_higher = city_01
+							has_building_or_higher = castle_01
+							has_building_or_higher = temple_01
+						}
+						OR = {
+							terrain = mountains
+							terrain = desert_mountains
+						}
+						NOT = { has_building = quarries_08 }
+					}
+					add_building = quarries_08
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							#has_building_or_higher = city_01 ##see 00_holdings.txt
+							has_building_or_higher = castle_01
+							#has_building_or_higher = temple_01
+						}
+						OR = {
+							terrain = mountains
+							terrain = desert_mountains
+							terrain = hills
+						}
+						NOT = { has_building = hill_forts_08 }
+					}
+					add_building = hill_forts_08 
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						has_building_or_higher = temple_01
+						NOT = { has_building = monastic_schools_08 }
+					}
+					
+					add_building = monastic_schools_08 
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						OR = {
+							has_building_or_higher = city_01
+							has_building_or_higher = castle_01
+							has_building_or_higher = temple_01
+						}
+						NOT = { has_building = common_tradeport_08 }
+						is_coastal = yes
+					}					
+					add_building = common_tradeport_08 
+				}
+			}
+		}
+#	dutchy capital building only. Need to implement new checks.
+# If you gonna add this building - dont forget others. They all located at common\buildings\00_duchy_capital_buildings.txt
+#		if = {
+#			every_sub_realm_county = {
+#				every_county_province  = {
+#					limit = {
+#						OR = {
+#							has_building_or_higher = city_01
+#							has_building_or_higher = castle_01
+#							has_building_or_higher = temple_01
+#						}
+#					}
+#					add_building = military_academy_03
+#				}
+#			}
+#		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						has_building_or_higher = tribe_01
+						NOT = { has_building = longhouses_02 }
+					}
+					add_building = longhouses_02
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						has_building_or_higher = tribe_01
+						NOT = { has_building = war_camps_02 }
+					}
+					add_building = war_camps_02
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						has_building_or_higher = tribe_01
+						NOT = { has_building = palisades_02 }
+					}
+					add_building = palisades_02 
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						has_building_or_higher = tribe_01
+						NOT = { has_building = market_villages_02 }
+					}
+					add_building = market_villages_02
+				}
+			}
+		}
+		if = {
+			every_sub_realm_county = {
+				every_county_province  = {
+					limit = {
+						has_building_or_higher = city_01
+						NOT = { has_building = guild_halls_08 }
+					}
+					add_building = guild_halls_08
+				}
+			}
+		}
+	}
+	ai_will_do = { base = 0 }
+	ai_check_interval = 0
+}
+
+pcm_b_show_decision = {
+    decision_group_type = pcm
+	picture = {
+		reference=gfx/interface/illustrations/decisions/pcm_b_show_decision.dds
+	}
+	sort_order = 314
+	title = pcm_b_show_decision_title
+    desc = pcm_b_show_decision_desc
+    selection_tooltip = pcm_b_show_decision_tooltip
+    confirm_text = pcm_b_show_decision_ct
+
+    is_shown = {
+	    NOT = { has_character_flag = pcm_b_show_decision_flag }
+    }
+
+    effect = {
+        add_character_flag = pcm_b_show_decision_flag
+    }
+	
+    ai_will_do = { base = 0 }
+	ai_check_interval = 0
+}
+
+pcm_b_hide_decision = {
+	decision_group_type = pcm
+	picture = {
+		reference=gfx/interface/illustrations/decisions/pcm_b_hide_decision.dds
+	}
+	sort_order = 313
+	title = pcm_b_hide_decision_title
+    desc = pcm_b_hide_decision_desc
+    selection_tooltip = pcm_b_hide_decision_tooltip
+    confirm_text = pcm_b_hide_decision_ct
+
+    is_shown = {
+	    has_character_flag = pcm_b_show_decision_flag
+    }
+
+    effect = {
+        remove_character_flag = pcm_b_show_decision_flag
+    }
+	
+    ai_will_do = { base = 0 }
+	ai_check_interval = 0
+}

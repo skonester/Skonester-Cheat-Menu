@@ -1,0 +1,1608 @@
+##############
+# 法理整理
+##############
+zhuge_organize_titles = {
+    category = interaction_category_cheat_menu
+    desc = zhuge_organize_titles_desc
+    icon = legend
+    auto_accept = yes
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+    interface_priority = 5
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+            has_character_flag = daddy_pika_cheat_menu
+        }
+        scope:recipient = {
+            highest_held_title_tier >= tier_duchy
+        }
+    }
+
+    on_accept = {
+        scope:recipient = {
+            every_held_title = {
+                set_de_jure_liege_title = scope:recipient.primary_title
+            }
+            every_vassal = {
+                every_held_title = {
+                    set_de_jure_liege_title = scope:recipient.primary_title
+                }
+            }
+        }
+    }
+
+    ai_will_do = 0
+}
+
+##############
+# 摧毁主头衔
+##############
+zhuge_destroy_title = {
+    category = interaction_category_cheat_menu
+    desc = zhuge_destroy_title_desc
+    icon = legend
+    auto_accept = yes
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+    interface_priority = 4
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+            has_character_flag = daddy_pika_cheat_menu
+        }
+        scope:recipient = {
+            highest_held_title_tier >= tier_duchy
+        }
+    }
+
+    on_accept = {
+        scope:recipient = {
+            destroy_title = primary_title
+        }
+    }
+
+    ai_will_do = 0
+}
+
+##############
+# 皇权强化
+##############
+zhuge_buff_01 = {
+    category = interaction_category_cheat_menu
+    desc = zhuge_buff_01_desc
+    icon = demand_submission
+    common_interaction = no
+    interface_priority = 10
+
+    is_highlighted = { always = yes }
+
+    auto_accept = yes
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+            has_character_flag = daddy_pika_cheat_menu
+        }
+    }
+
+    on_accept = {
+        scope:recipient = {
+            if = {
+                limit = { has_trait = boost_hufu }
+                remove_trait = boost_hufu
+            }
+            else = {
+                add_trait = boost_hufu
+            }
+        }
+    }
+
+    ai_will_do = 0
+}
+
+##############
+# 武都督
+##############
+zhuge_buff_02 = {
+    category = interaction_category_cheat_menu
+    desc = zhuge_buff_02_desc
+    icon = legend
+    common_interaction = no
+    interface_priority = 8
+
+    auto_accept = yes
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+            has_character_flag = daddy_pika_cheat_menu
+        }
+    }
+
+    on_accept = {
+        scope:recipient = {
+            if = {
+                limit = { has_trait = boost_dudu1 }
+                remove_trait = boost_dudu1
+            }
+            else = {
+                add_trait = boost_dudu1
+            }
+        }
+    }
+
+    ai_will_do = 0
+}
+
+##############
+# 翰林学士
+##############
+zhuge_buff_03 = {
+    category = interaction_category_cheat_menu
+    desc = zhuge_buff_03_desc
+    icon = legend
+    common_interaction = no
+    interface_priority = 8
+
+    auto_accept = yes
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+            has_character_flag = daddy_pika_cheat_menu
+        }
+    }
+
+    on_accept = {
+        scope:recipient = {
+            if = {
+                limit = { has_trait = boost_xueshi1 }
+                remove_trait = boost_xueshi1
+            }
+            else = {
+                add_trait = boost_xueshi1
+            }
+        }
+    }
+
+    ai_will_do = 0
+}
+
+##############
+# 瘟疫免疫
+##############
+zhuge_yixue_05 = {
+    category = interaction_category_cheat_menu
+    desc = zhuge_yixue_05_desc
+    icon = debug_good
+    common_interaction = no
+    interface_priority = 8
+
+    auto_accept = yes
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+            has_character_flag = daddy_pika_cheat_menu
+        }
+    }
+
+    on_accept = {
+        scope:recipient = {
+            if = {
+                limit = { has_trait = plague_immunity }
+                remove_trait = plague_immunity
+            }
+            else = {
+                add_trait = plague_immunity
+            }
+        }
+    }
+
+    ai_will_do = 0
+}
+
+##############
+# 神血
+##############
+zhuge_bloodline_03 = {
+    category = interaction_category_cheat_menu
+    desc = zhuge_bloodline_03_desc
+    icon = debug_good
+    common_interaction = no
+    interface_priority = 10
+
+    auto_accept = yes
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+            has_character_flag = daddy_pika_cheat_menu
+        }
+    }
+
+    on_accept = {
+        scope:recipient = {
+            # 如果角色已有神血但是无 toggled_bloodline 标志，则先移除后赋予最新
+            if = {
+                limit = {
+                    OR = {
+                        has_trait = bloodline_god_3
+                        has_trait = bloodline_god_2
+                        has_trait = bloodline_god_1
+                    }
+                    NOT = { has_character_flag = toggled_bloodline }
+                }
+                remove_trait = bloodline_god_3
+                remove_trait = bloodline_god_2
+                remove_trait = bloodline_god_1
+                add_trait = bloodline_god_3
+                add_character_flag = toggled_bloodline
+            }
+            else_if = {
+                # 若已处于神血开关模式，再点就清除神血和标志
+                limit = { has_character_flag = toggled_bloodline }
+                remove_trait = bloodline_god_3
+                remove_trait = bloodline_god_2
+                remove_trait = bloodline_god_1
+                remove_character_flag = toggled_bloodline
+            }
+            else = {
+                # 全新赋予：god_3 + 标志
+                add_trait = bloodline_god_3
+                add_character_flag = toggled_bloodline
+            }
+        }
+    }
+
+    ai_will_do = 0
+}
+
+##############
+# 医学奇迹
+##############
+zhuge_yixue_01 = {
+    category = interaction_category_cheat_menu 
+    desc = zhuge_yixue_01_desc
+    icon = debug_good
+    common_interaction = no 
+    interface_priority = 8
+
+    auto_accept = yes
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no 
+            has_character_flag = daddy_pika_cheat_menu 
+        }
+        scope:recipient = {
+            OR = {
+                has_trait = beauty_bad_1
+                has_trait = beauty_bad_2
+                has_trait = beauty_bad_3
+                has_trait = intellect_bad_1
+                has_trait = intellect_bad_2
+                has_trait = intellect_bad_3
+                has_trait = dull
+                has_trait = physique_bad_1
+                has_trait = physique_bad_2
+                has_trait = physique_bad_3
+                has_trait = weak
+                has_trait = spindly
+                has_trait = clubfooted
+                has_trait = hunchbacked
+                has_trait = lisping
+                has_trait = stuttering
+                has_trait = dwarf
+                has_trait = giant
+                has_trait = inbred
+                has_trait = impotent
+                has_trait = scaly
+                has_trait = albino
+                has_trait = wheezing
+                has_trait = bleeder
+                has_trait = infertile
+                has_trait = depressed_genetic
+                has_trait = depressed_1
+                has_trait = lunatic_genetic
+                has_trait = lunatic_1
+                has_trait = possessed_genetic
+                has_trait = possessed_1
+                has_trait = wounded_1
+                has_trait = wounded_2
+                has_trait = wounded_3
+                has_trait = maimed
+                has_trait = one_eyed
+                has_trait = one_legged
+                has_trait = disfigured
+                has_trait = infirm
+                has_trait = incapable
+                has_trait = gout_ridden
+                has_trait = consumption
+                has_trait = cancer
+                has_trait = typhus
+                has_trait = bubonic_plague
+                has_trait = smallpox
+                has_trait = blind
+                has_trait = inappetetic
+                has_trait = pneumonic
+                has_trait = great_pox
+                has_trait = early_great_pox
+                has_trait = lovers_pox
+                has_trait = leper
+                has_trait = sickly
+                has_trait = ergotism
+                has_trait = ill
+                has_trait = scarred
+            }
+        }
+    }
+    
+    on_accept = {
+        # 步骤一：校正性取向→异性恋
+        if = {
+            limit = {
+                scope:recipient = {
+                    OR = {
+                        has_sexuality = bisexual
+                        has_sexuality = homosexual
+                        has_sexuality = asexual
+                    }
+                }
+            }
+            scope:recipient = { set_sexuality = heterosexual }
+        }
+        
+        # 步骤二：移除不良基因&身体缺陷
+        if = {
+            limit = {
+                scope:recipient = {
+                    OR = {
+                        has_trait = beauty_bad_1
+                        has_trait = beauty_bad_2
+                        has_trait = beauty_bad_3
+                        has_trait = intellect_bad_1
+                        has_trait = intellect_bad_2
+                        has_trait = intellect_bad_3
+                        has_trait = physique_bad_1
+                        has_trait = physique_bad_2
+                        has_trait = physique_bad_3
+                        has_trait = clubfooted
+                        has_trait = hunchbacked
+                        has_trait = lisping
+                        has_trait = stuttering
+                        has_trait = dwarf
+                        has_trait = inbred
+                        has_trait = impotent
+                        has_trait = scaly
+                        has_trait = albino
+                        has_trait = wheezing
+                        has_trait = bleeder
+                        has_trait = infertile
+                        has_trait = depressed_genetic
+                        has_trait = depressed_1
+                        has_trait = lunatic_genetic
+                        has_trait = lunatic_1
+                        has_trait = possessed_genetic
+                        has_trait = possessed_1
+                        has_trait = wounded_1
+                        has_trait = wounded_2
+                        has_trait = wounded_3
+                        has_trait = maimed
+                        has_trait = one_eyed
+                        has_trait = one_legged
+                        has_trait = disfigured
+                        has_trait = infirm
+                        has_trait = incapable
+                        has_trait = gout_ridden
+                        has_trait = consumption
+                        has_trait = cancer
+                        has_trait = typhus
+                        has_trait = bubonic_plague
+                        has_trait = smallpox
+                        has_trait = blind
+                        has_trait = inappetetic
+                        has_trait = pneumonic
+                        has_trait = great_pox
+                        has_trait = early_great_pox
+                        has_trait = lovers_pox
+                        has_trait = leper
+                        has_trait = sickly
+                        has_trait = ergotism
+                        has_trait = ill
+                        has_trait = spindly
+                        has_trait = scarred
+                        has_trait = dull
+                        has_trait = weak
+                    }
+                }
+            }
+            scope:recipient = {
+                remove_trait = beauty_bad_1
+                remove_trait = beauty_bad_2
+                remove_trait = beauty_bad_3
+                remove_trait = intellect_bad_1
+                remove_trait = intellect_bad_2
+                remove_trait = intellect_bad_3
+                remove_trait = physique_bad_1
+                remove_trait = physique_bad_2
+                remove_trait = physique_bad_3
+                remove_trait = clubfooted
+                remove_trait = hunchbacked
+                remove_trait = lisping
+                remove_trait = stuttering
+                remove_trait = dwarf
+                remove_trait = inbred
+                remove_trait = impotent
+                remove_trait = scaly
+                remove_trait = albino
+                remove_trait = wheezing
+                remove_trait = bleeder
+                remove_trait = infertile
+                remove_trait = depressed_genetic
+                remove_trait = depressed_1
+                remove_trait = lunatic_genetic
+                remove_trait = lunatic_1
+                remove_trait = possessed_genetic
+                remove_trait = possessed_1
+                remove_trait = wounded_1
+                remove_trait = wounded_2
+                remove_trait = wounded_3
+                remove_trait = maimed
+                remove_trait = one_eyed
+                remove_trait = one_legged
+                remove_trait = disfigured
+                remove_trait = infirm
+                remove_trait = incapable
+                remove_trait = gout_ridden
+                remove_trait = consumption
+                remove_trait = cancer
+                remove_trait = typhus
+                remove_trait = bubonic_plague
+                remove_trait = smallpox
+                remove_trait = blind
+                remove_trait = inappetetic
+                remove_trait = pneumonic
+                remove_trait = great_pox
+                remove_trait = early_great_pox
+                remove_trait = lovers_pox
+                remove_trait = leper
+                remove_trait = sickly
+                remove_trait = ergotism
+                remove_trait = ill
+                remove_trait = spindly
+                remove_trait = scarred
+                remove_trait = dull
+                remove_trait = weak
+            }
+        }
+    }
+}
+
+##############
+# 矫正性格
+##############
+zhuge_yixue_02 = {
+    category = interaction_category_cheat_menu
+    desc = zhuge_yixue_02_desc
+    icon = legend
+    common_interaction = no
+    interface_priority = 8
+
+    auto_accept = yes
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+            has_character_flag = daddy_pika_cheat_menu
+        }
+        scope:recipient = {
+            OR = {
+                has_trait = gluttonous
+                has_trait = greedy
+                has_trait = wrathful
+                has_trait = impatient
+                has_trait = arrogant
+                has_trait = craven
+                has_trait = arbitrary
+                has_trait = lustful
+                has_trait = deceitful
+                has_trait = shy
+                has_trait = callous
+                has_trait = sadistic
+                has_trait = vengeful
+                has_trait = lazy
+            }
+        }
+    }
+
+    on_accept = {
+        scope:recipient = {
+            if = { limit = { has_trait = gluttonous } remove_trait = gluttonous add_trait = temperate }
+            if = { limit = { has_trait = greedy } remove_trait = greedy add_trait = generous }
+            if = { limit = { has_trait = wrathful } remove_trait = wrathful add_trait = calm }
+            if = { limit = { has_trait = impatient } remove_trait = impatient add_trait = patient }
+            if = { limit = { has_trait = arrogant } remove_trait = arrogant add_trait = humble }
+            if = { limit = { has_trait = craven } remove_trait = craven add_trait = brave }
+            if = { limit = { has_trait = arbitrary } remove_trait = arbitrary add_trait = just }
+            if = { limit = { has_trait = lustful } remove_trait = lustful add_trait = chaste }
+            if = { limit = { has_trait = deceitful } remove_trait = deceitful add_trait = honest }
+            if = { limit = { has_trait = shy } remove_trait = shy add_trait = gregarious }
+            if = { limit = { has_trait = callous } remove_trait = callous add_trait = compassionate }
+            if = { limit = { has_trait = sadistic } remove_trait = sadistic add_trait = compassionate }
+            if = { limit = { has_trait = vengeful } remove_trait = vengeful add_trait = forgiving }
+            if = { limit = { has_trait = lazy } remove_trait = lazy add_trait = diligent }
+        }
+    }
+}
+
+##############
+# 戒除怪癖
+##############
+zhueg_yixue_03 = {
+    category = interaction_category_cheat_menu
+    desc = zhueg_yixue_03_desc
+    icon = legend
+    common_interaction = no
+    interface_priority = 8
+
+    auto_accept = yes
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+            has_character_flag = daddy_pika_cheat_menu
+        }
+        scope:recipient = {
+            OR = {
+                has_trait = drunkard
+                has_trait = flagellant
+                has_trait = comfort_eater
+                has_trait = contrite
+                has_trait = improvident
+                has_trait = inappetetic
+                has_trait = reclusive
+                has_trait = irritable
+                has_trait = rakish
+                has_trait = hashishiyah
+                has_trait = profligate
+            }
+        }
+    }
+
+    on_accept = {
+        scope:recipient = {
+            remove_trait = drunkard
+            remove_trait = flagellant
+            remove_trait = comfort_eater
+            remove_trait = contrite
+            remove_trait = improvident
+            remove_trait = inappetetic
+            remove_trait = reclusive
+            remove_trait = irritable
+            remove_trait = rakish
+            remove_trait = hashishiyah
+            remove_trait = profligate
+        }
+    }
+}
+
+##############
+# 添加3个先天特质
+##############
+zhuge_yixue_04 = {
+    category = interaction_category_cheat_menu
+    desc = zhuge_yixue_04_desc
+    icon = legend
+    common_interaction = no
+    interface_priority = 8
+
+    auto_accept = yes
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+            has_character_flag = daddy_pika_cheat_menu
+        }
+        scope:recipient = {
+            NOT = {
+                and = {
+                    has_trait = beauty_good_3
+                    has_trait = intellect_good_3
+                    has_trait = physique_good_3
+                    has_trait = strong
+                    has_trait = shrewd
+                    has_trait = lifestyle_herbalist
+                }
+            }
+        }
+    }
+
+    on_accept = {
+        scope:recipient = {
+            remove_trait = beauty_good_1
+            remove_trait = beauty_good_2
+            remove_trait = beauty_bad_1
+            remove_trait = beauty_bad_2
+            remove_trait = beauty_bad_3
+            remove_trait = intellect_good_1
+            remove_trait = intellect_good_2
+            remove_trait = intellect_bad_1
+            remove_trait = intellect_bad_2
+            remove_trait = intellect_bad_3
+            remove_trait = dull
+            remove_trait = physique_good_1
+            remove_trait = physique_good_2
+            remove_trait = physique_bad_1
+            remove_trait = physique_bad_2
+            remove_trait = physique_bad_3
+            remove_trait = weak
+            remove_trait = spindly
+
+            add_trait = beauty_good_3
+            add_trait = intellect_good_3
+            add_trait = physique_good_3
+            add_trait = strong
+            add_trait = shrewd
+            add_trait = lifestyle_herbalist
+        }
+    }
+}
+
+##############
+# 提升学业
+##############
+zhuge_yixue_06 = {
+    category = interaction_category_cheat_menu
+    desc = zhuge_yixue_06_desc
+    icon = icon_boost_efficiency
+    common_interaction = no
+    interface_priority = 9
+
+    auto_accept = yes
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+            has_character_flag = daddy_pika_cheat_menu
+        }
+        scope:recipient = {
+            OR = {
+                has_trait = education_diplomacy_1
+                has_trait = education_diplomacy_2
+                has_trait = education_diplomacy_3
+                has_trait = education_diplomacy_4
+                has_trait = education_diplomacy_5
+                has_trait = education_martial_1
+                has_trait = education_martial_2
+                has_trait = education_martial_3
+                has_trait = education_martial_4
+                has_trait = education_stewardship_1
+                has_trait = education_stewardship_2
+                has_trait = education_stewardship_3
+                has_trait = education_stewardship_4
+                has_trait = education_intrigue_1
+                has_trait = education_intrigue_2
+                has_trait = education_intrigue_3
+                has_trait = education_intrigue_4
+                has_trait = education_learning_1
+                has_trait = education_learning_2
+                has_trait = education_learning_3
+                has_trait = education_learning_4
+            }
+        }
+    }
+
+    on_accept = {
+        # 根据教育类型不同赋予相应高级特质
+        if = {
+            limit = {
+                scope:recipient = {
+                    OR = {
+                        has_trait = education_diplomacy_1
+                        has_trait = education_diplomacy_2
+                        has_trait = education_diplomacy_3
+                        has_trait = education_diplomacy_4
+                        has_trait = education_diplomacy_5
+                    }
+                }
+            }
+            scope:recipient = {
+                remove_trait = education_diplomacy_1
+                remove_trait = education_diplomacy_2
+                remove_trait = education_diplomacy_3
+                remove_trait = education_diplomacy_4
+                add_trait = education_diplomacy_5
+                add_trait = lifestyle_reveler
+                add_trait = poet
+            }
+        }
+        if = {
+            limit = {
+                scope:recipient = {
+                    OR = {
+                        has_trait = education_martial_1
+                        has_trait = education_martial_2
+                        has_trait = education_martial_3
+                        has_trait = education_martial_4
+                        has_trait = education_martial_5
+                    }
+                }
+            }
+            scope:recipient = {
+                remove_trait = education_martial_1
+                remove_trait = education_martial_2
+                remove_trait = education_martial_3
+                remove_trait = education_martial_4
+                add_trait = education_martial_5
+                add_trait = lifestyle_blademaster
+                add_trait_xp = {
+                    trait = lifestyle_blademaster
+                    value = 50
+                }
+                add_trait = lifestyle_hunter
+                add_trait = education_martial_prowess_4
+            }
+        }
+        if = {
+            limit = {
+                scope:recipient = {
+                    OR = {
+                        has_trait = education_stewardship_1
+                        has_trait = education_stewardship_2
+                        has_trait = education_stewardship_3
+                        has_trait = education_stewardship_4
+                        has_trait = education_stewardship_5
+                    }
+                }
+            }
+            scope:recipient = {
+                remove_trait = education_stewardship_1
+                remove_trait = education_stewardship_2
+                remove_trait = education_stewardship_3
+                remove_trait = education_stewardship_4
+                add_trait = education_stewardship_5
+                add_trait = lifestyle_gardener
+                add_trait = poet
+            }
+        }
+        if = {
+            limit = {
+                scope:recipient = {
+                    OR = {
+                        has_trait = education_intrigue_1
+                        has_trait = education_intrigue_2
+                        has_trait = education_intrigue_3
+                        has_trait = education_intrigue_4
+                        has_trait = education_intrigue_5
+                    }
+                }
+            }
+            scope:recipient = {
+                remove_trait = education_intrigue_1
+                remove_trait = education_intrigue_2
+                remove_trait = education_intrigue_3
+                remove_trait = education_intrigue_4
+                add_trait = education_intrigue_5
+                add_trait = lifestyle_herbalist
+                add_trait = lifestyle_mystic
+                add_trait = lifestyle_blademaster
+                add_trait_xp = {
+                    trait = lifestyle_blademaster
+                    value = 100
+                }
+            }
+        }
+        if = {
+            limit = {
+                scope:recipient = {
+                    OR = {
+                        has_trait = education_learning_1
+                        has_trait = education_learning_2
+                        has_trait = education_learning_3
+                        has_trait = education_learning_4
+                        has_trait = education_learning_5
+                    }
+                }
+            }
+            scope:recipient = {
+                remove_trait = education_learning_1
+                remove_trait = education_learning_2
+                remove_trait = education_learning_3
+                remove_trait = education_learning_4
+                add_trait = education_learning_5
+                add_trait = lifestyle_herbalist
+                add_trait = lifestyle_mystic
+                add_trait = physician_3
+            }
+        }
+    }
+}
+
+##############
+# 学会其语言
+##############
+zhuge_buff_04 = {
+    category = interaction_category_cheat_menu
+    desc = zhuge_buff_04_desc
+    icon = icon_scheme_learn_language
+    interface_priority = -1
+
+    auto_accept = yes
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+            has_character_flag = daddy_pika_cheat_menu
+        }
+        NOT = {
+            scope:actor = {
+                knows_language_of_culture = scope:recipient.culture
+            }
+        }
+    }
+
+    on_accept = {
+        scope:actor = {
+            learn_language_of_culture = scope:recipient.culture
+        }
+    }
+}
+
+##############
+# 赐予勋骑荣誉
+##############
+zhuge_buff_05 = {
+    category = interaction_category_cheat_menu
+    desc = zhuge_buff_05_desc
+    icon = icon_combat
+    interface_priority = -1
+
+    auto_accept = yes
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+            has_character_flag = daddy_pika_cheat_menu
+        }
+        scope:recipient = {
+            is_acclaimed = yes
+        }
+    }
+
+    send_option = {
+        flag = high_glory
+        localization = zhuge_buff_05_high_tt
+    }
+    send_option = {
+        flag = low_glory
+        localization = zhuge_buff_05_low_tt
+    }
+    send_option = {
+        flag = delete_01_glory
+        localization = zhuge_buff_05_delete01_tt
+    }
+    send_option = {
+        flag = delete_02_glory
+        localization = zhuge_buff_05_delete02_tt
+    }
+
+    on_accept = {
+        scope:recipient = {
+            hidden_effect = {
+                if = {
+                    limit = {
+                        scope:high_glory = yes
+                        scope:recipient = { is_acclaimed = yes }
+                    }
+                    scope:recipient = {
+                        accolade = { add_glory = 2500 }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        scope:low_glory = yes
+                        scope:recipient = { is_acclaimed = yes }
+                    }
+                    scope:recipient = {
+                        accolade = { add_glory = 500 }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        scope:delete_01_glory = yes
+                        scope:recipient = { is_acclaimed = yes }
+                    }
+                    scope:recipient = {
+                        accolade = { add_glory = -500 }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        scope:delete_02_glory = yes
+                        scope:recipient = { is_acclaimed = yes }
+                    }
+                    scope:recipient = {
+                        accolade = { add_glory = -50000 }
+                    }
+                }
+            }
+        }
+    }
+}
+
+##############
+# 添加停战协议
+##############
+zhuge_add_truce_interaction = {
+    category = interaction_category_cheat_menu
+    desc = zhuge_add_truce_interaction_desc
+    icon = icon_retreat
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+
+    auto_accept = yes
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+            has_character_flag = daddy_pika_cheat_menu
+        }
+        NOT = { scope:recipient = scope:actor }
+        scope:recipient = { is_independent_ruler = yes }   # 仅独立统治者目标可见
+    }
+
+    # 多选项
+    send_option = {
+        flag = zhuge_danx_hd_01
+        localization = zhuge_danx_hd_01_desc
+    }
+    send_option = {
+        flag = zhuge_danx_give_01
+        localization = zhuge_danx_give_01_desc
+    }
+    send_option = {
+        flag = zhuge_danx_sx_01
+        localization = zhuge_danx_sx_01_desc
+    }
+    send_option = {
+        flag = zhuge_danx_sx_02
+        localization = zhuge_danx_sx_02_desc
+    }
+
+    on_accept = {
+        scope:actor = {
+            switch = {
+                trigger = yes
+
+                scope:zhuge_danx_hd_01 = {
+                    scope:recipient = {
+                        add_truce_one_way = {
+                            character = scope:actor
+                            years = 100
+                            name = ZHUGE_TRUCE
+                        }
+                    }
+                }
+                scope:zhuge_danx_give_01 = {
+                    add_truce_one_way = {
+                        character = scope:recipient
+                        years = 100
+                        name = ZHUGE_TRUCE
+                    }
+                }
+                scope:zhuge_danx_sx_01 = {
+                    add_truce_both_ways = {
+                        character = scope:recipient
+                        years = 100
+                        name = ZHUGE_TRUCE
+                    }
+                }
+                scope:zhuge_danx_sx_02 = {
+                    add_truce_both_ways = {
+                        character = scope:recipient
+                        years = -99999
+                        name = ZHUGE_TRUCE
+                    }
+                    custom_tooltip = zhuge_remove_truce_effect
+                }
+            }
+        }
+    }
+}
+
+##############
+# 大明货币菜单（仅对“大明皇帝”目标可见）
+##############
+zhuge_daming_currency_menu = {
+    category = interaction_category_cheat_menu
+    desc      = zhuge_daming_currency_menu_desc
+    icon      = icon_gold
+    common_interaction = yes
+    interface_priority = 8
+
+    auto_accept = yes
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+            has_character_flag = daddy_pika_cheat_menu 
+        }
+        scope:recipient = {
+            primary_title = { this = title:e_greatming } 
+        }
+    }
+
+    on_send = {
+        scope:recipient = { save_scope_as = currency_scope }
+        scope:actor     = { trigger_event = zhuge_curry_interactions.1 }
+    }
+}
+
+
+
+##############
+# 设置君权等级（直接升至最高）
+##############
+zhuge_set_authority_inter = {
+    category = interaction_category_cheat_menu
+    desc = zhuge_set_authority_inter_desc
+    icon = legend
+    interface_priority = 8
+
+    auto_accept = yes
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+            is_independent_ruler = yes
+            has_character_flag = daddy_pika_cheat_menu
+        }
+        scope:recipient = {
+            is_ai = no
+            is_independent_ruler = yes
+            NOT = { has_realm_law = crown_authority_3 }
+            NOT = { has_realm_law = tribal_authority_3 }
+            NOT = { has_realm_law = nomadic_authority_5 }
+            NOT = { has_realm_law = imperial_bureaucracy_3 }
+            NOT = { has_realm_law = FACTION_DISCONTENT_CA_3 }
+            NOT = { has_realm_law = celestial_bureaucracy_3 }
+        }
+    }
+
+    on_accept = {
+        scope:recipient = {
+            # 清除冷却变量（角色+头衔双重保险）
+            remove_variable = crown_authority_cooldown
+            remove_variable = tribal_authority_cooldown
+            primary_title = {
+                remove_variable = crown_authority_cooldown
+                remove_variable = tribal_authority_cooldown
+            }
+
+            # 检测每种法令，只加一次，自动升至最高
+            if = {
+                limit = {
+                    OR = {
+                        has_realm_law = crown_authority_0
+                        has_realm_law = crown_authority_1
+                        has_realm_law = crown_authority_2
+                    }
+                }
+                add_realm_law = crown_authority_3
+            }
+            else_if = {
+                limit = {
+                    OR = {
+                        has_realm_law = tribal_authority_0
+                        has_realm_law = tribal_authority_1
+                        has_realm_law = tribal_authority_2
+                    }
+                }
+                add_realm_law = tribal_authority_3
+            }
+            else_if = {
+                limit = {
+                    OR = {
+                        has_realm_law = nomadic_authority_0
+                        has_realm_law = nomadic_authority_1
+                        has_realm_law = nomadic_authority_2
+                        has_realm_law = nomadic_authority_3
+                        has_realm_law = nomadic_authority_4
+                    }
+                }
+                add_realm_law = nomadic_authority_5
+            }
+            else_if = {
+                limit = {
+                    OR = {
+                        has_realm_law = imperial_bureaucracy_0
+                        has_realm_law = imperial_bureaucracy_1
+                        has_realm_law = imperial_bureaucracy_2
+                    }
+                }
+                add_realm_law = imperial_bureaucracy_3
+            }
+            else_if = {
+                limit = {
+                    OR = {
+                        has_realm_law = FACTION_DISCONTENT_CA_0
+                        has_realm_law = FACTION_DISCONTENT_CA_1
+                        has_realm_law = FACTION_DISCONTENT_CA_2
+                    }
+                }
+                add_realm_law = FACTION_DISCONTENT_CA_3
+            }
+            else_if = {
+                limit = {
+                    OR = {
+                        has_realm_law = celestial_bureaucracy_0
+                        has_realm_law = celestial_bureaucracy_1
+                        has_realm_law = celestial_bureaucracy_2
+                    }
+                }
+                add_realm_law = celestial_bureaucracy_3
+            }
+        }
+    }
+}
+
+
+# 设定关系
+zhuge_set_relation_interaction = {
+    category = interaction_category_cheat_menu 
+    desc = zhuge_set_relation_interaction_desc
+    icon = legend
+    interface_priority = 8
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+            has_character_flag = daddy_pika_cheat_menu
+        }
+        NOT = { scope:recipient = scope:actor }
+    }
+
+    on_accept = {
+		scope:actor = { trigger_event = debug.350 }
+	}
+
+    auto_accept = yes
+}
+
+# 生成有历史的随机宝物
+zhuge_set_artifact_interaction = {
+    category = interaction_category_cheat_menu
+    desc = zhuge_set_artifact_interaction_desc
+    icon = artifact
+    auto_accept = yes
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+
+    is_shown = {
+        scope:actor = { is_ai = no has_character_flag = daddy_pika_cheat_menu }
+        NOT = { scope:recipient = scope:actor }
+    }
+
+    on_accept = {
+        scope:actor = {
+            trigger_event = debug.400 
+            if = {
+                limit = { exists = scope:created_artifact }
+                scope:created_artifact = {
+                    upgrade_artifact_rarity_effect = illustrious 
+                }
+            }
+        }
+    }
+}
+
+# 消灭行政制世家
+zhuge_kill_xingzh_house_interaction = {
+    category = interaction_category_cheat_menu
+    desc = zhuge_kill_xingzh_house_interaction_desc
+    icon = icon_cross
+    auto_accept = yes
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+
+    is_shown = {
+        scope:actor = { 
+            is_ai = no 
+            has_character_flag = daddy_pika_cheat_menu 
+        }
+        scope:recipient = {
+            any_held_title = { is_noble_family_title = yes }
+        }
+    }
+
+    on_accept = {
+        scope:recipient = {
+            random_held_title = {
+                limit = { is_noble_family_title = yes }
+                save_scope_as = title_to_destroy
+                scope:recipient = {
+                    destroy_title = scope:title_to_destroy
+                }
+            }
+        }
+    }
+}
+
+# 取得宝物
+zhuge_huoqu_artifact_interaction = {
+	category = interaction_category_cheat_menu
+    desc = zhuge_huoqu_artifact_interaction_desc
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = icon_scheme_steal_back_artifact
+
+	target_type = artifact
+	target_filter = recipient_artifacts
+
+	is_shown = {
+		scope:actor = {
+            is_ai = no
+            has_character_flag = daddy_pika_cheat_menu
+        }
+		scope:recipient = {
+			any_character_artifact = { exists = this }
+		}
+        NOT = { scope:recipient = scope:actor }
+	}
+
+	send_option = {
+		is_valid = {
+			NOT = { scope:recipient = scope:actor }
+		}
+		flag = player
+		localization = zhuge_jiequ_artifact_player
+	}
+	on_accept = {
+		scope:recipient = {
+			switch = {
+				trigger = yes
+				scope:random_neighbor = {
+					random_neighboring_top_liege_realm_owner = {
+						limit = {
+							NOR = {
+								this = scope:recipient
+								this = scope:actor
+							}
+						}
+						save_scope_as = new_owner
+					}
+				}
+				scope:player = {
+					scope:actor = { save_scope_as = new_owner }
+				}
+			}
+		}
+		scope:target = { set_owner = scope:new_owner }
+	}
+	auto_accept = yes
+}
+
+#改变草原季节
+zhuge_great_steppe = {
+	category = interaction_category_cheat_menu
+    desc = zhuge_great_steppe_desc
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = travel_mixed
+
+	interface_priority = -1
+	auto_accept = yes
+
+	is_shown = {
+		scope:actor = {
+            is_ai = no
+            has_character_flag = daddy_pika_cheat_menu
+			government_has_flag = government_is_nomadic
+		}
+	}
+	send_option = {
+		flag = grazing
+		localization = debug_change_steppe_grazing
+	}
+	send_option = {
+		flag = drought
+		localization = debug_change_steppe_drought
+	}
+	send_option = {
+		flag = white_zud
+		localization = debug_change_steppe_white_zud
+	}
+	send_option = {
+		flag = cold_zud
+		localization = debug_change_steppe_cold_zud
+	}
+	send_option = {
+		flag = summer
+		localization = debug_change_steppe_everlasting_summer
+	}
+	send_option = {
+		flag = blessing
+		localization = debug_change_steppe_blessing
+	}
+	send_option = {
+		flag = havsarsan
+		localization = debug_change_steppe_havsarsan
+	}
+	on_accept = {
+		switch = {
+			trigger = yes
+			scope:grazing = {
+				if = {
+					limit = {
+						NOT = { exists = situation:the_great_steppe }
+					}
+					start_situation = {
+						type = the_great_steppe
+						start_phase = situation_steppe_abundant_grazing_season
+					}
+				}
+				else = {
+					situation:the_great_steppe = {
+						every_situation_sub_region = {
+							change_phase = { phase = situation_steppe_abundant_grazing_season }
+						}
+					}
+				}
+			}
+			scope:drought = {
+				if = {
+					limit = {
+						NOT = { exists = situation:the_great_steppe }
+					}
+					start_situation = {
+						type = the_great_steppe
+						start_phase = situation_steppe_severe_drought_season
+					}
+				}
+				else = {
+					situation:the_great_steppe = {
+						every_situation_sub_region = {
+							change_phase = { phase = situation_steppe_severe_drought_season }
+						}
+					}
+				}
+			}
+			scope:white_zud = {
+				if = {
+					limit = {
+						NOT = { exists = situation:the_great_steppe }
+					}
+					start_situation = {
+						type = the_great_steppe
+						start_phase = situation_steppe_white_zud_season
+					}
+				}
+				else = {
+					situation:the_great_steppe = {
+						every_situation_sub_region = {
+							change_phase = { phase = situation_steppe_white_zud_season }
+						}
+					}
+				}
+			}
+			scope:cold_zud = {
+				if = {
+					limit = {
+						NOT = { exists = situation:the_great_steppe }
+					}
+					start_situation = {
+						type = the_great_steppe
+						start_phase = situation_steppe_cold_zud_season
+					}
+				}
+				else = {
+					situation:the_great_steppe = {
+						every_situation_sub_region = {
+							change_phase = { phase = situation_steppe_cold_zud_season }
+						}
+					}
+				}
+			}
+			scope:summer = {
+				if = {
+					limit = {
+						NOT = { exists = situation:the_great_steppe }
+					}
+					start_situation = {
+						type = the_great_steppe
+						start_phase = situation_steppe_warm_nights_season
+					}
+				}
+				else = {
+					situation:the_great_steppe = {
+						every_situation_sub_region = {
+							change_phase = { phase = situation_steppe_warm_nights_season }
+						}
+					}
+				}
+			}
+			scope:blessing = {
+				if = {
+					limit = {
+						NOT = { exists = situation:the_great_steppe }
+					}
+					start_situation = {
+						type = the_great_steppe
+						start_phase = situation_steppe_sky_blessing_season
+					}
+				}
+				else = {
+					situation:the_great_steppe = {
+						every_situation_sub_region = {
+							change_phase = { phase = situation_steppe_sky_blessing_season }
+						}
+					}
+				}
+			}
+			scope:havsarsan = {
+				if = {
+					limit = {
+						NOT = { exists = situation:the_great_steppe }
+					}
+					start_situation = {
+						type = the_great_steppe
+						start_phase = situation_steppe_havsarsan_zud_season
+					}
+				}
+				else = {
+					situation:the_great_steppe = {
+						every_situation_sub_region = {
+							change_phase = { phase = situation_steppe_havsarsan_zud_season }
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+#游牧增强
+zhuge_ymbuff_02 = {
+    category = interaction_category_cheat_menu
+    desc = zhuge_ymbuff_02_desc
+    icon = legend
+    common_interaction = no
+    interface_priority = 8
+
+    auto_accept = yes
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+            has_character_flag = daddy_pika_cheat_menu
+            government_has_flag = government_is_nomadic
+        }
+        scope:recipient = {
+            is_ai = no
+        }
+    }
+
+    on_accept = {
+        scope:recipient = {
+            if = {
+                limit = { has_trait = zhuge_ymbuff_01 }
+                remove_trait = zhuge_ymbuff_01
+            }
+            else = {
+                add_trait = zhuge_ymbuff_01
+            }
+        }
+    }
+
+    ai_will_do = 0
+}
+
+#生活技能加强
+zhuge_lifexp_all_xp = {
+    category = interaction_category_cheat_menu
+    desc = zhuge_lifexp_all_xp_desc
+    icon = legend
+    auto_accept = yes
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+    interface_priority = 8
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+            has_character_flag = daddy_pika_cheat_menu
+        }
+    }
+
+    is_shown = {
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+		}
+	}
+	is_valid = {
+		scope:recipient = { is_alive = yes }
+	}
+
+	on_accept = {
+		scope:recipient = {
+			if = {
+				limit = {
+					OR = {
+						has_character_flag = martial_effect
+						has_character_flag = diplo_effect
+						has_character_flag = steward_effect
+						has_character_flag = intrigue_effect
+						has_character_flag = learning_effect
+                        has_character_flag = wanderer_effect
+					}
+				}
+				lifestyle_martial_present_no_effect = yes
+				lifestyle_diplomacy_present_no_effect = yes
+				lifestyle_steward_present_no_effect = yes
+				lifestyle_intrigue_present_no_effect = yes
+				lifestyle_learning_present_no_effect = yes
+                lifestyle_wanderer_present_no_effect = yes
+
+				remove_character_flag = martial_effect
+				remove_character_flag = diplo_effect
+				remove_character_flag = steward_effect
+				remove_character_flag = intrigue_effect
+				remove_character_flag = learning_effect
+                remove_character_flag = wanderer_effect
+			}
+			else = {
+				lifestyle_martial_present_effect = yes
+				lifestyle_diplomacy_present_effect = yes
+				lifestyle_steward_present_effect = yes
+				lifestyle_intrigue_present_effect = yes
+				lifestyle_learning_present_effect = yes
+                lifestyle_wanderer_present_effect = yes
+
+				add_character_flag = martial_effect
+				add_character_flag = diplo_effect
+				add_character_flag = steward_effect
+				add_character_flag = intrigue_effect
+				add_character_flag = learning_effect
+                add_character_flag = wanderer_effect
+			}
+		}
+	}
+}

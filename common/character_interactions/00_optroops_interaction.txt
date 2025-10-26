@@ -1,0 +1,101 @@
+﻿open_optroop_menu = {
+	category = interaction_pcm_main
+	icon = on
+	desc = open_optroop_menu_desc
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			NOT = {
+				has_character_flag = open_optroop_menu
+			}
+		}
+	}
+	on_send = {
+		scope:actor = {
+			add_character_flag = open_optroop_menu
+		}
+	}
+}
+
+close_optroop_menu = {
+	category = interaction_pcm_main
+	icon = off
+	desc = close_optroop_menu_desc
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			has_character_flag = open_optroop_menu
+		}
+	}
+	on_send = {
+		scope:actor = {
+			remove_character_flag = open_optroop_menu
+		}
+	}
+}
+
+inheritable_optroop_interaction = { 
+	category = interaction_pcm_main
+	icon = on
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	desc = inheritable_optroop_interaction_desc
+	is_shown = { 
+		scope:actor = {
+			has_character_flag = open_optroop_menu
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			spawn_army = {
+				men_at_arms = {
+					type = house_guard_type
+					stacks = 10
+				}
+				location = scope:recipient.capital_province
+				inheritable = yes
+				uses_supply = no
+				name = house_guard_type
+			}
+		}
+	}
+	auto_accept = yes
+}
+
+non_inheritable_optroop_interaction = { 
+	category = interaction_pcm_main
+	icon = on
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	desc = non_inheritable_optroop_interaction_desc
+	is_shown = { 
+		scope:actor = {
+			has_character_flag = open_optroop_menu
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			spawn_army = {
+				men_at_arms = {
+					type = house_cavalry_type
+					stacks = 10
+				}
+				location = scope:recipient.capital_province
+				inheritable = yes
+				uses_supply = no
+				name = house_cavalry_type
+			}
+		}
+	}
+	auto_accept = yes
+}

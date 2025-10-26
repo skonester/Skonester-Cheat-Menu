@@ -1,0 +1,440 @@
+eka_impregnate_female_inter = {
+    icon = on
+    category = interaction_category_cheat_menu
+    common_interaction = no
+    interface_priority = -1
+
+    is_highlighted = { always = no }
+
+    auto_accept = yes
+    ai_will_do = -100
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = no
+
+    is_shown = {
+        scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+        scope:recipient = { is_female = yes }
+        scope:actor = { is_male = yes }
+        OR = {
+            scope:recipient = { is_married = yes }
+            AND = {
+                scope:recipient = { is_adult = yes }
+                scope:actor = { is_adult = yes }
+            }
+        }
+    }
+
+    send_option = {
+        flag = flag_spouse_boy
+        localization = flag_spouse_boy
+        is_shown = {
+            scope:recipient = {
+                is_married = yes
+                is_pregnant = no
+                NOT = { this.primary_spouse = scope:actor }
+            }
+        }
+    }
+    send_option = {
+        flag = flag_spouse_girl
+        localization = flag_spouse_girl
+        is_shown = {
+            scope:recipient = {
+                is_married = yes
+                is_pregnant = no
+                NOT = { this.primary_spouse = scope:actor }
+            }
+        }
+    }
+    send_option = {
+        flag = flag_my_boy
+        localization = flag_my_boy
+        is_shown = {
+            scope:actor = { is_adult = yes }
+            scope:recipient = { is_pregnant = no }
+        }
+    }
+    send_option = {
+        flag = flag_my_girl
+        localization = flag_my_girl
+        is_shown = {
+            scope:actor = { is_adult = yes }
+            scope:recipient = { is_pregnant = no }
+        }
+    }
+    send_option = {
+        flag = flag_pregnancy_boy
+        localization = flag_pregnancy_boy
+        is_shown = {
+            scope:recipient = { is_pregnant = yes }
+        }
+    }
+    send_option = {
+        flag = flag_pregnancy_girl
+        localization = flag_pregnancy_girl
+        is_shown = {
+            scope:recipient = { is_pregnant = yes }
+        }
+    }
+    send_options_exclusive = yes
+
+    on_accept = {
+        scope:recipient = {
+            switch = {
+                trigger = yes
+
+                scope:flag_spouse_boy = {
+                    had_sex_with_effect = {
+                        CHARACTER = this.primary_spouse
+                        PREGNANCY_CHANCE = 10000
+                    }
+                    set_pregnancy_gender = male
+                }
+                scope:flag_spouse_girl = {
+                    had_sex_with_effect = {
+                        CHARACTER = this.primary_spouse
+                        PREGNANCY_CHANCE = 10000
+                    }
+                    set_pregnancy_gender = female
+                }
+                scope:flag_my_boy = {
+                    had_sex_with_effect = {
+                        CHARACTER = scope:actor
+                        PREGNANCY_CHANCE = 10000
+                    }
+                    set_pregnancy_gender = male
+                }
+                scope:flag_my_girl = {
+                    had_sex_with_effect = {
+                        CHARACTER = scope:actor
+                        PREGNANCY_CHANCE = 10000
+                    }
+                    set_pregnancy_gender = female
+                }
+                scope:flag_pregnancy_boy = {
+                    set_pregnancy_gender = male
+                }
+                scope:flag_pregnancy_girl = {
+                    set_pregnancy_gender = female
+                }
+            }
+        }
+    }
+}
+
+eka_impregnate_male_inter = {
+    icon = on
+    category = interaction_category_cheat_menu
+    common_interaction = no
+    interface_priority = -1
+
+    is_highlighted = { always = no }
+
+    auto_accept = yes
+    #ai_will_do = -100
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = no
+
+    is_shown = {
+        scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+        scope:recipient = { is_male = yes }
+        scope:actor = { is_female = yes }
+        OR = {
+            scope:recipient = { is_married = yes }
+            AND = {
+                scope:recipient = { is_adult = yes }
+                scope:actor = { is_adult = yes }
+            }
+        }
+    }
+
+    send_option = {
+        flag = flag_spouse_boy
+        localization = flag_spouse_boy
+        is_shown = {
+            scope:recipient = {
+                is_married = yes
+                NOT = { this.primary_spouse = scope:actor }
+                this.primary_spouse = { is_pregnant = no }
+            }
+        }
+    }
+    send_option = {
+        flag = flag_spouse_girl
+        localization = flag_spouse_girl
+        is_shown = {
+            scope:recipient = {
+                is_married = yes
+                NOT = { this.primary_spouse = scope:actor }
+                this.primary_spouse = { is_pregnant = no }
+            }
+        }
+    }
+    send_option = {
+        flag = flag_spouse_boy_confirm
+        localization = flag_spouse_boy_confirm
+        is_shown = {
+            scope:recipient = {
+                is_married = yes
+                NOT = { this.primary_spouse = scope:actor }
+                this.primary_spouse = { is_pregnant = yes }
+            }
+        }
+    }
+    send_option = {
+        flag = flag_spouse_girl_confirm
+        localization = flag_spouse_girl_confirm
+        is_shown = {
+            scope:recipient = {
+                is_married = yes
+                NOT = { this.primary_spouse = scope:actor }
+                this.primary_spouse = { is_pregnant = yes }
+            }
+        }
+    }
+    send_option = {
+        flag = flag_my_boy
+        localization = flag_my_boy
+        is_shown = {
+            scope:recipient = { is_adult = yes }
+            scope:actor = {
+                is_adult = yes
+                is_pregnant = no
+            }
+        }
+    }
+    send_option = {
+        flag = flag_my_girl
+        localization = flag_my_girl
+        is_shown = {
+            scope:recipient = { is_adult = yes }
+            scope:actor = {
+                is_adult = yes
+                is_pregnant = no
+            }
+        }
+    }
+    send_option = {
+        flag = flag_my_boy_confirm
+        localization = flag_my_boy_confirm
+        is_shown = {
+            scope:recipient = { is_adult = yes }
+            scope:actor = {
+                is_adult = yes
+                is_pregnant = yes
+            }
+        }
+    }
+    send_option = {
+        flag = flag_my_girl_confirm
+        localization = flag_my_girl_confirm
+        is_shown = {
+            scope:recipient = { is_adult = yes }
+            scope:actor = {
+                is_adult = yes
+                is_pregnant = yes
+            }
+        }
+    }
+    send_options_exclusive = yes
+
+    on_accept = {
+        scope:recipient = {
+            switch = {
+                trigger = yes
+
+                scope:flag_spouse_boy = {
+                    had_sex_with_effect = {
+                        CHARACTER = this.primary_spouse
+                        PREGNANCY_CHANCE = 10000
+                    }
+                    this.primary_spouse = { set_pregnancy_gender = male }
+                }
+                scope:flag_spouse_girl = {
+                    had_sex_with_effect = {
+                        CHARACTER = this.primary_spouse
+                        PREGNANCY_CHANCE = 10000
+                    }
+                    this.primary_spouse = { set_pregnancy_gender = female }
+                }
+                scope:flag_spouse_boy_confirm = {
+                    this.primary_spouse = { set_pregnancy_gender = male }
+                }
+                scope:flag_spouse_girl_confirm = {
+                    this.primary_spouse = { set_pregnancy_gender = female }
+                }
+                scope:flag_my_boy = {
+                    had_sex_with_effect = {
+                        CHARACTER = scope:actor
+                        PREGNANCY_CHANCE = 10000
+                    }
+                    scope:actor = { set_pregnancy_gender = male }
+                }
+                scope:flag_my_girl = {
+                    had_sex_with_effect = {
+                        CHARACTER = scope:actor
+                        PREGNANCY_CHANCE = 10000
+                    }
+                    scope:actor = { set_pregnancy_gender = female }
+                }
+                scope:flag_my_boy_confirm = {
+                    scope:actor = { set_pregnancy_gender = male }
+                }
+                scope:flag_my_girl_confirm = {
+                    scope:actor = { set_pregnancy_gender = female }
+                }
+            }
+        }
+    }
+}
+
+eka_impregnate_me_inter = {
+    icon = on
+    category = interaction_category_cheat_menu
+    common_interaction = no
+    interface_priority = -1
+
+    is_highlighted = { always = no }
+
+    auto_accept = yes
+    ai_will_do = -100
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = no
+
+    is_shown = {
+        scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+        scope:recipient = {
+            this = scope:actor
+            is_pregnant = yes
+        }
+    }
+
+    send_option = {
+        flag = flag_my_boy_confirm
+        localization = flag_my_boy_confirm
+
+        is_shown = {
+            scope:actor = {
+                is_adult = yes
+                is_pregnant = yes
+            }
+        }
+    }
+    send_option = {
+        flag = flag_my_girl_confirm
+        localization = flag_my_girl_confirm
+
+        is_shown = {
+            scope:actor = {
+                is_adult = yes
+                is_pregnant = yes
+            }
+        }
+    }
+    send_options_exclusive = yes
+
+    on_accept = {
+        scope:actor = {
+            switch = {
+                trigger = yes
+
+                scope:flag_my_boy_confirm = {
+                    scope:actor = { set_pregnancy_gender = male }
+                }
+                scope:flag_my_girl_confirm = {
+                    scope:actor = { set_pregnancy_gender = female }
+                }
+            }
+        }
+    }
+}
+
+eka_impregnate_concubine_inter = {
+    icon = on
+    category = interaction_category_cheat_menu
+    common_interaction = no
+    interface_priority = -1
+
+    is_highlighted = { always = no }
+
+    auto_accept = yes
+    ai_will_do = -100
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = no
+
+    is_shown = {
+        scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+        scope:recipient = { is_female = yes }
+        AND = {
+            scope:recipient = { is_adult = yes }
+            scope:recipient = { is_female = yes }
+        }
+    }
+
+    send_option = {
+        flag = flag_spouse_boy
+        localization = flag_spouse_boy
+
+        is_shown = {
+            scope:recipient = {
+                is_pregnant = no
+            }
+        }
+    }
+    send_option = {
+        flag = flag_spouse_girl
+        localization = flag_spouse_girl
+
+        is_shown = {
+            scope:recipient = {
+                is_pregnant = no
+            }
+        }
+    }
+    send_option = {
+        flag = flag_pregnancy_boy
+        localization = flag_pregnancy_boy
+
+        is_shown = {
+            scope:recipient = { is_pregnant = yes }
+        }
+    }
+    send_option = {
+        flag = flag_pregnancy_girl
+        localization = flag_pregnancy_girl
+
+        is_shown = {
+            scope:recipient = { is_pregnant = yes }
+        }
+    }
+    send_options_exclusive = yes
+
+    on_accept = {
+        scope:recipient = {
+            switch = {
+                trigger = yes
+
+                scope:flag_spouse_boy = {
+                    had_sex_with_effect = {
+                        CHARACTER = this.primary_spouse
+                        PREGNANCY_CHANCE = 10000
+                    }
+                    set_pregnancy_gender = male
+                }
+                scope:flag_spouse_girl = {
+                    had_sex_with_effect = {
+                        CHARACTER = this.primary_spouse
+                        PREGNANCY_CHANCE = 10000
+                    }
+                    set_pregnancy_gender = female
+                }
+                scope:flag_pregnancy_boy = {
+                    set_pregnancy_gender = male
+                }
+                scope:flag_pregnancy_girl = {
+                    set_pregnancy_gender = female
+                }
+            }
+        }
+    }
+}

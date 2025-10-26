@@ -1,0 +1,22 @@
+﻿daddy_pika_information = {
+  picture = {
+      reference = "gfx/interface/illustrations/decisions/open_tab.dds"
+  }
+
+  desc = information_desc
+  selection_tooltip = information_TT
+  confirm_text = CONFIRM_OKAY
+
+  decision_group_type = debug
+
+  is_shown = {
+      has_character_flag = daddy_pika_cheat_menu
+  }
+
+  effect = {
+      trigger_event = dp_information.1
+  }
+  ai_check_interval = 0
+
+  ai_will_do = 0
+}

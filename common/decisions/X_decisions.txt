@@ -1,0 +1,438 @@
+﻿X1_decision = {
+    decision_group_type = pcm
+    picture = { reference = "gfx/interface/illustrations/decisions/1.dds" }
+    title = X1_decision_title
+    confirm_text = X1_decision_confirm
+    is_shown = {
+        NOT = { has_character_modifier = X1_modifier }
+    }
+    effect = {
+        add_character_modifier = { modifier = X1_modifier }
+    }
+    ai_will_do = { base = 0 }
+}
+
+X_build = {
+    decision_group_type = pcm
+    picture = { reference = "gfx/interface/illustrations/decisions/2.dds" }
+    title = X_build_title
+    confirm_text = X_build_confirm
+    is_shown = {
+        any_held_title = {
+            limit = { tier = tier_county }
+            any_in_de_jure_hierarchy = {
+                limit = { tier = tier_barony }
+                title_province = {
+                    OR = {
+                        building_slots <= 4
+                        AND = {
+                            has_holding_type = castle_holding
+                            NOT = { has_building = hospices_08 }
+                        }
+                        AND = {
+                            has_holding_type = city_holding
+                            NOT = { has_building = hospices_08 }
+                        }
+                        AND = {
+                            has_holding_type = church_holding
+                            NOT = { has_building = hospices_08 }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    effect = {
+        every_held_title = {
+            limit = { tier = tier_county }
+            every_in_de_jure_hierarchy = {
+                limit = {
+                    tier = tier_barony
+                    building_slots <= 4
+                }
+                title_province = {
+                    add_province_modifier = X2_modifier
+                }
+            }
+            every_in_de_jure_hierarchy = {
+                limit = {
+                    tier = tier_barony
+                    title_province = {
+                        OR = {
+                            has_building = castle_01
+                            has_building = castle_02
+                            has_building = castle_03
+                            has_building = castle_04
+                        }
+                    }
+                }
+                title_province = {
+                    add_building = castle_04
+                    add_building = hospices_08
+                    add_building = watermills_08
+                    add_building = windmills_08
+                    add_building = common_tradeport_08
+                    add_building = guild_halls_08
+                    add_building = orchards_08
+                    add_building = farm_estates_08
+                    add_building = hill_farms_08
+                    add_building = smiths_08
+                }
+            }
+            every_in_de_jure_hierarchy = {
+                limit = {
+                    tier = tier_barony
+                    title_province = {
+                        OR = {
+                            has_building = city_01
+                            has_building = city_02
+                            has_building = city_03
+                            has_building = city_04
+                        }
+                    }
+                }
+                title_province = {
+                    add_building = city_04
+                    add_building = hospices_08
+                    add_building = watermills_08
+                    add_building = windmills_08
+                    add_building = common_tradeport_08
+                    add_building = guild_halls_08
+                    add_building = orchards_08
+                    add_building = farm_estates_08
+                    add_building = hill_farms_08
+                }
+            }
+            every_in_de_jure_hierarchy = {
+                limit = {
+                    tier = tier_barony
+                    title_province = {
+                        OR = {
+                            has_building = temple_01
+                            has_building = temple_02
+                            has_building = temple_03
+                            has_building = temple_04
+                        }
+                    }
+                }
+                title_province = {
+                    add_building = temple_04
+                    add_building = hospices_08
+                    add_building = watermills_08
+                    add_building = windmills_08
+                    add_building = common_tradeport_08
+                    add_building = guild_halls_08
+                    add_building = orchards_08
+                    add_building = farm_estates_08
+                    add_building = hill_farms_08
+                }
+            }
+        }
+    }
+    ai_will_do = { base = 0 }
+}
+
+X_city = {
+    decision_group_type = pcm
+    picture = { reference = "gfx/interface/illustrations/decisions/3.dds" }
+    title = X_city_title
+    confirm_text = X_city_confirm
+    is_shown = {
+        OR = {
+            any_held_title = {
+                limit = { tier = tier_county }
+                any_in_de_jure_hierarchy = {
+                    limit = { tier = tier_barony }
+                    title_province = {
+                        OR = {
+                            has_holding = no
+                            NOT = { has_holding_type = city_holding }
+                        }
+                    }
+                }
+            }
+            any_vassal_or_below = {
+                any_held_title = {
+                    limit = { tier = tier_county }
+                    any_in_de_jure_hierarchy = {
+                        tier = tier_barony
+                        OR = {
+                            has_holding = no
+                            NOT = { has_holding_type = city_holding }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    effect = {
+        every_held_title = {
+            limit = { tier = tier_county }
+            every_in_de_jure_hierarchy = {
+                limit = {
+                    tier = tier_barony
+                    OR = {
+                        has_holding = no
+                        NOT = { has_holding_type = city_holding }
+                    }
+                }
+                title_province = {
+                    set_holding_type = city_holding
+                    add_province_modifier = {
+                        modifier = X_hospitals
+                        years = -1
+                    }
+                }
+            }
+        }
+        every_vassal_or_below = {
+            limit = {
+                any_held_title = {
+                    limit = { tier = tier_county }
+                    any_in_de_jure_hierarchy = {
+                        tier = tier_barony
+                        OR = {
+                            has_holding = no
+                            NOT = { has_holding_type = city_holding }
+                        }
+                    }
+                }
+            }
+            every_held_title = {
+                limit = { tier = tier_county }
+                every_in_de_jure_hierarchy = {
+                    limit = {
+                        tier = tier_barony
+                        OR = {
+                            has_holding = no
+                            NOT = { has_holding_type = city_holding }
+                        }
+                    }
+                    title_province = {
+                        set_holding_type = city_holding
+                        add_province_modifier = {
+                            modifier = X_hospitals
+                            years = -1
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ai_will_do = { base = 0 }
+}
+
+X_temple = {
+    decision_group_type = pcm
+    picture = { reference = "gfx/interface/illustrations/decisions/4.dds" }
+    title = X_temple_title
+    confirm_text = X_temple_confirm
+    is_shown = {
+        OR = {
+            any_held_title = {
+                limit = { tier = tier_county }
+                any_in_de_jure_hierarchy = {
+                    limit = { tier = tier_barony }
+                    title_province = {
+                        is_capital_barony = no
+                        OR = {
+                            has_holding = no
+                            NOT = { has_holding_type = church_holding }
+                        }
+                    }
+                }
+            }
+            any_vassal_or_below = {
+                any_held_title = {
+                    limit = { tier = tier_county }
+                    any_in_de_jure_hierarchy = {
+                        tier = tier_barony
+                        is_capital_barony = no
+                        OR = {
+                            has_holding = no
+                            NOT = { has_holding_type = church_holding }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    effect = {
+        every_held_title = {
+            limit = { tier = tier_county }
+            every_in_de_jure_hierarchy = {
+                limit = {
+                    tier = tier_barony
+                    is_capital_barony = no
+                    OR = {
+                        has_holding = no
+                        NOT = { has_holding_type = church_holding }
+                    }
+                }
+                title_province = { set_holding_type = church_holding }
+            }
+        }
+        every_vassal_or_below = {
+            limit = {
+                any_held_title = {
+                    limit = { tier = tier_county }
+                    any_in_de_jure_hierarchy = {
+                        tier = tier_barony
+                        is_capital_barony = no
+                        OR = {
+                            has_holding = no
+                            NOT = { has_holding_type = church_holding }
+                        }
+                    }
+                }
+            }
+            every_held_title = {
+                limit = { tier = tier_county }
+                every_in_de_jure_hierarchy = {
+                    limit = {
+                        tier = tier_barony
+                        is_capital_barony = no
+                        OR = {
+                            has_holding = no
+                            NOT = { has_holding_type = church_holding }
+                        }
+                    }
+                    title_province = { set_holding_type = church_holding }
+                }
+            }
+        }
+    }
+    ai_will_do = { base = 0 }
+}
+
+X_castle = {
+    decision_group_type = pcm
+    picture = { reference = "gfx/interface/illustrations/decisions/5.dds" }
+    title = X_castle_title
+    confirm_text = X_castle_confirm
+    is_shown = {
+        OR = {
+            any_held_title = {
+                limit = { tier = tier_county }
+                any_in_de_jure_hierarchy = {
+                    limit = { tier = tier_barony }
+                    title_province = {
+                        is_capital_barony = yes
+                        NOT = { has_holding_type = castle_holding }
+                    }
+                }
+            }
+            any_vassal_or_below = {
+                any_held_title = {
+                    limit = { tier = tier_county }
+                    any_in_de_jure_hierarchy = {
+                        tier = tier_barony
+                        is_capital_barony = yes
+                        OR = {
+                            has_holding = no
+                            NOT = { has_holding_type = castle_holding }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    effect = {
+        every_held_title = {
+            limit = { tier = tier_county }
+            every_in_de_jure_hierarchy = {
+                limit = {
+                    tier = tier_barony
+                    is_capital_barony = yes
+                    NOT = { has_holding_type = castle_holding }
+                }
+                title_province = { set_holding_type = castle_holding }
+            }
+        }
+        every_vassal_or_below = {
+            limit = {
+                any_held_title = {
+                    limit = { tier = tier_county }
+                    any_in_de_jure_hierarchy = {
+                        tier = tier_barony
+                        is_capital_barony = yes
+                        OR = {
+                            has_holding = no
+                            NOT = { has_holding_type = castle_holding }
+                        }
+                    }
+                }
+            }
+            every_held_title = {
+                limit = { tier = tier_county }
+                every_in_de_jure_hierarchy = {
+                    limit = {
+                        tier = tier_barony
+                        is_capital_barony = yes
+                        OR = {
+                            has_holding = no
+                            NOT = { has_holding_type = castle_holding }
+                        }
+                    }
+                    title_province = {
+                        set_holding_type = castle_holding
+                    }
+                }
+            }
+        }
+    }
+    ai_will_do = { base = 0 }
+}
+
+X_unify = {
+    decision_group_type = pcm
+    picture = { reference = "gfx/interface/illustrations/decisions/6.dds" }
+    title = X_unify_title
+    confirm_text = X_unify_confirm
+    is_shown = {
+        OR = {
+            any_vassal = {
+                OR = {
+                    NOT = { faith = root.faith }
+                    NOT = { culture = root.culture }
+                }
+            }
+            any_sub_realm_title = {
+                limit = { tier = tier_county }
+                OR = {
+                    NOT = { faith = root.faith }
+                    NOT = { culture = root.culture }
+                }
+            }
+        }
+    }
+    effect = {
+        every_vassal = {
+            limit = {
+                NOT = { faith = root.faith }
+            }
+            set_faith = root.faith
+        }
+        every_vassal = {
+            limit = {
+                NOT = { culture = root.culture }
+            }
+            set_culture = root.culture
+        }
+        every_sub_realm_title = {
+            limit = {
+                tier = tier_county
+                NOT = { faith = root.faith }
+            }
+            set_county_faith = root.faith
+        }
+        every_sub_realm_title = {
+            limit = {
+                tier = tier_county
+                NOT = { culture = root.culture }
+            }
+            set_county_culture = root.culture
+        }
+    }
+    ai_will_do = { base = 0 }
+}

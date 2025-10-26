@@ -1,0 +1,24 @@
+﻿zhuge_chuantong = {
+	category = societal
+
+	layers = {
+		0 = learning
+		1 = mena
+		4 = conversation.dds
+	}
+	can_pick = {
+		player = yes
+		ai = no
+	}
+	culture_modifier = {
+		culture_tradition_max_add = 666
+	}
+	cost = {
+		prestige = 0
+	}
+	ai_will_do = {
+		value = 0
+	}
+}
+
+

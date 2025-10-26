@@ -1,0 +1,47 @@
+jkm_send_courtier_interaction = {
+    category = interaction_pcm_main
+    icon = on
+
+    desc = jkm_send_courtier_interaction_desc
+
+    populate_actor_list = {
+        scope:actor = {
+            every_courtier = {
+                add_to_list = characters
+            }
+        }
+    }
+
+    is_shown = {
+        scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+        NOT = { scope:actor = scope:recipient }
+        scope:recipient = { is_ruler = yes }
+        scope:actor = { is_ruler = yes }
+    }
+
+    on_accept = {
+        scope:actor = {
+            send_interface_message = {
+                type = event_generic_neutral
+                title = jkm_send_courtier_interaction_notification
+                right_icon = scope:secondary_actor
+                scope:recipient = {
+                    add_courtier = scope:secondary_actor
+                }
+            }
+        }
+    }
+
+    auto_accept = {
+        custom_description = {
+            text = auto_accept_interaction_ai
+            object = scope:recipient
+            scope:recipient = { is_ai = yes }
+        }
+    }
+
+    ai_min_reply_days = 1
+    ai_max_reply_days = 1
+
+    greeting = positive
+}

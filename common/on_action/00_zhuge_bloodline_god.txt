@@ -1,0 +1,7 @@
+# 监听新生儿
+on_character_born = {
+    events = {
+        zhuge_bloodline_god.0001   # 父亲持三级
+        zhuge_bloodline_god.0002   # 父亲持二级
+    }
+}

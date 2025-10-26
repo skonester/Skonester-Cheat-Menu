@@ -1,0 +1,175 @@
+﻿#众王之族
+dynasty_of_many_crowns_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	}
+	desc = dynasty_of_many_crowns_decision_desc
+	decision_group_type = major
+	ai_check_interval = 120
+
+	is_shown = {
+		is_landless_adventurer = no
+		is_lowborn = no
+		NOT = {
+			dynasty = {
+			 	has_dynasty_modifier = dynasty_of_many_crowns
+			}
+		}
+		highest_held_title_tier >= tier_kingdom
+	}
+
+	is_valid = {
+		dynasty = {
+			any_dynasty_member = {
+				count >= 2
+				is_independent_ruler = yes
+				highest_held_title_tier >= tier_kingdom
+			}
+		}
+	}
+
+	effect = {
+		gain_legitimizing_legend_seed_tooltip_effect = yes
+		save_scope_as = many_crowns
+		show_as_tooltip = {
+			dynasty_of_many_crowns_effects = yes
+		}
+
+		trigger_event = major_decisions.0501
+
+		every_player = {
+			limit = {
+				NOT = {
+					this = root
+				}
+				dynasty = root.dynasty
+			}
+			send_interface_toast = {
+				type = event_toast_effect_good
+				title = dynasty_of_many_crowns
+				show_as_tooltip = {
+					dynasty_of_many_crowns_effects = yes
+				}
+			}
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+#诸葛皇族
+zhuge_huangzu_add = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/open_hz_tab.dds"
+	}
+	desc = zhuge_huangzu_add_desc
+	ai_check_interval = 0
+	decision_group_type = debug
+
+	is_shown = {
+		is_ai = no
+		has_character_flag = daddy_pika_cheat_menu
+		has_character_flag = zhuge_juese_menu_01
+		NOT = { has_character_modifier = zhuge_huangzu }
+		NOT = { has_global_variable = zhuge_has_guoxi1 }
+		NOT = {has_artifact_modifier = zhuge_huangzu_baowu}
+	}
+
+	effect = {
+		custom_tooltip = zhuge_jinyong_huangzu_tt
+		create_character = {
+			name = "李斯"
+			culture = culture:han
+			faith = faith:shangqing
+			age = 76
+			dynasty = none
+			is_female = no
+			historical = no
+			random_traits = no
+			martial = 66
+			prowess = 66
+			diplomacy = 66
+			stewardship = 66
+			intrigue = 66
+			learning = 66
+			save_scope_as = cn_lishi_creator
+		}
+		scope:cn_lishi_creator = {
+			death = {
+				death_reason = death_peaceful
+				killer = none
+				type = disappearance
+			}
+		}
+
+		create_artifact = {
+			name = chuanguoyuxi_cn
+			description = chuanguoyuxi_cn_description
+			type = regalia
+			visuals = guoxi1
+			template = zhuge_chuanguo_template
+			rarity = illustrious
+			max_durability = 9999
+			decaying = no
+			modifier = zhuge_huangzu_baowu
+			creator = scope:cn_lishi_creator
+		}
+		add_legitimacy = 6666
+		add_trait = bloodline_god_3
+		set_global_variable = {
+			name = zhuge_has_guoxi1
+			value = yes
+		}
+		dynasty = {
+			add_dynasty_modifier = {
+				modifier = zhuge_huangzu
+			}
+		}
+	}
+	cooldown = { years = 10000 } 
+	ai_will_do = {
+		base = 0
+	}
+}
+
+#大明决议菜单
+#三司制
+change_sansi_government = {
+    picture = {
+		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+	}
+
+    title = change_sansi_government
+    desc = change_sansi1_desc
+    selection_tooltip = change_govt_tt
+    confirm_text = CONFIRM_OKAY
+
+	decision_group_type = debug
+
+    is_shown = {
+		is_ai = no
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = zhuge_sansi_menu_02
+        has_title = title:e_greatming
+    }
+
+    effect = {
+        #change_government = sansizhi_government 
+		every_vassal_or_below = {
+			change_government = sansizhi_government
+		}
+        every_sub_realm_county = {
+			title_province = {
+				set_holding_type = ming_city_holding
+			}
+		}
+    }
+    ai_check_interval = 0
+    ai_will_do = 0
+}

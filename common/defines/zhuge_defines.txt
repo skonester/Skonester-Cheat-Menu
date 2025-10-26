@@ -1,0 +1,12 @@
+﻿#文化改革
+NCulture = {
+	REFORMATION_PROGRESS_GAIN_BASE = 1000					    # 基础改革进度
+	REFORMATION_PROGRESS_SLOWDOWN_PER_COUNTY_WITH_CULTURE = 0   # 每个拥有该文化的省份会减慢改革进度
+	REFORMATION_PROGRESS_REPLACE_TRADITION_MULT = 1				# 替换传统时的进度加成
+	REFORMATION_MAX_YEARS = 1								# 改革的最大年限，超过这个年限会被强制完成
+}
+
+#统计者点数
+NRulerDesigner = {
+	IRONMAN_POINT_MAX = 66666 #嗨起来
+}

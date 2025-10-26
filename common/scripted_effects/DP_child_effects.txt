@@ -1,0 +1,3222 @@
+﻿m_heir_age_0_effect = {
+	if = {
+		limit = {
+			has_character_flag = great_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 0
+				gender = male
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 0
+				gender = male
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_character_flag = shitty_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 0
+				gender = male
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 0
+				gender = male
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOR = {
+				has_character_flag = great_heir
+				has_character_flag = shitty_heir
+			}
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 0
+				gender = male
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 0
+				gender = male
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+}
+m_heir_age_0_effect_2 = {
+	m_heir_age_0_effect = yes
+	m_heir_age_0_effect = yes
+}
+m_heir_age_0_effect_5 = {
+	m_heir_age_0_effect_2 = yes
+	m_heir_age_0_effect_2 = yes
+	m_heir_age_0_effect = yes
+}
+m_heir_age_0_effect_10 = {
+	m_heir_age_0_effect_5 = yes
+	m_heir_age_0_effect_5 = yes
+}
+m_heir_age_0_code = {
+	if = {
+		limit = {
+			has_character_flag = char_numb_1
+		}
+		m_heir_age_0_effect = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_2
+		}
+		m_heir_age_0_effect_2 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_5
+		}
+		m_heir_age_0_effect_5 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_10
+		}
+		m_heir_age_0_effect_10 = yes
+	}
+}
+
+f_heir_age_0_effect = {
+	if = {
+		limit = {
+			has_character_flag = great_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 0
+				gender = female
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 0
+				gender = female
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_character_flag = shitty_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 0
+				gender = female
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 0
+				gender = female
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOR = {
+				has_character_flag = great_heir
+				has_character_flag = shitty_heir
+			}
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 0
+				gender = female
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 0
+				gender = female
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+}
+f_heir_age_0_effect_2 = {
+	f_heir_age_0_effect = yes
+	f_heir_age_0_effect = yes
+}
+f_heir_age_0_effect_5 = {
+	f_heir_age_0_effect_2 = yes
+	f_heir_age_0_effect_2 = yes
+	f_heir_age_0_effect = yes
+}
+f_heir_age_0_effect_10 = {
+	f_heir_age_0_effect_5 = yes
+	f_heir_age_0_effect_5 = yes
+}
+f_heir_age_0_code = {
+	if = {
+		limit = {
+			has_character_flag = char_numb_1
+		}
+		f_heir_age_0_effect = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_2
+		}
+		f_heir_age_0_effect_2 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_5
+		}
+		f_heir_age_0_effect_5 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_10
+		}
+		f_heir_age_0_effect_10 = yes
+	}
+}
+
+m_heir_age_3_effect = {
+	if = {
+		limit = {
+			has_character_flag = great_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 3
+				gender = male
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 3
+				gender = male
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_character_flag = shitty_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 3
+				gender = male
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 3
+				gender = male
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOR = {
+				has_character_flag = great_heir
+				has_character_flag = shitty_heir
+			}
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 3
+				gender = male
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 3
+				gender = male
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+}
+m_heir_age_3_effect_2 = {
+	m_heir_age_3_effect = yes
+	m_heir_age_3_effect = yes
+}
+m_heir_age_3_effect_5 = {
+	m_heir_age_3_effect_2 = yes
+	m_heir_age_3_effect_2 = yes
+	m_heir_age_3_effect = yes
+}
+m_heir_age_3_effect_10 = {
+	m_heir_age_3_effect_5 = yes
+	m_heir_age_3_effect_5 = yes
+}
+m_heir_age_3_code = {
+	if = {
+		limit = {
+			has_character_flag = char_numb_1
+		}
+		m_heir_age_3_effect = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_2
+		}
+		m_heir_age_3_effect_2 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_5
+		}
+		m_heir_age_3_effect_5 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_10
+		}
+		m_heir_age_3_effect_10 = yes
+	}
+}
+
+f_heir_age_3_effect = {
+	if = {
+		limit = {
+			has_character_flag = great_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 3
+				gender = female
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 3
+				gender = female
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_character_flag = shitty_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 3
+				gender = female
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 3
+				gender = female
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOR = {
+				has_character_flag = great_heir
+				has_character_flag = shitty_heir
+			}
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 3
+				gender = female
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 3
+				gender = female
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+}
+f_heir_age_3_effect_2 = {
+	f_heir_age_3_effect = yes
+	f_heir_age_3_effect = yes
+}
+f_heir_age_3_effect_5 = {
+	f_heir_age_3_effect_2 = yes
+	f_heir_age_3_effect_2 = yes
+	f_heir_age_3_effect = yes
+}
+f_heir_age_3_effect_10 = {
+	f_heir_age_3_effect_5 = yes
+	f_heir_age_3_effect_5 = yes
+}
+f_heir_age_3_code = {
+	if = {
+		limit = {
+			has_character_flag = char_numb_1
+		}
+		f_heir_age_3_effect = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_2
+		}
+		f_heir_age_3_effect_2 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_5
+		}
+		f_heir_age_3_effect_5 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_10
+		}
+		f_heir_age_3_effect_10 = yes
+	}
+}
+
+m_heir_age_6_effect = {
+	if = {
+		limit = {
+			has_character_flag = great_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 6
+				gender = male
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 6
+				gender = male
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_character_flag = shitty_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 6
+				gender = male
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 6
+				gender = male
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOR = {
+				has_character_flag = great_heir
+				has_character_flag = shitty_heir
+			}
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 6
+				gender = male
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 6
+				gender = male
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+}
+m_heir_age_6_effect_2 = {
+	m_heir_age_6_effect = yes
+	m_heir_age_6_effect = yes
+}
+m_heir_age_6_effect_5 = {
+	m_heir_age_6_effect_2 = yes
+	m_heir_age_6_effect_2 = yes
+	m_heir_age_6_effect = yes
+}
+m_heir_age_6_effect_10 = {
+	m_heir_age_6_effect_5 = yes
+	m_heir_age_6_effect_5 = yes
+}
+m_heir_age_6_code = {
+	if = {
+		limit = {
+			has_character_flag = char_numb_1
+		}
+		m_heir_age_6_effect = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_2
+		}
+		m_heir_age_6_effect_2 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_5
+		}
+		m_heir_age_6_effect_5 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_10
+		}
+		m_heir_age_6_effect_10 = yes
+	}
+}
+
+f_heir_age_6_effect = {
+	if = {
+		limit = {
+			has_character_flag = great_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 6
+				gender = female
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 6
+				gender = female
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_character_flag = shitty_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 6
+				gender = female
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 6
+				gender = female
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOR = {
+				has_character_flag = great_heir
+				has_character_flag = shitty_heir
+			}
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 6
+				gender = female
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 6
+				gender = female
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+}
+f_heir_age_6_effect_2 = {
+	f_heir_age_6_effect = yes
+	f_heir_age_6_effect = yes
+}
+f_heir_age_6_effect_5 = {
+	f_heir_age_6_effect_2 = yes
+	f_heir_age_6_effect_2 = yes
+	f_heir_age_6_effect = yes
+}
+f_heir_age_6_effect_10 = {
+	f_heir_age_6_effect_5 = yes
+	f_heir_age_6_effect_5 = yes
+}
+f_heir_age_6_code = {
+	if = {
+		limit = {
+			has_character_flag = char_numb_1
+		}
+		f_heir_age_6_effect = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_2
+		}
+		f_heir_age_6_effect_2 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_5
+		}
+		f_heir_age_6_effect_5 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_10
+		}
+		f_heir_age_6_effect_10 = yes
+	}
+}
+
+m_heir_age_3_effect = {
+	if = {
+		limit = {
+			has_character_flag = great_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 3
+				gender = male
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 3
+				gender = male
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_character_flag = shitty_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 3
+				gender = male
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 3
+				gender = male
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOR = {
+				has_character_flag = great_heir
+				has_character_flag = shitty_heir
+			}
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 3
+				gender = male
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 3
+				gender = male
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+}
+m_heir_age_3_effect_2 = {
+	m_heir_age_3_effect = yes
+	m_heir_age_3_effect = yes
+}
+m_heir_age_3_effect_5 = {
+	m_heir_age_3_effect_2 = yes
+	m_heir_age_3_effect_2 = yes
+	m_heir_age_3_effect = yes
+}
+m_heir_age_3_effect_10 = {
+	m_heir_age_3_effect_5 = yes
+	m_heir_age_3_effect_5 = yes
+}
+m_heir_age_3_code = {
+	if = {
+		limit = {
+			has_character_flag = char_numb_1
+		}
+		m_heir_age_3_effect = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_2
+		}
+		m_heir_age_3_effect_2 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_5
+		}
+		m_heir_age_3_effect_5 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_10
+		}
+		m_heir_age_3_effect_10 = yes
+	}
+}
+
+f_heir_age_3_effect = {
+	if = {
+		limit = {
+			has_character_flag = great_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 3
+				gender = female
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 3
+				gender = female
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_character_flag = shitty_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 3
+				gender = female
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 3
+				gender = female
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOR = {
+				has_character_flag = great_heir
+				has_character_flag = shitty_heir
+			}
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 3
+				gender = female
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 3
+				gender = female
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+}
+f_heir_age_3_effect_2 = {
+	f_heir_age_3_effect = yes
+	f_heir_age_3_effect = yes
+}
+f_heir_age_3_effect_5 = {
+	f_heir_age_3_effect_2 = yes
+	f_heir_age_3_effect_2 = yes
+	f_heir_age_3_effect = yes
+}
+f_heir_age_3_effect_10 = {
+	f_heir_age_3_effect_5 = yes
+	f_heir_age_3_effect_5 = yes
+}
+f_heir_age_3_code = {
+	if = {
+		limit = {
+			has_character_flag = char_numb_1
+		}
+		f_heir_age_3_effect = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_2
+		}
+		f_heir_age_3_effect_2 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_5
+		}
+		f_heir_age_3_effect_5 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_10
+		}
+		f_heir_age_3_effect_10 = yes
+	}
+}
+
+m_heir_age_9_effect = {
+	if = {
+		limit = {
+			has_character_flag = great_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 9
+				gender = male
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 9
+				gender = male
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_character_flag = shitty_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 9
+				gender = male
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 9
+				gender = male
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOR = {
+				has_character_flag = great_heir
+				has_character_flag = shitty_heir
+			}
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 9
+				gender = male
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 9
+				gender = male
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+}
+m_heir_age_9_effect_2 = {
+	m_heir_age_9_effect = yes
+	m_heir_age_9_effect = yes
+}
+m_heir_age_9_effect_5 = {
+	m_heir_age_9_effect_2 = yes
+	m_heir_age_9_effect_2 = yes
+	m_heir_age_9_effect = yes
+}
+m_heir_age_9_effect_10 = {
+	m_heir_age_9_effect_5 = yes
+	m_heir_age_9_effect_5 = yes
+}
+m_heir_age_9_code = {
+	if = {
+		limit = {
+			has_character_flag = char_numb_1
+		}
+		m_heir_age_9_effect = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_2
+		}
+		m_heir_age_9_effect_2 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_5
+		}
+		m_heir_age_9_effect_5 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_10
+		}
+		m_heir_age_9_effect_10 = yes
+	}
+}
+
+f_heir_age_9_effect = {
+	if = {
+		limit = {
+			has_character_flag = great_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 9
+				gender = female
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 9
+				gender = female
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_character_flag = shitty_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 9
+				gender = female
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 9
+				gender = female
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOR = {
+				has_character_flag = great_heir
+				has_character_flag = shitty_heir
+			}
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 9
+				gender = female
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 9
+				gender = female
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+}
+f_heir_age_9_effect_2 = {
+	f_heir_age_9_effect = yes
+	f_heir_age_9_effect = yes
+}
+f_heir_age_9_effect_5 = {
+	f_heir_age_9_effect_2 = yes
+	f_heir_age_9_effect_2 = yes
+	f_heir_age_9_effect = yes
+}
+f_heir_age_9_effect_10 = {
+	f_heir_age_9_effect_5 = yes
+	f_heir_age_9_effect_5 = yes
+}
+f_heir_age_9_code = {
+	if = {
+		limit = {
+			has_character_flag = char_numb_1
+		}
+		f_heir_age_9_effect = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_2
+		}
+		f_heir_age_9_effect_2 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_5
+		}
+		f_heir_age_9_effect_5 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_10
+		}
+		f_heir_age_9_effect_10 = yes
+	}
+}
+
+m_heir_age_12_effect = {
+	if = {
+		limit = {
+			has_character_flag = great_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 12
+				gender = male
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 12
+				gender = male
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_character_flag = shitty_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 12
+				gender = male
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 12
+				gender = male
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOR = {
+				has_character_flag = great_heir
+				has_character_flag = shitty_heir
+			}
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 12
+				gender = male
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 12
+				gender = male
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+}
+m_heir_age_12_effect_2 = {
+	m_heir_age_12_effect = yes
+	m_heir_age_12_effect = yes
+}
+m_heir_age_12_effect_5 = {
+	m_heir_age_12_effect_2 = yes
+	m_heir_age_12_effect_2 = yes
+	m_heir_age_12_effect = yes
+}
+m_heir_age_12_effect_10 = {
+	m_heir_age_12_effect_5 = yes
+	m_heir_age_12_effect_5 = yes
+}
+m_heir_age_12_code = {
+	if = {
+		limit = {
+			has_character_flag = char_numb_1
+		}
+		m_heir_age_12_effect = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_2
+		}
+		m_heir_age_12_effect_2 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_5
+		}
+		m_heir_age_12_effect_5 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_10
+		}
+		m_heir_age_12_effect_10 = yes
+	}
+}
+
+f_heir_age_12_effect = {
+	if = {
+		limit = {
+			has_character_flag = great_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 12
+				gender = female
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 12
+				gender = female
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_character_flag = shitty_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 12
+				gender = female
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 12
+				gender = female
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOR = {
+				has_character_flag = great_heir
+				has_character_flag = shitty_heir
+			}
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 12
+				gender = female
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 12
+				gender = female
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+}
+f_heir_age_12_effect_2 = {
+	f_heir_age_12_effect = yes
+	f_heir_age_12_effect = yes
+}
+f_heir_age_12_effect_5 = {
+	f_heir_age_12_effect_2 = yes
+	f_heir_age_12_effect_2 = yes
+	f_heir_age_12_effect = yes
+}
+f_heir_age_12_effect_10 = {
+	f_heir_age_12_effect_5 = yes
+	f_heir_age_12_effect_5 = yes
+}
+f_heir_age_12_code = {
+	if = {
+		limit = {
+			has_character_flag = char_numb_1
+		}
+		f_heir_age_12_effect = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_2
+		}
+		f_heir_age_12_effect_2 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_5
+		}
+		f_heir_age_12_effect_5 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_10
+		}
+		f_heir_age_12_effect_10 = yes
+	}
+}
+
+m_heir_age_15_effect = {
+	if = {
+		limit = {
+			has_character_flag = great_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 15
+				gender = male
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 15
+				gender = male
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_character_flag = shitty_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 15
+				gender = male
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 15
+				gender = male
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOR = {
+				has_character_flag = great_heir
+				has_character_flag = shitty_heir
+			}
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 15
+				gender = male
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 15
+				gender = male
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+}
+m_heir_age_15_effect_2 = {
+	m_heir_age_15_effect = yes
+	m_heir_age_15_effect = yes
+}
+m_heir_age_15_effect_5 = {
+	m_heir_age_15_effect_2 = yes
+	m_heir_age_15_effect_2 = yes
+	m_heir_age_15_effect = yes
+}
+m_heir_age_15_effect_10 = {
+	m_heir_age_15_effect_5 = yes
+	m_heir_age_15_effect_5 = yes
+}
+m_heir_age_15_code = {
+	if = {
+		limit = {
+			has_character_flag = char_numb_1
+		}
+		m_heir_age_15_effect = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_2
+		}
+		m_heir_age_15_effect_2 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_5
+		}
+		m_heir_age_15_effect_5 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_10
+		}
+		m_heir_age_15_effect_10 = yes
+	}
+}
+
+f_heir_age_15_effect = {
+	if = {
+		limit = {
+			has_character_flag = great_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 15
+				gender = female
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 15
+				gender = female
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_character_flag = shitty_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 15
+				gender = female
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 15
+				gender = female
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOR = {
+				has_character_flag = great_heir
+				has_character_flag = shitty_heir
+			}
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 15
+				gender = female
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 15
+				gender = female
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+}
+f_heir_age_15_effect_2 = {
+	f_heir_age_15_effect = yes
+	f_heir_age_15_effect = yes
+}
+f_heir_age_15_effect_5 = {
+	f_heir_age_15_effect_2 = yes
+	f_heir_age_15_effect_2 = yes
+	f_heir_age_15_effect = yes
+}
+f_heir_age_15_effect_10 = {
+	f_heir_age_15_effect_5 = yes
+	f_heir_age_15_effect_5 = yes
+}
+f_heir_age_15_code = {
+	if = {
+		limit = {
+			has_character_flag = char_numb_1
+		}
+		f_heir_age_15_effect = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_2
+		}
+		f_heir_age_15_effect_2 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_5
+		}
+		f_heir_age_15_effect_5 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_10
+		}
+		f_heir_age_15_effect_10 = yes
+	}
+}
+
+m_heir_age_18_effect = {
+	if = {
+		limit = {
+			has_character_flag = great_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 18
+				gender = male
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				trait = boost_xueshi1
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 18
+				gender = male
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				trait = boost_xueshi1
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_character_flag = shitty_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 18
+				gender = male
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				trait = boost_xueshi1
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 18
+				gender = male
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				trait = boost_xueshi1
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOR = {
+				has_character_flag = great_heir
+				has_character_flag = shitty_heir
+			}
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 18
+				gender = male
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 18
+				gender = male
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+}
+m_heir_age_18_effect_2 = {
+	m_heir_age_18_effect = yes
+	m_heir_age_18_effect = yes
+}
+m_heir_age_18_effect_5 = {
+	m_heir_age_18_effect_2 = yes
+	m_heir_age_18_effect_2 = yes
+	m_heir_age_18_effect = yes
+}
+m_heir_age_18_effect_10 = {
+	m_heir_age_18_effect_5 = yes
+	m_heir_age_18_effect_5 = yes
+}
+m_heir_age_18_code = {
+	if = {
+		limit = {
+			has_character_flag = char_numb_1
+		}
+		m_heir_age_18_effect = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_2
+		}
+		m_heir_age_18_effect_2 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_5
+		}
+		m_heir_age_18_effect_5 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_10
+		}
+		m_heir_age_18_effect_10 = yes
+	}
+}
+
+f_heir_age_18_effect = {
+	if = {
+		limit = {
+			has_character_flag = great_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 18
+				gender = female
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				trait = boost_xueshi1
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 18
+				gender = female
+				health = 10
+				fertility = 2
+				trait = beauty_good_3
+				trait = intellect_good_3
+				trait = physique_good_3
+				trait = boost_xueshi1
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 15
+				prowess = 15
+				diplomacy = 15
+				stewardship = 15
+				intrigue = 15
+				learning = 15
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_character_flag = shitty_heir
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 18
+				gender = female
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				trait = boost_xueshi1
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 18
+				gender = female
+				health = 5
+				fertility = 0.5
+				trait = beauty_bad_3
+				trait = intellect_bad_3
+				trait = physique_bad_3
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 0
+				prowess = 0
+				diplomacy = 0
+				stewardship = 0
+				intrigue = 0
+				learning = 0
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOR = {
+				has_character_flag = great_heir
+				has_character_flag = shitty_heir
+			}
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_character = {
+				age = 18
+				gender = female
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				father = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+		else = {
+			create_character = {
+				age = 18
+				gender = female
+				health = 5
+				fertility = 0.5
+				employer = root
+				faith = root.faith
+				culture = root.culture
+				dynasty_house = root.house
+				martial = 5
+				prowess = 5
+				diplomacy = 5
+				stewardship = 5
+				intrigue = 5
+				learning = 5
+				mother = scope:char_spawner_scope
+				save_scope_as = spawned_child
+			}
+		}
+	}
+}
+f_heir_age_18_effect_2 = {
+	f_heir_age_18_effect = yes
+	f_heir_age_18_effect = yes
+}
+f_heir_age_18_effect_5 = {
+	f_heir_age_18_effect_2 = yes
+	f_heir_age_18_effect_2 = yes
+	f_heir_age_18_effect = yes
+}
+f_heir_age_18_effect_10 = {
+	f_heir_age_18_effect_5 = yes
+	f_heir_age_18_effect_5 = yes
+}
+f_heir_age_18_code = {
+	if = {
+		limit = {
+			has_character_flag = char_numb_1
+		}
+		f_heir_age_18_effect = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_2
+		}
+		f_heir_age_18_effect_2 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_5
+		}
+		f_heir_age_18_effect_5 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_10
+		}
+		f_heir_age_18_effect_10 = yes
+	}
+}

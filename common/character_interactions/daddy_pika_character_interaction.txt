@@ -1,0 +1,1545 @@
+﻿open_daddy_pika_cheat_menu = {
+    category = interaction_category_cheat_menu
+    desc = daddy_pika_cheat_menu_desc
+    common_interaction = yes
+	icon = grant_governorship
+	interface_priority = 1000
+
+    auto_accept = yes
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+	
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+            NOT = {
+                has_character_flag = daddy_pika_cheat_menu
+            }
+        }
+    }
+	
+    on_send = {
+        scope:actor = {
+            add_character_flag = daddy_pika_cheat_menu
+        }
+    }
+}
+
+close_daddy_pika_cheat_menu = {
+    category = interaction_category_cheat_menu             
+    desc = daddy_pika_cheat_menu_desc             
+    common_interaction = yes
+	icon = grant_governorship     
+	interface_priority = 1000                        
+
+    auto_accept = yes                                 
+    use_diplomatic_range = no                                
+    ignores_pending_interaction_block = yes 
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no                                
+            has_character_flag = daddy_pika_cheat_menu     
+        }
+    }
+
+    on_send = {
+        scope:actor = {
+            remove_character_flag = daddy_pika_cheat_menu  
+        }
+    }
+}
+
+#角色编辑器
+daddy_pika_edit_character = {
+    category = interaction_category_cheat_menu
+    desc = daddy_pika_edit_character_desc
+    common_interaction = yes
+    needs_recipient_to_open = no
+	icon = legend
+	interface_priority = 10
+
+    auto_accept = yes
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+	
+    is_shown = {
+        scope:actor = {
+            has_character_flag = daddy_pika_cheat_menu
+            is_ai = no
+        }
+    }
+	
+    on_send = {
+        scope:recipient = {
+            save_scope_as = char_editor
+        }
+        scope:actor = {
+            save_scope_as = char_editor_actor
+            trigger_event = dp_char_editor.1000
+        }
+    }
+}
+
+#货币菜单
+daddy_pika_character_currency_menu = {
+    category = interaction_category_cheat_menu
+    desc = daddy_pika_character_currency_menu_desc
+    common_interaction = yes
+	icon = icon_gold
+	interface_priority = 8
+
+    auto_accept = yes
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+	
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+            has_character_flag = daddy_pika_cheat_menu
+        }
+    }
+	
+    on_send = {
+        scope:recipient = {
+            save_scope_as = currency_scope
+        }
+        scope:actor = {
+            trigger_event = dp_char_interactions.10
+        }
+    }
+}
+
+#角色生成器
+daddy_pika_character_spawner = {
+	category = interaction_category_cheat_menu
+	desc = daddy_pika_character_spawner_desc
+	common_interaction = yes
+	icon = legend
+	interface_priority = 10
+	
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+		}
+	}
+	
+	on_send = {
+		scope:recipient = {
+			save_scope_as = char_spawner_scope
+		}
+		scope:actor = {
+			add_character_flag = char_numb_1
+			trigger_event = char_spawner.1
+		}
+	}
+}
+
+daddy_pika_change_character = {
+	category = interaction_category_cheat_menu
+	desc = daddy_pika_change_character_desc
+	common_interaction = yes
+	icon = legend
+	
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+		}
+		scope:recipient = {
+			is_ai = yes
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			add_character_flag = daddy_pika_cheat_menu
+		}
+		scope:actor = {
+			remove_character_flag = daddy_pika_cheat_menu
+			set_player_character = scope:recipient
+		}
+	}
+
+	ai_will_do = 0
+}
+
+daddy_pika_change_religion = {
+	category = interaction_category_cheat_menu
+	desc = daddy_pika_change_religion_desc
+	common_interaction = yes
+	icon = legend
+	
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		NOT = { scope:actor.faith = scope:recipient.faith }
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			set_character_faith = scope:actor.faith
+		}
+	}
+
+	ai_will_do = 0
+}
+
+daddy_pika_change_culture = {
+	category = interaction_category_cheat_menu
+	desc = daddy_pika_change_culture_desc
+	common_interaction = yes
+	icon = legend
+	
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		NOT = { scope:actor.culture = scope:recipient.culture }
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			set_culture = scope:actor.culture
+		}
+	}
+
+	ai_will_do = 0
+}
+
+daddy_pika_change_dynasty = {
+	category = interaction_category_cheat_menu
+	desc = daddy_pika_change_dynasty_desc
+	common_interaction = yes
+	icon = legend
+
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		NOT = { scope:actor.house = scope:recipient.house }
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			set_house = scope:actor.house
+		}
+	}
+
+	ai_will_do = 0
+}
+
+daddy_pika_char_modify_vassal_contract_inter = {
+	special_interaction = liege_modify_vassal_contract
+	interface = modify_vassal_contract
+	category = interaction_category_cheat_menu
+	common_interaction = yes
+	icon = legend
+
+	send_name = "modify_vassal_contract_interaction_SEND"
+	desc = daddy_pika_char_modify_vassal_contract_inter_desc
+
+	force_notification = yes
+	notification_text = MODIFY_VASSAL_CONTRACT_NOTIFICATION_TO_VASSAL
+	
+	is_shown = {
+		scope:recipient = {
+			NOT = { this = scope:actor }
+			exists = liege
+			liege = scope:actor
+			is_ruler = yes
+		}
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		NOT = { scope:actor = { is_at_war_with = scope:recipient } } 
+	}
+
+	can_send = {
+	}
+
+	auto_accept = yes
+
+	on_accept = {
+		scope:actor = {
+			send_interface_message = {
+				type = msg_vassal_contract_change
+				title = modify_vassal_contract_interaction_notification
+				right_icon = scope:recipient
+				every_in_list = {
+					list = changed_obligations
+
+					save_scope_as = obligation
+
+					scope:recipient = {
+						vassal_contract_set_obligation_level = {
+							type = scope:obligation.vassal_contract_type
+							level = scope:obligation
+						}
+					}
+
+				}
+			}
+		}
+	}
+}
+
+daddy_pika_vassal_mod_vassal_contract_inter = {
+	special_interaction = liege_modify_vassal_contract
+	interface = modify_vassal_contract
+	category = interaction_category_cheat_menu
+	common_interaction = yes
+	icon = icon_contract_modification_single
+
+	send_name = "modify_vassal_contract_interaction_SEND"
+	desc = daddy_pika_char_modify_vassal_contract_inter_desc
+
+	force_notification = yes
+	notification_text = MODIFY_VASSAL_CONTRACT_NOTIFICATION_TO_LIEGE
+
+	redirect = {
+		# need to reverse the role for the UI to work properly
+		scope:recipient = {
+			save_scope_as = secondary_recipient
+		}
+		scope:actor = {
+			save_scope_as = recipient
+		}
+
+		scope:secondary_recipient = {
+			save_scope_as = actor
+		}
+	}
+	
+	is_shown = {
+		scope:recipient = {
+			is_independent_ruler = no
+			NOT = { this = scope:actor }
+			liege = scope:actor
+		}
+		scope:recipient = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		NOT = { scope:recipient = { is_at_war_with = scope:actor } } 
+	}
+
+	can_send = {
+	}
+
+	auto_accept = yes
+
+	on_accept = {
+		# Enact changes.
+		scope:recipient = {
+			send_interface_message = {
+				type = msg_vassal_contract_change
+				title = modify_vassal_contract_interaction_notification
+				right_icon = scope:actor
+				if = {
+					limit = { always = scope:hook }
+					use_hook = scope:actor
+				}
+
+				every_in_list = {
+					list = changed_obligations
+
+					save_scope_as = obligation
+
+					scope:recipient = {
+						vassal_contract_set_obligation_level = {
+							type = scope:obligation.vassal_contract_type
+							level = scope:obligation
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+daddy_pika_arrange_marriage_inter = {
+	category = interaction_category_cheat_menu
+	common_interaction = no
+	auto_accept = yes
+	icon = legend
+	
+	interface_priority = 8
+
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	special_interaction = arrange_marriage_interaction
+	interface = marriage
+	
+	redirect = {
+		scope:actor = {
+			if = {
+				limit = {
+					exists = matchmaker
+					NOT = { this = matchmaker }
+				}
+				save_scope_as = secondary_actor
+				matchmaker = {
+					save_scope_as = actor
+				}
+			}
+			if = {
+				limit = {
+					is_betrothed = yes
+					betrothed = scope:recipient
+				}
+
+				save_scope_as = secondary_actor
+			}
+		}
+
+		scope:recipient = {
+			if = {
+				limit = {
+					is_betrothed = yes
+					betrothed.matchmaker = scope:actor
+					is_adult = yes
+					betrothed = {
+						is_adult = yes
+					}
+				}
+
+				save_scope_as = secondary_recipient
+				matchmaker = {
+					save_scope_as = recipient
+				}
+				betrothed = {
+					save_scope_as = secondary_actor
+				}
+			}
+			if = {
+				limit = {
+					exists = matchmaker
+					NOT = { this = matchmaker }
+				}
+				save_scope_as = secondary_recipient
+				matchmaker = {
+					save_scope_as = recipient
+				}
+			}
+		}
+	}
+
+	populate_actor_list = {
+		scope:actor = {
+			add_to_list = characters
+			every_courtier = {
+				limit = {
+					NOT = { is_in_list = characters }
+				}
+				add_to_list = characters
+			}
+			every_child = {
+				limit = {
+					NOT = { is_in_list = characters }
+				}
+				add_to_list = characters
+			}
+		}
+	}
+
+	populate_recipient_list = {
+		scope:recipient = {
+			add_to_list = characters
+			every_courtier = {
+				limit = {
+					NOT = { is_in_list = characters }
+				}
+				add_to_list = characters
+			}
+			every_child = {
+				limit = {
+					NOT = { is_in_list = characters }
+				}
+				add_to_list = characters
+			}
+		}
+	}
+
+	is_shown = {
+		scope:actor = {
+			has_character_flag = daddy_pika_cheat_menu
+			is_ai = no
+		}
+		
+		#If you're interacting with someone who isn't their own matchmaker, only show the interaction if they can get married. (If someone isn't their own matchmaker, they will be set as secondary_recipient by code and their matchmaker becomes recipient)
+		trigger_if = {
+			limit = { exists = scope:secondary_recipient }
+			scope:secondary_recipient = {
+				OR = {
+					marriage_interaction_can_be_picked_trigger = yes #Can marry anyone
+					AND = {
+						ready_to_marry_betrothed_trigger = yes
+						OR = {
+							betrothed = scope:secondary_actor
+							trigger_if = {
+								limit = { exists = betrothed.liege }
+								betrothed.liege = scope:actor
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	is_valid_showing_failures_only = {
+	}
+	
+	can_be_picked = {
+	}
+
+	has_valid_target_showing_failures_only = {
+	}
+	
+	on_accept = {
+		marriage_interaction_on_accept_effect = yes		
+	}
+
+	on_decline = {
+	}
+	
+	ai_accept = {
+		base = 100
+	}
+	
+	on_send = {
+	}
+	
+	send_option = {
+		flag = matrilineal
+		localization = MATRILINEAL_OFFER
+		current_description = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:secondary_actor
+					scope:secondary_actor = {
+						betrothed = scope:secondary_recipient
+						matrilinear_betrothal = yes
+					}
+				}
+				desc = "MATRILINEAL_OFFER_BETROTHAL_INFO"
+			}
+		}
+		can_be_changed = {
+		}
+		starts_enabled = {
+			trigger_if = {
+				limit = {
+					exists = scope:secondary_actor
+					scope:secondary_actor = {
+						betrothed = scope:secondary_recipient
+					}
+				}
+				scope:secondary_actor = {
+					matrilinear_betrothal = yes
+				}
+			}
+		}
+	}
+	
+	send_option = {
+		is_shown = {
+			scope:secondary_actor = {
+				NOT = {
+					betrothed = scope:secondary_recipient
+				}
+			}
+		}
+		flag = marriage_hook
+		localization = MARRIAGE_HOOK
+	}
+	
+	send_options_exclusive = no
+	
+	show_effects_in_notification = no
+	greeting = positive
+
+}
+#离婚
+divorce_character_cheat = {
+	category = interaction_category_cheat_menu
+	desc = divorce_character_cheat_desc
+	common_interaction = no
+	icon = legend
+
+	interface_priority = 8
+
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	
+
+	is_shown = {
+		scope:recipient = {
+			is_spouse_of = scope:actor
+		}
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			divorce_effect = {
+				DIVORCER = scope:actor
+				DIVORCEE = scope:recipient
+			}
+		}
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+#指定为继承人
+daddy_pika_designate_heir = {
+	category = interaction_category_cheat_menu
+	desc = daddy_pika_designate_heir_desc
+	common_interaction = no
+	interface_priority = 8
+	icon = legend
+
+	
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+		}
+		NOR = {
+			scope:recipient = scope:actor
+			scope:recipient = scope:actor.designated_heir
+			scope:recipient = scope:actor.father
+			scope:recipient = scope:actor.mother
+		}
+	}
+
+	on_accept = {
+		scope:actor = { set_designated_heir = scope:recipient }
+	}
+
+	ai_will_do = 0
+}
+
+daddy_pika_adopt_m = {
+	category = interaction_category_cheat_menu
+	desc = daddy_pika_adopt
+	common_interaction = no
+	icon = legend
+	interface_priority = 8
+
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			is_female = no
+			has_character_flag = daddy_pika_cheat_menu
+			NOT = { scope:recipient.house = scope:actor.house }
+		}
+		NOR = {
+			scope:recipient = scope:actor
+			scope:recipient = scope:actor.designated_heir
+			scope:recipient = scope:actor.father
+			scope:recipient = scope:actor.mother
+		}
+	}
+
+	on_accept = {
+		scope:recipient = { set_father = scope:actor }
+		scope:actor = {
+			scope:recipient = { set_house = scope:actor.house }
+		}
+	}
+
+	ai_will_do = 0
+}
+
+daddy_pika_adopt_f = {
+	category = interaction_category_cheat_menu
+	desc = daddy_pika_adopt
+	common_interaction = no
+	icon = legend
+	
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			is_female = yes
+			has_character_flag = daddy_pika_cheat_menu
+			NOT = { scope:recipient.house = scope:actor.house }
+		}
+		NOR = {
+			scope:recipient = scope:actor
+			scope:recipient = scope:actor.designated_heir
+			scope:recipient = scope:actor.father
+			scope:recipient = scope:actor.mother
+		}
+	}
+
+	on_accept = {
+		scope:recipient = { set_mother = scope:actor }
+		scope:actor = {
+			scope:recipient = { set_house = scope:actor.house }
+		}
+	}
+
+	ai_will_do = 0
+}
+
+daddy_pika_disown = {
+	category = interaction_category_cheat_menu
+	desc = daddy_pika_disown_desc
+	common_interaction = no
+	icon = legend
+	
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+			scope:recipient.house = scope:actor.house
+		}
+		NOR = {
+			scope:recipient = scope:actor
+			scope:recipient = scope:actor.designated_heir
+			scope:recipient = scope:actor.father
+			scope:recipient = scope:actor.mother
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			scope:recipient = { set_to_lowborn = yes }
+		}
+	}
+
+	ai_will_do = 0
+}
+
+daddy_pika_boost_stats = {
+	category = interaction_category_cheat_menu
+	desc = daddy_pika_boost_stats_desc
+	common_interaction = no
+	icon = legend
+
+	interface_priority = 8
+	
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			if = {
+				limit = {
+					has_trait = boost_stats
+				}
+				remove_trait = boost_stats
+			}
+			else = {
+				add_trait = boost_stats
+			}
+		}
+	}
+
+	ai_will_do = 0
+}
+
+#谋杀
+daddy_pika_murder = {
+    category = interaction_category_cheat_menu
+    desc = daddy_pika_murder_desc
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+    common_interaction = yes
+    icon = icon_dead
+
+    is_shown = {
+        NOT = { scope:recipient = scope:actor }
+        scope:actor = {
+            is_ai = no
+            has_character_flag = daddy_pika_cheat_menu
+        }
+    }
+
+    send_option = {
+        flag = random_murder
+        localization = suiji_murder_character_interaction
+    }
+
+    send_option = {
+        flag = no_murder
+        localization = null_murder_character_interaction
+    }
+
+    send_option = {
+        is_valid = {
+            NOT = { scope:recipient = scope:actor }
+        }
+        flag = actor_murder
+        localization = actor_murder_character_interaction
+    }
+
+    send_option = {
+        flag = zhuge_kill_01
+        localization = zhuge_kill_01_character_interaction
+    }
+
+    on_accept = {
+        scope:recipient = {
+            switch = {
+                trigger = yes
+
+                scope:random_murder = {
+                    random_independent_ruler = {
+                        limit = {
+                            NOT = { this = scope:recipient }
+                        }
+                        save_scope_as = rando
+                    }
+                    hidden_effect = {
+						random_list = {
+							40 = { death = { death_reason = death_molten_silver_by_mob } }
+							30 = { death = { death_reason = death_heart_ripped_out killer = scope:rando } }
+							30 = { death = { death_reason = death_peaceful } }
+						}
+                    }
+                }
+
+                scope:no_murder = {
+                    death = { death_reason = death_natural_causes }
+                }
+
+                scope:actor_murder = {
+                    death = {
+                        death_reason = death_duel
+                        killer = scope:actor
+                    }
+                }
+
+                scope:zhuge_kill_01 = {
+                    add_trait = zhuge_kill_02
+					death_reason = "death_suicide"
+                }
+            }
+        }
+    }
+
+    auto_accept = yes
+}
+
+#囚禁
+daddy_pika_imprison = {
+	category = interaction_category_cheat_menu
+	desc = daddy_pika_imprison_desc
+	common_interaction = no
+	icon = legend
+
+	interface_priority = 8
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			imprison = {
+				target = scope:recipient
+				type = dungeon
+			}
+		}
+	}
+
+	ai_will_do = 0
+}
+#夺取头衔
+daddy_pika_usurpy_surp = {
+	category = interaction_category_cheat_menu
+	desc = daddy_pika_usurpy_surp_desc
+	
+	use_diplomatic_range = no
+	auto_accept = yes
+	ignores_pending_interaction_block = yes
+	special_interaction = revoke_title_interaction
+	#interface = manage_titles
+	target_type = title
+	target_filter = recipient_domain_titles
+	icon = revoke_title
+	interface_priority = 9
+	
+	is_shown = {
+		NOT = { scope:actor = scope:recipient }
+		scope:recipient = {
+			is_landed = yes
+		}
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+		}
+	}
+	
+	is_valid_showing_failures_only = {
+		scope:actor = { is_ai = no }
+	}
+	
+	can_be_picked_title = {
+		scope:target = {
+			holder = scope:recipient
+		}
+	}
+	
+	on_auto_accept = {
+	}
+	
+	on_accept = {
+	}
+}
+#获得其领主宣称
+daddy_pika_claim_title = {
+	category = interaction_category_cheat_menu
+	desc = daddy_pika_claim_title_desc
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	target_type = title
+	target_filter = recipient_domain_titles
+	icon = legend
+	interface_priority = 5
+
+	is_shown = {
+		NOT = { scope:actor = scope:recipient }
+		scope:recipient = {
+			is_landed = yes
+		}
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+		}
+	}
+	
+	is_valid_showing_failures_only = {
+		scope:actor = { is_ai = no }
+	}
+	
+	can_be_picked_title = {
+		scope:target = {
+			holder = scope:recipient
+			tier >= tier_county
+		}
+	}
+	
+	auto_accept = yes
+	
+	on_auto_accept = {
+		scope:recipient = {
+			trigger_event = char_interaction.0110
+		}
+	}
+	
+	on_send = {
+		scope:actor = {
+			add_pressed_claim = scope:target
+		}
+	}
+}
+#剥夺头衔
+daddy_pika_revoke_title = {
+	category = interaction_category_cheat_menu
+	common_interaction = yes
+	icon = debug_take_title
+	
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	
+	desc = daddy_pika_revoke_title_desc
+
+	special_interaction = revoke_title_interaction
+	interface = revoke_title
+	target_type = title
+	target_filter = recipient_domain_titles
+
+	is_shown = {
+		scope:recipient = {
+			is_landed = yes
+			target_is_liege_or_above = scope:actor
+		}
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+		}
+		NOT = { scope:recipient = scope:actor }
+	}
+	
+	is_valid_showing_failures_only = {
+	}
+
+	can_be_picked_title = {
+		trigger_if = {
+			limit = {
+				scope:landless_title = yes
+			}
+			scope:target = {
+				is_landless_type_title = yes
+				is_noble_family_title = no
+			}
+		}
+		trigger_else = {
+			scope:target = { is_landless_type_title = no }
+		}
+	}
+
+	send_option = {
+		flag = title_only
+		localization = take_title_interaction
+	}
+	send_option = {
+		flag = title_and_vassals
+		localization = take_title_and_vassals_interaction
+	}
+	send_option = {
+		flag = landless_title
+		localization = zhuge_rongyu_title_interaction
+	}
+
+	auto_accept = yes
+
+	on_accept = {
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		scope:target = {
+			switch = {
+				trigger = yes
+				scope:title_only = {
+					change_title_holder = {
+						holder = scope:actor
+						change = scope:change
+					}
+				}
+				scope:title_and_vassals = {
+					change_title_holder_include_vassals = {
+						holder = scope:actor
+						change = scope:change
+					}
+				}
+				scope:landless_title = {
+					change_title_holder = {
+						holder = scope:actor
+						change = scope:change
+					}
+				}
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+	}
+}
+
+daddy_pika_offer_vassal_inter = {
+	category = interaction_category_cheat_menu
+	common_interaction = yes
+	icon = icon_liege
+	
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	
+	desc = daddy_pika_offer_vassal_inter_desc
+	
+	is_shown = {
+		scope:recipient = {
+			NOT = { this = scope:actor }
+			is_landed = yes
+			highest_held_title_tier < scope:actor.highest_held_title_tier
+			NOT = { government_has_flag = can_not_be_vassal_or_liege }
+		}
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+		}
+	}
+
+	is_valid_showing_failures_only = {
+	}
+	ai_accept = {
+		base = 100
+	}
+
+	on_accept = {
+		offer_vassalization_interaction_effect = yes
+	}
+
+	on_decline = {
+	}
+
+	ai_will_do = {
+	}
+}
+#加入宫廷
+daddy_pika_add_to_court = {
+	category = interaction_category_cheat_menu
+	desc = daddy_pika_add_to_court_desc
+	common_interaction = no
+	icon = legend
+
+	interface_priority = 8
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:recipient = {
+			is_landed = no
+			NOT = {
+				is_courtier_of = scope:actor
+			}
+		}
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+			is_landed = yes
+		}
+	}
+	
+	on_accept = {
+		scope:actor = {
+			add_courtier = scope:recipient
+		}
+	}
+}
+
+#添加小妾
+daddy_pika_concubine_cheat = {
+	category = interaction_category_cheat_menu
+	desc = daddy_pika_concubine_cheat_desc
+	common_interaction = no
+	icon = legend
+	sort_order = 10
+
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	
+	is_shown = {
+		NOT = { scope:actor = scope:recipient }
+		NOT = { scope:recipient = { age < 16 } }
+		scope:recipient = {
+			sex_opposite_of = scope:actor
+			is_concubine = no
+		}
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+			allowed_concubines = yes
+			allowed_more_concubines = yes
+		}
+	}
+	
+	on_send = {
+		scope:actor = {
+			make_concubine = scope:recipient
+		}
+	}
+}
+#怀孕
+daddy_pika_impregnate_cheat = {
+	category = interaction_category_cheat_menu
+	desc = daddy_pika_impregnate_cheat_desc
+	common_interaction = no
+	interface_priority = 8
+	icon = legend
+
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	
+	is_shown = {
+		debug_only = yes
+		scope:recipient = { is_adult = yes }
+		scope:actor = { is_adult = yes }
+		scope:recipient = { is_pregnant = no }
+		scope:actor = { is_pregnant = no }
+
+		OR = {
+			AND = {
+				scope:recipient = { is_female = yes }
+				scope:actor = { is_male = yes }
+			}
+			AND = {
+				scope:recipient = { is_male = yes }
+				scope:actor = { is_female = yes }
+			}
+		}
+	}
+
+	on_accept = {
+		scope:actor = { trigger_event = debug.0002 }
+	}
+
+	auto_accept = yes
+}
+
+### ATTEMPTING SLEEP WITH CHARACTER INTERACTION ###
+
+dp_sex_interaction = { #一起睡觉
+    category = interaction_category_cheat_menu
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+    icon = legend
+    interface_priority = 5
+
+    is_shown = {
+        NOT = { scope:recipient = scope:actor }
+        scope:actor = {
+            is_ai = no
+            has_character_flag = daddy_pika_cheat_menu
+        }
+        scope:recipient = {
+            is_female = yes  # 确保目标角色是女性
+        }
+    }
+
+    on_accept = { scope:actor = { trigger_event = dp_char_interactions.11 } }
+    auto_accept = yes
+}
+
+
+#获得强牵制
+daddy_pika_add_strong_hook = {
+	category = interaction_category_cheat_menu
+	desc = daddy_pika_add_strong_hook_desc
+	common_interaction = no
+	icon = legend
+
+	interface_priority = 10
+	
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			add_hook = {
+				target = scope:recipient
+				type = strong_test_hook
+			}
+		}
+	}
+}
+#绝罚
+daddy_pika_excommunicate = {
+	category = interaction_category_cheat_menu
+	desc = daddy_pika_excommunicate_desc
+	common_interaction = no
+	icon = legend
+	interface_priority = 5
+	
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	
+	is_shown = {
+		NOT = {
+			scope:recipient = {
+				has_trait = excommunicated
+			}
+		}
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+		}
+		NOT = { scope:recipient = scope:actor }
+	}
+
+	on_accept = {
+		scope:recipient = {
+			add_trait = excommunicated
+		}
+	}
+
+	ai_will_do = 0
+}
+
+daddy_pika_remove_excommunication = {
+	category = interaction_category_cheat_menu
+	desc = daddy_pika_remove_excommunication_desc
+	common_interaction = no
+	sort_order = 10
+	
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	
+	is_shown = {
+		scope:recipient = {
+			has_trait = excommunicated
+		}
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			remove_trait = excommunicated
+		}
+	}
+
+	ai_will_do = 0
+}
+#自杀
+daddy_pika_commit_suicide = {
+	category = interaction_category_cheat_menu
+	desc = daddy_pika_commit_suicide_desc
+	common_interaction = no
+	interface_priority = 5
+	icon = legend
+
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		scope:recipient = scope:actor
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+		}
+	}
+
+	on_accept = {
+		scope:actor = {		
+			death = {
+				killer = scope:actor
+				death_reason = "death_suicide"
+			}
+		}
+	}
+
+	ai_will_do = 0
+}
+#忘族灭种
+daddy_pika_extermination_process = {
+	category = interaction_category_cheat_menu
+	desc = daddy_pika_extermination_process_desc
+	common_interaction = no
+	interface_priority = 8
+	icon = legend
+
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+			NOT = { has_character_flag = extermination_processing }
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			add_character_flag = extermination_processing
+		}
+		scope:recipient = {
+			add_to_list = dyn_clear
+		}
+	}
+
+	ai_will_do = 0
+}
+
+daddy_pika_designate_survivors = {
+	category = interaction_category_cheat_menu
+	desc = daddy_pika_designate_survivors_desc
+	common_interaction = no
+	sort_order = 10
+	
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+			has_character_flag = extermination_processing
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			add_character_flag = saved_from_extermination
+		}
+	}
+
+	ai_will_do = 0
+}
+
+daddy_pika_designate_survivors_remove = {
+	category = interaction_category_cheat_menu
+	desc = daddy_pika_designate_survivors_remove_desc
+	common_interaction = no
+	sort_order = 10
+	
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+			has_character_flag = extermination_processing
+		}
+		scope:recipient = {
+			has_character_flag = saved_from_extermination
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			remove_character_flag = saved_from_extermination
+		}
+	}
+
+	ai_will_do = 0
+}
+
+daddy_pika_murder_off_dynasty = {
+	category = interaction_category_cheat_menu
+	desc = daddy_pika_murder_off_dynasty_desc
+	common_interaction = no
+	sort_order = 10
+	
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = {
+			is_ai = no
+			has_character_flag = daddy_pika_cheat_menu
+			has_character_flag = extermination_processing
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			every_close_or_extended_family_member = {
+				limit = {
+					NOT = { has_character_flag = saved_from_extermination }
+					NOT = { has_character_flag = extermination_processing }
+				}
+				add_to_list = dyn_clear
+			}
+			every_dynasty_member = {
+				limit = {
+					NOT = { has_character_flag = saved_from_extermination }
+					NOT = { has_character_flag = extermination_processing }
+				}
+				add_to_list = dyn_clear
+			}
+			every_in_list = {
+				list = dyn_clear
+				death = {
+					killer = scope:actor
+					death_reason = "death_murder"
+				}
+			}
+		}
+		scope:actor = {
+			remove_character_flag = extermination_processing
+		}
+	}
+
+	ai_will_do = 0
+}
+
+
+#Whoa there buddy.

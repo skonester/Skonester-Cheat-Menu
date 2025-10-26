@@ -1,0 +1,46 @@
+﻿# 文化加速
+on_tradition_added = {
+	effect = {
+		every_player = {
+			limit = {
+				culture = root
+			}
+			trigger_event = {
+				id = culture_notification.0011
+				days = 0
+			}
+		}
+		
+		every_ruler = {
+			limit = {
+				is_ruler = yes
+				should_have_same_faith_succession_trigger = yes
+				NOT = {
+					has_realm_law = same_faith_only_law
+				}
+			}
+			add_realm_law_skip_effects = same_faith_only_law
+		}		
+	}
+}
+
+
+#大明兼容
+
+on_actions = {
+    # 游戏开始或存档读入时立刻检查并移除
+    on_game_start = {
+      if = {
+        limit = { exists = global_var:Data_tuiju }
+        remove_global_variable = Data_tuiju
+      }
+    }
+  
+    # 每年1月1日定时检查并移除
+    on_yearly_pulse = {
+      if = {
+        limit = { exists = global_var:Data_tuiju }
+        remove_global_variable = Data_tuiju
+      }
+    }
+}

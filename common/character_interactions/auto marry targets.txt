@@ -1,0 +1,496 @@
+﻿dynasty_marry = {
+    icon = on
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+            has_character_flag = bone_cheat_interactions_flag
+        }
+    }
+
+    on_accept = {
+        scope:recipient = {
+            if = {
+                limit = { scope:males_marry = yes }
+                if = {
+                    limit = {
+                        NOT = {
+                            any_in_global_list = {
+                                variable = dynasty_marry_males
+                                this = scope:recipient.dynasty
+                            }
+                        }
+                    }
+                    scope:recipient.dynasty = {
+                        add_dynasty_modifier = males_marry_dynasty
+                    }
+                    add_to_global_variable_list = {
+                        name = dynasty_marry_males
+                        target = scope:recipient.dynasty
+                    }
+                }
+                else = {
+                    remove_list_global_variable = {
+                        name = dynasty_marry_males
+                        target = scope:recipient.dynasty
+                    }
+                    scope:recipient.dynasty = {
+                        remove_dynasty_modifier = males_marry_dynasty
+                    }
+                }
+            }
+            if = {
+                limit = { scope:females_marry = yes }
+                if = {
+                    limit = {
+                        NOT = {
+                            any_in_global_list = {
+                                variable = dynasty_marry_females
+                                this = scope:recipient.dynasty
+                            }
+                        }
+                    }
+                    add_to_global_variable_list = {
+                        name = dynasty_marry_females
+                        target = scope:recipient.dynasty
+                    }
+                    scope:recipient.dynasty = {
+                        add_dynasty_modifier = females_marry_dynasty
+                    }
+                }
+                else = {
+                    remove_list_global_variable = {
+                        name = dynasty_marry_females
+                        target = scope:recipient.dynasty
+                    }
+                    scope:recipient.dynasty = {
+                        remove_dynasty_modifier = females_marry_dynasty
+                    }
+                }
+            }
+            if = {
+                limit = { scope:inbreed_marry = yes }
+                if = {
+                    limit = {
+                        NOT = {
+                            any_in_global_list = {
+                                variable = dynasty_marry_inbreed
+                                this = scope:recipient.dynasty
+                            }
+                        }
+                    }
+                    add_to_global_variable_list = {
+                        name = dynasty_marry_inbreed
+                        target = scope:recipient.dynasty
+                    }
+                    scope:recipient.dynasty = {
+                        add_dynasty_modifier = inbreed_marry_dynasty
+                    }
+                }
+                else = {
+                    remove_list_global_variable = {
+                        name = dynasty_marry_inbreed
+                        target = scope:recipient.dynasty
+                    }
+                    scope:recipient.dynasty = {
+                        remove_dynasty_modifier = inbreed_marry_dynasty
+                    }
+                }
+            }
+            if = {
+                limit = { scope:males_concubine = yes }
+                if = {
+                    limit = {
+                        NOT = {
+                            any_in_global_list = {
+                                variable = dynasty_conc_males
+                                this = scope:recipient.dynasty
+                            }
+                        }
+                    }
+                    add_to_global_variable_list = {
+                        name = dynasty_conc_males
+                        target = scope:recipient.dynasty
+                    }
+                    scope:recipient.dynasty = {
+                        add_dynasty_modifier = males_concubine_dynasty
+                    }
+                }
+                else = {
+                    remove_list_global_variable = {
+                        name = dynasty_conc_males
+                        target = scope:recipient.dynasty
+                    }
+                    scope:recipient.dynasty = {
+                        remove_dynasty_modifier = males_concubine_dynasty
+                    }
+                }
+            }
+            if = {
+                limit = { scope:females_concubine = yes }
+                if = {
+                    limit = {
+                        NOT = {
+                            any_in_global_list = {
+                                variable = dynasty_conc_females
+                                this = scope:recipient.dynasty
+                            }
+                        }
+                    }
+                    add_to_global_variable_list = {
+                        name = dynasty_conc_females
+                        target = scope:recipient.dynasty
+                    }
+                    scope:recipient.dynasty = {
+                        add_dynasty_modifier = females_concubine_dynasty
+                    }
+                }
+                else = {
+                    remove_list_global_variable = {
+                        name = dynasty_conc_females
+                        target = scope:recipient.dynasty
+                    }
+                    scope:recipient.dynasty = {
+                        remove_dynasty_modifier = females_concubine_dynasty
+                    }
+                }
+            }
+            if = {
+                limit = { scope:males_eugenic = yes }
+                if = {
+                    limit = {
+                        NOT = {
+                            any_in_global_list = {
+                                variable = dynasty_eugenic_males
+                                this = scope:recipient.dynasty
+                            }
+                        }
+                    }
+                    add_to_global_variable_list = {
+                        name = dynasty_eugenic_males
+                        target = scope:recipient.dynasty
+                    }
+                    scope:recipient.dynasty = {
+                        add_dynasty_modifier = males_eugenic_dynasty
+                    }
+                }
+                else = {
+                    remove_list_global_variable = {
+                        name = dynasty_eugenic_males
+                        target = scope:recipient.dynasty
+                    }
+                    scope:recipient.dynasty = {
+                        remove_dynasty_modifier = males_eugenic_dynasty
+                    }
+                }
+            }
+            if = {
+                limit = { scope:females_eugenic = yes }
+                if = {
+                    limit = {
+                        NOT = {
+                            any_in_global_list = {
+                                variable = dynasty_eugenic_females
+                                this = scope:recipient.dynasty
+                            }
+                        }
+                    }
+                    add_to_global_variable_list = {
+                        name = dynasty_eugenic_females
+                        target = scope:recipient.dynasty
+                    }
+                    scope:recipient.dynasty = {
+                        add_dynasty_modifier = females_eugenic_dynasty
+                    }
+                }
+                else = {
+                    remove_list_global_variable = {
+                        name = dynasty_eugenic_females
+                        target = scope:recipient.dynasty
+                    }
+                    scope:recipient.dynasty = {
+                        remove_dynasty_modifier = females_eugenic_dynasty
+                    }
+                }
+            }
+        }
+    }
+
+    send_option = { flag = males_marry localization = males_marry }
+    send_option = { flag = females_marry localization = females_marry }
+    send_option = { flag = inbreed_marry localization = inbreed_marry }
+    send_option = { flag = males_concubine localization = males_concubine }
+    send_option = { flag = females_concubine localization = females_concubine }
+    send_option = { flag = males_eugenic localization = males_eugenic }
+    send_option = { flag = females_eugenic localization = females_eugenic }
+
+    send_options_exclusive = no
+    auto_accept = { always = yes }
+}
+
+house_marry = {
+    icon = on
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+            has_character_flag = bone_cheat_interactions_flag
+        }
+    }
+    auto_accept = { always = yes }
+
+    on_accept = {
+        scope:recipient = {
+            if = {
+                limit = { scope:males_marry = yes }
+                if = {
+                    limit = {
+                        NOT = {
+                            any_in_global_list = {
+                                variable = house_marry_males
+                                this = scope:recipient.house
+                            }
+                        }
+                    }
+                    add_to_global_variable_list = {
+                        name = house_marry_males
+                        target = scope:recipient.house
+                    }
+                    scope:recipient.house = {
+                        add_house_modifier = males_marry_house
+                    }
+                }
+                else = {
+                    remove_list_global_variable = {
+                        name = house_marry_males
+                        target = scope:recipient.house
+                    }
+                    scope:recipient.house = {
+                        remove_house_modifier = males_marry_house
+                    }
+                }
+            }
+            if = {
+                limit = { scope:females_marry = yes }
+                if = {
+                    limit = {
+                        NOT = {
+                            any_in_global_list = {
+                                variable = house_marry_females
+                                this = scope:recipient.house
+                            }
+                        }
+                    }
+                    add_to_global_variable_list = {
+                        name = house_marry_females
+                        target = scope:recipient.house
+                    }
+                    scope:recipient.house = {
+                        add_house_modifier = females_marry_house
+                    }
+                }
+                else = {
+                    remove_list_global_variable = {
+                        name = house_marry_females
+                        target = scope:recipient.house
+                    }
+                    scope:recipient.house = {
+                        remove_house_modifier = females_marry_house
+                    }
+                }
+            }
+            if = {
+                limit = { scope:inbreed_marry = yes }
+                if = {
+                    limit = {
+                        NOT = {
+                            any_in_global_list = {
+                                variable = house_marry_inbreed
+                                this = scope:recipient.house
+                            }
+                        }
+                    }
+                    add_to_global_variable_list = {
+                        name = house_marry_inbreed
+                        target = scope:recipient.house
+                    }
+                    scope:recipient.house = {
+                        add_house_modifier = inbreed_marry_house
+                    }
+                }
+                else = {
+                    remove_list_global_variable = {
+                        name = house_marry_inbreed
+                        target = scope:recipient.house
+                    }
+                    scope:recipient.house = {
+                        remove_house_modifier = inbreed_marry_house
+                    }
+                }
+            }
+            if = {
+                limit = { scope:males_concubine = yes }
+                if = {
+                    limit = {
+                        NOT = {
+                            any_in_global_list = {
+                                variable = house_conc_males
+                                this = scope:recipient.house
+                            }
+                        }
+                    }
+                    add_to_global_variable_list = {
+                        name = house_conc_males
+                        target = scope:recipient.house
+                    }
+                    scope:recipient.house = {
+                        add_house_modifier = males_concubine_house
+                    }
+                }
+                else = {
+                    remove_list_global_variable = {
+                        name = house_conc_males
+                        target = scope:recipient.house
+                    }
+                    scope:recipient.house = {
+                        remove_house_modifier = males_concubine_house
+                    }
+                }
+            }
+            if = {
+                limit = { scope:females_concubine = yes }
+                if = {
+                    limit = {
+                        NOT = {
+                            any_in_global_list = {
+                                variable = house_conc_females
+                                this = scope:recipient.house
+                            }
+                        }
+                    }
+                    add_to_global_variable_list = {
+                        name = house_conc_females
+                        target = scope:recipient.house
+                    }
+                    scope:recipient.house = {
+                        add_house_modifier = females_concubine_house
+                    }
+                }
+                else = {
+                    remove_list_global_variable = {
+                        name = house_conc_females
+                        target = scope:recipient.house
+                    }
+                    scope:recipient.house = {
+                        remove_house_modifier = females_concubine_house
+                    }
+                }
+            }
+            if = {
+                limit = { scope:males_eugenic = yes }
+                if = {
+                    limit = {
+                        NOT = {
+                            any_in_global_list = {
+                                variable = house_eugenic_males
+                                this = scope:recipient.house
+                            }
+                        }
+                    }
+                    add_to_global_variable_list = {
+                        name = house_eugenic_males
+                        target = scope:recipient.house
+                    }
+                    scope:recipient.house = {
+                        add_house_modifier = males_eugenic_house
+                    }
+                }
+                else = {
+                    remove_list_global_variable = {
+                        name = house_eugenic_males
+                        target = scope:recipient.house
+                    }
+                    scope:recipient.house = {
+                        remove_house_modifier = males_eugenic_house
+                    }
+                }
+            }
+            if = {
+                limit = { scope:females_eugenic = yes }
+                if = {
+                    limit = {
+                        NOT = {
+                            any_in_global_list = {
+                                variable = house_eugenic_females
+                                this = scope:recipient.house
+                            }
+                        }
+                    }
+                    add_to_global_variable_list = {
+                        name = house_eugenic_females
+                        target = scope:recipient.house
+                    }
+                    scope:recipient.house = {
+                        add_house_modifier = females_eugenic_house
+                    }
+                }
+                else = {
+                    remove_list_global_variable = {
+                        name = house_eugenic_females
+                        target = scope:recipient.house
+                    }
+                    scope:recipient.house = {
+                        remove_house_modifier = females_eugenic_house
+                    }
+                }
+            }
+        }
+    }
+    send_option = { flag = males_marry }
+    send_option = { flag = females_marry }
+    send_option = { flag = inbreed_marry }
+    send_option = { flag = males_concubine }
+    send_option = { flag = females_concubine }
+    send_option = { flag = males_eugenic localization = males_eugenic }
+    send_option = { flag = females_eugenic localization = females_eugenic }
+
+    send_options_exclusive = no
+}
+
+individual_marry_exempt = {
+    icon = on
+
+    is_shown = {
+        scope:actor = {
+            is_ai = no
+            has_character_flag = bone_cheat_interactions_flag
+        }
+    }
+    auto_accept = { always = yes }
+    on_accept = {
+        scope:recipient = {
+            if = {
+                limit = {
+                    NOT = {
+                        any_in_global_list = {
+                            variable = individual_marry_exempt
+                            this = scope:recipient
+                        }
+                    }
+                }
+                add_to_global_variable_list = {
+                    name = individual_marry_exempt
+                    target = scope:recipient
+                }
+                add_character_modifier = individual_marry_exempt
+            }
+            else = {
+                remove_list_global_variable = {
+                    name = individual_marry_exempt
+                    target = scope:recipient
+                }
+                remove_character_modifier = individual_marry_exempt
+            }
+        }
+    }
+}

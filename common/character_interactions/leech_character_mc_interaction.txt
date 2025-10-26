@@ -1,0 +1,114 @@
+leech_mind_control_interaction = {
+    category = interaction_category_cheat_menu
+    desc = leech_mind_control_interaction_desc
+    ignores_pending_interaction_block = yes
+    use_diplomatic_range = no
+    icon = lady
+
+    redirect = {
+        scope:actor = {
+            if = {
+                limit = { exists = var:mind_controlled }
+                var:mind_controlled = { save_scope_as = secondary_recipient }
+            }
+        }
+    }
+
+    is_shown = {
+        scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+        NOT = {
+            AND = {
+                exists = scope:recipient
+                scope:recipient = scope:secondary_recipient
+            }
+        }
+    }
+
+    is_valid_showing_failures_only = {
+        NOT = {
+            AND = {
+                exists = scope:recipient
+                scope:recipient = scope:secondary_recipient
+            }
+        }
+    }
+
+    ai_frequency = 0
+    auto_accept = yes
+
+    on_accept = {
+        if = {
+            limit = { NOT = { exists = scope:secondary_recipient } }
+            scope:actor = {
+                add_character_flag = {
+                    flag = mind_controlled
+                    days = 5
+                }
+            }
+        }
+        scope:actor = {
+            set_variable = {
+                name = mind_controlled
+                value = scope:recipient
+            }
+        }
+    }
+}
+
+leech_mc_end_control_interaction = {
+    category = interaction_category_cheat_menu
+    desc = leech_mc_end_control_interaction_desc
+    ignores_pending_interaction_block = yes
+    icon = lady
+
+    is_shown = {
+        scope:actor = {
+            has_character_flag = bone_cheat_interactions_flag
+            exists = var:mind_controlled
+        }
+    }
+
+    ai_frequency = 0
+    auto_accept = yes
+
+    on_accept = {
+        scope:actor = {
+            remove_character_flag = mind_controlled
+        }
+    }
+}
+
+leech_mc_simple_action_interaction = {
+    category = interaction_category_cheat_menu
+    desc = leech_mc_simple_action_interaction_desc
+    ignores_pending_interaction_block = yes
+    use_diplomatic_range = no
+    icon = lady
+
+    redirect = {
+        scope:recipient = {
+            save_scope_as = secondary_recipient
+            scope:actor = {
+                if = {
+                    limit = { exists = var:mind_controlled }
+                    var:mind_controlled = { save_scope_as = recipient }
+                }
+            }
+        }
+    }
+
+    is_shown = {
+        scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+        exists = scope:recipient
+        NOT = { scope:recipient = scope:secondary_recipient }
+    }
+
+    ai_frequency = 0
+    auto_accept = yes
+
+    on_accept = {
+        scope:actor = {
+            trigger_event = leech_mc_event.1001
+        }
+    }
+}

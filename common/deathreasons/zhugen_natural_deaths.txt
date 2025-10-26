@@ -1,0 +1,17 @@
+﻿zhuge_boost_gy = {
+	natural_death_trigger = {
+		has_trait = boost_hufu
+	}
+	priority = 1
+	icon = "death_disease.dds"
+	death_reason = "$zhuge_boost_gy$"
+}
+
+death_zhuge_kill_02 = {
+	natural_death_trigger = {
+		has_trait = zhuge_kill_02
+	}
+	priority = 2 
+	icon = "death_natural.dds"
+	death_reason = "$death_zhuge_kill_02$"
+}

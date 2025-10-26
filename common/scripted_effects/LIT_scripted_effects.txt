@@ -1,0 +1,359 @@
+﻿### Author: Lithane ###
+### Attempting Script Effects to make life easier ###
+### Input personality TRAIT = X Where X is trait name
+LIT_personality_trait_check = {
+	if = {
+		limit = {
+			has_trait = $TRAIT$
+		}
+		remove_trait = $TRAIT$
+	}
+	else = {
+		LIT_personality_trait_check_opposite = {
+			TRAIT = $TRAIT$
+		}
+		add_trait = $TRAIT$
+	}
+}
+
+### Trait check that doesn't check for opposite personality traits ###
+LIT_trait_check = {
+	if = {
+		limit = {
+			has_trait = $TRAIT$
+		}
+		remove_trait = $TRAIT$
+	}
+	else = {
+		add_trait = $TRAIT$
+	}
+}
+
+### Input TRAIT = X Where X is a personality trait you wish to remove the opposite of
+### Useful for use with trait_check to remove an opposite personality trait before adding the new one
+LIT_personality_trait_check_opposite = {
+	hidden_effect = {
+		if = {
+			limit = {
+				flag:$TRAIT$ = flag:lustful
+				has_trait = chaste
+			}
+			remove_trait = chaste
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:chaste
+				has_trait = lustful
+			}
+			remove_trait = lustful
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:gluttonous
+				has_trait = temperate
+			}
+			remove_trait = temperate
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:temperate
+				has_trait = gluttonous
+			}
+			remove_trait = gluttonous
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:greedy
+				has_trait = generous
+			}
+			remove_trait = generous
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:generous
+				has_trait = greedy
+			}
+			remove_trait = greedy
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:lazy
+				has_trait = diligent
+			}
+			remove_trait = diligent
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:diligent
+				has_trait = lazy
+			}
+			remove_trait = lazy
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:wrathful
+				has_trait = calm
+			}
+			remove_trait = calm
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:calm
+				has_trait = wrathful
+			}
+			remove_trait = wrathful
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:patient
+				has_trait = impatient
+			}
+			remove_trait = impatient
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:impatient
+				has_trait = patient
+			}
+			remove_trait = patient
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:arrogant
+				has_trait = humble
+			}
+			remove_trait = humble
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:humble
+				has_trait = arrogant
+			}
+			remove_trait = arrogant
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:deceitful
+				has_trait = honest
+			}
+			remove_trait = honest
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:honest
+				has_trait = deceitful
+			}
+			remove_trait = deceitful
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:craven
+				has_trait = brave
+			}
+			remove_trait = brave
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:brave
+				has_trait = craven
+			}
+			remove_trait = craven
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:shy
+				has_trait = gregarious
+			}
+			remove_trait = gregarious
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:gregarious
+				has_trait = shy
+			}
+			remove_trait = shy
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:ambitious
+				has_trait = content
+			}
+			remove_trait = content
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:content
+				has_trait = ambitious
+			}
+			remove_trait = ambitious
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:arbitrary
+				has_trait = just
+			}
+			remove_trait = just
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:just
+				has_trait = arbitrary
+			}
+			remove_trait = arbitrary
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:cynical
+				has_trait = zealous
+			}
+			remove_trait = zealous
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:zealous
+				has_trait = cynical
+			}
+			remove_trait = cynical
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:paranoid
+				has_trait = trusting
+			}
+			remove_trait = trusting
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:trusting
+				has_trait = paranoid
+			}
+			remove_trait = paranoid
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:compassionate
+				OR = {
+					has_trait = callous
+					has_trait = sadistic
+				}
+			}
+			remove_trait = callous
+			remove_trait = sadistic
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:callous
+				has_trait = compassionate
+			}
+			remove_trait = compassionate
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:sadistic
+				has_trait = compassionate
+			}
+			remove_trait = compassionate
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:stubborn
+				has_trait = fickle
+			}
+			remove_trait = fickle
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:fickle
+				has_trait = stubborn
+			}
+			remove_trait = stubborn
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:vengeful
+				has_trait = forgiving
+			}
+			remove_trait = forgiving
+		}
+		else_if = {
+			limit = {
+				flag:$TRAIT$ = flag:forgiving
+				has_trait = vengeful
+			}
+			remove_trait = vengeful
+		}
+	}
+}
+
+### Script to take an innovation key as an input and check if the characters culture has the innovation, add if it doesn't remove otherwise
+LIT_innovation_check = {
+	scope:char_editor.culture = {
+		if = {
+			limit = { 
+				NOT = {
+					has_innovation = $KEY$
+				}
+			 }
+			 add_innovation = $KEY$
+		}
+		else = {
+			remove_innovation = $KEY$
+		}
+	}
+}
+
+### Check if a character has a given learned trait, if they do, add xp
+LIT_learned_trait_check_track = {
+	scope:char_editor = {
+		if = {
+			limit = {
+				has_trait_xp = {
+					trait = $TRAIT$
+					track = $TRACK$
+					value = 100
+				}
+			}
+			custom_tooltip = LIT_learned_trait_check_max_TT
+		}
+		else_if = {
+			limit = {
+				has_trait = $TRAIT$
+			}
+			add_trait_xp = {
+				trait = $TRAIT$
+				track = $TRACK$ 
+				value = $VALUE$
+			}
+		}
+		else = {
+			custom_tooltip = LIT_learned_trait_check_missing_TT
+		}
+	}
+}
+
+### 
+LIT_learned_trait_check = {
+	scope:char_editor = {
+		if = {
+			limit = {
+				has_trait_xp = {
+					trait = $TRAIT$
+					value = 100
+				}
+			}
+			custom_tooltip = LIT_learned_trait_check_max_TT
+		}
+		else_if = {
+			limit = {
+				has_trait = $TRAIT$
+			}
+			add_trait_xp = {
+				trait = $TRAIT$
+				value = $VALUE$
+			}
+		}
+		else = {
+			custom_tooltip = LIT_learned_trait_check_missing_TT
+		}
+	}
+}

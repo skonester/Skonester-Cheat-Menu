@@ -1,0 +1,125 @@
+﻿open_daddypika_menu = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/open_tab.dds"
+    }
+
+    desc = open_daddypika_menu_desc
+    selection_tooltip = open_daddypika_menu_desc
+    confirm_text = CONFIRM_OKAY
+
+    decision_group_type = debug
+
+    is_shown = {
+        NOT = { has_character_flag = daddy_pika_cheat_menu }
+    }
+
+    effect = {
+        add_character_flag = {
+            flag = daddy_pika_cheat_menu
+        }
+    }
+    ai_check_interval = 0
+
+    ai_will_do = 0
+}
+
+open_government_menu = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/open_tab.dds"
+    }
+
+    title = title_government_menu                    
+    desc = open_daddypika_menu_desc                 
+    selection_tooltip = open_daddypika_menu_desc
+    confirm_text = CONFIRM_OKAY
+
+    decision_group_type = debug                    
+
+    is_shown = {
+        has_character_flag = daddy_pika_cheat_menu 
+        NOT = { has_character_flag = govt_menu }      
+    }
+
+    effect = {
+        add_character_flag = govt_menu          
+    }
+
+    ai_check_interval = 0                        
+    ai_will_do = 0                                  
+}
+
+open_convert_menu = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/open_tab.dds"
+    }
+
+    title = title_convert_menu                   
+    desc = open_daddypika_menu_desc                 
+    selection_tooltip = open_daddypika_menu_desc
+    confirm_text = CONFIRM_OKAY
+
+    decision_group_type = debug                    
+
+    is_shown = {
+        has_character_flag = daddy_pika_cheat_menu 
+        NOT = { has_character_flag = covt_menu }      
+    }
+
+    effect = {
+        add_character_flag = covt_menu         
+    }
+
+    ai_check_interval = 0                        
+    ai_will_do = 0                                  
+}
+
+open_zhuge_juese_menu = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/open_tab.dds"
+    }
+
+    title = zhuge_juese_menu                  
+    desc = open_daddypika_menu_desc                 
+    selection_tooltip = open_daddypika_menu_desc
+    confirm_text = CONFIRM_OKAY
+
+    decision_group_type = debug                    
+
+    is_shown = {
+        has_character_flag = daddy_pika_cheat_menu 
+        NOT = { has_character_flag = zhuge_juese_menu_01  }      
+    }
+
+    effect = {
+        add_character_flag = zhuge_juese_menu_01         
+    }
+
+    ai_check_interval = 0                        
+    ai_will_do = 0                                  
+}
+
+open_zhuge_sansi_menu = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/open_tab.dds"
+    }
+
+    title = zhuge_sansi_menu                
+    desc = open_daddypika_menu_desc                 
+    selection_tooltip = open_daddypika_menu_desc
+    confirm_text = CONFIRM_OKAY
+
+    decision_group_type = debug                    
+
+    is_shown = {
+        has_title = title:e_greatming
+        has_character_flag = daddy_pika_cheat_menu 
+        NOT = { has_character_flag = zhuge_sansi_menu_02  }      
+    }
+
+    effect = {
+        add_character_flag = zhuge_sansi_menu_02     
+    }
+
+    ai_check_interval = 0                        
+    ai_will_do = 0                                  
+}

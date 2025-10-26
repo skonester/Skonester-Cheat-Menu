@@ -1,0 +1,21 @@
+﻿# has_ch_barony_selected
+# has_ch_eligble_barony_to_castle_in_county
+# has_ch_eligble_barony_to_city_in_county
+# has_ch_eligble_barony_to_temple_in_county
+
+
+has_ch_barony_selected = {
+	first_not = NOT_I_HAVE_CH_BARONY_SELECTED
+}
+
+has_ch_eligble_barony_to_castle_in_county = {
+	first = I_HAVE_CH_ELIGBLE_BARONIES_TO_CASTLE_COUNTY
+}
+
+has_ch_eligble_barony_to_city_in_county = {
+	first = I_HAVE_CH_ELIGBLE_BARONIES_TO_CITY_COUNTY
+}
+
+has_ch_eligble_barony_to_temple_in_county = {
+	first = I_HAVE_CH_ELIGBLE_BARONIES_TO_TEMPLE_COUNTY
+}

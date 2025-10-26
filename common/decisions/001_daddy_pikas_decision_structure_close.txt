@@ -1,0 +1,122 @@
+﻿close_daddypika_menu = {
+    picture =
+    {
+        reference = "gfx/interface/illustrations/decisions/close_tab.dds"
+    }
+
+    desc = close_daddypika_menu_desc
+    selection_tooltip = close_daddypika_menu_desc
+    confirm_text = CONFIRM_OKAY
+
+    decision_group_type = debug
+
+    is_shown = {
+        has_character_flag = daddy_pika_cheat_menu
+    }
+
+    effect = {
+        remove_character_flag = daddy_pika_cheat_menu
+    }
+    ai_check_interval = 0
+
+    ai_will_do = 0
+}
+
+
+close_government_menu = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/close_tab.dds"
+    }
+
+    title = title_government_menu
+    desc = close_daddypika_menu_desc
+    selection_tooltip = close_daddypika_menu_desc
+    confirm_text = CONFIRM_OKAY
+
+    decision_group_type = debug
+
+    is_shown = {
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        remove_character_flag = govt_menu
+    }
+    ai_check_interval = 0
+
+    ai_will_do = 0
+}
+
+close_convert_menu = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/close_tab.dds"
+    }
+
+    title = title_convert_menu
+    desc = close_daddypika_menu_desc
+    selection_tooltip = close_daddypika_menu_desc
+    confirm_text = CONFIRM_OKAY
+
+    decision_group_type = debug
+
+    is_shown = {
+        has_character_flag = covt_menu
+    }
+
+    effect = {
+        remove_character_flag = covt_menu
+    }
+    ai_check_interval = 0
+
+    ai_will_do = 0
+}
+
+close_zhuge_juese_menu = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/close_tab.dds"
+    }
+
+    title = zhuge_juese_menu
+    desc = close_daddypika_menu_desc
+    selection_tooltip = close_daddypika_menu_desc
+    confirm_text = CONFIRM_OKAY
+
+    decision_group_type = debug
+
+    is_shown = {
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = zhuge_juese_menu_01  
+    }
+
+    effect = {
+        remove_character_flag = zhuge_juese_menu_01  
+    }
+    ai_check_interval = 0
+
+    ai_will_do = 0
+}
+
+close_zhuge_sansi_menu = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/close_tab.dds"
+    }
+
+    title = zhuge_sansi_menu
+    desc = close_daddypika_menu_desc
+    selection_tooltip = close_daddypika_menu_desc
+    confirm_text = CONFIRM_OKAY
+
+    decision_group_type = debug
+
+    is_shown = {
+        has_character_flag = zhuge_sansi_menu_02
+        has_title = title:e_greatming
+    }
+
+    effect = {
+        remove_character_flag = zhuge_sansi_menu_02 
+    }
+    ai_check_interval = 0
+
+    ai_will_do = 0
+}

@@ -1,0 +1,50 @@
+﻿# Female Power
+bone_female_wife = {
+	index = 1020
+	learning = 10
+	diplomacy = 10
+	stewardship = 10
+
+	fertility = 0.1
+	stress_gain_mult = -0.1
+	ignore_negative_culture_opinion = yes
+	birth = 0
+	random_creation = 0
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_bone_female_wife_desc
+			}
+			desc = trait_bone_female_wife_character_desc
+		}
+	}
+}
+
+bone_female_heir = {
+	index = 1021
+	learning = 10
+	diplomacy = 10
+	stewardship = 10
+	monthly_prestige = 200
+	monthly_dynasty_prestige = 1
+	monthly_piety = 200
+	monthly_income = 200
+
+	fertility = 0.1
+	stress_gain_mult = -0.1
+	ignore_negative_culture_opinion = yes
+	birth = 0
+	random_creation = 0
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_bone_female_heir_desc
+			}
+			desc = trait_bone_female_hier_character_desc
+		}
+	}
+}

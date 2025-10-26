@@ -1,0 +1,1000 @@
+﻿
+#每三年可游玩角色触发
+three_year_playable_pulse = {
+	events = {
+		delay = { days = { 30 90 } }
+		yandaxueshi_events.00023
+	}
+}
+
+#每年触发
+yearly_global_pulse = {
+	on_actions = {
+		yongsheng_xiuzheng
+		zongshi_shouyu
+		nianhao_yearly_pulse
+	}
+	random_events = {
+		900 = 0
+		100 = GM_Pengdang_events.001
+	}
+	events = { }
+}
+
+#加入战争触发
+on_join_war_as_secondary = {
+	on_actions = {
+		war_fenghuan
+		qingwang_pulse
+		baqi_qingwang_pulse
+	}
+}
+
+#开战触发
+on_war_started = {
+	on_actions = {
+		war_fenghuan
+		qingwang_pulse
+		baqi_qingwang_pulse
+	}
+}
+
+#进攻战争胜利触发
+on_war_won_attacker = {
+	on_actions = {
+		huangquan_war_won_attacker
+	}
+}
+
+#防守战争胜利触发
+on_war_won_defender = {
+	on_actions = {
+		huangquan_war_won_defender
+	}
+}
+
+#攻城触发
+on_siege_completion = {
+	on_actions = {
+		pocheng_jungong
+	}
+}
+
+#战斗胜利触发
+on_combat_end_winner = {
+	on_actions = {
+		commander_jungong_pulse
+	}
+}
+
+#战斗失败触发
+on_combat_end_loser = {
+	on_actions = {
+		commander_jungong_pulse_loser
+		commander_loser_tanhe
+	}
+}
+
+#结婚触发
+on_marriage = {
+	on_actions = {
+		fuma_cefeng_pulse
+		yuanpei_pulse
+	}
+}
+
+#离婚触发
+on_divorce = {
+	on_actions = {
+		fuma_lihun_pulse
+	}
+}
+
+#加入宫廷触发
+on_join_court = {
+	on_actions = {
+		on_join_court_jingguan
+		shixi_wuguan_zhuanhui_effect
+	}
+}
+
+#死亡触发
+on_death = {
+	on_actions = {
+		liuguan_jicheng
+		dangkui_jicheng
+		daxueshi_dibu
+		GM_shihao_effects
+		GM_shihao_zhuizeng_effects
+		GM_relation_xiuzheng
+		xijue_effects_start
+		tusi_effects
+		Dingyou_on_action
+		gongcheng_siwang
+		taihou_set_2
+		huanghou_shihao_effect
+		GM_Zengguan_effect
+		death_add_traits_effect
+		shixi_wuguan_death_effect
+	}
+}
+
+#继承头衔触发
+on_title_gain_inheritance = {
+	on_actions = {
+		wuguanliuxi_xiuzheng_pulse
+	}
+}
+
+#获得头衔触发
+on_title_gain = {
+	on_actions = {
+		zongfan_fengdi
+		daxueshi_xiuzheng
+		Nianhao_on_title_gain
+		liuguan_guanwei_xiuzheng
+		GM_relation_xiuzheng1
+		delay = { days = 1 }
+		on_title_gain_GreatMing
+	}
+}
+
+#失去头衔触发
+on_title_lost = {
+	on_actions = { 
+		jilu_pinji_on_lost_title_effect
+		delay = { days = 2 }
+		on_memory_patch
+	}
+}
+
+#宝物变更拥有人触发
+on_artifact_changed_owner = {
+	on_actions = {
+		shixi_tiequan
+	}
+}
+#宝物继承时触发
+on_artifact_succession = {
+	on_actions = {
+		delay = { days = 1}
+		shixi_tiequan2
+	}
+}
+
+#每年角色生日触发
+on_birthday = {
+	on_actions = {
+		QC_CHECK
+		liuguan_kaoke
+		wuguan_kaoke
+		zongshi_xiuzheng
+		fuma_cefeng_xiuzheng
+		jungongjishu_yearly_pulse
+		gongxunjishu_yearly_pulse
+		xunan_kaoke
+		huanguan_kaoke
+		JG_set_employer
+		jiguan_effect
+		dangkui_abroad_effect
+		JQ_trigger_effect
+		shixi_wuguan_xiuzheng
+		shixi_wuguan_zhuanhui_effect
+	}
+	events = {
+		GM_Xuanxiu_events.001
+		delay = {days = { 3 5 }}
+		liuguan_events.037
+	}
+}
+
+#出生触发
+on_birth_child = {
+	on_actions = {
+		jiguan_birth
+		zongshi_birth
+	}
+}
+
+#每季度可游玩角色触发
+quarterly_playable_pulse = {
+	on_actions = {
+		xunan_tuibu
+		GM_quarterly_liuguan_pulse
+		GM_quarterly_liuguan_auto
+		liuke_liuguan_effect
+		yanfadao_quarterly_pulse
+		qingwang_pulse
+		baqi_qingwang_pulse
+		guanwei_events_pulse
+		greatming_falizhuanyi
+		jiangduguan_shouke
+		damingzhengti_baochi
+		shenban_debug
+		liuguan_wen_wu
+		huangquan_quarterly_pulse
+		JG_close_family_set
+		yuanpei_pulse_xiuzheng
+		taihou_set_1
+		Jiangdu_guan_tuibu
+		low_chance_event_effect
+		sansi_destory_maa_effect
+	}
+	events = {
+		delay = { days = { 3 6 } }
+		yanguanwei_events.007
+		delay = { days = { 3 6 } }
+		kaoke_events.001
+		delay = { days = { 3 6 } }
+		shouguan_events.008
+		delay = { days = { 3 6 } }
+		shouguan_events.013
+		delay = { days = { 3 6 } }
+		shouguan_events.018
+		delay = { days = { 3 6 } }
+		tuiju_events.006
+		delay = { days = { 3 6 } }
+		tuiju_events.007
+		delay = { days = { 3 6 } }
+		kaoke_events.008
+	}
+}
+
+#官位事件触发
+guanwei_events_pulse = {
+	trigger = {
+		has_title = title:e_greatming
+	}
+	events = {
+		delay = { days = { 15 20 } }
+		fengjue_events.0010
+		delay = { days = { 15 20 } }
+		fengjue_events.0008
+	}
+	random_events = {
+		60 = 0
+		35 = GM_Tanhe_events.001
+		5 = GM_Tanhe_events.003
+	}
+}
+
+#年号
+nianhao_yearly_pulse = {
+	trigger = {
+		any_ruler = {
+			has_variable = Greatming_Nianhao_Date
+		}
+	}
+	effect = {
+		every_ruler = {
+			limit = {
+				has_variable = Greatming_Nianhao_Date
+			}
+			change_variable = {
+				name = Greatming_Nianhao_Date
+				add = 1
+			}
+		}
+	}
+}
+
+#永生人物仇敌解除
+yongsheng_xiuzheng = {
+	effect = {
+		character:yannv01 = {
+			move_to_pool = yes
+			random_living_character = {
+				limit = {
+					OR = {
+						has_relation_nemesis = character:yannv01
+						has_relation_rival = character:yannv01
+					}
+				}
+				remove_relation_nemesis = character:yannv01
+				remove_relation_rival = character:yannv01
+			}
+		}
+		character:yannv02 = {
+			move_to_pool = yes
+			random_living_character = {
+				limit = {
+					OR = {
+						has_relation_nemesis = character:yannv02
+						has_relation_rival = character:yannv02
+					}
+				}
+				remove_relation_nemesis = character:yannv02
+				remove_relation_rival = character:yannv02
+			}
+		}
+		character:yannv03 = {
+			move_to_pool = yes
+			random_living_character = {
+				limit = {
+					OR = {
+						has_relation_nemesis = character:yannv03
+						has_relation_rival = character:yannv03
+					}
+				}
+				remove_relation_nemesis = character:yannv03
+				remove_relation_rival = character:yannv03
+			}
+		}
+		character:yannv04 = {
+			move_to_pool = yes
+			random_living_character = {
+				limit = {
+					OR = {
+						has_relation_nemesis = character:yannv04
+						has_relation_rival = character:yannv04
+					}
+				}
+				remove_relation_nemesis = character:yannv04
+				remove_relation_rival = character:yannv04
+			}
+		}
+		character:yannv05 = {
+			move_to_pool = yes
+			random_living_character = {
+				limit = {
+					OR = {
+						has_relation_nemesis = character:yannv05
+						has_relation_rival = character:yannv05
+					}
+				}
+				remove_relation_nemesis = character:yannv05
+				remove_relation_rival = character:yannv05
+			}
+		}
+		character:yannv06 = {
+			move_to_pool = yes
+			random_living_character = {
+				limit = {
+					OR = {
+						has_relation_nemesis = character:yannv06
+						has_relation_rival = character:yannv06
+					}
+				}
+				remove_relation_nemesis = character:yannv06
+				remove_relation_rival = character:yannv06
+			}
+		}
+		character:yannv07 = {
+			move_to_pool = yes
+			random_living_character = {
+				limit = {
+					OR = {
+						has_relation_nemesis = character:yannv07
+						has_relation_rival = character:yannv07
+					}
+				}
+				remove_relation_nemesis = character:yannv07
+				remove_relation_rival = character:yannv07
+			}
+		}
+		character:yannan01 = {
+			move_to_pool = yes
+			random_living_character = {
+				limit = {
+					OR = {
+						has_relation_nemesis = character:yannan01
+						has_relation_rival = character:yannan01
+					}
+				}
+				remove_relation_nemesis = character:yannan01
+				remove_relation_rival = character:yannan01
+			}
+		}
+		character:yannan02 = {
+			move_to_pool = yes
+			random_living_character = {
+				limit = {
+					OR = {
+						has_relation_nemesis = character:yannan02
+						has_relation_rival = character:yannan02
+					}
+				}
+				remove_relation_nemesis = character:yannan02
+				remove_relation_rival = character:yannan02
+			}
+		}
+		character:yanum01 = {
+			move_to_pool = yes
+			random_living_character = {
+				limit = {
+					OR = {
+						has_relation_nemesis = character:yanum01
+						has_relation_rival = character:yanum01
+					}
+				}
+				remove_relation_nemesis = character:yanum01
+				remove_relation_rival = character:yanum01
+			}
+		}
+	}
+}
+
+#明帝国君主政体保持
+damingzhengti_baochi = {
+	trigger = {
+		has_title = title:e_greatming
+		title:e_greatming = { NOT = { has_title_law = qunshuaiyongdi_law } }
+		NOT = { has_government = sansizhi_government }
+	}
+	effect = {
+		if = {
+			limit = { NOT = { has_government = sansizhi_government } }
+			change_government = sansizhi_government
+		}		
+		title:e_greatming = {
+			clear_title_laws_effects = yes
+		}
+		add_realm_law_skip_effects = huangshi_succession_law
+		if = {
+			limit = {
+				exists = global_var:save_the_data
+			}
+			change_global_variable = {
+				name = save_the_data
+				add = 1
+			}
+		}
+		else = {
+			set_global_variable = {
+				name = save_the_data
+				value = 1
+			}
+		}
+	}
+}
+
+#讲读官授课
+jiangduguan_shouke = {
+	trigger = {
+		has_title = title:e_greatming
+		any_relation = {
+			count > 0
+			type = diange_daxueshi
+			liege = root
+			has_trait = donggongjiangdu
+			liuguan_Perform_duties_trigger = yes
+		}
+		root.primary_heir = {
+			is_adult = no
+		}
+	}
+	effect = {
+		set_variable = {
+			name = jigelv
+			value = { 0 2 }
+		}
+		if = {
+			limit = {
+				any_courtier = {
+					count > 0
+					has_trait = donggongjiangdu
+					has_trait = zhongjidian_daxueshi
+				}
+			}
+			send_interface_message = {
+				title = jiangduguan_shouke_message_title
+				left_icon = root.primary_heir
+				root.primary_heir = {
+					add_diplomacy_skill = root.var:jigelv
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_courtier = {
+					count > 0
+					has_trait = donggongjiangdu
+					has_trait = jianjidian_daxueshi
+				}
+			}
+			send_interface_message = {
+				title = jiangduguan_shouke_message_title
+				left_icon = root.primary_heir
+				root.primary_heir = {
+					add_stewardship_skill = root.var:jigelv
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_courtier = {
+					count > 0
+					has_trait = donggongjiangdu
+					has_trait = wenhuadian_daxueshi
+				}
+			}
+			send_interface_message = {
+				title = jiangduguan_shouke_message_title
+				left_icon = root.primary_heir
+				root.primary_heir = {
+					add_learning_skill = root.var:jigelv
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_courtier = {
+					count > 0
+					has_trait = donggongjiangdu
+					has_trait = wuyingdian_daxueshi
+				}
+			}
+			send_interface_message = {
+				title = jiangduguan_shouke_message_title
+				left_icon = root.primary_heir
+				root.primary_heir = {
+					add_martial_skill = root.var:jigelv
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_courtier = {
+					count > 0
+					has_trait = donggongjiangdu
+					has_trait = wenyuange_daxueshi
+				}
+			}
+			send_interface_message = {
+				title = jiangduguan_shouke_message_title
+				left_icon = root.primary_heir
+				root.primary_heir = {
+					add_intrigue_skill = root.var:jigelv
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_courtier = {
+					count > 0
+					has_trait = donggongjiangdu
+					has_trait = dongge_daxueshi
+					var:jigelv = 0
+				}
+			}
+			send_interface_message = {
+				title = jiangduguan_shouke_message_title
+				left_icon = root.primary_heir
+				root.primary_heir = {
+					add_diplomacy_skill = 0
+					add_stewardship_skill = 0
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_courtier = {
+					count > 0
+					has_trait = donggongjiangdu
+					has_trait = dongge_daxueshi
+					var:jigelv = 0
+				}
+			}
+			send_interface_message = {
+				title = jiangduguan_shouke_message_title
+				left_icon = root.primary_heir
+				root.primary_heir = {
+					add_diplomacy_skill = 1
+					add_stewardship_skill = 0
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_courtier = {
+					count > 0
+					has_trait = donggongjiangdu
+					has_trait = dongge_daxueshi
+					var:jigelv = 2
+				}
+			}
+			send_interface_message = {
+				title = jiangduguan_shouke_message_title
+				left_icon = root.primary_heir
+				root.primary_heir = {
+					add_diplomacy_skill = 1
+					add_stewardship_skill = 1
+				}
+			}
+		}
+	}
+}
+
+#大明法理自动转移
+greatming_falizhuanyi = {
+	trigger = {
+		has_title = title:e_greatming
+		exists = dynasty
+	}
+	effect = {
+		title:e_greatming = {
+			set_capital_county = root.capital_province.county
+		}
+		every_vassal = {
+			limit = {
+				highest_held_title_tier = tier_kingdom
+			}
+			every_held_title = {
+				limit = {
+					tier = tier_kingdom
+				}
+				set_de_jure_liege_title = title:e_greatming
+			}
+		}
+		every_held_title = {
+			limit = {
+				tier = tier_kingdom
+			}
+			set_de_jure_liege_title = title:e_greatming
+		}
+		root = {
+			exists = dynasty
+			every_dynasty_member = {
+				limit = {
+					dynasty = root.dynasty
+					NOT = {
+						has_character_flag = blocked_from_leaving
+					}
+				}
+				add_character_flag = {
+					flag = blocked_from_leaving
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_variable = wanghao
+			}
+			if = {
+				limit = {
+					any_vassal_or_below = {
+						count = 0
+						has_title = title:k_qinwang
+						dynasty = root.dynasty
+					}
+				}
+				root = {
+					get_title = title:k_qinwang
+				}
+				title:k_qinwang = {
+					set_capital_county = root.capital_province.county
+				}
+			}
+			if = {
+				limit = {
+					any_vassal_or_below = {
+						count = 0
+						has_title = title:k_jinwang
+						dynasty = root.dynasty
+					}
+				}
+				root = {
+					get_title = title:k_jinwang
+				}
+				title:k_jinwang = {
+					set_capital_county = root.capital_province.county
+				}
+			}
+			if = {
+				limit = {
+					any_vassal_or_below = {
+						count = 0
+						has_title = title:k_yanwang
+						dynasty = root.dynasty
+					}
+				}
+				root = {
+					get_title = title:k_yanwang
+				}
+				title:k_yanwang = {
+					set_capital_county = root.capital_province.county
+				}
+			}
+			if = {
+				limit = {
+					any_vassal_or_below = {
+						count = 0
+						has_title = title:k_zhouwang
+						dynasty = root.dynasty
+					}
+				}
+				root = {
+					get_title = title:k_zhouwang
+				}
+				title:k_zhouwang = {
+					set_capital_county = root.capital_province.county
+				}
+			}
+			if = {
+				limit = {
+					any_vassal_or_below = {
+						count = 0
+						has_title = title:k_chuwang
+						dynasty = root.dynasty
+					}
+				}
+				root = {
+					get_title = title:k_chuwang
+				}
+				title:k_chuwang = {
+					set_capital_county = root.capital_province.county
+				}
+			}
+			if = {
+				limit = {
+					any_vassal_or_below = {
+						count = 0
+						has_title = title:k_qiwang
+						dynasty = root.dynasty
+					}
+				}
+				root = {
+					get_title = title:k_qiwang
+				}
+				title:k_qiwang = {
+					set_capital_county = root.capital_province.county
+				}
+			}
+			if = {
+				limit = {
+					any_vassal_or_below = {
+						count = 0
+						has_title = title:k_tanwang
+						dynasty = root.dynasty
+					}
+				}
+				root = {
+					get_title = title:k_tanwang
+				}
+				title:k_tanwang = {
+					set_capital_county = root.capital_province.county
+				}
+			}
+			if = {
+				limit = {
+					any_vassal_or_below = {
+						count = 0
+						has_title = title:k_luuwang
+						dynasty = root.dynasty
+					}
+				}
+				root = {
+					get_title = title:k_luuwang
+				}
+				title:k_luuwang = {
+					set_capital_county = root.capital_province.county
+				}
+			}
+			if = {
+				limit = {
+					any_vassal_or_below = {
+						count = 0
+						has_title = title:k_shuwang
+						dynasty = root.dynasty
+					}
+				}
+				root = {
+					get_title = title:k_shuwang
+				}
+				title:k_shuwang = {
+					set_capital_county = root.capital_province.county
+				}
+			}
+			if = {
+				limit = {
+					any_vassal_or_below = {
+						count = 0
+						has_title = title:k_xiangwang
+						dynasty = root.dynasty
+					}
+				}
+				root = {
+					get_title = title:k_xiangwang
+				}
+				title:k_xiangwang = {
+					set_capital_county = root.capital_province.county
+				}
+			}
+			if = {
+				limit = {
+					any_vassal_or_below = {
+						count = 0
+						has_title = title:k_daiwang
+						dynasty = root.dynasty
+					}
+				}
+				root = {
+					get_title = title:k_daiwang
+				}
+				title:k_daiwang = {
+					set_capital_county = root.capital_province.county
+				}
+			}
+			if = {
+				limit = {
+					any_vassal_or_below = {
+						count = 0
+						has_title = title:k_suwang
+						dynasty = root.dynasty
+					}
+				}
+				root = {
+					get_title = title:k_suwang
+				}
+				title:k_suwang = {
+					set_capital_county = root.capital_province.county
+				}
+			}
+			if = {
+				limit = {
+					any_vassal_or_below = {
+						count = 0
+						has_title = title:k_liaowang
+						dynasty = root.dynasty
+					}
+				}
+				root = {
+					get_title = title:k_liaowang
+				}
+				title:k_liaowang = {
+					set_capital_county = root.capital_province.county
+				}
+			}
+			if = {
+				limit = {
+					any_vassal_or_below = {
+						count = 0
+						has_title = title:k_qingwang
+						dynasty = root.dynasty
+					}
+				}
+				root = {
+					get_title = title:k_qingwang
+				}
+				title:k_qingwang = {
+					set_capital_county = root.capital_province.county
+				}
+			}
+			if = {
+				limit = {
+					any_vassal_or_below = {
+						count = 0
+						has_title = title:k_ningwang
+						dynasty = root.dynasty
+					}
+				}
+				root = {
+					get_title = title:k_ningwang
+				}
+				title:k_ningwang = {
+					set_capital_county = root.capital_province.county
+				}
+			}
+			if = {
+				limit = {
+					any_vassal_or_below = {
+						count = 0
+						has_title = title:k_minwang
+						dynasty = root.dynasty
+					}
+				}
+				root = {
+					get_title = title:k_minwang
+				}
+				title:k_minwang = {
+					set_capital_county = root.capital_province.county
+				}
+			}
+			if = {
+				limit = {
+					any_vassal_or_below = {
+						count = 0
+						has_title = title:k_guwang
+						dynasty = root.dynasty
+					}
+				}
+				root = {
+					get_title = title:k_guwang
+				}
+				title:k_guwang = {
+					set_capital_county = root.capital_province.county
+				}
+			}
+			if = {
+				limit = {
+					any_vassal_or_below = {
+						count = 0
+						has_title = title:k_hanwang
+						dynasty = root.dynasty
+					}
+				}
+				root = {
+					get_title = title:k_hanwang
+				}
+				title:k_hanwang = {
+					set_capital_county = root.capital_province.county
+				}
+			}
+			if = {
+				limit = {
+					any_vassal_or_below = {
+						count = 0
+						has_title = title:k_shenwang
+						dynasty = root.dynasty
+					}
+				}
+				root = {
+					get_title = title:k_shenwang
+				}
+				title:k_shenwang = {
+					set_capital_county = root.capital_province.county
+				}
+			}
+			if = {
+				limit = {
+					any_vassal_or_below = {
+						count = 0
+						has_title = title:k_anwang
+						dynasty = root.dynasty
+					}
+				}
+				root = {
+					get_title = title:k_anwang
+				}
+				title:k_anwang = {
+					set_capital_county = root.capital_province.county
+				}
+			}
+			if = {
+				limit = {
+					any_vassal_or_below = {
+						count = 0
+						has_title = title:k_tangwang
+						dynasty = root.dynasty
+					}
+				}
+				root = {
+					get_title = title:k_tangwang
+				}
+				title:k_tangwang = {
+					set_capital_county = root.capital_province.county
+				}
+			}
+			if = {
+				limit = {
+					any_vassal_or_below = {
+						count = 0
+						has_title = title:k_yingwang
+						dynasty = root.dynasty
+					}
+				}
+				root = {
+					get_title = title:k_yingwang
+				}
+				title:k_yingwang = {
+					set_capital_county = root.capital_province.county
+				}
+			}
+			if = {
+				limit = {
+					any_vassal_or_below = {
+						count = 0
+						has_title = title:k_yiwang
+						dynasty = root.dynasty
+					}
+				}
+				root = {
+					get_title = title:k_yiwang
+				}
+				title:k_yiwang = {
+					set_capital_county = root.capital_province.county
+				}
+			}
+		}
+	}
+}

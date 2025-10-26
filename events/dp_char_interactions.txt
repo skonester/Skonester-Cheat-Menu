@@ -1,0 +1,970 @@
+﻿
+namespace = dp_char_interactions
+#金币
+dp_char_interactions.1 = {
+	type = character_event
+	title = dp_char_interactions.gold.event.t
+	desc = dp_char_interactions.gold.event.d
+	theme = default
+	left_portrait = {
+		character = scope:currency_scope
+		animation = personality_bold
+	}
+
+	option = {
+		name = dp_char_interactions.gold.plus_100000
+		scope:currency_scope = {
+			add_gold = 100000
+		}
+		trigger_event = dp_char_interactions.1
+	}
+
+	option = {
+		name = dp_char_interactions.gold.plus_10000
+		scope:currency_scope = {
+			add_gold = 10000
+		}
+		trigger_event = dp_char_interactions.1
+	}
+
+	option = {
+		name = dp_char_interactions.gold.plus_1000
+		scope:currency_scope = {
+			add_gold = 1000
+		}
+		trigger_event = dp_char_interactions.1
+	}
+
+	option = {
+		name = dp_char_interactions.gold.minus_1000
+		scope:currency_scope = {
+			remove_short_term_gold = 1000
+		}
+		trigger_event = dp_char_interactions.1
+	}
+
+	option = {
+		name = dp_char_interactions.gold.minus_10000
+		scope:currency_scope = {
+			remove_short_term_gold = 10000
+		}
+		trigger_event = dp_char_interactions.1
+	}
+	
+	option = {
+		name = dp_char_interactions.gold.minus_100000
+		scope:currency_scope = {
+			remove_short_term_gold = 100000
+		}
+		trigger_event = dp_char_interactions.1
+	}
+	
+	option = {
+		name = dp_char_editor_forward
+		trigger_event = dp_char_interactions.2
+	}
+	option = {
+		name = dp_char_editor_backward
+		trigger_event = dp_char_interactions.8
+	}
+	
+	option = {
+		name = dp_char_interactions.end
+		trigger_event = dp_char_interactions.10
+	}
+}
+#威望
+dp_char_interactions.2 = {
+	type = character_event
+	title = dp_char_interactions.prestige.event.t
+	desc = dp_char_interactions.prestige.event.d
+	theme = default
+	left_portrait = {
+		character = scope:currency_scope
+		animation = personality_bold
+	}
+
+	option = {
+		name = dp_char_interactions.prestige.plus_10000
+		scope:currency_scope = {
+			add_prestige = 10000
+		}
+		trigger_event = dp_char_interactions.2
+	}
+
+	option = {
+		name = dp_char_interactions.prestige.plus_1000
+		scope:currency_scope = {
+			add_prestige = 1000
+		}
+		trigger_event = dp_char_interactions.2
+	}
+
+	option = {
+		name = dp_char_interactions.prestige.plus_100
+		scope:currency_scope = {
+			add_prestige = 100
+		}
+		trigger_event = dp_char_interactions.2
+	}
+
+	option = {
+		name = dp_char_interactions.prestige.minus_100
+		scope:currency_scope = {
+			add_prestige = -100
+		}
+		trigger_event = dp_char_interactions.2
+	}
+
+	option = {
+		name = dp_char_interactions.prestige.minus_1000
+		scope:currency_scope = {
+			add_prestige = -1000
+		}
+		trigger_event = dp_char_interactions.2
+	}
+	
+	option = {
+		name = dp_char_interactions.prestige.minus_10000
+		scope:currency_scope = {
+			add_prestige = -10000
+		}
+		trigger_event = dp_char_interactions.2
+	}
+	
+	option = {
+		name = dp_char_editor_forward
+		trigger_event = dp_char_interactions.3
+	}
+	option = {
+		name = dp_char_editor_backward
+		trigger_event = dp_char_interactions.1
+	}
+	
+	option = {
+		name = dp_char_interactions.end
+		trigger_event = dp_char_interactions.10
+	}
+}
+#虔诚
+dp_char_interactions.3 = {
+	type = character_event
+	title = dp_char_interactions.piety.event.t
+	desc = dp_char_interactions.piety.event.d
+	theme = default
+	left_portrait = {
+		character = scope:currency_scope
+		animation = personality_bold
+	}
+
+	option = {
+		name = dp_char_interactions.piety.plus_10000
+		scope:currency_scope = {
+			add_piety = 10000
+		}
+		trigger_event = dp_char_interactions.3
+	}
+
+	option = {
+		name = dp_char_interactions.piety.plus_1000
+		scope:currency_scope = {
+			add_piety = 1000
+		}
+		trigger_event = dp_char_interactions.3
+	}
+
+	option = {
+		name = dp_char_interactions.piety.plus_100
+		scope:currency_scope = {
+			add_piety = 100
+		}
+		trigger_event = dp_char_interactions.3
+	}
+
+	option = {
+		name = dp_char_interactions.piety.minus_100
+		scope:currency_scope = {
+			add_piety = -100
+		}
+		trigger_event = dp_char_interactions.3
+	}
+
+	option = {
+		name = dp_char_interactions.piety.minus_1000
+		scope:currency_scope = {
+			add_piety = -1000
+		}
+		trigger_event = dp_char_interactions.3
+	}
+	
+	option = {
+		name = dp_char_interactions.piety.minus_10000
+		scope:currency_scope = {
+			add_piety = -10000
+		}
+		trigger_event = dp_char_interactions.3
+	}
+	
+	option = {
+		name = dp_char_editor_forward
+		trigger_event = dp_char_interactions.4
+	}
+	option = {
+		name = dp_char_editor_backward
+		trigger_event = dp_char_interactions.2
+	}
+	
+	option = {
+		name = dp_char_interactions.end
+		trigger_event = dp_char_interactions.10
+	}
+}
+#宗族威望
+dp_char_interactions.4 = {
+	type = character_event
+	title = dp_char_interactions.renown.event.t
+	desc = dp_char_interactions.renown.event.d
+	theme = default
+	left_portrait = {
+		character = scope:currency_scope
+		animation = personality_bold
+	}
+
+	option = {
+		name = dp_char_interactions.dynasty_prestige.plus_100000
+		scope:currency_scope = {
+			dynasty = {
+				add_dynasty_prestige = 100000
+			}
+		}
+		trigger_event = dp_char_interactions.4
+	}
+
+	option = {
+		name = dp_char_interactions.dynasty_prestige.plus_10000
+		scope:currency_scope = {
+			dynasty = {
+				add_dynasty_prestige = 10000
+			}
+		}
+		trigger_event = dp_char_interactions.4
+	}
+
+	option = {
+		name = dp_char_interactions.dynasty_prestige.plus_1000
+		scope:currency_scope = {
+			dynasty = {
+				add_dynasty_prestige = 1000
+			}
+		}
+		trigger_event = dp_char_interactions.4
+	}
+
+	option = {
+		name = dp_char_interactions.dynasty_prestige.minus_1000
+		scope:currency_scope = {
+			dynasty = {
+				add_dynasty_prestige = -1000
+			}
+		}
+		trigger_event = dp_char_interactions.4
+	}
+
+	option = {
+		name = dp_char_interactions.dynasty_prestige.minus_10000
+		scope:currency_scope = {
+			dynasty = {
+				add_dynasty_prestige = -10000
+			}
+		}
+		trigger_event = dp_char_interactions.4
+	}
+	
+	option = {
+		name = dp_char_interactions.dynasty_prestige.minus_100000
+		scope:currency_scope = {
+			dynasty = {
+				add_dynasty_prestige = -100000
+			}
+		}
+		trigger_event = dp_char_interactions.4
+	}
+	
+	option = {
+		name = dp_char_editor_forward
+		trigger_event = dp_char_interactions.21
+	}
+	option = {
+		name = dp_char_editor_backward
+		trigger_event = dp_char_interactions.3
+	}
+	
+	option = {
+		name = dp_char_interactions.end
+		trigger_event = dp_char_interactions.10
+	}
+}
+
+dp_char_interactions.5 = {
+	type = character_event
+	title = dp_char_interactions.stress.event.t
+	desc = dp_char_interactions.stress.event.d
+	theme = default
+	left_portrait = {
+		character = scope:currency_scope
+		animation = personality_bold
+	}
+	
+	option = {
+		name = dp_char_interactions.lockinplace
+		scope:currency_scope = {
+			if = {
+				limit = {
+					has_character_modifier = no_stress_change
+				}
+				remove_character_modifier = no_stress_change
+			}
+			else = {
+				add_character_modifier = {
+					modifier = no_stress_change
+					days = -1
+				}
+			}
+		}
+		trigger_event = dp_char_interactions.5
+	}
+
+	option = {
+		name = dp_char_interactions.plus_100
+		scope:currency_scope = {
+			add_stress = 100
+		}
+		trigger_event = dp_char_interactions.5
+	}
+
+	option = {
+		name = dp_char_interactions.plus_50
+		scope:currency_scope = {
+			add_stress = 50
+		}
+		trigger_event = dp_char_interactions.5
+	}
+
+	option = {
+		name = dp_char_interactions.plus_10
+		scope:currency_scope = {
+			add_stress = 10
+		}
+		trigger_event = dp_char_interactions.5
+	}
+
+	option = {
+		name = dp_char_interactions.minus_10
+		scope:currency_scope = {
+			add_stress = -10
+		}
+		trigger_event = dp_char_interactions.5
+	}
+
+	option = {
+		name = dp_char_interactions.minus_50
+		scope:currency_scope = {
+			add_stress = -50
+		}
+		trigger_event = dp_char_interactions.5
+	}
+	
+	option = {
+		name = dp_char_interactions.minus_100
+		scope:currency_scope = {
+			add_stress = -100
+		}
+		trigger_event = dp_char_interactions.5
+	}
+	
+	option = {
+		name = dp_char_editor_forward
+		trigger_event = dp_char_interactions.6
+	}
+	option = {
+		name = dp_char_editor_backward
+		trigger_event = dp_char_interactions.23
+	}
+	
+	option = {
+		name = dp_char_interactions.end
+		trigger_event = dp_char_interactions.13
+	}
+}
+
+dp_char_interactions.6 = {
+	type = character_event
+	title = dp_char_interactions.tyranny.event.t
+	desc = dp_char_interactions.tyranny.event.d
+	theme = default
+	left_portrait = {
+		character = scope:currency_scope
+		animation = personality_bold
+	}
+	
+	option = {
+		name = dp_char_interactions.lockinplace
+		scope:currency_scope = {
+			if = {
+				limit = {
+					has_character_modifier = no_tyranny_change
+				}
+				remove_character_modifier = no_tyranny_change
+			}
+			else = {
+				add_character_modifier = {
+					modifier = no_tyranny_change
+					days = -1
+				}
+			}
+		}
+		trigger_event = dp_char_interactions.6
+	}
+
+	option = {
+		name = dp_char_interactions.plus_100
+		scope:currency_scope = {
+			add_tyranny = 100
+		}
+		trigger_event = dp_char_interactions.6
+	}
+
+	option = {
+		name = dp_char_interactions.plus_50
+		scope:currency_scope = {
+			add_tyranny = 50
+		}
+		trigger_event = dp_char_interactions.6
+	}
+
+	option = {
+		name = dp_char_interactions.plus_10
+		scope:currency_scope = {
+			add_tyranny = 10
+		}
+		trigger_event = dp_char_interactions.6
+	}
+
+	option = {
+		name = dp_char_interactions.minus_10
+		scope:currency_scope = {
+			add_tyranny = -10
+		}
+		trigger_event = dp_char_interactions.6
+	}
+
+	option = {
+		name = dp_char_interactions.minus_50
+		scope:currency_scope = {
+			add_tyranny = -50
+		}
+		trigger_event = dp_char_interactions.6
+	}
+	
+	option = {
+		name = dp_char_interactions.minus_100
+		scope:currency_scope = {
+			add_tyranny = -100
+		}
+		trigger_event = dp_char_interactions.6
+	}
+	
+	option = {
+		name = dp_char_editor_forward
+		trigger_event = dp_char_interactions.7
+	}
+	option = {
+		name = dp_char_editor_backward
+		trigger_event = dp_char_interactions.5
+	}
+	
+	option = {
+		name = dp_char_interactions.end
+		trigger_event = dp_char_interactions.13
+	}
+}
+
+dp_char_interactions.7 = {
+	type = character_event
+	title = dp_char_interactions.dread.event.t
+	desc = dp_char_interactions.dread.event.d
+	theme = default
+	left_portrait = {
+		character = scope:currency_scope
+		animation = personality_bold
+	}
+	
+	option = {
+		name = dp_char_interactions.lockinplace
+		scope:currency_scope = {
+			if = {
+				limit = {
+					has_character_modifier = no_dread_change
+				}
+				remove_character_modifier = no_dread_change
+			}
+			else = {
+				add_character_modifier = {
+					modifier = no_dread_change
+					days = -1
+				}
+			}
+		}
+		trigger_event = dp_char_interactions.7
+	}
+
+	option = {
+		name = dp_char_interactions.plus_100
+		scope:currency_scope = {
+			add_dread = 100
+		}
+		trigger_event = dp_char_interactions.7
+	}
+
+	option = {
+		name = dp_char_interactions.plus_50
+		scope:currency_scope = {
+			add_dread = 50
+		}
+		trigger_event = dp_char_interactions.7
+	}
+
+	option = {
+		name = dp_char_interactions.plus_10
+		scope:currency_scope = {
+			add_dread = 10
+		}
+		trigger_event = dp_char_interactions.7
+	}
+
+	option = {
+		name = dp_char_interactions.minus_10
+		scope:currency_scope = {
+			add_dread = -10
+		}
+		trigger_event = dp_char_interactions.7
+	}
+
+	option = {
+		name = dp_char_interactions.minus_50
+		scope:currency_scope = {
+			add_dread = -50
+		}
+		trigger_event = dp_char_interactions.7
+	}
+	
+	option = {
+		name = dp_char_interactions.minus_100
+		scope:currency_scope = {
+			add_dread = -100
+		}
+		trigger_event = dp_char_interactions.7
+	}
+	
+	option = {
+		name = dp_char_editor_forward
+		trigger_event = dp_char_interactions.8
+	}
+	option = {
+		name = dp_char_editor_backward
+		trigger_event = dp_char_interactions.6
+	}
+	
+	option = {
+		name = dp_char_interactions.end
+		trigger_event = dp_char_interactions.13
+	}
+}
+
+dp_char_interactions.8 = {
+	type = character_event
+	title = dp_char_interactions.weight.event.t
+	desc = dp_char_interactions.weight.event.d
+	theme = default
+	left_portrait = {
+		character = scope:currency_scope
+		animation = personality_bold
+	}
+	
+	option = {
+		name = dp_char_interactions.plus_100
+		scope:currency_scope = {
+			change_current_weight = 100
+		}
+		trigger_event = dp_char_interactions.8
+	}
+
+	option = {
+		name = dp_char_interactions.plus_50
+		scope:currency_scope = {
+			change_current_weight = 50
+		}
+		trigger_event = dp_char_interactions.8
+	}
+
+	option = {
+		name = dp_char_interactions.plus_10
+		scope:currency_scope = {
+			change_current_weight = 10
+		}
+		trigger_event = dp_char_interactions.8
+	}
+
+	option = {
+		name = dp_char_interactions.minus_10
+		scope:currency_scope = {
+			change_current_weight = -10
+		}
+		trigger_event = dp_char_interactions.8
+	}
+
+	option = {
+		name = dp_char_interactions.minus_50
+		scope:currency_scope = {
+			change_current_weight = -50
+		}
+		trigger_event = dp_char_interactions.8
+	}
+	
+	option = {
+		name = dp_char_interactions.minus_100
+		scope:currency_scope = {
+			change_current_weight = -100
+		}
+		trigger_event = dp_char_interactions.8
+	}
+	
+	option = {
+		name = dp_char_editor_forward
+		trigger_event = dp_char_interactions.1
+	}
+	option = {
+		name = dp_char_editor_backward
+		trigger_event = dp_char_interactions.7
+	}
+	
+	option = {
+		name = dp_char_interactions.end
+		trigger_event = dp_char_interactions.13
+	}
+}
+
+### ATTEMPTING SLEEP WITH CHARACTER INTERACTION ###
+
+dp_char_interactions.11 = {
+	hidden = yes
+	immediate = {
+		send_interface_message = {
+			type = sway_good_message
+			title = dp_sex_interaction.t
+			left_icon = scope:recipient
+			right_icon = ROOT # References root instead of scope:actor to verify that root is defined
+		
+			had_sex_with_effect = {
+				CHARACTER = scope:recipient
+				PREGNANCY_CHANCE = pregnancy_chance
+			}
+		}
+	}
+}
+#影响力
+dp_char_interactions.21 = {
+	type = character_event
+	title = dp_char_interactions.influence.event.t
+	desc = dp_char_interactions.influence.event.d
+	theme = default
+	left_portrait = {
+		character = scope:currency_scope
+		animation = personality_bold
+	}
+
+	option = {
+		name = dp_char_interactions.influence.plus_10000
+		scope:currency_scope = {
+			change_influence = 10000
+		}
+		trigger_event = dp_char_interactions.21
+	}
+
+	option = {
+		name = dp_char_interactions.influence.plus_1000
+		scope:currency_scope = {
+			change_influence = 1000
+		}
+		trigger_event = dp_char_interactions.21
+	}
+
+	option = {
+		name = dp_char_interactions.influence.plus_100
+		scope:currency_scope = {
+			change_influence = 100
+		}
+		trigger_event = dp_char_interactions.21
+	}
+
+	option = {
+		name = dp_char_interactions.influence.minus_100
+		scope:currency_scope = {
+			change_influence = -100
+		}
+		trigger_event = dp_char_interactions.21
+	}
+
+	option = {
+		name = dp_char_interactions.influence.minus_1000
+		scope:currency_scope = {
+			change_influence = -1000
+		}
+		trigger_event = dp_char_interactions.21
+	}
+	
+	option = {
+		name = dp_char_interactions.influence.minus_10000
+		scope:currency_scope = {
+			change_influence = -10000
+		}
+		trigger_event = dp_char_interactions.21
+	}
+	
+	option = {
+		name = dp_char_editor_forward
+		trigger_event = dp_char_interactions.22
+	}
+	option = {
+		name = dp_char_editor_backward
+		trigger_event = dp_char_interactions.4
+	}
+	
+	option = {
+		name = dp_char_interactions.end
+		trigger_event = dp_char_interactions.10
+	}
+}
+
+dp_char_interactions.22 = {
+	type = character_event
+	title = dp_char_interactions.legitimacy.event.t
+	desc = dp_char_interactions.legitimacy.event.d
+	theme = default
+	left_portrait = {
+		character = scope:currency_scope
+		animation = personality_bold
+	}
+	
+	option = {
+		name = dp_char_interactions.legitimacy.plus_500
+		scope:currency_scope = {
+			add_legitimacy = 500
+		}
+		trigger_event = dp_char_interactions.22
+	}
+
+	option = {
+		name = dp_char_interactions.legitimacy.plus_300
+		scope:currency_scope = {
+			add_legitimacy = 300
+		}
+		trigger_event = dp_char_interactions.22
+	}
+
+	option = {
+		name = dp_char_interactions.legitimacy.plus_100
+		scope:currency_scope = {
+			add_legitimacy = 100
+		}
+		trigger_event = dp_char_interactions.22
+	}
+
+	option = {
+		name = dp_char_interactions.legitimacy.minus_100
+		scope:currency_scope = {
+			add_legitimacy = -100
+		}
+		trigger_event = dp_char_interactions.22
+	}
+
+	option = {
+		name = dp_char_interactions.legitimacy.minus_300
+		scope:currency_scope = {
+			add_legitimacy = -300
+		}
+		trigger_event = dp_char_interactions.22
+	}
+	
+	option = {
+		name = dp_char_interactions.legitimacy.minus_500
+		scope:currency_scope = {
+			add_legitimacy = -500
+		}
+		trigger_event = dp_char_interactions.22
+	}
+	
+	option = {
+		name = dp_char_editor_forward
+		trigger_event = dp_char_interactions.23
+	}
+	option = {
+		name = dp_char_editor_backward
+		trigger_event = dp_char_interactions.21
+	}
+	
+	option = {
+		name = dp_char_interactions.end
+		trigger_event = dp_char_interactions.10
+	}
+}
+#牧群货币菜单
+dp_char_interactions.23 = {
+	type = character_event
+	title = dp_char_interactions.herd.event.t
+	desc = dp_char_interactions.herd.event.d
+	theme = default
+	left_portrait = {
+		character = scope:currency_scope
+		animation = personality_bold
+	}
+
+	option = {
+		name = dp_char_interactions.herd.plus_10000
+		scope:currency_scope = {
+			domicile = {
+				change_herd = 10000
+			}
+		}
+		trigger_event = dp_char_interactions.23
+	}
+
+	option = {
+		name = dp_char_interactions.herd.plus_1000
+		scope:currency_scope = {
+			domicile = {
+				change_herd = 1000
+			}
+		}
+		trigger_event = dp_char_interactions.23
+	}
+
+	option = {
+		name = dp_char_interactions.herd.plus_100
+		scope:currency_scope = {
+			domicile = {
+				change_herd = 100
+			}
+		}
+		trigger_event = dp_char_interactions.23
+	}
+
+	option = {
+		name = dp_char_interactions.herd.minus_100
+		scope:currency_scope = {
+			domicile = {
+				change_herd = -100
+			}
+		}
+		trigger_event = dp_char_interactions.23
+	}
+
+	option = {
+		name = dp_char_interactions.herd.minus_1000
+		scope:currency_scope = {
+			domicile = {
+				change_herd = -1000
+			}
+		}
+		trigger_event = dp_char_interactions.23
+	}
+
+	option = {
+		name = dp_char_interactions.herd.minus_10000
+		scope:currency_scope = {
+			domicile = {
+				change_herd = -10000
+			}
+		}
+		trigger_event = dp_char_interactions.23
+	}
+	option = {
+		name = dp_char_editor_forward
+		trigger_event = dp_char_interactions.5
+	}
+	option = {
+		name = dp_char_editor_backward
+		trigger_event = dp_char_interactions.22
+	}
+	option = {
+		name = dp_char_interactions.end
+		trigger_event = dp_char_interactions.13
+	}
+}
+
+#排序
+# ——— 第1页：显示1–6号功能 + 下一页 + 退出 ———
+dp_char_interactions.10 = {
+    type            = character_event
+    title           = dp_char_interactions.main.event.t
+    desc            = dp_char_interactions.main.event.d
+    theme           = default
+
+    left_portrait = {
+        character = scope:currency_scope
+        animation = personality_bold
+    }
+
+    # 前6个互动按钮
+    option = { name = dp_char_interactions.gold.event.t       trigger_event = dp_char_interactions.1  }
+    option = { name = dp_char_interactions.prestige.event.t   trigger_event = dp_char_interactions.2  }
+    option = { name = dp_char_interactions.piety.event.t      trigger_event = dp_char_interactions.3  }
+    option = { name = dp_char_interactions.renown.event.t     trigger_event = dp_char_interactions.4  }
+    option = { name = dp_char_interactions.influence.event.t  trigger_event = dp_char_interactions.21  }
+    option = { name = dp_char_interactions.legitimacy.event.t trigger_event = dp_char_interactions.22  }
+
+    # 下一页按钮：跳到 .13
+    option = {
+        name          = dp_char_editor_forward
+        trigger_event = dp_char_interactions.13
+    }
+
+    # 退出按钮
+    option = {
+        name    = dp_char_interactions.end
+        is_exit = yes
+    }
+}
+
+# ——— 第2页：显示7–11号功能 + 上一页 + 退出 ———
+dp_char_interactions.13 = {
+    type            = character_event
+    title           = dp_char_interactions.main.event.t
+    desc            = dp_char_interactions.main.event.d
+    theme           = default
+
+    left_portrait = {
+        character = scope:currency_scope
+        animation = personality_bold
+    }
+
+    # 剩余按钮
+	option = { name = dp_char_interactions.herd.event.t      trigger_event = dp_char_interactions.23 }
+    option = { name = dp_char_interactions.stress.event.t    trigger_event = dp_char_interactions.5  }
+    option = { name = dp_char_interactions.tyranny.event.t   trigger_event = dp_char_interactions.6  }
+    option = { name = dp_char_interactions.dread.event.t     trigger_event = dp_char_interactions.7  }
+    option = { name = dp_char_interactions.weight.event.t    trigger_event = dp_char_interactions.8 }
+    
+
+    # 上一页按钮：跳回 .10
+    option = {
+        name          = dp_char_editor_backward
+        trigger_event = dp_char_interactions.10
+    }
+
+    # 退出按钮
+    option = {
+        name    = dp_char_interactions.end
+        is_exit = yes
+    }
+}

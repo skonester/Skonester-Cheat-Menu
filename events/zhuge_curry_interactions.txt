@@ -1,0 +1,729 @@
+﻿
+namespace = zhuge_curry_interactions
+
+#大明专属货币系统
+zhuge_curry_interactions.1 = {
+	type = character_event
+	title = zhuge_char_interactions.main.event.t
+	desc = zhuge_char_interactions.main.event.d
+	theme = default
+	left_portrait = {
+		character = scope:currency_scope
+		animation = personality_bold
+	}
+
+	option = {
+		name = zhuge_char_interactions.huangquan.event.t
+		trigger_event = zhuge_curry_interactions.2
+	}
+
+	option = {
+		name = zhuge_char_interactions.shuiliang.event.t
+		trigger_event = zhuge_curry_interactions.3
+	}
+
+	option = {
+		name = zhuge_char_interactions.neitang.event.t
+		trigger_event = zhuge_curry_interactions.4
+	}
+
+	option = {
+		name = zhuge_char_interactions.duanpi.event.t
+		trigger_event = zhuge_curry_interactions.5
+	}
+	
+	option = {
+		name = zhuge_char_interactions.cangshu.event.t
+		trigger_event = zhuge_curry_interactions.6
+	}
+	
+	option = {
+		name = zhuge_char_interactions.gongliao.event.t
+		trigger_event = zhuge_curry_interactions.7
+	}
+	
+	option = {
+		name = zhuge_char_interactions.junqi.event.t
+		trigger_event = zhuge_curry_interactions.8
+	}
+
+	option = {
+		name = zhuge_curry_interactions.end
+	}
+}
+#大明皇权
+zhuge_curry_interactions.2 = {
+	type = character_event
+	title = zhuge_char_interactions.huangquan.event.t
+	desc = zhuge_char_interactions.huangquan.event.d
+	theme = default
+	left_portrait = {
+		character = scope:currency_scope
+		animation = personality_bold
+	}
+
+	option = {
+		name = zhuge_char_interactions.huangquan.plus_2000
+		scope:currency_scope = {
+			HQ_change = {
+				CHANGE = 2000
+				CHECK = 437639088
+			}
+			custom_tooltip = zhuge_hq_add_1.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.2
+	}
+
+	option = {
+		name = zhuge_char_interactions.huangquan.plus_1000
+		scope:currency_scope = {
+			HQ_change = {
+				CHANGE = 1000
+				CHECK = 437639088
+			}
+			custom_tooltip = zhuge_hq_add_2.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.2
+	}
+
+	option = {
+		name = zhuge_char_interactions.huangquan.plus_100
+		scope:currency_scope = {
+			HQ_change = {
+				CHANGE = 100
+				CHECK = 437639088
+			}
+			custom_tooltip = zhuge_hq_add_3.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.2
+	}
+
+	option = {
+		name = zhuge_char_interactions.huangquan.minus_100
+		scope:currency_scope = {
+			HQ_change = {
+				CHANGE = -100
+				CHECK = 437639088
+			}
+			custom_tooltip = zhuge_hq_rm_1.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.2
+	}
+
+	option = {
+		name = zhuge_char_interactions.huangquan.minus_1000
+		scope:currency_scope = {
+			HQ_change = {
+				CHANGE = -1000
+				CHECK = 437639088
+			}
+			custom_tooltip = zhuge_hq_rm_2.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.2
+	}
+	
+	option = {
+		name = zhuge_char_interactions.huangquan.minus_2000
+		scope:currency_scope = {
+			HQ_change = {
+				CHANGE = -2000
+				CHECK = 437639088
+			}
+			custom_tooltip = zhuge_hq_rm_3.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.2
+	}
+	
+	option = {
+		name = dp_char_editor_forward
+		trigger_event = zhuge_curry_interactions.3
+	}
+	option = {
+		name = dp_char_editor_backward
+		trigger_event = zhuge_curry_interactions.1
+	}
+	
+	option = {
+		name = zhuge_curry_interactions.end
+		trigger_event = zhuge_curry_interactions.1
+	}
+}
+
+#大明税粮
+zhuge_curry_interactions.3 = {
+	type = character_event
+	title = zhuge_char_interactions.shuiliang.event.t
+	desc = zhuge_char_interactions.shuiliang.event.d
+	theme = default
+	left_portrait = {
+		character = scope:currency_scope
+		animation = personality_bold
+	}
+
+	option = {
+		name = zhuge_char_interactions.shuiliang.plus_10000
+		scope:currency_scope = {
+			change_global_variable = {
+				name = shuiliang_value
+				add = 10000
+			}
+			custom_tooltip = zhuge_sl_add_1.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.3
+	}
+
+	option = {
+		name = zhuge_char_interactions.shuiliang.plus_1000
+		scope:currency_scope = {
+			change_global_variable = {
+				name = shuiliang_value
+				add = 1000
+			}
+			custom_tooltip = zhuge_sl_add_2.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.3
+	}
+
+	option = {
+		name = zhuge_char_interactions.shuiliang.plus_100
+		scope:currency_scope = {
+			change_global_variable = {
+				name = shuiliang_value
+				add = 100
+			}
+			custom_tooltip = zhuge_sl_add_3.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.3
+	}
+
+	option = {
+		name = zhuge_char_interactions.shuiliang.minus_100
+		scope:currency_scope = {
+			change_global_variable = {
+				name = shuiliang_value
+				add = -100
+			}
+			custom_tooltip = zhuge_sl_rm_1.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.3
+	}
+
+	option = {
+		name = zhuge_char_interactions.shuiliang.minus_1000
+		scope:currency_scope = {
+			change_global_variable = {
+				name = shuiliang_value
+				add = -1000
+			}
+			custom_tooltip = zhuge_sl_rm_2.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.3
+	}
+	
+	option = {
+		name = zhuge_char_interactions.shuiliang.minus_10000
+		scope:currency_scope = {
+			change_global_variable = {
+				name = shuiliang_value
+				add = -10000
+			}
+			custom_tooltip = zhuge_sl_rm_3.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.3
+	}
+
+	option = {
+		name = dp_char_editor_forward
+		trigger_event = zhuge_curry_interactions.4
+	}
+	option = {
+		name = dp_char_editor_backward
+		trigger_event = zhuge_curry_interactions.2
+	}
+	
+	option = {
+		name = zhuge_curry_interactions.end
+		trigger_event = zhuge_curry_interactions.1
+	}
+}
+#大明内帑
+zhuge_curry_interactions.4 = {
+	type = character_event
+	title = zhuge_char_interactions.neitang.event.t
+	desc = zhuge_char_interactions.neitang.event.d
+	theme = default
+	left_portrait = {
+		character = scope:currency_scope
+		animation = personality_bold
+	}
+
+	option = {
+		name = zhuge_char_interactions.neitang.plus_10000
+		scope:currency_scope = {
+			change_global_variable = {
+				name = guantang_value
+				add = 10000
+			}
+			custom_tooltip = zhuge_nt_add_1.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.4
+	}
+
+	option = {
+		name = zhuge_char_interactions.neitang.plus_1000
+		scope:currency_scope = {
+			change_global_variable = {
+				name = guantang_value
+				add = 1000
+			}
+			custom_tooltip = zhuge_nt_add_2.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.4
+	}
+
+	option = {
+		name = zhuge_char_interactions.neitang.plus_100
+		scope:currency_scope = {
+			change_global_variable = {
+				name = guantang_value
+				add = 100
+			}
+			custom_tooltip = zhuge_nt_add_3.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.4
+	}
+
+	option = {
+		name = zhuge_char_interactions.neitang.minus_100
+		scope:currency_scope = {
+			change_global_variable = {
+				name = guantang_value
+				add = -100
+			}
+			custom_tooltip = zhuge_nt_rm_1.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.4
+	}
+
+	option = {
+		name = zhuge_char_interactions.neitang.minus_1000
+		scope:currency_scope = {
+			change_global_variable = {
+				name = guantang_value
+				add = -1000
+			}
+			custom_tooltip = zhuge_nt_rm_2.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.4
+	}
+	
+	option = {
+		name = zhuge_char_interactions.neitang.minus_10000
+		scope:currency_scope = {
+			change_global_variable = {
+				name = guantang_value
+				add = -10000
+			}
+			custom_tooltip = zhuge_nt_rm_3.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.4
+	}
+
+	option = {
+		name = dp_char_editor_forward
+		trigger_event = zhuge_curry_interactions.5
+	}
+	option = {
+		name = dp_char_editor_backward
+		trigger_event = zhuge_curry_interactions.3
+	}
+	
+	option = {
+		name = zhuge_curry_interactions.end
+		trigger_event = zhuge_curry_interactions.1
+	}
+}
+#大明段匹
+zhuge_curry_interactions.5 = {
+	type = character_event
+	title = zhuge_char_interactions.duanpi.event.t
+	desc = zhuge_char_interactions.duanpi.event.d
+	theme = default
+	left_portrait = {
+		character = scope:currency_scope
+		animation = personality_bold
+	}
+
+	option = {
+		name = zhuge_char_interactions.duanpi.plus_10000
+		scope:currency_scope = {
+			change_global_variable = {
+				name = duanpi_value
+				add = 10000
+			}
+			custom_tooltip = zhuge_dp_add_1.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.5
+	}
+
+	option = {
+		name = zhuge_char_interactions.duanpi.plus_1000
+		scope:currency_scope = {
+			change_global_variable = {
+				name = duanpi_value
+				add = 1000
+			}
+			custom_tooltip = zhuge_dp_add_2.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.5
+	}
+
+	option = {
+		name = zhuge_char_interactions.duanpi.plus_100
+		scope:currency_scope = {
+			change_global_variable = {
+				name = duanpi_value
+				add = 100
+			}
+			custom_tooltip = zhuge_dp_add_3.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.5
+	}
+
+	option = {
+		name = zhuge_char_interactions.duanpi.minus_100
+		scope:currency_scope = {
+			change_global_variable = {
+				name = duanpi_value
+				subtract = 100
+			}
+			custom_tooltip = zhuge_dp_rm_1.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.5
+	}
+
+	option = {
+		name = zhuge_char_interactions.duanpi.minus_1000
+		scope:currency_scope = {
+			change_global_variable = {
+				name = duanpi_value
+				subtract = 1000
+			}
+			custom_tooltip = zhuge_dp_rm_2.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.5
+	}
+	
+	option = {
+		name = zhuge_char_interactions.duanpi.minus_10000
+		scope:currency_scope = {
+			change_global_variable = {
+				name = duanpi_value
+				subtract = 10000
+			}
+			custom_tooltip = zhuge_dp_rm_3.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.5
+	}
+	option = {
+		name = dp_char_editor_forward
+		trigger_event = zhuge_curry_interactions.6
+	}
+	option = {
+		name = dp_char_editor_backward
+		trigger_event = zhuge_curry_interactions.4
+	}
+
+	option = {
+		name = zhuge_curry_interactions.end
+		trigger_event = zhuge_curry_interactions.1
+	}
+}
+#大明藏书
+zhuge_curry_interactions.6 = {
+	type = character_event
+	title = zhuge_char_interactions.cangshu.event.t
+	desc = zhuge_char_interactions.cangshu.event.d
+	theme = default
+	left_portrait = {
+		character = scope:currency_scope
+		animation = personality_bold
+	}
+
+	option = {
+		name = zhuge_char_interactions.cangshu.plus_10000
+		scope:currency_scope = {
+			change_global_variable = {
+				name = cangshu_value
+				add = 10000
+			}
+			custom_tooltip = zhuge_cs_add_1.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.6
+	}
+
+	option = {
+		name = zhuge_char_interactions.cangshu.plus_1000
+		scope:currency_scope = {
+			change_global_variable = {
+				name = cangshu_value
+				add = 1000
+			}
+			custom_tooltip = zhuge_cs_add_2.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.6
+	}
+
+	option = {
+		name = zhuge_char_interactions.cangshu.plus_100
+		scope:currency_scope = {
+			change_global_variable = {
+				name = cangshu_value
+				add = 100
+			}
+			custom_tooltip = zhuge_cs_add_3.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.6
+	}
+
+	option = {
+		name = zhuge_char_interactions.cangshu.minus_100
+		scope:currency_scope = {
+			change_global_variable = {
+				name = cangshu_value
+				subtract = 100
+			}
+			custom_tooltip = zhuge_cs_rm_1.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.6
+	}
+
+	option = {
+		name = zhuge_char_interactions.cangshu.minus_1000
+		scope:currency_scope = {
+			change_global_variable = {
+				name = cangshu_value
+				subtract = 1000
+			}
+			custom_tooltip = zhuge_cs_rm_2.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.6
+	}
+	
+	option = {
+		name = zhuge_char_interactions.cangshu.minus_10000
+		scope:currency_scope = {
+			change_global_variable = {
+				name = cangshu_value
+				subtract = 10000
+			}
+			custom_tooltip = zhuge_cs_rm_3.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.6
+	}
+	option = {
+		name = dp_char_editor_forward
+		trigger_event = zhuge_curry_interactions.7
+	}
+	option = {
+		name = dp_char_editor_backward
+		trigger_event = zhuge_curry_interactions.5
+	}
+
+	option = {
+		name = zhuge_curry_interactions.end
+		trigger_event = zhuge_curry_interactions.1
+	}
+}
+#大明工料
+zhuge_curry_interactions.7 = {
+	type = character_event
+	title = zhuge_char_interactions.gongliao.event.t
+	desc = zhuge_char_interactions.gongliao.event.d
+	theme = default
+	left_portrait = {
+		character = scope:currency_scope
+		animation = personality_bold
+	}
+
+	option = {
+		name = zhuge_char_interactions.gongliao.plus_10000
+		scope:currency_scope = {
+			change_global_variable = {
+				name = gongliao_value
+				add = 10000
+			}
+			custom_tooltip = zhuge_gl_add_1.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.7
+	}
+
+	option = {
+		name = zhuge_char_interactions.gongliao.plus_1000
+		scope:currency_scope = {
+			change_global_variable = {
+				name = gongliao_value
+				add = 1000
+			}
+			custom_tooltip = zhuge_gl_add_2.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.7
+	}
+
+	option = {
+		name = zhuge_char_interactions.gongliao.plus_100
+		scope:currency_scope = {
+			change_global_variable = {
+				name = gongliao_value
+				add = 100
+			}
+			custom_tooltip = zhuge_gl_add_3.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.7
+	}
+
+	option = {
+		name = zhuge_char_interactions.gongliao.minus_100
+		scope:currency_scope = {
+			change_global_variable = {
+				name = gongliao_value
+				subtract = 100
+			}
+			custom_tooltip = zhuge_gl_rm_1.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.7
+	}
+
+	option = {
+		name = zhuge_char_interactions.gongliao.minus_1000
+		scope:currency_scope = {
+			change_global_variable = {
+				name = gongliao_value
+				subtract = 1000
+			}
+			custom_tooltip = zhuge_gl_rm_2.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.7
+	}
+	
+	option = {
+		name = zhuge_char_interactions.gongliao.minus_10000
+		scope:currency_scope = {
+			change_global_variable = {
+				name = gongliao_value
+				subtract = 10000
+			}
+			custom_tooltip = zhuge_gl_rm_3.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.7
+	}
+	option = {
+		name = dp_char_editor_forward
+		trigger_event = zhuge_curry_interactions.8
+	}
+	option = {
+		name = dp_char_editor_backward
+		trigger_event = zhuge_curry_interactions.6
+	}
+
+	option = {
+		name = zhuge_curry_interactions.end
+		trigger_event = zhuge_curry_interactions.1
+	}
+}
+#大明军器
+zhuge_curry_interactions.8 = {
+	type = character_event
+	title = zhuge_char_interactions.junqi.event.t
+	desc = zhuge_char_interactions.junqi.event.d
+	theme = default
+	left_portrait = {
+		character = scope:currency_scope
+		animation = personality_bold
+	}
+
+	option = {
+		name = zhuge_char_interactions.junqi.plus_10000
+		scope:currency_scope = {
+			change_global_variable = {
+				name = junqi_value
+				add = 10000
+			}
+			custom_tooltip = zhuge_jq_add_1.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.8
+	}
+
+	option = {
+		name = zhuge_char_interactions.junqi.plus_1000
+		scope:currency_scope = {
+			change_global_variable = {
+				name = junqi_value
+				add = 1000
+			}
+			custom_tooltip = zhuge_jq_add_2.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.8
+	}
+
+	option = {
+		name = zhuge_char_interactions.junqi.plus_100
+		scope:currency_scope = {
+			change_global_variable = {
+				name = junqi_value
+				add = 100
+			}
+			custom_tooltip = zhuge_jq_add_3.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.8
+	}
+
+	option = {
+		name = zhuge_char_interactions.junqi.minus_100
+		scope:currency_scope = {
+			change_global_variable = {
+				name = junqi_value
+				subtract = 100
+			}
+			custom_tooltip = zhuge_jq_rm_1.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.8
+	}
+
+	option = {
+		name = zhuge_char_interactions.junqi.minus_1000
+		scope:currency_scope = {
+			change_global_variable = {
+				name = junqi_value
+				subtract = 1000
+			}
+			custom_tooltip = zhuge_jq_rm_2.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.8
+	}
+	
+	option = {
+		name = zhuge_char_interactions.junqi.minus_10000
+		scope:currency_scope = {
+			change_global_variable = {
+				name = junqi_value
+				subtract = 10000
+			}
+			custom_tooltip = zhuge_jq_rm_3.tooltip
+		}
+		trigger_event = zhuge_curry_interactions.8
+	}
+	option = {
+		name = dp_char_editor_forward
+		trigger_event = zhuge_curry_interactions.2
+	}
+	option = {
+		name = dp_char_editor_backward
+		trigger_event = zhuge_curry_interactions.7
+	}
+
+	option = {
+		name = zhuge_curry_interactions.end
+		trigger_event = zhuge_curry_interactions.1
+	}
+}

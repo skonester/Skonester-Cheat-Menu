@@ -1,0 +1,24 @@
+﻿#############################
+# Remove Culture Cooldown   #
+# by BlackShip				#
+#############################
+
+namespace = RCC
+RCC.0001 = {
+	type = character_event
+	hidden = yes
+
+	trigger = {
+		is_ai = no
+		is_playable_character = yes
+		root.culture = {
+			has_variable = tradition_cooldown
+		}
+	}
+
+	immediate = {
+		root.culture = {
+			remove_variable  = tradition_cooldown
+		}
+	}
+}

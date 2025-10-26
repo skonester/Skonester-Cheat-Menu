@@ -68,6 +68,7 @@ I started developing this fork during the **Roads to Power** era — not because
 I don’t need donation points; please support the larger CK3 projects that make this game truly great.  
 
 This fork continues **Zhuge’s** work from the Chinese CK3 community for **English players**. Zhuge has mastered Daddy Pika’s base code, and my goal is to maintain a **stable, bilingual English/Russian fork** for long-term use.  
+link to Zhuge's mod https://steamcommunity.com/sharedfiles/filedetails/?id=2939268227
 
 Some players simply need a reliable, functional cheat menu that stays compatible through updates — that’s why this project exists, and why it’s open for others to build on.  
 

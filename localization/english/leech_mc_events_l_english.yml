@@ -1,0 +1,23 @@
+﻿l_english:
+
+ leech_mc_event.common.exit:0 "Exit"
+ 
+ leech_mc_event.truce.t:0 "End-of-War Negotiation"
+ leech_mc_event.truce.desc:0 "Negotiate an end of war between [recipient.GetShortUIName] and [secondary_recipient.GetShortUIName]"
+ leech_mc_event.truce.attacker:0 "Attacker Wins"
+ leech_mc_event.truce.white_peace:0 "White Peace"
+ leech_mc_event.truce.defender:0 "Defender Wins"
+ 
+ leech_mc_event.simple_action.t:0 "Skonester : Sub Menu"
+ leech_mc_event.simple_action.desc:0 "Let [recipient.GetShortUIName] do following actions to [secondary_recipient.GetShortUIName]"
+ leech_mc_event.simple_action.vassalize:0 "Let [recipient.GetShortUIName] vassalize [secondary_recipient.GetShortUIName]"
+ leech_mc_event.simple_action.marry:0 "Let [recipient.GetShortUIName] marry [secondary_recipient.GetShortUIName]"
+ leech_mc_event.simple_action.marry_mat:0 "Let [recipient.GetShortUIName] matrilineally marry [secondary_recipient.GetShortUIName]"
+ leech_mc_event.simple_action.divorce:0 "Let [recipient.GetShortUIName] divorce [secondary_recipient.GetShortUIName]"
+ leech_mc_event.simple_action.end_lover:0 "Let [recipient.GetShortUIName] part [secondary_recipient.GetShortUIName]"
+ leech_mc_event.simple_action.impregnate:0 "Let [recipient.GetShortUIName] impregnate [secondary_recipient.GetShortUIName]"
+ leech_mc_event.simple_action.copy_dna:0 "Let [secondary_recipient.GetShortUIName] have the same appearance of [recipient.GetShortUIName]"
+ leech_mc_event.simple_action.cancel_truce:0 "Let [recipient.GetShortUIName] break the truce with [secondary_recipient.GetShortUIName]"
+ leech_mc_event.simple_action.like:0 "Let [recipient.GetShortUIName] like [secondary_recipient.GetShortUIName]"
+ leech_mc_event.simple_action.hate:0 "Let [recipient.GetShortUIName] hate [secondary_recipient.GetShortUIName]"
+ leech_mc_event.simple_action.adopt:0 "Let [recipient.GetShortUIName] adopt [secondary_recipient.GetShortUIName]"

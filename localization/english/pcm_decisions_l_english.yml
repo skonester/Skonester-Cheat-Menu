@@ -1,0 +1,41 @@
+﻿l_english:
+ #Skonester Edition
+ pcm_money_decision_title:0 "#Skonester:#! Treasure of the Realm"
+ pcm_money_decision_desc:0 "Call forth an immense treasury, and be granted a bounty of gold, piety, and renown."
+ pcm_money_decision_tooltip:0 "Gain a great hoard of gold, piety, and prestige, to begin your reign with strength."
+ pcm_money_decision_ct:0 "The coffers of kings overflow before me!"
+
+ pcm_subrealm_to_culture_decision_title:0 "#Skonester:#! Edict of Culture"
+ pcm_subrealm_to_culture_decision_desc:0 "Proclaim an edict that all vassals and lands adopt the culture of their liege."
+ pcm_subrealm_to_culture_decision_tooltip:0 "Unite your realm under one culture."
+ pcm_subrealm_to_culture_decision_ct:0 "Henceforth, the realm shall speak with one tongue and custom."
+
+ pcm_convert_subrealm_to_religion_decision_title:0 "#Skonester:#! Edict of Faith"
+ pcm_convert_subrealm_to_religion_decision_desc:0 "Proclaim an edict that your vassals and sub-realm be converted to your faith."
+ pcm_convert_subrealm_to_religion_decision_tooltip:0 "Unite your realm under one holy banner."
+ pcm_convert_subrealm_to_religion_decision_ct:0 "Let the light of truth fall upon the wayward!"
+
+ pcm_show_decision_title:0 "--= #Skonester:#! Reveal the Hidden Edicts =--"
+ pcm_show_decision_desc:0 "Reveal all Skonester decrees."
+ pcm_show_decision_tooltip:0 ""
+ pcm_show_decision_ct:0 "So let it be written, so let it be known."
+
+ pcm_hide_decision_title:0 "--= #Skonester:#! Conceal the Edicts =--"
+ pcm_hide_decision_desc:0 "Conceal the Skonester decrees from view."
+ pcm_hide_decision_tooltip:0 ""
+ pcm_hide_decision_ct:0 "Seal the parchments and hush the tongues."
+
+ pcm_cure_pox_decision_title:0 "#Skonester:#! Purging of Afflictions"
+ pcm_cure_pox_decision_desc:0 "By decree, all carnal maladies and common ailments shall be banished from the realm."
+ pcm_cure_pox_decision_tooltip:0 "Cleanse the realm of afflictions borne of the flesh."
+ pcm_cure_pox_decision_ct:0 "The healer’s herbs and holy oils restore me to purity!"
+
+ pcm_cure_all_decision_title:0 "#Skonester:#! Panacea of the Realm"
+ pcm_cure_all_decision_desc:0 "A wondrous elixir is proclaimed, healing all manner of disease across the land."
+ pcm_cure_all_decision_tooltip:0 "Cure all ailments and plagues throughout the realm."
+ pcm_cure_all_decision_ct:0 "Rejoice! The shadow of sickness lifts from our people."
+
+ pcm_cure_inbred_decision_title:0 "#Skonester:#! Purification of Bloodlines"
+ pcm_cure_inbred_decision_desc:0 "Through mystic rites and divine favor, the stains in your blood are cleansed, and your line is made whole again."
+ pcm_cure_inbred_decision_tooltip:0 "Remove all ill humors and defects from your lineage."
+ pcm_cure_inbred_decision_ct:0 "The blood of my house flows pure and strong once more!"

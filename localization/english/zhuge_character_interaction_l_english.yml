@@ -1,0 +1,116 @@
+﻿l_english:
+ zhuge_organize_titles:0 "Organize De Jure"
+ zhuge_organize_titles_desc:0 "By decree of crown and sceptre, all lands and vassals shall bend their knee and be woven into the rightful dominion of their lord."
+ 
+ zhuge_destroy_title:0 "Destroy Primary Title"
+ zhuge_destroy_title_desc:0 "Shatter thine own crown and cast the title into dust, as though it never were—a bold stroke, yet folly to most."
+ 
+ zhuge_buff_01:0 "Imperial Empowerment"
+ zhuge_buff_01_desc:0 "Drink deep of power, though every draught shortens the candle of thine own life."
+ 
+ zhuge_buff_01_tt:0 "Toggle the Imperial Empowerment trait?"
+ 
+ zhuge_buff_02:0 "Grand Marshal"
+ zhuge_buff_02_desc:0 "Marshal of many banners, warden of borders, and scourge to oath‑breakers. A role sung in mead‑hall verse."
+ 
+ zhuge_buff_02_tt:0 "Toggle the Grand Marshal trait?"
+ 
+ zhuge_buff_03:0 "Grand Scholar"
+ zhuge_buff_03_desc:0 "Keeper of lore, scribe of wisdom, whose quill guides the realm better than a hundred swords."  
+ zhuge_buff_03_tt:0 "Toggle the Grand Scholar trait?"
+ 
+ zhuge_buff_04:0 "Learn Their Language"
+ zhuge_buff_04_desc:0 "By wit or sorcery, take up the tongue of another folk near instantly."
+ zhuge_buff_04_tt:0 "Learn this language?"
+ 
+ zhuge_buff_05:0 "Grant Knightly Honour"
+ zhuge_buff_05_desc:0 "Clothe yon knight in renown and wreath him with honour, that his name be hailed in hall and hearth."
+ zhuge_buff_05_tt:0 "Toggle the Knightly Honour trait?"
+ zhuge_buff_05_high_tt:0 "Add 2 500 Glory (maxes the [accolade|E])."
+ zhuge_buff_05_low_tt:0 "Add 500 Glory."
+ zhuge_buff_05_delete01_tt:0 "Remove 500 Glory."
+ zhuge_buff_05_delete02_tt:0 "Reset Glory to zero."
+ 
+ daddy_pika_add_strong_hook:0 "Gain Strong Hook"
+ daddy_pika_add_strong_hook_desc:0 "Secure secret sway over this soul, a hidden chain unseen yet unbreakable."
+ 
+ strong_test_hook:0 "Divine Attachment"
+ strong_hook:0 "Divine Attachment"
+ strong_hook_desc:0 "This soul offers fervent prayers to a power unseen, though whether the gods heed or jest over their mead is a mystery wrapped in shadow."
+ 
+ zhuge_bloodline_03:0 "Anointed by Barbara"
+ zhuge_bloodline_03_desc:0 "Marked above others, their blood gleams with peculiar blessing."
+ zhuge_bloodline_03_tt:0 "Toggle the Divine Blood trait?"
+ 
+ zhuge_yixue_01:0 "Medical Miracle"
+ zhuge_yixue_01_desc:0 "Purge all ills from flesh and bone, and turn frailty into the strength the gods themselves might envy."
+ zhuge_yixue_01_tt:0 "Apply the medical miracle?"
+ 
+ zhuge_yixue_02:0 "Correct Personality"
+ zhuge_yixue_02_desc:0 "Where once the humours of the soul ran ill, they are set aright as if a saint laid hands upon the mind."
+ zhuge_yixue_02_tt:0 "Correct this character’s personality?"
+ 
+ zhueg_yixue_03:0 "Remove Vices"
+ zhueg_yixue_03_desc:0 "Smoke, drink, and sin alike are cast out—though taverns may mourn the loss of a regular."
+ zhueg_yixue_03_tt:0 "Remove these vices?"
+ 
+ zhuge_yixue_04:0 "Add Congenital Traits"
+ zhuge_yixue_04_desc:0 "Blessed with gifts of mind and body—genius, might, beauty, and cunning." 
+ zhuge_yixue_04_tt:0 "Grant congenital traits?"
+ 
+ zhuge_yixue_05:0 "Plague Immunity"
+ zhuge_yixue_05_desc:0 "No major illness may lay hand upon this soul(you can still illness dear child)."
+ zhuge_yixue_05_tt:0 "Toggle Plague Immunity?"
+ 
+ zhuge_yixue_06:0 "Boost Education"
+ zhuge_yixue_06_desc:0 "Raise their learning to lofty heights, as if tutored by scholars of old... or at least a well‑drunken skald."
+ zhuge_yixue_06_tt:0 "Boost their education?"
+ 
+ zhuge_set_relation_interaction:0 "Set Relationship"
+ zhuge_set_relation_interaction_desc:0 "Command a shift of bond and station between you and [recipient.GetShortUIName]; friend, foe, or something in‑between."
+ 
+ zhuge_add_truce_interaction:0 "Adjust Truce"
+ zhuge_danx_hd_01_desc:0 "One‑way (gain)"
+ zhuge_danx_give_01_desc:0 "One‑way (grant)"
+ zhuge_danx_sx_01_desc:0 "Two‑way"
+ zhuge_danx_sx_02_desc:0 "Remove truce"
+ ZHUGE_TRUCE:0 "#Y Zhuge’s Face‑Saving Truce#!"
+ zhuge_remove_truce_effect:0 "Thy [truce|E] is ended—so much for ‘eternal peace.’"
+ 
+ zhuge_set_authority_inter:0 "Set Authority Level"
+ zhuge_set_authority_inter_desc:0 "Fix the crown’s might in iron measure, be it weak as whispers or high as heaven’s decree."
+ zhuge_set_authority_title:0 "Set Authority Level"
+ zhuge_set_authority_desc:0 "Choose the desired authority level:"
+ zhuge_set_authority_0:0 "Autonomous Vassals"
+ zhuge_set_authority_1:0 "Limited Authority"
+ zhuge_set_authority_2:0 "High Authority"
+ zhuge_set_authority_3:0 "Absolute Authority"
+ zhuge_set_authority_cancel:0 "Cancel"
+ 
+ zhuge_set_artifact_interaction:0 "Summon a Shiny Thing"
+ zhuge_set_artifact_interaction_desc:0 "Lo and behold! A relic appears,dare not question fortune."
+ 
+ zhuge_kill_xingzh_house_interaction:0 "Give the Nobles a Nudge (Off a Cliff)"
+ zhuge_kill_xingzh_house_interaction_desc:0 "These lofty houses grow fat and idle; the cliffside awaits their spring cleaning."
+ 
+ zhuge_huoqu_artifact_interaction:0 "Royal Borrowing (Totally Temporary)"
+ zhuge_huoqu_artifact_interaction_desc:0 "That treasure is most fine. Let the king hold it for ‘safekeeping,’."
+ 
+ zhuge_jiequ_artifact_player:0 "Nice Treasure. I’ll Take It."
+ 
+ zhuge_liuguan_interaction:0 "Pacify and Integrate"
+ zhuge_liuguan_interaction_desc:0 "‘Thou art a good subject,’ proclaims the crown. Now go be swallowed whole by my realm."
+ 
+ zhuge_select_succeed:0 "The child’s gender is sealed by fate and decree!"
+ 
+ zhuge_great_steppe:0 "Change #bold Steppe Season#!"
+ zhuge_great_steppe_desc:0 "Command the seasons across the steppe—snow, spring, or summer."
+ 
+ zhuge_ymbuff_02:0 "Mandate of the Nomads"
+ zhuge_ymbuff_02_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is hailed Heaven‑sent."
+ 
+ zhuge_mpo_qiyue:0 "Modify Tribute Contract"
+ zhuge_mpo_qiyue_desc:0 "Twist and alter the vows of tribute with [recipient.GetShortUINameNoTooltip], as deft as a jarl haggling over ale."
+ 
+ zhuge_lifexp_all_xp:0 "Lifestyle Skill Boost"
+ zhuge_lifexp_all_xp_desc:0 "#bold #P Unlock all arts and crafts of life—knowledge#!#!"

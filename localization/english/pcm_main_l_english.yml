@@ -1,0 +1,31 @@
+﻿#PCM localization
+l_english:
+ set_immortal_interaction:0 "Bestow Immortality"
+ set_immortal_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] shall be granted eternal life, with visage forever preserved at five-and-twenty winters."
+
+ set_mortal_interaction:0 "Revoke Immortality"
+ set_mortal_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] shall be released from the chains of endless life. Perhaps [recipient.GetSheHe] longs for the rest of the grave."
+
+ set_super_interaction:0 "Anoint as Paragon"
+ set_super_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] shall be exalted far beyond mortals: unmatched in wisdom, strength, fertility, vigor, renown, wealth, and dread. Truly a paragon among lords."
+
+ set_unsuper_interaction:0 "Rescind Paragon’s Blessings"
+ set_unsuper_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] shall be stripped of all exalted gifts. [recipient.GetSheHe|U] may find this burden most grievous."
+
+ set_super_governor_interaction:0 "Bestow Steward’s Mandate"
+ set_super_governor_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] shall be granted mastery in the governance of realms: greater levies, wise stewardship, swift building of halls, flourishing prosperity, and the favor of the commons."
+
+ set_unsuper_governor_interaction:0 "Rescind Steward’s Mandate"
+ set_unsuper_governor_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] shall lose these blessings of governance, returning to mortal limitation."
+
+ set_super_general_interaction:0 "Bless as Warlord"
+ set_super_general_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] shall become an unrivaled commander of hosts: unmatched in valor, martial prowess, stratagem, and endurance; feared in battle and swift in siege."
+
+ set_unsuper_general_interaction:0 "Rescind Warlord’s Blessing"
+ set_unsuper_general_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] shall be stripped of all divine favor in war, and may falter where once [recipient.GetSheHe] triumphed."
+
+ set_all_in_one_interaction:0 "Crown as Exemplar"
+ set_all_in_one_interaction_desc:0 "For [recipient.GetShortUINameNoTooltip|U], all blessings are granted: Paragon, Steward’s Mandate, and Warlord’s Bane, united within one form. Truly a wonder of Skonester’s mysteries."
+
+ set_unall_in_one_interaction:0 "Return to Mortal Station"
+ set_unall_in_one_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] shall lose all gifts of paragon, steward, and warlord, and walk again as a child of men."

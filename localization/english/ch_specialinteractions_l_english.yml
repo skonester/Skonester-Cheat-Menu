@@ -1,0 +1,55 @@
+﻿l_english:
+ ### --- CH Convert Holding Decisions ---
+ NOT_I_HAVE_CH_BARONY_SELECTED:1 "You have #bold not#! selected a Barony"
+ CH_CONVERT_HOLDING_DECISION_NAME_LABEL:0 "Name:"
+ CH_CONVERT_HOLDING_DECISION_CAPITAL_LABEL:0 "Holding:"
+ REVOKE_CH_CONVERT_HOLDING_DECISION_BARONY_LABEL:0 "County:"
+ CH_CONVERT_HOLDING_DECISION_CHANGE_CAPITAL:1 "Change Holding"
+ CH_CONVERT_HOLDING_DECISION_SELECT_CAPITAL:1 "Select Holding"
+ CH_SELECT_HOLDING_TITLE:1 "Select Holding"
+ CH_SELECT_HOLDING_NO_TITLES:0 "No available Holdings"
+ CH_SELECT_HOLDING_TOOLTIP:0 "#T [Select_CString( DecisionViewWidgetCreateHolyOrder.HasValidBaronies, '$CH_SELECT_HOLDING_TITLE$', '$CH_SELECT_HOLDING_NO_TITLES$' )] #!"
+ CH_SELECT_HOLDING_CONFIRM:0 "Select"
+
+ ch_convert_holding_to_castle_decision:0 "Convert Holding to Castle"
+ ch_convert_holding_to_castle_decision_tooltip:0 "The existing holding(s) will be replaced with a [castle|E] holding"
+ ch_convert_holding_to_castle_decision_desc:0 "#F Architects and engineers have been congregating within my realm as of late. Many are sought after as master builders, but to prove their skills, they want great projects to work on.#!"
+ ch_convert_holding_to_castle_decision_confirm:0 "Convert Holding to Castle"
+ I_HAVE_CH_ELIGBLE_BARONIES_TO_CASTLE_COUNTY:1 "You have a [barony|E] with a [holding|E] that can be converted to [castle|E]\n$EFFECT_LIST_BULLET$Only holdings in the [counties|E] you personally are the [holder|E] of are eligible\n$EFFECT_LIST_BULLET$Holdings with active constructions are #bold not#! eligible\n$EFFECT_LIST_BULLET$Despite what the Select Holding window may tell you, you #bold can#! in fact select a [county_capital|E]\n$EFFECT_LIST_BULLET$If you convert a [temple|E], you may have to wait until your [realm_priest|E] relinquishes the [holding|E] automatically"
+
+ ch_convert_holding_to_city_decision:0 "Convert Holding to City"
+ ch_convert_holding_to_city_decision_tooltip:0 "The existing holding(s) will be replaced with a [city|E] holding"
+ ch_convert_holding_to_city_decision_desc:0 "#F Architects and engineers have been congregating within my realm as of late. Many are sought after as master builders, but to prove their skills, they want great projects to work on.#!"
+ ch_convert_holding_to_city_decision_confirm:0 "Convert Holding to City"
+ I_HAVE_CH_ELIGBLE_BARONIES_TO_CITY_COUNTY:1 "You have a [barony|E] with a [holding|E] that can be converted to [city|E]\n$EFFECT_LIST_BULLET$Only holdings in the [counties|E] you personally are the [holder|E] of are eligible\n$EFFECT_LIST_BULLET$Holdings with active constructions are #bold not#! eligible\n$EFFECT_LIST_BULLET$Despite what the Select Holding window may tell you, you #bold can#! in fact select a [county_capital|E]\n$EFFECT_LIST_BULLET$If you convert a [temple|E], you may have to wait until your [realm_priest|E] relinquishes the [holding|E] automatically"
+
+ ch_convert_holding_to_temple_decision:0 "Convert Holding to Temple"
+ ch_convert_holding_to_temple_decision_tooltip:0 "The existing holding(s) will be replaced with a [temple|E] holding"
+ ch_convert_holding_to_temple_decision_desc:0 "#F Architects and engineers have been congregating within my realm as of late. Many are sought after as master builders, but to prove their skills, they want great projects to work on.#!"
+ ch_convert_holding_to_temple_decision_confirm:0 "Convert Holding to Temple"
+ I_HAVE_CH_ELIGBLE_BARONIES_TO_TEMPLE_COUNTY:1 "You have a [barony|E] with a [holding|E] that can be converted to [temple|E]\n$EFFECT_LIST_BULLET$Only holdings in the [counties|E] you personally are the [holder|E] of are eligible\n$EFFECT_LIST_BULLET$Holdings with active constructions are #bold not#! eligible\n$EFFECT_LIST_BULLET$Despite what the Select Holding window may tell you, you #bold can#! in fact select a [county_capital|E]"
+
+ ### --- X Decisions ---
+ X1_decision_title:0 "Embrace the Valorous Path"
+ X1_decision_desc:0 "The voice of honor and chivalry calleth unto me. By this choice, my name shall be sung as knightly and true."
+ X1_decision_confirm:0 "So let my valor be proven."
+
+ X_build_title:0 "Undertake Great Works"
+ X_build_desc:0 "The fields lie fallow and the folk cry out for bread and shelter. By such labors of stone and timber shall my realm be strengthened."
+ X_build_confirm:0 "Summon the masons and stewards."
+
+ X_city_title:0 "Found a Borough"
+ X_city_desc:0 "Where wilderness and hamlets lie, I shall raise a borough of trade and craft. Merchants shall flock and guilds shall prosper beneath my banner."
+ X_city_confirm:0 "Let the borough be raised."
+
+ X_temple_title:0 "Raise a Holy House"
+ X_temple_desc:0 "The faithful yearn for a place of worship, where bell and prayer may sound unto heaven. By my command, a temple shall rise."
+ X_temple_confirm:0 "Consecrate the ground."
+
+ X_castle_title:0 "Fortify with Castle"
+ X_castle_desc:0 "Naught secureth a lord’s rule swifter than walls of stone. A keep shall rise, bastion of might and seat of mine house."
+ X_castle_confirm:0 "Raise the stronghold."
+
+ X_unify_title:0 "Unite the Realm in Faith and Custom"
+ X_unify_desc:0 "My vassals are sundry in tongue and creed, riven in custom and prayer. Yet beneath one banner, blood and spirit shall be made whole."
+ X_unify_confirm:0 "Bring the realm to one faith and custom."

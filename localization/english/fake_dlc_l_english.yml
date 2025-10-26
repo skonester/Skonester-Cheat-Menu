@@ -1,0 +1,3 @@
+﻿l_english:
+  MODDED_DLC_BUTTON_TOOLTIP: "#T [Dlc.GetName]#!\n[Dlc.GetDesc]\n\n#low [SelectLocalization( Not(DlcIconDisabled), 'DLC_ENABLED', 'DLC_NOT_ENABLED' )]#![AddTextIf(Not(IsFakeDlc), '\n#I Click to access the store#!')]"
+  MODDED_DLC_ENABLED_DISABLED_SHORT: "[SelectLocalization( Not(DlcIconDisabled), 'DLC_ENABLED_SHORT', 'DLC_DISABLED_SHORT')]"

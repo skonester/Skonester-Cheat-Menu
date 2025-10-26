@@ -1,0 +1,16 @@
+﻿l_english:
+  # Decision: Grant Mandate of Heaven
+  zhuge_huangzu_add:0 "The Amulet of the Crusade"
+  zhuge_huangzu_add_desc:0 "As the heavens whispered softly, Barbara stepped back gently. Her form shimmered, like the last flicker of candlelight at dawn. Her flowing robes grew lighter, her hair released into soft, silver strands, and the kind expression on her face bloomed. When your vision cleared, before you stood not the fierce prophetess but a tender figure—radiant, gentle, full of hope.\n“Chosen pilgrim,” Barbara the Anointed murmured, “I have traveled many rivers of time. The burden no longer rests on me. The Light must dwell in another, one born of earth but eager to shine.”\n“Yahweh is Light everlasting. Yeshua is the Flame unextinguished,” she said softly. “I go now, beyond your Age, for another quiet night calls in another stream of time.”\nShe smiled, a sound warm and pure, ringing softly like chimes upon a gentle breeze. “The fire is yours now. I am free to return to the eternal rivers, no longer bound to witness every sorrow. Guard the Light tenderly, and it will guard you.”\nThen the child stepped into a radiance softer than the sun, dissolving into light without shadow, into joy without goodbye. Where she had been, you felt the warmth of life in your veins and the amulet beating gently against your heart.\nBarbara the Anointed was gone. Yet her light lived on—within you."
+  zhuge_jinyong_huangzu_tt:0 ""
+  # Here is the updated tooltip so the player *sees the actual item preview*
+  zhuge_huangzu_add_tooltip:0 "#P You will receive:#!\n#Y $chuanguoyuxi_cn$#!\n$chuanguoyuxi_cn_description$"
+  zhuge_huangzu_add_confirm:0 "Mandated by Heaven"
+
+  # Decision: Heirloom Seal
+  chuanguoyuxi_cn:0 "Amulet of the Crusade"
+  chuanguoyuxi_cn_description:0 "Forged in distant Cathay by the hand of a master Han craftsman, this wondrous seal was wrought with skill beyond the ken of common men. It was borne across many lands until it came before the servants of Holy Church, who, discerning in it a relic of hidden providence, bestowed their solemn blessing upon it. Thereafter it was spoken of not as a mere token, but as a vessel of divine authority.\n\nChroniclers record that its surface is etched with mysterious characters whose meaning is lost to all save the wise, and that it gleamed with a subtle light as though Heaven itself breathed within it. Thus did the Seal become a sign that #Y Heaven’s Mandate#! might rest upon rulers chosen to guard both priest and king alike, binding East and West beneath the shadow of sacred right."
+
+  # Modifier: Imperial Bloodline
+  zhuge_huangzu:0 "Imperial Bloodline"
+  zhuge_huangzu_desc:0 "This dynasty is regarded as a #Y divinely chosen imperial house#!, rightful bearer of Heaven’s Mandate.\nIts bloodline commands all under heaven, standing above all other noble lineages both East and West."

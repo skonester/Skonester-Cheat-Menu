@@ -1,0 +1,19 @@
+﻿l_english:
+ eka_impregnate_female_inter: "Impregnate option 1"
+ eka_impregnate_male_inter: "Impregnate option 3"
+ eka_impregnate_me_inter: "Be Impregnated"
+ eka_impregnate_concubine_inter: "Impregnate option 2"
+
+ flag_spouse_boy: "Spouse desires a son"
+ flag_spouse_girl: "Spouse desires a daughter"
+ flag_my_boy: "I desire a son"
+ flag_my_girl: "I desire a daughter"
+
+ flag_spouse_boy_confirm: "Spouse will have a son"
+ flag_spouse_girl_confirm: "Spouse will have a daughter"
+ flag_my_boy_confirm: "I will have a son"
+ flag_my_girl_confirm: "I will have a daughter"
+
+ flag_pregnancy_boy: "Pregnant with a son"
+ flag_pregnancy_girl: "Pregnant with a daughter"
+

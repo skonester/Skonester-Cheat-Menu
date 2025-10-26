@@ -1,0 +1,6 @@
+﻿l_english:
+  become_conqueror_interaction:0 "Grant Legendary Titles"
+  become_conqueror_interaction_desc:0 "Bestow upon this character the legendary titles and traits of the greatest rulers in history. They shall be known as:\n\n- Conqueror\n- Greatest of Khans\n- Chakravarti\n- Crusader King\n- Savior\n- Living Legend\n- Golden Lineage\n- Campeador\n- Saoshyant"
+
+  remove_conqueror_interaction:0 "Revoke Legendary Titles"
+  remove_conqueror_interaction_desc:0 "Strip this character of all their legendary titles and traits, returning them to a more ordinary status. They will no longer bear:\n\n- Conqueror\n- Greatest of Khans\n- Chakravarti\n- Crusader King\n- Savior\n- Living Legend\n- Golden Lineage\n- Campeador\n- Saoshyant"

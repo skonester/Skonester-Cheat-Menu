@@ -1,0 +1,18 @@
+﻿l_russian:
+ eka_impregnate_female_inter:0 "Оплодотворить (вариант 1)"
+ eka_impregnate_male_inter:0 "Нельзя оплодотворить мужчину"
+ eka_impregnate_me_inter:0 "Быть оплодотворённым"
+ eka_impregnate_concubine_inter:0 "Оплодотворить (вариант 2)"
+
+ flag_spouse_boy:0 "Супруг желает сына"
+ flag_spouse_girl:0 "Супруг желает дочь"
+ flag_my_boy:0 "Я желаю сына"
+ flag_my_girl:0 "Я желаю дочь"
+
+ flag_spouse_boy_confirm:0 "У супруга будет сын"
+ flag_spouse_girl_confirm:0 "У супруга будет дочь"
+ flag_my_boy_confirm:0 "У меня будет сын"
+ flag_my_girl_confirm:0 "У меня будет дочь"
+
+ flag_pregnancy_boy:0 "Беременна сыном"
+ flag_pregnancy_girl:0 "Беременна дочерью"

@@ -1,0 +1,15 @@
+﻿l_english:
+  daddy_pika_information:0 " Skonester Information Menu"
+  information_desc:0 "Displays some general information, such as useful tips, search functions, and change logs."
+  information_TT:0 "Click to view detailed information about this mod."
+  
+  dp_information.changelog.t:0 "Changelog for Libra Season"
+  dp_information.changelog.d:0 "Libra V1:Removed fonts,made the character interactions more streamlined, a few pregnancy and courtier options"
+  dp_information.useful_tips.t:0 "Useful Tips"
+  dp_information.useful_tips.d:0 "Feature Menu\n- Click once to add, click again to remove.\n- If a feature doesn’t appear, it doesn’t mean the mod is broken; it indicates a conflicting feature.\n- Due to environmental factors, some interactions may not appear on certain characters.\n- Trust me, having a bunch of kids can be a big hassle.\n- There is an immortal trait available in the character editor but its broken as of 1.16.2.3 as they can still die."
+  dp_information.locations.t:0 "Special Thanks"
+  dp_information.locations.d:0 "\n- To DaddyPika and Zhuge and some dead code I modifed from Pavel. Also RIP to Kurthakon, his Covert Holdings code lives on in this mod"
+  
+  use_new_system:0 "New System"
+  use_new_system_desc:0 "The old system has been replaced by the new one. Would you like to try it?"
+  use_new_system_tooltip:0 "Clicking this will trigger an event."

@@ -1,0 +1,55 @@
+﻿l_russian:
+ ### --- CH Convert Holding Decisions ---
+ NOT_I_HAVE_CH_BARONY_SELECTED:1 "Вы #bold не#! выбрали баронию"
+ CH_CONVERT_HOLDING_DECISION_NAME_LABEL:0 "Имя:"
+ CH_CONVERT_HOLDING_DECISION_CAPITAL_LABEL:0 "Владение:"
+ REVOKE_CH_CONVERT_HOLDING_DECISION_BARONY_LABEL:0 "Графство:"
+ CH_CONVERT_HOLDING_DECISION_CHANGE_CAPITAL:1 "Изменить владение"
+ CH_CONVERT_HOLDING_DECISION_SELECT_CAPITAL:1 "Выбрать владение"
+ CH_SELECT_HOLDING_TITLE:1 "Выбор владения"
+ CH_SELECT_HOLDING_NO_TITLES:0 "Нет доступных владений"
+ CH_SELECT_HOLDING_TOOLTIP:0 "#T [Select_CString( DecisionViewWidgetCreateHolyOrder.HasValidBaronies, '$CH_SELECT_HOLDING_TITLE$', '$CH_SELECT_HOLDING_NO_TITLES$' )] #!"
+ CH_SELECT_HOLDING_CONFIRM:0 "Выбрать"
+
+ ch_convert_holding_to_castle_decision:0 "Преобразовать владение в замок"
+ ch_convert_holding_to_castle_decision_tooltip:0 "Существующее владение(я) будет заменено на владение типа [замок|E]"
+ ch_convert_holding_to_castle_decision_desc:0 "#F Архитекторы и инженеры в последнее время собираются в моём княжестве. Многие из них — мастера в своём деле, и чтобы доказать мастерство, им нужны великие проекты.#!"
+ ch_convert_holding_to_castle_decision_confirm:0 "Преобразовать владение в замок"
+ I_HAVE_CH_ELIGBLE_BARONIES_TO_CASTLE_COUNTY:1 "У вас есть [барония|E] с владением, которое можно преобразовать в [замок|E]\n$EFFECT_LIST_BULLET$Право действует только на владения в [графствах|E], которыми вы владеете лично\n$EFFECT_LIST_BULLET$Владения с активным строительством #bold не #!подходят\n$EFFECT_LIST_BULLET$Несмотря на то, что окно выбора владения может показывать иначе, вы #bold можете#! выбрать [столицу графства|E]\n$EFFECT_LIST_BULLET$Если преобразовать [храм|E], возможно, придется подождать, пока ваш [церковный сановник|E] освободит владение"
+
+ ch_convert_holding_to_city_decision:0 "Преобразовать владение в город"
+ ch_convert_holding_to_city_decision_tooltip:0 "Существующее владение(я) будет заменено на владение типа [город|E]"
+ ch_convert_holding_to_city_decision_desc:0 "#F Архитекторы и инженеры в последнее время собираются в моём княжестве. Многие из них — мастера в своём деле, и чтобы доказать мастерство, им нужны великие проекты.#!"
+ ch_convert_holding_to_city_decision_confirm:0 "Преобразовать владение в город"
+ I_HAVE_CH_ELIGBLE_BARONIES_TO_CITY_COUNTY:1 "У вас есть [барония|E] с владением, которое можно преобразовать в [город|E]\n$EFFECT_LIST_BULLET$Право действует только на владения в [графствах|E], которыми вы владеете лично\n$EFFECT_LIST_BULLET$Владения с активным строительством #bold не #!подходят\n$EFFECT_LIST_BULLET$Несмотря на то, что окно выбора владения может показывать иначе, вы #bold можете#! выбрать [столицу графства|E]\n$EFFECT_LIST_BULLET$Если преобразовать [храм|E], возможно, придется подождать, пока ваш [церковный сановник|E] освободит владение"
+
+ ch_convert_holding_to_temple_decision:0 "Преобразовать владение в храм"
+ ch_convert_holding_to_temple_decision_tooltip:0 "Существующее владение(я) будет заменено на владение типа [храм|E]"
+ ch_convert_holding_to_temple_decision_desc:0 "#F Архитекторы и инженеры в последнее время собираются в моём княжестве. Многие из них — мастера в своём деле, и чтобы доказать мастерство, им нужны великие проекты.#!"
+ ch_convert_holding_to_temple_decision_confirm:0 "Преобразовать владение в храм"
+ I_HAVE_CH_ELIGBLE_BARONIES_TO_TEMPLE_COUNTY:1 "У вас есть [барония|E] с владением, которое можно преобразовать в [храм|E]\n$EFFECT_LIST_BULLET$Право действует только на владения в [графствах|E], которыми вы владеете лично\n$EFFECT_LIST_BULLET$Владения с активным строительством #bold не #!подходят\n$EFFECT_LIST_BULLET$Несмотря на то, что окно выбора владения может показывать иначе, вы #bold можете#! выбрать [столицу графства|E]"
+
+ ### --- X Decisions ---
+ X1_decision_title:0 "Прими Путь Доблести"
+ X1_decision_desc:0 "Голос чести и рыцарства взывает ко мне. Выбор сей — имя моё будут воспевать как доблестное и верное."
+ X1_decision_confirm:0 "Пусть докажется моя доблесть."
+
+ X_build_title:0 "Начни Великие Постройки"
+ X_build_desc:0 "Поля пустуют, а народ просит хлеба и крова. Трудами камня и дерева укрепится моё владение."
+ X_build_confirm:0 "Призываю каменщиков и управителей."
+
+ X_city_title:0 "Основать Боро"
+ X_city_desc:0 "Там, где дикая природа и деревни, воздвигну боро торговли и ремёсел. Торговцы и гильдии придут под моё знамя."
+ X_city_confirm:0 "Пусть будет возведено боро."
+
+ X_temple_title:0 "Воздвигни Святыню"
+ X_temple_desc:0 "Верующие жаждут молитвенного места, где звон и молитвы достанут до небес. Прикажу воздвигнуть храм."
+ X_temple_confirm:0 "Освяти землю."
+
+ X_castle_title:0 "Укрепись Замком"
+ X_castle_desc:0 "Нет крепче для власти господина, чем стены из камня. Мирная твердыня возвысится — твердыня силы и дом рода."
+ X_castle_confirm:0 "Воздвигни крепость."
+
+ X_unify_title:0 "Объедини Царство в Верe и Обычаях"
+ X_unify_desc:0 "Мои вассалы разрозненны в языке и вере, расколоты обычаями и молитвами. Но под одним знаменем, кровь и дух сольются в единое."
+ X_unify_confirm:0 "Объедини царство в одну веру и обычай."

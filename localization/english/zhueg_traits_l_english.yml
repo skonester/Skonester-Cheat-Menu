@@ -1,0 +1,46 @@
+﻿l_english:
+  trait_boost_stats:0 "Boost All Stats"
+  trait_boost_stats_desc:0 "Increase all attributes by 50."
+  trait_boost_stats_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a legendary figure endowed with extraordinary attributes."
+  
+  trait_boost_hufu:0 "Imperial Authority Boost"
+  trait_boost_hufu_desc:0 "At the cost of his own life, harness the natural power of heaven and earth to make the emperor's decisions wiser, ensuring that the state's affairs are orderly, stable, and prosperous."
+  trait_boost_hufu_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a great emperor who sacrificed himself for the nation's prosperity and democracy."
+  
+  trait_boost_dudu1:0 "Military Commander"
+  trait_boost_dudu1_desc:0 "General of the Five Armies – responsible for border or regional military affairs."
+  trait_boost_dudu1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the emperor's direct military commander, a staunch supporter of the imperial faction."
+  
+  trait_boost_xueshi1:0 "Honorary Scholar"
+  trait_boost_xueshi1_desc:0 "A cabinet scholar of the Hanlin Academy and advisor to the king."
+  trait_boost_xueshi1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is one of the king's trusted literary advisors."
+  
+  trait_plague_immunity:0 "Plague Immunity"
+  trait_plague_immunity_desc:0 "This character, blessed by 'Barbara', will not contract the plague."
+  trait_plague_immunity_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is immune to the plague."
+  
+  trait_zg_buxiu:0 "Immortal"
+  trait_zg_buxiu_desc:0 "Your character is immortal."
+  trait_zg_buxiu_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is immortal."
+  
+  trait_bloodline_god_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is of Barbara's divine lineage."
+  
+ trait_bloodline_god_3:0 "Barbara's Anointed Blood"
+ trait_bloodline_god_3_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] stands near the divine."
+ trait_bloodline_god_3_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a descendant of the #Y imperial #! #bold pureblood#! lineage of Barbara, bearing a sacred bloodline tied to the Kingdom of Heaven."
+
+ trait_bloodline_god_2:0 "Barbara's Royal Blood"
+ trait_bloodline_god_2_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] carries the royal vein of Barbara."
+ trait_bloodline_god_2_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] inherits the #bold royal#! bloodline of the Barbara. Though not pureblood, they are favored by the Mandate of Heaven."
+
+ trait_bloodline_god_1:0 "Barbara's Spirit Blood"
+ trait_bloodline_god_1_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] bears the remnants of the Barbara divine line."
+ trait_bloodline_god_1_character_desc:0 "A faint spark of Barbara's blood runs through [ROOT.GetCharacter.GetFirstNameNoTooltip]'s veins. Though distant, the divine heritage still lingers in their spirit."
+
+  
+  trait_zhuge_kill_02:0 "King's Wine"
+  trait_zhuge_kill_02_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] was executed by the chosen one of destiny\nWhen a king dies, the state perishes; loyal ministers fall by the king's decree."
+  trait_zhuge_kill_02_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] was executed by the chosen one of destiny."
+  trait_zhuge_ymbuff_01:0 "Nomadic Mandate"
+  trait_zhuge_ymbuff_01_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the Mandated Leader of the People."
+  trait_zhuge_ymbuff_01_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the Mandated Leader of the People."

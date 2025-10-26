@@ -1,0 +1,106 @@
+﻿l_english:
+ # Interaction Cheats
+ interaction_category_cheat_menu:0 "Skonester Sub Cheats"
+ CHEAT_ACTIONS:0 "Skonester little cheat list"
+ 
+ open_bone_cheat_interactions:0 "Open Sub Cheats"
+ close_bone_cheat_interactions:0 "Close Sub Cheats"
+ bone_cheat_interactions_desc:0 "Skonester cheat interactions"
+
+ open_bone_trait_interactions:0 "Open Traits"
+ close_bone_trait_interactions:0 "Close Traits"
+ bone_trait_interactions_desc:0 "Skonester trait interactions"
+ 
+ bone_add_to_court:0 "Add to Court"
+ bone_add_to_court_desc:0 "Add character to court"
+ 
+ add_trait_super_01_interaction:0 "Add Super Lvl 1"
+ add_trait_super_01_interaction_desc:0 "Add Trait Super Level 1 to the targeted character"
+ remove_trait_super_01_interaction:0 "Remove Super Lvl 1"
+ remove_trait_super_01_interaction_desc:0 "Remove Trait Super Level 1 from the targeted character"
+
+ add_trait_super_02_interaction:0 "Add Super Lvl 2"
+ add_trait_super_02_interaction_desc:0 "Add Trait Super Level 2 to the targeted character"
+ remove_trait_super_02_interaction:0 "Remove Super Lvl 2"
+ remove_trait_super_02_interaction_desc:0 "Remove Trait Super Level 2 from the targeted character"
+
+ add_trait_super_03_interaction:0 "Add Super Lvl 3"
+ add_trait_super_03_interaction_desc:0 "Add Trait Super Level 3 to the targeted character"
+ remove_trait_super_03_interaction:0 "Remove Super Lvl 3"
+ remove_trait_super_03_interaction_desc:0 "Remove Trait Super Level 3 from the targeted character"
+ 
+ add_trait_super_governor_01_interaction:0 "Add Super Governor Lvl 1"
+ add_trait_super_governor_01_interaction_desc:0 "Add Trait Super Governor Level 1 to the targeted character"
+ remove_trait_super_governor_01_interaction:0 "Remove Super Governor Lvl 1"
+ remove_trait_super_governor_01_interaction_desc:0 "Remove trait super governor Level 1 from the targeted character"
+
+ add_trait_super_governor_02_interaction:0 "Add Super Governor Lvl 2"
+ add_trait_super_governor_02_interaction_desc:0 "Add Trait Super Governor Level 2 to the targeted character"
+ remove_trait_super_governor_02_interaction:0 "Remove Super Governor Lvl 2"
+ remove_trait_super_governor_02_interaction_desc:0 "Remove trait super governor Level 2 from the targeted character"
+
+ add_trait_super_governor_03_interaction:0 "Add Super Governor Lvl 3"
+ add_trait_super_governor_03_interaction_desc:0 "Add Trait Super Governor Level 3 to the targeted character"
+ remove_trait_super_governor_03_interaction:0 "Remove Super Governor Lvl 3"
+ remove_trait_super_governor_03_interaction_desc:0 "Remove trait super governor Level 3 from the targeted character"
+ 
+ add_trait_super_general_01_interaction:0 "Add Super General Lvl 1"
+ add_trait_super_general_01_interaction_desc:0 "Add Trait Super General Level 1 to the targeted character"
+ remove_trait_super_general_01_interaction:0 "Remove Super General Lvl 1"
+ remove_trait_super_general_01_interaction_desc:0 "Remove trait super General Level 1 from the targeted character"
+
+ add_trait_super_general_02_interaction:0 "Add Super General Lvl 2"
+ add_trait_super_general_02_interaction_desc:0 "Add Trait Super General Level 2 to the targeted character"
+ remove_trait_super_general_02_interaction:0 "Remove Super General Lvl 2"
+ remove_trait_super_general_02_interaction_desc:0 "Remove trait super General Level 2 from the targeted character"
+
+ add_trait_super_general_03_interaction:0 "Add Super General Lvl 3"
+ add_trait_super_general_03_interaction_desc:0 "Add Trait Super General Level 3 to the targeted character"
+ remove_trait_super_general_03_interaction:0 "Remove Super General Lvl 3"
+ remove_trait_super_general_03_interaction_desc:0 "Remove trait super General Level 3 from the targeted character"
+
+ add_trait_bone_female_wife_interaction:0 "For the Queen"
+ add_trait_bone_female_wife_interaction_desc:0 "Your Wife will now be more awesome"
+ remove_trait_bone_female_wife_interaction:0 "Remove the Queen Trait"
+ remove_trait_bone_female_wife_interaction_desc:0 "Remove trait Queen from the targeted character"
+
+ add_trait_bone_female_heir_interaction:0 "Super Women"
+ add_trait_bone_female_heir_interaction_desc:0 "Super Women Trait"
+ remove_trait_bone_female_heir_interaction:0 "Remove the Super Women Trait"
+ remove_trait_bone_female_heir_interaction_desc:0 "Remove trait Super Women from the targeted character"
+
+ bone_add_gold_and_prestige:0 "Add Gold & Prestige"
+ bone_add_gold_and_prestige_desc:0 "Add Gold & Prestige to the targeted character"
+
+ bone_start_pregnancy_interaction:0 "Start Custom Pregnancy"
+ bone_start_pregnancy_interaction_desc:0 "Start Pregnancy, you can choose different options"
+
+ bone_add_weak_hook_interaction:0 "Add Weak Hook"
+ bone_add_weak_hook_interaction_desc:0 "Add a weak Hook from the target to your character"
+
+ bone_add_strong_hook_interaction:0 "Add Strong Hook"
+ bone_add_strong_hook_interaction_desc:0 "Add a strong Hook from the target to your character"
+
+ bone_slay_character_interaction:0 "Quick Kill"
+ bone_slay_character_interaction_desc:0 "A random character will kill the character in an assassination"
+
+ bone_take_title_interaction:0 "Take Title"
+ bone_take_title_interaction_desc:0 "Take the Title from the Target"
+
+ king_of_kings_interaction:0 "King of Kings"
+ king_of_kings_interaction_desc:0 "Traits for the King of Kings"
+
+ beauty_interaction:0 "Good Looking"
+ beauty_interaction_desc:0 "HrHr"
+ 
+ great_general_interaction:0 "Great General"
+ great_general_interaction_desc:0 "Traits to be the best General on the Battlefield"
+
+ learned_from_the_best_interaction:0 "MIT"
+ learned_from_the_best_interaction_desc:0 "MIT-Student"
+
+ bone_change_religion:0 "Change Religion"
+ bone_change_religion_desc:0 "The Target is changing his religion to yours"
+
+ bone_change_culture:0 "Change Culture"
+ bone_change_culture_desc:0 "The Target ist changing his culture to yours"

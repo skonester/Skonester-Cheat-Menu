@@ -1,0 +1,106 @@
+﻿l_russian:
+  # Interaction Cheats
+  interaction_category_cheat_menu:0 "Читы Skonester Sub"
+  CHEAT_ACTIONS:0 "Маленький список читов Skonester"
+
+  open_bone_cheat_interactions:0 "Открыть читы"
+  close_bone_cheat_interactions:0 "Закрыть читы"
+  bone_cheat_interactions_desc:0 "Читерские взаимодействия Skonester"
+
+  open_bone_trait_interactions:0 "Открыть Черты"
+  close_bone_trait_interactions:0 "Закрыть Черты"
+  bone_trait_interactions_desc:0 "Взаимодействия с чертами Skonester"
+
+  bone_add_to_court:0 "Добавить ко Двору"
+  bone_add_to_court_desc:0 "Добавить персонажа ко Двору"
+
+  add_trait_super_01_interaction:0 "Добавить Супер Ур. 1"
+  add_trait_super_01_interaction_desc:0 "Добавить черту Супер Уровня 1 выбранному персонажу"
+  remove_trait_super_01_interaction:0 "Убрать Супер Ур. 1"
+  remove_trait_super_01_interaction_desc:0 "Убрать черту Супер Уровня 1 у выбранного персонажа"
+
+  add_trait_super_02_interaction:0 "Добавить Супер Ур. 2"
+  add_trait_super_02_interaction_desc:0 "Добавить черту Супер Уровня 2 выбранному персонажу"
+  remove_trait_super_02_interaction:0 "Убрать Супер Ур. 2"
+  remove_trait_super_02_interaction_desc:0 "Убрать черту Супер Уровня 2 у выбранного персонажа"
+
+  add_trait_super_03_interaction:0 "Добавить Супер Ур. 3"
+  add_trait_super_03_interaction_desc:0 "Добавить черту Супер Уровня 3 выбранному персонажу"
+  remove_trait_super_03_interaction:0 "Убрать Супер Ур. 3"
+  remove_trait_super_03_interaction_desc:0 "Убрать черту Супер Уровня 3 у выбранного персонажа"
+
+  add_trait_super_governor_01_interaction:0 "Добавить Супер-губернатор Ур. 1"
+  add_trait_super_governor_01_interaction_desc:0 "Добавить черту Супер-губернатор Уровня 1 выбранному персонажу"
+  remove_trait_super_governor_01_interaction:0 "Убрать Супер-губернатор Ур. 1"
+  remove_trait_super_governor_01_interaction_desc:0 "Убрать черту Супер-губернатор Уровня 1 у выбранного персонажа"
+
+  add_trait_super_governor_02_interaction:0 "Добавить Супер-губернатор Ур. 2"
+  add_trait_super_governor_02_interaction_desc:0 "Добавить черту Супер-губернатор Уровня 2 выбранному персонажу"
+  remove_trait_super_governor_02_interaction:0 "Убрать Супер-губернатор Ур. 2"
+  remove_trait_super_governor_02_interaction_desc:0 "Убрать черту Супер-губернатор Уровня 2 у выбранного персонажа"
+
+  add_trait_super_governor_03_interaction:0 "Добавить Супер-губернатор Ур. 3"
+  add_trait_super_governor_03_interaction_desc:0 "Добавить черту Супер-губернатор Уровня 3 выбранному персонажу"
+  remove_trait_super_governor_03_interaction:0 "Убрать Супер-губернатор Ур. 3"
+  remove_trait_super_governor_03_interaction_desc:0 "Убрать черту Супер-губернатор Уровня 3 у выбранного персонажа"
+
+  add_trait_super_general_01_interaction:0 "Добавить Супер-генерал Ур. 1"
+  add_trait_super_general_01_interaction_desc:0 "Добавить черту Супер-генерал Уровня 1 выбранному персонажу"
+  remove_trait_super_general_01_interaction:0 "Убрать Супер-генерал Ур. 1"
+  remove_trait_super_general_01_interaction_desc:0 "Убрать черту Супер-генерал Уровня 1 у выбранного персонажа"
+
+  add_trait_super_general_02_interaction:0 "Добавить Супер-генерал Ур. 2"
+  add_trait_super_general_02_interaction_desc:0 "Добавить черту Супер-генерал Уровня 2 выбранному персонажу"
+  remove_trait_super_general_02_interaction:0 "Убрать Супер-генерал Ур. 2"
+  remove_trait_super_general_02_interaction_desc:0 "Убрать черту Супер-генерал Уровня 2 у выбранного персонажа"
+
+  add_trait_super_general_03_interaction:0 "Добавить Супер-генерал Ур. 3"
+  add_trait_super_general_03_interaction_desc:0 "Добавить черту Супер-генерал Уровня 3 выбранному персонажу"
+  remove_trait_super_general_03_interaction:0 "Убрать Супер-генерал Ур. 3"
+  remove_trait_super_general_03_interaction_desc:0 "Убрать черту Супер-генерал Уровня 3 у выбранного персонажа"
+
+  add_trait_bone_female_wife_interaction:0 "Для Королевы"
+  add_trait_bone_female_wife_interaction_desc:0 "Теперь ваша жена будет еще более потрясающей"
+  remove_trait_bone_female_wife_interaction:0 "Убрать черту 'Королева'"
+  remove_trait_bone_female_wife_interaction_desc:0 "Убрать черту 'Королева' у выбранного персонажа"
+
+  add_trait_bone_female_heir_interaction:0 "Супер-женщины"
+  add_trait_bone_female_heir_interaction_desc:0 "Черта 'Супер-женщины'"
+  remove_trait_bone_female_heir_interaction:0 "Убрать черту 'Супер-женщины'"
+  remove_trait_bone_female_heir_interaction_desc:0 "Убрать черту 'Супер-женщины' у выбранного персонажа"
+
+  bone_add_gold_and_prestige:0 "Добавить Золото и Престиж"
+  bone_add_gold_and_prestige_desc:0 "Добавить Золото и Престиж выбранному персонажу"
+
+  bone_start_pregnancy_interaction:0 "Начать Особую Беременность"
+  bone_start_pregnancy_interaction_desc:0 "Начать беременность, вы можете выбрать разные опции"
+
+  bone_add_weak_hook_interaction:0 "Добавить Слабый Крючок"
+  bone_add_weak_hook_interaction_desc:0 "Добавить слабый крючок от цели к вашему персонажу"
+
+  bone_add_strong_hook_interaction:0 "Добавить Сильный Крючок"
+  bone_add_strong_hook_interaction_desc:0 "Добавить сильный крючок от цели к вашему персонажу"
+
+  bone_slay_character_interaction:0 "Быстрое Убийство"
+  bone_slay_character_interaction_desc:0 "Случайный персонаж убьет цель в результате покушения"
+
+  bone_take_title_interaction:0 "Забрать Титул"
+  bone_take_title_interaction_desc:0 "Забрать титул у цели"
+
+  king_of_kings_interaction:0 "Король Королей"
+  king_of_kings_interaction_desc:0 "Черты для 'Короля Королей'"
+
+  beauty_interaction:0 "Привлекательный"
+  beauty_interaction_desc:0 "Оооо"
+
+  great_general_interaction:0 "Великий Генерал"
+  great_general_interaction_desc:0 "Черты, чтобы быть лучшим генералом на поле битвы"
+
+  learned_from_the_best_interaction:0 "MIT"
+  learned_from_the_best_interaction_desc:0 "Студент MIT"
+
+  bone_change_religion:0 "Сменить Религию"
+  bone_change_religion_desc:0 "Цель сменит свою религию на вашу"
+
+  bone_change_culture:0 "Сменить Культуру"
+  bone_change_culture_desc:0 "Цель сменит свою культуру на вашу"

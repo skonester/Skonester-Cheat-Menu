@@ -1,0 +1,15 @@
+﻿l_russian:
+daddy_pika_information:0 "Меню информации Skonester"
+information_desc:0 "Показывает общую информацию, включая полезные советы, функции поиска и список изменений."
+information_TT:0 "Нажмите, чтобы просмотреть подробную информацию о модуле."
+
+dp_information.changelog.t:0 "Список изменений для сезона Девы"
+dp_information.changelog.d:0 "Libra V1:"
+dp_information.useful_tips.t:0 "Полезные советы"
+dp_information.useful_tips.d:0 "Спасибо моим русским подписчикам"
+dp_information.locations.t:0 "Особая благодарность"
+dp_information.locations.d:0 "\n- DaddyPika и Zhuge."
+
+use_new_system:0 "Новая система"
+use_new_system_desc:0 "Старая система заменена новой. Хотите попробовать?"
+use_new_system_tooltip:0 "Нажатие вызовет событие."

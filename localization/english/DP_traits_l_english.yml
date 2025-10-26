@@ -1,0 +1,25 @@
+﻿l_english:
+  trait_nnn_challenger:0 "Many Children, Many Blessings"
+  trait_nnn_challenger_desc:0 "Barbara the Anointed teaches that fortune flows through numerous offspring, each a living blessing."
+  trait_nnn_challenger_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] follows Barbara the Anointed’s wisdom, finding strength and prosperity through their many children."
+
+  trait_build_speed_cheat:0 "Reincarnation of Villard de Honnecourt"
+  trait_build_speed_cheat_desc:0 "Only Barbara the Anointed could bless a mortal with the speed and vision of Villard de Honnecourt."
+  trait_build_speed_cheat_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] raises castles and cathedrals as though guided by Villard’s hand and blessed by Barbara the Anointed."
+
+  trait_stress_gain_remove:0 "Blessed and Carefree"
+  trait_stress_gain_remove_desc:0 "Guarded by Barbara the Anointed, this character walks without fear or worry."
+  trait_stress_gain_remove_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] rests in Barbara the Anointed’s grace, free forever from worldly burdens."
+
+  trait_tyranny_gain_remove:0 "Team of Top Lawyers"
+  trait_tyranny_gain_remove_desc:0 "Barbara the Anointed shields this character with unseen advocates, defending against all accusations."
+  trait_tyranny_gain_remove_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] stands beyond reproach, for Barbara the Anointed lends divine authority to every action."
+
+  trait_100_stat_man:0 "Omnipotent"
+  trait_100_stat_man_desc:0 "A legend exalted by Barbara the Anointed, a genius anointed by divine grace. None may overcome this destined soul."
+  trait_100_stat_man_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] walks as Barbara the Anointed’s chosen, a legend among legends and bearer of unstoppable might."
+
+  trait_immortal:0 "Immortal"
+  immortal:0 "Immortal"
+  trait_immortal_desc:0 "Barbara the Anointed has lifted this character above the cycle of death."
+  trait_immortal_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] endures forever, sealed in Barbara the Anointed’s eternal favor."

@@ -1,0 +1,26 @@
+﻿l_english:
+ #PCM – Skonester Edition
+ pcm_b_max_all_buildings_sub_realm_decision_title:0 "#Skonester Decrees:#! Raise All Holdings to Their Full Glory"
+ pcm_b_max_all_buildings_sub_realm_decision_desc:0 "Command that every hall, keep, and holding be raised to its utmost strength and grandeur."
+ pcm_b_max_all_buildings_sub_realm_decision_tooltip:0 ""
+ pcm_b_max_all_buildings_sub_realm_decision_ct:0 "Summon masons, carpenters, and smiths to perfect all works of stone and timber."
+
+ pcm_b_add_building_slot_7_sub_realm_decision_title:0 "#Skonester Decrees:#! Grant New Grounds for Building"
+ pcm_b_add_building_slot_7_sub_realm_decision_desc:0 "Each of your domains shall be blessed with free ground, until seven mighty structures may stand within them."
+ pcm_b_add_building_slot_7_sub_realm_decision_tooltip:0 ""
+ pcm_b_add_building_slot_7_sub_realm_decision_ct:0 "Let new hovels, halls, and towers rise in every land I hold!"
+
+ pcm_b_lucky_7_sub_realm_decision_title:0 "#Skonester Decrees:#! The Blessed Seven Works"
+ pcm_b_lucky_7_sub_realm_decision_desc:0 "All your holdings shall receive every worthy structure raised to its highest form. (Special and ducal edifices are not included). It is #underline wise#! to grant fresh ground for raising buildings beforehand."
+ pcm_b_lucky_7_sub_realm_decision_tooltip:0 ""
+ pcm_b_lucky_7_sub_realm_decision_ct:0 "Let all works be built in haste, as though guided by divine providence!"
+
+ pcm_b_show_decision_title:0 "--= #Skonester:#! Reveal the Builder’s Craft =--"
+ pcm_b_show_decision_desc:0 "Unveil all of the Skonester edicts concerning the art of raising structures."
+ pcm_b_show_decision_tooltip:0 ""
+ pcm_b_show_decision_ct:0 "So be it — let the hidden decrees be made known."
+
+ pcm_b_hide_decision_title:0 "--= #Skonester:#! Conceal the Builder’s Craft =--"
+ pcm_b_hide_decision_desc:0 "Conceal the Skonester decrees regarding the building arts."
+ pcm_b_hide_decision_tooltip:0 ""
+ pcm_b_hide_decision_ct:0 "Seal the scrolls and keep the knowledge from wandering eyes."

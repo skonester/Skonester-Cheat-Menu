@@ -1,7 +1,3 @@
-Here’s a polished and **GitHub README-friendly** version of your mod description with proper Markdown formatting and structure for readability:  
-
-***
-
 # Latest Updates
 
 ### **Late September – Libra V1**
@@ -75,6 +71,3 @@ This fork continues **Zhuge’s** work from the Chinese CK3 community for **Engl
 
 Some players simply need a reliable, functional cheat menu that stays compatible through updates — that’s why this project exists, and why it’s open for others to build on.  
 
-***
-
-Would you like me to add badge sections (like CK3 version compatibility, Nexus link, or mod banner image) to make it look more official for GitHub?

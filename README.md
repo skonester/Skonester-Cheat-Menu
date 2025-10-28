@@ -1,5 +1,8 @@
 # Latest Updates
 
+### **Late October – Scorpio V1**
+- Initial Release for Crane  
+
 ### **Late September – Libra V1**
 - Removed fonts  
 - Streamlined character interactions  

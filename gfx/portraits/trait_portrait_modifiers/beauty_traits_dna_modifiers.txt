@@ -1,0 +1,183 @@
+﻿beauty = {
+	beauty = {
+		traits = {
+			beauty_good_1
+			beauty_good_2
+			beauty_good_3
+		}
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_beauty_1
+				value = 0.2
+			}
+			morph = {
+				mode = replace
+				gene = gene_chin_forward
+				template = chin_forward_neg
+				value = 0.64
+			}
+			morph = {
+				mode = replace
+				gene = gene_chin_height
+				template = chin_height_pos
+				value = 0.47
+			}
+			morph = {
+				mode = replace
+				gene = gene_chin_width
+				template = chin_width_neg
+				value = 0.49
+			}
+			morph = {
+				mode = replace
+				gene = gene_forehead_angle
+				template = forehead_angle_pos
+				value = 0.51
+			}
+			morph = {
+				mode = replace
+				gene = gene_forehead_roundness
+				template = forehead_roundness_pos
+				value = 0.66
+			}
+			morph = {
+				mode = replace
+				gene = gene_forehead_width
+				template = forehead_width_pos
+				value = 0.51
+			}
+			morph = {
+				mode = replace
+				gene = gene_forehead_height
+				template = forehead_height_pos
+				value = 0.55
+			}
+			morph = {
+				mode = replace
+				gene = gene_head_width
+				template = head_width_neg
+				value = 0.46
+			}
+			morph = {
+				mode = replace
+				gene = gene_head_profile
+				template = head_profile_neg
+				value = 0.31
+			}
+			morph = {
+				mode = replace
+				gene = gene_head_top_height
+				template = head_top_height_neg
+				value = 0.54
+			}
+			morph = {
+				mode = replace
+				gene = gene_head_top_width
+				template = head_top_width_pos
+				value = 0.51
+			}
+			morph = {
+				mode = replace
+				gene = gene_jaw_angle
+				template = jaw_angle_neg
+				value = 0.68
+			}
+			morph = {
+				mode = replace
+				gene = gene_jaw_forward
+				template = jaw_forward_neg
+				value = 0.49
+			}
+			morph = {
+				mode = replace
+				gene = gene_jaw_height
+				template = jaw_height_neg
+				value = 0.42
+			}
+			morph = {
+				mode = replace
+				gene = gene_jaw_width
+				template = jaw_width_neg
+				value = 0.41
+			}
+			morph = {
+				mode = replace
+				gene = gene_mouth_width
+				template = mouth_width_neg
+				value = 0.24
+			}
+			morph = {
+				mode = replace
+				gene = gene_bs_nose_tip_width
+				template = nose_tip_width_neg
+				value = 0.45
+			}
+			morph = {
+				mode = replace
+				gene = face_detail_cheek_def
+				template = cheek_def_02
+				value = 0
+			}
+			morph = {
+				mode = replace
+				gene = face_detail_cheek_fat
+				template = cheek_fat_02_pos
+				value = 0
+			}
+			morph = {
+				mode = replace
+				gene = face_detail_nasolabial
+				template = nasolabial_02
+				value = 0
+			}
+		}
+		weight = {
+			base = 0
+			# modifier = {
+				# add = 100
+				# has_trait = beauty_good_1
+			# }
+			# modifier = {
+				# add = 100
+				# has_trait = beauty_good_2
+			# }
+			# modifier = {
+				# add = 100
+				# has_trait = beauty_good_3
+			# }
+			modifier = {
+				add = -1000
+				has_trait = beauty_good_1
+				is_female = no # Checks if char is male. If yes, removes beauty trait cosmetics.
+			}
+			modifier = {
+				add = -1000
+				has_trait = beauty_good_2
+				is_female = no # Checks if char is male. If yes, removes beauty trait cosmetics.
+			}
+			modifier = {
+				add = -1000
+				has_trait = beauty_good_3
+				is_female = no # Checks if char is male. If yes, removes beauty trait cosmetics.
+			}
+		}
+	}
+
+	ugly = {
+		traits = {
+			beauty_bad_1
+			beauty_bad_2
+			beauty_bad_3
+		}
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_ugly_1
+				value = 1.0
+			}
+		}
+	}
+}

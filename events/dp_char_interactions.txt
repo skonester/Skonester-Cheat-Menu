@@ -61,7 +61,7 @@ dp_char_interactions.1 = {
 	
 	option = {
 		name = dp_char_editor_forward
-		trigger_event = dp_char_interactions.2
+		trigger_event = dp_char_interactions.24
 	}
 	option = {
 		name = dp_char_editor_backward
@@ -138,7 +138,7 @@ dp_char_interactions.2 = {
 	}
 	option = {
 		name = dp_char_editor_backward
-		trigger_event = dp_char_interactions.1
+		trigger_event = dp_char_interactions.24
 	}
 	
 	option = {
@@ -207,7 +207,7 @@ dp_char_interactions.3 = {
 	
 	option = {
 		name = dp_char_editor_forward
-		trigger_event = dp_char_interactions.4
+		trigger_event = dp_char_interactions.21
 	}
 	option = {
 		name = dp_char_editor_backward
@@ -292,11 +292,11 @@ dp_char_interactions.4 = {
 	
 	option = {
 		name = dp_char_editor_forward
-		trigger_event = dp_char_interactions.21
+		trigger_event = dp_char_interactions.22
 	}
 	option = {
 		name = dp_char_editor_backward
-		trigger_event = dp_char_interactions.3
+		trigger_event = dp_char_interactions.21
 	}
 	
 	option = {
@@ -733,11 +733,11 @@ dp_char_interactions.21 = {
 	
 	option = {
 		name = dp_char_editor_forward
-		trigger_event = dp_char_interactions.22
+		trigger_event = dp_char_interactions.4
 	}
 	option = {
 		name = dp_char_editor_backward
-		trigger_event = dp_char_interactions.4
+		trigger_event = dp_char_interactions.3
 	}
 	
 	option = {
@@ -745,7 +745,7 @@ dp_char_interactions.21 = {
 		trigger_event = dp_char_interactions.10
 	}
 }
-
+#正统性
 dp_char_interactions.22 = {
 	type = character_event
 	title = dp_char_interactions.legitimacy.event.t
@@ -810,7 +810,7 @@ dp_char_interactions.22 = {
 	}
 	option = {
 		name = dp_char_editor_backward
-		trigger_event = dp_char_interactions.21
+		trigger_event = dp_char_interactions.4
 	}
 	
 	option = {
@@ -901,7 +901,79 @@ dp_char_interactions.23 = {
 		trigger_event = dp_char_interactions.13
 	}
 }
+# 国库
+dp_char_interactions.24 = {
+	type = character_event
+	title = dp_char_interactions.TREASURY.event.t
+	desc = dp_char_interactions.TREASURY.event.d
+	theme = default
+	left_portrait = {
+		character = scope:currency_scope
+		animation = personality_bold
+	}
 
+	option = {
+		name = dp_char_interactions.TREASURY.plus_100000
+		scope:currency_scope = {
+			add_TREASURY = 100000
+		}
+		trigger_event = dp_char_interactions.24
+	}
+
+	option = {
+		name = dp_char_interactions.TREASURY.plus_10000
+		scope:currency_scope = {
+			add_TREASURY = 10000
+		}
+		trigger_event = dp_char_interactions.24
+	}
+
+	option = {
+		name = dp_char_interactions.TREASURY.plus_1000
+		scope:currency_scope = {
+			add_TREASURY = 1000
+		}
+		trigger_event = dp_char_interactions.24
+	}
+
+	option = {
+		name = dp_char_interactions.TREASURY.minus_1000
+		scope:currency_scope = {
+			remove_short_term_TREASURY = 1000
+		}
+		trigger_event = dp_char_interactions.24
+	}
+
+	option = {
+		name = dp_char_interactions.TREASURY.minus_10000
+		scope:currency_scope = {
+			remove_short_term_TREASURY = 10000
+		}
+		trigger_event = dp_char_interactions.24
+	}
+	
+	option = {
+		name = dp_char_interactions.TREASURY.minus_100000
+		scope:currency_scope = {
+			remove_short_term_TREASURY = 100000
+		}
+		trigger_event = dp_char_interactions.24
+	}
+	
+	option = {
+		name = dp_char_editor_forward
+		trigger_event = dp_char_interactions.2
+	}
+	option = {
+		name = dp_char_editor_backward
+		trigger_event = dp_char_interactions.1
+	}
+	
+	option = {
+		name = dp_char_interactions.end
+		trigger_event = dp_char_interactions.10
+	}
+}
 #排序
 # ——— 第1页：显示1–6号功能 + 下一页 + 退出 ———
 dp_char_interactions.10 = {
@@ -917,10 +989,11 @@ dp_char_interactions.10 = {
 
     # 前6个互动按钮
     option = { name = dp_char_interactions.gold.event.t       trigger_event = dp_char_interactions.1  }
+    option = { name = dp_char_interactions.TREASURY.event.t   trigger_event = dp_char_interactions.24  }
     option = { name = dp_char_interactions.prestige.event.t   trigger_event = dp_char_interactions.2  }
     option = { name = dp_char_interactions.piety.event.t      trigger_event = dp_char_interactions.3  }
+	option = { name = dp_char_interactions.influence.event.t  trigger_event = dp_char_interactions.21  }
     option = { name = dp_char_interactions.renown.event.t     trigger_event = dp_char_interactions.4  }
-    option = { name = dp_char_interactions.influence.event.t  trigger_event = dp_char_interactions.21  }
     option = { name = dp_char_interactions.legitimacy.event.t trigger_event = dp_char_interactions.22  }
 
     # 下一页按钮：跳到 .13

@@ -1,4 +1,70 @@
-﻿change_government_feudal = {
+﻿change_government_meritocratic = {
+    picture = { reference = "gfx/interface/illustrations/decisions/cheat_tab.dds" }
+    title = change_govt_meritocratic
+    desc = change_govt_meritocratic_desc
+    selection_tooltip = change_govt_tt
+    confirm_text = CONFIRM_OKAY
+
+    decision_group_type = debug
+
+    is_shown = {
+        NOT = { has_government = meritocratic_government }
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        change_government = meritocratic_government
+    }
+    ai_check_interval = 0
+    ai_will_do = 0
+}
+
+change_government_mandala = {
+    picture = { reference = "gfx/interface/illustrations/decisions/cheat_tab.dds" }
+    title = change_govt_mandala
+    desc = change_govt_mandala_desc
+    selection_tooltip = change_govt_tt
+    confirm_text = CONFIRM_OKAY
+
+    decision_group_type = debug
+
+    is_shown = {
+        NOT = { has_government = mandala_government }
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        change_government = mandala_government
+    }
+    ai_check_interval = 0
+    ai_will_do = 0
+}
+
+change_government_wanua = {
+    picture = { reference = "gfx/interface/illustrations/decisions/cheat_tab.dds" }
+    title = change_govt_wanua
+    desc = change_govt_wanua_desc
+    selection_tooltip = change_govt_tt
+    confirm_text = CONFIRM_OKAY
+
+    decision_group_type = debug
+
+    is_shown = {
+        NOT = { has_government = wanua_government }
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        change_government = wanua_government
+    }
+    ai_check_interval = 0
+    ai_will_do = 0
+}
+
+change_government_feudal = {
     picture = {
 		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
 	}

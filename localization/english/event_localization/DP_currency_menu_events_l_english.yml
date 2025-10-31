@@ -158,3 +158,20 @@
 # Menu Footer
  dp_char_interactions.end:0 "Close Menu"
  zhuge_curry_interactions.end:0 "Close Menu"
+
+# Skonester
+dp_char_interactions.TREASURY.event.t:0 "Treasury Adjustment"
+dp_char_interactions.TREASURY.event.d:0 "You have the opportunity to adjust the treasury amount by adding or removing funds. Choose an option below:"
+
+dp_char_interactions.TREASURY.plus_100000:0 "Add 100,000 Treasury"
+dp_char_interactions.TREASURY.plus_10000:0 "Add 10,000 Treasury"
+dp_char_interactions.TREASURY.plus_1000:0 "Add 1,000 Treasury"
+
+dp_char_interactions.TREASURY.minus_1000:0 "Remove 1,000 Treasury"
+dp_char_interactions.TREASURY.minus_10000:0 "Remove 10,000 Treasury"
+dp_char_interactions.TREASURY.minus_100000:0 "Remove 100,000 Treasury"
+
+dp_char_editor_forward:0 "Next"
+dp_char_editor_backward:0 "Back"
+
+dp_char_interactions.end:0 "Finish"

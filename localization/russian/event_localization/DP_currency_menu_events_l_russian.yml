@@ -159,3 +159,20 @@
 # Закрытие меню
  dp_char_interactions.end:0 "Закрыть меню"
  zhuge_curry_interactions.end:0 "Закрыть меню"
+ 
+# Skonester
+dp_char_interactions.TREASURY.event.t:0 "Регулировка Казны"
+dp_char_interactions.TREASURY.event.d:0 "У вас есть возможность изменить сумму казны, добавляя или убирая средства. Выберите вариант ниже:"
+
+dp_char_interactions.TREASURY.plus_100000:0 "Добавить 100,000 в Казну"
+dp_char_interactions.TREASURY.plus_10000:0 "Добавить 10,000 в Казну"
+dp_char_interactions.TREASURY.plus_1000:0 "Добавить 1,000 в Казну"
+
+dp_char_interactions.TREASURY.minus_1000:0 "Убрать 1,000 из Казны"
+dp_char_interactions.TREASURY.minus_10000:0 "Убрать 10,000 из Казны"
+dp_char_interactions.TREASURY.minus_100000:0 "Убрать 100,000 из Казны"
+
+dp_char_editor_forward:0 "Вперёд"
+dp_char_editor_backward:0 "Назад"
+
+dp_char_interactions.end:0 "Завершить"

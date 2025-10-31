@@ -124,3 +124,12 @@
  manage_titles_interaction:0 "Manage Titles"
  manage_titles_interaction_desc:0 "Command the dispensation of titles as you wish."
  CHEAT_MENU_ACTIONS:0 "This hidden codex grants many secret tools with which to shape destiny."
+ change_govt_meritocratic:0 "Adopt Meritocratic Government"
+ change_govt_mandala:0 "Adopt Mandala Government"
+ change_govt_wanua:0 "Adopt Wanua Government"
+ change_govt_meritocratic_desc:0 "Rule based on merit: ascend the administrative ladder through exams and competition rather than birthright."
+ change_govt_mandala_desc:0 "Maritime Southeast Asia's layered kingdom structure, a gradual transition from tribal or wanua forms."
+ change_govt_wanua_desc:0 "Sea-based Southeast Asian tribal government, precursor to more developed Mandala kingdoms."
+ change_govt_tt:0 "Change to $TYPE$ government"
+ CONFIRM_OKAY:0 "Confirm"
+

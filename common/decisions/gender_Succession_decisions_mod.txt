@@ -1,0 +1,58 @@
+gender_Succession_events_mod_decision = {
+    picture = { reference = "gfx/interface/illustrations/decisions/cheat_tab.dds" }
+    title = gender_Succession_events_mod_decision_title
+    desc = gender_Succession_events_mod_decision_desc
+    selection_tooltip = gender_Succession_events_mod_decision_tt
+    confirm_text = CONFIRM_OKAY
+
+    decision_group_type = debug
+
+    is_shown = {
+        is_player = yes
+        NOT = { is_ai = yes }
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        trigger_event = gender_succession_events_mod.1001
+    }
+    ai_check_interval = 0
+    ai_will_do = 0
+}
+
+change_Realm_succession_law_mod_decision = {
+    picture = { reference = "gfx/interface/illustrations/decisions/cheat_tab.dds" }
+    title = change_Realm_succession_law_mod_decision_title
+    desc = change_Realm_succession_law_mod_decision_desc
+    selection_tooltip = change_Realm_succession_law_mod_decision_tt
+    confirm_text = CONFIRM_OKAY
+
+    decision_group_type = debug
+
+    is_shown = {
+        is_player = yes
+        NOT = { is_ai = yes }
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+        or = {
+            has_game_rule = change_Realm_succession_law_game_mod_on
+            culture = {
+                or = {
+                    has_innovation = innovation_heraldry
+                    has_innovation = innovation_hereditary_rule
+                    has_innovation = innovation_visigothic_codes
+                    has_innovation = innovation_gavelkind
+                    has_innovation = innovation_primogeniture
+                    has_innovation = innovation_table_of_princes
+                }
+            }
+        }
+    }
+
+    effect = {
+        trigger_event = change_Realm_succession_law_mod.1001
+    }
+    ai_check_interval = 0
+    ai_will_do = 0
+}

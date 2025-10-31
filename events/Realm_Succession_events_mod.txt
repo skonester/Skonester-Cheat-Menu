@@ -1,0 +1,543 @@
+namespace = change_Realm_succession_law_mod
+
+change_Realm_succession_law_mod.1001 = {
+    type = character_event
+    theme = default
+	desc = change_Realm_succession_law_mod.1001.desc
+	option = {
+		#Multiple Heirs
+		name = multiple_heirs_rse_mod
+		trigger_event = change_Realm_succession_law_mod.1002
+		trigger = {
+			or = {
+				has_game_rule = change_Realm_succession_law_game_mod_on
+				culture = {
+					or = {
+						has_innovation = innovation_heraldry
+						has_innovation = innovation_hereditary_rule
+						has_innovation = innovation_visigothic_codes
+						has_innovation = innovation_gavelkind
+					}
+				}
+			}
+		}
+	}
+	option = {
+		#Single Heir
+		name = single_Heir_rse_mod
+		trigger_event = change_Realm_succession_law_mod.1006
+		trigger = {
+			or = {
+				has_game_rule = change_Realm_succession_law_game_mod_on
+				culture = {
+					or = {
+						has_cultural_pillar = heritage_west_slavic
+						has_innovation = innovation_primogeniture
+						has_innovation = innovation_heraldry
+						has_innovation = innovation_table_of_princes
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "Unlock Innovation"
+		trigger_event = change_Realm_succession_law_mod.1010
+		trigger = {
+			nand = {
+				root.culture = {
+					has_innovation = innovation_hereditary_rule
+				}
+				root.culture = {
+					has_innovation = innovation_heraldry
+				}
+				root.culture = {
+					has_innovation = innovation_primogeniture
+				}
+			}
+		}
+	}
+	# option = {#Elective Succession
+	# name = Elective_rse_mod
+	# trigger_event = change_Realm_succession_law_mod.1010}
+}
+
+change_Realm_succession_law_mod.1002 = {
+    type = character_event
+    theme = default
+	#Multiple Heirs 
+	desc = change_Realm_succession_law_mod.1002.desc
+	option = {
+		#Confederate Partition
+		name = Confederate_Partition_rse_mod
+		trigger_event = change_Realm_succession_law_mod.1003
+		trigger = {
+			or = {
+				has_game_rule = change_Realm_succession_law_game_mod_on
+				culture = {
+					has_innovation = innovation_gavelkind
+				}
+			}
+		}
+	}
+	option = {
+		#Partition
+		name = Partition_rse_mod
+		trigger_event = change_Realm_succession_law_mod.1004
+		trigger = {
+			or = {
+				has_game_rule = change_Realm_succession_law_game_mod_on
+				culture = {
+					has_innovation = innovation_hereditary_rule
+				}
+			}
+		}
+	}
+	option = {
+		#High Partition
+		name = High_Partition_rse_mod
+		trigger_event = change_Realm_succession_law_mod.1005
+		trigger = {
+			or = {
+				has_game_rule = change_Realm_succession_law_game_mod_on
+				culture = {
+					or = {
+						has_innovation = innovation_heraldry
+						has_innovation = innovation_visigothic_codes
+					}
+				}
+			}
+		}
+	}
+}
+
+change_Realm_succession_law_mod.1003 = {
+    type = character_event
+    theme = default
+	#Confederate Partition
+	desc = change_Realm_succession_law_mod.1003.desc
+	option = {
+		name = Only_Me_gse_mod
+		add_realm_law_skip_effects = confederate_partition_succession_law
+	}
+	option = {
+		name = Me_and_Vassals_gse_mod
+		add_realm_law_skip_effects = confederate_partition_succession_law
+		every_vassal_or_below = {
+			limit = {
+				or = {
+					has_government = clan_government
+					has_government = feudal_government
+					has_government = tribal_government
+					has_government = administrative_government
+				}
+				nor = {
+					has_government = republic_government
+					has_government = theocracy_government
+					has_government = mercenary_government
+					has_government = holy_order_government
+				}
+			}
+			add_realm_law_skip_effects = confederate_partition_succession_law
+		}
+	}
+	option = {
+		name = Only_Vassals_gse_mod
+		every_vassal_or_below = {
+			limit = {
+				or = {
+					has_government = clan_government
+					has_government = feudal_government
+					has_government = tribal_government
+					has_government = administrative_government
+				}
+				nor = {
+					has_government = republic_government
+					has_government = theocracy_government
+					has_government = mercenary_government
+					has_government = holy_order_government
+				}
+			}
+			add_realm_law_skip_effects = confederate_partition_succession_law
+		}
+	}
+	option = {
+		name = Nothing_will_change_gse_mod
+	}
+}
+
+change_Realm_succession_law_mod.1004 = {
+    type = character_event
+    theme = default
+	#Partition
+	desc = change_Realm_succession_law_mod.1004.desc
+	option = {
+		name = Only_Me_gse_mod
+		add_realm_law_skip_effects = partition_succession_law
+	}
+	option = {
+		name = Me_and_Vassals_gse_mod
+		add_realm_law_skip_effects = partition_succession_law
+		every_vassal_or_below = {
+			limit = {
+				or = {
+					has_government = clan_government
+					has_government = feudal_government
+					has_government = tribal_government
+					has_government = administrative_government
+				}
+				nor = {
+					has_government = republic_government
+					has_government = theocracy_government
+					has_government = mercenary_government
+					has_government = holy_order_government
+				}
+			}
+			add_realm_law_skip_effects = partition_succession_law
+		}
+	}
+	option = {
+		name = Only_Vassals_gse_mod
+		every_vassal_or_below = {
+			limit = {
+				or = {
+					has_government = clan_government
+					has_government = feudal_government
+					has_government = tribal_government
+					has_government = administrative_government
+				}
+				nor = {
+					has_government = republic_government
+					has_government = theocracy_government
+					has_government = mercenary_government
+					has_government = holy_order_government
+				}
+			}
+			add_realm_law_skip_effects = partition_succession_law
+		}
+	}
+	option = {
+		name = Nothing_will_change_gse_mod
+	}
+}
+
+change_Realm_succession_law_mod.1005 = {
+    type = character_event
+    theme = default
+	#High Partition
+	desc = change_Realm_succession_law_mod.1005.desc
+	option = {
+		name = Only_Me_gse_mod
+		add_realm_law_skip_effects = high_partition_succession_law
+	}
+	option = {
+		name = Me_and_Vassals_gse_mod
+		add_realm_law_skip_effects = high_partition_succession_law
+		every_vassal_or_below = {
+			limit = {
+				or = {
+					has_government = clan_government
+					has_government = feudal_government
+					has_government = tribal_government
+					has_government = administrative_government
+				}
+				nor = {
+					has_government = republic_government
+					has_government = theocracy_government
+					has_government = mercenary_government
+					has_government = holy_order_government
+				}
+			}
+			add_realm_law_skip_effects = high_partition_succession_law
+		}
+	}
+	option = {
+		name = Only_Vassals_gse_mod
+		every_vassal_or_below = {
+			limit = {
+				or = {
+					has_government = clan_government
+					has_government = feudal_government
+					has_government = tribal_government
+					has_government = administrative_government
+				}
+				nor = {
+					has_government = republic_government
+					has_government = theocracy_government
+					has_government = mercenary_government
+					has_government = holy_order_government
+				}
+			}
+			add_realm_law_skip_effects = high_partition_succession_law
+		}
+	}
+	option = {
+		name = Nothing_will_change_gse_mod
+	}
+}
+
+change_Realm_succession_law_mod.1006 = {
+    type = character_event
+    theme = default
+	#Single Heir 
+	desc = change_Realm_succession_law_mod.1006.desc
+	option = {
+		#Primogeniture
+		name = Primogeniture_rse_mod
+		trigger_event = change_Realm_succession_law_mod.1007
+		trigger = {
+			or = {
+				has_game_rule = change_Realm_succession_law_game_mod_on
+				culture = {
+					has_innovation = innovation_primogeniture
+				}
+			}
+		}
+	}
+	option = {
+		#Ultimogeniture
+		name = Ultimogeniture_rse_mod
+		trigger_event = change_Realm_succession_law_mod.1008
+		trigger = {
+			or = {
+				has_game_rule = change_Realm_succession_law_game_mod_on
+				culture = {
+					has_innovation = innovation_primogeniture
+				}
+			}
+		}
+	}
+	option = {
+		#House Seniority
+		name = House_Seniority_rse_mod
+		trigger_event = change_Realm_succession_law_mod.1009
+		trigger = {
+			or = {
+				has_game_rule = change_Realm_succession_law_game_mod_on
+				culture = {
+					or = {
+						has_cultural_pillar = heritage_west_slavic
+						has_innovation = innovation_heraldry
+						has_innovation = innovation_table_of_princes
+					}
+				}
+			}
+		}
+	}
+}
+
+change_Realm_succession_law_mod.1007 = {
+    type = character_event
+    theme = default
+	#Primogeniture
+	desc = change_Realm_succession_law_mod.1007.desc
+	option = {
+		name = Only_Me_gse_mod
+		add_realm_law_skip_effects = single_heir_succession_law
+	}
+	option = {
+		name = Me_and_Vassals_gse_mod
+		add_realm_law_skip_effects = single_heir_succession_law
+		every_vassal_or_below = {
+			limit = {
+				or = {
+					has_government = clan_government
+					has_government = feudal_government
+					has_government = tribal_government
+					has_government = administrative_government
+				}
+				nor = {
+					has_government = republic_government
+					has_government = theocracy_government
+					has_government = mercenary_government
+					has_government = holy_order_government
+				}
+			}
+			add_realm_law_skip_effects = single_heir_succession_law
+		}
+	}
+	option = {
+		name = Only_Vassals_gse_mod
+		every_vassal_or_below = {
+			limit = {
+				or = {
+					has_government = clan_government
+					has_government = feudal_government
+					has_government = tribal_government
+					has_government = administrative_government
+				}
+				nor = {
+					has_government = republic_government
+					has_government = theocracy_government
+					has_government = mercenary_government
+					has_government = holy_order_government
+				}
+			}
+			add_realm_law_skip_effects = single_heir_succession_law
+		}
+	}
+	option = {
+		name = Nothing_will_change_gse_mod
+	}
+}
+
+change_Realm_succession_law_mod.1008 = {
+    type = character_event
+    theme = default
+	#Ultimogeniture
+	desc = change_Realm_succession_law_mod.1008.desc
+	option = {
+		name = Only_Me_gse_mod
+		add_realm_law_skip_effects = single_heir_succession_law_youngest
+	}
+	option = {
+		name = Me_and_Vassals_gse_mod
+		add_realm_law_skip_effects = single_heir_succession_law_youngest
+		every_vassal_or_below = {
+			limit = {
+				or = {
+					has_government = clan_government
+					has_government = feudal_government
+					has_government = tribal_government
+					has_government = administrative_government
+				}
+				nor = {
+					has_government = republic_government
+					has_government = theocracy_government
+					has_government = mercenary_government
+					has_government = holy_order_government
+				}
+			}
+			add_realm_law_skip_effects = single_heir_succession_law_youngest
+		}
+	}
+	option = {
+		name = Only_Vassals_gse_mod
+		every_vassal_or_below = {
+			limit = {
+				or = {
+					has_government = clan_government
+					has_government = feudal_government
+					has_government = tribal_government
+					has_government = administrative_government
+				}
+				nor = {
+					has_government = republic_government
+					has_government = theocracy_government
+					has_government = mercenary_government
+					has_government = holy_order_government
+				}
+			}
+			add_realm_law_skip_effects = single_heir_succession_law_youngest
+		}
+	}
+	option = {
+		name = Nothing_will_change_gse_mod
+	}
+}
+
+change_Realm_succession_law_mod.1009 = {
+    type = character_event
+    theme = default
+	#House Seniority
+	desc = change_Realm_succession_law_mod.1009.desc
+	option = {
+		name = Only_Me_gse_mod
+		add_realm_law_skip_effects = single_heir_dynasty_house
+	}
+	option = {
+		name = Me_and_Vassals_gse_mod
+		add_realm_law_skip_effects = single_heir_dynasty_house
+		every_vassal_or_below = {
+			limit = {
+				or = {
+					has_government = clan_government
+					has_government = feudal_government
+					has_government = tribal_government
+					has_government = administrative_government
+				}
+				nor = {
+					has_government = republic_government
+					has_government = theocracy_government
+					has_government = mercenary_government
+					has_government = holy_order_government
+				}
+			}
+			add_realm_law_skip_effects = single_heir_dynasty_house
+		}
+	}
+	option = {
+		name = Only_Vassals_gse_mod
+		every_vassal_or_below = {
+			limit = {
+				or = {
+					has_government = clan_government
+					has_government = feudal_government
+					has_government = tribal_government
+					has_government = administrative_government
+				}
+				nor = {
+					has_government = republic_government
+					has_government = theocracy_government
+					has_government = mercenary_government
+					has_government = holy_order_government
+				}
+			}
+			add_realm_law_skip_effects = single_heir_dynasty_house
+		}
+	}
+	option = {
+		name = Nothing_will_change_gse_mod
+	}
+}
+
+change_Realm_succession_law_mod.1010 = {
+    type = character_event
+    theme = default
+	title = "Innovation"
+	trigger = {
+		character = ROOT
+	}
+	option = {
+		name = "Hereditary Rule"
+		trigger = {
+			not = {
+				root.culture = {
+					has_innovation = innovation_hereditary_rule
+				}
+			}
+		}
+		root.culture = {
+			add_innovation = innovation_hereditary_rule
+		}
+	}
+	option = {
+		name = "Heraldry"
+		trigger = {
+			not = {
+				root.culture = {
+					has_innovation = innovation_heraldry
+				}
+			}
+		}
+		root.culture = {
+			add_innovation = innovation_heraldry
+		}
+	}
+	option = {
+		name = "Primogeniture"
+		trigger = {
+			not = {
+				root.culture = {
+					has_innovation = innovation_primogeniture 
+				}
+			}
+		}
+		root.culture = {
+			add_innovation = innovation_primogeniture 
+		}
+	}
+	option = {
+		name = "Close"
+	}
+}

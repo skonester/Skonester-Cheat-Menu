@@ -1,0 +1,719 @@
+﻿succession_order_laws = {
+	flag = succession_order_laws
+
+	confederate_partition_succession_law = {
+		can_keep = {
+			always = yes
+		}
+		can_pass = {
+			can_change_partition_succession_law_trigger = yes
+		}
+		can_have = {
+			can_have_confederate_partition_succession_law_trigger = yes
+		}
+		should_start_with = {
+			NOR = {
+				historical_succession_access_single_heir_succession_law_trigger = yes
+				historical_succession_access_single_heir_succession_law_youngest_trigger = yes
+				historical_succession_access_single_heir_dynasty_house_trigger = yes
+			}
+			OR = {
+				AND = {
+					OR = {
+						government_has_flag = government_is_feudal
+						government_has_flag = government_is_clan
+					}
+					culture = {
+						NOR = {
+							has_innovation = innovation_hereditary_rule
+							has_innovation = innovation_heraldry
+						}
+					}
+				}
+				government_has_flag = government_is_tribal
+			}
+		}
+		succession = {
+			order_of_succession = inheritance
+			traversal_order = children
+			rank = oldest
+			title_division = partition
+			create_primary_tier_titles = yes
+		}
+		flag = partition_succession_law
+		modifier = {
+			glory_hound_opinion = 10
+			parochial_opinion = 5
+			dynasty_house_opinion = 5
+			eligible_child_opinion = 10
+		}
+		pass_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+	}
+	
+	partition_succession_law = {
+		can_keep = {
+			or = {
+				has_game_rule = change_Realm_succession_law_game_mod_on
+				can_keep_partition_succession_law_trigger = yes
+			}
+		}
+		can_pass = {
+			can_change_partition_succession_law_trigger = yes
+		}
+		can_have = {
+			can_have_partition_succession_law_trigger = yes
+		}
+		should_start_with = {
+			NOR = {
+				historical_succession_access_single_heir_succession_law_trigger = yes
+				historical_succession_access_single_heir_succession_law_youngest_trigger = yes
+				historical_succession_access_single_heir_dynasty_house_trigger = yes
+			}
+			OR = {
+				government_has_flag = government_is_feudal
+				government_has_flag = government_is_clan
+			}
+			culture = {
+				has_innovation = innovation_hereditary_rule
+				NOT = {
+					has_innovation = innovation_heraldry
+				}
+			}
+		}
+		succession = {
+			order_of_succession = inheritance
+			traversal_order = children
+			rank = oldest
+			title_division = partition
+		}
+		flag = partition_succession_law
+		modifier = {
+			glory_hound_opinion = 10
+			parochial_opinion = 5
+			player_heir_opinion = 10
+			eligible_child_except_player_heir_opinion = 5
+		}
+		pass_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+
+		ai_will_do = {
+			if = {
+				limit = { has_realm_law = confederate_partition_succession_law }
+				value = 1
+			}
+		}
+	}
+
+	high_partition_succession_law = {
+		can_keep = {
+			or = {
+				has_game_rule = change_Realm_succession_law_game_mod_on
+				can_keep_high_partition_succession_law_trigger = yes
+			}
+		}
+		can_pass = {
+			can_change_partition_succession_law_trigger = yes
+		}
+		can_have = {
+			can_have_high_partition_succession_law_trigger = yes
+		}
+		should_start_with = {
+			NOR = {
+				historical_succession_access_single_heir_succession_law_trigger = yes
+				historical_succession_access_single_heir_succession_law_youngest_trigger = yes
+				historical_succession_access_single_heir_dynasty_house_trigger = yes
+			}
+			OR = {
+				government_has_flag = government_is_feudal
+				government_has_flag = government_is_clan
+			}
+			culture = {
+				has_innovation = innovation_heraldry
+				NOT = {
+					has_innovation = innovation_hereditary_rule
+				}
+			}
+		}
+		succession = {
+			order_of_succession = inheritance
+			traversal_order = children
+			rank = oldest
+			title_division = partition
+			primary_heir_minimum_share = 0.5
+		}
+		flag = partition_succession_law
+		modifier = {
+			glory_hound_opinion = 5
+			player_heir_opinion = 15
+		}
+		pass_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+
+		ai_will_do = {
+			if = {
+				limit = {
+					OR = {
+						has_realm_law = confederate_partition_succession_law
+						has_realm_law = partition_succession_law
+					}
+				}
+				value = 2
+			}
+		}
+	}
+	
+	single_heir_succession_law = {
+		can_keep = {
+			or = {
+				has_game_rule = change_Realm_succession_law_game_mod_on
+				can_keep_single_heir_succession_law_trigger = yes
+				# Vassal Contract allows it
+				custom_description = {
+					text = succession_laws_must_not_be_forced_partition
+					NAND = {
+						is_independent_ruler = no
+						vassal_contract_has_flag = locked_to_partition
+					}
+				}
+			}
+		}
+		can_have = {
+			can_have_single_heir_succession_law_trigger = yes
+		}
+		can_pass = {
+			can_change_succession_law_trigger = yes
+		}
+		should_start_with = {
+			historical_succession_access_single_heir_succession_law_trigger = yes
+		}
+		succession = {
+			order_of_succession = inheritance
+			traversal_order = children
+			rank = oldest
+			title_division = single_heir
+		}
+		flag = advanced_succession_law
+		modifier = {
+			glory_hound_opinion = -10
+			parochial_opinion = -5
+			player_heir_opinion = 20
+			eligible_child_except_player_heir_opinion = -5
+		}
+		pass_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+		revoke_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+
+		ai_will_do = {
+			if = {
+				limit = {
+					OR = {
+						has_realm_law = confederate_partition_succession_law
+						has_realm_law = partition_succession_law
+						has_realm_law = high_partition_succession_law
+					}
+				}
+				value = 3
+			}
+		}
+	}
+	
+	single_heir_succession_law_youngest = {
+		can_keep = {
+			or = {
+				has_game_rule = change_Realm_succession_law_game_mod_on
+				can_keep_single_heir_youngest_succession_law_trigger = yes
+				# Vassal Contract allows it
+				custom_description = {
+					text = succession_laws_must_not_be_forced_partition
+					NAND = {
+						is_independent_ruler = no
+						vassal_contract_has_flag = locked_to_partition
+					}
+				}
+			}
+		}
+		can_have = {
+			can_have_single_heir_youngest_succession_law_trigger = yes
+		}
+		can_pass = {
+			can_change_succession_law_trigger = yes
+		}
+		succession = {
+			order_of_succession = inheritance
+			traversal_order = children
+			rank = youngest
+			title_division = single_heir
+		}
+		
+		flag = advanced_succession_law
+		modifier = {
+			glory_hound_opinion = -10
+			parochial_opinion = -5
+			player_heir_opinion = 20
+			eligible_child_except_player_heir_opinion = -5
+		}
+		pass_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+		revoke_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+	}
+	
+	single_heir_dynasty_house = {
+		can_keep = {
+			or = {
+				has_game_rule = change_Realm_succession_law_game_mod_on
+				can_keep_single_heir_dynasty_house_trigger = yes
+				# Vassal Contract allows it
+				custom_description = {
+					text = succession_laws_must_not_be_forced_partition
+					NAND = {
+						is_independent_ruler = no
+						vassal_contract_has_flag = locked_to_partition
+					}
+				}
+			}
+		}
+		can_have = {
+			can_have_single_heir_dynasty_house_trigger = yes
+		}
+		can_pass = {
+			can_change_single_heir_dynasty_house_succession_law_trigger = yes
+		}
+		should_start_with = {
+			historical_succession_access_single_heir_dynasty_house_trigger = yes
+		}
+		succession = {
+			order_of_succession = inheritance
+			traversal_order = dynasty_house
+			rank = oldest
+			title_division = single_heir
+		}
+		
+		flag = advanced_succession_law
+		modifier = {
+			glory_hound_opinion = -5
+			eligible_child_except_player_heir_opinion = -15
+			dynasty_house_opinion = 5
+		}
+		pass_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+		revoke_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+
+		ai_will_do = {
+			if = {
+				limit = {
+					primary_title.tier > tier_county
+					OR = {
+						#West Slavic
+						culture = { has_cultural_pillar = heritage_west_slavic }
+					}
+				}
+				value = 2
+			}
+		}
+	}
+}
+
+succession_gender_laws = {
+	default = male_preference_law
+	flag = succession_gender_laws
+	
+	male_only_law = {
+		can_title_have = {
+			can_title_have_law_general_trigger = yes
+		}
+		should_show_for_title = { # Never show this in the UI, just apply it through script
+			always = no
+		}
+		can_keep = {
+			# Inverted gender rules.
+			trigger_if = {
+				limit = { has_game_rule = inversed_gender_equality }
+				custom_tooltip = {
+					text = culture_not_male_only_tt
+					OR = {
+						has_game_rule = Change_Vassal_Gender_law_game_mod_on
+						faith = { has_doctrine = doctrine_gender_female_dominated }
+						NOT = {
+							culture = { has_cultural_parameter = male_only_inheritance }
+						}
+					}
+				}
+			}
+			# Other rules.
+			trigger_else = {
+				custom_tooltip = {
+					text = culture_not_female_only_tt
+					OR = {
+						faith = { has_doctrine = doctrine_gender_male_dominated }
+						NOT = {
+							culture = { has_cultural_parameter = female_only_inheritance }
+						}
+					}
+				}
+			}
+		}
+		can_pass = {
+			can_change_succession_law_trigger = yes
+		}
+		should_start_with = {
+			OR = {
+				AND = {
+					faith = {
+						has_doctrine = doctrine_gender_male_dominated
+						religion_tag = islam_religion
+					}
+				}
+				culture = { has_cultural_parameter = male_only_inheritance }
+			}
+		}
+		succession = {
+			gender_law = male_only
+		}
+		flag = men_can_have_multiple_spouses
+		flag = men_can_have_consorts
+		flag = no_female_commanders
+		
+		pass_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+		revoke_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+	}
+	
+	male_preference_law = {
+		can_title_have = {
+			can_title_have_law_general_trigger = yes
+		}
+		should_show_for_title = { # Never show this in the UI, just apply it through script
+			always = no
+		}
+		can_keep = {
+			# Inverted gender rules.
+			trigger_if = {
+				limit = { has_game_rule = inversed_gender_equality }
+				custom_tooltip = {
+					text = male_preference_law_faith_or_culture_trigger
+					OR = {
+						has_game_rule = Change_Vassal_Gender_law_game_mod_on
+						faith = {
+							NOT = { has_doctrine = doctrine_gender_female_dominated }
+						}
+						culture = { has_cultural_parameter = male_preference_inheritance }
+					}
+				}
+			}
+			# Other rules.
+			trigger_else = {
+				custom_tooltip = {
+					text = MUST_HAVE_MALE_DOMINATED_OR_EQUAL
+					faith = {
+						NOT = { has_doctrine = doctrine_gender_female_dominated }
+					}
+				}
+				custom_tooltip = {
+					text = culture_not_female_only_tt
+					OR = {
+						faith = { has_doctrine = doctrine_gender_male_dominated }
+						NOT = {
+							culture = { has_cultural_parameter = female_only_inheritance }
+						}
+					}
+				}
+			}
+		}
+		can_pass = {
+			can_change_succession_law_trigger = yes
+		}
+		should_start_with = {
+			# Inverted gender rules.
+			trigger_if = {
+				limit = { has_game_rule = inversed_gender_equality }
+				OR = {
+					culture = { has_cultural_parameter = male_preference_inheritance }
+					faith = { has_doctrine = doctrine_gender_male_dominated }
+					has_realm_law = male_only_law # For when female_only_law ceases to be a legal option
+				}
+			}
+			# Other rules.
+			trigger_else = {
+				NOT = {
+					culture = { has_cultural_parameter = female_preference_inheritance }
+				}
+				OR = {
+					faith = {
+						NOT = { religion_tag = islam_religion }
+						has_doctrine = doctrine_gender_male_dominated
+					}
+					has_realm_law = male_only_law # For when male_only_law ceases to be a legal option
+				}
+			}
+		}
+		succession = {
+			gender_law = male_preference
+		}
+		flag = men_can_have_multiple_spouses
+		flag = men_can_have_consorts
+		flag = no_female_commanders
+		
+		pass_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+		revoke_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+	}
+	
+	equal_law = {
+		can_title_have = {
+			can_title_have_law_general_trigger = yes
+		}
+		should_show_for_title = { # Never show this in the UI, just apply it through script
+			always = no
+		}
+		can_keep = {
+			custom_tooltip = {
+				text = equal_law_culture_faith_or_innovation_trigger
+				OR = {
+					has_game_rule = Change_Vassal_Gender_law_game_mod_on
+					culture = { has_cultural_parameter = gender_equal_inheritance }
+					faith = { has_doctrine = doctrine_gender_equal }
+					AND = { #Culture is female dominated but religion is male dominated
+						faith = { has_doctrine = doctrine_gender_male_dominated }
+						OR = {
+							# Default game rules.
+							NAND = {
+								has_game_rule = inversed_gender_equality
+								culture = { has_cultural_parameter = male_only_inheritance }
+							}
+							# Inverted game rules.
+							AND = {
+								has_game_rule = inversed_gender_equality
+								culture = { has_cultural_parameter = female_only_inheritance }
+							}
+						}
+					}
+					# Culture is male dominated but faith is female dominated
+					AND = {
+						faith = { has_doctrine = doctrine_gender_female_dominated }
+						OR = {
+							# Default game rules.
+							NAND = {
+								has_game_rule = inversed_gender_equality
+								culture = { has_cultural_parameter = female_only_inheritance }
+							}
+							# Inverted game rules.
+							AND = {
+								has_game_rule = inversed_gender_equality
+								culture = { has_cultural_parameter = male_only_inheritance }
+							}
+						}
+					}
+				}
+			}
+		}
+		can_pass = {
+			#can_change_to_equal_succession_law_trigger = yes
+			can_change_succession_law_trigger = yes
+		}
+		should_start_with = {
+			NOR = {
+				culture = { has_cultural_parameter = female_preference_inheritance }
+				culture = { has_cultural_tradition = tradition_nubian_warrior_queens }
+			}
+			faith = {
+				has_doctrine = doctrine_gender_equal
+			}
+			trigger_if = {
+				limit = { has_game_rule = inversed_gender_equality }
+				# For when female_only_law ceases to be valid
+				NOT = { has_realm_law = male_only_law }
+			}
+			trigger_else = {
+				# For when female_only_law ceases to be valid
+				NOT = { has_realm_law = female_only_law }
+			}
+		}
+		succession = {
+			gender_law = equal
+		}
+		flag = men_can_have_multiple_spouses
+		flag = men_can_have_consorts
+		flag = women_can_have_multiple_spouses
+		flag = women_can_have_consorts
+		
+		pass_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+		revoke_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+
+		ai_will_do = {
+			if = {
+				limit = {
+					primary_title.tier > tier_county
+					faith = {
+						NOT = {
+							has_dominant_ruling_gender = prev
+						}
+					}
+				}
+				value = 2
+			}
+		}
+	}
+	
+	female_preference_law = {
+		can_title_have = {
+			can_title_have_law_general_trigger = yes
+		}
+		should_show_for_title = { # Never show this in the UI, just apply it through script
+			always = no
+		}
+		can_keep = {
+			# Inverted gender rules.
+			trigger_if = {
+				limit = { has_game_rule = inversed_gender_equality }
+				custom_tooltip = {
+					text = culture_not_male_only_tt
+					OR = {
+						has_game_rule = Change_Vassal_Gender_law_game_mod_on
+						faith = { has_doctrine = doctrine_gender_female_dominated }
+						NOT = {
+							culture = { has_cultural_parameter = male_only_inheritance }
+						}
+					}
+				}
+			}
+			# Other rules.
+			trigger_else = {
+				custom_tooltip = {
+					text = female_preference_law_faith_or_culture_trigger
+					OR = {
+						has_game_rule = Change_Vassal_Gender_law_game_mod_on
+						faith = {
+							NOT = { has_doctrine = doctrine_gender_male_dominated }
+						}
+						culture = { has_cultural_parameter = female_preference_inheritance }
+					}
+				}
+			}
+		}
+		should_start_with = {
+			# Inverted gender rules.
+			trigger_if = {
+				limit = { has_game_rule = inversed_gender_equality }
+				NOT = {
+					culture = { has_cultural_parameter = male_preference_inheritance }
+				}
+				OR = {
+					faith = {
+						NOT = { religion_tag = islam_religion }
+						has_doctrine = doctrine_gender_female_dominated
+					}
+					has_realm_law = female_only_law # For when female_only_law ceases to be a legal option
+				}
+			}
+			# Other rules.
+			trigger_else = {
+				OR = {
+					culture = { has_cultural_parameter = female_preference_inheritance }
+					faith = { has_doctrine = doctrine_gender_female_dominated }
+					has_realm_law = female_only_law # For when male_only_law ceases to be a legal option
+				}
+			}
+		}
+		can_pass = {
+			can_change_succession_law_trigger = yes
+		}
+		succession = {
+			gender_law = female_preference
+		}
+		flag = women_can_have_multiple_spouses
+		flag = women_can_have_consorts
+		
+		pass_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+		revoke_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+	}
+	
+	female_only_law = {
+		can_title_have = {
+			can_title_have_law_general_trigger = yes
+		}
+		should_show_for_title = { # Never show this in the UI, just apply it through script
+			always = no
+		}
+		can_keep = {
+			# Inverted gender rules.
+			trigger_if = {
+				limit = { has_game_rule = inversed_gender_equality }
+				custom_tooltip = {
+					text = culture_not_male_only_tt
+					OR = {
+						has_game_rule = Change_Vassal_Gender_law_game_mod_on
+						faith = { has_doctrine = doctrine_gender_female_dominated }
+						NOT = {
+							culture = { has_cultural_parameter = male_only_inheritance }
+						}
+					}
+				}
+			}
+			# Other rules.
+			trigger_else = {
+				custom_tooltip = {
+					text = female_only_law_faith_or_culture_trigger
+					OR = {
+						has_game_rule = Change_Vassal_Gender_law_game_mod_on
+						faith = { has_doctrine = doctrine_gender_female_dominated }
+						culture = { has_cultural_parameter = female_only_inheritance }
+					}
+				}
+			}
+		}
+		can_pass = {
+			can_change_succession_law_trigger = yes
+		}
+		succession = {
+			gender_law = female_only
+		}
+		flag = women_can_have_multiple_spouses
+		flag = women_can_have_consorts
+		
+		pass_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+		revoke_cost = {
+			prestige = change_succession_law_prestige_cost
+		}
+
+		should_start_with = {
+			OR = {
+				AND = {
+					faith = {
+						has_doctrine = doctrine_gender_female_dominated
+						religion_tag = islam_religion
+					}
+				}
+				culture = { has_cultural_parameter = female_only_inheritance }
+			}
+		}
+	}
+}

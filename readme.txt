@@ -1,5 +1,7 @@
 Latest Updates
 
+November- Scorpio V3 Pre-release test
+
 Late October- Scorpio V1(Intial 1.18.0 compatibility check),Scorpio V2(1.18.0.1):Added Meritocratic,Mandala,,Wanua Government types,Treasury option to Currency Menu.
 Late September- Libra V1,check in-game menu
 September Pre DLC update Virgo V5:check in-game menu log

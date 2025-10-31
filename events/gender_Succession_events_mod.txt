@@ -1,0 +1,307 @@
+namespace = gender_succession_events_mod
+
+gender_succession_events_mod.1001 = {
+    type = character_event
+    theme = default
+	desc = gender_succession_events_mod.1001.desc
+	#Male Only
+	option = {
+		name = male_only_gse_mod
+		trigger_event = gender_succession_events_mod.1002
+		trigger = {
+		}
+	}
+	#Male preference
+	option = {
+		name = Male_preference_gse_mod
+		trigger_event = gender_succession_events_mod.1003
+		trigger = {
+		}
+	}
+	#Equal
+	option = {
+		name = Equal_gse_mod
+		trigger_event = gender_succession_events_mod.1004
+		trigger = {
+		}
+	}
+	#Female preference
+	option = {
+		name = Female_preference_gse_mod
+		trigger_event = gender_succession_events_mod.1005
+		trigger = {
+		}
+	}
+	#Female Only
+	option = {
+		name = Female_Only_gse_mod
+		trigger_event = gender_succession_events_mod.1006
+		trigger = {
+		}
+	}
+}
+
+gender_succession_events_mod.1002 = {
+    type = character_event
+    theme = default
+	#Male Only
+	desc = gender_succession_events_mod.1002.desc
+	option = {
+		name = Only_Me_gse_mod
+		add_realm_law_skip_effects = male_only_law
+	}
+	option = {
+		name = Me_and_Vassals_gse_mod
+		add_realm_law_skip_effects = male_only_law
+		every_vassal_or_below = {
+			limit = {
+				or = {
+					has_government = clan_government
+					has_government = feudal_government
+					has_government = tribal_government
+				}
+				nor = {
+					has_government = republic_government
+					has_government = theocracy_government
+					has_government = mercenary_government
+					has_government = holy_order_government
+				}
+			}
+			add_realm_law_skip_effects = male_only_law
+		}
+	}
+	option = {
+		name = Only_Vassals_gse_mod
+		every_vassal_or_below = {
+			limit = {
+				or = {
+					has_government = clan_government
+					has_government = feudal_government
+					has_government = tribal_government
+				}
+				nor = {
+					has_government = republic_government
+					has_government = theocracy_government
+					has_government = mercenary_government
+					has_government = holy_order_government
+				}
+			}
+			add_realm_law_skip_effects = male_only_law
+		}
+	}
+	option = {
+		name = Nothing_will_change_gse_mod
+	}
+}
+
+gender_succession_events_mod.1003 = {
+    type = character_event
+    theme = default
+	#male_preference_law
+	desc = gender_succession_events_mod.1003.desc
+	option = {
+		name = Only_Me_gse_mod
+		add_realm_law_skip_effects = male_preference_law
+	}
+	option = {
+		name = Me_and_Vassals_gse_mod
+		add_realm_law_skip_effects = male_preference_law
+		every_vassal_or_below = {
+			limit = {
+				or = {
+					has_government = clan_government
+					has_government = feudal_government
+					has_government = tribal_government
+				}
+				nor = {
+					has_government = republic_government
+					has_government = theocracy_government
+					has_government = mercenary_government
+					has_government = holy_order_government
+				}
+			}
+			add_realm_law_skip_effects = male_only_law
+		}
+	}
+	option = {
+		name = Only_Vassals_gse_mod
+		every_vassal_or_below = {
+			limit = {
+				or = {
+					has_government = clan_government
+					has_government = feudal_government
+					has_government = tribal_government
+				}
+				nor = {
+					has_government = republic_government
+					has_government = theocracy_government
+					has_government = mercenary_government
+					has_government = holy_order_government
+				}
+			}
+			add_realm_law_skip_effects = male_preference_law
+		}
+	}
+	option = {
+		name = Nothing_will_change_gse_mod
+	}
+}
+
+gender_succession_events_mod.1004 = {
+    type = character_event
+    theme = default
+	#equal_law
+	desc = gender_succession_events_mod.1004.desc
+	option = {
+		name = Only_Me_gse_mod
+		add_realm_law_skip_effects = equal_law
+	}
+	option = {
+		name = Me_and_Vassals_gse_mod
+		add_realm_law_skip_effects = equal_law
+		every_vassal_or_below = {
+			limit = {
+				or = {
+					has_government = clan_government
+					has_government = feudal_government
+					has_government = tribal_government
+				}
+				nor = {
+					has_government = republic_government
+					has_government = theocracy_government
+					has_government = mercenary_government
+					has_government = holy_order_government
+				}
+			}
+			add_realm_law_skip_effects = equal_law
+		}
+	}
+	option = {
+		name = Only_Vassals_gse_mod
+		every_vassal_or_below = {
+			limit = {
+				or = {
+					has_government = clan_government
+					has_government = feudal_government
+					has_government = tribal_government
+				}
+				nor = {
+					has_government = republic_government
+					has_government = theocracy_government
+					has_government = mercenary_government
+					has_government = holy_order_government
+				}
+			}
+			add_realm_law_skip_effects = equal_law
+		}
+	}
+	option = {
+		name = Nothing_will_change_gse_mod
+	}
+}
+
+gender_succession_events_mod.1005 = {
+    type = character_event
+    theme = default
+	#female_preference_law
+	desc = gender_succession_events_mod.1005.desc
+	option = {
+		name = Only_Me_gse_mod
+		add_realm_law_skip_effects = female_preference_law
+	}
+	option = {
+		name = Me_and_Vassals_gse_mod
+		add_realm_law_skip_effects = female_preference_law
+		every_vassal_or_below = {
+			limit = {
+				or = {
+					has_government = clan_government
+					has_government = feudal_government
+					has_government = tribal_government
+				}
+				nor = {
+					has_government = republic_government
+					has_government = theocracy_government
+					has_government = mercenary_government
+					has_government = holy_order_government
+				}
+			}
+			add_realm_law_skip_effects = female_preference_law
+		}
+	}
+	option = {
+		name = Only_Vassals_gse_mod
+		every_vassal_or_below = {
+			limit = {
+				or = {
+					has_government = clan_government
+					has_government = feudal_government
+					has_government = tribal_government
+				}
+				nor = {
+					has_government = republic_government
+					has_government = theocracy_government
+					has_government = mercenary_government
+					has_government = holy_order_government
+				}
+			}
+			add_realm_law_skip_effects = female_preference_law
+		}
+	}
+	option = {
+		name = Nothing_will_change_gse_mod
+	}
+}
+
+gender_succession_events_mod.1006 = {
+    type = character_event
+    theme = default
+	#female_only_law
+	desc = gender_succession_events_mod.1006.desc
+	option = {
+		name = Only_Me_gse_mod
+		add_realm_law_skip_effects = female_only_law
+	}
+	option = {
+		name = Me_and_Vassals_gse_mod
+		add_realm_law_skip_effects = female_only_law
+		every_vassal_or_below = {
+			limit = {
+				or = {
+					has_government = clan_government
+					has_government = feudal_government
+					has_government = tribal_government
+				}
+				nor = {
+					has_government = republic_government
+					has_government = theocracy_government
+					has_government = mercenary_government
+					has_government = holy_order_government
+				}
+			}
+			add_realm_law_skip_effects = female_only_law
+		}
+	}
+	option = {
+		name = Only_Vassals_gse_mod
+		every_vassal_or_below = {
+			limit = {
+				or = {
+					has_government = clan_government
+					has_government = feudal_government
+					has_government = tribal_government
+				}
+				nor = {
+					has_government = republic_government
+					has_government = theocracy_government
+					has_government = mercenary_government
+					has_government = holy_order_government
+				}
+			}
+			add_realm_law_skip_effects = female_only_law
+		}
+	}
+	option = {
+		name = Nothing_will_change_gse_mod
+	}
+}

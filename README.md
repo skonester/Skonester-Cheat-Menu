@@ -57,7 +57,7 @@
 
 # Key Features
 - Customize your **character**, **NPCs**, and **realm**  
-- Fully compatible with CK3 versions **1.13 – 1.17**  
+- Fully compatible with CK3 versions **1.13 – 1.18**  
 - Regular updates with long-term maintenance in mind  
 - Much more to come!  
 

@@ -1,0 +1,170 @@
+﻿l_russian:
+# Неограниченное Войско
+sol_expansion_war_interaction:0 "Война без границ"
+sol_expansion_war_interaction_desc:0 "Объявите [войну|E] [получателю.GetShortUINameNoTooltip] без [casus_belli|E]."
+
+# Захват заложников при победе
+sol_captive_war_cb_prisoners.tt_attacker:1 "Некоторые [защитника.GetShortUINamePossessive] [дворяне|E] будут взяты в плен, в зависимости от их положения."
+
+# Решение показывать или скрывать расширенное войско при объявлении войны
+sol_expanded_war_special_troops_activate:0 "Активировать Особые Войска"
+sol_expanded_war_special_troops_activate_title:0 "Включить Войска Настоящих Времён"
+sol_expanded_war_special_troops_activate_desc:0 "Эти подкрепления не являются наследственными, не требуют снабжения, исчезают после войны, а их происхождение — ваш дворец."
+sol_expanded_war_special_troops_activate_tooltip:0 "На месте войны вы получите особые войска."
+sol_expanded_war_special_troops_activate_confirm:0 "ОК"
+
+sol_expanded_war_special_troops_deactivate:0 "Деактивировать Особые Войска"
+sol_expanded_war_special_troops_deactivate_title:0 "Выключить Войска Настоящих Времен"
+sol_expanded_war_special_troops_deactivate_desc:0 "Отключить подкрепление войска. При объявлении войны вы не получите особых войск и восполнения отрядов и гарнизонов."
+sol_expanded_war_special_troops_deactivate_tooltip:0 "Вы не получите особых войск при объявлении войны."
+sol_expanded_war_special_troops_deactivate_confirm:0 "ОК"
+
+show_sol_expanded_war_troops_flag_effect_tooltip:0 "Когда вы объявляете войну или на вас объявляют войну, в каждом вашем владении появятся особые войска. Они не являются наследственными и исчезнут после окончания войны. Ваши гарнизоны и наборы рекрутируются заново в начале войны."
+hide_sol_expanded_war_troops_flag_effect_tooltip:0 "Убрать эффекты мгновенного восполнения гарнизонных и рекрутных сил и призыва особых войск."
+
+# Названия особых военных подразделений
+game_concept_sol_expanded_warfare_attack_troops:0 "Штурмовые Войска"
+game_concept_sol_expanded_warfare_attack_troops_desc:0 "[sol_expanded_warfare_attack_troops|E] идут в атаку, чтобы разорвать врага и взять штурмом крепости."
+sol_expanded_warfare_attack_troops:0 "[sol_expanded_warfare_attack_troops|E]"
+sol_expanded_warfare_attack_troops_flavor:0 "[sol_expanded_warfare_attack_troops|E] стоят вместе с вашей армией, готовы к бою."
+
+game_concept_sol_expanded_warfare_support_troops:0 "Поддерживающие Войска"
+game_concept_sol_expanded_warfare_support_troops_desc:0 "[sol_expanded_warfare_support_troops|E] заполняют пустоты в ваших рядах."
+sol_expanded_warfare_support_troops:0 "[sol_expanded_warfare_support_troops|E]"
+sol_expanded_warfare_support_troops_flavor:0 "[sol_expanded_warfare_support_troops|E] дополняют вашу армию, укрепляя защиту."
+
+game_concept_sol_expanded_warfare_defense_troops:0 "Защитные Войска"
+game_concept_sol_expanded_warfare_defense_troops_desc:0 "[sol_expanded_warfare_defense_troops|E] охраняют ваше царство."
+sol_expanded_warfare_defense_troops:0 "[sol_expanded_warfare_defense_troops|E]"
+sol_expanded_warfare_troops_defense_flavor:0 "[sol_expanded_warfare_defense_troops|E] защищают ваши границы, пока основная армия выступает вперед."
+
+game_concept_sol_expanded_warfare_fighting_troops:0 "Бойцы Войны"
+game_concept_sol_expanded_warfare_fighting_troops_desc:0 "[sol_expanded_warfare_fighting_troops|E] идут в бой, когда это нужно."
+sol_expanded_warfare_fighting_troops:0 "[sol_expanded_warfare_fighting_troops|E]"
+sol_expanded_warfare_troops_fighting_flavor:0 "[sol_expanded_warfare_fighting_troops|E] вступают в бой без страха и сомнений."
+
+game_concept_sol_expanded_warfare_realm_levy_troops:0 "Народные Войска"
+game_concept_sol_expanded_warfare_realm_levy_troops_desc:0 "[sol_expanded_warfare_realm_levy_troops|E] идут на врага, когда нужны люди."
+sol_expanded_warfare_realm_levy_troops:0 "[sol_expanded_warfare_realm_levy_troops|E]"
+sol_expanded_warfare_troops_realm_levy_flavor:0 "[sol_expanded_warfare_realm_levy_troops|E] служат своему лорду и царю."
+
+# Группа войн расширения
+game_concept_sol_expansion:0 "Амбиции"
+game_concept_sol_expansion_desc:1 "[sol_expansion_war|E] — война за расширение территорий без всяких претензий или причин."
+sol_expansion:0 "[sol_expansion|E]"
+sol_expansion_flavor:0 "[sol_expansion|E] Война — это только расширение, как у Александра, Атиллы и Темучина."
+sol_expansion_desc:0 "[sol_expansion|E] Война — это борьба за новые земли, без претензий и формальностей."
+
+# Война расширения
+game_concept_sol_expansion_war:0 "Война за расширение"
+game_concept_sol_expansion_war_desc:0 "[sol_expansion_war|E] — несправедливое расширительное войно."
+game_concept_sol_expansion_wars:0 "Расширительные войны"
+game_concept_sol_expansion_wars_desc:0 "[sol_expansion_wars|E] — за расширение территорий."
+game_concept_sol_expansion_warring:0 "Война за славу"
+game_concept_sol_expansion_warring_desc:0 "[sol_expansion_warring|E] — за расширение земель, без объяснений."
+
+sol_expansion_war:0 "[sol_expansion_war|E]"
+sol_expansion_war_desc:1 "[sol_expansion_war|E] — это война для тех, кто жаждет новых владений. $sol_expansion_warring$ не требует претензий или [casus_belli|E], только силу."
+sol_expansion_wars:0 "[sol_expansion_wars|E]"
+sol_expansion_wars_desc:1 "[sol_expansion_wars|E] — без претензий и обоснований, только меч и кровь."
+sol_expansion_warring:0 "[sol_expansion_warring|E]"
+sol_expansion_warring_desc:1 "[sol_expansion_warring|E] — война ради самой войны — без законов, претензий и жалоб."
+
+SOL_EXPANSION_CB_NAME:0 "$sol_expansion_war$"
+SOL_EXPANSION_CB_TITLE:3 "Все земли [defender.GetShortUINamePossessive], находящиеся под управлением, перейдут под ваш контроль."
+SOL_EXPANSION_CB_SPECIFIC_NAME:1 "Завоевание [TITLE.GetBaseName]"
+
+SOL_EXPANSION_WAR_NAME:2 "$ORDER$ захват [ATTACKER.GetPrimaryTitle.GetAdjective] [TITLE.GetBaseName]"
+SOL_EXPANSION_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+SOL_EXPANSION_VICTORY_DESC:0 "Сегодня вы победили. Ваши знамена гордо реют над новыми землями."
+SOL_EXPANSION_WHITE_PEACE_DESC:0 "Княжества остаются равными. Мир, хотя и хмурый, — вечен."
+SOL_EXPANSION_DEFEAT_DESC:0 "Ваша глава по шрамам и пеплу. Враг не сломлен."
+SOL_EXPANSION_TRANSFER_TT:0 "Вы завоюете их титулы."
+SOL_EXPANSION_TRANSFER_2_TT:0 "Области, включённые в завоевание, будут присоединены."
+
+sol_expansion_war_defeat_desc:0 "[defender.GetShortUIName|U] сохраняет свои земли и титулы."
+sol_expansion_war_defeat_desc_defender:0 "Ваш род не сломлен."
+sol_expansion_war_defeat_desc_attacker:0 "[defender.GetShortUIName|U] сохраняет свои титулы."
+sol_expansion_war_white_peace_desc_defender:0 "Вы победили, но удерживаете статус-кво."
+sol_expansion_war_white_peace_desc_attacker:0 "Вы вынуждены согласиться на мир."
+sol_expansion_war_white_peace_desc:0 "[defender.GetShortUIName|U] сохраняет свои титулы."
+sol_expansion_war_victory_desc_defender:0 "[attacker.GetShortUIName|U] забрал все ваши титулы и вассалов."
+sol_expansion_war_victory_desc_attacker:0 "Вы завладели всеми титулами и владениями [defender.GetShortUIName|U]."
+sol_expansion_war_victory_desc:0 "[attacker.GetShortUIName|U] захватывает титулы и земли [defender.GetShortUIName|U]."
+
+msg_expansion_war_invalidated_message:0 "Война признана недействительной."
+expansion_vassal_transfer_tt:0 "Все [de_jure|E] [вассалы|E] целевых владений"
+expansion_title_transfer_tt:0 "Все [de_jure|E] [графства|E] в области переходят вам в подданство"
+expansion_title_transfer_2_tt:0 "Каждое [занято|E] [графство|E] за пределами цели переходит к вам"
+expansion_titles_destroyed_tt:0 "Все целевые титулы уничтожены"
+
+# Неконтролируемая Война Расширения
+game_concept_sol_expansion_war_unrestricted:0 "Свободная Война Завоевания"
+game_concept_sol_expansion_war_unrestricted_desc:0 "Неконтролируемая версия [sol_expansion|E], не ограниченная границами."
+sol_expansion_war_unrestricted:0 "[sol_expansion|E] — Война Без Ограничений"
+sol_expansion_war_unrestricted_desc:0 "Самая жесткая форма [sol_expansion|E], не знающая границ и правил."
+
+SOL_EXPANSION_UNRESTRICTED_CB_NAME:0 "$sol_expansion_war_unrestricted$"
+SOL_EXPANSION_UNRESTRICTED_WAR_NAME:1 "[sol_expansion|E] в войне за земли [TITLE.GetBaseName]"
+SOL_EXPANSION_UNRESTRICTED_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+# Война за графства
+game_concept_sol_expansion_war_barony:0 "Завоевание Бароний"
+game_concept_sol_expansion_war_barony_desc:0 "Версия [sol_expansion|E] войны, сосредоточенная на барониях."
+sol_expansion_war_barony:0 "[sol_expansion|E] — Баронский марш"
+sol_expansion_war_barony_desc:0 "Вам доступна война, нацеленная только на один баронский холм."
+
+SOL_EXPANSION_BARONY_CB_NAME:0 "$sol_expansion_war_barony$"
+SOL_EXPANSION_BARONY_WAR_NAME:1 "[sol_expansion|E] война за земли [TITLE.GetBaseName]"
+SOL_EXPANSION_BARONY_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+# Война за графства
+game_concept_sol_expansion_war_county:0 "Завоевание графств"
+game_concept_sol_expansion_war_county_desc:0 "[sol_expansion|E] — война за графство."
+sol_expansion_war_county:0 "[sol_expansion|E] — Графский марш"
+sol_expansion_war_county_desc:0 "Вам дана возможность захватить графство."
+
+SOL_EXPANSION_COUNTY_CB_NAME:0 "$sol_expansion_war_county$"
+SOL_EXPANSION_COUNTY_WAR_NAME:1 "[sol_expansion|E] — Война за земли [TITLE.GetBaseName]"
+SOL_EXPANSION_COUNTY_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+# Война за герцогство
+game_concept_sol_expansion_war_duchy:0 "Завоевание герцогств"
+game_concept_sol_expansion_war_duchy_desc:0 "[sol_expansion|E] — война за герцогство."
+sol_expansion_war_duchy:0 "[sol_expansion|E] — Герцогский марш"
+sol_expansion_war_duchy_desc:0 "Война за герцогство, чтобы контролировать весь регион."
+
+SOL_EXPANSION_DUCHY_CB_NAME:0 "$sol_expansion_war_duchy$"
+SOL_EXPANSION_DUCHY_WAR_NAME:1 "[sol_expansion|E] война за земли [TITLE.GetBaseName]"
+SOL_EXPANSION_DUCHY_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+# Война за королевство
+game_concept_sol_expansion_war_kingdom:0 "Завоевание королевств"
+game_concept_sol_expansion_war_kingdom_desc:0 "[sol_expansion|E] — война за трон."
+sol_expansion_war_kingdom:0 "[sol_expansion|E] — Королевский марш"
+sol_expansion_war_kingdom_desc:0 "Война за трон, что объединяет и подчиняет все в вашем царстве."
+
+SOL_EXPANSION_KINGDOM_CB_NAME:0 "$sol_expansion_war_kingdom$"
+SOL_EXPANSION_KINGDOM_WAR_NAME:1 "[sol_expansion|E] война за земли [TITLE.GetBaseName]"
+SOL_EXPANSION_KINGDOM_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+# Война за империю
+game_concept_sol_expansion_war_empire:0 "Завоевание Империй"
+game_concept_sol_expansion_war_empire_desc:0 "[sol_expansion|E] — война за власть над всем."
+sol_expansion_war_empire:0 "[sol_expansion|E] — Имперский поход"
+sol_expansion_war_empire_desc:0 "Война за величие, что покоряет все земли — это путь императора."
+
+SOL_EXPANSION_EMPIRE_CB_NAME:0 "$sol_expansion_war_empire$"
+SOL_EXPANSION_EMPIRE_WAR_NAME:1 "[sol_expansion|E] война за земли [TITLE.GetBaseName]"
+SOL_EXPANSION_EMPIRE_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+# Не Варианский Искатель приключений
+game_concept_sol_unrestricted_adventurer_conquest:0 "Приключение без границ"
+game_concept_sol_unrestricted_adventurer_conquest_desc:0 "Эта война — ваш путь в враги, уходящий за границы знакомых земель."
+sol_unrestricted_adventurer_conquest:0 "[sol_expansion|E] — Война искателя приключений"
+sol_unrestricted_adventurer_conquest_desc:0 "Порубите свой путь, оставив старые земли и отправившись за новые завоевания."
+
+SOL_UNRESTRICTED_ADVENTURER_CB_NAME:0 "$sol_unrestricted_adventurer_conquest$"
+SOL_UNRESTRICTED_ADVENTURER_WAR_NAME:1 "[sol_expansion|E] Война искателя приключений в земли [TITLE.GetBaseName]"
+SOL_UNRESTRICTED_ADVENTURER_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"

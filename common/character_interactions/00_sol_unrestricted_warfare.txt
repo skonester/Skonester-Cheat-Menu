@@ -1,0 +1,198 @@
+﻿#SOL UNRESTRICTED WARFARE DECLARATIONS
+sol_expansion_war_interaction = {
+	icon = on
+	category = interaction_pcm_main
+	common_interaction = yes
+	special_interaction = declare_war_interaction
+
+	ignores_pending_interaction_block = yes
+
+	interface = declare_war
+	interface_priority = 70
+	popup_on_receive = yes
+	pause_on_receive = yes # this is handled by the interface instead
+
+	use_diplomatic_range = no
+
+	is_shown = {
+		NOT = {
+			scope:recipient = scope:actor
+		}
+		scope:recipient = {
+			is_playable_character = yes
+		}
+		scope:actor = {
+			is_ai = no
+			NOT = {
+				is_at_war_with = scope:recipient
+			}
+		}
+
+
+	}
+
+
+	has_valid_target_showing_failures_only = {
+		scope:actor = {
+			NOR = {
+				is_at_war_with = scope:recipient
+				custom_description = { #A vassal cannot go to war against someone their Liege is already at war with
+					text = liege_is_at_war_with_recipient
+					object = scope:recipient
+					liege = {
+						is_at_war_with = scope:recipient
+					}
+				}
+			}
+		}
+	}
+
+	send_options_exclusive = no
+	
+	on_accept = {
+		scope:actor = {
+			#Feedback!
+			hidden_effect = {
+				send_interface_toast = {
+					type = event_toast_effect_neutral
+					title = declare_war_interaction_notification
+
+					left_icon = scope:actor					
+					right_icon = scope:recipient
+
+					custom_tooltip = declare_war_interaction_notification_tooltip
+
+				}
+			}
+
+			#Has the instigator promised a vassal a war (vassal.2601)?
+			if = {
+				limit = {
+					exists = var:promised_war
+					var:promised_war = {
+						is_alive = yes
+						NOT = { this = scope:recipient }
+					}
+				}
+				trigger_event = {
+					id = vassal.2610
+					days = { 7 10 }
+				}
+			}
+
+			#Send break up event if they are your lover
+			if = {
+				limit = {
+					has_relation_lover = scope:recipient
+					NOT = { has_relation_rival = scope:recipient } #To enable really strange love stories
+					any_character_war = {
+						casus_belli = {
+							primary_attacker = scope:actor
+							primary_defender = scope:recipient
+							any_target_title = { count >= 1 }
+						}
+					}
+				}
+				scope:recipient = {
+					trigger_event = {
+						id = lover.0103
+						days = { 5 10 }
+					}
+				}
+			}
+
+			#Invalidate any wars your vassals have going against recipient atm
+			scope:recipient = {
+				if = {
+					limit = {
+						any_character_war = {
+							primary_attacker = {
+								is_vassal_or_below_of = scope:actor
+								trigger_if = { #Ai should never invalidate a player's war!
+									limit = {
+										this = { is_ai = no }
+									}
+									scope:actor = {
+										is_ai = no
+									}
+								}
+							}
+						}
+					}
+					every_character_war = {
+						limit = {
+							primary_attacker = {
+								is_vassal_or_below_of = scope:actor
+								trigger_if = { #Ai should never invalidate a player's war!
+									limit = {
+										this = { is_ai = no }
+									}
+									scope:actor = {
+										is_ai = no
+									}
+								}
+							}
+						}
+						show_as_tooltip = { end_war = invalidated } #Actually ended in the event
+						primary_attacker = { trigger_event = war_event.1001 }
+					}
+				}
+			}
+			#Notify defender's vassals if the war is targeting one or more of their titles
+			scope:recipient = {
+				if = {
+					limit = {
+						any_vassal = {
+							save_temporary_scope_as = attacked_vassal
+							any_character_war = {
+								casus_belli = {
+									primary_attacker = scope:actor
+									primary_defender = scope:recipient
+									any_target_title = {
+										holder = {
+											OR = {
+												this = scope:attacked_vassal
+												is_vassal_or_below_of = scope:attacked_vassal
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					every_vassal = {
+						save_temporary_scope_as = attacked_vassal
+						limit = {
+							any_character_war = {
+								casus_belli = {
+									primary_attacker = scope:actor
+									primary_defender = scope:recipient
+									any_target_title = {
+										holder = {
+											OR = {
+												this = scope:attacked_vassal
+												is_vassal_or_below_of = scope:attacked_vassal
+											}
+										}
+									}
+								}
+							}
+						}
+						send_interface_toast = {
+							type = msg_war_declared_on_liege
+							title = declare_war_interaction_notification
+
+							left_icon = scope:actor					
+							right_icon = scope:recipient
+
+							custom_tooltip = declare_war_interaction_notification_tooltip
+						}
+					}
+				}
+			}
+			
+		}
+	}
+	
+	auto_accept = yes
+}

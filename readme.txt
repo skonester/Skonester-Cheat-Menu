@@ -1,6 +1,9 @@
 Latest Updates
 
-November- Scorpio V3 - Government Gender/Succession law options,unrestricted Casus Beli unlock
+November-
+Scorpio V4 - 1.18.0.2,More Debug Interactions
+Scorpio V3 - Government Gender/Succession law options,unrestricted Casus Beli unlock
+
 
 Late October- Scorpio V1(Intial 1.18.0 compatibility check),Scorpio V2(1.18.0.1):Added Meritocratic,Mandala,,Wanua Government types,Treasury option to Currency Menu.
 Late September- Libra V1,check in-game menu

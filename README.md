@@ -1,6 +1,6 @@
 # Latest Updates
 ### **November – Scorpio V4 1.18.0.2**
-### **November – Scorpio V3 1.18.0.1**
+Scorpio V3 1.18.0.1**
 
 ### **Late October – Scorpio V2 1.18.0.1**
 - Added Meritocratic,Mandala,,Wanua Government types,Treasury option to Currency Menu.

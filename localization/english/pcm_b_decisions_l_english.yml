@@ -15,12 +15,12 @@
  pcm_b_lucky_7_sub_realm_decision_tooltip:0 ""
  pcm_b_lucky_7_sub_realm_decision_ct:0 "Let all works be built in haste, as though guided by divine providence!"
 
- pcm_b_show_decision_title:0 "--= #Skonester:#! Reveal the Builder’s Craft =--"
+ pcm_b_show_decision_title:0 "--= #Skonester:#! Reveal the Gnostic Craft =--"
  pcm_b_show_decision_desc:0 "Unveil all of the Skonester edicts concerning the art of raising structures."
  pcm_b_show_decision_tooltip:0 ""
  pcm_b_show_decision_ct:0 "So be it — let the hidden decrees be made known."
 
- pcm_b_hide_decision_title:0 "--= #Skonester:#! Conceal the Builder’s Craft =--"
+ pcm_b_hide_decision_title:0 "--= #Skonester:#! Conceal the Gnostic Craft =--"
  pcm_b_hide_decision_desc:0 "Conceal the Skonester decrees regarding the building arts."
  pcm_b_hide_decision_tooltip:0 ""
  pcm_b_hide_decision_ct:0 "Seal the scrolls and keep the knowledge from wandering eyes."

@@ -5,7 +5,7 @@ gender_Succession_events_mod_decision = {
     selection_tooltip = gender_Succession_events_mod_decision_tt
     confirm_text = CONFIRM_OKAY
 
-    decision_group_type = debug
+    decision_group_type = pcm
 
     is_shown = {
         is_player = yes
@@ -28,7 +28,7 @@ change_Realm_succession_law_mod_decision = {
     selection_tooltip = change_Realm_succession_law_mod_decision_tt
     confirm_text = CONFIRM_OKAY
 
-    decision_group_type = debug
+    decision_group_type = pcm
 
     is_shown = {
         is_player = yes

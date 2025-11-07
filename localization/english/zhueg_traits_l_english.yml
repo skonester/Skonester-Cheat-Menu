@@ -9,7 +9,7 @@
   
   trait_boost_dudu1:0 "Military Commander"
   trait_boost_dudu1_desc:0 "General of the Five Armies – responsible for border or regional military affairs."
-  trait_boost_dudu1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the emperor's direct military commander, a staunch supporter of the imperial faction."
+  trait_boost_dudu1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the leader's direct military commander, a staunch supporter of the house."
   
   trait_boost_xueshi1:0 "Honorary Scholar"
   trait_boost_xueshi1_desc:0 "A cabinet scholar of the Hanlin Academy and advisor to the king."
@@ -27,7 +27,7 @@
   
  trait_bloodline_god_3:0 "Barbara's Anointed Blood"
  trait_bloodline_god_3_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] stands near the divine."
- trait_bloodline_god_3_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a descendant of the #Y imperial #! #bold pureblood#! lineage of Barbara, bearing a sacred bloodline tied to the Kingdom of Heaven."
+ trait_bloodline_god_3_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a descendant of the #Y imperial #! #bold pureblood#! lineage of Barbara, bearing a sacred bloodline tied to the Mandate of Heaven."
 
  trait_bloodline_god_2:0 "Barbara's Royal Blood"
  trait_bloodline_god_2_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] carries the royal vein of Barbara."

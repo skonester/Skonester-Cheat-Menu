@@ -70,7 +70,7 @@ zhuge_huangzu_add = {
 	}
 	desc = zhuge_huangzu_add_desc
 	ai_check_interval = 0
-	decision_group_type = debug
+	decision_group_type = pcm
 
 	is_shown = {
 		is_ai = no
@@ -150,7 +150,7 @@ change_sansi_government = {
     selection_tooltip = change_govt_tt
     confirm_text = CONFIRM_OKAY
 
-	decision_group_type = debug
+	decision_group_type = pcm
 
     is_shown = {
 		is_ai = no

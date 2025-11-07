@@ -7,7 +7,7 @@
   selection_tooltip = information_TT
   confirm_text = CONFIRM_OKAY
 
-  decision_group_type = debug
+  decision_group_type = pcm
 
   is_shown = {
       has_character_flag = daddy_pika_cheat_menu

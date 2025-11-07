@@ -8,7 +8,7 @@
     selection_tooltip = close_daddypika_menu_desc
     confirm_text = CONFIRM_OKAY
 
-    decision_group_type = debug
+    decision_group_type = pcm
 
     is_shown = {
         has_character_flag = daddy_pika_cheat_menu
@@ -33,7 +33,7 @@ close_government_menu = {
     selection_tooltip = close_daddypika_menu_desc
     confirm_text = CONFIRM_OKAY
 
-    decision_group_type = debug
+    decision_group_type = pcm
 
     is_shown = {
         has_character_flag = govt_menu
@@ -57,7 +57,7 @@ close_convert_menu = {
     selection_tooltip = close_daddypika_menu_desc
     confirm_text = CONFIRM_OKAY
 
-    decision_group_type = debug
+    decision_group_type = pcm
 
     is_shown = {
         has_character_flag = covt_menu
@@ -81,7 +81,7 @@ close_zhuge_juese_menu = {
     selection_tooltip = close_daddypika_menu_desc
     confirm_text = CONFIRM_OKAY
 
-    decision_group_type = debug
+    decision_group_type = pcm
 
     is_shown = {
         has_character_flag = daddy_pika_cheat_menu
@@ -106,7 +106,7 @@ close_zhuge_sansi_menu = {
     selection_tooltip = close_daddypika_menu_desc
     confirm_text = CONFIRM_OKAY
 
-    decision_group_type = debug
+    decision_group_type = pcm
 
     is_shown = {
         has_character_flag = zhuge_sansi_menu_02

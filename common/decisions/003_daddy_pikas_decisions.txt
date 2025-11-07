@@ -5,7 +5,7 @@
     selection_tooltip = change_govt_tt
     confirm_text = CONFIRM_OKAY
 
-    decision_group_type = debug
+    decision_group_type = pcm
 
     is_shown = {
         NOT = { has_government = meritocratic_government }
@@ -27,7 +27,7 @@ change_government_mandala = {
     selection_tooltip = change_govt_tt
     confirm_text = CONFIRM_OKAY
 
-    decision_group_type = debug
+    decision_group_type = pcm
 
     is_shown = {
         NOT = { has_government = mandala_government }
@@ -49,7 +49,7 @@ change_government_wanua = {
     selection_tooltip = change_govt_tt
     confirm_text = CONFIRM_OKAY
 
-    decision_group_type = debug
+    decision_group_type = pcm
 
     is_shown = {
         NOT = { has_government = wanua_government }
@@ -74,7 +74,7 @@ change_government_feudal = {
     selection_tooltip = change_govt_tt
     confirm_text = CONFIRM_OKAY
 
-	decision_group_type = debug
+	decision_group_type = pcm
 
     is_shown = {
         NOT = { has_government = feudal_government }
@@ -108,7 +108,7 @@ change_government_clan = {
     selection_tooltip = change_govt_tt
     confirm_text = CONFIRM_OKAY
 
-	decision_group_type = debug
+	decision_group_type = pcm
 
     is_shown = {
         NOT = { has_government = clan_government }
@@ -142,7 +142,7 @@ change_govt_tribe = {
     selection_tooltip = change_govt_tt
     confirm_text = CONFIRM_OKAY
 
-	decision_group_type = debug
+	decision_group_type = pcm
 
     is_shown = {
         NOT = { has_government = tribal_government }
@@ -176,7 +176,7 @@ change_govt_nomad = {
     selection_tooltip = change_govt_tt
     confirm_text = CONFIRM_OKAY
 
-	decision_group_type = debug
+	decision_group_type = pcm
 
     is_shown = {
         NOT = { has_government = nomad_government }
@@ -210,7 +210,7 @@ change_government_administrative = {
     selection_tooltip = change_govt_tt
     confirm_text = CONFIRM_OKAY
 
-	decision_group_type = debug
+	decision_group_type = pcm
 
     is_shown = {
         NOT = { has_government = administrative_governmentt }
@@ -244,7 +244,7 @@ change_government_landless_adventurer = {
     selection_tooltip = change_govt_tt
     confirm_text = CONFIRM_OKAY
 
-	decision_group_type = debug
+	decision_group_type = pcm
 
     is_shown = {
         NOT = { has_government = landless_adventurer_government }
@@ -271,7 +271,7 @@ change_succession_single = {
     selection_tooltip = change_suc_tt
     confirm_text = CONFIRM_OKAY
 
-	decision_group_type = debug
+	decision_group_type = pcm
 
     is_shown = {
         NOR = {
@@ -308,7 +308,7 @@ change_succession_single_youngest = {
     selection_tooltip = change_suc_tt
     confirm_text = CONFIRM_OKAY
 
-	decision_group_type = debug
+	decision_group_type = pcm
 
     is_shown = {
         NOR = {
@@ -345,7 +345,7 @@ convert_religion = {
     selection_tooltip = are_you_sure_tt
     confirm_text = "CONFIRM_OKAY"
 
-	decision_group_type = debug
+	decision_group_type = pcm
 
     is_shown = {
         has_character_flag = daddy_pika_cheat_menu
@@ -374,7 +374,7 @@ convert_culture = {
     selection_tooltip = are_you_sure_tt
     confirm_text = "CONFIRM_OKAY"
 
-	decision_group_type = debug
+	decision_group_type = pcm
 
     is_shown = {
         has_character_flag = daddy_pika_cheat_menu
@@ -403,7 +403,7 @@ realm_control = {
     selection_tooltip = are_you_sure_tt
     confirm_text = "CONFIRM_OKAY"
 
-	decision_group_type = debug
+	decision_group_type = pcm
 
     is_shown = {
         has_character_flag = daddy_pika_cheat_menu
@@ -429,7 +429,7 @@ realm_development = {
     selection_tooltip = are_you_sure_tt
     confirm_text = "CONFIRM_OKAY"
 
-	decision_group_type = debug
+	decision_group_type = pcm
 
     is_shown = {
         has_character_flag = daddy_pika_cheat_menu

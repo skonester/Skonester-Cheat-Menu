@@ -7,7 +7,7 @@
     selection_tooltip = open_daddypika_menu_desc
     confirm_text = CONFIRM_OKAY
 
-    decision_group_type = debug
+    decision_group_type = pcm
 
     is_shown = {
         NOT = { has_character_flag = daddy_pika_cheat_menu }
@@ -33,7 +33,7 @@ open_government_menu = {
     selection_tooltip = open_daddypika_menu_desc
     confirm_text = CONFIRM_OKAY
 
-    decision_group_type = debug                    
+    decision_group_type = pcm                   
 
     is_shown = {
         has_character_flag = daddy_pika_cheat_menu 
@@ -58,7 +58,7 @@ open_convert_menu = {
     selection_tooltip = open_daddypika_menu_desc
     confirm_text = CONFIRM_OKAY
 
-    decision_group_type = debug                    
+    decision_group_type = pcm                    
 
     is_shown = {
         has_character_flag = daddy_pika_cheat_menu 
@@ -83,7 +83,7 @@ open_zhuge_juese_menu = {
     selection_tooltip = open_daddypika_menu_desc
     confirm_text = CONFIRM_OKAY
 
-    decision_group_type = debug                    
+    decision_group_type = pcm                    
 
     is_shown = {
         has_character_flag = daddy_pika_cheat_menu 
@@ -108,7 +108,7 @@ open_zhuge_sansi_menu = {
     selection_tooltip = open_daddypika_menu_desc
     confirm_text = CONFIRM_OKAY
 
-    decision_group_type = debug                    
+    decision_group_type = pcm                   
 
     is_shown = {
         has_title = title:e_greatming

@@ -163,7 +163,7 @@ pcm_hide_decision = {
 
 pcm_cure_pox_decision = {
 	decision_group_type = pcm
-	picture = { reference = gfx/interface/illustrations/decisions/pcm_decision.dds }
+	picture = { reference = gfx/interface/illustrations/decisions/7.dds }
 	title = pcm_cure_pox_decision_title
     desc = pcm_cure_pox_decision_desc
     selection_tooltip = pcm_cure_pox_decision_tooltip
@@ -257,7 +257,7 @@ pcm_cure_pox_decision = {
 
 pcm_cure_all_decision = {
 	decision_group_type = pcm
-	picture = { reference = gfx/interface/illustrations/decisions/pcm_decision.dds }
+	picture = { reference = gfx/interface/illustrations/decisions/7.dds }
 	title = pcm_cure_all_decision_title
     desc = pcm_cure_all_decision_desc
     selection_tooltip = pcm_cure_all_decision_tooltip
@@ -390,7 +390,7 @@ pcm_cure_all_decision = {
 
 pcm_cure_inbred_decision = {
 	decision_group_type = pcm
-	picture = { reference = gfx/interface/illustrations/decisions/pcm_decision.dds }
+	picture = { reference = gfx/interface/illustrations/decisions/7.dds }
 	title = pcm_cure_inbred_decision_title
     desc = pcm_cure_inbred_decision_desc
     selection_tooltip = pcm_cure_inbred_decision_tooltip

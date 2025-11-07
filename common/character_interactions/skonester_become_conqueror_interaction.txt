@@ -1,0 +1,84 @@
+﻿become_conqueror_interaction = {
+    category = interaction_pcm_main
+    icon = on
+    common_interaction = yes
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+    desc = become_conqueror_interaction_desc
+
+    is_shown = {
+        scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+        scope:recipient = {
+            NOT = {
+                OR = {
+                    has_trait = conqueror
+                    has_trait = greatest_of_khans
+                    has_trait = chakravarti
+                    has_trait = crusader_king
+                    has_trait = savior
+                    has_trait = living_legend
+                    has_trait = golden_lineage
+                    has_trait = campeador
+                    has_trait = saoshyant
+                }
+            }
+        }
+    }
+
+    on_accept = {
+        scope:recipient = {
+            add_trait = conqueror
+            add_trait = greatest_of_khans
+            add_trait = chakravarti
+            add_trait = crusader_king
+            add_trait = savior
+            add_trait = living_legend
+            add_trait = golden_lineage
+            add_trait = campeador
+            add_trait = saoshyant
+        }
+    }
+
+    auto_accept = yes
+}
+
+remove_conqueror_interaction = {
+    category = interaction_pcm_main
+    icon = off
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+    desc = remove_conqueror_interaction_desc
+
+    is_shown = {
+        scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+        scope:recipient = {
+            OR = {
+                has_trait = conqueror
+                has_trait = greatest_of_khans
+                has_trait = chakravarti
+                has_trait = crusader_king
+                has_trait = savior
+                has_trait = living_legend
+                has_trait = golden_lineage
+                has_trait = campeador
+                has_trait = saoshyant
+            }
+        }
+    }
+
+    on_accept = {
+        scope:recipient = {
+            remove_trait = conqueror
+            remove_trait = greatest_of_khans
+            remove_trait = chakravarti
+            remove_trait = crusader_king
+            remove_trait = savior
+            remove_trait = living_legend
+            remove_trait = golden_lineage
+            remove_trait = campeador
+            remove_trait = saoshyant
+        }
+    }
+
+    auto_accept = yes
+}

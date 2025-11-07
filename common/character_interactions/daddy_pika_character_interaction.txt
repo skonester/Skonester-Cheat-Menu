@@ -1343,6 +1343,7 @@ daddy_pika_remove_excommunication = {
 	category = interaction_category_cheat_menu
 	desc = daddy_pika_remove_excommunication_desc
 	common_interaction = no
+	icon = off
 	sort_order = 10
 	
 	auto_accept = yes

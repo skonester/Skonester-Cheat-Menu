@@ -6,9 +6,9 @@
   dp_information.changelog.t:0 "Changelog for Scorpio Season"
   dp_information.changelog.d:0 "Scorpio V5:Final build until January 2026"
   dp_information.useful_tips.t:0 "Useful Tips"
-  dp_information.useful_tips.d:0 "Feature Menu\n- Click once to add, click again to remove.\n- If a feature doesn’t appear, it doesn’t mean the mod is broken; it indicates a conflicting feature.\n- Due to environmental factors, some interactions may not appear on certain characters.\n- Trust me, having a bunch of kids can be a big hassle.\n- This mod will also supported lower versions of the game."
+  dp_information.useful_tips.d:0 "Feature Menu\n- Click once to add, click again to remove.\n- If a feature doesn’t appear, it doesn’t mean the mod is broken; it indicates a conflicting feature.\n- Due to environmental factors, some interactions may not appear on certain characters.\n- Trust me, having a bunch of kids can be a big hassle.\n- This mod will also support older versions of the game if you need to downgrade."
   dp_information.locations.t:0 "Special Thanks"
-  dp_information.locations.d:0 "\n- To DaddyPika and Zhuge and some dead code I modifed from Pavel and Sol. Also RIP to Kurthakon, his Convert Holdings code lives on in this mod."
+  dp_information.locations.d:0 "\n- To DaddyPika and Zhuge and some dead code I modifed from Pavel,Bone,Leech,Sol. Also RIP to Kurthakon, his Convert Holdings code lives on in this mod."
   
   use_new_system:0 "New System"
   use_new_system_desc:0 "The old system has been replaced by the new one. Would you like to try it?"

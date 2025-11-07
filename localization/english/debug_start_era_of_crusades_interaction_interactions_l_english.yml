@@ -1,8 +1,8 @@
 ﻿l_english:
- dp_debug_start_era_of_crusades_interaction:0 "Start: Era of Crusades (Debug)"
+ dp_debug_start_era_of_crusades_interaction:0 "Start: Era of Crusades"
  dp_debug_launch_natural_crusade_interaction:0 "Launch Natural Crusade (Debug)"
- dp_debug_start_era_of_jihads_interaction:0 "Start: Era of Jihads (Debug)"
- dp_debug_start_great_holy_war_interaction:0 "Start Great Holy War (Debug)"
+ dp_debug_start_era_of_jihads_interaction:0 "Start: Era of Jihads"
+ dp_debug_start_great_holy_war_interaction:0 "Start Great Holy War(Redirect war target)"
  dp_debug_start_era_of_crusades_interaction_desc:0 "Begin the Era of Crusades for testing purposes."
  dp_debug_launch_natural_crusade_interaction_desc:0 "Debug trigger for launching a natural crusade."
  dp_debug_start_era_of_jihads_interaction_desc:0 "Begin the Era of Jihads for test purposes."

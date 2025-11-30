@@ -124,14 +124,7 @@
  manage_titles_interaction:0 "Manage Titles"
  manage_titles_interaction_desc:0 "Command the dispensation of titles as you wish."
  CHEAT_MENU_ACTIONS:0 "This hidden codex grants many secret tools with which to shape destiny."
- change_govt_meritocratic:0 "Adopt Meritocratic Government"
- change_govt_mandala:0 "Adopt Mandala Government"
- change_govt_wanua:0 "Adopt Wanua Government"
- change_govt_meritocratic_desc:0 "Rule based on merit: ascend the administrative ladder through exams and competition rather than birthright."
- change_govt_mandala_desc:0 "Maritime Southeast Asia's layered kingdom structure, a gradual transition from tribal or wanua forms."
- change_govt_wanua_desc:0 "Sea-based Southeast Asian tribal government, precursor to more developed Mandala kingdoms."
- change_govt_tt:0 "Change to $TYPE$ government"
- CONFIRM_OKAY:0 "Confirm"
+
  
 Only_Me_gse_mod:0 "Change only for myself"
 Me_and_Vassals_gse_mod:0 "Change for myself and my vassals"
@@ -188,6 +181,7 @@ setting_change_Realm_succession_law_game_mod_off:0 "Change Realm Succession law 
 setting_change_Realm_succession_law_game_mod_off_desc:0 "Succession laws are based on culture"
 setting_change_Realm_succession_law_game_mod_on:0 "Change Realm Succession law on"
 setting_change_Realm_succession_law_game_mod_on_desc:0 "Succession laws are not based on culture"
+
 gender_Succession_events_mod_decision_title: "Trigger Gender Succession Event"
   gender_Succession_events_mod_decision_desc: "Manually trigger the gender succession event to test related mechanics."
   gender_Succession_events_mod_decision_tt: "Activate this to start the gender succession event."
@@ -195,3 +189,18 @@ gender_Succession_events_mod_decision_title: "Trigger Gender Succession Event"
   change_Realm_succession_law_mod_decision_title: "Change Realm Succession Law"
   change_Realm_succession_law_mod_decision_desc: "Modify the realm's succession law based on culture and innovations."
   change_Realm_succession_law_mod_decision_tt: "Select to trigger the realm succession law change event."
+
+change_govt_celestial: "Change Government: Celestial"
+ change_govt_celestial_desc: "Instantly change your primary realm to the Celestial (Imperial Chinese) Government type. Requires specific cultural/religious prerequisites to function reliably."
+ 
+ change_govt_meritocratic: "Change Government: Meritocratic"
+ change_govt_meritocratic_desc: "Instantly change your primary realm to the Meritocratic Government type. Used by specialized candidates and merit-based realms."
+ 
+ change_govt_mandala: "Change Government: Mandala (High)"
+ change_govt_mandala_desc: "Instantly change your primary realm to the Mandala Government type (Specialized Southeast Asian rule)."
+ 
+ change_govt_wanua: "Change Government: Wanua (Low)"
+ change_govt_wanua_desc: "Instantly change your primary realm to the Wanua Government type (Tribal Southeast Asian rule)."
+ change_govt_tt:0 "Change to $TYPE$ government"
+ CONFIRM_OKAY:0 "Confirm"
+

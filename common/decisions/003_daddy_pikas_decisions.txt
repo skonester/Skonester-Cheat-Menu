@@ -1,64 +1,157 @@
-﻿change_government_meritocratic = {
-    picture = { reference = "gfx/interface/illustrations/decisions/cheat_tab.dds" }
-    title = change_govt_meritocratic
-    desc = change_govt_meritocratic_desc
+﻿change_government_celestial = {
+    picture = {
+		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+	}
+
+    title = change_govt_celestial
+    desc = change_govt_celestial_desc
     selection_tooltip = change_govt_tt
     confirm_text = CONFIRM_OKAY
 
-    decision_group_type = pcm
+	decision_group_type = pcm
 
     is_shown = {
-        NOT = { has_government = meritocratic_government }
+        # CRITICAL FIX MISSING: You must add 'is_player = yes' here for visibility.
+        NOT = { has_government = celestial_government }
         has_character_flag = daddy_pika_cheat_menu
         has_character_flag = govt_menu
     }
 
     effect = {
-        change_government = meritocratic_government
+        # Custom mod effect to clean up landless status (requires third-party mod)
+        tgp_wipe_domicile_effect = yes 
+
+		if = {
+			limit = { NOT = { has_domicile = yes } }
+			give_noble_family_title = {
+				name = noble_family_name
+				tier = county # Warning: This tier is likely incorrect for Noble Family Titles
+				article = DEFAULT_TITLE_NAME_ARTICLE
+				government = celestial_government # Target government
+			}
+			domicile ?= {
+				set_domicile_type = east_asian_estate
+				set_up_domicile_estate_effect = yes
+			}
+		}
+        # Change player's government
+		change_government = celestial_government
+
+        # WARNING: This mass converts holdings and is highly disruptive/game-breaking
+		every_sub_realm_county = {
+			title_province = { set_holding_type = city_holding } 
+		}
+
+        # Change vassals' government
+		every_vassal_or_below = {
+			change_government = celestial_government
+		}
     }
     ai_check_interval = 0
     ai_will_do = 0
 }
 
 change_government_mandala = {
-    picture = { reference = "gfx/interface/illustrations/decisions/cheat_tab.dds" }
+    picture = {
+		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+	}
+
     title = change_govt_mandala
     desc = change_govt_mandala_desc
     selection_tooltip = change_govt_tt
     confirm_text = CONFIRM_OKAY
 
-    decision_group_type = pcm
+	decision_group_type = pcm
 
     is_shown = {
+        # CRITICAL FIX MISSING: You must add 'is_player = yes' here for visibility.
         NOT = { has_government = mandala_government }
         has_character_flag = daddy_pika_cheat_menu
         has_character_flag = govt_menu
     }
 
     effect = {
-        change_government = mandala_government
+        # Custom mod effect to clean up landless status (requires third-party mod)
+        tgp_wipe_domicile_effect = yes 
+
+		if = {
+			limit = { NOT = { has_domicile = yes } }
+			give_noble_family_title = {
+				name = noble_family_name
+				tier = county # Warning: This tier is likely incorrect for Noble Family Titles
+				article = DEFAULT_TITLE_NAME_ARTICLE
+				government = mandala_government # Target government
+			}
+			domicile ?= {
+				set_domicile_type = east_asian_estate
+				set_up_domicile_estate_effect = yes
+			}
+		}
+        # Change player's government
+		change_government = mandala_government
+
+        # WARNING: This mass converts holdings and is highly disruptive/game-breaking
+		every_sub_realm_county = {
+			title_province = { set_holding_type = city_holding } 
+		}
+
+        # Change vassals' government
+		every_vassal_or_below = {
+			change_government = mandala_government
+		}
     }
     ai_check_interval = 0
     ai_will_do = 0
 }
 
 change_government_wanua = {
-    picture = { reference = "gfx/interface/illustrations/decisions/cheat_tab.dds" }
+    picture = {
+		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+	}
+
     title = change_govt_wanua
     desc = change_govt_wanua_desc
     selection_tooltip = change_govt_tt
     confirm_text = CONFIRM_OKAY
 
-    decision_group_type = pcm
+	decision_group_type = pcm
 
     is_shown = {
+        # CRITICAL FIX MISSING: You must add 'is_player = yes' here for visibility.
         NOT = { has_government = wanua_government }
         has_character_flag = daddy_pika_cheat_menu
         has_character_flag = govt_menu
     }
 
     effect = {
-        change_government = wanua_government
+        # Custom mod effect to clean up landless status (requires third-party mod)
+        tgp_wipe_domicile_effect = yes 
+
+		if = {
+			limit = { NOT = { has_domicile = yes } }
+			give_noble_family_title = {
+				name = noble_family_name
+				tier = county # Warning: This tier is likely incorrect for Noble Family Titles
+				article = DEFAULT_TITLE_NAME_ARTICLE
+				government = wanua_government # Target government
+			}
+			domicile ?= {
+				set_domicile_type = east_asian_estate
+				set_up_domicile_estate_effect = yes
+			}
+		}
+        # Change player's government
+		change_government = wanua_government
+
+        # WARNING: This mass converts holdings and is highly disruptive/game-breaking
+		every_sub_realm_county = {
+			title_province = { set_holding_type = city_holding } 
+		}
+
+        # Change vassals' government
+		every_vassal_or_below = {
+			change_government = wanua_government
+		}
     }
     ai_check_interval = 0
     ai_will_do = 0
@@ -97,7 +190,52 @@ change_government_feudal = {
 
     ai_will_do = 0
 }
-#氏族制
+
+change_government_meritocratic = {
+    picture = {
+		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+	}
+
+    title = change_govt_meritocratic
+    desc = change_govt_desc
+    selection_tooltip = change_govt_tt
+    confirm_text = CONFIRM_OKAY
+
+	decision_group_type = pcm
+
+    is_shown = {
+        NOT = { has_government = meritocratic_government }
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        tgp_wipe_domicile_effect = yes
+		if = {
+			limit = { NOT = { has_domicile = yes } }
+			give_noble_family_title = {
+				name = noble_family_name
+				tier = county
+				article = DEFAULT_TITLE_NAME_ARTICLE
+				government = meritocratic_government
+			}
+			domicile ?= {
+				set_domicile_type = east_asian_estate
+				set_up_domicile_estate_effect = yes
+			}
+		}
+		change_government = meritocratic_government
+		every_sub_realm_county = {
+			title_province = { set_holding_type = city_holding }
+		}
+		every_vassal_or_below = {
+			change_government = meritocratic_government
+		}
+    }
+    ai_check_interval = 0
+    ai_will_do = 0
+}
+
 change_government_clan = {
     picture = {
 		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
@@ -131,7 +269,7 @@ change_government_clan = {
 
     ai_will_do = 0
 }
-#部落制
+
 change_govt_tribe = {
     picture = {
 		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
@@ -165,7 +303,7 @@ change_govt_tribe = {
 
     ai_will_do = 0
 }
-#游牧制
+
 change_govt_nomad = {
     picture = {
 		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
@@ -199,67 +337,75 @@ change_govt_nomad = {
 
     ai_will_do = 0
 }
-#行政制
-change_government_administrative = {
-    picture = {
-		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
-	}
 
-    title = change_govt_administrative
-    desc = change_govt_desc
-    selection_tooltip = change_govt_tt
-    confirm_text = CONFIRM_OKAY
+change_government_administrative = {
+	picture = { reference = "gfx/interface/illustrations/decisions/cheat_tab.dds" }
+
+	title = change_govt_administrative
+	desc = change_govt_desc
+	selection_tooltip = change_govt_tt
+	confirm_text = CONFIRM_OKAY
 
 	decision_group_type = pcm
 
-    is_shown = {
-        NOT = { has_government = administrative_governmentt }
-        has_character_flag = daddy_pika_cheat_menu
-        has_character_flag = govt_menu
-    }
+	is_shown = {
+		NOT = { has_government = administrative_government }   # ← 修正拼写
+		has_character_flag = daddy_pika_cheat_menu
+		has_character_flag = govt_menu
+	}
 
-    effect = {
-        change_government = administrative_government
-        every_sub_realm_county = {
-			title_province = {
-				set_holding_type = city_holding
+	effect = {
+		tgp_wipe_domicile_effect = yes
+		if = {
+			limit = { NOT = { has_domicile = yes } }
+			give_noble_family_title = {
+				name = noble_family_name
+				tier = county
+				article = DEFAULT_TITLE_NAME_ARTICLE
+				government = administrative_government
+			}
+			domicile ?= {
+				set_domicile_type = east_asian_estate
+				set_up_domicile_estate_effect = yes
 			}
 		}
-        every_vassal_or_below = {
+		change_government = administrative_government
+		every_sub_realm_county = {
+			title_province = { set_holding_type = castle_holding }
+		}
+		every_vassal_or_below = {
 			change_government = administrative_government
 		}
-    }
-    ai_check_interval = 0
-    ai_will_do = 0
-}
-
-#冒险者
-change_government_landless_adventurer = {
-    picture = {
-		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
 	}
 
-    title = change_govt_landless_adventurer
-    desc = change_govt_desc
-    selection_tooltip = change_govt_tt
-    confirm_text = CONFIRM_OKAY
+	ai_check_interval = 0
+	ai_will_do = 0
+}
+
+change_government_landless_adventurer = {
+	picture = { reference = "gfx/interface/illustrations/decisions/cheat_tab.dds" }
+
+	title = change_govt_landless_adventurer
+	desc = change_govt_desc
+	selection_tooltip = change_govt_tt
+	confirm_text = CONFIRM_OKAY
 
 	decision_group_type = pcm
 
-    is_shown = {
-        NOT = { has_government = landless_adventurer_government }
-        has_character_flag = daddy_pika_cheat_menu
-        has_character_flag = govt_menu
-    }
+	is_shown = {
+		has_character_flag = daddy_pika_cheat_menu
+		has_character_flag = govt_menu
+	}
 
-    effect = {
-        change_government = landless_adventurer_government
-    }
-    ai_check_interval = 0
+	effect = {
+		create_landless_adventurer_title_tooltip_effect = yes
+		trigger_event = { id = ep3_laamps.0030 }
+		change_government = landless_adventurer_government
+	}
 
-    ai_will_do = 0
+	ai_check_interval = 0
+	ai_will_do = 0
 }
-
 
 change_succession_single = {
     picture = {

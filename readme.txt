@@ -1,6 +1,7 @@
 Latest Updates
 
 November-
+Sagittarius V1- "Attempted" fix of Government issues, added more character interactions from DLC
 Scorpio V5- Final release until January 2026
 Scorpio V4 - 1.18.0.2,More Debug Interactions
 Scorpio V3 - Government Gender/Succession law options,unrestricted Casus Beli unlock

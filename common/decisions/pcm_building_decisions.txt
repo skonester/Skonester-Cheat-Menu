@@ -3,99 +3,80 @@
 
 pcm_b_add_building_slot_7_sub_realm_decision = {
 	decision_group_type = pcm
-	picture = {	reference = gfx/interface/illustrations/decisions/pcm_b_decision.dds }
+	picture = { reference = gfx/interface/illustrations/decisions/pcm_b_decision.dds }
 	sort_order = 312
 	title = pcm_b_add_building_slot_7_sub_realm_decision_title
- 	desc = pcm_b_add_building_slot_7_sub_realm_decision_desc
-    selection_tooltip = pcm_b_add_building_slot_7_sub_realm_decision_tooltip
-    confirm_text = pcm_b_add_building_slot_7_sub_realm_decision_ct
+	desc = pcm_b_add_building_slot_7_sub_realm_decision_desc
+	selection_tooltip = pcm_b_add_building_slot_7_sub_realm_decision_tooltip
+	confirm_text = pcm_b_add_building_slot_7_sub_realm_decision_ct
+	ai_will_do = { base = 0 }
+	ai_check_interval = 0
 
-    is_shown = {
+	is_shown = {
+		is_landed = yes
 		is_ai = no
-	    has_character_flag = pcm_b_show_decision_flag
-    }
+		has_character_flag = pcm_b_show_decision_flag
+	}
 
-	effect = {
-		if = {
-			every_sub_realm_county = {
-				every_county_province  = {
-					limit = { building_slots = 7}
-					add_province_modifier = extra_building_slot
-				}
+	# widget copied from create_holy_order_decision
+	widget = {
+		controller = create_holy_order
+		barony_valid = {
+			trigger_if = {
+				limit = { exists = this }
+				abs_barony_is_valid_trigger = { CHARACTER = scope:ruler }
 			}
-		}
-		if = {
-			every_sub_realm_county = {
-				every_county_province  = {
-					limit = { building_slots = 6}
-					add_province_modifier = extra_building_slot
-					add_province_modifier = extra_building_slot
-				}
-			}
-		}
-		if = {
-			every_sub_realm_county = {
-				every_county_province  = {
-					limit = { building_slots = 5}
-					add_province_modifier = extra_building_slot
-					add_province_modifier = extra_building_slot
-					add_province_modifier = extra_building_slot
-				}
-			}
-		}
-		if = {
-			every_sub_realm_county = {
-				every_county_province  = {
-					limit = { building_slots = 4}
-					add_province_modifier = extra_building_slot
-					add_province_modifier = extra_building_slot
-					add_province_modifier = extra_building_slot
-					add_province_modifier = extra_building_slot
-				}
-			}
-		}
-		if = {
-			every_sub_realm_county = {
-				every_county_province  = {
-					limit = { building_slots = 3}
-					add_province_modifier = extra_building_slot
-					add_province_modifier = extra_building_slot
-					add_province_modifier = extra_building_slot
-					add_province_modifier = extra_building_slot
-					add_province_modifier = extra_building_slot
-				}
-			}
-		}
-		if = {
-			every_sub_realm_county = {
-				every_county_province  = {
-					limit = { building_slots = 2}
-					add_province_modifier = extra_building_slot
-					add_province_modifier = extra_building_slot
-					add_province_modifier = extra_building_slot
-					add_province_modifier = extra_building_slot
-					add_province_modifier = extra_building_slot
-					add_province_modifier = extra_building_slot
-				}
-			}
-		}
-		if = {
-			every_sub_realm_county = {
-				every_county_province  = {
-					limit = { building_slots = 1}
-					add_province_modifier = extra_building_slot
-					add_province_modifier = extra_building_slot
-					add_province_modifier = extra_building_slot
-					add_province_modifier = extra_building_slot
-					add_province_modifier = extra_building_slot
-					add_province_modifier = extra_building_slot
-					add_province_modifier = extra_building_slot
+			trigger_else = {
+				custom_description = {
+					text = "exists != this custom_decision"
+					always = no
 				}
 			}
 		}
 	}
-    ai_will_do = { base = 0 }
-	ai_check_interval = 0
+
+	is_valid_showing_failures_only = {
+		is_alive = yes
+		is_imprisoned = no
+		is_adult = yes
+	}
+
+	is_valid = {
+	}
+
+	cost = {
+		gold = {
+			value = 1
+			if = {
+				limit = {
+					has_variable = abs_add_building_slot_cost_modifier
+				}
+				add = var:abs_add_building_slot_cost_modifier
+			}
+		}
+	}
+
+	effect = {
+		scope:barony.title_province = {
+			add_province_modifier = extra_building_slot
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { has_variable = abs_add_building_slot_cost_modifier }
+				} 
+				set_variable = {
+					name = abs_add_building_slot_cost_modifier
+					value = 1
+				}
+			} else = {
+				change_variable = {
+					name = abs_add_building_slot_cost_modifier
+					add = 1
+				}
+			}
+		}
+	}
 }
 
 pcm_b_max_all_buildings_sub_realm_decision = {

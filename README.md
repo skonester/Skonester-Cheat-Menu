@@ -1,5 +1,7 @@
 # Latest Updates
-### **November – Scorpio V5 1.18.0.2**
+### **November – 
+Sagittarius V1 1.18.1.1
+Scorpio V5 1.18.0.2**
 
 
 ### **Late October – Scorpio V2 1.18.0.1**

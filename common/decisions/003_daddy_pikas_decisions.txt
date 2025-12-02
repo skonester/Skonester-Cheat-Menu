@@ -407,6 +407,112 @@ change_government_landless_adventurer = {
 	ai_will_do = 0
 }
 
+change_government_japan_feudal_government = {
+    picture = {
+		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+	}
+
+    title = change_govt_japan_feudal_government
+    desc = change_govt_japan_feudal_government_desc
+    selection_tooltip = change_govt_tt
+    confirm_text = CONFIRM_OKAY
+
+	decision_group_type = pcm
+
+    is_shown = {
+        # CRITICAL FIX MISSING: You must add 'is_player = yes' here for visibility.
+        NOT = { has_government = japan_feudal_government }
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        # Custom mod effect to clean up landless status (requires third-party mod)
+        tgp_wipe_domicile_effect = yes 
+
+		if = {
+			limit = { NOT = { has_domicile = yes } }
+			give_noble_family_title = {
+				name = noble_family_name
+				tier = county # Warning: This tier is likely incorrect for Noble Family Titles
+				article = DEFAULT_TITLE_NAME_ARTICLE
+				government = japan_feudal_government # Target government
+			}
+			domicile ?= {
+				set_domicile_type = east_asian_estate
+				set_up_domicile_estate_effect = yes
+			}
+		}
+        # Change player's government
+		change_government = japan_feudal_government
+
+        # WARNING: This mass converts holdings and is highly disruptive/game-breaking
+		every_sub_realm_county = {
+			title_province = { set_holding_type = city_holding } 
+		}
+
+        # Change vassals' government
+		every_vassal_or_below = {
+			change_government = japan_feudal_government
+		}
+    }
+    ai_check_interval = 0
+    ai_will_do = 0
+}
+
+change_government_japan_administrative_government = {
+    picture = {
+		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+	}
+
+    title = change_govt_japan_administrative_government
+    desc = change_govt_japan_administrative_government_desc
+    selection_tooltip = change_govt_tt
+    confirm_text = CONFIRM_OKAY
+
+	decision_group_type = pcm
+
+    is_shown = {
+        is_player = yes # <--- ADDED THIS LINE for visibility!
+        NOT = { has_government = japan_administrative_government }
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        # Custom mod effect to clean up landless status (requires third-party mod)
+        tgp_wipe_domicile_effect = yes 
+
+		if = {
+			limit = { NOT = { has_domicile = yes } }
+			give_noble_family_title = {
+				name = noble_family_name
+				tier = county # Warning: This tier is likely incorrect for Noble Family Titles
+				article = DEFAULT_TITLE_NAME_ARTICLE
+				government = japan_administrative_government # Target government
+			}
+			domicile ?= {
+				set_domicile_type = east_asian_estate
+				set_up_domicile_estate_effect = yes
+			}
+		}
+        # Change player's government
+		change_government = japan_administrative_government
+
+        # WARNING: This mass converts holdings and is highly disruptive/game-breaking
+		every_sub_realm_county = {
+			title_province = { set_holding_type = city_holding } 
+		}
+
+        # Change vassals' government
+		every_vassal_or_below = {
+			change_government = japan_administrative_government
+		}
+    }
+    ai_check_interval = 0
+    ai_will_do = 0
+}
+
 change_succession_single = {
     picture = {
 		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"

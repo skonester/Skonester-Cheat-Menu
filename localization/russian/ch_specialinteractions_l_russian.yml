@@ -29,6 +29,40 @@
  ch_convert_holding_to_temple_decision_confirm:0 "Преобразовать владение в храм"
  I_HAVE_CH_ELIGBLE_BARONIES_TO_TEMPLE_COUNTY:1 "У вас есть [барония|E] с владением, которое можно преобразовать в [храм|E]\n$EFFECT_LIST_BULLET$Право действует только на владения в [графствах|E], которыми вы владеете лично\n$EFFECT_LIST_BULLET$Владения с активным строительством #bold не #!подходят\n$EFFECT_LIST_BULLET$Несмотря на то, что окно выбора владения может показывать иначе, вы #bold можете#! выбрать [столицу графства|E]"
 
+### CONVERT TO NOMAD
+ ch_convert_holding_to_nomad_decision:0 "Преобразовать владение в Кочевой лагерь"
+ ch_convert_holding_to_nomad_decision_tooltip:0 "Существующее владение(я) будет заменено на [nomad_holding|E] поселение"
+ ch_convert_holding_to_nomad_title:0 "Преобразовать владение в Кочевой лагерь"
+ ch_convert_holding_to_nomad_tt:0 "Преобразовать основное владение баронства."
+ ch_convert_holding_to_nomad_desc:0 "#F Потребности людей изменились, что требует смены основной функции этого поселения. Новый метод строительства будет сосредоточен на мобильности и военной доблести.#!"
+ ch_convert_holding_to_nomad_decision_confirm:0 "Преобразовать в Кочевой лагерь"
+ ch_convert_holding_to_nomad_decision_effect_message:0 "Владение преобразовано в Кочевой лагерь."
+ has_ch_eligble_barony_to_nomad_in_county:1 "У вас есть [barony|E] с [holding|E], которое может быть преобразовано в Кочевое поселение\n$EFFECT_LIST_BULLET$Право на преобразование имеют только владения в [counties|E], которыми вы лично являетесь [holder|E]\n$EFFECT_LIST_BULLET$Владения, в которых ведется строительство, #bold не#! подходят\n$EFFECT_LIST_BULLET$Несмотря на то, что может говорить окно выбора владений, вы #bold можете#! выбрать [county_capital|E]"
+
+---
+
+### CONVERT TO TRIBAL
+ ch_convert_holding_to_tribal_decision:0 "Преобразовать владение в Племенное поселение"
+ ch_convert_holding_to_tribal_decision_tooltip:0 "Существующее владение(я) будет заменено на [tribal_holding|E] поселение"
+ ch_convert_holding_to_tribal_title:0 "Преобразовать владение в Племенное поселение"
+ ch_convert_holding_to_tribal_tt:0 "Преобразовать основное владение баронства."
+ ch_convert_holding_to_tribal_desc:0 "#F Во времена меняющейся верности и местных войн укрепление наших основ традиционными, надежными поселениями может оказаться наиболее разумным выбором.#!"
+ ch_convert_holding_to_tribal_decision_confirm:0 "Преобразовать во Племенное"
+ ch_convert_holding_to_tribal_decision_effect_message:0 "Владение преобразовано в Племенное поселение."
+ has_ch_eligble_barony_to_tribal_in_county:1 "У вас есть [barony|E] с [holding|E], которое может быть преобразовано в [tribal_holding|E]\n$EFFECT_LIST_BULLET$Право на преобразование имеют только владения в [counties|E], которыми вы лично являетесь [holder|E]\n$EFFECT_LIST_BULLET$Владения, в которых ведется строительство, #bold не#! подходят\n$EFFECT_LIST_BULLET$Несмотря на то, что может говорить окно выбора владений, вы #bold можете#! выбрать [county_capital|E]"
+
+---
+
+### CONVERT TO TEMPLE CITADEL
+ ch_convert_holding_to_temple_citadel_decision:0 "Преобразовать владение в Храмовую цитадель"
+ ch_convert_holding_to_temple_citadel_tooltip:0 "Существующее владение(я) будет заменено на [temple|E] цитадель"
+ ch_convert_holding_to_temple_citadel_title:0 "Преобразовать владение в Храмовую цитадель"
+ ch_convert_holding_to_temple_citadel_tt:0 "Преобразовать основное владение баронства."
+ ch_convert_holding_to_temple_citadel_desc:0 "#F Требуется великое духовное начинание, чтобы укрепить веру в этом регионе. Мы должны посвятить эту землю божественному, построив место, которое будет одновременно священным и неприступным.#!"
+ ch_convert_holding_to_temple_citadel_decision_confirm:0 "Преобразовать в Храмовую цитадель"
+ ch_convert_holding_to_temple_citadel_decision_effect_message:0 "Владение преобразовано в Храмовую цитадель."
+ has_ch_eligble_barony_to_temple_citadel_in_county:1 "У вас есть [barony|E] с [holding|E], которое может быть преобразовано в [temple|E] Цитадель\n$EFFECT_LIST_BULLET$Право на преобразование имеют только владения в [counties|E], которыми вы лично являетесь [holder|E]\n$EFFECT_LIST_BULLET$Владения, в которых ведется строительство, #bold не#! подходят\n$EFFECT_LIST_BULLET$Несмотря на то, что может говорить окно выбора владений, вы #bold можете#! выбрать [county_capital|E]"
+
  ### --- X Decisions ---
  X1_decision_title:0 "Прими Путь Доблести"
  X1_decision_desc:0 "Голос чести и рыцарства взывает ко мне. Выбор сей — имя моё будут воспевать как доблестное и верное."

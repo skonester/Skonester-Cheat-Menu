@@ -204,3 +204,15 @@ change_govt_celestial: "Change Government: Celestial"
  change_govt_tt:0 "Change to $TYPE$ government"
  CONFIRM_OKAY:0 "Confirm"
 
+
+### JAPAN GOVERNMENT DECISION TITLES
+ change_govt_japan_administrative_government: "Change to Japan Administrative Government"
+ change_govt_japan_feudal_government: "Change to Japan Feudal Government"
+
+### JAPAN GOVERNMENT DECISION DESCRIPTIONS
+ change_govt_japan_administrative_government_desc: "Adopt the Japan Administrative Government, centralizing state power and emphasizing bureaucratic rule over traditional noble authority."
+ change_govt_japan_feudal_government_desc: "Adopt the Japan Feudal Government, shifting power to a military structure reliant on samurai vassals and a feudal land system."
+
+### REUSED TOOLTIP
+ change_govt_tt: "This decision will change your government type."
+

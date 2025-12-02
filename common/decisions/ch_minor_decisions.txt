@@ -1,14 +1,10 @@
-﻿#ch_convert_holding_to_castle_decision
-#ch_convert_holding_to_city_decision
-#ch_convert_holding_to_temple_decision
-
-ch_convert_holding_to_castle_decision = {
+﻿ch_convert_holding_to_castle_decision = {
     decision_group_type = pcm
     picture = { reference = "gfx/interface/illustrations/decisions/castle.dds" }
     ai_check_interval = 0
     is_shown = {
         NOT = {
-            has_government = tribal_government
+            has_government = holy_order_government
         }
         is_landed = yes
     }
@@ -46,7 +42,7 @@ ch_convert_holding_to_castle_decision = {
         }
         subject = root.culture
         culture = {
-            has_innovation = innovation_motte
+            
         }
     }
     cost = {
@@ -72,14 +68,12 @@ ch_convert_holding_to_city_decision = {
     ai_check_interval = 0
     is_shown = {
         NOT = {
-            has_government = tribal_government
+            has_government = holy_order_government
         }
         is_landed = yes
     }
     widget = {
-        # Name of the widget to use. Must be at the path <decision_view_widgets>/<widget_name>.gui
         gui = decision_view_widget_ch_convert_holding
-        # Some widgets require a custom controller (see below). Default: default
         controller = create_holy_order
         barony_valid = {
             trigger_if = {
@@ -108,19 +102,13 @@ ch_convert_holding_to_city_decision = {
                 }
             }
         }
-        subject = root.culture
-        culture = {
-            has_innovation = innovation_city_planning 
-        }
     }
     cost = {
-        #gold = main_building_tier_1_cost
     }
     effect = {
         scope:barony.title_province = {
             set_holding_type = city_holding
         }
-        # custom_tooltip = ch_convert_holding_to_city_decision_effect_message
     }
     ai_potential = {
         always = no
@@ -136,7 +124,7 @@ ch_convert_holding_to_temple_decision = {
     ai_check_interval = 0
     is_shown = {
         NOT = {
-            has_government = tribal_government
+            has_government = holy_order_government
         }
         is_landed = yes
     }
@@ -174,7 +162,7 @@ ch_convert_holding_to_temple_decision = {
         }
         subject = root.culture
         culture = {
-            has_innovation = innovation_city_planning 
+            
         }
     }
     cost = {
@@ -192,4 +180,221 @@ ch_convert_holding_to_temple_decision = {
     ai_will_do = {
         base = 0
     }
+}
+
+ch_convert_holding_to_nomad_decision = {
+	decision_group_type = pcm
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/nomad.dds"
+	}
+
+	title = ch_convert_holding_to_nomad_title
+	desc = ch_convert_holding_to_nomad_desc
+	confirm_text = CONFIRM_OKAY
+	selection_tooltip = ch_convert_holding_to_nomad_tt
+
+	ai_check_interval = 0
+	ai_potential = { always = no }
+	ai_will_do = { base = 0 }
+
+	is_shown = {
+		is_landed = yes
+		
+	}
+
+	widget = {
+		gui = decision_view_widget_ch_convert_holding
+		controller = create_holy_order
+		
+		barony_valid = {
+			trigger_if = {
+				limit = { exists = this }
+				ch_barony_is_valid_for_nomad_trigger = { CHARACTER = scope:ruler }
+			}
+			trigger_else = {
+				custom_description = {
+					text = "has_ch_barony_selected"
+					always = no
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	is_valid = {
+		is_at_war = no
+		custom_description = {
+			text = "has_ch_eligble_barony_to_nomad_in_county"
+			any_held_county = {
+				any_in_de_jure_hierarchy = {
+					ch_barony_is_valid_for_nomad_trigger = { CHARACTER = scope:ruler }
+				}
+			}
+		}
+	}
+
+	cost = {
+		
+	}
+	
+	effect = {
+		scope:barony.title_province = {
+			set_holding_type = nomad_holding
+		}
+		custom_tooltip = ch_convert_holding_to_nomad_decision_effect_message
+	}
+}
+
+ch_convert_holding_to_tribal_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/tribal.dds"
+	}
+	
+	decision_group_type = pcm
+	
+	title = ch_convert_holding_to_tribal_title
+	desc = ch_convert_holding_to_tribal_desc
+	confirm_text = CONFIRM_OKAY
+	selection_tooltip = ch_convert_holding_to_tribal_tt
+	
+	ai_check_interval = 0
+
+	is_shown = {
+		is_landed = yes
+	}
+
+	widget = {
+		gui = decision_view_widget_ch_convert_holding
+		controller = create_holy_order
+		barony_valid = {
+			trigger_if = {
+				limit = { exists = this }
+				ch_barony_is_valid_for_tribal_trigger = { CHARACTER = scope:ruler }
+			}
+			trigger_else = {
+				custom_description = {
+					text = "has_ch_barony_selected"
+					always = no
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	is_valid = {
+		is_at_war = no
+		custom_description = {
+			text = "has_ch_eligble_barony_to_tribal_in_county"
+			any_held_county = {
+				any_in_de_jure_hierarchy = {
+					ch_barony_is_valid_for_tribal_trigger = { CHARACTER = scope:ruler }
+				}
+			}
+		}
+	}
+
+	cost = {
+
+	}
+
+	effect = {
+	
+		scope:barony.title_province = {
+			set_holding_type = tribal_holding
+		}
+		
+		custom_tooltip = ch_convert_holding_to_tribal_decision_effect_message
+
+	}
+	
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+ch_convert_holding_to_temple_citadel_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/citadel.dds"
+	}
+	
+	decision_group_type = pcm
+	
+	title = ch_convert_holding_to_temple_citadel_title
+	desc = ch_convert_holding_to_temple_citadel_desc
+	confirm_text = CONFIRM_OKAY
+	selection_tooltip = ch_convert_holding_to_temple_citadel_tt
+	
+	ai_check_interval = 0
+
+	is_shown = {
+		is_landed = yes
+	}
+
+	widget = {
+		gui = decision_view_widget_ch_convert_holding
+		controller = create_holy_order
+		barony_valid = {
+			trigger_if = {
+				limit = { exists = this }
+				ch_barony_is_valid_for_temple_citadel_trigger = { CHARACTER = scope:ruler }
+			}
+			trigger_else = {
+				custom_description = {
+					text = "has_ch_barony_selected"
+					always = no
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	is_valid = {
+		is_at_war = no
+		custom_description = {
+			text = "has_ch_eligble_barony_to_temple_citadel_in_county"
+			any_held_county = {
+				any_in_de_jure_hierarchy = {
+					ch_barony_is_valid_for_temple_citadel_trigger = { CHARACTER = scope:ruler }
+				}
+			}
+		}
+	}
+
+	cost = {
+
+	}
+
+	effect = {
+	
+		scope:barony.title_province = {
+			set_holding_type = temple_citadel_holding
+		}
+		
+		custom_tooltip = ch_convert_holding_to_temple_citadel_decision_effect_message
+
+	}
+	
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
 }

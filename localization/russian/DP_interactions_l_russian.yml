@@ -202,4 +202,16 @@ change_govt_celestial: "Сменить строй: Небесный"
  change_govt_wanua_desc: "Мгновенно сменить основной строй на Вануа (Племенное Юго-Восточноазиатское правление)."
  change_govt_tt:0 "Сменить строй на $TYPE$"
  CONFIRM_OKAY:0 "Подтвердить"
+ 
+
+### JAPAN GOVERNMENT DECISION TITLES
+ change_govt_japan_administrative_government: "Переход к Административному правительству Японии"
+ change_govt_japan_feudal_government: "Переход к Феодальному правительству Японии"
+
+### JAPAN GOVERNMENT DECISION DESCRIPTIONS
+ change_govt_japan_administrative_government_desc: "Принять Административное правительство Японии, централизуя государственную власть и делая акцент на бюрократическом управлении вместо традиционного авторитета знати."
+ change_govt_japan_feudal_government_desc: "Принять Феодальное правительство Японии, передавая власть военной структуре, основанной на вассалах-самураях и феодальной системе землевладения."
+
+### REUSED TOOLTIP
+ change_govt_tt: "Это решение изменит тип вашего правительства."
 

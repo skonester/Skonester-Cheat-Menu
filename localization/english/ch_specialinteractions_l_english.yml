@@ -29,6 +29,40 @@
  ch_convert_holding_to_temple_decision_confirm:0 "Convert Holding to Temple"
  I_HAVE_CH_ELIGBLE_BARONIES_TO_TEMPLE_COUNTY:1 "You have a [barony|E] with a [holding|E] that can be converted to [temple|E]\n$EFFECT_LIST_BULLET$Only holdings in the [counties|E] you personally are the [holder|E] of are eligible\n$EFFECT_LIST_BULLET$Holdings with active constructions are #bold not#! eligible\n$EFFECT_LIST_BULLET$Despite what the Select Holding window may tell you, you #bold can#! in fact select a [county_capital|E]"
 
+### CONVERT TO NOMAD
+ ch_convert_holding_to_nomad_decision:0 "Convert Holding to Nomad Camp"
+ ch_convert_holding_to_nomad_decision_tooltip:0 "The existing holding(s) will be replaced with a [nomad_holding|E] settlement"
+ ch_convert_holding_to_nomad_title:0 "Convert Holding to Nomad Camp" 
+ ch_convert_holding_to_nomad_tt:0 "Convert a barony's primary holding." 
+ ch_convert_holding_to_nomad_desc:0 "#F The needs of the people have changed, necessitating a shift in the primary function of this settlement. A new construction method will focus on mobility and military prowess.#!"
+ ch_convert_holding_to_nomad_decision_confirm:0 "Convert Holding to Nomad"
+ ch_convert_holding_to_nomad_decision_effect_message:0 "The holding has been converted to a Nomad Camp."
+ has_ch_eligble_barony_to_nomad_in_county:1 "You have a [barony|E] with a [holding|E] that can be converted to a Nomad Settlement\n$EFFECT_LIST_BULLET$Only holdings in the [counties|E] you personally are the [holder|E] of are eligible\n$EFFECT_LIST_BULLET$Holdings with active constructions are #bold not#! eligible\n$EFFECT_LIST_BULLET$Despite what the Select Holding window may tell you, you #bold can#! in fact select a [county_capital|E]"
+
+---
+
+### CONVERT TO TRIBAL
+ ch_convert_holding_to_tribal_decision:0 "Convert Holding to Tribal Settlement"
+ ch_convert_holding_to_tribal_decision_tooltip:0 "The existing holding(s) will be replaced with a [tribal_holding|E] settlement"
+ ch_convert_holding_to_tribal_title:0 "Convert Holding to Tribal Settlement"
+ ch_convert_holding_to_tribal_tt:0 "Convert a barony's primary holding." 
+ ch_convert_holding_to_tribal_desc:0 "#F In a time of shifting loyalty and local warfare, strengthening our foundations with traditional, robust settlements may prove the most prudent choice.#!"
+ ch_convert_holding_to_tribal_decision_confirm:0 "Convert Holding to Tribal"
+ ch_convert_holding_to_tribal_decision_effect_message:0 "The holding has been converted to a Tribal Settlement."
+ has_ch_eligble_barony_to_tribal_in_county:1 "You have a [barony|E] with a [holding|E] that can be converted to [tribal_holding|E]\n$EFFECT_LIST_BULLET$Only holdings in the [counties|E] you personally are the [holder|E] of are eligible\n$EFFECT_LIST_BULLET$Holdings with active constructions are #bold not#! eligible\n$EFFECT_LIST_BULLET$Despite what the Select Holding window may tell you, you #bold can#! in fact select a [county_capital|E]"
+
+---
+
+### CONVERT TO TEMPLE CITADEL
+ ch_convert_holding_to_temple_citadel_decision:0 "Convert Holding to Temple Citadel"
+ ch_convert_holding_to_temple_citadel_tooltip:0 "The existing holding(s) will be replaced with a [temple|E] citadel holding"
+ ch_convert_holding_to_temple_citadel_title:0 "Convert Holding to Temple Citadel"
+ ch_convert_holding_to_temple_citadel_tt:0 "Convert a barony's primary holding." 
+ ch_convert_holding_to_temple_citadel_desc:0 "#F A great spiritual undertaking is required to solidify the faith in this region. We must dedicate this land to the divine, building a place that is both sacred and impenetrable.#!"
+ ch_convert_holding_to_temple_citadel_decision_confirm:0 "Convert Holding to Temple Citadel"
+ ch_convert_holding_to_temple_citadel_decision_effect_message:0 "The holding has been converted to a Temple Citadel."
+ has_ch_eligble_barony_to_temple_citadel_in_county:1 "You have a [barony|E] with a [holding|E] that can be converted to [temple|E] Citadel\n$EFFECT_LIST_BULLET$Only holdings in the [counties|E] you personally are the [holder|E] of are eligible\n$EFFECT_LIST_BULLET$Holdings with active constructions are #bold not#! eligible\n$EFFECT_LIST_BULLET$Despite what the Select Holding window may tell you, you #bold can#! in fact select a [county_capital|E]"
+ 
  ### --- X Decisions ---
  X1_decision_title:0 "Embrace the Valorous Path"
  X1_decision_desc:0 "The voice of honor and chivalry calleth unto me. By this choice, my name shall be sung as knightly and true."

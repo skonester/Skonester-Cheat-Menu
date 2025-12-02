@@ -1,9 +1,5 @@
 # Latest Updates
-### **November – 
-
-Sagittarius V1 1.18.1.1 - Government fixes
-
-Scorpio V5 1.18.0.2 - Stable throughly tested release
+### **November – Scorpio V5 1.18.0.2**
 
 
 ### **Late October – Scorpio V2 1.18.0.1**

@@ -1,23 +1,50 @@
 house_guard_type = {
 	type = house_guard_type
-	damage = 100
-	toughness = 100
-	pursuit = 0
-	screen = 50
+	damage = 180
+	toughness = 80
+	pursuit = 120
+	screen = 150
 	can_recruit = {
 		is_ai = no
 	}
 	terrain_bonus = {
-		plains = { damage = 15 }
-		hills = { toughness = 15 }
-		mountains = { toughness = 30 }
-		desert_mountains = { toughness = 30 }
+		
+		plains = { damage = 40 toughness = 20 pursuit = 30 }
+		steppe = { damage = 35 pursuit = 40 toughness = 15 }             
+		farmlands = { damage = 30 toughness = 25 pursuit = 25 }          
+		drylands = { damage = 25 pursuit = 35 }                          
+		hills = { damage = 30 toughness = 25 screen = 20 }
+		mountains = { damage = 20 toughness = 30 screen = 40 }
+		desert_mountains = { damage = 25 toughness = 25 screen = 30 }    
+		hills_with_terraces = { damage = 28 toughness = 28 screen = 25 } 
+		forest = { damage = 25 screen = 30 pursuit = 20 }
+		jungle = { damage = 20 screen = 40 pursuit = 15 }
+		taiga = { screen = 25 toughness = 20 }
+		wetlands = { screen = 35 pursuit = -30 }                         
+		desert = { pursuit = 40 toughness = 15 }
+		oasis = { toughness = 30 screen = 20 }                           
+		floodplains = { pursuit = -20 screen = 25 }                      
+		floodplains_dry = { pursuit = 25 }                               
+		floodplains_wet = { pursuit = -25 screen = 30 }                  
 	}
+
 	counters = {
-		pikemen = 2
-		skirmishers = 2
-		house_cavalry_type = 2
+		heavy_infantry = 5.0     
+    	pikemen = 6.0            
+    	archers = 5.0            
+    	skirmishers = 4.0        
+    	peasant_militia = 8.0    
+		light_cavalry = 8.0      
+		heavy_cavalry = 5.0      
+    	camel_cavalry = 6.0      
+		elephant_cavalry = 4.0   
 	}
+
+	winter_bonus = {
+		normal_winter = { damage = 54 toughness = 16 pursuit = 30 }      
+		harsh_winter = { damage = 36 toughness = 24 screen = 52.5 }      
+	}
+	
 	buy_cost = { gold = 1 }
 	low_maintenance_cost = { gold = 0 }
 	high_maintenance_cost = { gold = 0 }
@@ -44,8 +71,11 @@ house_cavalry_type = {
 		wetlands = { damage = -45 toughness = -10 pursuit = -10 } # FIXED
 	}
 	counters = {
-		archers = 2
-		house_guard_type = 2
+		archers = 2.0
+		light_cavalry = 8.0      
+		heavy_cavalry = 5.0      
+    	camel_cavalry = 6.0      
+		elephant_cavalry = 4.0   
 	}
 	buy_cost = { gold = 1 }
 	low_maintenance_cost = { gold = 0 }

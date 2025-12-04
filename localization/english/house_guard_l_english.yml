@@ -1,4 +1,6 @@
 ﻿l_english:
  house_cavalry_type:0 "Elite House Cavalry"
- house_cavalry_flavor:0 "This elite regiment is in service of a specific Dynasty. These warriors are hand-picked from the most loyal and skilled cavalryman to protect the Dynasty members while travelling."
+ house_cavalry_type_flavor:0 "This elite regiment is in service of a specific Dynasty. These warriors are hand-picked from the most loyal and skilled cavalrymen to protect the Dynasty members while travelling."
+ 
  house_guard_type:0 "Elite House Guard"
+ house_guard_type_flavor:0 "This elite regiment is in service of a specific Dynasty. These warriors are hand-picked from the most loyal and skilled infantry to protect the Dynasty members at home."

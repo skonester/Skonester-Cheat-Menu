@@ -1,4 +1,4 @@
-gender_Succession_events_mod_decision = {
+﻿gender_Succession_events_mod_decision = {
     picture = { reference = "gfx/interface/illustrations/decisions/cheat_tab.dds" }
     title = gender_Succession_events_mod_decision_title
     desc = gender_Succession_events_mod_decision_desc

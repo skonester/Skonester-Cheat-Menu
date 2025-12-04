@@ -4,7 +4,7 @@
     ai_check_interval = 0
     is_shown = {
         NOT = {
-            has_government = holy_order_government
+            has_government = non_government
         }
         is_landed = yes
     }
@@ -68,7 +68,7 @@ ch_convert_holding_to_city_decision = {
     ai_check_interval = 0
     is_shown = {
         NOT = {
-            has_government = holy_order_government
+            has_government = non_government
         }
         is_landed = yes
     }
@@ -124,7 +124,7 @@ ch_convert_holding_to_temple_decision = {
     ai_check_interval = 0
     is_shown = {
         NOT = {
-            has_government = holy_order_government
+            has_government = non_government
         }
         is_landed = yes
     }

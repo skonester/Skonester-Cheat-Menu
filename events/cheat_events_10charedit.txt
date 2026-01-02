@@ -1,0 +1,66 @@
+﻿namespace = cheateb
+
+cheateb.1000 = {
+	type = character_event
+	title = cheateb.1000.charedit
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = cheateb.1001.rename
+		scope:actor = { trigger_event = cheateb.1001 }
+	}
+	option = {
+		name = cheateb.1000.stress
+		scope:recipient = { add_stress = -100 }
+	}
+	option = {
+		name = cheateb.1100.statmod
+		scope:actor = { trigger_event = cheateb.1100 }
+	}
+	option = {
+		name = cheateb.1200.trait
+		scope:actor = { trigger_event = cheateb.1200 }
+	}
+	option = {
+		name = cheateb.1300.modifier
+		scope:actor = { trigger_event = cheateb.1300 }
+	}
+	option = {
+		name = cheateb.1400.lifestyle
+		scope:actor = { trigger_event = cheateb.1400 }
+	}
+	option = { 
+		name = cheateb.return
+		scope:actor = { trigger_event = cheateb.0010 }
+	}
+	option = { name = cheateb.exit }
+}
+
+cheateb.1001 = {
+	type = character_event
+	title = cheateb.1001.rename
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+	widgets = {
+		widget = {
+			gui = "event_window_widget_name_child"
+			container = "dynamic_birth_name"
+			controller = name_character
+			setup_scope = { scope:recipient = { save_scope_as = name_character_target } }
+		}
+	}
+	option = {
+		name = cheateb.return
+		scope:actor = { trigger_event = cheateb.1000 }
+	}
+	option = { name = cheateb.exit }
+}

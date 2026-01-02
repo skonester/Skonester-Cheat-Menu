@@ -1,0 +1,862 @@
+﻿namespace = cheateb
+
+# add_innovation get_all_innovations_from
+
+cheateb.7000 = {
+	type = character_event
+	title = cheateb.7000.culture
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = cheateb.7001.maa
+		scope:actor = { trigger_event = cheateb.7001 }
+	}
+	option = {
+		name = cheateb.7010.tribal
+		scope:actor = { trigger_event = cheateb.7010 }
+	}
+	option = {
+		name = cheateb.7020.early
+		scope:actor = { trigger_event = cheateb.7020 }
+	}
+	option = {
+		name = cheateb.7030.high
+		scope:actor = { trigger_event = cheateb.7030 }
+	}
+	option = {
+		name = cheateb.7040.late
+		scope:actor = { trigger_event = cheateb.7040 }
+	}
+	option = {
+		name = cheateb.return
+		scope:actor = {	trigger_event = cheateb.0010 }
+	}
+}
+
+cheateb.7001 = {
+	type = character_event
+	title = cheateb.7001.maa
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = innovation_hird
+		scope:recipient.culture = { add_innovation = innovation_hird }
+		scope:actor = { trigger_event = cheateb.7001 }
+	}
+	option = {
+		name = innovation_zweihanders
+		scope:recipient.culture = { add_innovation = innovation_zweihanders }
+		scope:actor = { trigger_event = cheateb.7001 }
+	}
+	option = {
+		name = innovation_cranes
+		scope:recipient.culture = { add_innovation = innovation_cranes }
+		scope:actor = { trigger_event = cheateb.7001 }
+	}
+	option = {
+		name = innovation_adaptive_militia
+		scope:recipient.culture = { add_innovation = innovation_adaptive_militia }
+		scope:actor = { trigger_event = cheateb.7001 }
+	}
+	option = {
+		name = innovation_valets
+		scope:recipient.culture = { add_innovation = innovation_valets }
+		scope:actor = { trigger_event = cheateb.7001 }
+	}
+	option = {
+		name = innovation_pike_columns
+		scope:recipient.culture = { add_innovation = innovation_pike_columns }
+		scope:actor = { trigger_event = cheateb.7001 }
+	}
+	option = {
+		name = innovation_legionnaires
+		scope:recipient.culture = { add_innovation = innovation_legionnaires }
+		scope:actor = { trigger_event = cheateb.7001 }
+	}
+	option = {
+		name = innovation_desert_tactics
+		scope:recipient.culture = { add_innovation = innovation_desert_tactics }
+		scope:actor = { trigger_event = cheateb.7001 }
+	}
+	option = {
+		name = cheateb.nextpage
+		scope:actor = {	trigger_event = cheateb.7002 }
+	}
+	option = {
+		name = cheateb.return
+		scope:actor = {	trigger_event = cheateb.7000 }
+	}
+}
+cheateb.7002 = {
+	type = character_event
+	title = cheateb.7001.maa
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = innovation_caballeros
+		scope:recipient.culture = { add_innovation = innovation_caballeros }
+		scope:actor = { trigger_event = cheateb.7002 }
+	}
+	option = {
+		name = innovation_cataphracts
+		scope:recipient.culture = { add_innovation = innovation_cataphracts }
+		scope:actor = { trigger_event = cheateb.7002 }
+	}
+	option = {
+		name = innovation_hobbies
+		scope:recipient.culture = { add_innovation = innovation_hobbies }
+		scope:actor = { trigger_event = cheateb.7002 }
+	}
+	option = {
+		name = innovation_rectilinear_schiltron
+		scope:recipient.culture = { add_innovation = innovation_rectilinear_schiltron }
+		scope:actor = { trigger_event = cheateb.7002 }
+	}
+	option = {
+		name = innovation_forest_wardens
+		scope:recipient.culture = { add_innovation = innovation_forest_wardens }
+		scope:actor = { trigger_event = cheateb.7002 }
+	}
+	option = {
+		name = innovation_compound_bows
+		scope:recipient.culture = { add_innovation = innovation_compound_bows }
+		scope:actor = { trigger_event = cheateb.7002 }
+	}
+	option = {
+		name = innovation_khandayats
+		scope:recipient.culture = { add_innovation = innovation_khandayats }
+		scope:actor = { trigger_event = cheateb.7002 }
+	}
+	option = {
+		name = cheateb.prevpage
+		scope:actor = {	trigger_event = cheateb.7001 }
+	}
+	option = {
+		name = cheateb.nextpage
+		scope:actor = {	trigger_event = cheateb.7003 }
+	}
+	option = {
+		name = cheateb.return
+		scope:actor = {	trigger_event = cheateb.7000 }
+	}
+}
+cheateb.7003 = {
+	type = character_event
+	title = cheateb.7001.maa
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = innovation_mubarizuns
+		scope:recipient.culture = { add_innovation = innovation_mubarizuns }
+		scope:actor = { trigger_event = cheateb.7003 }
+	}
+	option = {
+
+
+	}
+	option = {
+		name = innovation_hussar_raids
+		scope:recipient.culture = { add_innovation = innovation_hussar_raids }
+		scope:actor = { trigger_event = cheateb.7003 }
+	}
+	option = {
+		name = innovation_druzhina
+		scope:recipient.culture = { add_innovation = innovation_druzhina }
+		scope:actor = { trigger_event = cheateb.7003 }
+	}
+	option = {
+		name = innovation_mountain_skirmishing
+		scope:recipient.culture = { add_innovation = innovation_mountain_skirmishing }
+		scope:actor = { trigger_event = cheateb.7003 }
+	}
+	option = {
+		name = innovation_bush_hunting
+		scope:recipient.culture = { add_innovation = innovation_bush_hunting }
+		scope:actor = { trigger_event = cheateb.7003 }
+	}
+	option = {
+		name = innovation_mobile_guards
+		scope:recipient.culture = { add_innovation = innovation_mobile_guards }
+		scope:actor = { trigger_event = cheateb.7003 }
+	}
+	option = {
+		name = cheateb.prevpage
+		scope:actor = {	trigger_event = cheateb.7002 }
+	}
+	option = {
+		name = cheateb.nextpage
+		scope:actor = {	trigger_event = cheateb.7004 }
+	}
+	option = {
+		name = cheateb.return
+		scope:actor = {	trigger_event = cheateb.7000 }
+	}
+}
+cheateb.7004 = {
+	type = character_event
+	title = cheateb.7001.maa
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = innovation_alpine_supremacy
+		scope:recipient.culture = { add_innovation = innovation_alpine_supremacy }
+		scope:actor = { trigger_event = cheateb.7004 }
+	}
+	option = {
+		name = innovation_sahel_horsemen
+		scope:recipient.culture = { add_innovation = innovation_sahel_horsemen }
+		scope:actor = { trigger_event = cheateb.7004 }
+	}
+	option = {
+		name = innovation_zbrojnosh
+		scope:recipient.culture = { add_innovation = innovation_zbrojnosh }
+		scope:actor = { trigger_event = cheateb.7004 }
+	}
+	option = {
+		name = innovation_desert_mountain_herding
+		scope:recipient.culture = { add_innovation = innovation_desert_mountain_herding }
+		scope:actor = { trigger_event = cheateb.7004 }
+	}
+	option = {
+		name = innovation_sarawit
+		scope:recipient.culture = { add_innovation = innovation_sarawit }
+		scope:actor = { trigger_event = cheateb.7004 }
+	}
+	option = {
+		name = innovation_upland_skirmishing
+		scope:recipient.culture = { add_innovation = innovation_upland_skirmishing }
+		scope:actor = { trigger_event = cheateb.7004 }
+	}
+	option = {
+		name = innovation_royal_army_tradition
+		scope:recipient.culture = { add_innovation = innovation_royal_army_tradition }
+		scope:actor = { trigger_event = cheateb.7004 }
+	}
+	option = {
+		name = innovation_repeating_crossbow
+		scope:recipient.culture = { add_innovation = innovation_repeating_crossbow }
+		scope:actor = { trigger_event = cheateb.7004 }
+	}
+	option = {
+		name = cheateb.prevpage
+		scope:actor = {	trigger_event = cheateb.7003 }
+	}
+	option = {
+		name = cheateb.return
+		scope:actor = {	trigger_event = cheateb.7000 }
+	}
+}
+
+cheateb.7010 = {
+	type = character_event
+	title = cheateb.7010.tribal
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = innovation_motte
+		scope:recipient.culture = { add_innovation = innovation_motte }
+		scope:actor = { trigger_event = cheateb.7010 }
+	}
+	option = {
+		name = innovation_catapult
+		scope:recipient.culture = { add_innovation = innovation_catapult }
+		scope:actor = { trigger_event = cheateb.7010 }
+	}
+	option = {
+		name = innovation_barracks
+		scope:recipient.culture = { add_innovation = innovation_barracks }
+		scope:actor = { trigger_event = cheateb.7010 }
+	}
+	option = {
+		name = innovation_mustering_grounds
+		scope:recipient.culture = { add_innovation = innovation_mustering_grounds }
+		scope:actor = { trigger_event = cheateb.7010 }
+	}
+	option = {
+		name = innovation_bannus
+		scope:recipient.culture = { add_innovation = innovation_bannus }
+		scope:actor = { trigger_event = cheateb.7010 }
+	}
+	option = {
+		name = innovation_quilted_armor
+		scope:recipient.culture = { add_innovation = innovation_quilted_armor }
+		scope:actor = { trigger_event = cheateb.7010 }
+	}
+	option = {
+		name = innovation_development_01
+		scope:recipient.culture = { add_innovation = innovation_development_01 }
+		scope:actor = { trigger_event = cheateb.7010 }
+	}
+	option = {
+		name = innovation_currency_01
+		scope:recipient.culture = { add_innovation = innovation_currency_01 }
+		scope:actor = { trigger_event = cheateb.7010 }
+	}
+	option = {
+		name = cheateb.nextpage
+		scope:actor = {	trigger_event = cheateb.7011 }
+	}
+	option = {
+		name = cheateb.return
+		scope:actor = {	trigger_event = cheateb.7000 }
+	}
+}
+cheateb.7011 = {
+	type = character_event
+	title = cheateb.7010.tribal
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = innovation_gavelkind
+		scope:recipient.culture = { add_innovation = innovation_gavelkind }
+		scope:actor = { trigger_event = cheateb.7011 }
+	}
+	option = {
+		name = innovation_crop_rotation
+		scope:recipient.culture = { add_innovation = innovation_crop_rotation }
+		scope:actor = { trigger_event = cheateb.7011 }
+	}
+	option = {
+		name = innovation_city_planning
+		scope:recipient.culture = { add_innovation = innovation_city_planning }
+		scope:actor = { trigger_event = cheateb.7011 }
+	}
+	option = {
+		name = innovation_casus_belli
+		scope:recipient.culture = { add_innovation = innovation_casus_belli }
+		scope:actor = { trigger_event = cheateb.7011 }
+	}
+	option = {
+		name = innovation_plenary_assemblies
+		scope:recipient.culture = { add_innovation = innovation_plenary_assemblies }
+		scope:actor = { trigger_event = cheateb.7011 }
+	}
+	option = {
+		name = innovation_ledger
+		scope:recipient.culture = { add_innovation = innovation_ledger }
+		scope:actor = { trigger_event = cheateb.7011 }
+	}
+	option = {
+		name = innovation_table_of_princes
+		scope:recipient.culture = { add_innovation = innovation_table_of_princes }
+		scope:actor = { trigger_event = cheateb.7011 }
+	}
+	option = {
+		name = cheateb.prevpage
+		scope:actor = {	trigger_event = cheateb.7010 }
+	}
+	option = {
+		name = cheateb.nextpage
+		scope:actor = {	trigger_event = cheateb.7012 }
+	}
+	option = {
+		name = cheateb.return
+		scope:actor = {	trigger_event = cheateb.7000 }
+	}
+}
+cheateb.7012 = {
+	type = character_event
+	title = cheateb.7010.tribal
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = innovation_visigothic_codes
+		scope:recipient.culture = { add_innovation = innovation_visigothic_codes }
+		scope:actor = { trigger_event = cheateb.7012 }
+	}
+	option = {
+		name = innovation_crop_rotation
+		scope:recipient.culture = { add_innovation = innovation_crop_rotation }
+		scope:actor = { trigger_event = cheateb.7012 }
+	}
+	option = {
+		name = innovation_longboats
+		scope:recipient.culture = { add_innovation = innovation_longboats }
+		scope:actor = { trigger_event = cheateb.7012 }
+	}
+	option = {
+		name = innovation_elephantry
+		scope:recipient.culture = { add_innovation = innovation_elephantry }
+		scope:actor = { trigger_event = cheateb.7012 }
+	}
+	option = {
+		name = innovation_war_camels
+		scope:recipient.culture = { add_innovation = innovation_war_camels }
+		scope:actor = { trigger_event = cheateb.7012 }
+	}
+	option = {
+		name = innovation_wootz_steel
+		scope:recipient.culture = { add_innovation = innovation_wootz_steel }
+		scope:actor = { trigger_event = cheateb.7012 }
+	}
+	option = {
+		name = innovation_african_canoes
+		scope:recipient.culture = { add_innovation = innovation_african_canoes }
+		scope:actor = { trigger_event = cheateb.7012 }
+	}
+	option = {
+		name = cheateb.prevpage
+		scope:actor = {	trigger_event = cheateb.7011 }
+	}
+	option = {
+		name = cheateb.return
+		scope:actor = {	trigger_event = cheateb.7000 }
+	}
+}
+
+cheateb.7020 = {
+	type = character_event
+	title = cheateb.7020.early
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = innovation_battlements
+		scope:recipient.culture = { add_innovation = innovation_battlements }
+		scope:actor = { trigger_event = cheateb.7020 }
+	}
+	option = {
+		name = innovation_mangonel
+		scope:recipient.culture = { add_innovation = innovation_mangonel }
+		scope:actor = { trigger_event = cheateb.7020 }
+	}
+	option = {
+		name = innovation_burhs
+		scope:recipient.culture = { add_innovation = innovation_burhs }
+		scope:actor = { trigger_event = cheateb.7020 }
+	}
+	option = {
+		name = innovation_house_soldiers
+		scope:recipient.culture = { add_innovation = innovation_house_soldiers }
+		scope:actor = { trigger_event = cheateb.7020 }
+	}
+	option = {
+		name = innovation_horseshoes
+		scope:recipient.culture = { add_innovation = innovation_horseshoes }
+		scope:actor = { trigger_event = cheateb.7020 }
+	}
+	option = {
+		name = innovation_arched_saddle
+		scope:recipient.culture = { add_innovation = innovation_arched_saddle }
+		scope:actor = { trigger_event = cheateb.7020 }
+	}
+	option = {
+		name = innovation_hereditary_rule
+		scope:recipient.culture = { add_innovation = innovation_hereditary_rule }
+		scope:actor = { trigger_event = cheateb.7020 }
+	}
+	option = {
+		name = innovation_manorialism
+		scope:recipient.culture = { add_innovation = innovation_manorialism }
+		scope:actor = { trigger_event = cheateb.7020 }
+	}
+	option = {
+		name = cheateb.nextpage
+		scope:actor = {	trigger_event = cheateb.7021 }
+	}
+	option = {
+		name = cheateb.return
+		scope:actor = {	trigger_event = cheateb.7000 }
+	}
+}
+cheateb.7021 = {
+	type = character_event
+	title = cheateb.7020.early
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = innovation_development_02
+		scope:recipient.culture = { add_innovation = innovation_development_02 }
+		scope:actor = { trigger_event = cheateb.7021 }
+	}
+	option = {
+		name = innovation_currency_02
+		scope:recipient.culture = { add_innovation = innovation_currency_02 }
+		scope:actor = { trigger_event = cheateb.7021 }
+	}
+	option = {
+		name = innovation_royal_prerogative
+		scope:recipient.culture = { add_innovation = innovation_royal_prerogative }
+		scope:actor = { trigger_event = cheateb.7021 }
+	}
+	option = {
+		name = innovation_chronicle_writing
+		scope:recipient.culture = { add_innovation = innovation_chronicle_writing }
+		scope:actor = { trigger_event = cheateb.7021 }
+	}
+	option = {
+		name = innovation_armilary_sphere
+		scope:recipient.culture = { add_innovation = innovation_armilary_sphere }
+		scope:actor = { trigger_event = cheateb.7021 }
+	}
+	option = {
+		name = innovation_baliffs
+		scope:recipient.culture = { add_innovation = innovation_baliffs }
+		scope:actor = { trigger_event = cheateb.7021 }
+	}
+	option = {
+		name = innovation_reconquista
+		scope:recipient.culture = { add_innovation = innovation_reconquista }
+		scope:actor = { trigger_event = cheateb.7021 }
+	}
+	option = {
+		name = cheateb.prevpage
+		scope:actor = {	trigger_event = cheateb.7020 }
+	}
+	option = {
+		name = cheateb.nextpage
+		scope:actor = {	trigger_event = cheateb.7022 }
+	}
+	option = {
+		name = cheateb.return
+		scope:actor = {	trigger_event = cheateb.7000 }
+	}
+}
+cheateb.7022 = {
+	type = character_event
+	title = cheateb.7020.early
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = innovation_stem_duchies
+		scope:recipient.culture = { add_innovation = innovation_stem_duchies }
+		scope:actor = { trigger_event = cheateb.7022 }
+	}
+	option = {
+		name = innovation_ghilman
+		scope:recipient.culture = { add_innovation = innovation_ghilman }
+		scope:actor = { trigger_event = cheateb.7022 }
+	}
+	option = {
+		name = cheateb.prevpage
+		scope:actor = {	trigger_event = cheateb.7021 }
+	}
+	option = {
+		name = cheateb.return
+		scope:actor = {	trigger_event = cheateb.7000 }
+	}
+}
+
+cheateb.7030 = {
+	type = character_event
+	title = cheateb.7030.high
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = innovation_hoardings
+		scope:recipient.culture = { add_innovation = innovation_hoardings }
+		scope:actor = { trigger_event = cheateb.7030 }
+	}
+	option = {
+		name = innovation_trebuchet
+		scope:recipient.culture = { add_innovation = innovation_trebuchet }
+		scope:actor = { trigger_event = cheateb.7030 }
+	}
+	option = {
+		name = innovation_castle_baileys
+		scope:recipient.culture = { add_innovation = innovation_castle_baileys }
+		scope:actor = { trigger_event = cheateb.7030 }
+	}
+	option = {
+		name = innovation_men_at_arms
+		scope:recipient.culture = { add_innovation = innovation_men_at_arms }
+		scope:actor = { trigger_event = cheateb.7030 }
+	}
+	option = {
+		name = innovation_knighthood
+		scope:recipient.culture = { add_innovation = innovation_knighthood }
+		scope:actor = { trigger_event = cheateb.7030 }
+	}
+	option = {
+		name = innovation_advanced_bowmaking
+		scope:recipient.culture = { add_innovation = innovation_advanced_bowmaking }
+		scope:actor = { trigger_event = cheateb.7030 }
+	}
+	option = {
+		name = innovation_heraldry
+		scope:recipient.culture = { add_innovation = innovation_heraldry }
+		scope:actor = { trigger_event = cheateb.7030 }
+	}
+	option = {
+		name = innovation_windmills
+		scope:recipient.culture = { add_innovation = innovation_windmills }
+		scope:actor = { trigger_event = cheateb.7030 }
+	}
+	option = {
+		name = cheateb.nextpage
+		scope:actor = {	trigger_event = cheateb.7031 }
+	}
+	option = {
+		name = cheateb.return
+		scope:actor = {	trigger_event = cheateb.7000 }
+	}
+}
+cheateb.7031 = {
+	type = character_event
+	title = cheateb.7030.high
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = innovation_divine_right
+		scope:recipient.culture = { add_innovation = innovation_divine_right }
+		scope:actor = { trigger_event = cheateb.7031 }
+	}
+	option = {
+		name = innovation_land_grants
+		scope:recipient.culture = { add_innovation = innovation_land_grants }
+		scope:actor = { trigger_event = cheateb.7031 }
+	}
+	option = {
+		name = innovation_scutage
+		scope:recipient.culture = { add_innovation = innovation_scutage }
+		scope:actor = { trigger_event = cheateb.7031 }
+	}
+	option = {
+		name = innovation_guilds
+		scope:recipient.culture = { add_innovation = innovation_guilds }
+		scope:actor = { trigger_event = cheateb.7031 }
+	}
+	option = {
+		name = innovation_development_03
+		scope:recipient.culture = { add_innovation = innovation_development_03 }
+		scope:actor = { trigger_event = cheateb.7031 }
+	}
+	option = {
+		name = innovation_currency_03
+		scope:recipient.culture = { add_innovation = innovation_currency_03 }
+		scope:actor = { trigger_event = cheateb.7031 }
+	}
+	option = {
+		name = innovation_east_settling
+		scope:recipient.culture = { add_innovation = innovation_east_settling }
+		scope:actor = { trigger_event = cheateb.7031 }
+	}
+	option = {
+		name = cheateb.prevpage
+		scope:actor = {	trigger_event = cheateb.7030 }
+	}
+	option = {
+		name = cheateb.nextpage
+		scope:actor = {	trigger_event = cheateb.7032 }
+	}
+	option = {
+		name = cheateb.return
+		scope:actor = {	trigger_event = cheateb.7000 }
+	}
+}
+cheateb.7032 = {
+	type = character_event
+	title = cheateb.7030.high
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = innovation_seigneurialism
+		scope:recipient.culture = { add_innovation = innovation_seigneurialism }
+		scope:actor = { trigger_event = cheateb.7032 }
+	}
+	option = {
+		name = innovation_muladi
+		scope:recipient.culture = { add_innovation = innovation_muladi }
+		scope:actor = { trigger_event = cheateb.7032 }
+	}
+	option = {
+		name = innovation_french_peerage
+		scope:recipient.culture = { add_innovation = innovation_french_peerage }
+		scope:actor = { trigger_event = cheateb.7032 }
+	}
+	option = {
+		name = cheateb.prevpage
+		scope:actor = {	trigger_event = cheateb.7031 }
+	}
+	option = {
+		name = cheateb.return
+		scope:actor = {	trigger_event = cheateb.7000 }
+	}
+}
+
+cheateb.7040 = {
+	type = character_event
+	title = cheateb.7040.late
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = innovation_machicolations
+		scope:recipient.culture = { add_innovation = innovation_machicolations }
+		scope:actor = { trigger_event = cheateb.7040 }
+	}
+	option = {
+	
+	}
+	option = {
+		name = innovation_royal_armory
+		scope:recipient.culture = { add_innovation = innovation_royal_armory }
+		scope:actor = { trigger_event = cheateb.7040 }
+	}
+	option = {
+		name = innovation_standing_armies
+		scope:recipient.culture = { add_innovation = innovation_standing_armies }
+		scope:actor = { trigger_event = cheateb.7040 }
+	}
+	option = {
+		name = innovation_sappers
+		scope:recipient.culture = { add_innovation = innovation_sappers }
+		scope:actor = { trigger_event = cheateb.7040 }
+	}
+	option = {
+		name = innovation_plate_armor
+		scope:recipient.culture = { add_innovation = innovation_plate_armor }
+		scope:actor = { trigger_event = cheateb.7040 }
+	}
+	option = {
+		name = innovation_primogeniture
+		scope:recipient.culture = { add_innovation = innovation_primogeniture }
+		scope:actor = { trigger_event = cheateb.7040 }
+	}
+	option = {
+		name = innovation_cranes
+		scope:recipient.culture = { add_innovation = innovation_cranes }
+		scope:actor = { trigger_event = cheateb.7040 }
+	}
+	option = {
+		name = cheateb.nextpage
+		scope:actor = {	trigger_event = cheateb.7041 }
+	}
+	option = {
+		name = cheateb.return
+		scope:actor = {	trigger_event = cheateb.7000 }
+	}
+}
+cheateb.7041 = {
+	type = character_event
+	title = cheateb.7040.late
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = innovation_noblesse_oblige
+		scope:recipient.culture = { add_innovation = innovation_noblesse_oblige }
+		scope:actor = { trigger_event = cheateb.7041 }
+	}
+	option = {
+		name = innovation_rightful_ownership
+		scope:recipient.culture = { add_innovation = innovation_rightful_ownership }
+		scope:actor = { trigger_event = cheateb.7041 }
+	}
+	option = {
+		name = innovation_ermine_cloaks
+		scope:recipient.culture = { add_innovation = innovation_ermine_cloaks }
+		scope:actor = { trigger_event = cheateb.7041 }
+	}
+	option = {
+		name = innovation_court_officials
+		scope:recipient.culture = { add_innovation = innovation_court_officials }
+		scope:actor = { trigger_event = cheateb.7041 }
+	}
+	option = {
+		name = innovation_development_04
+		scope:recipient.culture = { add_innovation = innovation_development_04 }
+		scope:actor = { trigger_event = cheateb.7041 }
+	}
+	option = {
+		name = innovation_currency_04
+		scope:recipient.culture = { add_innovation = innovation_currency_04 }
+		scope:actor = { trigger_event = cheateb.7041 }
+	}
+	option = {
+		name = innovation_wierdijks
+		scope:recipient.culture = { add_innovation = innovation_wierdijks }
+		scope:actor = { trigger_event = cheateb.7041 }
+	}
+	option = {
+		name = innovation_condottieri
+		scope:recipient.culture = { add_innovation = innovation_condottieri }
+		scope:actor = { trigger_event = cheateb.7041 }
+	}
+	option = {
+		name = innovation_deccan_unity
+		scope:recipient.culture = { add_innovation = innovation_deccan_unity }
+		scope:actor = { trigger_event = cheateb.7041 }
+	}
+	option = {
+		name = cheateb.prevpage
+		scope:actor = {	trigger_event = cheateb.7040 }
+	}
+}

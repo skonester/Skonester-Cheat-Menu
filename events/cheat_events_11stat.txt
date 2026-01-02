@@ -1,0 +1,365 @@
+﻿namespace = cheateb
+
+cheateb.1100 = {
+	type = character_event
+	title = cheateb.1100.statmod
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+	
+	option = {
+		name = cheateb.all
+		scope:recipient = {
+			add_diplomacy_skill = 5
+			add_martial_skill = 5
+			add_stewardship_skill = 5
+			add_intrigue_skill = 5
+			add_learning_skill = 5
+			add_prowess_skill = 5
+		}
+		scope:actor = { trigger_event = cheateb.1100 }
+	}
+	option = {
+		name = cheateb.diplomacy
+		scope:actor = { trigger_event = cheateb.1101 }
+	}
+	option = {
+		name = cheateb.martial
+		scope:actor = { trigger_event = cheateb.1102 }
+	}
+	option = {
+		name = cheateb.stewardship
+		scope:actor = { trigger_event = cheateb.1103 }
+	}
+	option = {
+		name = cheateb.intrigue
+		scope:actor = { trigger_event = cheateb.1104 }
+	}
+	option = {
+		name = cheateb.learning
+		scope:actor = { trigger_event = cheateb.1105 }
+	}
+	option = {
+		name = cheateb.prowess
+		scope:actor = { trigger_event = cheateb.1106 }
+	}
+	option = {
+		name = cheateb.return
+		scope:actor = { trigger_event = cheateb.1000 }
+	}
+}
+
+cheateb.1101 = { #diplomacy
+	type = character_event
+	title = cheateb.diplomacy
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = cheateb.plus10
+		scope:recipient = { add_diplomacy_skill = 10 }
+		scope:actor = { trigger_event = cheateb.1101 }
+	}
+	option = {
+		name = cheateb.plus5
+		scope:recipient = { add_diplomacy_skill = 5 }
+		scope:actor = { trigger_event = cheateb.1101 }
+	}
+	option = {
+		name = cheateb.minus5
+		scope:recipient = { add_diplomacy_skill = -5 }
+		scope:actor = { trigger_event = cheateb.1101 }
+	}
+	option = {
+		name = cheateb.minus10
+		scope:recipient = {
+			add_diplomacy_skill = -10
+		}
+		scope:actor = {
+			trigger_event = cheateb.1101
+		}
+	}
+	option = {
+		name = cheateb.return
+		scope:actor = {
+			trigger_event = cheateb.1100
+		}
+	}
+}
+
+cheateb.1102 = { #martial
+	type = character_event
+	title = cheateb.martial
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = cheateb.plus10
+		scope:recipient = {
+			add_martial_skill = 10
+		}
+		scope:actor = {
+			trigger_event = cheateb.1102
+		}
+	}
+	option = {
+		name = cheateb.plus5
+		scope:recipient = {
+			add_martial_skill = 5
+		}
+		scope:actor = {
+			trigger_event = cheateb.1102
+		}
+	}
+	option = {
+		name = cheateb.minus5
+		scope:recipient = {
+			add_martial_skill = -5
+		}
+		scope:actor = {
+			trigger_event = cheateb.1102
+		}
+	}
+	option = {
+		name = cheateb.minus10
+		scope:recipient = {
+			add_martial_skill = -10
+		}
+		scope:actor = {
+			trigger_event = cheateb.1102
+		}
+	}
+	option = {
+		name = cheateb.return
+		scope:actor = {
+			trigger_event = cheateb.1100
+		}
+	}
+}
+
+cheateb.1103 = { #stewardship
+	type = character_event
+	title = cheateb.stewardship
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = cheateb.plus10
+		scope:recipient = {
+			add_stewardship_skill = 10
+		}
+		scope:actor = {
+			trigger_event = cheateb.1103
+		}
+	}
+	option = {
+		name = cheateb.plus5
+		scope:recipient = {
+			add_stewardship_skill = 5
+		}
+		scope:actor = {
+			trigger_event = cheateb.1103
+		}
+	}
+	option = {
+		name = cheateb.minus5
+		scope:recipient = {
+			add_stewardship_skill = -5
+		}
+		scope:actor = {
+			trigger_event = cheateb.1103
+		}
+	}
+	option = {
+		name = cheateb.minus10
+		scope:recipient = {
+			add_stewardship_skill = -10
+		}
+		scope:actor = {
+			trigger_event = cheateb.1103
+		}
+	}
+	option = {
+		name = cheateb.return
+		scope:actor = {
+			trigger_event = cheateb.1100
+		}
+	}
+}
+
+cheateb.1104 = { #intrigue
+	type = character_event
+	title = cheateb.intrigue
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = cheateb.plus10
+		scope:recipient = {
+			add_intrigue_skill = 10
+		}
+		scope:actor = {
+			trigger_event = cheateb.1104
+		}
+	}
+	option = {
+		name = cheateb.plus5
+		scope:recipient = {
+			add_intrigue_skill = 5
+		}
+		scope:actor = {
+			trigger_event = cheateb.1104
+		}
+	}
+	option = {
+		name = cheateb.minus5
+		scope:recipient = {
+			add_intrigue_skill = -5
+		}
+		scope:actor = {
+			trigger_event = cheateb.1104
+		}
+	}
+	option = {
+		name = cheateb.minus10
+		scope:recipient = {
+			add_intrigue_skill = -10
+		}
+		scope:actor = {
+			trigger_event = cheateb.1104
+		}
+	}
+	option = {
+		name = cheateb.return
+		scope:actor = {
+			trigger_event = cheateb.1100
+		}
+	}
+}
+
+cheateb.1105 = { #learning
+	type = character_event
+	title = cheateb.learning
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = cheateb.plus10
+		scope:recipient = {
+			add_learning_skill = 10
+		}
+		scope:actor = {
+			trigger_event = cheateb.1105
+		}
+	}
+	option = {
+		name = cheateb.plus5
+		scope:recipient = {
+			add_learning_skill = 5
+		}
+		scope:actor = {
+			trigger_event = cheateb.1105
+		}
+	}
+	option = {
+		name = cheateb.minus5
+		scope:recipient = {
+			add_learning_skill = -5
+		}
+		scope:actor = {
+			trigger_event = cheateb.1105
+		}
+	}
+	option = {
+		name = cheateb.minus10
+		scope:recipient = {
+			add_learning_skill = -10
+		}
+		scope:actor = {
+			trigger_event = cheateb.1105
+		}
+	}
+	option = {
+		name = cheateb.return
+		scope:actor = {
+			trigger_event = cheateb.1100
+		}
+	}
+}
+
+cheateb.1106 = { #prowess
+	type = character_event
+	title = cheateb.prowess
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = cheateb.plus10
+		scope:recipient = {
+			add_prowess_skill = 10
+		}
+		scope:actor = {
+			trigger_event = cheateb.1106
+		}
+	}
+	option = {
+		name = cheateb.plus5
+		scope:recipient = {
+			add_prowess_skill = 5
+		}
+		scope:actor = {
+			trigger_event = cheateb.1106
+		}
+	}
+	option = {
+		name = cheateb.minus5
+		scope:recipient = {
+			add_prowess_skill = -5
+		}
+		scope:actor = {
+			trigger_event = cheateb.1106
+		}
+	}
+	option = {
+		name = cheateb.minus10
+		scope:recipient = {
+			add_prowess_skill = -10
+		}
+		scope:actor = {
+			trigger_event = cheateb.1106
+		}
+	}
+	option = {
+		name = cheateb.return
+		scope:actor = {
+			trigger_event = cheateb.1100
+		}
+	}
+}

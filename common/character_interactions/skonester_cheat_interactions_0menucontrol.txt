@@ -1,0 +1,15 @@
+﻿cheateb_editmenu_interaction = {
+	category = interaction_category_cheat_menu
+	common_interaction = yes
+	use_diplomatic_range = no
+	auto_accept = yes
+	ignores_pending_interaction_block = yes
+	ai_will_do = 0
+	
+	on_accept = {
+		scope:actor = {
+			trigger_event = cheateb.0010
+		}
+	}
+	
+}

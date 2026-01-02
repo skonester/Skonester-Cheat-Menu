@@ -37,7 +37,7 @@ X1_modifier = {
 }
 
 X2_modifier = {
-	stacking = yes
+	stacking = no
 	building_slot_add = 4
 }
 

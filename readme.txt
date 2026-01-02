@@ -1,5 +1,9 @@
 Latest Updates
 
+January
+Capricorn V1-added Quick Modification Menu,other small bug fixes
+
+
 November-
 Sagittarius V1- "Attempted" fix of Government issues, added more character interactions from DLC
 Scorpio V5- Final release until January 2026

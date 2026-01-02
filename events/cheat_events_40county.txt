@@ -1,0 +1,343 @@
+﻿namespace = cheateb
+
+cheateb.4000 = {
+	type = character_event
+	title = cheateb.4000.county
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = cheateb.4001.countychangemode
+		scope:actor = { trigger_event = cheateb.4001 }
+	}
+
+	option = {
+		name = cheateb.4002.spawnchar
+		scope:actor = { trigger_event = cheateb.4002 }
+	}
+
+	option = {
+		name = cheateb.4003.switchholding
+		scope:actor = { trigger_event = cheateb.4003 }
+	}
+
+	option = {
+		name = cheateb.return
+		scope:actor = { trigger_event = cheateb.0010 }
+	}
+}
+
+cheateb.4001 = {
+	type = character_event
+	title = cheateb.4001.countychangemode
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = republic_government
+		scope:recipient = { change_government = republic_government }
+		scope:actor = { trigger_event = cheateb.4001 }
+	}
+	option = {
+		name = theocracy_government
+		scope:recipient = { change_government = theocracy_government }
+		scope:actor = { trigger_event = cheateb.4001 }
+	}
+	option = {
+		name = celestial_government
+		scope:recipient = { change_government = celestial_government }
+		scope:actor = { trigger_event = cheateb.4001 }
+	}
+	option = {
+		name = japan_administrative_government
+		scope:recipient = { change_government = japan_administrative_government }
+		scope:actor = { trigger_event = cheateb.4001 }
+	}
+	option = {
+		name = wanua_government
+		scope:recipient = { change_government = wanua_government }
+		scope:actor = { trigger_event = cheateb.4001 }
+	}
+	option = {
+		name = meritocratic_government
+		scope:recipient = { change_government = meritocratic_government }
+		scope:actor = { trigger_event = cheateb.4001 }
+	}
+	option = {
+		name = nomad_government
+		scope:recipient = { change_government = nomad_government }
+		scope:actor = { trigger_event = cheateb.4001 }
+	}
+	option = {
+		name = administrative_government
+		scope:recipient = { change_government = administrative_government }
+		scope:actor = { trigger_event = cheateb.4001 }
+	}
+	option = {
+		name = japan_feudal_government
+		scope:recipient = { change_government = japan_feudal_government }
+		scope:actor = { trigger_event = cheateb.4001 }
+	}
+	option = {
+		name = herder_government
+		scope:recipient = { change_government = herder_government }
+		scope:actor = { trigger_event = cheateb.4001 }
+	}	
+	option = {
+		name = cheateb.return
+		scope:actor = { trigger_event = cheateb.4000 }
+	}
+}
+
+cheateb.4002 = {
+	type = character_event
+	title = cheateb.4002.spawnchar
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = cheateb.4002.spawn_female
+		scope:recipient = {
+			create_character = {
+				age = 20
+				gender = female
+				health = 10
+				fertility = 8
+				employer = scope:recipient
+				faith = scope:recipient.faith
+				culture = scope:recipient.culture
+				dynasty = none
+				martial = 20
+				prowess = 20
+				diplomacy = 20
+				stewardship = 20
+				intrigue = 20
+				learning = 20
+			}
+		}
+		scope:actor = { trigger_event = cheateb.4002 }
+	}
+	option = {
+		name = cheateb.4002.spawn_male
+		scope:recipient = {
+			create_character = {
+				age = 20
+				gender = male
+				health = 10
+				fertility = 8
+				employer = scope:recipient
+				faith = scope:recipient.faith
+				culture = scope:recipient.culture
+				dynasty = none
+				martial = 20
+				prowess = 20
+				diplomacy = 20
+				stewardship = 20
+				intrigue = 20
+				learning = 20
+			}
+		}
+		scope:actor = { trigger_event = cheateb.4002 }
+	}
+	option = {
+		name = cheateb.4002.spawn_female_house
+		scope:recipient = {
+			create_character = {
+				age = 20
+				gender = female
+				health = 10
+				fertility = 8
+				employer = scope:recipient
+				faith = scope:recipient.faith
+				culture = scope:recipient.culture
+				dynasty = scope:recipient.dynasty
+				dynasty_house = scope:recipient.house
+				martial = 20
+				prowess = 20
+				diplomacy = 20
+				stewardship = 20
+				intrigue = 20
+				learning = 20
+				real_father = scope:recipient.father
+				father = scope:recipient.father
+				mother = scope:recipient.mother
+			}
+		}
+		scope:actor = { trigger_event = cheateb.4002 }
+	}
+	option = {
+		name = cheateb.4002.spawn_male_house
+		scope:recipient = {
+			create_character = {
+				age = 20
+				gender = male
+				health = 10
+				fertility = 8
+				employer = scope:recipient
+				faith = scope:recipient.faith
+				culture = scope:recipient.culture
+				dynasty = scope:recipient.dynasty
+				dynasty_house = scope:recipient.house
+				martial = 20
+				prowess = 20
+				diplomacy = 20
+				stewardship = 20
+				intrigue = 20
+				learning = 20
+				real_father = scope:recipient.father
+				father = scope:recipient.father
+				mother = scope:recipient.mother
+			}
+		}
+		scope:actor = { trigger_event = cheateb.4002 }
+	}
+	option = {
+		name = cheateb.4002.spawn_female_house_child
+		scope:recipient = {
+			create_character = {
+				age = 20
+				gender = female
+				health = 10
+				fertility = 8
+				employer = scope:recipient
+				faith = scope:recipient.faith
+				culture = scope:recipient.culture
+				dynasty = scope:recipient.dynasty
+				dynasty_house = scope:recipient.house
+				martial = 20
+				prowess = 20
+				diplomacy = 20
+				stewardship = 20
+				intrigue = 20
+				learning = 20
+				real_father = scope:recipient
+				father = scope:recipient
+			}
+		}
+		scope:actor = { trigger_event = cheateb.4002 }
+	}
+	option = {
+		name = cheateb.4002.spawn_male_house_child
+		scope:recipient = {
+			create_character = {
+				age = 20
+				gender = male
+				health = 10
+				fertility = 8
+				employer = scope:recipient
+				faith = scope:recipient.faith
+				culture = scope:recipient.culture
+				dynasty = scope:recipient.dynasty
+				dynasty_house = scope:recipient.house
+				martial = 20
+				prowess = 20
+				diplomacy = 20
+				stewardship = 20
+				intrigue = 20
+				learning = 20
+				real_father = scope:recipient
+				father = scope:recipient
+			}
+		}
+		scope:actor = { trigger_event = cheateb.4002 }
+	}
+
+
+	option = {
+		name = cheateb.return
+		scope:actor = { trigger_event = cheateb.4000 }
+	}
+}
+
+cheateb.4003 = {
+	type = character_event
+	title = cheateb.4003.switchholding
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = cheateb.4003.tocastle
+		scope:recipient.location = { set_holding_type = castle_holding }
+		scope:actor = { trigger_event = cheateb.4003 }
+	}
+
+	option = {
+		name = cheateb.4003.tochurch
+		scope:recipient.location = { set_holding_type = church_holding }
+		scope:actor = { trigger_event = cheateb.4003 }
+	}
+
+	option = {
+		name = cheateb.4003.tocity
+		scope:recipient.location = { set_holding_type = city_holding }
+		scope:actor = { trigger_event = cheateb.4003 }
+	}
+
+	option = {
+		name = cheateb.4003.totribal
+		scope:recipient.location = { set_holding_type = tribal_holding }
+		scope:actor = { trigger_event = cheateb.4003 }
+	}
+	
+	option = {
+		name = cheateb.4003.tonomad
+		scope:recipient.location = { set_holding_type = nomad_holding }
+		scope:actor = { trigger_event = cheateb.4003 }
+	}
+
+	option = {
+		name = cheateb.4003.totemplecitadel
+		scope:recipient.location = { set_holding_type = temple_citadel_holding }
+		scope:actor = { trigger_event = cheateb.4003 }
+	}
+
+
+	option = {
+		name = cheateb.return
+		scope:actor = { trigger_event = cheateb.4000 }
+	}
+}
+
+cheateb.4004 = {
+	type = character_event
+	title = cheateb.4004.addslot
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = cheateb.4004.addslot
+		scope:recipient.location = { add_building_slot = 1 }
+		scope:actor = { trigger_event = cheateb.4004 }
+	}
+
+	option = {
+		name = cheateb.4004.addslot
+		scope:recipient = { every_directly_owned_province = { add_building_slot = 1 } }
+		scope:actor = { trigger_event = cheateb.4004 }
+	}
+
+	option = {
+		name = cheateb.return
+		scope:actor = { trigger_event = cheateb.4000 }
+	}
+}

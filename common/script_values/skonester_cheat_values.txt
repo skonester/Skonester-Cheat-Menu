@@ -1,0 +1,9 @@
+﻿erudition_legacy_5_percentage = {
+	add = 10
+	if = {
+		# limit = {
+		# 	root = { is_ai = no }
+		# }
+		multiply = 10
+	}
+}

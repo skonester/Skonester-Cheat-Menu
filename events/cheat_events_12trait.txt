@@ -1,0 +1,333 @@
+﻿namespace = cheateb
+
+cheateb.1200 = {
+	type = character_event
+	title = cheateb.1200.trait
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = cheateb.1201.trait.education
+		scope:actor = { trigger_event = cheateb.1201 }
+	}
+	option = {
+		name = cheateb.1202.trait.talent
+		scope:actor = { trigger_event = cheateb.1202 }
+	}
+
+	option = {
+		name = cheateb.1200.trait.disease
+		scope:recipient = {
+			remove_trait = one_handed
+			remove_trait = half_blind
+			remove_trait = mute
+			remove_trait = crippled
+			remove_trait = obese
+			remove_trait = thin
+			remove_trait = feeble
+			remove_trait = frail
+			remove_trait = delicate
+			remove_trait = hashishiyah
+			remove_trait = rakish
+			remove_trait = comfort_eater
+			remove_trait = improvident
+			remove_trait = irritable
+			remove_trait = reclusive
+			remove_trait = flagellant
+			remove_trait = profligate
+			remove_trait = inappetetic
+			remove_trait = drunkard
+			remove_trait = depressed_1
+			remove_trait = depressed_genetic
+			remove_trait = lunatic_1
+			remove_trait = lunatic_genetic
+			remove_trait = possessed_1
+			remove_trait = possessed_genetic
+			remove_trait = ill
+			remove_trait = pneumonic
+			remove_trait = great_pox
+			remove_trait = early_great_pox
+			remove_trait = lovers_pox
+			remove_trait = leper
+			remove_trait = wounded_1
+			remove_trait = wounded_2
+			remove_trait = wounded_3
+			remove_trait = maimed
+			remove_trait = one_eyed
+			remove_trait = one_legged
+			remove_trait = disfigured
+			remove_trait = infirm
+			remove_trait = incapable
+			remove_trait = gout_ridden
+			remove_trait = consumption
+			remove_trait = cancer
+			remove_trait = typhus
+			remove_trait = bubonic_plague
+			remove_trait = smallpox
+			remove_trait = sickly
+			remove_trait = scarred
+			remove_trait = eunuch
+			remove_trait = blind
+		}
+		scope:actor = { trigger_event = cheateb.1200 }
+	}
+
+	option = {
+		name = cheateb.1200.trait.negtrait
+		scope:recipient = {
+			remove_trait = kinslayer_1
+			remove_trait = kinslayer_2
+			remove_trait = kinslayer_3
+			remove_trait = deviant
+			remove_trait = cannibal
+			remove_trait = lustful
+			remove_trait = incestuous
+			remove_trait = sodomite
+			remove_trait = adulterer
+			remove_trait = fornicator
+			remove_trait = murderer
+			remove_trait = gluttonous
+			remove_trait = greedy
+			remove_trait = lazy
+			remove_trait = wrathful
+			remove_trait = impatient
+			remove_trait = arrogant
+			remove_trait = deceitful
+			remove_trait = craven
+			remove_trait = arbitrary
+			remove_trait = cynical
+			remove_trait = paranoid
+			remove_trait = sadistic
+			remove_trait = vengeful
+		}
+		scope:actor = { trigger_event = cheateb.1200 }
+	}
+
+	option = {
+		name = cheateb.return
+		scope:actor = { trigger_event = cheateb.1000 }
+	}
+}
+
+cheateb.1201 = {
+	type = character_event
+	title = cheateb.1201.trait.education
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}	
+
+	option = {
+		name = trait_education_diplomacy_4
+		scope:recipient = {
+			add_trait = education_diplomacy_4
+			remove_trait = education_diplomacy_3
+			remove_trait = education_diplomacy_2
+			remove_trait = education_diplomacy_1
+		}
+		scope:actor = { trigger_event = cheateb.1201 }
+	}
+	option = {
+		name = trait_education_martial_4
+		scope:recipient = {
+			add_trait = education_martial_4
+			remove_trait = education_martial_3
+			remove_trait = education_martial_2
+			remove_trait = education_martial_1
+		}
+		scope:actor = { trigger_event = cheateb.1201 }
+	}
+	option = {
+		name = trait_education_stewardship_4
+		scope:recipient = {
+			add_trait = education_stewardship_4
+			remove_trait = education_stewardship_3
+			remove_trait = education_stewardship_2
+			remove_trait =education_stewardship_1
+		}
+		scope:actor = { trigger_event = cheateb.1201 }
+	}
+	option = {
+		name = trait_education_intrigue_4
+		scope:recipient = {
+			add_trait = education_intrigue_4
+			remove_trait = education_intrigue_3
+			remove_trait = education_intrigue_2
+			remove_trait = education_intrigue_1
+		}
+		scope:actor = { trigger_event = cheateb.1201 }
+	}
+	option = {
+		name = trait_education_learning_4
+		scope:recipient = {
+			remove_trait = education_learning_1
+			remove_trait = education_learning_2
+			remove_trait = education_learning_3
+			add_trait = education_learning_4
+		}
+		scope:actor = { trigger_event = cheateb.1201 }
+	}
+	option = {
+		name = trait_education_martial_prowess_4
+		scope:recipient = {
+			add_trait = education_martial_prowess_4
+			remove_trait = education_martial_prowess_3
+			remove_trait = education_martial_prowess_2
+			remove_trait = education_martial_prowess_1
+		}
+		scope:actor = { trigger_event = cheateb.1201 }
+	}
+	option = {
+		name = trait_order_member
+		scope:recipient = {
+			add_trait = order_member
+		}
+		scope:actor = { trigger_event = cheateb.1201 }
+	}
+	
+	option = {
+		name = trait_devoted
+		scope:recipient = {
+			add_trait = devoted
+		}
+		scope:actor = { trigger_event = cheateb.1201 }
+	}
+	option = {
+		name = cheateb.1201.trait.education.remove
+		scope:recipient = {
+			remove_trait = order_member
+			renove_trait = devoted
+			remove_trait = education_martial_prowess_4
+			remove_trait = education_learning_4
+			remove_trait = education_intrigue_4
+			remove_trait = education_stewardship_4
+			remove_trait = education_martial_4
+			remove_trait = education_diplomacy_4
+		}
+		scope:actor = { trigger_event = cheateb.1201 }
+	}
+
+	option = {
+		name = cheateb.return
+		scope:actor = { trigger_event = cheateb.1200 }
+	}
+}
+
+cheateb.1202 = {
+	type = character_event
+	title = cheateb.1202.trait.talent
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+	
+
+	option = {
+		name = trait_beauty_good_3
+		scope:recipient = { add_trait = beauty_good_3 }
+		scope:actor = { trigger_event = cheateb.1202 }
+	}
+	option = {
+		name = trait_intellect_good_3
+		scope:recipient = { add_trait = intellect_good_3 }
+		scope:actor = { trigger_event = cheateb.1202 }
+	}
+	option = {
+		name = trait_physique_good_3
+		scope:recipient = { add_trait = physique_good_3 }
+		scope:actor = { trigger_event = cheateb.1202 }
+	}
+	option = {
+		name = trait_pure_blooded
+		scope:recipient = {
+			if = { 
+				limit = { has_trait = pure_blooded }
+				remove_trait = pure_blooded
+			}
+			else = {
+				remove_trait = inbred
+				add_trait = pure_blooded
+			}
+		}
+		scope:actor = { trigger_event = cheateb.1202 }
+	}
+	option = {
+		name = trait_crusader_king
+		scope:recipient = {
+			if = { 
+				limit = { has_trait = crusader_king }
+				remove_trait = crusader_king
+			}
+			else = {
+				add_trait = crusader_king
+			}
+		}
+		scope:actor = { trigger_event = cheateb.1202 }
+	}
+
+	option = {
+		name = cheateb.1202.trait.talent.removeneg
+		scope:recipient = {
+			remove_trait = depressed_genetic
+			remove_trait = lunatic_genetic
+			remove_trait = possessed_genetic
+			remove_trait = beauty_bad_1
+			remove_trait = beauty_bad_2
+			remove_trait = beauty_bad_3
+			remove_trait = intellect_bad_1
+			remove_trait = intellect_bad_2
+			remove_trait = intellect_bad_3
+			remove_trait = physique_bad_1
+			remove_trait = physique_bad_2
+			remove_trait = physique_bad_3
+			remove_trait = clubfooted
+			remove_trait = hunchbacked
+			remove_trait = lisping
+			remove_trait = stuttering
+			remove_trait = dwarf
+			remove_trait = giant
+			remove_trait = inbred
+			remove_trait = weak
+			remove_trait = dull
+			remove_trait = impotent
+			remove_trait = spindly
+			remove_trait = scaly
+			remove_trait = wheezing
+			remove_trait = bleeder
+			remove_trait = infertile
+		}
+		scope:actor = { trigger_event = cheateb.1202 }
+	}
+	option = {
+		name = cheateb.1202.trait.talent.removepos
+		scope:recipient = {
+			remove_trait = beauty_good_1
+			remove_trait = beauty_good_2
+			remove_trait = beauty_good_3
+			remove_trait = intellect_good_1
+			remove_trait = intellect_good_2
+			remove_trait = intellect_good_3
+			remove_trait = physique_good_1
+			remove_trait = physique_good_2
+			remove_trait = physique_good_3
+			remove_trait = pure_blooded
+			remove_trait = fecund
+			remove_trait = strong
+			remove_trait = shrewd
+		}
+		scope:actor = { trigger_event = cheateb.1202 }
+	}
+
+	option = {
+		name = cheateb.return
+		scope:actor = { trigger_event = cheateb.1200 }
+	}
+}

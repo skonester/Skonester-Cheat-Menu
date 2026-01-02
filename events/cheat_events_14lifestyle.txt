@@ -1,0 +1,54 @@
+﻿namespace = cheateb
+
+cheateb.1400 = {
+	type = character_event
+	title = cheateb.1400.lifestyle
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = cheateb.diplomacy
+		scope:recipient = { add_diplomacy_lifestyle_perk_points = 1 }
+		scope:actor = { trigger_event = cheateb.1400 }
+	}
+	option = {
+		name = cheateb.martial
+		scope:recipient = { add_martial_lifestyle_perk_points = 1 }
+		scope:actor = { trigger_event = cheateb.1400 }
+	}
+	option = {
+		name = cheateb.stewardship
+		scope:recipient = { add_stewardship_lifestyle_perk_points = 1 }
+		scope:actor = { trigger_event = cheateb.1400 }
+	}
+	option = {
+		name = cheateb.intrigue
+		scope:recipient = { add_intrigue_lifestyle_perk_points = 1 }
+		scope:actor = { trigger_event = cheateb.1400 }
+	}
+	option = {
+		name = cheateb.learning
+		scope:recipient = { add_learning_lifestyle_perk_points = 1 }
+		scope:actor = { trigger_event = cheateb.1400 }
+	}
+	option = {
+		name = cheateb.all
+		scope:recipient = {
+			add_martial_lifestyle_perk_points = 5
+			add_diplomacy_lifestyle_perk_points = 5
+			add_stewardship_lifestyle_perk_points = 5
+			add_intrigue_lifestyle_perk_points = 5
+			add_learning_lifestyle_perk_points = 5
+		}
+		scope:actor = { trigger_event = cheateb.1400 }
+	}
+	
+	option = {
+		name = cheateb.return
+		scope:actor = { trigger_event = cheateb.1000 }
+	}
+}

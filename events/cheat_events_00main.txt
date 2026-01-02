@@ -1,0 +1,27 @@
+﻿namespace = cheateb
+
+cheateb.0010 = {
+	type = character_event
+	title = cheateb.0010.mainmenu
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = cheateb.1000.charedit
+		scope:actor = { trigger_event = cheateb.1000 }
+	}
+	option = {
+		name = cheateb.4000.county
+		scope:actor = { trigger_event = cheateb.4000 }
+	}
+	option = {
+		name = cheateb.7000.culture
+		scope:actor = { trigger_event = cheateb.7000 }
+	}
+
+	option = { name = cheateb.exit }
+}

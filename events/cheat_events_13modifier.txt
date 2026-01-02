@@ -1,0 +1,107 @@
+﻿namespace = cheateb
+
+cheateb.1300 = {
+	type = character_event
+	title = cheateb.1300.modifier
+	desc = cheateb.null
+	theme = realm
+	right_portrait = {
+		character = scope:recipient
+		animation = personality_honorable
+	}
+
+	option = {
+		name = cheateb_stat20_modifier
+		scope:recipient = {
+			if = { 
+				limit = { has_character_modifier = cheateb_stat20_modifier }
+				remove_character_modifier = cheateb_stat20_modifier
+			}
+			else = { add_character_modifier = cheateb_stat20_modifier }
+		}
+		scope:actor = { trigger_event = cheateb.1300 }
+	}
+	option = {
+		name = cheateb_stat7_modifier
+		scope:recipient = {
+			if = { 
+				limit = { has_character_modifier = cheateb_stat7_modifier }
+				remove_character_modifier = cheateb_stat7_modifier
+			}
+			else = { add_character_modifier = cheateb_stat7_modifier }
+		}
+		scope:actor = { trigger_event = cheateb.1300 }
+	}
+	option = {
+		name = cheateb_niverdie_modifier
+		scope:recipient = {
+			if = { 
+				limit = { has_character_modifier = cheateb_niverdie_modifier }
+				remove_character_modifier = cheateb_niverdie_modifier
+			}
+			else = { add_character_modifier = cheateb_niverdie_modifier }
+		}
+		scope:actor = { trigger_event = cheateb.1300 }
+	}
+	option = {
+		name = cheateb_army_modifier
+		scope:recipient = {
+			if = { 
+				limit = { has_character_modifier = cheateb_army_modifier }
+				remove_character_modifier = cheateb_army_modifier
+			}
+			else = { add_character_modifier = cheateb_army_modifier }
+		}
+		scope:actor = { trigger_event = cheateb.1300 }
+	}
+	option = {
+		name = cheateb_development_modifier
+		scope:recipient = {
+			if = { 
+				limit = { has_character_modifier = cheateb_development_modifier }
+				remove_character_modifier = cheateb_development_modifier
+			}
+			else = { add_character_modifier = cheateb_development_modifier }
+		}
+		scope:actor = { trigger_event = cheateb.1300 }
+	}
+	option = {
+		name = cheateb_nofertility_modifier
+		scope:recipient = {
+			if = { 
+				limit = { has_character_modifier = cheateb_nofertility_modifier }
+				remove_character_modifier = cheateb_nofertility_modifier
+			}
+			else = { add_character_modifier = cheateb_nofertility_modifier }
+		}
+		scope:actor = { trigger_event = cheateb.1300 }
+	}
+	option = {
+		name = cheateb_fullfertility_modifier
+		scope:recipient = {
+			if = { 
+				limit = { has_character_modifier = cheateb_fullfertility_modifier }
+				remove_character_modifier = cheateb_fullfertility_modifier
+			}
+			else = { add_character_modifier = cheateb_fullfertility_modifier }
+		}
+		scope:actor = { trigger_event = cheateb.1300 }
+	}
+	option = {
+		name = cheateb_defence_modifier
+		scope:recipient = {
+			if = { 
+				limit = { has_character_modifier = cheateb_defence_modifier }
+				remove_character_modifier = cheateb_defence_modifier
+			}
+			else = { add_character_modifier = cheateb_defence_modifier }
+		}
+		scope:actor = { trigger_event = cheateb.1300 }
+	}
+
+
+	option = {
+		name = cheateb.return
+		scope:actor = { trigger_event = cheateb.1000 }
+	}
+}

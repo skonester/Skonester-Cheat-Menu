@@ -56,3 +56,187 @@ change_Realm_succession_law_mod_decision = {
     ai_check_interval = 0
     ai_will_do = 0
 }
+
+change_succession_single = {
+    picture = {
+		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+	}
+
+    title = change_suc_old
+    desc = change_suc_desc
+    selection_tooltip = change_suc_tt
+    confirm_text = CONFIRM_OKAY
+
+	decision_group_type = pcm
+
+    is_shown = {
+        NOR = {
+            has_government = theocracy_government
+            has_government = republic_government
+            has_government = mercenary_government
+            has_government = tribal_government
+            has_government = clan_government
+            has_government = landless_adventurer_government
+            has_government = nomad_government
+        }
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        add_realm_law_skip_effects = single_heir_succession_law
+        root.culture = {
+            add_innovation = innovation_primogeniture
+        }
+    }
+    ai_check_interval = 0
+
+    ai_will_do = 0
+}
+
+change_succession_single_youngest = {
+    picture = {
+		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+	}
+
+    title = change_suc_young
+    desc = change_suc_desc
+    selection_tooltip = change_suc_tt
+    confirm_text = CONFIRM_OKAY
+
+	decision_group_type = pcm
+
+    is_shown = {
+        NOR = {
+            has_government = theocracy_government
+            has_government = republic_government
+            has_government = mercenary_government
+            has_government = tribal_government
+            has_government = clan_government
+            has_government = landless_adventurer_government
+            has_government = nomad_government
+        }
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        add_realm_law_skip_effects = single_heir_succession_law_youngest
+        root.culture = {
+            add_innovation = innovation_primogeniture
+        }
+    }
+    ai_check_interval = 0
+
+    ai_will_do = 0
+}
+
+convert_religion = {
+    picture = {
+		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+	}
+
+    title = conv_realm_religion_tt
+    desc = convert_realm_desc
+    selection_tooltip = are_you_sure_tt
+    confirm_text = "CONFIRM_OKAY"
+
+	decision_group_type = pcm
+
+    is_shown = {
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        every_sub_realm_county = {
+            set_county_faith = root.faith
+        }
+        every_vassal_or_below = {
+            set_character_faith_with_conversion = root.faith
+        }
+    }
+
+    ai_check_interval = 0
+}
+
+convert_culture = {
+    picture = {
+		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+	}
+
+    title = conv_realm_culture_tt
+    desc = convert_realm_desc
+    selection_tooltip = are_you_sure_tt
+    confirm_text = "CONFIRM_OKAY"
+
+	decision_group_type = pcm
+
+    is_shown = {
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu 
+    }
+
+    effect = {
+        every_sub_realm_county = {
+            set_county_culture = root.culture
+        }
+        every_vassal_or_below = {
+            set_culture = root.culture
+        }
+    }
+
+    ai_check_interval = 0
+}
+
+realm_control = {
+    picture = {
+		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+	}
+
+    title = max_realm_control_TT
+    desc = max_realm_desc
+    selection_tooltip = are_you_sure_tt
+    confirm_text = "CONFIRM_OKAY"
+
+	decision_group_type = pcm
+
+    is_shown = {
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        every_sub_realm_county = {
+            change_county_control = 100
+        }
+    }
+
+    ai_check_interval = 0
+}
+
+realm_development = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+    }
+
+    title = max_realm_development_TT
+    desc = max_realm_desc
+    selection_tooltip = are_you_sure_tt
+    confirm_text = "CONFIRM_OKAY"
+
+    decision_group_type = pcm
+
+    is_shown = {
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }  # <--- THIS BRACKET WAS MISSING
+
+    effect = {
+        every_sub_realm_county = {
+            change_development_level = 100 
+        }
+    }
+
+    ai_check_interval = 0
+}

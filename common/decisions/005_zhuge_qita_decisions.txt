@@ -84,20 +84,24 @@ zhuge_huangzu_add = {
 	effect = {
 		custom_tooltip = zhuge_jinyong_huangzu_tt
 		create_character = {
-			name = "李斯"
-			culture = culture:han
-			faith = faith:shangqing
-			age = 76
+			name = "Mary of Magdala"
+			culture = culture:assyrian
+			faith = faith:orthodox
+			age = 35 
 			dynasty = none
-			is_female = no
+			is_female = yes
+			09.08.19 = { birth = yes }
+			sexuality = heterosexual
+			gender_female_chance = 100
 			historical = no
 			random_traits = no
-			martial = 66
-			prowess = 66
-			diplomacy = 66
-			stewardship = 66
-			intrigue = 66
-			learning = 66
+			trait = saint
+			martial = 5
+			prowess = 5
+			diplomacy = 30
+			stewardship = 30
+			intrigue = 30
+			learning = 30
 			save_scope_as = cn_lishi_creator
 		}
 		scope:cn_lishi_creator = {
@@ -172,4 +176,71 @@ change_sansi_government = {
     }
     ai_check_interval = 0
     ai_will_do = 0
+}
+
+start_searching_for_water_of_life_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/barbara.dds"
+    }
+    ai_check_interval = 0
+	decision_group_type = pcm
+	
+	is_shown = {
+		is_ai = no
+		has_character_flag = daddy_pika_cheat_menu
+		has_character_flag = zhuge_juese_menu_01
+	}
+
+    cost = {
+        piety = {
+            add = 1
+            divide = learning
+        }
+    }
+
+    cooldown = { years = 999 }
+
+    is_shown = {
+        is_landed = yes
+        is_available_adult = yes
+        NOT = { has_trait = water_of_life }
+    }
+
+    is_valid = {
+        custom_description = {
+            text = "start_searching_for_water_of_life_decision_start"
+            learning >= 25
+        }
+    }
+
+    effect = {
+        trigger_event = {
+            id = water_of_life.1001
+            days = { 20 60 }
+        }
+
+        if = {
+            limit = { has_trait = lazy }
+            custom_tooltip = start_searching_for_water_of_life_decision_stress_lazy
+        }
+        else = {
+            stress_impact = {
+                base = hunt_stress_loss_value
+                compassionate = activity_stress_gain_impact
+                craven = activity_stress_gain_impact
+                diligent = activity_stress_loss_impact
+                athletic = activity_stress_loss_impact
+                sadistic = activity_stress_loss_impact
+                brave = activity_stress_loss_impact
+            }
+        }
+
+        custom_tooltip = start_searching_for_water_of_life_decision_stress
+        custom_tooltip = start_searching_for_water_of_life_decision_proceed
+    }
+
+    ai_potential = 0
+    ai_will_do = {
+        base = 0
+    }
 }

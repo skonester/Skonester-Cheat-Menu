@@ -1,0 +1,82 @@
+﻿hooded_old_man_character = {
+	age = 45
+	random_traits_list = {
+		count = 8
+		humble = {}
+		honest = {}
+		just = {}
+		compassionate = {}
+		intellect_good_3 = {}
+		physique_good_3 = {}
+		pure_blooded = {}
+		education_intrigue_4 = {}
+		order_member = {}
+		water_of_life = {}
+	}
+	dynasty = salamas
+	name = "Clavius Aquila"
+	random_traits = no
+	faith = faith:orthodox
+	culture = culture:roman
+	gender_female_chance = 0
+	sexuality = heterosexual
+	add_trait = order_member
+	add_trait = water_of_life
+	prowess = { 90 100 }
+	martial = { 90 100 }
+	diplomacy = { 90 100 }
+	learning = { 90 100 }
+	stewardship = { 90 100 }
+	intrigue = { 90 100 }
+
+	# Guaranteed trait
+	order_member = {}
+}
+
+village_elder_merchant_character = {
+	age = { 60 80 }
+	random_traits_list = {
+		count = 3
+	}
+	dynasty = random
+	random_traits = yes
+	culture = root.culture
+	gender_female_chance = 0
+	stewardship = { 8 12 }
+}
+
+one_loyal_subject_character = {
+	age = { 20 40 }
+	random_traits_list = { count = 0 }
+	dynasty = random
+	random_traits = no
+	culture = this.culture
+	gender_female_chance = 60
+}
+
+second_loyal_subject_character = {
+	age = { 20 50 }
+	random_traits_list = { count = 0 }
+	dynasty = random
+	random_traits = no
+	culture = this.culture
+	gender_female_chance = 50
+}
+
+third_loyal_subject_character = {
+	age = { 25 35 }
+	random_traits_list = { count = 0 }
+	dynasty = random
+	random_traits = no
+	culture = this.culture
+	gender_female_chance = 50
+}
+
+fourth_loyal_subject_character = {
+	age = { 18 45 }
+	random_traits_list = { count = 0 }
+	dynasty = random
+	random_traits = no
+	culture = this.culture
+	gender_female_chance = 50
+}

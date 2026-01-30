@@ -1,0 +1,17 @@
+﻿
+water_of_life_modifier_knight_and_maa_limit_and_cap_increased = {
+	icon = martial_positive
+	knight_limit = 5
+	men_at_arms_cap = 5
+	men_at_arms_limit = 5
+}
+
+water_of_life_modifier_hunting_trophy = {
+	icon = hunt_positive
+	monthly_prestige = 1.0
+}
+
+water_of_life_modifier_good_deal = {
+	icon = economy_positive
+	monthly_income = 1.0
+}

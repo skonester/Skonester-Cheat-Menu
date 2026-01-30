@@ -240,3 +240,120 @@ realm_development = {
 
     ai_check_interval = 0
 }
+
+dynasty_pope_0_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+	}
+
+	decision_group_type = pcm
+
+	ai_goal = no
+
+	is_shown = {
+		is_landed = yes
+		is_player = yes
+		has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+		NOT = {
+			any_owned_story = {
+				story_type = dynasty_pope_story
+			}
+		}
+		exists = root.faith.religious_head
+		faith = {
+			has_doctrine = doctrine_spiritual_head
+			}
+		}
+
+	is_valid ={
+		piety_level >= 1
+		}
+
+	 cost = {
+		prestige = {
+			value = 1
+		}
+		piety = {
+			value = 1
+		}
+	}
+
+		
+	effect = {
+		custom_tooltip = dynasty_pope_0_decision_message
+		dynasty = {
+		add_dynasty_modifier = {
+			modifier = dynasty_pope_modifier
+			}
+		}
+            	create_story = dynasty_pope_story		
+	}
+}
+
+dynasty_grandmaster_0_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+	}
+
+	decision_group_type = pcm
+
+	ai_goal = no
+
+	is_shown = {
+		is_landed = yes
+		is_player = yes
+		has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+		NOT = {
+			any_owned_story = {
+				story_type = dynasty_grandmaster_story
+			}
+		}
+		faith = {
+			any_faith_holy_order = {
+				holy_order_patron = root
+				}
+			}
+		}
+
+	is_valid ={
+		piety_level >= 1
+		trigger_if = {
+			limit = {
+				exists = faith.religious_head
+				NOT = { root = root.faith.religious_head }
+			}
+			faith.religious_head = {
+				opinion = {
+					target = root
+					value >= {
+						value = 1
+						if = {
+							limit = { is_ai = no }
+					 		add = high_positive_opinion
+						}
+					}
+				}
+			}
+		}
+		}
+
+	 cost = {
+		piety = {
+			value = 1
+		}
+	}
+
+		
+	effect = {
+		custom_tooltip = dynasty_grandmaster_0_decision_message
+		dynasty = {
+		add_dynasty_modifier = {
+			modifier = dynasty_grandmaster_modifier
+			}
+		}
+            	create_story = dynasty_grandmaster_story
+		
+	}
+}

@@ -1,0 +1,47 @@
+﻿special_gift_interaction_3 = {
+	category = interaction_category_uncategorized
+	interface_priority = 60
+	desc = special_gift_interaction_desc_3
+
+	ai_frequency = 0
+
+	is_shown = {
+		scope:actor = {
+			has_trait = water_of_life
+		}
+		scope:recipient = {
+			NOT = {
+				#is_adult = no
+				has_trait = water_of_life
+			}	
+		}
+		scope:recipient = {
+			is_child_of = scope:actor
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			send_interface_message = {
+				type = event_generic_neutral
+				title = "Gift of Immortality"
+				right_icon = scope:recipient
+				custom_tooltip = special_gift_interaction_tooltip_3
+				
+				scope:recipient = {
+					target = scope:actor
+					add_trait = water_of_life
+				}
+			}
+		}
+	}
+
+	auto_accept = yes
+
+	ai_min_reply_days = 1
+	ai_max_reply_days = 1
+	
+	ai_will_do = {
+		base = 0
+	}
+}

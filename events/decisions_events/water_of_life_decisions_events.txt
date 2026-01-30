@@ -1,0 +1,409 @@
+﻿namespace = water_of_life
+
+# ~ Decipher ~
+water_of_life.1001 = {
+	type = character_event
+	title = water_of_life.1001.t
+	desc = water_of_life.1001.desc
+	theme = learning
+	left_portrait = {
+		character = ROOT
+		animation = worry
+	}
+	immediate = {
+		# Stop characters from planning multiple activities at once.
+		add_character_flag = {
+			flag = planning_next_step
+			days = 100
+		}
+	}
+	option = {
+		name = water_of_life.1001.a
+		add_martial_lifestyle_perk_points = 1
+		stress_impact = {
+			athletic = minor_stress_impact_loss
+			brave = medium_stress_impact_loss
+			ambitious = medium_stress_impact_loss
+			stubborn = medium_stress_impact_loss
+			patient = medium_stress_impact_gain
+			craven = medium_stress_impact_gain
+			lazy = medium_stress_impact_gain
+		}
+	}
+	option = {
+		name = water_of_life.1001.b
+		add_learning_lifestyle_perk_points = 1
+		stress_impact = {
+			patient = minor_stress_impact_loss
+			calm = minor_stress_impact_loss
+			content = minor_stress_impact_loss
+			arrogant = medium_stress_impact_gain
+			impatient = medium_stress_impact_gain
+		}
+	}
+	after = {
+		trigger_event = {
+			id = water_of_life.1002
+			days = { 10 12 }
+		}
+	}
+}
+
+# ~ First steps ~
+water_of_life.1002 = {
+	type = character_event
+	title = water_of_life.1002.t
+	desc = water_of_life.1002.desc
+	theme = hunting
+	override_background = {
+		event_background = farmland
+	}
+	left_portrait = {
+		character = ROOT
+		animation = happiness
+	}
+	immediate = { }
+	option = {
+		name = water_of_life.1002.a
+		stress_impact = {
+			athletic = medium_stress_impact_loss
+			brave = medium_stress_impact_loss
+			ambitious = medium_stress_impact_loss
+			stubborn = medium_stress_impact_loss
+			patient = medium_stress_impact_gain
+			craven = medium_stress_impact_gain
+			lazy = medium_stress_impact_gain
+		}
+	}
+	option = {
+		name = water_of_life.1002.b
+		stress_impact = {
+			patient = medium_stress_impact_loss
+			calm = medium_stress_impact_loss
+			content = minor_stress_impact_loss
+			arrogant = medium_stress_impact_gain
+			impatient = medium_stress_impact_gain
+		}
+	}
+	after = {
+		trigger_event = {
+			id = water_of_life.1003
+			days = { 10 15 }
+		}
+	}
+}
+
+# ~ The wilderness ~
+water_of_life.1003 = {
+	type = character_event
+	title = water_of_life.1003.t
+	desc = water_of_life.1003.desc
+	theme = default
+	override_background = {
+		event_background = wilderness_mountains
+	}
+	left_portrait = {
+		character = ROOT
+		animation = personality_content
+	}
+	immediate = { }
+	option = {
+		name = water_of_life.1003.a
+		stress_impact = {
+			calm = medium_stress_impact_loss
+			brave = medium_stress_impact_loss
+			strong = medium_stress_impact_loss
+			impatient = medium_stress_impact_gain
+			craven = medium_stress_impact_gain
+			weak = medium_stress_impact_gain
+			paranoid = high_stress_impact_gain
+		}
+	}
+	after = {
+		trigger_event = {
+			id = water_of_life.1004
+			days = { 10 15 }
+		}
+	}
+}
+
+# ~ Dilemma ~
+water_of_life.1004 = {
+	type = character_event
+	title = water_of_life.1004.t
+	desc = water_of_life.1004.desc
+	theme = healthcare
+	override_background = {
+		event_background = wilderness_forest_pine
+	}
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	immediate = { }
+	option = {
+		name = water_of_life.1004.a
+		stress_impact = {
+			comfort_eater = medium_stress_impact_gain
+		}
+		hidden_effect = {
+			trigger_event = {
+				id = water_of_life.1005
+				days = { 1 2 }
+			}
+		}
+	}
+	option = {
+		name = water_of_life.1004.b
+		stress_impact = {
+			comfort_eater = medium_stress_impact_gain
+		}
+		hidden_effect = {
+			trigger_event = {
+				id = water_of_life.1006
+				days = { 1 2 }
+			}
+		}
+	}
+}
+
+# ~ Hunting ~
+water_of_life.1005 = {
+	type = character_event
+	title = water_of_life.1005.t
+	desc = water_of_life.1005.desc
+	theme = hunting
+	override_background = {
+		event_background = wilderness
+	}
+	left_portrait = {
+		character = ROOT
+		animation = personality_bold
+	}
+	immediate = { }
+	option = {
+		name = water_of_life.1005.a
+		water_of_life_effect_trophy = yes
+		stress_impact = {
+			hunter_1 = minor_stress_impact_loss
+			hunter_2 = medium_stress_impact_loss
+			hunter_3 = major_stress_impact_loss
+		}
+	}
+	after = {
+		trigger_event = {
+			id = water_of_life.1007
+			days = { 10 15 }
+		}
+	}
+}
+
+# ~ Buying ~
+water_of_life.1006 = {
+	type = character_event
+	title = water_of_life.1006.t
+	desc = water_of_life.1006.desc
+	theme = stewardship
+	override_background = {
+		event_background = market_tribal
+	}
+	left_portrait = {
+		character = ROOT
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:village_elder
+		animation = boredom
+	}
+	immediate = {
+		play_music_cue = "mx_cue_postive_effect"
+		add_character_flag = {
+			flag = the_hooded_old_man
+			days = 50
+		}
+		hidden_effect = {
+			create_character = {
+				location = scope:activity.activity_province
+				template = village_elder_merchant_character
+				faith = root.faith
+				culture = root.culture
+				dynasty = random
+				save_scope_as = village_elder
+			}
+		}
+	}
+	option = {
+		name = water_of_life.1006.a
+		remove_short_term_gold = { 5 10 }
+		water_of_life_effect_merchant = yes
+		stress_impact = {
+			generous = minor_stress_impact_loss
+			honest = minor_stress_impact_loss
+			greedy = minor_stress_impact_gain
+			avaricious = minor_stress_impact_gain
+		}
+	}
+	after = {
+		trigger_event = {
+			id = water_of_life.1007
+			days = { 10 15 }
+		}
+		hidden_effect = {
+			scope:village_elder = {
+				death = { death_reason = death_disappearance }
+			}
+		}
+	}
+}
+
+# ~ Coordinates ~
+water_of_life.1007 = {
+	type = character_event
+	title = water_of_life.1007.t
+	desc = water_of_life.1007.desc
+	theme = faith
+	override_background = {
+		event_background = terrain
+	}
+	left_portrait = {
+		character = ROOT
+		animation = war_over_win
+	}
+	immediate = { }
+	option = {
+		name = water_of_life.1007.a
+		water_of_life_effect_chosen_one = yes
+	}
+	after = {
+		trigger_event = {
+			id = water_of_life.1008
+			days = { 10 15 }
+		}
+	}
+}
+
+# ~ The hooded old man ~
+water_of_life.1008 = {
+	type = character_event
+	title = water_of_life.1008.t
+	desc = water_of_life.1008.desc
+	theme = friendly
+	override_background = {
+		event_background = temple
+	}
+	left_portrait = {
+		character = ROOT
+		animation = happiness
+	}
+	right_portrait = {
+		character = scope:hooded_old_man
+		animation = personality_forgiving
+	}
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"
+		add_character_flag = {
+			flag = hooded_old_man
+			days = 150
+		}
+		hidden_effect = {
+			create_character = {
+				location = scope:activity.activity_province
+				template = hooded_old_man_character
+				faith = faith:orthodox
+				age = (867 1178)
+				culture = culture:roman
+				dynasty = salamas
+				09.11.19 = { birth = yes }
+				add_trait = water_of_life 
+				save_scope_as = hooded_old_man
+			}
+		}
+	}
+	option = {
+		name = water_of_life.1008.a
+		water_of_life_effect = yes
+	}
+	after = {
+		trigger_event = {
+			id = water_of_life.1009
+			days = { 60 120 }
+		}
+		hidden_effect = {
+			scope:hooded_old_man = {
+				death = { death_reason = death_disappearance }
+				death_reason = death_peaceful
+			}
+		}
+	}
+}
+
+# ~ Road back home ~
+water_of_life.1009 = {
+	type = character_event
+	title = water_of_life.1009.t
+	desc = water_of_life.1009.desc
+	theme = friend_relation
+	override_background = {
+		event_background = throne_room
+	}
+	left_portrait = {
+		character = ROOT
+		animation = personality_bold
+	}
+	right_portrait = {
+		character = scope:one_loyal_subject_character
+		animation = admiration
+	}
+	lower_left_portrait = {
+		character = scope:second_loyal_subject_character
+		animation = flirtation
+	}
+	lower_center_portrait = {
+		character = scope:third_loyal_subject_character
+		animation = love
+	}
+	lower_right_portrait = {
+		character = scope:fourth_loyal_subject_character
+		animation = happiness
+	}
+	immediate = {
+		play_music_cue = "mx_cue_touching_moment"
+		hidden_effect = {
+			create_character = {
+				location = scope:activity.activity_province
+				template = one_loyal_subject_character
+				faith = ROOT.faith
+				culture = ROOT.culture
+				dynasty = random
+				save_scope_as = one_loyal_subject_character
+			}
+			create_character = {
+				location = scope:activity.activity_province
+				template = second_loyal_subject_character
+				faith = ROOT.faith
+				culture = ROOT.culture
+				dynasty = random
+				save_scope_as = second_loyal_subject_character
+			}
+			create_character = {
+				location = scope:activity.activity_province
+				template = third_loyal_subject_character
+				faith = ROOT.faith
+				culture = ROOT.culture
+				dynasty = random
+				save_scope_as = third_loyal_subject_character
+			}
+			create_character = {
+				location = scope:activity.activity_province
+				template = fourth_loyal_subject_character
+				faith = ROOT.faith
+				culture = ROOT.culture
+				dynasty = random
+				save_scope_as = fourth_loyal_subject_character
+			}
+		}
+	}
+	option = {
+		name = water_of_life.1009.a
+	}
+}

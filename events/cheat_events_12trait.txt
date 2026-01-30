@@ -72,6 +72,7 @@ cheateb.1200 = {
 			remove_trait = scarred
 			remove_trait = eunuch
 			remove_trait = blind
+			remove_trait = measles
 		}
 		scope:actor = { trigger_event = cheateb.1200 }
 	}

@@ -1,7 +1,8 @@
 Latest Updates
 
 January
-Capricorn V1-added Quick Modification Menu,other small bug fixes
+Aquarius V1- Character lore,more duchy building types
+Capricorn V1 and V1.1-added Quick Modification Menu,other small bug fixes
 
 
 November-

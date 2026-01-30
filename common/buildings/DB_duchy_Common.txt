@@ -1,0 +1,2186 @@
+﻿######Duchy Building For Common#######
+#####List of Common Duchy Building#####
+####Local Parliament####
+####Artificial Forest####
+####Local Library####
+####Caravan Sarai####
+####Prison####
+####Court of Justice####
+####Statue of Horse####
+####Kurultai####
+####Lighthouse####
+####Mercenary Camp####
+####Things####
+####Fair####
+####Statue of Hero####
+####Menagerie####
+
+######Local Parliament######
+db_local_parliament_01 = { # Non-Permanent local Parliament
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_parliament.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		NOT = {
+			OR = {
+				scope:holder = {
+					religion = religion:islam_religion
+				}
+				scope:holder = {
+					religion = religion:judaism_religion
+				}
+			}
+		}
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_plenary_assemblies
+			}
+		}
+	}
+	
+	cost_gold = 300
+	
+	character_modifier = {
+		stewardship = 1
+		vassal_opinion = 5
+		monthly_prestige = 0.5
+	}
+
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.05
+		county_opinion_add = 5
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_local_parliament_02
+	
+	type = duchy_capital
+}
+
+db_local_parliament_02 = { # Permanent Local Parliament
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_parliament.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		NOT = {
+			OR = {
+				scope:holder = {
+					religion = religion:islam_religion
+				}
+				scope:holder = {
+					religion = religion:judaism_religion
+				}
+			}
+		}
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_development_02 
+			}
+		}
+	}
+	
+	cost_gold = 400
+	
+	character_modifier = {
+		stewardship_per_prestige_level = 1
+		diplomacy_per_prestige_level = 1
+		vassal_opinion = 10
+		monthly_prestige = 0.75
+	}
+	province_modifier = {
+		monthly_income = -1
+	}
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.1
+		county_opinion_add = 10
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_local_parliament_03
+	
+	type = duchy_capital
+}
+
+db_local_parliament_03 = { # Extended Local Parliament
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_parliament.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_requirement_castle_city_church = { LEVEL = 03 }
+		NOT = {
+			OR = {
+				scope:holder = {
+					religion = religion:islam_religion
+				}
+				scope:holder = {
+					religion = religion:judaism_religion
+				}
+			}
+		}
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_divine_right
+			}
+		}
+	}
+	
+	cost_gold = 500
+	
+	character_modifier = {
+		stewardship_per_prestige_level = 1
+		diplomacy_per_prestige_level = 1
+		learning_per_prestige_level = 1
+		vassal_opinion = 15
+		monthly_prestige = 1
+	}
+	province_modifier = {
+		monthly_income = -1.5
+	}
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.15
+		county_opinion_add = 15
+	}
+
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+	
+	type = duchy_capital
+}
+
+
+######local library######
+db_local_library_01 = { # local library
+	construction_time = standard_construction_time
+
+	type_icon = "icon_building_library.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_requirement_castle_city_church = { LEVEL = 01 }
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_plenary_assemblies
+			}
+		}
+	}
+	
+	cost_gold = 300
+	
+	character_modifier = {
+		learning = 1
+		cultural_head_fascination_mult = 0.05
+		monthly_learning_lifestyle_xp_gain_mult = 0.05
+	}
+	province_modifier = {
+		monthly_income = 0.5
+	}
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.05
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_local_library_02
+	
+	type = duchy_capital
+}
+
+db_local_library_02 = { # Famous Local Library
+	construction_time = standard_construction_time
+
+	type_icon = "icon_building_library.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_requirement_castle_city_church = { LEVEL = 02 }
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_windmills 
+			}
+		}
+	}
+	
+	cost_gold = 400
+	
+	character_modifier = {
+		learning_per_piety_level = 1
+		cultural_head_fascination_mult = 0.15
+		monthly_learning_lifestyle_xp_gain_mult = 0.15
+	}
+	province_modifier = {
+		monthly_income = 1
+	}
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.15
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_local_library_03
+	
+	type = duchy_capital
+}
+
+db_local_library_03 = { # Grand Library
+	construction_time = standard_construction_time
+
+	type_icon = "icon_building_library.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_requirement_castle_city_church = { LEVEL = 03 }
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_cranes
+			}
+		}
+	}
+	
+	cost_gold = 500
+	
+	character_modifier = {
+		learning_per_piety_level = 2
+		cultural_head_fascination_mult = 0.25
+		monthly_learning_lifestyle_xp_gain_mult = 0.25
+	}
+	province_modifier = {
+		monthly_income = 1.5
+	}
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.25
+	}
+
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+	
+	type = duchy_capital
+}
+
+######Artificial Forest######
+db_artificial_forest_01 = { # Artificial Forest
+	construction_time = standard_construction_time
+
+	type_icon = "icon_building_royal_forest.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_forest_requirement = yes
+		building_requirement_castle_city_church = { LEVEL = 01 }
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_development_01
+			}
+		}
+	}
+	
+	cost_gold = 300
+	
+	character_modifier = {
+		forest_advantage = 5
+		army_maintenance_mult = -0.05
+		archers_damage_mult = 0.05
+		embarkation_cost_mult = -0.05
+	}
+	province_modifier = {
+		monthly_income = 0.5
+		build_speed = -0.05
+		build_gold_cost = -0.05
+	}
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.05
+		supply_limit = 500
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_artificial_forest_02
+	
+	type = duchy_capital
+}
+
+db_artificial_forest_02 = { # Famous Local Library
+	construction_time = standard_construction_time
+
+	type_icon = "icon_building_royal_forest.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_forest_requirement = yes
+		building_requirement_castle_city_church = { LEVEL = 02 }
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_hereditary_rule
+			}
+		}
+	}
+	
+	cost_gold = 400
+	
+	character_modifier = {
+		forest_advantage = 10
+		army_maintenance_mult = -0.1
+		archers_damage_mult = 0.1
+		embarkation_cost_mult = -0.1
+	}
+	province_modifier = {
+		monthly_income = 1
+		build_speed = -0.15
+		build_gold_cost = -0.15
+	}
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.15
+		supply_limit = 1000
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_artificial_forest_03
+	
+	type = duchy_capital
+}
+
+db_artificial_forest_03 = { # Artificial Forest
+	construction_time = standard_construction_time
+
+	type_icon = "icon_building_royal_forest.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_forest_requirement = yes
+		building_requirement_castle_city_church = { LEVEL = 03 }
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_divine_right
+			}
+		}
+	}
+	
+	cost_gold = 500
+	
+	character_modifier = {
+		forest_advantage = 15
+		army_maintenance_mult = -0.15
+		archers_damage_mult = 0.15
+		embarkation_cost_mult = -0.15
+		forest_cancel_negative_supply = yes
+	}
+	province_modifier = {
+		monthly_income = 1.5
+		build_speed = -0.25
+		build_gold_cost = -0.25
+	}
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.25
+		supply_limit = 1500
+	}
+
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+	
+	type = duchy_capital
+}
+
+
+######Caravan Sarai######
+db_caravan_sarai_01 = { # Caravan Sarai
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_caravan.dds"
+	
+	can_construct_potential = {
+		building_caravan_requirement = yes
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_plenary_assemblies
+			}
+		}
+	}
+	
+	cost_gold = 300
+	
+	character_modifier = {
+		health = -0.5
+		domain_tax_mult = 0.05
+		county_opinion_add = 3		
+	}
+	province_modifier = {
+		monthly_income = 0.5
+	}
+	duchy_capital_county_modifier = {
+		supply_limit = 500
+		development_growth_factor = 0.05
+		tax_mult = 0.05
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_caravan_sarai_02
+	
+	type = duchy_capital
+}
+
+db_caravan_sarai_02 = { # Caravan Sarai
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_caravan.dds"
+	
+	can_construct_potential = {
+		building_caravan_requirement = yes
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_currency_02#Coinage
+			}
+		}
+	}
+	
+	cost_gold = 400
+	
+	character_modifier = {
+		health = -0.7
+		domain_tax_mult = 0.1
+		county_opinion_add = 5		
+	}
+	province_modifier = {
+		monthly_income = 1
+	}
+	duchy_capital_county_modifier = {
+		supply_limit = 1500
+		development_growth_factor = 0.15
+		tax_mult = 0.15
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_caravan_sarai_03
+	
+	type = duchy_capital
+}
+
+db_caravan_sarai_03 = { # Caravan Sarai
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_caravan.dds"
+	
+	can_construct_potential = {
+		building_caravan_requirement = yes
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_currency_03 ###Banking
+			}
+		}
+	}
+	
+	cost_gold = 500
+	
+	character_modifier = {
+		health = -1
+		domain_tax_mult = 0.15
+		county_opinion_add = 15		
+	}
+	province_modifier = {
+		monthly_income = 3.5
+	}
+	duchy_capital_county_modifier = {
+		supply_limit = 2500
+		development_growth_factor = 0.25
+		tax_mult = 0.25
+	}
+
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+	
+	type = duchy_capital
+}
+
+
+######Prison######
+db_prison_cell_01 = { # Prison
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_prison.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_requirement_castle_city_church = { LEVEL = 01 }
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_plenary_assemblies
+			}
+		}
+	}
+	
+	cost_gold = 300
+	
+	character_modifier = {
+		prisoner_opinion = 5
+		dread_baseline_add = 5
+		dread_decay_mult = -0.05
+		monthly_piety = -0.25
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_prison_cell_02
+	
+	type = duchy_capital
+}
+
+db_prison_cell_02 = { # Prison
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_prison.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_requirement_castle_city_church = { LEVEL = 02 }
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_development_02
+			}
+		}
+	}
+	
+	cost_gold = 400
+	
+	character_modifier = {
+		prisoner_opinion = 10
+		dread_baseline_add = 10
+		dread_decay_mult = -0.15
+		monthly_piety = -0.25
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_prison_cell_03
+	
+	type = duchy_capital
+}
+
+db_prison_cell_03 = { # Prison
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_prison.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_requirement_castle_city_church = { LEVEL = 03 }
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_hoardings
+			}
+		}
+	}
+	
+	cost_gold = 500
+	
+	character_modifier = {
+		prisoner_opinion = 15
+		dread_baseline_add = 15
+		dread_decay_mult = -0.25
+		monthly_piety = -0.25
+		dread_gain_mult = 0.15
+		men_at_arms_maintenance_per_dread_mult = -0.05
+	}
+
+	province_modifier = {
+		fort_level = 2
+		defender_holding_advantage = 5
+	}
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+	
+	type = duchy_capital
+}
+
+######Court of Justice######
+db_court_justice_01 = { # Court of Justice : Hundred Courts
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_justice_hall.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_requirement_castle_city_church = { LEVEL = 01 }
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_plenary_assemblies
+			}
+		}
+	}
+	
+	cost_gold = 300
+	
+	character_modifier = {
+		general_opinion = 5
+		opinion_of_vassal = 5
+		hostile_scheme_resistance_mult = 0.05
+		personal_scheme_resistance_mult = 0.05
+	}
+	
+	duchy_capital_county_modifier = {
+		monthly_county_control_change_factor = 0.05
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_court_justice_02
+	
+	type = duchy_capital
+}
+
+db_court_justice_02 = { # Court of Justice : Shire Courts
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_justice_hall.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_requirement_castle_city_church = { LEVEL = 02 }
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_manorialism
+			}
+		}
+	}
+	
+	cost_gold = 400
+	
+	character_modifier = {
+		general_opinion = 10
+		opinion_of_vassal = 10
+		hostile_scheme_resistance_mult = 0.15
+		personal_scheme_resistance_mult = 0.15
+		monthly_dynasty_prestige = 0.5
+	}
+	
+	duchy_capital_county_modifier = {
+		monthly_county_control_change_factor = 0.15
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_court_justice_03
+	
+	type = duchy_capital
+}
+
+db_court_justice_03 = { # Court of Justice : Court of King's Bench
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_justice_hall.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_requirement_castle_city_church = { LEVEL = 03 }
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_windmills
+			}
+		}
+	}
+	
+	cost_gold = 500
+	
+	character_modifier = {
+		general_opinion = 15
+		opinion_of_vassal = 15
+		hostile_scheme_resistance_mult = 0.25
+		personal_scheme_resistance_mult = 0.25
+		monthly_dynasty_prestige = 0.8
+	}
+	
+	duchy_capital_county_modifier = {
+		monthly_county_control_change_factor = 0.25
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+	
+	type = duchy_capital
+}
+
+######Statue of Horse######
+db_statue_horse_01 = { # Statue of Horse
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_horse_statue.dds"
+	
+	can_construct_potential = {
+		OR = {
+			scope:holder = {
+				culture = {
+					has_cultural_tradition = tradition_horse_lords
+				}
+			}
+			scope:holder = {
+				OR = {
+					has_trait = lunatic_genetic
+					has_trait = lunatic_1
+				}
+			}
+		}	
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_plenary_assemblies
+			}
+		}
+	}
+	
+	cost_gold = 300
+	
+	character_modifier = {
+		light_cavalry_damage_mult = 0.05
+		heavy_cavalry_damage_mult = 0.05
+		archer_cavalry_damage_mult = 0.05
+		same_faith_opinion = -5
+		different_faith_opinion = -5
+		monthly_dynasty_prestige = 0.2
+	}
+		
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_statue_horse_02
+	
+	type = duchy_capital
+}
+
+db_statue_horse_02 = { # Statue of Horse : Gold Plating
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_horse_statue.dds"
+	
+	can_construct_potential = {
+		OR = {
+			scope:holder = {
+				culture = {
+					has_cultural_tradition = tradition_horse_lords
+				}
+			}
+			scope:holder = {
+				OR = {
+					has_trait = lunatic_genetic
+					has_trait = lunatic_1
+				}
+			}
+		}	
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_hereditary_rule
+			}
+		}
+	}
+	
+	cost_gold = 500
+	
+	character_modifier = {
+		light_cavalry_damage_mult = 0.15
+		heavy_cavalry_damage_mult = 0.15
+		archer_cavalry_damage_mult = 0.15
+		same_faith_opinion = -10
+		different_faith_opinion = -10
+		monthly_dynasty_prestige = 0.5
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_statue_horse_03
+	
+	type = duchy_capital
+}
+
+db_statue_horse_03 = { # Statue of Horse
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_horse_statue.dds"
+	
+	can_construct_potential = {
+		OR = {
+			scope:holder = {
+				culture = {
+					has_cultural_tradition = tradition_horse_lords
+				}
+			}
+			scope:holder = {
+				OR = {
+					has_trait = lunatic_genetic
+					has_trait = lunatic_1
+				}
+			}
+		}	
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_divine_right
+			}
+		}
+	}
+	
+	cost_gold = 700
+	
+	character_modifier = {
+		light_cavalry_damage_mult = 0.25
+		heavy_cavalry_damage_mult = 0.25
+		archer_cavalry_damage_mult = 0.25
+		same_faith_opinion = -15
+		different_faith_opinion = -15
+		monthly_dynasty_prestige = 1
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+	
+	type = duchy_capital
+}
+
+######Kurultai######
+db_kurultai_01 = { # Non-Permanent Kurultai
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_kurultai.dds"
+	
+	can_construct_potential = {
+		building_steppe_requirement = yes
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_plenary_assemblies
+			}
+		}
+	}
+	
+	cost_gold = 300
+	
+	character_modifier = {
+		knight_effectiveness_mult = 0.10
+		vassal_opinion = 5
+		monthly_prestige = 0.5
+		stewardship = 1
+		martial = 1
+	}
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.05
+		county_opinion_add = 5
+	}	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_kurultai_02
+	
+	type = duchy_capital
+}
+
+db_kurultai_02 = { # Permanent Kurultai
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_kurultai.dds"
+	
+	can_construct_potential = {
+		building_steppe_requirement = yes
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_development_02 ###Communal Government
+			}
+		}
+	}
+	
+	cost_gold = 400
+	
+	character_modifier = {
+		knight_effectiveness_mult = 0.22
+		martial_per_prestige_level = 1
+		vassal_opinion = 10
+		monthly_prestige = 0.75
+		stewardship_per_prestige_level = 1
+	}
+	province_modifier = {
+		monthly_income = -1
+	}
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.15
+		county_opinion_add = 10
+	}	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_kurultai_03
+	
+	type = duchy_capital
+}
+
+db_kurultai_03 = { # Expanded Kurultai
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_kurultai.dds"
+	
+	can_construct_potential = {
+		building_steppe_requirement = yes
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_divine_right
+			}
+		}
+	}
+	
+	cost_gold = 500
+	
+	character_modifier = {
+		knight_effectiveness_mult = 0.33
+		martial_per_prestige_level = 2
+		stewardship_per_prestige_level = 1
+		vassal_opinion = 15
+		monthly_prestige = 1
+	}
+	province_modifier = {
+		monthly_income = -1.5
+	}	
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.25
+		county_opinion_add = 15
+	}	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+	
+	type = duchy_capital
+}
+
+######Lighthouse######
+db_lighthouse_01 = { # Lighthouse
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_lighthouse.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_common_tradeport_requirement_terrain = yes
+		building_requirement_castle_city_church = { LEVEL = 01 }
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_development_01 ###Public Works
+			}
+		}
+	}
+	
+	cost_gold = 150
+	
+	character_modifier = {
+		embarkation_cost_mult = -0.05
+		naval_movement_speed_mult = 0.1
+	}
+	province_modifier = {
+		monthly_income = 0.5
+	}
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.05
+		tax_mult = 0.05
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_lighthouse_02
+	
+	type = duchy_capital
+}
+
+db_lighthouse_02 = { # Lighthouse : Giant Banners
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_lighthouse.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_common_tradeport_requirement_terrain = yes
+		building_requirement_castle_city_church = { LEVEL = 02 }
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_armilary_sphere
+				has_innovation = innovation_windmills
+			}
+		}
+	}
+	
+	cost_gold = 300
+	
+	character_modifier = {
+		embarkation_cost_mult = -0.15
+		naval_movement_speed_mult = 0.15
+	}
+	province_modifier = {
+		monthly_income = 1.3
+	}
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.3
+		tax_mult = 0.15
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_lighthouse_03
+	
+	type = duchy_capital
+}
+
+db_lighthouse_03 = { # Lighthouse : Great Lighthouse
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_lighthouse.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_common_tradeport_requirement_terrain = yes
+		building_requirement_castle_city_church = { LEVEL = 03 }
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_cranes
+			}
+		}
+	}
+	
+	cost_gold = 500
+	
+	character_modifier = {
+		embarkation_cost_mult = -0.2
+		naval_movement_speed_mult = 0.25
+	}
+	province_modifier = {
+		monthly_income = 2
+	}
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.5
+		tax_mult = 0.17
+	}
+
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+	
+	type = duchy_capital
+}
+
+
+######Mercenary Camp######
+db_mercenary_camp_01 = { # Mercenary Camp
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_mercenary.dds"
+	
+	can_construct_potential = {
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_plenary_assemblies
+			}
+		}
+	}
+	
+	cost_gold = 300
+	
+	character_modifier = {
+		mercenary_hire_cost_mult = -0.05
+		same_culture_mercenary_hire_cost_mult = -0.05
+		county_opinion_add = -5
+	}
+	province_modifier = {
+		monthly_income = 0.5
+	}
+	duchy_capital_county_modifier = {
+		tax_mult = 0.05
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_mercenary_camp_02
+	
+	type = duchy_capital
+}
+
+db_mercenary_camp_02 = { # Expanded Mercenary Camp
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_mercenary.dds"
+	
+	can_construct_potential = {
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_development_02
+			}
+		}
+	}
+	
+	cost_gold = 400
+	
+	character_modifier = {
+		mercenary_hire_cost_mult = -0.15
+		same_culture_mercenary_hire_cost_mult = -0.15
+		county_opinion_add = -10
+	}
+	province_modifier = {
+		monthly_income = 1.5
+	}
+	duchy_capital_county_modifier = {
+		tax_mult = 0.15
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+	
+	type = duchy_capital
+}
+
+######Things######
+db_things_01 = { # Non-Permanent Things
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_things.dds"
+	
+	can_construct_potential = {
+		building_things_requirment = yes
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_plenary_assemblies
+			}
+		}
+	}
+	
+	cost_gold = 300
+	
+	character_modifier = {
+		learning = 1
+		stewardship = 1
+		prowess = 1
+		vassal_opinion = 5
+		monthly_prestige = 0.75
+	}
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.05
+		county_opinion_add = 5
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+		NOT = {
+			scope:holder = {
+				religion = religion:islam_religion
+			}
+		}
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_things_02
+	
+	type = duchy_capital
+}
+
+db_things_02 = { # Permanent Things
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_things.dds"
+	
+	can_construct_potential = {
+		building_things_requirment = yes
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_development_02 ###Communal Government
+			}
+		}
+	}
+	
+	cost_gold = 400
+	
+	character_modifier = {
+		stewardship_per_prestige_level = 1
+		diplomacy_per_prestige_level = 1
+		learning_per_prestige_level = 1
+		prowess_per_prestige_level = 1
+		vassal_opinion = 10
+		monthly_prestige = 1
+	}
+	province_modifier = {
+		monthly_income = -1
+	}
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.1
+		county_opinion_add = 10
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+		NOT = {
+			scope:holder = {
+				religion = religion:islam_religion
+			}
+		}
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_things_03
+	
+	type = duchy_capital
+}
+
+db_things_03 = { # Expened Things
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_things.dds"
+	
+	can_construct_potential = {
+		building_things_requirment = yes
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_divine_right
+			}
+		}
+	}
+	
+	cost_gold = 500
+	
+	character_modifier = {
+		stewardship_per_prestige_level = 2
+		diplomacy_per_prestige_level = 1
+		learning_per_prestige_level = 2
+		prowess_per_prestige_level = 1
+		vassal_opinion = 15
+		monthly_prestige = 1.5
+	}
+	province_modifier = {
+		monthly_income = -1.5
+	}
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.15
+		county_opinion_add = 15
+	}
+
+	is_enabled = {
+		county.duchy.holder = county.holder
+		NOT = {
+			scope:holder = {
+				religion = religion:islam_religion
+			}
+		}		
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+	
+	type = duchy_capital
+}
+
+######Fair######
+db_fair_01 = { # Small Fair
+	construction_time = standard_construction_time
+
+	type_icon = "icon_building_market_villages.dds"
+	
+	can_construct_potential = {
+		building_fair_requirement = yes
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_city_planning
+			}
+		}
+	}
+	
+	cost_gold = 300
+	
+	character_modifier = {
+		health = -0.5
+		domain_tax_mult = 0.05
+		county_opinion_add = 3		
+	}
+	province_modifier = {
+		monthly_income = 0.5
+	}
+	duchy_capital_county_modifier = {
+		supply_limit = 250
+		development_growth_factor = 0.05
+		tax_mult = 0.05
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_fair_02
+	
+	type = duchy_capital
+}
+
+db_fair_02 = { # Fair
+	construction_time = standard_construction_time
+
+	type_icon = "icon_building_market_villages.dds"
+	
+	can_construct_potential = {
+		building_fair_requirement = yes
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_currency_02#Coinage
+			}
+		}
+	}
+	
+	cost_gold = 500
+	
+	character_modifier = {
+		health = -0.7
+		domain_tax_mult = 0.1
+		county_opinion_add = 5		
+	}
+	province_modifier = {
+		monthly_income = 1
+	}
+	duchy_capital_county_modifier = {
+		supply_limit = 500
+		development_growth_factor = 0.1
+		tax_mult = 0.1
+	}
+
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_fair_03
+	
+	type = duchy_capital
+}
+
+db_fair_03 = { # Regional Fair
+	construction_time = standard_construction_time
+
+	type_icon = "icon_building_market_villages.dds"
+	
+	can_construct_potential = {
+		building_fair_requirement = yes
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_currency_03 ###Banking
+			}
+		}
+	}
+	
+	cost_gold = 700
+	
+	character_modifier = {
+		health = -1
+		domain_tax_mult = 0.15
+		county_opinion_add = 7		
+	}
+	province_modifier = {
+		monthly_income = 2
+	}
+	duchy_capital_county_modifier = {
+		supply_limit = 1000
+		development_growth_factor = 0.2
+		tax_mult = 0.2
+	}
+
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_fair_04
+	
+	type = duchy_capital
+}
+
+db_fair_04 = { # Grand Fair
+	construction_time = standard_construction_time
+
+	type_icon = "icon_building_market_villages.dds"
+	
+	can_construct_potential = {
+		building_fair_requirement = yes
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_currency_03 ###Banking
+				has_innovation = innovation_guilds ###Guild
+				has_innovation = innovation_development_03 ###Urbanization			
+			}
+		}
+	}
+	
+	cost_gold = 1000
+	
+	character_modifier = {
+		health = -1.5
+		domain_tax_mult = 0.25
+		county_opinion_add = 15		
+	}
+	province_modifier = {
+		monthly_income = 5
+	}
+	duchy_capital_county_modifier = {
+		supply_limit = 3500
+		development_growth_factor = 0.45
+		tax_mult = 0.35
+	}
+
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+	
+	type = duchy_capital
+}
+
+######Statue of Hero######
+db_statue_ruler_01 = { # Statue of Hero
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_statue.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_requirement_castle_city_church = { LEVEL = 01 }
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_plenary_assemblies
+			}
+		}
+	}
+	
+	cost_gold = 300
+	
+	character_modifier = {
+		monthly_dynasty_prestige = 0.2
+		martial = 1
+		prowess = 2
+		pikemen_damage_mult = 0.1
+		heavy_infantry_damage_mult = 0.1
+		archers_damage_mult = 0.1
+	}
+		
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_statue_ruler_02
+	
+	type = duchy_capital
+}
+
+db_statue_ruler_02 = { # Statue of Hero : Gold Plating
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_statue.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_requirement_castle_city_church = { LEVEL = 02 }
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_hereditary_rule
+			}
+		}
+	}
+	
+	cost_gold = 400
+	
+	character_modifier = {
+		monthly_dynasty_prestige = 0.5
+		martial_per_prestige_level = 1
+		prowess_per_prestige_level = 1
+		pikemen_damage_mult = 0.2
+		heavy_infantry_damage_mult = 0.2
+		archers_damage_mult = 0.2
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_statue_ruler_03
+	
+	type = duchy_capital
+}
+
+db_statue_ruler_03 = { # Statue of Hero
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_statue.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_requirement_castle_city_church = { LEVEL = 03 }
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_divine_right
+			}
+		}
+	}
+	
+	cost_gold = 500
+	
+	character_modifier = {
+		monthly_dynasty_prestige = 1
+		martial_per_prestige_level = 2
+		prowess_per_prestige_level = 2
+		pikemen_damage_mult = 0.3
+		heavy_infantry_damage_mult = 0.3
+		archers_damage_mult = 0.3
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+	
+	type = duchy_capital
+}
+
+######Menagerie######
+db_menagerie_01 = { # Menagerie
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_menagerie.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_requirement_castle_city_church = { LEVEL = 01 }
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_plenary_assemblies
+			}
+		}
+	}
+	
+	cost_gold = 1000
+	
+	character_modifier = {
+		monthly_dynasty_prestige = 0.5
+		monthly_prestige = 0.5
+		county_opinion_add = -5		
+	}
+
+	province_modifier = {
+		monthly_income = -10
+	}
+		
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_menagerie_02
+	
+	type = duchy_capital
+}
+
+db_menagerie_02 = { # Menagerie
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_menagerie.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_requirement_castle_city_church = { LEVEL = 02 }
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_hereditary_rule
+			}
+		}
+	}
+	
+	cost_gold = 2000
+	
+	character_modifier = {
+		monthly_dynasty_prestige = 1.0
+		monthly_prestige = 0.5
+		monthly_piety = -0.5	
+		county_opinion_add = -10		
+	}
+
+	province_modifier = {
+		monthly_income = -20
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_menagerie_03
+	
+	type = duchy_capital
+}
+
+db_menagerie_03 = { # Menagerie
+	construction_time = standard_construction_time
+
+	type_icon = "icon_db_menagerie.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_requirement_castle_city_church = { LEVEL = 03 }
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_divine_right
+			}
+		}
+	}
+	
+	cost_gold = 4000
+	
+	character_modifier = {
+		monthly_dynasty_prestige = 1.5
+		monthly_prestige = 1
+		monthly_piety = -1
+		county_opinion_add = -25		
+	}
+
+	province_modifier = {
+		monthly_income = -40
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+	
+	type = duchy_capital
+}

@@ -1,0 +1,132 @@
+grandmaster_select_interaction = {
+    category =  interaction_category_diplomacy
+    icon = revoke_title
+    desc = grandmaster_select_interaction_desc
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+    common_interaction = yes
+
+    is_shown = {
+       scope:actor = {
+           is_ai = no
+		NOT = {
+			any_owned_story = {
+			story_type = dynasty_grandmaster_completed_story
+			}
+			}
+           any_owned_story = {
+			story_type = dynasty_grandmaster_story
+			}
+       }
+        scope:recipient = {
+			is_alive = yes
+			is_ruler = no
+			OR = {
+				is_child_of = scope:actor
+				is_grandchild_of = scope:actor
+				is_great_grandchild_of = scope:actor
+			}
+		}
+    }
+
+    send_option = {
+        flag = grandmaster_select_flag
+        localization = grandmaster_select_flag_desc
+    }
+
+    auto_accept = yes
+
+    on_accept = {
+        scope:actor = {
+            switch = {
+                trigger = yes
+                scope:grandmaster_select_flag = {
+                  scope:actor  = {
+			trigger_event = {
+				id = holy_dynasty.0004
+				days = { 10 20 }
+			} 
+			create_story = 	dynasty_grandmaster_completed_story	
+			faith = {
+			random_faith_holy_order = {
+				limit = { holy_order_patron = scope:actor }
+				leader = { 
+		                        every_held_title = {
+                		            limit = {
+                                		tier >= tier_county}
+                          			  scope:recipient = { get_title = prev }
+                 			       }
+					}
+				}
+			}
+			}
+                }
+            }
+        }
+    }
+}
+
+
+pope_select_interaction = {
+    category =  interaction_category_diplomacy
+    icon = revoke_title
+    desc = pope_select_interaction_desc
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+    common_interaction = yes
+
+    is_shown = {
+       scope:actor = {
+           is_ai = no
+		NOT = {
+			any_owned_story = {
+			story_type = dynasty_pope_completed_story
+			}
+			}
+           any_owned_story = {
+			story_type = dynasty_pope_story
+			}
+       }
+        scope:recipient = {
+			is_alive = yes
+			is_ruler = no
+			OR = {
+				is_child_of = scope:actor
+				is_grandchild_of = scope:actor
+				is_great_grandchild_of = scope:actor
+			}
+		}
+    }
+
+    send_option = {
+        flag = pope_select_flag
+        localization = pope_select_flag_desc
+    }
+
+    auto_accept = yes
+
+    on_accept = {
+        scope:actor = {
+            switch = {
+                trigger = yes
+                scope:pope_select_flag = {
+                  scope:actor  = {
+			trigger_event = {
+				id = holy_dynasty.0003
+				days = { 10 20 }
+			} 
+			create_story = 	dynasty_pope_completed_story
+			scope:actor.faith.religious_head = {	
+			 every_held_title = {
+                		            limit = {
+                                		tier >= tier_county}
+                          			  scope:recipient = { get_title = prev }
+                 			       }
+				}
+			}
+                }
+            }
+        }
+    }
+}
+

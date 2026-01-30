@@ -1,0 +1,84 @@
+﻿building_forest_requirement = {
+	or = {
+		terrain = farmlands
+		terrain = plains
+	}
+}
+
+
+building_caravan_requirement = {
+	AND = {
+		OR = {
+			terrain = oasis
+			terrain = steppe
+			terrain = drylands
+			terrain = desert
+			terrain = desert_mountains
+			terrain = plains
+			terrain = mountains
+			terrain = hills
+		}
+		NOT = { geographical_region = world_europe }
+	}
+}
+
+building_insular_requirement = {
+	OR = {
+		geographical_region = world_europe_west_britannia
+		scope:holder = {
+			culture = {
+				has_cultural_pillar = heritage_goidelic
+			}
+		}
+	}
+}
+
+building_pillage_requirment = {
+	NOT = {
+		AND = {
+			OR = {
+				scope:holder = {
+					faith = { has_doctrine = tenet_pacifism }
+				}
+				scope:holder = {
+					faith = { has_doctrine = tenet_dharmic_pacifism }
+				}
+			}
+			scope:holder = {
+				culture = {
+					has_cultural_tradition = tradition_horse_lords
+				}
+			}
+		}
+	}
+}
+
+building_steppe_requirement = {
+	scope:holder = {
+		culture = {
+			has_cultural_tradition = tradition_horse_lords
+		}
+	}
+}
+			
+building_things_requirment = {
+	scope:holder = {
+		culture = {
+			has_cultural_pillar = heritage_north_germanic
+		}
+	}
+}
+
+building_tribal_council_requirement = {
+	AND = {
+		scope:holder = {
+			has_government = tribal_government
+		}
+		
+		NOT = { geographical_region = world_europe_north }
+	}
+}
+
+building_fair_requirement = {
+	geographical_region = world_europe
+}

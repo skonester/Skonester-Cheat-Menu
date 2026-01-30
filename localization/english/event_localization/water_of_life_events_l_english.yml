@@ -1,0 +1,49 @@
+﻿l_english:
+ water_of_life_header:0 "The Centurion's Journal:"
+ water_of_life.1001.t:0 "$water_of_life_header$ The Man Who Did Not Die."
+ water_of_life.1001.desc:0 "The scroll was hidden not in a library, but inside the hilt of a rusted gladius found in Judea. The Latin is rough, military—the report of a Tribune named Clavius. It speaks of a body missing from a sealed tomb, of a red-haired woman who knew the truth, and of a cup that stops the clock of life.\n\nThe final entry is not a date, but a vow: #'I cannot kill what cannot die. I can only serve it. I go to the wilderness to keep watch.'#!\n\nLegends say he is there still. A soldier waiting for relief. If I find him, I find the Grail."
+ water_of_life.1001.a:0 "The Tribune waits. I will find him."
+ water_of_life.1001.b:0 "To hunt a Roman soldier, one must be prepared."
+
+ water_of_life_header_1:0 "The Pursuit:"
+ water_of_life.1002.t:1 "$water_of_life_header_1$ Shadow of the Eagle."
+ water_of_life.1002.desc:0 "I leave my crown behind. To find Clavius, I must walk the path of the exile. I trade my velvet for wool, my scepter for a walking staff. The clues in his journal lead away from the cities of men, toward the silent places where the Empire's reach crumbled. I am tracking a ghost who has had centuries to cover his tracks."
+ water_of_life.1002.a:0 "The road is long, but my will is iron."
+ water_of_life.1002.b:0 "One last look at my realm, then I disappear."
+
+ water_of_life_header_2:0 "The Wilderness:"
+ water_of_life.1003.t:1 "$water_of_life_header_2$ The Seven Powers."
+ water_of_life.1003.desc:0 "The wilderness strips a [ROOT.Char.GetWomanMan] to the bone. As the *Gospel of Mary* warns, the soul is beset by the Seven Powers of Wrath: Darkness, Craving, and Ignorance. Alone by the fire, I fight them. I do not fear bandits; I fear the silence where Clavius found his God. My mind—the *Nous*—must become still as a tomb before the stone is rolled away."
+ water_of_life.1003.a:0 "I conquer the urge to turn back."
+
+ water_of_life_header_3:0 "Trial of Endurance:"
+ water_of_life.1004.t:1 "$water_of_life_header_3$ The Soldier's Ration."
+ water_of_life.1004.desc:0 "Supplies run low. The landscape is unforgiving rock and thorn. I realize now why he chose this place: it is a fortress made of nature. Hunger gnaws at my belly. Do I hunt as a lord, or beg as a pilgrim? The Tribune would respect discipline, but the Magdalene taught humility."
+ water_of_life.1004.a:0 "I will hunt. Discipline sustains the body."
+ water_of_life.1004.b:0 "I will seek the locals. Humility sustains the soul."
+
+ water_of_life_header_4:0 "The Hunt:"
+ water_of_life.1005.t:1 "$water_of_life_header_4$ Signs of the Legion."
+ water_of_life.1005.desc:0 "I find a marker—a stone cairn stacked with military precision. Then another. I am not wandering; I am being guided. Or perhaps... herded. Near a stream, I spot a stag. It does not run. It watches me, unafraid, as if under the protection of a powerful guardian. I hold my fire. To kill here feels like a violation of a Truce."
+ water_of_life.1005.a:0 "I lower my bow. I am a guest here."
+
+ water_of_life_header_5:0 "The Village:"
+ water_of_life.1006.t:1 "$water_of_life_header_5$ The Old Man of the Hills."
+ water_of_life.1006.desc:0 "A small hamlet clings to the mountainside. When I ask of the Roman, the villagers make the sign of the fish. An elder whispers: 'The Stranger? He has been here since my grandfather's grandfather. He wears the iron of the old world. He protects us from wolves and bandits, but he never speaks. He is waiting for someone.' The elder looks at me. 'Perhaps you.'"
+ water_of_life.1006.a:0 "He knows I am coming."
+
+ water_of_life_header_6:0 "The Approach:"
+ water_of_life.1007.t:1 "$water_of_life_header_6$ The Tenth Legion."
+ water_of_life.1007.desc:0 "The path narrows to a goat track leading to a cave mouth fortified with ancient stones. I feel eyes upon me—the weight of a gaze that has watched empires rise and turn to dust. I stop and raise my empty hands. 'Tribune!' I call out. 'I seek the Living One!' \n\nSilence answers. Then, the grinding of stone."
+ water_of_life.1007.a:0 "Enter the lion's den."
+
+ water_of_life_header_8:0 "The Tribune:"
+ water_of_life.1008.t:1 "$water_of_life_header_8$ Clavius Aquila."
+l_english:
+ water_of_life.1008.desc:0 "He sits by a simple fire, cleaning a gladius that still shines like new. He wears the tunic of a Roman Tribune, though the leather is worn smooth by eons. Clavius looks up, his eyes heavy with a thousand years of memory.\n\n'I have seen two things which cannot reconcile,' he says, his voice like gravel. 'A man dead without question, and that same man alive again. I promised Mary I would hold the watch until a worthy heir arrived.'\n\nHe looks deep into the flames. 'I have advised many kings. I stood beside the Leper King, Baldwin, when he commanded: #P *'Do not mistreat the Jew or the Muslim. In this Kingdom, there is no race, only subjects of God.'*#! You must carry that justice now.'\n\nHe holds out a simple clay cup now encrusted with jewels over the centuries. 'The *Gospel* says: *Matter gave birth to a passion that has no equal.* Drink, and the passion dies. Only the duty remains. Are you ready to take my shift, [ROOT.GetCharacter.GetTitledFirstNameNoTooltip]?'"
+ water_of_life.1008.a:0 "'I relieve you, Tribune. Go to your rest.'"
+
+ water_of_life_header_9:0 "Return:"
+ water_of_life.1009.t:1 "$water_of_life_header_9$ The New Sentinel."
+ water_of_life.1009.desc:0 "Clavius turned to dust the moment the cup touched my lips—finally at peace. I return to my realm carrying his burden and His blood. My subjects cheer, but they do not understand. They see a ruler; I see the transient nature of flesh. \n\n[one_loyal_subject_character.GetFirstNameNoTooltip]: My [ROOT.Char.GetLadyLord], you have returned! \n\n[second_loyal_subject_character.GetFirstNameNoTooltip]: We feared you were lost to the wild! \n\n[third_loyal_subject_character.GetFirstNameNoTooltip]: You look... terrifyingly calm. \n\n[fourth_loyal_subject_character.GetFirstNameNoTooltip]: Welcome home, Guardian."
+ water_of_life.1009.a:0 "I Can Never Be The Same."

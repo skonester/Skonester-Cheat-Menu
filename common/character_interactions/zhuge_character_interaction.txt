@@ -206,6 +206,7 @@ zhuge_yixue_05 = {
             }
             else = {
                 add_trait = plague_immunity
+				add_trait = measles_immunity
             }
         }
     }

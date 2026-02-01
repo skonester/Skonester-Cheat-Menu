@@ -1,0 +1,23 @@
+﻿# vgl. game > common > on_action > religion_on_action.txt
+
+### Mod Code
+
+## On actions related to religion
+
+# Code on-action: character creates a faith
+# Root is the creator
+# scope:old_faith is the faith they used to have
+on_faith_created = {
+	on_actions = {
+		on_mts_faith_creation		# Clean Empty Doctrines
+	}
+}
+
+## Called from 'on_game_start_after_lobby'
+
+# Clean Empty Doctrines
+on_mts_faith_creation = {
+	events = {
+		faith_creation_clean.001
+	}
+}

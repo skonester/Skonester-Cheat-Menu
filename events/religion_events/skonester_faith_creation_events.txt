@@ -1,0 +1,41 @@
+﻿# vgl. game > events > religion_events > faith_creation_events.txt
+
+# modified code
+
+namespace = faith_creation_clean
+
+# Fired when you make a faith.
+faith_creation_clean.001 = {	
+	hidden = yes
+	
+	trigger = {	
+	   always = yes
+	}	
+	
+	immediate = {	
+		faith = {	
+
+			remove_doctrine = tenet_zz_empty_1
+			remove_doctrine = tenet_zz_empty_2
+			# remove_doctrine = tenet_zz_empty_3
+			# remove_doctrine = tenet_zz_empty_4
+			# remove_doctrine = tenet_zz_empty_5
+			# remove_doctrine = tenet_zz_empty_6
+			# remove_doctrine = tenet_zz_empty_7
+			# remove_doctrine = tenet_zz_empty_8
+			# remove_doctrine = tenet_zz_empty_9
+			# remove_doctrine = tenet_zz_empty_10
+			# remove_doctrine = tenet_zz_empty_11
+			# remove_doctrine = tenet_zz_empty_12
+			# remove_doctrine = tenet_zz_empty_13
+			# remove_doctrine = tenet_zz_empty_14
+			# remove_doctrine = tenet_zz_empty_15
+			# remove_doctrine = tenet_zz_empty_16
+			# remove_doctrine = tenet_zz_empty_17
+			# remove_doctrine = tenet_zz_empty_18
+			# remove_doctrine = tenet_zz_empty_19
+			# remove_doctrine = tenet_zz_empty_20
+
+		}	
+	}	
+}

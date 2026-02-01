@@ -1,0 +1,1061 @@
+blood_ancester_1 = { #猫之优雅
+	index = 6601
+
+	diplomacy = 3	#外交
+	#stewardship = 4	#管理
+	#learning = 2	#学识
+	#tax_mult = 0.05	#地产税收
+	martial = 5
+	intrigue = 6
+	prowess = 6
+	general_opinion = 10	#大众好感
+	vassal_opinion = -5
+	liege_opinion = 10
+	#same_faith_opinion = 5	#相同信仰的好感
+	health = 0.5
+	inherit_chance = 30	#遗传
+	parent_inheritance_sex = male	#父母遗传性别（男）
+	#inherit_from_real_father = no #从真正的父亲那里继承该特质，默认yes
+	inherit_from_real_father = yes
+	birth = 0.03
+	random_creation = 0.03
+	
+	physical = yes
+	
+	genetic = yes
+	good = yes
+	
+	
+	intrigue_scheme_resistance = 15
+	intrigue_scheme_power = 15
+	
+	#level = 1
+	#group = blood_ancester
+	opposites = {
+		blood_ancester_2
+		blood_ancester_6
+		blood_ancester_4
+		blood_ancester_5
+		blood_ancester_8
+		blood_ancester_9
+		blood_ancester_10
+		blood_ancester_7
+		blood_ancester_11
+	}
+	movement_speed = 0.15
+	attacker_advantage = 15
+	defender_advantage = -10
+	
+	
+	monthly_intrigue_lifestyle_xp_gain_mult = 0.3
+	monthly_martial_lifestyle_xp_gain_mult = 0.3
+	monthly_diplomacy_lifestyle_xp_gain_mult = 0.2
+	
+		fertility = 0.1
+	attraction_opinion = 10
+	
+	enemy_hard_casualty_modifier = 0.15
+	intrigue_scheme_power = 15
+	jungle_advantage = 30
+	genetic_constraint_all = beauty_1
+	genetic_constraint_men = male_beauty_1
+	genetic_constraint_women = female_beauty_1
+	forced_portrait_age_index = 1 # old_beauty_1
+	
+	compatibility = {
+		blood_ancester_2 = -20
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_blood_ancester_1_desc
+			}
+			desc = trait_blood_ancester_1_character_desc
+		}
+	}
+}
+blood_ancester_2 = { # 犬之忠勇
+	index = 6602
+
+	diplomacy = 4	#外交
+	stewardship = 5	#管理
+	#learning = 5	#学识
+	martial = 6
+	intrigue = -4
+	prowess = 5
+	tax_mult = 0.15	#地产税收
+	general_opinion = 20	#大众好感
+	liege_opinion = 100
+	vassal_opinion = 10
+	dynasty_opinion = 100
+	same_faith_opinion = 20	#相同信仰的好感
+	health = 0.5
+	inherit_chance = 30	#必定遗传
+	parent_inheritance_sex = male	#父母遗传性别（男）
+	#inherit_from_real_father = no #从真正的父亲那里继承该特质，默认yes
+	
+	birth = 0.03
+	random_creation = 0.03 #开局随机分配该特质给人物几率
+	
+	physical = yes
+	
+	genetic = yes
+	good = yes
+	
+	#level = 2
+	#group = blood_ancester
+	opposites = {
+		blood_ancester_1
+		blood_ancester_6
+		blood_ancester_4
+		blood_ancester_5
+		blood_ancester_8
+		blood_ancester_9
+		blood_ancester_10
+		blood_ancester_7
+		blood_ancester_11
+	}
+	
+	intrigue_scheme_resistance = -30
+	intrigue_scheme_power = -30
+	
+	build_speed = -0.20
+	holding_build_speed = -0.20
+	build_gold_cost = -0.2
+	holding_build_gold_cost = -0.2
+	development_growth_factor = 0.2
+	
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.3
+	monthly_martial_lifestyle_xp_gain_mult = 0.2
+	monthly_diplomacy_lifestyle_xp_gain_mult = 0.3
+
+    	fertility = 0.5
+	attraction_opinion = 15
+	advantage = 15
+	forest_advantage = 30
+	genetic_constraint_all = beauty_1
+	genetic_constraint_men = male_beauty_1
+	genetic_constraint_women = female_beauty_1
+	forced_portrait_age_index = 1 # old_beauty_1
+	
+	compatibility = {
+		blood_ancester_1 = -20
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_blood_ancester_2_desc
+			}
+			desc = trait_blood_ancester_2_character_desc
+		}
+	}
+}
+blood_ancester_6 = { #暗夜
+	index = 6611
+
+	diplomacy = -4	#外交
+	martial = 2
+	learning = 2	#学识
+	intrigue = 12
+	prowess = 6
+	owned_personal_scheme_success_chance_add = 15
+	owned_hostile_scheme_success_chance_add = 15
+	stress_gain_mult = 0.3
+	general_opinion = -50	#大众好感
+	#same_faith_opinion = 15	#相同信仰的好感
+	health = 0.3
+	inherit_chance = 30	#必定遗传
+	parent_inheritance_sex = male	#父母遗传性别（男）
+	#inherit_from_real_father = no #从真正的父亲那里继承该特质，默认yes
+	movement_speed = 0.1
+	
+	birth = 0.03
+	random_creation = 0.03 #开局随机分配该特质给人物几率
+	
+	intrigue_scheme_resistance = 30
+	intrigue_scheme_power = 30
+	
+	physical = yes
+	
+	genetic = yes
+	good = yes
+	
+	#level = 4
+	#group = blood_ancester
+	
+	opposites = {
+		blood_ancester_2
+		blood_ancester_6
+		blood_ancester_1
+		blood_ancester_5
+		blood_ancester_8
+		blood_ancester_9
+		blood_ancester_10
+		blood_ancester_7
+		blood_ancester_11
+	}
+	
+	#monthly_learning_lifestyle_xp_gain_mult = 0.2
+	monthly_intrigue_lifestyle_xp_gain_mult = 0.6
+	#monthly_stewardship_lifestyle_xp_gain_mult = 0.2
+	#monthly_martial_lifestyle_xp_gain_mult = 0.1
+	monthly_diplomacy_lifestyle_xp_gain_mult = -0.15
+	
+	fertility = 0.3
+	attraction_opinion = -30
+	
+	genetic_constraint_all = beauty_3
+	genetic_constraint_men = male_beauty_3
+	genetic_constraint_women = female_beauty_3
+	forced_portrait_age_index = 1 # old_beauty_1
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_blood_ancester_6_desc
+			}
+			desc = trait_blood_ancester_6_character_desc
+		}
+	}
+}
+
+
+blood_art_1 = { #太极
+	index = 6604
+	
+	diplomacy = 2	#外交
+	martial = 2
+	#stewardship = -4	#管理
+	#intrigue = 12
+	learning = 2	#学识
+	prowess = 6 #勇武
+	no_prowess_loss_from_age = yes
+	#owned_personal_scheme_success_chance_add = 5
+	#owned_hostile_scheme_success_chance_add = 5
+	stress_gain_mult = -0.15
+	general_opinion = 10	#大众好感
+	#same_faith_opinion = 10	#相同信仰的好感
+	health = 0.2
+	inherit_chance = 20	#必定遗传
+	parent_inheritance_sex = male	#父母遗传性别（男）
+	#inherit_from_real_father = no #从真正的父亲那里继承该特质，默认yes
+	
+	birth = 0
+	random_creation = 0.01
+	
+	physical = yes
+	
+	genetic = yes
+	good = yes
+	
+	level = 1
+	group = blood_art
+	
+	monthly_learning_lifestyle_xp_gain_mult = 0.1
+	monthly_martial_lifestyle_xp_gain_mult = 0.1
+	monthly_diplomacy_lifestyle_xp_gain_mult = 0.1
+	
+	fertility = 0.15
+	
+	genetic_constraint_all = beauty_1
+	genetic_constraint_men = male_beauty_1
+	genetic_constraint_women = female_beauty_1
+	forced_portrait_age_index = 1 # old_beauty_1
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_blood_art_1_desc
+			}
+			desc = trait_blood_art_1_character_desc
+		}
+	}
+}
+blood_ancester_4 = { #月光
+	index = 6605
+
+	diplomacy = 6	#外交
+	martial = 4
+	learning = 2	#学识
+	intrigue = 6
+	prowess = 6
+	#owned_personal_scheme_success_chance_add = 5
+	#owned_hostile_scheme_success_chance_add = 5
+	stress_gain_mult = -0.15
+	general_opinion = 50	#大众好感
+	#same_faith_opinion = 15	#相同信仰的好感
+	health = 0.3
+	inherit_chance = 30	#必定遗传
+	parent_inheritance_sex = male	#父母遗传性别（男）
+	#inherit_from_real_father = no #从真正的父亲那里继承该特质，默认yes
+	movement_speed = 0.3
+	
+	birth = 0.03
+	random_creation = 0.03 #开局随机分配该特质给人物几率
+	
+	physical = yes
+	
+	genetic = yes
+	good = yes
+	
+	#level = 4
+	#group = blood_ancester
+	
+	opposites = {
+		blood_ancester_2
+		blood_ancester_6
+		blood_ancester_1
+		blood_ancester_5
+		blood_ancester_8
+		blood_ancester_9
+		blood_ancester_10
+		blood_ancester_7
+		blood_ancester_11
+	}
+	
+	monthly_learning_lifestyle_xp_gain_mult = 0.2
+	monthly_intrigue_lifestyle_xp_gain_mult = 0.3
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.2
+	monthly_martial_lifestyle_xp_gain_mult = 0.1
+	monthly_diplomacy_lifestyle_xp_gain_mult = 0.3
+	
+	fertility = 0.3
+	attraction_opinion = 30
+	
+	genetic_constraint_all = beauty_3
+	genetic_constraint_men = male_beauty_3
+	genetic_constraint_women = female_beauty_3
+	forced_portrait_age_index = 1 # old_beauty_1
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_blood_ancester_4_desc
+			}
+			desc = trait_blood_ancester_4_character_desc
+		}
+	}
+}
+
+blood_ancester_5 = { #野猪
+	index = 6606
+
+	diplomacy = -6	#外交
+	martial = 14
+	learning = -6	#学识
+	intrigue = -2
+	prowess = 8
+	#owned_personal_scheme_success_chance_add = 5
+	#owned_hostile_scheme_success_chance_add = 5
+	stress_gain_mult = -0.15
+	general_opinion = -20	#大众好感
+	#same_faith_opinion = 15	#相同信仰的好感
+	health = 0.3
+	inherit_chance = 30	#必定遗传
+	parent_inheritance_sex = male	#父母遗传性别（男）
+	#inherit_from_real_father = no #从真正的父亲那里继承该特质，默认yes
+	movement_speed = 0.3
+	
+	liege_opinion = -30
+	vassal_opinion = -20
+	dynasty_opinion = 10
+	enemy_hard_casualty_modifier = 0.5
+	
+	birth = 0.03
+	random_creation = 0.03 #开局随机分配该特质给人物几率
+	
+	physical = yes
+	
+	genetic = yes
+	good = yes
+	
+	#level = 4
+	#group = blood_ancester
+	
+	opposites = {
+		blood_ancester_2
+		blood_ancester_6
+		blood_ancester_1
+		blood_ancester_4
+		blood_ancester_8
+		blood_ancester_9
+		blood_ancester_10
+		blood_ancester_7
+		blood_ancester_11
+	}
+	
+	#monthly_learning_lifestyle_xp_gain_mult = 0.2
+	#monthly_intrigue_lifestyle_xp_gain_mult = 0.3
+	#monthly_stewardship_lifestyle_xp_gain_mult = 0.2
+	monthly_martial_lifestyle_xp_gain_mult = 0.4
+	#monthly_diplomacy_lifestyle_xp_gain_mult = 0.3
+	
+	fertility = 0.5
+	attraction_opinion = -15
+	
+	genetic_constraint_all = beauty_1
+	genetic_constraint_men = male_beauty_1
+	genetic_constraint_women = female_beauty_1
+	forced_portrait_age_index = 1 # old_beauty_1
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_blood_ancester_5_desc
+			}
+			desc = trait_blood_ancester_5_character_desc
+		}
+	}
+}
+
+blood_ancester_7 = { #windrunner
+	index = 6610
+
+	diplomacy = 2	#外交
+	martial = 4
+	learning = 2	#学识
+	#intrigue = -2
+	prowess = 8
+	#owned_personal_scheme_success_chance_add = 5
+	#owned_hostile_scheme_success_chance_add = 5
+	stress_gain_mult = -0.15
+	general_opinion = 20	#大众好感
+	#same_faith_opinion = 15	#相同信仰的好感
+	health = 0.3
+	inherit_chance = 30	#必定遗传
+	parent_inheritance_sex = female	#父母遗传性别（男）
+	#inherit_from_real_father = no #从真正的父亲那里继承该特质，默认yes
+	movement_speed = 0.7
+	
+	liege_opinion = 30
+	vassal_opinion = 20
+	dynasty_opinion = 30
+	enemy_hard_casualty_modifier = 0.2
+	attacker_advantage  = 15
+	jungle_advantage  = 15
+	forest_advantage  = 15
+	
+	birth = 0.03
+	random_creation = 0.03 #开局随机分配该特质给人物几率
+	
+	min_combat_roll = 4
+	max_combat_roll = 7
+	
+	physical = yes
+	
+	genetic = yes
+	good = yes
+	
+	#level = 4
+	#group = blood_ancester
+	
+	opposites = {
+		blood_ancester_2
+		blood_ancester_6
+		blood_ancester_1
+		blood_ancester_4
+		blood_ancester_8
+		blood_ancester_9
+		blood_ancester_10
+		blood_ancester_7
+		blood_ancester_11
+	}
+	
+	monthly_learning_lifestyle_xp_gain_mult = 0.1
+	#monthly_intrigue_lifestyle_xp_gain_mult = 0.3
+	#monthly_stewardship_lifestyle_xp_gain_mult = 0.2
+	monthly_martial_lifestyle_xp_gain_mult = 0.3
+	monthly_diplomacy_lifestyle_xp_gain_mult = 0.1
+	
+	fertility = 0.3
+	#attraction_opinion = 30
+	
+	genetic_constraint_all = beauty_1
+	genetic_constraint_men = male_beauty_1
+	genetic_constraint_women = female_beauty_1
+	forced_portrait_age_index = 1 # old_beauty_1
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_blood_ancester_7_desc
+			}
+			desc = trait_blood_ancester_7_character_desc
+		}
+	}
+}
+
+
+blood_ancester_8 = { #晨星
+	index = 6607
+
+	diplomacy = 6	#外交
+	martial = 4
+	learning = 6	#学识
+	#intrigue = -2
+	prowess = 6
+	#owned_personal_scheme_success_chance_add = 5
+	#owned_hostile_scheme_success_chance_add = 5
+	stress_gain_mult = 0.15
+	general_opinion = 50	#大众好感
+	#same_faith_opinion = 15	#相同信仰的好感
+	health = 0.3
+	inherit_chance = 30	#必定遗传
+	parent_inheritance_sex = male	#父母遗传性别（男）
+	#inherit_from_real_father = no #从真正的父亲那里继承该特质，默认yes
+	movement_speed = 0.1
+	
+	liege_opinion = -30
+	vassal_opinion = 50
+	dynasty_opinion = 100
+	same_faith_opinion = 50
+	
+	birth = 0.03
+	random_creation = 0.03 #开局随机分配该特质给人物几率
+	
+	physical = yes
+	
+	genetic = yes
+	good = yes
+	
+	attacker_advantage = 15
+	defender_advantage = 15
+	attraction_opinion = 50
+	enemy_hard_casualty_modifier = 0.15
+	#intrigue_scheme_power = 20
+	
+	#level = 4
+	#group = blood_ancester
+	
+	opposites = {
+		blood_ancester_2
+		blood_ancester_6
+		blood_ancester_1
+		blood_ancester_4
+		blood_ancester_5
+		blood_ancester_9
+		blood_ancester_10
+		blood_ancester_7
+		blood_ancester_11
+	}
+	
+	monthly_learning_lifestyle_xp_gain_mult = 0.4
+	#monthly_intrigue_lifestyle_xp_gain_mult = 0.3
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.2
+	monthly_martial_lifestyle_xp_gain_mult = 0.2
+	monthly_diplomacy_lifestyle_xp_gain_mult = 0.6
+	
+	fertility = 0.3
+	#attraction_opinion = 30
+	
+	genetic_constraint_all = beauty_1
+	genetic_constraint_men = male_beauty_1
+	genetic_constraint_women = female_beauty_1
+	forced_portrait_age_index = 1 # old_beauty_1
+	
+	compatibility = {
+		blood_ancester_6 = -20
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_blood_ancester_8_desc
+			}
+			desc = trait_blood_ancester_8_character_desc
+		}
+	}
+}
+
+
+blood_ancester_9 = { #小丑
+	index = 6608
+
+	diplomacy = -8	#外交
+	martial = 4
+	learning = 2	#学识
+	intrigue = 6
+	prowess = 6
+	owned_personal_scheme_success_chance_add = 5
+	owned_hostile_scheme_success_chance_add = 5
+	stress_gain_mult = -0.3
+	general_opinion = -20	#大众好感
+	#same_faith_opinion = 15	#相同信仰的好感
+	health = 0.3
+	inherit_chance = 30	#必定遗传
+	parent_inheritance_sex = male	#父母遗传性别（男）
+	#inherit_from_real_father = no #从真正的父亲那里继承该特质，默认yes
+	#movement_speed = 0.1
+	vassal_opinion = -30
+	liege_opinion = 30
+	dynasty_opinion = 20
+	attraction_opinion = -30
+	birth = 0.03
+	random_creation = 0.03 #开局随机分配该特质给人物几率
+	
+	physical = yes
+	
+	genetic = yes
+	good = yes
+	
+	attacker_advantage = 15
+	defender_advantage = -10
+	
+	enemy_hard_casualty_modifier = 0.3
+	intrigue_scheme_power = 20
+	#jungle_advantage = 30
+	#level = 4
+	#group = blood_ancester
+	
+	opposites = {
+		blood_ancester_2
+		blood_ancester_6
+		blood_ancester_1
+		blood_ancester_4
+		blood_ancester_5
+		blood_ancester_8
+		blood_ancester_10
+		blood_ancester_7
+		blood_ancester_11
+	}
+	
+	#monthly_learning_lifestyle_xp_gain_mult = 0.4
+	monthly_intrigue_lifestyle_xp_gain_mult = 0.4
+	#monthly_stewardship_lifestyle_xp_gain_mult = 0.2
+	monthly_martial_lifestyle_xp_gain_mult = 0.2
+	#monthly_diplomacy_lifestyle_xp_gain_mult = 0.6
+	
+	fertility = 0.3
+	#attraction_opinion = 30
+	
+	genetic_constraint_all = beauty_1
+	genetic_constraint_men = male_beauty_1
+	genetic_constraint_women = female_beauty_1
+	forced_portrait_age_index = 1 # old_beauty_1
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_blood_ancester_9_desc
+			}
+			desc = trait_blood_ancester_9_character_desc
+		}
+	}
+}
+
+
+blood_ancester_10 = { #渡鸦
+	index = 6609
+
+	diplomacy = -6	#外交
+	stewardship = 2	#管理
+	martial = -4
+	intrigue = 2
+	learning = 10	#学识
+	prowess = 6 #勇武
+	owned_personal_scheme_success_chance_add = 10
+	owned_hostile_scheme_success_chance_add = 10
+	#tax_mult = 0.25	#地产税收
+	general_opinion = -15	#大众好感
+	dynasty_opinion = 15	#宗族好感
+	#same_faith_opinion = 15	#相同信仰的好感
+	health = 0.3
+	inherit_chance = 30	#必定遗传
+	parent_inheritance_sex = male	#父母遗传性别（男）
+	#inherit_from_real_father = no #从真正的父亲那里继承该特质，默认yes	
+	movement_speed = 0.3
+	
+	development_growth_factor = 0.5
+
+	birth = 0.03
+	random_creation = 0.03
+	attraction_opinion = -10
+	physical = yes
+	
+	genetic = yes
+	good = yes
+	
+	opposites = {
+		blood_ancester_2
+		blood_ancester_1
+		blood_ancester_4
+		blood_ancester_5
+		blood_ancester_8
+		blood_ancester_9
+		blood_ancester_6
+		blood_ancester_7
+		blood_ancester_11
+	}
+	
+	#level = 3
+	#group = blood_ancester
+	
+	#build_speed = -0.10
+	#holding_build_speed = -0.10
+	#build_gold_cost = -0.1
+	#holding_build_gold_cost = -0.1
+	#development_growth_factor = 0.1
+	monthly_learning_lifestyle_xp_gain_mult = 0.6
+	#monthly_intrigue_lifestyle_xp_gain_mult = 0.5
+	#monthly_martial_lifestyle_xp_gain_mult = 0.3
+  	
+    	fertility = 0.3
+	attraction_opinion = -15
+	
+	intrigue_scheme_resistance = 10
+	intrigue_scheme_power = 10
+	enemy_hard_casualty_modifier = 0.1
+	
+	genetic_constraint_all = beauty_3
+	genetic_constraint_men = male_beauty_3
+	genetic_constraint_women = female_beauty_3
+	forced_portrait_age_index = 1 # old_beauty_1
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_blood_ancester_10_desc
+			}
+			desc = trait_blood_ancester_10_character_desc
+		}
+	}
+}
+
+
+blood_ancester_11 = { #银龙
+	index = 6612
+
+	diplomacy = 2	#外交
+	stewardship = 8	#管理
+	martial = 2
+	intrigue = 2
+	learning = 2	#学识
+	prowess = 8 #勇武
+	#owned_personal_scheme_success_chance_add = 10
+	#owned_hostile_scheme_success_chance_add = 10
+	tax_mult = 0.4	#地产税收
+	general_opinion = 15	#大众好感
+	dynasty_opinion = 50	#宗族好感
+	#same_faith_opinion = 15	#相同信仰的好感
+	health = 0.5
+	inherit_chance = 30	#必定遗传
+	parent_inheritance_sex = male	#父母遗传性别（男）
+	#inherit_from_real_father = no #从真正的父亲那里继承该特质，默认yes	
+	movement_speed = 0.2
+	
+	development_growth_factor = 0.1
+
+	birth = 0.03
+	random_creation = 0.03
+	attraction_opinion = -10
+	physical = yes
+	
+	genetic = yes
+	good = yes
+	
+	opposites = {
+		blood_ancester_2
+		blood_ancester_1
+		blood_ancester_4
+		blood_ancester_5
+		blood_ancester_8
+		blood_ancester_9
+		blood_ancester_6
+		blood_ancester_7
+		blood_ancester_11
+	}
+	
+	#level = 3
+	#group = blood_ancester
+	
+	#build_speed = -0.10
+	#holding_build_speed = -0.10
+	build_gold_cost = -0.3
+	holding_build_gold_cost = -0.3
+	#development_growth_factor = 0.2
+	monthly_learning_lifestyle_xp_gain_mult = 0.1
+	monthly_intrigue_lifestyle_xp_gain_mult = 0.1
+	monthly_martial_lifestyle_xp_gain_mult = 0.1
+  	
+    	fertility = 0.6
+	attraction_opinion = 50
+	
+	#intrigue_scheme_resistance = 10
+	#intrigue_scheme_power = 10
+	enemy_hard_casualty_modifier = 0.2
+	
+	genetic_constraint_all = beauty_3
+	genetic_constraint_men = male_beauty_3
+	genetic_constraint_women = female_beauty_3
+	forced_portrait_age_index = 1 # old_beauty_1
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_blood_ancester_11_desc
+			}
+			desc = trait_blood_ancester_11_character_desc
+		}
+	}
+}
+
+
+
+blood_knight_1 = {
+	index = 6701
+
+	prowess = 10
+	stress_gain_mult = -0.1
+	general_opinion = 10	#大众好感
+	same_faith_opinion = 20	#相同信仰的好感
+	health = 0.1
+	inherit_chance = 0	#
+	#parent_inheritance_sex = male	#父母遗传性别（男）
+	#inherit_from_real_father = no #从真正的父亲那里继承该特质，默认yes	
+
+	birth = 0
+	random_creation = 2		
+	
+	physical = yes
+	
+	genetic = no
+	good = yes
+	
+	level = 1
+	group = blood_knight
+	
+	monthly_martial_lifestyle_xp_gain_mult = 0.1
+	
+	fertility = 0.1
+	attraction_opinion = 10
+ 
+	life_expectancy = 5
+	years_of_fertility = 5
+	monthly_prestige_gain_mult = 0.1
+	
+	genetic_constraint_all = beauty_1
+	genetic_constraint_men = male_beauty_1
+	genetic_constraint_women = female_beauty_1
+	forced_portrait_age_index = 1 # old_beauty_1
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_blood_knight_1_desc
+			}
+			desc = trait_blood_knight_1_character_desc
+		}
+	}
+}
+
+blood_knight_2 = {
+	index = 6702
+
+	prowess = 20
+	stress_gain_mult = -0.2
+	general_opinion = 20	#大众好感
+	same_faith_opinion = 30	#相同信仰的好感
+	health = 0.2
+	inherit_chance = 0	#必定不遗传
+	#parent_inheritance_sex = male	#父母遗传性别（男）
+	#inherit_from_real_father = no #从真正的父亲那里继承该特质，默认yes	
+
+	birth = 0
+	random_creation = 0.5		
+	
+	physical = yes
+	
+	genetic = no
+	good = yes
+	
+	level = 2
+	group = blood_knight
+	no_prowess_loss_from_age = yes
+	monthly_martial_lifestyle_xp_gain_mult = 0.2
+	
+	fertility = 0.2
+	attraction_opinion = 20
+ 
+	life_expectancy = 10
+	years_of_fertility = 10
+	monthly_prestige_gain_mult = 0.2
+	
+	genetic_constraint_all = beauty_2
+	genetic_constraint_men = male_beauty_2
+	genetic_constraint_women = female_beauty_2
+	forced_portrait_age_index = 1 # old_beauty_1
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_blood_knight_2_desc
+			}
+			desc = trait_blood_knight_2_character_desc
+		}
+	}
+}
+
+blood_knight_3 = {
+	index = 6703
+
+	prowess = 40
+	stress_gain_mult = -0.3
+	general_opinion = 30	#大众好感
+	same_faith_opinion = 40	#相同信仰的好感
+	health = 0.3
+	inherit_chance = 0	#必定不遗传
+	#parent_inheritance_sex = male	#父母遗传性别（男）
+	#inherit_from_real_father = no #从真正的父亲那里继承该特质，默认yes	
+
+	birth = 0
+	random_creation = 0.1		
+	
+	physical = yes
+	
+	genetic = no
+	good = yes
+	
+	no_prowess_loss_from_age = yes
+	level = 3
+	group = blood_knight
+	
+	monthly_martial_lifestyle_xp_gain_mult = 0.3
+	
+	fertility = 0.3
+	attraction_opinion = 30
+ 
+	life_expectancy = 15
+	years_of_fertility = 15
+	monthly_prestige_gain_mult = 0.3
+	
+	genetic_constraint_all = beauty_3
+	genetic_constraint_men = male_beauty_3
+	genetic_constraint_women = female_beauty_3
+	forced_portrait_age_index = 1 # old_beauty_1
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_blood_knight_3_desc
+			}
+			desc = trait_blood_knight_3_character_desc
+		}
+	}
+}
+
+blood_knight_4 = {
+	index = 6704
+
+	prowess = 65
+	stress_gain_mult = -0.5
+	general_opinion = 60	#大众好感
+	same_faith_opinion = 80	#相同信仰的好感
+	health = 0.6
+	inherit_chance = 0	#必定不遗传
+	#parent_inheritance_sex = male	#父母遗传性别（男）
+	#inherit_from_real_father = no #从真正的父亲那里继承该特质，默认yes	
+
+	birth = 0
+	random_creation = 0.02		
+	
+	physical = yes
+	
+	genetic = no
+	good = yes
+	no_prowess_loss_from_age = yes
+	
+	level = 4
+	group = blood_knight
+	
+	monthly_martial_lifestyle_xp_gain_mult = 0.6
+	
+	fertility = 0.6
+	attraction_opinion = 60
+ 
+	life_expectancy = 30
+	years_of_fertility = 30
+	monthly_prestige_gain_mult = 0.6
+	
+	genetic_constraint_all = beauty_3
+	genetic_constraint_men = male_beauty_3
+	genetic_constraint_women = female_beauty_3
+	forced_portrait_age_index = 1 # old_beauty_1
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_blood_knight_4_desc
+			}
+			desc = trait_blood_knight_4_character_desc
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+﻿l_english:
+
+ #########################################
+ # Traits
+ #########################################
+
+ trait_blood_ancester:0 "Ancestral Blood"
+ trait_blood_knight:0 "Knightly Blood"
+
+ # --- Cat ---
+ trait_blood_ancester_1:0 "Feline Grace"
+ trait_blood_ancester_1_desc:0 "This character traces their lineage to a legendary knight who formed a pact with a Great Feline. The blood flowing in their veins carries the ancestral power of the beast: the elegance of the cat."
+ trait_blood_ancester_1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] traces their lineage to a legendary knight who formed a pact with a Great Feline. The blood flowing in their veins echoes the power of that ancestor."
+
+ # --- Dog ---
+ trait_blood_ancester_2:0 "Loyal Hound"
+ trait_blood_ancester_2_desc:0 "This character traces their lineage to a legendary knight who bonded with the great Hachiko. The blood flowing in their veins carries the ancestral power of the beast: the undying loyalty of the dog."
+ trait_blood_ancester_2_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] traces their lineage to a legendary knight who bonded with the great Hachiko. The blood flowing in their veins echoes the power of that ancestor."
+
+ # --- Moon ---
+ trait_blood_ancester_4:0 "Moonlight"
+ trait_blood_ancester_4_desc:0 "This character traces their lineage to a legendary knight blessed by the Silver Moon. The blood flowing in their veins carries ancestral power: clarity as fluid as moonlight."
+ trait_blood_ancester_4_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] traces their lineage to a legendary knight blessed by the Silver Moon. The blood flowing in their veins echoes the power of that ancestor."
+
+ # --- Wind ---
+ trait_blood_ancester_7:0 "Windrunner"
+ trait_blood_ancester_7_desc:0 "This character traces their lineage to a legendary knight who danced with the Angels of the Wind. The blood flowing in their veins carries ancestral power: speed and freedom."
+ trait_blood_ancester_7_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] traces their lineage to a legendary knight who danced with the Angels of the Wind. The blood flowing in their veins echoes the power of that ancestor."
+
+ # --- Boar ---
+ trait_blood_ancester_5:0 "Wild Boar"
+ trait_blood_ancester_5_desc:0 "This character traces their lineage to a legendary knight who possessed the spirit of the Wild Boar. The blood flowing in their veins carries ancestral power: rampage and destruction."
+ trait_blood_ancester_5_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] traces their lineage to a legendary knight who possessed the spirit of the Wild Boar. The blood flowing in their veins echoes the power of that ancestor."
+
+ # --- Darkness ---
+ trait_blood_ancester_6:0 "Dark Night"
+ trait_blood_ancester_6_desc:0 "This character traces their lineage to a legendary knight blessed by the Lord of Night. The blood flowing in their veins carries ancestral power: the omnipresence of shadow."
+ trait_blood_ancester_6_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] traces their lineage to a legendary knight blessed by the Lord of Night. The blood flowing in their veins echoes the power of that ancestor."
+
+ # --- Venus/Hope ---
+ trait_blood_ancester_8:0 "Venus"
+ trait_blood_ancester_8_desc:0 "This character traces their lineage to a legendary knight who watched for light in the dark and stood firm against despair. The blood flowing in their veins carries ancestral power: hope amidst ruin."
+ trait_blood_ancester_8_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] traces their lineage to a legendary knight who watched for light in the dark. The blood flowing in their veins echoes the power of that ancestor."
+
+ # --- Clown/Jester ---
+ trait_blood_ancester_9:0 "Jester"
+ trait_blood_ancester_9_desc:0 "This character traces their lineage to a legendary knight who was fooled by the world yet made it his mission to bring smiles. The blood flowing in their veins carries ancestral power: the ridicule of love."
+ trait_blood_ancester_9_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] traces their lineage to a legendary knight who was fooled by the world yet chose to smile. The blood flowing in their veins echoes the power of that ancestor."
+
+ # --- Raven ---
+ trait_blood_ancester_10:0 "Raven"
+ trait_blood_ancester_10_desc:0 "This character traces their lineage to a legendary knight who prayed to the bird of wisdom to foresee death. The blood flowing in their veins carries ancestral power: wisdom through calamity."
+ trait_blood_ancester_10_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] traces their lineage to a legendary knight who prayed to the bird of wisdom. The blood flowing in their veins echoes the power of that ancestor."
+
+ # --- Dragon ---
+ trait_blood_ancester_11:0 "Silver Dragon"
+ trait_blood_ancester_11_desc:0 "This character traces their lineage to a legendary knight who committed a taboo against the Great Silver Dragon. The blood flowing in their veins carries ancestral power: the dragon's breath."
+ trait_blood_ancester_11_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] traces their lineage to a legendary knight who committed a taboo against the Great Silver Dragon. The blood flowing in their veins echoes the power of that ancestor."
+
+ # --- Special Arts ---
+ trait_blood_art_1:0 "Taiji"
+ trait_blood_art_1_desc:0 "Since birth, this character has been deeply influenced by their grandfather, learning a great physical technique from the Far East through observation and practice: Taiji."
+ trait_blood_art_1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has been deeply influenced by their grandfather since birth, learning a great physical technique from the Far East: Taiji."
+
+ # --- Knight Ranks ---
+ trait_blood_knight_1:0 "Knight Squire"
+ trait_blood_knight_1_desc:0 "With diligence, persistence, faith, and a little luck, this character has awakened their bloodline and become a Knight Squire."
+ trait_blood_knight_1_character_desc:0 "With diligence, persistence, faith, and a little luck, [ROOT.GetCharacter.GetFirstNameNoTooltip] has awakened their bloodline and become a Knight Squire."
+
+ trait_blood_knight_2:0 "Formal Knight"
+ trait_blood_knight_2_desc:0 "After unremitting effort, this character has successfully embarked on the path of power and become a Formal Knight."
+ trait_blood_knight_2_character_desc:0 "After unremitting effort, [ROOT.GetCharacter.GetFirstNameNoTooltip] has successfully embarked on the path of power and become a Formal Knight."
+
+ trait_blood_knight_3:0 "Grand Knight"
+ trait_blood_knight_3_desc:0 "Gifted by talent, hard work, and destiny, this character has mastered the power bestowed by their blood and become a Grand Knight."
+ trait_blood_knight_3_character_desc:0 "Gifted by talent, hard work, and destiny, [ROOT.GetCharacter.GetFirstNameNoTooltip] has mastered the power bestowed by their blood and become a Grand Knight."
+
+ trait_blood_knight_4:0 "Sky Knight"
+ trait_blood_knight_4_desc:0 "This character has conquered the earth, conquered the sky, and most importantly, conquered themselves. They stand at the pinnacle of human power."
+ trait_blood_knight_4_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has conquered the earth, the sky, and themselves, standing at the pinnacle of human power."

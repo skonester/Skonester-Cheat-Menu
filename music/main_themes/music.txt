@@ -1,0 +1,9 @@
+﻿##### MAINTHEME
+main_theme_track_roco  = {
+	music = "file:/music/SkonesterCheatMenuTürkçeYama.ogg"
+	can_be_interrupted = yes
+}
+main_theme_track = {
+	music = "event:/MUSIC/MainTheme/Maintheme"
+	can_be_interrupted = yes
+}

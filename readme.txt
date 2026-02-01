@@ -1,8 +1,9 @@
 Latest Updates
 
 January
-Aquarius V1- Character lore,more duchy building types
-Capricorn V1 and V1.1-added Quick Modification Menu,other small bug fixes
+Aquarius V1.1- see ingame notes.
+Aquarius V1- 1.18.3 update.Added lore to characters menu, new duchy buildings
+Capricorn V1-added Quick Modification Menu,other small bug fixes
 
 
 November-
@@ -33,7 +34,7 @@ and much more!
 Background
 The original Daddy Pika's Cheat Menu, a legendary mod for Crusader Kings III, was designed for earlier versions of the game. Users experienced crashes with version 1.13 and above. Roads to Power is when I got into the game. There are better cheats mods out there but this is just a project I keep going since I love the game so much.
 I don't need donation points. Just send them to the bigger CK3 projects that make this game truly great.
-Consider this now a fork of Zhuge's work from the Chinese CK3 community but for English players. He has mastered Daddy Pika's codebase and the goal is to keep a steady long-term cheat menu fork even if Zhuge decides to move on. I have rewritten code after each update but best to leave this as a English fork for the time being. Some players don't care and just need a functional cheat menu long-term.
+Consider this now a fork of Zhuge's work from the Chinese CK3 community but for English and Russian players. He has mastered Daddy Pika's codebase and the goal is to keep a steady long-term cheat menu fork even if Zhuge decides to move on. I have rewritten code after each update but best to leave this as a English fork for the time being. Some players don't care and just need a functional cheat menu long-term.
 
 Note to Users
 -Some features require a new game start. This is the case with many mods. More than 90 percent of features work with existing save game so you don't have to start a new game.

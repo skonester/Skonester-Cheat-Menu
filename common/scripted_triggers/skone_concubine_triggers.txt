@@ -1,0 +1,136 @@
+﻿make_concubine_is_shown_trigger = {
+	scope:actor = {
+		OR = {
+			allowed_concubines = yes
+			has_relation_lover = scope:recipient
+			has_secret_relation_lover = scope:recipient
+			AND = {
+				scope:recipient = {
+					OR = {
+						is_imprisoned_by = prev
+						has_opinion_modifier = {
+							modifier = forced_me_concubine_marriage_opinion
+							target = prev
+						}
+					}
+				}
+				OR = {
+					NOT = { faith = { has_doctrine = doctrine_monogamy } }
+					can_raid_trigger = yes
+				}
+			}
+		}
+		is_adult = yes
+	}
+	scope:recipient = {
+		OR = {
+			is_courtier_of = scope:actor
+			is_imprisoned_by = scope:actor
+		}
+		OR = {
+			can_become_concubine_of_character_valid_trigger = { CHARACTER = scope:actor }
+			AND = {
+				is_available_quick = {
+					adult = yes
+					ruler = no
+					advanced_ruler = no
+				}
+				trigger_if = {
+					limit = {
+						NOT = { is_imprisoned_by = scope:actor }
+					}
+					is_married = no
+					is_betrothed = no
+					is_concubine = no
+					is_diarch = no
+					number_of_concubines = 0
+				}
+				trigger_if = {
+					limit = {
+						is_imprisoned_by = scope:actor
+						is_married = yes
+					}
+					NOT = { is_spouse_of = scope:actor }
+				}
+				NOR = {
+					is_concubine_of = scope:actor
+					has_character_flag = has_been_offered_as_concubine
+				}
+				OR = {
+					has_relation_lover = scope:actor
+					has_secret_relation_lover = scope:actor
+				}
+				NOR = {
+					relation_with_character_is_sodomy_in_my_or_lieges_faith_trigger = { CHARACTER = scope:actor }
+					relation_with_character_is_incestuous_in_my_or_lieges_faith_trigger = { CHARACTER = scope:actor }
+				}
+			}
+		}
+	}
+}
+make_concubine_is_valid_trigger = {
+	custom_description = {
+		text = take_concubine_allowed_more
+		object = scope:recipient
+		scope:actor = {
+			OR = {
+				allowed_more_concubines = yes
+				has_relation_lover = scope:recipient
+				has_secret_relation_lover = scope:recipient
+				AND = {
+					scope:recipient = {
+						OR = {
+							is_imprisoned_by = prev
+							has_opinion_modifier = {
+								modifier = forced_me_concubine_marriage_opinion
+								target = prev
+							}
+						}
+					}
+					OR = {
+						NOT = { faith = { has_doctrine = doctrine_monogamy } }
+						can_raid_trigger = yes
+					}
+				}
+			}
+		}
+	}
+	scope:recipient = {
+		custom_tooltip = {
+			text = take_concubine_ex_spouse
+			OR = {
+				NOT = {
+					has_opinion_modifier = {
+						modifier = divorced_me_opinion
+						target = scope:actor
+					}
+				}
+				has_relation_lover = scope:actor
+				has_secret_relation_lover = scope:actor
+				AND = {
+					scope:recipient = {
+						OR = {
+							is_imprisoned_by = prev
+							has_opinion_modifier = {
+								modifier = forced_me_concubine_marriage_opinion
+								target = prev
+							}
+						}
+					}
+					OR = {
+						NOT = { faith = { has_doctrine = doctrine_monogamy } }
+						can_raid_trigger = yes
+					}
+				}
+			}
+		}
+		OR = {
+			AND = {
+				is_imprisoned_by = scope:actor
+				is_married = yes
+			}
+			is_married = no
+		}
+		is_hostage = no
+	}
+}

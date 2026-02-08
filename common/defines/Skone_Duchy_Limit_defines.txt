@@ -1,0 +1,3 @@
+NCharacterOpinion = {
+	MAX_DUCHIES_BEFORE_PENALTY = 4                    # 超过 4 个公国头衔开始触发惩罚
+}

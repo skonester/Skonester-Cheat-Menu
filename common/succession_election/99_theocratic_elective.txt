@@ -1,0 +1,85 @@
+theocratic_elective = {
+	elector_vote_strength = {
+		base = 1  # Changed from 0 so vassals have a baseline voice
+		
+		modifier = { #rank
+			desc = tooltip_theocratic_vote_strength_title_tier
+			add = highest_held_title_tier
+			# Removed government_is_theocracy check
+		}
+		modifier = { #level of devotion
+			desc = tooltip_theocratic_vote_strength_piety
+			add = {
+				value = piety_level
+				subtract = {
+					value = 1
+				} 
+			}
+			# Removed government_is_theocracy check
+		}
+		modifier = { #Number of virtues
+			desc = tooltip_theocratic_vote_strength_virtues
+			add = {
+				value = num_virtuous_traits
+				subtract = num_sinful_traits
+			}
+			# Removed government_is_theocracy check
+		}
+		min = 0
+	}
+	
+	electors = {
+		add = holder
+		add = {
+			type = title_dejure_vassals
+			limit = {
+				# Removed government_is_theocracy check. 
+				# Now ANY count+ vassal can vote.
+				highest_held_title_tier > 1
+				domain_size > 0
+			}
+		}
+	}
+
+	candidate_score = {
+		base = 0
+		######################	Elector self-voting pattern	##########################
+		elector_self_voting_pattern_feudal_elective_modifier = yes
+
+		##########################	Holder voting pattern	##########################
+		holder_voting_pattern_feudal_elective_modifier = yes
+
+		##########################	Elector voting patterns (circumstances)	##########################
+		elector_voting_pattern_circumstances_feudal_elective_modifier = yes
+
+		##########################	Elector voting patterns (prestige/piety)	##########################
+		elector_voting_pattern_prestige_piety_feudal_elective_modifier = yes
+
+		##########################	Elector voting patterns (traits)	##########################
+		elector_voting_pattern_traits_feudal_elective_modifier = yes
+
+		##########################	Elector voting patterns (opinion)	##########################
+		elector_voting_pattern_opinion_feudal_elective_modifier = yes
+
+		##########################	Elector voting patterns (misc)	##########################
+		elector_voting_pattern_circumstances_misc_elective_modifier = yes
+		
+		########################## MODDED ###################################################
+	}
+	
+	candidates = {
+		add = {
+			type = title_claimants
+			limit = {
+				feudal_elective_potential_landless_claimant_candidate_trigger = yes
+			}
+		}
+		add = {
+			type = holder_close_or_extended_family
+			limit = {
+				is_close_family_of = scope:holder
+				feudal_elective_potential_landless_dynastic_candidate_trigger = yes
+			}
+		}
+	}
+}

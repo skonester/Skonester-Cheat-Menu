@@ -1,0 +1,21 @@
+﻿legend_spread_increase_add_very_very_very_high =80
+spread_chance_legends_default_value = {
+	legend_owner = {
+		if = {
+			limit = {
+				scope:legend.legend_owner = {
+					is_ai = no
+				}
+			}
+			add = legend_spread_increase_add_very_very_very_high
+		}
+		else_if = {
+			limit = {
+				scope:legend.legend_owner = {
+					is_ai = yes
+				}
+			}
+			add = legend_spread_decrease_mult_unlikely
+		}
+	}
+}

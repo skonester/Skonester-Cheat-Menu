@@ -1,0 +1,110 @@
+﻿savant_intrig = {
+	inherit_chance = 20
+	both_parent_has_trait_inherit_chance = 40
+	birth = 0.1
+	random_creation = 0.05
+	#genetic = yes
+	ruler_designer_cost = 10
+
+	negate_intrigue_penalty_add = 2
+	intrigue = 6
+	diplomacy = -2
+	martial = -2
+	stewardship = -2
+	learning = -2
+	opposites = {
+		savant_learn
+		savant_mat 
+		savant_stew 
+		savant_diplo 
+	}
+
+}
+savant_learn = {
+	inherit_chance = 20
+	both_parent_has_trait_inherit_chance = 40
+	birth = 0.1
+	random_creation = 0.05
+	#genetic = yes
+	ruler_designer_cost = 10
+
+	negate_learning_penalty_add = 2
+	learning = 6
+	diplomacy = -2
+	martial = -2
+	stewardship = -2
+	intrigue = -2
+	opposites = {
+		savant_intrig 
+		savant_mat
+		savant_stew 
+		savant_diplo 
+	}
+
+}
+savant_mat = {
+	inherit_chance = 20
+	both_parent_has_trait_inherit_chance = 40
+	birth = 0.1
+	random_creation = 0.05
+	#genetic = yes
+	ruler_designer_cost = 10
+
+	negate_martial_penalty_add = 2
+	learning = -2
+	diplomacy = -2
+	martial = 6
+	stewardship = -2
+	intrigue = -2
+	opposites = {
+		savant_learn
+		savant_intrig 
+		savant_stew 
+		savant_diplo 
+	}
+
+}
+savant_stew = {
+	inherit_chance = 20
+	both_parent_has_trait_inherit_chance = 40
+	birth = 0.1
+	random_creation = 0.05
+	#genetic = yes
+	ruler_designer_cost = 10
+
+	negate_stewardship_penalty_add = 2
+	learning = -2
+	diplomacy = -2
+	martial = -2
+	stewardship = 6
+	intrigue = -2
+	opposites = {
+		savant_learn
+		savant_intrig 
+		savant_mat 
+		savant_diplo 
+	}
+
+}
+savant_diplo = {
+	inherit_chance = 20
+	both_parent_has_trait_inherit_chance = 40
+	birth = 0.1
+	random_creation = 0.05
+	#genetic = yes
+	ruler_designer_cost = 10
+
+	negate_diplomacy_penalty_add = 2
+	learning = -2
+	diplomacy = 6
+	martial = -2
+	stewardship = -2
+	intrigue = -2
+	opposites = {
+		savant_learn
+		savant_intrig 
+		savant_mat 
+		savant_stew 
+	}
+
+}

@@ -29,7 +29,7 @@ January 2025 Update: Resolved HUD compatibility problems for version 1.14.2.2 (T
 
 
 Background
-The original Daddy Pika's Cheat Menu, a legendary mod for Crusader Kings III, was designed for earlier versions of the game. Users experienced crashes with version 1.13 and above. Roads to Power is when I got into the game. There are more established cheats mods out there but this is just a project I keep going since I love the game so much. N
+The original Daddy Pika's Cheat Menu, a legendary mod for Crusader Kings III, was designed for earlier versions of the game. Users experienced crashes with version 1.13 and above. Roads to Power is when I got into the game. There are more established cheats mods out there but this is just a project I keep going since I love the game so much. 
 I don't need donation points. Just send them to the bigger CK3 projects that make this game truly great.
 Consider this a fork of Zhuge's work from the Chinese CK3 community. He has mastered Daddy Pika's codebase and the goal is to keep a steady long-term cheat menu fork with its own unique flavor.
 

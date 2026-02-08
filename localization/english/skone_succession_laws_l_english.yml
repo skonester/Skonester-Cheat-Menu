@@ -1,0 +1,37 @@
+﻿l_english: 
+ oligarchic_elective_succession_law: "Oligarch Elective"
+ oligarchic_elective_succession_law_effects: "The [ruler|E] and all [powerful_vassals|E] of the realm can nominate a [title_heir|E] from among themselves and the [close_family|E] of the ruler."
+
+ oligarchic_elective_candidates: "Close Family and Electors"
+ oligarchic_elective_candidates_tooltip:1 "In order to be a valid Candidate under Oligarchic Elective, a character must fulfill one of the following conditions:\n$EFFECT_LIST_BULLET$Be a legitimate [close_family|E] member of the current ruler, who is not in line to inherit a Theocracy or Republic. Children of a candidate cannot be nominated\n$EFFECT_LIST_BULLET$Be a valid Oligarchic [elector|E] to the title"
+ oligarchic_elective_electors:0 "$feudal_elective_electors$"
+ oligarchic_elective_electors_tooltip:1 "In order to be a valid [elector|E] under Oligarchic Elective, a character must fulfill one of the following conditions:\n$EFFECT_LIST_BULLET$Be the current holder of the title\n$EFFECT_LIST_BULLET$Be a [powerful_vassal|E] who is a direct vassal of the title"
+
+
+#Peasant Elective
+ tooltip_peasant_elective_development:2 "Total [development|E], modified by [county_opinion|E]: $VALUE|=+0$"
+ tooltip_peasant_elector_vote:0 "Capital popular opinion: $VALUE|=+0$"
+ 
+ #Theocratic Elective
+ tooltip_theocratic_vote_strength_title_tier:2 "[ROOT.Char.GetSheHe|U] is the [ROOT.Char.GetTitleTierName]: $VALUE|=+0$"
+ tooltip_theocratic_vote_strength_piety:2 "Level of devotion: $VALUE|=+0$"
+ tooltip_theocratic_vote_strength_virtues:2 "Sins and virtues: $VALUE|=+0$"
+ 
+ 
+ #Modded
+ peasant_elective_succession_law:1 "Populist Elective"
+ peasant_elective_succession_law_subname:0 "Peasant"
+ peasant_elective_succession_law_effects:2 "The [ruler|E] and all direct [vassals|E] (except Barons) can nominate a [title_heir|E] from among themselves and the [close_family|E] of the ruler. [voting_power|E] in this [succession_law|E] is influenced by the [elector|E]'s total [domain|E] [county_development|E] and [county_opinion|E]. Electors will favor candidates with high [capital|E] [county_opinion|E]."
+ peasant_elective_candidates:0 "Close Family, Claimants, and Electors"
+ peasant_elective_candidates_tooltip:1 "In order to be a valid Candidate under Popular Elective, a character must fulfill one of the following conditions:\n$EFFECT_LIST_BULLET$Be a legitimate [close_family|E] member of the current ruler, who is not in line to inherit a Theocracy or Republic. Children of a candidate cannot be nominated\n$EFFECT_LIST_BULLET$Be a [claimant|E] to the title, who is not in line to inherit a Theocracy or Republic\n$EFFECT_LIST_BULLET$Be a valid Popular [elector|E] to the title"
+ peasant_elective_electors:0 "Ruler and Vassals"
+ peasant_elective_electors_tooltip:0 "In order to be a valid [elector|E] under Popular Elective, a vassal must fulfill all the following conditions:\n$EFFECT_LIST_BULLET$Be a direct vassal of the title\n$EFFECT_LIST_BULLET$Be above the [rank|E] of [baron|E]."
+ 
+ theocratic_elective_succession_law:1 "Theocratic Elective"
+ theocratic_elective_succession_law_effects:2 "All [de_jure|E] [vassals|E] with [theocracy|E] [government|E] can nominate a [title_heir|E] from among the [close_family|E] of the ruler and [claimant|E]s. [voting_power|E] in this [succession_law|E] is influenced by the [elector|E]'s [title_tier|E], [piety_level|E], and [virtuous|E] [traits|E]. Electors will favor candidates with a high [piety_level|E] and [virtuous|E] [traits|E]."
+ theocratic_elective_candidates:0 "Close Family and Claiments"
+ theocratic_elective_candidates_tooltip:1 "In order to be a valid Candidate under Theo Elective, a character must fulfill one of the following conditions:\n$EFFECT_LIST_BULLET$Be a legitimate [close_family|E] member of the current ruler, who is not in line to inherit a Theocracy or Republic. Children of a candidate cannot be nominated\n$EFFECT_LIST_BULLET$Be a [claimant|E] to the title, who is not in line to inherit a Theocracy or Republic"
+ theocratic_elective_electors:0 "Theocratic Vassals"
+ theocratic_elective_electors_tooltip:0 "In order to be a valid [elector|E] under Theocratic Elective, a vassal must fulfill all the following conditions:\n$EFFECT_LIST_BULLET$Be a [de_jure|E] [vassals|E] of the title\n$EFFECT_LIST_BULLET$Have a [theocracy|E] [government|E]."
+ 
+ 

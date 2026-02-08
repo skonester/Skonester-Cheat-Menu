@@ -1,7 +1,8 @@
 Latest Updates
 
-January
-Aquarius V1.1- see ingame notes.
+January 2026
+Aquarius V 1.2 - More feudal elective laws
+Aquarius V1.1- More Traits,cleanups.
 Aquarius V1- 1.18.3 update.Added lore to characters menu, new duchy buildings
 Capricorn V1-added Quick Modification Menu,other small bug fixes
 
@@ -24,26 +25,67 @@ August- Total overhaul for compatibility with 1.16 and above(Leo V2). Leo V1 on 
 March Update- Begin working on overhaul for 1.15. Still WIP
 Late February Update - Fixed Menu Interactions
 February Update: Fixed issues in the decisions area
-January Update: Resolved HUD compatibility problems for version 1.14.2.2 (Traverse)
+January 2025 Update: Resolved HUD compatibility problems for version 1.14.2.2 (Traverse)
 
-Key Features
-Allows you to customize your character/npcs/realm
-Full compatibility with CK3 versions 1.13-1.18
-and much more!
 
 Background
-The original Daddy Pika's Cheat Menu, a legendary mod for Crusader Kings III, was designed for earlier versions of the game. Users experienced crashes with version 1.13 and above. Roads to Power is when I got into the game. There are better cheats mods out there but this is just a project I keep going since I love the game so much.
+The original Daddy Pika's Cheat Menu, a legendary mod for Crusader Kings III, was designed for earlier versions of the game. Users experienced crashes with version 1.13 and above. Roads to Power is when I got into the game. There are more established cheats mods out there but this is just a project I keep going since I love the game so much. N
 I don't need donation points. Just send them to the bigger CK3 projects that make this game truly great.
-Consider this now a fork of Zhuge's work from the Chinese CK3 community but for English and Russian players. He has mastered Daddy Pika's codebase and the goal is to keep a steady long-term cheat menu fork even if Zhuge decides to move on. I have rewritten code after each update but best to leave this as a English fork for the time being. Some players don't care and just need a functional cheat menu long-term.
-
-Note to Users
--Some features require a new game start. This is the case with many mods. More than 90 percent of features work with existing save game so you don't have to start a new game.
--Some mods that change the user interface can make this mod not show up or even work. In that case its best to disable all your mods, then use just this one. Finally, then make the changs to your character then disable again. Sorry some users mod lists are large and I don't have the time to test out hundreds of scenarios. This is just a passion project I do for free. Its for newer players who can use this mod to figure out how to be better players without having to eventually use cheats. Its also for vet players who don't care and just want to fix certain issue they come across when playing tall.
--There are some bugs that I am aware of that need fixing. I could spend hours fixing it just for it to break again in an Paradox update. Core features is the overall goal so I apologize for lack of polish in certain areas. Thanks!
+Consider this a fork of Zhuge's work from the Chinese CK3 community. He has mastered Daddy Pika's codebase and the goal is to keep a steady long-term cheat menu fork with its own unique flavor.
 
 
 
+A Summary from players
 
-if you can't figure out how to install since the game is implemented with Steam Workshop better, this application will set up the right parameters for the mod to install in Paradox so you can just drop and drop it into your Documents\Paradox Interactive\Crusader Kings III\mod folder. Then relaunch the Paradox Launcher.
 
-GitHub - ISNeiron/CK3-Mod-Installer
+Skonester Cheat Menu is a powerful and regularly updated game modification that provides you with an extensive toolkit for managing the game world, characters, and your realm via a convenient graphical interface, eliminating the need to manually enter console commands.
+
+Character Management:
+
+Instant stat modification: Change attributes (skills) and add or remove any personality traits.
+
+Appearance and Age: Edit looks and age.
+
+Relationship Management: Instantly make someone a friend, lover, or nemesis/rival.
+
+Interaction Commands: Kill, move to court, force pregnancy, or force character suicide.
+
+Realm and Resources:
+
+Instant Resources: Add gold, prestige, piety, and renown.
+
+Religion and Culture: Change religion and culture for an individual character, entire regions, or the whole realm.
+
+Government and Law: Change government type and vassal contract conditions.
+
+Warfare and Expansion:
+
+Spawn Troops: Instantly create armies and special Men-at-Arms regiments.
+
+Titles and Claims: Instantly seize any title or obtain a claim on one.
+
+War Management: Functions to manage peace and wars.
+
+Unique Features:
+
+Special Decisions and Interactions: For example, creating a "House Guard" or instantly launching a Crusade.
+
+Debug Mode Toggle: Ability to turn Debug Mode on/off directly from the game menu without restarting or using launch parameters.
+
+Interface and Usage:
+
+Accessibility: The menu is usually opened by right-clicking on a character or via a special icon in the interface (e.g., above the map or in the decisions list).
+
+Localization: The mod supports multiple languages, including Russian and English.
+
+Compatibility: The author (theskonester) promptly updates the mod for current game versions (e.g.,for patch 1.14 "Traverse" and later versions 1.18+).
+
+GitHub: The project has an open repository, allowing the community to track changes and assist with translations.
+
+Who is this mod for? It is perfect for players who want to create specific historical (or alternative) scenarios, test game mechanics, or simply play in a "sandbox" format without being limited by difficulty rules.
+
+Compatibility: The Cheat Menu is compatible with global (total conversion) mods like Elder Kings II and A Game of Thrones.
+
+Mod Translation: Russian / English/ Partial Turkish
+
+Installation: Unpack and drop the files into the mod folder: C:\Users\[username]\Documents\Paradox Interactive\Crusader Kings III\mod\ Then, add the mod to your "Playsets" in the game launcher.

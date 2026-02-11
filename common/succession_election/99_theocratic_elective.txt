@@ -1,3 +1,6 @@
+
+#I need to work on this more, not working currently
+
 theocratic_elective = {
 	elector_vote_strength = {
 		base = 1  # Changed from 0 so vassals have a baseline voice

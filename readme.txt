@@ -1,7 +1,7 @@
 Latest Updates
 
 January 2026
-Aquarius V 1.2 - More feudal elective laws
+Aquarius V 1.2 - More feudal elective laws,etc.
 Aquarius V1.1- More Traits,cleanups.
 Aquarius V1- 1.18.3 update.Added lore to characters menu, new duchy buildings
 Capricorn V1-added Quick Modification Menu,other small bug fixes

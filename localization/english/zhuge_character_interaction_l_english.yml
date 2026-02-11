@@ -59,10 +59,10 @@
  zhuge_yixue_04_tt:0 "Grant congenital traits?"
  
  zhuge_yixue_05:0 "Plague Immunity"
- zhuge_yixue_05_desc:0 "No major illness may lay hand upon this soul(you can still illness dear child)."
+ zhuge_yixue_05_desc:0 "No major illness may lay hand upon this soul(you can still minor illness dear child)."
  zhuge_yixue_05_tt:0 "Toggle Plague Immunity?"
  
- zhuge_yixue_06:0 "Boost Education"
+ zhuge_yixue_06:0 "Boost Physician Education"
  zhuge_yixue_06_desc:0 "Raise their learning to lofty heights, as if tutored by scholars of old... or at least a well‑drunken skald."
  zhuge_yixue_06_tt:0 "Boost their education?"
  

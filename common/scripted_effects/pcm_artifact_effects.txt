@@ -1,0 +1,14 @@
+﻿# Template for creating illustrious cheat artifacts quickly
+pcm_create_cheat_artifact = {
+	set_artifact_rarity_illustrious = yes
+	create_artifact = {
+		name = $NAME$
+		description = $DESC$
+		type = $TYPE$
+		visuals = $VISUALS$
+		modifier = $MOD$
+		decaying = no
+		max_durability = 1000
+		save_scope_as = newly_created_artifact
+	}
+}

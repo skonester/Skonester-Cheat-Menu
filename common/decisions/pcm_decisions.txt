@@ -390,11 +390,11 @@ pcm_cure_all_decision = {
 
 pcm_cure_inbred_decision = {
 	decision_group_type = pcm
-	picture = { reference = gfx/interface/illustrations/decisions/7.dds }
+	picture = { reference = "gfx/interface/illustrations/decisions/7.dds" }
 	title = pcm_cure_inbred_decision_title
-    desc = pcm_cure_inbred_decision_desc
-    selection_tooltip = pcm_cure_inbred_decision_tooltip
-    confirm_text = pcm_cure_inbred_decision_ct
+	desc = pcm_cure_inbred_decision_desc
+	selection_tooltip = pcm_cure_inbred_decision_tooltip
+	confirm_text = pcm_cure_inbred_decision_ct
 
 	is_shown = {
 		is_ai = no
@@ -453,6 +453,159 @@ pcm_cure_inbred_decision = {
 			}
 		}
 	}
-    ai_will_do = { base = 0 }
+	ai_will_do = { base = 0 }
 	ai_check_interval = 0
+}
+
+Artifact_1000 = {
+	decision_group_type = pcm
+	picture = { reference = "gfx/interface/illustrations/decisions/7.dds" }
+	title = cheat_decition_artifact
+	desc = cheat_description_artifact
+	confirm_text = cheat_decition_accept
+
+	is_shown = {
+		is_ai = no
+		has_character_flag = pcm_show_decision_flag
+	}
+
+	ai_will_do = { base = 0 }
+
+	effect = {
+		save_scope_as = owner 
+		
+		# This stays visible to the player
+		custom_tooltip = "You will receive court and personal artifacts to bolster your realm ."
+
+		# Everything inside here is hidden from the on-screen tooltip
+		hidden_effect = {
+			# --- SECTION 1: THE RELICS OF THE DAWN ---
+			create_artifact_al_dawat_effect = { OWNER = scope:owner }
+			create_artifact_al_hafir_effect = { OWNER = scope:owner }
+			create_artifact_pedestal_al_jabal_effect = { OWNER = scope:owner }
+			create_artifact_al_sayf_al_khass_effect = { OWNER = scope:owner }
+			create_artifact_al_taj_crown_effect = { OWNER = scope:owner }
+			create_artifact_pedestal_al_yatima_effect = { OWNER = scope:owner }
+			create_artifact_abhidhamma_pitaka_effect = { OWNER = scope:owner }
+			create_artifact_afarganyu_effect = { OWNER = scope:owner }
+			create_artifact_arms_of_alexander_effect = { OWNER = scope:owner }
+			create_artifact_aruval_effect = { OWNER = scope:owner }
+			create_artifact_kantele_effect = { OWNER = scope:owner }
+			create_artifact_angelicas_ring_effect = { OWNER = scope:owner }
+			create_artifact_aram_effect = { OWNER = scope:owner }
+			create_artifact_sculpture_ark_of_covenant_effect = { OWNER = scope:owner }
+			create_artifact_ascalon_effect = { OWNER = scope:owner }
+			create_artifact_sculpture_babr_e_bayan_effect = { OWNER = scope:owner }
+			create_artifact_wall_banner_thankfulness_effect = { OWNER = scope:owner }
+			create_artifact_various_bells_santiago = { OWNER = scope:owner }
+			create_artifact_pedestal_branch_relic_boog_effect = { OWNER = scope:owner }
+			create_artifact_pedestal_branch_relic_hinduism_effect = { OWNER = scope:owner }
+			create_artifact_pedestal_branch_relic_slavic_effect = { OWNER = scope:owner }
+			create_artifact_bronze_head_effect = { OWNER = scope:owner }
+			create_artifact_khanda_effect = { OWNER = scope:owner }
+			create_artifact_goblet_chalice_of_dona_urraca = { OWNER = scope:owner }
+			create_artifact_chinese_caligraphy_effect = { OWNER = scope:owner }
+			create_colada_effect = { OWNER = scope:owner }
+			create_artifact_pedestal_justinian_effect = { OWNER = scope:owner }
+			create_artifact_nikephoros_crown_effect = { OWNER = scope:owner }
+			create_artifact_crystal_carving_effect = { OWNER = scope:owner }
+			create_artifact_pedestal_cup_jamshid_effect = { OWNER = scope:owner }
+			create_artifact_curtana_effect = { OWNER = scope:owner }
+			create_artifact_dagger_of_rostam_effect = { OWNER = scope:owner }
+			create_artifact_pedestal_david_harp_effect = { OWNER = scope:owner }
+			create_artifact_wall_banner_kaviani_effect = { OWNER = scope:owner }
+			create_artifact_dhammapada_effect = { OWNER = scope:owner }
+			create_artifact_dragvandil_effect = { OWNER = scope:owner }
+			create_artifact_durendal_effect = { OWNER = scope:owner }
+			create_artifact_excalibur_effect = { OWNER = scope:owner }
+			create_artifact_various_aquamanile_santiago = { OWNER = scope:owner }
+			create_artifact_pedestal_great_diamond_effect = { OWNER = scope:owner }
+			create_artifact_edmund_head_effect = { OWNER = scope:owner }
+			create_artifact_ibeji_effect = { OWNER = scope:owner }
+			create_artifact_pedestal_ikenga_effect = { OWNER = scope:owner }
+			create_artifact_wall_banner_edessa_effect = { OWNER = scope:owner }
+			create_artifact_pedestal_crown_iron_effect = { OWNER = scope:owner }
+			create_artifact_jewelled_danda_effect = { OWNER = scope:owner }
+			create_artifact_joyeuse_effect = { OWNER = scope:owner }
+			create_artifact_kaves_apron_effect = { OWNER = scope:owner }
+			create_artifact_essen_crown_effect = { OWNER = scope:owner }
+			create_artifact_kladenets_effect = { OWNER = scope:owner }
+			create_artifact_legbiter_effect = { OWNER = scope:owner }
+			create_artifact_makarakundala_effect = { OWNER = scope:owner }
+			create_artifact_mantle_of_the_prophet_effect = { OWNER = scope:owner }
+			create_artifact_sword_mmaagha_kamalu_effect = { OWNER = scope:owner }
+			create_artifact_monomachus_crown_effect = { OWNER = scope:owner }
+			create_artifact_pedestal_koh_i_noor_effect = { OWNER = scope:owner }
+			create_artifact_nagelring_effect = { OWNER = scope:owner }
+			create_artifact_navaratna_effect = { OWNER = scope:owner }
+			create_artifact_olifant_effect = { OWNER = scope:owner }
+			create_artifact_papal_tiara_effect = { OWNER = scope:owner }
+			create_artifact_peacock_throne_effect = { OWNER = scope:owner }
+			create_artifact_sculpture_cabinet_pentapyrgion_effect = { OWNER = scope:owner }
+			create_artifact_robe_kassapa_effect = { OWNER = scope:owner }
+			create_artifact_qadib_al_mulk_effect = { OWNER = scope:owner }
+			create_artifact_quernbiter_effect = { OWNER = scope:owner }
+			create_artifact_reichskrone_effect = { OWNER = scope:owner }
+			create_artifact_ruyi_effect = { OWNER = scope:owner }
+			create_artifact_zomorrodnegar_effect = { OWNER = scope:owner }
+			create_artifact_pedestal_shankha_conch_effect = { OWNER = scope:owner }
+			create_artifact_siddhachakra_effect = { OWNER = scope:owner }
+			create_artifact_skull_cap_charlemagne_effect = { OWNER = scope:owner }
+			create_artifact_sledovik_effect = { OWNER = scope:owner }
+			create_artifact_spear_of_the_prophet_effect = { OWNER = scope:owner }
+			create_artifact_staff_kakusandha_effect = { OWNER = scope:owner }
+			create_artifact_throne_scone_effect = { OWNER = scope:owner }
+			create_artifact_sutta_pitaka_effect = { OWNER = scope:owner }
+			create_artifact_wall_sword_attila_effect = { OWNER = scope:owner }
+			create_artifact_wall_muhammad_sword_effect = { OWNER = scope:owner }
+			create_artifact_szczerbiec_effect = { OWNER = scope:owner }
+			create_artifact_throne_charlemagne_effect = { OWNER = scope:owner }
+			create_artifact_throne_solomon_effect = { OWNER = scope:owner }
+			create_artifact_wall_cid_sword_effect = { OWNER = scope:owner }
+			create_artifact_turquoise_throne_effect = { OWNER = scope:owner }
+			create_artifact_vinaya_pitaka_effect = { OWNER = scope:owner }
+			create_artifact_fp2_votive_crowns_effect = { OWNER = scope:owner }
+			create_artifact_konagamana_effect = { OWNER = scope:owner }
+
+			# --- SECTION 2: THE LEGENDARY BOOKS ---
+			pcm_create_cheat_artifact = { NAME = pope_joan_book_name DESC = pope_joan_book_desc TYPE = book VISUALS = book MOD = artifact_monthly_piety_5_modifier }
+			pcm_create_cheat_artifact = { NAME = lady_godiva_book_name DESC = lady_godiva_book_desc TYPE = book VISUALS = book MOD = artifact_attraction_opinion_3_modifier }
+			pcm_create_cheat_artifact = { NAME = caligula_book_name DESC = caligula_book_desc TYPE = book VISUALS = book MOD = artifact_dread_gain_mult_2_modifier }
+			pcm_create_cheat_artifact = { NAME = nasreddin_book_name DESC = nasreddin_book_desc TYPE = book VISUALS = book MOD = artifact_monthly_diplomacy_lifestyle_xp_2_modifier }
+			pcm_create_cheat_artifact = { NAME = valmiki_book_name DESC = valmiki_book_desc TYPE = book VISUALS = book MOD = artifact_monthly_diplomacy_lifestyle_xp_2_modifier }
+			pcm_create_cheat_artifact = { NAME = ruler_hero_book_name DESC = ruler_hero_book_desc TYPE = book VISUALS = book MOD = artifact_monthly_diplomacy_lifestyle_xp_2_modifier }
+			pcm_create_cheat_artifact = { NAME = sinbad_book_name DESC = sinbad_book_desc TYPE = book VISUALS = book MOD = artifact_monthly_martial_lifestyle_xp_2_modifier }
+
+			# --- SECTION 3: PLAYER EQUIPMENT ---
+			pcm_create_cheat_artifact = { NAME = artifact_sword_name DESC = artifact_sword_description TYPE = weapon VISUALS = sword_visuals MOD = artifact_duel_weapon_5_modifier }
+			pcm_create_cheat_artifact = { NAME = artifact_armor_name DESC = artifact_armor_description_costum_plate_armor TYPE = armor VISUALS = armor_plate_visuals MOD = artifact_armor_5_artifact_modifier }
+			pcm_create_cheat_artifact = { NAME = artifact_crown_name DESC = artifact_crown_description TYPE = headgear VISUALS = crown_visuals MOD = artifact_emperors_crown_artifact_5_modifier }
+			pcm_create_cheat_artifact = { NAME = artifact_regalia_name DESC = artifact_regalia_description TYPE = regalia VISUALS = regalia_visuals MOD = artifact_emperors_regalia_artifact_5_modifier }
+
+			# --- SECTION 4: BANNERS ---
+			create_artifact = {
+				name = artifact_wall_banner_royal_name_1
+				description = artifact_wall_banner_royal_description_1
+				type = wall_big
+				visuals = wall_banner_visuals
+				visuals_source = root.dynasty
+				modifier = artifact_house_banner_5_artifact_modifier
+				decaying = no
+			}
+			create_artifact = {
+				name = artifact_wall_banner_house_name_1
+				description = artifact_wall_banner_house_description_1
+				type = wall_big
+				visuals = wall_banner_visuals
+				visuals_source = root.house
+				modifier = artifact_house_banner_5_artifact_modifier
+				decaying = no
+			}
+			create_artifact_wall_banner_effect = {
+				OWNER = root
+				CREATOR = root
+				TARGET = root.primary_title
+			}
+		}
+	}
 }

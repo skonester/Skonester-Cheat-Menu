@@ -2312,10 +2312,19 @@ debug_travel_to_ruler_interaction = {
 
 	on_accept = {
 		scope:actor = {
-			random_courtier_or_guest = {
-				limit = {
-					is_available = yes
+			# THE ADVENTURER FIX: 
+			# We must move the Domicile (Camp) to the recipient's province.
+			# If we don't, the adventurer is "homeless" upon arrival, causing errors.
+			if = {
+				limit = { has_government = landless_adventurer_government }
+				domicile = {
+					move_domicile = scope:recipient.capital_province
 				}
+			}
+
+			# Select 3 companions to join the 'Teleport' trip
+			random_courtier_or_guest = {
+				limit = { is_available = yes }
 				save_scope_as = companion1
 			}
 			random_courtier_or_guest = {
@@ -2335,6 +2344,8 @@ debug_travel_to_ruler_interaction = {
 				}
 				save_scope_as = companion3
 			}
+
+			# Execute the Travel Plan
 			start_travel_plan = {
 				destination = scope:recipient.capital_province
 				companion = scope:companion1

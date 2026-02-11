@@ -1,0 +1,32 @@
+﻿l_english:
+# Artifact Decision (Christian Gnostic Style)
+  cheat_decition_artifact:0 "Recover the Gifts"
+  cheat_description_artifact:0 "The world we see is a shadow cast by a blind creator. These relics are fragments of the True Light, sent from the Pleroma to aid the children of the Spirit in their journey home."
+  cheat_decition_accept:0 "The Light shall know its own."
+  Artifact_1000_tooltip:0 "Recieve the fragments of the Pleroma."
+
+  # Book Names & Descriptions
+  pope_joan_book_name:0 "The Secret Chronicles of Pope Joan"
+  pope_joan_book_desc:0 "A forbidden text detailing the life of the legendary female Pope. Its pages radiate an aura of hidden wisdom."
+  lady_godiva_book_name:0 "The Ride of Godiva"
+  lady_godiva_book_desc:0 "A poem of sacrifice and noble protest, bound in fine silk."
+  caligula_book_name:0 "The Madness of the Emperor"
+  caligula_book_desc:0 "A chilling account of Rome's most eccentric ruler. It inspires both fear and awe."
+  nasreddin_book_name:0 "The Tales of Nasreddin Hodja"
+  nasreddin_book_desc:0 "A collection of satirical stories that sharpen the mind and lighten the spirit."
+  valmiki_book_name:0 "The Ramayana of Valmiki"
+  valmiki_book_desc:0 "An epic Sanskrit poem that provides deep insight into dharma and duty."
+  ruler_hero_book_name:0 "The Path of the Hero King"
+  ruler_hero_book_desc:0 "A manual on leadership and legendary deeds."
+  sinbad_book_name:0 "The Seven Voyages of Sinbad"
+  sinbad_book_desc:0 "Tales of high-seas adventure that inspire strategic thinking and bold maneuvers."
+
+  # Equipment Names & Descriptions
+  artifact_sword_name:0 "Heartsbane's Legacy"
+  artifact_sword_description:0 "A ripple-marked blade of Valyrian steel, lighter and sharper than any common steel."
+  artifact_armor_name:0 "Plate of the Dragonlord"
+  artifact_armor_description_costum_plate_armor:0 "Blackened steel plate forged with ancient techniques, offering unmatched protection."
+  artifact_crown_name:0 "The Conqueror’s Circlet"
+  artifact_crown_description:0 "A crown of Valyrian steel set with square-cut rubies, signifying absolute authority."
+  artifact_regalia_name:0 "Scepter of the Tide"
+  artifact_regalia_description:0 "An ancient scepter that symbolizes dominion over both land and sea."

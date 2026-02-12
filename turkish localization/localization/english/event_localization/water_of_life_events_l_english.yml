@@ -1,0 +1,49 @@
+﻿l_english:
+  # Başlıklar ve Olaylar: Hayat Suyu (Water of Life)
+  water_of_life_header:0 "Yüzbaşının Günlüğü:"
+  water_of_life.1001.t:0 "$water_of_life_header$ Ölmeyen Adam."
+  water_of_life.1001.desc:0 "Parşömen bir kütüphanede değil, Yahudiye'de bulunan paslı bir gladius kabzasının içine gizlenmişti. Latince kaba ve askeri bir dille yazılmış; Clavius adında bir Tribün'ün raporu. Mühürlü bir mezardan kaybolan bir cesetten, gerçeği bilen kızıl saçlı bir kadından ve yaşamın saatini durduran bir kupadan bahsediyor.\n\nSon kayıt bir tarih değil, bir yemin: #'Ölemeyeni öldüremem. Sadece ona hizmet edebilirim. Nöbet tutmak için yaban ellere gidiyorum.'#!\n\nEfsaneler onun hala orada olduğunu söyler. Görevini devretmek için bekleyen bir asker. Eğer onu bulursam, Kase'yi de bulurum."
+  water_of_life.1001.a:0 "Tribün bekliyor. Onu bulacağım."
+  water_of_life.1001.b:0 "Bir Roma askerini avlamak için hazırlıklı olmak gerekir."
+
+  water_of_life_header_1:0 "Takip:"
+  water_of_life.1002.t:1 "$water_of_life_header_1$ Kartalın Gölgesi."
+  water_of_life.1002.desc:0 "Tacımı geride bırakıyorum. Clavius'u bulmak için sürgünün yolundan yürümeliyim. Kadifelerimi yünle, asamı ise bir yürüyüş değneğiyle takas ediyorum. Günlüğündeki ipuçları, insan şehirlerinden uzağa, İmparatorluğun gücünün çöktüğü sessiz yerlere çıkıyor. İzlerini örtmek için yüzyılları olan bir hayaletin peşindeyim."
+  water_of_life.1002.a:0 "Yol uzun ama iradem çelikten."
+  water_of_life.1002.b:0 "Diyarıma son bir bakış, sonra gözden kayboluyorum."
+
+  water_of_life_header_2:0 "Yaban Eller:"
+  water_of_life.1003.t:1 "$water_of_life_header_2$ Yedi Güç."
+  water_of_life.1003.desc:0 "Yaban hayatı bir [ROOT.Char.GetWomanMan] karakterini özüne kadar soyar. *Meryem İncili*'nin uyardığı gibi, ruh Gazabın Yedi Gücü tarafından kuşatılır: Karanlık, Arzu ve Cehalet. Ateş başında tek başıma onlarla savaşıyorum. Haydutlardan korkmuyorum; Clavius'un Tanrısını bulduğu o sessizlikten korkuyorum. Zihnim —yani *Nous*— taş yerinden oynatılmadan önceki bir mezar kadar hareketsiz kalmalı."
+  water_of_life.1003.a:0 "Geri dönme arzusuna galip geliyorum."
+
+  water_of_life_header_3:0 "Dayanıklılık Sınavı:"
+  water_of_life.1004.t:1 "$water_of_life_header_3$ Asker Azığı."
+  water_of_life.1004.desc:0 "Erzak azalıyor. Doğa acımasız kaya ve dikenlerden ibaret. Onun neden burayı seçtiğini şimdi anlıyorum: Burası doğadan yapılmış bir kale. Açlık karnımı kemiriyor. Bir lord gibi avlanmalı mıyım, yoksa bir hacı gibi dilenmeli miyim? Tribün disipline saygı duyardı ama Meryem Ana alçakgönüllülüğü öğretmişti."
+  water_of_life.1004.a:0 "Avlanacağım. Disiplin bedeni ayakta tutar."
+  water_of_life.1004.b:0 "Yerlilerden yardım isteyeceğim. Alçakgönüllülük ruhu besler."
+
+  water_of_life_header_4:0 "Av:"
+  water_of_life.1005.t:1 "$water_of_life_header_4$ Lejyonun İşaretleri."
+  water_of_life.1005.desc:0 "Bir işaret buluyorum; askeri bir titizlikle üst üste yığılmış bir taş öbeği. Sonra bir diğeri. Başıboş dolaşmıyorum; yönlendiriliyorum. Ya da belki de... güdülüyorum. Bir dere kenarında bir geyik görüyorum. Kaçmıyor. Korkusuzca beni izliyor, sanki güçlü bir koruyucunun himayesindeymiş gibi. Atış yapmıyorum. Burada öldürmek, bir Mütarekeyi ihlal etmek gibi hissettiriyor."
+  water_of_life.1005.a:0 "Yayımı indiriyorum. Burada bir misafirim."
+
+  water_of_life_header_5:0 "Köy:"
+  water_of_life.1006.t:1 "$water_of_life_header_5$ Tepelerin Yaşlı Adamı."
+  water_of_life.1006.desc:0 "Dağ yamacına tutunmuş küçük bir mezra. Romalıyı sorduğumda köylüler balık işareti yapıyor. Bir yaşlı fısıldıyor: 'Yabancı mı? Büyükbabamın büyükbabasından beri buradadır. Eski dünyanın demirlerini kuşanır. Bizi kurtlardan ve haydutlardan korur ama hiç konuşmaz. Birini bekliyor.' Yaşlı adam bana bakıyor. 'Belki de seni.'"
+  water_of_life.1006.a:0 "Geleceğimi biliyor."
+
+  water_of_life_header_6:0 "Yaklaşma:"
+  water_of_life.1007.t:1 "$water_of_life_header_6$ Onuncu Lejyon."
+  water_of_life.1007.desc:0 "Yol daralarak antik taşlarla tahkim edilmiş bir mağara ağzına çıkan bir keçi yoluna dönüşüyor. Üzerimde gözler hissediyorum; imparatorlukların yükselişini ve toza dönüşünü izlemiş bir bakışın ağırlığı bu. Duruyorum ve boş ellerimi kaldırıyorum. 'Tribün!' diye sesleniyorum. 'Yaşayan Olan'ı arıyorum!' \n\nSessizlik cevap veriyor. Sonra, bir taş sürtünme sesi."
+  water_of_life.1007.a:0 "Aslanın inine gir."
+
+  water_of_life_header_8:0 "Tribün:"
+  water_of_life.1008.t:1 "$water_of_life_header_8$ Clavius Aquila."
+  water_of_life.1008.desc:0 "Basit bir ateşin başında oturmuş, hala yeni gibi parlayan bir gladiusu temizliyor. Derisi bin yılların geçmesiyle pürüzsüzleşmiş olsa da bir Roma Tribünü tuniği giyiyor. Clavius başını kaldırıyor, gözleri bin yıllık hatıraların ağırlığıyla dolu.\n\n'Birbiriyle bağdaşmayan iki şey gördüm,' diyor sesi çakıl taşları gibi gürleyerek. 'Şüphe götürmez şekilde ölmüş bir adam ve aynı adamın yeniden dirilişi. Meryem'e, layık bir varis gelene kadar nöbet tutacağıma dair söz verdim.'\n\nAlevlerin derinliklerine bakıyor. 'Pek çok krala danışmanlık yaptım. Cüzzamlı Kral Baldwin'in yanında durdum ve o emrettiğinde oradaydım: #P *'Yahudiye veya Müslüman'a kötü davranmayın. Bu krallıkta ırk yoktur, sadece Tanrı'nın kulları vardır.'*#! Şimdi bu adaleti sen taşımalısın.'\n\nYüzyıllar içinde mücevherlerle kaplanmış basit bir kil kupayı uzatıyor. '*İncil* der ki: *Madde, eşi benzeri olmayan bir tutku doğurdu.* İç ve o tutku ölsün. Sadece görev kalsın. Nöbetimi devralmaya hazır mısın, [ROOT.GetCharacter.GetTitledFirstNameNoTooltip]?'"
+  water_of_life.1008.a:0 "'Nöbetini devralıyorum, Tribün. Artık huzurla uyu.'"
+
+  water_of_life_header_9:0 "Dönüş:"
+  water_of_life.1009.t:1 "$water_of_life_header_9$ Yeni Gözcü."
+  water_of_life.1009.desc:0 "Kupa dudaklarıma değdiği anda Clavius toza dönüştü; sonunda huzura erdi. Onun yükünü ve O'nun kanını taşıyarak diyarıma dönüyorum. Tebalarım seviniyor ama anlamıyorlar. Onlar bir hükümdar görüyor; ben ise etin fani doğasını görüyorum. \n\n[one_loyal_subject_character.GetFirstNameNoTooltip]: [ROOT.Char.GetLadyLord]'um, döndünüz! \n\n[second_loyal_subject_character.GetFirstNameNoTooltip]: Yaban ellerde kaybolduğunuzdan korkmuştuk! \n\n[third_loyal_subject_character.GetFirstNameNoTooltip]: Çok... ürkütücü bir şekilde sakin görünüyorsunuz. \n\n[fourth_loyal_subject_character.GetFirstNameNoTooltip]: Evine hoş geldin, Muhafız."
+  water_of_life.1009.a:0 "Asla Eskisi Gibi Olamam."

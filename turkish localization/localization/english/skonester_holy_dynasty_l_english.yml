@@ -1,0 +1,25 @@
+﻿l_english:
+  pope_select_flag_desc:0 "“Yeni Papa sensin!”"
+  pope_select_interaction:0 "Yeni Papa Ata"
+  pope_select_interaction_desc:0 "“Papa benim hanemden çıkmalı!”"
+
+  grandmaster_select_flag_desc:0 "“Yeni Büyük Üstat sensin!”"
+  grandmaster_select_interaction:0 "Yeni Büyük Üstat Ata"
+  grandmaster_select_interaction_desc:0 "“Büyük Üstat benim hanemden çıkmalı!”"
+
+  dynasty_grandmaster_0_decision:0 "Yeni bir Büyük Üstat Ata"
+  dynasty_grandmaster_0_decision_desc:0 "Ailemiz her zaman inancına sadık kalmıştır. Şimdi Tarikatın yeni bir lidere ihtiyacı var. Kutsal ateş soyumuzun üzerinde parlasın ve imanın kılıcı bir kez daha çekilsin."
+  dynasty_grandmaster_0_decision_message:0 "Soyundan gelen birini Tarikatın Büyük Üstadı yapmak için karakter etkileşimlerini (Diplomasi menüsünde) kullanabilirsin."
+  dynasty_grandmaster_0_decision_confirm:0 "Yeni Büyük Üstadı Ata"
+
+  dynasty_pope_0_decision:0 "Yeni bir Papa Ata"
+  dynasty_pope_0_decision_desc:0 "Soyumuz ilahi gözetim altındadır. Kilise'de düzeni ancak Kutsal Makam'da oturan benim kanımdan biri yeniden tesis edebilir."
+  dynasty_pope_0_decision_message:0 "Soyundan gelen birini Papa yapmak için karakter etkileşimlerini (Diplomasi menüsünde) kullanabilirsin."
+  dynasty_pope_0_decision_confirm:0 "Yeni Papayı Ata"
+
+  dynasty_pope_modifier:0 "Papalık Hanedanı"
+  dynasty_grandmaster_modifier:0 "Kutsal Şövalye Hanedanı"
+  decision_group_type_holy_dynasty_decision_group:0 "Kutsal Hanedan Kararları"
+
+  dynasty_pope_0_decision_tooltip:0 "Seç"
+  dynasty_grandmaster_0_decision_tooltip:0 "Seç"

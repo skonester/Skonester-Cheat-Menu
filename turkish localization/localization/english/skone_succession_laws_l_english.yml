@@ -1,0 +1,34 @@
+﻿l_english:
+  # Oligarşik Seçim Sistemi
+  oligarchic_elective_succession_law: "Oligarşik Seçim"
+  oligarchic_elective_succession_law_effects: "[ruler|E] ve diyardaki tüm [powerful_vassals|E], kendileri arasından veya hükümdarın [close_family|E] üyelerinden birini [title_heir|E] olarak aday gösterebilir."
+
+  oligarchic_elective_candidates: "Yakın Aile ve Seçmenler"
+  oligarchic_elective_candidates_tooltip:1 "Oligarşik Seçim altında geçerli bir Aday olabilmek için karakterin şu koşullardan birini karşılaması gerekir:\n$EFFECT_LIST_BULLET$Mevcut hükümdarın meşru bir [close_family|E] üyesi olmak ve bir Teokrasi veya Cumhuriyet mirasçısı olmamak. Adayın çocukları aday gösterilemez.\n$EFFECT_LIST_BULLET$Unvan için geçerli bir Oligarşik [elector|E] olmak."
+  oligarchic_elective_electors:0 "$feudal_elective_electors$"
+  oligarchic_elective_electors_tooltip:1 "Oligarşik Seçim altında geçerli bir [elector|E] olabilmek için karakterin şu koşullardan birini karşılaması gerekir:\n$EFFECT_LIST_BULLET$Unvanın mevcut sahibi olmak\n$EFFECT_LIST_BULLET$Unvana doğrudan bağlı bir [powerful_vassal|E] olmak"
+
+  # Köylü/Halk Meclisi Seçimi
+  tooltip_peasant_elective_development:2 "[county_opinion|E] ile düzenlenmiş toplam [development|E]: $VALUE|=+0$"
+  tooltip_peasant_elector_vote:0 "Başkent halk görüşü: $VALUE|=+0$"
+  
+  # Teokratik Seçim
+  tooltip_theocratic_vote_strength_title_tier:2 "[ROOT.Char.GetSheHe|U] şu unvan kademesindedir ([ROOT.Char.GetTitleTierName]): $VALUE|=+0$"
+  tooltip_theocratic_vote_strength_piety:2 "Dindarlık seviyesi: $VALUE|=+0$"
+  tooltip_theocratic_vote_strength_virtues:2 "Günahlar ve erdemler: $VALUE|=+0$"
+  
+  # Modlanmış Veraset Yasaları
+  peasant_elective_succession_law:1 "Popülist Seçim"
+  peasant_elective_succession_law_subname:0 "Köylü"
+  peasant_elective_succession_law_effects:2 "[ruler|E] ve tüm doğrudan [vassals|E] (Baronlar hariç), kendileri arasından veya hükümdarın [close_family|E] üyelerinden birini [title_heir|E] olarak aday gösterebilir. Bu [succession_law|E] altındaki [voting_power|E], [elector|E]'ün toplam [domain|E] alanındaki [county_development|E] ve [county_opinion|E] miktarından etkilenir. Seçmenler, [capital|E] [county_opinion|E] seviyesi yüksek olan adayları tercih edecektir."
+  peasant_elective_candidates:0 "Yakın Aile, Hak Sahipleri ve Seçmenler"
+  peasant_elective_candidates_tooltip:1 "Popülist Seçim altında geçerli bir Aday olabilmek için karakterin şu koşullardan birini karşılaması gerekir:\n$EFFECT_LIST_BULLET$Mevcut hükümdarın meşru bir [close_family|E] üyesi olmak ve bir Teokrasi veya Cumhuriyet mirasçısı olmamak. Adayın çocukları aday gösterilemez.\n$EFFECT_LIST_BULLET$Unvan üzerinde bir [claimant|E] olmak ve bir Teokrasi veya Cumhuriyet mirasçısı olmamak\n$EFFECT_LIST_BULLET$Unvan için geçerli bir Popülist [elector|E] olmak"
+  peasant_elective_electors:0 "Hükümdar ve Vassallar"
+  peasant_elective_electors_tooltip:0 "Popülist Seçim altında geçerli bir [elector|E] olabilmek için bir vassalın şu koşulların tümünü karşılaması gerekir:\n$EFFECT_LIST_BULLET$Unvanın doğrudan vassalı olmak\n$EFFECT_LIST_BULLET$[baron|E] rütbesinin üzerinde olmak."
+  
+  theocratic_elective_succession_law:1 "Teokratik Seçim"
+  theocratic_elective_succession_law_effects:2 "[theocracy|E] hükümetine sahip tüm [de_jure|E] [vassals|E], hükümdarın [close_family|E] üyeleri ve [claimant|E]'lar arasından bir [title_heir|E] aday gösterebilir. Bu [succession_law|E] altındaki [voting_power|E], [elector|E]'ün [title_tier|E], [piety_level|E] ve [virtuous|E] [traits|E] durumundan etkilenir. Seçmenler, yüksek [piety_level|E] ve [virtuous|E] [traits|E] sahibi adayları tercih edecektir."
+  theocratic_elective_candidates:0 "Yakın Aile ve Hak Sahipleri"
+  theocratic_elective_candidates_tooltip:1 "Teokratik Seçim altında geçerli bir Aday olabilmek için karakterin şu koşullardan birini karşılaması gerekir:\n$EFFECT_LIST_BULLET$Mevcut hükümdarın meşru bir [close_family|E] üyesi olmak ve bir Teokrasi veya Cumhuriyet mirasçısı olmamak. Adayın çocukları aday gösterilemez.\n$EFFECT_LIST_BULLET$Unvan üzerinde bir [claimant|E] olmak ve bir Teokrasi veya Cumhuriyet mirasçısı olmamak"
+  theocratic_elective_electors:0 "Teokratik Vassallar"
+  theocratic_elective_electors_tooltip:0 "Teokratik Seçim altında geçerli bir [elector|E] olabilmek için bir vassalın şu koşulların tümünü karşılaması gerekir:\n$EFFECT_LIST_BULLET$Unvanın [de_jure|E] [vassals|E] üyesi olmak\n$EFFECT_LIST_BULLET$[theocracy|E] hükümetine sahip olmak."

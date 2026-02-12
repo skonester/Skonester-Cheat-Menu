@@ -1,0 +1,20 @@
+﻿l_english:
+  special_gift_interaction:0 "#bold #X Y#!#N a#!#X ş#!#N a#!#X y#!#N a#!#X n#! #X S#!#N u#! #!"
+  special_gift_interaction_desc:0 "[recipient.GetShortUINameNoTooltip] karakterine Clavius'un boş mezarda bulduğu gerçeği bahşet; Ruhu, maddenin zincirlerinden ayıran bir yudum."
+  special_gift_interaction_tooltip:0 "Ayağa kalk, [recipient.GetShortUINameNoTooltip]. İmparatorluklar toza dönüşür ama biz kalırız. İç ve kendi içindeki #E Huzuru#! bul."
+
+  special_gift_interaction_2:0 "#bold #X Y#!#N a#!#X ş#!#N a#!#X y#!#N a#!#X n#! #X S#!#N u#! #!"
+  special_gift_interaction_desc_2:0 "Kupayı [recipient.GetShortUINameNoTooltip] ile paylaş; ruhlarınızı bu dünyayı yöneten Güçlerin erişemeyeceği bir yerde birbirine bağla."
+  special_gift_interaction_tooltip_2:0 "Sevgilim [recipient.GetFirstNameNoTooltip], 'birbiriyle bağdaşmayan iki şey' bizde birliğini buldu. İç ve sonsuza dek Sessizlikte birlikte yaşayalım."
+
+  special_gift_interaction_3:0 "#bold #X Y#!#N a#!#X ş#!#N a#!#X y#!#N a#!#X n#! #X S#!#N u#! #!"
+  special_gift_interaction_desc_3:0 "Nöbetin ağırlığını [recipient.GetShortUINameNoTooltip] karakterine devret; Meryem'in soyunun doğanın çözülüşünün üzerine çıkmasını sağla."
+  special_gift_interaction_tooltip_3:0 "Evladım, #E İnsanoğlu#! senin içindedir. O'nun peşinden git! İç ve zamanın akıntısına karşı duran bir çapa ol."
+
+  special_gift_interaction_4:0 "#bold #X Y#!#N a#!#X ş#!#N a#!#X y#!#N a#!#X n#! #X S#!#N u#! #!"
+  special_gift_interaction_desc_4:0 "[recipient.GetShortUINameNoTooltip] karakterine Onuncu Lejyon'un canlılığını bağışla; altınla değil, Ruhun ebediyetiyle dövülmüş bir sadakat."
+  special_gift_interaction_tooltip_4:0 "Silah arkadaşım, [recipient.GetShortUINameNoTooltip] — iç. Savaş uzun ve ölüm artık göze alamayacağımız bir uyku. Hattı benimle birlikte tut."
+
+  trait_water_of_life:0 "Kelam'ın Gözcüsü"
+  trait_water_of_life_desc:0 "Bu karakter Dirilen Olan'ı görmüş ve Kupadan içmiştir. Maddenin yozlaşmasının ötesine geçmişlerdir."
+  trait_water_of_life_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], Üst Oda'nın sırrını taşıyor. [ROOT.GetCharacter.GetSheHe|U] artık doğa kanunlarına bağlı değil, #E Yaşayan Ruhun#! bir kanıtı olarak yürüyor."

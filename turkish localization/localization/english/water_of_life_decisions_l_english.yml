@@ -1,0 +1,19 @@
+﻿l_english:
+  start_searching_for_water_of_life_decision:0 "Ölümsüz Bir Gün"
+  start_searching_for_water_of_life_decision_tooltip:1 "Clavius aradığı huzuru Roma'da değil, Meryem'in #E Nous#! (Zihin) öğretisinde buldu. Soylarını sonsuza dek güvence altına alıyor."
+  
+  start_searching_for_water_of_life_decision_desc:0 "#F 'Birbiriyle bağdaşmayan iki şey gördüm: Şüphe götürmez şekilde ölmüş bir adam ve aynı adamın yeniden dirilişi.'#!\n\nTribün Clavius Aquila Roma'nın deliliğinden kaçtığında, diğerlerinin reddettiği kişinin peşinden gitti. *Meryem İncili*'nde kaydedildiği üzere, Petrus ona meydan okumuştu: 'O gerçekten bizim bilgimiz dışında bir kadınla mı konuştu?' Ama Levi cevap verdi: 'Eğer Kurtarıcı onu layık gördüyse, sen onu reddedecek kimsin?'\n\nClavius bu layık görülüşün kılıcı oldu. Saçlarını Roma kili gibi kızıla boyayarak gizlenen Meryem'i ve onların sır çocuklarını korumak için Kupadan içti. Maddenin çözülmesine karşı duran bir çapa oldu ve onun öğrettiği şu gerçeği korudu: #'İnsanoğlu senin içindedir. O'nun peşinden git!'#!\n\n#P Tribün asla ölmedi. Gnosis'in ebedi gözcüsü olarak hala dünyada yürüyor.#!\n\n#X #bold ~ ONUNCU LEJYON TRİBÜNÜ, SESSİZLİĞİN MUHAFIZI ~ \n    ~ 'ONU BİZDEN DAHA ÇOK SEVDİ' ~ \n~ YENİDEN DOĞAN BARBARA YÜKSELECEK ~ #! #!"
+  
+  start_searching_for_water_of_life_decision_start:0 "#Y #bold *'Huzur sizinle olsun. Kendi içinizdeki huzurumu kazanın.'#!"
+  
+  start_searching_for_water_of_life_decision_proceed:0 "Mezardaki mühür kırıldı ve ölümün pençesi de onunla birlikte yok oldu. Clavius gölgelerde varlığını sürdürüyor, sevdiği Meryem'in #E Nous#! (Zihin) gücünü taşıyan bir soyu bekliyor. Yeniden doğan Macdelli Meryem'in, yani #P Barbara'nın Soyuna#! katılmayı kabul et. #Z Tribün'ün Koruması#! ve #E Kutsal Kase üzerinde hak iddiası#! kazan; ancak ortodoksların kıskançlığına karşı dikkatli ol."
+  
+  start_searching_for_water_of_life_decision_stress:0 "Meryem şöyle öğretmişti: 'Zihin neredeyse, hazine de oradadır.' Clavius yüzyıllardır ette kalırken, o Sessizlikte dinlenmeye yükseldi. Bu ayrılığa dayanabilir miyim?"
+  
+  start_searching_for_water_of_life_decision_stress_lazy:0 "#N 'Kimsenin sizi yoldan çıkarmasına izin vermeyin.' Bir Muhafız uyuyamaz. [GetTrait('lazy').GetName( GetPlayer )] sıfatıyla, #E içindeki İnsanoğlu'nu#! aramak için gereken disiplin toza dönüşüyor.#!"
+  
+  start_searching_for_water_of_life_decision_confirm:0 "Tüm doğa, kendi köklerine geri döner."
+  
+  water_of_life_modifier_knight_and_maa_limit_and_cap_increased:0 "Nous Muhafızları"
+  water_of_life_modifier_hunting_trophy:0 "Gizli İncil"
+  water_of_life_modifier_good_deal:0 "Sevgilinin Kanı"

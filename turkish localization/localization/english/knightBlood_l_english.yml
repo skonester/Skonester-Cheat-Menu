@@ -1,0 +1,79 @@
+﻿l_english:
+ #########################################
+ # Sıfatlar (Traits)
+ #########################################
+
+ trait_blood_ancester:0 "Atasal Kan"
+ trait_blood_knight:0 "Şövalye Kanı"
+
+ # --- Kedi ---
+ trait_blood_ancester_1:0 "Kedigil Zarafeti"
+ trait_blood_ancester_1_desc:0 "Bu karakter, soyunu Ulu bir Kedigil ile pakt kuran efsanevi bir şövalyeye dayandırıyor. Damarlarında akan kan, vahşi doğanın atasal gücünü taşıyor: bir kedinin zarafeti."
+ trait_blood_ancester_1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], soyunu Ulu bir Kedigil ile pakt kuran efsanevi bir şövalyeye dayandırıyor. Damarlarında akan kan, o atanın gücünü yankılatıyor."
+
+ # --- Köpek ---
+ trait_blood_ancester_2:0 "Sadık Tazı"
+ trait_blood_ancester_2_desc:0 "Bu karakter, soyunu yüce Hachiko ile bağ kuran efsanevi bir şövalyeye dayandırıyor. Damarlarında akan kan, vahşi doğanın atasal gücünü taşıyor: bir köpeğin sarsılmaz sadakati."
+ trait_blood_ancester_2_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], soyunu yüce Hachiko ile bağ kuran efsanevi bir şövalyeye dayandırıyor. Damarlarında akan kan, o atanın gücünü yankılatıyor."
+
+ # --- Ay ---
+ trait_blood_ancester_4:0 "Ay Işığı"
+ trait_blood_ancester_4_desc:0 "Bu karakter, soyunu Gümüş Ay tarafından kutsanmış efsanevi bir şövalyeye dayandırıyor. Damarlarında akan kan atasal bir güç taşıyor: ay ışığı kadar akışkan bir berraklık."
+ trait_blood_ancester_4_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], soyunu Gümüş Ay tarafından kutsanmış efsanevi bir şövalyeye dayandırıyor. Damarlarında akan kan, o atanın gücünü yankılatıyor."
+
+ # --- Rüzgar ---
+ trait_blood_ancester_7:0 "Rüzgarkuşu"
+ trait_blood_ancester_7_desc:0 "Bu karakter, soyunu Rüzgarın Melekleri ile dans eden efsanevi bir şövalyeye dayandırıyor. Damarlarında akan kan atasal bir güç taşıyor: hız ve özgürlük."
+ trait_blood_ancester_7_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], soyunu Rüzgarın Melekleri ile dans eden efsanevi bir şövalyeye dayandırıyor. Damarlarında akan kan, o atanın gücünü yankılatıyor."
+
+ # --- Yaban Domuzu ---
+ trait_blood_ancester_5:0 "Yaban Domuzu"
+ trait_blood_ancester_5_desc:0 "Bu karakter, soyunu Yaban Domuzu'nun ruhuna sahip efsanevi bir şövalyeye dayandırıyor. Damarlarında akan kan atasal bir güç taşıyor: amansız bir saldırganlık ve yıkım."
+ trait_blood_ancester_5_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], soyunu Yaban Domuzu'nun ruhuna sahip efsanevi bir şövalyeye dayandırıyor. Damarlarında akan kan, o atanın gücünü yankılatıyor."
+
+ # --- Karanlık ---
+ trait_blood_ancester_6:0 "Karanlık Gece"
+ trait_blood_ancester_6_desc:0 "Bu karakter, soyunu Gece Lordu tarafından kutsanmış efsanevi bir şövalyeye dayandırıyor. Damarlarında akan kan atasal bir güç taşıyor: gölgenin her yerdeki mutlak varlığı."
+ trait_blood_ancester_6_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], soyunu Gece Lordu tarafından kutsanmış efsanevi bir şövalyeye dayandırıyor. Damarlarında akan kan, o atanın gücünü yankılatıyor."
+
+ # --- Venüs/Umut ---
+ trait_blood_ancester_8:0 "Venüs"
+ trait_blood_ancester_8_desc:0 "Bu karakter, soyunu karanlığın içinde ışığı arayan ve umutsuzluğa karşı dimdik duran efsanevi bir şövalyeye dayandırıyor. Damarlarında akan kan atasal bir güç taşıyor: yıkımın ortasında yeşeren umut."
+ trait_blood_ancester_8_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], soyunu karanlıkta ışığı gözleyen efsanevi bir şövalyeye dayandırıyor. Damarlarında akan kan, o atanın gücünü yankılatıyor."
+
+ # --- Palyaço/Jester ---
+ trait_blood_ancester_9:0 "Saray Palyaçosu"
+ trait_blood_ancester_9_desc:0 "Bu karakter, soyunu dünya tarafından kandırılmış olsa da misyonunu gülümseme yaymak olarak belirleyen efsanevi bir şövalyeye dayandırıyor. Damarlarında akan kan atasal bir güç taşıyor: aşkın o trajikomik alaycılığı."
+ trait_blood_ancester_9_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], soyunu dünya tarafından aldatılmış olsa da gülümsemeyi seçen efsanevi bir şövalyeye dayandırıyor. Damarlarında akan kan, o atanın gücünü yankılatıyor."
+
+ # --- Kuzgun ---
+ trait_blood_ancester_10:0 "Kuzgun"
+ trait_blood_ancester_10_desc:0 "Bu karakter, soyunu ölümü önceden görebilmek için bilgelik kuşuna dua eden efsanevi bir şövalyeye dayandırıyor. Damarlarında akan kan atasal bir güç taşıyor: felaketlerden süzülüp gelen bilgelik."
+ trait_blood_ancester_10_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], soyunu bilgelik kuşuna dua eden efsanevi bir şövalyeye dayandırıyor. Damarlarında akan kan, o atanın gücünü yankılatıyor."
+
+ # --- Ejderha ---
+ trait_blood_ancester_11:0 "Gümüş Ejderha"
+ trait_blood_ancester_11_desc:0 "Bu karakter, soyunu Ulu Gümüş Ejderha'ya karşı yasak bir eylemde bulunan efsanevi bir şövalyeye dayandırıyor. Damarlarında akan kan atasal bir güç taşıyor: ejderha nefesi."
+ trait_blood_ancester_11_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], soyunu Ulu Gümüş Ejderha'ya karşı tabuyu yıkan efsanevi bir şövalyeye dayandırıyor. Damarlarında akan kan, o atanın gücünü yankılatıyor."
+
+ # --- Özel Sanatlar ---
+ trait_blood_art_1:0 "Taiji"
+ trait_blood_art_1_desc:0 "Bu karakter doğumundan beri büyükbabasından derinlemesine etkilenmiş, gözlem ve pratik yoluyla Uzak Doğu'nun muazzam fiziksel tekniği olan Taiji'yi öğrenmiştir."
+ trait_blood_art_1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], doğumundan beri büyükbabasından etkilenerek Uzak Doğu'nun muazzam fiziksel tekniğini öğrenmiştir: Taiji."
+
+ # --- Şövalye Rütbeleri ---
+ trait_blood_knight_1:0 "Şövalye Yaveri"
+ trait_blood_knight_1_desc:0 "Çalışkanlık, azim, inanç ve biraz da şansla, bu karakter soyunu uyandırmış ve bir Şövalye Yaveri olmuştur."
+ trait_blood_knight_1_character_desc:0 "Çalışkanlık, azim, inanç ve biraz da şansla, [ROOT.GetCharacter.GetFirstNameNoTooltip] soyunu uyandırmış ve bir Şövalye Yaveri olmuştur."
+
+ trait_blood_knight_2:0 "Resmi Şövalye"
+ trait_blood_knight_2_desc:0 "Durmak bilmeyen çabaların ardından bu karakter, güç yoluna başarıyla girmiş ve Resmi Şövalye rütbesine erişmiştir."
+ trait_blood_knight_2_character_desc:0 "Durmak bilmeyen çabaların ardından, [ROOT.GetCharacter.GetFirstNameNoTooltip] güç yoluna başarıyla girmiş ve Resmi Şövalye olmuştur."
+
+ trait_blood_knight_3:0 "Usta Şövalye"
+ trait_blood_knight_3_desc:0 "Yetenek, sıkı çalışma ve kaderin yardımıyla bu karakter, kanından gelen güce hükmetmeyi başarmış ve bir Usta Şövalye olmuştur."
+ trait_blood_knight_3_character_desc:0 "Yetenek, sıkı çalışma ve kaderin yardımıyla, [ROOT.GetCharacter.GetFirstNameNoTooltip] kanından gelen güce hükmetmiş ve bir Usta Şövalye olmuştur."
+
+ trait_blood_knight_4:0 "Gök Şövalyesi"
+ trait_blood_knight_4_desc:0 "Bu karakter toprağa hükmetti, gökyüzüne hükmetti ve en önemlisi kendi nefsine hükmetti. İnsani gücün zirvesinde durmaktadır."
+ trait_blood_knight_4_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] toprağa, gökyüzüne ve kendisine hükmederek insani gücün zirvesine ulaşmıştır."

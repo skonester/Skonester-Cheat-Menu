@@ -1,0 +1,32 @@
+﻿l_english:
+  # Eser Kararı (Hristiyan Gnostik Tarzı)
+  cheat_decition_artifact:0 "Hediyeleri Geri Al"
+  cheat_description_artifact:0 "Gördüğümüz dünya, kör bir yaratıcının bıraktığı gölgeden ibarettir. Bu kutsal emanetler, Pleroma'dan Ruhun çocuklarına eve dönüş yolculuklarında yardım etmesi için gönderilen Gerçek Işığın parçalarıdır."
+  cheat_decition_accept:0 "Işık kendine ait olanı tanıyacaktır."
+  Artifact_1000_tooltip:0 "Pleroma'nın parçalarını teslim al."
+
+  # Kitap İsimleri ve Açıklamaları
+  pope_joan_book_name:0 "Papa Joan'ın Gizli Günlükleri"
+  pope_joan_book_desc:0 "Efsanevi kadın Papa'nın hayatını detaylandıran yasaklı bir metin. Sayfaları gizli bir bilgelik aurası yayıyor."
+  lady_godiva_book_name:0 "Godiva'nın Yürüyüşü"
+  lady_godiva_book_desc:0 "İnce ipeğe sarılmış, fedakarlık ve asil bir protestoyu anlatan bir şiir."
+  caligula_book_name:0 "İmparatorun Çılgınlığı"
+  caligula_book_desc:0 "Roma'nın en eksantrik hükümdarının tüyler ürpertici bir anlatımı. Hem korku hem de hayranlık uyandırıyor."
+  nasreddin_book_name:0 "Nasreddin Hoca Fıkraları"
+  nasreddin_book_desc:0 "Zihni keskinleştiren ve ruhu hafifleten hiciv dolu hikayeler koleksiyonu."
+  valmiki_book_name:0 "Valmiki'nin Ramayana Destanı"
+  valmiki_book_desc:0 "Dharma ve görev bilinci hakkında derin bilgiler sunan epik bir Sanskrit şiiri."
+  ruler_hero_book_name:0 "Kahraman Kralın Yolu"
+  ruler_hero_book_desc:0 "Liderlik ve efsanevi işler üzerine bir el kitabı."
+  sinbad_book_name:0 "Sinbad'ın Yedi Denizi"
+  sinbad_book_desc:0 "Stratejik düşünmeyi ve cesur manevraları teşvik eden deniz maceraları hikayeleri."
+
+  # Ekipman İsimleri ve Açıklamaları
+  artifact_sword_name:0 "Yürekfelaketi'nin Mirası"
+  artifact_sword_description:0 "Sıradan çelikten daha hafif ve keskin, dalga desenli bir Valyria çeliği kılıcı."
+  artifact_armor_name:0 "Ejderha Lordu'nun Zırhı"
+  artifact_armor_description_costum_plate_armor:0 "Antik tekniklerle dövülmüş, eşsiz koruma sağlayan karartılmış çelik plaka zırh."
+  artifact_crown_name:0 "Fatih'in Tacı"
+  artifact_crown_description:0 "Kare kesim yakutlarla süslenmiş, mutlak otoriteyi simgeleyen Valyria çeliğinden bir taç."
+  artifact_regalia_name:0 "Gelgit Asası"
+  artifact_regalia_description:0 "Hem karada hem de denizde hakimiyeti simgeleyen antik bir asa."

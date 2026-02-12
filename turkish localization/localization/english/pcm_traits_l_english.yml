@@ -1,0 +1,17 @@
+﻿l_english:
+ #Skonester Sürümü 
+ trait_immortality:0 "Ölümsüz"
+ trait_immortality_desc:0 "Bu karakter Kutsal Ölümsüzlük Hediyesi'nden pay almıştır. Çehresi daima genç kalacak ve doğal ölümün pençesine karşı muaf olacaktır."
+ trait_immortality_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], Kutsal Ölümsüzlük Hediyesi ile takdis edildi. [ROOT.GetCharacter.GetSheHe|U] asla yirmi beş yaşından fazla yaşlanmayacak ve doğal ölüme asla boyun eğmeyecek."
+
+ trait_super:0 "Kusursuzluk Timsali"
+ trait_super_desc:0 "Bu karakter ölümlüler arasında bir mükemmellik timsalidir; eşsiz nitelikleri, dinçliği, cazibesi ve becerileri onu diğer herkesin üzerine taşır."
+ trait_super_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], sınırsız güç, zeka ve şöhretle donatılmış bir kusursuzluk timsali olarak yüceltildi."
+
+ trait_super_governor:0 "Harikalar Kâhyası"
+ trait_super_governor_desc:0 "Bu karakter neredeyse ilahi bir bilgelikle hükmeder. Toprakları kalkınır, kasabaları serpilir ve sanki göğün eli değmişçesine mutlak bir düzen hüküm sürer."
+ trait_super_governor_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] hükmü altında diyar gelişir, tarlalar çiçek açar ve en sefil köylü bile kâhyasının adını kutsar."
+
+ trait_super_general:0 "Meshedilmiş Savaş Beyi"
+ trait_super_general_desc:0 "Bu karakter orduları sanki bizzat kaderin eliyle yönlendiriliyormuşçasına yönetir. Askerleri sarsılmaz bir cesaretle savaşır ve üst üste zaferler kazanır."
+ trait_super_general_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], düşmanlarının korktuğu, askerlerinin ise saygı duyduğu eşsiz bir dehayla komuta ederek her orduyu zafere taşır."

@@ -1,0 +1,46 @@
+﻿l_english:
+  trait_boost_stats:0 "Tüm Nitelikleri Artır"
+  trait_boost_stats_desc:0 "Tüm nitelikleri 50 artırır."
+  trait_boost_stats_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], olağanüstü niteliklerle donatılmış efsanevi bir şahsiyettir."
+  
+  trait_boost_hufu:0 "İmparatorluk Otoritesi Desteği"
+  trait_boost_hufu_desc:0 "Kendi canı pahasına, imparatorun kararlarını daha bilge kılmak için göğün ve yerin doğal gücünden yararlanır; devlet işlerinin düzenli, istikrarlı ve müreffeh olmasını sağlar."
+  trait_boost_hufu_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], ulusun refahı ve düzeni için kendini feda eden yüce bir imparatordur."
+  
+  trait_boost_dudu1:0 "Askeri Komutan"
+  trait_boost_dudu1_desc:0 "Beş Ordu Generali – sınır veya bölgesel askeri işlerden sorumlu."
+  trait_boost_dudu1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], liderin doğrudan askeri komutanı ve hanenin sadık bir destekçisidir."
+  
+  trait_boost_xueshi1:0 "Onursal Alim"
+  trait_boost_xueshi1_desc:0 "Hanlin Akademisi'nin kabine alimi ve kralın danışmanı."
+  trait_boost_xueshi1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], kralın güvenilir edebi danışmanlarından biridir."
+  
+  trait_plague_immunity:0 "Veba Bağışıklığı"
+  trait_plague_immunity_desc:0 "'Barbara' tarafından kutsanan bu karakter veba kapmaz."
+  trait_plague_immunity_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] vebaya karşı bağışıklıdır."
+  
+  trait_zg_buxiu:0 "Ölümsüz"
+  trait_zg_buxiu_desc:0 "Karakteriniz ölümsüzdür."
+  trait_zg_buxiu_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] ölümsüzdür."
+  
+  trait_bloodline_god_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], Barbara'nın ilahi soyundandır."
+  
+  trait_bloodline_god_3:0 "Barbara'nın Meshedilmiş Kanı"
+  trait_bloodline_god_3_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] ilahiliğe yakındır."
+  trait_bloodline_god_3_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], Barbara'nın #Y imparatorluk #! #bold safkan #! soyundan gelen, Göklerin İradesi'ne (Mandate of Heaven) bağlı kutsal bir soyun taşıyıcısıdır."
+
+  trait_bloodline_god_2:0 "Barbara'nın Kraliyet Kanı"
+  trait_bloodline_god_2_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], Barbara'nın kraliyet damarını taşır."
+  trait_bloodline_god_2_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], Barbara'nın #bold kraliyet #! soyunu miras almıştır. Safkan olmasa da Göklerin İradesi tarafından kayrılmıştır."
+
+  trait_bloodline_god_1:0 "Barbara'nın Ruh Kanı"
+  trait_bloodline_god_1_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], Barbara'nın ilahi soyunun kalıntılarını taşır."
+  trait_bloodline_god_1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip]'un damarlarında Barbara'nın kanından zayıf bir kıvılcım dolaşıyor. Uzak olsa da ilahi miras ruhunda hâlâ varlığını koruyor."
+
+  trait_zhuge_kill_02:0 "Kralın Şarabı"
+  trait_zhuge_kill_02_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], kaderin seçilmiş kişisi tarafından idam edildi.\nBir kral öldüğünde devlet de yok olur; sadık bakanlar kralın emriyle can verir."
+  trait_zhuge_kill_02_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], kaderin seçilmiş kişisi tarafından idam edildi."
+
+  trait_zhuge_ymbuff_01:0 "Göçebe İradesi"
+  trait_zhuge_ymbuff_01_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], Halkın Görevlendirilmiş Lideridir."
+  trait_zhuge_ymbuff_01_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], Halkın Görevlendirilmiş Lideridir."

@@ -1,0 +1,106 @@
+﻿l_english:
+ # Etkileşim Hileleri
+ interaction_category_cheat_menu:0 "Skonester Alt Hileleri"
+ CHEAT_ACTIONS:0 "Skonester küçük hile listesi"
+ 
+ open_bone_cheat_interactions:0 "Alt Hileleri Aç"
+ close_bone_cheat_interactions:0 "Alt Hileleri Kapat"
+ bone_cheat_interactions_desc:0 "Skonester hile etkileşimleri"
+
+ open_bone_trait_interactions:0 "Özellikleri Aç"
+ close_bone_trait_interactions:0 "Özellikleri Kapat"
+ bone_trait_interactions_desc:0 "Skonester özellik etkileşimleri"
+ 
+ bone_add_to_court:0 "Saraya Ekle"
+ bone_add_to_court_desc:0 "Karakteri sarayına ekle"
+ 
+ add_trait_super_01_interaction:0 "Süper Sv. 1 Ekle"
+ add_trait_super_01_interaction_desc:0 "Hedef karaktere Süper Seviye 1 özelliğini ekler"
+ remove_trait_super_01_interaction:0 "Süper Sv. 1 Kaldır"
+ remove_trait_super_01_interaction_desc:0 "Hedef karakterden Süper Seviye 1 özelliğini kaldırır"
+
+ add_trait_super_02_interaction:0 "Süper Sv. 2 Ekle"
+ add_trait_super_02_interaction_desc:0 "Hedef karaktere Süper Seviye 2 özelliğini ekler"
+ remove_trait_super_02_interaction:0 "Süper Sv. 2 Kaldır"
+ remove_trait_super_02_interaction_desc:0 "Hedef karakterden Süper Seviye 2 özelliğini kaldırır"
+
+ add_trait_super_03_interaction:0 "Süper Sv. 3 Ekle"
+ add_trait_super_03_interaction_desc:0 "Hedef karaktere Süper Seviye 3 özelliğini ekler"
+ remove_trait_super_03_interaction:0 "Süper Sv. 3 Kaldır"
+ remove_trait_super_03_interaction_desc:0 "Hedef karakterden Süper Seviye 3 özelliğini kaldırır"
+ 
+ add_trait_super_governor_01_interaction:0 "Süper Vali Sv. 1 Ekle"
+ add_trait_super_governor_01_interaction_desc:0 "Hedef karaktere Süper Vali Seviye 1 özelliğini ekler"
+ remove_trait_super_governor_01_interaction:0 "Süper Vali Sv. 1 Kaldır"
+ remove_trait_super_governor_01_interaction_desc:0 "Hedef karakterden Süper Vali Seviye 1 özelliğini kaldırır"
+
+ add_trait_super_governor_02_interaction:0 "Süper Vali Sv. 2 Ekle"
+ add_trait_super_governor_02_interaction_desc:0 "Hedef karaktere Süper Vali Seviye 2 özelliğini ekler"
+ remove_trait_super_governor_02_interaction:0 "Süper Vali Sv. 2 Kaldır"
+ remove_trait_super_governor_02_interaction_desc:0 "Hedef karakterden Süper Vali Seviye 2 özelliğini kaldırır"
+
+ add_trait_super_governor_03_interaction:0 "Süper Vali Sv. 3 Ekle"
+ add_trait_super_governor_03_interaction_desc:0 "Hedef karaktere Süper Vali Seviye 3 özelliğini ekler"
+ remove_trait_super_governor_03_interaction:0 "Süper Vali Sv. 3 Kaldır"
+ remove_trait_super_governor_03_interaction_desc:0 "Hedef karakterden Süper Vali Seviye 3 özelliğini kaldırır"
+ 
+ add_trait_super_general_01_interaction:0 "Süper General Sv. 1 Ekle"
+ add_trait_super_general_01_interaction_desc:0 "Hedef karaktere Süper General Seviye 1 özelliğini ekler"
+ remove_trait_super_general_01_interaction:0 "Süper General Sv. 1 Kaldır"
+ remove_trait_super_general_01_interaction_desc:0 "Hedef karakterden Süper General Seviye 1 özelliğini kaldırır"
+
+ add_trait_super_general_02_interaction:0 "Süper General Sv. 2 Ekle"
+ add_trait_super_general_02_interaction_desc:0 "Hedef karaktere Süper General Seviye 2 özelliğini ekler"
+ remove_trait_super_general_02_interaction:0 "Süper General Sv. 2 Kaldır"
+ remove_trait_super_general_02_interaction_desc:0 "Hedef karakterden Süper General Seviye 2 özelliğini kaldırır"
+
+ add_trait_super_general_03_interaction:0 "Süper General Sv. 3 Ekle"
+ add_trait_super_general_03_interaction_desc:0 "Hedef karaktere Süper General Seviye 3 özelliğini ekler"
+ remove_trait_super_general_03_interaction:0 "Süper General Sv. 3 Kaldır"
+ remove_trait_super_general_03_interaction_desc:0 "Hedef karakterden Süper General Seviye 3 özelliğini kaldırır"
+
+ add_trait_bone_female_wife_interaction:0 "Kraliçe İçin"
+ add_trait_bone_female_wife_interaction_desc:0 "Eşiniz artık çok daha muazzam olacak"
+ remove_trait_bone_female_wife_interaction:0 "Kraliçe Özelliğini Kaldır"
+ remove_trait_bone_female_wife_interaction_desc:0 "Hedef karakterden Kraliçe özelliğini kaldırır"
+
+ add_trait_bone_female_heir_interaction:0 "Süper Kadınlar"
+ add_trait_bone_female_heir_interaction_desc:0 "Süper Kadınlar Özelliği"
+ remove_trait_bone_female_heir_interaction:0 "Süper Kadınlar Özelliğini Kaldır"
+ remove_trait_bone_female_heir_interaction_desc:0 "Hedef karakterden Süper Kadınlar özelliğini kaldırır"
+
+ bone_add_gold_and_prestige:0 "Altın ve Prestij Ekle"
+ bone_add_gold_and_prestige_desc:0 "Hedef karaktere Altın ve Prestij ekler"
+
+ bone_start_pregnancy_interaction:0 "Özel Hamilelik Başlat"
+ bone_start_pregnancy_interaction_desc:0 "Hamileliği başlatır, farklı seçenekler seçebilirsiniz"
+
+ bone_add_weak_hook_interaction:0 "Zayıf Koz Ekle"
+ bone_add_weak_hook_interaction_desc:0 "Hedef karakterden kendinize doğru zayıf bir Koz ekler"
+
+ bone_add_strong_hook_interaction:0 "Güçlü Koz Ekle"
+ bone_add_strong_hook_interaction_desc:0 "Hedef karakterden kendinize doğru güçlü bir Koz ekler"
+
+ bone_slay_character_interaction:0 "Hızlı Öldür"
+ bone_slay_character_interaction_desc:0 "Rastgele bir karakter, hedefi bir suikastla öldürecektir"
+
+ bone_take_title_interaction:0 "Unvanı Al"
+ bone_take_title_interaction_desc:0 "Unvanı hedeften alır"
+
+ king_of_kings_interaction:0 "Kralların Kralı"
+ king_of_kings_interaction_desc:0 "Kralların Kralı için özellikler"
+
+ beauty_interaction:0 "İyi Görünümlü"
+ beauty_interaction_desc:0 "HrHr"
+ 
+ great_general_interaction:0 "Büyük General"
+ great_general_interaction_desc:0 "Savaş alanındaki en iyi General olmak için gereken özellikler"
+
+ learned_from_the_best_interaction:0 "MIT Mezunu"
+ learned_from_the_best_interaction_desc:0 "MIT Öğrencisi"
+
+ bone_change_religion:0 "Din Değiştir"
+ bone_change_religion_desc:0 "Hedef karakter dinini sizinkiyle değiştirir"
+
+ bone_change_culture:0 "Kültür Değiştir"
+ bone_change_culture_desc:0 "Hedef karakter kültürünü sizinkiyle değiştirir"

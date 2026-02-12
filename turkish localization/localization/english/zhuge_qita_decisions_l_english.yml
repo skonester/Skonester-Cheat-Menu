@@ -1,0 +1,16 @@
+﻿l_english:
+  # Decision: Grant Mandate of Heaven
+  zhuge_huangzu_add:0 "Haçlı Muskası"
+  zhuge_huangzu_add_desc:0 "Gökler usulca fısıldarken Barbara nazikçe geri çekildi. Sureti, şafak vaktindeki bir mum alevinin son titreyişi gibi parıldadı. Akan cübbesi hafifledi, saçları yumuşak gümüş tellere dönüştü ve yüzündeki o müşfik ifade çiçek gibi açtı. Görüşün berraklaştığında karşında duran o sert peygamber değil, ışık saçan, nazik ve umut dolu şefkatli bir figürdü.\n“Seçilmiş hacı,” diye fısıldadı Kutsanmış Barbara, “Zamanın nice nehirlerini aştım. Yük artık benim omuzlarımda değil. Işık artık bir başkasında, dünyada doğmuş ama parlamaya can atan birinde yaşamalı.”\n“Yahve ebedi Nur'dur. Yeşua sönmeyen Ateş'tir,” dedi usulca. “Ben artık bu çağın ötesine gidiyorum; zamanın başka bir akışında, başka bir sessiz gece beni çağırıyor.”\nGülümsedi; sesi ılık ve saftı, hafif bir meltemle çalan çanlar gibi tatlı tınılar yayıyordu. “Ateş artık senin. Ben sonsuz nehirlere dönmekte özgürüm, artık her kederin şahidi olmak zorunda değilim. Işığı şefkatle koru, o da seni koruyacaktır.”\nArdından bu figür güneşten daha yumuşak bir parıltının içine adım attı; gölgesiz bir ışığa, vedasız bir sevince karışarak yok oldu. Onun olduğu yerde, damarlarında yaşamın sıcaklığını ve kalbine karşı nazikçe vuran muskayı hissettin.\nKutsanmış Barbara gitmişti. Fakat ışığı senin içinde yaşamaya devam ediyordu."
+  zhuge_jinyong_huangzu_tt:0 ""
+  # Here is the updated tooltip so the player *sees the actual item preview*
+  zhuge_huangzu_add_tooltip:0 "#P Alacağınız ödül:#!\n#Y $chuanguoyuxi_cn$#!\n$chuanguoyuxi_cn_description$"
+  zhuge_huangzu_add_confirm:0 "Göklerin İradesiyle"
+
+  # Decision: Heirloom Seal
+  chuanguoyuxi_cn:0 "Haçlı Muskası"
+  chuanguoyuxi_cn_description:0 "Uzak Ktay'da (Cathay) bir Han usta zanaatkârın elinde dövülen bu harikulade mühür, sıradan insanların anlayışının ötesinde bir yetenekle işlenmiştir. İçinde gizli bir ilahi inayet saklı olduğunu fark eden Kutsal Kilise hizmetkârlarının önüne gelene dek nice topraklardan geçti ve onlar bu mühre kutsal takdislerini bahşettiler. O andan itibaren bu mühür basit bir nişan değil, ilahi otoritenin bir aracı olarak anılmaya başlandı.\n\nVakayinüvisler, mührün yüzeyine sadece bilgelerin çözebileceği gizemli karakterlerin kazındığını ve sanki Göklerin kendisi içinde nefes alıyormuşçasına hafif bir ışıkla parıldadığını kaydederler. Böylece bu Mühür, hem rahibi hem de kralı korumak için seçilen hükümdarların üzerinde #Y Göklerin İradesi#!'nin (Mandate of Heaven) bir işareti haline gelmiş; Doğu ile Batı'yı kutsal hakkın gölgesi altında birleştirmiştir."
+
+  # Modifier: Imperial Bloodline
+  zhuge_huangzu:0 "İmparatorluk Soyu"
+  zhuge_huangzu_desc:0 "Bu hanedan, Göklerin İradesi'nin meşru taşıyıcısı olan #Y ilahi olarak seçilmiş bir imparatorluk hanesi#! olarak kabul edilir.\nSoyu, gökkubbe altındaki her şeye hükmeder; hem Doğu hem de Batı'daki tüm diğer asil soyların üzerinde durur."

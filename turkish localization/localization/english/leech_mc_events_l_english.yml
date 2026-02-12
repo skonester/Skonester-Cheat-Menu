@@ -1,0 +1,23 @@
+﻿l_english:
+
+ leech_mc_event.common.exit:0 "Çıkış"
+ 
+ leech_mc_event.truce.t:0 "Savaş Sonu Müzakeresi"
+ leech_mc_event.truce.desc:0 "[recipient.GetShortUIName] ile [secondary_recipient.GetShortUIName] arasındaki savaşı sona erdirmek için müzakere et"
+ leech_mc_event.truce.attacker:0 "Saldıran Kazanır"
+ leech_mc_event.truce.white_peace:0 "Beyaz Barış"
+ leech_mc_event.truce.defender:0 "Savunan Kazanır"
+ 
+ leech_mc_event.simple_action.t:0 "Skonester : Alt Menü"
+ leech_mc_event.simple_action.desc:0 "[recipient.GetShortUIName] kişisinin [secondary_recipient.GetShortUIName] kişisine karşı şu eylemleri yapmasını sağla:"
+ leech_mc_event.simple_action.vassalize:0 "[recipient.GetShortUIName], [secondary_recipient.GetShortUIName] kişisini vasalı yapsın"
+ leech_mc_event.simple_action.marry:0 "[recipient.GetShortUIName], [secondary_recipient.GetShortUIName] ile evlensin"
+ leech_mc_event.simple_action.marry_mat:0 "[recipient.GetShortUIName], [secondary_recipient.GetShortUIName] ile anaerkil (matrilineal) olarak evlensin"
+ leech_mc_event.simple_action.divorce:0 "[recipient.GetShortUIName], [secondary_recipient.GetShortUIName] kişisinden boşansın"
+ leech_mc_event.simple_action.end_lover:0 "[recipient.GetShortUIName], [secondary_recipient.GetShortUIName] kişisinden (sevgilisinden) ayrılsın"
+ leech_mc_event.simple_action.impregnate:0 "[recipient.GetShortUIName], [secondary_recipient.GetShortUIName] kişisini hamile bıraksın"
+ leech_mc_event.simple_action.copy_dna:0 "[secondary_recipient.GetShortUIName], [recipient.GetShortUIName] ile aynı dış görünüşe (DNA) sahip olsun"
+ leech_mc_event.simple_action.cancel_truce:0 "[recipient.GetShortUIName], [secondary_recipient.GetShortUIName] ile olan mütarekeyi (ateşkesi) bozsun"
+ leech_mc_event.simple_action.like:0 "[recipient.GetShortUIName], [secondary_recipient.GetShortUIName] kişisinden hoşlansın"
+ leech_mc_event.simple_action.hate:0 "[recipient.GetShortUIName], [secondary_recipient.GetShortUIName] kişisinden nefret etsin"
+ leech_mc_event.simple_action.adopt:0 "[recipient.GetShortUIName], [secondary_recipient.GetShortUIName] kişisini evlat edinsin"

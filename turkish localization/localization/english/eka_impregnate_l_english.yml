@@ -1,0 +1,18 @@
+﻿l_english:
+ eka_impregnate_female_inter: "Hamile Bırak (Seçenek 1)"
+ eka_impregnate_male_inter: "Hamile Bırak (Seçenek 3)"
+ eka_impregnate_me_inter: "Hamile Kal"
+ eka_impregnate_concubine_inter: "Hamile Bırak (Seçenek 2)"
+
+ flag_spouse_boy: "Eş bir erkek evlat arzuluyor"
+ flag_spouse_girl: "Eş bir kız evlat arzuluyor"
+ flag_my_boy: "Bir erkek evlat arzuluyorum"
+ flag_my_girl: "Bir kız evlat arzuluyorum"
+
+ flag_spouse_boy_confirm: "Eşin bir oğlu olacak"
+ flag_spouse_girl_confirm: "Eşin bir kızı olacak"
+ flag_my_boy_confirm: "Bir oğlum olacak"
+ flag_my_girl_confirm: "Bir kızım olacak"
+
+ flag_pregnancy_boy: "Erkek bebeğe hamile"
+ flag_pregnancy_girl: "Kız bebeğe hamile"

@@ -1,0 +1,170 @@
+﻿l_english:
+# Sınırsız Savaş Etkileşimi
+sol_expansion_war_interaction:0 "Sınır Tanımayan Savaş"
+sol_expansion_war_interaction_desc:0 "[recipient.GetShortUINameNoTooltip] kişisine karşı; hiçbir [casus_belli|E] veya hak iddiası ile kısıtlanmadan açıkça [war|E] ilan et."
+
+# Zaferde esir alma
+sol_captive_war_cb_prisoners.tt_attacker:1 "Zafer kazandığınızda, [defender.GetShortUINamePossessive] [courtiers|E] arasından pek çok kişi esiriniz olacak; sayıları [defender.GetHerHis] rütbesine göre belirlenecektir."
+
+# Savaş ilanı sırasında genişletilmiş birlikleri göster/gizle kararı
+sol_expanded_war_special_troops_activate:0 "Skonester Savaş Gruplarını Çağır"
+sol_expanded_war_special_troops_activate_title:0 "Serbest Bölüğü Çağır"
+sol_expanded_war_special_troops_activate_desc:0 "Davanıza sadık savaş gruplarını huzurunuza çağırın. Bu amansız birlikler savaş bittikten sonra buralarda oyalanmazlar, hazinenizden veya stoklarınızdan harcama yapmazlar ve yalnızca sizin güç merkezinizden gelirler."
+sol_expanded_war_special_troops_activate_tooltip:0 "Savaş ilanıyla birlikte özel savaş grupları sancaklarınıza katılacaktır."
+sol_expanded_war_special_troops_activate_confirm:0 "Onları Çağır"
+
+sol_expanded_war_special_troops_deactivate:0 "Skonester Savaş Gruplarını Dağıt"
+sol_expanded_war_special_troops_deactivate_title:0 "Serbest Bölüğü Gönder"
+sol_expanded_war_special_troops_deactivate_desc:0 "Çağırdığınız savaşçıları dağıtın. Savaşın başlangıcında sancağınıza hiçbir savaş grubu toplanmayacak, halk ordunuz veya garnizonlarınız büyü ya da emirle yenilenmeyecektir."
+sol_expanded_war_special_troops_deactivate_tooltip:0 "Savaş ilanıyla birlikte hiçbir savaş grubu çağrınıza cevap vermeyecek."
+sol_expanded_war_special_troops_deactivate_confirm:0 "Onları Gönder"
+
+show_sol_expanded_war_troops_flag_effect_tooltip:0 "Savaş davulları çaldığında, size sadakatle bağlı olan her yerleşimde özel savaş grupları ortaya çıkacak ve barış geldiğinde ortadan kaybolacaklardır. Mücadelenin başlangıcında garnizonlarınız ve halk ordunuz tamamen yenilenecektir."
+hide_sol_expanded_war_troops_flag_effect_tooltip:0 "Anında garnizon ve halk ordusu yenilenmesi lütfunu iptal et ve savaş grubu çağırma hakkını geri al."
+
+# Özel Birlik Mangalarının Adları (Askeri Sekme, İpucu)
+game_concept_sol_expanded_warfare_attack_troops:0 "Fetih Savaş Grupları"
+game_concept_sol_expanded_warfare_attack_troops_desc:0 "[sol_expanded_warfare_attack_troops|E] birlikleri düşmanları ezmek ve kuşatmaları kırmak için ileri atılır."
+sol_expanded_warfare_attack_troops:0 "[sol_expanded_warfare_attack_troops|E]"
+sol_expanded_warfare_attack_troops_flavor:0 "[sol_expanded_warfare_attack_troops|E] öncü birliğinizle birlikte, amansız ve kararlı bir şekilde hazır bekleyecekler."
+
+game_concept_sol_expanded_warfare_support_troops:0 "Kalkan Savaş Grupları"
+game_concept_sol_expanded_warfare_support_troops_desc:0 "[sol_expanded_warfare_support_troops|E] birlikleri, saflarınızın seyrelmiş olduğu her yerde hattı tutarlar."
+sol_expanded_warfare_support_troops:0 "[sol_expanded_warfare_support_troops|E]"
+sol_expanded_warfare_support_troops_flavor:0 "[sol_expanded_warfare_support_troops|E] kalkan duvarını doldurarak savaş ordunuzu güçlendirirler."
+
+game_concept_sol_expanded_warfare_defense_troops:0 "Diyar Savaş Grupları"
+game_concept_sol_expanded_warfare_defense_troops_desc:0 "[sol_expanded_warfare_defense_troops|E] birlikleri, zor zamanlarda topraklarınızı savunurlar."
+sol_expanded_warfare_defense_troops:0 "[sol_expanded_warfare_defense_troops|E]"
+sol_expanded_warfare_troops_defense_flavor:0 "[sol_expanded_warfare_defense_troops|E] ana ordu sefere çıktığında yerleşimlerinizi korurlar."
+
+game_concept_sol_expanded_warfare_fighting_troops:0 "Kan Savaş Grupları"
+game_concept_sol_expanded_warfare_fighting_troops_desc:0 "[sol_expanded_warfare_fighting_troops|E] çarpışmanın en şiddetli olduğu her yerde çağrıya cevap verirler."
+sol_expanded_warfare_fighting_troops:0 "[sol_expanded_warfare_fighting_troops|E]"
+sol_expanded_warfare_troops_fighting_flavor:0 "[sol_expanded_warfare_fighting_troops|E] her türlü arbedeye korkusuzca dalarlar."
+
+game_concept_sol_expanded_warfare_realm_levy_troops:0 "Halk Ordusu Savaş Grupları"
+game_concept_sol_expanded_warfare_realm_levy_troops_desc:0 "[sol_expanded_warfare_realm_levy_troops|E] en çok insan gücüne ihtiyaç duyulan yerde hizmet ederler."
+sol_expanded_warfare_realm_levy_troops:0 "[sol_expanded_warfare_realm_levy_troops|E]"
+sol_expanded_warfare_troops_realm_levy_flavor:0 "[sol_expanded_warfare_realm_levy_troops|E] taç ve ülke için silaha sarılmaya yeminlidirler."
+
+# Genişleme Savaşları Grubu
+game_concept_sol_expansion:0 "İhtiras"
+game_concept_sol_expansion_desc:1 "[sol_expansion_war|E], dizginlenemez bir hırsın savaşı, yeni toprakları ele geçirme yürüyüşüdür. [sol_expansion_wars|E] ne bir [claim|E] (hak iddiası) ne de bir [casus_belli|E] tanır; yalnızca güç ve iradeyi esas alır."
+sol_expansion:0 "[sol_expansion|E]"
+sol_expansion_flavor:0 "[sol_expansion|E] Savaş tarzı, sancaklarının dört bir yana yayıldığını görmek isteyenler içindir. Kadim fatihlerin ayak izlerini takip edin."
+sol_expansion_desc:0 "[sol_expansion|E] Savaş tarzı; İskender, Atilla ve Temuçin gibi geçmiş lordların çelikle dövülmüş tahtını arzulayanlar içindir."
+
+# Genişleme Savaşı
+game_concept_sol_expansion_war:0 "İhtiras Savaşı"
+game_concept_sol_expansion_war_desc:0 "[sol_expansion_war|E], herhangi bir gerekçe göstermeksizin yalnızca kazanç için verilen bir savaştır."
+game_concept_sol_expansion_wars:0 "İhtiras Savaşları"
+game_concept_sol_expansion_wars_desc:0 "[sol_expansion_wars|E], adalet canı cehenneme diyerek diyarınızı büyütmek için yapılır."
+game_concept_sol_expansion_warring:0 "İhtiras Peşinde"
+game_concept_sol_expansion_warring_desc:0 "[sol_expansion_warring|E], hak veya hukuk gözetmeksizin sadece yeni topraklar peşinde olanlar içindir."
+
+sol_expansion_war:0 "[sol_expansion_war|E]"
+sol_expansion_war_desc:1 "[sol_expansion_war|E], sınır tanımayan ve sadece yeni hakimiyet alanları arayanlar için bir savaştır. $sol_expansion_warring$, hiçbir [claim|E] veya [casus_belli|E] tanımaz; sadece fethi bilir."
+sol_expansion_wars:0 "[sol_expansion_wars|E]"
+sol_expansion_wars_desc:1 "[sol_expansion_wars|E], hiçbir [claim|E] veya [casus_belli|E] olmaksızın, sadece kılıcın hakkıyla yapılır."
+sol_expansion_warring:0 "[sol_expansion_warring|E]"
+sol_expansion_warring_desc:1 "[sol_expansion_warring|E], savaş için savaştır – kanun yok, iddia yok, sadece güç galip gelir."
+
+SOL_EXPANSION_CB_NAME:0 "$sol_expansion_war$"
+SOL_EXPANSION_CB_TITLE:3 "Savaşla kaybedilen tüm [defender.GetShortUINamePossessive] [realm|E] toprakları, sancağınız altına girecektir."
+SOL_EXPANSION_CB_SPECIFIC_NAME:1 "[TITLE.GetBaseName] Fethi"
+
+SOL_EXPANSION_WAR_NAME:2 "$ORDER$ [ATTACKER.GetPrimaryTitle.GetAdjective] [TITLE.GetBaseName] Fethi"
+SOL_EXPANSION_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+SOL_EXPANSION_VICTORY_DESC:0 "Gün sizindir. Sancaklarınız artık yeni hakimiyet alanlarında dalgalanıyor."
+SOL_EXPANSION_WHITE_PEACE_DESC:0 "İki taraf da boyun eğmiyor; tanrılar kimseye zafer bahşetmedi."
+SOL_EXPANSION_DEFEAT_DESC:0 "Hırslarınız paramparça oldu. Düşman ise diz çökmedi."
+SOL_EXPANSION_TRANSFER_TT:0 "Fetih hakkıyla onların unvanlarına el koyacaksınız."
+SOL_EXPANSION_TRANSFER_2_TT:0 "Fetih sırasında ele geçirilen baronluklar diyarınıza dahil edilecektir."
+
+sol_expansion_war_defeat_desc:0 "[defender.GetShortUIName|U] topraklarını ve unvanlarını korur."
+sol_expansion_war_defeat_desc_defender:0 "Haneniz ve diyarınız ayakta kalır."
+sol_expansion_war_defeat_desc_attacker:0 "[defender.GetShortUIName|U] unvanlarını elinde tutar."
+sol_expansion_war_white_peace_desc_defender:0 "Çıkmazdan doğan zafer. Lekeli ama bütün bir barış."
+sol_expansion_war_white_peace_desc_attacker:0 "Barışa razı oldunuz, hırslarınız başka bahara kaldı."
+sol_expansion_war_white_peace_desc:0 "[defender.GetShortUIName|U] hâlâ unvanlarına sıkı sıkıya sarılıyor."
+sol_expansion_war_victory_desc_defender:0 "[attacker.GetShortUIName|U] sizi topraklarınızdan ve sadık vasallarınızdan mahrum bırakıyor."
+sol_expansion_war_victory_desc_attacker:0 "[defender.GetShortUIName|U] kişisinin sahip olduğu her şeyde hak iddia ediyorsunuz."
+sol_expansion_war_victory_desc:0 "[attacker.GetShortUIName|U], [defender.GetShortUIName|U] kişisinden her unvanı ve yerleşimi zorla alır."
+
+msg_expansion_war_invalidated_message:0 "Savaş boşuna sona erdi."
+expansion_vassal_transfer_tt: "Fethedilen topraklara bağlı olan tüm [de_jure|E] [vassals|E] (vasallar)"
+expansion_title_transfer_tt: "Hedefteki her bir [de_jure|E] [county|E] (kontluk) hükmünüz altına girer"
+expansion_title_transfer_2_tt: "İddianın ötesindeki tüm [occupied|E] (işgal edilmiş) [counties|E], artık [attacker.GetShortUIName] kişisine cevap verir"
+expansion_titles_destroyed_tt: "Tüm hedef unvanlar kayıtlardan silinir"
+
+# Sınırsız Genişleme Savaşı
+game_concept_sol_expansion_war_unrestricted:0 "Dizginlenemeyen Fetih"
+game_concept_sol_expansion_war_unrestricted_desc:0 "Sınır tanımayan, kuralsız bir [sol_expansion|E] savaşı."
+sol_expansion_war_unrestricted:0 "[sol_expansion|E] – Sınır Tanımayan Savaş"
+sol_expansion_war_unrestricted_desc:0 "[sol_expansion|E] savaşının en acımasız biçimi; sınır yok, sadece kılıç var."
+
+SOL_EXPANSION_UNRESTRICTED_CB_NAME:0 "$sol_expansion_war_unrestricted$"
+SOL_EXPANSION_UNRESTRICTED_WAR_NAME:1 "[TITLE.GetBaseName] Toprakları Üzerinde [sol_expansion|E] Savaşı"
+SOL_EXPANSION_UNRESTRICTED_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+# Baronluk Genişleme Savaşı
+game_concept_sol_expansion_war_barony:0 "Baronlukların Fethi"
+game_concept_sol_expansion_war_barony_desc:0 "Yalnızca baronluklar için yapılan daha dar kapsamlı bir [sol_expansion|E] savaşı."
+sol_expansion_war_barony:0 "[sol_expansion|E] – Baronluk Seferi"
+sol_expansion_war_barony_desc:0 "Bu savaşla hırsınızı tek bir baronluğa odaklayın."
+
+SOL_EXPANSION_BARONY_CB_NAME:0 "$sol_expansion_war_barony$"
+SOL_EXPANSION_BARONY_WAR_NAME:1 "[TITLE.GetBaseName] Toprakları İçin [sol_expansion|E] Savaşı"
+SOL_EXPANSION_BARONY_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+# Kontluk Genişleme Savaşı
+game_concept_sol_expansion_war_county:0 "Kontlukların Fethi"
+game_concept_sol_expansion_war_county_desc:0 "Kontluk ölçeğindeki hırslar için dövülmüş [sol_expansion|E] savaşı."
+sol_expansion_war_county:0 "[sol_expansion|E] – Kontluk Seferi"
+sol_expansion_war_county_desc:0 "Bir kontluğu ele geçirmek için sancaklarınızı ileri sürün."
+
+SOL_EXPANSION_COUNTY_CB_NAME:0 "$sol_expansion_war_county$"
+SOL_EXPANSION_COUNTY_WAR_NAME:1 "[TITLE.GetBaseName] Toprakları İçin [sol_expansion|E] Savaşı"
+SOL_EXPANSION_COUNTY_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+# Düklük Genişleme Savaşı
+game_concept_sol_expansion_war_duchy:0 "Düklüklerin Fethi"
+game_concept_sol_expansion_war_duchy_desc:0 "Gözü düklük tahtlarında olanlar için [sol_expansion|E] savaşı."
+sol_expansion_war_duchy:0 "[sol_expansion|E] – Düklük Seferi"
+sol_expansion_war_duchy_desc:0 "Küçük lordları titreterek koca bir düklük için savaşın."
+
+SOL_EXPANSION_DUCHY_CB_NAME:0 "$sol_expansion_war_duchy$"
+SOL_EXPANSION_DUCHY_WAR_NAME:1 "[TITLE.GetBaseName] Toprakları İçin [sol_expansion|E] Savaşı"
+SOL_EXPANSION_DUCHY_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+# Krallık Genişleme Savaşı
+game_concept_sol_expansion_war_kingdom:0 "Krallıkların Fethi"
+game_concept_sol_expansion_war_kingdom_desc:0 "Taçlara susamış soylular için [sol_expansion|E] savaşı."
+sol_expansion_war_kingdom:0 "[sol_expansion|E] – Krallık Seferi"
+sol_expansion_war_kingdom_desc:0 "Bir diyardaki tüm küçük lordları yöneten taht için savaş."
+
+SOL_EXPANSION_KINGDOM_CB_NAME:0 "$sol_expansion_war_kingdom$"
+SOL_EXPANSION_KINGDOM_WAR_NAME:1 "[TITLE.GetBaseName] Toprakları İçin [sol_expansion|E] Savaşı"
+SOL_EXPANSION_KINGDOM_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+# İmparatorluk Genişleme Savaşı
+game_concept_sol_expansion_war_empire:0 "İmparatorlukların Fethi"
+game_concept_sol_expansion_war_empire_desc:0 "Her şeye hükmetmek isteyenler için [sol_expansion|E] savaşı."
+sol_expansion_war_empire:0 "[sol_expansion|E] – İmparatorluk Seferi"
+208: sol_expansion_war_empire_desc:0 "Savaşların en kudretlisi için kılıca sarılın: Bir imparatorluğun fethi."
+
+SOL_EXPANSION_EMPIRE_CB_NAME:0 "$sol_expansion_war_empire$"
+SOL_EXPANSION_EMPIRE_WAR_NAME:1 "[TITLE.GetBaseName] Toprakları İçin [sol_expansion|E] Savaşı"
+SOL_EXPANSION_EMPIRE_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+# Vareng Olmayan Maceracı Fetih Savaşı
+game_concept_sol_unrestricted_adventurer_conquest:0 "Sınır Tanımayan Macera"
+game_concept_sol_unrestricted_adventurer_conquest_desc:0 "Bu savaşı vermek, her şeyi terk edip düşman topraklarında yeni bir kader dövmek demektir."
+sol_unrestricted_adventurer_conquest:0 "[sol_expansion|E] – Maceracı Savaşı"
+sol_unrestricted_adventurer_conquest_desc:0 "Fetih vaadi uğruna eski topraklarınızı geride bırakarak kaderinizi yeniden yazın."
+
+SOL_UNRESTRICTED_ADVENTURER_CB_NAME:0 "$sol_unrestricted_adventurer_conquest$"
+SOL_UNRESTRICTED_ADVENTURER_WAR_NAME:1 "[TITLE.GetBaseName] Toprakları İçin [sol_expansion|E] Maceracı Savaşı"
+SOL_UNRESTRICTED_ADVENTURER_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"

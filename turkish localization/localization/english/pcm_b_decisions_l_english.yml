@@ -1,0 +1,26 @@
+﻿l_english:
+ #PCM – Skonester Sürümü
+ pcm_b_max_all_buildings_sub_realm_decision_title:0 "#Skonester Fermanları:#! Tüm Yerleşimleri Tam İhtişamına Kavuştur"
+ pcm_b_max_all_buildings_sub_realm_decision_desc:0 "Her salonun, hisarın ve yerleşimin en üstün güç ve görkeme ulaştırılmasını emret."
+ pcm_b_max_all_buildings_sub_realm_decision_tooltip:0 ""
+ pcm_b_max_all_buildings_sub_realm_decision_ct:0 "Taş ve keresteden tüm eserleri mükemmelleştirmek için taş ustalarını, marangozları ve demircileri çağırın."
+
+ pcm_b_add_building_slot_7_sub_realm_decision_title:0 "#Skonester Fermanları:#! İnşaat İçin Yeni Alanlar Bahşet"
+ pcm_b_add_building_slot_7_sub_realm_decision_desc:0 "Mülklerinizin her biri, içlerinde yedi kudretli yapı yükselene dek yeni arazilerle kutsanacak."
+ pcm_b_add_building_slot_7_sub_realm_decision_tooltip:0 ""
+ pcm_b_add_building_slot_7_sub_realm_decision_ct:0 "Elimde tuttuğum her toprakta yeni konutlar, salonlar ve kuleler yükselsin!"
+
+ pcm_b_lucky_7_sub_realm_decision_title:0 "#Skonester Fermanları:#! Kutsanmış Yedi Eser"
+ pcm_b_lucky_7_sub_realm_decision_desc:0 "Tüm yerleşimlerinizdeki her bir kayda değer yapı en yüksek seviyesine yükseltilecek. (Özel ve düklük binaları dahil değildir). Binaları yükseltmeden önce yeni inşaat alanları bahşetmek #underline akıllıca#! olacaktır."
+ pcm_b_lucky_7_sub_realm_decision_tooltip:0 ""
+ pcm_b_lucky_7_sub_realm_decision_ct:0 "Tüm eserler, sanki ilahi bir takdirle yönlendiriliyormuşçasına süratle inşa edilsin!"
+
+ pcm_b_show_decision_title:0 "--= #Skonester:#! Gnostik Zanaatı Açığa Çıkar =--"
+ pcm_b_show_decision_desc:0 "Yapı inşa etme sanatı hakkındaki tüm Skonester buyruklarını gün yüzüne çıkar."
+ pcm_b_show_decision_tooltip:0 ""
+ pcm_b_show_decision_ct:0 "Öyle olsun — gizli fermanlar duyurulsun."
+
+ pcm_b_hide_decision_title:0 "--= #Skonester:#! Gnostik Zanaatı Gizle =--"
+ pcm_b_hide_decision_desc:0 "İnşaat sanatlarına dair Skonester fermanlarını gizle."
+ pcm_b_hide_decision_tooltip:0 ""
+ pcm_b_hide_decision_ct:0 "Parşömenleri mühürle ve bu bilgiyi meraklı gözlerden uzak tut."

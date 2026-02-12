@@ -1,0 +1,41 @@
+﻿l_english:
+ #Skonester Sürümü
+ pcm_money_decision_title:0 "#Skonester:#! Diyar Hazinesi"
+ pcm_money_decision_desc:0 "Muazzam bir hazineyi huzuruna çağır; bolca altın, dindarlık ve şanla ödüllendiril."
+ pcm_money_decision_tooltip:0 "Hükümdarlığına güçlü bir başlangıç yapmak için büyük bir altın, dindarlık ve prestij birikimi kazan."
+ pcm_money_decision_ct:0 "Kralların kasaları önümde taşıyor!"
+
+ pcm_subrealm_to_culture_decision_title:0 "#Skonester:#! Kültür Fermanı"
+ pcm_subrealm_to_culture_decision_desc:0 "Tüm vasalların ve toprakların, süzerenlerinin kültürünü benimsemesi için bir ferman ilan et."
+ pcm_subrealm_to_culture_decision_tooltip:0 "Diyarını tek bir kültür altında birleştir."
+ pcm_subrealm_to_culture_decision_ct:0 "Bundan böyle diyar, tek bir dille konuşacak ve tek bir geleneği yaşayacak."
+
+ pcm_convert_subrealm_to_religion_decision_title:0 "#Skonester:#! İnanç Fermanı"
+ pcm_convert_subrealm_to_religion_decision_desc:0 "Vasallarının ve alt diyarının senin inancına dönmesi için bir ferman ilan et."
+ pcm_convert_subrealm_to_religion_decision_tooltip:0 "Diyarını tek bir kutsal sancak altında birleştir."
+ pcm_convert_subrealm_to_religion_decision_ct:0 "Hakikatin ışığı yoldan sapanların üzerine doğsun!"
+
+ pcm_show_decision_title:0 "--= #Skonester:#! Gizli Fermanları Açığa Çıkar =--"
+ pcm_show_decision_desc:0 "Tüm Skonester buyruklarını görünür kıl."
+ pcm_show_decision_tooltip:0 ""
+ pcm_show_decision_ct:0 "Öyle yazılsın, öyle bilinsin."
+
+ pcm_hide_decision_title:0 "--= #Skonester:#! Fermanları Gizle =--"
+ pcm_hide_decision_desc:0 "Skonester buyruklarını gözlerden uzaklaştır."
+ pcm_hide_decision_tooltip:0 ""
+ pcm_hide_decision_ct:0 "Parşömenleri mühürle ve dilleri sustur."
+
+ pcm_cure_pox_decision_title:0 "#Skonester:#! Musibetlerin Temizlenmesi"
+ pcm_cure_pox_decision_desc:0 "Fermanla, tüm bedensel marazlar ve yaygın hastalıklar diyardan kovulsun."
+ pcm_cure_pox_decision_tooltip:0 "Diyarı etten gelen musibetlerden arındır."
+ pcm_cure_pox_decision_ct:0 "Şifacının otları ve kutsal yağlar beni saflığıma geri döndürüyor!"
+
+ pcm_cure_all_decision_title:0 "#Skonester:#! Diyarın Devası"
+ pcm_cure_all_decision_desc:0 "Ülke çapında her türlü hastalığı iyileştiren mucizevi bir iksir ilan edildi."
+ pcm_cure_all_decision_tooltip:0 "Diyar genelindeki tüm rahatsızlıkları ve salgınları iyileştir."
+ pcm_cure_all_decision_ct:0 "Sevinin! Hastalığın gölgesi halkımızın üzerinden kalkıyor."
+
+ pcm_cure_inbred_decision_title:0 "#Skonester:#! Soyların Arındırılması"
+ pcm_cure_inbred_decision_desc:0 "Mistik ritüeller ve ilahi inayet sayesinde diyarındaki soy lekeleri temizlenir."
+ pcm_cure_inbred_decision_tooltip:0 "Diyardaki tüm kötü huyları ve genetik kusurları kaldır."
+ pcm_cure_inbred_decision_ct:0 "Topraklarımın kanı bir kez daha saf ve güçlü akıyor!"

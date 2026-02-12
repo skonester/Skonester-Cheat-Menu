@@ -1,0 +1,31 @@
+﻿l_english:
+ #PCM yerelleştirmesi
+ set_immortal_interaction:0 "Ölümsüzlük Bahşet"
+ set_immortal_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] ebedi yaşamla ödüllendirilecek; siması sonsuza dek yirmi beşinci kışındaki tazeliğiyle korunacak."
+
+ set_mortal_interaction:0 "Ölümsüzlüğü Geri Al"
+ set_mortal_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] sonsuz yaşamın zincirlerinden azat edilecek. Belki de [recipient.GetSheHe] artık mezarın huzurlu uykusunu özlemiştir."
+
+ set_super_interaction:0 "Kusursuzluk Timsali Olarak Takdis Et"
+ set_super_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] ölümlülerin çok ötesine yüceltilecek: Bilgelik, güç, doğurganlık, dinçlik, şöhret, servet ve dehşette eşsiz olacak. Lordlar arasında gerçek bir kusursuzluk örneği."
+
+ set_unsuper_interaction:0 "Kusursuzluk Takdislerini Feshet"
+ set_unsuper_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] tüm yüce lütuflardan mahrum bırakılacak. [recipient.GetSheHe|U] bu kaybı oldukça ağır bir yük olarak görebilir."
+
+ set_super_governor_interaction:0 "Kâhya Yetkisi Bahşet"
+ set_super_governor_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] diyarların yönetimi konusunda ustalık kazanacak: Daha büyük ordular, bilgece yöneticilik, süratli inşaatlar, filizlenen bir refah ve halkın inayeti onunla olacak."
+
+ set_unsuper_governor_interaction:0 "Kâhya Yetkisini Feshet"
+ set_unsuper_governor_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] yönetim üzerindeki bu kutsamaları kaybederek ölümlü sınırlarına geri dönecek."
+
+ set_super_general_interaction:0 "Savaş Beyi Olarak Kutsa"
+ set_super_general_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] orduların rakipsiz bir komutanı olacak: Cesaret, savaş ustalığı, strateji ve dayanıklılıkta eşsiz; savaşta korkulan, kuşatmada ise yıldırım gibi hızlı biri haline gelecek."
+
+ set_unsuper_general_interaction:0 "Savaş Beyi Kutsamasını Feshet"
+ set_unsuper_general_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] savaştaki tüm ilahi inayetten mahrum bırakılacak ve bir zamanlar zafer kazandığı yerlerde tökezleyebilecek."
+
+ set_all_in_one_interaction:0 "Örnek Hükümdar Olarak Taçlandır"
+ set_all_in_one_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] için tüm kutsamalar birleşiyor: Kusursuzluk Timsali, Kâhya Yetkisi ve Savaş Beyi kudreti tek bir vücutta toplanacak. Skonester gizemlerinin gerçek bir harikası."
+
+ set_unall_in_one_interaction:0 "Ölümlü Mertebesine Döndür"
+ set_unall_in_one_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] kusursuzluk, yöneticilik ve savaş beyi yeteneklerinin tamamını kaybederek yeniden bir insanoğlu olarak yürüyecek."

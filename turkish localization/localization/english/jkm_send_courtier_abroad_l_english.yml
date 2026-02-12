@@ -1,0 +1,5 @@
+﻿l_english:
+  jkm_send_courtier_interaction:0 "Saraylı Gönder"
+  jkm_send_courtier_interaction_desc:0 "[recipient.GetShortUIName] adlı kişinin sarayına bir saraylı gönder"
+  actor_secondary_jkm_send_courtier_interaction:0 "Saraylı"
+  jkm_send_courtier_interaction_notification:0 "Saraylı Gönderildi"

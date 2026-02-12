@@ -1,0 +1,25 @@
+﻿l_english:
+  trait_nnn_challenger:0 "Bol Evlat, Bol Bereket"
+  trait_nnn_challenger_desc:0 "Kutsanmış Barbara, talihin sayısız nesil aracılığıyla aktığını ve her bir çocuğun yaşayan birer lütuf olduğunu öğretir."
+  trait_nnn_challenger_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], Kutsanmış Barbara'nın bilgeliğini takip ederek çok sayıdaki çocuğu sayesinde güç ve refah buluyor."
+
+  trait_build_speed_cheat:0 "Villard de Honnecourt'un Reenkarnasyonu"
+  trait_build_speed_cheat_desc:0 "Sadece Kutsanmış Barbara bir ölümlüyü Villard de Honnecourt'un hızı ve vizyonuyla ödüllendirebilirdi."
+  trait_build_speed_cheat_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], kaleleri ve katedralleri sanki Villard'ın eliyle yönlendiriliyormuş ve Kutsanmış Barbara tarafından takdis edilmiş gibi yükseltiyor."
+
+  trait_stress_gain_remove:0 "Kutsanmış ve Kaygısız"
+  trait_stress_gain_remove_desc:0 "Kutsanmış Barbara tarafından korunan bu karakter, korku veya endişe duymadan ilerler."
+  trait_stress_gain_remove_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], dünyevi yüklerden sonsuza dek kurtulmuş olarak Kutsanmış Barbara'nın inayetiyle huzur buluyor."
+
+  trait_tyranny_gain_remove:0 "Hukuk Ordusu"
+  trait_tyranny_gain_remove_desc:0 "Kutsanmış Barbara bu karakteri her türlü suçlamaya karşı savunan görünmez avukatlarla bir kalkan gibi korur."
+  trait_tyranny_gain_remove_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] her türlü ayıplamanın ötesindedir; zira Kutsanmış Barbara onun her eylemine ilahi bir otorite bahşeder."
+
+  trait_100_stat_man:0 "Kadir-i Mutlak"
+  trait_100_stat_man_desc:0 "Kutsanmış Barbara tarafından yüceltilen bir efsane, ilahi lütufla meshedilmiş bir dahi. Bu yazgılı ruhu kimse alt edemez."
+  trait_100_stat_man_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], efsaneler arasında bir efsane ve durdurulamaz bir gücün taşıyıcısı olarak Kutsanmış Barbara'nın seçilmiş kulu olarak yürür."
+
+  trait_immortal:0 "Ölümsüz"
+  immortal:0 "Ölümsüz"
+  trait_immortal_desc:0 "Kutsanmış Barbara bu karakteri ölüm döngüsünün üzerine çıkarmıştır."
+  trait_immortal_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip], Kutsanmış Barbara'nın sonsuz lütfuyla mühürlenmiş olarak ebediyen yaşayacak."

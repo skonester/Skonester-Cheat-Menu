@@ -1,0 +1,11 @@
+﻿l_english:
+# \regiment_types
+ op_troops:1 "Seçkin Hane Muhafızları"
+ open_optroop_menu:0 "Hane Muhafızı Menüsünü Aç"
+ open_optroop_menu_desc:0 "[recipient.GetShortUINameNoTooltip|U], Hane Muhafızı seçeneklerine erişecek"
+ close_optroop_menu:0 "Hane Muhafızı Menüsünü Kapat"
+ close_optroop_menu_desc:0 "[recipient.GetShortUINameNoTooltip|U], Hane Muhafızı seçeneklerini kapatacak"
+ inheritable_optroop_interaction:0 "5000 Seçkin Hane Muhafızı Oluştur"
+ inheritable_optroop_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U], varislerine miras kalacak 5000 Hane Muhafızı askeri alacak"
+ non_inheritable_optroop_interaction:0 "2000 Seçkin Hane Süvarisi Oluştur"
+ non_inheritable_optroop_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U], varislerine miras kalacak 2000 Hane Süvarisi askeri alacak"

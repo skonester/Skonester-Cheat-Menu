@@ -1,0 +1,15 @@
+﻿l_english:
+  daddy_pika_information:0 "Skonester Bilgi Menüsü"
+  information_desc:0 "Faydalı ipuçları, arama fonksiyonları ve değişim günlükleri gibi bazı genel bilgileri görüntüler."
+  information_TT:0 "Bu mod hakkında detaylı bilgi görüntülemek için tıklayın."
+  
+  dp_information.changelog.t:0 "Akrep Sezonu (Scorpio Season) Değişim Günlüğü"
+  dp_information.changelog.d:0 "Scorpio V5: Ocak 2026'ya kadar olan son sürüm"
+  dp_information.useful_tips.t:0 "Faydalı İpuçları"
+  dp_information.useful_tips.d:0 "Özellik Menüsü\n- Eklemek için bir kez tıklayın, kaldırmak için tekrar tıklayın.\n- Eğer bir özellik görünmüyorsa, bu modun bozuk olduğu anlamına gelmez; çakışan bir özelliği işaret eder.\n- Çevresel faktörler nedeniyle, bazı etkileşimler belirli karakterlerde görünmeyebilir.\n- Güven bana, bir sürü çocuk sahibi olmak büyük bir baş ağrısı olabilir.\n- Eğer oyun sürümünü düşürmeniz gerekirse, bu mod oyunun eski sürümlerini de destekleyecektir."
+  dp_information.locations.t:0 "Özel Teşekkürler"
+  dp_information.locations.d:0 "\n- DaddyPika ve Zhuge'ye; ayrıca Pavel, Bone, Leech ve Sol'dan alıp düzenlediğim bazı kodlar için teşekkürler. Ayrıca Kurthakon huzur içinde yatsın; onun Yerleşim Dönüştürme kodları bu modda yaşamaya devam ediyor."
+  
+  use_new_system:0 "Yeni Sistem"
+  use_new_system_desc:0 "Eski sistem yenisiyle değiştirildi. Denemek ister misiniz?"
+  use_new_system_tooltip:0 "Buna tıklamak bir olayı (event) tetikleyecektir."

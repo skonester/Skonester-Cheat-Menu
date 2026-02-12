@@ -1,0 +1,55 @@
+﻿l_english:
+ ### --- CH Yerleşim Dönüştürme Kararları ---
+ NOT_I_HAVE_CH_BARONY_SELECTED:1 "Bir Baronluk #bold seçmediniz#!"
+ CH_CONVERT_HOLDING_DECISION_NAME_LABEL:0 "Ad:"
+ CH_CONVERT_HOLDING_DECISION_CAPITAL_LABEL:0 "Yerleşim:"
+ REVOKE_CH_CONVERT_HOLDING_DECISION_BARONY_LABEL:0 "Kontluk:"
+ CH_CONVERT_HOLDING_DECISION_CHANGE_CAPITAL:1 "Yerleşimi Değiştir"
+ CH_CONVERT_HOLDING_DECISION_SELECT_CAPITAL:1 "Yerleşim Seç"
+ CH_SELECT_HOLDING_TITLE:1 "Yerleşim Seç"
+ CH_SELECT_HOLDING_NO_TITLES:0 "Mevcut Yerleşim yok"
+ CH_SELECT_HOLDING_TOOLTIP:0 "#T [Select_CString( DecisionViewWidgetCreateHolyOrder.HasValidBaronies, '$CH_SELECT_HOLDING_TITLE$', '$CH_SELECT_HOLDING_NO_TITLES$' )] #!"
+ CH_SELECT_HOLDING_CONFIRM:0 "Seç"
+
+ ch_convert_holding_to_castle_decision:0 "Yerleşimi Kaleye Dönüştür"
+ ch_convert_holding_to_castle_decision_tooltip:0 "Mevcut yerleşim(ler) bir [castle|E] (kale) yerleşimi ile değiştirilecek"
+ ch_convert_holding_to_castle_decision_desc:0 "#F Son zamanlarda mülkümde mimarlar ve mühendisler toplanmaya başladı. Birçoğu usta inşaatçılar olarak rağbet görüyor ancak becerilerini kanıtlamak için üzerinde çalışacakları büyük projeler istiyorlar.#!"
+ ch_convert_holding_to_castle_decision_confirm:0 "Yerleşimi Kaleye Dönüştür"
+ I_HAVE_CH_ELIGBLE_BARONIES_TO_CASTLE_COUNTY:1 "[castle|E] yerleşimine dönüştürülebilecek bir [holding|E] içeren [barony|E] sahibisiniz\n$EFFECT_LIST_BULLET$Sadece bizzat [holder|E] (sahip) olduğunuz [counties|E] içindeki yerleşimler uygundur\n$EFFECT_LIST_BULLET$İnşaatı devam eden yerleşimler uygun #bold değildir#!\n$EFFECT_LIST_BULLET$Yerleşim Seçme penceresi ne derse desin, aslında bir [county_capital|E] seçebilirsiniz\n$EFFECT_LIST_BULLET$Bir [temple|E] dönüştürürseniz, [realm_priest|E] (saray rahibi) yerleşimi otomatik olarak bırakana kadar beklemeniz gerekebilir"
+
+ ch_convert_holding_to_city_decision:0 "Yerleşimi Şehre Dönüştür"
+ ch_convert_holding_to_city_decision_tooltip:0 "Mevcut yerleşim(ler) bir [city|E] (şehir) yerleşimi ile değiştirilecek"
+ ch_convert_holding_to_city_decision_desc:0 "#F Son zamanlarda mülkümde mimarlar ve mühendisler toplanmaya başladı. Birçoğu usta inşaatçılar olarak rağbet görüyor ancak becerilerini kanıtlamak için üzerinde çalışacakları büyük projeler istiyorlar.#!"
+ ch_convert_holding_to_city_decision_confirm:0 "Yerleşimi Şehre Dönüştür"
+ I_HAVE_CH_ELIGBLE_BARONIES_TO_CITY_COUNTY:1 "[city|E] yerleşimine dönüştürülebilecek bir [holding|E] içeren [barony|E] sahibisiniz\n$EFFECT_LIST_BULLET$Sadece bizzat [holder|E] olduğunuz [counties|E] içindeki yerleşimler uygundur\n$EFFECT_LIST_BULLET$İnşaatı devam eden yerleşimler uygun #bold değildir#!\n$EFFECT_LIST_BULLET$Yerleşim Seçme penceresi ne derse desin, aslında bir [county_capital|E] seçebilirsiniz\n$EFFECT_LIST_BULLET$Bir [temple|E] dönüştürürseniz, [realm_priest|E] yerleşimi otomatik olarak bırakana kadar beklemeniz gerekebilir"
+
+ ch_convert_holding_to_temple_decision:0 "Yerleşimi Tapınağa Dönüştür"
+ ch_convert_holding_to_temple_decision_tooltip:0 "Mevcut yerleşim(ler) bir [temple|E] (tapınak) yerleşimi ile değiştirilecek"
+ ch_convert_holding_to_temple_decision_desc:0 "#F Son zamanlarda mülkümde mimarlar ve mühendisler toplanmaya başladı. Birçoğu usta inşaatçılar olarak rağbet görüyor ancak becerilerini kanıtlamak için üzerinde çalışacakları büyük projeler istiyorlar.#!"
+ ch_convert_holding_to_temple_decision_confirm:0 "Yerleşimi Tapınağa Dönüştür"
+ I_HAVE_CH_ELIGBLE_BARONIES_TO_TEMPLE_COUNTY:1 "[temple|E] yerleşimine dönüştürülebilecek bir [holding|E] içeren [barony|E] sahibisiniz\n$EFFECT_LIST_BULLET$Sadece bizzat [holder|E] olduğunuz [counties|E] içindeki yerleşimler uygundur\n$EFFECT_LIST_BULLET$İnşaatı devam eden yerleşimler uygun #bold değildir#!\n$EFFECT_LIST_BULLET$Yerleşim Seçme penceresi ne derse desin, aslında bir [county_capital|E] seçebilirsiniz"
+
+ ### --- X Kararları ---
+ X1_decision_title:0 "Kahramanlık Yolunu Benimse"
+ X1_decision_desc:0 "Onur ve şövalyeliğin sesi beni çağırıyor. Bu seçimle, adım şövalyeye yaraşır ve sadık biri olarak anılacak."
+ X1_decision_confirm:0 "Öyleyse cesaretim kanıtlansın."
+
+ X_build_title:0 "Büyük İşlere Giriş"
+ X_build_desc:0 "Tarlalar nadasa bırakıldı ve halk ekmek ve barınak için feryat ediyor. Taş ve kereste emekleriyle mülküm güçlenecek."
+ X_build_confirm:0 "Duvar ustalarını ve kâhyaları çağırın."
+
+ X_city_title:0 "Bir Belde Kur"
+ X_city_desc:0 "Yaban hayatı ve köylerin olduğu yerde, ticaret ve zanaat için bir belde inşa edeceğim. Sancağımın altında tüccarlar toplanacak ve loncalar refaha erecek."
+ X_city_confirm:0 "Belde inşa edilsin."
+
+ X_temple_title:0 "Kutsal Bir Ev İnşa Et"
+ X_temple_desc:0 "Müminler, çanların ve duaların göğe yükseleceği bir ibadethane özlemi çekiyor. Emrimle bir tapınak yükselecek."
+ X_temple_confirm:0 "Toprağı kutsayın."
+
+ X_castle_title:0 "Kaleyle Tahkim Et"
+ X_castle_desc:0 "Hiçbir şey bir lordun hükmünü taş duvarlardan daha hızlı güvence altına alamaz. Gücün kalesi ve hanemizin merkezi olacak bir hisar yükselecek."
+ X_castle_confirm:0 "Hisarı inşa edin."
+
+ X_unify_title:0 "Diyarı İnanç ve Gelenekte Birleştir"
+ X_unify_desc:0 "Vasallarım dil ve inanç bakımından çeşit çeşit, gelenek ve duada bölünmüş durumdalar. Yine de tek bir sancak altında kan ve ruh bir bütün olacak."
+ X_unify_confirm:0 "Diyarı tek bir inanç ve geleneğe kavuşturun."

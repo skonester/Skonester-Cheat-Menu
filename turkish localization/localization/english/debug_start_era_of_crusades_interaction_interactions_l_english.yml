@@ -1,0 +1,9 @@
+﻿l_english:
+ dp_debug_start_era_of_crusades_interaction:0 "Başlat: Haçlı Seferleri Çağı"
+ dp_debug_launch_natural_crusade_interaction:0 "Doğal Haçlı Seferi Başlat (Debug)"
+ dp_debug_start_era_of_jihads_interaction:0 "Başlat: Cihatlar Çağı"
+ dp_debug_start_great_holy_war_interaction:0 "Büyük Kutsal Savaş Başlat (Savaş hedefini yönlendir)"
+ dp_debug_start_era_of_crusades_interaction_desc:0 "Test amaçlı Haçlı Seferleri Çağı'nı başlatır."
+ dp_debug_launch_natural_crusade_interaction_desc:0 "Doğal bir haçlı seferi başlatmak için hata ayıklama (debug) tetikleyicisi."
+ dp_debug_start_era_of_jihads_interaction_desc:0 "Test amaçlı Cihatlar Çağı'nı başlatır."
+ dp_debug_start_great_holy_war_interaction_desc:0 "Uygun herhangi bir hedefe karşı Büyük Kutsal Savaş başlatmak için hata ayıklama tetikleyicisi."

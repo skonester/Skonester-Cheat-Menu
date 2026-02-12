@@ -1,0 +1,72 @@
+﻿l_english:
+ males_marry:0 "Erkek Evlilikleri için Hanedanı/Hane'yi İşaretle"
+ males_marry_desc:0 "Uygun erkekler, maksimum eş sayısına ulaşana kadar yılda bir kez evlendirilir. Standart (ataerkil) evlilikler olarak düzenlenir."
+
+ females_marry:0 "Kadın Evlilikleri için Hanedanı/Hane'yi İşaretle"
+ females_marry_desc:0 "Uygun kadınlar, maksimum eş sayısına ulaşana kadar yılda bir kez evlendirilir. Soylarını korumak amacıyla anaerkil (matrilineal) evlilikler olarak düzenlenir."
+
+ inbreed_marry:0 "Yakın Akraba Evliliklerini Etkinleştir"
+ inbreed_marry_desc:0 "İşaretlenmiş hanedanların veya hanelerin akrabaları mümkün olduğunda birbirleriyle evlendirilir. Sistem; dini kurallara uymakla birlikte safkan yavrular hedefleyerek üvey kardeş, kuzen veya amca/hala/dayı/teyze-yeğen eşleşmelerini tercih eder."
+
+ males_concubine:0 "Erkeklere Cariye Ata"
+ males_concubine_desc:0 "İşaretlenmiş hanedan veya hanelerden uygun erkeklere, inanç ve yasaların izin verdiği sınıra ulaşana kadar cariye atanır."
+
+ females_concubine:0 "Kadınlara Cariye Ata"
+ females_concubine_desc:0 "İşaretlenmiş hanedan veya hanelerden uygun kadınlara, dini ve kültürel sınırlara saygı duyarak izin verilen maksimum sayıya kadar cariye/eş atanır."
+
+ dynasty_marry:0 "Tüm Hanedanı İşaretle"
+ dynasty_marry_desc:0 "Tüm hanedanı; üyelerinin ayarlara bağlı olarak otomatik olarak evlenmesi, cariye alması veya öjenik (soy ıslahı) kurallarına tabi olması için işaretler. Görünür bir hanedan belirleyicisi bu durumu takip eder."
+
+ house_marry:0 "Tüm Haneyi İşaretle"
+ house_marry_desc:0 "Bir hanedan içindeki tek bir haneyi otomatik evlilik ve cariyelik kuralları için işaretler. Bir hane belirleyicisi, hanenin işaretlendiğini tanımlayacaktır."
+
+ individual_marry_exempt:0 "Bireyi Muaf Tut"
+ individual_marry_exempt_desc:0 "Seçilen karakteri otomatik evlilik veya cariyelik düzenlemelerinin dışında tutmak için işaretler. Bir belirleyici onları muaf olarak tanımlar."
+
+ males_marry_dynasty:0 "Evlendirilecek Hanedan Erkekleri"
+ males_marry_dynasty_desc:0 "Bu hanedanın erkekleri, sistem tarafından yılda bir kez otomatik olarak evlendirilir."
+
+ females_marry_dynasty:0 "Evlendirilecek Hanedan Kadınları"
+ females_marry_dynasty_desc:0 "Bu hanedanın kadınları, yılda bir kez otomatik olarak anaerkil (matrilineal) evliliklerle evlendirilir."
+
+ inbreed_marry_dynasty:0 "Akrabalık Bağıyla Bağlı Hanedan"
+ inbreed_marry_dynasty_desc:0 "Bu hanedan; kardeşler, kuzenler veya amca/hala/dayı/teyze ile yeğenler arasındaki birliktelikleri tercih ederek üyeleri arasında yakın akraba evliliklerini teşvik eder."
+
+ males_concubine_dynasty:0 "Cariyesi Olan Hanedan Erkekleri"
+ males_concubine_dynasty_desc:0 "Bu hanedanın erkeklerine, inanç ve yasalara uygun olarak otomatik olarak cariye verilecektir."
+
+ females_concubine_dynasty:0 "Cariyesi Olan Hanedan Kadınları"
+ females_concubine_dynasty_desc:0 "Bu hanedanın kadınlarına, inanç ve geleneklerin izin verdiği ölçüde otomatik olarak cariye verilecektir."
+
+ males_marry_house:0 "Evlendirilecek Hane Erkekleri"
+ males_marry_house_desc:0 "Bu hanenin erkekleri, yılda bir kez otomatik olarak evlendirilir."
+
+ females_marry_house:0 "Evlendirilecek Hane Kadınları"
+ females_marry_house_desc:0 "Bu hanenin kadınları, yılda bir kez otomatik olarak anaerkil evliliklerle evlendirilir."
+
+ inbreed_marry_house:0 "Akraba Evliliği Uygulayan Hane"
+ inbreed_marry_house_desc:0 "Bu hane, kan bağlarını güçlendiren birlikteliklere öncelik vererek üyeleri arasında yakın akraba evlilikleri düzenler."
+
+ males_concubine_house:0 "Cariyesi Olan Hane Erkekleri"
+ males_concubine_house_desc:0 "Bu hanenin erkeklerine otomatik olarak cariye atanacaktır."
+
+ females_concubine_house:0 "Cariyesi Olan Hane Kadınları"
+ females_concubine_house_desc:0 "Bu hanenin kadınlarına, geleneklerin izin verdiği şekilde otomatik olarak cariye atanacaktır."
+
+ males_eugenic:0 "Erkek Soy Islahı (Öjenik) Evlilikleri"
+ males_eugenic_desc:0 "İşaretlenmiş hanedan veya hanelerin uygun erkekleri; saf ve güçlü kan bağlarını hedefleyen, genetik olarak arzu edilen birlikteliklere öncelik veren evliliklerle evlendirilir."
+
+ females_eugenic:0 "Kadın Soy Islahı (Öjenik) Evlilikleri"
+ females_eugenic_desc:0 "İşaretlenmiş hanedan veya hanelerin uygun kadınları; kan bağlarını korumak veya güçlendirmek için (mümkünse anaerkil olarak) evlendirilir."
+
+ males_eugenic_dynasty:0 "Erkek Soy Islahı Güden Hanedan"
+ males_eugenic_dynasty_desc:0 "Bu hanedan, güçlü ve safkan torunlar üretmek amacıyla erkekleri için evlilikler düzenler."
+
+ females_eugenic_dynasty:0 "Kadın Soy Islahı Güden Hanedan"
+ females_eugenic_dynasty_desc:0 "Bu hanedan, güçlü ve safkan torunlar üretmek amacıyla kadınları için evlilikler düzenler."
+
+ males_eugenic_house:0 "Erkek Soy Islahı Güden Hane"
+ males_eugenic_house_desc:0 "Bu hane, soy saflığı ve gücü peşinde erkekleri için evlilikler düzenler."
+
+ females_eugenic_house:0 "Kadın Soy Islahı Güden Hane"
+ females_eugenic_house_desc:0 "Bu hane, soy saflığı ve gücü peşinde kadınları için evlilikler düzenler."

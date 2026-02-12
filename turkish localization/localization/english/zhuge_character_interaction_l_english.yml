@@ -1,0 +1,116 @@
+﻿l_english:
+ zhuge_organize_titles:0 "Hukuki Sınırları (De Jure) Düzenle"
+ zhuge_organize_titles_desc:0 "Taç ve asanın fermanıyla; tüm topraklar ve vasallar diz çökecek ve lordlarının haklı hakimiyetine dahil edilecek."
+ 
+ zhuge_destroy_title:0 "Birincil Unvanı Yok Et"
+ zhuge_destroy_title_desc:0 "Kendi tacını parçala ve unvanı toza çevir, sanki hiç var olmamış gibi—cesurca bir hamle, ancak çoğu kişi için tam bir delilik."
+ 
+ zhuge_buff_01:0 "İmparatorluk Güçlendirmesi"
+ zhuge_buff_01_desc:0 "Güçten kana kana iç, her yudum kendi ömür mumunu kısaltsa bile."
+ 
+ zhuge_buff_01_tt:0 "İmparatorluk Güçlendirmesi özelliği açılsın mı?"
+ 
+ zhuge_buff_02:0 "Büyük Mareşal"
+ zhuge_buff_02_desc:0 "Nice sancakların mareşali, sınırların muhafızı ve yemin bozanların belası. Meyhanelerde türküleri söylenen bir rütbe."
+ 
+ zhuge_buff_02_tt:0 "Büyük Mareşal özelliği açılsın mı?"
+ 
+ zhuge_buff_03:0 "Büyük Alim"
+ zhuge_buff_03_desc:0 "İlim bekçisi, bilgelik katibi; tüy kalemi diyarı yüz kılıçtan daha iyi yönetir."  
+ zhuge_buff_03_tt:0 "Büyük Alim özelliği açılsın mı?"
+ 
+ zhuge_buff_04:0 "Dillerini Öğren"
+ zhuge_buff_04_desc:0 "Zeka veya büyü yoluyla, başka bir halkın dilini anında sök."
+ zhuge_buff_04_tt:0 "Bu dili öğrenmek istiyor musunuz?"
+ 
+ zhuge_buff_05:0 "Şövalyelik Onuru Bahşet"
+ zhuge_buff_05_desc:0 "Şu şövalyeyi şanla donat ve onurla kuşat ki adı her salonda ve ocak başında anılsın."
+ zhuge_buff_05_tt:0 "Şövalyelik Onuru özelliği açılsın mı?"
+ zhuge_buff_05_high_tt:0 "2.500 Şan ekler ([accolade|E] seviyesini maksimize eder)."
+ zhuge_buff_05_low_tt:0 "500 Şan ekler."
+ zhuge_buff_05_delete01_tt:0 "500 Şan kaldırır."
+ zhuge_buff_05_delete02_tt:0 "Şanı sıfırlar."
+ 
+ daddy_pika_add_strong_hook:0 "Güçlü Koz Kazan"
+ daddy_pika_add_strong_hook_desc:0 "Bu ruh üzerinde gizli bir hakimiyet sağla; görülmeyen ama kırılması imkansız gizli bir zincir."
+ 
+ strong_test_hook:0 "İlahi Bağlılık"
+ strong_hook:0 "İlahi Bağlılık"
+ strong_hook_desc:0 "Bu ruh, görünmez bir güce hararetle dua ediyor; tanrıların onları duyup duymadığı yoksa birer şaka malzemesi olarak mı gördüğü ise tam bir gizem."
+ 
+ zhuge_bloodline_03:0 "Barbara Tarafından Meshedilmiş"
+ zhuge_bloodline_03_desc:0 "Diğerlerinden ayrı tutulmuş; kanları tuhaf bir kutsamayla parlıyor."
+ zhuge_bloodline_03_tt:0 "İlahi Kan özelliği açılsın mı?"
+ 
+ zhuge_yixue_01:0 "Tıbbi Mucize"
+ zhuge_yixue_01_desc:0 "Etten ve kemikten tüm marazları söküp at, zayıflığı tanrıların bile kıskanacağı bir güce dönüştür."
+ zhuge_yixue_01_tt:0 "Tıbbi mucize uygulansın mı?"
+ 
+ zhuge_yixue_02:0 "Kişiliği Düzelt"
+ zhuge_yixue_02_desc:0 "Ruhun mizaçlarının bozulduğu yerde, bir aziz zihne el sürmüşçesine her şeyi yerli yerine koy."
+ zhuge_yixue_02_tt:0 "Bu karakterin kişiliği düzeltilsin mi?"
+ 
+ zhueg_yixue_03:0 "Kötü Alışkanlıkları Kaldır"
+ zhueg_yixue_03_desc:0 "Tütün, içki ve günah hep birlikte dışarı atılır—gerçi meyhaneler müdavimlerini kaybettikleri için yas tutabilir."
+ zhueg_yixue_03_tt:0 "Bu alışkanlıklar kaldırılsın mı?"
+ 
+ zhuge_yixue_04:0 "Kalıtsal Özellikler Ekle"
+ zhuge_yixue_04_desc:0 "Zihin ve beden hediyeleriyle kutsanmış: Dahi, güçlü, güzel ve kurnaz." 
+ zhuge_yixue_04_tt:0 "Kalıtsal özellikler bahşedilsin mi?"
+ 
+ zhuge_yixue_05:0 "Veba Bağışıklığı"
+ zhuge_yixue_05_desc:0 "Hiçbir büyük hastalık bu ruha el süremez (yine de hafif rahatsızlıklar görebilirsin sevgili evladım)."
+ zhuge_yixue_05_tt:0 "Veba Bağışıklığı açılsın mı?"
+ 
+ zhuge_yixue_06:0 "Eğitimi Güçlendir"
+ zhuge_yixue_06_desc:0 "Öğrenimlerini, sanki kadim alimlerden... ya da en azından zil zurna sarhoş bir ozandan ders almışçasına zirveye taşı."
+ zhuge_yixue_06_tt:0 "Eğitimleri güçlendirilsin mı?"
+ 
+ zhuge_set_relation_interaction:0 "İlişkiyi Belirle"
+ zhuge_set_relation_interaction_desc:0 "[recipient.GetShortUIName] ile arandaki bağı ve statüyü komuta et; dost, düşman veya ikisi arası bir şey."
+ 
+ zhuge_add_truce_interaction:0 "Mütarekeyi Ayarla"
+ zhuge_danx_hd_01_desc:0 "Tek taraflı (kazan)"
+ zhuge_danx_give_01_desc:0 "Tek taraflı (bahşet)"
+ zhuge_danx_sx_01_desc:0 "Çift taraflı"
+ zhuge_danx_sx_02_desc:0 "Mütarekeyi kaldır"
+ ZHUGE_TRUCE:0 "#Y Zhuge'nin İtibar Kurtaran Mütarekesi#!"
+ zhuge_remove_truce_effect:0 "[truce|E] sona erdi—'ebedi barış' buraya kadarmış."
+ 
+ zhuge_set_authority_inter:0 "Otorite Seviyesini Belirle"
+ zhuge_set_authority_inter_desc:0 "Tacın gücünü; fısıltı kadar zayıf veya ilahi bir emir kadar yüksek olacak şekilde demir ölçülerle sabitle."
+ zhuge_set_authority_title:0 "Otorite Seviyesini Belirle"
+ zhuge_set_authority_desc:0 "İstediğiniz otorite seviyesini seçin:"
+ zhuge_set_authority_0:0 "Özerk Vasallar"
+ zhuge_set_authority_1:0 "Sınırlı Otorite"
+ zhuge_set_authority_2:0 "Yüksek Otorite"
+ zhuge_set_authority_3:0 "Mutlak Otorite"
+ zhuge_set_authority_cancel:0 "İptal"
+ 
+ zhuge_set_artifact_interaction:0 "Parlak Bir Şey Çağır"
+ zhuge_set_artifact_interaction_desc:0 "Bak hele! Bir eser belirdi, şansını sorgulamaya cüret etme."
+ 
+ zhuge_kill_xingzh_house_interaction:0 "Soylulara Bir Dürtme Ver (Uçurumdan Aşağı)"
+ zhuge_kill_xingzh_house_interaction_desc:0 "Bu yüce haneler yağ bağlayıp tembelleşti; uçurum kenarı bahar temizliği için onları bekliyor."
+ 
+ zhuge_huoqu_artifact_interaction:0 "Kraliyet Ödüncü (Tamamen Geçici)"
+ zhuge_huoqu_artifact_interaction_desc:0 "Bu hazine pek nefismiş. 'Güvenli ellerde' olması için biraz bende dursun."
+ 
+ zhuge_jiequ_artifact_player:0 "Güzel Hazine. Ben Alıyorum."
+ 
+ zhuge_liuguan_interaction:0 "Yatıştır ve Entegre Et"
+ zhuge_liuguan_interaction_desc:0 "'Sen iyi bir tebaasın,' diye gürler taç. Şimdi git ve diyarım tarafından tamamen yutul."
+ 
+ zhuge_select_succeed:0 "Çocuğun cinsiyeti kader ve fermanla mühürlendi!"
+ 
+ zhuge_great_steppe:0 "#bold Bozkır Mevsimini#! Değiştir"
+ zhuge_great_steppe_desc:0 "Bozkırın mevsimlerini komuta et—kar, bahar veya yaz."
+ 
+ zhuge_ymbuff_02:0 "Göçebelerin İradesi"
+ zhuge_ymbuff_02_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] göklerden gönderilmiş biri olarak selamlanıyor."
+ 
+ zhuge_mpo_qiyue:0 "Haraç Sözleşmesini Düzenle"
+ zhuge_mpo_qiyue_desc:0 "[recipient.GetShortUINameNoTooltip] ile olan haraç yeminlerini, bir jarlın bira üzerine pazarlık yapması gibi ustalıkla evir çevir."
+ 
+ zhuge_lifexp_all_xp:0 "Yaşam Tarzı Beceri Desteği"
+ zhuge_lifexp_all_xp_desc:0 "#bold #P Yaşamın tüm sanatlarının ve zanaatlarının—bilginin—kilidini aç!#!#!"

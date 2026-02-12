@@ -1,0 +1,6 @@
+﻿l_english:
+  become_conqueror_interaction:0 "Efsanevi Unvanlar Bahşet"
+  become_conqueror_interaction_desc:0 "Bu karaktere CK3'ün en büyük hükümdarlarının efsanevi unvanlarını ve özelliklerini bahşet. Şu unvanlarla anılacaklar:\n\n- Fatih (Conqueror)\n- Hanlar Hanı (Greatest of Khans)\n- Çakravarti\n- Haçlı Kralı\n- Kurtarıcı\n- Yaşayan Efsane\n- Altın Soy\n- Campeador\n- Saoşyant"
+
+  remove_conqueror_interaction:0 "Efsanevi Unvanları Geri Al"
+  remove_conqueror_interaction_desc:0 "Bu karakterin tüm efsanevi unvanlarını ve özelliklerini geri alarak onu sıradan bir statüye döndür. Artık şunları taşımayacaklar:\n\n- Fatih\n- Hanlar Hanı\n- Çakravarti\n- Haçlı Kralı\n- Kurtarıcı\n- Yaşayan Efsane\n- Altın Soy\n- Campeador\n- Saoşyant"

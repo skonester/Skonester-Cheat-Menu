@@ -1,0 +1,23 @@
+﻿l_russian:
+ cheat_decition_tradition:0 "Установить культурное превосходство"
+ cheat_description_tradition:0 "По нашему указу мы впитаем мудрость каждого уголка земли. От рисовых полей Востока до лучников Запада — наш народ не будет знать равных."
+ cheat_decition_accept:0 "Наша культура теперь вечна."
+ culture_cheat_tooltip:0 "Будет установлено более 100 традиций."
+ 
+ # Modifiers
+ culture_acceptance_gain_mult:0 "Культурная открытость"
+ 
+ # Decision Menu
+ yyz_open_menu_decision:0 "Меню поиска талантов"
+ yyz_open_menu_decision_desc:0 "Наши текущие планы требуют особого мастерства. Формализовав поиск талантов, мы превратим наш двор в пристанище для элиты, обеспечив себя навыками, необходимыми для успеха."
+ yyz_open_menu_decision_confirm:0 "Открыть меню"
+ yyz_open_menu_decision_tooltip:0 "Инициализировать список."
+ 
+ # Traditions
+ tradition_zz_cultural_polygamy_three_wives_name:0 "Культурное многоженство"
+ tradition_zz_cultural_polygamy_three_wives_desc:0 "В этой культуре правители высших рангов по традиции содержат дом с несколькими супругами и наложницами, чтобы обеспечить многочисленность и стабильность своей династии."
+ 
+ tenet_zz_empty_1_name:0 "Четвертый догмат"
+ tenet_zz_empty_1_desc:0 "Дополнительный религиозный догмат."
+ tenet_zz_empty_2_name:0 "Пятый догмат"
+ tenet_zz_empty_2_desc:0 "Дополнительный религиозный догмат."

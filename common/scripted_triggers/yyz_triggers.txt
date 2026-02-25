@@ -1,0 +1,402 @@
+﻿
+is_eligible_to_pull = {
+  in_diplomatic_range = root                                 # range check
+  NOT = { any_spouse  = { is_landed = yes } }                # no spouse is landed
+  NOT = { any_consort = { is_landed = yes } }                # no consort is landed
+  is_ruler = no                                              # not ruler
+  is_landed = no                                             # not landed
+  is_adult = yes                                             # is adult
+  NOT = { has_council_position = councillor_court_chaplain } # no priests
+  OR = {
+    is_imprisoned = no                                       # either not imprisoned
+    is_imprisoned_by = root                                  # or imprisoned by self    
+  }
+}
+
+is_male_or_unattached_female = {
+  OR = {                                                     # either male or not married/concubine
+    is_female = no                           
+    AND = {
+      is_married = no                                        # not married
+      is_concubine = no                                      # not consort
+    }
+  }
+}
+
+passes_sexFilter = {
+  OR = {
+    AND = { NOT = { root.var:yyz_filterSex = FILTER_SEX_MALE }    is_female = yes }  # females
+    AND = { NOT = { root.var:yyz_filterSex = FILTER_SEX_FEMALE }  is_female = no }  # males
+  }
+}
+
+passes_whereFilter = {
+  OR = {
+    AND = {
+      root.var:yyz_filterWhereNot = 0
+      OR = { NOT = { root.var:yyz_filterWhere = FILTER_WHERE_REALM }    target_is_liege_or_above = root }  # realm
+      OR = { NOT = { root.var:yyz_filterWhere = FILTER_WHERE_COURT }    is_courtier_of = root  }           # court
+    }
+    AND = {
+      root.var:yyz_filterWhereNot = 1
+  OR = {
+        root.var:yyz_filterWhere = FILTER_WHERE_NONE
+        AND = { root.var:yyz_filterWhere = FILTER_WHERE_REALM  NOT = { target_is_liege_or_above = root } } # not in realm
+        AND = { root.var:yyz_filterWhere = FILTER_WHERE_COURT  NOT = { is_courtier_of = root } }           # not in court
+      }
+    }
+  }
+}
+
+passes_maritalFilter = {
+  OR = {
+    root.var:yyz_filterMarital = FILTER_MARITAL_BOTH
+    AND = { root.var:yyz_filterMarital = FILTER_MARITAL_MARRIED   OR = { is_married = yes is_concubine = yes is_betrothed = yes any_consort = { is_alive = yes } } }
+    AND = { root.var:yyz_filterMarital = FILTER_MARITAL_UNMARRIED is_married = no is_concubine = no is_betrothed = no   NOT = { any_consort = { is_alive = yes } } }
+  }
+}
+
+passes_hookedFilter = {
+  OR = {
+    root.var:yyz_filterHooked = FILTER_HOOKED_BOTH
+    AND = { root.var:yyz_filterHooked = FILTER_HOOKED_HOOK   root = { has_hook = prev } }
+    AND = { root.var:yyz_filterHooked = FILTER_HOOKED_NOT    NOT = { root = { has_hook = prev } } }
+  }
+}
+
+passes_nobilityFilter = {
+  OR = {
+    root.var:yyz_filterNobility = FILTER_NOBILITY_BOTH
+    AND = { root.var:yyz_filterNobility = FILTER_NOBILITY_NOBLE   is_lowborn = no  }
+    AND = { root.var:yyz_filterNobility = FILTER_NOBILITY_LOWBORN is_lowborn = yes }
+  }
+}
+
+passes_inviteFilter = {
+  OR = {
+    root.var:yyz_filterInvite = 0
+    will_accept_invite_to_court = { RECRUITER = $RECRUITER$ RECRUITEE = $RECRUITEE$ }
+  }
+}
+
+passes_organizerTraitsFilter = {
+  OR = {
+    AND = { root.var:yyz_filterOrgSiege  = 1  has_trait = military_engineer }
+    AND = { root.var:yyz_filterOrgLogi   = 1  has_trait = logistician }      
+    AND = { root.var:yyz_filterOrgReaver = 1  has_trait = reaver }           
+    AND = { root.var:yyz_filterOrgWinter = 1  has_trait = winter_soldier }   
+    AND = { root.var:yyz_filterOrgSiege  = 0  root.var:yyz_filterOrgLogi = 0 root.var:yyz_filterOrgReaver = 0 root.var:yyz_filterOrgWinter = 0 }   
+  }
+}
+
+passes_organizerSpeedFilter = {
+  yyz_movement_speed >= root.var:yyz_filterOrgSpeed
+}
+
+will_accept_invite_to_court = {
+  is_landed = no # yyz - would think that the trigger below would handle this, but no                      
+  is_ruler  = no # yyz - would think that the trigger below would handle this, but no                      
+
+  can_recruit_character_to_court_trigger = {
+    RECRUITER = $RECRUITER$
+    RECRUITEE = $RECRUITEE$
+  }
+  0 < yyz_inviteValue
+}
+
+can_be_archer = {
+  OR = { 
+    has_trait = forest_fighter
+    has_trait_xp = { trait = tourney_participant track = bow value >= 20 }
+  }
+}
+
+can_be_outrider = {
+  OR = { 
+    has_trait = open_terrain_expert
+    has_trait_xp = { trait = tourney_participant track = horse value >= 20 }
+  } 
+}
+
+can_be_pike_captain = {
+  OR = {
+    has_trait = rough_terrain_expert   
+    has_trait_xp = { trait = tourney_participant track = foot value >= 20 }
+  }
+}
+
+can_be_skirmisher = {
+  OR = {
+    has_trait = jungle_stalker
+    has_trait = winter_soldier   
+    has_trait_xp = { trait = tourney_participant track = bow  value >= 20 } 
+    has_trait_xp = { trait = tourney_participant track = foot value >= 20 } 
+  } 
+}
+
+can_be_vanguard = {
+  OR = {
+    has_trait = athletic               
+    has_trait = strong           
+    has_trait = physique_good 
+    has_trait_xp = { trait = tourney_participant track = foot value >= 20 } 
+  }
+}
+
+can_be_lancer = {
+  AND = {
+    OR = { 
+      has_trait = aggressive_attacker 
+      has_trait_xp = { trait = tourney_participant track = horse value >= 20 }
+    }
+    culture ?= { 
+      OR = { 
+        has_innovation = innovation_arched_saddle 
+        has_cultural_tradition = tradition_caucasian_wolves 
+        has_cultural_tradition = tradition_roman_legacy 
+        has_innovation = innovation_valets 
+      } 
+    }
+  }
+}
+
+can_be_camelier = {
+  AND = {
+    OR = { 
+      has_trait_xp = { trait = tourney_participant track = horse value >= 20 } 
+      has_trait = desert_warrior 
+    }
+    culture ?= { has_innovation = innovation_war_camels }
+  }
+}
+
+can_be_crossbow_captain = {
+  AND = {
+    OR = { 
+      has_trait_xp = { trait = tourney_participant track = bow value >= 20 } 
+      has_trait = cautious_leader 
+    }
+    culture ?= { 
+      OR = { 
+        has_innovation = innovation_advanced_bowmaking 
+        has_innovation = innovation_repeating_crossbow 
+      }
+    }
+  }
+}
+
+can_be_elephant_rider = {
+  AND = {
+    OR = {
+      has_trait_xp = {
+        trait = tourney_participant
+        track = horse
+        value >= 20
+      }
+      has_trait = jungle_stalker
+    }
+    culture ?= { has_innovation = innovation_elephantry }
+  }
+}
+
+can_be_horse_archer = {
+  AND = {
+    OR = { 
+      has_trait_xp = { trait = tourney_participant track = horse value >= 20 }  
+      has_trait_xp = { trait = tourney_participant track = bow   value >= 20 } 
+      has_trait = flexible_leader 
+    }
+    culture ?= { has_cultural_tradition = tradition_horse_lords }
+  }
+}
+
+can_be_besieger = {
+  AND = {
+    OR = { 
+      has_trait = military_engineer 
+      has_trait = logistician 
+    }
+    culture ?= { has_innovation = innovation_mangonel }
+  }
+}
+
+can_be_contender = {
+  OR = {
+    prowess >= 20
+    has_trait_xp = { trait = tourney_participant track = horse value >= 50 } 
+    has_trait_xp = { trait = tourney_participant track = bow   value >= 50 } 
+    has_trait_xp = { trait = tourney_participant track = foot  value >= 50 } 
+    has_trait_xp = { trait = tourney_participant track = wit   value >= 50 }
+  }
+}
+
+can_be_charmer = {
+  OR = {
+    has_trait = seducer
+    has_trait = lustful 
+  }
+}
+
+can_be_disciplinarian = {
+  OR = {
+    has_trait = stubborn  
+    has_trait = diligent  
+    has_trait = temperate  
+    has_trait = organizer  
+    has_trait = overseer 
+  }
+}
+
+can_be_idealist = {
+  OR = {
+    has_trait = compassionate  
+    has_trait = forgiving  
+    has_trait = trusting  
+    has_trait = generous 
+  }
+}
+
+can_be_marauder = {
+  OR = {
+    has_trait = sadistic
+    has_trait = callous  
+    has_trait = vengeful 
+  }
+}
+
+can_be_scoundrel = {
+  OR = {
+    has_trait = ambitious 
+    has_trait = greedy     
+    has_trait = deceitful  
+    has_trait = gregarious 
+    has_trait = adventurer 
+  }
+}
+
+can_be_stalwart = {
+  OR = {
+    has_trait = honest
+    has_trait = just
+    has_trait = patient
+    has_trait = loyal
+    has_trait = unyielding_defender 
+  }
+}
+
+can_be_thug = {
+  OR = {
+    has_trait = wrathful
+    has_trait = arbitrary
+    has_trait = impatient
+    has_trait = arrogant
+    has_trait = reaver 
+  }
+}
+
+can_be_valiant = {
+  OR = {
+    has_trait = brave
+    has_trait = berserker
+    has_trait = reckless 
+  }
+}
+
+can_be_fanatic = {             # ignoring same faith requirement since you can demand they convert
+  OR = {
+    has_trait = zealous
+    has_trait = holy_warrior
+  }
+}
+
+can_be_blademaster = {
+  OR = {
+    has_trait = lifestyle_blademaster
+    has_trait_xp = { trait = lifestyle_blademaster value >= 100 } 
+  }
+}
+
+can_be_huntmaster = {
+  has_trait = lifestyle_hunter 
+}
+
+can_be_master_of_revels = {
+  has_trait = lifestyle_reveler 
+}
+
+can_be_politicker = {
+  OR = {
+    diplomacy >= high_skill_rating
+    has_trait = diplomat 
+  }
+}
+
+can_be_tactician = {
+  OR = {
+    martial >= high_skill_rating
+    has_trait = strategist 
+  }
+} 
+
+can_be_reeve = {
+  OR = {
+    stewardship >= high_skill_rating
+    has_trait = administrator 
+  }
+}
+can_be_manipulator = {
+  OR = {
+    intrigue >= high_skill_rating
+    has_trait = schemer 
+  }
+}
+
+can_be_mentor = {
+  OR = {
+    learning >= high_skill_rating
+    has_trait = whole_of_body 
+  }
+}
+
+can_be_house_paragon = {
+   AND = { 
+     exists = house 
+     house = root.house 
+     NOT = { has_trait = denounced }
+  }
+}
+
+passes_accoladeFilter = {
+  AND = {
+    OR = { NOT = { root.var:yyz_modeAccolade_retinue = ACCOLADE_ARCHER }            can_be_archer = yes }
+    OR = { NOT = { root.var:yyz_modeAccolade_retinue = ACCOLADE_OUTRIDER }          can_be_outrider = yes }
+    OR = { NOT = { root.var:yyz_modeAccolade_retinue = ACCOLADE_PIKE_CAPTAIN }      can_be_pike_captain = yes }
+    OR = { NOT = { root.var:yyz_modeAccolade_retinue = ACCOLADE_SKIRMISHER }        can_be_skirmisher = yes }
+    OR = { NOT = { root.var:yyz_modeAccolade_retinue = ACCOLADE_VANGUARD }          can_be_vanguard = yes }
+    OR = { NOT = { root.var:yyz_modeAccolade_retinue = ACCOLADE_LANCER }            can_be_lancer = yes }
+    OR = { NOT = { root.var:yyz_modeAccolade_retinue = ACCOLADE_CAMELIER }          can_be_camelier = yes }
+    OR = { NOT = { root.var:yyz_modeAccolade_retinue = ACCOLADE_CROSSBOW_CAPTAIN }  can_be_crossbow_captain = yes }
+    OR = { NOT = { root.var:yyz_modeAccolade_retinue = ACCOLADE_ELEPHANT_RIDER }    can_be_elephant_rider = yes }
+    OR = { NOT = { root.var:yyz_modeAccolade_retinue = ACCOLADE_HORSE_ARCHER }      can_be_horse_archer = yes }
+    OR = { NOT = { root.var:yyz_modeAccolade_retinue = ACCOLADE_BESIEGER }          can_be_besieger = yes }
+    OR = { root.var:yyz_modeAccolade_contender = 0                                  can_be_contender = yes }
+    OR = { root.var:yyz_modeAccolade_charmer = 0                                    can_be_charmer = yes }
+    OR = { root.var:yyz_modeAccolade_disciplinarian = 0                             can_be_disciplinarian = yes }
+    OR = { root.var:yyz_modeAccolade_idealist = 0                                   can_be_idealist = yes }
+    OR = { root.var:yyz_modeAccolade_marauder = 0                                   can_be_marauder = yes }
+    OR = { root.var:yyz_modeAccolade_scoundrel = 0                                  can_be_scoundrel = yes }
+    OR = { root.var:yyz_modeAccolade_stalwart = 0                                   can_be_stalwart = yes }
+    OR = { root.var:yyz_modeAccolade_thug = 0                                       can_be_thug = yes }
+    OR = { root.var:yyz_modeAccolade_valiant = 0                                    can_be_valiant = yes }
+    OR = { root.var:yyz_modeAccolade_fanatic = 0                                    can_be_fanatic = yes }
+    OR = { root.var:yyz_modeAccolade_blademaster = 0                                can_be_blademaster = yes }
+    OR = { root.var:yyz_modeAccolade_huntmaster = 0                                 can_be_huntmaster = yes }
+    OR = { root.var:yyz_modeAccolade_master_of_revels = 0                           can_be_master_of_revels = yes }
+    OR = { root.var:yyz_modeAccolade_politicker = 0                                 can_be_politicker = yes }
+    OR = { root.var:yyz_modeAccolade_tactician = 0                                  can_be_tactician = yes }
+    OR = { root.var:yyz_modeAccolade_reeve = 0                                      can_be_reeve = yes }
+    OR = { root.var:yyz_modeAccolade_manipulator = 0                                can_be_manipulator = yes }
+    OR = { root.var:yyz_modeAccolade_mentor = 0                                     can_be_mentor = yes }
+    OR = { root.var:yyz_modeAccolade_house_paragon = 0                              can_be_house_paragon = yes }
+  }
+}

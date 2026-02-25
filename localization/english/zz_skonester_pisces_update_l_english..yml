@@ -1,0 +1,26 @@
+﻿l_english:
+ cheat_decition_tradition:0 "Establish Cultural Supremacy"
+ cheat_description_tradition:0 "By decree, we shall adopt the wisdom of every corner of the earth. From the Rice Fields of the East to the Longbowmen of the West, our people will know no equal."
+ cheat_decition_accept:0 "Our culture is now eternal."
+ culture_cheat_tooltip:0 "Over 100 traditions to be established."
+ 
+ # Modifiers
+ culture_acceptance_gain_mult:0 "Cultural Openness"
+ 
+ # Decision Menu
+ yyz_open_menu_decision:0 "Talent Finder Menu"
+ yyz_open_menu_decision_desc:0 "Our current plans require specialized expertise. By formalizing our search for talent, we can ensure that our court remains a destination for the elite, providing us with the skills necessary for success."
+ yyz_open_menu_decision_confirm:0 "Open Menu"
+ yyz_open_menu_decision_tooltip:0 "Initialize the list."
+ 
+ # Traditions
+ tradition_zz_cultural_polygamy_three_wives_name:0 "Cultural Polygamy"
+ tradition_zz_cultural_polygamy_three_wives_desc:0 "In this culture, it is tradition for the highest-ranking rulers to maintain a household of multiple spouses and concubines to ensure a vast and stable lineage."
+ 
+ 
+ tenet_zz_empty_1_name:0 "Fourth Tenant"
+ tenet_zz_empty_1_desc:0 "Extra Religious Tenant."
+ tenet_zz_empty_2_name:0 "Fifth Tenant"
+ tenet_zz_empty_2_desc:0 "Extra Religious Tenant."
+  
+ 

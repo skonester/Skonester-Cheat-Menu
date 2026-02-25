@@ -1,0 +1,1133 @@
+﻿
+window = {
+  name = "yyz_character_list_window"
+  size = { 1250 95% }
+  parentanchor = top|left
+  position = { 35% 2% }
+  allow_outside = no
+  layer = middle
+
+  using = Window_Background
+  using = Window_Decoration_Flat
+  using = Window_Size_CharacterList
+
+  visible_at_creation = no
+  visible = "[GetScriptedGui('yyz_clear_list').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+  vbox = {
+    using = Window_Margins
+    
+    hbox = {
+      margin_left = 4
+      margin_bottom = 12
+      layoutpolicy_horizontal = expanding
+      layoutpolicy_vertical = growing
+      background = {
+        name = "header"
+        texture = "gfx/interface/component_tiles/tile_title_big_top_01.dds"
+        spriteType = Corneredtiled
+        texture_density = 2
+
+        modify_texture = {
+          name = "mask"
+          texture = "gfx/interface/component_masks/mask_title_big_top.dds"
+          spriteType = Corneredtiled
+          spriteborder = { 160 0 }
+          blend_mode = alphamultiply
+          alpha = 0.5
+        }
+        modify_texture = {
+          name = "overlay"
+          texture = "gfx/interface/component_overlay/overlay_title_big_top.dds"
+          spriteType = Corneredstretched
+          spriteborder = { 0 0 }
+          blend_mode = overlay
+        }
+      }
+      hbox = {
+        name = "yyz_menu"
+        margin_left = 5
+        margin_right = 20
+        margin_top = 5
+        spacing = 5
+        layoutpolicy_horizontal = expanding
+
+        yyz_toolbar_button = { 
+          name = "yyz_btn_unlandedDynasty"
+          tooltip = "YYZ_BTN_UNLANDED_DYNASTY_TT"
+          datacontext = "[GetScriptedGui('open_yyz_dynasty_list')]"
+
+          blockoverride "icon" {
+            texture = "gfx/interface/icons/flat_icons/dynasty.dds"
+          }
+        }
+
+        yyz_toolbar_button = {
+#          size = { 48 48 }
+#          down_icon = {
+#            texture = "gfx/interface/icons/icon_soldier.dds"
+#            size = { 40 40 }
+#            position = { 0 4 }
+#            parentanchor = center
+#            glow = {
+#              color = { 0 0 0 0.8 }
+#              glow_radius = 3
+#              using = Glow_Standard
+#            }
+#          }
+#          onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+          name = "yyz_btn_knights"
+          tooltip = "YYZ_BTN_KNIGHT_RECRUITS_TT"
+          datacontext = "[GetScriptedGui('open_yyz_knight_list')]"
+
+          blockoverride "icon" {
+            texture = "gfx/interface/icons/flat_icons/army_details.dds"
+          }
+        }
+
+        yyz_toolbar_button = { 
+          name = "yyz_btn_criminalGold"
+          tooltip = "YYZ_BTN_CRIMINAL_GOLD_TT"
+          datacontext = "[GetScriptedGui('open_yyz_criminalGold_list')]"
+
+          blockoverride "icon" {
+            texture = "gfx/interface/icons/flat_icons/prison_ransom.dds"
+          }
+        }
+
+        yyz_toolbar_button = { 
+          name = "yyz_btn_specialOrganizers"
+          tooltip = "YYZ_BTN_SPECIAL_ORGANIZERS_TT"
+          datacontext = "[GetScriptedGui('open_yyz_specialOrganizers_list')]"
+
+          blockoverride "icon" {
+            texture = "gfx/interface/icons/flat_icons/army_reorganize.dds"
+          }
+        }
+        yyz_toolbar_button = { 
+          name = "yyz_btn_killTarget"
+          tooltip = "YYZ_BTN_KILL_TARGETS_TT"
+          datacontext = "[GetScriptedGui('open_yyz_killTarget_list')]"
+
+          blockoverride "icon" {
+            texture = "gfx/interface/icons/flat_icons/scheme.dds"
+          }
+        }
+        yyz_toolbar_button = { 
+          name = "yyz_btn_courtPositions"
+          tooltip = "YYZ_BTN_COURT_POSITIONS_TT"
+          datacontext = "[GetScriptedGui('open_yyz_courtPositions_list')]"
+
+          blockoverride "icon" {
+            texture = "gfx/interface/icons/flat_icons/royal_court.dds"
+          }
+        }
+        yyz_toolbar_button = { 
+          name = "yyz_btn_fertility"
+          tooltip = "YYZ_BTN_FERTILITY_TT"
+          datacontext = "[GetScriptedGui('open_yyz_fertility_list')]"
+
+          blockoverride "icon" {
+            texture = "gfx/interface/icons/flat_icons/heterosexual.dds"
+          }
+        }
+        yyz_toolbar_button = { 
+          name = "yyz_btn_inspirations"
+          tooltip = "YYZ_BTN_INSPIRATIONS_TT"
+          datacontext = "[GetScriptedGui('open_yyz_inspiration_list')]"
+
+          blockoverride "icon" {
+            texture = "gfx/interface/icons/flat_icons/reforge.dds"
+          }
+        }
+#        yyz_toolbar_button = { 
+#          name = "yyz_btn_qqq"
+#          tooltip = "YYZ_BTN_QQQ_TT"
+#          datacontext = "[GetScriptedGui('open_yyz_qqq_list')]"
+#
+#          blockoverride "icon" {
+#            texture = "gfx/interface/icons/flat_icons/prison_ransom.dds"
+#          }
+#        }
+
+        expand = {}
+      }
+      yyz_header_text = {
+        visible = "[GetScriptedGui('open_yyz_viceroy_list').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+        text = "YYZ_CAPTION_VICEROYS"
+      }
+      yyz_header_text = {
+        visible = "[GetScriptedGui('open_yyz_dynasty_list').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+        text = "YYZ_CAPTION_UNLANDED_DYNASTY"
+      }
+      yyz_header_text = {
+        visible = "[GetScriptedGui('open_yyz_knight_list').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+        text = "YYZ_CAPTION_KNIGHT_RECRUITS"
+      }
+      yyz_header_text = {
+        visible = "[GetScriptedGui('open_yyz_specialOrganizers_list').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End )]"
+        text = "YYZ_CAPTION_SPECIAL_ORGANIZERS"
+      }
+      yyz_header_text = {
+        visible = "[GetScriptedGui('open_yyz_killTarget_list').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+        text = "YYZ_CAPTION_KILL_TARGETS"
+      }
+      yyz_header_text = {
+        visible = "[GetScriptedGui('open_yyz_courtPositions_list').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+        text = "YYZ_CAPTION_COURT_POSITIONS"
+      }
+      yyz_header_text = {
+        visible = "[GetScriptedGui('open_yyz_criminalGold_list').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+        text = "YYZ_CAPTION_CRIMINAL_GOLD"
+      }
+      yyz_header_text = {
+        visible = "[GetScriptedGui('open_yyz_inspiration_list').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+        text = "YYZ_CAPTION_INSPIRATIONS"
+      }
+      yyz_header_text = {
+        visible = "[GetScriptedGui('open_yyz_fertility_list').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+        text = "YYZ_CAPTION_FERTILITY"
+      }
+      spacer = { size = { 10 0 } }
+      expand = {}
+      button_menu = {
+        size = { 32 32 }
+        texture = "gfx/interface/icons/flat_icons/menu.dds"
+        datacontext = "[GetScriptedGui('yyz_settings')]"
+        onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+        tooltip = "YYZ_SETTINGS_TT"
+      }
+      button_close = {
+        name = "button_close"
+        shortcut = "close_window"
+        tooltip = "CLOSE_TOOLTIP"
+        clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_close"
+
+        onclick = "[GetScriptedGui('yyz_clear_list').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+      }
+    }
+############################
+# knight accolade modes
+    hbox = {
+# deferring visibility to try to avoid flickering as the controls are drawn at initial opening
+      visible_at_creation = no
+      visible = "[GetScriptedGui('open_yyz_knight_list').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+      margin_left = 4
+      margin_bottom = 4
+      layoutpolicy_horizontal = expanding
+      text_single = {
+        visible = no
+        align = center
+        raw_text = "Accolades:"
+        using = Font_Type_Flavor
+        using = Font_Size_Medium
+        margin_bottom = 6
+        margin_right = 6
+      }
+
+      yyz_button = {
+        size = { 64 32 }
+        name = "btn_modeAccolade_retinue"
+        text = "YYZ_MODE_ACCOLADE_RETINUE"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_retinue')]"
+        tooltip = "YYZ_MODE_ACCOLADE_RETINUE_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_archer"
+        text = "YYZ_MODE_ACCOLADE_ARCHER"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_archer')]"
+        tooltip = "YYZ_MODE_ACCOLADE_ARCHER_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_outrider"
+        text = "YYZ_MODE_ACCOLADE_OUTRIDER"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_outrider')]"
+        tooltip = "YYZ_MODE_ACCOLADE_OUTRIDER_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_pike_captain"
+        text = "YYZ_MODE_ACCOLADE_PIKE_CAPTAIN"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_pike_captain')]"
+        tooltip = "YYZ_MODE_ACCOLADE_PIKE_CAPTAIN_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_skirmisher"
+        text = "YYZ_MODE_ACCOLADE_SKIRMISHER"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_skirmisher')]"
+        tooltip = "YYZ_MODE_ACCOLADE_SKIRMISHER_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_vanguard"
+        text = "YYZ_MODE_ACCOLADE_VANGUARD"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_vanguard')]"
+        tooltip = "YYZ_MODE_ACCOLADE_VANGUARD_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_lancer"
+        text = "YYZ_MODE_ACCOLADE_LANCER"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_lancer')]"
+        tooltip = "YYZ_MODE_ACCOLADE_LANCER_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_camelier"
+        text = "YYZ_MODE_ACCOLADE_CAMELIER"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_camelier')]"
+        tooltip = "YYZ_MODE_ACCOLADE_CAMELIER_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_crossbow_captain"
+        text = "YYZ_MODE_ACCOLADE_CROSSBOW_CAPTAIN"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_crossbow_captain')]"
+        tooltip = "YYZ_MODE_ACCOLADE_CROSSBOW_CAPTAIN_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_elephant_rider"
+        text = "YYZ_MODE_ACCOLADE_ELEPHANT_RIDER"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_elephant_rider')]"
+        tooltip = "YYZ_MODE_ACCOLADE_ELEPHANT_RIDER_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_horse_archer"
+        text = "YYZ_MODE_ACCOLADE_HORSE_ARCHER"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_horse_archer')]"
+        tooltip = "YYZ_MODE_ACCOLADE_HORSE_ARCHER_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_besieger"
+        text = "YYZ_MODE_ACCOLADE_BESIEGER"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_besieger')]"
+        tooltip = "YYZ_MODE_ACCOLADE_BESIEGER_TT"
+      }
+
+      expand = {}
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_contender"
+        text = "YYZ_MODE_ACCOLADE_CONTENDER"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_contender')]"
+        tooltip = "YYZ_MODE_ACCOLADE_CONTENDER_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_manipulator"
+        text = "YYZ_MODE_ACCOLADE_MANIPULATOR"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_manipulator')]"
+        tooltip = "YYZ_MODE_ACCOLADE_MANIPULATOR_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_mentor"
+        text = "YYZ_MODE_ACCOLADE_MENTOR"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_mentor')]"
+        tooltip = "YYZ_MODE_ACCOLADE_MENTOR_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_politicker"
+        text = "YYZ_MODE_ACCOLADE_POLITICKER"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_politicker')]"
+        tooltip = "YYZ_MODE_ACCOLADE_POLITICKER_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_reeve"
+        text = "YYZ_MODE_ACCOLADE_REEVE"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_reeve')]"
+        tooltip = "YYZ_MODE_ACCOLADE_REEVE_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_tactician"
+        text = "YYZ_MODE_ACCOLADE_TACTICIAN"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_tactician')]"
+        tooltip = "YYZ_MODE_ACCOLADE_TACTICIAN_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_charmer"
+        text = "YYZ_MODE_ACCOLADE_CHARMER"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_charmer')]"
+        tooltip = "YYZ_MODE_ACCOLADE_CHARMER_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_disciplinarian"
+        text = "YYZ_MODE_ACCOLADE_DISCIPLINARIAN"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_disciplinarian')]"
+        tooltip = "YYZ_MODE_ACCOLADE_DISCIPLINARIAN_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_idealist"
+        text = "YYZ_MODE_ACCOLADE_IDEALIST"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_idealist')]"
+        tooltip = "YYZ_MODE_ACCOLADE_IDEALIST_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_marauder"
+        text = "YYZ_MODE_ACCOLADE_MARAUDER"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_marauder')]"
+        tooltip = "YYZ_MODE_ACCOLADE_MARAUDER_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_scoundrel"
+        text = "YYZ_MODE_ACCOLADE_SCOUNDREL"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_scoundrel')]"
+        tooltip = "YYZ_MODE_ACCOLADE_SCOUNDREL_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_stalwart"
+        text = "YYZ_MODE_ACCOLADE_STALWART"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_stalwart')]"
+        tooltip = "YYZ_MODE_ACCOLADE_STALWART_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_thug"
+        text = "YYZ_MODE_ACCOLADE_THUG"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_thug')]"
+        tooltip = "YYZ_MODE_ACCOLADE_THUG_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_valiant"
+        text = "YYZ_MODE_ACCOLADE_VALIANT"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_valiant')]"
+        tooltip = "YYZ_MODE_ACCOLADE_VALIANT_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_fanatic"
+        text = "YYZ_MODE_ACCOLADE_FANATIC"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_fanatic')]"
+        tooltip = "YYZ_MODE_ACCOLADE_FANATIC_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_blademaster"
+        text = "YYZ_MODE_ACCOLADE_BLADEMASTER"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_blademaster')]"
+        tooltip = "YYZ_MODE_ACCOLADE_BLADEMASTER_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_huntmaster"
+        text = "YYZ_MODE_ACCOLADE_HUNTMASTER"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_huntmaster')]"
+        tooltip = "YYZ_MODE_ACCOLADE_HUNTMASTER_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_master_of_revels"
+        text = "YYZ_MODE_ACCOLADE_MASTER_OF_REVELS"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_master_of_revels')]"
+        tooltip = "YYZ_MODE_ACCOLADE_MASTER_OF_REVELS_TT"
+      }
+
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeAccolade_house_paragon"
+        text = "YYZ_MODE_ACCOLADE_HOUSE_PARAGON"
+        datacontext = "[GetScriptedGui('yyz_modeAccolade_house_paragon')]"
+        tooltip = "YYZ_MODE_ACCOLADE_HOUSE_PARAGON_TT"
+      }
+    }
+
+############################
+# court position modes
+    hbox = {
+# deferring visibility to try to avoid flickering as the controls are drawn at initial opening
+      visible_at_creation = no
+      visible = "[GetScriptedGui('open_yyz_courtPositions_list').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+      margin_left = 4
+      margin_bottom = 4
+      layoutpolicy_horizontal = expanding
+      yyz_button = {
+        size = { 44 32 }
+        name = "btn_modeCourtPosition_Antiquarian"
+        text = "YYZ_MODE_COURT_POSITION_ANTIQUARIAN"
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_antiquarian')]"
+        tooltip = "YYZ_MODE_COURT_POSITION_ANTIQUARIAN_TT"
+      }
+      yyz_button = {
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_travel_leader')]"
+        name = "btn_modeCourtPosition_Caravan"
+        text = "YYZ_MODE_COURT_POSITION_CARAVAN_MASTER"
+        tooltip = "YYZ_MODE_COURT_POSITION_CARAVAN_MASTER_TT"
+      }
+      yyz_button = {
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_court_physician')]"
+        name = "btn_modeCourtPosition_court_physician"
+        text = "YYZ_MODE_COURT_POSITION_COURT_PHYSICIAN"
+        tooltip = "YYZ_MODE_COURT_POSITION_COURT_PHYSICIAN_TT"
+      }
+      yyz_button = {
+        visible = no   # disabled for now
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_cultural_emissary')]"
+        name = "btn_modeCourtPosition_cultural_emissary"
+        text = "YYZ_MODE_COURT_POSITION_CULTURAL_EMISSARY"
+        tooltip = "YYZ_MODE_COURT_POSITION_CULTURAL_EMISSARY_TT"
+      }
+      yyz_button = {
+        visible = no   # disabled for now
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_keeper_of_swans')]"
+        name = "btn_modeCourtPosition_keeper_of_swans"
+        text = "YYZ_MODE_COURT_POSITION_KEEPER_OF_SWANS"
+        tooltip = "YYZ_MODE_COURT_POSITION_KEEPER_OF_SWANS_TT"
+      }
+      yyz_button = {
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_chief_qadi')]"
+        name = "btn_modeCourtPosition_chief_qadi"
+        text = "YYZ_MODE_COURT_POSITION_CHIEF_QADI"
+        tooltip = "YYZ_MODE_COURT_POSITION_CHIEF_QADI_TT"
+      }
+      yyz_button = {
+        visible = no   # disabled for now
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_garuda')]"
+        name = "btn_modeCourtPosition_garuda"
+        text = "YYZ_MODE_COURT_POSITION_GARUDA"
+        tooltip = "YYZ_MODE_COURT_POSITION_GARUDA_TT"
+      }
+      yyz_button = {
+        visible = no   # disabled for now
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_court_gardener')]"
+        name = "btn_modeCourtPosition_court_gardener"
+        text = "YYZ_MODE_COURT_POSITION_COURT_GARDENER"
+        tooltip = "YYZ_MODE_COURT_POSITION_COURT_GARDENER_TT"
+      }
+      yyz_button = {
+        visible = no   # disabled for now
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_lady_in_waiting')]"
+        name = "btn_modeCourtPosition_lady_in_waiting"
+        text = "YYZ_MODE_COURT_POSITION_LADY_IN_WAITING"
+        tooltip = "YYZ_MODE_COURT_POSITION_LADY_IN_WAITING_TT"
+      }
+      yyz_button = {
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_court_tutor')]"
+        name = "btn_modeCourtPosition_court_tutor"
+        text = "YYZ_MODE_COURT_POSITION_COURT_TUTOR"
+        tooltip = "YYZ_MODE_COURT_POSITION_COURT_TUTOR_TT"
+      }
+      yyz_button = {
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_food_taster')]"
+        name = "btn_modeCourtPosition_food_taster"
+        text = "YYZ_MODE_COURT_POSITION_FOOD_TASTER"
+        tooltip = "YYZ_MODE_COURT_POSITION_FOOD_TASTER_TT"
+      }
+      yyz_button = {
+        visible = no   # disabled for now
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_master_of_horse')]"
+        name = "btn_modeCourtPosition_master_of_horse"
+        text = "YYZ_MODE_COURT_POSITION_MASTER_OF_HORSE"
+        tooltip = "YYZ_MODE_COURT_POSITION_MASTER_OF_HORSE_TT"
+      }
+      yyz_button = {
+        visible = no   # disabled for now
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_master_of_hunt')]"
+        name = "btn_modeCourtPosition_master_of_hunt"
+        text = "YYZ_MODE_COURT_POSITION_MASTER_OF_HUNT"
+        tooltip = "YYZ_MODE_COURT_POSITION_MASTER_OF_HUNT_TT"
+      }
+      yyz_button = {
+        visible = no   # disabled for now
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_royal_architect')]"
+        name = "btn_modeCourtPosition_royal_architect"
+        text = "YYZ_MODE_COURT_POSITION_ROYAL_ARCHITECT"
+        tooltip = "YYZ_MODE_COURT_POSITION_ROYAL_ARCHITECT_TT"
+      }
+      yyz_button = {
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_high_almoner')]"
+        name = "btn_modeCourtPosition_high_almoner"
+        text = "YYZ_MODE_COURT_POSITION_HIGH_ALMONER"
+        tooltip = "YYZ_MODE_COURT_POSITION_HIGH_ALMONER_TT"
+      }
+      yyz_button = {
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_seneschal')]"
+        name = "btn_modeCourtPosition_seneschal"
+        text = "YYZ_MODE_COURT_POSITION_SENESCHAL"
+        tooltip = "YYZ_MODE_COURT_POSITION_SENESCHAL_TT"
+      }
+      yyz_button = {
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_cupbearer')]"
+        name = "btn_modeCourtPosition_cupbearer"
+        text = "YYZ_MODE_COURT_POSITION_CUPBEARER"
+        tooltip = "YYZ_MODE_COURT_POSITION_CUPBEARER_TT"
+      }
+      yyz_button = {
+        visible = no   # disabled for now
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_chief_eunuch')]"
+        name = "btn_modeCourtPosition_chief_eunuch"
+        text = "YYZ_MODE_COURT_POSITION_CHIEF_EUNUCH"
+        tooltip = "YYZ_MODE_COURT_POSITION_CHIEF_EUNUCH_TT"
+      }
+      yyz_button = {
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_court_jester')]"
+        name = "btn_modeCourtPosition_court_jester"
+        text = "YYZ_MODE_COURT_POSITION_COURT_JESTER"
+        tooltip = "YYZ_MODE_COURT_POSITION_COURT_JESTER_TT"
+      }
+      yyz_button = {
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_court_poet')]"
+        name = "btn_modeCourtPosition_court_poet"
+        text = "YYZ_MODE_COURT_POSITION_COURT_POET"
+        tooltip = "YYZ_MODE_COURT_POSITION_COURT_POET_TT"
+      }
+      yyz_button = {
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_court_musician')]"
+        name = "btn_modeCourtPosition_court_musician"
+        text = "YYZ_MODE_COURT_POSITION_COURT_MUSICIAN"
+        tooltip = "YYZ_MODE_COURT_POSITION_COURT_MUSICIAN_TT"
+      }
+      yyz_button = {
+        visible = no   # disabled for now
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_bodyguard')]"
+        name = "btn_modeCourtPosition_bodyguard"
+        text = "YYZ_MODE_COURT_POSITION_BODYGUARD"
+        tooltip = "YYZ_MODE_COURT_POSITION_BODYGUARD_TT"
+      }
+      yyz_button = {
+        visible = no   # disabled for now
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_champion')]"
+        name = "btn_modeCourtPosition_champion"
+        text = "YYZ_MODE_COURT_POSITION_CHAMPION"
+        tooltip = "YYZ_MODE_COURT_POSITION_CHAMPION_TT"
+      }
+      yyz_button = {
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_executioner')]"
+        name = "btn_modeCourtPosition_executioner"
+        text = "YYZ_MODE_COURT_POSITION_EXECUTIONER"
+        tooltip = "YYZ_MODE_COURT_POSITION_EXECUTIONER_TT"
+      }
+      yyz_button = {
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_court_artificer')]"
+        name = "btn_modeCourtPosition_court_artificer"
+        text = "YYZ_MODE_COURT_POSITION_COURT_ARTIFICER"
+        tooltip = "YYZ_MODE_COURT_POSITION_COURT_ARTIFICER_TT"
+      }
+      yyz_button = {
+        visible = no   # disabled for now
+        size = { 44 32 }
+        datacontext = "[GetScriptedGui('yyz_modeCourtPosition_court_cave_hermit')]"
+        name = "btn_modeCourtPosition_court_cave_hermit"
+        text = "YYZ_MODE_COURT_POSITION_COURT_CAVE_HERMIT"
+        tooltip = "YYZ_MODE_COURT_POSITION_COURT_CAVE_HERMIT_TT"
+      }
+      expand = {}
+    }
+##############################################
+# all filters hbox
+    hbox = {
+# deferring visibility to try to avoid flickering as the controls are drawn at initial opening
+#      visible_at_creation = no
+#      visible = "[GetScriptedGui('open_yyz_knight_list').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+      margin_left = 4
+      layoutpolicy_horizontal = expanding
+      text_single = {
+        align = center
+        raw_text = "Filters:"
+        using = Font_Type_Flavor
+        using = Font_Size_Medium
+        margin_bottom = 6
+        margin_right = 6
+      }
+
+##############################################
+# unlanded dynasty member filters
+      hbox = {
+        layoutpolicy_horizontal = preferred
+        visible = "[GetScriptedGui('open_yyz_dynasty_list').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+        using = filter_sex
+        using = filter_marital
+        using = filter_where
+
+        yyz_button = {
+          size = { 24 32 }
+          name = "btn_filterNotHooked"
+          text = "YYZ_FILTER_NOT_HOOKED"
+          datacontext = "[GetScriptedGui('yyz_filterHookedNot_toggle')]"
+          tooltip = "YYZ_FILTER_NOT_HOOKED_TT"
+        }
+
+        yyz_button = {
+          size = { 58 32 }
+          name = "btn_filterHooked"
+          text = "YYZ_FILTER_HOOKED"
+          datacontext = "[GetScriptedGui('yyz_filterHooked_toggle')]"
+          tooltip = "YYZ_FILTER_HOOKED_TT"
+        }
+        spacer = { size = { 10 0 } }
+
+        expand = {}
+      }
+
+############################
+# recruit knights filters
+      hbox = {
+        layoutpolicy_horizontal = preferred
+        visible = "[GetScriptedGui('open_yyz_knight_list').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+        using = filter_sex
+        using = filter_marital
+        using = filter_invite
+        expand = {}
+      }
+
+
+############################
+# special organizers filters
+      hbox = {
+        layoutpolicy_horizontal = preferred
+        visible = "[GetScriptedGui('open_yyz_specialOrganizers_list').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+        using = filter_sex
+        using = filter_marital
+        using = filter_invite
+
+        button_standard_hover = {
+          size = { 32 32 }
+          icon = {
+            texture = "gfx/interface/icons/traits/military_engineer.dds"
+            size = { 28 28 }
+            parentanchor = center
+          }
+          name = "btn_filterOrgSiege"
+          datacontext = "[GetScriptedGui('yyz_filterOrgSiege_toggle')]"
+          down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('yyz_filterOrgSiege'), '(CFixedPoint)1')]"
+          onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+          tooltip = "YYZ_FILTER_ORG_SIEGE_TT"
+        }
+        spacer = { size = { 5 0 } }
+
+        button_standard_hover = {
+          size = { 32 32 }
+          icon = {
+            texture = "gfx/interface/icons/traits/reaver.dds"
+            size = { 28 28 }
+            parentanchor = center
+          }
+          name = "btn_filter_orgReaver"
+          datacontext = "[GetScriptedGui('yyz_filterOrgReaver_toggle')]"
+          down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('yyz_filterOrgReaver'), '(CFixedPoint)1')]"
+          onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+          tooltip = "YYZ_FILTER_ORG_REAVER_TT"
+        }
+        spacer = { size = { 5 0 } }
+
+        button_standard_hover = {
+          size = { 32 32 }
+          icon = {
+            texture = "gfx/interface/icons/traits/winter_soldier.dds"
+            size = { 28 28 }
+            parentanchor = center
+          }
+          name = "btn_filter_orgWinter"
+          datacontext = "[GetScriptedGui('yyz_filterOrgWinter_toggle')]"
+          down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('yyz_filterOrgWinter'), '(CFixedPoint)1')]"
+          onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+          tooltip = "YYZ_FILTER_ORG_WINTER_TT"
+        }
+        spacer = { size = { 5 0 } }
+
+        button_standard_hover = {
+          size = { 32 32 }
+          icon = {
+            texture = "gfx/interface/icons/traits/logistician.dds"
+            size = { 28 28 }
+            parentanchor = center
+          }
+          name = "btn_filter_orgLogi"
+          datacontext = "[GetScriptedGui('yyz_filterOrgLogi_toggle')]"
+          down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('yyz_filterOrgLogi'), '(CFixedPoint)1')]"
+          onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+          tooltip = "YYZ_FILTER_ORG_LOGI_TT"
+        }
+        spacer = { size = { 5 0 } }
+
+        button_standard = {
+          size = { 42 32 }
+          name = "btn_filter_orgSpeed5"
+          text = "YYZ_FILTER_ORG_SPEED5"
+          datacontext = "[GetScriptedGui('yyz_filterOrgSpeed5')]"
+          down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('yyz_filterOrgSpeed'), '(CFixedPoint)30')]"
+          onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+          tooltip = "YYZ_FILTER_ORG_SPEED5_TT"
+        }
+        button_standard = {
+          size = { 48 32 }
+          name = "btn_filter_orgSpeed10"
+          text = "YYZ_FILTER_ORG_SPEED10"
+          datacontext = "[GetScriptedGui('yyz_filterOrgSpeed10')]"
+          down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('yyz_filterOrgSpeed'), '(CFixedPoint)35')]"
+          onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+          tooltip = "YYZ_FILTER_ORG_SPEED10_TT"
+        }
+        button_standard = {
+          size = { 48 32 }
+          name = "btn_filter_orgSpeed15"
+          text = "YYZ_FILTER_ORG_SPEED15"
+          datacontext = "[GetScriptedGui('yyz_filterOrgSpeed15')]"
+          down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('yyz_filterOrgSpeed'), '(CFixedPoint)40')]"
+          onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+          tooltip = "YYZ_FILTER_ORG_SPEED15_TT"
+        }
+        spacer = { size = { 10 0 } }
+
+        expand = {}
+      }
+
+############################
+# court position filters
+      hbox = {
+        layoutpolicy_horizontal = preferred
+        visible = "[GetScriptedGui('open_yyz_courtPositions_list').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+        using = filter_sex
+        using = filter_marital
+        using = filter_invite
+        expand = {}
+      }
+
+############################
+# gold filters
+      hbox = {
+        layoutpolicy_horizontal = preferred
+        visible = "[GetScriptedGui('open_yyz_criminalGold_list').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+        button_standard = {
+          size = { 68 32 }
+          name = "btn_filterCriminal"
+          text = "YYZ_FILTER_CRIMINAL"
+          datacontext = "[GetScriptedGui('yyz_filterCriminal_toggle')]"
+          down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('yyz_filterCriminal'), '(CFixedPoint)1')]"
+          onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+          tooltip = "YYZ_FILTER_CRIMINAL_TT"
+        }
+        spacer = { size = { 10 0 } }
+
+        button_standard = {
+          size = { 78 32 }
+          name = "btn_filterUnhealthy"
+          text = "YYZ_FILTER_UNHEALTHY"
+          datacontext = "[GetScriptedGui('yyz_filterUnhealthy_toggle')]"
+          down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('yyz_filterUnhealthy'), '(CFixedPoint)1')]"
+          onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+          tooltip = "YYZ_FILTER_UNHEALTHY_TT"
+        }
+        spacer = { size = { 10 0 } }
+
+        button_standard = {
+          size = { 68 32 }
+          name = "btn_filterHeirless"
+          text = "YYZ_FILTER_HEIRLESS"
+          datacontext = "[GetScriptedGui('yyz_filterHeirless_toggle')]"
+          down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('yyz_filterHeirless'), '(CFixedPoint)1')]"
+          onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+          tooltip = "YYZ_FILTER_HEIRLESS_TT"
+        }
+        spacer = { size = { 10 0 } }
+
+        using = filter_invite
+        expand = {}
+      }
+
+############################
+# inspiration filters
+      hbox = {
+        layoutpolicy_horizontal = preferred
+        visible = "[GetScriptedGui('open_yyz_inspiration_list').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+        button_standard_hover = {
+          name = "btn_filterInspirationWeapon"
+          size = { 32 32 }
+          icon = {
+            texture = "gfx/interface/icons/inspirations/weapon_inspiration.dds"
+            size = { 32 32 }
+          }
+          datacontext = "[GetScriptedGui('yyz_filterInspirationWeapon_toggle')]"
+          down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('yyz_filterInspirationWeapon'), '(CFixedPoint)1')]"
+          onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+          tooltip = "YYZ_FILTER_INSPIRATION_WEAPON_TT"
+        }
+        spacer = { size = { 6 0 } }
+
+        button_standard_hover = {
+          size = { 32 32 }
+          icon = {
+            texture = "gfx/interface/icons/inspirations/armor_inspiration.dds"
+            size = { 32 32 }
+          }
+          name = "btn_filterInspirationArmor"
+          datacontext = "[GetScriptedGui('yyz_filterInspirationArmor_toggle')]"
+          down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('yyz_filterInspirationArmor'), '(CFixedPoint)1')]"
+          onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+          tooltip = "YYZ_FILTER_INSPIRATION_ARMOR_TT"
+        }
+        spacer = { size = { 6 0 } }
+
+        button_standard_hover = {
+          size = { 32 32 }
+          icon = {
+            texture = "gfx/interface/icons/inspirations/book_inspiration.dds"
+            size = { 32 32 }
+          }
+          name = "btn_filterInspirationBook"
+          datacontext = "[GetScriptedGui('yyz_filterInspirationBook_toggle')]"
+          down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('yyz_filterInspirationBook'), '(CFixedPoint)1')]"
+          onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+          tooltip = "YYZ_FILTER_INSPIRATION_BOOK_TT"
+        }
+        spacer = { size = { 6 0 } }
+
+        button_standard_hover = {
+          size = { 32 32 }
+          icon = {
+            texture = "gfx/interface/icons/inspirations/weaver_inspiration.dds"
+            size = { 32 32 }
+          }
+          name = "btn_filterInspirationWeaver"
+          datacontext = "[GetScriptedGui('yyz_filterInspirationWeaver_toggle')]"
+          down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('yyz_filterInspirationWeaver'), '(CFixedPoint)1')]"
+          onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+          tooltip = "YYZ_FILTER_INSPIRATION_WEAVER_TT"
+        }
+        spacer = { size = { 6 0 } }
+
+        button_standard_hover = {
+          size = { 32 32 }
+          icon = {
+            texture = "gfx/interface/icons/inspirations/artisan_inspiration.dds"
+            size = { 32 32 }
+          }
+          name = "btn_filterInspirationArtisan"
+          datacontext = "[GetScriptedGui('yyz_filterInspirationArtisan_toggle')]"
+          down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('yyz_filterInspirationArtisan'), '(CFixedPoint)1')]"
+          onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+          tooltip = "YYZ_FILTER_INSPIRATION_ARTISAN_TT"
+        }
+        spacer = { size = { 6 0 } }
+
+        button_standard_hover = {
+          size = { 32 32 }
+          icon = {
+            texture = "gfx/interface/icons/inspirations/smith_inspiration.dds"
+            size = { 32 32 }
+          }
+          name = "btn_filterInspirationSmith"
+          datacontext = "[GetScriptedGui('yyz_filterInspirationSmith_toggle')]"
+          down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('yyz_filterInspirationSmith'), '(CFixedPoint)1')]"
+          onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+          tooltip = "YYZ_FILTER_INSPIRATION_SMITH_TT"
+        }
+        spacer = { size = { 6 0 } }
+
+        button_standard_hover = {
+          size = { 32 32 }
+          icon = {
+            texture = "gfx/interface/icons/inspirations/alchemy_inspiration.dds"
+            size = { 32 32 }
+          }
+          name = "btn_filterInspirationAlchemy"
+          datacontext = "[GetScriptedGui('yyz_filterInspirationAlchemy_toggle')]"
+          down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('yyz_filterInspirationAlchemy'), '(CFixedPoint)1')]"
+          onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+          tooltip = "YYZ_FILTER_INSPIRATION_ALCHEMY_TT"
+        }
+        spacer = { size = { 6 0 } }
+
+        button_standard_hover = {
+          size = { 32 32 }
+          icon = {
+            texture = "gfx/interface/icons/inspirations/adventure_inspiration.dds"
+            size = { 32 32 }
+          }
+          name = "btn_filterInspirationAdventure"
+          datacontext = "[GetScriptedGui('yyz_filterInspirationAdventure_toggle')]"
+          down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('yyz_filterInspirationAdventure'), '(CFixedPoint)1')]"
+          onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+          tooltip = "YYZ_FILTER_INSPIRATION_ADVENTURE_TT"
+        }
+        spacer = { size = { 12 0 } }
+
+        yyz_button = {
+          size = { 58 32 }
+          name = "btn_filterInspirationQualityLocal"
+          text = "YYZ_FILTER_INSPIRATION_QUALITY_LOCAL"
+          datacontext = "[GetScriptedGui('yyz_filterInspirationQuality_Local')]"
+          down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('yyz_filterInspirationQuality'), '(CFixedPoint)0')]"
+          tooltip = "YYZ_FILTER_INSPIRATION_QUALITY_LOCAL_TT"
+        }
+        yyz_button = {
+          size = { 58 32 }
+          name = "btn_filterInspirationQualityLow"
+          text = "YYZ_FILTER_INSPIRATION_QUALITY_LOW"
+          datacontext = "[GetScriptedGui('yyz_filterInspirationQuality_Low')]"
+          down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('yyz_filterInspirationQuality'), '(CFixedPoint)8')]"
+          tooltip = "YYZ_FILTER_INSPIRATION_QUALITY_LOW_TT"
+        }
+        yyz_button = {
+          size = { 58 32 }
+          name = "btn_filterInspirationQualityMedium"
+          text = "YYZ_FILTER_INSPIRATION_QUALITY_MEDIUM"
+          datacontext = "[GetScriptedGui('yyz_filterInspirationQuality_Medium')]"
+          down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('yyz_filterInspirationQuality'), '(CFixedPoint)12')]"
+          tooltip = "YYZ_FILTER_INSPIRATION_QUALITY_MEDIUM_TT"
+        }
+        yyz_button = {
+          size = { 58 32 }
+          name = "btn_filterInspirationQualityHigh"
+          text = "YYZ_FILTER_INSPIRATION_QUALITY_HIGH"
+          datacontext = "[GetScriptedGui('yyz_filterInspirationQuality_High')]"
+          down = "[EqualTo_CFixedPoint(GuiScope.SetRoot(GetPlayer.MakeScope).ScriptValue('yyz_filterInspirationQuality'), '(CFixedPoint)16')]"
+          tooltip = "YYZ_FILTER_INSPIRATION_QUALITY_HIGH_TT"
+        }
+        spacer = { size = { 12 0 } }
+
+        yyz_button = {
+          size = { 98 32 }
+          name = "btn_filterInspirationUnsponsored_toggle"
+          text = "YYZ_FILTER_INSPIRATION_UNSPONSORED"
+          datacontext = "[GetScriptedGui('yyz_filterInspirationUnsponsored_toggle')]"
+          tooltip = "YYZ_FILTER_INSPIRATION_UNSPONSORED_TT"
+        }
+
+        expand = {}
+      }
+
+############################
+# fertility filters
+      hbox = {
+        layoutpolicy_horizontal = preferred
+        visible = "[GetScriptedGui('open_yyz_fertility_list').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+        using = filter_sex
+        using = filter_nobility
+        using = filter_invite
+        expand = {}
+      }
+
+#################################################
+# end filters
+      expand = {}
+    }
+    yyz_vbox_character_list = {
+      layoutpolicy_horizontal = expanding
+      layoutpolicy_vertical = expanding
+    }
+  }
+
+
+  window = {
+    name = "yyz_settings"
+    datacontext = "[GetScriptedGui('yyz_settings')]"
+    visible_at_creation = no
+    visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+    parentanchor = top|left
+    position = { -400 10 }
+    size = { 400 600 }
+#    focuspolicy = click
+
+    allow_outside = yes
+
+    using = Window_Movable
+    using = Window_Background_Subwindow
+
+    vbox = {
+      layoutpolicy_horizontal = expanding
+      layoutpolicy_vertical = expanding
+      hbox = {
+        layoutpolicy_horizontal = expanding
+        margin_right = 4
+        margin_top = 4
+        margin_bottom = 4
+        expand = {}
+        text_single = {
+          using = Font_Size_Large
+          raw_text = "Settings" 
+        }
+        expand = {}
+        button_close = {
+          name = "button_close"
+          shortcut = "close_window"
+          tooltip = "CLOSE_TOOLTIP"
+          clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_close"
+
+          datacontext = "[GetScriptedGui('yyz_settings')]"
+          onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+        }
+      }
+      expand = {}
+    }
+  }
+}

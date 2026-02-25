@@ -1,5 +1,8 @@
 Latest Updates
 
+February
+Pisces V1- Search,Culture decisions.
+
 January 2026
 Aquarius V 1.2 - More feudal elective laws,etc.
 Aquarius V1.1- More Traits,cleanups.

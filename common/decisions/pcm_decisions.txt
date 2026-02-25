@@ -457,6 +457,28 @@ pcm_cure_inbred_decision = {
 	ai_check_interval = 0
 }
 
+yyz_open_menu_decision = {
+    decision_group_type = pcm
+    picture = { reference = "gfx/interface/illustrations/decisions/menu.dds" }
+    
+    is_shown = { 
+        always = yes 
+    }
+    
+    is_valid = { 
+        always = yes 
+    }
+    
+    effect = {
+        set_global_variable = { name = yyz_list_mode value = MAIN_DYNASTY }
+        reset_filters = yes
+        set_global_variable = { name = yyz_sort_key value = SORT_KEY_AGE }
+        set_global_variable = { name = yyz_sort_desc value = 1 }
+        
+        yyz_generate_list = yes  
+    }
+}
+
 Artifact_1000 = {
 	decision_group_type = pcm
 	picture = { reference = "gfx/interface/illustrations/decisions/7.dds" }
@@ -605,6 +627,279 @@ Artifact_1000 = {
 				OWNER = root
 				CREATOR = root
 				TARGET = root.primary_title
+			}
+		}
+	}
+}
+
+culture_cheat = {
+	decision_group_type = pcm
+	picture = { reference = "gfx/interface/illustrations/decisions/7.dds" }
+	title = cheat_decition_tradition
+	desc = cheat_description_tradition
+	confirm_text = cheat_decition_accept
+	ai_will_do = 0
+	music = "event:/DLC/Arctic_Attire/MUSIC/cuetracks/longing_for_the_land"
+	
+	is_shown = {
+		has_character_flag = pcm_show_decision_flag
+	}
+	
+	effect = {
+		custom_tooltip = "I might need to be cautious,I will take upon alot of traditions."
+		hidden_effect = {
+			culture = {
+				# ========================================
+				# CLEAR CONFLICTING TRADITIONS FIRST
+				# ========================================
+				remove_culture_tradition = tradition_agrarian
+				remove_culture_tradition = tradition_coastal_warriors
+				remove_culture_tradition = tradition_seafaring
+				remove_culture_tradition = tradition_fp1_only_men
+				remove_culture_tradition = tradition_isolationist
+				remove_culture_tradition = tradition_modest
+				remove_culture_tradition = tradition_eye_for_an_eye
+				remove_culture_tradition = tradition_parochialism
+				remove_culture_tradition = tradition_seclusion
+				remove_culture_tradition = tradition_staunch_traditionalists
+				remove_culture_tradition = tradition_horse_lords
+				remove_culture_tradition = tradition_warrior_monks
+				remove_culture_tradition = tradition_poetry
+				remove_culture_tradition = tradition_gardening
+				remove_culture_tradition = tradition_monogamous
+				remove_culture_tradition = tradition_polygamous
+				remove_culture_tradition = tradition_concubines
+				remove_culture_tradition = tradition_court_eunuchs
+				remove_culture_tradition = tradition_mountaineers
+				remove_culture_tradition = tradition_noble_adoption
+				
+				# ========================================
+				# QUALITY OF LIFE (Health, Stress, Happiness)
+				# ========================================
+				add_culture_tradition = tradition_zhuge_chuantong      # Just as a failsafe
+				add_culture_tradition = tradition_vintner              # Wine: Health + Stress loss
+				add_culture_tradition = tradition_festivities          # Parties: Diplomacy + Stress loss
+				add_culture_tradition = tradition_culinary_artists     # Food: Health + Stress loss
+				add_culture_tradition = tradition_tea_ceremony         # Tea: Learning + Stress loss
+				add_culture_tradition = tradition_life_is_just_a_joke  # Comedy: Stress loss
+				add_culture_tradition = tradition_brewing_culture      # Breweries bonus
+				
+				# ========================================
+				# ECONOMY & DEVELOPMENT
+				# ========================================
+				add_culture_tradition = tradition_rice_cultivators     # Best food production
+				add_culture_tradition = tradition_tgp_rice_cultivators # TGP rice (terraced hills bonus)
+				add_culture_tradition = tradition_intensive_farming    # TGP Chinese farming
+				add_culture_tradition = tradition_industrious          # Development growth
+				add_culture_tradition = tradition_maritime_mercantilism # Naval trade
+				add_culture_tradition = tradition_silk_road_merchants  # Land trade
+				add_culture_tradition = tradition_artisans             # Building bonuses
+				add_culture_tradition = tradition_ancient_miners       # Mining bonuses
+				add_culture_tradition = tradition_irrigation_experts   # Farmland bonuses
+				add_culture_tradition = tradition_family_entrepreneurship # Economic bonuses
+				
+				# ========================================
+				# WARFARE - MILITARY POWER
+				# ========================================
+				add_culture_tradition = tradition_by_the_sword         # Prowess focus
+				add_culture_tradition = tradition_only_the_strong      # Strong heirs
+				add_culture_tradition = tradition_knighthood           # Knight effectiveness
+				add_culture_tradition = tradition_fp1_coastal_warriors # Coastal raids (DLC)
+				add_culture_tradition = tradition_longbow_competitions # Archer damage
+				add_culture_tradition = tradition_huscarls             # House guards
+				add_culture_tradition = tradition_druzhina             # Slavic warriors
+				add_culture_tradition = tradition_hird                 # Norse warriors
+				add_culture_tradition = tradition_futuwaa              # Islamic warriors
+				add_culture_tradition = tradition_khadga_puja          # Indian warriors
+				add_culture_tradition = tradition_mubarizun            # Persian dueling
+				add_culture_tradition = tradition_swords_for_hire      # Mercenary bonuses
+				add_culture_tradition = tradition_adaptive_skirmishing # Terrain bonuses
+				add_culture_tradition = tradition_hit_and_run          # Retreat bonuses
+				add_culture_tradition = tradition_winter_warriors      # Winter combat
+				add_culture_tradition = tradition_stalwart_defenders   # Defense bonuses
+				add_culture_tradition = tradition_martial_admiration   # Prowess prestige
+				
+				# TGP Japanese/Asian Warfare Traditions
+				add_culture_tradition = tradition_tgp_bushido          # Samurai tradition
+				add_culture_tradition = tradition_tgp_imperial_peace   # Imperial samurai
+				add_culture_tradition = tradition_tgp_defiant_ambushers # Ainuic horse archers
+				add_culture_tradition = tradition_tgp_warrior_monks    # Buddhist warrior monks
+				add_culture_tradition = tradition_tgp_art_of_war       # Chinese military science
+				add_culture_tradition = tradition_stratified_society   # Korean merit warriors
+				
+				# MPO Nomadic/Steppe Warfare Traditions
+				add_culture_tradition = tradition_devoted_horsemanship # Horse archer tradition
+				add_culture_tradition = tradition_mpo_iron_cavalry     # Heavy cavalry cataphracts
+				add_culture_tradition = tradition_mpo_wolves_of_the_deep_steppe # Mongol elite mangudai
+				add_culture_tradition = tradition_mpo_northern_tribes  # Siberian tribes
+				
+				# ========================================
+				# REALM STABILITY & GOVERNANCE
+				# ========================================
+				add_culture_tradition = tradition_visigothic_codes     # Legal stability
+				add_culture_tradition = tradition_roman_legacy         # Prestige bonuses
+				add_culture_tradition = tradition_legalistic           # Law focus
+				add_culture_tradition = tradition_philosopher_culture  # Learning bonuses
+				add_culture_tradition = tradition_mystical_ancestors   # Piety bonuses
+				add_culture_tradition = tradition_civilian_service     # Admin government
+				add_culture_tradition = tradition_astute_diplomats     # Diplomacy bonuses
+				add_culture_tradition = tradition_hereditary_hierarchy # Succession stability
+				add_culture_tradition = tradition_loyal_subjects       # Vassal opinion
+				add_culture_tradition = tradition_malleable_invaders   # Culture acceptance
+				add_culture_tradition = tradition_the_witenagemot      # Council power
+				add_culture_tradition = tradition_fp2_republicanism    # Republic government (DLC)
+				add_culture_tradition = tradition_byzantine_succession # Imperial succession
+				
+				# TGP Asian Governance
+				add_culture_tradition = tradition_scholar_officials    # Confucian bureaucracy
+				add_culture_tradition = tradition_cultivation          # Taoist cultivation
+				add_culture_tradition = tradition_tgp_court_machinations # Chinese court intrigue
+				
+				# ========================================
+				# SOCIAL & DIPLOMATIC
+				# ========================================
+				add_culture_tradition = tradition_social_fluidity      # Easy befriending
+				add_culture_tradition = tradition_xenophilic           # Foreign acceptance
+				add_culture_tradition = tradition_esteemed_hospitality # Guest bonuses
+				add_culture_tradition = tradition_fp2_guest_roads      # Guest protection (DLC)
+				add_culture_tradition = tradition_equal_inheritance    # Gender equality
+				add_culture_tradition = tradition_equitable            # Gender equality
+				add_culture_tradition = tradition_warrior_queens       # Female warriors
+				add_culture_tradition = tradition_astrology            # Fortune telling
+				add_culture_tradition = tradition_storytellers         # Cultural fascination
+				add_culture_tradition = tradition_chivalry             # Honor code
+				add_culture_tradition = tradition_refined_poetry       # Cultural prestige
+				add_culture_tradition = tradition_chanson_de_geste     # Epic poetry
+				add_culture_tradition = tradition_wedding_ceremonies   # Marriage prestige
+				add_culture_tradition = tradition_strong_kinship       # Family bonds
+				
+				# TGP Asian Social Traditions
+				add_culture_tradition = tradition_tgp_ephemeral_grace  # Japanese aesthetics (poetry+gardening)
+				add_culture_tradition = tradition_tgp_inward_perfection # East Asian isolationism
+				add_culture_tradition = tradition_cultural_primacy     # Chinese cultural superiority
+				add_culture_tradition = tradition_sinophilic           # Admiration for China
+				add_culture_tradition = tradition_tgp_japanese_houses  # Japanese adoption system
+				
+				# ========================================
+				# RELIGIOUS & SPIRITUAL
+				# ========================================
+				add_culture_tradition = tradition_religious_patronage  # Faith bonuses
+				add_culture_tradition = tradition_fervent_temple_builders # Temple construction
+				add_culture_tradition = tradition_monastic_communities # Monastic orders
+				add_culture_tradition = tradition_mendicant_mystics    # Holy order bonuses
+				add_culture_tradition = tradition_ancestor_worship     # Ancestor veneration
+				add_culture_tradition = tradition_sacred_hunts         # Ritual hunts
+				add_culture_tradition = tradition_sacred_mountains     # Mountain shrines
+				add_culture_tradition = tradition_highlight_piety      # Piety display
+				add_culture_tradition = tradition_strong_believers     # Faith defense
+				add_culture_tradition = tradition_fp1_faith_bound      # Religious unity (DLC)
+				add_culture_tradition = tradition_esoteric_power       # Mystical power
+				add_culture_tradition = tradition_tgp_esoteric_power   # TGP Austronesian mysticism
+				add_culture_tradition = tradition_tgp_religious_hospitality # Mandala religious tolerance
+				
+				# ========================================
+				# TERRAIN & REGIONAL SPECIALIZATION
+				# ========================================
+				add_culture_tradition = tradition_mountain_homes       # Mountain living
+				add_culture_tradition = tradition_tgp_mountain_island  # TGP Japanese mountains
+				add_culture_tradition = tradition_alpine_highlanders   # Alpine terrain
+				add_culture_tradition = tradition_himalayan_settlers   # Himalayan terrain
+				add_culture_tradition = tradition_highland_warriors    # Highland combat
+				add_culture_tradition = tradition_upland_skirmishing   # Hill combat
+				add_culture_tradition = tradition_forest_folk          # Forest living
+				add_culture_tradition = tradition_forest_wardens       # Forest combat
+				add_culture_tradition = tradition_jungle_dwellers      # Jungle terrain
+				add_culture_tradition = tradition_wetlanders           # Wetland terrain
+				add_culture_tradition = tradition_desert_nomads        # Desert terrain
+				add_culture_tradition = tradition_dryland_dwellers     # Dry terrain
+				add_culture_tradition = tradition_saharan_nomads       # Sahara terrain
+				add_culture_tradition = tradition_desert_ribat         # Desert forts
+				add_culture_tradition = tradition_fp1_seafaring        # Naval focus (DLC)
+				add_culture_tradition = tradition_practiced_pirates    # Piracy bonuses
+				add_culture_tradition = tradition_fishermen            # Coastal fishing
+				add_culture_tradition = tradition_craned_rivers        # River navigation
+				add_culture_tradition = tradition_caravaneers          # Desert trade
+				add_culture_tradition = tradition_rovers               # Nomadic travel
+				add_culture_tradition = tradition_pastoralists         # Herding culture
+				add_culture_tradition = tradition_horse_breakers       # Horse taming
+				
+				# TGP Southeast Asian Traditions
+				add_culture_tradition = tradition_maritime_way_of_life # Austronesian seafaring
+				add_culture_tradition = tradition_tgp_hydraulic_builders # Mandala water engineering
+				add_culture_tradition = tradition_tgp_fortified_strongholds # Mandala temple forts
+				add_culture_tradition = tradition_tgp_barangay_confederations # Tribal confederations
+				
+				# ========================================
+				# MILITARY SPECIALIZATION
+				# ========================================
+				add_culture_tradition = tradition_castle_keepers       # Castle defense
+				add_culture_tradition = tradition_city_keepers         # City defense
+				add_culture_tradition = tradition_stand_and_fight      # No retreat
+				add_culture_tradition = tradition_frugal_armorsmiths   # Cheaper MAA
+				add_culture_tradition = tradition_bush_hunting         # Ambush tactics
+				add_culture_tradition = tradition_rough_terrain_experts # Terrain combat
+				add_culture_tradition = tradition_mobile_guards        # Mobile army
+				add_culture_tradition = tradition_warrior_culture      # Warrior society
+				add_culture_tradition = tradition_quarrelsome          # Aggressive
+				add_culture_tradition = tradition_camel_warrior        # Camel cavalry
+				add_culture_tradition = tradition_caucasian_wolves     # Caucasus warriors
+				add_culture_tradition = tradition_land_of_the_bow      # Archery focus
+				add_culture_tradition = tradition_lords_of_the_elephant # War elephants
+				add_culture_tradition = tradition_hussar               # Light cavalry
+				add_culture_tradition = tradition_battalions           # Large armies
+				add_culture_tradition = tradition_royal_army           # Professional army
+				add_culture_tradition = tradition_imperial_tagmata     # Byzantine elite
+				
+				# ========================================
+				# DLC-SPECIFIC TRADITIONS
+				# ========================================
+				# Northern Lords (fp1_)
+				add_culture_tradition = tradition_fp1_performative_honour
+				add_culture_tradition = tradition_fp1_northern_stories
+				add_culture_tradition = tradition_fp1_things           # Norse assemblies
+				add_culture_tradition = tradition_fp1_trials_by_combat
+				add_culture_tradition = tradition_fp1_witches
+				add_culture_tradition = tradition_fp1_folklore
+				add_culture_tradition = tradition_fp1_zadruga          # Slavic family
+				
+				# Legacy of Persia (fp3_)
+				add_culture_tradition = tradition_fp3_account_for_shadows
+				add_culture_tradition = tradition_fp3_diasporic
+				add_culture_tradition = tradition_fp3_enlightened_magnates
+				add_culture_tradition = tradition_fp3_fierce_independence
+				add_culture_tradition = tradition_fp3_jirga            # Tribal council
+				add_culture_tradition = tradition_fp3_pragmatic_creed
+				add_culture_tradition = tradition_fp3_roman_ceremonies
+				add_culture_tradition = tradition_fp3_frontier_warriors
+				
+				# Roads to Power / Steppe
+				add_culture_tradition = tradition_steppe_tolerance
+				add_culture_tradition = tradition_yassa                # Mongol law
+				
+				# ========================================
+				# SPECIAL & UNIQUE
+				# ========================================
+				add_culture_tradition = tradition_collective_lands     # Communal property
+				add_culture_tradition = tradition_ruling_caste         # Elite class
+				add_culture_tradition = tradition_tribe_unity          # Tribal solidarity
+				add_culture_tradition = tradition_forbearing           # Patience culture
+				add_culture_tradition = tradition_christmas_truce      # Christmas peace
+				add_culture_tradition = tradition_runestones           # Runestone monuments
+				add_culture_tradition = tradition_mountain_herding     # Mountain livestock
+				add_culture_tradition = tradition_mountaineer_ruralism # Rural mountains
+				add_culture_tradition = tradition_xiao_chinese         # Chinese culture
+				
+				# ========================================
+				# CULTURE MODIFIERS (GOD MODE)
+				# ========================================
+				add_culture_modifier = {
+					modifier = {
+						culture_acceptance_gain_
+						mult = 10.0
+						reform_culture_cost_mult = -1.0
+					}
+					years = 100
+				}
 			}
 		}
 	}

@@ -1,0 +1,4 @@
+﻿
+gui/yyz_buttons.gui = yyz_cmd_buttons
+gui/yyz_gui.gui = yyz_character_list_window
+

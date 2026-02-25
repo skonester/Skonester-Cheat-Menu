@@ -11,7 +11,7 @@
 		ai = no
 	}
 	culture_modifier = {
-		culture_tradition_max_add = 666
+		culture_tradition_max_add = 200
 	}
 	cost = {
 		prestige = 0

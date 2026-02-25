@@ -1,0 +1,214 @@
+﻿
+
+#####################################################################
+# constants
+MAIN_VICEROYS                                  = 1
+MAIN_DYNASTY                                   = 2
+MAIN_KNIGHTS                                   = 3
+MAIN_ORGANIZERS                                = 4
+MAIN_KILL_TARGETS                              = 5
+MAIN_COURT_POS                                 = 6
+MAIN_GOLD                                      = 7
+MAIN_INSPIRATION                               = 8
+MAIN_FERTILITY                                 = 12
+
+DETAILS_PANEL_ALWAYS                           = 1
+DETAILS_PANEL_CONTEXT                          = 0
+DETAILS_PANEL_NEVER                            = 2
+
+SORT_KEY_DIPLOMACY                             = 0
+SORT_KEY_MARTIAL                               = 1
+SORT_KEY_STEWARDSHIP                           = 2
+SORT_KEY_INTRIGUE                              = 3
+SORT_KEY_LEARNING                              = 4
+SORT_KEY_PROWESS                               = 5
+SORT_KEY_HEALTH                                = 6
+SORT_KEY_RANK                                  = 7
+SORT_KEY_AGE                                   = 8
+SORT_KEY_REAL_AGE                              = 9
+SORT_KEY_ALL_STATS                             = 10
+SORT_KEY_GOLD                                  = 11
+SORT_KEY_PRESTIGE                              = 12
+SORT_KEY_PIETY                                 = 13
+SORT_KEY_ARMY_SPEED                            = 14
+SORT_KEY_TRAVEL_SPEED                          = 15
+SORT_KEY_TRAVEL_SAFETY                         = 16
+
+FILTER_EXCLUDE_NONE                            = 0
+FILTER_EXCLUDE_MALE                            = 1
+FILTER_EXCLUDE_FEMALE                          = 2
+
+FILTER_EXCLUDE_MARRIED                         = 1
+FILTER_EXCLUDE_SINGLE                          = 2
+
+FILTER_EXCLUDE_NOBLE                           = 1
+FILTER_EXCLUDE_LOWBORN                         = 2
+
+FILTER_EXCLUDE_HOOK                            = 1
+FILTER_EXCLUDE_NOHOOK                          = 2
+
+FILTER_EXCLUDE_MARRIED                         = 1
+FILTER_EXCLUDE_SINGLE                          = 2
+
+FILTER_SEX_BOTH                                = 0 
+FILTER_SEX_MALE                                = 1 
+FILTER_SEX_FEMALE                              = 2 
+
+FILTER_MARITAL_BOTH                            = 0 
+FILTER_MARITAL_MARRIED                         = 1 
+FILTER_MARITAL_UNMARRIED                       = 2 
+
+FILTER_NOBILITY_BOTH                           = 0 
+FILTER_NOBILITY_NOBLE                          = 1 
+FILTER_NOBILITY_LOWBORN                        = 2 
+
+FILTER_WHERE_NONE                              = 0
+FILTER_WHERE_REALM                             = 1
+FILTER_WHERE_COURT                             = 2
+
+FILTER_HOOKED_BOTH                             = 0 
+FILTER_HOOKED_HOOK                             = 1 
+FILTER_HOOKED_NOT                              = 2 
+                         
+ACCOLADE_ARCHER                                = 2 # 0 and 1 are reserved for the retinue button itself
+ACCOLADE_OUTRIDER                              = 3
+ACCOLADE_PIKE_CAPTAIN                          = 4
+ACCOLADE_SKIRMISHER                            = 5
+ACCOLADE_VANGUARD                              = 6
+ACCOLADE_LANCER                                = 7
+ACCOLADE_CAMELIER                              = 8
+ACCOLADE_CROSSBOW_CAPTAIN                      = 9
+ACCOLADE_ELEPHANT_RIDER                        = 10
+ACCOLADE_HORSE_ARCHER                          = 11
+ACCOLADE_BESIEGER                              = 12
+#####################################################################
+# script values for variable access
+
+#yyz_sort_key                          = { value = 0 add ?= { value = global_var:yyz_sort_key } }
+#yyz_sort_desc                         = { value = 0 add ?= { value = global_var:yyz_sort_desc } }
+yyz_sort_key = { value = 0 if = { limit = { exists = global_var:yyz_sort_key } add = global_var:yyz_sort_key } }
+yyz_sort_desc = { value = 0 if = { limit = { exists = global_var:yyz_sort_desc } add = global_var:yyz_sort_desc } }
+
+# TODO: standardize this variable/value combo
+yyz_list_mode                         = { value = 0 if = { limit = { exists = global_var:yyz_list_mode } add = global_var:yyz_list_mode } }
+yyz_settingsOpen                      = { value = 0 if = { limit = { exists = var:yyz_settingsOpen } add = var:yyz_settingsOpen } }
+
+# using listGenerated variable to try to avoid flickering as the controls are drawn at initial opening
+yyz_listGenerated                     = { value = 0 if = { limit = { exists = var:yyz_listGenerated } add = var:yyz_listGenerated } }
+
+yyz_modeCourtPosition                 = { value = 0 if = { limit = { exists = var:yyz_modeCourtPosition } add = var:yyz_modeCourtPosition } }
+yyz_currency_details_option           = { value = DETAILS_PANEL_CONTEXT }
+yyz_speed_details_option              = { value = DETAILS_PANEL_CONTEXT }
+
+# filters - generic
+yyz_filterSex                         = { value = 0 if = { limit = { exists = var:yyz_filterSex } add = var:yyz_filterSex } }
+yyz_filterHooked                      = { value = 0 if = { limit = { exists = var:yyz_filterHooked } add = var:yyz_filterHooked } }
+yyz_filterWhere                       = { value = 0 if = { limit = { exists = var:yyz_filterWhere } add = var:yyz_filterWhere } }
+yyz_filterWhereNot                    = { value = 0 if = { limit = { exists = var:yyz_filterWhereNot } add = var:yyz_filterWhereNot } }
+yyz_filterInvite                      = { value = 0 if = { limit = { exists = var:yyz_filterInvite } add = var:yyz_filterInvite } }
+yyz_filterMarital                     = { value = 0 if = { limit = { exists = var:yyz_filterMarital } add = var:yyz_filterMarital } }
+yyz_filterNobility                    = { value = 0 if = { limit = { exists = var:yyz_filterNobility } add = var:yyz_filterNobility } }
+
+yyz_filterOrgSiege                    = { value = 0 if = { limit = { exists = var:yyz_filterOrgSiege } add = var:yyz_filterOrgSiege } }
+yyz_filterOrgReaver                   = { value = 0 if = { limit = { exists = var:yyz_filterOrgReaver } add = var:yyz_filterOrgReaver } }
+yyz_filterOrgWinter                   = { value = 0 if = { limit = { exists = var:yyz_filterOrgWinter } add = var:yyz_filterOrgWinter } }
+yyz_filterOrgLogi                     = { value = 0 if = { limit = { exists = var:yyz_filterOrgLogi } add = var:yyz_filterOrgLogi } }
+yyz_filterOrgSpeed                    = { value = 0 if = { limit = { exists = var:yyz_filterOrgSpeed } add = var:yyz_filterOrgSpeed } }
+yyz_filterUnhealthy                   = { value = 0 if = { limit = { exists = var:yyz_filterUnhealthy } add = var:yyz_filterUnhealthy } }
+yyz_filterCriminal                    = { value = 0 if = { limit = { exists = var:yyz_filterCriminal } add = var:yyz_filterCriminal } }
+yyz_filterHeirless                    = { value = 0 if = { limit = { exists = var:yyz_filterHeirless } add = var:yyz_filterHeirless } }
+
+# filters - inspiration values
+yyz_filterInspirationWeapon           = { value = 0 if = { limit = { exists = var:yyz_filterInspirationWeapon } add = var:yyz_filterInspirationWeapon } }
+yyz_filterInspirationArmor            = { value = 0 if = { limit = { exists = var:yyz_filterInspirationArmor } add = var:yyz_filterInspirationArmor } }
+yyz_filterInspirationBook             = { value = 0 if = { limit = { exists = var:yyz_filterInspirationBook } add = var:yyz_filterInspirationBook } }
+yyz_filterInspirationWeaver           = { value = 0 if = { limit = { exists = var:yyz_filterInspirationWeaver } add = var:yyz_filterInspirationWeaver } }
+yyz_filterInspirationArtisan          = { value = 0 if = { limit = { exists = var:yyz_filterInspirationArtisan } add = var:yyz_filterInspirationArtisan } }
+yyz_filterInspirationSmith            = { value = 0 if = { limit = { exists = var:yyz_filterInspirationSmith } add = var:yyz_filterInspirationSmith } }
+yyz_filterInspirationAlchemy          = { value = 0 if = { limit = { exists = var:yyz_filterInspirationAlchemy } add = var:yyz_filterInspirationAlchemy } }
+yyz_filterInspirationAdventure        = { value = 0 if = { limit = { exists = var:yyz_filterInspirationAdventure } add = var:yyz_filterInspirationAdventure } }
+yyz_filterInspirationQuality          = { value = 0 if = { limit = { exists = var:yyz_filterInspirationQuality } add = var:yyz_filterInspirationQuality } }
+yyz_filterInspirationUnsponsored      = { value = 0 if = { limit = { exists = var:yyz_filterInspirationUnsponsored } add = var:yyz_filterInspirationUnsponsored } }
+
+# modes - accolade values
+yyz_modeAccolade_retinue              = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_retinue } add = var:yyz_modeAccolade_retinue } }
+yyz_modeAccolade_contender            = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_contender } add = var:yyz_modeAccolade_contender } }
+yyz_modeAccolade_manipulator          = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_manipulator } add = var:yyz_modeAccolade_manipulator } }
+yyz_modeAccolade_mentor               = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_mentor } add = var:yyz_modeAccolade_mentor } }
+yyz_modeAccolade_politicker           = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_politicker } add = var:yyz_modeAccolade_politicker } }
+yyz_modeAccolade_reeve                = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_reeve } add = var:yyz_modeAccolade_reeve } }
+yyz_modeAccolade_tactician            = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_tactician } add = var:yyz_modeAccolade_tactician } }
+yyz_modeAccolade_charmer              = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_charmer } add = var:yyz_modeAccolade_charmer } }
+yyz_modeAccolade_disciplinarian       = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_disciplinarian } add = var:yyz_modeAccolade_disciplinarian } }
+yyz_modeAccolade_idealist             = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_idealist } add = var:yyz_modeAccolade_idealist } }
+yyz_modeAccolade_marauder             = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_marauder } add = var:yyz_modeAccolade_marauder } }
+yyz_modeAccolade_scoundrel            = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_scoundrel } add = var:yyz_modeAccolade_scoundrel } }
+yyz_modeAccolade_stalwart             = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_stalwart } add = var:yyz_modeAccolade_stalwart } }
+yyz_modeAccolade_thug                 = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_thug } add = var:yyz_modeAccolade_thug } }
+yyz_modeAccolade_valiant              = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_valiant } add = var:yyz_modeAccolade_valiant } }
+yyz_modeAccolade_fanatic              = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_fanatic } add = var:yyz_modeAccolade_fanatic } }
+yyz_modeAccolade_blademaster          = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_blademaster } add = var:yyz_modeAccolade_blademaster } }
+yyz_modeAccolade_huntmaster           = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_huntmaster } add = var:yyz_modeAccolade_huntmaster } }
+yyz_modeAccolade_master_of_revels     = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_master_of_revels } add = var:yyz_modeAccolade_master_of_revels } }
+yyz_modeAccolade_house_paragon        = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_house_paragon } add = var:yyz_modeAccolade_house_paragon } }
+
+#####################################################################
+# calculated values
+#####################################################################
+####################################################
+# calculates the army movement speed bonus
+yyz_movement_speed = {
+  value = 0
+  if = { limit = { has_trait = organizer }                                                add = 25 }
+  if = { limit = { culture = { has_cultural_tradition = tradition_caravaneers }         } add =  5 }
+  if = { limit = { culture = { has_cultural_tradition = tradition_horse_lords }         } add = 10 }
+  if = { limit = { culture = { has_cultural_tradition = tradition_saharan_nomads }      } add = 10 }
+  if = { limit = { culture = { has_cultural_tradition = tradition_fp2_strategy_gamers } } add = 10 }
+}
+
+####################################################
+# determines the sort key value for an item
+yyz_sort_value = {
+  value = 0
+# TODO: change to switch statement
+
+  if = { limit = { yyz_sort_key = SORT_KEY_HEALTH } add = health }
+  if = {
+    limit = { yyz_sort_key = SORT_KEY_RANK }
+    if = {
+      limit = { is_lowborn = no }
+      add = 1
+      if = {
+        limit = { is_ruler = yes }
+        add = primary_title.tier
+      }
+    }  
+  }
+  if = { limit = { yyz_sort_key = SORT_KEY_AGE }          add = age }
+  if = { limit = { yyz_sort_key = SORT_KEY_DIPLOMACY }    add = diplomacy }
+  if = { limit = { yyz_sort_key = SORT_KEY_MARTIAL }      add = martial }
+  if = { limit = { yyz_sort_key = SORT_KEY_STEWARDSHIP }  add = stewardship }
+  if = { limit = { yyz_sort_key = SORT_KEY_INTRIGUE }     add = intrigue }
+  if = { limit = { yyz_sort_key = SORT_KEY_LEARNING }     add = learning }
+  if = { limit = { yyz_sort_key = SORT_KEY_PROWESS }      add = prowess }
+  if = {
+    limit = { yyz_sort_key = SORT_KEY_ALL_STATS }
+    add = diplomacy
+    add = martial
+    add = stewardship
+    add = intrigue
+    add = learning
+    add = prowess
+  }
+  if = { limit = { yyz_sort_key = SORT_KEY_GOLD }          add = gold }
+  if = { limit = { yyz_sort_key = SORT_KEY_PRESTIGE }      add = prestige }
+  if = { limit = { yyz_sort_key = SORT_KEY_PIETY }         add = piety }
+  if = { limit = { yyz_sort_key = SORT_KEY_ARMY_SPEED }    add = yyz_movement_speed }
+  if = { limit = { yyz_sort_key = SORT_KEY_TRAVEL_SPEED }  add = travel_leader_speed }
+  if = { limit = { yyz_sort_key = SORT_KEY_TRAVEL_SAFETY } add = travel_leader_safety  }
+    
+  if = {
+    limit = { yyz_sort_desc = 0 }
+    multiply = -1
+  }
+}

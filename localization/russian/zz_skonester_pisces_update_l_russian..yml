@@ -21,3 +21,10 @@
  tenet_zz_empty_1_desc:0 "Дополнительный религиозный догмат."
  tenet_zz_empty_2_name:0 "Пятый догмат"
  tenet_zz_empty_2_desc:0 "Дополнительный религиозный догмат."
+ 
+ skonester_change_age_interaction:0 "Изменить возраст персонажа"
+    flag_age_6:0 "6 лет"
+    flag_age_16:0 "16 лет"
+    flag_age_25:0 "25 лет"
+    flag_age_42:0 "42 года"
+    flag_age_64:0 "64 года"

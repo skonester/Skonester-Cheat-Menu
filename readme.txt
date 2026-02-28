@@ -1,6 +1,8 @@
 Latest Updates
 
 February
+Pisces V 1.2- Religious Tenant unlock,max schemes fix
+Pisces V 1.1- Main Release, Pisces Proper
 Pisces V1- Search,Culture decisions.
 
 January 2026

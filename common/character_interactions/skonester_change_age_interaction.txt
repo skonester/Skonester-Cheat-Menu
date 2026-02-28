@@ -1,0 +1,61 @@
+skonester_change_age_interaction = {
+    icon = on
+    category = interaction_pcm_main
+    common_interaction = no
+    interface_priority = -1
+    
+    is_highlighted = { always = yes }
+    
+    auto_accept = yes
+    ai_will_do = -100
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+    
+    is_shown = { always = yes }
+    
+    send_option = {
+        flag = flag_age_6
+        localization = flag_age_6
+    }
+    send_option = {
+        flag = flag_age_16
+        localization = flag_age_16
+    }
+    send_option = {
+        flag = flag_age_25
+        localization = flag_age_25
+    }
+    send_option = {
+        flag = flag_age_42
+        localization = flag_age_42
+    }
+    send_option = {
+        flag = flag_age_64
+        localization = flag_age_64
+    }
+    send_options_exclusive = yes
+
+    on_accept = {
+        scope:recipient = {
+            switch = {
+                trigger = yes
+                
+                scope:flag_age_6 = {
+                    set_age = 6
+                }
+                scope:flag_age_16 = {
+                    set_age = 16
+                }
+                scope:flag_age_25 = {
+                    set_age = 25
+                }
+                scope:flag_age_42 = {
+                    set_age = 42
+                }
+                scope:flag_age_64 = {
+                    set_age = 64
+                }
+            }
+        }
+    }
+}

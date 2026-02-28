@@ -22,5 +22,12 @@
  tenet_zz_empty_1_desc:0 "Extra Religious Tenant."
  tenet_zz_empty_2_name:0 "Fifth Tenant"
  tenet_zz_empty_2_desc:0 "Extra Religious Tenant."
-  
  
+ skonester_change_age_interaction:0 "Change Character Age"
+    flag_age_6:0 "6 years old"
+    flag_age_16:0 "16 years old"
+    flag_age_25:0 "25 years old"
+    flag_age_42:0 "42 years old"
+    flag_age_64:0 "64 years old"
+  
+  

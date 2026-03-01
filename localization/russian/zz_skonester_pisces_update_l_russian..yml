@@ -28,3 +28,5 @@
     flag_age_25:0 "25 лет"
     flag_age_42:0 "42 года"
     flag_age_64:0 "64 года"
+    
+ siege_weapon_max_size_mult:0 "Макс. размер осадного оружия"

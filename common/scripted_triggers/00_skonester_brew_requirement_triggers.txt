@@ -1,0 +1,15 @@
+﻿building_breweries_requirement = {
+	AND = {
+		has_building_or_higher = city_$NUMBER$
+		OR = {
+			#CATHOLICS
+			faith = faith:catholic
+
+			#CHRISTIANS
+			faith = { religion_tag = christianity_religion }
+
+			#ALL NON MUSLIM
+			NOT = { faith = { religion_tag = islam_religion } }
+		}
+	}
+}

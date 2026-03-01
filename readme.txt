@@ -1,5 +1,8 @@
 Latest Updates
 
+March
+Pisces V 1.3 - Menu/Decisions Cleanup
+
 February
 Pisces V 1.2- Religious Tenant unlock,max schemes fix
 Pisces V 1.1- Main Release, Pisces Proper

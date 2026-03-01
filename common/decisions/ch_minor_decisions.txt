@@ -3,6 +3,8 @@
     picture = { reference = "gfx/interface/illustrations/decisions/castle.dds" }
     ai_check_interval = 0
     is_shown = {
+		has_character_flag = daddy_pika_cheat_menu
+		has_character_flag = covt_menu   
         NOT = {
             has_government = non_government
         }
@@ -51,6 +53,7 @@
     effect = {
         scope:barony.title_province = {
             set_holding_type = castle_holding
+			add_character_flag = covt_menu    
         }
         # custom_tooltip = ch_convert_holding_to_castle_decision_effect_message
     }
@@ -67,6 +70,8 @@ ch_convert_holding_to_city_decision = {
     picture = { reference = "gfx/interface/illustrations/decisions/city.dds" }
     ai_check_interval = 0
     is_shown = {
+		has_character_flag = daddy_pika_cheat_menu
+		has_character_flag = covt_menu   
         NOT = {
             has_government = non_government
         }
@@ -108,6 +113,7 @@ ch_convert_holding_to_city_decision = {
     effect = {
         scope:barony.title_province = {
             set_holding_type = city_holding
+			add_character_flag = covt_menu    
         }
     }
     ai_potential = {
@@ -123,6 +129,8 @@ ch_convert_holding_to_temple_decision = {
     picture = { reference = "gfx/interface/illustrations/decisions/temple.dds" }
     ai_check_interval = 0
     is_shown = {
+		has_character_flag = daddy_pika_cheat_menu
+		has_character_flag = covt_menu   
         NOT = {
             has_government = non_government
         }
@@ -199,7 +207,8 @@ ch_convert_holding_to_nomad_decision = {
 
 	is_shown = {
 		is_landed = yes
-		
+		has_character_flag = daddy_pika_cheat_menu
+		has_character_flag = covt_menu   
 	}
 
 	widget = {
@@ -244,6 +253,7 @@ ch_convert_holding_to_nomad_decision = {
 	effect = {
 		scope:barony.title_province = {
 			set_holding_type = nomad_holding
+			add_character_flag = covt_menu    
 		}
 		custom_tooltip = ch_convert_holding_to_nomad_decision_effect_message
 	}
@@ -265,6 +275,8 @@ ch_convert_holding_to_tribal_decision = {
 
 	is_shown = {
 		is_landed = yes
+		has_character_flag = daddy_pika_cheat_menu
+		has_character_flag = covt_menu   
 	}
 
 	widget = {
@@ -309,6 +321,7 @@ ch_convert_holding_to_tribal_decision = {
 	
 		scope:barony.title_province = {
 			set_holding_type = tribal_holding
+			add_character_flag = covt_menu    
 		}
 		
 		custom_tooltip = ch_convert_holding_to_tribal_decision_effect_message
@@ -340,6 +353,8 @@ ch_convert_holding_to_temple_citadel_decision = {
 
 	is_shown = {
 		is_landed = yes
+		has_character_flag = daddy_pika_cheat_menu
+		has_character_flag = covt_menu   
 	}
 
 	widget = {
@@ -384,6 +399,7 @@ ch_convert_holding_to_temple_citadel_decision = {
 	
 		scope:barony.title_province = {
 			set_holding_type = temple_citadel_holding
+			add_character_flag = covt_menu    
 		}
 		
 		custom_tooltip = ch_convert_holding_to_temple_citadel_decision_effect_message

@@ -1,6 +1,6 @@
 ﻿#Change hunt score
 change_hunt_success_chance = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	common_interaction = yes
@@ -102,7 +102,7 @@ change_hunt_success_chance = {
 }
 
 debug_give_animal_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	common_interaction = no
@@ -186,7 +186,7 @@ debug_give_animal_interaction = {
 
 #Change tournament score
 change_tournament_score = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	common_interaction = yes
@@ -283,7 +283,7 @@ change_tournament_score = {
 
 #Bring a character to your court
 add_to_court_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = guest
@@ -307,7 +307,7 @@ add_to_court_interaction = {
 }
 
 debug_secrets_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = debug_secret
@@ -472,7 +472,7 @@ debug_secrets_interaction = {
 }
 
 add_hook_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	interface_priority = -1
@@ -535,7 +535,7 @@ add_hook_interaction = {
 }
 
 set_relation_debug = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	desc = set_relationship_debug_desc
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
@@ -1037,7 +1037,7 @@ set_relation_debug = {
 }
 
 change_character_weight_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = activity_feast
@@ -1066,7 +1066,7 @@ change_character_weight_interaction = {
 }
 
 slay_character_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = icon_dead
@@ -1133,7 +1133,7 @@ slay_character_interaction = {
 }
 
 change_cultural_acceptance_debug_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = icon_culture
@@ -1177,7 +1177,7 @@ change_cultural_acceptance_debug_interaction = {
 }
 
 learn_language_debug_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = icon_scheme_learn_language
@@ -1201,7 +1201,7 @@ learn_language_debug_interaction = {
 
 #Start a duel or board game against another character
 start_bout_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = icon_combat
@@ -1271,7 +1271,7 @@ start_bout_interaction = {
 }
 
 add_artifact_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = artifact
@@ -1554,7 +1554,7 @@ add_artifact_interaction = {
 }
 
 take_artifact_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = icon_scheme_steal_back_artifact
@@ -1626,7 +1626,7 @@ take_artifact_interaction = {
 }
 
 add_artifact_claim_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = icon_scheme_steal_back_artifact
@@ -1665,7 +1665,7 @@ add_artifact_claim_interaction = {
 }
 
 debug_destroy_artifact_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = artifact
@@ -1714,7 +1714,7 @@ debug_destroy_artifact_interaction = {
 }
 
 inspire_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = inspiration
@@ -1835,7 +1835,7 @@ inspire_interaction = {
 }
 
 sponsor_inspiration_debug = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	auto_accept = yes
@@ -1865,7 +1865,7 @@ sponsor_inspiration_debug = {
 }
 
 test_effect_localization_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 
 	is_shown = {
@@ -1988,7 +1988,7 @@ test_effect_localization_interaction = {
 
 #Give the character a criminal trait that allows actor to imprison them
 give_criminal_trait_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = prison
@@ -2040,7 +2040,7 @@ give_criminal_trait_interaction = {
 }
 
 generate_artifact_with_history_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	desc = generate_artifact_with_history_debug_desc
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
@@ -2061,7 +2061,7 @@ generate_artifact_with_history_interaction = {
 # Have (or trigger the aftermath of) sex with the target character
 debug_sex_interaction = { # Sleep With Character
 	icon = seducer
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	is_shown = {
@@ -2074,7 +2074,7 @@ debug_sex_interaction = { # Sleep With Character
 }
 
 debug_change_every_county = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = alliance
@@ -2136,7 +2136,7 @@ debug_change_every_county = {
 
 # Embezzle from 'em
 do_a_crime_embezzle_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	desc = do_a_crime_embezzle_interaction_desc
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
@@ -2212,7 +2212,7 @@ do_a_crime_embezzle_interaction = {
 }
 
 add_glory_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = icon_combat
@@ -2285,7 +2285,7 @@ add_glory_interaction = {
 }
 
 debug_progress_all_active_schemes_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = debug_secret
@@ -2301,7 +2301,7 @@ debug_progress_all_active_schemes_interaction = {
 }
 
 debug_travel_to_ruler_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = travel_mixed
@@ -2362,7 +2362,7 @@ debug_travel_to_ruler_interaction = {
 }
 
 debug_add_truce_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = icon_retreat
@@ -2421,7 +2421,7 @@ debug_add_truce_interaction = {
 }
 
 spawn_epidemic_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = plague
@@ -2611,7 +2611,7 @@ spawn_epidemic_interaction = {
 }
 
 spawn_legend_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = legend
@@ -2693,7 +2693,7 @@ spawn_legend_interaction = {
 }
 
 debug_buff_schemes = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = scheme_assassination
@@ -2808,7 +2808,7 @@ debug_buff_schemes = {
 }
 
 debug_clear_agents_from_schemes = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = independence
@@ -2944,7 +2944,7 @@ debug_clear_agents_from_schemes = {
 }
 
 debug_make_laamp = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	desc = debug_make_laamp_desc
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
@@ -2971,7 +2971,7 @@ debug_make_laamp = {
 }
 
 debug_add_to_contact_list_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = icon_contract_modification_single
@@ -2998,7 +2998,7 @@ debug_add_to_contact_list_interaction = {
 }
 
 debug_alliance_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = icon_ally
@@ -3030,7 +3030,7 @@ debug_alliance_interaction = {
 }
 
 create_task_contract_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = icon_contract_modification_single
@@ -3139,7 +3139,7 @@ create_task_contract_interaction = {
 
 # Debug move domicile, choose between moving just the domicile, moving the domicile and the owner, and if you want to use the travel system to do it (last option is only for laamps).
 debug_move_domicile_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	common_interaction = yes
@@ -3231,7 +3231,7 @@ debug_move_domicile_interaction = {
 }
 
 debug_populate_contracts = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	common_interaction = no
@@ -3256,7 +3256,7 @@ debug_populate_contracts = {
 }
 
 give_infinite_schemes_of_type_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = icon_adultery
@@ -3306,7 +3306,7 @@ give_infinite_schemes_of_type_interaction = {
 }
 
 antagonise_court = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = icon_hostile
@@ -3407,7 +3407,7 @@ antagonise_court = {
 }
 
 spawn_courtier_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = guest
@@ -3536,7 +3536,7 @@ spawn_courtier_interaction = {
 }
 
 destroy_title_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = antagonistic
@@ -3585,7 +3585,7 @@ destroy_title_interaction = {
 }
 
 debug_change_the_great_steppe = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	common_interaction = yes
@@ -3762,7 +3762,7 @@ debug_change_the_great_steppe = {
 }
 
 debug_coronation_add_to_guest_subset_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = icon_dismiss_entrenched_regency
@@ -3845,7 +3845,7 @@ debug_coronation_add_to_guest_subset_interaction = {
 }
 
 change_coronation_law = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	icon = artifact
@@ -3894,7 +3894,7 @@ change_coronation_law = {
 }
 
 debug_change_dynastic_cycle = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	common_interaction = yes
@@ -4049,7 +4049,7 @@ debug_change_dynastic_cycle = {
 }
 
 debug_change_silk_road_cycle = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	common_interaction = yes
@@ -4164,7 +4164,7 @@ debug_change_silk_road_cycle = {
 }
 
 debug_set_mandala_aspect = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	desc = debug_set_mandala_aspect_desc
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes

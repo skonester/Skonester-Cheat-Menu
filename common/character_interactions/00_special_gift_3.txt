@@ -1,5 +1,5 @@
 ﻿special_gift_interaction_3 = {
-	category = interaction_category_uncategorized
+	category = interaction_pcm_main
 	interface_priority = 60
 	desc = special_gift_interaction_desc_3
 

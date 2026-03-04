@@ -1,5 +1,5 @@
 ﻿open_bone_cheat_interactions = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	icon = on
 	desc = bone_cheat_interactions_desc
 	common_interaction = yes
@@ -17,7 +17,7 @@
 	}
 }
 close_bone_cheat_interactions = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	icon = off
 	desc = bone_cheat_interactions_desc
 	common_interaction = yes
@@ -36,7 +36,7 @@ close_bone_cheat_interactions = {
 }
 
 set_immortal_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	common_interaction = yes
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
@@ -71,7 +71,7 @@ set_mortal_interaction = {
 }
 
 set_super_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	common_interaction = yes
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
@@ -87,7 +87,7 @@ set_super_interaction = {
 }
 
 set_unsuper_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	common_interaction = yes
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
@@ -103,7 +103,7 @@ set_unsuper_interaction = {
 }
 
 set_super_governor_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	common_interaction = yes
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
@@ -119,7 +119,7 @@ set_super_governor_interaction = {
 }
 
 set_unsuper_governor_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	common_interaction = yes
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
@@ -135,7 +135,7 @@ set_unsuper_governor_interaction = {
 }
 
 set_super_general_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	common_interaction = yes
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
@@ -151,7 +151,7 @@ set_super_general_interaction = {
 }
 
 set_unsuper_general_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	common_interaction = yes
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
@@ -167,7 +167,7 @@ set_unsuper_general_interaction = {
 }
 
 set_all_in_one_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	common_interaction = yes
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
@@ -195,7 +195,7 @@ set_all_in_one_interaction = {
 }
 
 set_unall_in_one_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	common_interaction = yes
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
@@ -221,7 +221,7 @@ set_unall_in_one_interaction = {
 }
 
 take_title_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	is_shown = {
@@ -247,7 +247,7 @@ take_title_interaction = {
 }
 
 start_pregnancy_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	is_shown = {

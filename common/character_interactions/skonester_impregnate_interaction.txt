@@ -1,6 +1,6 @@
 eka_impregnate_female_inter = {
     icon = on
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     common_interaction = no
     interface_priority = -1
 
@@ -124,7 +124,7 @@ eka_impregnate_female_inter = {
 
 eka_impregnate_male_inter = {
     icon = on
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     common_interaction = no
     interface_priority = -1
 
@@ -290,7 +290,7 @@ eka_impregnate_male_inter = {
 
 eka_impregnate_me_inter = {
     icon = on
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     common_interaction = no
     interface_priority = -1
 
@@ -351,7 +351,7 @@ eka_impregnate_me_inter = {
 
 eka_impregnate_concubine_inter = {
     icon = on
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     common_interaction = no
     interface_priority = -1
 

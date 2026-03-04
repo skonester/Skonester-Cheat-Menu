@@ -1,5 +1,5 @@
 leech_mind_control_interaction = {
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     desc = leech_mind_control_interaction_desc
     ignores_pending_interaction_block = yes
     use_diplomatic_range = no
@@ -56,7 +56,7 @@ leech_mind_control_interaction = {
 }
 
 leech_mc_end_control_interaction = {
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     desc = leech_mc_end_control_interaction_desc
     ignores_pending_interaction_block = yes
     icon = lady
@@ -79,7 +79,7 @@ leech_mc_end_control_interaction = {
 }
 
 leech_mc_simple_action_interaction = {
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     desc = leech_mc_simple_action_interaction_desc
     ignores_pending_interaction_block = yes
     use_diplomatic_range = no

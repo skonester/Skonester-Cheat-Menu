@@ -3,7 +3,7 @@ zhuge_mpo_qiyue = {
     special_interaction = liege_modify_vassal_contract
     interface = modify_vassal_contract
     common_interaction = yes
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     icon = icon_contract_modification_single
     desc = zhuge_mpo_qiyue_desc
     auto_accept = yes
@@ -19,7 +19,7 @@ zhuge_mpo_qiyue = {
         }
         scope:actor = {
             is_ai = no
-            has_character_flag = daddy_pika_cheat_menu
+            has_character_flag = bone_cheat_interactions_flag
         }
     }
     is_valid_showing_failures_only = { always = yes }

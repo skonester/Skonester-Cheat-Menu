@@ -1,7 +1,7 @@
 Latest Updates
 
 March
-Pisces V 1.3 - Menu/Decisions Cleanup
+Pisces V 1.3 - Menu/Decisions Cleanup,DI Patch
 
 February
 Pisces V 1.2- Religious Tenant unlock,max schemes fix

@@ -1,5 +1,5 @@
 ﻿open_bone_cheat_interactions = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	icon = on
 	desc = bone_cheat_interactions_desc
 	common_interaction = yes
@@ -21,7 +21,7 @@
 	}
 }
 close_bone_cheat_interactions = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	icon = off
 	desc = bone_cheat_interactions_desc
 	common_interaction = yes
@@ -41,7 +41,7 @@ close_bone_cheat_interactions = {
 	}
 }
 bone_add_to_court = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	icon = on
 	desc = bone_add_to_court_desc
 	common_interaction = no
@@ -69,7 +69,7 @@ bone_add_to_court = {
 	}
 }
 bone_add_gold_and_prestige = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	icon = on
 	desc = bone_add_gold_and_prestige_desc
 	common_interaction = no
@@ -93,7 +93,7 @@ bone_add_gold_and_prestige = {
 	}
 }
 bone_start_pregnancy_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	icon = lady2
 	desc = bone_start_pregnancy_interaction_desc
 	common_interaction = no
@@ -129,7 +129,7 @@ bone_start_pregnancy_interaction = {
 	auto_accept = yes
 }
 bone_add_weak_hook_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	icon = on
 	desc = bone_add_weak_hook_interaction_desc
 	common_interaction = yes
@@ -153,7 +153,7 @@ bone_add_weak_hook_interaction = {
 	}
 }
 bone_add_strong_hook_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	icon = on
 	desc = bone_add_strong_hook_interaction_desc
 	common_interaction = yes
@@ -177,7 +177,7 @@ bone_add_strong_hook_interaction = {
 	}
 }
 bone_slay_character_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	icon = on
 	desc = bone_slay_character_interaction_desc
 	common_interaction = yes
@@ -204,7 +204,7 @@ bone_slay_character_interaction = {
 	auto_accept = yes
 }
 bone_take_title_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	icon = on
 	desc = bone_take_title_interaction_desc
 	common_interaction = yes
@@ -238,7 +238,7 @@ bone_take_title_interaction = {
 	}
 }
 bone_change_religion = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	icon = on
 	desc = bone_change_religion_desc
 	common_interaction = yes
@@ -260,7 +260,7 @@ bone_change_religion = {
 	}
 }
 bone_change_culture = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
 	icon = on
 	desc = bone_change_culture_desc
 	common_interaction = yes

@@ -1,0 +1,66 @@
+﻿set_xa_height = {
+  effect = {
+    if = {
+      limit = {
+        NOT = { has_global_variable = xa_height }
+      }
+      set_global_variable = {
+        name = xa_height
+        value = 900
+      }
+    }
+  }
+}
+
+minus_xa_height = {
+  is_valid = {
+    trigger_if = {
+      limit = {
+        has_global_variable = xa_height
+      }
+      global_var:xa_height > 200
+    }
+  }
+  effect = {
+    if = {
+      limit = {
+        NOT = { has_global_variable = xa_height }
+      }
+      set_global_variable = {
+        name = xa_height
+        value = 900
+      }
+    }
+    change_global_variable = {
+      name = xa_height
+      subtract = 100
+    }
+  }
+}
+
+plus_xa_height = {
+  effect = {
+    if = {
+      limit = {
+        NOT = { has_global_variable = xa_height }
+      }
+      set_global_variable = {
+        name = xa_height
+        value = 900
+      }
+    }
+    change_global_variable = {
+      name = xa_height
+      add = 100
+    }
+  }
+}
+
+reset_xa_height = {
+  effect = {
+    set_global_variable = {
+      name = xa_height
+      value = 900
+    }
+  }
+}

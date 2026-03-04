@@ -2,7 +2,7 @@
 # 法理整理
 ##############
 zhuge_organize_titles = {
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     desc = zhuge_organize_titles_desc
     icon = legend
     auto_accept = yes
@@ -13,7 +13,7 @@ zhuge_organize_titles = {
     is_shown = {
         scope:actor = {
             is_ai = no
-            has_character_flag = daddy_pika_cheat_menu
+            has_character_flag = bone_cheat_interactions_flag
         }
         scope:recipient = {
             highest_held_title_tier >= tier_duchy
@@ -40,7 +40,7 @@ zhuge_organize_titles = {
 # 摧毁主头衔
 ##############
 zhuge_destroy_title = {
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     desc = zhuge_destroy_title_desc
     icon = legend
     auto_accept = yes
@@ -51,7 +51,7 @@ zhuge_destroy_title = {
     is_shown = {
         scope:actor = {
             is_ai = no
-            has_character_flag = daddy_pika_cheat_menu
+            has_character_flag = bone_cheat_interactions_flag
         }
         scope:recipient = {
             highest_held_title_tier >= tier_duchy
@@ -71,7 +71,7 @@ zhuge_destroy_title = {
 # 皇权强化
 ##############
 zhuge_buff_01 = {
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     desc = zhuge_buff_01_desc
     icon = demand_submission
     common_interaction = no
@@ -86,7 +86,7 @@ zhuge_buff_01 = {
     is_shown = {
         scope:actor = {
             is_ai = no
-            has_character_flag = daddy_pika_cheat_menu
+            has_character_flag = bone_cheat_interactions_flag
         }
     }
 
@@ -109,7 +109,7 @@ zhuge_buff_01 = {
 # 武都督
 ##############
 zhuge_buff_02 = {
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     desc = zhuge_buff_02_desc
     icon = legend
     common_interaction = no
@@ -122,7 +122,7 @@ zhuge_buff_02 = {
     is_shown = {
         scope:actor = {
             is_ai = no
-            has_character_flag = daddy_pika_cheat_menu
+            has_character_flag = bone_cheat_interactions_flag
         }
     }
 
@@ -145,7 +145,7 @@ zhuge_buff_02 = {
 # 翰林学士
 ##############
 zhuge_buff_03 = {
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     desc = zhuge_buff_03_desc
     icon = legend
     common_interaction = no
@@ -158,7 +158,7 @@ zhuge_buff_03 = {
     is_shown = {
         scope:actor = {
             is_ai = no
-            has_character_flag = daddy_pika_cheat_menu
+            has_character_flag = bone_cheat_interactions_flag
         }
     }
 
@@ -181,7 +181,7 @@ zhuge_buff_03 = {
 # 瘟疫免疫
 ##############
 zhuge_yixue_05 = {
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     desc = zhuge_yixue_05_desc
     icon = debug_good
     common_interaction = no
@@ -194,7 +194,7 @@ zhuge_yixue_05 = {
     is_shown = {
         scope:actor = {
             is_ai = no
-            has_character_flag = daddy_pika_cheat_menu
+            has_character_flag = bone_cheat_interactions_flag
         }
     }
 
@@ -218,7 +218,7 @@ zhuge_yixue_05 = {
 # 神血
 ##############
 zhuge_bloodline_03 = {
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     desc = zhuge_bloodline_03_desc
     icon = debug_good
     common_interaction = no
@@ -231,7 +231,7 @@ zhuge_bloodline_03 = {
     is_shown = {
         scope:actor = {
             is_ai = no
-            has_character_flag = daddy_pika_cheat_menu
+            has_character_flag = bone_cheat_interactions_flag
         }
     }
 
@@ -276,7 +276,7 @@ zhuge_bloodline_03 = {
 # 医学奇迹
 ##############
 zhuge_yixue_01 = {
-    category = interaction_category_cheat_menu 
+    category = interaction_pcm_main
     desc = zhuge_yixue_01_desc
     icon = debug_good
     common_interaction = no 
@@ -289,7 +289,7 @@ zhuge_yixue_01 = {
     is_shown = {
         scope:actor = {
             is_ai = no 
-            has_character_flag = daddy_pika_cheat_menu 
+            has_character_flag = bone_cheat_interactions_flag 
         }
         scope:recipient = {
             OR = {
@@ -499,7 +499,7 @@ zhuge_yixue_01 = {
 # 矫正性格
 ##############
 zhuge_yixue_02 = {
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     desc = zhuge_yixue_02_desc
     icon = legend
     common_interaction = no
@@ -512,7 +512,7 @@ zhuge_yixue_02 = {
     is_shown = {
         scope:actor = {
             is_ai = no
-            has_character_flag = daddy_pika_cheat_menu
+            has_character_flag = bone_cheat_interactions_flag
         }
         scope:recipient = {
             OR = {
@@ -558,7 +558,7 @@ zhuge_yixue_02 = {
 # 戒除怪癖
 ##############
 zhueg_yixue_03 = {
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     desc = zhueg_yixue_03_desc
     icon = legend
     common_interaction = no
@@ -571,7 +571,7 @@ zhueg_yixue_03 = {
     is_shown = {
         scope:actor = {
             is_ai = no
-            has_character_flag = daddy_pika_cheat_menu
+            has_character_flag = bone_cheat_interactions_flag
         }
         scope:recipient = {
             OR = {
@@ -611,7 +611,7 @@ zhueg_yixue_03 = {
 # 添加3个先天特质
 ##############
 zhuge_yixue_04 = {
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     desc = zhuge_yixue_04_desc
     icon = legend
     common_interaction = no
@@ -624,7 +624,7 @@ zhuge_yixue_04 = {
     is_shown = {
         scope:actor = {
             is_ai = no
-            has_character_flag = daddy_pika_cheat_menu
+            has_character_flag = bone_cheat_interactions_flag
         }
         scope:recipient = {
             NOT = {
@@ -675,7 +675,7 @@ zhuge_yixue_04 = {
 # 提升学业
 ##############
 zhuge_yixue_06 = {
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     desc = zhuge_yixue_06_desc
     icon = icon_boost_efficiency
     common_interaction = no
@@ -688,7 +688,7 @@ zhuge_yixue_06 = {
     is_shown = {
         scope:actor = {
             is_ai = no
-            has_character_flag = daddy_pika_cheat_menu
+            has_character_flag = bone_cheat_interactions_flag
         }
         scope:recipient = {
             OR = {
@@ -847,7 +847,7 @@ zhuge_yixue_06 = {
 # 学会其语言
 ##############
 zhuge_buff_04 = {
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     desc = zhuge_buff_04_desc
     icon = icon_scheme_learn_language
     interface_priority = -1
@@ -859,7 +859,7 @@ zhuge_buff_04 = {
     is_shown = {
         scope:actor = {
             is_ai = no
-            has_character_flag = daddy_pika_cheat_menu
+            has_character_flag = bone_cheat_interactions_flag
         }
         NOT = {
             scope:actor = {
@@ -879,7 +879,7 @@ zhuge_buff_04 = {
 # 赐予勋骑荣誉
 ##############
 zhuge_buff_05 = {
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     desc = zhuge_buff_05_desc
     icon = icon_combat
     interface_priority = -1
@@ -891,7 +891,7 @@ zhuge_buff_05 = {
     is_shown = {
         scope:actor = {
             is_ai = no
-            has_character_flag = daddy_pika_cheat_menu
+            has_character_flag = bone_cheat_interactions_flag
         }
         scope:recipient = {
             is_acclaimed = yes
@@ -963,7 +963,7 @@ zhuge_buff_05 = {
 # 添加停战协议
 ##############
 zhuge_add_truce_interaction = {
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     desc = zhuge_add_truce_interaction_desc
     icon = icon_retreat
     use_diplomatic_range = no
@@ -974,7 +974,7 @@ zhuge_add_truce_interaction = {
     is_shown = {
         scope:actor = {
             is_ai = no
-            has_character_flag = daddy_pika_cheat_menu
+            has_character_flag = bone_cheat_interactions_flag
         }
         NOT = { scope:recipient = scope:actor }
         scope:recipient = { is_independent_ruler = yes }   # 仅独立统治者目标可见
@@ -1043,7 +1043,7 @@ zhuge_add_truce_interaction = {
 # 大明货币菜单（仅对“大明皇帝”目标可见）
 ##############
 zhuge_daming_currency_menu = {
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     desc      = zhuge_daming_currency_menu_desc
     icon      = icon_gold
     common_interaction = yes
@@ -1056,7 +1056,7 @@ zhuge_daming_currency_menu = {
     is_shown = {
         scope:actor = {
             is_ai = no
-            has_character_flag = daddy_pika_cheat_menu 
+            has_character_flag = bone_cheat_interactions_flag 
         }
         scope:recipient = {
             primary_title = { this = title:e_greatming } 
@@ -1075,7 +1075,7 @@ zhuge_daming_currency_menu = {
 # 设置君权等级（直接升至最高）
 ##############
 zhuge_set_authority_inter = {
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     desc = zhuge_set_authority_inter_desc
     icon = legend
     interface_priority = 8
@@ -1088,7 +1088,7 @@ zhuge_set_authority_inter = {
         scope:actor = {
             is_ai = no
             is_independent_ruler = yes
-            has_character_flag = daddy_pika_cheat_menu
+            has_character_flag = bone_cheat_interactions_flag
         }
         scope:recipient = {
             is_ai = no
@@ -1182,7 +1182,7 @@ zhuge_set_authority_inter = {
 
 # 设定关系
 zhuge_set_relation_interaction = {
-    category = interaction_category_cheat_menu 
+    category = interaction_pcm_main
     desc = zhuge_set_relation_interaction_desc
     icon = legend
     interface_priority = 8
@@ -1192,7 +1192,7 @@ zhuge_set_relation_interaction = {
     is_shown = {
         scope:actor = {
             is_ai = no
-            has_character_flag = daddy_pika_cheat_menu
+            has_character_flag = bone_cheat_interactions_flag
         }
         NOT = { scope:recipient = scope:actor }
     }
@@ -1206,7 +1206,7 @@ zhuge_set_relation_interaction = {
 
 # 生成有历史的随机宝物
 zhuge_set_artifact_interaction = {
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     desc = zhuge_set_artifact_interaction_desc
     icon = artifact
     auto_accept = yes
@@ -1214,7 +1214,7 @@ zhuge_set_artifact_interaction = {
     ignores_pending_interaction_block = yes
 
     is_shown = {
-        scope:actor = { is_ai = no has_character_flag = daddy_pika_cheat_menu }
+        scope:actor = { is_ai = no has_character_flag = bone_cheat_interactions_flag }
         NOT = { scope:recipient = scope:actor }
     }
 
@@ -1233,7 +1233,7 @@ zhuge_set_artifact_interaction = {
 
 # 消灭行政制世家
 zhuge_kill_xingzh_house_interaction = {
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     desc = zhuge_kill_xingzh_house_interaction_desc
     icon = icon_cross
     auto_accept = yes
@@ -1243,7 +1243,7 @@ zhuge_kill_xingzh_house_interaction = {
     is_shown = {
         scope:actor = { 
             is_ai = no 
-            has_character_flag = daddy_pika_cheat_menu 
+            has_character_flag = bone_cheat_interactions_flag 
         }
         scope:recipient = {
             any_held_title = { is_noble_family_title = yes }
@@ -1265,7 +1265,7 @@ zhuge_kill_xingzh_house_interaction = {
 
 # 取得宝物
 zhuge_huoqu_artifact_interaction = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
     desc = zhuge_huoqu_artifact_interaction_desc
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
@@ -1277,7 +1277,7 @@ zhuge_huoqu_artifact_interaction = {
 	is_shown = {
 		scope:actor = {
             is_ai = no
-            has_character_flag = daddy_pika_cheat_menu
+            has_character_flag = bone_cheat_interactions_flag
         }
 		scope:recipient = {
 			any_character_artifact = { exists = this }
@@ -1319,7 +1319,7 @@ zhuge_huoqu_artifact_interaction = {
 
 #改变草原季节
 zhuge_great_steppe = {
-	category = interaction_category_cheat_menu
+	category = interaction_pcm_main
     desc = zhuge_great_steppe_desc
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
@@ -1331,7 +1331,7 @@ zhuge_great_steppe = {
 	is_shown = {
 		scope:actor = {
             is_ai = no
-            has_character_flag = daddy_pika_cheat_menu
+            has_character_flag = bone_cheat_interactions_flag
 			government_has_flag = government_is_nomadic
 		}
 	}
@@ -1499,7 +1499,7 @@ zhuge_great_steppe = {
 
 #游牧增强
 zhuge_ymbuff_02 = {
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     desc = zhuge_ymbuff_02_desc
     icon = legend
     common_interaction = no
@@ -1512,7 +1512,7 @@ zhuge_ymbuff_02 = {
     is_shown = {
         scope:actor = {
             is_ai = no
-            has_character_flag = daddy_pika_cheat_menu
+            has_character_flag = bone_cheat_interactions_flag
             government_has_flag = government_is_nomadic
         }
         scope:recipient = {
@@ -1537,7 +1537,7 @@ zhuge_ymbuff_02 = {
 
 #生活技能加强
 zhuge_lifexp_all_xp = {
-    category = interaction_category_cheat_menu
+    category = interaction_pcm_main
     desc = zhuge_lifexp_all_xp_desc
     icon = legend
     auto_accept = yes
@@ -1548,14 +1548,14 @@ zhuge_lifexp_all_xp = {
     is_shown = {
         scope:actor = {
             is_ai = no
-            has_character_flag = daddy_pika_cheat_menu
+            has_character_flag = bone_cheat_interactions_flag
         }
     }
 
     is_shown = {
 		scope:actor = {
 			is_ai = no
-			has_character_flag = daddy_pika_cheat_menu
+			has_character_flag = bone_cheat_interactions_flag
 		}
 	}
 	is_valid = {

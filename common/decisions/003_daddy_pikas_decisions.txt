@@ -1,4 +1,48 @@
-﻿change_government_celestial = {
+﻿change_government_japan_administrative_government_backup = {
+    picture = { reference = "gfx/interface/illustrations/decisions/cheat_tab.dds" }
+
+    title = change_govt_japan_administrative_government
+    desc = change_govt_japan_administrative_government_desc
+    selection_tooltip = change_govt_tt
+    confirm_text = CONFIRM_OKAY
+
+    decision_group_type = pcm
+
+    is_shown = {
+		NOT = { has_government = celestial_government }
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        tgp_wipe_domicile_effect = yes
+
+        if = {
+            limit = { NOT = { has_domicile = yes } }
+            give_noble_family_title = {
+                name = noble_family_name
+                tier = county
+                article = DEFAULT_TITLE_NAME_ARTICLE
+                government = japan_administrative_government
+            }
+            domicile ?= {
+                set_domicile_type = japanese_manor
+                set_up_domicile_estate_effect = yes
+            }
+        }
+
+        change_government = japan_administrative_government
+
+        every_vassal_or_below = {
+            change_government = japan_administrative_government
+        }
+    }
+
+    ai_check_interval = 0
+    ai_will_do = 0
+}
+
+change_government_celestial = {
     picture = {
 		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
 	}
@@ -383,28 +427,113 @@ change_government_administrative = {
 }
 
 change_government_landless_adventurer = {
-	picture = { reference = "gfx/interface/illustrations/decisions/cheat_tab.dds" }
+    picture = { reference = "gfx/interface/illustrations/decisions/cheat_tab.dds" }
 
-	title = change_govt_landless_adventurer
-	desc = change_govt_desc
-	selection_tooltip = change_govt_tt
-	confirm_text = CONFIRM_OKAY
+    title = change_govt_landless_adventurer
+    desc = change_govt_desc
+    selection_tooltip = change_govt_tt
+    confirm_text = CONFIRM_OKAY
 
-	decision_group_type = pcm
+    decision_group_type = pcm
 
-	is_shown = {
-		has_character_flag = daddy_pika_cheat_menu
-		has_character_flag = govt_menu
-	}
+    is_shown = {
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
 
-	effect = {
-		create_landless_adventurer_title_tooltip_effect = yes
-		trigger_event = { id = ep3_laamps.0030 }
-		change_government = landless_adventurer_government
-	}
+    effect = {
+        # Required scope the event reads from
+        save_scope_as = adventurer
 
-	ai_check_interval = 0
-	ai_will_do = 0
+        # Determine who gets the titles — mirrors vanilla logic
+        if = {
+            limit = {
+                player_heir ?= {
+                    this != root
+                    is_adult = yes
+                }
+            }
+            player_heir = {
+                save_scope_as = laamp_heir
+                save_scope_as = laamp_inheritor
+            }
+        }
+        else_if = {
+            limit = { top_liege != this }
+            liege = {
+                save_scope_as = laamp_liege
+                save_scope_as = laamp_inheritor
+            }
+        }
+        else = {
+            # No valid heir or liege — generate a throwaway inheritor character
+            hidden_effect_new_object = {
+                create_character = {
+                    template = laamp_inheritor_template
+                    culture = root.capital_county.culture
+                    faith = root.capital_county.faith
+                    dynasty = generate
+                    location = root.capital_province
+                    after_creation = {
+                        save_scope_as = laamp_inheritor
+                        add_character_flag = new_laamp_inheritor
+                    }
+                }
+            }
+        }
+
+        # Create the adventurer camp title
+        create_landless_adventurer_title_tooltip_effect = yes
+
+        # This event does the actual government change, title handoff, and full setup
+        trigger_event = { id = ep3_laamps.0030 }
+    }
+
+    ai_check_interval = 0
+    ai_will_do = 0
+}
+
+change_government_steppe_admin = {
+    picture = { reference = "gfx/interface/illustrations/decisions/cheat_tab.dds" }
+
+    title = change_govt_steppe_admin
+    desc = change_govt_desc
+    selection_tooltip = change_govt_tt
+    confirm_text = CONFIRM_OKAY
+
+    decision_group_type = pcm
+
+    is_shown = {
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        tgp_wipe_domicile_effect = yes
+
+        if = {
+            limit = { NOT = { has_domicile = yes } }
+            give_noble_family_title = {
+                name = noble_family_name
+                tier = county
+                article = DEFAULT_TITLE_NAME_ARTICLE
+                government = steppe_admin_government
+            }
+            domicile ?= {
+                set_domicile_type = east_asian_estate
+                set_up_domicile_estate_effect = yes
+            }
+        }
+
+        change_government = steppe_admin_government
+
+        every_vassal_or_below = {
+            change_government = steppe_admin_government
+        }
+    }
+
+    ai_check_interval = 0
+    ai_will_do = 0
 }
 
 change_government_japan_feudal_government = {

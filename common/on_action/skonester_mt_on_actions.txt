@@ -1,0 +1,12 @@
+﻿setup_after_game_start_on_actions = {
+    effect = {
+        every_player = {
+             trigger_event = merge_titles.1
+        }
+    }
+}
+on_game_start_after_lobby = {
+    on_actions = {
+        setup_after_game_start_on_actions
+    }
+}

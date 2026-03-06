@@ -1,0 +1,23 @@
+﻿l_english:
+GET_TARGET_TITLE_NAME:0 "[target.GetBaseNameNoTierNoTooltip]"
+GET_TARGET_TITLE_ADJECTIVE:0 "[target.GetAdjectiveNoTooltip]" #not used
+
+skonester_create_titular.back:0 "Go Back"
+
+
+skonester_create_titular:0 "Create a Titular Title"
+
+skonester_create_titular.1000.t:0 "Choose Owner"
+skonester_create_titular.1000.desc:0 "#S Who should get the Title? #!"
+
+skonester_create_titular.1000.me:0 "Take it for Myself!"
+skonester_create_titular.1000.recipient:0 "Grant it to [recipient.GetNameNoTooltip]"
+
+
+skonester_create_titular.1001.desc:0 "#S Select the desired Rank of the Title #!"
+skonester_create_titular.1001.t:0 "Title Rank"
+
+skonester_create_titular.1001.duchy:0 "Create a Duchy #!"
+skonester_create_titular.1001.kingdom:0 "Create a Kingdom"
+skonester_create_titular.1001.empire:0 "Create an Empire"
+skonester_create_titular.1001.hegemony:0 "Create a Hegemony"

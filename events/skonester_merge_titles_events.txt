@@ -1,0 +1,13 @@
+namespace = merge_titles
+merge_titles.1 = {
+	desc = merge_titles.1.desc
+	hidden = yes
+
+	immediate = {
+		set_variable = {
+			name = marked_title
+			value = 0
+		 }
+	}
+	}
+	

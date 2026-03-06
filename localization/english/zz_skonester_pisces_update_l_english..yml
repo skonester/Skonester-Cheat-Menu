@@ -30,5 +30,14 @@
     flag_age_42:0 "42 years old"
     flag_age_64:0 "64 years old"
   
-  siege_weapon_max_size_mult:0 "Max Siege Weapon Size"
-   
+ siege_weapon_max_size_mult:0 "Max Siege Weapon Size"
+  
+ 
+
+ change_govt_steppe_admin:0 "Become a Meritocratic Khagan"
+ change_govt_steppe_admin_desc:0 "Abandon the old ways and embrace the meritocratic traditions of the steppe, ruling through merit and treasury rather than birth and levy."
+ change_govt_steppe_admin_tt:0 "Transform your realm into a Meritocratic Khanate."
+
+ change_govt_japan_administrative_government:0 "Adopt the Ritsuryō System"
+ change_govt_japan_administrative_government_desc:0 "Reorganize your realm under the Ritsuryō administrative system, ruling through noble families and provincial appointments."
+

@@ -1,0 +1,445 @@
+﻿mt_merge_titles_interaction = {
+	category = interaction_pcm_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	target_type = title
+	target_filter = recipient_domain_titles
+	icon = debug_take_title
+	is_shown = {
+		scope:recipient = {
+			is_landed_or_landless_administrative = yes
+		}
+		scope:recipient = scope:actor
+	}
+	can_be_picked_title = {
+		scope:target = {
+			NOT = {
+				tier = tier_barony
+			}
+		}
+		trigger_if = {
+			limit = {
+				NOT = {
+					scope:actor = {
+						var:marked_title = 0
+					}
+				}
+			}
+			custom_tooltip = {
+				# counties cannot go into kingdoms
+				text = mt_req_no_county_and_kingdom
+				NOT = {
+					AND = {
+						scope:actor = {
+							var:marked_title = {
+								tier = tier_county
+							}
+						}
+						scope:target = {
+							tier = tier_kingdom
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				# counties cannto go into empires
+				text = mt_req_no_county_and_empire
+				NOT = {
+					AND = {
+						scope:actor = {
+							var:marked_title = {
+								tier = tier_county
+							}
+						}
+						scope:target = {
+							tier = tier_empire
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				# duchies cannot go into empires
+				text = mt_req_no_duchy_and_empire
+				NOT = {
+					AND = {
+						scope:actor = {
+							var:marked_title = {
+								tier = tier_duchy
+							}
+						}
+						scope:target = {
+							tier = tier_empire
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				# marked and target can not be the same
+				text = mt_req_not_the_same
+				NOT = {
+					scope:actor = {
+						scope:target = var:marked_title
+					}
+				}
+			}
+			custom_tooltip = {
+				# marked titles can not be higher than target titles
+				text = mt_req_no_higher_marked_title
+				NOT = {
+					OR = {
+						AND = {
+							# duchy, county
+							scope:actor = {
+								var:marked_title = {
+									tier = tier_duchy
+								}
+							}
+							scope:target = {
+								tier = tier_county
+							}
+						}
+						AND = {
+							# kingdom, county
+							scope:actor = {
+								var:marked_title = {
+									tier = tier_kingdom
+								}
+							}
+							scope:target = {
+								tier = tier_county
+							}
+						}
+						AND = {
+							# empire, county
+							scope:actor = {
+								var:marked_title = {
+									tier = tier_empire
+								}
+							}
+							scope:target = {
+								tier = tier_county
+							}
+						}
+						AND = {
+							# kingdom, duchy
+							scope:actor = {
+								var:marked_title = {
+									tier = tier_kingdom
+								}
+							}
+							scope:target = {
+								tier = tier_duchy
+							}
+						}
+						AND = {
+							# empire, duchy
+							scope:actor = {
+								var:marked_title = {
+									tier = tier_empire
+								}
+							}
+							scope:target = {
+								tier = tier_duchy
+							}
+						}
+						AND = {
+							# empire, kingdom
+							scope:actor = {
+								var:marked_title = {
+									tier = tier_empire
+								}
+							}
+							scope:target = {
+								tier = tier_kingdom
+							}
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				text = mt_req_no_two_counties
+				NOT = {
+					AND = {
+						# county, county
+						scope:actor = {
+							var:marked_title = {
+								tier = tier_county
+							}
+						}
+						scope:target = {
+							tier = tier_county
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				text = mt_req_already_dejure_liege
+				NOT = {
+					scope:actor = {
+						var:marked_title = {
+							de_jure_liege = scope:target
+						}
+					}
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				scope:landless_title = yes
+			}
+			scope:target = {
+				is_landless_type_title = yes
+				is_noble_family_title = no
+			}
+		}
+		trigger_else = {
+			scope:target = {
+				is_landless_type_title = no
+			}
+		}
+	}
+	send_option = {
+		flag = merge
+		localization = MERGE_KINGDOMS_MERGE_LOC
+	}
+	send_option = {
+		flag = back
+		localization = MERGE_KINGDOMS_BACK_LOC
+	}
+	auto_accept = yes
+	on_accept = {
+		scope:target = {
+			switch = {
+				trigger = yes
+				scope:merge = {
+					if = {
+						# If there is no marked title
+						limit = {
+							scope:actor = {
+								var:marked_title = 0
+							}
+						}
+						hidden_effect = {
+							scope:actor = {
+								set_variable = {
+									name = marked_title
+									value = scope:target
+								}
+							}
+						}
+						custom_tooltip = {
+							text = mt_select_title
+						}
+					}
+					else = {
+						# county INTO duchy
+						if = {
+							limit = {
+								scope:actor = {
+									var:marked_title = {
+										tier = tier_county
+									}
+								}
+								scope:target = {
+									tier = tier_duchy
+								}
+							}
+							scope:actor = {
+								# titles get merged
+								var:marked_title = {
+									set_de_jure_liege_title = scope:target
+								}
+							}
+							scope:actor = {
+								# cost
+								remove_short_term_gold = 1
+								add_prestige = 1
+							}
+						}
+						else_if = {
+							# duchy INTO duchy
+							limit = {
+								scope:actor = {
+									var:marked_title = {
+										tier = tier_duchy
+									}
+								}
+								scope:target = {
+									tier = tier_duchy
+								}
+							}
+							scope:actor = {
+								# titles get merged
+								var:marked_title = {
+									every_in_de_jure_hierarchy = {
+										limit = {
+											tier = tier_county
+										}
+										set_de_jure_liege_title = scope:target
+									}
+								}
+							}
+							scope:actor = {
+								# cost
+								remove_short_term_gold = 1
+								add_prestige = 1
+							}
+						}
+						else_if = {
+							# duchy INTO kingdom
+							limit = {
+								scope:actor = {
+									var:marked_title = {
+										tier = tier_duchy
+									}
+								}
+								scope:target = {
+									tier = tier_kingdom
+								}
+							}
+							scope:actor = {
+								# titles get merged
+								var:marked_title = {
+									set_de_jure_liege_title = scope:target
+								}
+							}
+							scope:actor = {
+								# cost
+								remove_short_term_gold = 1
+								add_prestige = 1
+							}
+						}
+						else_if = {
+							# kingdom INTO kingdom
+							limit = {
+								scope:actor = {
+									var:marked_title = {
+										tier = tier_kingdom
+									}
+								}
+								scope:target = {
+									tier = tier_kingdom
+								}
+							}
+							scope:actor = {
+								# titles get merged
+								var:marked_title = {
+									every_in_de_jure_hierarchy = {
+										limit = {
+											tier = tier_duchy
+										}
+										set_de_jure_liege_title = scope:target
+									}
+								}
+							}
+							scope:actor = {
+								# cost
+								remove_short_term_gold = 1
+								add_prestige = 1
+							}
+						}
+						else_if = {
+							# kingdom INTO empire
+							limit = {
+								scope:actor = {
+									var:marked_title = {
+										tier = tier_kingdom
+									}
+								}
+								scope:target = {
+									tier = tier_empire
+								}
+							}
+							scope:actor = {
+								# titles get merged
+								var:marked_title = {
+									set_de_jure_liege_title = scope:target
+								}
+							}
+							scope:actor = {
+								# cost
+								remove_short_term_gold = 1
+								add_prestige = 1
+							}
+						}
+						else_if = {
+							# empire INTO empire
+							limit = {
+								scope:actor = {
+									var:marked_title = {
+										tier = tier_empire
+									}
+								}
+								scope:target = {
+									tier = tier_empire
+								}
+							}
+							scope:actor = {
+								# titles get merged
+								var:marked_title = {
+									every_in_de_jure_hierarchy = {
+										limit = {
+											tier = tier_kingdom
+										}
+										set_de_jure_liege_title = scope:target
+									}
+								}
+							}
+							scope:actor = {
+								# cost
+								remove_short_term_gold = 1
+								add_prestige = 1
+							}
+						}
+						scope:actor = {
+							custom_tooltip = {
+								# selection gets cleared
+								text = mt_clear_selection
+								set_variable = {
+									name = marked_title
+									value = 0
+								}
+							}
+						}
+					}
+				}
+				scope:back = {
+					scope:actor = {
+						custom_tooltip = {
+							# selection gets cleared
+							text = mt_clear_selection
+							set_variable = {
+								name = marked_title
+								value = 0
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+mt_clear_selection_interaction = {
+	category = interaction_pcm_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = debug_take_title
+	is_shown = {
+		scope:recipient = {
+			is_landed_or_landless_administrative = yes
+		}
+		scope:recipient = scope:actor
+	}
+	on_accept = {
+		scope:actor = {
+			set_variable = {
+				name = marked_title
+				value = 0
+			}
+		}
+	}
+	auto_accept = {
+		always = yes
+	}
+}

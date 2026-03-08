@@ -1,0 +1,2419 @@
+open_optroop_menu = {
+	category = interaction_pcm_main
+	icon = on
+	desc = open_optroop_menu_desc
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			NOT = {
+				has_character_flag = open_optroop_menu
+			}
+		}
+	}
+	on_send = {
+		scope:actor = {
+			add_character_flag = open_optroop_menu
+		}
+	}
+}
+
+close_optroop_menu = {
+	category = interaction_pcm_main
+	icon = off
+	desc = close_optroop_menu_desc
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			has_character_flag = open_optroop_menu
+		}
+	}
+	on_send = {
+		scope:actor = {
+			remove_character_flag = open_optroop_menu
+		}
+	}
+}
+
+inheritable_optroop_interaction = {
+	category = interaction_pcm_main
+	icon = on
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	desc = inheritable_optroop_interaction_desc
+	is_shown = {
+		scope:actor = {
+			has_character_flag = open_optroop_menu
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			spawn_army = {
+				men_at_arms = {
+					type = house_guard_type
+					stacks = 10
+				}
+				location = scope:recipient.capital_province
+				inheritable = yes
+				uses_supply = no
+				name = house_guard_type
+			}
+		}
+	}
+	auto_accept = yes
+}
+
+non_inheritable_optroop_interaction = {
+	category = interaction_pcm_main
+	icon = on
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	desc = non_inheritable_optroop_interaction_desc
+	is_shown = {
+		scope:actor = {
+			has_character_flag = open_optroop_menu
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			spawn_army = {
+				men_at_arms = {
+					type = house_cavalry_type
+					stacks = 10
+				}
+				location = scope:recipient.capital_province
+				inheritable = yes
+				uses_supply = no
+				name = house_cavalry_type
+			}
+		}
+	}
+	auto_accept = yes
+}
+
+open_bone_cheat_interactions = {
+	category = interaction_pcm_main
+	icon = on
+	desc = bone_cheat_interactions_desc
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			NOT = { has_character_flag = bone_cheat_interactions_flag }
+		}
+	}
+	on_send = {
+		scope:actor = { add_character_flag = bone_cheat_interactions_flag }
+	}
+}
+close_bone_cheat_interactions = {
+	category = interaction_pcm_main
+	icon = off
+	desc = bone_cheat_interactions_desc
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			has_character_flag = bone_cheat_interactions_flag
+		}
+	}
+	on_send = {
+		scope:actor = { remove_character_flag = bone_cheat_interactions_flag }
+	}
+}
+
+set_immortal_interaction = {
+	category = interaction_pcm_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	desc = set_immortal_interaction_desc
+	is_shown = {
+		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+		scope:recipient = { NOT = { has_trait = immortality } }
+	}
+	on_accept = {
+		scope:recipient = {
+			add_trait = immortality
+			set_immortal_age = 25
+		}
+	}
+	auto_accept = yes
+}
+
+set_mortal_interaction = {
+	category = interaction_category_cheat_menu
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	desc = set_mortal_interaction_desc
+	is_shown = {
+		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+		scope:recipient = { has_trait = immortality }
+	}
+	on_accept = {
+		scope:recipient = { remove_trait = immortality }
+	}
+	auto_accept = yes
+}
+
+set_super_interaction = {
+	category = interaction_pcm_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	desc = set_super_interaction_desc
+	is_shown = {
+		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+		scope:recipient = { NOT = { has_trait = super } }
+	}
+	on_accept = {
+		scope:recipient = { add_trait = super }
+	}
+	auto_accept = yes
+}
+
+set_unsuper_interaction = {
+	category = interaction_pcm_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	desc = set_unsuper_interaction_desc
+	is_shown = {
+		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+		scope:recipient = { has_trait = super }
+	}
+	on_accept = {
+		scope:recipient = { remove_trait = super }
+	}
+	auto_accept = yes
+}
+
+set_super_governor_interaction = {
+	category = interaction_pcm_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	desc = set_super_governor_interaction_desc
+	is_shown = {
+		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+		scope:recipient = { NOT = { has_trait = super_governor } }
+	}
+	on_accept = {
+		scope:recipient = { add_trait = super_governor }
+	}
+	auto_accept = yes
+}
+
+set_unsuper_governor_interaction = {
+	category = interaction_pcm_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	desc = set_unsuper_governor_interaction_desc
+	is_shown = {
+		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+		scope:recipient = { has_trait = super_governor }
+	}
+	on_accept = {
+		scope:recipient = { remove_trait = super_governor }
+	}
+	auto_accept = yes
+}
+
+set_super_general_interaction = {
+	category = interaction_pcm_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	desc = set_super_general_interaction_desc
+	is_shown = {
+		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+		scope:recipient = { NOT = { has_trait = super_general } }
+	}
+	on_accept = {
+		scope:recipient = { add_trait = super_general }
+	}
+	auto_accept = yes
+}
+
+set_unsuper_general_interaction = {
+	category = interaction_pcm_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	desc = set_unsuper_general_interaction_desc
+	is_shown = {
+		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+		scope:recipient = { has_trait = super_general }
+	}
+	on_accept = {
+		scope:recipient = { remove_trait = super_general }
+	}
+	auto_accept = yes
+}
+
+set_all_in_one_interaction = {
+	category = interaction_pcm_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	desc = set_all_in_one_interaction_desc
+	is_shown = {
+		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+		scope:recipient = {
+			NOT = {
+				AND = {
+					has_trait = super
+					has_trait = super_general
+					has_trait = super_governor
+				}
+			}
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			add_trait = super
+			add_trait = super_general
+			add_trait = super_governor
+		}
+	}
+	auto_accept = yes
+}
+
+set_unall_in_one_interaction = {
+	category = interaction_pcm_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	desc = set_unall_in_one_interaction_desc
+	is_shown = {
+		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+		scope:recipient = {
+			AND = {
+				has_trait = super
+				has_trait = super_general
+				has_trait = super_governor
+			}
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			remove_trait = super
+			remove_trait = super_general
+			remove_trait = super_governor
+		}
+	}
+	auto_accept = yes
+}
+
+take_title_interaction = {
+	category = interaction_pcm_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+		scope:recipient = { is_landed = yes }
+		NOT = { scope:recipient = scope:actor }
+	}
+	auto_accept = yes
+	on_accept = {
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		scope:recipient.primary_title = {
+			change_title_holder = {
+				holder = scope:actor
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+	}
+}
+
+start_pregnancy_interaction = {
+	category = interaction_pcm_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+		scope:recipient = { is_adult = yes, is_pregnant = no }
+		scope:actor = { is_adult = yes, is_pregnant = no }
+		OR = {
+			AND = { scope:recipient = { is_female = yes }, scope:actor = { is_male = yes } }
+			AND = { scope:recipient = { is_male = yes }, scope:actor = { is_female = yes } }
+		}
+	}
+	on_accept = { scope:actor = { trigger_event = debug.0002 } }
+	auto_accept = yes
+}
+
+open_optroop_menu = {
+	category = interaction_pcm_main
+	icon = on
+	desc = open_optroop_menu_desc
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			NOT = {
+				has_character_flag = open_optroop_menu
+			}
+		}
+	}
+	on_send = {
+		scope:actor = {
+			add_character_flag = open_optroop_menu
+		}
+	}
+}
+
+close_optroop_menu = {
+	category = interaction_pcm_main
+	icon = off
+	desc = close_optroop_menu_desc
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			has_character_flag = open_optroop_menu
+		}
+	}
+	on_send = {
+		scope:actor = {
+			remove_character_flag = open_optroop_menu
+		}
+	}
+}
+
+inheritable_optroop_interaction = {
+	category = interaction_pcm_main
+	icon = on
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	desc = inheritable_optroop_interaction_desc
+	is_shown = {
+		scope:actor = {
+			has_character_flag = open_optroop_menu
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			spawn_army = {
+				men_at_arms = {
+					type = house_guard_type
+					stacks = 10
+				}
+				location = scope:recipient.capital_province
+				inheritable = yes
+				uses_supply = no
+				name = house_guard_type
+			}
+		}
+	}
+	auto_accept = yes
+}
+
+non_inheritable_optroop_interaction = {
+	category = interaction_pcm_main
+	icon = on
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	desc = non_inheritable_optroop_interaction_desc
+	is_shown = {
+		scope:actor = {
+			has_character_flag = open_optroop_menu
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			spawn_army = {
+				men_at_arms = {
+					type = house_cavalry_type
+					stacks = 10
+				}
+				location = scope:recipient.capital_province
+				inheritable = yes
+				uses_supply = no
+				name = house_cavalry_type
+			}
+		}
+	}
+	auto_accept = yes
+}
+
+become_conqueror_interaction = {
+	category = interaction_pcm_main
+	icon = on
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	desc = become_conqueror_interaction_desc
+
+	is_shown = {
+		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+		scope:recipient = {
+			NOT = {
+				OR = {
+					has_trait = conqueror
+					has_trait = greatest_of_khans
+					has_trait = chakravarti
+					has_trait = crusader_king
+					has_trait = savior
+					has_trait = living_legend
+					has_trait = golden_lineage
+					has_trait = campeador
+					has_trait = saoshyant
+				}
+			}
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			add_trait = conqueror
+			add_trait = greatest_of_khans
+			add_trait = chakravarti
+			add_trait = crusader_king
+			add_trait = savior
+			add_trait = living_legend
+			add_trait = golden_lineage
+			add_trait = campeador
+			add_trait = saoshyant
+		}
+	}
+
+	auto_accept = yes
+}
+
+remove_conqueror_interaction = {
+	category = interaction_pcm_main
+	icon = off
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	desc = remove_conqueror_interaction_desc
+
+	is_shown = {
+		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+		scope:recipient = {
+			OR = {
+				has_trait = conqueror
+				has_trait = greatest_of_khans
+				has_trait = chakravarti
+				has_trait = crusader_king
+				has_trait = savior
+				has_trait = living_legend
+				has_trait = golden_lineage
+				has_trait = campeador
+				has_trait = saoshyant
+			}
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			remove_trait = conqueror
+			remove_trait = greatest_of_khans
+			remove_trait = chakravarti
+			remove_trait = crusader_king
+			remove_trait = savior
+			remove_trait = living_legend
+			remove_trait = golden_lineage
+			remove_trait = campeador
+			remove_trait = saoshyant
+		}
+	}
+
+	auto_accept = yes
+}
+
+dynasty_marry = {
+	icon = on
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			has_character_flag = bone_cheat_interactions_flag
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			if = {
+				limit = { scope:males_marry = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = dynasty_marry_males
+								this = scope:recipient.dynasty
+							}
+						}
+					}
+					scope:recipient.dynasty = {
+						add_dynasty_modifier = males_marry_dynasty
+					}
+					add_to_global_variable_list = {
+						name = dynasty_marry_males
+						target = scope:recipient.dynasty
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = dynasty_marry_males
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						remove_dynasty_modifier = males_marry_dynasty
+					}
+				}
+			}
+			if = {
+				limit = { scope:females_marry = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = dynasty_marry_females
+								this = scope:recipient.dynasty
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = dynasty_marry_females
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						add_dynasty_modifier = females_marry_dynasty
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = dynasty_marry_females
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						remove_dynasty_modifier = females_marry_dynasty
+					}
+				}
+			}
+			if = {
+				limit = { scope:inbreed_marry = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = dynasty_marry_inbreed
+								this = scope:recipient.dynasty
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = dynasty_marry_inbreed
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						add_dynasty_modifier = inbreed_marry_dynasty
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = dynasty_marry_inbreed
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						remove_dynasty_modifier = inbreed_marry_dynasty
+					}
+				}
+			}
+			if = {
+				limit = { scope:males_concubine = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = dynasty_conc_males
+								this = scope:recipient.dynasty
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = dynasty_conc_males
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						add_dynasty_modifier = males_concubine_dynasty
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = dynasty_conc_males
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						remove_dynasty_modifier = males_concubine_dynasty
+					}
+				}
+			}
+			if = {
+				limit = { scope:females_concubine = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = dynasty_conc_females
+								this = scope:recipient.dynasty
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = dynasty_conc_females
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						add_dynasty_modifier = females_concubine_dynasty
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = dynasty_conc_females
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						remove_dynasty_modifier = females_concubine_dynasty
+					}
+				}
+			}
+			if = {
+				limit = { scope:males_eugenic = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = dynasty_eugenic_males
+								this = scope:recipient.dynasty
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = dynasty_eugenic_males
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						add_dynasty_modifier = males_eugenic_dynasty
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = dynasty_eugenic_males
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						remove_dynasty_modifier = males_eugenic_dynasty
+					}
+				}
+			}
+			if = {
+				limit = { scope:females_eugenic = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = dynasty_eugenic_females
+								this = scope:recipient.dynasty
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = dynasty_eugenic_females
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						add_dynasty_modifier = females_eugenic_dynasty
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = dynasty_eugenic_females
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						remove_dynasty_modifier = females_eugenic_dynasty
+					}
+				}
+			}
+		}
+	}
+
+	send_option = { flag = males_marry localization = males_marry }
+	send_option = { flag = females_marry localization = females_marry }
+	send_option = { flag = inbreed_marry localization = inbreed_marry }
+	send_option = { flag = males_concubine localization = males_concubine }
+	send_option = { flag = females_concubine localization = females_concubine }
+	send_option = { flag = males_eugenic localization = males_eugenic }
+	send_option = { flag = females_eugenic localization = females_eugenic }
+
+	send_options_exclusive = no
+	auto_accept = { always = yes }
+}
+
+house_marry = {
+	icon = on
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			has_character_flag = bone_cheat_interactions_flag
+		}
+	}
+	auto_accept = { always = yes }
+
+	on_accept = {
+		scope:recipient = {
+			if = {
+				limit = { scope:males_marry = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = house_marry_males
+								this = scope:recipient.house
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = house_marry_males
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						add_house_modifier = males_marry_house
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = house_marry_males
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						remove_house_modifier = males_marry_house
+					}
+				}
+			}
+			if = {
+				limit = { scope:females_marry = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = house_marry_females
+								this = scope:recipient.house
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = house_marry_females
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						add_house_modifier = females_marry_house
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = house_marry_females
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						remove_house_modifier = females_marry_house
+					}
+				}
+			}
+			if = {
+				limit = { scope:inbreed_marry = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = house_marry_inbreed
+								this = scope:recipient.house
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = house_marry_inbreed
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						add_house_modifier = inbreed_marry_house
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = house_marry_inbreed
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						remove_house_modifier = inbreed_marry_house
+					}
+				}
+			}
+			if = {
+				limit = { scope:males_concubine = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = house_conc_males
+								this = scope:recipient.house
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = house_conc_males
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						add_house_modifier = males_concubine_house
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = house_conc_males
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						remove_house_modifier = males_concubine_house
+					}
+				}
+			}
+			if = {
+				limit = { scope:females_concubine = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = house_conc_females
+								this = scope:recipient.house
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = house_conc_females
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						add_house_modifier = females_concubine_house
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = house_conc_females
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						remove_house_modifier = females_concubine_house
+					}
+				}
+			}
+			if = {
+				limit = { scope:males_eugenic = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = house_eugenic_males
+								this = scope:recipient.house
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = house_eugenic_males
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						add_house_modifier = males_eugenic_house
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = house_eugenic_males
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						remove_house_modifier = males_eugenic_house
+					}
+				}
+			}
+			if = {
+				limit = { scope:females_eugenic = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = house_eugenic_females
+								this = scope:recipient.house
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = house_eugenic_females
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						add_house_modifier = females_eugenic_house
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = house_eugenic_females
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						remove_house_modifier = females_eugenic_house
+					}
+				}
+			}
+		}
+	}
+	send_option = { flag = males_marry }
+	send_option = { flag = females_marry }
+	send_option = { flag = inbreed_marry }
+	send_option = { flag = males_concubine }
+	send_option = { flag = females_concubine }
+	send_option = { flag = males_eugenic localization = males_eugenic }
+	send_option = { flag = females_eugenic localization = females_eugenic }
+
+	send_options_exclusive = no
+}
+
+individual_marry_exempt = {
+	icon = on
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			has_character_flag = bone_cheat_interactions_flag
+		}
+	}
+	auto_accept = { always = yes }
+	on_accept = {
+		scope:recipient = {
+			if = {
+				limit = {
+					NOT = {
+						any_in_global_list = {
+							variable = individual_marry_exempt
+							this = scope:recipient
+						}
+					}
+				}
+				add_to_global_variable_list = {
+					name = individual_marry_exempt
+					target = scope:recipient
+				}
+				add_character_modifier = individual_marry_exempt
+			}
+			else = {
+				remove_list_global_variable = {
+					name = individual_marry_exempt
+					target = scope:recipient
+				}
+				remove_character_modifier = individual_marry_exempt
+			}
+		}
+	}
+}
+
+eka_impregnate_female_inter = {
+	icon = on
+	category = interaction_pcm_main
+	common_interaction = no
+	interface_priority = -1
+
+	is_highlighted = { always = no }
+
+	auto_accept = yes
+	ai_will_do = -100
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = no
+
+	is_shown = {
+		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+		scope:recipient = { is_female = yes }
+		scope:actor = { is_male = yes }
+		OR = {
+			scope:recipient = { is_married = yes }
+			AND = {
+				scope:recipient = { is_adult = yes }
+				scope:actor = { is_adult = yes }
+			}
+		}
+	}
+
+	send_option = {
+		flag = flag_spouse_boy
+		localization = flag_spouse_boy
+		is_shown = {
+			scope:recipient = {
+				is_married = yes
+				is_pregnant = no
+				NOT = { this.primary_spouse = scope:actor }
+			}
+		}
+	}
+	send_option = {
+		flag = flag_spouse_girl
+		localization = flag_spouse_girl
+		is_shown = {
+			scope:recipient = {
+				is_married = yes
+				is_pregnant = no
+				NOT = { this.primary_spouse = scope:actor }
+			}
+		}
+	}
+	send_option = {
+		flag = flag_my_boy
+		localization = flag_my_boy
+		is_shown = {
+			scope:actor = { is_adult = yes }
+			scope:recipient = { is_pregnant = no }
+		}
+	}
+	send_option = {
+		flag = flag_my_girl
+		localization = flag_my_girl
+		is_shown = {
+			scope:actor = { is_adult = yes }
+			scope:recipient = { is_pregnant = no }
+		}
+	}
+	send_option = {
+		flag = flag_pregnancy_boy
+		localization = flag_pregnancy_boy
+		is_shown = {
+			scope:recipient = { is_pregnant = yes }
+		}
+	}
+	send_option = {
+		flag = flag_pregnancy_girl
+		localization = flag_pregnancy_girl
+		is_shown = {
+			scope:recipient = { is_pregnant = yes }
+		}
+	}
+	send_options_exclusive = yes
+
+	on_accept = {
+		scope:recipient = {
+			switch = {
+				trigger = yes
+
+				scope:flag_spouse_boy = {
+					had_sex_with_effect = {
+						CHARACTER = this.primary_spouse
+						PREGNANCY_CHANCE = 10000
+					}
+					set_pregnancy_gender = male
+				}
+				scope:flag_spouse_girl = {
+					had_sex_with_effect = {
+						CHARACTER = this.primary_spouse
+						PREGNANCY_CHANCE = 10000
+					}
+					set_pregnancy_gender = female
+				}
+				scope:flag_my_boy = {
+					had_sex_with_effect = {
+						CHARACTER = scope:actor
+						PREGNANCY_CHANCE = 10000
+					}
+					set_pregnancy_gender = male
+				}
+				scope:flag_my_girl = {
+					had_sex_with_effect = {
+						CHARACTER = scope:actor
+						PREGNANCY_CHANCE = 10000
+					}
+					set_pregnancy_gender = female
+				}
+				scope:flag_pregnancy_boy = {
+					set_pregnancy_gender = male
+				}
+				scope:flag_pregnancy_girl = {
+					set_pregnancy_gender = female
+				}
+			}
+		}
+	}
+}
+
+eka_impregnate_male_inter = {
+	icon = on
+	category = interaction_pcm_main
+	common_interaction = no
+	interface_priority = -1
+
+	is_highlighted = { always = no }
+
+	auto_accept = yes
+	#ai_will_do = -100
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = no
+
+	is_shown = {
+		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+		scope:recipient = { is_male = yes }
+		scope:actor = { is_female = yes }
+		OR = {
+			scope:recipient = { is_married = yes }
+			AND = {
+				scope:recipient = { is_adult = yes }
+				scope:actor = { is_adult = yes }
+			}
+		}
+	}
+
+	send_option = {
+		flag = flag_spouse_boy
+		localization = flag_spouse_boy
+		is_shown = {
+			scope:recipient = {
+				is_married = yes
+				NOT = { this.primary_spouse = scope:actor }
+				this.primary_spouse = { is_pregnant = no }
+			}
+		}
+	}
+	send_option = {
+		flag = flag_spouse_girl
+		localization = flag_spouse_girl
+		is_shown = {
+			scope:recipient = {
+				is_married = yes
+				NOT = { this.primary_spouse = scope:actor }
+				this.primary_spouse = { is_pregnant = no }
+			}
+		}
+	}
+	send_option = {
+		flag = flag_spouse_boy_confirm
+		localization = flag_spouse_boy_confirm
+		is_shown = {
+			scope:recipient = {
+				is_married = yes
+				NOT = { this.primary_spouse = scope:actor }
+				this.primary_spouse = { is_pregnant = yes }
+			}
+		}
+	}
+	send_option = {
+		flag = flag_spouse_girl_confirm
+		localization = flag_spouse_girl_confirm
+		is_shown = {
+			scope:recipient = {
+				is_married = yes
+				NOT = { this.primary_spouse = scope:actor }
+				this.primary_spouse = { is_pregnant = yes }
+			}
+		}
+	}
+	send_option = {
+		flag = flag_my_boy
+		localization = flag_my_boy
+		is_shown = {
+			scope:recipient = { is_adult = yes }
+			scope:actor = {
+				is_adult = yes
+				is_pregnant = no
+			}
+		}
+	}
+	send_option = {
+		flag = flag_my_girl
+		localization = flag_my_girl
+		is_shown = {
+			scope:recipient = { is_adult = yes }
+			scope:actor = {
+				is_adult = yes
+				is_pregnant = no
+			}
+		}
+	}
+	send_option = {
+		flag = flag_my_boy_confirm
+		localization = flag_my_boy_confirm
+		is_shown = {
+			scope:recipient = { is_adult = yes }
+			scope:actor = {
+				is_adult = yes
+				is_pregnant = yes
+			}
+		}
+	}
+	send_option = {
+		flag = flag_my_girl_confirm
+		localization = flag_my_girl_confirm
+		is_shown = {
+			scope:recipient = { is_adult = yes }
+			scope:actor = {
+				is_adult = yes
+				is_pregnant = yes
+			}
+		}
+	}
+	send_options_exclusive = yes
+
+	on_accept = {
+		scope:recipient = {
+			switch = {
+				trigger = yes
+
+				scope:flag_spouse_boy = {
+					had_sex_with_effect = {
+						CHARACTER = this.primary_spouse
+						PREGNANCY_CHANCE = 10000
+					}
+					this.primary_spouse = { set_pregnancy_gender = male }
+				}
+				scope:flag_spouse_girl = {
+					had_sex_with_effect = {
+						CHARACTER = this.primary_spouse
+						PREGNANCY_CHANCE = 10000
+					}
+					this.primary_spouse = { set_pregnancy_gender = female }
+				}
+				scope:flag_spouse_boy_confirm = {
+					this.primary_spouse = { set_pregnancy_gender = male }
+				}
+				scope:flag_spouse_girl_confirm = {
+					this.primary_spouse = { set_pregnancy_gender = female }
+				}
+				scope:flag_my_boy = {
+					had_sex_with_effect = {
+						CHARACTER = scope:actor
+						PREGNANCY_CHANCE = 10000
+					}
+					scope:actor = { set_pregnancy_gender = male }
+				}
+				scope:flag_my_girl = {
+					had_sex_with_effect = {
+						CHARACTER = scope:actor
+						PREGNANCY_CHANCE = 10000
+					}
+					scope:actor = { set_pregnancy_gender = female }
+				}
+				scope:flag_my_boy_confirm = {
+					scope:actor = { set_pregnancy_gender = male }
+				}
+				scope:flag_my_girl_confirm = {
+					scope:actor = { set_pregnancy_gender = female }
+				}
+			}
+		}
+	}
+}
+
+eka_impregnate_me_inter = {
+	icon = on
+	category = interaction_pcm_main
+	common_interaction = no
+	interface_priority = -1
+
+	is_highlighted = { always = no }
+
+	auto_accept = yes
+	ai_will_do = -100
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = no
+
+	is_shown = {
+		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+		scope:recipient = {
+			this = scope:actor
+			is_pregnant = yes
+		}
+	}
+
+	send_option = {
+		flag = flag_my_boy_confirm
+		localization = flag_my_boy_confirm
+
+		is_shown = {
+			scope:actor = {
+				is_adult = yes
+				is_pregnant = yes
+			}
+		}
+	}
+	send_option = {
+		flag = flag_my_girl_confirm
+		localization = flag_my_girl_confirm
+
+		is_shown = {
+			scope:actor = {
+				is_adult = yes
+				is_pregnant = yes
+			}
+		}
+	}
+	send_options_exclusive = yes
+
+	on_accept = {
+		scope:actor = {
+			switch = {
+				trigger = yes
+
+				scope:flag_my_boy_confirm = {
+					scope:actor = { set_pregnancy_gender = male }
+				}
+				scope:flag_my_girl_confirm = {
+					scope:actor = { set_pregnancy_gender = female }
+				}
+			}
+		}
+	}
+}
+
+eka_impregnate_concubine_inter = {
+	icon = on
+	category = interaction_pcm_main
+	common_interaction = no
+	interface_priority = -1
+
+	is_highlighted = { always = no }
+
+	auto_accept = yes
+	ai_will_do = -100
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = no
+
+	is_shown = {
+		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+		scope:recipient = { is_female = yes }
+		AND = {
+			scope:recipient = { is_adult = yes }
+			scope:recipient = { is_female = yes }
+		}
+	}
+
+	send_option = {
+		flag = flag_spouse_boy
+		localization = flag_spouse_boy
+
+		is_shown = {
+			scope:recipient = {
+				is_pregnant = no
+			}
+		}
+	}
+	send_option = {
+		flag = flag_spouse_girl
+		localization = flag_spouse_girl
+
+		is_shown = {
+			scope:recipient = {
+				is_pregnant = no
+			}
+		}
+	}
+	send_option = {
+		flag = flag_pregnancy_boy
+		localization = flag_pregnancy_boy
+
+		is_shown = {
+			scope:recipient = { is_pregnant = yes }
+		}
+	}
+	send_option = {
+		flag = flag_pregnancy_girl
+		localization = flag_pregnancy_girl
+
+		is_shown = {
+			scope:recipient = { is_pregnant = yes }
+		}
+	}
+	send_options_exclusive = yes
+
+	on_accept = {
+		scope:recipient = {
+			switch = {
+				trigger = yes
+
+				scope:flag_spouse_boy = {
+					had_sex_with_effect = {
+						CHARACTER = this.primary_spouse
+						PREGNANCY_CHANCE = 10000
+					}
+					set_pregnancy_gender = male
+				}
+				scope:flag_spouse_girl = {
+					had_sex_with_effect = {
+						CHARACTER = this.primary_spouse
+						PREGNANCY_CHANCE = 10000
+					}
+					set_pregnancy_gender = female
+				}
+				scope:flag_pregnancy_boy = {
+					set_pregnancy_gender = male
+				}
+				scope:flag_pregnancy_girl = {
+					set_pregnancy_gender = female
+				}
+			}
+		}
+	}
+}
+
+jkm_send_courtier_interaction = {
+	category = interaction_pcm_main
+	icon = on
+
+	desc = jkm_send_courtier_interaction_desc
+
+	populate_actor_list = {
+		scope:actor = {
+			every_courtier = {
+				add_to_list = characters
+			}
+		}
+	}
+
+	is_shown = {
+		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+		NOT = { scope:actor = scope:recipient }
+		scope:recipient = { is_ruler = yes }
+		scope:actor = { is_ruler = yes }
+	}
+
+	on_accept = {
+		scope:actor = {
+			send_interface_message = {
+				type = event_generic_neutral
+				title = jkm_send_courtier_interaction_notification
+				right_icon = scope:secondary_actor
+				scope:recipient = {
+					add_courtier = scope:secondary_actor
+				}
+			}
+		}
+	}
+
+	auto_accept = {
+		custom_description = {
+			text = auto_accept_interaction_ai
+			object = scope:recipient
+			scope:recipient = { is_ai = yes }
+		}
+	}
+
+	ai_min_reply_days = 1
+	ai_max_reply_days = 1
+
+	greeting = positive
+}
+
+leech_mind_control_interaction = {
+	category = interaction_pcm_main
+	desc = leech_mind_control_interaction_desc
+	ignores_pending_interaction_block = yes
+	use_diplomatic_range = no
+	icon = lady
+
+	redirect = {
+		scope:actor = {
+			if = {
+				limit = { exists = var:mind_controlled }
+				var:mind_controlled = { save_scope_as = secondary_recipient }
+			}
+		}
+	}
+
+	is_shown = {
+		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+		NOT = {
+			AND = {
+				exists = scope:recipient
+				scope:recipient = scope:secondary_recipient
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		NOT = {
+			AND = {
+				exists = scope:recipient
+				scope:recipient = scope:secondary_recipient
+			}
+		}
+	}
+
+	ai_frequency = 0
+	auto_accept = yes
+
+	on_accept = {
+		if = {
+			limit = { NOT = { exists = scope:secondary_recipient } }
+			scope:actor = {
+				add_character_flag = {
+					flag = mind_controlled
+					days = 5
+				}
+			}
+		}
+		scope:actor = {
+			set_variable = {
+				name = mind_controlled
+				value = scope:recipient
+			}
+		}
+	}
+}
+
+leech_mc_end_control_interaction = {
+	category = interaction_pcm_main
+	desc = leech_mc_end_control_interaction_desc
+	ignores_pending_interaction_block = yes
+	icon = lady
+
+	is_shown = {
+		scope:actor = {
+			has_character_flag = bone_cheat_interactions_flag
+			exists = var:mind_controlled
+		}
+	}
+
+	ai_frequency = 0
+	auto_accept = yes
+
+	on_accept = {
+		scope:actor = {
+			remove_character_flag = mind_controlled
+		}
+	}
+}
+
+leech_mc_simple_action_interaction = {
+	category = interaction_pcm_main
+	desc = leech_mc_simple_action_interaction_desc
+	ignores_pending_interaction_block = yes
+	use_diplomatic_range = no
+	icon = lady
+
+	redirect = {
+		scope:recipient = {
+			save_scope_as = secondary_recipient
+			scope:actor = {
+				if = {
+					limit = { exists = var:mind_controlled }
+					var:mind_controlled = { save_scope_as = recipient }
+				}
+			}
+		}
+	}
+
+	is_shown = {
+		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
+		exists = scope:recipient
+		NOT = { scope:recipient = scope:secondary_recipient }
+	}
+
+	ai_frequency = 0
+	auto_accept = yes
+
+	on_accept = {
+		scope:actor = {
+			trigger_event = leech_mc_event.1001
+		}
+	}
+}
+
+dynasty_marry = {
+	icon = on
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			has_character_flag = bone_cheat_interactions_flag
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			if = {
+				limit = { scope:males_marry = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = dynasty_marry_males
+								this = scope:recipient.dynasty
+							}
+						}
+					}
+					scope:recipient.dynasty = {
+						add_dynasty_modifier = males_marry_dynasty
+					}
+					add_to_global_variable_list = {
+						name = dynasty_marry_males
+						target = scope:recipient.dynasty
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = dynasty_marry_males
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						remove_dynasty_modifier = males_marry_dynasty
+					}
+				}
+			}
+			if = {
+				limit = { scope:females_marry = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = dynasty_marry_females
+								this = scope:recipient.dynasty
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = dynasty_marry_females
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						add_dynasty_modifier = females_marry_dynasty
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = dynasty_marry_females
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						remove_dynasty_modifier = females_marry_dynasty
+					}
+				}
+			}
+			if = {
+				limit = { scope:inbreed_marry = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = dynasty_marry_inbreed
+								this = scope:recipient.dynasty
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = dynasty_marry_inbreed
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						add_dynasty_modifier = inbreed_marry_dynasty
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = dynasty_marry_inbreed
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						remove_dynasty_modifier = inbreed_marry_dynasty
+					}
+				}
+			}
+			if = {
+				limit = { scope:males_concubine = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = dynasty_conc_males
+								this = scope:recipient.dynasty
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = dynasty_conc_males
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						add_dynasty_modifier = males_concubine_dynasty
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = dynasty_conc_males
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						remove_dynasty_modifier = males_concubine_dynasty
+					}
+				}
+			}
+			if = {
+				limit = { scope:females_concubine = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = dynasty_conc_females
+								this = scope:recipient.dynasty
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = dynasty_conc_females
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						add_dynasty_modifier = females_concubine_dynasty
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = dynasty_conc_females
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						remove_dynasty_modifier = females_concubine_dynasty
+					}
+				}
+			}
+			if = {
+				limit = { scope:males_eugenic = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = dynasty_eugenic_males
+								this = scope:recipient.dynasty
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = dynasty_eugenic_males
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						add_dynasty_modifier = males_eugenic_dynasty
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = dynasty_eugenic_males
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						remove_dynasty_modifier = males_eugenic_dynasty
+					}
+				}
+			}
+			if = {
+				limit = { scope:females_eugenic = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = dynasty_eugenic_females
+								this = scope:recipient.dynasty
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = dynasty_eugenic_females
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						add_dynasty_modifier = females_eugenic_dynasty
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = dynasty_eugenic_females
+						target = scope:recipient.dynasty
+					}
+					scope:recipient.dynasty = {
+						remove_dynasty_modifier = females_eugenic_dynasty
+					}
+				}
+			}
+		}
+	}
+
+	send_option = { flag = males_marry localization = males_marry }
+	send_option = { flag = females_marry localization = females_marry }
+	send_option = { flag = inbreed_marry localization = inbreed_marry }
+	send_option = { flag = males_concubine localization = males_concubine }
+	send_option = { flag = females_concubine localization = females_concubine }
+	send_option = { flag = males_eugenic localization = males_eugenic }
+	send_option = { flag = females_eugenic localization = females_eugenic }
+
+	send_options_exclusive = no
+	auto_accept = { always = yes }
+}
+
+house_marry = {
+	icon = on
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			has_character_flag = bone_cheat_interactions_flag
+		}
+	}
+	auto_accept = { always = yes }
+
+	on_accept = {
+		scope:recipient = {
+			if = {
+				limit = { scope:males_marry = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = house_marry_males
+								this = scope:recipient.house
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = house_marry_males
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						add_house_modifier = males_marry_house
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = house_marry_males
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						remove_house_modifier = males_marry_house
+					}
+				}
+			}
+			if = {
+				limit = { scope:females_marry = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = house_marry_females
+								this = scope:recipient.house
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = house_marry_females
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						add_house_modifier = females_marry_house
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = house_marry_females
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						remove_house_modifier = females_marry_house
+					}
+				}
+			}
+			if = {
+				limit = { scope:inbreed_marry = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = house_marry_inbreed
+								this = scope:recipient.house
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = house_marry_inbreed
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						add_house_modifier = inbreed_marry_house
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = house_marry_inbreed
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						remove_house_modifier = inbreed_marry_house
+					}
+				}
+			}
+			if = {
+				limit = { scope:males_concubine = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = house_conc_males
+								this = scope:recipient.house
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = house_conc_males
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						add_house_modifier = males_concubine_house
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = house_conc_males
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						remove_house_modifier = males_concubine_house
+					}
+				}
+			}
+			if = {
+				limit = { scope:females_concubine = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = house_conc_females
+								this = scope:recipient.house
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = house_conc_females
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						add_house_modifier = females_concubine_house
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = house_conc_females
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						remove_house_modifier = females_concubine_house
+					}
+				}
+			}
+			if = {
+				limit = { scope:males_eugenic = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = house_eugenic_males
+								this = scope:recipient.house
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = house_eugenic_males
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						add_house_modifier = males_eugenic_house
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = house_eugenic_males
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						remove_house_modifier = males_eugenic_house
+					}
+				}
+			}
+			if = {
+				limit = { scope:females_eugenic = yes }
+				if = {
+					limit = {
+						NOT = {
+							any_in_global_list = {
+								variable = house_eugenic_females
+								this = scope:recipient.house
+							}
+						}
+					}
+					add_to_global_variable_list = {
+						name = house_eugenic_females
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						add_house_modifier = females_eugenic_house
+					}
+				}
+				else = {
+					remove_list_global_variable = {
+						name = house_eugenic_females
+						target = scope:recipient.house
+					}
+					scope:recipient.house = {
+						remove_house_modifier = females_eugenic_house
+					}
+				}
+			}
+		}
+	}
+	send_option = { flag = males_marry }
+	send_option = { flag = females_marry }
+	send_option = { flag = inbreed_marry }
+	send_option = { flag = males_concubine }
+	send_option = { flag = females_concubine }
+	send_option = { flag = males_eugenic localization = males_eugenic }
+	send_option = { flag = females_eugenic localization = females_eugenic }
+
+	send_options_exclusive = no
+}
+
+individual_marry_exempt = {
+	icon = on
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			has_character_flag = bone_cheat_interactions_flag
+		}
+	}
+	auto_accept = { always = yes }
+	on_accept = {
+		scope:recipient = {
+			if = {
+				limit = {
+					NOT = {
+						any_in_global_list = {
+							variable = individual_marry_exempt
+							this = scope:recipient
+						}
+					}
+				}
+				add_to_global_variable_list = {
+					name = individual_marry_exempt
+					target = scope:recipient
+				}
+				add_character_modifier = individual_marry_exempt
+			}
+			else = {
+				remove_list_global_variable = {
+					name = individual_marry_exempt
+					target = scope:recipient
+				}
+				remove_character_modifier = individual_marry_exempt
+			}
+		}
+	}
+}
+
+cheateb_editmenu_interaction = {
+	category = interaction_pcm_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	auto_accept = yes
+	ignores_pending_interaction_block = yes
+	ai_will_do = 0
+
+	on_accept = {
+		scope:actor = {
+			trigger_event = cheateb.0010
+		}
+	}
+
+}
+
+grandmaster_select_interaction = {
+	category =  interaction_category_diplomacy
+	icon = revoke_title
+	desc = grandmaster_select_interaction_desc
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	common_interaction = yes
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			NOT = {
+				any_owned_story = {
+					story_type = dynasty_grandmaster_completed_story
+				}
+			}
+			any_owned_story = {
+				story_type = dynasty_grandmaster_story
+			}
+		}
+		scope:recipient = {
+			is_alive = yes
+			is_ruler = no
+			OR = {
+				is_child_of = scope:actor
+				is_grandchild_of = scope:actor
+				is_great_grandchild_of = scope:actor
+			}
+		}
+	}
+
+	send_option = {
+		flag = grandmaster_select_flag
+		localization = grandmaster_select_flag_desc
+	}
+
+	auto_accept = yes
+
+	on_accept = {
+		scope:actor = {
+			switch = {
+				trigger = yes
+				scope:grandmaster_select_flag = {
+					scope:actor  = {
+						trigger_event = {
+							id = holy_dynasty.0004
+							days = { 10 20 }
+						}
+						create_story = 	dynasty_grandmaster_completed_story
+						faith = {
+							random_faith_holy_order = {
+								limit = { holy_order_patron = scope:actor }
+								leader = {
+									every_held_title = {
+										limit = {
+										tier >= tier_county}
+										scope:recipient = { get_title = prev }
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+pope_select_interaction = {
+	category =  interaction_category_diplomacy
+	icon = revoke_title
+	desc = pope_select_interaction_desc
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	common_interaction = yes
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			NOT = {
+				any_owned_story = {
+					story_type = dynasty_pope_completed_story
+				}
+			}
+			any_owned_story = {
+				story_type = dynasty_pope_story
+			}
+		}
+		scope:recipient = {
+			is_alive = yes
+			is_ruler = no
+			OR = {
+				is_child_of = scope:actor
+				is_grandchild_of = scope:actor
+				is_great_grandchild_of = scope:actor
+			}
+		}
+	}
+
+	send_option = {
+		flag = pope_select_flag
+		localization = pope_select_flag_desc
+	}
+
+	auto_accept = yes
+
+	on_accept = {
+		scope:actor = {
+			switch = {
+				trigger = yes
+				scope:pope_select_flag = {
+					scope:actor  = {
+						trigger_event = {
+							id = holy_dynasty.0003
+							days = { 10 20 }
+						}
+						create_story = 	dynasty_pope_completed_story
+						scope:actor.faith.religious_head = {
+							every_held_title = {
+								limit = {
+								tier >= tier_county}
+								scope:recipient = { get_title = prev }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+dp_debug_start_era_of_crusades_interaction = {
+	category = interaction_pcm_main
+	icon = on
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			has_character_flag = bone_cheat_interactions_flag
+		}
+		faith:catholic = {
+			NOT = {
+				religion = { exists = var:variable_ghw_unlocked }
+			}
+		}
+	}
+
+	auto_accept = yes
+
+	on_accept = {
+		faith:catholic = {
+			change_fervor = 200
+			save_scope_as = awakening_faith
+
+			if = {
+				limit = { exists = religious_head }
+				religious_head = { save_scope_as = ghw_first_sponsor }
+			}
+			else = {
+				random_theocratic_ruler = {
+					limit = { faith = root }
+					save_scope_as = ghw_first_sponsor
+				}
+			}
+
+			if = {
+				limit = { NOT = { exists = scope:ghw_first_sponsor } }
+				random_ruler = {
+					limit = { faith = root }
+					save_scope_as = ghw_first_sponsor
+				}
+			}
+
+			religion = { set_variable = { name = variable_ghw_unlocked value = yes } }
+
+			every_player = {
+				trigger_event = great_holy_war.0011
+			}
+		}
+	}
+}
+
+dp_debug_start_era_of_jihads_interaction = {
+	category = interaction_pcm_main
+	icon = on
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			has_character_flag = bone_cheat_interactions_flag
+		}
+		faith:ashari = {
+			NOT = { religion = { exists = var:variable_ghw_unlocked } }
+		}
+	}
+	auto_accept = yes
+	on_accept = {
+		faith:ashari = {
+			change_fervor = 200
+			save_scope_as = awakening_faith
+			if = {
+				limit = { exists = religious_head }
+				religious_head = { save_scope_as = ghw_first_sponsor }
+			}
+			else = {
+				random_theocratic_ruler = {
+					limit = { faith = root }
+					save_scope_as = ghw_first_sponsor
+				}
+			}
+			if = {
+				limit = { NOT = { exists = scope:ghw_first_sponsor } }
+				random_ruler = {
+					limit = { faith = root }
+					save_scope_as = ghw_first_sponsor
+				}
+			}
+			religion = { set_variable = { name = variable_ghw_unlocked value = yes } }
+			every_player = { trigger_event = great_holy_war.0011 }
+		}
+	}
+}
+
+dp_debug_start_great_holy_war_interaction = {
+	category = interaction_pcm_main
+	icon = on
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			has_character_flag = bone_cheat_interactions_flag
+		}
+		NOT = { scope:recipient.faith = scope:actor.faith }
+	}
+	auto_accept = yes
+	on_accept = {
+		scope:actor.faith = {
+			start_great_holy_war = {
+				target_character = scope:recipient
+				target_title = scope:recipient.primary_title
+				delay = 110
+			}
+		}
+	}
+}
+

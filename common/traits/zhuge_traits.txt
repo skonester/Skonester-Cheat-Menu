@@ -1,67 +1,66 @@
-# 皇权强化
+# Imperial Power Enhancement
 boost_hufu = {
     index = 601
-	charinfo = yes 
-	instabuild = yes
+    charinfo = yes 
+    instabuild = yes
     category = fame
-    shown_in_ruler_designer = no                            # 特质不会在统治者设计器中显示
-	is_highlighted = no                                     # 特质不会出现在任何事件或推荐中
-	end_schemes = yes                                       # 禁止任何人对玩家施展阴谋
-    can_become_fluent_in_language = yes                     # 角色能够变得精通语言
-    no_water_crossing_penalty = yes                         # 无涉水惩罚
-	set_absolute_country_control = yes                      # 对领地绝对控制
-    flag = conqueror_bonuses_modifier                       # 征服者buff
-    flag = blocks_getting_non_epidemic_disease              # 阻止"非传染病"的疾病
-	flag = never_gains_disease                              # 减少得病的几率
-	flag = blocks_getting_plague                            # 减少瘟疫的传播
-	flag = agent_acceptance_25								# 同谋接受度
-    flag = can_foment_revolt_interaction 	                # 解锁煽动叛乱（须有伊朗dlc）
-    flag = initial_legitimacy_boost                         # 初始提高正统性
-    flag = can_dismiss_hooks_interaction                    # 可以花费威望换取消除对己方的牵制
-    flag = gok_obedience_flag                               # 初始提高忠顺度
+    shown_in_ruler_designer = no                            # Trait will not appear in the ruler designer
+    is_highlighted = no                                     # Trait will not appear in any events or suggestions
+    end_schemes = yes                                       # Prevents anyone from running schemes against the player
+    can_become_fluent_in_language = yes                     # Character can become fluent in languages
+    no_water_crossing_penalty = yes                         # No water crossing penalty
+    set_absolute_country_control = yes                      # Absolute control over domain
+    flag = conqueror_bonuses_modifier                       # Conqueror buffs
+    flag = blocks_getting_non_epidemic_disease              # Blocks non-epidemic diseases
+    flag = never_gains_disease                              # Reduces chance of getting diseases
+    flag = blocks_getting_plague                            # Reduces plague spread
+    flag = agent_acceptance_25                              # Scheme agent acceptance
+    flag = can_foment_revolt_interaction                    # Unlocks Foment Revolt (requires Iran DLC)
+    flag = initial_legitimacy_boost                         # Boosts legitimacy at game start
+    flag = can_dismiss_hooks_interaction                    # Can spend prestige to remove hooks against self
+    flag = gok_obedience_flag                               # Boosts obedience at game start
 
+    # Base Stats
+    health = -3                                             # Health
+    stewardship = 1000                                      # Stewardship
+    learning = 1000                                         # Learning
+    intrigue = 100                                          # Intrigue
+    diplomacy = 100                                         # Diplomacy
+    martial = 100                                           # Martial
+    prowess = 100                                           # Prowess
+    epidemic_resistance = 666                               # Full plague immunity
+    character_travel_safety = 1000                          # Travel safety
 
-    # 基础属性
-    health = -3                                             # 健康
-    stewardship = 1000                                       # 管理
-    learning = 1000                                          # 学识
-    intrigue = 100                                         # 阴谋
-    diplomacy = 100                                         # 外交
-    martial = 100                                           # 军事
-    prowess = 100                                           # 勇武
-	epidemic_resistance = 666                               # 免疫瘟疫
-    character_travel_safety = 1000                          # 旅行安全
+    # General Modifiers
+    general_opinion = 999                                   # General opinion bonus
+    domain_limit = 616                                      # Domain limit
+    vassal_limit = 616                                      # Vassal limit
+    domain_limit_max = 1000                                 # Maximum direct domain cap
+    men_at_arms_limit = 50                                  # Men-at-arms regiment limit
+    diplomatic_range_mult = 1                               # Diplomatic range
 
-    # 综合修正
-    general_opinion = 999                                   # 总体声望加成
-    domain_limit = 616                                      # 领地上限
-    vassal_limit = 616                                      # 封臣上限
-	domain_limit_max = 1000                                 # 最大直辖上限
-    men_at_arms_limit = 50                                  # 兵士军团上限
-    diplomatic_range_mult = 1                               # 外交范围  
+    # Scheme Modifiers
+    personal_scheme_phase_duration_add = -1000              # Greatly reduces personal scheme duration
+    hostile_scheme_phase_duration_add = -1000               # Greatly reduces hostile scheme duration
+    political_scheme_phase_duration_add = -1000             # Greatly reduces political scheme duration
+    owned_personal_scheme_success_chance_add = 1000         # Personal scheme success chance +1000, guarantees success
+    owned_hostile_scheme_success_chance_add = 1000          # Hostile scheme success chance +1000, guarantees success
+    owned_political_scheme_success_chance_add = 1000        # Political scheme success chance +1000, guarantees success
+    owned_hostile_scheme_success_chance_max_add = 1000      # Maximizes hostile scheme potential cap
 
-	# 阴谋修正
-	personal_scheme_phase_duration_add = -1000              # 大幅缩短私人阴谋时间
-	hostile_scheme_phase_duration_add = -1000               # 大幅缩短恶意阴谋时间
-	political_scheme_phase_duration_add = -1000             # 大幅缩短政治阴谋时间
-	owned_personal_scheme_success_chance_add = 1000         # 私人阴谋成功率 +100，确保必定成功
-	owned_hostile_scheme_success_chance_add = 1000          # 恶意阴谋成功率 +100，确保必定成功
-	owned_political_scheme_success_chance_add = 1000        # 恶意阴谋成功率 +100，确保必定成功
-	owned_hostile_scheme_success_chance_max_add = 1000      # 恶意阴谋潜力最大化
+    # Scheme Discovery and Progress Adjustments
+    scheme_discovery_chance_add = 0                         # Player's schemes will never be discovered
+    enemy_hostile_scheme_phase_duration_add = 666           # Increases enemy scheme duration
+    enemy_hostile_scheme_success_chance_add = -666          # Reduces enemy scheme success chance
 
-	# 阴谋发现和成长率调整
-	scheme_discovery_chance_add = 0                         # 玩家不会被发现阴谋
-    enemy_hostile_scheme_phase_duration_add = 666           # 敌人阴谋时间增加
-    enemy_hostile_scheme_success_chance_add = -666          # 敌人阴谋成功率减少
-
-    # 收入修正（简化显示）
-    monthly_income = 100                                    # 每月收入
-    monthly_income_mult = 10                                # 每月收入倍增
-    men_at_arms_maintenance = -0.75                         # 兵士军团维护费减少
-    title_creation_cost_mult = -0.75                        # 封号创建成本减少
-    legitimacy_gain_mult = 10                               # 正统性增益
-    monthly_influence_mult = 10                             # 影响力修正
-    provisions_gain_mult = 100                              # 给养增益
+    # Income Modifiers
+    monthly_income = 100                                    # Monthly income
+    monthly_income_mult = 10                                # Monthly income multiplier
+    men_at_arms_maintenance = -0.75                         # Men-at-arms maintenance cost reduced
+    title_creation_cost_mult = -0.75                        # Title creation cost reduced
+    legitimacy_gain_mult = 10                               # Legitimacy gain bonus
+    monthly_influence_mult = 10                             # Influence modifier
+    provisions_gain_mult = 100                              # Provisions gain bonus
 
     ai_will_do = {
         factor = 0
@@ -81,30 +80,30 @@ boost_hufu = {
 }
 
 
-# 武职-都督
+# Military Office - Grand Commander (Dudu)
 boost_dudu1 = {
     index = 602
-	ruler_designer_cost = 66								 # 统治者设计器成本
-    legitimacy_gain_mult = 1                                 # 正统性增益倍率
-	diplomacy = 10                                           # 外交能力加成
-	martial = 30                                             # 军事能力加成
-	stewardship = 10                                         # 统治能力加成
-	intrigue = -5                                            # 谋略能力减成
-	ruler_opinion = 10                                       # 其他统治者对该角色的好感
-    vassal_opinion = 20                                      # 封臣对该角色的好感
-	epidemic_resistance = 100                                # 免疫瘟疫
-	
-	#军事修正
-    men_at_arms_cap = 30                                    # 兵士军团上限
-    men_at_arms_limit = 100                                 # 兵士军团规模上限
-    movement_speed = 60                                     # 地上移动速度
-    naval_movement_speed_mult = 60                          # 海洋移动速度
-    siege_phase_time = -50                                  # 围城阶段时间减少
-    pursue_efficiency = 99                                  # 追击效率
-    defender_advantage = 99                                 # 玩家拥有的城池防御优势极高
-    supply_capacity_mult = 3                                # 补给容量提高
-    hostile_county_attrition = -0.66                        # 在敌方领土的损耗减少
-	men_at_arms_muster_speed_mult = 6                       # 提升军队集结速度
+    ruler_designer_cost = 66                                # Ruler designer cost
+    legitimacy_gain_mult = 1                                # Legitimacy gain multiplier
+    diplomacy = 10                                          # Diplomacy bonus
+    martial = 30                                            # Martial bonus
+    stewardship = 10                                        # Stewardship bonus
+    intrigue = -5                                           # Intrigue penalty
+    ruler_opinion = 10                                      # Other rulers' opinion of this character
+    vassal_opinion = 20                                     # Vassals' opinion of this character
+    epidemic_resistance = 100                               # Full plague immunity
+
+    # Military Modifiers
+    men_at_arms_cap = 30                                    # Men-at-arms regiment cap
+    men_at_arms_limit = 100                                 # Men-at-arms size limit
+    movement_speed = 60                                     # Land movement speed
+    naval_movement_speed_mult = 60                          # Naval movement speed
+    siege_phase_time = -50                                  # Siege phase time reduced
+    pursue_efficiency = 99                                  # Pursuit efficiency
+    defender_advantage = 99                                 # Extremely high defender advantage for player's holdings
+    supply_capacity_mult = 3                                # Supply capacity increased
+    hostile_county_attrition = -0.66                        # Attrition in enemy territory reduced
+    men_at_arms_muster_speed_mult = 6                       # Army muster speed increased
 
     genetic = no
     good = yes 
@@ -122,28 +121,27 @@ boost_dudu1 = {
     }
 }
 
-#文职-翰林学士
+# Civil Office - Hanlin Academician
 boost_xueshi1 = {
     index = 603
-	ruler_designer_cost = 66								# 统治者设计器成本
-    learning_gain_mult = 1.5                                # 学识增益倍率
-	diplomacy = 10                                          # 外交能力加成
-    stewardship = 10                                        # 统治能力加成
-    intrigue = 10                                           # 谋略能力加成
-    learning = 30                                           # 学识能力加成
-	ruler_opinion = 20                                      # 其他统治者对该角色的好感
-    vassal_opinion = 25                                     # 封臣对该角色的好感
-    max_contract_schemes_add = 20                           # 最大合约阴谋数增加
-    contract_scheme_phase_duration_add = -1000              # 合约阴谋阶段持续时间减少
-	legitimacy_gain_mult = 1                                # 正统性提升
-	epidemic_resistance = 100                               # 免疫瘟疫
-	monthly_influence_mult = 1
+    ruler_designer_cost = 66                                # Ruler designer cost
+    learning_gain_mult = 1.5                                # Learning gain multiplier
+    diplomacy = 10                                          # Diplomacy bonus
+    stewardship = 10                                        # Stewardship bonus
+    intrigue = 10                                           # Intrigue bonus
+    learning = 30                                           # Learning bonus
+    ruler_opinion = 20                                      # Other rulers' opinion of this character
+    vassal_opinion = 25                                     # Vassals' opinion of this character
+    max_contract_schemes_add = 20                           # Maximum contract schemes increased
+    contract_scheme_phase_duration_add = -1000              # Contract scheme phase duration greatly reduced
+    legitimacy_gain_mult = 1                                # Legitimacy gain bonus
+    epidemic_resistance = 100                               # Full plague immunity
+    monthly_influence_mult = 1
 
-    tyranny_gain_mult = -1                                  # 暴政               
+    tyranny_gain_mult = -1                                  # Tyranny gain reduced
 
     genetic = no
     good = yes
-
 
     desc = {
         first_valid = {
@@ -157,78 +155,78 @@ boost_xueshi1 = {
         }
     }
 }
-# 免疫瘟疫
+
+# Plague Immunity
 plague_immunity = { 
-	index = 605
-	genetic = no
-	good = yes
+    index = 605
+    genetic = no
+    good = yes
 
-	stewardship = 10	
-	inheritability = 0.8
-    male = yes  # 仅男性可遗传
-	shown_in_ruler_designer = no
-	epidemic_resistance = 100       
+    stewardship = 10	
+    inheritability = 0.8
+    male = yes                                              # Only inheritable by males
+    shown_in_ruler_designer = no
+    epidemic_resistance = 100       
 
-
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					NOT = { exists = this }
-				}
-				desc = trait_plague_immunity_desc
-			}
-			desc = trait_plague_immunity_character_desc
-		}
-	}
+    desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = {
+                    NOT = { exists = this }
+                }
+                desc = trait_plague_immunity_desc
+            }
+            desc = trait_plague_immunity_character_desc
+        }
+    }
 }
 
-#赐死
+# Death Sentence
 zhuge_kill_02 = {
-	index = 608
+    index = 608
     flag = higher_chance_of_dying_in_battle 
     flag = cannot_inherit_titles
-    prowess = -10                   # 勇武
-    intrigue = -10                  # 谋略
-    stewardship = -5                # 管理
-    diplomacy = -3                  # 外交
+    prowess = -10                                           # Prowess
+    intrigue = -10                                          # Intrigue
+    stewardship = -5                                        # Stewardship
+    diplomacy = -3                                          # Diplomacy
 
-	dread_baseline_add = -90        # 恐惧基线增加
-    dread_loss_mult = 1             # 恐惧损失倍率
-    attraction_opinion = -60        # 吸引力好感
-    fertility = -10                 # 生育力
-    health = -999                   # 健康
-    elderly_health = -999           # 老年人健康
+    dread_baseline_add = -90                                # Dread baseline reduction
+    dread_loss_mult = 1                                     # Dread loss multiplier
+    attraction_opinion = -60                                # Attraction opinion penalty
+    fertility = -10                                         # Fertility
+    health = -999                                           # Health
+    elderly_health = -999                                   # Elderly health
 
     category = health
 
     flag = illness
-	flag = debilitating_illness
-	flag = blocks_getting_non_epidemic_disease
+    flag = debilitating_illness
+    flag = blocks_getting_non_epidemic_disease
 
-	genetic = no
-	good = yes
+    genetic = no
+    good = yes
 
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					NOT = { exists = this }
-				}
-				desc = trait_zhuge_kill_02_desc
-			}
-			desc = trait_zhuge_kill_02_character_desc
-		}
-	}
+    desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = {
+                    NOT = { exists = this }
+                }
+                desc = trait_zhuge_kill_02_desc
+            }
+            desc = trait_zhuge_kill_02_character_desc
+        }
+    }
 }
 
-#游牧增强
+# Nomadic Enhancement
 zhuge_ymbuff_01 = {
     index = 609
     
     domain_limit = 10
     domain_limit_min = 1
-	domain_limit_max = 94
+    domain_limit_max = 94
     margin_right = 0
 
     uses_county_fertility = yes
@@ -236,13 +234,12 @@ zhuge_ymbuff_01 = {
     county_fertility_growth_add = 666
     character_capital_monthly_county_fertility_growth_add = 100
     county_fertility_decline_mult = -1
-    
 
     herd_capacity_add = 100000
     vassal_herd_contribution_mult = 1
     desert_fertility_growth_mult = 1
-	drylands_fertility_growth_mult = 1
-	oasis_fertility_growth_mult = 1
+    drylands_fertility_growth_mult = 1
+    oasis_fertility_growth_mult = 1
     steppe_fertility_growth_mult = 1
 
     good = yes

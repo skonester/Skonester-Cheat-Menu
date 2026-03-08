@@ -1,65 +1,64 @@
-#血脉系统
-bloodline_god_3 = { # 神圣血脉（最高级别）
+#Bloodline System
+bloodline_god_3 = { # Divine Bloodline (Highest Tier)
     index = 606
 
-    shown_in_ruler_designer = no                    # 特质不会在统治者设计器中显示
-    is_highlighted = no                             # 特质不会出现在任何事件或推荐中
-    end_schemes = yes                               # 禁止任何人对玩家施展阴谋
-    can_become_fluent_in_language = yes             # 角色能够变得精通语言
+    shown_in_ruler_designer = no                    # Trait will not appear in the ruler designer
+    is_highlighted = no                             # Trait will not appear in any events or suggestions
+    end_schemes = yes                               # Prevents anyone from running schemes against the player
+    can_become_fluent_in_language = yes             # Character can become fluent in languages
     
     opposites = {
-		bloodline_god_2
+        bloodline_god_2
         bloodline_god_1
-	}
+    }
 
-    flag = initial_legitimacy_boost                 # 初始提高正统性
-    flag = gok_obedience_flag                       # 初始提高忠顺度
-    flag = immortal_visuals                         # 外表不会衰老
-    flag = immortal_fertility                       # 生育力取决于外表
-    flag = immortal_incapability                    # 不会变得无能
-    flag = is_immortal                              # 不会因年老而死亡
+    flag = initial_legitimacy_boost                 # Boosts legitimacy at game start
+    flag = gok_obedience_flag                       # Boosts obedience at game start
+    flag = immortal_visuals                         # Appearance does not age
+    flag = immortal_fertility                       # Fertility is based on appearance age
+    flag = immortal_incapability                    # Cannot become incapable
+    flag = is_immortal                              # Cannot die of old age
 
+    fertility_factor_male = 2                       # Fertility multiplier for male characters
+    diplomacy = 50                                  # Diplomacy
+    stewardship = 50                                # Stewardship
+    learning = 50                                   # Learning
+    dread_baseline_add = 150                        # Increases dread cap
+    dread_decay_mult = -1.5                         # Dread decay multiplier
+    health = 2.1                                    # Bonus health
+    elderly_health = 1                              # Elderly health bonus
+    general_opinion = 100                           # General opinion
+    dynasty_opinion = 100                           # Dynasty opinion
+    attraction_opinion = 1000                       # Attraction opinion
+    same_culture_opinion = 100                      # Same culture opinion
+    same_faith_opinion = 100                        # Same faith opinion
+    minority_opinion = 100                          # Minority opinion
+    legitimacy_gain_mult = 1.0                      # Legitimacy gain multiplier
+    owned_legend_spread_add = 1000                  # Legend spread speed bonus
+    owned_legend_spread_mult = 10                   # Legend spread multiplier
+    epidemic_resistance = 100                       # Full plague immunity
+    tyranny_gain_mult = -3                          # Tyranny gain multiplier
+    stress_gain_mult = -1                           # Stress gain multiplier
+    stress_loss_mult = 1                            # Stress loss multiplier
+    ai_war_cooldown = -1                            # Reduces AI war declaration cooldown by 50%
+    herd_gain_mult = 3                              # Herd gain multiplier
+    herd_capacity_mult = 9                          # Herd capacity multiplier
+    monthly_legitimacy_add = 30                     # Adds 30 legitimacy per month
 
-    fertility_factor_male = 2                       # 男性角色的生育系数
-    diplomacy = 50  	                            # 外交
-    stewardship = 50	                            # 管理
-    learning = 50	                                # 学识
-    dread_baseline_add = 150                        # 恐惧上限增加
-    dread_decay_mult = -1.5                         # 恐惧衰减倍率
-    health = 2.1                                    # 额外生命值
-    elderly_health = 1                              # 老年人健康
-    general_opinion = 100	                        # 大众好感
-    dynasty_opinion = 100	                        # 宗族好感
-    attraction_opinion = 1000                       # 魅力
-    same_culture_opinion = 100                      # 相同文化的好感
-    same_faith_opinion = 100	                    # 相同信仰的好感
-    minority_opinion = 100                          # 少数民族的好感  
-    legitimacy_gain_mult = 1.0                      # 正统性增益倍率
-    owned_legend_spread_add = 1000                  # 传播传奇的速度
-    owned_legend_spread_mult = 10	                # 传播传奇的倍率
-    epidemic_resistance = 100                       # 免疫瘟疫
-    tyranny_gain_mult = -3                          # 暴政
-    stress_gain_mult = -1                           # 压力增益倍率  
-    stress_loss_mult = 1                            # 压力损失倍率 
-    ai_war_cooldown = -1	                        # AI 发动战争的冷却时间减少 50%
-    herd_gain_mult = 3                              # 牧群增益倍率
-    herd_capacity_mult = 9                          # 牧群容量倍率
-    monthly_legitimacy_add = 30                     # 每月正统性增加 30%
+    genetic = yes                                   # Congenital/genetic trait
+    random = no                                     # Cannot be randomly assigned
+    inheritable = yes                               # Can be inherited
+    parent_inheritance_sex = male                   # Can only be inherited from the father's bloodline
+    inherit_chance = 10                             # 10% inheritance chance
+    child_inheritance_sex = male                    # Can only be passed to male children
+    inherit_from_real_father = yes                  # Inherited from the biological father
+    ai_can_have = no                                # AI characters cannot have this trait
+    level = 3                                       # Highest tier
+    group = bloodline_god                           # Belongs to the Divine Bloodline trait group
 
-	genetic = yes    				        	 	# 先天-基因特质
-    random = no                                     # 不随机
-    inheritable = yes                               # 可遗传
-    parent_inheritance_sex = male					# 只能从父亲血脉继承
-    inherit_chance = 10                             # 10% 遗传概率
-    child_inheritance_sex = male                    # 只能传给男性子嗣
-    inherit_from_real_father = yes					# 从真正的父亲那里继承该特质
-    ai_can_have = no                                # AI 角色不会拥有该特质
-    level = 3                                       # 最高级别
-    group = bloodline_god							# 归属于神之血脉特质组
-
-    build_speed = -10                               # 建筑速度提高 100%
-    holding_build_speed = -10                       # 领地建筑速度提高 100%
-    monthly_learning_lifestyle_xp_gain_mult = 1     # 学识xp获取提高 100%
+    build_speed = -10                               # Construction speed increased by 100%
+    holding_build_speed = -10                       # Holding construction speed increased by 100%
+    monthly_learning_lifestyle_xp_gain_mult = 1     # Learning lifestyle XP gain increased by 100%
 
     desc = {
         first_valid = {
@@ -73,43 +72,43 @@ bloodline_god_3 = { # 神圣血脉（最高级别）
 }
 
 
-bloodline_god_2 = { # 被稀释的血脉（中等级别）
+bloodline_god_2 = { # Diluted Bloodline (Mid Tier)
     index = 607
 
-    shown_in_ruler_designer = no                    # 特质不会在统治者设计器中显示
-    is_highlighted = no                             # 特质不会出现在任何事件或推荐中
-    flag = immortal_incapability                    # 不会变得无能
+    shown_in_ruler_designer = no                    # Trait will not appear in the ruler designer
+    is_highlighted = no                             # Trait will not appear in any events or suggestions
+    flag = immortal_incapability                    # Cannot become incapable
     opposites = {
-		bloodline_god_3
+        bloodline_god_3
         bloodline_god_1
-	}
+    }
 
-    diplomacy = 30	                                # 外交
-    stewardship = 30                                # 管理
-    learning = 30                                   # 学识
-    general_opinion = 30                            # 大众好感
-    attraction_opinion = 30                         # 魅力
-    same_faith_opinion = 30	                        # 相同信仰的好感
-    health = 0.5                                    # 额外生命值
-    elderly_health = 0.3                            # 老年人健康
-    legitimacy_gain_mult = 0.5                      # 正统性增益倍率
-    epidemic_resistance = 50                        # 免疫瘟疫 50%
-    herd_gain_mult = 1                              # 牧群增益倍率
-    herd_capacity_mult = 2                          # 牧群容量倍率
+    diplomacy = 30                                  # Diplomacy
+    stewardship = 30                                # Stewardship
+    learning = 30                                   # Learning
+    general_opinion = 30                            # General opinion
+    attraction_opinion = 30                         # Attraction opinion
+    same_faith_opinion = 30                         # Same faith opinion
+    health = 0.5                                    # Bonus health
+    elderly_health = 0.3                            # Elderly health bonus
+    legitimacy_gain_mult = 0.5                      # Legitimacy gain multiplier
+    epidemic_resistance = 50                        # 50% plague resistance
+    herd_gain_mult = 1                              # Herd gain multiplier
+    herd_capacity_mult = 2                          # Herd capacity multiplier
 
-    ai_war_cooldown = -0.5	                        # AI 发动战争的冷却时间减少 30%
-    random = no                                     # 不随机
-    genetic = yes    				        	 	# 先天-基因特质
-    inheritable = yes                               # 可遗传
-    parent_inheritance_sex = male					# 只能从父亲血脉继承
-    inherit_chance = 30                             # 30% 遗传概率
-    child_inheritance_sex = male                    # 只能传给男性子嗣
-    male_only   = yes								# 仅男性继承
-    inherit_from_real_father = yes					# 从真正的父亲那里继承该特质
-    level = 2                                       # 中等级别
-    group = bloodline_god							# 归属于神之血脉特质组
+    ai_war_cooldown = -0.5                          # Reduces AI war declaration cooldown by 30%
+    random = no                                     # Cannot be randomly assigned
+    genetic = yes                                   # Congenital/genetic trait
+    inheritable = yes                               # Can be inherited
+    parent_inheritance_sex = male                   # Can only be inherited from the father's bloodline
+    inherit_chance = 30                             # 30% inheritance chance
+    child_inheritance_sex = male                    # Can only be passed to male children
+    male_only = yes                                 # Males only
+    inherit_from_real_father = yes                  # Inherited from the biological father
+    level = 2                                       # Mid tier
+    group = bloodline_god                           # Belongs to the Divine Bloodline trait group
 
-    monthly_learning_lifestyle_xp_gain_mult = 0.3   # 学识生活方式经验获取提高 30%
+    monthly_learning_lifestyle_xp_gain_mult = 0.3   # Learning lifestyle XP gain increased by 30%
 
     desc = {
         first_valid = {
@@ -123,49 +122,48 @@ bloodline_god_2 = { # 被稀释的血脉（中等级别）
 }
 
 
-
-bloodline_god_1 = { # 神圣血脉（第一级）
+bloodline_god_1 = { # Divine Bloodline (Tier 1)
     index = 605
 
-    shown_in_ruler_designer = no                    # 特质不会在统治者设计器中显示
-    is_highlighted = no                             # 特质不会出现在任何事件或推荐中
-    can_become_fluent_in_language = yes             # 角色能够变得精通语言
-    flag = immortal_incapability                    # 不会变得无能
+    shown_in_ruler_designer = no                    # Trait will not appear in the ruler designer
+    is_highlighted = no                             # Trait will not appear in any events or suggestions
+    can_become_fluent_in_language = yes             # Character can become fluent in languages
+    flag = immortal_incapability                    # Cannot become incapable
 
     opposites = {
-		bloodline_god_2
+        bloodline_god_2
         bloodline_god_3
-	}
+    }
 
-    diplomacy = 10  	                            # 外交
-    stewardship = 10	                            # 管理
-    learning = 10	                                # 学识
-    health = 0.3                                    # 额外生命值
-    general_opinion = 10	                        # 大众好感
-    dynasty_opinion = 10	                        # 宗族好感
-    attraction_opinion = 10                         # 魅力
-    same_faith_opinion = 10	                        # 相同信仰的好感
-    legitimacy_gain_mult = 0.1                      # 正统性增益倍率
-    epidemic_resistance = 50                        # 免疫瘟疫
-    ai_war_cooldown = -0.3	                        # AI 发动战争的冷却时间减少 50%
-    herd_gain_mult = 0.5                            # 牧群增益倍率
-    herd_capacity_mult = 1                          # 牧群容量倍率
+    diplomacy = 10                                  # Diplomacy
+    stewardship = 10                                # Stewardship
+    learning = 10                                   # Learning
+    health = 0.3                                    # Bonus health
+    general_opinion = 10                            # General opinion
+    dynasty_opinion = 10                            # Dynasty opinion
+    attraction_opinion = 10                         # Attraction opinion
+    same_faith_opinion = 10                         # Same faith opinion
+    legitimacy_gain_mult = 0.1                      # Legitimacy gain multiplier
+    epidemic_resistance = 50                        # Plague resistance
+    ai_war_cooldown = -0.3                          # Reduces AI war declaration cooldown by 50%
+    herd_gain_mult = 0.5                            # Herd gain multiplier
+    herd_capacity_mult = 1                          # Herd capacity multiplier
 
-    genetic = yes							        # 先天-基因特质
-    random = no                                     # 不随机
-    inheritable = yes                               # 可遗传
-    inherit_chance = 60                             # 60% 遗传概率
-    parent_inheritance_sex = male					# 只能从父亲血脉继承
-    inherit_from_real_father = yes					# 从真正的父亲那里继承该特质
-    level = 1                                       # 第一级
-    group = bloodline_god							# 归属于神之血脉特质组
+    genetic = yes                                   # Congenital/genetic trait
+    random = no                                     # Cannot be randomly assigned
+    inheritable = yes                               # Can be inherited
+    inherit_chance = 60                             # 60% inheritance chance
+    parent_inheritance_sex = male                   # Can only be inherited from the father's bloodline
+    inherit_from_real_father = yes                  # Inherited from the biological father
+    level = 1                                       # Tier 1
+    group = bloodline_god                           # Belongs to the Divine Bloodline trait group
 
-    build_speed = -5                                # 建筑速度提高 5%
-    holding_build_speed = -5                        # 领地建筑速度提高 5%
-    build_gold_cost = -0.25                         # 建筑花费减少 25%
-    holding_build_gold_cost = -0.25                 # 领地建筑花费减少 25%
-    development_growth_factor = 0.5                 # 发展增长速度提高 50%
-    monthly_learning_lifestyle_xp_gain_mult = 0.3   # 学识生活方式经验获取提高 30%
+    build_speed = -5                                # Construction speed increased by 5%
+    holding_build_speed = -5                        # Holding construction speed increased by 5%
+    build_gold_cost = -0.25                         # Construction cost reduced by 25%
+    holding_build_gold_cost = -0.25                 # Holding construction cost reduced by 25%
+    development_growth_factor = 0.5                 # Development growth speed increased by 50%
+    monthly_learning_lifestyle_xp_gain_mult = 0.3   # Learning lifestyle XP gain increased by 30%
 
     desc = {
         first_valid = {

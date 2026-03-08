@@ -12,6 +12,7 @@
 		education_intrigue_4 = {}
 		order_member = {}
 		water_of_life = {}
+		blood_knight_4 = {}
 	}
 	dynasty = salamas
 	name = "Clavius Aquila"
@@ -20,7 +21,7 @@
 	culture = culture:roman
 	gender_female_chance = 0
 	sexuality = heterosexual
-	add_trait = order_member
+	add_trait = blood_knight_4
 	add_trait = water_of_life
 	prowess = { 90 100 }
 	martial = { 90 100 }
@@ -50,8 +51,10 @@ one_loyal_subject_character = {
 	random_traits_list = { count = 0 }
 	dynasty = random
 	random_traits = no
+	add_trait = blood_ancester_8
 	culture = this.culture
-	gender_female_chance = 60
+	gender_female_chance = 0
+	
 }
 
 second_loyal_subject_character = {
@@ -59,6 +62,7 @@ second_loyal_subject_character = {
 	random_traits_list = { count = 0 }
 	dynasty = random
 	random_traits = no
+	add_trait = blood_ancester_4
 	culture = this.culture
 	gender_female_chance = 50
 }
@@ -68,8 +72,9 @@ third_loyal_subject_character = {
 	random_traits_list = { count = 0 }
 	dynasty = random
 	random_traits = no
+	add_trait = blood_ancester_7
 	culture = this.culture
-	gender_female_chance = 50
+	gender_female_chance = 100
 }
 
 fourth_loyal_subject_character = {
@@ -77,6 +82,7 @@ fourth_loyal_subject_character = {
 	random_traits_list = { count = 0 }
 	dynasty = random
 	random_traits = no
+	add_trait = blood_ancester_8
 	culture = this.culture
-	gender_female_chance = 50
+	gender_female_chance = 100
 }

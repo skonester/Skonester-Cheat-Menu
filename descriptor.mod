@@ -1,4 +1,4 @@
-version="3.6.26"
+version="3.8.26"
 tags={
 	"1.18 'Crane'"
 }

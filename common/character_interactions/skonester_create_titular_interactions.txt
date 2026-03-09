@@ -1,12 +1,12 @@
 skonester_create_titular = {
-	category = interaction_pcm_main
+	icon = on
+	category = interaction_debug_main
 	desc = skonester_create_titular
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	target_type = title
 	target_filter = recipient_domain_titles
-	interface_priority = 79
-	icon = on
+	interface_priority = -1
 	
 	is_shown = {
 		scope:recipient = {

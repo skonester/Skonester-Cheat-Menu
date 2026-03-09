@@ -37,3 +37,6 @@
 
  change_govt_japan_administrative_government:0 "Принять систему Рицурё"
  change_govt_japan_administrative_government_desc:0 "Реорганизуй своё владение под административную систему Рицурё, правя через знатные семьи и провинциальные назначения."
+ 
+ game_concept_wanderer:0 "Странник"
+ game_concept_wanderer_desc:0 "Персонаж, живущий без титула, свободно скитающийся по миру."

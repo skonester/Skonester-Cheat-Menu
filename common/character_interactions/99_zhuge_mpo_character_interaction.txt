@@ -1,4 +1,4 @@
-# 朝贡者契约互动
+# Tributary Contract Interaction
 zhuge_mpo_qiyue = {
     special_interaction = liege_modify_vassal_contract
     interface = modify_vassal_contract

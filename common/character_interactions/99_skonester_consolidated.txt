@@ -348,23 +348,6 @@ take_title_interaction = {
 	}
 }
 
-start_pregnancy_interaction = {
-	category = interaction_pcm_main
-	use_diplomatic_range = no
-	ignores_pending_interaction_block = yes
-	is_shown = {
-		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
-		scope:recipient = { is_adult = yes, is_pregnant = no }
-		scope:actor = { is_adult = yes, is_pregnant = no }
-		OR = {
-			AND = { scope:recipient = { is_female = yes }, scope:actor = { is_male = yes } }
-			AND = { scope:recipient = { is_male = yes }, scope:actor = { is_female = yes } }
-		}
-	}
-	on_accept = { scope:actor = { trigger_event = debug.0002 } }
-	auto_accept = yes
-}
-
 open_optroop_menu = {
 	category = interaction_pcm_main
 	icon = on

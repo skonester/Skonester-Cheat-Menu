@@ -41,3 +41,6 @@
  change_govt_japan_administrative_government:0 "Adopt the Ritsuryō System"
  change_govt_japan_administrative_government_desc:0 "Reorganize your realm under the Ritsuryō administrative system, ruling through noble families and provincial appointments."
 
+ game_concept_wanderer:0 "Wanderer"
+ game_concept_wanderer_desc:0 "A character who lives without a landed title, roaming freely."
+

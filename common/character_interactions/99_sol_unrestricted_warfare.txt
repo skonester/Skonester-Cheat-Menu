@@ -1,7 +1,7 @@
 ﻿#SOL UNRESTRICTED WARFARE DECLARATIONS
 sol_expansion_war_interaction = {
 	icon = on
-	category = interaction_pcm_main
+	category = interaction_debug_main
 	common_interaction = yes
 	special_interaction = declare_war_interaction
 

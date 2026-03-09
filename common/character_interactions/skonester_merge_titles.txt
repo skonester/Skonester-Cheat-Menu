@@ -1,10 +1,12 @@
 ﻿mt_merge_titles_interaction = {
+	icon = debug_take_title
 	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	target_type = title
 	target_filter = recipient_domain_titles
-	icon = debug_take_title
+	interface_priority = -1
+	
 	is_shown = {
 		scope:recipient = {
 			is_landed_or_landless_administrative = yes
@@ -424,6 +426,7 @@ mt_clear_selection_interaction = {
 	category = interaction_pcm_main
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
+	interface_priority = -1
 	icon = debug_take_title
 	is_shown = {
 		scope:recipient = {

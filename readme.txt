@@ -1,3 +1,5 @@
+[![Downloads](https://img.shields.io/github/downloads/skonester/Skonester-Cheat-Menu/total.svg)](https://github.com/skonester/Skonester-Cheat-Menu/releases).
+
 Latest Updates
 
 March

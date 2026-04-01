@@ -103,6 +103,7 @@ non_inheritable_optroop_interaction = {
 open_bone_cheat_interactions = {
 	category = interaction_pcm_main
 	icon = on
+	interface_priority = 100
 	desc = bone_cheat_interactions_desc
 	common_interaction = yes
 	auto_accept = yes
@@ -121,6 +122,7 @@ open_bone_cheat_interactions = {
 close_bone_cheat_interactions = {
 	category = interaction_pcm_main
 	icon = off
+	interface_priority = 100
 	desc = bone_cheat_interactions_desc
 	common_interaction = yes
 	auto_accept = yes
@@ -143,6 +145,7 @@ set_immortal_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	desc = set_immortal_interaction_desc
+	interface_priority = 100
 	is_shown = {
 		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
 		scope:recipient = { NOT = { has_trait = immortality } }
@@ -162,6 +165,7 @@ set_mortal_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	desc = set_mortal_interaction_desc
+	interface_priority = 100
 	is_shown = {
 		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
 		scope:recipient = { has_trait = immortality }
@@ -178,6 +182,7 @@ set_super_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	desc = set_super_interaction_desc
+	interface_priority = -1
 	is_shown = {
 		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
 		scope:recipient = { NOT = { has_trait = super } }
@@ -194,6 +199,7 @@ set_unsuper_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	desc = set_unsuper_interaction_desc
+	interface_priority = -1
 	is_shown = {
 		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
 		scope:recipient = { has_trait = super }
@@ -210,6 +216,7 @@ set_super_governor_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	desc = set_super_governor_interaction_desc
+	interface_priority = -1
 	is_shown = {
 		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
 		scope:recipient = { NOT = { has_trait = super_governor } }
@@ -226,6 +233,7 @@ set_unsuper_governor_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	desc = set_unsuper_governor_interaction_desc
+	interface_priority = -1
 	is_shown = {
 		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
 		scope:recipient = { has_trait = super_governor }
@@ -242,6 +250,7 @@ set_super_general_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	desc = set_super_general_interaction_desc
+	interface_priority = -1
 	is_shown = {
 		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
 		scope:recipient = { NOT = { has_trait = super_general } }
@@ -258,6 +267,7 @@ set_unsuper_general_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	desc = set_unsuper_general_interaction_desc
+	interface_priority = -1
 	is_shown = {
 		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
 		scope:recipient = { has_trait = super_general }
@@ -274,6 +284,7 @@ set_all_in_one_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	desc = set_all_in_one_interaction_desc
+	interface_priority = -1
 	is_shown = {
 		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
 		scope:recipient = {
@@ -302,6 +313,7 @@ set_unall_in_one_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	desc = set_unall_in_one_interaction_desc
+	interface_priority = -1
 	is_shown = {
 		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
 		scope:recipient = {
@@ -457,6 +469,7 @@ become_conqueror_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	desc = become_conqueror_interaction_desc
+	interface_priority = -1
 
 	is_shown = {
 		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
@@ -500,6 +513,7 @@ remove_conqueror_interaction = {
 	use_diplomatic_range = no
 	ignores_pending_interaction_block = yes
 	desc = remove_conqueror_interaction_desc
+	interface_priority = -1
 
 	is_shown = {
 		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
@@ -537,6 +551,7 @@ remove_conqueror_interaction = {
 
 dynasty_marry = {
 	icon = on
+	interface_priority = 70
 
 	is_shown = {
 		scope:actor = {
@@ -767,6 +782,7 @@ dynasty_marry = {
 
 house_marry = {
 	icon = on
+	interface_priority = 60
 
 	is_shown = {
 		scope:actor = {
@@ -996,6 +1012,7 @@ house_marry = {
 
 individual_marry_exempt = {
 	icon = on
+	interface_priority = 40
 
 	is_shown = {
 		scope:actor = {
@@ -1036,7 +1053,7 @@ eka_impregnate_female_inter = {
 	icon = on
 	category = interaction_pcm_main
 	common_interaction = no
-	interface_priority = -1
+	interface_priority = 10
 
 	is_highlighted = { always = no }
 
@@ -1160,7 +1177,7 @@ eka_impregnate_male_inter = {
 	icon = on
 	category = interaction_pcm_main
 	common_interaction = no
-	interface_priority = -1
+	interface_priority = 10
 
 	is_highlighted = { always = no }
 
@@ -1326,7 +1343,7 @@ eka_impregnate_me_inter = {
 	icon = on
 	category = interaction_pcm_main
 	common_interaction = no
-	interface_priority = -1
+	interface_priority = 10
 
 	is_highlighted = { always = no }
 
@@ -1387,7 +1404,7 @@ eka_impregnate_concubine_inter = {
 	icon = on
 	category = interaction_pcm_main
 	common_interaction = no
-	interface_priority = -1
+	interface_priority = 10
 
 	is_highlighted = { always = no }
 
@@ -1476,6 +1493,7 @@ eka_impregnate_concubine_inter = {
 jkm_send_courtier_interaction = {
 	category = interaction_pcm_main
 	icon = on
+	interface_priority = -1
 
 	desc = jkm_send_courtier_interaction_desc
 
@@ -1583,6 +1601,7 @@ leech_mc_end_control_interaction = {
 	desc = leech_mc_end_control_interaction_desc
 	ignores_pending_interaction_block = yes
 	icon = lady
+	interface_priority = -1
 
 	is_shown = {
 		scope:actor = {
@@ -1607,6 +1626,7 @@ leech_mc_simple_action_interaction = {
 	ignores_pending_interaction_block = yes
 	use_diplomatic_range = no
 	icon = lady
+	interface_priority = -1
 
 	redirect = {
 		scope:recipient = {
@@ -2140,6 +2160,7 @@ cheateb_editmenu_interaction = {
 	auto_accept = yes
 	ignores_pending_interaction_block = yes
 	ai_will_do = 0
+	interface_priority = 100
 
 	on_accept = {
 		scope:actor = {

@@ -1,10 +1,10 @@
 ﻿l_english:
  # Interaction Cheats
- interaction_category_cheat_menu:0 "Skonester Sub Cheats"
+ interaction_category_cheat_menu:0 "Skonester Cheats"
  CHEAT_ACTIONS:0 "Skonester little cheat list"
  
- open_bone_cheat_interactions:0 "Open Sub Cheats"
- close_bone_cheat_interactions:0 "Close Sub Cheats"
+ open_bone_cheat_interactions:0 "Open Cheats"
+ close_bone_cheat_interactions:0 "Close Cheats"
  bone_cheat_interactions_desc:0 "Skonester cheat interactions"
 
  open_bone_trait_interactions:0 "Open Traits"

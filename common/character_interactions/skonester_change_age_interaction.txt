@@ -61,17 +61,47 @@ skonester_change_age_interaction = {
 }
 
 start_pregnancy_interaction = {
-	category = interaction_debug_main
+    category = interaction_debug_main
+    use_diplomatic_range = no
+    ignores_pending_interaction_block = yes
+    is_shown = {
+        NOT = { scope:actor = scope:recipient }  # Prevents self-targeting
+        scope:recipient = { is_adult = yes is_pregnant = no }
+        scope:actor = { is_adult = yes is_pregnant = no }
+        OR = {
+            AND = { scope:recipient = { is_female = yes } scope:actor = { is_male = yes } }
+            AND = { scope:recipient = { is_male = yes } scope:actor = { is_female = yes } }
+        }
+    }
+    on_accept = { scope:actor = { trigger_event = debug.0002 } }
+    auto_accept = yes
+}
+
+
+debug_imprison_simple_interaction = {
 	use_diplomatic_range = no
+	category = interaction_debug_main
+	common_interaction = yes
 	ignores_pending_interaction_block = yes
+	icon = prison
+	interface_priority = -1
+
 	is_shown = {
-		scope:recipient = { is_adult = yes, is_pregnant = no }
-		scope:actor = { is_adult = yes, is_pregnant = no }
-		OR = {
-			AND = { scope:recipient = { is_female = yes }, scope:actor = { is_male = yes } }
-			AND = { scope:recipient = { is_male = yes }, scope:actor = { is_female = yes } }
+		NOT = { scope:actor = scope:recipient }  # Prevents self-imprisonment
+		scope:actor = { is_ai = no }
+		scope:recipient = {
+			is_imprisoned = no
 		}
 	}
-	on_accept = { scope:actor = { trigger_event = debug.0002 } }
+
+	on_accept = {
+		scope:actor = {
+			imprison = {
+				target = scope:recipient
+				type = house_arrest
+			}
+		}
+	}
+
 	auto_accept = yes
 }

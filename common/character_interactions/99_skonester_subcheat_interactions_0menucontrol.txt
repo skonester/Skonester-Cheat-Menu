@@ -5,6 +5,7 @@
 	auto_accept = yes
 	ignores_pending_interaction_block = yes
 	ai_will_do = 0
+	interface_priority = 75
 	
 	on_accept = {
 		scope:actor = {

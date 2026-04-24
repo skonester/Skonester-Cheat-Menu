@@ -1,0 +1,3251 @@
+﻿
+#Debugging events
+
+namespace = tocmod
+
+tocmod.0002 = {
+	type = character_event
+	title = tocmod.0002.t
+	desc = tocmod.0002.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {
+		if = {
+			limit = { is_female = yes }
+			save_scope_as = mother
+			scope:recipient = { save_scope_as = father }
+		}
+
+		else = {
+			save_scope_as = father
+			scope:recipient = { save_scope_as = mother }
+		}
+	}
+
+	#Normal pregnancy
+	option = {
+		name = tocmod.0002.a
+		
+		scope:mother = {
+			make_pregnant = {
+				father = scope:father
+			}
+		}
+	}
+
+	#One please
+	option = {
+		name = tocmod.0002.b
+
+		scope:mother = {
+			make_pregnant = {
+				father = scope:father
+				number_of_children = 1
+			}
+		}
+	}
+	
+	#Two please
+	option = {
+		name = tocmod.0002.c
+		
+			scope:mother = {
+				make_pregnant = {
+				father = scope:father
+				number_of_children = 2
+			}
+		}
+	}
+
+	#Three please
+	option = {
+		name = tocmod.0002.d
+		
+			scope:mother = {
+				make_pregnant = {
+				father = scope:father
+				number_of_children = 3
+			}
+		}
+	}
+
+	#Go crazy
+	option = {
+		name = tocmod.0002.e
+		
+			scope:mother = {
+				make_pregnant = {
+				father = scope:father
+				number_of_children = 10
+			}
+		}
+	}
+
+	#100kids
+	option = {
+		name = tocmod.0002.f
+		
+			scope:mother = {
+				make_pregnant = {
+				father = scope:father
+				number_of_children = 20
+			}
+		}
+	}
+
+	#Go 1000
+	option = {
+		name = tocmod.0002.g
+		
+			scope:mother = {
+				make_pregnant = {
+				father = scope:father
+				number_of_children = 30
+			}
+		}
+	}
+
+#1488
+	option = {
+		name = tocmod.0002.h
+		
+			scope:mother = {
+				make_pregnant = {
+				father = scope:father
+				number_of_children = 40
+			}
+		}
+	}
+	option = {
+		name = tocmod.0002.i_close #close
+	}
+
+}
+
+## globally upgrade some holdings for marketing videos and screenshots
+
+#debug.0008 = { }
+
+######################
+# HEALTH DATA EVENTS #
+######################
+
+
+
+tocmod.0005 = {
+	type = character_event
+	title = tocmod.0005.t
+	desc = tocmod.0005.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {
+		#		scope:actor.liege = {
+		#	imprison = {
+		#		target = scope:recipient
+		#		type = house_arrest
+		#	}
+		#}
+	}
+
+	#Normal pregnancy
+	option = {
+		name = tocmod.0005.a
+		
+		#scope:mother = {
+		#	make_pregnant = {
+		#		father = scope:father
+		#	}
+		#}
+				scope:recipient.liege = {
+			imprison = {
+				target = scope:recipient
+				type = house_arrest
+			}
+		}
+
+	}
+
+
+
+}
+
+
+
+#### addcharacter
+
+tocmod.1000 = {
+	type = character_event
+	title = tocmod.1000.t
+	desc = tocmod.1000.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {
+		scope:recipient = { save_scope_as = toc_employere }
+	}
+
+	#maleorfemale
+	option = {
+		name = tocmod.1000.a
+
+		scope:recipient = {
+			create_character = {
+	save_scope_as = toc_addchar
+	age = 18
+	gender = male
+	random_traits = yes
+	employer = scope:recipient #will end up in this court, will become a pool character unless specified or father/mother is landed
+}
+		}
+
+		trigger_event = {			id = tocmod.1001		}
+	}
+
+	option = {
+		name = tocmod.1000.b
+
+		scope:recipient = {
+			create_character = {
+	save_scope_as = toc_addchar
+	age = 18
+	gender = female
+	random_traits = yes
+	employer = scope:recipient
+}
+		}
+
+		trigger_event = {			id = tocmod.1001		}
+	}
+
+	option = {
+		name = tocmod.1000.c
+
+		scope:recipient = {
+			create_character = {
+	save_scope_as = toc_addchar
+	age = 18
+	gender = female
+	random_traits = yes
+	employer = scope:recipient
+	dynasty_house = scope:recipient.house
+}
+		}
+
+		trigger_event = {			id = tocmod.1001		}
+	}
+
+	option = {
+		name = tocmod.1000.d
+
+		scope:recipient = {
+			create_character = {
+	save_scope_as = toc_addchar
+	age = 18
+	gender = male
+	random_traits = yes
+	employer = scope:recipient
+	dynasty_house = scope:recipient.house
+}
+		}
+
+		trigger_event = {			id = tocmod.1001		}
+	}
+
+	option = {
+		name = tocmod.1000.e
+
+		scope:recipient = {
+			create_character = {
+	save_scope_as = toc_addchar
+	age = 45
+	gender = male
+	random_traits = yes
+	employer = scope:recipient
+	#dynasty_house = scope:recipient.house
+}
+		}
+
+		trigger_event = {			id = tocmod.1001		}
+	}
+
+	option = {
+		name = tocmod.1000.f
+
+		scope:recipient = {
+			create_character = {
+	save_scope_as = toc_addchar
+	age = 45
+	gender = female
+	random_traits = yes
+	employer = scope:recipient
+	#dynasty_house = scope:recipient.house
+}
+		}
+
+		trigger_event = {			id = tocmod.1001		}
+	}
+
+	option = {
+		name = tocmod.1000.g
+
+		scope:recipient = {
+			create_character = {
+	save_scope_as = toc_addchar
+	age = 45
+	gender = female
+	random_traits = yes
+	employer = scope:recipient
+	dynasty_house = scope:recipient.house
+}
+		}
+
+		trigger_event = {			id = tocmod.1001		}
+	}
+
+	option = {
+		name = tocmod.1000.h
+
+		scope:recipient = {
+			create_character = {
+	save_scope_as = toc_addchar
+	age = 100
+	gender = male
+	random_traits = yes
+	employer = scope:recipient
+	#dynasty_house = scope:recipient.house
+}
+		}
+
+		trigger_event = {			id = tocmod.1001		}
+	}
+
+	option = {
+		name = tocmod.1000.i #close
+	}
+}
+
+tocmod.1001 = {
+	type = character_event
+	title = tocmod.1001.t
+	desc = tocmod.1001.desc
+	theme = default
+	left_portrait = scope:toc_addchar
+
+	immediate = {	}
+
+	option = {
+		name = tocmod.1001.a
+
+		# scope:toc_addchar = {
+								
+								# }
+		trigger_event = { id = tocmod.1003 }
+	}
+
+	option = {
+		name = tocmod.1001.b
+
+		scope:toc_addchar = {
+								add_trait = intellect_good_3
+								}
+		trigger_event = { id = tocmod.1003 }
+	}	
+
+	option = {
+		name = tocmod.1001.c
+
+		scope:toc_addchar = {
+								add_trait = intellect_good_3
+								add_trait = physique_good_3
+								}
+		trigger_event = { id = tocmod.1003 }
+	}
+
+	option = {
+		name = tocmod.1001.d
+
+		scope:toc_addchar = {
+								add_trait = intellect_good_3
+								add_trait = physique_good_3
+								add_trait = beauty_good_3
+								}
+		trigger_event = { id = tocmod.1003 }
+	}
+
+	option = {
+		name = tocmod.1001.e
+
+		scope:toc_addchar = {
+								add_trait = beauty_good_3
+								}
+		trigger_event = { id = tocmod.1003 }
+	}
+
+	option = {
+		name = tocmod.1001.f
+
+		scope:toc_addchar = {
+								add_trait = beauty_good_3
+								add_trait = physique_good_3
+								}
+		trigger_event = { id = tocmod.1003 }
+	}
+
+	option = {
+		name = tocmod.1001.g
+
+		scope:toc_addchar = {
+								add_trait = physique_good_3
+								}
+		trigger_event = { id = tocmod.1003 }
+	}
+
+	option = {
+		name = tocmod.1001.h
+		trigger_event = { id = tocmod.1002 }
+	}
+
+	option = {
+		name = tocmod.1001.i #goback
+
+		# scope:toc_addchar = {
+								# add_trait = genius
+								# }
+	}
+
+}
+
+tocmod.1002 = {
+	type = character_event
+	title = tocmod.1002.t
+	desc = tocmod.1002.desc
+	theme = default
+	left_portrait = scope:toc_addchar
+
+	immediate = {	}
+
+	option = {
+		name = tocmod.1002.a
+
+		# scope:toc_addchar = {
+								
+								# }
+		trigger_event = { id = tocmod.1003 }
+	}
+
+	option = {
+		name = tocmod.1002.b
+
+		scope:toc_addchar = {
+								add_trait = intellect_bad_3
+								}
+		trigger_event = { id = tocmod.1003 }
+	}	
+
+	option = {
+		name = tocmod.1002.c
+
+		scope:toc_addchar = {
+								add_trait = intellect_bad_3
+								add_trait = physique_bad_3
+								}
+		trigger_event = { id = tocmod.1003 }
+	}
+
+	option = {
+		name = tocmod.1002.d
+
+		scope:toc_addchar = {
+								add_trait = intellect_bad_3
+								add_trait = physique_bad_3
+								add_trait = beauty_bad_3
+								}
+		trigger_event = { id = tocmod.1003 }
+	}
+
+	option = {
+		name = tocmod.1002.e
+
+		scope:toc_addchar = {
+								add_trait = beauty_bad_3
+								}
+		trigger_event = { id = tocmod.1003 }
+	}
+
+	option = {
+		name = tocmod.1002.f
+
+		scope:toc_addchar = {
+								add_trait = beauty_bad_3
+								add_trait = physique_bad_3
+								}
+		trigger_event = { id = tocmod.1003 }
+	}
+
+	option = {
+		name = tocmod.1002.g
+
+		scope:toc_addchar = {
+								add_trait = physique_bad_3
+								}
+		trigger_event = { id = tocmod.1003 }
+	}
+
+	# option = {
+		# name = tocmod.1002.h
+		# trigger_event = { id = tocmod.1003 }
+	# }
+
+#	option = {
+#		name = tocmod.1002.i #goback
+
+		# scope:toc_addchar = {
+								# add_trait = genius
+								# }
+#	}
+
+	# ===== PAGINATION: Back & Close =====
+	option = {
+		name = tocmod.1002.h #back to prev page (1001)
+		trigger_event = { id = tocmod.1001 }
+	}
+
+	option = {
+		name = tocmod.1002.i #close
+	}
+
+}
+
+tocmod.1003 = {
+	type = character_event
+	title = tocmod.1003.t
+	desc = tocmod.1003.desc
+	theme = default
+	left_portrait = scope:toc_addchar
+
+	immediate = {	}
+
+	option = {
+		name = tocmod.1003.a
+
+		# scope:toc_addchar = {
+								
+								# }
+		trigger_event = { id = tocmod.1004 }
+	}
+
+	option = {
+		name = tocmod.1003.b
+
+		scope:toc_addchar = {
+								add_trait = pure_blooded
+								}
+		trigger_event = { id = tocmod.1004 }
+	}	
+
+	option = {
+		name = tocmod.1003.c
+
+		scope:toc_addchar = {
+								add_trait = pure_blooded
+								add_trait = fecund
+								}
+		trigger_event = { id = tocmod.1004 }
+	}
+
+	option = {
+		name = tocmod.1003.d
+
+		scope:toc_addchar = {
+								add_trait = fecund
+								}
+		trigger_event = { id = tocmod.1004 }
+	}
+
+	option = {
+		name = tocmod.1003.e
+
+		scope:toc_addchar = {
+								add_trait = celibate
+								}
+		trigger_event = { id = tocmod.1004 }
+	}
+
+	option = {
+		name = tocmod.1003.f
+
+		scope:toc_addchar = {
+								add_trait = eunuch
+								}
+		trigger_event = { id = tocmod.1004 }
+	}
+
+	option = {
+		name = tocmod.1003.g
+
+		scope:toc_addchar = {
+								add_trait = infertile
+								}
+		trigger_event = { id = tocmod.1004 }
+	}
+
+	option = {
+		name = tocmod.1003.h
+		scope:toc_addchar = {
+								add_trait = shrewd
+								}
+		trigger_event = { id = tocmod.1004 }
+	}
+
+#	option = {
+#		name = tocmod.1003.i #goback
+
+		# scope:toc_addchar = {
+								# add_trait = genius
+								# }
+#	}
+
+	# ===== PAGINATION: Back & Close =====
+	option = {
+		name = tocmod.1003.i #back to prev page (1001)
+		trigger_event = { id = tocmod.1001 }
+	}
+
+	option = {
+		name = tocmod.1003.j #close
+	}
+
+}
+
+
+tocmod.1004 = {
+	type = character_event
+	title = tocmod.1004.t
+	desc = tocmod.1004.desc
+	theme = default
+	left_portrait = scope:toc_addchar
+
+	immediate = {	}
+
+	option = {
+		name = tocmod.1004.a
+
+		# scope:toc_addchar = {
+								
+								# }
+		trigger_event = { id = tocmod.1005 }
+	}
+
+	option = {
+		name = tocmod.1004.b
+
+		scope:toc_addchar = {
+								add_trait = albino
+								}
+		trigger_event = { id = tocmod.1005 }
+	}	
+
+	option = {
+		name = tocmod.1004.c
+
+		scope:toc_addchar = {
+								add_trait = giant
+								}
+		trigger_event = { id = tocmod.1005 }
+	}
+
+	option = {
+		name = tocmod.1004.d
+
+		scope:toc_addchar = {
+								add_trait = albino
+								add_trait = giant
+								}
+		trigger_event = { id = tocmod.1005 }
+	}
+
+	option = {
+		name = tocmod.1004.e
+
+		scope:toc_addchar = {
+								add_trait = hunchbacked
+								}
+		trigger_event = { id = tocmod.1005 }
+	}
+
+	option = {
+		name = tocmod.1004.f
+
+		scope:toc_addchar = {
+								add_trait = spindly
+								}
+		trigger_event = { id = tocmod.1005 }
+	}
+
+	option = {
+		name = tocmod.1004.g
+
+		scope:toc_addchar = {
+								add_trait = inbred
+								}
+		trigger_event = { id = tocmod.1005 }
+	}
+
+	# option = {
+		# name = tocmod.1004.h
+		# trigger_event = { id = tocmod.1005 }
+	# }
+
+#	option = {
+#		name = tocmod.1004.i #goback
+
+		# scope:toc_addchar = {
+								# add_trait = genius
+								# }
+#	}
+
+	# ===== PAGINATION: Back & Close =====
+	option = {
+		name = tocmod.1004.h #back to prev page (1003)
+		trigger_event = { id = tocmod.1003 }
+	}
+
+	option = {
+		name = tocmod.1004.i #close
+	}
+
+}
+
+
+tocmod.1005 = {
+	type = character_event
+	title = tocmod.1005.t
+	desc = tocmod.1005.desc
+	theme = default
+	left_portrait = scope:toc_addchar
+
+	immediate = {	}
+
+	option = {
+		name = tocmod.1005.a
+
+		# scope:toc_addchar = {
+								
+								# }
+		# trigger_event = { id = tocmod.1003 }
+	}
+
+	option = {
+		name = tocmod.1005.b
+
+		scope:toc_addchar = {
+								add_trait = lifestyle_physician
+								add_trait_xp = { trait = lifestyle_physician value = 100 }
+								}
+		# trigger_event = { id = tocmod.1003 }
+	}	
+
+	option = {
+		name = tocmod.1005.c
+
+		scope:toc_addchar = {
+								add_trait = lifestyle_physician
+								add_trait_xp = { trait = lifestyle_physician value = 100 }
+								add_trait = deviant
+								}
+		# trigger_event = { id = tocmod.1003 }
+	}
+
+	option = {
+		name = tocmod.1005.d
+
+		scope:toc_addchar = {
+								add_trait = lifestyle_physician
+								add_trait_xp = { trait = lifestyle_physician value = 100 }
+								add_trait = deviant
+								add_trait = witch
+								}
+		# trigger_event = { id = tocmod.1003 }
+	}
+
+	option = {
+		name = tocmod.1005.e
+
+		scope:toc_addchar = {
+								add_trait = lifestyle_physician
+								add_trait_xp = { trait = lifestyle_physician value = 100 }
+								add_trait = deviant
+								add_trait = witch
+								add_trait = cannibal
+								}
+		# trigger_event = { id = tocmod.1003 }
+	}
+
+	option = {
+		name = tocmod.1005.f
+
+		scope:toc_addchar = {
+								add_trait = lifestyle_mystic
+								add_trait_xp = { trait = lifestyle_mystic value = 100 }
+								}
+		# trigger_event = { id = tocmod.1003 }
+	}
+
+	option = {
+		name = tocmod.1005.g
+
+		scope:toc_addchar = {
+								add_trait = lifestyle_physician
+								add_trait_xp = { trait = lifestyle_physician value = 100 }
+								add_trait = lifestyle_mystic
+								add_trait_xp = { trait = lifestyle_mystic value = 100 }
+								add_trait = lifestyle_herbalist
+								}
+		# trigger_event = { id = tocmod.1003 }
+	}
+
+	# option = {
+		# name = tocmod.1005.h
+		# trigger_event = { id = tocmod.1002 }
+	# }
+
+#	option = {
+#		name = tocmod.1005.i #goback
+
+		# scope:toc_addchar = {
+								# add_trait = genius
+								# }
+#	}
+
+	# ===== PAGINATION: Back & Close =====
+	option = {
+		name = tocmod.1005.h #back to prev page (1004)
+		trigger_event = { id = tocmod.1004 }
+	}
+
+	option = {
+		name = tocmod.1005.i #close
+	}
+
+}
+
+
+
+
+#
+
+# tocmod.1100 = {
+	# type = character_event
+	# title = tocmod.1100.t
+	# desc = tocmod.1100.desc
+	# theme = default
+	# left_portrait = scope:recipient
+
+	# immediate = {	}
+
+	# option = {
+		# name = tocmod.1100.a
+	# }
+
+	# option = {
+		# name = tocmod.1100.b
+	# }
+# }
+
+
+
+
+
+
+
+
+
+
+#
+
+
+#### otheroptions
+
+tocmod.2000 = {
+	type = character_event
+	title = tocmod.2000.t
+	desc = tocmod.2000.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {
+		#scope:recipient = { save_scope_as = toc_targete }
+	}
+
+	option = {
+		name = tocmod.2000.a #other
+		
+		trigger_event = { # Makes another event happen
+			id = tocmod.2001
+			#days = { 7 14 }
+		}
+
+	}
+
+	option = {
+		name = tocmod.2000.b #grantblessingboosts
+
+		trigger_event = {
+			id = tocmod.2020
+		}
+			# scope:mother = {
+				# make_pregnant = {
+				# father = scope:father
+				# number_of_children = 2
+			# }
+		# }
+	}
+
+	option = {
+		name = tocmod.2000.c #gold
+		scope:recipient = { add_gold = 5000 }
+		trigger_event = { id = tocmod.2000 }
+	}
+
+	option = {
+		name = tocmod.2000.d #prestige
+		scope:recipient = { add_prestige = 5000 }
+		trigger_event = { id = tocmod.2000 }
+	}
+
+	option = {
+		name = tocmod.2000.e #piety
+		scope:recipient = { add_piety = 5000 }
+		trigger_event = { id = tocmod.2000 }
+	}
+
+	option = {
+		name = tocmod.2000.f #renown
+		#scope:recipient.dynasty = { dynasty_prestige = 5000 }
+		scope:toc_targete.dynasty = { add_dynasty_prestige = 5000 }
+		trigger_event = { id = tocmod.2000 }
+	}
+
+	option = {
+		name = tocmod.2000.g #miraclehealing
+			scope:toc_targete = {
+			remove_trait = bubonic_plague
+			remove_trait = smallpox
+			remove_trait = typhus
+			remove_trait = cancer
+			remove_trait = consumption
+			remove_trait = gout_ridden
+			remove_trait = sickly
+			remove_trait = ill
+			remove_trait = pneumonic
+			remove_trait = great_pox
+			remove_trait = early_great_pox
+			remove_trait = lovers_pox
+			remove_trait = leper
+
+			remove_trait = wounded_1
+			remove_trait = wounded_2
+			remove_trait = wounded_3
+			remove_trait = maimed
+			remove_trait = one_legged
+			remove_trait = disfigured
+			remove_trait = infirm
+			remove_trait = incapable
+			#remove_trait = scarred
+			remove_trait = eunuch
+			remove_trait = blind
+			remove_trait = inbred
+			}
+
+	}
+
+	option = {
+		name = tocmod.2000.h #traits
+
+		trigger_event = {
+			id = tocmod.2030
+
+		}
+	}
+
+	option = {
+		name = tocmod.2000.i #checksome
+
+		trigger_event = {
+			id = tocmod.2050
+
+		}
+
+	}
+
+	option = {
+		name = tocmod.2000.j #dosome
+		trigger_event = {
+			id = tocmod.2070
+
+		}
+
+	}
+
+	# ===== PAGINATION =====
+	option = {
+		name = tocmod.2000.k #next page
+		trigger_event = { id = tocmod.2009 }
+	}
+
+
+#tocmod.2000.m:0 "13" #wontwork
+# NOTE: tocmod.2000 is at max 12 options. Option .l is the "Next Page" to tocmod.2001.
+# To add a standalone Close button here, remove one option or use the next-page chain.
+
+}
+
+# ===== OVERFLOW PAGE 2 for tocmod.2000 =====
+tocmod.2009 = {
+	type = character_event
+	title = tocmod.2009.t
+	desc = tocmod.2009.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {	}
+
+	option = {
+		name = tocmod.2000.k #nothinghappens
+
+			scope:toc_targete = {
+				death = natural
+			}
+
+	}
+
+	option = {
+		name = tocmod.2000.l #12
+		
+	}
+
+	option = {
+		name = tocmod.2009.c #back to prev page (tocmod.2000)
+		trigger_event = { id = tocmod.2000 }
+	}
+
+	option = {
+		name = tocmod.2009.d #close
+	}
+
+}
+
+
+
+#		trigger_event = { id = tocmod.1003 }
+
+tocmod.2087 = {
+	type = character_event
+	title = tocmod.2087.t
+	desc = tocmod.2087.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {	}
+	option = {	name = tocmod.2087.a	}
+	option = {	name = tocmod.2087.b
+		#scope:toc_targete = {  }
+}
+	# option = {		name = tocmod.2087.c 	}
+	# option = {		name = tocmod.2087.d 	}
+	# option = {		name = tocmod.2087.e 	}
+	# option = {		name = tocmod.2087.f 	}
+	# option = {		name = tocmod.2087.g 	}
+	# option = {		name = tocmod.2087.h 	}
+	# option = {		name = tocmod.2087.i 	}
+	# option = {		name = tocmod.2087.j 	}
+	# option = {		name = tocmod.2087.k 	}
+	# option = {		name = tocmod.2087.l 	}
+
+}
+
+
+tocmod.2088 = {
+	type = character_event
+	title = tocmod.2088.t
+	desc = tocmod.2088.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {	}
+	option = {	name = tocmod.2088.a	}
+	option = {	name = tocmod.2088.b
+		#scope:toc_targete = {  }
+}
+	option = {		name = tocmod.2088.c 	}
+	option = {		name = tocmod.2088.d 	}
+	option = {		name = tocmod.2088.e 	}
+	option = {		name = tocmod.2088.f 	}
+	option = {		name = tocmod.2088.g 	}
+	option = {		name = tocmod.2088.h 	}
+	option = {		name = tocmod.2088.i 	}
+	option = {		name = tocmod.2088.j 	}
+	# ===== PAGINATION =====
+	option = {
+		name = tocmod.2088.k #next page
+		trigger_event = { id = tocmod.2090 }
+	}
+
+
+}
+
+# ===== PAGE 2 for tocmod.2088 =====
+tocmod.2090 = {
+	type = character_event
+	title = tocmod.2090.t
+	desc = tocmod.2090.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {	}
+
+	option = {		name = tocmod.2088.k 	}
+
+	option = {		name = tocmod.2088.l 	}
+
+	option = {
+		name = tocmod.2090.d #close
+	}
+
+}
+
+
+
+#######
+
+tocmod.2001 = {
+	type = character_event
+	title = tocmod.2001.t
+	desc = tocmod.2001.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {
+		#scope:recipient = { save_scope_as = toc_targete }
+	}
+
+	option = {
+		name = tocmod.2001.a #other
+		
+		trigger_event = { id = tocmod.2002 }
+
+	}
+
+	option = {
+		name = tocmod.2001.b #
+		
+		scope:toc_targete = { set_sexuality = asexual }
+	}
+
+	option = {
+		name = tocmod.2001.c #
+		scope:toc_targete = { set_sexuality = homosexual }
+	}
+
+	option = {
+		name = tocmod.2001.d #
+		scope:toc_targete = { set_sexuality = bisexual }
+	}
+
+	option = {
+		name = tocmod.2001.e #
+		scope:toc_targete = { set_sexuality = heterosexual }
+	}
+
+	option = {
+		name = tocmod.2001.f #CHECKfather
+		trigger_event = { id = tocmod.2087 }
+
+	}
+
+	option = {
+		name = tocmod.2001.g #
+scope:toc_targete = {
+		add_realm_law_skip_effects = single_heir_succession_law
+					}
+	}
+
+	option = {
+		name = tocmod.2001.h #
+scope:toc_targete = {
+		add_realm_law_skip_effects = single_heir_succession_law_youngest
+					}
+	}
+
+	option = {
+		name = tocmod.2001.i #
+scope:toc_targete = {
+		add_realm_law_skip_effects = single_heir_dynasty_house
+					}
+	}
+
+	option = {
+		name = tocmod.2001.j #
+scope:toc_targete = {
+		add_realm_law_skip_effects = crown_authority_2
+					}
+	}
+
+	# ===== PAGINATION =====
+	option = {
+		name = tocmod.2001.k #next page
+		trigger_event = { id = tocmod.2008 }
+	}
+
+
+
+	# NOTE: tocmod.2001 is at max 12 options (a-l). To add Back(->2000) or Close navigation,
+	# one existing option must be moved to a sub-page. Currently no slot available without removal.
+
+}
+
+# ===== OVERFLOW PAGE 2 for tocmod.2001 =====
+tocmod.2008 = {
+	type = character_event
+	title = tocmod.2008.t
+	desc = tocmod.2008.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {	}
+
+	option = {
+		name = tocmod.2001.k #nothing
+scope:toc_targete = {
+		add_realm_law_skip_effects = crown_authority_3
+					}
+	}
+
+	option = {
+		name = tocmod.2001.l #12
+			#every_independent_ruler	
+			#every_living_character
+			#every_pool_character
+			#
+			every_living_character = {
+# limit = { <triggers> } 
+# <effects>
+
+			remove_trait = insane_generale
+			remove_trait = pantokratorus_a
+			remove_trait = crazyminded_psycho
+			remove_trait = goodguy_toc
+			remove_trait = borntorule_seed
+			remove_trait = sneed_seed
+			remove_trait = gigasuperseed
+			remove_trait = greatest_lord_np
+			remove_trait = greatest_lord_t
+			remove_trait = insane_opinion_fv
+			remove_trait = insane_opinion_fa
+			remove_trait = first_bloodline1
+			remove_trait = second_bloodline2
+			remove_trait = third_bloodline3
+			remove_trait = fourth_bloodline4
+			remove_trait = fifth_bloodline5
+			remove_trait = toc_patrilinealblood
+			remove_trait = toc_patrilinealblood2
+			remove_trait = toc_patrilinealblood3
+			remove_trait = toc_gamerblood0
+			remove_trait = toc_gamer0
+			remove_trait = toc_immortalblood
+			remove_trait = toc_immortal
+			remove_trait = pantokratorus_ablood
+
+}
+
+		
+	}
+
+	option = {
+		name = tocmod.2008.c #back to prev page (tocmod.2001)
+		trigger_event = { id = tocmod.2001 }
+	}
+
+	option = {
+		name = tocmod.2008.d #close
+	}
+
+}
+
+
+#
+
+tocmod.2002 = {
+	type = character_event
+	title = tocmod.2002.t
+	desc = tocmod.2002.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {
+		#scope:recipient = { save_scope_as = toc_targete }
+	}
+
+	option = {
+		name = tocmod.2002.a #other
+		
+		# trigger_event = { id = tocmod.2003 }
+			# every_living_character = {
+# limit = { <triggers> } 
+# <effects>
+
+				# set_character_faith = scope:recipient.faith
+
+# }
+
+	}
+
+	option = {
+		name = tocmod.2002.b #
+
+			every_ruler = {
+# limit = { <triggers> } 
+# <effects>
+
+				set_character_faith = scope:actor.faith
+
+}
+
+
+
+	}
+
+	option = {
+		name = tocmod.2002.c #
+
+			# every_faith_ruler = {
+			every_ruler = {
+				set_culture	= scope:actor.culture
+}
+
+	}
+
+	option = {
+		name = tocmod.2002.d #
+				every_realm_county = {
+			set_county_culture = scope:actor.culture
+								}
+
+	}
+
+	option = {
+		name = tocmod.2002.e #
+				every_realm_county = {
+			set_county_faith = scope:actor.faith
+								}
+
+	}
+#set_court_language = language_norwegian
+	option = {
+		name = tocmod.2002.f #CHECKfather
+			every_courtier = {
+				set_culture	= scope:actor.culture
+				set_character_faith	= scope:actor.faith
+}
+
+			# every_courtier = {
+				# set_character_faith	= scope:actor.faith
+# }
+
+	}
+
+	# option = {
+		# name = tocmod.2002.g #
+# scope:toc_targete = {
+		# add_realm_law_skip_effects = single_heir_succession_law
+					# }
+	# }
+
+	# ===== PAGINATION: Back & Close =====
+	option = {
+		name = tocmod.2002.g #back to prev page
+		trigger_event = { id = tocmod.2001 }
+	}
+
+	option = {
+		name = tocmod.2002.h #close
+	}
+
+	# option = {
+		# name = tocmod.2002.h #
+# scope:toc_targete = {
+		# add_realm_law_skip_effects = single_heir_succession_law_youngest
+					# }
+	# }
+
+	# option = {
+		# name = tocmod.2002.i #
+# scope:toc_targete = {
+		# add_realm_law_skip_effects = single_heir_dynasty_house
+					# }
+	# }
+
+	# option = {
+		# name = tocmod.2002.j #
+# scope:toc_targete = {
+		# add_realm_law_skip_effects = crown_authority_2
+					# }
+	# }
+
+	# option = {
+		# name = tocmod.2002.k #nothing
+# scope:toc_targete = {
+		# add_realm_law_skip_effects = crown_authority_3
+					# }
+	# }
+	# option = {
+		# name = tocmod.2002.l #12
+			#every_independent_ruler	
+			#every_living_character
+			#every_pool_character
+			#
+
+
+		
+	# }
+
+
+}
+
+#
+
+tocmod.2020 = {
+	type = character_event
+	title = tocmod.2020.t
+	desc = tocmod.2020.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {
+		#scope:recipient = { save_scope_as = toc_targete }
+	}
+
+	option = {
+		name = tocmod.2020.a #toc_allfiefs_modifier
+
+			scope:toc_targete = {			add_character_modifier = toc_allfiefs_modifier			}
+
+	}
+
+	option = {
+		name = tocmod.2020.b #grantblessingboosts
+			scope:toc_targete = { add_character_modifier = toc_diplomacy_modifier }
+		trigger_event = { id = tocmod.2020 }
+	}
+
+	option = {
+		name = tocmod.2020.c #gold
+			scope:toc_targete = { add_character_modifier = toc_martial_modifier }
+		trigger_event = { id = tocmod.2020 }
+	}
+
+	option = {
+		name = tocmod.2020.d #prestige
+			scope:toc_targete = { add_character_modifier = toc_stewardship_modifier }
+		trigger_event = { id = tocmod.2020 }
+	}
+
+	option = {
+		name = tocmod.2020.e #piety
+			scope:toc_targete = { add_character_modifier = toc_intrigue_modifier }
+		trigger_event = { id = tocmod.2020 }
+	}
+
+	option = {
+		name = tocmod.2020.f #renown
+			scope:toc_targete = { add_character_modifier = toc_learning_modifier }
+		trigger_event = { id = tocmod.2020 }
+	}
+
+	option = {
+		name = tocmod.2020.g #miraclehealing
+			scope:toc_targete = { add_character_modifier = toc_prowess_modifier }
+	}
+
+	option = {
+		name = tocmod.2020.h #traits
+			scope:toc_targete = { add_character_modifier = toc_luckinbattle_modifier }
+	}
+
+	option = {
+		name = tocmod.2020.i #checksome
+			scope:toc_targete = { add_character_modifier = toc_privatearmy_modifier }
+	}
+
+	option = {
+		name = tocmod.2020.j #dosome
+			scope:toc_targete = { add_character_modifier = toc_belovedgeneralopinion_modifier }
+	}
+
+	# ===== PAGINATION =====
+	option = {
+		name = tocmod.2020.k #next page
+		trigger_event = { id = tocmod.2022 }
+	}
+
+
+
+	# NOTE: tocmod.2020 is at max 12 options (a-l). Option .l is the "Next Page" to tocmod.2021.
+	# To add a standalone Close button here, one existing option must be moved to a sub-page.
+
+}
+
+# ===== OVERFLOW PAGE 2 for tocmod.2020 =====
+tocmod.2022 = {
+	type = character_event
+	title = tocmod.2022.t
+	desc = tocmod.2022.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {	}
+
+	option = {
+		name = tocmod.2020.k #nothinghappens
+			scope:toc_targete = { add_character_modifier = toc_speedy_modifier }
+		trigger_event = { id = tocmod.2020 }
+	}
+
+	option = {
+		name = tocmod.2020.l #12
+		trigger_event = { id = tocmod.2021 }
+	}
+
+	option = {
+		name = tocmod.2022.c #back to prev page (tocmod.2020)
+		trigger_event = { id = tocmod.2020 }
+	}
+
+	option = {
+		name = tocmod.2022.d #close
+	}
+
+}
+
+
+
+tocmod.2021 = {
+	type = character_event
+	title = tocmod.2021.t
+	desc = tocmod.2021.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {	}
+
+	option = {
+		name = tocmod.2021.a
+			scope:toc_targete = { add_character_modifier = toc_diplomaticrange_modifier }
+	}
+
+	option = {
+		name = tocmod.2021.b
+			# scope:toc_targete = { add_character_modifier = toc_diplomaticrange_modifier }
+			scope:toc_targete = { 
+									remove_character_modifier = toc_diplomaticrange_modifier
+									remove_character_modifier = toc_diplomacy_modifier
+									remove_character_modifier = toc_martial_modifier
+									remove_character_modifier = toc_stewardship_modifier
+									remove_character_modifier = toc_intrigue_modifier
+									remove_character_modifier = toc_learning_modifier
+									remove_character_modifier = toc_prowess_modifier
+									remove_character_modifier = toc_luckinbattle_modifier
+									remove_character_modifier = toc_privatearmy_modifier
+									remove_character_modifier = toc_belovedgeneralopinion_modifier
+									remove_character_modifier = toc_speedy_modifier
+
+									remove_character_modifier = toc_exoticcourtbonus
+									remove_character_modifier = toc_fertile_modifier
+									remove_character_modifier = toc_dreadful_modifier
+									remove_character_modifier = toc_notyranny_modifier
+
+
+									# remove_character_modifier = toc_speedy_modifier
+							}
+	}
+
+	option = {
+		name = tocmod.2021.c #gold
+			scope:toc_targete.dynasty = { add_dynasty_modifier = strong_blood }
+	}
+
+	option = {
+		name = tocmod.2021.d #prestige
+			scope:toc_targete.dynasty = { add_dynasty_modifier = fp1_legacy_of_piracy_modifier }
+
+# fp1_legacy_of_piracy_modifier = {
+	# icon = horse_dead_positive
+	## This modifier gives access to raiding & overseas raiding.
+	# raid_speed = 0.5
+	# embarkation_cost_mult = -0.5
+# }
+	}
+
+	option = {
+		name = tocmod.2021.e #piety
+			scope:toc_targete.dynasty = { add_dynasty_modifier = dynasty_of_many_crowns }
+	}
+
+	option = {
+		name = tocmod.2021.f #renown
+			scope:toc_targete = { add_character_modifier = toc_exoticcourtbonus }
+		trigger_event = { id = tocmod.2021 }
+	}
+
+	option = {
+		name = tocmod.2021.g #miraclehealing
+			scope:toc_targete = { add_character_modifier = toc_fertile_modifier }
+		trigger_event = { id = tocmod.2021 }
+	}
+
+	option = {
+		name = tocmod.2021.h #traits
+			scope:toc_targete = { add_character_modifier = toc_dreadful_modifier }
+		trigger_event = { id = tocmod.2021 }
+	}
+
+	option = {
+		name = tocmod.2021.i #checksome
+			# scope:toc_targete = { add_character_modifier = toc_allfiefs_modifier }
+	}
+
+	option = {
+		name = tocmod.2021.j #dosome
+			scope:toc_targete = { add_character_modifier = toc_notyranny_modifier }
+		trigger_event = { id = tocmod.2021 }
+	}
+
+	option = {
+		name = tocmod.2021.k #nothinghappens
+			scope:toc_targete = { add_character_modifier = toc_superknights_modifier }
+		trigger_event = { id = tocmod.2021 }
+	}
+	# option = {
+		# name = tocmod.2021.l #12
+		# trigger_event = { id = tocmod.2021 }
+	# }
+
+	# ===== PAGINATION: Back & Close =====
+	option = {
+		name = tocmod.2021.l #back to prev page (2020)
+		trigger_event = { id = tocmod.2020 }
+	}
+
+
+}
+
+tocmod.2030 = {
+	type = character_event
+	title = tocmod.2030.t
+	desc = tocmod.2030.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {
+		#scope:recipient = { save_scope_as = toc_targete }
+	}
+
+	option = {
+		name = tocmod.2030.a #cosmeticbloodlines
+		
+		trigger_event = { id = tocmod.2031 }
+
+	}
+
+	option = {
+		name = tocmod.2030.b #congenital traits
+			# scope:toc_targete = { add_trait = beauty_good_3 }
+			trigger_event = { id = tocmod.2032 }
+	}
+
+	option = {
+		name = tocmod.2030.c #gold
+			trigger_event = { id = tocmod.2033 }
+	}
+
+	option = {
+		name = tocmod.2030.d
+			scope:toc_targete = { add_trait = poet }
+	}
+
+	option = {
+		name = tocmod.2030.e #piety
+			trigger_event = { id = tocmod.2034 }
+	}
+
+	option = {
+		name = tocmod.2030.f #
+scope:toc_targete = { 
+add_trait = education_diplomacy_4
+add_trait = education_stewardship_4
+add_trait = education_martial_4
+add_trait = education_learning_4
+add_trait = education_intrigue_4
+}
+	}
+
+	option = {
+		name = tocmod.2030.g #Childhood
+			trigger_event = { id = tocmod.2035 }
+	}
+
+	option = {
+		name = tocmod.2030.h #Personality
+			trigger_event = { id = tocmod.2040 }
+	}
+
+	option = {
+		name = tocmod.2030.i #checksome
+			scope:toc_targete = {
+			add_trait = pantokratorus_ablood
+			}
+	}
+
+	option = {
+		name = tocmod.2030.j #dosome
+		
+	}
+
+	# ===== PAGINATION =====
+	option = {
+		name = tocmod.2030.k #next page
+		trigger_event = { id = tocmod.2039 }
+	}
+
+
+
+	# NOTE: tocmod.2030 is at max 12 options (a-l). To add Back(->2000) or Close navigation,
+	# one existing option must be moved to a sub-page.
+
+}
+
+# ===== OVERFLOW PAGE 2 for tocmod.2030 =====
+tocmod.2039 = {
+	type = character_event
+	title = tocmod.2039.t
+	desc = tocmod.2039.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {	}
+
+	option = {
+		name = tocmod.2030.k #nothinghappens
+			scope:toc_targete = {
+			add_trait = toc_immortal
+			}
+
+	}
+
+	option = {
+		name = tocmod.2030.l #12
+			scope:toc_targete = {
+			add_trait = toc_immortalblood
+			}
+	}
+
+	option = {
+		name = tocmod.2039.c #back to prev page (tocmod.2030)
+		trigger_event = { id = tocmod.2030 }
+	}
+
+	option = {
+		name = tocmod.2039.d #close
+	}
+
+}
+
+
+tocmod.2031 = {
+	type = character_event
+	title = tocmod.2031.t
+	desc = tocmod.2031.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {
+		#scope:recipient = { save_scope_as = toc_targete }
+	}
+
+	option = {
+		name = tocmod.2031.a #cosmeticbloodlines
+			scope:toc_targete = { add_trait = first_bloodline1 }
+
+	}
+
+	option = {
+		name = tocmod.2031.b #grantblessingboosts
+			scope:toc_targete = { add_trait = second_bloodline2 }
+	}
+
+	option = {
+		name = tocmod.2031.c #gold
+			scope:toc_targete = { add_trait = third_bloodline3 }
+	}
+
+	option = {
+		name = tocmod.2031.d #prestige
+			scope:toc_targete = { add_trait = fourth_bloodline4 }
+	}
+
+	option = {
+		name = tocmod.2031.e #piety
+			scope:toc_targete = { add_trait = fifth_bloodline5 }
+	}
+
+	option = {
+		name = tocmod.2031.f #renown
+			scope:toc_targete = { add_trait = toc_patrilinealblood }
+	}
+
+	option = {
+		name = tocmod.2031.g #miraclehealing
+			scope:toc_targete = { add_trait = toc_patrilinealblood2 }
+	}
+
+	option = {
+		name = tocmod.2031.h #traits
+			scope:toc_targete = { add_trait = toc_patrilinealblood3 }
+	}
+
+	option = {
+		name = tocmod.2031.i #checksome
+			scope:toc_targete = {
+			add_trait = toc_immortal
+			}
+	}
+
+	# option = {
+		# name = tocmod.2031.j #dosome
+		
+	# }
+
+	# option = {
+		# name = tocmod.2031.k #nothinghappens
+
+
+	# }
+	# option = {
+		# name = tocmod.2031.l #12
+		
+	# }
+
+
+
+	# ===== PAGINATION =====
+	option = {
+		name = tocmod.2031.j_back #back
+		trigger_event = { id = tocmod.2030 }
+	}
+
+	option = {
+		name = tocmod.2031.k_close #close
+	}
+
+}
+
+# 			# scope:toc_targete = { add_trait = beauty_good_3 }
+
+tocmod.2032 = {
+	type = character_event
+	title = tocmod.2032.t
+	desc = tocmod.2032.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {	}
+	option = {	name = tocmod.2032.a scope:toc_targete = { add_trait = beauty_good_3 } }
+	option = {	name = tocmod.2032.b
+			scope:toc_targete = { add_trait = intellect_good_3 }
+}
+	option = {		name = tocmod.2032.c scope:toc_targete = { add_trait = physique_good_3 } 	}
+	option = {		name = tocmod.2032.d  scope:toc_targete = { add_trait = pure_blooded } 	}
+	option = {		name = tocmod.2032.e  scope:toc_targete = { add_trait = fecund } 	}
+	option = {		name = tocmod.2032.f  scope:toc_targete = { add_trait = giant } 	}
+	option = {		name = tocmod.2032.g  scope:toc_targete = { add_trait = albino } 	}
+	option = {		name = tocmod.2032.h  scope:toc_targete = { add_trait = infertile } 	}
+	option = {		name = tocmod.2032.i  scope:toc_targete = { add_trait = dwarf } 	}
+	option = {		name = tocmod.2032.j  scope:toc_targete = { add_trait = eunuch } 	}
+	# option = {		name = tocmod.2032.k  scope:toc_targete = { add_trait = pure_blooded } 	}
+	# option = {		name = tocmod.2032.l  scope:toc_targete = { add_trait = pure_blooded } 	}
+
+
+	# ===== PAGINATION =====
+	option = {
+		name = tocmod.2032.k_back #back
+		trigger_event = { id = tocmod.2030 }
+	}
+
+	option = {
+		name = tocmod.2032.l_close #close
+	}
+
+}
+
+tocmod.2033 = {
+	type = character_event
+	title = tocmod.2033.t
+	desc = tocmod.2033.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {	}
+	option = {	name = tocmod.2033.a scope:toc_targete = { add_trait = cannibal } }
+	option = {	name = tocmod.2033.b
+			scope:toc_targete = { add_trait = deviant }
+}
+	option = {		name = tocmod.2033.c scope:toc_targete = { add_trait = witch } 	}
+	option = {		name = tocmod.2033.d  scope:toc_targete = { remove_trait = murderer } 	}
+	option = {		name = tocmod.2033.e  scope:toc_targete = { add_trait = drunkard } 	}
+	option = {		name = tocmod.2033.f  scope:toc_targete = { add_trait = hashishiyah } 	}
+	option = {		name = tocmod.2033.g  scope:toc_targete = { add_trait = rakish } 	}
+	option = {		name = tocmod.2033.h  scope:toc_targete = { 
+add_trait = journaller
+add_trait = confider
+add_trait = athletic
+ } 	}
+	option = {		name = tocmod.2033.i  scope:toc_targete = { add_trait = adventurer } 	}
+	option = {		name = tocmod.2033.j  scope:toc_targete = { add_trait = depressed_genetic } 	}
+	# ===== PAGINATION =====
+	option = {
+		name = tocmod.2033.k #next page
+		trigger_event = { id = tocmod.2036 }
+	}
+
+
+}
+
+# ===== PAGE 2 for tocmod.2033 =====
+tocmod.2036 = {
+	type = character_event
+	title = tocmod.2036.t
+	desc = tocmod.2036.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {	}
+
+	option = {		name = tocmod.2033.k  scope:toc_targete = { add_trait = crusader_king } 	}
+
+	option = {		name = tocmod.2033.l  scope:toc_targete = { 
+add_trait = physician_3
+add_trait = mystic_3
+add_trait = lifestyle_herbalist
+add_trait = blademaster_3
+add_trait = hunter_3
+add_trait = shrewd
+add_trait = strong
+ } 	}
+
+	option = {
+		name = tocmod.2036.c #back
+		trigger_event = { id = tocmod.2030 }
+	}
+
+	option = {
+		name = tocmod.2036.d #close
+	}
+
+}
+
+
+tocmod.2034 = {
+	type = character_event
+	title = tocmod.2034.t
+	desc = tocmod.2034.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {	}
+	option = {	name = tocmod.2034.a 
+
+scope:toc_targete = {
+
+add_trait = aggressive_attacker
+add_trait = military_engineer
+add_trait = logistician
+add_trait = unyielding_defender
+add_trait = forder
+add_trait = flexible_leader
+# add_trait = reckless
+add_trait = cautious_leader
+add_trait = holy_warrior
+add_trait = viking
+add_trait = faith_warrior
+
+
+add_trait = desert_warrior
+add_trait = jungle_stalker
+add_trait = reaver
+add_trait = open_terrain_expert
+add_trait = rough_terrain_expert
+add_trait = forest_fighter
+add_trait = organizer
+add_trait = winter_soldier
+# add_trait = desert_warrior
+# add_trait = desert_warrior
+
+
+} }
+	option = {	name = tocmod.2034.b
+			scope:toc_targete = {
+add_trait = desert_warrior
+add_trait = jungle_stalker
+add_trait = reaver
+add_trait = open_terrain_expert
+add_trait = rough_terrain_expert
+add_trait = forest_fighter
+add_trait = organizer
+add_trait = winter_soldier
+
+} }
+	option = {		name = tocmod.2034.c 
+		scope:toc_targete = {
+
+add_trait = aggressive_attacker
+add_trait = military_engineer
+add_trait = logistician
+add_trait = unyielding_defender
+add_trait = forder
+add_trait = flexible_leader
+add_trait = reckless
+# add_trait = cautious_leader
+add_trait = holy_warrior
+# add_trait = aggressive_attacker
+
+} 	}
+	option = {		name = tocmod.2034.d  scope:toc_targete = { add_trait = greatest_of_khans } 	}
+	option = {		name = tocmod.2034.e  scope:toc_targete = { add_trait = berserker } 	}
+	option = {		name = tocmod.2034.f  scope:toc_targete = { add_trait = heresiarch } 	}
+	option = {		name = tocmod.2034.g  scope:toc_targete = { add_trait = peasant_leader } 	}
+	option = {		name = tocmod.2034.h  scope:toc_targete = {
+add_trait = varangian
+# add_trait = confider
+# add_trait = athletic
+ } 	}
+	# option = {		name = tocmod.2034.i  scope:toc_targete = { add_trait = adventurer } 	}
+	# option = {		name = tocmod.2034.j  scope:toc_targete = { add_trait = depressed_genetic } 	}
+	# option = {		name = tocmod.2034.k  scope:toc_targete = { add_trait = crusader_king } 	}
+	# option = {		name = tocmod.2034.l  scope:toc_targete = { 
+# add_trait = physician_3
+# add_trait = mystic_3
+# add_trait = lifestyle_herbalist
+# add_trait = blademaster_3
+# add_trait = hunter_3
+# add_trait = shrewd
+# add_trait = strong
+ # } 	}
+
+
+
+
+
+
+
+	# ===== PAGINATION =====
+	option = {
+		name = tocmod.2034.i_back #back
+		trigger_event = { id = tocmod.2030 }
+	}
+
+	option = {
+		name = tocmod.2034.j_close #close
+	}
+
+}
+
+
+#childhoodtraitsbroken3-15?
+tocmod.2035 = {
+	type = character_event
+	title = tocmod.2035.t
+	desc = tocmod.2035.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {	}
+	option = {	name = tocmod.2035.a scope:toc_targete = { add_trait = bossy } }
+	option = {	name = tocmod.2035.b
+			scope:toc_targete = { add_trait = charming }
+}
+	option = {		name = tocmod.2035.c scope:toc_targete = { add_trait = curious } 	}
+	option = {		name = tocmod.2035.d  scope:toc_targete = { add_trait = pensive } 	}
+	option = {		name = tocmod.2035.e  scope:toc_targete = { add_trait = rowdy } 	}
+	option = {		name = tocmod.2035.f  scope:toc_targete = { remove_trait = rowdy remove_trait = pensive remove_trait = curious remove_trait = charming remove_trait = bossy } 	}
+	option = {		name = tocmod.2035.g  scope:toc_targete = { add_trait = education_martial_prowess_4 } 	}
+	# option = {		name = tocmod.2035.h  scope:toc_targete = { add_trait = infertile } 	}
+	# option = {		name = tocmod.2035.i  scope:toc_targete = { add_trait = dwarf } 	}
+	# option = {		name = tocmod.2035.j  scope:toc_targete = { add_trait = eunuch } 	}
+	# option = {		name = tocmod.2035.k  scope:toc_targete = { add_trait = pure_blooded } 	}
+	# option = {		name = tocmod.2035.l  scope:toc_targete = { add_trait = pure_blooded } 	}
+
+}
+
+tocmod.2040 = {
+	type = character_event
+	title = tocmod.2040.t
+	desc = tocmod.2040.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {	}
+	option = {	name = tocmod.2040.a 
+scope:toc_targete = {
+remove_trait = brave
+remove_trait = lustful
+remove_trait = chaste
+remove_trait = gluttonous
+remove_trait = temperate
+remove_trait = greedy
+remove_trait = generous
+remove_trait = lazy
+remove_trait = diligent
+remove_trait = wrathful
+remove_trait = calm
+remove_trait = patient
+remove_trait = impatient
+remove_trait = arrogant
+remove_trait = humble
+remove_trait = deceitful
+remove_trait = honest
+remove_trait = craven
+remove_trait = shy
+remove_trait = gregarious
+remove_trait = ambitious
+remove_trait = content
+remove_trait = arbitrary
+remove_trait = just
+remove_trait = cynical
+remove_trait = zealous
+remove_trait = paranoid
+remove_trait = trusting
+remove_trait = compassionate
+remove_trait = callous
+remove_trait = sadistic
+remove_trait = stubborn
+remove_trait = fickle
+remove_trait = vengeful
+remove_trait = forgiving
+# remove_trait = brave
+
+
+} }
+	option = {	name = tocmod.2040.b
+			# scope:toc_targete = { add_trait = intellect_good_3 }
+scope:toc_targete = {
+add_trait = brave
+add_trait = chaste
+add_trait = temperate
+add_trait = generous
+add_trait = diligent
+add_trait = calm
+add_trait = patient
+add_trait = humble
+add_trait = honest
+add_trait = gregarious
+# add_trait = ambitious
+add_trait = content
+add_trait = just
+# add_trait = zealous
+# add_trait = paranoid
+# add_trait = trusting
+add_trait = compassionate
+# add_trait = stubborn
+#finnic
+# add_trait = fickle
+add_trait = forgiving
+
+
+}
+
+}
+	option = {		name = tocmod.2040.c 
+
+scope:toc_targete = {
+
+add_trait = lustful
+add_trait = gluttonous
+add_trait = greedy
+add_trait = lazy
+add_trait = wrathful
+add_trait = impatient
+add_trait = arrogant
+add_trait = deceitful
+add_trait = craven
+add_trait = shy
+add_trait = ambitious
+add_trait = arbitrary
+add_trait = cynical
+# add_trait = paranoid
+# add_trait = trusting
+# add_trait = callous
+add_trait = sadistic
+# add_trait = stubborn
+add_trait = fickle
+add_trait = vengeful
+
+
+}
+
+}
+	option = {		name = tocmod.2040.d  
+
+scope:toc_targete = {
+add_trait = brave
+add_trait = wrathful
+add_trait = lustful
+add_trait = ambitious
+add_trait = diligent
+# fickle - stubborn
+# forgiving - vengeful
+add_trait = generous
+add_trait = gregarious
+add_trait = honest
+add_trait = humble
+add_trait = patient
+add_trait = temperate
+# paranoid - trusting
+# zealous - cynical
+# compassionate - callous - sadistic
+
+
+}
+
+}
+	option = {		name = tocmod.2040.e  
+
+scope:toc_targete = {
+# add_trait = craven
+# add_trait = calm
+add_trait = chaste
+add_trait = content
+add_trait = diligent
+add_trait = stubborn
+add_trait = forgiving
+add_trait = generous
+add_trait = gregarious
+add_trait = honest
+add_trait = humble
+add_trait = just
+add_trait = patient
+add_trait = temperate
+add_trait = trusting
+add_trait = zealous
+add_trait = compassionate
+
+
+
+}
+}
+	option = {		name = tocmod.2040.f  scope:toc_targete = { add_trait = cynical add_trait = trusting 	} }
+	option = {		name = tocmod.2040.g  scope:toc_targete = { add_trait = zealous add_trait = paranoid } }
+	option = {		name = tocmod.2040.h  
+
+scope:toc_targete = {
+add_trait = brave
+add_trait = calm
+# add_trait = chaste
+add_trait = lustful
+add_trait = ambitious
+add_trait = diligent
+add_trait = stubborn
+# add_trait = forgiving
+add_trait = generous
+add_trait = gregarious
+add_trait = honest
+add_trait = humble
+add_trait = just
+add_trait = patient
+add_trait = temperate
+add_trait = paranoid
+add_trait = zealous
+# add_trait = callous
+}
+
+}
+	option = {		name = tocmod.2040.i  
+
+scope:toc_targete = {
+add_trait = craven
+add_trait = wrathful
+add_trait = lustful
+add_trait = content
+add_trait = lazy
+add_trait = fickle
+add_trait = vengeful
+add_trait = greedy
+add_trait = gregarious
+add_trait = deceitful
+add_trait = arrogant
+add_trait = arbitrary
+add_trait = impatient
+add_trait = gluttonous
+add_trait = paranoid
+add_trait = cynical
+add_trait = sadistic
+}
+
+}
+	option = {		name = tocmod.2040.j  	}
+	option = {		name = tocmod.2040.k  			trigger_event = { id = tocmod.2041 } 	}
+	# option = {		name = tocmod.2040.l  scope:toc_targete = { add_trait = pure_blooded } 	}
+
+
+	# ===== PAGINATION =====
+	option = {
+		name = tocmod.2040.zzback #back
+		trigger_event = { id = tocmod.2030 }
+	}
+
+	option = {
+		name = tocmod.2040.l_close #close
+	}
+
+}
+
+tocmod.2041 = {
+	type = character_event
+	title = tocmod.2041.t
+	desc = tocmod.2041.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {	}
+	option = {	name = tocmod.2041.a scope:toc_targete = { remove_trait = ambitious add_trait = content } }
+	option = {	name = tocmod.2041.b
+			scope:toc_targete = { remove_trait = content add_trait = ambitious }
+}
+	option = {		name = tocmod.2041.c scope:toc_targete = { remove_trait = deceitful remove_trait = craven remove_trait = forgiving remove_trait = calm add_trait = brave add_trait = vengeful add_trait = wrathful add_trait = poet add_trait = one_eyed } 	}
+	option = {		name = tocmod.2041.d  scope:toc_targete = { remove_trait = sadistic remove_trait = callous remove_trait = lustful remove_trait = vengeful add_trait = chaste add_trait = forgiving add_trait = compassionate } 	}
+	option = {		name = tocmod.2041.e  scope:toc_targete = { remove_trait = brave add_trait = craven } 	}
+	# option = {		name = tocmod.2041.f  scope:toc_targete = { remove_trait = rowdy add_trait = bossy } 	}
+	# option = {		name = tocmod.2041.g  scope:toc_targete = { add_trait = education_martial_prowess_4 } 	}
+	# option = {		name = tocmod.2041.h  scope:toc_targete = { add_trait = infertile } 	}
+	# option = {		name = tocmod.2041.i  scope:toc_targete = { add_trait = dwarf } 	}
+	# option = {		name = tocmod.2041.j  scope:toc_targete = { add_trait = eunuch } 	}
+	# option = {		name = tocmod.2041.k  trigger_event = { id = tocmod.2042 } 	}
+	# option = {		name = tocmod.2041.l  scope:toc_targete = { add_trait = pure_blooded } 	}
+
+
+	# ===== PAGINATION =====
+	option = {
+		name = tocmod.2041.f_back #back
+		trigger_event = { id = tocmod.2040 }
+	}
+
+	option = {
+		name = tocmod.2041.g_close #close
+	}
+
+}
+
+
+tocmod.2050 = {
+	type = character_event
+	title = tocmod.2050.t
+	desc = tocmod.2050.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {
+		#scope:recipient = { save_scope_as = toc_targete }
+	}
+
+	option = {
+		name = tocmod.2050.a #other
+			scope:toc_targete = { add_trait = toc_immortal
+				set_immortal_age = 18
+				}
+
+	}
+
+	option = {
+		name = tocmod.2050.b #grantblessingboosts
+			scope:toc_targete = { remove_trait = toc_immortal
+				# set_immortal_age = 18
+				}
+
+	}
+
+	option = {
+		name = tocmod.2050.c #gold
+			scope:toc_targete = { add_trait = toc_immortal
+				set_immortal_age = 30
+				}
+	}
+
+	option = {
+		name = tocmod.2050.d #prestige
+			scope:toc_targete = { add_trait = toc_immortal
+				set_immortal_age = 45
+				}
+	}
+
+	option = {
+		name = tocmod.2050.e #piety
+			scope:toc_targete = { add_trait = toc_immortal
+				set_immortal_age = 70
+				}
+
+	}
+
+	option = {
+		name = tocmod.2050.f #renown
+			scope:toc_targete = { add_trait = toc_immortal
+				set_immortal_age = 100
+				}
+	}
+
+	option = {
+		name = tocmod.2050.g #miraclehealing
+			scope:toc_targete = { add_trait = toc_immortal
+				set_immortal_age = 130
+				}
+	}
+
+	option = {
+		name = tocmod.2050.h #traits
+			scope:toc_targete = { 
+				change_age = 1
+				}
+
+
+	}
+
+	option = {
+		name = tocmod.2050.i #checksome
+		
+
+			scope:toc_targete = {
+				change_age = 2
+				}
+
+	}
+
+	option = {
+		name = tocmod.2050.j #dosome
+			scope:toc_targete = { change_age = 10 }
+	}
+
+	# ===== PAGINATION =====
+	option = {
+		name = tocmod.2050.k #next page
+		trigger_event = { id = tocmod.2051 }
+	}
+
+
+
+}
+
+# ===== PAGE 2 for tocmod.2050 =====
+tocmod.2051 = {
+	type = character_event
+	title = tocmod.2051.t
+	desc = tocmod.2051.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {	}
+
+	option = {
+		name = tocmod.2050.k #nothinghappens
+		
+			scope:toc_targete = { change_age = 18 }
+	}
+
+	option = {
+		name = tocmod.2050.l #12
+			scope:toc_targete = { change_age = -5 }
+	}
+
+	option = {
+		name = tocmod.2051.c #back
+		trigger_event = { id = tocmod.2000 }
+	}
+
+	option = {
+		name = tocmod.2051.d #close
+	}
+
+}
+
+
+tocmod.2070 = {
+	type = character_event
+	title = tocmod.2070.t
+	desc = tocmod.2070.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {
+		#scope:recipient = { save_scope_as = toc_targete }
+	}
+
+	option = {
+		name = tocmod.2070.a #other
+			scope:toc_targete = { 
+					add_perk = like_weed_in_a_garden_perk
+					add_perk = unshackled_lust_perk
+					add_perk = subtle_desire_perk
+					add_perk = mortal_adoration_perk
+					add_perk = enticing_opportunity_perk
+					add_perk = home_advantage_perk
+					add_perk = graceful_recovery_perk
+					add_perk = smooth_operator_perk
+					# add_perk = seducer_perk
+
+					add_perk = truth_is_relative_perk
+					add_perk = digging_for_dirt_perk
+					add_perk = kidnapper_perk
+					add_perk = court_of_shadows_perk
+					add_perk = prepared_for_anything_perk
+					add_perk = swift_execution_perk
+					add_perk = a_job_done_right_perk
+					add_perk = twice_schemed_perk
+					add_perk = schemer_perk
+
+					add_perk = dark_insights_perk
+					add_perk = divine_retribution_perk
+					add_perk = dreadful_perk
+					add_perk = thriving_in_chaos_perk
+					add_perk = malice_implicit_perk
+					add_perk = fear_tax_perk
+					add_perk = forever_infamous_perk
+					add_perk = prison_feudal_complex_perk
+					add_perk = torturer_perk
+
+					add_perk = faithful_perk
+					add_perk = zealous_proselytizer_perk
+					add_perk = religious_icon_perk
+					add_perk = apostate_perk
+					add_perk = clerical_justifications_perk
+					add_perk = church_and_state_perk
+					add_perk = radiant_perk
+					add_perk = defender_of_the_faith_perk
+					add_perk = theologian_perk
+
+					add_perk = anatomical_studies_perk
+					add_perk = carefree_perk
+					add_perk = mental_resilience_perk
+					add_perk = restraint_perk
+					add_perk = know_thyself_perk
+					add_perk = wash_your_hands_perk
+					add_perk = iron_constitution_perk
+					add_perk = healthy_perk
+					add_perk = whole_of_body_perk
+
+					add_perk = pedagogy_perk
+					add_perk = open_minded_perk
+					add_perk = prophet_perk
+					add_perk = scientific_perk
+					add_perk = planned_cultivation_perk
+					add_perk = scholarly_circles_perk
+					add_perk = learn_on_the_job_perk
+					add_perk = sanctioned_loopholes_perk
+					add_perk = scholar_perk
+
+					add_perk = tax_man_perk
+					add_perk = defensive_measures_perk
+					add_perk = organized_muster_rolls_perk
+					add_perk = cutting_corners_perk
+					add_perk = professional_workforce_perk
+					add_perk = centralization_perk
+					add_perk = popular_figurehead_perk
+					add_perk = divided_attention_perk
+					add_perk = architect_perk
+
+					add_perk = meritocracy_perk
+					add_perk = chains_of_loyalty_perk
+					add_perk = likable_perk
+					add_perk = positions_of_power_perk
+					add_perk = large_levies_perk
+					add_perk = soon_forgiven_perk
+					add_perk = toe_the_line_perk
+					add_perk = honored_to_serve_perk
+					add_perk = administrator_perk
+
+					add_perk = golden_obligations_perk
+					add_perk = heregeld_perk
+					add_perk = detailed_ledgers_perk
+					add_perk = war_profiteer_perk
+					add_perk = fearful_troops_perk
+					add_perk = it_is_my_domain_perk
+					add_perk = golden_aplomb_perk
+					add_perk = at_any_cost_perk
+					add_perk = avaricious_perk
+
+					add_perk = thoughtful_perk
+					add_perk = ducal_conquest_perk
+					add_perk = forced_vassalage_perk
+					add_perk = adaptive_traditions_perk
+					add_perk = flexible_truces_perk
+					add_perk = defensive_negotiations_perk
+					add_perk = embassies_perk
+					add_perk = accomplished_forger_perk
+					add_perk = diplomat_perk
+
+					add_perk = befriend_perk
+					add_perk = confidants_perk
+					add_perk = flatterer_perk
+					add_perk = groomed_to_rule_perk
+					add_perk = familial_familiar_perk
+					add_perk = thicker_than_water_perk
+					add_perk = friendly_counsel_perk
+					add_perk = sound_foundations_perk
+					add_perk = family_man_perk
+
+					add_perk = benevolent_intent_perk
+					add_perk = inspiring_rule_perk
+					add_perk = firm_hand_perk
+					add_perk = praetorian_guard_perk
+					add_perk = true_ruler_perk
+					add_perk = writing_history_perk
+					add_perk = a_life_of_glory_perk
+					add_perk = dignitas_perk
+					add_perk = august_perk
+
+					add_perk = bellum_justum_perk
+					add_perk = parthian_tactics_perk
+					add_perk = envelopment_perk
+					add_perk = organized_retreat_perk
+					add_perk = hit_and_run_perk
+					add_perk = engineered_for_destruction_perk
+					add_perk = living_off_the_land_perk
+					add_perk = sappers_perk
+					add_perk = strategist_perk
+
+					add_perk = serve_the_crown_perk
+					add_perk = a_mans_home_perk
+					add_perk = enduring_hardships_perk
+					add_perk = prepared_conscription_perk
+					add_perk = strict_organization_perk
+					add_perk = hard_rule_perk
+					add_perk = soldiers_of_lesser_fortune_perk
+					add_perk = absolute_control_perk
+					add_perk = overseer_perk
+
+					add_perk = stalwart_leader_perk
+					add_perk = courtship_perk
+					add_perk = promising_prospects_perk
+					add_perk = loyalty_and_respect_perk
+					add_perk = chivalric_dominance_perk
+					add_perk = never_back_down_perk
+					add_perk = kingsguard_perk
+					add_perk = peacemaker_perk
+					add_perk = gallant_perk
+					# add_perk = 
+					# add_perk = 
+					
+
+					}
+
+
+	}
+
+	option = {
+		name = tocmod.2070.b #REMOVE SEDUCER FROM PREMISES?
+									scope:toc_targete = { 	add_perk = seducer_perk }
+
+	}
+
+	option = {
+		name = tocmod.2070.c
+		#Stop from leaving court! (flag)
+			scope:toc_targete = { add_character_flag = blocked_from_leaving }
+		
+	}
+
+	option = {
+		name = tocmod.2070.d #torture! >
+			trigger_event = { id = tocmod.2080 }
+	}
+
+	option = {
+		name = tocmod.2070.e #piety
+			scope:toc_targete = { create_alliance = scope:actor }
+	}
+
+	option = {
+		name = tocmod.2070.f #renown
+		
+	}
+
+	option = {
+		name = tocmod.2070.g #miraclehealing
+		
+	}
+
+	option = {
+		name = tocmod.2070.h #traits
+		
+	}
+
+	option = {
+		name = tocmod.2070.i #checksome
+		
+	}
+
+	option = {
+		name = tocmod.2070.j #dosome
+		
+	}
+
+	# ===== PAGINATION =====
+	option = {
+		name = tocmod.2070.k #next page
+		trigger_event = { id = tocmod.2072 }
+	}
+
+
+
+}
+
+# ===== PAGE 2 for tocmod.2070 =====
+tocmod.2072 = {
+	type = character_event
+	title = tocmod.2072.t
+	desc = tocmod.2072.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {	}
+
+	option = {
+		name = tocmod.2070.k #nothinghappens
+		
+	}
+
+	option = {
+		name = tocmod.2070.l #12
+		
+	}
+
+	option = {
+		name = tocmod.2072.c #back
+		trigger_event = { id = tocmod.2000 }
+	}
+
+	option = {
+		name = tocmod.2072.d #close
+	}
+
+}
+
+
+	# on_accept = {
+		# scope:recipient = {
+			# add_character_flag = {
+				# flag = is_being_tortured
+				# months = 6 ## Players in MP can keep the event window open...
+			# }
+		# }
+
+		##EFFECT TOOLTIP###
+		# torture_interaction_actor_effect = yes
+		# show_as_tooltip = {
+			# scope:recipient = {
+				# add_character_modifier = {
+					# modifier = recently_tortured
+					# years = 5
+				# }
+			# }
+		# }
+
+		##EVENTS###
+		# hidden_effect = {
+			#Torture method for descs
+			# random_list = {
+				# 3 = { save_scope_value_as = { name = torture_method value = flag:rack } }
+				# 3 = { save_scope_value_as = { name = torture_method value = flag:whip } }
+				# 1 = { save_scope_value_as = { name = torture_method value = flag:rats } }
+				# 8 = {
+					# trigger = {
+						# scope:actor = { has_trait = poet }
+					# }
+					# save_scope_value_as = {
+						# name = torture_method
+						# value = flag:poetry
+					# }
+				# }
+			# }
+
+			#They have a secret I want to know about
+			# if = {
+				# limit = {
+					# scope:recipient = {	
+						# OR = {
+							# any_secret = {
+								# torture_secret_trigger = { PARTICIPANT = scope:recipient }
+							# }
+							# any_known_secret = {
+								# secret_owner = { save_temporary_scope_as = torture_secret_owner }
+								# torture_secret_trigger = { PARTICIPANT = scope:torture_secret_owner }
+							# }
+						# }
+					# }
+				# }
+				# scope:recipient = {
+					# trigger_event = {
+						# id = prison.1001
+						# days = 1
+					# }
+				# }
+			# }
+			# else = {
+				# scope:actor = {
+					# trigger_event = {
+						# id = prison.1010
+						# days = 1
+					# }
+				# }
+			# }
+		# }
+
+		# Dark Insights Perk:
+		# if = {
+			# limit = {
+				# scope:actor = { has_perk = dark_insights_perk }
+			# }
+			# scope:actor = {
+				# dark_insights_skill_gain_roll_effect = yes
+			# }
+		# }
+	# }
+
+#3wounded-severelyinjured-brutallymauled (wounded_3) + impotent + infirm + incapable + maimed + blind + one-eyed 2 + one-legged+ disfigured ? weak dull? lunatic / melancholic / leper?
+
+tocmod.2080 = {
+	type = character_event
+	title = tocmod.2080.t
+	desc = tocmod.2080.desc
+	theme = default
+	# left_portrait = scope:recipient
+	left_portrait = {
+		character = scope:recipient
+		animation = fear
+
+	}
+	right_portrait = {
+		character = scope:actor
+		animation = schadenfreude
+	}
+
+	immediate = {	}
+
+	option = {	name = tocmod.2080.a 
+
+scope:toc_targete = { add_trait = wounded_1 }
+save_scope_value_as = { name = toc_torture_method value = flag:beat }
+# { save_scope_value_as = { name = toc_torture_method value = flag:beat } }
+trigger_event = { id = tocmod.2082 }
+
+	}
+	option = {	name = tocmod.2080.b
+
+save_scope_value_as = { name = toc_torture_method value = flag:cutscar }
+scope:toc_targete = { add_trait = scarred }
+trigger_event = { id = tocmod.2082 }
+
+}
+	option = {		name = tocmod.2080.c 
+save_scope_value_as = { name = toc_torture_method value = flag:eye }
+scope:toc_targete = { add_trait = one_eyed }
+trigger_event = { id = tocmod.2082 }
+
+	}
+	option = {		name = tocmod.2080.d 
+save_scope_value_as = { name = toc_torture_method value = flag:disfigure }
+scope:toc_targete = { add_trait = disfigured }
+trigger_event = { id = tocmod.2082 }
+
+	}
+	option = {		name = tocmod.2080.e 
+save_scope_value_as = { name = toc_torture_method value = flag:cutleg }
+scope:toc_targete = { add_trait = one_legged }
+trigger_event = { id = tocmod.2082 }
+
+	}
+	option = {		name = tocmod.2080.f 
+save_scope_value_as = { name = toc_torture_method value = flag:impotent }
+scope:toc_targete = { add_trait = impotent }
+trigger_event = { id = tocmod.2082 }
+
+	}
+	option = {		name = tocmod.2080.g 
+save_scope_value_as = { name = toc_torture_method value = flag:infirm }
+scope:toc_targete = { add_trait = infirm }
+trigger_event = { id = tocmod.2082 }
+
+	}
+	option = {		name = tocmod.2080.h 
+save_scope_value_as = { name = toc_torture_method value = flag:incapable }
+scope:toc_targete = { add_trait = incapable }
+trigger_event = { id = tocmod.2082 }
+
+	}
+	option = {		name = tocmod.2080.i 
+save_scope_value_as = { name = toc_torture_method value = flag:maimed }
+scope:toc_targete = { add_trait = maimed }
+trigger_event = { id = tocmod.2082 }
+
+	}
+	option = {		name = tocmod.2080.j 
+save_scope_value_as = { name = toc_torture_method value = flag:leprosy }
+scope:toc_targete = { add_trait = leper }
+trigger_event = { id = tocmod.2082 }
+
+	}
+	# ===== PAGINATION =====
+	option = {
+		name = tocmod.2080.k #next page
+		trigger_event = { id = tocmod.2084 }
+	}
+
+
+}
+
+# ===== PAGE 2 for tocmod.2080 =====
+tocmod.2084 = {
+	type = character_event
+	title = tocmod.2084.t
+	desc = tocmod.2084.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {	}
+
+	option = {		name = tocmod.2080.k 
+			trigger_event = { id = tocmod.2083 }
+}
+
+	option = {
+		name = tocmod.2080.l #back to prev page (2070)
+		trigger_event = { id = tocmod.2070 }
+	}
+
+	option = {
+		name = tocmod.2084.c #back
+		trigger_event = { id = tocmod.2070 }
+	}
+
+	option = {
+		name = tocmod.2084.d #close
+	}
+
+}
+
+
+
+tocmod.2081 = {
+	type = character_event
+	title = tocmod.2081.t
+	desc = tocmod.2081.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {	}
+	option = {	name = tocmod.2081.a	}
+	option = {	name = tocmod.2081.b
+		#scope:toc_targete = {  }
+}
+	# option = {		name = tocmod.2080.c 	}
+	# option = {		name = tocmod.2080.d 	}
+	# option = {		name = tocmod.2080.e 	}
+	# option = {		name = tocmod.2080.f 	}
+	# option = {		name = tocmod.2080.g 	}
+	# option = {		name = tocmod.2080.h 	}
+	# option = {		name = tocmod.2080.i 	}
+	# option = {		name = tocmod.2080.j 	}
+	# option = {		name = tocmod.2080.k 	}
+	# option = {		name = tocmod.2080.l 	}
+
+}
+
+# tocmod.2082 = {
+	# type = character_event
+	# title = tocmod.2082.t
+	# desc = tocmod.2082.desc
+	# theme = default
+	# left_portrait = scope:recipient
+
+	# immediate = {	}
+	# option = {	name = tocmod.2082.a	}
+	# option = {	name = tocmod.2082.b
+		# scope:toc_targete = {  }
+# }
+	# option = {		name = tocmod.2080.c 	}
+	# option = {		name = tocmod.2080.d 	}
+	# option = {		name = tocmod.2080.e 	}
+	# option = {		name = tocmod.2080.f 	}
+	# option = {		name = tocmod.2080.g 	}
+	# option = {		name = tocmod.2080.h 	}
+	# option = {		name = tocmod.2080.i 	}
+	# option = {		name = tocmod.2080.j 	}
+	# option = {		name = tocmod.2080.k 	}
+	# option = {		name = tocmod.2080.l 	}
+
+# }
+
+tocmod.2082 = {
+	type = character_event
+	title = tocmod.2082.t
+
+	desc = {
+		# desc = tocmod.2082.start.desc
+		#Method
+		# first_valid = {
+			# triggered_desc = {
+				# trigger = { scope:torture_method = flag:rack }
+				# desc = tocmod.2082.rack.desc
+			# }
+			# triggered_desc = {
+				# trigger = { scope:torture_method = flag:whip }
+				# desc = tocmod.2082.whip.desc
+			# }
+			# triggered_desc = {
+				# trigger = { scope:torture_method = flag:rats }
+				# desc = tocmod.2082.rats.desc
+			# }
+			# triggered_desc = {
+				# trigger = { scope:torture_method = flag:poetry }
+				# desc = tocmod.2082.poetry.desc
+			# }
+		# }
+
+
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:toc_torture_method = flag:beat }
+				desc = tocmod.2082.beat.desc
+			}
+			triggered_desc = {
+				trigger = { scope:toc_torture_method = flag:cutscar }
+				desc = tocmod.2082.cutscar.desc
+			}
+			triggered_desc = {
+				trigger = { scope:toc_torture_method = flag:eye }
+				desc = tocmod.2082.eye.desc
+			}
+			triggered_desc = {
+				trigger = { scope:toc_torture_method = flag:disfigure }
+				desc = tocmod.2082.disfigure.desc
+			}
+			triggered_desc = {
+				trigger = { scope:toc_torture_method = flag:cutleg }
+				desc = tocmod.2082.cutleg.desc
+			}
+			triggered_desc = {
+				trigger = { scope:toc_torture_method = flag:impotent }
+				desc = tocmod.2082.impotent.desc
+			}
+			triggered_desc = {
+				trigger = { scope:toc_torture_method = flag:infirm }
+				desc = tocmod.2082.infirm.desc
+			}
+			triggered_desc = {
+				trigger = { scope:toc_torture_method = flag:incapable }
+				desc = tocmod.2082.incapable.desc
+			}
+			triggered_desc = {
+				trigger = { scope:toc_torture_method = flag:maimed }
+				desc = tocmod.2082.maimed.desc
+			}
+			triggered_desc = {
+				trigger = { scope:toc_torture_method = flag:leprosy }
+				desc = tocmod.2082.leprosy.desc
+			}
+			# triggered_desc = {
+				# trigger = { scope:toc_torture_method = flag:poetry }
+				# desc = tocmod.2082.maimed.desc
+			# }
+			# triggered_desc = {
+				# trigger = { scope:toc_torture_method = flag:poetry }
+				# desc = tocmod.2082.maimed.desc
+			# }
+		}
+	}
+
+	# desc = tocmod.2082.desc
+	theme = default
+	# theme = prison
+	# left_portrait = scope:recipient
+
+	# left_portrait = {
+		# character = root
+		# animation = schadenfreude
+
+	# }
+	# right_portrait = {
+		# character = scope:recipient
+		# animation = fear
+	# }
+
+	left_portrait = {
+		character = root
+		animation = anger
+
+	}
+	right_portrait = {
+		character = scope:recipient
+		animation = fear
+	}
+
+	# trigger = { scope:recipient = { is_imprisoned_by = scope:actor } }
+
+	# on_trigger_fail = {
+		# scope:recipient = {
+			# if = {
+				# limit = { has_character_flag = is_being_tortured }
+				# remove_character_flag = is_being_tortured
+			# }
+		# }
+	# }
+
+	# immediate = {	}
+	immediate = {
+		play_music_cue = "mx_cue_prison"
+	}
+
+	option = {
+		name = {
+			trigger = {
+				OR = {
+					has_trait = sadistic
+					has_relation_rival = scope:recipient
+				}
+			}
+			text = tocmod.2082.a
+		}
+		name = {
+			trigger = {
+				NOR = {
+					has_trait = sadistic
+					has_relation_rival = scope:recipient
+				}
+			}
+			text = tocmod.2082.b
+		}
+		
+		# show_as_tooltip = { torturer_interaction_recipient_effect = yes }
+		# scope:recipient = { trigger_event = prison.1011 }
+		# scope:recipient = { trigger_event = prison.1011 }
+	}
+
+	# option = {	name = tocmod.2082.a	}
+	# option = {	name = tocmod.2082.b
+		# scope:toc_targete = {  }
+# }
+	# option = {		name = tocmod.2080.c 	}
+	# option = {		name = tocmod.2080.d 	}
+	# option = {		name = tocmod.2080.e 	}
+	# option = {		name = tocmod.2080.f 	}
+	# option = {		name = tocmod.2080.g 	}
+	# option = {		name = tocmod.2080.h 	}
+	# option = {		name = tocmod.2080.i 	}
+	# option = {		name = tocmod.2080.j 	}
+	# option = {		name = tocmod.2080.k 	}
+	# option = {		name = tocmod.2080.l 	}
+
+}
+
+tocmod.2083 = {
+	type = character_event
+	title = tocmod.2083.t
+	desc = tocmod.2083.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {	}
+	option = {	name = tocmod.2083.a	}
+	option = {	name = tocmod.2083.b
+		#scope:toc_targete = {  }
+}
+	# option = {		name = tocmod.2080.c 	}
+	# option = {		name = tocmod.2080.d 	}
+	# option = {		name = tocmod.2080.e 	}
+	# option = {		name = tocmod.2080.f 	}
+	# option = {		name = tocmod.2080.g 	}
+	# option = {		name = tocmod.2080.h 	}
+	# option = {		name = tocmod.2080.i 	}
+	# option = {		name = tocmod.2080.j 	}
+	# option = {		name = tocmod.2080.k 	}
+	# option = {		name = tocmod.2080.l 	}
+
+}
+
+
+
+####
+
+
+tocmod.3000 = {
+	type = character_event
+	title = tocmod.3000.t
+	desc = tocmod.3000.desc
+	theme = default
+	left_portrait = scope:recipient
+
+	immediate = {	}
+	option = {	name = tocmod.3000.a	
+		scope:toc_build_locationcountyp = {
+			# add_building_slot = 1
+								add_county_modifier	= toc_cityland_modifier
+														# years = 5
+		}
+}
+	option = {	name = tocmod.3000.b
+		#scope:toc_targete = {  }
+
+		scope:toc_build_locationcountyp = {
+								# add_county_modifier	= { modifier = toc_bigcityland_modifier }
+								add_county_modifier	= toc_bigcityland_modifier
+		}
+}
+	option = {		name = tocmod.3000.c 	
+		scope:toc_build_locationcountyp = {
+								add_county_modifier	= toc_imperialcityland_modifier
+		}
+}
+	option = {		name = tocmod.3000.d 
+		scope:toc_build_locationcountyp = {
+								add_county_modifier	= toc_hordeland_modifier
+		}
+}
+	option = {		name = tocmod.3000.e 
+
+		scope:toc_build_locationcountyp = {
+								remove_county_modifier = toc_cityland_modifier
+								remove_county_modifier = toc_bigcityland_modifier
+								remove_county_modifier = toc_imperialcityland_modifier
+								remove_county_modifier = toc_hordeland_modifier
+								remove_county_modifier = toc_grandwallland_modifier
+		}
+
+}
+	option = {		name = tocmod.3000.f 	
+		scope:toc_build_locationcountyp = {
+								add_county_modifier	= toc_grandwallland_modifier
+		}
+}
+	# option = {		name = tocmod.3000.g 	}
+	# option = {		name = tocmod.3000.h 	}
+	# option = {		name = tocmod.3000.i 	}
+	# option = {		name = tocmod.3000.j 	}
+	# option = {		name = tocmod.3000.k 	}
+	# option = {		name = tocmod.3000.l 	}
+
+}
+
+
+
+
+
+####
+

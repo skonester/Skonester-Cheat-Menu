@@ -1,0 +1,1734 @@
+﻿# 1. Main Buffs & Cheats (Gold, Piety, Healing, Traits)
+toc_main_debug_interaction = {
+	category = interaction_debug_main
+	desc = toc_main_debug_interaction_desc
+	icon = legend
+	
+	common_interaction = no
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		# Only the player can see and use this menu
+		scope:actor = { is_ai = no }
+	}
+
+	on_accept = {
+		# Saves whoever you clicked (NPC or yourself) as the target
+		scope:recipient = { save_scope_as = toc_targete }
+		
+		# Pops the menu open on your screen
+		scope:actor = {
+			trigger_event = tocmod.2000
+		}
+	}
+}
+
+# 2. Pregnancy Menu
+toc_pregnancy_interaction = {
+	category = interaction_debug_main
+	desc = toc_pregnancy_interaction_desc
+	icon = legend
+	
+	common_interaction = no
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		scope:recipient = { is_female = yes }
+	}
+
+	on_accept = {
+		scope:recipient = { save_scope_as = toc_targete }
+		scope:actor = {
+			trigger_event = tocmod.0002
+		}
+	}
+}
+
+# 3. Add Custom Character Menu
+toc_spawn_character_interaction = {
+	category = interaction_debug_main
+	desc = toc_spawn_character_interaction_desc
+	icon = legend
+	
+	common_interaction = no
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+	}
+
+	on_accept = {
+		scope:recipient = { save_scope_as = toc_targete }
+		scope:actor = {
+			trigger_event = tocmod.1000
+		}
+	}
+}
+
+# 4. Torture & Perk Assignment Menu
+toc_torture_and_perks_interaction = {
+	category = interaction_debug_main
+	desc = toc_torture_and_perks_interaction_desc
+	icon = legend
+	
+	common_interaction = no
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+	}
+
+	on_accept = {
+		scope:recipient = { save_scope_as = toc_targete }
+		scope:actor = {
+			trigger_event = tocmod.2070
+		}
+	}
+}
+
+# 5. County Modifiers Menu (Cities, Hordes, Walls)
+toc_county_modifier_interaction = {
+	category = interaction_debug_main
+	desc = toc_county_modifier_interaction_desc
+	icon = legend
+	
+	common_interaction = no
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		scope:recipient = { is_landed = yes }
+	}
+
+	on_accept = {
+		# Saves the clicked character's capital to receive the building modifier
+		scope:recipient.capital_county = { save_scope_as = toc_build_locationcountyp }
+		scope:actor = {
+			trigger_event = tocmod.3000
+		}
+	}
+}
+
+toc_showdebs_interaction = {
+	category = interaction_debug_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = legend
+	
+	interface_priority = -1
+
+	is_shown = {
+		scope:recipient = { is_ai = no }
+NOT = {
+		scope:recipient = { has_character_flag = toc_showdebsflag }
+	  }
+	}
+
+	on_accept = {
+		scope:recipient = {
+			#add_character_flag = { flag = toc_showdebsflag }
+			add_character_flag = toc_showdebsflag
+		}
+	}
+	auto_accept = yes
+}
+#{ flag = X [days/weeks/years = Y] }
+
+toc_hidedebs_interaction = {
+	category = interaction_debug_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = legend
+	
+	interface_priority = -1
+
+	is_shown = {
+		scope:recipient = { is_ai = no }
+		scope:recipient = { has_character_flag = toc_showdebsflag }
+	}
+
+	on_accept = {
+		scope:recipient = {
+			remove_character_flag = toc_showdebsflag
+		}
+	}
+	auto_accept = yes
+}
+
+toc_showspecs_interaction = {
+	category = interaction_debug_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = legend
+	
+	interface_priority = -1
+
+	is_shown = {
+		scope:recipient = { is_ai = no }
+NOT = {
+		scope:recipient = { has_character_flag = toc_showspecsflag }
+	  }
+	}
+
+	on_accept = {
+		scope:recipient = {
+			#add_character_flag = { flag = toc_showspecsflag }
+			add_character_flag = toc_showspecsflag
+		}
+	}
+	auto_accept = yes
+}
+
+toc_hidespecs_interaction = {
+	category = interaction_debug_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = off
+	
+	interface_priority = -1
+
+	is_shown = {
+		scope:recipient = { is_ai = no }
+		scope:recipient = { has_character_flag = toc_showspecsflag }
+	}
+
+	on_accept = {
+		scope:recipient = {
+			remove_character_flag = toc_showspecsflag
+		}
+	}
+	auto_accept = yes
+}
+
+toc_hidetextras_interaction = {
+	category = interaction_debug_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = off
+	
+	interface_priority = -1
+
+	is_shown = {
+		scope:recipient = { is_ai = no }
+		scope:recipient = { has_character_flag = toc_showspecsflag }
+		scope:recipient = { has_character_flag = toc_showtextrasflag }
+	}
+
+	on_accept = {
+		scope:recipient = {
+			remove_character_flag = toc_showtextrasflag
+		}
+	}
+	auto_accept = yes
+}
+
+toc_showtextras_interaction = {
+	category = interaction_debug_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+	
+	interface_priority = -1
+
+	is_shown = {
+		scope:recipient = { is_ai = no }
+		scope:recipient = { has_character_flag = toc_showspecsflag }
+NOT = {
+		scope:recipient = { has_character_flag = toc_showtextrasflag }
+	  }
+	}
+
+	on_accept = {
+		scope:recipient = {
+			add_character_flag = toc_showtextrasflag
+		}
+	}
+	auto_accept = yes
+}
+
+#############################################
+
+start_bout_interaction = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	icon = on
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		#debug_only = yes
+		scope:actor = { is_ai = no }
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = { has_character_flag = toc_showdebsflag }
+	}
+	
+	on_accept = {
+		scope:actor = { trigger_event = single_combat.1004 }
+	}
+	
+	auto_accept = yes
+}
+
+start_pregnancy_interaction = {
+	use_diplomatic_range = no
+	category = interaction_debug_main
+	common_interaction = yes
+	ignores_pending_interaction_block = yes
+	icon = pregnant
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		scope:recipient = { is_adult = yes }
+		scope:actor = { is_adult = yes }
+		scope:recipient = { is_pregnant = no }
+		scope:actor = { is_pregnant = no }
+
+		OR = {
+			AND = {
+				scope:recipient = { is_female = yes }
+				scope:actor = { is_male = yes }
+			}
+			AND = {
+				scope:recipient = { is_male = yes }
+				scope:actor = { is_female = yes }
+			}
+		}
+		scope:actor = { has_character_flag = toc_showdebsflag }
+	}
+
+	on_accept = {
+		scope:actor = { trigger_event = debug.0002 }
+	}
+	
+	auto_accept = yes
+}
+
+mega_preg_toc = {
+	use_diplomatic_range = no
+	category = interaction_debug_main
+	#common_interaction = yes
+	ignores_pending_interaction_block = yes
+	icon = pregnant
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		scope:recipient = { is_adult = yes }
+		scope:actor = { is_adult = yes }
+		scope:recipient = { is_pregnant = no }
+		scope:actor = { is_pregnant = no }
+
+		OR = {
+			AND = {
+				scope:recipient = { is_female = yes }
+				scope:actor = { is_male = yes }
+			}
+			AND = {
+				scope:recipient = { is_male = yes }
+				scope:actor = { is_female = yes }
+			}
+		}
+
+		scope:actor = { has_character_flag = toc_showspecsflag }
+#		scope:actor = { has_character_flag = toc_showdebsflag }
+	}
+
+	on_accept = {
+		scope:actor = { trigger_event = tocmod.0002 }
+	}
+	
+	auto_accept = yes
+}
+
+toc_disinherit_interaction = {
+	category = interaction_debug_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+	
+	interface_priority = -1
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		#scope:recipient = {
+		#	has_trait = disinherited
+		#}
+		scope:actor = { has_character_flag = toc_showspecsflag }
+	}
+
+	on_accept = {
+		scope:recipient = {
+			add_trait = disinherited
+		}
+	}
+	auto_accept = yes
+}
+
+toc_restoreinh_interaction = {
+	category = interaction_debug_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+	
+	interface_priority = -1
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		scope:recipient = {
+			has_trait = disinherited
+		}
+		scope:actor = { has_character_flag = toc_showspecsflag }
+	}
+
+	on_accept = {
+		scope:recipient = {
+			remove_trait = disinherited
+		}
+	}
+	auto_accept = yes
+}
+
+toc_setheira_interaction = {
+	category = interaction_debug_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+	
+	interface_priority = -1
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		#scope:recipient = {
+		#	has_trait = disinherited
+		#}
+		scope:actor = { has_character_flag = toc_showspecsflag }
+	}
+
+	on_accept = {
+		scope:recipient.liege = {
+			every_child = {
+									limit = {  }
+								add_trait = disinherited
+								}
+
+		scope:recipient.liege = {
+			
+			set_designated_heir = scope:recipient
+	}
+			
+		scope:recipient= {
+			remove_trait = disinherited
+	}
+
+
+
+		}
+
+	}
+	auto_accept = yes
+}
+
+toc_deposed_interaction = {
+	category = interaction_debug_main
+	#common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+	
+	interface_priority = -1
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		#scope:recipient = {
+		#	has_trait = disinherited
+		#}
+		scope:actor = { has_character_flag = toc_showspecsflag }
+		scope:recipient = { is_landed = yes }
+	}
+
+	on_accept = {
+		scope:recipient = {
+			#depose = yes
+				if = {
+					limit = {
+						scope:recipient = { is_landed = yes }
+					}
+					custom_tooltip = deposed_and_become_wanderer
+					hidden_effect = { 
+						depose = yes
+						#move_to_pool = yes
+					}
+				}
+		}
+
+	}
+	auto_accept = yes
+}
+
+toc_celibate_interaction = {
+	category = interaction_debug_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+	
+	interface_priority = -1
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		scope:actor = { has_character_flag = toc_showspecsflag }
+NOT = {
+		scope:recipient = {
+			has_trait = celibate
+		}
+}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			add_trait = celibate
+		}
+	}
+	auto_accept = yes
+}
+
+toc_uncelibate_interaction = {
+	category = interaction_debug_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+	
+	interface_priority = -1
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		scope:recipient = {
+			has_trait = celibate
+		}
+		scope:actor = { has_character_flag = toc_showspecsflag }
+	}
+
+	on_accept = {
+		scope:recipient = {
+			remove_trait = celibate
+		}
+	}
+	auto_accept = yes
+}
+
+toc_lunatic_genetic_interaction = {
+	category = interaction_debug_main
+	#common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+	
+	interface_priority = -1
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		scope:actor = { has_character_flag = toc_showspecsflag }
+NOT = {
+		scope:recipient = {
+			has_trait = lunatic_genetic
+		}
+}
+		scope:actor = { has_character_flag = toc_showtextrasflag }
+	}
+
+	on_accept = {
+		scope:recipient = {
+			add_trait = lunatic_genetic
+		}
+	}
+	auto_accept = yes
+}
+
+toc_possessed_genetic_interaction = {
+	category = interaction_debug_main
+	#common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+	
+	interface_priority = -1
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		scope:actor = { has_character_flag = toc_showspecsflag }
+NOT = {
+		scope:recipient = {
+			has_trait = possessed_genetic
+		}
+}
+		scope:actor = { has_character_flag = toc_showtextrasflag }
+	}
+
+	on_accept = {
+		scope:recipient = {
+			add_trait = possessed_genetic
+		}
+	}
+	auto_accept = yes
+}
+
+toc_aconvert_interaction = {
+	category = interaction_debug_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+	
+	interface_priority = -1
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		scope:actor = { has_character_flag = toc_showspecsflag }
+		NOT = {
+		scope:recipient.faith = faith:adamites
+			}
+		scope:actor = { has_character_flag = toc_showtextrasflag }
+	}
+
+	on_accept = {
+		scope:recipient = {
+			set_character_faith = faith:adamites
+#yapaniya jain#
+#scope:actor.faith
+#set_character_faith_with_conversion	
+		}
+	}
+	auto_accept = yes
+}
+
+toc_religionconvert_interaction = {
+	category = interaction_debug_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+	
+	interface_priority = -1
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		scope:actor = { has_character_flag = toc_showspecsflag }
+		NOT = {
+		scope:recipient.faith = scope:actor.faith
+			}
+		# scope:actor = { has_character_flag = toc_showtextrasflag }
+	}
+
+	on_accept = {
+		scope:recipient = {
+			set_character_faith_with_conversion	= scope:actor.faith
+
+		}
+	}
+	auto_accept = yes
+}
+
+toc_yapaconvert_interaction = {
+	category = interaction_debug_main
+	#common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+	
+	interface_priority = -1
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		scope:actor = { has_character_flag = toc_showspecsflag }
+		NOT = {
+		scope:recipient.faith = faith:adamites
+			}
+		# scope:actor = { has_character_flag = toc_showtextrasflag }
+	}
+
+	on_accept = {
+		scope:recipient = {
+			set_character_faith_with_conversion = faith:adamites
+#yapaniya jain#
+#scope:actor.faith
+#set_character_faith_with_conversion	
+		}
+	}
+	auto_accept = yes
+}
+
+toc_givearmyhorde_interaction = {
+	category = interaction_debug_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+	interface_priority = -1
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		scope:actor = { has_character_flag = toc_showspecsflag }
+	}
+
+	on_accept = {
+		scope:recipient = {
+#counters-pikes-archers*2-hvycavinf-lightcav-skirmishers-?picchieri
+
+				spawn_army = {
+					name = event_troop_default_name
+					levies = 1000
+					men_at_arms = {
+						type = bombard
+						stacks = 5
+					}
+
+					men_at_arms = {
+						type = house_guard
+						stacks = 5
+					}
+					men_at_arms = {
+						type = longbowmen
+						stacks = 5
+					}
+					men_at_arms = {
+						type = longbowmen
+						stacks = 5
+					}
+					men_at_arms = {
+						type = landsknecht
+						stacks = 5
+					}
+					men_at_arms = {
+						type = horse_archers
+						stacks = 5
+					}
+					location = scope:recipient.capital_province
+					origin = scope:recipient.capital_province
+
+					inheritable = yes
+					uses_supply = no
+				}
+
+		}
+	}
+	auto_accept = yes
+}
+
+learn_secrets_interaction = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	common_interaction = yes
+	icon = icon_discovered_scheme
+	interface_priority = -3
+	icon = on
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		scope:actor = { has_character_flag = toc_showdebsflag }
+
+		scope:recipient = {
+			any_secret = {
+				NOT = {
+					is_known_by = scope:actor
+				}
+			}
+		}
+	}
+	on_accept = {
+		scope:recipient = {
+			every_secret = {
+				reveal_to = scope:actor
+			}
+		}
+	}
+	
+	auto_accept = yes
+}
+
+expose_known_secrets_interaction = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+
+	is_shown = {
+		#debug_only = yes
+		scope:actor = { is_ai = no }
+		scope:actor = { has_character_flag = toc_showdebsflag }
+	}
+	on_accept = {
+		scope:actor = {
+			every_known_secret = {
+				limit = {
+					secret_owner = scope:recipient
+				}
+				expose_secret = scope:actor
+			}
+		}
+	}
+	
+	auto_accept = yes
+}
+
+take_title_interaction = {
+	category = interaction_debug_main
+	
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	target_type = title
+	target_filter = recipient_domain_titles
+	icon = on
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		scope:recipient = { is_landed = yes }
+		scope:actor = { has_character_flag = toc_showdebsflag }
+	}
+	
+	auto_accept = yes
+	
+	on_accept = {
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+
+		scope:recipient.primary_title = {
+			change_title_holder = {
+				holder = scope:actor
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+		
+	}
+}
+
+take_title_and_vassals_interaction = {
+	category = interaction_debug_main
+	common_interaction = yes
+	
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	target_type = title
+	target_filter = recipient_domain_titles
+	icon = debug_take_title
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		scope:recipient = { is_landed = yes }
+		scope:actor = { has_character_flag = toc_showdebsflag }
+	}
+	
+	auto_accept = yes
+	
+	on_accept = {
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+		}
+		scope:recipient.primary_title = {
+			change_title_holder_include_vassals = {
+				holder = scope:actor
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+		
+	}
+}
+
+take_domain_interaction = {
+	category = interaction_debug_main
+	icon = on
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+	is_shown = {
+		#debug_only = yes
+		scope:recipient = { is_landed = yes }
+		NOT = {
+			scope:recipient = scope:actor
+		}
+		always = no
+	}
+	
+	auto_accept = yes
+	
+	on_accept = {
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+		}
+		scope:recipient = {
+			every_held_title = {
+				change_title_holder_include_vassals = {
+					holder = scope:actor
+					change = scope:change
+				}
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+	}
+}
+
+take_realm_interaction = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	common_interaction = yes
+	icon = grant_titles_interaction
+
+	is_shown = {
+		#debug_only = yes
+		scope:recipient = { is_landed = yes }
+		NOT = {
+			scope:recipient = scope:actor
+		}
+		scope:actor = { is_ai = no }
+		scope:actor = { has_character_flag = toc_showdebsflag }
+	}
+	
+	auto_accept = yes
+	
+	send_option = {
+		flag = domain
+		localization = take_domain_interaction
+	}
+	send_option = {
+		flag = realm
+		localization = take_realm_interaction
+	}
+	
+	on_accept = {
+		if = {
+			limit = { scope:realm = yes }
+				create_title_and_vassal_change = {
+				type = conquest
+				save_scope_as = change
+			}
+			scope:recipient = {
+				every_sub_realm_title = {
+					limit = { tier > tier_barony }
+					change_title_holder_include_vassals = {
+						holder = scope:actor
+						change = scope:change
+					}
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+		}
+		else_if = {
+			limit = { scope:domain = yes }
+			create_title_and_vassal_change = {
+				type = conquest
+				save_scope_as = change
+			}
+			scope:recipient = {
+				every_held_title = {
+					change_title_holder_include_vassals = {
+						holder = scope:actor
+						change = scope:change
+					}
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+		}
+	}
+}
+
+get_claim_interaction = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		scope:recipient = { is_landed = yes }
+		scope:actor = { has_character_flag = toc_showdebsflag }
+	}
+	
+	auto_accept = yes
+	
+	on_accept = {
+		scope:actor = {
+			add_pressed_claim = scope:recipient.primary_title
+		}
+	}
+}
+
+get_claim_on_all_creatable_interaction = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		scope:recipient = scope:actor
+		scope:actor = { has_character_flag = toc_showdebsflag }
+	}
+	
+	auto_accept = yes
+	
+	on_accept = {
+		scope:actor = {
+			every_alert_creatable_title =
+			{
+				scope:actor = {
+					add_pressed_claim = prev
+				}
+			}
+		}
+	}
+}
+
+test_dynasty_prestige_interaction = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		scope:recipient = scope:actor
+		scope:actor = { has_character_flag = toc_showdebsflag }
+	}
+	
+	auto_accept = yes
+	
+	on_accept = {
+		scope:actor.dynasty = {
+			add_dynasty_prestige_level = 1
+			add_dynasty_prestige = 1000
+		}
+	}
+}
+
+debug_change_council_task_interaction = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			cp:councillor_spymaster = {
+				NOT = { councillor_task_target = scope:recipient }
+			}
+		}
+	}
+	
+	is_shown = {
+		scope:actor = { is_ai = no }
+		exists = scope:actor.cp:councillor_spymaster.councillor_task_target
+		scope:actor = { has_character_flag = toc_showdebsflag }
+	}
+	
+	auto_accept = yes
+	
+	on_accept = {
+		scope:actor = {
+			cp:councillor_spymaster = {
+				set_council_task = {
+					task_type = task_find_secrets
+					target = scope:recipient
+				}
+			}
+		}
+	}
+}
+
+castrate_interaction = {
+	interface_priority = 30
+	category = interaction_debug_main
+	desc = castrate_interaction_desc
+	icon = on
+
+	is_shown = {
+		scope:recipient = {
+			is_imprisoned_by = scope:actor
+			NOT = { has_trait = eunuch }
+			is_male = yes
+		}
+		scope:actor = {
+
+			#is_adult = yes
+			OR = {
+				has_culture_group = culture_group:byzantine_group
+				has_culture = culture:ethiopian
+		scope:actor = { is_ai = no }
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:recipient = {
+			custom_description = {
+				text = "currently_being_tortured"
+				NOT = { has_character_flag = is_being_tortured }
+			}
+		}
+	}
+
+	is_highlighted = {
+		OR = {
+			scope:actor = { has_trait = sadistic }
+			scope:actor = { has_relation_rival = scope:recipient }
+			scope:recipient = {
+				any_claim = {
+					holder = scope:actor
+				}
+			}
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			add_character_flag = {
+				flag = is_being_tortured
+				months = 6 # Players in MP can keep the event window open...
+			}
+		}
+
+		blind_and_castrate_actor_effect = yes #Stress & dread
+
+		show_as_tooltip = {
+			scope:recipient = {
+				add_trait = eunuch
+				release_from_prison = yes
+			}
+		}
+
+		torture_blind_castrate_opinion_effect = { VERB = castrated }
+
+		scope:actor = {
+			trigger_event = {
+				id = prison.1025
+				days = 1
+			}
+		}
+	}
+
+	auto_accept = yes
+
+	ai_targets = {
+		ai_recipients = prisoners
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = -20
+
+		modifier = {
+			has_trait = sadistic
+			add = 20
+		}
+		ai_value_modifier = {
+			ai_compassion = tiny_chance_impact_negative_ai_value #Adds +50 for highly uncompassionate characters, -50 for highly compassionate characters
+		}
+		opinion_modifier = {
+			opinion_target = scope:recipient
+			multiplier = -0.25
+		}
+	}
+
+	ai_frequency = 36
+}
+
+blind_interaction = {
+	interface_priority = 30
+	category = interaction_debug_main
+	desc = blind_interaction_desc
+	icon = on
+
+	is_shown = {
+		scope:recipient = {
+			is_imprisoned_by = scope:actor
+			NOT = { has_trait = blind }
+		}
+		scope:actor = {
+
+			#is_adult = yes
+			OR = {
+			has_culture_group = culture_group:byzantine_group
+		scope:actor = { is_ai = no }
+				}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:recipient = {
+			custom_description = {
+				text = "currently_being_tortured"
+				NOT = { has_character_flag = is_being_tortured }
+			}
+		}
+	}
+
+	is_highlighted = {
+		OR = {
+			scope:actor = { has_trait = sadistic }
+			scope:actor = { has_relation_rival = scope:recipient }
+			scope:recipient = {
+				any_claim = {
+					holder = scope:actor
+				}
+			}
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			add_character_flag = {
+				flag = is_being_tortured
+				months = 6 # Players in MP can keep the event window open...
+			}
+		}
+
+		blind_and_castrate_actor_effect = yes #Stress & dread
+
+		show_as_tooltip = {
+			scope:recipient = {
+				add_trait = blind
+				release_from_prison = yes
+			}
+		}
+
+		torture_blind_castrate_opinion_effect = { VERB = blinded }
+
+		scope:actor = {
+			trigger_event = {
+				id = prison.1020
+				days = 1
+			}
+		}
+	}
+
+	auto_accept = yes
+
+	ai_targets = {
+		ai_recipients = prisoners
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = -20
+
+		modifier = {
+			has_trait = sadistic
+			add = 20
+		}
+		ai_value_modifier = {
+			ai_compassion = tiny_chance_impact_negative_ai_value #Adds +50 for highly uncompassionate characters, -50 for highly compassionate characters
+		}
+		opinion_modifier = {
+			opinion_target = scope:recipient
+			multiplier = -0.25
+		}
+	}
+
+	ai_frequency = 36
+}
+
+toc_addwombmancourtier_interaction = {
+	category = interaction_debug_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+	interface_priority = -1
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		scope:actor = { has_character_flag = toc_showspecsflag }
+		scope:recipient = { is_landed = yes }
+	}
+
+	on_accept = {
+		scope:recipient = {
+			create_character = {
+	save_scope_as = toc_wombmancourt #save the character as a scope
+	#save_temporary_scope_as = flag #save the character as a temporary scope
+	#name = <name>
+	age = 18
+	gender = female
+	#gender_female_chance = script_value #Range (0..100)
+	#opposite_gender = character scope
+	#trait = <trait id>#add this trait
+	#random_traits_list = {
+	#	count = { 1 5 }
+	#	traitID = { some triggers }
+	#	traitID = { some triggers }
+	#} #A number of traits specified by count (1 if not specified) will be picked from the traits that have their triggers met. Scopes are the same as where create_character is used. More than one grouping like this can be defined
+	random_traits = yes #/no
+	#health = <health>
+	#fertility = <fertility>
+	#mother = <character>
+	#father = <character>
+	#real_father = <character> #(should only be set if the real father is not the same as father=)
+	employer = scope:recipient #will end up in this court, will become a pool character unless specified or father/mother is landed
+	#location = <character> #pool province; mutually exclusive with employer
+	#template_character = 
+	#faith, culture and dynasty are set from 1. template_character 2. father 3. mother 4. employer (not employer for dynasty) unless specified directly
+	#faith = faith tag OR a faith scope
+	#random_faith = { catholic = { some triggers } cathar = { some triggers } } # Random one where the triggers are met will be picked. Scopes are the same as where create_character is used
+	#random_faith_in_religion = religion tag OR a faith scope (there's no religion scope)
+	#culture = culture name OR a culture scope
+	#random_culture = { norse = { some triggers } norwegian = { some triggers } } #Random one where the triggers are met will be picked. Scopes are the same as where create_character is used
+	#random_culture_in_group = culture group name OR a culture scope (there's no group scope)
+	#dynasty_house = dynasty house name OR a dynasty house scope
+	#dynasty = generate/inherit/none - What to do if dynasty_house is not specified. generate by default.
+	#martial/diplomacy/intrigue...  =  will get random unless specified
+	#after_creation = { some effects } run after character is created. Scope starts off in the character, with the scope it was created in as PREV, and the same top scope and saved targets etc.
+}
+		}
+	}
+	auto_accept = yes
+}
+
+toc_addcourtier_interaction = {
+	category = interaction_debug_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+	interface_priority = -1
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		scope:actor = { has_character_flag = toc_showspecsflag }
+		scope:recipient = { is_landed = yes }
+	}
+
+	on_accept = {
+		scope:recipient = {
+			create_character = {
+	save_scope_as = toc_mancourt
+	age = 18
+	gender = male
+	random_traits = yes
+	employer = scope:recipient #will end up in this court, will become a pool character unless specified or father/mother is landed
+}
+		}
+	}
+	auto_accept = yes
+}
+
+toc_addcharacter_interaction = {
+	category = interaction_debug_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+	interface_priority = -1
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		scope:actor = { has_character_flag = toc_showspecsflag }
+		scope:recipient = { is_landed = yes }
+	}
+
+	on_accept = {
+		scope:actor = { trigger_event = tocmod.1000 }
+	}
+	auto_accept = yes
+}
+
+toc_otheroptions_interaction = {
+	category = interaction_debug_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+	interface_priority = -1
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		#scope:actor = { has_character_flag = toc_showspecsflag }
+	}
+
+	on_accept = {
+		#scope:recipient = { save_scope_as = toc_targete }
+		scope:recipient = { save_scope_as = toc_targete }
+		scope:actor = {
+		trigger_event = tocmod.2000
+					}
+	}
+	auto_accept = yes
+}
+
+toc_forcedivorce_interaction = {
+	category = interaction_debug_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+	interface_priority = -1
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		scope:actor = { has_character_flag = toc_showspecsflag }
+		scope:recipient = { is_married = yes }
+	}
+
+	on_accept = {
+		scope:recipient = {
+			divorce = scope:recipient.primary_spouse
+		}
+	}
+	auto_accept = yes
+}
+
+toc_finishcounciltask_interaction = {
+	category = interaction_debug_main
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+	interface_priority = -1
+
+	is_shown = {
+		scope:actor = { is_ai = no }
+		# scope:actor = { has_character_flag = toc_showspecsflag }
+		scope:actor = { has_character_flag = toc_showdebsflag }
+		# scope:recipient = { is_married = yes }
+		scope:recipient = { is_councillor = yes }
+	}
+
+	on_accept = {
+		scope:recipient = {
+			finish_council_task = yes
+		}
+	}
+	auto_accept = yes
+}
+
+marry_off_interaction = {
+	category = interaction_category_diplomacy
+	common_interaction = yes
+	desc = marry_off_interaction_desc
+	icon = on
+	send_name = marry_off_send
+	needs_recipient_to_open = no
+	special_interaction = arrange_marriage_interaction
+	interface = marriage
+	redirect = {
+		if = {
+			limit = {
+				exists = scope:secondary_actor
+			}
+			scope:recipient = {
+				save_scope_as = secondary_recipient
+				matchmaker = {
+					save_scope_as = recipient
+				}
+			}
+
+		}
+		else_if = {
+			scope:recipient = {
+				save_scope_as = secondary_actor
+			}
+			clear_saved_scope = recipient
+		}
+	}
+
+	populate_recipient_list = {
+		scope:secondary_actor = {
+			every_spouse_candidate = {
+				limit = {
+					NAND = {
+						is_landless_ruler = yes
+						faith.religious_head = this
+						NOT = { scope:secondary_actor.faith = faith }
+					}
+				}
+				add_to_list = characters
+			}
+		}
+	}
+
+	interface_priority = 60
+
+	# actor, recipient ... characters arranging the marriage
+	# secondary_actor, secondary_recipient ... characters that should marry
+
+	is_shown = {
+		scope:secondary_actor = {
+			#Is this someone I can marry off?
+			OR = {
+				is_courtier_of = scope:actor
+				AND = {
+					is_close_family_of = scope:actor # Only line that's changed
+					target_is_liege_or_above = scope:actor
+				}
+				scope:actor = this
+			}
+			#They can be married
+			can_marry_trigger = yes
+			#To account for a person marrying their concubines/consorts
+			trigger_if = {
+				limit = {
+					is_concubine = yes
+				}
+				is_concubine_of = scope:actor
+				can_marry_character_trigger = { CHARACTER = scope:actor }
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		#Diplomatic availability & prison
+		scope:secondary_actor = {
+			is_diplomatically_available = yes
+			is_imprisoned = no
+		}
+	}
+
+	has_valid_target_showing_failures_only = {
+		marriage_interaction_valid_target_trigger = yes  #Checks marriage status, betrothed, gender, consanguinity, faith hostility etc.
+
+		#Diplomatic availability & prison (located here because these will never be set at the start)
+		scope:recipient = {
+			is_diplomatically_available = yes
+			is_imprisoned = no
+		}
+		NOT = {
+			scope:actor = {
+				is_at_war_with = scope:recipient
+			}
+		}
+		trigger_if = {
+			limit = { NOT = { scope:recipient = scope:secondary_recipient } }
+			scope:secondary_recipient = {
+				is_diplomatically_available = yes
+				is_imprisoned = no
+			}
+		}
+		#secondary_actor is checked above because they are always available
+
+		#Blocks AI from marrying player guests
+		scope:secondary_recipient = {
+			trigger_if = {
+				limit = {
+					is_pool_guest = yes
+					host = {
+						is_ai = no
+						NOT = { this = scope:actor }
+					}
+				}
+				NOT = { is_pool_guest_of = host }
+			}
+		}
+	}
+
+	on_accept = {
+		marriage_interaction_on_accept_effect = yes
+	}
+
+	on_decline = {
+		scope:actor = {
+			if = {	
+				limit = { NOT = { this = scope:recipient } }
+				trigger_event = marriage_interaction.0011	
+			}
+		}
+	}
+
+	auto_accept = {
+		marriage_interaction_auto_accept_trigger = yes #Strong hook conditions
+	}
+	
+	ai_accept = {
+		base = 0 # Should be 0 for all interactions
+		
+		marriage_ai_accept_modifier = yes
+	}
+	
+	send_option = {
+		flag = matrilineal
+		localization = "MATRILINEAL_OFFER"
+		starts_enabled = {
+			scope:actor = {
+				OR= {
+					faith = {
+						has_doctrine = doctrine_gender_female_dominated
+					}
+					AND = {
+						scope:secondary_actor = { is_female = yes }
+						faith = { has_doctrine = doctrine_gender_equal }
+					}
+					AND = {
+						exists = scope:secondary_actor
+						scope:actor = scope:secondary_actor
+						is_female = yes
+						is_ai = no
+					}
+				}
+			}
+		}
+	}
+	
+	send_option = {
+		is_valid = {
+			scope:actor = {
+				has_usable_hook = scope:recipient
+			}
+		}
+		flag = marriage_hook
+		localization = MARRIAGE_HOOK
+	}
+	#This option cannot be linked with the hook icon, because recipient isn't known in the right-click menu
+	
+	send_options_exclusive = no
+	
+	show_effects_in_notification = no
+	greeting = positive
+	
+	notification_text = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:secondary_actor = {
+						is_adult = yes
+					}
+					scope:secondary_recipient = {
+						is_adult = yes
+					}
+				}
+				desc = {
+					first_valid = {	
+						triggered_desc = {
+							trigger = {
+								scope:matrilineal = yes
+								scope:secondary_actor = scope:actor
+								scope:secondary_recipient = scope:recipient
+							}
+							desc = MARRIAGE_NOTIFICATION_BOTH_PERSONAL_MATRI
+						}
+						triggered_desc = {
+							trigger = {
+								scope:matrilineal = yes
+								scope:secondary_actor = scope:actor
+							}
+							desc = MARRIAGE_NOTIFICATION_ACTOR_PERSONAL_MATRI
+						}
+						triggered_desc = {
+							trigger = {
+								scope:matrilineal = yes
+								scope:secondary_recipient = scope:recipient
+							}
+							desc = MARRIAGE_NOTIFICATION_RECIPIENT_PERSONAL_MATRI
+						}
+						triggered_desc = {
+							trigger = {
+								scope:matrilineal = yes
+							}
+							desc = MARRIAGE_NOTIFICATION_MATRI
+						}
+						triggered_desc = {
+							trigger = {
+								scope:secondary_actor = scope:actor
+								scope:secondary_recipient = scope:recipient
+							}
+							desc = MARRIAGE_NOTIFICATION_BOTH_PERSONAL
+						}
+						triggered_desc = {
+							trigger = {
+								scope:secondary_actor = scope:actor
+							}
+							desc = MARRIAGE_NOTIFICATION_ACTOR_PERSONAL
+						}
+						triggered_desc = {
+							trigger = {
+								scope:secondary_recipient = scope:recipient
+							}
+							desc = MARRIAGE_NOTIFICATION_RECIPIENT_PERSONAL
+						}
+						desc = MARRIAGE_NOTIFICATION
+					}
+				}
+			}
+			desc = {
+				first_valid = {	
+					triggered_desc = {
+						trigger = {
+							scope:matrilineal = yes
+							scope:secondary_actor = scope:actor
+							scope:secondary_recipient = scope:recipient
+						}
+						desc = BETROTHAL_NOTIFICATION_BOTH_PERSONAL_MATRI
+					}
+					triggered_desc = {
+						trigger = {
+							scope:matrilineal = yes
+							scope:secondary_actor = scope:actor
+						}
+						desc = BETROTHAL_NOTIFICATION_ACTOR_PERSONAL_MATRI
+					}
+					triggered_desc = {
+						trigger = {
+							scope:matrilineal = yes
+							scope:secondary_recipient = scope:recipient
+						}
+						desc = BETROTHAL_NOTIFICATION_RECIPIENT_PERSONAL_MATRI
+					}
+					triggered_desc = {
+						trigger = {
+							scope:matrilineal = yes
+						}
+						desc = BETROTHAL_NOTIFICATION_MATRI
+					}
+					triggered_desc = {
+						trigger = {
+							scope:secondary_actor = scope:actor
+							scope:secondary_recipient = scope:recipient
+						}
+						desc = BETROTHAL_NOTIFICATION_BOTH_PERSONAL
+					}
+					triggered_desc = {
+						trigger = {
+							scope:secondary_actor = scope:actor
+						}
+						desc = BETROTHAL_NOTIFICATION_ACTOR_PERSONAL
+					}
+					triggered_desc = {
+						trigger = {
+							scope:secondary_recipient = scope:recipient
+						}
+						desc = BETROTHAL_NOTIFICATION_RECIPIENT_PERSONAL
+					}
+					desc = BETROTHAL_NOTIFICATION
+				}
+			}
+		}
+	}
+}

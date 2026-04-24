@@ -62,6 +62,9 @@ Skonester Cheat Menu is a powerful and regularly updated game modification that 
 
 ### 2026 Updates
 
+**April**
+* **Aries V 1.2:** Secondary Update for Scribe,more cheats
+
 **March**
 * **Aries V 1.1:** Update for Scribe
 * **Pisces V 1.4-Beta:** Github release.

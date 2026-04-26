@@ -9,11 +9,13 @@
 ## Table of Contents
 - [Background & Vision](#background--vision)
 - [Master Feature List](#master-feature-list)
-  - [The "Super" Traits Suite](#the-super-traits-suite)
+  - [The "Paragon" Traits Suite](#the-paragon-traits-suite)
   - [The Modifier Menu Customizer](#the-modifier-menu-customizer)
+  - [Character Interaction Menu (Forbidden Powers)](#character-interaction-menu-forbidden-powers)
   - [Resource & Dynasty Management](#resource--dynasty-management)
   - [Warfare, Armies & Instant Conquest](#warfare-armies--instant-conquest)
   - [Ultimate Building & Development Decisions](#ultimate-building--development-decisions)
+  - [Government & Succession Law Manipulation](#government--succession-law-manipulation)
   - [The Great Heir Spawning System](#the-great-heir-spawning-system)
   - [Religion, Culture & Tradition Mastery](#religion-culture--tradition-mastery)
   - [Legendary Artifacts & Relics Library](#legendary-artifacts--relics-library)
@@ -34,21 +36,21 @@ Our vision is to provide a "God Mode" experience that is both deep and accessibl
 
 ## Master Feature List
 
-### The "Super" Traits Suite
-The mod introduces several "Super" traits that provide staggering bonuses, effectively turning a character into a superhuman entity:
-*   **Super Trait**:
+### The "Paragon" Traits Suite
+The mod introduces several powerful traits that provide staggering bonuses, effectively turning a character into a superhuman entity:
+*   **Paragon** (`trait_super`):
     *   **Attributes**: +100 to Diplomacy, Martial, Stewardship, Intrigue, Learning, and Prowess.
     *   **Resources**: +30 Monthly Prestige, +1000 Monthly Piety, +1000 Monthly Income.
     *   **Social**: +1000 Attraction Opinion, +500% Fertility, +100 Years of Fertility.
     *   **Schemes**: 10x Hostile/Personal Scheme Power, +100 flat power to all scheme types.
     *   **Realm**: +200 Vassal Limit, +200 Domain Limit, ignores negative culture opinion.
     *   **Genetics**: 100% chance to strengthen genetic traits, -100% inbreeding chance.
-*   **Super Governor**: 
+*   **Steward of Wonders** (`trait_super_governor`): 
     *   **Development**: +1000% Development Growth.
     *   **Construction**: -1000% Build Speed (Instant) and -100% Build Cost (Free).
     *   **Control**: +100 Monthly County Control growth.
     *   **Public Image**: +100 County Opinion.
-*   **Super General**: 
+*   **Warlord Anointed** (`trait_super_general`): 
     *   **Combat**: +100 Advantage, +20 Min Combat Roll, +40 Max Combat Roll.
     *   **Movement**: 10x Movement Speed, 10x Naval Movement Speed.
     *   **Siege**: -1000% Siege Phase Time (Instant Sieges).
@@ -60,46 +62,89 @@ A deep, togglable system that allows you to fine-tune your character's bonuses. 
 *   **Opinion Toggles**: Specific opinion bonuses for every category: Same/Different Faith, Same/Different Culture, Liege/Vassal, Clergy, Powerful Vassals, Courtiers, Guests, Prisoners, and even specific family members like Twins or Player Heirs.
 *   **Economic Toggles**: Toggles for Tax Multipliers, Domain Tax (even if a baron), and Stress-based income.
 
+### Character Interaction Menu (Forbidden Powers)
+Right-click any character to access the **Skonester Cheat Menu** interaction category. This provides direct control over individual souls:
+*   **Life and Death**:
+    *   **Murder / Kill Personally**: Instantly end a character's life by your own hand.
+    *   **Grant Death / Natural Death**: Arrange for a character to pass away peacefully.
+    *   **Annihilate Dynasty / Complete Annihilation**: Hunt down and extinguish an entire bloodline until none remain.
+    *   **Take One’s Own Life**: Force a character to choose suicide.
+*   **Social & Family Manipulation**:
+    *   **Sleep Together**: Instantly initiate a tryst.
+    *   **Impregnate**: Quicken a womb by command.
+    *   **Force Marriage / Force Betrothal**: Bind souls in wedlock regardless of their will.
+    *   **Adopt This Person / Disown**: Bring someone into your family or cast them out.
+    *   **Join Your Dynasty**: Adopt a soul directly into your noble bloodline.
+    *   **Designate Heir**: Proclaim a rightful inheritor to your legacy.
+    *   **Add Concubine**: Take a soul into your household.
+    *   **Divorce**: Instantly dissolve matrimonial bonds.
+*   **Political & Legal Control**:
+    *   **Modify Contract**: Rewrite vassal oaths of fealty without consequence.
+    *   **Force Vassal**: Bend any soul to your rule.
+    *   **Imprison**: Cast a soul into chains.
+    *   **Excommunicate / Remove Excommunication**: Control a character's standing with the holy church.
+    *   **Switch Character**: Forsake your current path and walk in the stead of another.
+*   **Spiritual & Cultural Shift**:
+    *   **Change Religion / Change Culture**: Bend a spirit to new faiths or customs.
+*   **Knowledge & Power**:
+    *   **Super Boost**: Bless a character with extraordinary ability.
+    *   **Gain Secrets**: Uncover every hidden whisper and shadow.
+    *   **Join Court**: Summon any person into your halls.
+
 ### Resource & Dynasty Management
-*   **The "Motherlode" Decision**: Instantly add **100,000 Gold, Prestige, Piety**, and **100,000 Dynasty Renown**.
-*   **Dynasty/House Wide Cheats**: Use character interactions to apply auto-marriage, auto-concubinage, and eugenics modifiers to your entire house or dynasty.
+*   **Treasure of the Realm**: Instantly add **100,000 Gold, Prestige, Piety**, and **100,000 Dynasty Renown**.
+*   **Currency Menu**: A specialized interface to bestow wealth, honor, and renown.
+*   **Dynasty/House Wide Cheats**: Toggle auto-marriage and eugenics for your entire noble house.
 
 ### Warfare, Armies & Instant Conquest
-*   **Instant Army Spawning**:
+*   **Army Menu**:
     *   **House Guards**: Spawn 10 stacks of elite, inheritable Men-at-Arms.
     *   **House Cavalry**: Spawn 10 stacks of elite heavy cavalry.
-    *   **Conqueror Armies**: Summon massive "Conqueror" event troops.
-*   **Interaction Cheats**:
-    *   **Take Title**: Instantly seize the primary title (and all de jure vassals) of any targeted character.
-    *   **Unrestricted Warfare**: Toggle the ability to declare war without standard constraints.
-    *   **Become Conqueror**: Apply the 'Conqueror' trait and multiple legendary historical traits at once.
+    *   **Conqueror Armies**: Summon massive event troops for grand expansion.
+*   **Territorial Interaction**:
+    *   **Claim Their Title / Usurp Title**: Lay claim to or instantly seize another's lordship.
+    *   **Revoke Title**: Strip a soul of their honor and holdings.
+    *   **Unrestricted Warfare**: Bypass standard Casus Belli requirements.
+    *   **Become Conqueror**: Apply the 'Conqueror' trait and multiple legendary historical traits.
 
 ### Ultimate Building & Development Decisions
-The mod includes a specialized sub-menu for realm development:
-*   **Max All Buildings**: A single decision that scans your entire sub-realm and upgrades every building (Castles, Cities, Temples, Mines, Tradeports, Academies, etc.) to their absolute maximum level.
-*   **Extra Building Slots**: Instantly add a 7th building slot to any barony.
-*   **Development Boost**: Instantly set county development to maximum.
+The mod includes a specialized sub-menu ("The Gnostic Craft") for realm development:
+*   **Raise All Holdings to Their Full Glory**: A single decision that upgrades every building in your sub-realm to its absolute maximum level.
+*   **The Blessed Seven Works**: Mass-upgrades every worthy structure across your holdings.
+*   **Grant New Grounds for Building**: Adds building slots to your domains, allowing up to seven structures per barony.
+*   **Maximize Development / Maximize Control**: Raise the order and prosperity of your lands to their utmost heights via the **Realm Menu**.
+
+### Government & Succession Law Manipulation
+Total control over the laws of your realm:
+*   **Government Menu**:
+    *   Instantly change to **Tribal, Clan, Feudal, Administrative, Nomadic**, or **Adventurer** governments.
+    *   Specialized types: **Celestial** (Imperial Chinese), **Meritocratic**, **Mandala**, **Wanua**, or **Japanese Administrative/Feudal**.
+*   **Succession Law Manipulation**:
+    *   **Change Succession**: Instantly switch between **Primogeniture, Ultimogeniture**, or **House Seniority**.
+    *   **Realm Succession**: Detailed control over **Confederate Partition, Partition**, or **High Partition**.
+    *   **Gender Succession**: Set the law to **Male Only, Male Preference, Equal, Female Preference**, or **Female Only** for yourself and your vassals.
 
 ### The Great Heir Spawning System
-Need a perfect successor? The mod allows you to spawn children with specific parameters:
+Need a perfect successor? Use the **Character Spawner**:
 *   **Great Heir**: Spawns a child with level 3 Beauty, Intellect, and Physique traits, +15 to all base stats, and 10 base health.
-*   **Bulk Spawning**: Options to spawn 1, 2, 5, or 10 heirs at once.
-*   **Gender Selection**: Choose between male or female spawned heirs.
+*   **Bulk Spawning**: Options to spawn 1, 2, 5, or 10 heirs (male or female) at once.
 
 ### Religion, Culture & Tradition Mastery
-*   **Instant Realm Conversion**: One-click decisions to convert your entire sub-realm (counties, vassals, family) to your current Culture or Faith.
-*   **The Tradition Vault**: A decision that applies nearly **100 powerful cultural traditions** simultaneously, covering Warfare (Bushido, Longbow Competitions), Economy (Silk Road Merchants, Rice Cultivators), and Governance (Roman Legacy, Legalistic).
+*   **Edict of Culture & Edict of Faith**: One-click decisions to convert your entire sub-realm (counties, vassals, family) to your current Culture or Faith.
+*   **Convert Vassals**: Compel all vassals to follow your spiritual and cultural path.
+*   **The Tradition Vault**: A decision that applies nearly **100 powerful cultural traditions** simultaneously.
 
 ### Legendary Artifacts & Relics Library
 Instantly populate your court with the most famous relics in history:
-*   **Historical Relics**: Ark of the Covenant, Excalibur, Durendal, Joyeuse, Holy Grail (Chalice of Dona Urraca), Stone of Scone, Throne of Charlemagne, and many more.
-*   **Cheat Equipment**: High-tier custom-coded weapons, armor, crowns, and regalia with massive modifiers.
-*   **Legendary Books**: Spawn books based on figures like Caligula, Lady Godiva, and Sinbad.
+*   **Historical Relics**: Ark of the Covenant, Excalibur, Durendal, Joyeuse, Holy Grail, Stone of Scone, Throne of Charlemagne, and many more.
+*   **Cheat Equipment**: High-tier custom-coded weapons, armor, crowns, and regalia.
+*   **Legendary Books**: Spawn forbidden tomes (Caligula, Lady Godiva, Sinbad).
 
 ### Health, Immortality & Genetic Purity
-*   **Cure All**: A "Panacea" decision that cures every disease (Plague, Consumption, Cancer, etc.) and removes all physical wounds or maimings.
-*   **Cure Inbred**: Instantly removes negative genetic traits like Inbred, Clubfooted, Hunchbacked, and Dwarfism.
-*   **Immortality Interaction**: Lock a character's age at 25 and make them immune to natural death.
+*   **Panacea of the Realm**: A decision that cures every disease (Plague, Consumption, Cancer, etc.) and physical wounds.
+*   **Purging of Afflictions**: Banishes carnal maladies and common ailments from the realm.
+*   **Purification of Bloodlines**: Removes negative genetic traits like Inbred, Clubfooted, and Hunchbacked.
+*   **Immortal**: Toggle the trait to lock a character's age at 25 and prevent natural death.
 
 ---
 

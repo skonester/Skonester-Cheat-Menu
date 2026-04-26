@@ -4,40 +4,37 @@ gender_succession_events_mod.1001 = {
     type = character_event
     theme = default
 	desc = gender_succession_events_mod.1001.desc
+
+	trigger = {
+		is_ai = no
+		is_landless_adventurer = no
+		NOT = { has_government = administrative_government }
+	}
+
 	#Male Only
 	option = {
 		name = male_only_gse_mod
 		trigger_event = gender_succession_events_mod.1002
-		trigger = {
-		}
 	}
 	#Male preference
 	option = {
 		name = Male_preference_gse_mod
 		trigger_event = gender_succession_events_mod.1003
-		trigger = {
-		}
 	}
 	#Equal
 	option = {
 		name = Equal_gse_mod
 		trigger_event = gender_succession_events_mod.1004
-		trigger = {
-		}
 	}
 	#Female preference
 	option = {
 		name = Female_preference_gse_mod
 		trigger_event = gender_succession_events_mod.1005
-		trigger = {
-		}
 	}
 	#Female Only
 	option = {
 		name = Female_Only_gse_mod
 		trigger_event = gender_succession_events_mod.1006
-		trigger = {
-		}
 	}
 }
 
@@ -49,24 +46,34 @@ gender_succession_events_mod.1002 = {
 	option = {
 		name = Only_Me_gse_mod
 		add_realm_law_skip_effects = male_only_law
+		gender_rse_flag_cleanup = yes
+		add_character_flag = rse_flag_male_only
 	}
 	option = {
 		name = Me_and_Vassals_gse_mod
 		add_realm_law_skip_effects = male_only_law
+		gender_rse_flag_cleanup = yes
+		add_character_flag = rse_flag_male_only
 		every_vassal_or_below = {
 			limit = {
-				always = yes
+				is_landless_adventurer = no
+				NOT = { has_government = administrative_government }
 			}
 			add_realm_law_skip_effects = male_only_law
+			gender_rse_flag_cleanup = yes
+			add_character_flag = rse_flag_male_only
 		}
 	}
 	option = {
 		name = Only_Vassals_gse_mod
 		every_vassal_or_below = {
 			limit = {
-				always = yes
+				is_landless_adventurer = no
+				NOT = { has_government = administrative_government }
 			}
 			add_realm_law_skip_effects = male_only_law
+			gender_rse_flag_cleanup = yes
+			add_character_flag = rse_flag_male_only
 		}
 	}
 	option = {
@@ -82,24 +89,34 @@ gender_succession_events_mod.1003 = {
 	option = {
 		name = Only_Me_gse_mod
 		add_realm_law_skip_effects = male_preference_law
+		gender_rse_flag_cleanup = yes
+		add_character_flag = rse_flag_male_preference
 	}
 	option = {
 		name = Me_and_Vassals_gse_mod
 		add_realm_law_skip_effects = male_preference_law
+		gender_rse_flag_cleanup = yes
+		add_character_flag = rse_flag_male_preference
 		every_vassal_or_below = {
 			limit = {
-				always = yes
+				is_landless_adventurer = no
+				NOT = { has_government = administrative_government }
 			}
 			add_realm_law_skip_effects = male_preference_law
+			gender_rse_flag_cleanup = yes
+			add_character_flag = rse_flag_male_preference
 		}
 	}
 	option = {
 		name = Only_Vassals_gse_mod
 		every_vassal_or_below = {
 			limit = {
-				always = yes
+				is_landless_adventurer = no
+				NOT = { has_government = administrative_government }
 			}
 			add_realm_law_skip_effects = male_preference_law
+			gender_rse_flag_cleanup = yes
+			add_character_flag = rse_flag_male_preference
 		}
 	}
 	option = {
@@ -115,24 +132,34 @@ gender_succession_events_mod.1004 = {
 	option = {
 		name = Only_Me_gse_mod
 		add_realm_law_skip_effects = equal_law
+		gender_rse_flag_cleanup = yes
+		add_character_flag = rse_flag_equal
 	}
 	option = {
 		name = Me_and_Vassals_gse_mod
 		add_realm_law_skip_effects = equal_law
+		gender_rse_flag_cleanup = yes
+		add_character_flag = rse_flag_equal
 		every_vassal_or_below = {
 			limit = {
-				always = yes
+				is_landless_adventurer = no
+				NOT = { has_government = administrative_government }
 			}
 			add_realm_law_skip_effects = equal_law
+			gender_rse_flag_cleanup = yes
+			add_character_flag = rse_flag_equal
 		}
 	}
 	option = {
 		name = Only_Vassals_gse_mod
 		every_vassal_or_below = {
 			limit = {
-				always = yes
+				is_landless_adventurer = no
+				NOT = { has_government = administrative_government }
 			}
 			add_realm_law_skip_effects = equal_law
+			gender_rse_flag_cleanup = yes
+			add_character_flag = rse_flag_equal
 		}
 	}
 	option = {
@@ -148,24 +175,34 @@ gender_succession_events_mod.1005 = {
 	option = {
 		name = Only_Me_gse_mod
 		add_realm_law_skip_effects = female_preference_law
+		gender_rse_flag_cleanup = yes
+		add_character_flag = rse_flag_female_preference
 	}
 	option = {
 		name = Me_and_Vassals_gse_mod
 		add_realm_law_skip_effects = female_preference_law
+		gender_rse_flag_cleanup = yes
+		add_character_flag = rse_flag_female_preference
 		every_vassal_or_below = {
 			limit = {
-				always = yes
+				is_landless_adventurer = no
+				NOT = { has_government = administrative_government }
 			}
 			add_realm_law_skip_effects = female_preference_law
+			gender_rse_flag_cleanup = yes
+			add_character_flag = rse_flag_female_preference
 		}
 	}
 	option = {
 		name = Only_Vassals_gse_mod
 		every_vassal_or_below = {
 			limit = {
-				always = yes
+				is_landless_adventurer = no
+				NOT = { has_government = administrative_government }
 			}
 			add_realm_law_skip_effects = female_preference_law
+			gender_rse_flag_cleanup = yes
+			add_character_flag = rse_flag_female_preference
 		}
 	}
 	option = {
@@ -181,27 +218,38 @@ gender_succession_events_mod.1006 = {
 	option = {
 		name = Only_Me_gse_mod
 		add_realm_law_skip_effects = female_only_law
+		gender_rse_flag_cleanup = yes
+		add_character_flag = rse_flag_female_only
 	}
 	option = {
 		name = Me_and_Vassals_gse_mod
 		add_realm_law_skip_effects = female_only_law
+		gender_rse_flag_cleanup = yes
+		add_character_flag = rse_flag_female_only
 		every_vassal_or_below = {
 			limit = {
-				always = yes
+				is_landless_adventurer = no
+				NOT = { has_government = administrative_government }
 			}
 			add_realm_law_skip_effects = female_only_law
+			gender_rse_flag_cleanup = yes
+			add_character_flag = rse_flag_female_only
 		}
 	}
 	option = {
 		name = Only_Vassals_gse_mod
 		every_vassal_or_below = {
 			limit = {
-				always = yes
+				is_landless_adventurer = no
+				NOT = { has_government = administrative_government }
 			}
 			add_realm_law_skip_effects = female_only_law
+			gender_rse_flag_cleanup = yes
+			add_character_flag = rse_flag_female_only
 		}
 	}
 	option = {
 		name = Nothing_will_change_gse_mod
 	}
 }
+

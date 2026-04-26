@@ -1,0 +1,71 @@
+rse_death_on_actions = {
+	on_death = {
+		on_actions = {
+			rse_transfer_flags_on_death
+		}
+	}
+}
+
+rse_transfer_flags_on_death = {
+	effect = {
+		if = {
+			limit = {
+				exists = primary_heir
+				primary_heir = {
+					or = {
+						has_government = clan_government
+						has_government = feudal_government
+						has_government = tribal_government
+					}
+					is_landless_adventurer = no
+				}
+			}
+			# Transfer flags
+			if = {
+				limit = { has_character_flag = rse_flag_confederate_partition }
+				primary_heir = { add_character_flag = rse_flag_confederate_partition }
+			}
+			if = {
+				limit = { has_character_flag = rse_flag_partition }
+				primary_heir = { add_character_flag = rse_flag_partition }
+			}
+			if = {
+				limit = { has_character_flag = rse_flag_high_partition }
+				primary_heir = { add_character_flag = rse_flag_high_partition }
+			}
+			if = {
+				limit = { has_character_flag = rse_flag_primogeniture }
+				primary_heir = { add_character_flag = rse_flag_primogeniture }
+			}
+			if = {
+				limit = { has_character_flag = rse_flag_ultimogeniture }
+				primary_heir = { add_character_flag = rse_flag_ultimogeniture }
+			}
+			if = {
+				limit = { has_character_flag = rse_flag_house_seniority }
+				primary_heir = { add_character_flag = rse_flag_house_seniority }
+			}
+			# Gender Flags
+			if = {
+				limit = { has_character_flag = rse_flag_male_only }
+				primary_heir = { add_character_flag = rse_flag_male_only }
+			}
+			if = {
+				limit = { has_character_flag = rse_flag_male_preference }
+				primary_heir = { add_character_flag = rse_flag_male_preference }
+			}
+			if = {
+				limit = { has_character_flag = rse_flag_equal }
+				primary_heir = { add_character_flag = rse_flag_equal }
+			}
+			if = {
+				limit = { has_character_flag = rse_flag_female_preference }
+				primary_heir = { add_character_flag = rse_flag_female_preference }
+			}
+			if = {
+				limit = { has_character_flag = rse_flag_female_only }
+				primary_heir = { add_character_flag = rse_flag_female_only }
+			}
+		}
+	}
+}

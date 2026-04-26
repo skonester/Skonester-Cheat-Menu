@@ -4,6 +4,13 @@ change_Realm_succession_law_mod.1001 = {
     type = character_event
     theme = default
 	desc = change_Realm_succession_law_mod.1001.desc
+
+	trigger = {
+		is_ai = no # Only players should trigger the main menu
+		is_landless_adventurer = no
+		NOT = { has_government = administrative_government }
+	}
+
 	option = {
 		#Multiple Heirs
 		name = multiple_heirs_rse_mod
@@ -35,6 +42,7 @@ change_Realm_succession_law_mod.1001 = {
 						has_innovation = innovation_primogeniture
 						has_innovation = innovation_heraldry
 						has_innovation = innovation_table_of_princes
+						has_innovation = innovation_theme_system
 					}
 				}
 			}
@@ -53,6 +61,9 @@ change_Realm_succession_law_mod.1001 = {
 				}
 				root.culture = {
 					has_innovation = innovation_primogeniture
+				}
+				root.culture = {
+					has_innovation = innovation_theme_system
 				}
 			}
 		}
@@ -119,6 +130,7 @@ change_Realm_succession_law_mod.1003 = {
 	option = {
 		name = Only_Me_gse_mod
 		add_realm_law_skip_effects = confederate_partition_succession_law
+		add_character_flag = rse_flag_confederate_partition
 	}
 	option = {
 		name = Me_and_Vassals_gse_mod
@@ -129,16 +141,17 @@ change_Realm_succession_law_mod.1003 = {
 					has_government = clan_government
 					has_government = feudal_government
 					has_government = tribal_government
-					has_government = administrative_government
 				}
-				nor = {
-					has_government = republic_government
-					has_government = theocracy_government
-					has_government = mercenary_government
-					has_government = holy_order_government
-				}
+				is_landless_adventurer = no
 			}
 			add_realm_law_skip_effects = confederate_partition_succession_law
+			remove_character_flag = rse_flag_confederate_partition
+			remove_character_flag = rse_flag_partition
+			remove_character_flag = rse_flag_high_partition
+			remove_character_flag = rse_flag_primogeniture
+			remove_character_flag = rse_flag_ultimogeniture
+			remove_character_flag = rse_flag_house_seniority
+			add_character_flag = rse_flag_confederate_partition
 		}
 	}
 	option = {
@@ -149,16 +162,17 @@ change_Realm_succession_law_mod.1003 = {
 					has_government = clan_government
 					has_government = feudal_government
 					has_government = tribal_government
-					has_government = administrative_government
 				}
-				nor = {
-					has_government = republic_government
-					has_government = theocracy_government
-					has_government = mercenary_government
-					has_government = holy_order_government
-				}
+				is_landless_adventurer = no
 			}
 			add_realm_law_skip_effects = confederate_partition_succession_law
+			remove_character_flag = rse_flag_confederate_partition
+			remove_character_flag = rse_flag_partition
+			remove_character_flag = rse_flag_high_partition
+			remove_character_flag = rse_flag_primogeniture
+			remove_character_flag = rse_flag_ultimogeniture
+			remove_character_flag = rse_flag_house_seniority
+			add_character_flag = rse_flag_confederate_partition
 		}
 	}
 	option = {
@@ -174,6 +188,7 @@ change_Realm_succession_law_mod.1004 = {
 	option = {
 		name = Only_Me_gse_mod
 		add_realm_law_skip_effects = partition_succession_law
+		add_character_flag = rse_flag_partition
 	}
 	option = {
 		name = Me_and_Vassals_gse_mod
@@ -184,16 +199,17 @@ change_Realm_succession_law_mod.1004 = {
 					has_government = clan_government
 					has_government = feudal_government
 					has_government = tribal_government
-					has_government = administrative_government
 				}
-				nor = {
-					has_government = republic_government
-					has_government = theocracy_government
-					has_government = mercenary_government
-					has_government = holy_order_government
-				}
+				is_landless_adventurer = no
 			}
 			add_realm_law_skip_effects = partition_succession_law
+			remove_character_flag = rse_flag_confederate_partition
+			remove_character_flag = rse_flag_partition
+			remove_character_flag = rse_flag_high_partition
+			remove_character_flag = rse_flag_primogeniture
+			remove_character_flag = rse_flag_ultimogeniture
+			remove_character_flag = rse_flag_house_seniority
+			add_character_flag = rse_flag_partition
 		}
 	}
 	option = {
@@ -204,16 +220,17 @@ change_Realm_succession_law_mod.1004 = {
 					has_government = clan_government
 					has_government = feudal_government
 					has_government = tribal_government
-					has_government = administrative_government
 				}
-				nor = {
-					has_government = republic_government
-					has_government = theocracy_government
-					has_government = mercenary_government
-					has_government = holy_order_government
-				}
+				is_landless_adventurer = no
 			}
 			add_realm_law_skip_effects = partition_succession_law
+			remove_character_flag = rse_flag_confederate_partition
+			remove_character_flag = rse_flag_partition
+			remove_character_flag = rse_flag_high_partition
+			remove_character_flag = rse_flag_primogeniture
+			remove_character_flag = rse_flag_ultimogeniture
+			remove_character_flag = rse_flag_house_seniority
+			add_character_flag = rse_flag_partition
 		}
 	}
 	option = {
@@ -229,6 +246,7 @@ change_Realm_succession_law_mod.1005 = {
 	option = {
 		name = Only_Me_gse_mod
 		add_realm_law_skip_effects = high_partition_succession_law
+		add_character_flag = rse_flag_high_partition
 	}
 	option = {
 		name = Me_and_Vassals_gse_mod
@@ -239,16 +257,17 @@ change_Realm_succession_law_mod.1005 = {
 					has_government = clan_government
 					has_government = feudal_government
 					has_government = tribal_government
-					has_government = administrative_government
 				}
-				nor = {
-					has_government = republic_government
-					has_government = theocracy_government
-					has_government = mercenary_government
-					has_government = holy_order_government
-				}
+				is_landless_adventurer = no
 			}
 			add_realm_law_skip_effects = high_partition_succession_law
+			remove_character_flag = rse_flag_confederate_partition
+			remove_character_flag = rse_flag_partition
+			remove_character_flag = rse_flag_high_partition
+			remove_character_flag = rse_flag_primogeniture
+			remove_character_flag = rse_flag_ultimogeniture
+			remove_character_flag = rse_flag_house_seniority
+			add_character_flag = rse_flag_high_partition # Flag to track change
 		}
 	}
 	option = {
@@ -259,16 +278,17 @@ change_Realm_succession_law_mod.1005 = {
 					has_government = clan_government
 					has_government = feudal_government
 					has_government = tribal_government
-					has_government = administrative_government
 				}
-				nor = {
-					has_government = republic_government
-					has_government = theocracy_government
-					has_government = mercenary_government
-					has_government = holy_order_government
-				}
+				is_landless_adventurer = no
 			}
 			add_realm_law_skip_effects = high_partition_succession_law
+			remove_character_flag = rse_flag_confederate_partition
+			remove_character_flag = rse_flag_partition
+			remove_character_flag = rse_flag_high_partition
+			remove_character_flag = rse_flag_primogeniture
+			remove_character_flag = rse_flag_ultimogeniture
+			remove_character_flag = rse_flag_house_seniority
+			add_character_flag = rse_flag_high_partition # Flag to track change
 		}
 	}
 	option = {
@@ -334,6 +354,7 @@ change_Realm_succession_law_mod.1007 = {
 	option = {
 		name = Only_Me_gse_mod
 		add_realm_law_skip_effects = single_heir_succession_law
+		add_character_flag = rse_flag_primogeniture
 	}
 	option = {
 		name = Me_and_Vassals_gse_mod
@@ -344,16 +365,17 @@ change_Realm_succession_law_mod.1007 = {
 					has_government = clan_government
 					has_government = feudal_government
 					has_government = tribal_government
-					has_government = administrative_government
 				}
-				nor = {
-					has_government = republic_government
-					has_government = theocracy_government
-					has_government = mercenary_government
-					has_government = holy_order_government
-				}
+				is_landless_adventurer = no
 			}
 			add_realm_law_skip_effects = single_heir_succession_law
+			remove_character_flag = rse_flag_confederate_partition
+			remove_character_flag = rse_flag_partition
+			remove_character_flag = rse_flag_high_partition
+			remove_character_flag = rse_flag_primogeniture
+			remove_character_flag = rse_flag_ultimogeniture
+			remove_character_flag = rse_flag_house_seniority
+			add_character_flag = rse_flag_primogeniture
 		}
 	}
 	option = {
@@ -364,16 +386,17 @@ change_Realm_succession_law_mod.1007 = {
 					has_government = clan_government
 					has_government = feudal_government
 					has_government = tribal_government
-					has_government = administrative_government
 				}
-				nor = {
-					has_government = republic_government
-					has_government = theocracy_government
-					has_government = mercenary_government
-					has_government = holy_order_government
-				}
+				is_landless_adventurer = no
 			}
 			add_realm_law_skip_effects = single_heir_succession_law
+			remove_character_flag = rse_flag_confederate_partition
+			remove_character_flag = rse_flag_partition
+			remove_character_flag = rse_flag_high_partition
+			remove_character_flag = rse_flag_primogeniture
+			remove_character_flag = rse_flag_ultimogeniture
+			remove_character_flag = rse_flag_house_seniority
+			add_character_flag = rse_flag_primogeniture
 		}
 	}
 	option = {
@@ -389,6 +412,7 @@ change_Realm_succession_law_mod.1008 = {
 	option = {
 		name = Only_Me_gse_mod
 		add_realm_law_skip_effects = single_heir_succession_law_youngest
+		add_character_flag = rse_flag_ultimogeniture
 	}
 	option = {
 		name = Me_and_Vassals_gse_mod
@@ -399,16 +423,17 @@ change_Realm_succession_law_mod.1008 = {
 					has_government = clan_government
 					has_government = feudal_government
 					has_government = tribal_government
-					has_government = administrative_government
 				}
-				nor = {
-					has_government = republic_government
-					has_government = theocracy_government
-					has_government = mercenary_government
-					has_government = holy_order_government
-				}
+				is_landless_adventurer = no
 			}
 			add_realm_law_skip_effects = single_heir_succession_law_youngest
+			remove_character_flag = rse_flag_confederate_partition
+			remove_character_flag = rse_flag_partition
+			remove_character_flag = rse_flag_high_partition
+			remove_character_flag = rse_flag_primogeniture
+			remove_character_flag = rse_flag_ultimogeniture
+			remove_character_flag = rse_flag_house_seniority
+			add_character_flag = rse_flag_ultimogeniture
 		}
 	}
 	option = {
@@ -419,16 +444,17 @@ change_Realm_succession_law_mod.1008 = {
 					has_government = clan_government
 					has_government = feudal_government
 					has_government = tribal_government
-					has_government = administrative_government
 				}
-				nor = {
-					has_government = republic_government
-					has_government = theocracy_government
-					has_government = mercenary_government
-					has_government = holy_order_government
-				}
+				is_landless_adventurer = no
 			}
 			add_realm_law_skip_effects = single_heir_succession_law_youngest
+			remove_character_flag = rse_flag_confederate_partition
+			remove_character_flag = rse_flag_partition
+			remove_character_flag = rse_flag_high_partition
+			remove_character_flag = rse_flag_primogeniture
+			remove_character_flag = rse_flag_ultimogeniture
+			remove_character_flag = rse_flag_house_seniority
+			add_character_flag = rse_flag_ultimogeniture
 		}
 	}
 	option = {
@@ -444,6 +470,7 @@ change_Realm_succession_law_mod.1009 = {
 	option = {
 		name = Only_Me_gse_mod
 		add_realm_law_skip_effects = single_heir_dynasty_house
+		add_character_flag = rse_flag_house_seniority
 	}
 	option = {
 		name = Me_and_Vassals_gse_mod
@@ -454,16 +481,17 @@ change_Realm_succession_law_mod.1009 = {
 					has_government = clan_government
 					has_government = feudal_government
 					has_government = tribal_government
-					has_government = administrative_government
 				}
-				nor = {
-					has_government = republic_government
-					has_government = theocracy_government
-					has_government = mercenary_government
-					has_government = holy_order_government
-				}
+				is_landless_adventurer = no
 			}
 			add_realm_law_skip_effects = single_heir_dynasty_house
+			remove_character_flag = rse_flag_confederate_partition
+			remove_character_flag = rse_flag_partition
+			remove_character_flag = rse_flag_high_partition
+			remove_character_flag = rse_flag_primogeniture
+			remove_character_flag = rse_flag_ultimogeniture
+			remove_character_flag = rse_flag_house_seniority
+			add_character_flag = rse_flag_house_seniority
 		}
 	}
 	option = {
@@ -474,16 +502,17 @@ change_Realm_succession_law_mod.1009 = {
 					has_government = clan_government
 					has_government = feudal_government
 					has_government = tribal_government
-					has_government = administrative_government
 				}
-				nor = {
-					has_government = republic_government
-					has_government = theocracy_government
-					has_government = mercenary_government
-					has_government = holy_order_government
-				}
+				is_landless_adventurer = no
 			}
 			add_realm_law_skip_effects = single_heir_dynasty_house
+			remove_character_flag = rse_flag_confederate_partition
+			remove_character_flag = rse_flag_partition
+			remove_character_flag = rse_flag_high_partition
+			remove_character_flag = rse_flag_primogeniture
+			remove_character_flag = rse_flag_ultimogeniture
+			remove_character_flag = rse_flag_house_seniority
+			add_character_flag = rse_flag_house_seniority
 		}
 	}
 	option = {
@@ -535,6 +564,19 @@ change_Realm_succession_law_mod.1010 = {
 		}
 		root.culture = {
 			add_innovation = innovation_primogeniture 
+		}
+	}
+	option = {
+		name = "Theme System"
+		trigger = {
+			not = {
+				root.culture = {
+					has_innovation = innovation_theme_system
+				}
+			}
+		}
+		root.culture = {
+			add_innovation = innovation_theme_system
 		}
 	}
 	option = {

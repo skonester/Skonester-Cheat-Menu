@@ -4,7 +4,7 @@
   information_TT:0 "Click to view detailed information about this mod."
   
   dp_information.changelog.t:0 "Changelog for Taurus Season"
-  dp_information.changelog.d:0 "Taurus v1.1 : 1.19.0.4 "Added most missing religions/cultures to edit character menu "
+  dp_information.changelog.d:0 "Taurus v1.2 : 1.19.0.4 "fixes to realm laws/gender succession,character event chain"
   dp_information.useful_tips.t:0 "Useful Tips"
   dp_information.useful_tips.d:0 "Feature Menu\n- Click once to add, click again to remove.\n- If a feature doesn’t appear, it doesn’t mean the mod is broken; it can indicate a hardcoded override from Paradox.\n- Due to DLC factors, some interactions may not appear on certain characters.\n- Knightblood traits are added randomly at new game start in small doses to give random NPC's interesting stats.I will take it out if people don't warm up to it.\n- This mod will also support older versions of the game if you need to downgrade."
   dp_information.locations.t:0 "Special Thanks"

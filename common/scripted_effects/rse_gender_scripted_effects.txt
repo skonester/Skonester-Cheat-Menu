@@ -1,0 +1,7 @@
+gender_rse_flag_cleanup = {
+	remove_character_flag = rse_flag_male_only
+	remove_character_flag = rse_flag_male_preference
+	remove_character_flag = rse_flag_equal
+	remove_character_flag = rse_flag_female_preference
+	remove_character_flag = rse_flag_female_only
+}

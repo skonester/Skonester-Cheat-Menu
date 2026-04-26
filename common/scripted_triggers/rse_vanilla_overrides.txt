@@ -1,0 +1,95 @@
+# Overriding vanilla triggers to allow enforced laws to persist without innovations or requirements
+# This prevents the 'Reversion' bug where the game strips the law on every tick.
+
+can_keep_partition_succession_law_trigger = {
+	trigger_if = {
+		limit = {
+			has_realm_law = partition_succession_law
+		}
+		OR = {
+			can_have_partition_succession_law_trigger = yes
+			has_character_flag = rse_flag_partition
+			# Mongol Empires
+			has_title = title:e_mongol_empire
+			has_title = title:e_ilkhanate
+			has_title = title:e_golden_horde
+			has_title = title:e_chagatai
+			has_title = title:e_red_horde
+			has_title = title:e_white_horde
+			has_title = title:e_aarlud_khanate
+			has_title = title:e_togskol_khanate
+			has_title = title:e_baruun_khanate
+			has_title = title:e_great_yuan
+			has_title = title:e_blue_horde
+			has_title = title:e_omnod_dalai_khanate
+		}
+	}
+	NOT = { government_has_flag = government_is_clan }
+}
+
+can_keep_high_partition_succession_law_trigger = {
+	trigger_if = {
+		limit = {
+			has_realm_law = high_partition_succession_law
+		}
+		OR = {
+			can_have_high_partition_succession_law_trigger = yes
+			has_character_flag = rse_flag_high_partition
+			# Mongol Empires
+			has_title = title:e_mongol_empire
+			has_title = title:e_ilkhanate
+			has_title = title:e_golden_horde
+			has_title = title:e_chagatai
+			has_title = title:e_red_horde
+			has_title = title:e_white_horde
+			has_title = title:e_aarlud_khanate
+			has_title = title:e_togskol_khanate
+			has_title = title:e_baruun_khanate
+			has_title = title:e_great_yuan
+			has_title = title:e_blue_horde
+			has_title = title:e_omnod_dalai_khanate
+		}
+	}
+	NOT = { government_has_flag = government_is_clan }
+}
+
+can_keep_single_heir_succession_law_trigger = {
+	trigger_if = {
+		limit = {
+			has_realm_law = single_heir_succession_law
+		}
+		OR = {
+			can_have_single_heir_succession_law_trigger = yes
+			has_character_flag = rse_flag_primogeniture
+			# Byzantine Empire / Ceremonial Liege
+			historical_succession_access_single_heir_succession_law_trigger = yes
+			has_variable = purge_oath_previous_law # ACH Purge Pretenders Oath
+		}
+	}
+}
+
+can_keep_single_heir_youngest_succession_law_trigger = {
+	trigger_if = {
+		limit = {
+			has_realm_law = single_heir_succession_law_youngest
+		}
+		OR = {
+			can_have_single_heir_youngest_succession_law_trigger = yes
+			has_character_flag = rse_flag_ultimogeniture
+			historical_succession_access_single_heir_succession_law_youngest_trigger = yes
+		}
+	}
+}
+
+can_keep_single_heir_dynasty_house_trigger = {
+	trigger_if = {
+		limit = {
+			has_realm_law = single_heir_dynasty_house
+		}
+		OR = {
+			can_have_single_heir_dynasty_house_trigger = yes
+			has_character_flag = rse_flag_house_seniority
+			historical_succession_access_single_heir_dynasty_house_trigger = yes
+		}
+	}
+}

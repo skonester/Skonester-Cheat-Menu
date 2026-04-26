@@ -1,0 +1,132 @@
+rse_enforce_laws_effect = {
+	if = {
+		limit = {
+			is_ruler = yes
+			is_landless_adventurer = no
+			NOT = { has_government = administrative_government }
+		}
+
+		# --- REALM SUCCESSION ---
+		
+		# CLAN GOVERNMENTS (Target the specific Clan laws)
+		if = {
+			limit = { government_has_flag = government_is_clan }
+			
+			# Clans usually use house_unity laws. We force the one matching the user's intent.
+			if = {
+				limit = {
+					has_character_flag = rse_flag_confederate_partition
+					NOT = { has_realm_law = clan_impassive_partition_succession_law } # Neutral choice for clans
+				}
+				add_realm_law_skip_effects = clan_impassive_partition_succession_law
+			}
+			if = {
+				limit = {
+					has_character_flag = rse_flag_partition
+					NOT = { has_realm_law = clan_impassive_partition_succession_law }
+				}
+				add_realm_law_skip_effects = clan_impassive_partition_succession_law
+			}
+			if = {
+				limit = {
+					has_character_flag = rse_flag_high_partition
+					NOT = { has_realm_law = clan_friendly_partition_succession_law }
+				}
+				add_realm_law_skip_effects = clan_friendly_partition_succession_law
+			}
+			# Clans CAN use standard Primogeniture (single_heir_succession_law)
+			if = {
+				limit = {
+					has_character_flag = rse_flag_primogeniture
+					NOT = { has_realm_law = single_heir_succession_law }
+				}
+				add_realm_law_skip_effects = single_heir_succession_law
+			}
+		}
+		
+		# NON-CLAN GOVERNMENTS (Feudal, Tribal, etc.)
+		else = {
+			if = {
+				limit = {
+					has_character_flag = rse_flag_confederate_partition
+					NOT = { has_realm_law = confederate_partition_succession_law }
+				}
+				add_realm_law_skip_effects = confederate_partition_succession_law
+			}
+			if = {
+				limit = {
+					has_character_flag = rse_flag_partition
+					NOT = { has_realm_law = partition_succession_law }
+				}
+				add_realm_law_skip_effects = partition_succession_law
+			}
+			if = {
+				limit = {
+					has_character_flag = rse_flag_high_partition
+					NOT = { has_realm_law = high_partition_succession_law }
+				}
+				add_realm_law_skip_effects = high_partition_succession_law
+			}
+			if = {
+				limit = {
+					has_character_flag = rse_flag_primogeniture
+					NOT = { has_realm_law = single_heir_succession_law }
+				}
+				add_realm_law_skip_effects = single_heir_succession_law
+			}
+		}
+
+		# Universal Single Heir Variants
+		if = {
+			limit = {
+				has_character_flag = rse_flag_ultimogeniture
+				NOT = { has_realm_law = single_heir_succession_law_youngest }
+			}
+			add_realm_law_skip_effects = single_heir_succession_law_youngest
+		}
+		if = {
+			limit = {
+				has_character_flag = rse_flag_house_seniority
+				NOT = { has_realm_law = single_heir_dynasty_house }
+			}
+			add_realm_law_skip_effects = single_heir_dynasty_house
+		}
+
+		# --- GENDER SUCCESSION ---
+		if = {
+			limit = {
+				has_character_flag = rse_flag_male_only
+				NOT = { has_realm_law = male_only_law }
+			}
+			add_realm_law_skip_effects = male_only_law
+		}
+		if = {
+			limit = {
+				has_character_flag = rse_flag_male_preference
+				NOT = { has_realm_law = male_preference_law }
+			}
+			add_realm_law_skip_effects = male_preference_law
+		}
+		if = {
+			limit = {
+				has_character_flag = rse_flag_equal
+				NOT = { has_realm_law = equal_law }
+			}
+			add_realm_law_skip_effects = equal_law
+		}
+		if = {
+			limit = {
+				has_character_flag = rse_flag_female_preference
+				NOT = { has_realm_law = female_preference_law }
+			}
+			add_realm_law_skip_effects = female_preference_law
+		}
+		if = {
+			limit = {
+				has_character_flag = rse_flag_female_only
+				NOT = { has_realm_law = female_only_law }
+			}
+			add_realm_law_skip_effects = female_only_law
+		}
+	}
+}

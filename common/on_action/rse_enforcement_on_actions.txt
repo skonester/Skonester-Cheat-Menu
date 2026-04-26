@@ -1,0 +1,29 @@
+rse_enforcement_on_actions = {
+	on_quarterly_playable_pulse = {
+		on_actions = {
+			rse_enforcement_sub_pulse
+		}
+	}
+}
+
+rse_enforcement_sub_pulse = {
+	trigger = {
+		is_ruler = yes
+		OR = {
+			has_character_flag = rse_flag_confederate_partition
+			has_character_flag = rse_flag_partition
+			has_character_flag = rse_flag_high_partition
+			has_character_flag = rse_flag_primogeniture
+			has_character_flag = rse_flag_ultimogeniture
+			has_character_flag = rse_flag_house_seniority
+			has_character_flag = rse_flag_male_only
+			has_character_flag = rse_flag_male_preference
+			has_character_flag = rse_flag_equal
+			has_character_flag = rse_flag_female_preference
+			has_character_flag = rse_flag_female_only
+		}
+	}
+	effect = {
+		rse_enforce_laws_effect = yes
+	}
+}

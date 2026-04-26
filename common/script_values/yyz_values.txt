@@ -70,17 +70,17 @@ FILTER_HOOKED_BOTH                             = 0
 FILTER_HOOKED_HOOK                             = 1 
 FILTER_HOOKED_NOT                              = 2 
                          
-ACCOLADE_ARCHER                                = 2 # 0 and 1 are reserved for the retinue button itself
-ACCOLADE_OUTRIDER                              = 3
-ACCOLADE_PIKE_CAPTAIN                          = 4
-ACCOLADE_SKIRMISHER                            = 5
-ACCOLADE_VANGUARD                              = 6
-ACCOLADE_LANCER                                = 7
-ACCOLADE_CAMELIER                              = 8
-ACCOLADE_CROSSBOW_CAPTAIN                      = 9
-ACCOLADE_ELEPHANT_RIDER                        = 10
-ACCOLADE_HORSE_ARCHER                          = 11
-ACCOLADE_BESIEGER                              = 12
+RETINUE_ROLE_ARCHER                                = 2 # 0 and 1 are reserved for the retinue button itself
+RETINUE_ROLE_OUTRIDER                              = 3
+RETINUE_ROLE_PIKE_CAPTAIN                          = 4
+RETINUE_ROLE_SKIRMISHER                            = 5
+RETINUE_ROLE_VANGUARD                              = 6
+RETINUE_ROLE_LANCER                                = 7
+RETINUE_ROLE_CAMELIER                              = 8
+RETINUE_ROLE_CROSSBOW_CAPTAIN                      = 9
+RETINUE_ROLE_ELEPHANT_RIDER                        = 10
+RETINUE_ROLE_HORSE_ARCHER                          = 11
+RETINUE_ROLE_BESIEGER                              = 12
 #####################################################################
 # script values for variable access
 
@@ -131,26 +131,26 @@ yyz_filterInspirationQuality          = { value = 0 if = { limit = { exists = va
 yyz_filterInspirationUnsponsored      = { value = 0 if = { limit = { exists = var:yyz_filterInspirationUnsponsored } add = var:yyz_filterInspirationUnsponsored } }
 
 # modes - accolade values
-yyz_modeAccolade_retinue              = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_retinue } add = var:yyz_modeAccolade_retinue } }
-yyz_modeAccolade_contender            = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_contender } add = var:yyz_modeAccolade_contender } }
-yyz_modeAccolade_manipulator          = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_manipulator } add = var:yyz_modeAccolade_manipulator } }
-yyz_modeAccolade_mentor               = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_mentor } add = var:yyz_modeAccolade_mentor } }
-yyz_modeAccolade_politicker           = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_politicker } add = var:yyz_modeAccolade_politicker } }
-yyz_modeAccolade_reeve                = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_reeve } add = var:yyz_modeAccolade_reeve } }
-yyz_modeAccolade_tactician            = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_tactician } add = var:yyz_modeAccolade_tactician } }
-yyz_modeAccolade_charmer              = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_charmer } add = var:yyz_modeAccolade_charmer } }
-yyz_modeAccolade_disciplinarian       = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_disciplinarian } add = var:yyz_modeAccolade_disciplinarian } }
-yyz_modeAccolade_idealist             = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_idealist } add = var:yyz_modeAccolade_idealist } }
-yyz_modeAccolade_marauder             = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_marauder } add = var:yyz_modeAccolade_marauder } }
-yyz_modeAccolade_scoundrel            = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_scoundrel } add = var:yyz_modeAccolade_scoundrel } }
-yyz_modeAccolade_stalwart             = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_stalwart } add = var:yyz_modeAccolade_stalwart } }
-yyz_modeAccolade_thug                 = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_thug } add = var:yyz_modeAccolade_thug } }
-yyz_modeAccolade_valiant              = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_valiant } add = var:yyz_modeAccolade_valiant } }
-yyz_modeAccolade_fanatic              = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_fanatic } add = var:yyz_modeAccolade_fanatic } }
-yyz_modeAccolade_blademaster          = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_blademaster } add = var:yyz_modeAccolade_blademaster } }
-yyz_modeAccolade_huntmaster           = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_huntmaster } add = var:yyz_modeAccolade_huntmaster } }
-yyz_modeAccolade_master_of_revels     = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_master_of_revels } add = var:yyz_modeAccolade_master_of_revels } }
-yyz_modeAccolade_house_paragon        = { value = 0 if = { limit = { exists = var:yyz_modeAccolade_house_paragon } add = var:yyz_modeAccolade_house_paragon } }
+yyz_modeRETINUE_ROLE_retinue              = { value = 0 if = { limit = { exists = var:yyz_modeRETINUE_ROLE_retinue } add = var:yyz_modeRETINUE_ROLE_retinue } }
+yyz_modeRETINUE_ROLE_contender            = { value = 0 if = { limit = { exists = var:yyz_modeRETINUE_ROLE_contender } add = var:yyz_modeRETINUE_ROLE_contender } }
+yyz_modeRETINUE_ROLE_manipulator          = { value = 0 if = { limit = { exists = var:yyz_modeRETINUE_ROLE_manipulator } add = var:yyz_modeRETINUE_ROLE_manipulator } }
+yyz_modeRETINUE_ROLE_mentor               = { value = 0 if = { limit = { exists = var:yyz_modeRETINUE_ROLE_mentor } add = var:yyz_modeRETINUE_ROLE_mentor } }
+yyz_modeRETINUE_ROLE_politicker           = { value = 0 if = { limit = { exists = var:yyz_modeRETINUE_ROLE_politicker } add = var:yyz_modeRETINUE_ROLE_politicker } }
+yyz_modeRETINUE_ROLE_reeve                = { value = 0 if = { limit = { exists = var:yyz_modeRETINUE_ROLE_reeve } add = var:yyz_modeRETINUE_ROLE_reeve } }
+yyz_modeRETINUE_ROLE_tactician            = { value = 0 if = { limit = { exists = var:yyz_modeRETINUE_ROLE_tactician } add = var:yyz_modeRETINUE_ROLE_tactician } }
+yyz_modeRETINUE_ROLE_charmer              = { value = 0 if = { limit = { exists = var:yyz_modeRETINUE_ROLE_charmer } add = var:yyz_modeRETINUE_ROLE_charmer } }
+yyz_modeRETINUE_ROLE_disciplinarian       = { value = 0 if = { limit = { exists = var:yyz_modeRETINUE_ROLE_disciplinarian } add = var:yyz_modeRETINUE_ROLE_disciplinarian } }
+yyz_modeRETINUE_ROLE_idealist             = { value = 0 if = { limit = { exists = var:yyz_modeRETINUE_ROLE_idealist } add = var:yyz_modeRETINUE_ROLE_idealist } }
+yyz_modeRETINUE_ROLE_marauder             = { value = 0 if = { limit = { exists = var:yyz_modeRETINUE_ROLE_marauder } add = var:yyz_modeRETINUE_ROLE_marauder } }
+yyz_modeRETINUE_ROLE_scoundrel            = { value = 0 if = { limit = { exists = var:yyz_modeRETINUE_ROLE_scoundrel } add = var:yyz_modeRETINUE_ROLE_scoundrel } }
+yyz_modeRETINUE_ROLE_stalwart             = { value = 0 if = { limit = { exists = var:yyz_modeRETINUE_ROLE_stalwart } add = var:yyz_modeRETINUE_ROLE_stalwart } }
+yyz_modeRETINUE_ROLE_thug                 = { value = 0 if = { limit = { exists = var:yyz_modeRETINUE_ROLE_thug } add = var:yyz_modeRETINUE_ROLE_thug } }
+yyz_modeRETINUE_ROLE_valiant              = { value = 0 if = { limit = { exists = var:yyz_modeRETINUE_ROLE_valiant } add = var:yyz_modeRETINUE_ROLE_valiant } }
+yyz_modeRETINUE_ROLE_fanatic              = { value = 0 if = { limit = { exists = var:yyz_modeRETINUE_ROLE_fanatic } add = var:yyz_modeRETINUE_ROLE_fanatic } }
+yyz_modeRETINUE_ROLE_blademaster          = { value = 0 if = { limit = { exists = var:yyz_modeRETINUE_ROLE_blademaster } add = var:yyz_modeRETINUE_ROLE_blademaster } }
+yyz_modeRETINUE_ROLE_huntmaster           = { value = 0 if = { limit = { exists = var:yyz_modeRETINUE_ROLE_huntmaster } add = var:yyz_modeRETINUE_ROLE_huntmaster } }
+yyz_modeRETINUE_ROLE_master_of_revels     = { value = 0 if = { limit = { exists = var:yyz_modeRETINUE_ROLE_master_of_revels } add = var:yyz_modeRETINUE_ROLE_master_of_revels } }
+yyz_modeRETINUE_ROLE_house_paragon        = { value = 0 if = { limit = { exists = var:yyz_modeRETINUE_ROLE_house_paragon } add = var:yyz_modeRETINUE_ROLE_house_paragon } }
 
 #####################################################################
 # calculated values
@@ -212,3 +212,4 @@ yyz_sort_value = {
     multiply = -1
   }
 }
+

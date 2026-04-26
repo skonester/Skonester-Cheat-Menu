@@ -1,4 +1,4 @@
-﻿title_succession_laws = {
+title_succession_laws = {
 	# Default Feudal Elective
 	feudal_elective_succession_law = {
 		can_have = {
@@ -315,9 +315,8 @@
 			prestige = 1
 		}
 	}
-}
 
-title_succession_laws = {
+	# Populist/Peasant Elective
 	peasant_elective_succession_law = {
 		can_have = {
 			OR = {
@@ -343,42 +342,44 @@ title_succession_laws = {
 		}
 		pass_cost = {
 			prestige = 1
-	}
-	
-theocratic_elective_succession_law = {
-	can_have = {
-		OR = {
-			government_has_flag = government_is_feudal
-			government_has_flag = government_is_theocracy
 		}
-		highest_held_title_tier >= tier_duchy
-	}
-	can_pass = {
-		can_change_title_law_trigger = yes
-	}
-	can_title_have = {
-		can_title_have_law_general_trigger = yes
-	}
-	succession = {
-		order_of_succession = election
-		election_type = theocratic_elective
-	}
-	flag = elective_succession_law
-	title_allegiance_opinion = 5
-	revoke_cost = {
-		prestige = 1
-	}
-	pass_cost = {
-		prestige = 1
 	}
 	
-	# OPTIONAL: Uncomment this if you want the AI to use it.
-	# ai_will_do = {
-	# 	base = 10
-	# 	modifier = {
-	# 		factor = 0
-	# 		piety_level < 3 # AI won't do it if they aren't pious
-	# 	}
-	# }
-
+	# Theocratic Elective
+	theocratic_elective_succession_law = {
+		can_have = {
+			OR = {
+				government_has_flag = government_is_feudal
+				government_has_flag = government_is_theocracy
+			}
+			highest_held_title_tier >= tier_duchy
+		}
+		can_pass = {
+			can_change_title_law_trigger = yes
+		}
+		can_title_have = {
+			can_title_have_law_general_trigger = yes
+		}
+		succession = {
+			order_of_succession = election
+			election_type = theocratic_elective
+		}
+		flag = elective_succession_law
+		title_allegiance_opinion = 5
+		revoke_cost = {
+			prestige = 1
+		}
+		pass_cost = {
+			prestige = 1
+		}
+		
+		# OPTIONAL: Uncomment this if you want the AI to use it.
+		# ai_will_do = {
+		# 	base = 10
+		# 	modifier = {
+		# 		factor = 0
+		# 		piety_level < 3 # AI won't do it if they aren't pious
+		# 	}
+		# }
+	}
 }

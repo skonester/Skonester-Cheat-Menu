@@ -46,27 +46,27 @@ reset_filters = {
   set_variable = { name = yyz_filterInspirationQuality   value = 12 }
   set_variable = { name = yyz_filterInspirationUnsponsored  value = 0 }
 
-  set_variable = { name = yyz_modeAccolade_retinue           value = 0 }
+  set_variable = { name = yyz_modeRetinueRole_retinue           value = 0 }
 
-  set_variable = { name = yyz_modeAccolade_contender         value = 0 }
-  set_variable = { name = yyz_modeAccolade_manipulator       value = 0 }
-  set_variable = { name = yyz_modeAccolade_mentor            value = 0 }
-  set_variable = { name = yyz_modeAccolade_politicker        value = 0 }
-  set_variable = { name = yyz_modeAccolade_reeve             value = 0 }
-  set_variable = { name = yyz_modeAccolade_tactician         value = 0 }
-  set_variable = { name = yyz_modeAccolade_charmer           value = 0 }
-  set_variable = { name = yyz_modeAccolade_disciplinarian    value = 0 }
-  set_variable = { name = yyz_modeAccolade_idealist          value = 0 }
-  set_variable = { name = yyz_modeAccolade_marauder          value = 0 }
-  set_variable = { name = yyz_modeAccolade_scoundrel         value = 0 }
-  set_variable = { name = yyz_modeAccolade_stalwart          value = 0 }
-  set_variable = { name = yyz_modeAccolade_thug              value = 0 }
-  set_variable = { name = yyz_modeAccolade_valiant           value = 0 }
-  set_variable = { name = yyz_modeAccolade_fanatic           value = 0 }
-  set_variable = { name = yyz_modeAccolade_blademaster       value = 0 }
-  set_variable = { name = yyz_modeAccolade_huntmaster        value = 0 }
-  set_variable = { name = yyz_modeAccolade_master_of_revels  value = 0 }
-  set_variable = { name = yyz_modeAccolade_house_paragon     value = 0 }
+  set_variable = { name = yyz_modeRetinueRole_contender         value = 0 }
+  set_variable = { name = yyz_modeRetinueRole_manipulator       value = 0 }
+  set_variable = { name = yyz_modeRetinueRole_mentor            value = 0 }
+  set_variable = { name = yyz_modeRetinueRole_politicker        value = 0 }
+  set_variable = { name = yyz_modeRetinueRole_reeve             value = 0 }
+  set_variable = { name = yyz_modeRetinueRole_tactician         value = 0 }
+  set_variable = { name = yyz_modeRetinueRole_charmer           value = 0 }
+  set_variable = { name = yyz_modeRetinueRole_disciplinarian    value = 0 }
+  set_variable = { name = yyz_modeRetinueRole_idealist          value = 0 }
+  set_variable = { name = yyz_modeRetinueRole_marauder          value = 0 }
+  set_variable = { name = yyz_modeRetinueRole_scoundrel         value = 0 }
+  set_variable = { name = yyz_modeRetinueRole_stalwart          value = 0 }
+  set_variable = { name = yyz_modeRetinueRole_thug              value = 0 }
+  set_variable = { name = yyz_modeRetinueRole_valiant           value = 0 }
+  set_variable = { name = yyz_modeRetinueRole_fanatic           value = 0 }
+  set_variable = { name = yyz_modeRetinueRole_blademaster       value = 0 }
+  set_variable = { name = yyz_modeRetinueRole_huntmaster        value = 0 }
+  set_variable = { name = yyz_modeRetinueRole_master_of_revels  value = 0 }
+  set_variable = { name = yyz_modeRetinueRole_house_paragon     value = 0 }
 }
 
 # toggles the value of $PRIMARY$ between 0 and 1.  if $PIMARY$ is 0, force $SECONDARY$ to 1 
@@ -230,7 +230,7 @@ generate_yyz_knight_list = {
 # filters
       passes_sexFilter = yes                                      # check for male/female as appropriate
       passes_maritalFilter = yes                                  # check for married/unmarried as requested by player
-      passes_accoladeFilter = yes
+      passes_retinueRoleFilter = yes
       passes_inviteFilter = { RECRUITER = scope:actor RECRUITEE = this }
     }         
     order_by = { value = yyz_sort_value }
@@ -529,3 +529,4 @@ generate_yyz_fertility_list = {
 
 #######################################
 # reminder mod
+

@@ -1,4 +1,4 @@
-namespace = dp_char_editor
+﻿namespace = dp_char_editor
 
 ###  ###
 

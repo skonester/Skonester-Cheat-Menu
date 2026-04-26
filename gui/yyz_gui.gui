@@ -1,4 +1,4 @@
-﻿
+
 window = {
   name = "yyz_character_list_window"
   size = { 1250 95% }
@@ -229,252 +229,252 @@ window = {
 
       yyz_button = {
         size = { 64 32 }
-        name = "btn_modeAccolade_retinue"
-        text = "YYZ_MODE_ACCOLADE_RETINUE"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_retinue')]"
-        tooltip = "YYZ_MODE_ACCOLADE_RETINUE_TT"
+        name = "btn_modeRetinueRole_retinue"
+        text = "YYZ_MODE_RETINUE_ROLE_RETINUE"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_retinue')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_RETINUE_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_archer"
-        text = "YYZ_MODE_ACCOLADE_ARCHER"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_archer')]"
-        tooltip = "YYZ_MODE_ACCOLADE_ARCHER_TT"
+        name = "btn_modeRetinueRole_archer"
+        text = "YYZ_MODE_RETINUE_ROLE_ARCHER"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_archer')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_ARCHER_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_outrider"
-        text = "YYZ_MODE_ACCOLADE_OUTRIDER"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_outrider')]"
-        tooltip = "YYZ_MODE_ACCOLADE_OUTRIDER_TT"
+        name = "btn_modeRetinueRole_outrider"
+        text = "YYZ_MODE_RETINUE_ROLE_OUTRIDER"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_outrider')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_OUTRIDER_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_pike_captain"
-        text = "YYZ_MODE_ACCOLADE_PIKE_CAPTAIN"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_pike_captain')]"
-        tooltip = "YYZ_MODE_ACCOLADE_PIKE_CAPTAIN_TT"
+        name = "btn_modeRetinueRole_pike_captain"
+        text = "YYZ_MODE_RETINUE_ROLE_PIKE_CAPTAIN"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_pike_captain')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_PIKE_CAPTAIN_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_skirmisher"
-        text = "YYZ_MODE_ACCOLADE_SKIRMISHER"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_skirmisher')]"
-        tooltip = "YYZ_MODE_ACCOLADE_SKIRMISHER_TT"
+        name = "btn_modeRetinueRole_skirmisher"
+        text = "YYZ_MODE_RETINUE_ROLE_SKIRMISHER"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_skirmisher')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_SKIRMISHER_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_vanguard"
-        text = "YYZ_MODE_ACCOLADE_VANGUARD"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_vanguard')]"
-        tooltip = "YYZ_MODE_ACCOLADE_VANGUARD_TT"
+        name = "btn_modeRetinueRole_vanguard"
+        text = "YYZ_MODE_RETINUE_ROLE_VANGUARD"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_vanguard')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_VANGUARD_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_lancer"
-        text = "YYZ_MODE_ACCOLADE_LANCER"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_lancer')]"
-        tooltip = "YYZ_MODE_ACCOLADE_LANCER_TT"
+        name = "btn_modeRetinueRole_lancer"
+        text = "YYZ_MODE_RETINUE_ROLE_LANCER"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_lancer')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_LANCER_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_camelier"
-        text = "YYZ_MODE_ACCOLADE_CAMELIER"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_camelier')]"
-        tooltip = "YYZ_MODE_ACCOLADE_CAMELIER_TT"
+        name = "btn_modeRetinueRole_camelier"
+        text = "YYZ_MODE_RETINUE_ROLE_CAMELIER"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_camelier')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_CAMELIER_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_crossbow_captain"
-        text = "YYZ_MODE_ACCOLADE_CROSSBOW_CAPTAIN"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_crossbow_captain')]"
-        tooltip = "YYZ_MODE_ACCOLADE_CROSSBOW_CAPTAIN_TT"
+        name = "btn_modeRetinueRole_crossbow_captain"
+        text = "YYZ_MODE_RETINUE_ROLE_CROSSBOW_CAPTAIN"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_crossbow_captain')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_CROSSBOW_CAPTAIN_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_elephant_rider"
-        text = "YYZ_MODE_ACCOLADE_ELEPHANT_RIDER"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_elephant_rider')]"
-        tooltip = "YYZ_MODE_ACCOLADE_ELEPHANT_RIDER_TT"
+        name = "btn_modeRetinueRole_elephant_rider"
+        text = "YYZ_MODE_RETINUE_ROLE_ELEPHANT_RIDER"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_elephant_rider')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_ELEPHANT_RIDER_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_horse_archer"
-        text = "YYZ_MODE_ACCOLADE_HORSE_ARCHER"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_horse_archer')]"
-        tooltip = "YYZ_MODE_ACCOLADE_HORSE_ARCHER_TT"
+        name = "btn_modeRetinueRole_horse_archer"
+        text = "YYZ_MODE_RETINUE_ROLE_HORSE_ARCHER"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_horse_archer')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_HORSE_ARCHER_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_besieger"
-        text = "YYZ_MODE_ACCOLADE_BESIEGER"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_besieger')]"
-        tooltip = "YYZ_MODE_ACCOLADE_BESIEGER_TT"
+        name = "btn_modeRetinueRole_besieger"
+        text = "YYZ_MODE_RETINUE_ROLE_BESIEGER"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_besieger')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_BESIEGER_TT"
       }
 
       expand = {}
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_contender"
-        text = "YYZ_MODE_ACCOLADE_CONTENDER"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_contender')]"
-        tooltip = "YYZ_MODE_ACCOLADE_CONTENDER_TT"
+        name = "btn_modeRetinueRole_contender"
+        text = "YYZ_MODE_RETINUE_ROLE_CONTENDER"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_contender')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_CONTENDER_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_manipulator"
-        text = "YYZ_MODE_ACCOLADE_MANIPULATOR"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_manipulator')]"
-        tooltip = "YYZ_MODE_ACCOLADE_MANIPULATOR_TT"
+        name = "btn_modeRetinueRole_manipulator"
+        text = "YYZ_MODE_RETINUE_ROLE_MANIPULATOR"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_manipulator')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_MANIPULATOR_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_mentor"
-        text = "YYZ_MODE_ACCOLADE_MENTOR"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_mentor')]"
-        tooltip = "YYZ_MODE_ACCOLADE_MENTOR_TT"
+        name = "btn_modeRetinueRole_mentor"
+        text = "YYZ_MODE_RETINUE_ROLE_MENTOR"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_mentor')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_MENTOR_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_politicker"
-        text = "YYZ_MODE_ACCOLADE_POLITICKER"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_politicker')]"
-        tooltip = "YYZ_MODE_ACCOLADE_POLITICKER_TT"
+        name = "btn_modeRetinueRole_politicker"
+        text = "YYZ_MODE_RETINUE_ROLE_POLITICKER"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_politicker')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_POLITICKER_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_reeve"
-        text = "YYZ_MODE_ACCOLADE_REEVE"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_reeve')]"
-        tooltip = "YYZ_MODE_ACCOLADE_REEVE_TT"
+        name = "btn_modeRetinueRole_reeve"
+        text = "YYZ_MODE_RETINUE_ROLE_REEVE"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_reeve')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_REEVE_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_tactician"
-        text = "YYZ_MODE_ACCOLADE_TACTICIAN"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_tactician')]"
-        tooltip = "YYZ_MODE_ACCOLADE_TACTICIAN_TT"
+        name = "btn_modeRetinueRole_tactician"
+        text = "YYZ_MODE_RETINUE_ROLE_TACTICIAN"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_tactician')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_TACTICIAN_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_charmer"
-        text = "YYZ_MODE_ACCOLADE_CHARMER"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_charmer')]"
-        tooltip = "YYZ_MODE_ACCOLADE_CHARMER_TT"
+        name = "btn_modeRetinueRole_charmer"
+        text = "YYZ_MODE_RETINUE_ROLE_CHARMER"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_charmer')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_CHARMER_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_disciplinarian"
-        text = "YYZ_MODE_ACCOLADE_DISCIPLINARIAN"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_disciplinarian')]"
-        tooltip = "YYZ_MODE_ACCOLADE_DISCIPLINARIAN_TT"
+        name = "btn_modeRetinueRole_disciplinarian"
+        text = "YYZ_MODE_RETINUE_ROLE_DISCIPLINARIAN"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_disciplinarian')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_DISCIPLINARIAN_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_idealist"
-        text = "YYZ_MODE_ACCOLADE_IDEALIST"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_idealist')]"
-        tooltip = "YYZ_MODE_ACCOLADE_IDEALIST_TT"
+        name = "btn_modeRetinueRole_idealist"
+        text = "YYZ_MODE_RETINUE_ROLE_IDEALIST"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_idealist')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_IDEALIST_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_marauder"
-        text = "YYZ_MODE_ACCOLADE_MARAUDER"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_marauder')]"
-        tooltip = "YYZ_MODE_ACCOLADE_MARAUDER_TT"
+        name = "btn_modeRetinueRole_marauder"
+        text = "YYZ_MODE_RETINUE_ROLE_MARAUDER"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_marauder')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_MARAUDER_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_scoundrel"
-        text = "YYZ_MODE_ACCOLADE_SCOUNDREL"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_scoundrel')]"
-        tooltip = "YYZ_MODE_ACCOLADE_SCOUNDREL_TT"
+        name = "btn_modeRetinueRole_scoundrel"
+        text = "YYZ_MODE_RETINUE_ROLE_SCOUNDREL"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_scoundrel')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_SCOUNDREL_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_stalwart"
-        text = "YYZ_MODE_ACCOLADE_STALWART"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_stalwart')]"
-        tooltip = "YYZ_MODE_ACCOLADE_STALWART_TT"
+        name = "btn_modeRetinueRole_stalwart"
+        text = "YYZ_MODE_RETINUE_ROLE_STALWART"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_stalwart')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_STALWART_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_thug"
-        text = "YYZ_MODE_ACCOLADE_THUG"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_thug')]"
-        tooltip = "YYZ_MODE_ACCOLADE_THUG_TT"
+        name = "btn_modeRetinueRole_thug"
+        text = "YYZ_MODE_RETINUE_ROLE_THUG"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_thug')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_THUG_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_valiant"
-        text = "YYZ_MODE_ACCOLADE_VALIANT"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_valiant')]"
-        tooltip = "YYZ_MODE_ACCOLADE_VALIANT_TT"
+        name = "btn_modeRetinueRole_valiant"
+        text = "YYZ_MODE_RETINUE_ROLE_VALIANT"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_valiant')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_VALIANT_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_fanatic"
-        text = "YYZ_MODE_ACCOLADE_FANATIC"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_fanatic')]"
-        tooltip = "YYZ_MODE_ACCOLADE_FANATIC_TT"
+        name = "btn_modeRetinueRole_fanatic"
+        text = "YYZ_MODE_RETINUE_ROLE_FANATIC"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_fanatic')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_FANATIC_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_blademaster"
-        text = "YYZ_MODE_ACCOLADE_BLADEMASTER"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_blademaster')]"
-        tooltip = "YYZ_MODE_ACCOLADE_BLADEMASTER_TT"
+        name = "btn_modeRetinueRole_blademaster"
+        text = "YYZ_MODE_RETINUE_ROLE_BLADEMASTER"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_blademaster')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_BLADEMASTER_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_huntmaster"
-        text = "YYZ_MODE_ACCOLADE_HUNTMASTER"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_huntmaster')]"
-        tooltip = "YYZ_MODE_ACCOLADE_HUNTMASTER_TT"
+        name = "btn_modeRetinueRole_huntmaster"
+        text = "YYZ_MODE_RETINUE_ROLE_HUNTMASTER"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_huntmaster')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_HUNTMASTER_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_master_of_revels"
-        text = "YYZ_MODE_ACCOLADE_MASTER_OF_REVELS"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_master_of_revels')]"
-        tooltip = "YYZ_MODE_ACCOLADE_MASTER_OF_REVELS_TT"
+        name = "btn_modeRetinueRole_master_of_revels"
+        text = "YYZ_MODE_RETINUE_ROLE_MASTER_OF_REVELS"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_master_of_revels')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_MASTER_OF_REVELS_TT"
       }
 
       yyz_button = {
         size = { 44 32 }
-        name = "btn_modeAccolade_house_paragon"
-        text = "YYZ_MODE_ACCOLADE_HOUSE_PARAGON"
-        datacontext = "[GetScriptedGui('yyz_modeAccolade_house_paragon')]"
-        tooltip = "YYZ_MODE_ACCOLADE_HOUSE_PARAGON_TT"
+        name = "btn_modeRetinueRole_house_paragon"
+        text = "YYZ_MODE_RETINUE_ROLE_HOUSE_PARAGON"
+        datacontext = "[GetScriptedGui('yyz_modeRetinueRole_house_paragon')]"
+        tooltip = "YYZ_MODE_RETINUE_ROLE_HOUSE_PARAGON_TT"
       }
     }
 
@@ -1131,3 +1131,4 @@ window = {
     }
   }
 }
+

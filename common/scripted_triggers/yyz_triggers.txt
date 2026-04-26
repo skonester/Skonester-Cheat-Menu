@@ -366,37 +366,38 @@ can_be_house_paragon = {
   }
 }
 
-passes_accoladeFilter = {
+passes_retinueRoleFilter = {
   AND = {
-    OR = { NOT = { root.var:yyz_modeAccolade_retinue = ACCOLADE_ARCHER }            can_be_archer = yes }
-    OR = { NOT = { root.var:yyz_modeAccolade_retinue = ACCOLADE_OUTRIDER }          can_be_outrider = yes }
-    OR = { NOT = { root.var:yyz_modeAccolade_retinue = ACCOLADE_PIKE_CAPTAIN }      can_be_pike_captain = yes }
-    OR = { NOT = { root.var:yyz_modeAccolade_retinue = ACCOLADE_SKIRMISHER }        can_be_skirmisher = yes }
-    OR = { NOT = { root.var:yyz_modeAccolade_retinue = ACCOLADE_VANGUARD }          can_be_vanguard = yes }
-    OR = { NOT = { root.var:yyz_modeAccolade_retinue = ACCOLADE_LANCER }            can_be_lancer = yes }
-    OR = { NOT = { root.var:yyz_modeAccolade_retinue = ACCOLADE_CAMELIER }          can_be_camelier = yes }
-    OR = { NOT = { root.var:yyz_modeAccolade_retinue = ACCOLADE_CROSSBOW_CAPTAIN }  can_be_crossbow_captain = yes }
-    OR = { NOT = { root.var:yyz_modeAccolade_retinue = ACCOLADE_ELEPHANT_RIDER }    can_be_elephant_rider = yes }
-    OR = { NOT = { root.var:yyz_modeAccolade_retinue = ACCOLADE_HORSE_ARCHER }      can_be_horse_archer = yes }
-    OR = { NOT = { root.var:yyz_modeAccolade_retinue = ACCOLADE_BESIEGER }          can_be_besieger = yes }
-    OR = { root.var:yyz_modeAccolade_contender = 0                                  can_be_contender = yes }
-    OR = { root.var:yyz_modeAccolade_charmer = 0                                    can_be_charmer = yes }
-    OR = { root.var:yyz_modeAccolade_disciplinarian = 0                             can_be_disciplinarian = yes }
-    OR = { root.var:yyz_modeAccolade_idealist = 0                                   can_be_idealist = yes }
-    OR = { root.var:yyz_modeAccolade_marauder = 0                                   can_be_marauder = yes }
-    OR = { root.var:yyz_modeAccolade_scoundrel = 0                                  can_be_scoundrel = yes }
-    OR = { root.var:yyz_modeAccolade_stalwart = 0                                   can_be_stalwart = yes }
-    OR = { root.var:yyz_modeAccolade_thug = 0                                       can_be_thug = yes }
-    OR = { root.var:yyz_modeAccolade_valiant = 0                                    can_be_valiant = yes }
-    OR = { root.var:yyz_modeAccolade_fanatic = 0                                    can_be_fanatic = yes }
-    OR = { root.var:yyz_modeAccolade_blademaster = 0                                can_be_blademaster = yes }
-    OR = { root.var:yyz_modeAccolade_huntmaster = 0                                 can_be_huntmaster = yes }
-    OR = { root.var:yyz_modeAccolade_master_of_revels = 0                           can_be_master_of_revels = yes }
-    OR = { root.var:yyz_modeAccolade_politicker = 0                                 can_be_politicker = yes }
-    OR = { root.var:yyz_modeAccolade_tactician = 0                                  can_be_tactician = yes }
-    OR = { root.var:yyz_modeAccolade_reeve = 0                                      can_be_reeve = yes }
-    OR = { root.var:yyz_modeAccolade_manipulator = 0                                can_be_manipulator = yes }
-    OR = { root.var:yyz_modeAccolade_mentor = 0                                     can_be_mentor = yes }
-    OR = { root.var:yyz_modeAccolade_house_paragon = 0                              can_be_house_paragon = yes }
+    OR = { NOT = { root.var:yyz_modeRetinueRole_retinue = RETINUE_ROLE_ARCHER }            can_be_archer = yes }
+    OR = { NOT = { root.var:yyz_modeRetinueRole_retinue = RETINUE_ROLE_OUTRIDER }          can_be_outrider = yes }
+    OR = { NOT = { root.var:yyz_modeRetinueRole_retinue = RETINUE_ROLE_PIKE_CAPTAIN }      can_be_pike_captain = yes }
+    OR = { NOT = { root.var:yyz_modeRetinueRole_retinue = RETINUE_ROLE_SKIRMISHER }        can_be_skirmisher = yes }
+    OR = { NOT = { root.var:yyz_modeRetinueRole_retinue = RETINUE_ROLE_VANGUARD }          can_be_vanguard = yes }
+    OR = { NOT = { root.var:yyz_modeRetinueRole_retinue = RETINUE_ROLE_LANCER }            can_be_lancer = yes }
+    OR = { NOT = { root.var:yyz_modeRetinueRole_retinue = RETINUE_ROLE_CAMELIER }          can_be_camelier = yes }
+    OR = { NOT = { root.var:yyz_modeRetinueRole_retinue = RETINUE_ROLE_CROSSBOW_CAPTAIN }  can_be_crossbow_captain = yes }
+    OR = { NOT = { root.var:yyz_modeRetinueRole_retinue = RETINUE_ROLE_ELEPHANT_RIDER }    can_be_elephant_rider = yes }
+    OR = { NOT = { root.var:yyz_modeRetinueRole_retinue = RETINUE_ROLE_HORSE_ARCHER }      can_be_horse_archer = yes }
+    OR = { NOT = { root.var:yyz_modeRetinueRole_retinue = RETINUE_ROLE_BESIEGER }          can_be_besieger = yes }
+    OR = { root.var:yyz_modeRetinueRole_contender = 0                                  can_be_contender = yes }
+    OR = { root.var:yyz_modeRetinueRole_charmer = 0                                    can_be_charmer = yes }
+    OR = { root.var:yyz_modeRetinueRole_disciplinarian = 0                             can_be_disciplinarian = yes }
+    OR = { root.var:yyz_modeRetinueRole_idealist = 0                                   can_be_idealist = yes }
+    OR = { root.var:yyz_modeRetinueRole_marauder = 0                                   can_be_marauder = yes }
+    OR = { root.var:yyz_modeRetinueRole_scoundrel = 0                                  can_be_scoundrel = yes }
+    OR = { root.var:yyz_modeRetinueRole_stalwart = 0                                   can_be_stalwart = yes }
+    OR = { root.var:yyz_modeRetinueRole_thug = 0                                       can_be_thug = yes }
+    OR = { root.var:yyz_modeRetinueRole_valiant = 0                                    can_be_valiant = yes }
+    OR = { root.var:yyz_modeRetinueRole_fanatic = 0                                    can_be_fanatic = yes }
+    OR = { root.var:yyz_modeRetinueRole_blademaster = 0                                can_be_blademaster = yes }
+    OR = { root.var:yyz_modeRetinueRole_huntmaster = 0                                 can_be_huntmaster = yes }
+    OR = { root.var:yyz_modeRetinueRole_master_of_revels = 0                           can_be_master_of_revels = yes }
+    OR = { root.var:yyz_modeRetinueRole_politicker = 0                                 can_be_politicker = yes }
+    OR = { root.var:yyz_modeRetinueRole_tactician = 0                                  can_be_tactician = yes }
+    OR = { root.var:yyz_modeRetinueRole_reeve = 0                                      can_be_reeve = yes }
+    OR = { root.var:yyz_modeRetinueRole_manipulator = 0                                can_be_manipulator = yes }
+    OR = { root.var:yyz_modeRetinueRole_mentor = 0                                     can_be_mentor = yes }
+    OR = { root.var:yyz_modeRetinueRole_house_paragon = 0                              can_be_house_paragon = yes }
   }
 }
+

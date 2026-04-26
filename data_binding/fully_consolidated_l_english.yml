@@ -4703,3 +4703,11 @@ dp_char_interactions.TREASURY.minus_100000:0 "Remove 100,000 Treasury"
  ### From: modifiers_localization\zhuge_health_modifiers_l_english.yml
   zhuge_hufu_modifier: "Erosion of National Destiny"
   zhuge_hufu_modifier_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] borrowed the power of national destiny, and as a result, his soul was devoured—ultimately ascending to the heavens and dissolving into the endless void."
+
+##### For Taurus/theocratic_elective_succession_law:1 "Theocratic Elective"
+ theocratic_elective_succession_law_effects:2 "All [de_jure|E] [vassals|E] can nominate a [title_heir|E] from among themselves, the [close_family|E] of the ruler, and [claimant|E]s. [voting_power|E] in this [succession_law|E] is influenced by the [elector|E]'s [title_tier|E], [piety_level|E], and [virtuous|E] [traits|E]. Electors will favor candidates with a high [piety_level|E] and [virtuous|E] [traits|E]."
+ theocratic_elective_candidates:0 "Close Family, Claimants, and De Jure Vassals"
+ theocratic_elective_candidates_tooltip:1 "In order to be a valid Candidate under Theo Elective, a character must fulfill one of the following conditions:\n$EFFECT_LIST_BULLET$Be a legitimate [close_family|E] member of the current ruler, who is not in line to inherit a Republic. Children of a candidate cannot be nominated\n$EFFECT_LIST_BULLET$Be a [claimant|E] to the title, who is not in line to inherit a Republic\n$EFFECT_LIST_BULLET$Be a [de_jure|E] [vassal|E] of the title"
+ theocratic_elective_electors:0 "De Jure Vassals"
+ theocratic_elective_electors_tooltip:0 "In order to be a valid [elector|E] under Theocratic Elective, a vassal must fulfill all the following conditions:\n$EFFECT_LIST_BULLET$Be a [de_jure|E] [vassal|E] of the title\n$EFFECT_LIST_BULLET$Be a Count or higher tier."
+ 

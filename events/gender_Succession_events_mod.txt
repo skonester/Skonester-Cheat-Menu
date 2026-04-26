@@ -1,4 +1,4 @@
-namespace = gender_succession_events_mod
+﻿namespace = gender_succession_events_mod
 
 gender_succession_events_mod.1001 = {
     type = character_event

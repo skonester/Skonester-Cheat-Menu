@@ -1,0 +1,14 @@
+# Forces the new holder to become a theocracy if the title they just inherited uses the theocratic elective law
+on_title_gain_inheritance = {
+	effect = {
+		if = {
+			limit = {
+				scope:title = {
+					has_title_law = theocratic_elective_succession_law
+				}
+				NOT = { has_government = theocracy_government }
+			}
+			change_government = theocracy_government
+		}
+	}
+}

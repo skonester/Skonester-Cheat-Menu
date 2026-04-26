@@ -1,4 +1,4 @@
-
+﻿
 namespace = sarc_char_design
 
 sarc_char_design.1001 = {

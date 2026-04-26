@@ -1,4 +1,4 @@
-texticon = {
+﻿texticon = {
 	icon = tyranny_icon
 	iconsize = {
 		texture = "gfx/interface/icons/icon_tyranny.dds"

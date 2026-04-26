@@ -27,11 +27,9 @@
  peasant_elective_electors_tooltip:0 "Чтобы быть [elector|E] при народных выборах, вассал должен соответствовать всем следующим условиям:\n$EFFECT_LIST_BULLET$Быть прямым вассалом титула\n$EFFECT_LIST_BULLET$Иметь [rank|E] выше, чем [baron|E]."
 
  theocratic_elective_succession_law:1 "Теократические выборы"
- theocratic_elective_succession_law_effects:2 "Все [de_jure|E] [vassals|E] с [government|E] типа [theocracy|E] могут выдвинуть [title_heir|E] из числа [close_family|E] правителя и [claimant|E]. На [voting_power|E] в этом [succession_law|E] влияет [title_tier|E], [piety_level|E] и [virtuous|E] [traits|E] [elector|E]. Выборщики будут предпочитать кандидатов с высоким [piety_level|E] и [virtuous|E] [traits|E]."
- theocratic_elective_candidates:0 "Близкие родственники и претенденты"
- # Note: In your source text, this tooltip says "Popular Elective", likely a copy-paste error.
- # I have corrected it here to "Theocratic Elective" (теократических выборах) for the translation to make sense in game.
- theocratic_elective_candidates_tooltip:1 "Чтобы быть кандидатом при теократических выборах, персонаж должен соответствовать одному из следующих условий:\n$EFFECT_LIST_BULLET$Быть законным членом [close_family|E] текущего правителя и не быть наследником теократии или республики. Дети кандидата не могут быть выдвинуты\n$EFFECT_LIST_BULLET$Быть [claimant|E] на титул и не быть наследником теократии или республики"
- theocratic_elective_electors:0 "Теократические вассалы"
- theocratic_elective_electors_tooltip:0 "Чтобы быть [elector|E] при теократических выборах, вассал должен соответствовать всем следующим условиям:\n$EFFECT_LIST_BULLET$Быть [de_jure|E] [vassals|E] титула\n$EFFECT_LIST_BULLET$Иметь [government|E] типа [theocracy|E]."
+ theocratic_elective_succession_law_effects:2 "Все [de_jure|E] [vassals|E] могут выдвинуть [title_heir|E] из своего числа, из числа [close_family|E] правителя и [claimant|E]ов. На [voting_power|E] в этом [succession_law|E] влияет [title_tier|E], [piety_level|E] и [virtuous|E] [traits|E] [elector|E]. Выборщики будут предпочитать кандидатов с высоким [piety_level|E] и [virtuous|E] [traits|E]."
+ theocratic_elective_candidates:0 "Близкие родственники, претенденты и де-юре вассалы"
+ theocratic_elective_candidates_tooltip:1 "Чтобы быть кандидатом при теократических выборах, персонаж должен соответствовать одному из следующих условий:\n$EFFECT_LIST_BULLET$Быть законным членом [close_family|E] текущего правителя и не быть наследником республики. Дети кандидата не могут быть выдвинуты\n$EFFECT_LIST_BULLET$Быть [claimant|E] на титул и не быть наследником республики\n$EFFECT_LIST_BULLET$Быть [de_jure|E] [vassal|E] титула"
+ theocratic_elective_electors:0 "Де-юре вассалы"
+ theocratic_elective_electors_tooltip:0 "Чтобы быть [elector|E] при теократических выборах, вассал должен соответствовать всем следующим условиям:\n$EFFECT_LIST_BULLET$Быть [de_jure|E] [vassal|E] титула\n$EFFECT_LIST_BULLET$Иметь ранг графа или выше."
  

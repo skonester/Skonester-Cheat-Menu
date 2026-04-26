@@ -1,4 +1,4 @@
-namespace = change_Realm_succession_law_mod
+﻿namespace = change_Realm_succession_law_mod
 
 change_Realm_succession_law_mod.1001 = {
     type = character_event

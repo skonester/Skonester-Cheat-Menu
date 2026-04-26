@@ -1,13 +1,10 @@
-
-#I need to work on this more, not working currently
-
 theocratic_elective = {
 	elector_vote_strength = {
 		base = 1  # Changed from 0 so vassals have a baseline voice
 		
 		modifier = { #rank
 			desc = tooltip_theocratic_vote_strength_title_tier
-			add = highest_held_title_tier
+			add = { value = highest_held_title_tier }
 			# Removed government_is_theocracy check
 		}
 		modifier = { #level of devotion
@@ -82,6 +79,13 @@ theocratic_elective = {
 			limit = {
 				is_close_family_of = scope:holder
 				feudal_elective_potential_landless_dynastic_candidate_trigger = yes
+			}
+		}
+		add = {
+			type = title_dejure_vassals
+			limit = {
+				highest_held_title_tier > 1
+				domain_size > 0
 			}
 		}
 	}

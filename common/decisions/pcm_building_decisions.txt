@@ -1,4 +1,4 @@
-﻿## Building decisions are separated to make it easy moving it to separate mod
+## Building decisions are separated to make it easy moving it to separate mod
 ## use pcm_b_ prefix
 
 pcm_b_add_building_slot_7_sub_realm_decision = {
@@ -915,6 +915,301 @@ pcm_b_max_all_buildings_sub_realm_decision = {
 				}			
 			}				
 		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = caravanserai_01
+							has_building = caravanserai_02
+							has_building = caravanserai_03
+							has_building = caravanserai_04
+							has_building = caravanserai_05
+							has_building = caravanserai_06
+							has_building = caravanserai_07
+						}	
+					}		
+					add_building = caravanserai_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = watermills_01
+							has_building = watermills_02
+							has_building = watermills_03
+							has_building = watermills_04
+							has_building = watermills_05
+							has_building = watermills_06
+							has_building = watermills_07
+						}	
+					}		
+					add_building = watermills_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = windmills_01
+							has_building = windmills_02
+							has_building = windmills_03
+							has_building = windmills_04
+							has_building = windmills_05
+							has_building = windmills_06
+							has_building = windmills_07
+						}	
+					}		
+					add_building = windmills_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = hospices_01
+							has_building = hospices_02
+							has_building = hospices_03
+							has_building = hospices_04
+							has_building = hospices_05
+							has_building = hospices_06
+							has_building = hospices_07
+						}	
+					}		
+					add_building = hospices_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = capital_bureau_01
+							has_building = capital_bureau_02
+							has_building = capital_bureau_03
+							has_building = capital_bureau_04
+							has_building = capital_bureau_05
+							has_building = capital_bureau_06
+							has_building = capital_bureau_07
+						}	
+					}		
+					add_building = capital_bureau_08		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = generic_copper_mines_01
+							has_building = generic_copper_mines_02
+							has_building = generic_copper_mines_03
+						}	
+					}		
+					add_building = generic_copper_mines_04		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = generic_silver_mines_01
+							has_building = generic_silver_mines_02
+							has_building = generic_silver_mines_03
+						}	
+					}		
+					add_building = generic_silver_mines_04		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = generic_gold_mines_01
+							has_building = generic_gold_mines_02
+							has_building = generic_gold_mines_03
+						}	
+					}		
+					add_building = generic_gold_mines_04		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = baofeng_mines_01
+							has_building = baofeng_mines_02
+							has_building = baofeng_mines_03
+						}	
+					}		
+					add_building = baofeng_mines_04		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = zijinshan_mines_01
+							has_building = zijinshan_mines_02
+							has_building = zijinshan_mines_03
+						}	
+					}		
+					add_building = zijinshan_mines_04		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = jiaodong_mines_01
+							has_building = jiaodong_mines_02
+							has_building = jiaodong_mines_03
+						}	
+					}		
+					add_building = jiaodong_mines_04		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = dragon_kiln_01
+							has_building = dragon_kiln_02
+						}	
+					}		
+					add_building = dragon_kiln_03		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = examination_hall_01
+							has_building = examination_hall_02
+						}	
+					}		
+					add_building = examination_hall_03		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = charnel_grounds_01
+							has_building = charnel_grounds_02
+						}	
+					}		
+					add_building = charnel_grounds_03		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = burial_site_01
+							has_building = burial_site_02
+						}	
+					}		
+					add_building = burial_site_03		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = temple_citadel_01
+							has_building = temple_citadel_02
+							has_building = temple_citadel_03
+						}	
+					}		
+					add_building = temple_citadel_04		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = mandala_capital_01
+							has_building = mandala_capital_02
+							has_building = mandala_capital_03
+							has_building = mandala_capital_04
+						}	
+					}		
+					add_building = mandala_capital_05		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = the_great_wall_01
+							has_building = the_great_wall_02
+							has_building = the_great_wall_03
+						}	
+					}		
+					add_building = the_great_wall_04		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = cluny_abbey_01
+						}	
+					}		
+					add_building = cluny_abbey_02		
+				}			
+			}				
+		}					
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						OR = {	
+							has_building = duomo_florence_01
+							has_building = duomo_florence_02
+							has_building = duomo_florence_03
+						}	
+					}		
+					add_building = duomo_florence_04		
+				}			
+			}				
+		}					
 	}
 	ai_will_do = { base = 0 }
 	ai_check_interval = 0
@@ -1456,6 +1751,17 @@ pcm_b_lucky_7_sub_realm_decision = {
 					add_building = guild_halls_08
 				}
 			}
+		}
+		if = {					
+			every_sub_realm_county = {				
+				every_county_province  = {			
+					limit = {		
+						free_building_slots > 0		
+						NOT = { has_building_or_higher = hospices_01 }
+					}		
+					add_building = hospices_01		
+				}			
+			}				
 		}
 	}
 	ai_will_do = { base = 0 }

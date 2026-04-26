@@ -63,6 +63,7 @@ Skonester Cheat Menu is a powerful and regularly updated game modification that 
 ### 2026 Updates
 
 **April**
+* **Taurus V 1.1:** 1.19.0.4 for Scribe,more edit character religion/culture
 * **Aries V 1.2:** Secondary Update for Scribe,more cheats
 
 **March**

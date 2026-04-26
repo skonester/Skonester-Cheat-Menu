@@ -14,9 +14,9 @@ X_modifier = {
 	different_faith_opinion = 200
 	same_faith_opinion = 200
 
-	build_speed = -9
-	holding_build_speed = -9
-	domicile_build_speed = -9
+	build_speed = -100.0
+	holding_build_speed = -100.0
+	domicile_build_speed = -100.0
 }
 
 X1_modifier = {
@@ -34,6 +34,10 @@ X1_modifier = {
 	knight_effectiveness_mult = 99
 	siege_weapon_siege_value_mult = 99
 	siege_phase_time = -1
+
+	build_speed = -100.0
+	holding_build_speed = -100.0
+	domicile_build_speed = -100.0
 }
 
 X2_modifier = {

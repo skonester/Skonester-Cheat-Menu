@@ -5061,7 +5061,7 @@ dp_char_editor.39 = {
 		name = mon
 		trigger = {
 			scope:char_editor = {
-				has_character_flag = burman_culture_pg
+				has_character_flag = mon_khmer_culture_pg
 			}
 		}
 		scope:char_editor = {
@@ -5074,7 +5074,7 @@ dp_char_editor.39 = {
 		name = armenian
 		trigger = {
 			scope:char_editor = {
-				has_character_flag = byzantine_culture_pg
+				has_character_flag = caucasian_culture_pg
 			}
 		}
 		scope:char_editor = {
@@ -5113,7 +5113,7 @@ dp_char_editor.39 = {
 		name = georgian
 		trigger = {
 			scope:char_editor = {
-				has_character_flag = byzantine_culture_pg
+				has_character_flag = caucasian_culture_pg
 			}
 		}
 		scope:char_editor = {
@@ -5126,7 +5126,7 @@ dp_char_editor.39 = {
 		name = assyrian
 		trigger = {
 			scope:char_editor = {
-				has_character_flag = byzantine_culture_pg
+				has_character_flag = syriac_culture_pg
 			}
 		}
 		scope:char_editor = {
@@ -6439,7 +6439,7 @@ dp_char_editor.39 = {
 		name = vlach
 		trigger = {
 			scope:char_editor = {
-				has_character_flag = south_slavic_culture_pg
+				has_character_flag = vlach_culture_pg
 			}
 		}
 		scope:char_editor = {
@@ -7112,6 +7112,617 @@ dp_char_editor.39 = {
 	}
 	
 	option = {
+		name = kachin
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = burman_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:kachin
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = karen
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = burman_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:karen
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = yi
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = chinese_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:yi
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = bai
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = chinese_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:bai
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = japanese
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = japonic_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:japanese
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = ryukyuan
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = japonic_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:ryukyuan
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = emishi
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = ainuic_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:emishi
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = ainu
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = ainuic_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:ainu
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = goryeo
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = korean_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:goryeo
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = silla
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = korean_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:silla
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = baekje
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = buyeo_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:baekje
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = goguryeo
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = buyeo_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:goguryeo
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = balhae
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = buyeo_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:balhae
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = viet
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = viet_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:viet
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = khmer
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = mon_khmer_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:khmer
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = khmu
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = mon_khmer_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:khmu
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = tai
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = tai_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:tai
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = hlai
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = tai_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:hlai
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = bouxcuengh
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = tai_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:bouxcuengh
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = tujia
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = tai_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:tujia
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = javanese
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = austronesian_culture_pg_1
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:javanese
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = malay
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = austronesian_culture_pg_1
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:malay
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = senoi
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = austronesian_culture_pg_1
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:senoi
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = dayak
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = austronesian_culture_pg_1
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:dayak
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = bisayan
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = austronesian_culture_pg_1
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:bisayan
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = tagalog
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = austronesian_culture_pg_1
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:tagalog
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = iloko
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = austronesian_culture_pg_1
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:iloko
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = bugis
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = austronesian_culture_pg_1
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:bugis
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = toraja
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = austronesian_culture_pg_2
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:toraja
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = maluku
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = austronesian_culture_pg_2
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:maluku
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = papuan
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = austronesian_culture_pg_2
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:papuan
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = amis
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = austronesian_culture_pg_2
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:amis
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = cham
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = austronesian_culture_pg_2
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:cham
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = acehnese
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = austronesian_culture_pg_2
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:acehnese
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = nakkavaram
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = austronesian_culture_pg_2
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:nakkavaram
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = nivkh
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = amuric_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:nivkh
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = tangut
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = qiangic_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:tangut
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = qiang
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = qiangic_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:qiang
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = jurchen
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = tungusic_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:jurchen
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = mohe
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = tungusic_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:mohe
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = hmong
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = hmongic_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:hmong
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = yao
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = hmongic_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:yao
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = ancient_egyptian
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = dead_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:ancient_egyptian
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = trojan
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = dead_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:trojan
+		}
+		trigger_event = dp_char_editor.39
+	}
+	
+	option = {
+		name = carthaginian
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = dead_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:carthaginian
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = swahili
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = bantu_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:swahili
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = east_bantu
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = bantu_culture_pg
+			}
+		}
+		scope:char_editor = {
+			set_culture = culture:east_bantu
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
 		name = dp_char_editor_forward
 		trigger = {
 			scope:char_editor = {
@@ -7142,7 +7753,35 @@ dp_char_editor.39 = {
 		}
 		trigger_event = dp_char_editor.39
 	}
+
+	option = {
+		name = dp_char_editor_forward
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = austronesian_culture_pg_1
+			}
+		}
+		scope:char_editor = {
+			remove_character_flag = austronesian_culture_pg_1
+			add_character_flag = austronesian_culture_pg_2
+		}
+		trigger_event = dp_char_editor.39
+	}
 	
+	option = {
+		name = dp_char_editor_backward
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = austronesian_culture_pg_2
+			}
+		}
+		scope:char_editor = {
+			remove_character_flag = austronesian_culture_pg_2
+			add_character_flag = austronesian_culture_pg_1
+		}
+		trigger_event = dp_char_editor.39
+	}
+
 	option = {
 		name = dp_char_editor_forward
 		trigger = {
@@ -7220,6 +7859,24 @@ dp_char_editor.39 = {
 			if = { limit = { has_character_flag = west_germanic_culture_pg } remove_character_flag = west_germanic_culture_pg }
 			if = { limit = { has_character_flag = west_slavic_culture_group } remove_character_flag = west_slavic_culture_group }
 			if = { limit = { has_character_flag = yoruba_culture_pg } remove_character_flag = yoruba_culture_pg }
+			if = { limit = { has_character_flag = japonic_culture_pg } remove_character_flag = japonic_culture_pg }
+			if = { limit = { has_character_flag = ainuic_culture_pg } remove_character_flag = ainuic_culture_pg }
+			if = { limit = { has_character_flag = korean_culture_pg } remove_character_flag = korean_culture_pg }
+			if = { limit = { has_character_flag = buyeo_culture_pg } remove_character_flag = buyeo_culture_pg }
+			if = { limit = { has_character_flag = viet_culture_pg } remove_character_flag = viet_culture_pg }
+			if = { limit = { has_character_flag = mon_khmer_culture_pg } remove_character_flag = mon_khmer_culture_pg }
+			if = { limit = { has_character_flag = tai_culture_pg } remove_character_flag = tai_culture_pg }
+			if = { limit = { has_character_flag = austronesian_culture_pg_1 } remove_character_flag = austronesian_culture_pg_1 }
+			if = { limit = { has_character_flag = austronesian_culture_pg_2 } remove_character_flag = austronesian_culture_pg_2 }
+			if = { limit = { has_character_flag = hmongic_culture_pg } remove_character_flag = hmongic_culture_pg }
+			if = { limit = { has_character_flag = dead_culture_pg } remove_character_flag = dead_culture_pg }
+			if = { limit = { has_character_flag = bantu_culture_pg } remove_character_flag = bantu_culture_pg }
+			if = { limit = { has_character_flag = amuric_culture_pg } remove_character_flag = amuric_culture_pg }
+			if = { limit = { has_character_flag = qiangic_culture_pg } remove_character_flag = qiangic_culture_pg }
+			if = { limit = { has_character_flag = tungusic_culture_pg } remove_character_flag = tungusic_culture_pg }
+			if = { limit = { has_character_flag = caucasian_culture_pg } remove_character_flag = caucasian_culture_pg }
+			if = { limit = { has_character_flag = vlach_culture_pg } remove_character_flag = vlach_culture_pg }
+			if = { limit = { has_character_flag = syriac_culture_pg } remove_character_flag = syriac_culture_pg }
 		}
 		trigger_event = dp_char_editor.40
 	}
@@ -7720,20 +8377,270 @@ dp_char_editor.40 = {
 	}
 
 	option = {
+		name = japonic_group
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = culture_pg_6
+			}
+		}
+		scope:char_editor = {
+			add_character_flag = japonic_culture_pg
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = ainuic_group
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = culture_pg_6
+			}
+		}
+		scope:char_editor = {
+			add_character_flag = ainuic_culture_pg
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = korean_group
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = culture_pg_6
+			}
+		}
+		scope:char_editor = {
+			add_character_flag = korean_culture_pg
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = buyeo_group
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = culture_pg_6
+			}
+		}
+		scope:char_editor = {
+			add_character_flag = buyeo_culture_pg
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = viet_group
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = culture_pg_6
+			}
+		}
+		scope:char_editor = {
+			add_character_flag = viet_culture_pg
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = mon_khmer_group
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = culture_pg_6
+			}
+		}
+		scope:char_editor = {
+			add_character_flag = mon_khmer_culture_pg
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = tai_group
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = culture_pg_6
+			}
+		}
+		scope:char_editor = {
+			add_character_flag = tai_culture_pg
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = austronesian_group
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = culture_pg_6
+			}
+		}
+		scope:char_editor = {
+			add_character_flag = austronesian_culture_pg_1
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = hmongic_group
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = culture_pg_7
+			}
+		}
+		scope:char_editor = {
+			add_character_flag = hmongic_culture_pg
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = dead_group
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = culture_pg_7
+			}
+		}
+		scope:char_editor = {
+			add_character_flag = dead_culture_pg
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = bantu_group
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = culture_pg_7
+			}
+		}
+		scope:char_editor = {
+			add_character_flag = bantu_culture_pg
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = amuric_group
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = culture_pg_7
+			}
+		}
+		scope:char_editor = {
+			add_character_flag = amuric_culture_pg
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = qiangic_group
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = culture_pg_7
+			}
+		}
+		scope:char_editor = {
+			add_character_flag = qiangic_culture_pg
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = tungusic_group
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = culture_pg_7
+			}
+		}
+		scope:char_editor = {
+			add_character_flag = tungusic_culture_pg
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = caucasian_group
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = culture_pg_7
+			}
+		}
+		scope:char_editor = {
+			add_character_flag = caucasian_culture_pg
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
 		name = dp_char_editor_forward
-		culture_forward = yes
+		trigger = {
+			scope:char_editor = {
+				NOT = { has_character_flag = culture_pg_7 }
+			}
+		}
+		scope:char_editor = {
+			if = { limit = { has_character_flag = culture_pg_1 } remove_character_flag = culture_pg_1 add_character_flag = culture_pg_2 }
+			else_if = { limit = { has_character_flag = culture_pg_2 } remove_character_flag = culture_pg_2 add_character_flag = culture_pg_3 }
+			else_if = { limit = { has_character_flag = culture_pg_3 } remove_character_flag = culture_pg_3 add_character_flag = culture_pg_4 }
+			else_if = { limit = { has_character_flag = culture_pg_4 } remove_character_flag = culture_pg_4 add_character_flag = culture_pg_5 }
+			else_if = { limit = { has_character_flag = culture_pg_5 } remove_character_flag = culture_pg_5 add_character_flag = culture_pg_6 }
+			else_if = { limit = { has_character_flag = culture_pg_6 } remove_character_flag = culture_pg_6 add_character_flag = culture_pg_7 }
+			else_if = { limit = { has_character_flag = culture_pg_7 } remove_character_flag = culture_pg_7 add_character_flag = culture_pg_8 }
+		}
 		trigger_event = dp_char_editor.40
 	}
 	option = {
 		name = dp_char_editor_backward
-		culture_backward = yes
+		trigger = {
+			scope:char_editor = {
+				NOT = { has_character_flag = culture_pg_1 }
+			}
+		}
+		scope:char_editor = {
+			if = { limit = { has_character_flag = culture_pg_8 } remove_character_flag = culture_pg_8 add_character_flag = culture_pg_7 }
+			else_if = { limit = { has_character_flag = culture_pg_7 } remove_character_flag = culture_pg_7 add_character_flag = culture_pg_6 }
+			else_if = { limit = { has_character_flag = culture_pg_6 } remove_character_flag = culture_pg_6 add_character_flag = culture_pg_5 }
+			else_if = { limit = { has_character_flag = culture_pg_5 } remove_character_flag = culture_pg_5 add_character_flag = culture_pg_4 }
+			else_if = { limit = { has_character_flag = culture_pg_4 } remove_character_flag = culture_pg_4 add_character_flag = culture_pg_3 }
+			else_if = { limit = { has_character_flag = culture_pg_3 } remove_character_flag = culture_pg_3 add_character_flag = culture_pg_2 }
+			else_if = { limit = { has_character_flag = culture_pg_2 } remove_character_flag = culture_pg_2 add_character_flag = culture_pg_1 }
+		}
 		trigger_event = dp_char_editor.40
+	}
+
+	option = {
+		name = vlach_group
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = culture_pg_8
+			}
+		}
+		scope:char_editor = {
+			add_character_flag = vlach_culture_pg
+		}
+		trigger_event = dp_char_editor.39
+	}
+
+	option = {
+		name = syriac_group
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = culture_pg_8
+			}
+		}
+		scope:char_editor = {
+			add_character_flag = syriac_culture_pg
+		}
+		trigger_event = dp_char_editor.39
 	}
 
 	option = {
 		name = dp_char_editor_main_menu
 		scope:char_editor = {
 			remove_culture_pgs = yes
+			if = { limit = { has_character_flag = culture_pg_6 } remove_character_flag = culture_pg_6 }
+			if = { limit = { has_character_flag = culture_pg_7 } remove_character_flag = culture_pg_7 }
+			if = { limit = { has_character_flag = culture_pg_8 } remove_character_flag = culture_pg_8 }
 		}
 
 		trigger_event = dp_char_editor.1000
@@ -14236,6 +15143,9 @@ dp_char_editor.1000 = {
 			remove_all_modifier_go_back_flags = yes
 			remove_all_culture_pgs = yes
 			remove_all_religion_pgs = yes
+			if = { limit = { has_character_flag = culture_pg_6 } remove_character_flag = culture_pg_6 }
+			if = { limit = { has_character_flag = culture_pg_7 } remove_character_flag = culture_pg_7 }
+			if = { limit = { has_character_flag = culture_pg_8 } remove_character_flag = culture_pg_8 }
 		}
 	}
 	
@@ -14281,6 +15191,11 @@ dp_char_editor.1000 = {
 		name = dp_char_editor.religion.group.t
 		scope:char_editor = { add_character_flag = religion_pg_1 }
 		trigger_event = dp_char_editor.41
+	}
+
+	option = {
+		name = "Dragon Birth"
+		trigger_event = dp_char_editor.514
 	}
 
 	option = {
@@ -14415,7 +15330,7 @@ dp_char_editor.514 = {
 	
 	option = {
 		name = dp_char_editor_back
-		trigger_event = dp_char_editor.510
+		trigger_event = dp_char_editor.1000
 	}	
 	
 }
@@ -14513,7 +15428,7 @@ dp_char_editor.515 = {
 	
 	option = {
 		name = dp_char_editor_back
-		trigger_event = dp_char_editor.510
+		trigger_event = dp_char_editor.1000
 	}
 	
 }

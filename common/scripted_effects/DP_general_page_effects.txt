@@ -1,4 +1,4 @@
-﻿########################
+########################
 ### New Page Effects ###
 ########################
 
@@ -1610,10 +1610,31 @@ religion_forward = {
 		scope:char_editor = {
 			if = {
 				limit = {
+					has_character_flag = religion_pg_7
+				}
+				remove_character_flag = religion_pg_7
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = {
+					has_character_flag = religion_pg_6
+				}
+				remove_character_flag = religion_pg_6
+				add_character_flag = religion_pg_7
+			}
+			if = {
+				limit = {
+					has_character_flag = religion_pg_5
+				}
+				remove_character_flag = religion_pg_5
+				add_character_flag = religion_pg_6
+			}
+			if = {
+				limit = {
 					has_character_flag = religion_pg_4
 				}
 				remove_character_flag = religion_pg_4
-				add_character_flag = need_pg_1
+				add_character_flag = religion_pg_5
 			}
 			if = {
 				limit = {
@@ -1673,10 +1694,31 @@ religion_backward = {
 			}
 			if = {
 				limit = {
+					has_character_flag = religion_pg_5
+				}
+				remove_character_flag = religion_pg_5
+				add_character_flag = religion_pg_4
+			}
+			if = {
+				limit = {
+					has_character_flag = religion_pg_6
+				}
+				remove_character_flag = religion_pg_6
+				add_character_flag = religion_pg_5
+			}
+			if = {
+				limit = {
+					has_character_flag = religion_pg_7
+				}
+				remove_character_flag = religion_pg_7
+				add_character_flag = religion_pg_6
+			}
+			if = {
+				limit = {
 					has_character_flag = religion_pg_1
 				}
 				remove_character_flag = religion_pg_1
-				add_character_flag = religion_pg_4
+				add_character_flag = religion_pg_7
 			}
 			if = {
 				limit = {
@@ -1713,6 +1755,24 @@ remove_religion_pgs = {
 			has_character_flag = religion_pg_4
 		}
 		remove_character_flag = religion_pg_4
+	}
+	if = {
+		limit = {
+			has_character_flag = religion_pg_5
+		}
+		remove_character_flag = religion_pg_5
+	}
+	if = {
+		limit = {
+			has_character_flag = religion_pg_6
+		}
+		remove_character_flag = religion_pg_6
+	}
+	if = {
+		limit = {
+			has_character_flag = religion_pg_7
+		}
+		remove_character_flag = religion_pg_7
 	}
 }
 

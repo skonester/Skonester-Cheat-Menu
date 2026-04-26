@@ -1,0 +1,22 @@
+﻿l_english:
+ # Culture Groups
+ japonic_group:0 "Japonic"
+ ainuic_group:0 "Ainuic"
+ korean_group:0 "Korean"
+ buyeo_group:0 "Buyeo"
+ viet_group:0 "Viet"
+ mon_khmer_group:0 "Mon-Khmer"
+ tai_group:0 "Tai"
+ austronesian_group:0 "Austronesian"
+ hmongic_group:0 "Hmongic"
+ bantu_group:0 "Bantu"
+ amuric_group:0 "Amuric"
+ qiangic_group:0 "Qiangic"
+ tungusic_group:0 "Tungusic"
+ caucasian_group:0 "Caucasian"
+ vlach_group:0 "Vlach"
+ syriac_group:0 "Syriac"
+ # Dragon Birth
+ dp_char_editor.dragon_birth:0 "Dragon Birth/AGOT"
+ dp_char_editor.dragon_birth.t:0 "Dragon Birth Traits"
+ dp_char_editor.dragon_birth.d:0 "Select mythical dragon-related physique and birth traits for your character."

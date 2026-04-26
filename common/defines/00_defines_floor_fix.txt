@@ -1,0 +1,3 @@
+NModifier = {
+	STANDARD_MINIMUM_VALUE = -1.0
+}

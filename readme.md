@@ -20,6 +20,8 @@
   - [Religion, Culture & Tradition Mastery](#religion-culture--tradition-mastery)
   - [Legendary Artifacts & Relics Library](#legendary-artifacts--relics-library)
   - [Health, Immortality & Genetic Purity](#health-immortality--genetic-purity)
+- [Translation & Localized Support](#translation--localized-support)
+  - [The Consolidated Rebuilder Tool](#the-consolidated-rebuilder-tool)
 - [Installation Guide](#installation-guide)
 - [Comprehensive Changelog](#comprehensive-changelog)
 - [Contributing & Community](#contributing--community)
@@ -145,6 +147,28 @@ Instantly populate your court with the most famous relics in history:
 *   **Purging of Afflictions**: Banishes carnal maladies and common ailments from the realm.
 *   **Purification of Bloodlines**: Removes negative genetic traits like Inbred, Clubfooted, and Hunchbacked.
 *   **Immortal**: Toggle the trait to lock a character's age at 25 and prevent natural death.
+
+---
+
+## Translation & Localized Support
+
+To make translating the mod easier for our international community, we have provided a **Consolidated Localization File**. Instead of hunting through dozens of separate `.yml` files, you can find every single text string used by the mod in one place.
+
+### How to use the Consolidated File:
+1.  Navigate to the `data_binding/` folder in the mod root.
+2.  Locate `fully_consolidated_l_english.yml`.
+3.  **To Create a New Translation**:
+    *   Copy the file and rename it according to your target language (e.g., `fully_consolidated_l_french.yml`).
+    *   Open the file in a text editor (VS Code or Notepad++ recommended).
+    *   Change the first line from `l_english:` to your target language code (e.g., `l_french:`).
+    *   Translate the text inside the quotation marks for each key.
+4.  Once finished, place your translated file in the `localization/[language]/` folder of your mod or submit it via a Pull Request on Github!
+
+### The Consolidated Rebuilder Tool
+For modders and translators who want to ensure the consolidated file is perfectly up-to-date with the latest mod version, we include a Python utility in the `data_binding/` folder:
+
+*   **rebuild_loc_mod1.py**: A Python script that scans the entire `localization/english/` directory and merges all keys into the single consolidated file. It automatically handles UTF-8 BOM encoding required by the game.
+*   **rebuild_localization.bat**: A user-friendly Windows batch file. Simply **double-click** this file to run the rebuilder without needing to open a command prompt. (Requires Python 3 installed on your system).
 
 ---
 

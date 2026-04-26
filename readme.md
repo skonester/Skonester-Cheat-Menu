@@ -1,124 +1,161 @@
 # Skonester Cheat Menu
 
 <p align="center">
-  <img src="skonestermaster.jpg" width="300">
+  <img src="skonestermaster.jpg" width="100%">
 </p>
 
 [![Downloads](https://img.shields.io/github/downloads/skonester/Skonester-Cheat-Menu/total.svg?cacheSeconds=3600)](https://github.com/skonester/Skonester-Cheat-Menu/releases)
 
 ## Table of Contents
-- [Background](#background)
-- [Features](#features)
-- [Compatibility & Languages](#compatibility--languages)
-- [Installation](#installation)
-- [Changelog](#changelog)
-- [Contributing](#contributing)
+- [Background & Vision](#background--vision)
+- [Master Feature List](#master-feature-list)
+  - [The "Super" Traits Suite](#the-super-traits-suite)
+  - [The Modifier Menu Customizer](#the-modifier-menu-customizer)
+  - [Resource & Dynasty Management](#resource--dynasty-management)
+  - [Warfare, Armies & Instant Conquest](#warfare-armies--instant-conquest)
+  - [Ultimate Building & Development Decisions](#ultimate-building--development-decisions)
+  - [The Great Heir Spawning System](#the-great-heir-spawning-system)
+  - [Religion, Culture & Tradition Mastery](#religion-culture--tradition-mastery)
+  - [Legendary Artifacts & Relics Library](#legendary-artifacts--relics-library)
+  - [Health, Immortality & Genetic Purity](#health-immortality--genetic-purity)
+- [Installation Guide](#installation-guide)
+- [Comprehensive Changelog](#comprehensive-changelog)
+- [Contributing & Community](#contributing--community)
 
-## Background
+---
 
-The original Daddy Pika's Cheat Menu, a legendary mod for Crusader Kings III, was designed for earlier versions of the game. Users experienced crashes with version 1.13 and above. This project began when I got into the game during the Roads to Power update. While there are more established cheat mods available, this is a project I maintain out of passion for the game.
+## Background & Vision
 
-Consider this a fork of Zhuge's work from the Chinese CK3 community, who successfully mastered Daddy Pika's codebase. The goal is to keep a steady, long-term cheat menu fork with its own unique flavor.
+The **Skonester Cheat Menu** is the definitive evolution of the legendary *Daddy Pika's Cheat Menu*. Originally built for earlier versions of Crusader Kings III, this fork was born from a necessity to fix crashes and compatibility issues with the *Roads to Power* (v1.13+) update and beyond. 
 
-**Note:** I do not need donation points. Please send your support to the larger CK3 projects that make this game truly great.
+Our vision is to provide a "God Mode" experience that is both deep and accessible. Whether you want to roleplay as an immortal god-king, stabilize a crumbling empire, or experiment with the game's deepest mechanics without the grind, this mod provides the tools to do so through a seamless graphical interface.
 
-## Features
+---
 
-Skonester Cheat Menu is a powerful and regularly updated game modification that provides an extensive toolkit for managing the game world, characters, and your realm via a convenient graphical interface, eliminating the need to manually enter console commands.
+## Master Feature List
 
-### Character Management
-* **Instant Stat Modification:** Change attributes (skills) and add or remove any personality traits.
-* **Appearance and Age:** Edit looks and age directly.
-* **Relationship Management:** Instantly make someone a friend, lover, or nemesis/rival.
-* **Interaction Commands:** Kill, move to court, force pregnancy, or force character suicide.
+### The "Super" Traits Suite
+The mod introduces several "Super" traits that provide staggering bonuses, effectively turning a character into a superhuman entity:
+*   **Super Trait**:
+    *   **Attributes**: +100 to Diplomacy, Martial, Stewardship, Intrigue, Learning, and Prowess.
+    *   **Resources**: +30 Monthly Prestige, +1000 Monthly Piety, +1000 Monthly Income.
+    *   **Social**: +1000 Attraction Opinion, +500% Fertility, +100 Years of Fertility.
+    *   **Schemes**: 10x Hostile/Personal Scheme Power, +100 flat power to all scheme types.
+    *   **Realm**: +200 Vassal Limit, +200 Domain Limit, ignores negative culture opinion.
+    *   **Genetics**: 100% chance to strengthen genetic traits, -100% inbreeding chance.
+*   **Super Governor**: 
+    *   **Development**: +1000% Development Growth.
+    *   **Construction**: -1000% Build Speed (Instant) and -100% Build Cost (Free).
+    *   **Control**: +100 Monthly County Control growth.
+    *   **Public Image**: +100 County Opinion.
+*   **Super General**: 
+    *   **Combat**: +100 Advantage, +20 Min Combat Roll, +40 Max Combat Roll.
+    *   **Movement**: 10x Movement Speed, 10x Naval Movement Speed.
+    *   **Siege**: -1000% Siege Phase Time (Instant Sieges).
+    *   **Logistics**: No water crossing penalties, -100% Hostile County Attrition, 10x Supply Capacity.
 
-### Realm and Resources
-* **Instant Resources:** Add gold, prestige, piety, and renown.
-* **Religion and Culture:** Change religion and culture for an individual character, entire regions, or the whole realm.
-* **Government and Law:** Change government type and vassal contract conditions.
+### The Modifier Menu Customizer
+A deep, togglable system that allows you to fine-tune your character's bonuses. You can enable modifiers that scale with your **Prestige Level** or **Piety Level**:
+*   **Scaling Stats**: Diplomacy/Martial/Stewardship/Intrigue/Learning/Prowess per level of Fame/Devotion.
+*   **Opinion Toggles**: Specific opinion bonuses for every category: Same/Different Faith, Same/Different Culture, Liege/Vassal, Clergy, Powerful Vassals, Courtiers, Guests, Prisoners, and even specific family members like Twins or Player Heirs.
+*   **Economic Toggles**: Toggles for Tax Multipliers, Domain Tax (even if a baron), and Stress-based income.
 
-### Warfare and Expansion
-* **Spawn Troops:** Instantly create armies and special Men-at-Arms regiments.
-* **Titles and Claims:** Instantly seize any title or obtain a claim on one.
-* **War Management:** Functions to manage peace and wars.
+### Resource & Dynasty Management
+*   **The "Motherlode" Decision**: Instantly add **100,000 Gold, Prestige, Piety**, and **100,000 Dynasty Renown**.
+*   **Dynasty/House Wide Cheats**: Use character interactions to apply auto-marriage, auto-concubinage, and eugenics modifiers to your entire house or dynasty.
 
-### Unique Features
-* **Special Decisions and Interactions:** Create a "House Guard" or instantly launch a Crusade.
-* **Debug Mode Toggle:** Turn Debug Mode on/off directly from the game menu without restarting or using launch parameters.
+### Warfare, Armies & Instant Conquest
+*   **Instant Army Spawning**:
+    *   **House Guards**: Spawn 10 stacks of elite, inheritable Men-at-Arms.
+    *   **House Cavalry**: Spawn 10 stacks of elite heavy cavalry.
+    *   **Conqueror Armies**: Summon massive "Conqueror" event troops.
+*   **Interaction Cheats**:
+    *   **Take Title**: Instantly seize the primary title (and all de jure vassals) of any targeted character.
+    *   **Unrestricted Warfare**: Toggle the ability to declare war without standard constraints.
+    *   **Become Conqueror**: Apply the 'Conqueror' trait and multiple legendary historical traits at once.
 
-### Interface and Usage
-* **Accessibility:** Open the menu by right-clicking on a character or via a special icon in the interface (e.g., above the map or in the decisions list).
+### Ultimate Building & Development Decisions
+The mod includes a specialized sub-menu for realm development:
+*   **Max All Buildings**: A single decision that scans your entire sub-realm and upgrades every building (Castles, Cities, Temples, Mines, Tradeports, Academies, etc.) to their absolute maximum level.
+*   **Extra Building Slots**: Instantly add a 7th building slot to any barony.
+*   **Development Boost**: Instantly set county development to maximum.
 
-## Compatibility & Languages
+### The Great Heir Spawning System
+Need a perfect successor? The mod allows you to spawn children with specific parameters:
+*   **Great Heir**: Spawns a child with level 3 Beauty, Intellect, and Physique traits, +15 to all base stats, and 10 base health.
+*   **Bulk Spawning**: Options to spawn 1, 2, 5, or 10 heirs at once.
+*   **Gender Selection**: Choose between male or female spawned heirs.
 
-* **Game Version:** Promptly updated for current game versions (patch 1.14 "Traverse" and later versions 1.18+).
-* **Global Mods:** Compatible with total conversion mods like *Elder Kings II* and *A Game of Thrones*.
-* **Translations:** Russian / English / Partial Turkish.
+### Religion, Culture & Tradition Mastery
+*   **Instant Realm Conversion**: One-click decisions to convert your entire sub-realm (counties, vassals, family) to your current Culture or Faith.
+*   **The Tradition Vault**: A decision that applies nearly **100 powerful cultural traditions** simultaneously, covering Warfare (Bushido, Longbow Competitions), Economy (Silk Road Merchants, Rice Cultivators), and Governance (Roman Legacy, Legalistic).
 
-## Installation
+### Legendary Artifacts & Relics Library
+Instantly populate your court with the most famous relics in history:
+*   **Historical Relics**: Ark of the Covenant, Excalibur, Durendal, Joyeuse, Holy Grail (Chalice of Dona Urraca), Stone of Scone, Throne of Charlemagne, and many more.
+*   **Cheat Equipment**: High-tier custom-coded weapons, armor, crowns, and regalia with massive modifiers.
+*   **Legendary Books**: Spawn books based on figures like Caligula, Lady Godiva, and Sinbad.
 
-1.  Unpack the downloaded archive.
-2.  Drop the files into your Crusader Kings III mod folder:
-    `C:\Users\[username]\Documents\Paradox Interactive\Crusader Kings III\mod\`
-3.  Open the game launcher and add the mod to your active **Playsets**.
+### Health, Immortality & Genetic Purity
+*   **Cure All**: A "Panacea" decision that cures every disease (Plague, Consumption, Cancer, etc.) and removes all physical wounds or maimings.
+*   **Cure Inbred**: Instantly removes negative genetic traits like Inbred, Clubfooted, Hunchbacked, and Dwarfism.
+*   **Immortality Interaction**: Lock a character's age at 25 and make them immune to natural death.
 
-## Changelog
+---
+
+## Installation Guide
+
+1.  **Download**: Unpack the mod archive.
+2.  **Locate Mod Folder**: Place the contents into your CK3 mod directory (usually `Documents/Paradox Interactive/Crusader Kings III/mod/`).
+3.  **Launcher Setup**: Open the Paradox Launcher, create/edit a playset, and ensure "Skonester Cheat Menu" is enabled.
+4.  **Load Order**: Generally, this mod should be placed towards the bottom of your load order to ensure its interactions and decisions take priority.
+
+---
+
+## Comprehensive Changelog
 
 ### 2026 Updates
 
 **April**
-* **Taurus V 1.1:** 1.19.0.4 for Scribe,more edit character religion/culture
-* **Aries V 1.2:** Secondary Update for Scribe,more cheats
+* **Taurus V 1.1**: Added extensive character religion/culture editing interactions. Updated for game version 1.19.0.4 (Scribe).
+* **Aries V 1.2**: Secondary update for Scribe compatibility. Expanded the 'Special Gifts' interaction menu.
 
 **March**
-* **Aries V 1.1:** Update for Scribe
-* **Pisces V 1.4-Beta:** Github release.
-* **Pisces V 1.3:** Menu/Decisions Cleanup, DI Patch.
+* **Aries V 1.1**: Initial update for the Scribe patch.
+* **Pisces V 1.4-Beta**: First official Github release.
+* **Pisces V 1.3**: Consolidated menu decisions and cleaned up logic to prevent UI clutter.
 
 **February**
-* **Pisces V 1.2:** Religious Tenant unlock, max schemes fix.
-* **Pisces V 1.1:** Main Release, Pisces Proper.
-* **Pisces V1:** Search, Culture decisions.
+* **Pisces V 1.2**: Added Religious Tenant unlocking decisions. Fixed maximum scheme limitations.
+* **Pisces V 1.1**: The "Pisces Proper" main release.
+* **Pisces V1**: Added Advanced Search and Culture-specific cheat decisions.
 
 **January**
-* **Aquarius V 1.2:** More feudal elective laws, etc.
-* **Aquarius V 1.1:** More Traits, cleanups.
-* **Aquarius V1:** 1.18.3 update. Added lore to characters menu, new duchy buildings.
-* **Capricorn V1:** Added Quick Modification Menu, other small bug fixes.
+* **Aquarius V 1.2**: Added more Feudal Elective law options and succession fixes.
+* **Aquarius V 1.1**: Expanded the trait library and cleaned up localization.
+* **Aquarius V1**: Full update for version 1.18.3. Added 'Lore' section to the character menu and new Duchy building cheats.
+* **Capricorn V1**: Introduced the 'Quick Modification Menu'.
 
 ### 2025 Updates
 
-**November**
-* **Sagittarius V1:** Attempted fix of Government issues, added more character interactions from DLC.
-* **Scorpio V5:** Final release until January 2026.
-* **Scorpio V4:** 1.18.0.2 compatibility, More Debug Interactions.
-* **Scorpio V3:** Government Gender/Succession law options, unrestricted Casus Beli unlock.
+**November - December**
+* **Sagittarius V1**: Fixed government transition issues. Added interactions from recent DLCs.
+* **Scorpio V5**: Final optimization pass for the 2025 release cycle.
+* **Scorpio V4**: Full 1.18.0.2 compatibility. Added more Debug-level interactions.
 
 **October**
-* **Scorpio V2:** 1.18.0.1 compatibility. Added Meritocratic, Mandala, Wanua Government types, Treasury option to Currency Menu.
-* **Scorpio V1:** Initial 1.18.0 compatibility check.
+* **Scorpio V2**: Added compatibility for Meritocratic, Mandala, and Wanua government types. Added 'Treasury' options to the Currency Menu.
+* **Scorpio V1**: Initial 1.18.0 compatibility check.
 
-**September**
-* **Libra V1:** Check in-game menu.
-* **Virgo V5 (Pre-DLC Update):** Check in-game menu log.
-* **Virgo V4:** Check in-game menu log.
+**August - September**
+* **Virgo V3-V5**: Cosmetic overhaul. Redesigned all menu icons and background illustrations. Fixed the 'Anointed by Barbara' bug for female characters.
+* **Leo V1-V2**: Total codebase overhaul for compatibility with version 1.16+; transitioned away from the legacy Daddy Pika structure for better performance.
 
-**August**
-* **Virgo V3:** Cosmetic change. Redid Icons and Illustrations. Anointed by Barbara FIXED for female characters.
-* **Virgo V2:** Additional features.
-* **Virgo Build (Mid/Late August):** Cleanup localization files, fonts, and other minor bug fixes affecting decisions and events.
-* **Leo V2:** Total overhaul for compatibility with 1.16 and above. (Leo V1 available on Nexus).
+---
 
-**March**
-* Begin working on overhaul for 1.15. Still WIP.
+## Contributing & Community
 
-**February**
-* **Late February:** Fixed Menu Interactions.
-* **Early February:** Fixed issues in the decisions area.
-
-**January**
-* Resolved HUD compatibility problems for version 1.14.2.2 (Traverse).
-
-## Contributing
-
-This project maintains an open repository. The community is welcome to track changes, submit pull requests, and assist with translations.
+This project is open-source and community-driven. 
+*   **Feedback**: We welcome reports on missing localizations or bugged interactions.
+*   **Contributions**: Pull requests for new translations (especially Turkish, Chinese, and Spanish) are highly appreciated.
+*   **Support**: I do not accept donations. If you enjoy the mod, please support the creators of the larger total conversion mods (EK2, AGOT, etc.) that make the CK3 community so vibrant.

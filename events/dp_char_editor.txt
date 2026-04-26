@@ -1,6 +1,6 @@
-﻿namespace = dp_char_editor
+namespace = dp_char_editor
 
-### 角色加点技能菜单 ###
+###  ###
 
 dp_char_editor.1 = {
 	type = character_event
@@ -41,7 +41,7 @@ dp_char_editor.1 = {
 
 	option = {
 		name = dp_char_editor.prowess.t
-		trigger_event = dp_char_editor.7 #勇武加点
+		trigger_event = dp_char_editor.7 #
 	}
 
 	option = {
@@ -385,7 +385,7 @@ dp_char_editor.6 = {
 	}
 }
 
-### 技能菜单 ###
+###  ###
 
 dp_char_editor.7 = {
 	type = character_event
@@ -583,7 +583,7 @@ dp_char_editor.8 = {
 	}
 }
 
-### 特质主菜单 ###
+###  ###
 
 dp_char_editor.10 = {
 	type = character_event
@@ -612,8 +612,8 @@ dp_char_editor.10 = {
 	option = {
 		name = dp_char_editor.traits.personality.t
 		trigger = { scope:char_editor = { has_character_flag = trait_menu_pg_1 } }
-		scope:char_editor = { 
-			add_character_flag = trait_menu_personality_pg_1 
+		scope:char_editor = {
+			add_character_flag = trait_menu_personality_pg_1
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -633,8 +633,8 @@ dp_char_editor.10 = {
 	option = {
 		name = dp_char_editor.traits.commander.t
 		trigger = { scope:char_editor = { has_character_flag = trait_menu_pg_1 } }
-		scope:char_editor = { 
-			add_character_flag = trait_menu_commander_pg_1 
+		scope:char_editor = {
+			add_character_flag = trait_menu_commander_pg_1
 		}
 		trigger_event = dp_char_editor.26
 	}
@@ -727,7 +727,7 @@ dp_char_editor.10 = {
 	}
 }
 
-### 教育菜单 ###
+###  ###
 
 dp_char_editor.11 = {
 	type = character_event
@@ -791,7 +791,7 @@ dp_char_editor.11 = {
 	}
 }
 
-### 主要性格特征 ###
+###  ###
 
 dp_char_editor.12 = {
 	type = character_event
@@ -810,7 +810,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = lustful } 
+			LIT_personality_trait_check = { TRAIT = lustful }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -821,7 +821,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = chaste } 
+			LIT_personality_trait_check = { TRAIT = chaste }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -832,7 +832,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = gluttonous } 
+			LIT_personality_trait_check = { TRAIT = gluttonous }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -843,7 +843,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = temperate } 
+			LIT_personality_trait_check = { TRAIT = temperate }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -854,7 +854,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = greedy } 
+			LIT_personality_trait_check = { TRAIT = greedy }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -865,7 +865,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = generous } 
+			LIT_personality_trait_check = { TRAIT = generous }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -876,7 +876,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = lazy } 
+			LIT_personality_trait_check = { TRAIT = lazy }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -887,7 +887,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = diligent } 
+			LIT_personality_trait_check = { TRAIT = diligent }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -898,7 +898,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = wrathful } 
+			LIT_personality_trait_check = { TRAIT = wrathful }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -909,7 +909,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = calm } 
+			LIT_personality_trait_check = { TRAIT = calm }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -920,7 +920,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = patient } 
+			LIT_personality_trait_check = { TRAIT = patient }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -931,7 +931,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = impatient } 
+			LIT_personality_trait_check = { TRAIT = impatient }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -942,7 +942,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = arrogant } 
+			LIT_personality_trait_check = { TRAIT = arrogant }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -953,7 +953,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = humble } 
+			LIT_personality_trait_check = { TRAIT = humble }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -964,7 +964,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = deceitful } 
+			LIT_personality_trait_check = { TRAIT = deceitful }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -975,7 +975,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = honest } 
+			LIT_personality_trait_check = { TRAIT = honest }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -985,7 +985,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_3 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = craven } 
+			LIT_personality_trait_check = { TRAIT = craven }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -996,7 +996,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_3 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = brave } 
+			LIT_personality_trait_check = { TRAIT = brave }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -1007,7 +1007,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_3 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = shy } 
+			LIT_personality_trait_check = { TRAIT = shy }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -1018,7 +1018,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_3 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = gregarious } 
+			LIT_personality_trait_check = { TRAIT = gregarious }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -1029,7 +1029,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_3 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = ambitious } 
+			LIT_personality_trait_check = { TRAIT = ambitious }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -1040,7 +1040,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_3 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = content } 
+			LIT_personality_trait_check = { TRAIT = content }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -1051,7 +1051,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_3 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = arbitrary } 
+			LIT_personality_trait_check = { TRAIT = arbitrary }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -1062,7 +1062,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_3 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = just } 
+			LIT_personality_trait_check = { TRAIT = just }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -1073,7 +1073,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_4 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = zealous } 
+			LIT_personality_trait_check = { TRAIT = zealous }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -1084,7 +1084,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_4 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = cynical } 
+			LIT_personality_trait_check = { TRAIT = cynical }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -1095,7 +1095,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_4 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = paranoid } 
+			LIT_personality_trait_check = { TRAIT = paranoid }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -1106,7 +1106,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_4 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = trusting } 
+			LIT_personality_trait_check = { TRAIT = trusting }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -1117,7 +1117,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_4 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = compassionate } 
+			LIT_personality_trait_check = { TRAIT = compassionate }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -1128,7 +1128,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_4 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = callous } 
+			LIT_personality_trait_check = { TRAIT = callous }
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -1139,7 +1139,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_4 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = sadistic} 
+			LIT_personality_trait_check = { TRAIT = sadistic}
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -1150,7 +1150,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_4 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = stubborn} 
+			LIT_personality_trait_check = { TRAIT = stubborn}
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -1161,7 +1161,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_5 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = fickle} 
+			LIT_personality_trait_check = { TRAIT = fickle}
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -1172,7 +1172,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_5 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = vengeful} 
+			LIT_personality_trait_check = { TRAIT = vengeful}
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -1183,7 +1183,7 @@ dp_char_editor.12 = {
 			scope:char_editor = { has_character_flag = trait_menu_personality_pg_5 }
 		}
 		scope:char_editor = {
-			LIT_personality_trait_check = { TRAIT = forgiving} 
+			LIT_personality_trait_check = { TRAIT = forgiving}
 		}
 		trigger_event = dp_char_editor.12
 	}
@@ -1193,8 +1193,8 @@ dp_char_editor.12 = {
 		trigger = {
 			scope:char_editor = {
 				has_character_flag = trait_menu_personality_pg_5
-				NOT = { has_trait = stubborn }  # 不能同时拥有顽固特质
-				NOT = { has_trait = fickle }    # 不能同时拥有善变特质
+				NOT = { has_trait = stubborn }  #
+				NOT = { has_trait = fickle }    #
 			}
 		}
 		scope:char_editor = {
@@ -1247,7 +1247,7 @@ dp_char_editor.13 = {
 			scope:char_editor = { has_character_flag = trait_menu_infamy_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = adulterer } 
+			LIT_trait_check = { TRAIT = adulterer }
 		}
 		trigger_event = dp_char_editor.13
 	}
@@ -1258,7 +1258,7 @@ dp_char_editor.13 = {
 			scope:char_editor = { has_character_flag = trait_menu_infamy_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = fornicator } 
+			LIT_trait_check = { TRAIT = fornicator }
 		}
 		trigger_event = dp_char_editor.13
 	}
@@ -1269,7 +1269,7 @@ dp_char_editor.13 = {
 			scope:char_editor = { has_character_flag = trait_menu_infamy_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = deviant } 
+			LIT_trait_check = { TRAIT = deviant }
 		}
 		trigger_event = dp_char_editor.13
 	}
@@ -1280,7 +1280,7 @@ dp_char_editor.13 = {
 			scope:char_editor = { has_character_flag = trait_menu_infamy_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = kinslayer_1 } 
+			LIT_trait_check = { TRAIT = kinslayer_1 }
 		}
 		trigger_event = dp_char_editor.13
 	}
@@ -1291,7 +1291,7 @@ dp_char_editor.13 = {
 			scope:char_editor = { has_character_flag = trait_menu_infamy_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = kinslayer_2 } 
+			LIT_trait_check = { TRAIT = kinslayer_2 }
 		}
 		trigger_event = dp_char_editor.13
 	}
@@ -1302,7 +1302,7 @@ dp_char_editor.13 = {
 			scope:char_editor = { has_character_flag = trait_menu_infamy_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = kinslayer_3 } 
+			LIT_trait_check = { TRAIT = kinslayer_3 }
 		}
 		trigger_event = dp_char_editor.13
 	}
@@ -1313,7 +1313,7 @@ dp_char_editor.13 = {
 			scope:char_editor = { has_character_flag = trait_menu_infamy_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = incestuous} 
+			LIT_trait_check = { TRAIT = incestuous}
 		}
 		trigger_event = dp_char_editor.13
 	}
@@ -1324,7 +1324,7 @@ dp_char_editor.13 = {
 			scope:char_editor = { has_character_flag = trait_menu_infamy_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = sodomite } 
+			LIT_trait_check = { TRAIT = sodomite }
 		}
 		trigger_event = dp_char_editor.13
 	}
@@ -1335,7 +1335,7 @@ dp_char_editor.13 = {
 			scope:char_editor = { has_character_flag = trait_menu_infamy_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = witch } 
+			LIT_trait_check = { TRAIT = witch }
 		}
 		trigger_event = dp_char_editor.13
 	}
@@ -1346,7 +1346,7 @@ dp_char_editor.13 = {
 			scope:char_editor = { has_character_flag = trait_menu_infamy_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = cannibal } 
+			LIT_trait_check = { TRAIT = cannibal }
 		}
 		trigger_event = dp_char_editor.13
 	}
@@ -1357,7 +1357,7 @@ dp_char_editor.13 = {
 			scope:char_editor = { has_character_flag = trait_menu_infamy_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = excommunicated } 
+			LIT_trait_check = { TRAIT = excommunicated }
 		}
 		trigger_event = dp_char_editor.13
 	}
@@ -1368,7 +1368,7 @@ dp_char_editor.13 = {
 			scope:char_editor = { has_character_flag = trait_menu_infamy_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = murderer } 
+			LIT_trait_check = { TRAIT = murderer }
 		}
 		trigger_event = dp_char_editor.13
 	}
@@ -1379,7 +1379,7 @@ dp_char_editor.13 = {
 			scope:char_editor = { has_character_flag = trait_menu_infamy_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = decadent } 
+			LIT_trait_check = { TRAIT = decadent }
 		}
 		trigger_event = dp_char_editor.13
 	}
@@ -1426,7 +1426,7 @@ dp_char_editor.14 = {
 			scope:char_editor = { has_character_flag = trait_menu_lifestyle_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = celibate } 
+			LIT_trait_check = { TRAIT = celibate }
 		}
 		trigger_event = dp_char_editor.14
 	}
@@ -1437,7 +1437,7 @@ dp_char_editor.14 = {
 			scope:char_editor = { has_character_flag = trait_menu_lifestyle_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = lifestyle_herbalist } 
+			LIT_trait_check = { TRAIT = lifestyle_herbalist }
 		}
 		trigger_event = dp_char_editor.14
 	}
@@ -1448,7 +1448,7 @@ dp_char_editor.14 = {
 			scope:char_editor = { has_character_flag = trait_menu_lifestyle_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = lifestyle_gardener } 
+			LIT_trait_check = { TRAIT = lifestyle_gardener }
 		}
 		trigger_event = dp_char_editor.14
 	}
@@ -1459,7 +1459,7 @@ dp_char_editor.14 = {
 			scope:char_editor = { has_character_flag = trait_menu_lifestyle_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = pilgrim } 
+			LIT_trait_check = { TRAIT = pilgrim }
 		}
 		trigger_event = dp_char_editor.14
 	}
@@ -1470,7 +1470,7 @@ dp_char_editor.14 = {
 			scope:char_editor = { has_character_flag = trait_menu_lifestyle_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = lifestyle_mystic } 
+			LIT_trait_check = { TRAIT = lifestyle_mystic }
 		}
 		trigger_event = dp_char_editor.14
 	}
@@ -1481,7 +1481,7 @@ dp_char_editor.14 = {
 			scope:char_editor = { has_character_flag = trait_menu_lifestyle_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = lifestyle_hunter } 
+			LIT_trait_check = { TRAIT = lifestyle_hunter }
 		}
 		trigger_event = dp_char_editor.14
 	}
@@ -1492,7 +1492,7 @@ dp_char_editor.14 = {
 			scope:char_editor = { has_character_flag = trait_menu_lifestyle_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = lifestyle_traveler } 
+			LIT_trait_check = { TRAIT = lifestyle_traveler }
 		}
 		trigger_event = dp_char_editor.14
 	}
@@ -1504,7 +1504,7 @@ dp_char_editor.14 = {
 			scope:char_editor = { has_character_flag = trait_menu_lifestyle_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = tourney_participant } 
+			LIT_trait_check = { TRAIT = tourney_participant }
 		}
 		trigger_event = dp_char_editor.14
 	}
@@ -1515,7 +1515,7 @@ dp_char_editor.14 = {
 			scope:char_editor = { has_character_flag = trait_menu_lifestyle_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = lifestyle_blademaster} 
+			LIT_trait_check = { TRAIT = lifestyle_blademaster}
 		}
 		trigger_event = dp_char_editor.14
 	}
@@ -1526,7 +1526,7 @@ dp_char_editor.14 = {
 			scope:char_editor = { has_character_flag = trait_menu_lifestyle_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = lifestyle_reveler } 
+			LIT_trait_check = { TRAIT = lifestyle_reveler }
 		}
 		trigger_event = dp_char_editor.14
 	}
@@ -1537,7 +1537,7 @@ dp_char_editor.14 = {
 			scope:char_editor = { has_character_flag = trait_menu_lifestyle_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = lifestyle_physician } 
+			LIT_trait_check = { TRAIT = lifestyle_physician }
 		}
 		trigger_event = dp_char_editor.14
 	}
@@ -1548,7 +1548,7 @@ dp_char_editor.14 = {
 			scope:char_editor = { has_character_flag = trait_menu_lifestyle_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = gallowsbait } 
+			LIT_trait_check = { TRAIT = gallowsbait }
 		}
 		trigger_event = dp_char_editor.14
 	}
@@ -1637,7 +1637,7 @@ dp_char_editor.16 = {
 			scope:char_editor = { has_character_flag = trait_menu_fame_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = pilgrim } 
+			LIT_trait_check = { TRAIT = pilgrim }
 		}
 		trigger_event = dp_char_editor.16
 	}
@@ -1648,7 +1648,7 @@ dp_char_editor.16 = {
 			scope:char_editor = { has_character_flag = trait_menu_fame_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = hajjaj } 
+			LIT_trait_check = { TRAIT = hajjaj }
 		}
 		trigger_event = dp_char_editor.16
 	}
@@ -1659,7 +1659,7 @@ dp_char_editor.16 = {
 			scope:char_editor = { has_character_flag = trait_menu_fame_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = devoted} 
+			LIT_trait_check = { TRAIT = devoted}
 		}
 		trigger_event = dp_char_editor.16
 	}
@@ -1670,7 +1670,7 @@ dp_char_editor.16 = {
 			scope:char_editor = { has_character_flag = trait_menu_fame_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = sayyid } 
+			LIT_trait_check = { TRAIT = sayyid }
 		}
 		trigger_event = dp_char_editor.16
 	}
@@ -1681,7 +1681,7 @@ dp_char_editor.16 = {
 			scope:char_editor = { has_character_flag = trait_menu_fame_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = saoshyant } 
+			LIT_trait_check = { TRAIT = saoshyant }
 		}
 		trigger_event = dp_char_editor.16
 	}
@@ -1692,7 +1692,7 @@ dp_char_editor.16 = {
 			scope:char_editor = { has_character_flag = trait_menu_fame_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = saoshyant_descendant } 
+			LIT_trait_check = { TRAIT = saoshyant_descendant }
 		}
 		trigger_event = dp_char_editor.16
 	}
@@ -1703,7 +1703,7 @@ dp_char_editor.16 = {
 			scope:char_editor = { has_character_flag = trait_menu_fame_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = paragon } 
+			LIT_trait_check = { TRAIT = paragon }
 		}
 		trigger_event = dp_char_editor.16
 	}
@@ -1714,7 +1714,7 @@ dp_char_editor.16 = {
 			scope:char_editor = { has_character_flag = trait_menu_fame_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = savior } 
+			LIT_trait_check = { TRAIT = savior }
 		}
 		trigger_event = dp_char_editor.16
 	}
@@ -1727,7 +1727,7 @@ dp_char_editor.16 = {
 			scope:char_editor = { has_character_flag = trait_menu_fame_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = divine_blood } 
+			LIT_trait_check = { TRAIT = divine_blood }
 		}
 		trigger_event = dp_char_editor.16
 	}
@@ -1738,7 +1738,7 @@ dp_char_editor.16 = {
 			scope:char_editor = { has_character_flag = trait_menu_fame_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = blood_of_prophet} 
+			LIT_trait_check = { TRAIT = blood_of_prophet}
 		}
 		trigger_event = dp_char_editor.16
 	}
@@ -1749,7 +1749,7 @@ dp_char_editor.16 = {
 			scope:char_editor = { has_character_flag = trait_menu_fame_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = faith_warrior} 
+			LIT_trait_check = { TRAIT = faith_warrior}
 		}
 		trigger_event = dp_char_editor.16
 	}
@@ -1760,7 +1760,7 @@ dp_char_editor.16 = {
 			scope:char_editor = { has_character_flag = trait_menu_fame_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = saint } 
+			LIT_trait_check = { TRAIT = saint }
 		}
 		trigger_event = dp_char_editor.16
 	}
@@ -1771,7 +1771,7 @@ dp_char_editor.16 = {
 			scope:char_editor = { has_character_flag = trait_menu_fame_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = order_member } 
+			LIT_trait_check = { TRAIT = order_member }
 		}
 		trigger_event = dp_char_editor.16
 	}
@@ -1782,7 +1782,7 @@ dp_char_editor.16 = {
 			scope:char_editor = { has_character_flag = trait_menu_fame_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = berserker } 
+			LIT_trait_check = { TRAIT = berserker }
 		}
 		trigger_event = dp_char_editor.16
 	}
@@ -1793,7 +1793,7 @@ dp_char_editor.16 = {
 			scope:char_editor = { has_character_flag = trait_menu_fame_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = shieldmaiden } 
+			LIT_trait_check = { TRAIT = shieldmaiden }
 		}
 		trigger_event = dp_char_editor.16
 	}
@@ -1804,7 +1804,7 @@ dp_char_editor.16 = {
 			scope:char_editor = { has_character_flag = trait_menu_fame_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = adventurer } 
+			LIT_trait_check = { TRAIT = adventurer }
 		}
 		trigger_event = dp_char_editor.16
 	}
@@ -1817,7 +1817,7 @@ dp_char_editor.16 = {
 			scope:char_editor = { has_character_flag = trait_menu_fame_pg_3 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = varangian } 
+			LIT_trait_check = { TRAIT = varangian }
 		}
 		trigger_event = dp_char_editor.16
 	}
@@ -1828,7 +1828,7 @@ dp_char_editor.16 = {
 			scope:char_editor = { has_character_flag = trait_menu_fame_pg_3 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = poet } 
+			LIT_trait_check = { TRAIT = poet }
 		}
 		trigger_event = dp_char_editor.16
 	}
@@ -1839,7 +1839,7 @@ dp_char_editor.16 = {
 			scope:char_editor = { has_character_flag = trait_menu_fame_pg_3 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = viking } 
+			LIT_trait_check = { TRAIT = viking }
 		}
 		trigger_event = dp_char_editor.16
 	}
@@ -1850,7 +1850,7 @@ dp_char_editor.16 = {
 			scope:char_editor = { has_character_flag = trait_menu_fame_pg_3 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = heresiarch } 
+			LIT_trait_check = { TRAIT = heresiarch }
 		}
 		trigger_event = dp_char_editor.16
 	}
@@ -1861,7 +1861,7 @@ dp_char_editor.16 = {
 			scope:char_editor = { has_character_flag = trait_menu_fame_pg_3 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = peasant_leader } 
+			LIT_trait_check = { TRAIT = peasant_leader }
 
 		}
 		trigger_event = dp_char_editor.16
@@ -1873,7 +1873,7 @@ dp_char_editor.16 = {
 			scope:char_editor = { has_character_flag = trait_menu_fame_pg_3 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = loyal } 
+			LIT_trait_check = { TRAIT = loyal }
 		}
 		trigger_event = dp_char_editor.16
 	}
@@ -1884,7 +1884,7 @@ dp_char_editor.16 = {
 			scope:char_editor = { has_character_flag = trait_menu_fame_pg_3 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = disloyal } 
+			LIT_trait_check = { TRAIT = disloyal }
 		}
 		trigger_event = dp_char_editor.16
 	}
@@ -2981,7 +2981,7 @@ dp_char_editor.26 = {
 			scope:char_editor = { has_character_flag = trait_menu_commander_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = logistician } 
+			LIT_trait_check = { TRAIT = logistician }
 		}
 		trigger_event = dp_char_editor.26
 	}
@@ -2992,7 +2992,7 @@ dp_char_editor.26 = {
 			scope:char_editor = { has_character_flag = trait_menu_commander_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = military_engineer } 
+			LIT_trait_check = { TRAIT = military_engineer }
 		}
 		trigger_event = dp_char_editor.26
 	}
@@ -3003,7 +3003,7 @@ dp_char_editor.26 = {
 			scope:char_editor = { has_character_flag = trait_menu_commander_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = aggressive_attacker } 
+			LIT_trait_check = { TRAIT = aggressive_attacker }
 		}
 		trigger_event = dp_char_editor.26
 	}
@@ -3014,7 +3014,7 @@ dp_char_editor.26 = {
 			scope:char_editor = { has_character_flag = trait_menu_commander_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = unyielding_defender } 
+			LIT_trait_check = { TRAIT = unyielding_defender }
 		}
 		trigger_event = dp_char_editor.26
 	}
@@ -3025,7 +3025,7 @@ dp_char_editor.26 = {
 			scope:char_editor = { has_character_flag = trait_menu_commander_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = forder } 
+			LIT_trait_check = { TRAIT = forder }
 		}
 		trigger_event = dp_char_editor.26
 	}
@@ -3036,7 +3036,7 @@ dp_char_editor.26 = {
 			scope:char_editor = { has_character_flag = trait_menu_commander_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = flexible_leader } 
+			LIT_trait_check = { TRAIT = flexible_leader }
 		}
 		trigger_event = dp_char_editor.26
 	}
@@ -3047,7 +3047,7 @@ dp_char_editor.26 = {
 			scope:char_editor = { has_character_flag = trait_menu_commander_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = desert_warrior } 
+			LIT_trait_check = { TRAIT = desert_warrior }
 		}
 		trigger_event = dp_char_editor.26
 	}
@@ -3060,7 +3060,7 @@ dp_char_editor.26 = {
 			scope:char_editor = { has_character_flag = trait_menu_commander_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = jungle_stalker } 
+			LIT_trait_check = { TRAIT = jungle_stalker }
 		}
 		trigger_event = dp_char_editor.26
 	}
@@ -3071,7 +3071,7 @@ dp_char_editor.26 = {
 			scope:char_editor = { has_character_flag = trait_menu_commander_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = reaver} 
+			LIT_trait_check = { TRAIT = reaver}
 		}
 		trigger_event = dp_char_editor.26
 	}
@@ -3082,7 +3082,7 @@ dp_char_editor.26 = {
 			scope:char_editor = { has_character_flag = trait_menu_commander_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = reckless } 
+			LIT_trait_check = { TRAIT = reckless }
 		}
 		trigger_event = dp_char_editor.26
 	}
@@ -3093,7 +3093,7 @@ dp_char_editor.26 = {
 			scope:char_editor = { has_character_flag = trait_menu_commander_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = holy_warrior } 
+			LIT_trait_check = { TRAIT = holy_warrior }
 		}
 		trigger_event = dp_char_editor.26
 	}
@@ -3103,7 +3103,7 @@ dp_char_editor.26 = {
 			scope:char_editor = { has_character_flag = trait_menu_commander_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = open_terrain_expert } 
+			LIT_trait_check = { TRAIT = open_terrain_expert }
 		}
 		trigger_event = dp_char_editor.26
 	}
@@ -3114,7 +3114,7 @@ dp_char_editor.26 = {
 			scope:char_editor = { has_character_flag = trait_menu_commander_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = rough_terrain_expert } 
+			LIT_trait_check = { TRAIT = rough_terrain_expert }
 		}
 		trigger_event = dp_char_editor.26
 	}
@@ -3125,7 +3125,7 @@ dp_char_editor.26 = {
 			scope:char_editor = { has_character_flag = trait_menu_commander_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = forest_fighter } 
+			LIT_trait_check = { TRAIT = forest_fighter }
 		}
 		trigger_event = dp_char_editor.26
 	}
@@ -3138,7 +3138,7 @@ dp_char_editor.26 = {
 			scope:char_editor = { has_character_flag = trait_menu_commander_pg_3 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = cautious_leader } 
+			LIT_trait_check = { TRAIT = cautious_leader }
 		}
 		trigger_event = dp_char_editor.26
 	}
@@ -3149,7 +3149,7 @@ dp_char_editor.26 = {
 			scope:char_editor = { has_character_flag = trait_menu_commander_pg_3 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = organizer } 
+			LIT_trait_check = { TRAIT = organizer }
 		}
 		trigger_event = dp_char_editor.26
 	}
@@ -3160,7 +3160,7 @@ dp_char_editor.26 = {
 			scope:char_editor = { has_character_flag = trait_menu_commander_pg_3 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = winter_soldier} 
+			LIT_trait_check = { TRAIT = winter_soldier}
 		}
 		trigger_event = dp_char_editor.26
 	}
@@ -3207,7 +3207,7 @@ dp_char_editor.27 = {
 			scope:char_editor = { has_character_flag = trait_menu_birth_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = bastard } 
+			LIT_trait_check = { TRAIT = bastard }
 		}
 		trigger_event = dp_char_editor.27
 	}
@@ -3218,7 +3218,7 @@ dp_char_editor.27 = {
 			scope:char_editor = { has_character_flag = trait_menu_birth_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = legitimized_bastard } 
+			LIT_trait_check = { TRAIT = legitimized_bastard }
 		}
 		trigger_event = dp_char_editor.27
 	}
@@ -3229,7 +3229,7 @@ dp_char_editor.27 = {
 			scope:char_editor = { has_character_flag = trait_menu_birth_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = disputed_heritage } 
+			LIT_trait_check = { TRAIT = disputed_heritage }
 		}
 		trigger_event = dp_char_editor.27
 	}
@@ -3243,7 +3243,7 @@ dp_char_editor.27 = {
 			}		
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = child_of_concubine_male } 
+			LIT_trait_check = { TRAIT = child_of_concubine_male }
 		}
 		trigger_event = dp_char_editor.27
 	}
@@ -3257,7 +3257,7 @@ dp_char_editor.27 = {
 			}		
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = child_of_concubine_female } 
+			LIT_trait_check = { TRAIT = child_of_concubine_female }
 		}
 		trigger_event = dp_char_editor.27
 	}
@@ -3268,7 +3268,7 @@ dp_char_editor.27 = {
 			scope:char_editor = { has_character_flag = trait_menu_birth_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = wild_oat } 
+			LIT_trait_check = { TRAIT = wild_oat }
 		}
 		trigger_event = dp_char_editor.27
 	}
@@ -3279,7 +3279,7 @@ dp_char_editor.27 = {
 			scope:char_editor = { has_character_flag = trait_menu_birth_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = bastard_founder } 
+			LIT_trait_check = { TRAIT = bastard_founder }
 		}
 		trigger_event = dp_char_editor.27
 	}
@@ -3290,7 +3290,7 @@ dp_char_editor.27 = {
 			scope:char_editor = { has_character_flag = trait_menu_birth_pg_1 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = twin } 
+			LIT_trait_check = { TRAIT = twin }
 		}
 		trigger_event = dp_char_editor.27
 	}
@@ -3303,7 +3303,7 @@ dp_char_editor.27 = {
 			scope:char_editor = { has_character_flag = trait_menu_birth_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = born_in_the_purple } 
+			LIT_trait_check = { TRAIT = born_in_the_purple }
 		}
 		trigger_event = dp_char_editor.27
 	}
@@ -3314,7 +3314,7 @@ dp_char_editor.27 = {
 			scope:char_editor = { has_character_flag = trait_menu_birth_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = augustus } 
+			LIT_trait_check = { TRAIT = augustus }
 		}
 		trigger_event = dp_char_editor.27
 	}
@@ -3325,7 +3325,7 @@ dp_char_editor.27 = {
 			scope:char_editor = { has_character_flag = trait_menu_birth_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = conqueror } 
+			LIT_trait_check = { TRAIT = conqueror }
 		}
 		trigger_event = dp_char_editor.27
 	}
@@ -3336,7 +3336,7 @@ dp_char_editor.27 = {
 			scope:char_editor = { has_character_flag = trait_menu_birth_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = chakravarti } 
+			LIT_trait_check = { TRAIT = chakravarti }
 		}
 		trigger_event = dp_char_editor.27
 	}
@@ -3347,7 +3347,7 @@ dp_char_editor.27 = {
 			scope:char_editor = { has_character_flag = trait_menu_birth_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = greatest_of_khans } 
+			LIT_trait_check = { TRAIT = greatest_of_khans }
 		}
 		trigger_event = dp_char_editor.27
 	}
@@ -3358,7 +3358,7 @@ dp_char_editor.27 = {
 			scope:char_editor = { has_character_flag = trait_menu_birth_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = reincarnation } 
+			LIT_trait_check = { TRAIT = reincarnation }
 		}
 		trigger_event = dp_char_editor.27
 	}
@@ -3369,7 +3369,7 @@ dp_char_editor.27 = {
 			scope:char_editor = { has_character_flag = trait_menu_birth_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = extolled } 
+			LIT_trait_check = { TRAIT = extolled }
 		}
 		trigger_event = dp_char_editor.27
 	}
@@ -3380,7 +3380,7 @@ dp_char_editor.27 = {
 			scope:char_editor = { has_character_flag = trait_menu_birth_pg_2 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = saint } 
+			LIT_trait_check = { TRAIT = saint }
 		}
 		trigger_event = dp_char_editor.27
 	}
@@ -4444,7 +4444,7 @@ dp_char_editor.36 = {
 	}
 }
 
-### 学识 EDUCATION ###
+###  EDUCATION ###
 
 dp_char_editor.37 = {
 	type = character_event
@@ -4542,7 +4542,7 @@ dp_char_editor.37 = {
 	}
 }
 
-### 教育-勇武特质选项 ###
+### - ###
 
 dp_char_editor.38 = {
 	type = character_event
@@ -4624,7 +4624,7 @@ dp_char_editor.38 = {
 	}
 }
 
-### 教育-共和国学特质选项 ###
+### - ###
 
 dp_char_editor.99 = {
 	type = character_event
@@ -8144,6 +8144,253 @@ dp_char_editor.41 = {
 	}
 	
 	option = {
+		name = kaharingan_religion
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = religion_pg_4
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:kaharingan
+		}
+		trigger_event = dp_char_editor.41
+	}
+
+	option = {
+		name = kamuyism_religion
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = religion_pg_5
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:kamuyism_pagan
+		}
+		trigger_event = dp_char_editor.41
+	}
+
+	option = {
+		name = bimoism_religion
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = religion_pg_5
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:bimoism
+		}
+		trigger_event = dp_char_editor.41
+	}
+
+	option = {
+		name = hantuism_religion
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = religion_pg_5
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:hantuism
+		}
+		trigger_event = dp_char_editor.41
+	}
+
+	option = {
+		name = shamanism_religion
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = religion_pg_5
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:shamanism
+		}
+		trigger_event = dp_char_editor.41
+	}
+
+	option = {
+		name = siberian_religion
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = religion_pg_5
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:siberian_pagan
+		}
+		trigger_event = dp_char_editor.41
+	}
+
+	option = {
+		name = aluk_religion
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = religion_pg_5
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:aluk
+		}
+		trigger_event = dp_char_editor.41
+	}
+
+	option = {
+		name = basque_religion
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = religion_pg_5
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:basque_pagan
+		}
+		trigger_event = dp_char_editor.41
+	}
+
+	option = {
+		name = biliku_religion
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = religion_pg_6
+			}
+		}
+		scope:char_editor = {
+			add_character_flag = biliku_religion_pg
+		}
+		trigger_event = dp_char_editor.42
+	}
+
+	option = {
+		name = confucianism_religion
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = religion_pg_6
+			}
+		}
+		scope:char_editor = {
+			add_character_flag = confucianism_religion_pg
+		}
+		trigger_event = dp_char_editor.42
+	}
+
+	option = {
+		name = muism_religion
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = religion_pg_6
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:mu
+		}
+		trigger_event = dp_char_editor.41
+	}
+
+	option = {
+		name = shintoism_religion
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = religion_pg_6
+			}
+		}
+		scope:char_editor = {
+			add_character_flag = shintoism_religion_pg
+		}
+		trigger_event = dp_char_editor.42
+	}
+
+	option = {
+		name = utaki_religion
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = religion_pg_6
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:utaki
+		}
+		trigger_event = dp_char_editor.41
+	}
+
+	option = {
+		name = tolotang_religion
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = religion_pg_6
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:tolotang
+		}
+		trigger_event = dp_char_editor.41
+	}
+
+	option = {
+		name = dab_qhuas_religion
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = religion_pg_6
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:dab_qhuas
+		}
+		trigger_event = dp_char_editor.41
+	}
+
+	option = {
+		name = dayawism_religion
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = religion_pg_7
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:dayawism
+		}
+		trigger_event = dp_char_editor.41
+	}
+
+	option = {
+		name = north_african_religion
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = religion_pg_7
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:north_african_acham_pagan
+		}
+		trigger_event = dp_char_editor.41
+	}
+
+	option = {
+		name = moism_religion
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = religion_pg_7
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:moism
+		}
+		trigger_event = dp_char_editor.41
+	}
+
+	option = {
+		name = satsana_phi_religion
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = religion_pg_7
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:satsana_phi
+		}
+		trigger_event = dp_char_editor.41
+	}
+	
+	option = {
 		name = dp_char_editor_forward
 		religion_forward = yes
 		trigger_event = dp_char_editor.41
@@ -8267,6 +8514,123 @@ dp_char_editor.42 = {
 		}
 		trigger_event = dp_char_editor.42
 	}
+
+	option = {
+		name = pundarika
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = buddhism_religion_pg
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:pundarika
+		}
+		trigger_event = dp_char_editor.42
+	}
+
+	option = {
+		name = mantrayana
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = buddhism_religion_pg
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:mantrayana
+		}
+		trigger_event = dp_char_editor.42
+	}
+
+	option = {
+		name = dhyana
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = buddhism_religion_pg
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:dhyana
+		}
+		trigger_event = dp_char_editor.42
+	}
+
+	option = {
+		name = sukhavati
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = buddhism_religion_pg
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:sukhavati
+		}
+		trigger_event = dp_char_editor.42
+	}
+
+	option = {
+		name = avatamsaka
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = buddhism_religion_pg
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:avatamsaka
+		}
+		trigger_event = dp_char_editor.42
+	}
+
+	option = {
+		name = maitreya
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = buddhism_religion_pg
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:maitreya
+		}
+		trigger_event = dp_char_editor.42
+	}
+
+	option = {
+		name = vinaya
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = buddhism_religion_pg
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:vinaya
+		}
+		trigger_event = dp_char_editor.42
+	}
+
+	option = {
+		name = yogacara
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = buddhism_religion_pg
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:yogacara
+		}
+		trigger_event = dp_char_editor.42
+	}
+
+	option = {
+		name = acharya
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = buddhism_religion_pg
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:acharya
+		}
+		trigger_event = dp_char_editor.42
+	}
 	
 	option = {
 		name = orthodox
@@ -8368,6 +8732,32 @@ dp_char_editor.42 = {
 		}
 		scope:char_editor = {
 			set_character_faith = faith:lollard
+		}
+		trigger_event = dp_char_editor.42
+	}
+
+	option = {
+		name = mozarabic_church
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = christianity_religion_pg_2
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:mozarabic_church
+		}
+		trigger_event = dp_char_editor.42
+	}
+
+	option = {
+		name = adoptionist
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = christianity_religion_pg_2
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:adoptionist
 		}
 		trigger_event = dp_char_editor.42
 	}
@@ -8683,6 +9073,19 @@ dp_char_editor.42 = {
 		}
 		trigger_event = dp_char_editor.42
 	}
+
+	option = {
+		name = saura
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = hinduism_religion_pg
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:saura
+		}
+		trigger_event = dp_char_editor.42
+	}
 	
 	option = {
 		name = ashari
@@ -8891,6 +9294,19 @@ dp_char_editor.42 = {
 		}
 		trigger_event = dp_char_editor.42
 	}
+
+	option = {
+		name = hafizi
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = islam_religion_pg_2
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:hafizi
+		}
+		trigger_event = dp_char_editor.42
+	}
 	
 	option = {
 		name = azariqa
@@ -9044,6 +9460,19 @@ dp_char_editor.42 = {
 		}
 		scope:char_editor = {
 			set_character_faith = faith:kabarism
+		}
+		trigger_event = dp_char_editor.42
+	}
+
+	option = {
+		name = merkabah
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = judaism_religion_pg
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:merkabah
 		}
 		trigger_event = dp_char_editor.42
 	}
@@ -9294,6 +9723,97 @@ dp_char_editor.42 = {
 		}
 		trigger_event = dp_char_editor.42
 	}
+
+	option = {
+		name = afridunism
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = zoroastrianism_religion_pg
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:afridunism
+		}
+		trigger_event = dp_char_editor.42
+	}
+
+	option = {
+		name = bilikuism
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = biliku_religion_pg
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:bilikuism
+		}
+		trigger_event = dp_char_editor.42
+	}
+
+	option = {
+		name = pulugaism
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = biliku_religion_pg
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:pulugaism
+		}
+		trigger_event = dp_char_editor.42
+	}
+
+	option = {
+		name = jingxue
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = confucianism_religion_pg
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:jingxue
+		}
+		trigger_event = dp_char_editor.42
+	}
+
+	option = {
+		name = daoxue
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = confucianism_religion_pg
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:daoxue
+		}
+		trigger_event = dp_char_editor.42
+	}
+
+	option = {
+		name = shinto
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = shintoism_religion_pg
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:shinto
+		}
+		trigger_event = dp_char_editor.42
+	}
+
+	option = {
+		name = shugendo
+		trigger = {
+			scope:char_editor = {
+				has_character_flag = shintoism_religion_pg
+			}
+		}
+		scope:char_editor = {
+			set_character_faith = faith:shugendo
+		}
+		trigger_event = dp_char_editor.42
+	}
 	option = {
 		name = dp_char_editor_forward
 		trigger = {
@@ -9377,13 +9897,16 @@ dp_char_editor.42 = {
  			if = { limit = { has_character_flag = west_african_religion_pg } remove_character_flag = west_african_religion_pg }
  			if = { limit = { has_character_flag = yazidi_religion_pg } remove_character_flag = yazidi_religion_pg }
  			if = { limit = { has_character_flag = zoroastrianism_religion_pg } remove_character_flag = zoroastrianism_religion_pg }
+			if = { limit = { has_character_flag = biliku_religion_pg } remove_character_flag = biliku_religion_pg }
+			if = { limit = { has_character_flag = confucianism_religion_pg } remove_character_flag = confucianism_religion_pg }
+			if = { limit = { has_character_flag = shintoism_religion_pg } remove_character_flag = shintoism_religion_pg }
 		}
 		trigger_event = dp_char_editor.41
 	}
 }
 
 ### NAME MENU ###
-#重命名
+#
 dp_char_editor.43 = {
 	type = character_event
 	title = dp_char_editor.naming.t
@@ -9750,7 +10273,7 @@ dp_char_editor.47 = {
 	option = {
 		name = dp_char_editor.presents.randomizer
 		custom_tooltip = dp_char_editor.presents.randomizer_TT
-		hidden_effect = { 
+		hidden_effect = {
 			scope:char_editor = {
 				clear_personality_traits_effect = yes
 				personality_trait_randomizer_effect = yes
@@ -9761,35 +10284,35 @@ dp_char_editor.47 = {
 	
 	option = {
 		name = dp_char_editor.presents.special_traits
-		hidden_effect = { 
+		hidden_effect = {
 			scope:char_editor = {
-				if = { limit = { has_trait = immortal } 
-					remove_trait = immortal 
+				if = { limit = { has_trait = immortal }
+					remove_trait = immortal
 					if = { limit = { NOT = { has_character_flag = dp_char_editor_presents_special_traits } } add_character_flag = dp_char_editor_presents_special_traits }
 				}
-				if = { limit = { has_trait = zg_buxiu } 
-				remove_trait = zg_buxiu 
+				if = { limit = { has_trait = zg_buxiu }
+				remove_trait = zg_buxiu
 				if = { limit = { NOT = { has_character_flag = dp_char_editor_presents_special_traits } } add_character_flag = dp_char_editor_presents_special_traits }
 			}
-				if = { limit = { has_trait = 100_stat_man } 
-					remove_trait = 100_stat_man 
+				if = { limit = { has_trait = 100_stat_man }
+					remove_trait = 100_stat_man
 					if = { limit = { NOT = { has_character_flag = dp_char_editor_presents_special_traits } } add_character_flag = dp_char_editor_presents_special_traits }
 				}
-				if = { limit = { has_trait = nnn_challenger } 
-					remove_trait = nnn_challenger 
+				if = { limit = { has_trait = nnn_challenger }
+					remove_trait = nnn_challenger
 					if = { limit = { NOT = { has_character_flag = dp_char_editor_presents_special_traits } } add_character_flag = dp_char_editor_presents_special_traits }
 				}
 
-				if = { limit = { has_trait = build_speed_cheat } 
-					remove_trait = build_speed_cheat 
+				if = { limit = { has_trait = build_speed_cheat }
+					remove_trait = build_speed_cheat
 					if = { limit = { NOT = { has_character_flag = dp_char_editor_presents_special_traits } } add_character_flag = dp_char_editor_presents_special_traits }
 				}
-				if = { limit = { has_trait = stress_gain_remove } 
-					remove_trait = stress_gain_remove 
+				if = { limit = { has_trait = stress_gain_remove }
+					remove_trait = stress_gain_remove
 					if = { limit = { NOT = { has_character_flag = dp_char_editor_presents_special_traits } } add_character_flag = dp_char_editor_presents_special_traits }
 				}
-				if = { limit = { has_trait = tyranny_gain_remove } 
-					remove_trait = tyranny_gain_remove 
+				if = { limit = { has_trait = tyranny_gain_remove }
+					remove_trait = tyranny_gain_remove
 					if = { limit = { NOT = { has_character_flag = dp_char_editor_presents_special_traits } } add_character_flag = dp_char_editor_presents_special_traits }
 				}
 			
@@ -9942,31 +10465,31 @@ dp_char_editor.49 = {
 		animation = personality_bold
 	}
 	override_background = { event_background = study }
-	#部落革新
+	#
 	option = {
 		name = tribal_innovation_decision
 		trigger_event = dp_char_editor.49
 		innovation_tribal_effect = yes
 	}
-	#中世纪早期
+	#
 	option = {
 		name = early_medival_innovation_decision
 		trigger_event = dp_char_editor.49
 		innovation_early_medival_effect = yes
 	}
-	#中世纪盛期
+	#
 	option = {
 		name = high_medival_innovation_decision
 		trigger_event = dp_char_editor.49
 		innovation_high_medival_effect = yes
 	}
-	#中世纪晚期
+	#
 	option = {
 		name = late_medival_innovation_decision
 		trigger_event = dp_char_editor.49
 		innovation_late_medival_effect = yes
 	}
-	#特殊革新
+	#
 	option = {
 		name = special_innovation_decision
 		trigger_event = dp_char_editor.49
@@ -13506,7 +14029,7 @@ dp_char_editor.77 = {
 		trigger_event = dp_char_editor.77
 	}
 	### PAGE 3 ###
-	# 强盗
+	#
 	option = {
 		name = trait_track_bandit
 		trigger = {
@@ -13517,7 +14040,7 @@ dp_char_editor.77 = {
 		LIT_learned_trait_check_track = { TRAIT = gallowsbait TRACK = bandit VALUE = 50 }
 		trigger_event = dp_char_editor.77
 	}
-	# 骗子
+	#
 	option = {
 		name = trait_track_trickster
 		trigger = {
@@ -13528,7 +14051,7 @@ dp_char_editor.77 = {
 		LIT_learned_trait_check_track = { TRAIT = gallowsbait TRACK = trickster VALUE = 50 }
 		trigger_event = dp_char_editor.77
 	}
-	# 盗贼
+	#
 	option = {
 		name = trait_track_thief
 		trigger = {
@@ -13539,7 +14062,7 @@ dp_char_editor.77 = {
 		LIT_learned_trait_check_track = { TRAIT = gallowsbait TRACK = thief VALUE = 50 }
 		trigger_event = dp_char_editor.77
 	}
-	# 偷猎者
+	#
 	option = {
 		name = trait_track_poacher
 		trigger = {
@@ -13550,7 +14073,7 @@ dp_char_editor.77 = {
 		LIT_learned_trait_check_track = { TRAIT = gallowsbait TRACK = poacher VALUE = 50 }
 		trigger_event = dp_char_editor.77
 	}
-	# 掠夺者
+	#
 	option = {
 		name = trait_track_marauder
 		trigger = {

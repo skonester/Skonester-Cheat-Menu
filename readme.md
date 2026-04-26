@@ -25,6 +25,7 @@
 - [Installation Guide](#installation-guide)
 - [Comprehensive Changelog](#comprehensive-changelog)
 - [Contributing & Community](#contributing--community)
+- [License & Credits](#license--credits)
 
 ---
 
@@ -228,3 +229,26 @@ This project is open-source and community-driven.
 *   **Feedback**: We welcome reports on missing localizations or bugged interactions.
 *   **Contributions**: Pull requests for new translations (especially Turkish, Chinese, and Spanish) are highly appreciated.
 *   **Support**: I do not accept donations. If you enjoy the mod, please support the creators of the larger total conversion mods (EK2, AGOT, etc.) that make the CK3 community so vibrant.
+
+---
+
+## License & Credits
+
+### Credits
+The **Skonester Cheat Menu** is a community-driven project that builds upon the foundations laid by the giants of the CK3 modding scene. This mod is an evolution and continuation of the following works:
+*   **DaddyPika**: Original creator of the *Daddy Pika's Cheat Menu*.
+*   **Zhuge**: Major contributor to the advanced character interactions and menu logic.
+*   **Community Contributors**: Special thanks to Pavel, Bone, Leech, Sol, Xorxidox, Gravity, and x4077 for various scripts and assets used in this version.
+
+### License
+This mod is released under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** license.
+
+Under this license, you are free to:
+*   **Share**: Copy and redistribute the material in any medium or format.
+*   **Adapt**: Remix, transform, and build upon the material for any purpose, even commercially.
+
+**Under the following terms:**
+*   **Attribution**: You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+*   **Evolutionary Notice**: As this mod is an evolution of work by **DaddyPika** and **Zhuge**, any derivative works must also maintain clear attribution to the original creators and the Skonester development team.
+
+For full license details, please visit: [Creative Commons CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)

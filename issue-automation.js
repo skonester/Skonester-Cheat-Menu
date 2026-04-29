@@ -169,20 +169,12 @@ class IssueAutomation {
 
 **Before we proceed, please make sure:**
 1. You're using the latest version of the mod
-2. You've checked the [README](https://github.com/${REPO_OWNER}/${REPO_NAME}#readme) for common issues
 3. You've provided enough details for us to help you
 
 **For bug reports, please include:**
 - Game version
 - Mod version
-- Steps to reproduce
-- Expected vs actual behavior
 - Screenshots if applicable
-
-**For feature requests, please include:**
-- Detailed description of the feature
-- Why it would be useful
-- Any implementation ideas
 
 A maintainer will review your issue soon!`;
 

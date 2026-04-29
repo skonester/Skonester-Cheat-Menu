@@ -10,7 +10,8 @@
     "setup": "npm install",
     "setup-labels": "node setup-labels.js",
     "test": "node test-automation.js",
-    "verify": "node test-automation.js"
+    "verify": "node test-automation.js",
+    "ai-analyze": "node ai-issue-agent.js"
   },
   "bin": {
     "skonester-issue-automation": "./issue-automation.js"

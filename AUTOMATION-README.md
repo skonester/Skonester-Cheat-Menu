@@ -9,6 +9,7 @@ This setup provides automated issue management for the Skonester Cheat Menu mod 
 - **Welcome messages**: New issues receive a welcome message with guidelines
 - **Duplicate detection**: Identifies potential duplicate issues
 - **Stale issue management**: Automatically flags issues that haven't been updated in 30 days
+- **🤖 AI-Powered Analysis**: Uses Gemini to analyze bug reports and suggest fixes based on the codebase
 
 ### 📋 Issue Templates
 - **Bug Report Template**: Structured template for reporting bugs
@@ -19,6 +20,7 @@ This setup provides automated issue management for the Skonester Cheat Menu mod 
 - Runs automatically on issue events (opened, edited, commented)
 - No manual intervention required
 - Uses GitHub's free tier resources
+- **AI Agent Integration**: Connects to Gemini for deep issue analysis
 
 ## Setup Instructions
 
@@ -52,6 +54,13 @@ For local execution or custom workflows, you need a GitHub Personal Access Token
 2. Generate a new token with `repo` scope
 3. Save the token securely
 
+### 4. AI Agent Setup (Gemini)
+To enable the AI analysis:
+1. Get a Gemini API Key from [Google AI Studio](https://aistudio.google.com/).
+2. In your GitHub repository, go to **Settings → Secrets and variables → Actions**.
+3. Create a **New repository secret** named `GEMINI_API_KEY` and paste your key.
+4. The AI agent will now automatically comment on new issues!
+
 ## Usage
 
 ### Automated Workflow (Recommended)
@@ -67,6 +76,12 @@ npm run cleanup -- --token YOUR_TOKEN
 
 # Generate issue statistics
 npm run stats -- --token YOUR_TOKEN
+
+# Run AI analysis manually
+export GITHUB_TOKEN=YOUR_TOKEN
+export GEMINI_API_KEY=YOUR_GEMINI_KEY
+export ISSUE_NUMBER=123
+npm run ai-analyze
 ```
 
 ### As a Global CLI Tool

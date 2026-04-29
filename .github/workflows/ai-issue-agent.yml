@@ -34,4 +34,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ISSUE_NUMBER: ${{ github.event.inputs.issue_number || github.event.issue.number }}
+          # Optional: target base branch for PRs (default 'main')
+          TARGET_BASE_BRANCH: ${{ secrets.TARGET_BASE_BRANCH }}
         run: node ai-issue-agent.js

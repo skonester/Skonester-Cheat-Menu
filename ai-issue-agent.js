@@ -164,12 +164,15 @@ Only return the JSON.
   }
 
   async callGemini(prompt) {
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${this.geminiApiKey}`;
+    const model = 'gemini-2.5-flash';
+    const url = `https://generativelanguage.googleapis.com/v1/models/${model}:generateContent?key=${this.geminiApiKey}`;
     const response = await fetch(url, {
       method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
     });
     const data = await response.json();
+    if (data.error) throw new Error(`Gemini API Error: ${data.error.message}`);
     return data.candidates[0].content.parts[0].text;
   }
 }

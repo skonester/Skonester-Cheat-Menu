@@ -5,8 +5,8 @@
     process.exit(1);
   }
 
-  // Choose a model that the key supports (non‑Pro)
-  const model = 'gemini-2.0-flash';
+  // Use the highest‑tier flash model we have access to (2.5 Flash)
+  const model = 'gemini-2.5-flash';
   const url = `https://generativelanguage.googleapis.com/v1/models/${model}:generateContent?key=${key}`;
 
   const response = await fetch(url, {

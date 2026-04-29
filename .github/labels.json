@@ -1,0 +1,92 @@
+[
+  {
+    "name": "bug",
+    "color": "d73a4a",
+    "description": "Something isn't working"
+  },
+  {
+    "name": "enhancement",
+    "color": "a2eeef",
+    "description": "New feature or request"
+  },
+  {
+    "name": "translation",
+    "color": "0075ca",
+    "description": "Translation or localization issue"
+  },
+  {
+    "name": "documentation",
+    "color": "0075ca",
+    "description": "Improvements or additions to documentation"
+  },
+  {
+    "name": "compatibility",
+    "color": "cfd3d7",
+    "description": "Compatibility issue with game version or other mods"
+  },
+  {
+    "name": "question",
+    "color": "d876e3",
+    "description": "Further information is requested"
+  },
+  {
+    "name": "duplicate",
+    "color": "cfd3d7",
+    "description": "This issue or pull request already exists"
+  },
+  {
+    "name": "possible-duplicate",
+    "color": "f9d0c4",
+    "description": "Possible duplicate issue"
+  },
+  {
+    "name": "stale",
+    "color": "ffffff",
+    "description": "Issue hasn't been updated in 30 days"
+  },
+  {
+    "name": "help wanted",
+    "color": "008672",
+    "description": "Extra attention is needed"
+  },
+  {
+    "name": "good first issue",
+    "color": "7057ff",
+    "description": "Good for newcomers"
+  },
+  {
+    "name": "priority: high",
+    "color": "b60205",
+    "description": "High priority issue"
+  },
+  {
+    "name": "priority: medium",
+    "color": "d93f0b",
+    "description": "Medium priority issue"
+  },
+  {
+    "name": "priority: low",
+    "color": "0e8a16",
+    "description": "Low priority issue"
+  },
+  {
+    "name": "needs-reproduction",
+    "color": "fef2c0",
+    "description": "Issue needs steps to reproduce"
+  },
+  {
+    "name": "blocked",
+    "color": "d93f0b",
+    "description": "Blocked by another issue or external factor"
+  },
+  {
+    "name": "wontfix",
+    "color": "ffffff",
+    "description": "This will not be worked on"
+  },
+  {
+    "name": "invalid",
+    "color": "e4e669",
+    "description": "This doesn't seem right"
+  }
+]

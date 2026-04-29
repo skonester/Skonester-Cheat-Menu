@@ -1,0 +1,173 @@
+name: Issue Automation
+
+on:
+  issues:
+    types: [opened, edited, labeled, unlabeled]
+  issue_comment:
+    types: [created, edited]
+
+jobs:
+  triage-issues:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Auto-label issues
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { issue } = context.payload;
+            
+            // Get issue title and body
+            const title = issue.title.toLowerCase();
+            const body = issue.body?.toLowerCase() || '';
+            
+            // Define label patterns
+            const labelPatterns = {
+              'bug': ['bug', 'crash', 'error', 'broken', 'not working', 'fix'],
+              'enhancement': ['feature', 'enhancement', 'improvement', 'suggestion'],
+              'translation': ['translation', 'localization', 'language', 'locale'],
+              'documentation': ['documentation', 'readme', 'guide', 'tutorial'],
+              'compatibility': ['compatibility', 'update', 'version', 'patch', 'dlc'],
+              'question': ['question', 'help', 'how to', 'support'],
+              'duplicate': ['duplicate'],
+            };
+            
+            // Check for existing labels
+            const existingLabels = issue.labels.map(label => label.name);
+            
+            // Determine which labels to add
+            const labelsToAdd = [];
+            
+            for (const [label, patterns] of Object.entries(labelPatterns)) {
+              if (patterns.some(pattern => title.includes(pattern) || body.includes(pattern))) {
+                if (!existingLabels.includes(label)) {
+                  labelsToAdd.push(label);
+                }
+              }
+            }
+            
+            // Add labels if any were found
+            if (labelsToAdd.length > 0) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                labels: labelsToAdd
+              });
+            }
+            
+            // Auto-close empty issues
+            if (body.trim().length < 10 && !existingLabels.includes('question')) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                body: 'This issue appears to be empty or lacks sufficient details. Please provide more information about the problem or feature request. The issue will be closed automatically.'
+              });
+              
+              setTimeout(async () => {
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  state: 'closed'
+                });
+              }, 3000);
+            }
+
+  welcome-new-issue:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Welcome new issue
+        if: github.event_name == 'issues' && github.event.action == 'opened'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { issue } = context.payload;
+            
+            // Welcome message template
+            const welcomeMessage = `👋 Thanks for opening an issue, @${issue.user.login}!
+
+**Before we proceed, please make sure:**
+1. You're using the latest version of the mod
+2. You've checked the [README](https://github.com/${context.repo.owner}/${context.repo.repo}#readme) for common issues
+3. You've provided enough details for us to help you
+
+**For bug reports, please include:**
+- Game version
+- Mod version
+- Steps to reproduce
+- Expected vs actual behavior
+- Screenshots if applicable
+
+**For feature requests, please include:**
+- Detailed description of the feature
+- Why it would be useful
+- Any implementation ideas
+
+A maintainer will review your issue soon!`;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              body: welcomeMessage
+            });
+
+  check-duplicates:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: read
+    steps:
+      - name: Check for duplicate issues
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { issue } = context.payload;
+            
+            // Only check on new issues
+            if (context.payload.action !== 'opened') {
+              return;
+            }
+            
+            // Search for similar issues
+            const searchResults = await github.rest.search.issuesAndPullRequests({
+              q: `repo:${context.repo.owner}/${context.repo.repo} ${issue.title} in:title is:issue`
+            });
+            
+            // Filter out current issue and closed issues
+            const similarIssues = searchResults.data.items.filter(
+              item => item.number !== issue.number && item.state === 'open'
+            );
+            
+            if (similarIssues.length > 0) {
+              const duplicateList = similarIssues.map(item => `#${item.number}: ${item.title}`).join('\n');
+              
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                body: `⚠️ **Possible duplicate detected!**
+
+The following open issues appear similar to yours:
+${duplicateList}
+
+Please check if your issue is already reported. If it is, consider adding your information to the existing issue instead.`
+              });
+              
+              // Add duplicate label
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                labels: ['possible-duplicate']
+              });
+            }

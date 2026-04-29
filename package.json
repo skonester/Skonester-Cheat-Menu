@@ -1,0 +1,45 @@
+{
+  "name": "skonester-cheat-menu-automation",
+  "version": "1.0.0",
+  "description": "GitHub issue automation for Skonester Cheat Menu mod",
+  "main": "issue-automation.js",
+  "scripts": {
+    "triage": "node issue-automation.js --action triage",
+    "cleanup": "node issue-automation.js --action cleanup",
+    "stats": "node issue-automation.js --action stats",
+    "setup": "npm install",
+    "setup-labels": "node setup-labels.js",
+    "test": "node test-automation.js",
+    "verify": "node test-automation.js"
+  },
+  "bin": {
+    "skonester-issue-automation": "./issue-automation.js"
+  },
+  "keywords": [
+    "github",
+    "automation",
+    "issues",
+    "ck3",
+    "mod",
+    "crusader-kings"
+  ],
+  "author": "Skonester",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/rest": "^20.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skonester/Skonester-Cheat-Menu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/skonester/Skonester-Cheat-Menu/issues"
+  },
+  "homepage": "https://github.com/skonester/Skonester-Cheat-Menu#readme"
+}

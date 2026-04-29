@@ -1,0 +1,32 @@
+{
+  "autoLabel": {
+    "enabled": true,
+    "patterns": {
+      "bug": ["bug", "error", "crash", "broken", "not working", "fix", "issue"],
+      "enhancement": ["feature", "enhancement", "improvement", "suggestion", "request"],
+      "translation": ["translation", "localization", "language", "locale"],
+      "documentation": ["documentation", "readme", "guide", "wiki", "help"],
+      "compatibility": ["compatibility", "update", "version", "patch", "dlc"],
+      "question": ["question", "help", "how to", "support", "?"],
+      "duplicate": ["duplicate", "same as"]
+    }
+  },
+  "welcomeMessage": {
+    "enabled": true,
+    "message": "👋 Thanks for opening an issue! Please make sure you've provided enough details for us to help you effectively."
+  },
+  "duplicateCheck": {
+    "enabled": true,
+    "similarityThreshold": 0.7
+  },
+  "autoClose": {
+    "enabled": true,
+    "minBodyLength": 10,
+    "gracePeriodHours": 72
+  },
+  "responseTemplates": {
+    "needsMoreInfo": "This issue needs more information. Please provide: 1) Game version, 2) Mod version, 3) Steps to reproduce, 4) Expected vs actual behavior.",
+    "duplicateFound": "This appears to be a duplicate of #{issueNumber}. Please continue the discussion there.",
+    "fixedInVersion": "This issue should be fixed in version {version}. Please update and check if the issue persists."
+  }
+}

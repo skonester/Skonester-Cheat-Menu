@@ -155,10 +155,24 @@ Only return the JSON.
 }
 
 // Trigger analysis
-const [,, token, key, issueNum] = process.argv;
-if (token && key && issueNum) {
-    new AIIssueAgent(token, key).analyzeAndFix(issueNum);
-} else {
-    // Fallback to env for GH Actions
-    new AIIssueAgent(process.env.GITHUB_TOKEN, process.env.GEMINI_API_KEY).analyzeAndFix(process.env.ISSUE_NUMBER);
+async function run() {
+    const [,, token, key, issueNum] = process.argv;
+    const githubToken = token || process.env.GITHUB_TOKEN;
+    const geminiApiKey = key || process.env.GEMINI_API_KEY;
+    const issueNumber = issueNum || process.env.ISSUE_NUMBER;
+
+    if (!githubToken || !geminiApiKey || !issueNumber) {
+        console.error('❌ Missing environment variables: GITHUB_TOKEN, GEMINI_API_KEY, or ISSUE_NUMBER');
+        process.exit(1);
+    }
+
+    try {
+        const agent = new AIIssueAgent(githubToken, geminiApiKey);
+        await agent.analyzeAndFix(parseInt(issueNumber));
+    } catch (e) {
+        console.error(`❌ Critical Error: ${e.message}`);
+        process.exit(1);
+    }
 }
+
+run();

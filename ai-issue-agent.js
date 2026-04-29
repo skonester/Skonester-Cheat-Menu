@@ -39,11 +39,11 @@ class AIIssueAgent {
       // 2. Find relevant files
       const relevantFiles = await this.findRelevantFiles(issueTitle + ' ' + issueBody);
       
-      // 3. Construct context
+      // 3. Construct context (giving full files to Gemini)
       let context = '';
       for (const file of relevantFiles) {
         const content = fs.readFileSync(file, 'utf8');
-        context += `\n--- File: ${file} ---\n${content.substring(0, 5000)}\n`;
+        context += `\n--- File: ${file} ---\n${content}\n`;
       }
 
       // 4. Ask Gemini for a fix in JSON format
@@ -94,15 +94,26 @@ Only return the JSON.
 
     if (!fs.existsSync(filePath)) throw new Error(`File ${fix.file_to_fix} not found`);
 
-    // Apply the change
+    // Apply the change with basic normalization
     let content = fs.readFileSync(filePath, 'utf8');
+    
     if (!content.includes(fix.find)) {
-        console.warn("Could not find exact text to replace. Trying fuzzy match...");
-        // Fallback or error
-        throw new Error("Find text not found in target file.");
+        // Try a slightly more flexible match (ignoring extra whitespace)
+        const normalizedFind = fix.find.replace(/\s+/g, ' ').trim();
+        const normalizedContent = content.replace(/\s+/g, ' ');
+        
+        if (normalizedContent.includes(normalizedFind)) {
+            console.log("ℹ️ Found match via whitespace normalization.");
+            // This is a simple replacement; for production we'd want a more robust diff-patch
+            content = content.replace(fix.find.trim(), fix.replace);
+        } else {
+            throw new Error(`Could not find the target code in ${fix.file_to_fix}. The AI suggested a fix for code that doesn't seem to exist.`);
+        }
+    } else {
+        content = content.replace(fix.find, fix.replace);
     }
-    const newContent = content.replace(fix.find, fix.replace);
-    fs.writeFileSync(filePath, newContent);
+    
+    fs.writeFileSync(filePath, content);
 
     // Git operations
     try {

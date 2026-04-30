@@ -1,4 +1,4 @@
-﻿# 1. Main Buffs & Cheats (Gold, Piety, Healing, Traits)
+# 1. Main Buffs & Cheats (Gold, Piety, Healing, Traits)
 toc_main_debug_interaction = {
 	category = interaction_debug_main
 	desc = toc_main_debug_interaction_desc
@@ -696,28 +696,27 @@ toc_givearmyhorde_interaction = {
 					name = event_troop_default_name
 					levies = 1000
 					men_at_arms = {
+						type = nomadic_riders
+						stacks = 10
+					}
+					men_at_arms = {
+						type = mangudai
+						stacks = 10
+					}
+					men_at_arms = {
+						type = steppe_raiders
+						stacks = 10
+					}
+					men_at_arms = {
+						type = nomad_lancers
+						stacks = 10
+					}
+					men_at_arms = {
+						type = kheshig
+						stacks = 5
+					}
+					men_at_arms = {
 						type = bombard
-						stacks = 5
-					}
-
-					men_at_arms = {
-						type = house_guard
-						stacks = 5
-					}
-					men_at_arms = {
-						type = longbowmen
-						stacks = 5
-					}
-					men_at_arms = {
-						type = longbowmen
-						stacks = 5
-					}
-					men_at_arms = {
-						type = landsknecht
-						stacks = 5
-					}
-					men_at_arms = {
-						type = horse_archers
 						stacks = 5
 					}
 					location = scope:recipient.capital_province

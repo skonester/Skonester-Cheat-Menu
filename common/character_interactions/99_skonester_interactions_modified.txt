@@ -1512,7 +1512,7 @@ add_artifact_interaction = {
 		custom_tooltip = add_artifact_interaction
 		save_scope_value_as = {
 			name = quality
-			value = 100
+			value = 200
 		}
 		scope:recipient = {
 			hidden_effect = {

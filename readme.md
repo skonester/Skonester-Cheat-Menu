@@ -187,6 +187,7 @@ For modders and translators who want to ensure the consolidated file is perfectl
 ### 2026 Updates
 
 **April**
+* **Taurus V 1.2**: Bug cleanup code from 1.18
 * **Taurus V 1.1**: Added extensive character religion/culture editing interactions. Updated for game version 1.19.0.4 (Scribe).
 * **Aries V 1.2**: Secondary update for Scribe compatibility. Expanded the 'Special Gifts' interaction menu.
 

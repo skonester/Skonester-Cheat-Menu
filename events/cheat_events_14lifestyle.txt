@@ -51,4 +51,5 @@ cheateb.1400 = {
 		name = cheateb.return
 		scope:actor = { trigger_event = cheateb.1000 }
 	}
+	option = { name = cheateb.exit }
 }

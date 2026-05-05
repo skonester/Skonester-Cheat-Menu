@@ -31,6 +31,8 @@
 
 ## Background & Vision
 
+Project is now considered Gold status and will receive no more planned updates.
+
 The **Skonester Cheat Menu** is the definitive evolution of the legendary *Daddy Pika's Cheat Menu*. Originally built for earlier versions of Crusader Kings III, this fork was born from a necessity to fix crashes and compatibility issues with the *Roads to Power* (v1.13+) update and beyond. 
 
 Our vision is to provide a "God Mode" experience that is both deep and accessible. Whether you want to roleplay as an immortal god-king, stabilize a crumbling empire, or experiment with the game's deepest mechanics without the grind, this mod provides the tools to do so through a seamless graphical interface.
@@ -187,6 +189,7 @@ For modders and translators who want to ensure the consolidated file is perfectl
 ### 2026 Updates
 
 **April**
+* **Taurus V 1.3**: Final Build for foreseeable future.
 * **Taurus V 1.2**: Bug cleanup code from 1.18
 * **Taurus V 1.1**: Added extensive character religion/culture editing interactions. Updated for game version 1.19.0.4 (Scribe).
 * **Aries V 1.2**: Secondary update for Scribe compatibility. Expanded the 'Special Gifts' interaction menu.

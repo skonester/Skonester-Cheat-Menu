@@ -1,0 +1,41 @@
+strong_bones = {
+	index = 8001
+	health = 0.5
+	prowess = 1
+}
+
+resilient_skeleton = {
+	index = 8002
+	health = 1.0
+	prowess = 2
+}
+
+unbreakable_bones = {
+	index = 8003
+	health = 2.0
+	prowess = 5
+}
+
+longevity_1 = {
+	index = 8004
+	health = 0.5
+	fertility = 0.1
+}
+
+longevity_2 = {
+	index = 8005
+	health = 1.0
+	fertility = 0.2
+}
+
+longevity_3 = {
+	index = 8006
+	health = 2.0
+	fertility = 0.3
+}
+
+eternal_youth = {
+	index = 8007
+	health = 5.0
+	immortal = yes
+}

@@ -1,4 +1,4 @@
-########################
+﻿########################
 ### New Page Effects ###
 ########################
 
@@ -1140,6 +1140,20 @@ trait_menu_birth_backward = {
 		scope:char_editor = {
 			if = {
 				limit = { 
+					has_character_flag = trait_menu_birth_pg_4 
+				}
+				remove_character_flag = trait_menu_birth_pg_4
+				add_character_flag = trait_menu_birth_pg_3
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_birth_pg_3 
+				}
+				remove_character_flag = trait_menu_birth_pg_3
+				add_character_flag = trait_menu_birth_pg_2
+			}
+			if = {
+				limit = { 
 					has_character_flag = trait_menu_birth_pg_2 
 				}
 				remove_character_flag = trait_menu_birth_pg_2
@@ -1150,7 +1164,7 @@ trait_menu_birth_backward = {
 					has_character_flag = trait_menu_birth_pg_1 
 				}
 				remove_character_flag = trait_menu_birth_pg_1
-				add_character_flag = trait_menu_birth_pg_2
+				add_character_flag = trait_menu_birth_pg_4
 			}
 			if = {
 				limit = { 
@@ -1167,13 +1181,26 @@ trait_menu_birth_backward = {
 trait_menu_birth_forward = {
 	hidden_effect = {
 		scope:char_editor = {
-		
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_birth_pg_4 
+				}
+				remove_character_flag = trait_menu_birth_pg_4
+				add_character_flag = need_pg_1
+			}
+			if = {
+				limit = { 
+					has_character_flag = trait_menu_birth_pg_3 
+				}
+				remove_character_flag = trait_menu_birth_pg_3
+				add_character_flag = trait_menu_birth_pg_4
+			}
 			if = {
 				limit = { 
 					has_character_flag = trait_menu_birth_pg_2 
 				}
 				remove_character_flag = trait_menu_birth_pg_2
-				add_character_flag = need_pg_1
+				add_character_flag = trait_menu_birth_pg_3
 			}
 			if = {
 				limit = { 

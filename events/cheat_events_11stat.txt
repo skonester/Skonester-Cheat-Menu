@@ -50,6 +50,7 @@ cheateb.1100 = {
 		name = cheateb.return
 		scope:actor = { trigger_event = cheateb.1000 }
 	}
+	option = { name = cheateb.exit }
 }
 
 cheateb.1101 = { #diplomacy
@@ -92,6 +93,7 @@ cheateb.1101 = { #diplomacy
 			trigger_event = cheateb.1100
 		}
 	}
+	option = { name = cheateb.exit }
 }
 
 cheateb.1102 = { #martial
@@ -146,6 +148,7 @@ cheateb.1102 = { #martial
 			trigger_event = cheateb.1100
 		}
 	}
+	option = { name = cheateb.exit }
 }
 
 cheateb.1103 = { #stewardship
@@ -200,6 +203,7 @@ cheateb.1103 = { #stewardship
 			trigger_event = cheateb.1100
 		}
 	}
+	option = { name = cheateb.exit }
 }
 
 cheateb.1104 = { #intrigue
@@ -254,6 +258,7 @@ cheateb.1104 = { #intrigue
 			trigger_event = cheateb.1100
 		}
 	}
+	option = { name = cheateb.exit }
 }
 
 cheateb.1105 = { #learning
@@ -308,6 +313,7 @@ cheateb.1105 = { #learning
 			trigger_event = cheateb.1100
 		}
 	}
+	option = { name = cheateb.exit }
 }
 
 cheateb.1106 = { #prowess
@@ -362,4 +368,5 @@ cheateb.1106 = { #prowess
 			trigger_event = cheateb.1100
 		}
 	}
+	option = { name = cheateb.exit }
 }

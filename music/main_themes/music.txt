@@ -1,6 +1,6 @@
 ﻿##### MAINTHEME
 main_theme_track_roco  = {
-	music = "file:/music/SkonesterCheatMenuTürkçeYama.ogg"
+	music = "file:/music/skonegold.ogg"
 	can_be_interrupted = yes
 }
 main_theme_track = {

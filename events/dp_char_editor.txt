@@ -1,4 +1,4 @@
-namespace = dp_char_editor
+﻿namespace = dp_char_editor
 
 ###  ###
 
@@ -1823,12 +1823,12 @@ dp_char_editor.16 = {
 	}
 
 	option = {
-		name = trait_poet
+		name = trait_lifestyle_poet
 		trigger = {
 			scope:char_editor = { has_character_flag = trait_menu_fame_pg_3 }
 		}
 		scope:char_editor = {
-			LIT_trait_check = { TRAIT = poet }
+			LIT_trait_check = { TRAIT = lifestyle_poet }
 		}
 		trigger_event = dp_char_editor.16
 	}
@@ -3381,6 +3381,169 @@ dp_char_editor.27 = {
 		}
 		scope:char_editor = {
 			LIT_trait_check = { TRAIT = saint }
+		}
+		trigger_event = dp_char_editor.27
+	}
+	### PAGE 3 ###
+
+	option = {
+		name = trait_blood_ancester_1
+		trigger = {
+			scope:char_editor = { has_character_flag = trait_menu_birth_pg_3 }
+		}
+		scope:char_editor = {
+			LIT_trait_check = { TRAIT = blood_ancester_1 }
+		}
+		trigger_event = dp_char_editor.27
+	}
+	option = {
+		name = trait_blood_ancester_2
+		trigger = {
+			scope:char_editor = { has_character_flag = trait_menu_birth_pg_3 }
+		}
+		scope:char_editor = {
+			LIT_trait_check = { TRAIT = blood_ancester_2 }
+		}
+		trigger_event = dp_char_editor.27
+	}
+	option = {
+		name = trait_blood_ancester_4
+		trigger = {
+			scope:char_editor = { has_character_flag = trait_menu_birth_pg_3 }
+		}
+		scope:char_editor = {
+			LIT_trait_check = { TRAIT = blood_ancester_4 }
+		}
+		trigger_event = dp_char_editor.27
+	}
+	option = {
+		name = trait_blood_ancester_5
+		trigger = {
+			scope:char_editor = { has_character_flag = trait_menu_birth_pg_3 }
+		}
+		scope:char_editor = {
+			LIT_trait_check = { TRAIT = blood_ancester_5 }
+		}
+		trigger_event = dp_char_editor.27
+	}
+	option = {
+		name = trait_blood_ancester_6
+		trigger = {
+			scope:char_editor = { has_character_flag = trait_menu_birth_pg_3 }
+		}
+		scope:char_editor = {
+			LIT_trait_check = { TRAIT = blood_ancester_6 }
+		}
+		trigger_event = dp_char_editor.27
+	}
+	option = {
+		name = trait_blood_ancester_7
+		trigger = {
+			scope:char_editor = { has_character_flag = trait_menu_birth_pg_3 }
+		}
+		scope:char_editor = {
+			LIT_trait_check = { TRAIT = blood_ancester_7 }
+		}
+		trigger_event = dp_char_editor.27
+	}
+	option = {
+		name = trait_blood_ancester_8
+		trigger = {
+			scope:char_editor = { has_character_flag = trait_menu_birth_pg_3 }
+		}
+		scope:char_editor = {
+			LIT_trait_check = { TRAIT = blood_ancester_8 }
+		}
+		trigger_event = dp_char_editor.27
+	}
+	option = {
+		name = trait_blood_ancester_9
+		trigger = {
+			scope:char_editor = { has_character_flag = trait_menu_birth_pg_3 }
+		}
+		scope:char_editor = {
+			LIT_trait_check = { TRAIT = blood_ancester_9 }
+		}
+		trigger_event = dp_char_editor.27
+	}
+	### PAGE 4 ####
+	option = {
+		name = trait_blood_ancester_10
+		trigger = {
+			scope:char_editor = { has_character_flag = trait_menu_birth_pg_4 }
+		}
+		scope:char_editor = {
+			LIT_trait_check = { TRAIT = blood_ancester_10 }
+		}
+		trigger_event = dp_char_editor.27
+	}
+	option = {
+		name = trait_blood_ancester_11
+		trigger = {
+			scope:char_editor = { has_character_flag = trait_menu_birth_pg_4 }
+		}
+		scope:char_editor = {
+			LIT_trait_check = { TRAIT = blood_ancester_11 }
+		}
+		trigger_event = dp_char_editor.27
+	}
+	option = {
+		name = trait_blood_art_1
+		trigger = {
+			scope:char_editor = { has_character_flag = trait_menu_birth_pg_4 }
+		}
+		scope:char_editor = {
+			LIT_trait_check = { TRAIT = blood_art_1 }
+		}
+		trigger_event = dp_char_editor.27
+	}
+	option = {
+		name = trait_blood_knight_1
+		trigger = {
+			scope:char_editor = { has_character_flag = trait_menu_birth_pg_4 }
+		}
+		scope:char_editor = {
+			LIT_trait_check = { TRAIT = blood_knight_1 }
+		}
+		trigger_event = dp_char_editor.27
+	}
+	option = {
+		name = trait_blood_knight_2
+		trigger = {
+			scope:char_editor = { has_character_flag = trait_menu_birth_pg_4 }
+		}
+		scope:char_editor = {
+			LIT_trait_check = { TRAIT = blood_knight_2 }
+		}
+		trigger_event = dp_char_editor.27
+	}
+	option = {
+		name = trait_sneed_seed
+		trigger = {
+			scope:char_editor = { has_character_flag = trait_menu_birth_pg_4 }
+		}
+		scope:char_editor = {
+			LIT_trait_check = { TRAIT = sneed_seed }
+		}
+		trigger_event = dp_char_editor.27
+	}
+	option = {
+		name = trait_gigasuperseed
+		trigger = {
+			scope:char_editor = { has_character_flag = trait_menu_birth_pg_4 }
+		}
+		scope:char_editor = {
+			LIT_trait_check = { TRAIT = gigasuperseed }
+		}
+		trigger_event = dp_char_editor.27
+	}
+	option = {
+		name = trait_borntorule_seed
+		trigger = {
+			scope:char_editor = { has_character_flag = trait_menu_birth_pg_4 }
+		}
+		scope:char_editor = {
+			LIT_trait_check = { TRAIT = borntorule_seed }
 		}
 		trigger_event = dp_char_editor.27
 	}

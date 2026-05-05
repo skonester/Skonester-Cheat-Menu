@@ -29,6 +29,7 @@ cheateb.4000 = {
 		name = cheateb.return
 		scope:actor = { trigger_event = cheateb.0010 }
 	}
+	option = { name = cheateb.exit }
 }
 
 cheateb.4001 = {
@@ -95,6 +96,7 @@ cheateb.4001 = {
 		name = cheateb.return
 		scope:actor = { trigger_event = cheateb.4000 }
 	}
+	option = { name = cheateb.exit }
 }
 
 cheateb.4002 = {
@@ -259,6 +261,7 @@ cheateb.4002 = {
 		name = cheateb.return
 		scope:actor = { trigger_event = cheateb.4000 }
 	}
+	option = { name = cheateb.exit }
 }
 
 cheateb.4003 = {
@@ -312,6 +315,7 @@ cheateb.4003 = {
 		name = cheateb.return
 		scope:actor = { trigger_event = cheateb.4000 }
 	}
+	option = { name = cheateb.exit }
 }
 
 cheateb.4004 = {
@@ -340,4 +344,5 @@ cheateb.4004 = {
 		name = cheateb.return
 		scope:actor = { trigger_event = cheateb.4000 }
 	}
+	option = { name = cheateb.exit }
 }

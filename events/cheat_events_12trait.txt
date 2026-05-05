@@ -112,6 +112,7 @@ cheateb.1200 = {
 		name = cheateb.return
 		scope:actor = { trigger_event = cheateb.1000 }
 	}
+	option = { name = cheateb.exit }
 }
 
 cheateb.1201 = {
@@ -218,6 +219,7 @@ cheateb.1201 = {
 		name = cheateb.return
 		scope:actor = { trigger_event = cheateb.1200 }
 	}
+	option = { name = cheateb.exit }
 }
 
 cheateb.1202 = {
@@ -331,4 +333,5 @@ cheateb.1202 = {
 		name = cheateb.return
 		scope:actor = { trigger_event = cheateb.1200 }
 	}
+	option = { name = cheateb.exit }
 }

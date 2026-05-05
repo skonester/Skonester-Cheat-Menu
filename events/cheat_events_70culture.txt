@@ -36,6 +36,7 @@ cheateb.7000 = {
 		name = cheateb.return
 		scope:actor = {	trigger_event = cheateb.0010 }
 	}
+	option = { name = cheateb.exit }
 }
 
 cheateb.7001 = {
@@ -96,6 +97,7 @@ cheateb.7001 = {
 		name = cheateb.return
 		scope:actor = {	trigger_event = cheateb.7000 }
 	}
+	option = { name = cheateb.exit }
 }
 cheateb.7002 = {
 	type = character_event
@@ -154,6 +156,7 @@ cheateb.7002 = {
 		name = cheateb.return
 		scope:actor = {	trigger_event = cheateb.7000 }
 	}
+	option = { name = cheateb.exit }
 }
 cheateb.7003 = {
 	type = character_event
@@ -211,6 +214,7 @@ cheateb.7003 = {
 		name = cheateb.return
 		scope:actor = {	trigger_event = cheateb.7000 }
 	}
+	option = { name = cheateb.exit }
 }
 cheateb.7004 = {
 	type = character_event
@@ -270,6 +274,7 @@ cheateb.7004 = {
 		name = cheateb.return
 		scope:actor = {	trigger_event = cheateb.7000 }
 	}
+	option = { name = cheateb.exit }
 }
 
 cheateb.7010 = {
@@ -330,6 +335,7 @@ cheateb.7010 = {
 		name = cheateb.return
 		scope:actor = {	trigger_event = cheateb.7000 }
 	}
+	option = { name = cheateb.exit }
 }
 cheateb.7011 = {
 	type = character_event
@@ -388,6 +394,7 @@ cheateb.7011 = {
 		name = cheateb.return
 		scope:actor = {	trigger_event = cheateb.7000 }
 	}
+	option = { name = cheateb.exit }
 }
 cheateb.7012 = {
 	type = character_event
@@ -442,6 +449,7 @@ cheateb.7012 = {
 		name = cheateb.return
 		scope:actor = {	trigger_event = cheateb.7000 }
 	}
+	option = { name = cheateb.exit }
 }
 
 cheateb.7020 = {
@@ -502,6 +510,7 @@ cheateb.7020 = {
 		name = cheateb.return
 		scope:actor = {	trigger_event = cheateb.7000 }
 	}
+	option = { name = cheateb.exit }
 }
 cheateb.7021 = {
 	type = character_event
@@ -560,6 +569,7 @@ cheateb.7021 = {
 		name = cheateb.return
 		scope:actor = {	trigger_event = cheateb.7000 }
 	}
+	option = { name = cheateb.exit }
 }
 cheateb.7022 = {
 	type = character_event
@@ -589,6 +599,7 @@ cheateb.7022 = {
 		name = cheateb.return
 		scope:actor = {	trigger_event = cheateb.7000 }
 	}
+	option = { name = cheateb.exit }
 }
 
 cheateb.7030 = {
@@ -649,6 +660,7 @@ cheateb.7030 = {
 		name = cheateb.return
 		scope:actor = {	trigger_event = cheateb.7000 }
 	}
+	option = { name = cheateb.exit }
 }
 cheateb.7031 = {
 	type = character_event
@@ -707,6 +719,7 @@ cheateb.7031 = {
 		name = cheateb.return
 		scope:actor = {	trigger_event = cheateb.7000 }
 	}
+	option = { name = cheateb.exit }
 }
 cheateb.7032 = {
 	type = character_event
@@ -741,6 +754,7 @@ cheateb.7032 = {
 		name = cheateb.return
 		scope:actor = {	trigger_event = cheateb.7000 }
 	}
+	option = { name = cheateb.exit }
 }
 
 cheateb.7040 = {
@@ -799,6 +813,7 @@ cheateb.7040 = {
 		name = cheateb.return
 		scope:actor = {	trigger_event = cheateb.7000 }
 	}
+	option = { name = cheateb.exit }
 }
 cheateb.7041 = {
 	type = character_event
@@ -859,4 +874,5 @@ cheateb.7041 = {
 		name = cheateb.prevpage
 		scope:actor = {	trigger_event = cheateb.7040 }
 	}
+	option = { name = cheateb.exit }
 }

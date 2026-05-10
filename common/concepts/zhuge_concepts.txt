@@ -1,5 +1,0 @@
-concept_wanderer = {
-    name = wanderer
-    icon = "learning"  # Can be replaced with your own icon definition
-    description = wanderer_concept_desc
-}

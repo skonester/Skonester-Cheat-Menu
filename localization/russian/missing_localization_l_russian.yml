@@ -1,0 +1,67 @@
+﻿l_russian:
+ # --- Interactions ---
+ toc__interaction:1 "Быстрое действие"
+
+ # --- Decisions ---
+ toc_deceitful_progress_hostile_schemes_decision:0 "Продвижение враждебных происков"
+ toc_deceitful_progress_hostile_schemes_decision_confirm:0 "Привести происки в действие."
+ toc_deceitful_progress_hostile_schemes_decision_tooltip:0 "Продвинуть все активные враждебные происки."
+
+ toc_diligent_development_focus_decision:0 "Сосредоточиться на развитии"
+ toc_diligent_development_focus_decision_confirm:0 "Начать работу."
+
+ toc_impatient_rushing_all_schemes_decision:0 "Ускорить все происки"
+ toc_impatient_rushing_all_schemes_decision_confirm:0 "Продвинуть их прямо сейчас."
+
+ tocwinwars_decision:0 "Завершить все войны"
+ tocwinwars_decision_desc:0 "Ваши войны длятся слишком долго. Отдайте приказ об их завершении."
+ tocwinwars_decision_tooltip:0 "Все текущие войны будут немедленно завершены."
+ tocwinwars_decision_confirm:0 "Покончить с этим."
+
+ toc_armyslaughter_decision:0 "Разорить провинцию"
+ toc_armyslaughter_decision_desc:0 "Эта провинция доставила достаточно проблем. Вы сделаете из нее пример и подавите любое сопротивление ее жителей."
+ toc_armyslaughter_decision_tooltip:0 "Ваша армия под вашим командованием должна находиться в целевой провинции."
+ toc_armyslaughter_decision_confirm:0 "Отдать приказ."
+
+ toc_armybuilders_decision:0 "Расширить владение"
+ toc_armybuilders_decision_desc:0 "У этого владения есть нераскрытый потенциал. Заставьте свои войска работать и создайте здесь что-то стоящее."
+ toc_armybuilders_decision_tooltip:0 "Ваша армия под вашим командованием должна находиться в целевом владении."
+ toc_armybuilders_decision_confirm:0 "Отдать приказ."
+
+ toc_build_decision:0 "Развить провинцию"
+ toc_build_decision_desc:0 "Этой провинции есть куда расти. При правильных вложениях она может стать процветающим центром вашего государства."
+ toc_build_decision_tooltip:0 "Ваша армия под вашим командованием должна находиться в целевом владении."
+ toc_build_decision_confirm:0 "Начать строительство."
+
+ # --- Messages ---
+ msg_armyslaughter_decision:0 "Провинция была разорена."
+ msg_armybuilders_decision:0 "Владение было расширено."
+
+ # --- Modifiers ---
+ toc_diplomaticrange_modifier:1 "Расширенная дипломатическая дистанция"
+ toc_diplomaticrange_modifier_desc:1 "Влияние этого правителя простирается далеко за пределы его границ."
+
+ toc_exoticcourtbonus:1 "Экзотический двор"
+ toc_exoticcourtbonus_desc:1 "Этот двор привлекает гостей из далеких земель, придавая ему атмосферу престижа и интриг."
+
+ toc_fertile_modifier:1 "Благословенная плодовитость"
+ toc_fertile_modifier_desc:1 "Этот персонаж необычайно плодовит и, вероятно, произведет на свет множество наследников."
+
+ toc_dreadful_modifier:1 "Ужасающая репутация"
+ toc_dreadful_modifier_desc:1 "Имя этого правителя внушает страх всему государству."
+
+ toc_notyranny_modifier:1 "Справедливое правление"
+ toc_notyranny_modifier_desc:1 "Этот правитель правит, не прибегая к тирании."
+
+ toc_superknights_modifier:1 "Элитные рыцари"
+ toc_superknights_modifier_desc:1 "Под командованием этого правителя находятся рыцари исключительного мастерства и славы."
+ 
+ toc_uncelibate_interaction:1 "Отказ от целибата"
+
+ # --- Commented / Unused ---
+ #toc_major_purge_war:0 "Война очищения"
+ #trait_pure_blooded_desc:0 "Этот персонаж принадлежит к чистой родословной."
+ #trait_gigasuperseed:0 "Чистокровность"
+ #trait_gigasuperseed_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] принадлежит к чистой родословной."
+ #trait_gigasuperseed_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is of a pure bloodline."
+

@@ -1,0 +1,177 @@
+#Bloodline System
+bloodline_god_3 = { # Divine Bloodline (Highest Tier)
+    index = 606
+
+    shown_in_ruler_designer = no                    # Trait will not appear in the ruler designer
+    is_highlighted = no                             # Trait will not appear in any events or suggestions
+    end_schemes = yes                               # Prevents anyone from running schemes against the player
+    can_become_fluent_in_language = yes             # Character can become fluent in languages
+    
+    opposites = {
+        bloodline_god_2
+        bloodline_god_1
+    }
+
+    flag = initial_legitimacy_boost                 # Boosts legitimacy at game start
+    flag = gok_obedience_flag                       # Boosts obedience at game start
+    flag = immortal_visuals                         # Appearance does not age
+    flag = immortal_fertility                       # Fertility is based on appearance age
+    flag = immortal_incapability                    # Cannot become incapable
+    flag = is_immortal                              # Cannot die of old age
+
+    fertility_factor_male = 2                       # Fertility multiplier for male characters
+    diplomacy = 50                                  # Diplomacy
+    stewardship = 50                                # Stewardship
+    learning = 50                                   # Learning
+    dread_baseline_add = 150                        # Increases dread cap
+    dread_decay_mult = -1.5                         # Dread decay multiplier
+    health = 2.1                                    # Bonus health
+    elderly_health = 1                              # Elderly health bonus
+    general_opinion = 100                           # General opinion
+    dynasty_opinion = 100                           # Dynasty opinion
+    attraction_opinion = 1000                       # Attraction opinion
+    same_culture_opinion = 100                      # Same culture opinion
+    same_faith_opinion = 100                        # Same faith opinion
+    minority_opinion = 100                          # Minority opinion
+    legitimacy_gain_mult = 1.0                      # Legitimacy gain multiplier
+    owned_legend_spread_add = 1000                  # Legend spread speed bonus
+    owned_legend_spread_mult = 10                   # Legend spread multiplier
+    epidemic_resistance = 100                       # Full plague immunity
+    tyranny_gain_mult = -3                          # Tyranny gain multiplier
+    stress_gain_mult = -1                           # Stress gain multiplier
+    stress_loss_mult = 1                            # Stress loss multiplier
+    ai_war_cooldown = -1                            # Reduces AI war declaration cooldown by 50%
+    herd_gain_mult = 3                              # Herd gain multiplier
+    herd_capacity_mult = 9                          # Herd capacity multiplier
+    monthly_legitimacy_add = 30                     # Adds 30 legitimacy per month
+
+    genetic = yes                                   # Congenital/genetic trait
+    random = no                                     # Cannot be randomly assigned
+    inheritable = yes                               # Can be inherited
+    parent_inheritance_sex = male                   # Can only be inherited from the father's bloodline
+    inherit_chance = 10                             # 10% inheritance chance
+    child_inheritance_sex = male                    # Can only be passed to male children
+    inherit_from_real_father = yes                  # Inherited from the biological father
+    ai_can_have = no                                # AI characters cannot have this trait
+    level = 3                                       # Highest tier
+    group = bloodline_god                           # Belongs to the Divine Bloodline trait group
+
+    build_speed = -10                               # Construction speed increased by 100%
+    holding_build_speed = -10                       # Holding construction speed increased by 100%
+    monthly_learning_lifestyle_xp_gain_mult = 1     # Learning lifestyle XP gain increased by 100%
+
+    desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = { NOT = { exists = this } }
+                desc = trait_bloodline_god_3_desc
+            }
+            desc = trait_bloodline_god_character_desc
+        }
+    }
+}
+
+
+bloodline_god_2 = { # Diluted Bloodline (Mid Tier)
+    index = 607
+
+    shown_in_ruler_designer = no                    # Trait will not appear in the ruler designer
+    is_highlighted = no                             # Trait will not appear in any events or suggestions
+    flag = immortal_incapability                    # Cannot become incapable
+    opposites = {
+        bloodline_god_3
+        bloodline_god_1
+    }
+
+    diplomacy = 30                                  # Diplomacy
+    stewardship = 30                                # Stewardship
+    learning = 30                                   # Learning
+    general_opinion = 30                            # General opinion
+    attraction_opinion = 30                         # Attraction opinion
+    same_faith_opinion = 30                         # Same faith opinion
+    health = 0.5                                    # Bonus health
+    elderly_health = 0.3                            # Elderly health bonus
+    legitimacy_gain_mult = 0.5                      # Legitimacy gain multiplier
+    epidemic_resistance = 50                        # 50% plague resistance
+    herd_gain_mult = 1                              # Herd gain multiplier
+    herd_capacity_mult = 2                          # Herd capacity multiplier
+
+    ai_war_cooldown = -0.5                          # Reduces AI war declaration cooldown by 30%
+    random = no                                     # Cannot be randomly assigned
+    genetic = yes                                   # Congenital/genetic trait
+    inheritable = yes                               # Can be inherited
+    parent_inheritance_sex = male                   # Can only be inherited from the father's bloodline
+    inherit_chance = 30                             # 30% inheritance chance
+    child_inheritance_sex = male                    # Can only be passed to male children
+    male_only = yes                                 # Males only
+    inherit_from_real_father = yes                  # Inherited from the biological father
+    level = 2                                       # Mid tier
+    group = bloodline_god                           # Belongs to the Divine Bloodline trait group
+
+    monthly_learning_lifestyle_xp_gain_mult = 0.3   # Learning lifestyle XP gain increased by 30%
+
+    desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = { NOT = { exists = this } }
+                desc = trait_bloodline_god_2_desc
+            }
+            desc = trait_bloodline_god_2_character_desc
+        }
+    }
+}
+
+
+bloodline_god_1 = { # Divine Bloodline (Tier 1)
+    index = 605
+
+    shown_in_ruler_designer = no                    # Trait will not appear in the ruler designer
+    is_highlighted = no                             # Trait will not appear in any events or suggestions
+    can_become_fluent_in_language = yes             # Character can become fluent in languages
+    flag = immortal_incapability                    # Cannot become incapable
+
+    opposites = {
+        bloodline_god_2
+        bloodline_god_3
+    }
+
+    diplomacy = 10                                  # Diplomacy
+    stewardship = 10                                # Stewardship
+    learning = 10                                   # Learning
+    health = 0.3                                    # Bonus health
+    general_opinion = 10                            # General opinion
+    dynasty_opinion = 10                            # Dynasty opinion
+    attraction_opinion = 10                         # Attraction opinion
+    same_faith_opinion = 10                         # Same faith opinion
+    legitimacy_gain_mult = 0.1                      # Legitimacy gain multiplier
+    epidemic_resistance = 50                        # Plague resistance
+    ai_war_cooldown = -0.3                          # Reduces AI war declaration cooldown by 50%
+    herd_gain_mult = 0.5                            # Herd gain multiplier
+    herd_capacity_mult = 1                          # Herd capacity multiplier
+
+    genetic = yes                                   # Congenital/genetic trait
+    random = no                                     # Cannot be randomly assigned
+    inheritable = yes                               # Can be inherited
+    inherit_chance = 60                             # 60% inheritance chance
+    parent_inheritance_sex = male                   # Can only be inherited from the father's bloodline
+    inherit_from_real_father = yes                  # Inherited from the biological father
+    level = 1                                       # Tier 1
+    group = bloodline_god                           # Belongs to the Divine Bloodline trait group
+
+    build_speed = -5                                # Construction speed increased by 5%
+    holding_build_speed = -5                        # Holding construction speed increased by 5%
+    build_gold_cost = -0.25                         # Construction cost reduced by 25%
+    holding_build_gold_cost = -0.25                 # Holding construction cost reduced by 25%
+    development_growth_factor = 0.5                 # Development growth speed increased by 50%
+    monthly_learning_lifestyle_xp_gain_mult = 0.3   # Learning lifestyle XP gain increased by 30%
+
+    desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = { NOT = { exists = this } }
+                desc = trait_bloodline_god_1_desc
+            }
+            desc = trait_bloodline_god_1_character_desc
+        }
+    }
+}

@@ -1,0 +1,96 @@
+﻿cheateb_keep_modifier = {
+	icon = health_positive
+	men_at_arms_cap = 0
+	men_at_arms_limit = 0
+	domain_limit = 0
+	monthly_county_control_change_add = 10
+	monthly_tyranny = 0
+
+	
+
+	supply_capacity_add = 300
+	supply_duration = 1
+}
+
+cheateb_stat7_modifier = {
+	icon = learning_positive
+	prowess = 15
+	diplomacy = 7
+	stewardship = 7
+	martial = 7
+	intrigue = 7
+	learning = 7
+
+	monthly_piety = 1
+	monthly_prestige = 1
+	monthly_income = 5
+	no_prowess_loss_from_age = yes
+}
+
+cheateb_stat20_modifier = {
+	icon = prestige_positive
+	prowess = 15
+	diplomacy = 13
+	stewardship = 13
+	martial = 13
+	intrigue = 13
+	learning = 13
+	monthly_piety = 1
+	monthly_prestige = 1
+	monthly_income = 5
+	monthly_dynasty_prestige = 5
+	dread_baseline_add = 100
+
+	general_opinion = 50
+	county_opinion_add = 50
+	no_prowess_loss_from_age = yes
+
+	faith_creation_piety_cost_mult = -1
+
+	cultural_head_fascination_mult = 0.35
+
+	build_speed = -0.7
+	holding_build_speed = -0.7
+	
+}
+
+cheateb_niverdie_modifier = {
+	icon = health_positive
+	life_expectancy = 1000
+	health = 95
+}
+
+cheateb_army_modifier = {
+	icon = prowess_positive
+	min_combat_roll = 2
+	light_cavalry_damage_add = 50
+	light_cavalry_toughness_add = 100
+	light_cavalry_pursuit_add = 50
+	light_cavalry_screen_add = 50
+	siege_weapon_siege_value_mult = 2
+	movement_speed = 10
+	knight_effectiveness_mult = 1
+	knight_limit = 1
+	
+}
+
+cheateb_development_modifier = {
+	icon = prestige_positive
+	development_growth_factor = 4
+	development_growth = 2
+}
+
+cheateb_nofertility_modifier = {
+	icon = prowess_positive
+	fertility = -100
+}
+
+cheateb_fullfertility_modifier = {
+	icon = prowess_positive
+	fertility = 100
+}
+
+cheateb_defence_modifier = {
+	icon = prowess_positive
+	fort_level = 30
+}

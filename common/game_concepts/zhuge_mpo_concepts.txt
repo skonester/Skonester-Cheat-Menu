@@ -1,0 +1,6 @@
+﻿wandering_life = {
+	alias = { wandering_i wandering }
+	texture = "gfx/interface/icons/lifestyles/wanderer_lifestyle.dds"
+	framesize = { 60 60 }
+	frame = 3
+}

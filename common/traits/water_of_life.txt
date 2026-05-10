@@ -1,0 +1,29 @@
+﻿water_of_life = {
+	index = 50002
+
+	immortal = yes
+	life_expectancy = 10000
+	years_of_fertility = 10000
+	health = 1000
+	no_prowess_loss_from_age = yes
+	inbreeding_chance = -1.0
+	ruler_designer_cost = 10000
+	remove_trait = incapable
+
+
+	inherit_chance = 0
+	birth = 0
+	random_creation = 0
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_water_of_life_desc
+			}
+			desc = trait_water_of_life_character_desc
+		}
+	}
+}

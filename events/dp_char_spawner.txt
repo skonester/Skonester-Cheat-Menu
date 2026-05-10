@@ -1,0 +1,460 @@
+﻿namespace = char_spawner
+
+### MAIN MENU ###
+
+char_spawner.1 = {
+	type = character_event
+	title = char_spawner.t
+	desc = char_spawner.d
+	theme = default
+	left_portrait = {
+		character = scope:char_spawner_scope
+		animation = personality_bold
+	}
+
+	option = {
+		name = char_spawner.numb.t
+		trigger_event = char_spawner.2
+	}
+	option = {
+		name = char_spawner.councillors.t
+		add_character_flag = m_councillors
+		remove_character_flag = f_councillors
+		trigger_event = char_spawner.3
+	}
+	option = {
+		name = char_spawner.heirs.t
+		add_character_flag = m_heir
+		add_character_flag = norm_heir
+		trigger_event = char_spawner.4
+	}
+	option = {
+		name = char_spawner.courtiers.t
+		trigger_event = char_spawner.5
+	}
+	option = {
+		name = dp_char_interactions.end
+		remove_character_flag = char_numb_1
+		remove_character_flag = char_numb_2
+		remove_character_flag = char_numb_5
+		remove_character_flag = char_numb_10
+		remove_character_flag = f_councillors
+		remove_character_flag = m_councillors
+		remove_character_flag = great_heir
+		remove_character_flag = shitty_heir
+		remove_character_flag = norm_heir
+	}
+}
+
+### NUMBER OF CHARACTERS ###
+
+char_spawner.2 = {
+	type = character_event
+	title = char_spawner.numb.t
+	desc = char_spawner.numb.d
+	theme = default
+	left_portrait = {
+		character = scope:char_spawner_scope
+		animation = personality_bold
+	}
+	option = {
+		name = char_spawner.numb1
+		custom_tooltip = char_numb_1_TT
+		add_character_flag = char_numb_1
+		remove_character_flag = char_numb_2
+		remove_character_flag = char_numb_5
+		remove_character_flag = char_numb_10
+		trigger_event = char_spawner.1
+	}
+	option = {
+		name = char_spawner.numb2
+		custom_tooltip = char_numb_2_TT
+		add_character_flag = char_numb_2
+		remove_character_flag = char_numb_1
+		remove_character_flag = char_numb_5
+		remove_character_flag = char_numb_10
+		trigger_event = char_spawner.1
+	}
+	option = {
+		name = char_spawner.numb5
+		custom_tooltip = char_numb_5_TT
+		add_character_flag = char_numb_5
+		remove_character_flag = char_numb_2
+		remove_character_flag = char_numb_1
+		remove_character_flag = char_numb_10
+		trigger_event = char_spawner.1
+	}
+	option = {
+		name = char_spawner.numb10
+		custom_tooltip = char_numb_10_TT
+		add_character_flag = char_numb_10
+		remove_character_flag = char_numb_2
+		remove_character_flag = char_numb_5
+		remove_character_flag = char_numb_1
+		trigger_event = char_spawner.1
+	}
+	option = {
+		name = dp_char_editor_back
+		trigger_event = char_spawner.1
+	}
+}
+
+### councillors ###
+
+char_spawner.3 = {
+	type = character_event
+	title = char_spawner.councillors.t
+	desc = char_spawner.councillors.d
+	theme = default
+	left_portrait = {
+		character = scope:char_spawner_scope
+		animation = personality_bold
+	}
+	option = {
+		name = char_spawner.remove_immortal
+		trigger = { NOT = { has_character_flag = immortality_flag } }
+		add_character_flag = immortality_flag
+		trigger_event = char_spawner.3
+	}
+	option = {
+		name = char_spawner.add_immortal
+		trigger = { has_character_flag = immortality_flag }
+		remove_character_flag = immortality_flag
+		trigger_event = char_spawner.3
+	}
+	option = {
+		name = char_spawner.remove_100_stat_man
+		trigger = { NOT = { has_character_flag = 100_stat_man_flag } }
+		add_character_flag = 100_stat_man_flag
+		trigger_event = char_spawner.3
+	}
+	option = {
+		name = char_spawner.add_100_stat_man
+		trigger = { has_character_flag = 100_stat_man_flag }
+		remove_character_flag = 100_stat_man_flag
+		trigger_event = char_spawner.3
+	}
+	option = {
+		name = char_spawner.switch_m
+		trigger = { has_character_flag = m_councillors }
+		remove_character_flag = m_councillors
+		add_character_flag = f_councillors
+		trigger_event = char_spawner.3
+	}
+	option = {
+		name = char_spawner.switch_f
+		trigger = { has_character_flag = f_councillors }
+		remove_character_flag = f_councillors
+		add_character_flag = m_councillors
+		trigger_event = char_spawner.3
+	}
+	option = {
+		name = char_spawner.diplo_councillor
+		trigger = { has_character_flag = m_councillors }
+		m_diplo_councillor_effect = yes
+		trigger_event = char_spawner.3
+	}
+	option = {
+		name = char_spawner.martial_councillor
+		trigger = { has_character_flag = m_councillors }
+		m_martial_councillor_effect = yes
+		trigger_event = char_spawner.3
+	}
+	option = {
+		name = char_spawner.steward_councillor
+		trigger = { has_character_flag = m_councillors }
+		m_stewardship_councillor_effect = yes
+		trigger_event = char_spawner.3
+	}
+	option = {
+		name = char_spawner.intrigue_councillor
+		trigger = { has_character_flag = m_councillors }
+		m_intrigue_councillor_effect = yes
+		trigger_event = char_spawner.3
+	}
+	option = {
+		name = char_spawner.learning_councillor
+		trigger = { has_character_flag = m_councillors }
+		m_learning_councillor_effect = yes
+		trigger_event = char_spawner.3
+	}
+	option = {
+		name = char_spawner.diplo_councillor
+		trigger = { has_character_flag = f_councillors }
+		f_diplo_councillor_effect = yes
+		trigger_event = char_spawner.3
+	}
+	option = {
+		name = char_spawner.martial_councillor
+		trigger = { has_character_flag = f_councillors }
+		f_martial_councillor_effect = yes
+		trigger_event = char_spawner.3
+	}
+	option = {
+		name = char_spawner.steward_councillor
+		trigger = { has_character_flag = f_councillors }
+		f_stewardship_councillor_effect = yes
+		trigger_event = char_spawner.3
+	}
+	option = {
+		name = char_spawner.intrigue_councillor
+		trigger = { has_character_flag = f_councillors }
+		f_intrigue_councillor_effect = yes
+		trigger_event = char_spawner.3
+	}
+	option = {
+		name = char_spawner.learning_councillor
+		trigger = { has_character_flag = f_councillors }
+		f_learning_councillor_effect = yes
+		trigger_event = char_spawner.3
+	}
+	option = {
+		name = dp_char_editor_back
+		trigger_event = char_spawner.1
+	}
+}
+
+### CHILDREN ###
+
+char_spawner.4 = {
+	type = character_event
+	title = char_spawner.heirs.t
+	desc = char_spawner.heirs.d
+	theme = default
+	left_portrait = {
+		character = scope:char_spawner_scope
+		animation = personality_bold
+	}
+	option = {
+		name = char_spawner.shitty_heir
+		trigger = {
+			has_character_flag = shitty_heir
+		}
+		scope:char_spawner_scope = {
+			remove_character_flag = shitty_heir
+			add_character_flag = norm_heir
+		}
+		trigger_event = char_spawner.4
+	}
+	option = {
+		name = char_spawner.norm_heir
+		trigger = {
+			has_character_flag = norm_heir
+		}
+		scope:char_spawner_scope = {
+			remove_character_flag = norm_heir
+			add_character_flag = great_heir
+		}
+		trigger_event = char_spawner.4
+	}
+	option = {
+		name = char_spawner.great_heir
+		trigger = {
+			has_character_flag = great_heir
+		}
+		scope:char_spawner_scope = {
+			remove_character_flag = great_heir
+			add_character_flag = shitty_heir
+		}
+		trigger_event = char_spawner.4
+	}
+	option = {
+		name = char_spawner.switch_f
+		trigger = {
+			has_character_flag = f_heir
+		}
+		scope:char_spawner_scope = {
+			remove_character_flag = f_heir
+			add_character_flag = m_heir
+		}
+		trigger_event = char_spawner.4
+	}
+	option = {
+		name = char_spawner.switch_m
+		trigger = {
+			has_character_flag = m_heir
+		}
+		scope:char_spawner_scope = {
+			remove_character_flag = m_heir
+			add_character_flag = f_heir
+		}
+		trigger_event = char_spawner.4
+	}
+	option = {
+		name = char_spawner.heir_age_0
+		trigger = { has_character_flag = m_heir }
+		scope:char_spawner_scope = {
+			m_heir_age_0_code = yes
+			number_of_char_TT_code = yes
+		}
+		trigger_event = char_spawner.4
+	}
+	option = {
+		name = char_spawner.heir_age_3
+		trigger = { has_character_flag = m_heir }
+		scope:char_spawner_scope = {
+			m_heir_age_3_code = yes
+			number_of_char_TT_code = yes
+		}
+		trigger_event = char_spawner.4
+	}
+	option = {
+		name = char_spawner.heir_age_6
+		trigger = { has_character_flag = m_heir }
+		scope:char_spawner_scope = {
+			m_heir_age_6_code = yes
+			number_of_char_TT_code = yes
+		}
+		trigger_event = char_spawner.4
+	}
+	option = {
+		name = char_spawner.heir_age_9
+		trigger = { has_character_flag = m_heir }
+		scope:char_spawner_scope = {
+			m_heir_age_9_code = yes
+			number_of_char_TT_code = yes
+		}
+		trigger_event = char_spawner.4
+	}
+	option = {
+		name = char_spawner.heir_age_12
+		trigger = { has_character_flag = m_heir }
+		scope:char_spawner_scope = {
+			m_heir_age_12_code = yes
+			number_of_char_TT_code = yes
+		}
+		trigger_event = char_spawner.4
+	}
+	option = {
+		name = char_spawner.heir_age_15
+		trigger = { has_character_flag = m_heir }
+		scope:char_spawner_scope = {
+			m_heir_age_15_code = yes
+			number_of_char_TT_code = yes
+		}
+		trigger_event = char_spawner.4
+	}
+	option = {
+		name = char_spawner.heir_age_18
+		trigger = { has_character_flag = m_heir }
+		scope:char_spawner_scope = {
+			m_heir_age_18_code = yes
+			number_of_char_TT_code = yes
+		}
+		trigger_event = char_spawner.4
+	}
+	option = {
+		name = char_spawner.heir_age_0
+		trigger = { has_character_flag = f_heir }
+		scope:char_spawner_scope = {
+			f_heir_age_0_code = yes
+			number_of_char_TT_code = yes
+		}
+		trigger_event = char_spawner.4
+	}
+	option = {
+		name = char_spawner.heir_age_3
+		trigger = { has_character_flag = f_heir }
+		scope:char_spawner_scope = {
+			f_heir_age_3_code = yes
+			number_of_char_TT_code = yes
+		}
+		trigger_event = char_spawner.4
+	}
+	option = {
+		name = char_spawner.heir_age_6
+		trigger = { has_character_flag = f_heir }
+		scope:char_spawner_scope = {
+			f_heir_age_6_code = yes
+			number_of_char_TT_code = yes
+		}
+		trigger_event = char_spawner.4
+	}
+	option = {
+		name = char_spawner.heir_age_9
+		trigger = { has_character_flag = f_heir }
+		scope:char_spawner_scope = {
+			f_heir_age_9_code = yes
+			number_of_char_TT_code = yes
+		}
+		trigger_event = char_spawner.4
+	}
+	option = {
+		name = char_spawner.heir_age_12
+		trigger = { has_character_flag = f_heir }
+		scope:char_spawner_scope = {
+			f_heir_age_12_code = yes
+			number_of_char_TT_code = yes
+		}
+		trigger_event = char_spawner.4
+	}
+	option = {
+		name = char_spawner.heir_age_15
+		trigger = { has_character_flag = f_heir }
+		scope:char_spawner_scope = {
+			f_heir_age_15_code = yes
+			number_of_char_TT_code = yes
+		}
+		trigger_event = char_spawner.4
+	}
+	option = {
+		name = char_spawner.heir_age_18
+		trigger = { has_character_flag = f_heir }
+		scope:char_spawner_scope = {
+			f_heir_age_18_code = yes
+			number_of_char_TT_code = yes
+		}
+		trigger_event = char_spawner.4
+	}
+	option = {
+		name = dp_char_editor_back
+		trigger_event = char_spawner.1
+	}
+}
+
+char_spawner.5 = {
+	type = character_event
+	title = char_spawner.courtiers.t
+	desc = char_spawner.courtiers.d
+	theme = default
+	left_portrait = {
+		character = scope:char_spawner_scope
+		animation = personality_bold
+	}
+	option = {
+		name = char_spawner.courtiers.m_courtier
+		trigger_event = char_spawner.5
+		scope:char_spawner_scope = {
+			m_courtier_code = yes
+			number_of_char_TT_code = yes
+		}
+	}
+	option = {
+		name = char_spawner.courtiers.f_courtier
+		trigger_event = char_spawner.5
+		scope:char_spawner_scope = {
+			f_courtier_code = yes
+			number_of_char_TT_code = yes
+		}
+	}
+	option = {
+		name = char_spawner.courtiers.m_courtier_good
+		trigger_event = char_spawner.5
+		scope:char_spawner_scope = {
+			m_courtier_good_code = yes
+			number_of_char_TT_code = yes
+		}
+	}
+	option = {
+		name = char_spawner.courtiers.f_courtier_good
+		trigger_event = char_spawner.5
+		scope:char_spawner_scope = {
+			f_courtier_good_code = yes
+			number_of_char_TT_code = yes
+		}
+	}
+	option = {
+		name = dp_char_editor_back
+		trigger_event = char_spawner.1
+	}
+}

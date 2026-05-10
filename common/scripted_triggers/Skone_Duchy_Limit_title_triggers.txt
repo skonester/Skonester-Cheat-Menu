@@ -1,0 +1,7 @@
+﻿has_too_many_held_duchies_trigger = {
+	highest_held_title_tier >= tier_kingdom
+	any_held_title = {
+		count >= 5
+		title_counts_towards_too_many_duchies_trigger = yes
+	}
+}

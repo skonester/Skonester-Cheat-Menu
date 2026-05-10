@@ -1,0 +1,12 @@
+﻿cheateb_targetchar_effect = {
+	scope:actor = {
+		if = {
+			limit = { has_character_flag = cheateb_targeted }
+			random_living_character = {
+				limit = { has_character_flag = cheateb_target }
+				save_scope_as = cheateb_targetscope
+			}
+		}
+		else = { save_scope_as = cheateb_targetscope }
+	}
+}

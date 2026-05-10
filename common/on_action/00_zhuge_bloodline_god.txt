@@ -1,0 +1,7 @@
+﻿# ç›‘å¬æ–°ç”Ÿå„¿
+on_character_born = {
+    events = {
+        zhuge_bloodline_god.0001   # çˆ¶äº²æŒä¸‰çº§
+        zhuge_bloodline_god.0002   # çˆ¶äº²æŒäºŒçº§
+    }
+}

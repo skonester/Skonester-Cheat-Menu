@@ -1,0 +1,17 @@
+﻿l_russian:
+  #Skonester Edition 
+  trait_immortality:0 "Бессмертный"
+  trait_immortality_desc:0 "Этот персонаж вкусил Священный Дар Бессмертия. Его облик навеки останется юным, и он защищён от естественной смерти."
+  trait_immortality_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] был благословлён Священным Даром Бессмертия. [ROOT.GetCharacter.GetSheHe|U] никогда не постареет старше двадцати пяти лет и не поддастся смерти естественным путём."
+
+  trait_super:0 "Идеал"
+  trait_super_desc:0 "Этот персонаж — истинный идеал среди смертных, обладающий несравненными качествами, энергией, обаянием и умениями, что возносят [ROOT.GetCharacter.GetHerHim] над всеми."
+  trait_super_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] возвышен как идеал, одарённый безграничной силой, умом и славой."
+
+  trait_super_governor:0 "Небесный управитель"
+  trait_super_governor_desc:0 "Этот персонаж правит с почти божественной мудростью. Его земли процветают, города цветут, а порядок воцаряется, словно сама небесная десница коснулась их."
+  trait_super_governor_character_desc:0 "Под властью [ROOT.GetCharacter.GetFirstNameNoTooltip] державы расцветают, поля колосятся, и даже простолюдины благословляют имя своего управителя."
+
+  trait_super_general:0 "Помазанник войны"
+  trait_super_general_desc:0 "Этот персонаж ведёт армии так, словно сам рок направляет его руку. Его войска сражаются с несокрушимой доблестью и одерживают победу за победой."
+  trait_super_general_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] командует с непревзойдённым гением, враги страшатся его, а солдаты чтут, ведь под его рукой каждый поход завершается триумфом."

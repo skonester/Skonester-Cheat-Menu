@@ -1,0 +1,5 @@
+﻿l_english:
+  jkm_send_courtier_interaction:0 "Send Courtier"
+  jkm_send_courtier_interaction_desc:0 "Send a courtier to [recipient.GetShortUIName]'s court"
+  actor_secondary_jkm_send_courtier_interaction:0 "Courtier"
+  jkm_send_courtier_interaction_notification:0 "Sent Courtier"

@@ -1,0 +1,38 @@
+﻿# vgl. game > common > on_action > game_start.txt
+# vgl. game > common > on_action > religion_on_action.txt
+
+## Called from code after history generation
+
+# Like on_game_start, except it is called once the host (or player, in single player) exits the lobby. Good for anything where you need to know who the players are, or what the game rules are
+on_game_start_after_lobby = {
+	on_actions = {
+		on_mts_start		# Set Global Variables
+	}
+}
+
+## Called from 'on_game_start_after_lobby'
+
+# Set Global Variables
+on_mts_start = {
+	effect = {
+		# Needed by 'Unified UI' mod
+		set_global_variable = {
+			name = MTS_is_loaded
+			value = yes
+		}
+	}
+}
+
+
+## Mod Code
+
+#On actions related to religion
+
+# Code on-action: character creates a faith
+# Root is the creator
+# scope:old_faith is the faith they used to have
+on_faith_created = {
+	events = {
+		faith_creation_clean.001 #clean empty doctrines
+	}
+}

@@ -1,0 +1,877 @@
+﻿### Courtier ###
+
+number_of_char_TT_code = {
+	if = {
+		limit ={
+			has_character_flag = char_numb_1
+		}
+		custom_tooltip = char_numb_1_TT
+	}
+	if = {
+		limit ={
+			has_character_flag = char_numb_2
+		}
+		custom_tooltip = char_numb_2_TT
+	}
+	if = {
+		limit ={
+			has_character_flag = char_numb_5
+		}
+		custom_tooltip = char_numb_5_TT
+	}
+	if = {
+		limit ={
+			has_character_flag = char_numb_10
+		}
+		custom_tooltip = char_numb_10_TT
+	}
+}
+
+m_courtier_effect = {
+	create_character = {
+		age = 18
+		gender = male
+		health = 5
+		fertility = 0.5
+		employer = root
+		faith = root.faith
+		culture = root.culture
+		dynasty = generate
+		martial = 5
+		prowess = 5
+		diplomacy = 5
+		stewardship = 5
+		intrigue = 5
+		learning = 5
+	}
+}
+m_courtier_effect_2 = {
+	m_courtier_effect = yes
+	m_courtier_effect = yes
+}
+m_courtier_effect_5 = {
+	m_courtier_effect_2 = yes
+	m_courtier_effect_2 = yes
+	m_courtier_effect = yes
+}
+m_courtier_effect_10 = {
+	m_courtier_effect_5 = yes
+	m_courtier_effect_5 = yes
+}
+m_courtier_code = {
+	if = {
+		limit = {
+			has_character_flag = char_numb_1
+		}
+		m_courtier_effect = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_2
+		}
+		m_courtier_effect_2 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_5
+		}
+		m_courtier_effect_5 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_10
+		}
+		m_courtier_effect_10 = yes
+	}
+}
+
+f_courtier_effect = {
+	create_character = {
+		age = 18
+		gender = female
+		health = 5
+		fertility = 0.5
+		employer = root
+		faith = root.faith
+		culture = root.culture
+		dynasty = generate
+		martial = 5
+		prowess = 5
+		diplomacy = 5
+		stewardship = 5
+		intrigue = 5
+		learning = 5
+	}
+}
+f_courtier_effect_2 = {
+	f_courtier_effect = yes
+	f_courtier_effect = yes
+}
+f_courtier_effect_5 = {
+	f_courtier_effect_2 = yes
+	f_courtier_effect_2 = yes
+	f_courtier_effect = yes
+}
+f_courtier_effect_10 = {
+	f_courtier_effect_5 = yes
+	f_courtier_effect_5 = yes
+}
+f_courtier_code = {
+	if = {
+		limit = {
+			has_character_flag = char_numb_1
+		}
+		f_courtier_effect = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_2
+		}
+		f_courtier_effect_2 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_5
+		}
+		f_courtier_effect_5 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_10
+		}
+		f_courtier_effect_10 = yes
+	}
+}
+
+m_courtier_good_effect = {
+	create_character = {
+		age = 18
+		gender = male
+		health = 6
+		fertility = 0.65
+		employer = root
+		faith = root.faith
+		culture = root.culture
+		dynasty = generate
+		martial = 15
+		prowess = 15
+		diplomacy = 15
+		stewardship = 15
+		intrigue = 15
+		learning = 15
+	}
+}
+m_courtier_good_effect_2 = {
+	m_courtier_good_effect = yes
+	m_courtier_good_effect = yes
+}
+m_courtier_good_effect_5 = {
+	m_courtier_good_effect_2 = yes
+	m_courtier_good_effect_2 = yes
+	m_courtier_good_effect = yes
+}
+m_courtier_good_effect_10 = {
+	m_courtier_good_effect_5 = yes
+	m_courtier_good_effect_5 = yes
+}
+m_courtier_good_code = {
+	if = {
+		limit = {
+			has_character_flag = char_numb_1
+		}
+		m_courtier_good_effect = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_2
+		}
+		m_courtier_good_effect_2 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_5
+		}
+		m_courtier_good_effect_5 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_10
+		}
+		m_courtier_good_effect_10 = yes
+	}
+}
+
+f_courtier_good_effect = {
+	create_character = {
+		age = 18
+		gender = female
+		health = 6
+		fertility = 0.65
+		employer = root
+		faith = root.faith
+		culture = root.culture
+		dynasty = generate
+		martial = 15
+		prowess = 15
+		diplomacy = 15
+		stewardship = 15
+		intrigue = 15
+		learning = 15
+	}
+}
+f_courtier_good_effect_2 = {
+	f_courtier_good_effect = yes
+	f_courtier_good_effect = yes
+}
+f_courtier_good_effect_5 = {
+	f_courtier_good_effect_2 = yes
+	f_courtier_good_effect_2 = yes
+	f_courtier_good_effect = yes
+}
+f_courtier_good_effect_10 = {
+	f_courtier_good_effect_5 = yes
+	f_courtier_good_effect_5 = yes
+}
+f_courtier_good_code = {
+	if = {
+		limit = {
+			has_character_flag = char_numb_1
+		}
+		f_courtier_good_effect = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_2
+		}
+		f_courtier_good_effect_2 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_5
+		}
+		f_courtier_good_effect_5 = yes
+	}
+	if = {
+		limit = {
+			has_character_flag = char_numb_10
+		}
+		f_courtier_good_effect_10 = yes
+	}
+}
+
+### councillors ###
+	
+m_martial_councillor_effect = {
+	create_character = {
+		age = 18
+		gender = male
+		trait = education_martial_5
+		trait = content
+		trait = beauty_good_3
+		trait = intellect_good_3
+		trait = physique_good_3
+		trait = strong
+		trait = boost_dudu1
+		health = 6
+		fertility = 6
+		employer = root
+		faith = root.faith
+		culture = root.culture
+		dynasty = generate
+		martial = 30
+		prowess = 30
+		diplomacy = 16
+		stewardship = 16
+		intrigue = 16
+		learning = 16
+		save_scope_as = new_councillor
+	}
+	scope:char_spawner_scope = {
+		if = {
+			limit = {
+				has_character_flag = immortality_flag
+			}
+			scope:new_councillor = {
+				add_trait = immortal
+			}
+		}
+		if = {
+			limit = {
+				has_character_flag = 100_stat_man_flag
+			}
+			scope:new_councillor = {
+				add_trait = 100_stat_man
+			}
+		}
+	}
+	if = {
+		limit = {
+			exists = cp:councillor_marshal
+		}
+		fire_councillor = cp:councillor_marshal
+	}
+	assign_councillor_type = {
+		type = councillor_marshal
+		target = scope:new_councillor
+	}
+}
+
+f_martial_councillor_effect = {
+	create_character = {
+		age = 18
+		gender = female
+		trait = education_martial_5
+		trait = content
+		trait = beauty_good_3
+		trait = intellect_good_3
+		trait = physique_good_3
+		trait = strong
+		trait = boost_dudu1
+		health = 6
+		fertility = 6
+		employer = root
+		faith = root.faith
+		culture = root.culture
+		dynasty = generate
+		martial = 30
+		prowess = 30
+		diplomacy = 16
+		stewardship = 16
+		intrigue = 16
+		learning = 16
+		save_scope_as = new_councillor
+	}
+	scope:char_spawner_scope = {
+		if = {
+			limit = {
+				has_character_flag = immortality_flag
+			}
+			scope:new_councillor = {
+				add_trait = immortal
+			}
+		}
+		if = {
+			limit = {
+				has_character_flag = 100_stat_man_flag
+			}
+			scope:new_councillor = {
+				add_trait = 100_stat_man
+			}
+		}
+	}
+	if = {
+		limit = {
+			exists = cp:councillor_marshal
+		}
+		fire_councillor = cp:councillor_marshal
+	}
+	assign_councillor_type = {
+		type = councillor_marshal
+		target = scope:new_councillor
+	}
+}
+
+m_diplo_councillor_effect = {
+	create_character = {
+		age = 18
+		gender = male
+		trait = education_diplomacy_5
+		trait = content
+		trait = beauty_good_3
+		trait = intellect_good_3
+		trait = physique_good_3
+		trait = boost_xueshi1
+		health = 6
+		fertility = 6
+		employer = root
+		faith = root.faith
+		culture = root.culture
+		dynasty = generate
+		martial = 16
+		prowess = 16
+		diplomacy = 30
+		stewardship = 30
+		intrigue = 16
+		learning = 16
+		save_scope_as = new_councillor
+	}
+	scope:char_spawner_scope = {
+		if = {
+			limit = {
+				has_character_flag = immortality_flag
+			}
+			scope:new_councillor = {
+				add_trait = immortal
+			}
+		}
+		if = {
+			limit = {
+				has_character_flag = 100_stat_man_flag
+			}
+			scope:new_councillor = {
+				add_trait = 100_stat_man
+			}
+		}
+	}
+	if = {
+		limit = {
+			exists = cp:councillor_chancellor
+		}
+		fire_councillor = cp:councillor_chancellor
+	}
+	assign_councillor_type = {
+		type = councillor_chancellor
+		target = scope:new_councillor
+	}
+}
+
+f_diplo_councillor_effect = {
+	create_character = {
+		age = 18
+		gender = female
+		trait = education_diplomacy_5
+		trait = content
+		trait = beauty_good_3
+		trait = intellect_good_3
+		trait = physique_good_3
+		trait = boost_xueshi1
+		health = 6
+		fertility = 6
+		employer = root
+		faith = root.faith
+		culture = root.culture
+		dynasty = generate
+		martial = 16
+		prowess = 16
+		diplomacy = 30
+		stewardship = 30
+		intrigue = 16
+		learning = 16
+		save_scope_as = new_councillor
+	}
+	scope:char_spawner_scope = {
+		if = {
+			limit = {
+				has_character_flag = immortality_flag
+			}
+			scope:new_councillor = {
+				add_trait = immortal
+			}
+		}
+		if = {
+			limit = {
+				has_character_flag = 100_stat_man_flag
+			}
+			scope:new_councillor = {
+				add_trait = 100_stat_man
+			}
+		}
+	}
+	if = {
+		limit = {
+			exists = cp:councillor_chancellor
+		}
+		fire_councillor = cp:councillor_chancellor
+	}
+	assign_councillor_type = {
+		type = councillor_chancellor
+		target = scope:new_councillor
+	}
+}
+
+m_stewardship_councillor_effect = {
+	create_character = {
+		age = 18
+		gender = male
+		trait = education_stewardship_5
+		trait = content
+		trait = beauty_good_3
+		trait = intellect_good_3
+		trait = physique_good_3
+		trait = boost_xueshi1
+		health = 6
+		fertility = 6
+		employer = root
+		faith = root.faith
+		culture = root.culture
+		dynasty = generate
+		martial = 16
+		prowess = 16
+		diplomacy = 25
+		stewardship = 30
+		intrigue = 16
+		learning = 30
+		save_scope_as = new_councillor
+	}
+	scope:char_spawner_scope = {
+		if = {
+			limit = {
+				has_character_flag = immortality_flag
+			}
+			scope:new_councillor = {
+				add_trait = immortal
+			}
+		}
+		if = {
+			limit = {
+				has_character_flag = 100_stat_man_flag
+			}
+			scope:new_councillor = {
+				add_trait = 100_stat_man
+			}
+		}
+	}
+	if = {
+		limit = {
+			exists = cp:councillor_steward
+		}
+		fire_councillor = cp:councillor_steward
+	}
+	assign_councillor_type = {
+		type = councillor_steward
+		target = scope:new_councillor
+	}
+}
+
+f_stewardship_councillor_effect = {
+	create_character = {
+		age = 18
+		gender = female
+		trait = education_stewardship_5
+		trait = content
+		trait = beauty_good_3
+		trait = intellect_good_3
+		trait = physique_good_3
+		trait = boost_xueshi1
+		health = 6
+		fertility = 6
+		employer = root
+		faith = root.faith
+		culture = root.culture
+		dynasty = generate
+		martial = 16
+		prowess = 16
+		diplomacy = 25
+		stewardship = 30
+		intrigue = 16
+		learning = 30
+		save_scope_as = new_councillor
+	}
+	scope:char_spawner_scope = {
+		if = {
+			limit = {
+				has_character_flag = immortality_flag
+			}
+			scope:new_councillor = {
+				add_trait = immortal
+			}
+		}
+		if = {
+			limit = {
+				has_character_flag = 100_stat_man_flag
+			}
+			scope:new_councillor = {
+				add_trait = 100_stat_man
+			}
+		}
+	}
+	if = {
+		limit = {
+			exists = cp:councillor_steward
+		}
+		fire_councillor = cp:councillor_steward
+	}
+	assign_councillor_type = {
+		type = councillor_steward
+		target = scope:new_councillor
+	}
+}
+	
+m_intrigue_councillor_effect = {
+	create_character = {
+		age = 18
+		gender = male
+		trait = education_intrigue_5
+		trait = content
+		trait = beauty_good_3
+		trait = intellect_good_3
+		trait = physique_good_3
+		trait = boost_xueshi1
+		health = 6
+		fertility = 6
+		employer = root
+		faith = root.faith
+		culture = root.culture
+		dynasty = generate
+		martial = 16
+		prowess = 16
+		diplomacy = 25
+		stewardship = 20
+		intrigue = 30
+		learning = 16
+		save_scope_as = new_councillor
+	}
+	scope:char_spawner_scope = {
+		if = {
+			limit = {
+				has_character_flag = immortality_flag
+			}
+			scope:new_councillor = {
+				add_trait = immortal
+			}
+		}
+		if = {
+			limit = {
+				has_character_flag = 100_stat_man_flag
+			}
+			scope:new_councillor = {
+				add_trait = 100_stat_man
+			}
+		}
+	}
+	if = {
+		limit = {
+			exists = cp:councillor_spymaster
+		}
+		fire_councillor = cp:councillor_spymaster
+	}
+	assign_councillor_type = {
+		type = councillor_spymaster
+		target = scope:new_councillor
+	}
+}
+
+f_intrigue_councillor_effect = {
+	create_character = {
+		age = 18
+		gender = female
+		trait = education_intrigue_5
+		trait = content
+		trait = beauty_good_3
+		trait = intellect_good_3
+		trait = physique_good_3
+		trait = boost_xueshi1
+		health = 6
+		fertility = 6
+		employer = root
+		faith = root.faith
+		culture = root.culture
+		dynasty = generate
+		martial = 16
+		prowess = 16
+		diplomacy = 25
+		stewardship = 20
+		intrigue = 30
+		learning = 16
+		save_scope_as = new_councillor
+	}
+	scope:char_spawner_scope = {
+		if = {
+			limit = {
+				has_character_flag = immortality_flag
+			}
+			scope:new_councillor = {
+				add_trait = immortal
+			}
+		}
+		if = {
+			limit = {
+				has_character_flag = 100_stat_man_flag
+			}
+			scope:new_councillor = {
+				add_trait = 100_stat_man
+			}
+		}
+	}
+	if = {
+		limit = {
+			exists = cp:councillor_spymaster
+		}
+		fire_councillor = cp:councillor_spymaster
+	}
+	assign_councillor_type = {
+		type = councillor_spymaster
+		target = scope:new_councillor
+	}
+}
+
+m_learning_councillor_effect = {
+	if = {
+		limit = {
+			NOR = {
+				faith = {
+					has_doctrine_parameter = clerical_appointment_head_of_faith
+					has_doctrine_parameter = clerical_appointment_fixed
+				}
+			}
+		}
+		create_character = {
+			age = 18
+			gender = male
+			trait = education_learning_5
+			trait = content
+			trait = beauty_good_3
+			trait = intellect_good_3
+			trait = physique_good_3
+			trait = boost_xueshi1
+			health = 6
+			fertility = 6
+			employer = root
+			faith = root.faith
+			culture = root.culture
+			dynasty = generate
+			martial = 16
+			prowess = 16
+			diplomacy = 25
+			stewardship = 25
+			intrigue = 16
+			learning = 30
+			save_scope_as = new_councillor
+		}
+		if = {
+			limit = {
+				exists = cp:councillor_court_chaplain
+			}
+			fire_councillor = cp:councillor_court_chaplain
+		}
+		assign_councillor_type = {
+			type = councillor_court_chaplain
+			target = scope:new_councillor
+		}
+	}
+	else = {
+		limit = {
+			exists = cp:councillor_court_chaplain
+			cp:councillor_court_chaplain = {
+				NOT = { has_character_flag = upgraded_chaplain }
+			}
+		}
+		cp:councillor_court_chaplain = {
+			custom_tooltip = improved_stats_effect_TT
+			hidden_effect = {
+				save_scope_as = new_councillor
+				remove_health_conflict_effect = yes
+				remove_education_traits_effect = yes
+				clear_personality_traits_effect = yes
+				add_martial_skill = 16
+				add_prowess_skill = 16
+				add_diplomacy_skill = 25
+				add_stewardship_skill = 25
+				add_intrigue_skill = 16
+				add_learning_skill = 30
+				add_trait = education_learning_4
+				add_trait = content
+				add_trait = trusting
+				add_trait = calm
+				add_trait = beauty_good_3
+				add_trait = intellect_good_3
+				add_trait = physique_good_3
+				add_character_flag = upgraded_chaplain
+			}
+		}
+	}
+	scope:char_spawner_scope = {
+		if = { limit = { has_character_flag = immortality_flag }
+			scope:new_councillor = {
+				add_trait = immortal
+			}
+		}
+		if = { limit = { has_character_flag = 100_stat_man_flag }
+			scope:new_councillor = {
+				add_trait = 100_stat_man
+			}
+		}
+	}
+}
+
+f_learning_councillor_effect = {
+	if = {
+		limit = {
+			NOR = {
+				faith = {
+					has_doctrine_parameter = clerical_appointment_head_of_faith
+					has_doctrine_parameter = clerical_appointment_fixed
+				}
+			}
+		}
+		create_character = {
+			age = 18
+			gender = female
+			trait = education_learning_5
+			trait = content
+			trait = beauty_good_3
+			trait = intellect_good_3
+			trait = physique_good_3
+			trait = boost_xueshi1
+			health = 6
+			fertility = 6
+			employer = root
+			faith = root.faith
+			culture = root.culture
+			dynasty = generate
+			martial = 16
+			prowess = 16
+			diplomacy = 25
+			stewardship = 25
+			intrigue = 16
+			learning = 30
+			save_scope_as = new_councillor
+		}
+		if = {
+			limit = {
+				exists = cp:councillor_court_chaplain
+			}
+			fire_councillor = cp:councillor_court_chaplain
+		}
+		assign_councillor_type = {
+			type = councillor_court_chaplain
+			target = scope:new_councillor
+		}
+	}
+	else = {
+		limit = {
+			exists = cp:councillor_court_chaplain
+			cp:councillor_court_chaplain = {
+				NOT = { has_character_flag = upgraded_chaplain }
+			}
+		}
+		cp:councillor_court_chaplain = {
+			custom_tooltip = improved_stats_effect_TT
+			hidden_effect = {
+				save_scope_as = new_councillor
+				remove_health_conflict_effect = yes
+				remove_education_traits_effect = yes
+				clear_personality_traits_effect = yes
+				add_martial_skill = 16
+				add_prowess_skill = 16
+				add_diplomacy_skill = 25
+				add_stewardship_skill = 25
+				add_intrigue_skill = 16
+				add_learning_skill = 30
+				add_trait = education_learning_4
+				add_trait = content
+				add_trait = trusting
+				add_trait = calm
+				add_trait = beauty_good_3
+				add_trait = intellect_good_3
+				add_trait = physique_good_3
+				add_character_flag = upgraded_chaplain
+			}
+		}
+	}
+	scope:char_spawner_scope = {
+		if = { limit = { has_character_flag = immortality_flag }
+			scope:new_councillor = {
+				add_trait = immortal
+			}
+		}
+		if = { limit = { has_character_flag = 100_stat_man_flag }
+			scope:new_councillor = {
+				add_trait = 100_stat_man
+			}
+		}
+	}
+}
+
+
+

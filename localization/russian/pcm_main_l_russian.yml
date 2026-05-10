@@ -1,0 +1,31 @@
+﻿#PCM localization
+l_russian:
+  set_immortal_interaction:0 "Даровать бессмертие"
+  set_immortal_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] обретёт вечную жизнь, а его облик навеки сохранится на отметке двадцати пяти зим."
+
+  set_mortal_interaction:0 "Отнять бессмертие"
+  set_mortal_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] будет освобождён от оков вечной жизни. Быть может, [recipient.GetSheHe] жаждет покоя в могиле."
+
+  set_super_interaction:0 "Помазать как Идеал"
+  set_super_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] возвысится над смертными: непревзойдённый в мудрости, силе, плодовитости, энергии, славе, богатстве и ужасе. Истинный образец среди властителей."
+
+  set_unsuper_interaction:0 "Отнять дары Идеала"
+  set_unsuper_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] лишится всех возвышенных даров. [recipient.GetSheHe|U] может считать это тяжким бременем."
+
+  set_super_governor_interaction:0 "Даровать Мандат Управителя"
+  set_super_governor_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] получит мастерство в управлении державами: большее ополчение, мудрое правление, быстрое возведение строений, расцвет процветания и любовь народа."
+
+  set_unsuper_governor_interaction:0 "Отнять Мандат Управителя"
+  set_unsuper_governor_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] утратит благословения управления и вернётся к смертным ограничениям."
+
+  set_super_general_interaction:0 "Благословить как Воителя"
+  set_super_general_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] станет непревзойдённым командиром: отважным, грозным в бою, искусным в стратегии и стойким в осадах."
+
+  set_unsuper_general_interaction:0 "Отнять благословение Воителя"
+  set_unsuper_general_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] будет лишён божественного покровительства в войне и может пасть там, где прежде побеждал."
+
+  set_all_in_one_interaction:0 "Возвысить как Совершенного"
+  set_all_in_one_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] получит все дары: Идеала, Мандата Управителя и Благословения Воителя, соединённые в одном. Истинное чудо тайн Skonester."
+
+  set_unall_in_one_interaction:0 "Вернуть смертное положение"
+  set_unall_in_one_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] утратит все дары идеала, управителя и воителя и снова пойдёт по земле как дитя человеческое."

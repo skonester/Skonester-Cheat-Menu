@@ -1,0 +1,237 @@
+﻿namespace = leech_mc_event
+
+leech_mc_event.1000 = {
+	type = character_event
+#	sender = scope:actor
+	title = leech_mc_event.truce.t
+	desc = leech_mc_event.truce.desc
+	
+	theme = battle
+	left_portrait = {
+		character = scope:recipient
+		animation = war_attacker
+	}
+	right_portrait = {
+		character = scope:secondary_recipient
+		animation = war_defender
+	}
+	
+	immediate = {
+	}
+
+	option = {
+		name = leech_mc_event.truce.attacker
+		scope:recipient = {
+			every_character_war = {
+				limit = {
+					primary_defender = scope:secondary_recipient
+				}
+				end_war = attacker
+			}
+		}
+	}
+
+	option = {
+		name = leech_mc_event.truce.white_peace
+		scope:recipient = {
+			every_character_war = {
+				limit = {
+					primary_defender = scope:secondary_recipient
+				}
+				end_war = white_peace
+			}
+		}
+	}
+
+	option = {
+		name = leech_mc_event.truce.defender
+		scope:recipient = {
+			every_character_war = {
+				limit = {
+					primary_defender = scope:secondary_recipient
+				}
+				end_war = defender
+			}
+		}
+	}
+	
+	option = {
+		name = leech_mc_event.common.exit
+	}
+}
+
+leech_mc_event.1001 = {
+	type = character_event
+	title = leech_mc_event.simple_action.t
+	desc = leech_mc_event.simple_action.desc
+	
+	theme = default
+	left_portrait = {
+		character = scope:recipient
+		animation = idle
+	}
+	right_portrait = {
+		character = scope:secondary_recipient
+		animation = idle
+	}
+	
+	immediate = {
+	}
+
+	option = {
+		name = leech_mc_event.simple_action.vassalize
+		trigger = {
+			scope:recipient = {
+				is_landed = yes
+				NOT = { is_vassal_of = scope:secondary_recipient }
+			}
+			scope:secondary_recipient = {
+				is_landed = yes
+				NOT = { is_vassal_of = scope:recipient }
+				highest_held_title_tier < scope:recipient.highest_held_title_tier
+			}
+		}
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		scope:secondary_recipient = {
+			change_liege = {
+				liege = scope:recipient
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+		trigger_event = leech_mc_event.1001
+	}
+
+	option = {
+		name = leech_mc_event.simple_action.marry
+		trigger = {
+			scope:recipient = {
+				is_male = yes
+				is_married = no
+				sex_opposite_of = scope:secondary_recipient
+			}
+			scope:secondary_recipient = { is_married = no }
+		}
+		scope:recipient = { marry = scope:secondary_recipient }
+		trigger_event = leech_mc_event.1001
+	}
+
+	option = {
+		name = leech_mc_event.simple_action.marry_mat
+		trigger = {
+			scope:recipient = {
+				is_male = no
+				is_married = no
+				sex_opposite_of = scope:secondary_recipient
+			}
+			scope:secondary_recipient = { is_married = no }
+		}
+		scope:recipient = { marry_matrilineal = scope:secondary_recipient }
+		trigger_event = leech_mc_event.1001
+	}
+
+	option = {
+		name = leech_mc_event.simple_action.divorce
+		trigger = {
+			scope:recipient = { is_spouse_of = scope:secondary_recipient }
+		}
+		scope:recipient = {
+			divorce = scope:secondary_recipient
+		}
+		trigger_event = leech_mc_event.1001
+	}
+	
+	option = {
+		name = leech_mc_event.simple_action.end_lover
+		trigger = {
+			scope:recipient = { has_relation_lover = scope:secondary_recipient }
+		}
+		scope:recipient = {
+			remove_relation_lover = scope:secondary_recipient
+		}
+		trigger_event = leech_mc_event.1001
+	}
+
+	option = {
+		name = leech_mc_event.simple_action.impregnate
+		trigger = {
+			scope:recipient = { is_male = yes }
+			scope:secondary_recipient = {
+				is_female = yes
+				is_pregnant = no
+			}
+		}
+		scope:secondary_recipient = {
+			make_pregnant = {
+				father = scope:recipient
+			}
+		}
+		trigger_event = leech_mc_event.1001
+	}
+
+	option = {
+		name = leech_mc_event.simple_action.copy_dna
+		scope:secondary_recipient = {
+			copy_inheritable_appearance_from = scope:recipient
+		}
+		trigger_event = leech_mc_event.1001
+	}
+	
+	option = {
+		name = leech_mc_event.simple_action.cancel_truce
+		trigger = {
+			scope:recipient = { has_truce = scope:secondary_recipient }
+		}
+		scope:recipient = {
+			cancel_truce_both_ways = scope:secondary_recipient
+		}
+		trigger_event = leech_mc_event.1001
+	}
+	
+	option = {
+		name = leech_mc_event.simple_action.like
+		scope:recipient = {
+			add_opinion = {
+				modifier = friendliness_opinion
+				target = scope:secondary_recipient
+				opinion = 100
+			}
+		}
+		trigger_event = leech_mc_event.1001
+	}
+	
+	option = {
+		name = leech_mc_event.simple_action.hate
+		scope:recipient = {
+			add_opinion = {
+				modifier = angry_opinion
+				target = scope:secondary_recipient
+				opinion = -100
+			}
+		}
+		trigger_event = leech_mc_event.1001
+	}
+	
+	option = {
+		name = leech_mc_event.simple_action.adopt
+		trigger = {
+			NOT = { scope:secondary_recipient = { is_child_of = scope:recipient } }
+			NOT = { scope:recipient = { is_child_of = scope:secondary_recipient } }
+		}
+		scope:secondary_recipient = {
+			set_father = scope:recipient
+			set_house = scope:recipient.house
+			remove_trait = bastard
+		}
+		trigger_event = leech_mc_event.1001
+	}
+	
+	option = {
+		name = leech_mc_event.common.exit
+	}
+}
+

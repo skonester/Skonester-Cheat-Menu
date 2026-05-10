@@ -1,0 +1,15 @@
+﻿l_english:
+  daddy_pika_information:0 " Skonester Cheat Menu Gold Information"
+  information_desc:0 "Fork and add additions to Github.I will most likely merge into main if this mod ever starts having game starting breaking bugs post 1.19.0.5"
+  information_TT:0 "Click to view detailed information about this mod."
+  
+  dp_information.changelog.t:0 "Gold"
+  dp_information.changelog.d:0 ":Gold-fixed parsing complaints with AGOT mod so longterm I dont have to mess with this if I come back.
+  dp_information.useful_tips.t:0 "Useful Tips"
+  dp_information.useful_tips.d:0 "Feature Menu\n- Click once to add, click again to remove.\n- If a feature doesn’t appear, it doesn’t mean the mod is broken; it can indicate a hardcoded override from Paradox or that AGOT,etc.overode a base game factor.This is why some decisions don't work.\n- Due to DLC factors, some interactions may not appear on certain characters.\n- Test this mod with only base game/DLC.Then with say a 1066 character like Duchess Matilda to see if this mod is causing your isses. Some older mods that havent been updated can be the real issue."
+  dp_information.locations.t:0 "This is goodbye"
+  dp_information.locations.d:0 "\n- This is likely the last update to this mod. I don't have the motivation to build upon it further.I have done everything I wanted to do in this game. To be quite frank, I no longer prefer to engage in free bug testing in regards to what Paradox implements with this game. They are a business first and make a great core. Thankful to everyone for the support.The creative drive is just now gone.I hope you had fun enjoying it as I really did making it.Much love Skone. 
+  
+  use_new_system:0 "New System"
+  use_new_system_desc:0 "The old system has been replaced by the new one. Would you like to try it?"
+  use_new_system_tooltip:0 "Clicking this will trigger an event."

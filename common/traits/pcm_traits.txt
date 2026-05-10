@@ -1,0 +1,227 @@
+﻿### Pavlik cheat mode traits
+## personality and good are removed, because they are randomly given to generating chars;
+## 	birth = 0 and random_creation = 0	not helping.
+
+#Make character immortal with look age locked at 25. Age is set in the interaction code.
+immortality = {
+	index = 1001					#Let's go far of range
+	immortal = yes				#We are immortal from the old
+	#personality = yes		#Let's show it as big trait
+	#good = yes					#For sure
+	
+	birth = 0						#This trait can not be obtained by character children
+	random_creation = 0		#This trait can not be given to generated (scripts, events) characters
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_immortality_desc
+			}
+			desc = trait_immortality_character_desc
+		}
+	}
+
+}
+
+super = {
+	index = 1002
+	#personality = yes		#Let's show it as big trait
+	#good = yes					#For sure
+	#Stats
+	learning = 100
+	diplomacy = 100
+	martial = 100
+	stewardship = 100
+	intrigue = 100
+	prowess = 100
+
+	dread_baseline_add = 200
+	dread_loss_mult = -100
+	monthly_dread = 100
+	monthly_prestige = 30
+	monthly_dynasty_prestige = 30
+	monthly_piety = 1000
+	monthly_income = 1000
+	attraction_opinion = 1000
+	health = 50
+	negate_health_penalty_add = 100
+	fertility = 500
+	years_of_fertility = 100
+	no_prowess_loss_from_age = yes
+	hostile_scheme_power_mult = 10
+	personal_scheme_power_mult = 10
+	diplomacy_scheme_power = 100
+	intrigue_scheme_power = 100
+	stewardship_scheme_power = 100
+	martial_scheme_power = 100
+	prowess_scheme_power = 100
+	learning_scheme_power = 100
+	stress_gain_mult = -10
+	vassal_limit = 200
+	domain_limit = 200
+	ignore_negative_culture_opinion = yes
+	diplomatic_range_mult = 100
+	
+	genetic_trait_strengthen_chance = 100
+	inbreeding_chance = -100
+	positive_inactive_inheritance_chance = 100
+	negative_inactive_inheritance_chance = -100
+	positive_random_genetic_chance = 100
+	negative_random_genetic_chance = -100
+	
+	
+	
+	owned_legend_spread_mult = 999
+	tourney_participant_xp_gain_mult = 10
+	epidemic_resistance = 100
+	legitimacy_gain_mult = 100
+	
+#	life_expectancy = 100
+	
+	birth = 0							#This trait can not be obtained by character children
+	random_creation = 0			#This trait can not be given to generated (scripts, events) characters
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_super_desc
+			}
+			desc = trait_super_character_desc
+		}
+	}
+
+}
+
+#Trait, made to make you and your vassals good governors. Your counties have absolute control in 1 month, build faster and cheaper, have good opinion so have no rebels,
+#larger levy.
+super_governor = {
+	index = 1003
+	#personality = yes		#Let's show it as big trait
+	#good = yes					#For sure
+
+	learning = 100
+	diplomacy = 100
+	martial = 100
+	stewardship = 100
+	intrigue = 100
+	prowess = 100
+	
+	monthly_county_control_growth_add = 100
+	county_opinion_add_even_if_baron = 100
+	development_growth = 1000
+	build_speed = -1000
+	holding_build_speed = -1000
+	build_gold_cost = -100
+	tax_mult = 10
+	levy_size = 1
+#	health = 100			#Mega health boost. It turned out, that 300 boost makes chars immortal in terms of game time length.
+	
+	ai_greed = -200			#Let's make your vassals spend gold very easyly.
+	ai_energy = 500			#I think this will make you act more often.
+
+	birth = 0						#This trait can not be obtained by character children
+	random_creation = 0		#This trait can not be given to generated (scripts, events) characters
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_super_governor_desc
+			}
+			desc = trait_super_governor_character_desc
+		}
+	}
+
+}
+
+#Trait for your character and your generals. You win and move fast - simple.
+super_general = {
+	index = 1004
+	#personality = yes		#Let's show it as big trait
+	#good = yes				#For sure
+	#commander = yes
+
+	learning = 100
+	diplomacy = 100
+	martial = 100
+	stewardship = 100
+	intrigue = 100
+	prowess = 100
+
+	advantage = 100
+	siege_phase_time = -1000
+	siege_morale_loss = 1000
+	movement_speed = 1000
+	naval_movement_speed_mult = 1000
+	enemy_terrain_advantage = -1
+	hard_casualty_modifier = -10
+	enemy_hard_casualty_modifier = 10
+	supply_duration = 100
+	supply_limit_mult = 10
+	supply_capacity_mult = 10
+	hard_casualty_modifier = -1	#% Friendly Fatal Casualties
+	retreat_losses = -1					#% Retreat Losses
+	no_water_crossing_penalty = yes
+	enemy_terrain_advantage = -1
+	raid_speed = 10
+	min_combat_roll = 20
+	max_combat_roll = 40
+	siege_weapon_max_size_mult = 3
+	hostile_county_attrition = -1
+	#health = 100			#Mega health boost. It turned out, that 300 boost makes chars immortal in terms of game time length.
+	#desert_cancel_negative_supply = yes
+	#jungle_cancel_negative_supply = yes
+	#jungle_attrition_mult = -1
+	######
+	# All terrain advantages modifiers have realm exclusive check. It might be still ok without them due to 'advantage' modifier.
+	# Keep just not to loose work done.
+	#farmlands_advantage = 100
+	#plains_advantage = 100
+	#steppe_advantage = 100
+	#hills_advantage = 100
+	#mountains_advantage = 100
+	#wetlands_advantage = 100
+	#forest_advantage = 100
+	#taiga_advantage = 100
+	#drylands_advantage = 100
+	#desert_advantage = 100
+	#desert_mountains_advantage = 100
+	#oasis_advantage = 100
+	#jungle_advantage = 100	
+	######
+	birth = 0				#This trait can not be obtained by character children
+	random_creation = 0		#This trait can not be given to generated (scripts, events) characters
+
+##################################
+#	ai_rationality = -200	##		#Pavlik, make option for ai to be more aggresive in observe mode. Dont think you want that for your vassals.
+#	ai_vengefulness = 200	##
+ai_energy = 500			#I think this will make you act more often.
+#-------------	
+#	ai_greed = -200
+#	ai_boldness = -200	###
+#	ai_sociability = 200
+	ai_war_chance = 100
+	ai_war_cooldown = -365
+##################################
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_super_general_desc
+			}
+			desc = trait_super_general_character_desc
+		}
+	}
+
+}

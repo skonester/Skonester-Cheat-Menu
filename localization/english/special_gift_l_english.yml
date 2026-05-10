@@ -1,0 +1,21 @@
+﻿l_english:
+ special_gift_interaction:0 "#bold #X L#!#N i#!#X v#!#N i#!#X n#!#N g#! #X W#!#N a#!#X t#!#N e#!#X r#! #!"
+ special_gift_interaction_desc:0 "Bestow upon [recipient.GetShortUINameNoTooltip] the truth Clavius found in the empty tomb—a draft that separates the Spirit from the chains of matter."
+ special_gift_interaction_tooltip:0 "Stand, [recipient.GetShortUINameNoTooltip]. The Empires turn to dust, but we remain. Drink, and acquire the #E Peace#! within yourself."
+
+ special_gift_interaction_2:0 "#bold #X L#!#N i#!#X v#!#N i#!#X n#!#N g#! #X W#!#N a#!#X t#!#N e#!#X r#! #!"
+ special_gift_interaction_desc_2:0 "Share the Cup with [recipient.GetShortUINameNoTooltip]—binding your souls beyond the reach of the Powers that rule this world."
+ special_gift_interaction_tooltip_2:0 "My beloved [recipient.GetFirstNameNoTooltip], 'Two things which cannot reconcile' have found their union in us. Drink, and let us dwell in the Silence together forever."
+
+ special_gift_interaction_3:0 "#bold #X L#!#N i#!#X v#!#N i#!#X n#!#N g#! #X W#!#N a#!#X t#!#N e#!#X r#! #!"
+ special_gift_interaction_desc_3:0 "Pass the burden of the Watch to [recipient.GetShortUINameNoTooltip]—ensuring the line of Mary rises above the dissolution of nature."
+ special_gift_interaction_tooltip_3:0 "My child, the #E Son of Man#! is within you. Follow after Him! Drink, and become the anchor that holds against the tide of time."
+
+ special_gift_interaction_4:0 "#bold #X L#!#N i#!#X v#!#N i#!#X n#!#N g#! #X W#!#N a#!#X t#!#N e#!#X r#! #!"
+ special_gift_interaction_desc_4:0 "Grant [recipient.GetShortUINameNoTooltip] the vitality of the Tenth Legion—a loyalty forged not in gold, but in the eternity of the Spirit."
+ special_gift_interaction_tooltip_4:0 "Fellow soldier, [recipient.GetShortUINameNoTooltip]—drink. The war is long, and death is a sleep we can no longer afford. Hold the line with me."
+
+ trait_water_of_life:0 "Sentinel of the Word"
+ trait_water_of_life_desc:0 "This character has seen the Risen One and drank from the Cup. They have transcended the corruption of matter."
+ trait_water_of_life_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] carries the secret of the Upper Room. [ROOT.GetCharacter.GetSheHe|U] is no longer bound by the laws of nature, but walks as a testiment to the #E Living Spirit#!"
+

@@ -1,0 +1,5 @@
+﻿l_english:
+  cxa_tip: "Right-click to [Select_CString(PdxGuiFoldOut.IsFolded, 'collapse', 'expand')] all"
+  xa_height: "Maximum height:"
+  xa_change_height: "Change maximum height"
+  xa_update: "Will update when the menu is reopened"

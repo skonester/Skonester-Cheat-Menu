@@ -1,0 +1,65 @@
+﻿l_english:
+# \character_interaction_categories
+ cheateb_interaction_menu:0 "Skonester Main Menu"
+ cheateb_interaction_menu_relation:0 "Skonester Relationship Options"
+
+# \character_interactions
+## 0
+ cheateb_editmenu_interaction:0 "@legend_icon! Quick Modification Menu"
+ cheateb_settarget_interaction:0 "@advantage_icon! #P Set#! Target (Recipient)"
+ cheateb_removetarget_interaction:0 "@cross_icon! #N Remove#! Target (If Target is Set)"
+
+## 1 (Currency/Points)
+ cheateb_gold_interaction:0 "@gold_icon! Add Gold"
+ cheateb_prestige_interaction:0 "@prestige_icon! Add Prestige"
+ cheateb_piety_interaction:0 "[GetLocalPlayerPietyTextIcon] Add Piety"
+ cheateb_dyprestige_interaction:0 "@dynasty_prestige_icon! Add Dynasty Prestige"
+ 
+## 2 (Actions)
+ cheateb_changename_interaction:0 "@skill_diplomacy_icon! #P Change#! Character Name"
+ cheateb_dressed_interaction:0 "Toggle Clothing"
+ cheateb_claim_interaction:0 "@pressed_claim! #P Claim#! Title"
+ cheateb_take_alltitle_interaction:0 "@prestige_icon! #N Seize#! All Titles"
+ cheateb_take_title_interaction:0 "@prestige_icon! #N Seize#! Title"
+ cheateb_take_title_stand_interaction:0 "@prestige_icon! #N Seize#! Title (Target's Location)"
+ cheateb_religion_interaction:0 "@piety_icon! #P Change#! Religion"
+ cheateb_culture_interaction:0 "@skill_learning_icon! #P Change#! Culture"
+ cheateb_kill_interaction:0 "@scheme_icon! #N Kill#! Character"
+ cheateb_imprison_interaction:0 "@crime_icon! #X Imprison#! Character"
+ cheateb_marry_interaction:0 "@arrange_marriage_icon! #P Arrange Marriage#!"
+ cheateb_setsoulmate_interaction:0 "@arrange_marriage_icon! #P Set Soulmate#!"
+ cheateb_setlover_interaction:0 "@arrange_marriage_icon! #P Set Lover#!"
+ cheateb_pregnant_interaction:0 "@arrange_marriage_icon! #X Set Pregnant#!"
+ cheateb_hook_interaction:0 "@weak_hook_icon! Grant Strong Hook"
+ cheateb_hook_reason:0 "EasyBuff Hook"
+ cheateb_revealsecret_interaction:0 "Discover Secrets"
+ cheateb_addtocourt_interaction:0 "@knight_icon! #P Join#! Court"
+ cheateb_befriend_interaction:0 "@alliance_icon! #P Befriend#!"
+
+# \regiment_types (Military)
+ privateguard:0 "Personal Bodyguards"
+ privateguard_flavor:0 "Do we need any other troops with these bodyguards?"
+
+ innovation_privateguard:0 "Bodyguard Innovation"
+
+ cheateb_legacy_track_name:0 "EB Legacy"
+ cheateb_legacy_track_desc:0 "EasyBuff Legacy"
+ cheateb_legacy_1_name:0 "Bodyguard Access"
+
+# \modifiers (Character/County Effects)
+ cheateb_keep_modifier:0 "Backup Modifier"
+
+ cheateb_stat7_modifier:0 "Excellent Skill Bonus"
+ cheateb_stat20_modifier:0 "Perfect Skill Bonus"
+ cheateb_niverdie_modifier:0 "Immortal"
+ cheateb_army_modifier:0 "Army Training"
+ cheateb_development_modifier:0 "Advanced Productivity"
+ cheateb_nofertility_modifier:0 "Disable Fertility"
+ cheateb_fullfertility_modifier:0 "Max Fertility"
+ cheateb_defence_modifier:0 "Impenetrable Defenses"
+
+# \religion (Holy Site Effects)
+ holy_site_ganzhou_effect_name:0 "Martial Training Bonus"
+ holy_site_ganzhou_name:0 "Ganzhou"
+
+ HEALTH_POINTS_HINT:0 "\nHealth: [CHARACTER.GetHealth|1V]\nFertility: [CHARACTER.GetFertility|%0V]\nStress: [CHARACTER.GetStress|0V]"

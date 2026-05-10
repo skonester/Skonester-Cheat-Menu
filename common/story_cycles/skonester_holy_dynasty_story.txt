@@ -1,0 +1,24 @@
+dynasty_grandmaster_story = {
+	story_owner = {}
+	on_end = {}
+	on_owner_death = {}
+}
+
+dynasty_grandmaster_completed_story = {
+	story_owner = {}
+	on_end = {}
+	on_owner_death = {}
+}
+
+dynasty_pope_story = {
+	story_owner = {}
+	on_end = {}
+	on_owner_death = {}
+}
+
+dynasty_pope_completed_story = {
+	story_owner = {}
+	on_end = {}
+	on_owner_death = {}
+}
+

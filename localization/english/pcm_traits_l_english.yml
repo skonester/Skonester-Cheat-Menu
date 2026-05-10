@@ -1,0 +1,17 @@
+﻿l_english:
+ #Skonester Edition 
+ trait_immortality:0 "Immortal"
+ trait_immortality_desc:0 "This character has partaken of the Sacred Gift of Immortality. Their visage shall remain ever youthful, and they are proof against the grasp of natural death."
+ trait_immortality_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has been blessed with the Sacred Gift of Immortality. [ROOT.GetCharacter.GetSheHe|U] shall never age beyond five-and-twenty years, nor yield to natural death itself."
+
+ trait_super:0 "Paragon"
+ trait_super_desc:0 "This character is a paragon among mortals, bearing unmatched attributes, vigor, charm, and skills that place [ROOT.GetCharacter.GetHerHim] above all others."
+ trait_super_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has been exalted as a paragon, gifted with boundless strength, wit, and renown."
+
+ trait_super_governor:0 "Steward of Wonders"
+ trait_super_governor_desc:0 "This character governs with near-divine wisdom. Their lands prosper, towns flourish, and order reigns supreme, as though touched by heaven’s hand."
+ trait_super_governor_character_desc:0 "Under [ROOT.GetCharacter.GetFirstNameNoTooltip]’s rule, the realm thrives, fields blossom, and even the lowliest peasant blesses their steward’s name."
+
+ trait_super_general:0 "Warlord Anointed"
+ trait_super_general_desc:0 "This character leads armies as though guided by the hand of destiny itself. Their hosts fight with unshakable valor and achieve victory after victory."
+ trait_super_general_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] commands with unmatched genius, feared by enemies and revered by soldiers, leading every host to triumph."

@@ -1,0 +1,5 @@
+﻿l_russian:
+  cxa_tip: "ПКМ: [Select_CString(PdxGuiFoldOut.IsFolded, 'закрыть', 'раскрыть')] все"
+  xa_height: "Макс. высота:"
+  xa_change_height: "Изменить максимальную высоту"
+  xa_update: "Закройте меню чтобы обновить его размер"

@@ -1,0 +1,15 @@
+dynasty_grandmaster_modifier = {
+	icon = prowess_positive
+	prowess_per_piety_level = 1
+	holy_order_hire_cost_mult = -0.2
+}
+
+
+dynasty_pope_modifier = {
+	icon = piety_positive
+	opinion_of_same_faith = 5
+	zealot_tax_contribution_add = 0.1
+	diplomacy_per_piety_level = 1
+	monthly_piety = 2.5
+	monthly_piety_gain_mult = 0.5
+}

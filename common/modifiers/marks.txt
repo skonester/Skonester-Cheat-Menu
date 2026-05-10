@@ -1,0 +1,45 @@
+males_marry_dynasty = {
+	icon = fertility_positive
+}
+females_marry_dynasty = {
+	icon = fertility_positive
+}
+inbreed_marry_dynasty = {
+	icon = fertility_positive
+}
+males_concubine_dynasty = {
+	icon = fertility_positive
+}
+females_concubine_dynasty = {
+	icon = fertility_positive
+}
+males_eugenic_dynasty = {
+	icon = fertility_positive
+}
+females_eugenic_dynasty = {
+	icon = fertility_positive
+}
+males_marry_house = {
+	icon = fertility_positive
+}
+females_marry_house = {
+	icon = fertility_positive
+}
+inbreed_marry_house = {
+	icon = fertility_positive
+}
+males_concubine_house = {
+	icon = fertility_positive
+}
+females_concubine_house = {
+	icon = fertility_positive
+}
+males_eugenic_house = {
+	icon = fertility_positive
+}
+females_eugenic_house = {
+	icon = fertility_positive
+}
+individual_marry_exempt = {
+	icon = fertility_positive
+}

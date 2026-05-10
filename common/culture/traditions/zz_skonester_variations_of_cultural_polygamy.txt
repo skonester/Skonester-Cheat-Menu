@@ -1,0 +1,111 @@
+﻿tradition_zz_cultural_polygamy_two_wives = {
+	category = ritual
+	
+	layers = {
+		0 = diplo
+		1 = mena
+		4 = greeting.dds
+	}
+	
+	is_shown = {
+		always = yes
+	}
+	
+	can_pick = {
+		always = yes
+	}
+	
+	can_pick_for_hybridization = {
+		custom_tooltip = {
+			text = only_one_marriage_tradition_allowed
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_polygamous = { is_in_list = traits }
+			}
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_zz_cultural_polygamy_nine_wives = { is_in_list = traits }
+			}
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_zz_cultural_polygamy_five_wives = { is_in_list = traits }
+			}
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_zz_cultural_polygamy_four_wives = { is_in_list = traits }
+			}
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_zz_cultural_polygamy_three_wives = { is_in_list = traits }
+			}
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_zz_cultural_polygamy_two_wives = { is_in_list = traits }
+			}
+		}
+	}
+
+	parameters = {
+		number_of_consorts_empire = 2
+		number_of_consorts_hegemony = 2
+		number_of_spouses =  2
+		romance_scheme_bonus_vs_spouse = yes
+	}
+	
+	cost = {
+		prestige = 1000
+	}
+	
+	ai_will_do = { 
+		value = -1
+
+	}
+}
+tradition_zz_cultural_polygamy_three_wives = {
+	category = ritual
+	
+	layers = {
+		0 = diplo
+		1 = mena
+		4 = greeting.dds
+	}
+	
+	is_shown = {
+		always = yes
+	}
+	
+	can_pick = {
+		always = yes
+	}
+	
+	can_pick_for_hybridization = {
+		custom_tooltip = {
+			text = only_one_marriage_tradition_allowed
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_polygamous = { is_in_list = traits }
+			}
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_zz_cultural_polygamy_nine_wives = { is_in_list = traits }
+			}
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_zz_cultural_polygamy_five_wives = { is_in_list = traits }
+			}
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_zz_cultural_polygamy_four_wives = { is_in_list = traits }
+			}
+			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
+				culture_tradition:tradition_zz_cultural_polygamy_two_wives = { is_in_list = traits }
+			}
+		}
+	}
+
+	parameters = {
+		number_of_consorts_empire = 3
+		number_of_consorts_hegemony = 3
+		number_of_spouses =  3
+		romance_scheme_bonus_vs_spouse = yes
+	}
+	
+	cost = {
+		prestige = 1000
+	}
+	
+	ai_will_do = { 
+		value = -1
+
+	}
+}

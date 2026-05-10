@@ -1,0 +1,71 @@
+﻿l_russian:
+  #Skonester Edition
+  pcm_money_decision_title:0 "#Skonester:#! Сокровища державы"
+  pcm_money_decision_desc:0 "Призови несметные богатства и будь одарён золотом, благочестием и славой."
+  pcm_money_decision_tooltip:0 "Получить огромное количество золота, благочестия и престижа, чтобы начать правление в силе."
+  pcm_money_decision_ct:0 "Сокровищницы королей переполнены предо мной!"
+
+  pcm_subrealm_to_culture_decision_title:0 "#Skonester:#! Указ о культуре"
+  pcm_subrealm_to_culture_decision_desc:0 "Провозгласи указ, чтобы все вассалы и земли приняли культуру своего сеньора."
+  pcm_subrealm_to_culture_decision_tooltip:0 "Объедини своё государство под единой культурой."
+  pcm_subrealm_to_culture_decision_ct:0 "Отныне весь народ будет говорить на одном языке и следовать одним обычаям."
+
+  pcm_convert_subrealm_to_religion_decision_title:0 "#Skonester:#! Указ о вере"
+  pcm_convert_subrealm_to_religion_decision_desc:0 "Провозгласи указ, чтобы твои вассалы и владения приняли твою веру."
+  pcm_convert_subrealm_to_religion_decision_tooltip:0 "Объедини державу под единым святым знаменем."
+  pcm_convert_subrealm_to_religion_decision_ct:0 "Да снизойдёт свет истины на заблудших!"
+
+  pcm_show_decision_title:0 "--= #Skonester:#! Явить скрытые указы =--"
+  pcm_show_decision_desc:0 "Открой все указы Skonester."
+  pcm_show_decision_tooltip:0 ""
+  pcm_show_decision_ct:0 "Да будет записано и станет известным всем."
+
+  pcm_hide_decision_title:0 "--= #Skonester:#! Скрыть указы =--"
+  pcm_hide_decision_desc:0 "Спрячь указы Skonester от глаз."
+  pcm_hide_decision_tooltip:0 ""
+  pcm_hide_decision_ct:0 "Запечатай свитки и заглуши языки."
+
+  pcm_cure_pox_decision_title:0 "#Skonester:#! Изгнание недугов"
+  pcm_cure_pox_decision_desc:0 "По указу все плотские болезни и недуги будут изгнаны из державы."
+  pcm_cure_pox_decision_tooltip:0 "Очистить державу от болезней плоти."
+  pcm_cure_pox_decision_ct:0 "Травы целителей и святые масла вернули мне чистоту!"
+
+  pcm_cure_all_decision_title:0 "#Skonester:#! Панацея державы"
+  pcm_cure_all_decision_desc:0 "Провозглашается чудесное зелье, излечивающее все болезни в земле."
+  pcm_cure_all_decision_tooltip:0 "Исцелить все недуги и мор в державе."
+  pcm_cure_all_decision_ct:0 "Ликуйте! Тень болезни покидает наш народ."
+
+  pcm_cure_inbred_decision_title:0 "#Skonester:#! Очищение крови"
+  pcm_cure_inbred_decision_desc:0 "Через мистические обряды и божественную милость твоя кровь очищается, и твой род восстанавливает свою чистоту."
+  pcm_cure_inbred_decision_tooltip:0 "Избавить род от всех пороков и изъянов."
+  pcm_cure_inbred_decision_ct:0 "Наследие вновь очищено, как в первые дни сотворения."
+
+  pcm_cure_incapable_decision_title:0 "#Skonester:#! Дар новой силы"
+  pcm_cure_incapable_decision_desc:0 "Сняты все ограничения и немощи, и ты вновь полон сил."
+  pcm_cure_incapable_decision_tooltip:0 "Избавиться от состояния 'Недееспособен'."
+  pcm_cure_incapable_decision_ct:0 "Я восстал, и тело моё вновь подчиняется мне!"
+
+  pcm_cure_wounded_decision_title:0 "#Skonester:#! Целительные руки"
+  pcm_cure_wounded_decision_desc:0 "Все раны, полученные в битвах и бедствиях, чудесным образом исцеляются."
+  pcm_cure_wounded_decision_tooltip:0 "Исцелить все ранения."
+  pcm_cure_wounded_decision_ct:0 "Плоть срастается, боль уходит — я снова готов к битве!"
+
+  pcm_cure_stress_decision_title:0 "#Skonester:#! Спокойствие духа"
+  pcm_cure_stress_decision_desc:0 "Все тревоги и заботы растворяются, ум обретает покой."
+  pcm_cure_stress_decision_tooltip:0 "Снять стресс."
+  pcm_cure_stress_decision_ct:0 "Ни одна забота больше не тяготит меня."
+
+  pcm_cure_drunkard_decision_title:0 "#Skonester:#! Отрезвление"
+  pcm_cure_drunkard_decision_desc:0 "Прекрати порочный путь пьянства и верни ясность рассудка."
+  pcm_cure_drunkard_decision_tooltip:0 "Убрать черту 'Пьяница'."
+  pcm_cure_drunkard_decision_ct:0 "Вино больше не властно надо мной."
+
+  pcm_cure_hashishiyah_decision_title:0 "#Skonester:#! Свобода от дурмана"
+  pcm_cure_hashishiyah_decision_desc:0 "Изгони зависимость от гашиша и верни силу духа."
+  pcm_cure_hashishiyah_decision_tooltip:0 "Убрать черту 'Гашишин'."
+  pcm_cure_hashishiyah_decision_ct:0 "Мой разум снова чист."
+
+  pcm_cure_obese_decision_title:0 "#Skonester:#! Стройность и здоровье"
+  pcm_cure_obese_decision_desc:0 "Избавься от излишеств и верни телу лёгкость."
+  pcm_cure_obese_decision_tooltip:0 "Убрать черту 'Ожирение'."
+  pcm_cure_obese_decision_ct:0 "Моё тело вновь в силе и равновесии."

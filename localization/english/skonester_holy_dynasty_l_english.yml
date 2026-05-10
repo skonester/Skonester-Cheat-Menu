@@ -1,0 +1,25 @@
+﻿l_english:
+ pope_select_flag_desc:0 "“You are the new Pope!”"
+ pope_select_interaction:0 "Appoint New Pope"
+ pope_select_interaction_desc:0 "“The Pope should come from my house!”"
+
+ grandmaster_select_flag_desc:0 "“You are the new Grandmaster!”"
+ grandmaster_select_interaction:0 "Appoint New Grandmaster"
+ grandmaster_select_interaction_desc:0 "“The Grandmaster should come from my house!”"
+
+ dynasty_grandmaster_0_decision:0 "Appoint a New Grandmaster"
+ dynasty_grandmaster_0_decision_desc:0 "Our family has ever been loyal to the faith. Now the Order stands in need of a new leader. Let the holy fire shine upon our bloodline, and let the sword of faith be drawn once more."
+ dynasty_grandmaster_0_decision_message:0 "You can use character interactions (in the Diplomacy menu) to make your descendant the Grandmaster of the Order."
+ dynasty_grandmaster_0_decision_confirm:0 "Appoint the New Grandmaster"
+
+ dynasty_pope_0_decision:0 "Appoint a New Pope"
+ dynasty_pope_0_decision_desc:0 "Our bloodline is under divine watch. Only one of my blood upon the Holy See can restore order to the Church."
+ dynasty_pope_0_decision_message:0 "You can use character interactions (in the Diplomacy menu) to make your descendant the Pope."
+ dynasty_pope_0_decision_confirm:0 "Appoint the New Pope"
+
+ dynasty_pope_modifier:0 "Papal Dynasty"
+ dynasty_grandmaster_modifier:0 "Holy Knightly Dynasty"
+ decision_group_type_holy_dynasty_decision_group:0 "Sacred Dynasty Decisions"
+
+ dynasty_pope_0_decision_tooltip:0 "Select"
+ dynasty_grandmaster_0_decision_tooltip:0 "Select"

@@ -1,0 +1,46 @@
+﻿namespace = zhuge_bloodline_god
+
+# ───────────────────────────────────────────
+# 父亲拥有 3 级血脉 → 子嗣 50% 获 3，50% 获 2
+# ───────────────────────────────────────────
+zhuge_bloodline_god.0001 = {
+    type = character_event
+    hide_window = yes          # 不弹窗
+    trigger = {
+        is_baby = yes
+        is_male = yes
+		is_female = yes
+        father = { has_trait = bloodline_god_3 }
+        NOT = { has_trait = bloodline_god_3 }  # 避免重复赋值
+    }
+    immediate = {
+        random_list = {
+            50 = { add_trait = bloodline_god_3 }
+            50 = { add_trait = bloodline_god_2 }
+        }
+    }
+}
+
+# ───────────────────────────────────────────
+# 父亲拥有 2 级血脉 → 子嗣 50% 获 2，50% 获 1
+# ───────────────────────────────────────────
+zhuge_bloodline_god.0002 = {
+    type = character_event
+    hide_window = yes
+    trigger = {
+        is_baby = yes
+        is_male = yes
+		is_female = yes
+        father = { has_trait = bloodline_god_2 }
+        NOT = {
+            has_trait = bloodline_god_3   # 前面事件可能已赋
+            has_trait = bloodline_god_2
+        }
+    }
+    immediate = {
+        random_list = {
+            50 = { add_trait = bloodline_god_2 }
+            50 = { add_trait = bloodline_god_1 }
+        }
+    }
+}

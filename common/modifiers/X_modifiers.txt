@@ -1,0 +1,57 @@
+X_modifier = {
+	icon = stewardship_positive
+
+	enemy_hostile_scheme_success_chance_add = -999
+	enemy_personal_scheme_success_chance_add = -999
+
+	# Slows natural old-age death; visual age is handled by immortality/set_immortal_age.
+	life_expectancy = 1000
+	negate_health_penalty_add = 9
+	no_prowess_loss_from_age = yes
+
+	county_opinion_add = 200
+	monthly_county_control_change_add = 100
+
+	different_culture_opinion = 200
+	same_culture_opinion = 200
+	different_faith_opinion = 200
+	same_faith_opinion = 200
+
+	build_speed = -100.0
+	holding_build_speed = -100.0
+	domicile_build_speed = -100.0
+}
+
+X1_modifier = {
+
+	icon = stewardship_positive
+
+	stress_gain_mult = -10
+
+	#domain_limit = 200
+	vassal_limit = 2000
+
+	naval_movement_speed_mult = 9
+	movement_speed = 9
+	#knight_limit = 15
+	knight_effectiveness_mult = 99
+	no_prowess_loss_from_age = yes
+	siege_weapon_siege_value_mult = 99
+	siege_phase_time = -1
+
+	# Slows natural old-age death; visual age is handled by immortality/set_immortal_age.
+	life_expectancy = 1000
+	build_speed = -100.0
+	holding_build_speed = -100.0
+	domicile_build_speed = -100.0
+}
+
+X2_modifier = {
+	stacking = no
+	building_slot_add = 4
+}
+
+X_hospitals = {
+	icon = rat_mixed
+	epidemic_resistance = 200
+}

@@ -1,0 +1,25 @@
+﻿l_russian:
+ pope_select_flag_desc:0 "«Ты — новый Папа!»"
+ pope_select_interaction:0 "Назначить нового Папу"
+ pope_select_interaction_desc:0 "«Папа должен быть из моего рода!»"
+
+ grandmaster_select_flag_desc:0 "«Ты — новый магистр!»"
+ grandmaster_select_interaction:0 "Назначить нового магистра"
+ grandmaster_select_interaction_desc:0 "«Магистр должен быть из моего рода!»"
+
+ dynasty_grandmaster_0_decision:0 "Назначить нового магистра"
+ dynasty_grandmaster_0_decision_desc:0 "Наш род всегда был верен вере. Орден нуждается в новом лидере. Пусть святой огонь озарит нашу кровь, и меч веры снова выйдет из ножен."
+ dynasty_grandmaster_0_decision_message:0 "Вы можете использовать взаимодействия с персонажами (в меню дипломатии), чтобы сделать вашего потомка магистром Ордена."
+ dynasty_grandmaster_0_decision_confirm:0 "Назначить нового магистра"
+
+ dynasty_pope_0_decision:0 "Назначить нового Папу"
+ dynasty_pope_0_decision_desc:0 "Наша кровь под божественным взором. Только мой кровный родственник на Святом Престоле сможет восстановить порядок в Церкви."
+ dynasty_pope_0_decision_message:0 "Вы можете использовать взаимодействия с персонажами (в меню дипломатии), чтобы сделать вашего потомка Папой."
+ dynasty_pope_0_decision_confirm:0 "Назначить нового Папу"
+
+ dynasty_pope_modifier:0 "Папская династия"
+ dynasty_grandmaster_modifier:0 "Рыцарская династия"
+ decision_group_type_holy_dynasty_decision_group:0 "Священные династические решения"
+
+ dynasty_pope_0_decision_tooltip:0 "Выбрать"
+ dynasty_grandmaster_0_decision_tooltip:0 "Выбрать"

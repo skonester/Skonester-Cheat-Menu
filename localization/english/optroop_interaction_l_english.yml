@@ -1,0 +1,11 @@
+﻿l_english:
+# \regiment_types
+ op_troops:1 "Elite House Guard"
+ open_optroop_menu:0 "Open House Guard Menu"
+ open_optroop_menu_desc:0 "[recipient.GetShortUINameNoTooltip|U] will get House Guard Options"
+ close_optroop_menu:0 "Close House Guard Menu"
+ close_optroop_menu_desc:0 "[recipient.GetShortUINameNoTooltip|U] will close House Guard Options"
+ inheritable_optroop_interaction:0 "Spawn 5000 Elite House Guard Soldiers"
+ inheritable_optroop_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] will receive 5000 House Guard Soldiers that will be passed down to their heirs"
+ non_inheritable_optroop_interaction:0 "Spawn 2000 Elite House Calvary Soldiers"
+ non_inheritable_optroop_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] will receive 2000 House Calvary Soldiers that will be passed down to their heirs"

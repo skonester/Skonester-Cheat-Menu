@@ -1,0 +1,13 @@
+﻿xa_height = {
+  # in case you started in observer mode, so we can't set the global variable
+  # could in theory spawn a scripted widget that would fire in the character selection and set the variable, but I think this is safer
+  if = {
+    limit = {
+      has_global_variable = xa_height
+    }
+    value = global_var:xa_height
+  }
+  else = {
+    value = 700
+  }
+}

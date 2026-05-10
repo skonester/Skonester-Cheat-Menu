@@ -1,0 +1,68 @@
+﻿l_english:
+
+ # --- Interactions ---
+ toc__interaction:1 "Quick Action"
+
+ # --- Decisions ---
+ toc_deceitful_progress_hostile_schemes_decision:0 "Progress Hostile Schemes"
+ toc_deceitful_progress_hostile_schemes_decision_confirm:0 "Set the schemes in motion."
+ toc_deceitful_progress_hostile_schemes_decision_tooltip:0 "Advance all active hostile schemes."
+
+ toc_diligent_development_focus_decision:0 "Focus on Development"
+ toc_diligent_development_focus_decision_confirm:0 "Begin the work."
+
+ toc_impatient_rushing_all_schemes_decision:0 "Rush All Schemes"
+ toc_impatient_rushing_all_schemes_decision_confirm:0 "Push them forward now."
+
+ tocwinwars_decision:0 "Resolve All Wars"
+ tocwinwars_decision_desc:0 "Your wars have gone on long enough. Issue the command to bring them to an end."
+ tocwinwars_decision_tooltip:0 "All ongoing wars will be resolved immediately."
+ tocwinwars_decision_confirm:0 "End it."
+
+ toc_armyslaughter_decision:0 "Ravage Province"
+ toc_armyslaughter_decision_desc:0 "This province has caused enough trouble. You will make an example of it and ensure no further resistance from its people."
+ toc_armyslaughter_decision_tooltip:0 "Your commanded army must be present in the target province."
+ toc_armyslaughter_decision_confirm:0 "Give the order."
+
+ toc_armybuilders_decision:0 "Expand Holding"
+ toc_armybuilders_decision_desc:0 "This holding has untapped potential. Put your forces to work and make something of it."
+ toc_armybuilders_decision_tooltip:0 "Your commanded army must be present at the target holding."
+ toc_armybuilders_decision_confirm:0 "Give the order."
+
+ toc_build_decision:0 "Develop Province"
+ toc_build_decision_desc:0 "This province has room to grow. With the right investment it could become a thriving center of your realm."
+ toc_build_decision_tooltip:0 "Your commanded army must be present at the target holding."
+ toc_build_decision_confirm:0 "Begin construction."
+
+ # --- Messages ---
+ msg_armyslaughter_decision:0 "The province has been ravaged."
+ msg_armybuilders_decision:0 "The holding has been expanded."
+
+ # --- Modifiers ---
+ toc_diplomaticrange_modifier:1 "Extended Diplomatic Reach"
+ toc_diplomaticrange_modifier_desc:1 "This ruler's influence extends far beyond their borders."
+
+ toc_exoticcourtbonus:1 "Exotic Court"
+ toc_exoticcourtbonus_desc:1 "This court draws visitors from distant lands, lending it an air of prestige and intrigue."
+
+ toc_fertile_modifier:1 "Blessed Fertility"
+ toc_fertile_modifier_desc:1 "This character is unusually fertile and likely to produce many heirs."
+
+ toc_dreadful_modifier:1 "Dreadful Reputation"
+ toc_dreadful_modifier_desc:1 "This ruler's name inspires fear across the realm."
+
+ toc_notyranny_modifier:1 "Just Rule"
+ toc_notyranny_modifier_desc:1 "This ruler governs without resorting to tyranny."
+
+ toc_superknights_modifier:1 "Elite Knights"
+ toc_superknights_modifier_desc:1 "This ruler commands knights of exceptional skill and renown."
+ 
+ toc_uncelibate_interaction:1 "Uncelibate"
+
+
+ # --- Commented / Unused ---
+ #toc_major_purge_war:0 "Purge War"
+ #trait_pure_blooded_desc:0 "This character is of a pure bloodline."
+ #trait_gigasuperseed:0 "Pure-blooded"
+ #trait_gigasuperseed_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is of a pure bloodline."
+

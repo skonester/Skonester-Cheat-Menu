@@ -1,0 +1,5 @@
+zhuge_hufu_modifier = {
+	icon = health_negative
+	health = -1
+    disease_resistance = -20 
+}

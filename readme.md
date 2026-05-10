@@ -190,7 +190,7 @@ For modders and translators who want to ensure the consolidated file is perfectl
 
 **May**
 
-* **Gold**:(1.19.04) Final Build for foreseeable future.
+* **Gold**:(1.19.0.5) Final Build for foreseeable future.
 
 **April**
 * **Taurus V 1.2**: Bug cleanup code from 1.18

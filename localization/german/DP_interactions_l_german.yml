@@ -1,0 +1,286 @@
+﻿l_german:
+ interaction_category_cheat_menu:0 "Skonester-Cheat-Menü/DI-Patch"
+ CHEAT_ACTIONS:0 "Skonester-Cheat-Menü"
+
+ open_daddy_pika_cheat_menu:0 "Menü öffnen"
+ close_daddy_pika_cheat_menu:0 "Menü schließen"
+ daddy_pika_cheat_menu_desc:0 "Ein geheimes Kompendium verbotener Mächte."
+
+ dp_sex_interaction.t:0 "Gemeinsam schlafen"
+ dp_sex_interaction:0 "Gemeinsam schlafen"
+
+ daddy_pika_edit_character:0 "Charakter bearbeiten"
+ daddy_pika_edit_character_desc:0 "Forme diese Seele, als wäre es Gottes eigener Wille."
+
+ daddy_pika_character_currency_menu:0 "Währungsmenü"
+ daddy_pika_character_currency_menu_desc:0 "Verleihe mit einem einzigen Wort Reichtum, Ehre oder Ruhm."
+
+ daddy_pika_murder:0 "Ermorden"
+ daddy_pika_murder_desc:0 "Beende das Leben dieses Charakters mit kaltem Blut."
+
+ suiji_murder_character_interaction:0 "Zufälliger Mord"
+ suiji_murder_character_interaction_desc:0 "Überlasse dem Schicksal die Wahl des Mörders."
+
+ null_murder_character_interaction:0 "Natürlicher Tod"
+ null_murder_character_interaction_desc:0 "Die Seele scheidet friedlich dahin, als wäre es Gottes Wille."
+
+ actor_murder_character_interaction:0 "Persönlich töten"
+ actor_murder_character_interaction_desc:0 "Nimm die Tat selbst in die Hand und beende ihr Leben."
+
+ zhuge_kill_01_character_interaction:0 "Tod gewähren"
+ zhuge_kill_01_character_interaction_desc:0 "Erlöse diese Seele von ihrer sterblichen Hülle."
+
+ daddy_pika_extermination_process:0 "Dynastie auslöschen"
+ daddy_pika_extermination_process_desc:0 "Lösche eine gesamte Blutlinie von der Welt – niemand soll überleben."
+
+ daddy_pika_designate_survivors:0 "Als Überlebenden markieren"
+ daddy_pika_designate_survivors_desc:0 "Verschone diese Seele vor der Säuberung."
+
+ daddy_pika_murder_off_dynasty:0 "Vollständige Auslöschung"
+ daddy_pika_murder_off_dynasty_desc:0 "Sorge dafür, dass diese Blutlinie bis auf das letzte Mitglied ausgelöscht wird."
+
+ daddy_pika_marry:0 "Ehe erzwingen"
+ daddy_pika_marry_desc:0 "Verbinde zwei Seelen im Bund der Ehe – ungeachtet ihres Willens."
+
+ daddy_pika_imprison:0 "Einkerkern"
+ daddy_pika_imprison_desc:0 "Wirf diese Seele in Ketten."
+
+ daddy_pika_commit_suicide:0 "Selbstmord begehen"
+ daddy_pika_commit_suicide_desc:0 "Dieser Charakter entscheidet sich für den Tod statt für das Leben."
+
+ daddy_pika_excommunicate:0 "Exkommunizieren"
+ daddy_pika_excommunicate_desc:0 "Verstoße diese Seele aus der heiligen Kirche."
+
+ daddy_pika_remove_excommunication:0 "Exkommunikation aufheben"
+ daddy_pika_remove_excommunication_desc:0 "Nimm diese Person wieder in die Gemeinschaft der Kirche auf."
+
+ daddy_pika_change_religion:0 "Religion ändern"
+ daddy_pika_change_religion_desc:0 "Führe diese Seele zu einem neuen Glauben."
+
+ daddy_pika_change_culture:0 "Kultur ändern"
+ daddy_pika_change_culture_desc:0 "Lass diese Person ihre alten Bräuche hinter sich und eine neue Kultur annehmen."
+
+ daddy_pika_change_dynasty:0 "In Eure Dynastie aufnehmen"
+ daddy_pika_change_dynasty_desc:0 "Nimm diese Seele in Eure edle Blutlinie auf."
+
+ daddy_pika_change_character:0 "Charakter wechseln"
+ daddy_pika_change_character_desc:0 "Verlasse Euren bisherigen Weg und übernehmt das Schicksal eines anderen."
+
+ daddy_pika_boost_stats:0 "Super-Verstärkung"
+ daddy_pika_boost_stats_desc:0 "Segne diesen Charakter mit außergewöhnlichen Fähigkeiten."
+
+ daddy_pika_secrets_in_realm:0 "Geheimnisse aufdecken"
+ daddy_pika_secrets_in_realm_desc:0 "Enthülle sämtliche Geheimnisse, die diese Seele verbirgt."
+
+ daddy_pika_add_to_court:0 "Dem Hof beitreten"
+ daddy_pika_add_to_court_desc:0 "Rufe diese Person an Euren Hof."
+
+ daddy_pika_designate_survivors_remove:0 "Überlebendenstatus entfernen"
+ daddy_pika_designate_survivors_remove_desc:0 "Entziehe dieser Seele Eure Gnade."
+
+ daddy_pika_impregnate_cheat:0 "Schwängern"
+ daddy_pika_impregnate_cheat_desc:0 "Lasst neues Leben nach Eurem Willen entstehen."
+
+ daddy_pika_designate_heir:0 "Erben bestimmen"
+ daddy_pika_designate_heir_desc:0 "Erkläre diese Seele zum rechtmäßigen Erben Eures Vermächtnisses."
+
+ daddy_pika_adopt:0 "Diese Person adoptieren"
+ daddy_pika_adopt_f:0 "Adoptieren"
+ daddy_pika_adopt_m:0 "Adoptieren"
+
+ daddy_pika_disown:0 "Verstoßen"
+ daddy_pika_disown_desc:0 "Verstoße diese Seele und entreiße ihr Familie und Namen."
+
+ daddy_pika_concubine_cheat:0 "Konkubine hinzufügen"
+ daddy_pika_concubine_cheat_desc:0 "Nimm diese Seele als Konkubine in Euren Haushalt auf."
+
+ divorce_character_cheat:0 "Scheidung"
+ divorce_character_cheat_desc:0 "Löse den Bund der Ehe auf."
+
+ daddy_pika_claim_title:0 "Anspruch auf Titel erheben"
+ daddy_pika_claim_title_desc:0 "Erhebe Anspruch auf den rechtmäßigen Titel dieser Person."
+
+ daddy_pika_usurpy_surp:0 "Titel an sich reißen"
+ daddy_pika_usurpy_surp_desc:0 "Nimm diesen Titel mit Gewalt an Dich."
+
+ zhuge_rongyu_title_interaction:0 "Ehrentitel verleihen/Titellos"
+
+ daddy_pika_char_modify_vassal_contract_inter:0 "Vertrag ändern"
+ daddy_pika_char_modify_vassal_contract_inter_desc:0 "Schreibe die Vasallenpflichten nach Eurem Willen neu."
+
+ daddy_pika_vassal_mod_vassal_contract_inter:0 "Vertrag ändern"
+ daddy_pika_vassal_mod_vassal_contract_inter_desc:0 "Ändere die Bindungen zwischen Lehnsherr und Vasall nach Belieben."
+
+ daddy_pika_revoke_title:0 "Titel entziehen"
+ daddy_pika_revoke_title_desc:0 "Nimm dieser Seele Titel und Ehre."
+
+ daddy_pika_offer_vassal_inter:0 "Vasallenschaft erzwingen"
+ daddy_pika_offer_vassal_inter_desc:0 "Unterwerfe diese Seele Eurer Herrschaft."
+
+ daddy_pika_character_spawner:0 "Charakter erschaffen"
+ daddy_pika_character_spawner_desc:0 "Erschaffe neue Charaktere von großer Stärke für Euer Reich."
+
+ daddy_pika_arrange_marriage_inter:0 "Verlobung erzwingen"
+ daddy_pika_arrange_marriage_inter_desc:0 "Erzwinge ein Eheversprechen zwischen diesen beiden Seelen."
+
+ actor_secondary_daddy_pika_arrange_marriage_inter:0 "Ehepartner"
+
+ daddy_pika_confirm:0 "Bestätigen"
+
+ open_daddypika_menu:0 "*Untermenü-Editor öffnen*"
+ close_daddypika_menu:0 "*Untermenü-Editor schließen*"
+ open_daddypika_menu_desc:0 "Schlage das verborgene Verzeichnis auf."
+ close_daddypika_menu_desc:0 "Verschließe das verborgene Verzeichnis."
+
+ conv_realm_religion_tt:0 "Religion bekehren"
+ conv_realm_culture_tt:0 "Kultur ändern"
+
+ zhuge_gm_fczh_TT:0 "Vasallen bekehren"
+ zhuge_gm_fczh_desc:0 "Bringe Eure Vasallen dazu, denselben Weg zu beschreiten."
+
+ max_realm_development_TT:0 "Entwicklung maximieren"
+ max_realm_control_TT:0 "Kontrolle maximieren"
+ max_realm_desc:0 "Steigere die Stärke und Ordnung Eures Reiches bis an ihre Grenzen."
+
+ convert_realm_desc:0 "Forme die Bräuche Eures Reiches nach Eurem Willen."
+
+ are_you_sure_tt:0 "$generic_proceed$"
+
+ change_suc_young:0 "Erbfolge ändern: Ultimogenitur"
+ change_suc_old:0 "Erbfolge ändern: Primogenitur"
+ change_suc_desc:0 "Verkünde ein neues Erbfolgerecht."
+ change_suc_tt:0 "$generic_proceed$"
+
+ generic_proceed:0 "Seid Ihr sicher, dass Ihr fortfahren möchtet?"
+
+ change_govt_tribe:0 "Zu Stammesherrschaft wechseln"
+ change_govt_clan:0 "Zu Clanherrschaft wechseln"
+ change_govt_feudal:0 "Zu Feudalherrschaft wechseln"
+ change_govt_administrative:0 "Zu Verwaltungsregierung wechseln"
+ change_govt_landless_adventurer:0 "Zu landlosem Abenteurer wechseln"
+ change_govt_nomad:0 "Zu Nomaden wechseln"
+
+ change_sansi_government:0 "Untertanenregierung ändern"
+
+ change_govt_desc:0 "Ordnet die Regierungsform neu."
+ change_sansi1_desc:0 "Ändert die Regierungsform Eures Untertanen."
+ change_govt_tt:0 "$generic_proceed$"
+
+ daddy_pika_GENERIC_EFFECT_DESC:0 ""
+
+ title_army_spawn_menu:0 "Armee-Menü"
+ title_government_menu:0 "-Regierungsmenü-"
+ title_convert_menu:0 "-Reichsmenü-"
+ zhuge_juese_menu:0 "-Charaktermenü-"
+ zhuge_sansi_menu:0 "-Hauptmenü-"
+
+ CONFIRM_OKAY:0 "Okay"
+
+ manage_titles:0 "Titel verwalten"
+ manage_titles_desc:0 "Verwaltet und verteilt Adelstitel."
+ manage_titles_interaction:0 "Titel verwalten"
+ manage_titles_interaction_desc:0 "Bestimmt nach Eurem Willen über die Vergabe von Titeln."
+
+ CHEAT_MENU_ACTIONS:0 "Dieser verborgene Kodex gewährt zahlreiche geheime Werkzeuge, mit denen Ihr das Schicksal selbst formen könnt."
+
+ Only_Me_gse_mod:0 "Nur für mich ändern"
+ Me_and_Vassals_gse_mod:0 "Für mich und meine Vasallen ändern"
+ Only_Vassals_gse_mod:0 "Nur für meine Vasallen ändern"
+ Nothing_will_change_gse_mod:0 "Es wird nichts geändert"
+
+ #Gender
+ gender_Succession_events_mod_decision:0 "Geschlechter-Erbfolge ändern"
+ gender_Succession_events_mod_decision_tooltip:0 "Ändert das Gesetz für Euch selbst und/oder Eure Vasallen."
+ gender_Succession_events_mod_decision_confirm:0 "Lasst es geschehen!"
+ gender_Succession_events_mod_decision_desc:0 "Ändert das Gesetz für Euch selbst und/oder Eure Vasallen."
+
+ gender_succession_events_mod.1001.desc:0 "Zeigt die für Eure Religion verfügbaren Geschlechter-Erbfolgeregeln an. Vasallen mit Religionen, bei denen eine Regel nicht möglich ist, erhalten automatisch eine passende Alternative."
+ gender_succession_events_mod.1002.desc:0 "Auswählen"
+ gender_succession_events_mod.1003.desc:0 "Auswählen"
+ gender_succession_events_mod.1004.desc:0 "Auswählen"
+ gender_succession_events_mod.1005.desc:0 "Auswählen"
+ gender_succession_events_mod.1006.desc:0 "Auswählen"
+
+ male_only_gse_mod:0 "Nur Männer"
+ Male_preference_gse_mod:0 "Männliche Präferenz"
+ Equal_gse_mod:0 "Gleichberechtigt"
+ Female_preference_gse_mod:0 "Weibliche Präferenz"
+ Female_Only_gse_mod:0 "Nur Frauen"
+
+ rule_Change_Vassal_Gender_law_game_mod:0 "Geschlechter-Erbfolgerecht ändern"
+
+ setting_Change_Vassal_Gender_law_game_mod_off:0 "Geschlechter-Erbfolgerecht deaktiviert"
+ setting_Change_Vassal_Gender_law_game_mod_off_desc:0 "Die Geschlechter-Erbfolge richtet sich nach der Religion."
+
+ setting_Change_Vassal_Gender_law_game_mod_on:0 "Geschlechter-Erbfolgerecht aktiviert"
+ setting_Change_Vassal_Gender_law_game_mod_on_desc:0 "Die Geschlechter-Erbfolge ist unabhängig von der Religion."
+
+# Reich
+change_Realm_succession_law_mod_decision:0 "Reichserbfolge ändern"
+change_Realm_succession_law_mod_decision_tooltip:0 "Ändert das Gesetz für Euch selbst und/oder Eure Vasallen."
+change_Realm_succession_law_mod_decision_confirm:0 "Lasst es geschehen!"
+change_Realm_succession_law_mod_decision_desc:0 "Ändert das Gesetz für Euch selbst und/oder Eure Vasallen."
+
+change_Realm_succession_law_mod.1001.desc:0 "Zeigt die für Eure Kultur verfügbaren Erbfolgegesetze an. Vasallen, deren Kultur ein bestimmtes Gesetz nicht unterstützt, erhalten automatisch ein passendes Gesetz."
+change_Realm_succession_law_mod.1002.desc:0 "Auswählen"
+change_Realm_succession_law_mod.1003.desc:0 "Auswählen"
+change_Realm_succession_law_mod.1004.desc:0 "Auswählen"
+change_Realm_succession_law_mod.1005.desc:0 "Auswählen"
+change_Realm_succession_law_mod.1006.desc:0 "Auswählen"
+change_Realm_succession_law_mod.1007.desc:0 "Auswählen"
+change_Realm_succession_law_mod.1008.desc:0 "Auswählen"
+change_Realm_succession_law_mod.1009.desc:0 "Auswählen"
+
+multiple_heirs_rse_mod:0 "Mehrere Erben"
+single_Heir_rse_mod:0 "Einzelerbe"
+Elective_rse_mod:0 "Wahlmonarchie"
+Confederate_Partition_rse_mod:0 "Konföderierte Teilung"
+Partition_rse_mod:0 "Teilung"
+High_Partition_rse_mod:0 "Hohe Teilung"
+Primogeniture_rse_mod:0 "Primogenitur"
+Ultimogeniture_rse_mod:0 "Ultimogenitur"
+House_Seniority_rse_mod:0 "Hausältestenschaft"
+
+rule_change_Realm_succession_law_game_mod:0 "Reichserbfolge ändern"
+
+setting_change_Realm_succession_law_game_mod_off:0 "Reichserbfolge deaktiviert"
+setting_change_Realm_succession_law_game_mod_off_desc:0 "Erbfolgegesetze richten sich nach der Kultur."
+
+setting_change_Realm_succession_law_game_mod_on:0 "Reichserbfolge aktiviert"
+setting_change_Realm_succession_law_game_mod_on_desc:0 "Erbfolgegesetze sind unabhängig von der Kultur."
+
+gender_Succession_events_mod_decision_title:0 "Geschlechter-Erbfolgeereignis auslösen"
+gender_Succession_events_mod_decision_desc:0 "Löst das Geschlechter-Erbfolgeereignis manuell aus, um die entsprechenden Spielmechaniken zu testen."
+gender_Succession_events_mod_decision_tt:0 "Aktiviert das Geschlechter-Erbfolgeereignis."
+
+change_Realm_succession_law_mod_decision_title:0 "Reichserbfolgegesetz ändern"
+change_Realm_succession_law_mod_decision_desc:0 "Ändert das Erbfolgegesetz des Reiches anhand von Kultur und Innovationen."
+change_Realm_succession_law_mod_decision_tt:0 "Löst das Ereignis zum Ändern des Reichserbfolgegesetzes aus."
+
+change_govt_celestial:0 "Regierung ändern: Himmlisch"
+change_govt_celestial_desc:0 "Ändert Euer Haupterreich sofort zur Himmlischen Regierung (Kaiserliches China). Für eine zuverlässige Funktion sind bestimmte kulturelle und religiöse Voraussetzungen erforderlich."
+
+change_govt_meritocratic:0 "Regierung ändern: Meritokratisch"
+change_govt_meritocratic_desc:0 "Ändert Euer Haupterreich sofort zur meritokratischen Regierungsform. Diese wird von besonderen Kandidaten und leistungsorientierten Reichen genutzt."
+
+change_govt_mandala:0 "Regierung ändern: Mandala (Hoch)"
+change_govt_mandala_desc:0 "Ändert Euer Haupterreich sofort zur Mandala-Regierungsform (spezialisierte südostasiatische Herrschaftsform)."
+
+change_govt_wanua:0 "Regierung ändern: Wanua (Niedrig)"
+change_govt_wanua_desc:0 "Ändert Euer Haupterreich sofort zur Wanua-Regierungsform (südostasiatische Stammesherrschaft)."
+
+change_govt_tt:0 "Zur Regierungsform „$TYPE$“ wechseln"
+
+CONFIRM_OKAY:0 "Bestätigen"
+
+### JAPAN GOVERNMENT DECISION TITLES
+change_govt_japan_administrative_government:0 "Zur japanischen Verwaltungsregierung wechseln"
+change_govt_japan_feudal_government:0 "Zur japanischen Feudalregierung wechseln"
+
+### JAPAN GOVERNMENT DECISION DESCRIPTIONS
+change_govt_japan_administrative_government_desc:0 "Übernehmt die japanische Verwaltungsregierung und stärkt die zentrale Staatsgewalt durch eine bürokratische Verwaltung anstelle der traditionellen Adelsmacht."
+
+change_govt_japan_feudal_government_desc:0 "Übernehmt die japanische Feudalregierung und verlagert die Macht auf eine militärische Ordnung, die auf Samurai-Vasallen und einem feudalen Landsystem beruht."
+
+### REUSED TOOLTIP
+change_govt_tt:0 "Diese Entscheidung ändert Eure Regierungsform."

@@ -1,0 +1,170 @@
+﻿l_german:
+# Interaktion: Krieg ohne Einschränkungen
+ sol_expansion_war_interaction:0 "Krieg ohne Grenzen"
+ sol_expansion_war_interaction_desc:0 "Erkläre [recipient.GetShortUINameNoTooltip] offen den [war|E], ohne an [casus_belli|E] oder [claim|E] gebunden zu sein."
+
+# Gefangene nach dem Sieg
+ sol_captive_war_cb_prisoners.tt_attacker:1 "Nach eurem Sieg werden viele von [defender.GetShortUINamePossessive] [courtiers|E] zu euren Gefangenen. Ihre Zahl richtet sich nach dem Rang von [defender.GetHerHis]."
+
+# Entscheidungen zum Aktivieren/Deaktivieren der Spezialtruppen
+ sol_expanded_war_special_troops_activate:0 "Skonester-Kriegerscharen beschwören"
+ sol_expanded_war_special_troops_activate_title:0 "Freikompanie beschwören"
+ sol_expanded_war_special_troops_activate_desc:0 "Rufe Kriegerscharen zu den Waffen, die allein deiner Sache dienen. Diese Truppen verschwinden mit dem Ende des Krieges, kosten weder Gold noch Versorgung und erscheinen ausschließlich an deinem Herrschaftssitz."
+ sol_expanded_war_special_troops_activate_tooltip:0 "Bei Kriegserklärungen schließen sich besondere Kriegerscharen deinen Streitkräften an."
+ sol_expanded_war_special_troops_activate_confirm:0 "Sie beschwören"
+
+ sol_expanded_war_special_troops_deactivate:0 "Skonester-Kriegerscharen entlassen"
+ sol_expanded_war_special_troops_deactivate_title:0 "Freikompanie entlassen"
+ sol_expanded_war_special_troops_deactivate_desc:0 "Entlasse deine beschworenen Krieger. Künftig werden weder Kriegerscharen zu Beginn eines Krieges erscheinen noch Garnisonen oder Aufgebote auf wundersame Weise wiederhergestellt."
+ sol_expanded_war_special_troops_deactivate_tooltip:0 "Bei Kriegserklärungen werden keine Kriegerscharen mehr erscheinen."
+ sol_expanded_war_special_troops_deactivate_confirm:0 "Sie entlassen"
+
+ show_sol_expanded_war_troops_flag_effect_tooltip:0 "Sobald die Kriegstrommeln erklingen, erscheinen in jeder eurer Besitzungen besondere Kriegerscharen. Mit der Rückkehr des Friedens verschwinden sie wieder. Zu Beginn des Krieges werden außerdem eure Garnisonen und Aufgebote vollständig wiederhergestellt."
+ hide_sol_expanded_war_troops_flag_effect_tooltip:0 "Hebt die sofortige Wiederherstellung von Garnisonen und Aufgeboten auf und entzieht euch das Recht, Kriegerscharen zu beschwören."
+
+# Spezialtruppen
+ game_concept_sol_expanded_warfare_attack_troops:0 "Kriegerscharen der Eroberung"
+ game_concept_sol_expanded_warfare_attack_troops_desc:0 "[sol_expanded_warfare_attack_troops|E] stürmen voran, um Feinde zu zerschlagen und Belagerungen zu brechen."
+ sol_expanded_warfare_attack_troops:0 "[sol_expanded_warfare_attack_troops|E]"
+ sol_expanded_warfare_attack_troops_flavor:0 "[sol_expanded_warfare_attack_troops|E] stehen unerschütterlich an der Spitze eures Heeres."
+
+ game_concept_sol_expanded_warfare_support_troops:0 "Kriegerscharen des Schildes"
+ game_concept_sol_expanded_warfare_support_troops_desc:0 "[sol_expanded_warfare_support_troops|E] halten die Linie, wo immer eure Reihen zu schwinden drohen."
+ sol_expanded_warfare_support_troops:0 "[sol_expanded_warfare_support_troops|E]"
+ sol_expanded_warfare_support_troops_flavor:0 "[sol_expanded_warfare_support_troops|E] stärken euer Heer und schließen jede Lücke im Schildwall."
+
+ game_concept_sol_expanded_warfare_defense_troops:0 "Kriegerscharen des Reiches"
+ game_concept_sol_expanded_warfare_defense_troops_desc:0 "[sol_expanded_warfare_defense_troops|E] verteidigen eure Lande in Zeiten größter Not."
+ sol_expanded_warfare_defense_troops:0 "[sol_expanded_warfare_defense_troops|E]"
+ sol_expanded_warfare_troops_defense_flavor:0 "[sol_expanded_warfare_defense_troops|E] beschützen eure Besitzungen, während das Hauptheer in den Krieg zieht."
+
+ game_concept_sol_expanded_warfare_fighting_troops:0 "Kriegerscharen des Blutes"
+ game_concept_sol_expanded_warfare_fighting_troops_desc:0 "[sol_expanded_warfare_fighting_troops|E] folgen dem Ruf an jeden Ort, an dem die Kämpfe am heftigsten toben."
+ sol_expanded_warfare_fighting_troops:0 "[sol_expanded_warfare_fighting_troops|E]"
+ sol_expanded_warfare_troops_fighting_flavor:0 "[sol_expanded_warfare_fighting_troops|E] stürzen sich furchtlos in jede Schlacht."
+
+ game_concept_sol_expanded_warfare_realm_levy_troops:0 "Kriegerscharen des Aufgebots"
+ game_concept_sol_expanded_warfare_realm_levy_troops_desc:0 "[sol_expanded_warfare_realm_levy_troops|E] dienen überall dort, wo jede zusätzliche Waffe gebraucht wird."
+ sol_expanded_warfare_realm_levy_troops:0 "[sol_expanded_warfare_realm_levy_troops|E]"
+ sol_expanded_warfare_troops_realm_levy_flavor:0 "[sol_expanded_warfare_realm_levy_troops|E] haben Krone und Reich die Treue geschworen."
+
+# Kriege der Expansion
+ game_concept_sol_expansion:0 "Expansion"
+ game_concept_sol_expansion_desc:1 "[sol_expansion_war|E] ist ein Krieg grenzenlosen Ehrgeizes, geführt allein zur Eroberung neuer Ländereien. [sol_expansion_wars|E] kennen weder [claim|E] noch [casus_belli|E], sondern nur Stärke und Entschlossenheit."
+ sol_expansion:0 "[sol_expansion|E]"
+ sol_expansion_flavor:0 "[sol_expansion|E] richtet sich an jene, die ihre Banner über immer weitere Lande wehen sehen wollen. Folgt den Spuren der großen Eroberer vergangener Zeiten."
+ sol_expansion_desc:0 "[sol_expansion|E] ist die Kriegsführung jener, die nach dem mit Stahl errungenen Thron der großen Herrscher streben: Alexander, Attila und Temüdschin."
+
+# Expansionskrieg
+ game_concept_sol_expansion_war:0 "Expansionskrieg"
+ game_concept_sol_expansion_war_desc:0 "[sol_expansion_war|E] ist ein Krieg, der allein aus Gewinnstreben geführt wird – ohne jede Rechtfertigung."
+ game_concept_sol_expansion_wars:0 "Expansionskriege"
+ game_concept_sol_expansion_wars_desc:0 "[sol_expansion_wars|E] werden geführt, um das eigene Reich zu vergrößern – Recht und Gesetz spielen dabei keine Rolle."
+ game_concept_sol_expansion_warring:0 "Expansion betreiben"
+ game_concept_sol_expansion_warring_desc:0 "[sol_expansion_warring|E] ist denjenigen vorbehalten, die nur neue Ländereien sehen und sich weder um Recht noch Gesetz kümmern."
+
+ sol_expansion_war:0 "[sol_expansion_war|E]"
+ sol_expansion_war_desc:1 "[sol_expansion_war|E] ist ein Krieg für jene, die keine Grenzen kennen und allein nach neuen Herrschaftsgebieten streben. $sol_expansion_warring$ missachtet [claim|E] und [casus_belli|E] und kennt nur die Eroberung."
+ sol_expansion_wars:0 "[sol_expansion_wars|E]"
+ sol_expansion_wars_desc:1 "[sol_expansion_wars|E] werden ohne [claim|E] und ohne [casus_belli|E] geführt – allein das Recht des Schwertes entscheidet."
+ sol_expansion_warring:0 "[sol_expansion_warring|E]"
+ sol_expansion_warring_desc:1 "[sol_expansion_warring|E] bedeutet Krieg um des Krieges willen – keine Gesetze, keine Ansprüche, allein die Stärke siegt."
+
+ SOL_EXPANSION_CB_NAME:0 "$sol_expansion_war$"
+ SOL_EXPANSION_CB_TITLE:3 "Das gesamte [realm|E] von [defender.GetShortUIName] wird durch das Recht der Eroberung unter eure Banner fallen."
+ SOL_EXPANSION_CB_SPECIFIC_NAME:1 "Eroberung von [TITLE.GetBaseName]"
+
+ SOL_EXPANSION_WAR_NAME:2 "$ORDER$ Eroberung von [TITLE.GetBaseName] durch [ATTACKER.GetPrimaryTitle.GetAdjective]"
+ SOL_EXPANSION_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+ SOL_EXPANSION_VICTORY_DESC:0 "Der Sieg gehört euch. Eure Banner wehen nun über neuen Ländereien."
+ SOL_EXPANSION_WHITE_PEACE_DESC:0 "Keine Seite gibt nach; die Götter bestimmen keinen Sieger."
+ SOL_EXPANSION_DEFEAT_DESC:0 "Eure Ambitionen liegen in Trümmern. Der Feind bleibt ungebrochen."
+ SOL_EXPANSION_TRANSFER_TT:0 "Ihr werdet ihre Titel durch das Recht der Eroberung an euch reißen."
+ SOL_EXPANSION_TRANSFER_2_TT:0 "Im Zuge der Eroberung gewonnene Baronien werden eurem Reich eingegliedert."
+
+ sol_expansion_war_defeat_desc:0 "[defender.GetShortUIName|U] behält seine Ländereien und Titel."
+ sol_expansion_war_defeat_desc_defender:0 "Euer Haus und euer Reich bestehen fort."
+ sol_expansion_war_defeat_desc_attacker:0 "[defender.GetShortUIName|U] behält seine Titel."
+ sol_expansion_war_white_peace_desc_defender:0 "Ein Sieg durch Stillstand. Der Frieden ist angeschlagen, doch er hält."
+ sol_expansion_war_white_peace_desc_attacker:0 "Ihr fügt euch dem Frieden. Eure Ambitionen müssen warten."
+ sol_expansion_war_white_peace_desc:0 "[defender.GetShortUIName|U] klammert sich weiterhin an seine Titel."
+ sol_expansion_war_victory_desc_defender:0 "[attacker.GetShortUIName|U] entreißt euch eure Ländereien und treuen Vasallen."
+ sol_expansion_war_victory_desc_attacker:0 "Ihr beansprucht alles, was [defender.GetShortUIName|U] einst gehörte."
+ sol_expansion_war_victory_desc:0 "[attacker.GetShortUIName|U] entreißt [defender.GetShortUIName|U] sämtliche Titel und Besitztümer."
+
+ msg_expansion_war_invalidated_message:0 "Der Krieg ist ohne Ergebnis zu Ende gegangen."
+ expansion_vassal_transfer_tt:0 "Alle [de_jure|E]-[vassals|E], die den eroberten Ländereien unterstehen"
+ expansion_title_transfer_tt:0 "Jede [de_jure|E]-[county|E] des Zielgebiets fällt unter eure Herrschaft."
+ expansion_title_transfer_2_tt:0 "Alle [occupied|E]-[counties|E] außerhalb des Anspruchs unterstehen nun [attacker.GetShortUIName]."
+ expansion_titles_destroyed_tt:0 "Alle Zieltitel werden ausgelöscht."
+
+# Grenzenloser Expansionskrieg
+ game_concept_sol_expansion_war_unrestricted:0 "Grenzenlose Eroberung"
+ game_concept_sol_expansion_war_unrestricted_desc:0 "Ein entfesselter [sol_expansion|E], der keinerlei Grenzen kennt."
+ sol_expansion_war_unrestricted:0 "[sol_expansion|E] – Grenzenloser Krieg"
+ sol_expansion_war_unrestricted_desc:0 "Die rücksichtsloseste Form des [sol_expansion|E]: Es gibt keine Grenzen – nur das Schwert."
+
+ SOL_EXPANSION_UNRESTRICTED_CB_NAME:0 "$sol_expansion_war_unrestricted$"
+ SOL_EXPANSION_UNRESTRICTED_WAR_NAME:1 "[sol_expansion|E] gegen die Ländereien von [TITLE.GetBaseName]"
+ SOL_EXPANSION_UNRESTRICTED_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+# Baronie
+ game_concept_sol_expansion_war_barony:0 "Eroberung einer Baronie"
+ game_concept_sol_expansion_war_barony_desc:0 "Eine kleinere Form des [sol_expansion|E], die sich auf Baronien beschränkt."
+ sol_expansion_war_barony:0 "[sol_expansion|E] – Baronie-Feldzug"
+ sol_expansion_war_barony_desc:0 "Richtet euren Ehrgeiz auf die Eroberung einer einzelnen Baronie."
+
+ SOL_EXPANSION_BARONY_CB_NAME:0 "$sol_expansion_war_barony$"
+ SOL_EXPANSION_BARONY_WAR_NAME:1 "[sol_expansion|E] um die Ländereien von [TITLE.GetBaseName]"
+ SOL_EXPANSION_BARONY_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+# Grafschaft
+ game_concept_sol_expansion_war_county:0 "Eroberung einer Grafschaft"
+ game_concept_sol_expansion_war_county_desc:0 "Ein [sol_expansion|E] für Herrscher, deren Ehrgeiz einer Grafschaft gilt."
+ sol_expansion_war_county:0 "[sol_expansion|E] – Grafschafts-Feldzug"
+ sol_expansion_war_county_desc:0 "Lasst eure Banner marschieren und nehmt eine Grafschaft ein."
+
+ SOL_EXPANSION_COUNTY_CB_NAME:0 "$sol_expansion_war_county$"
+ SOL_EXPANSION_COUNTY_WAR_NAME:1 "[sol_expansion|E] um die Ländereien von [TITLE.GetBaseName]"
+ SOL_EXPANSION_COUNTY_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+# Herzogtum
+ game_concept_sol_expansion_war_duchy:0 "Eroberung eines Herzogtums"
+ game_concept_sol_expansion_war_duchy_desc:0 "Ein [sol_expansion|E] für jene, die nach einem Herzogsthron greifen."
+ sol_expansion_war_duchy:0 "[sol_expansion|E] – Herzogtums-Feldzug"
+ sol_expansion_war_duchy_desc:0 "Führt Krieg um ein ganzes Herzogtum und lasst die kleineren Herren erzittern."
+
+ SOL_EXPANSION_DUCHY_CB_NAME:0 "$sol_expansion_war_duchy$"
+ SOL_EXPANSION_DUCHY_WAR_NAME:1 "[sol_expansion|E] um die Ländereien von [TITLE.GetBaseName]"
+ SOL_EXPANSION_DUCHY_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+# Königreich
+ game_concept_sol_expansion_war_kingdom:0 "Eroberung eines Königreichs"
+ game_concept_sol_expansion_war_kingdom_desc:0 "Ein [sol_expansion|E] für Hochgeborene, die nach einer Krone verlangen."
+ sol_expansion_war_kingdom:0 "[sol_expansion|E] – Königreichs-Feldzug"
+ sol_expansion_war_kingdom_desc:0 "Führt Krieg um den Thron, der über alle anderen Herren eines Landes herrscht."
+
+ SOL_EXPANSION_KINGDOM_CB_NAME:0 "$sol_expansion_war_kingdom$"
+ SOL_EXPANSION_KINGDOM_WAR_NAME:1 "[sol_expansion|E] um die Ländereien von [TITLE.GetBaseName]"
+ SOL_EXPANSION_KINGDOM_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+# Kaiserreich
+ game_concept_sol_expansion_war_empire:0 "Eroberung eines Kaiserreichs"
+ game_concept_sol_expansion_war_empire_desc:0 "Ein [sol_expansion|E] für jene, die über die ganze Welt herrschen wollen."
+ sol_expansion_war_empire:0 "[sol_expansion|E] – Kaiserreichs-Feldzug"
+ sol_expansion_war_empire_desc:0 "Greift zum Schwert für den größten aller Kriege – die Eroberung eines Kaiserreichs."
+
+ SOL_EXPANSION_EMPIRE_CB_NAME:0 "$sol_expansion_war_empire$"
+ SOL_EXPANSION_EMPIRE_WAR_NAME:1 "[sol_expansion|E] um die Ländereien von [TITLE.GetBaseName]"
+ SOL_EXPANSION_EMPIRE_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+# Abenteuerkrieg
+ game_concept_sol_unrestricted_adventurer_conquest:0 "Grenzenloses Abenteuer"
+ game_concept_sol_unrestricted_adventurer_conquest_desc:0 "Wer diesen Krieg führt, lässt alles zurück und schmiedet sein Schicksal in fremden Landen neu."
+ sol_unrestricted_adventurer_conquest:0 "[sol_expansion|E] – Abenteurerkrieg"
+ sol_unrestricted_adventurer_conquest_desc:0 "Lasst eure alte Heimat hinter euch und schmiedet euer Schicksal durch Eroberung neu."
+
+ SOL_UNRESTRICTED_ADVENTURER_CB_NAME:0 "$sol_unrestricted_adventurer_conquest$"
+ SOL_UNRESTRICTED_ADVENTURER_WAR_NAME:1 "[sol_expansion|E]-Abenteurerkrieg um die Ländereien von [TITLE.GetBaseName]"
+ SOL_UNRESTRICTED_ADVENTURER_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"

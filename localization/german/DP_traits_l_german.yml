@@ -1,0 +1,25 @@
+﻿l_german:
+  trait_nnn_challenger:0 "Viele Kinder, viele Segnungen"
+  trait_nnn_challenger_desc:0 "Barbara die Gesalbte lehrt, dass wahrer Segen durch zahlreiche Nachkommen fließt – jedes Kind ist ein göttliches Geschenk."
+  trait_nnn_challenger_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] folgt den Lehren Barbaras der Gesalbten und findet Stärke sowie Wohlstand in einer großen Kinderschar."
+
+  trait_build_speed_cheat:0 "Wiedergeburt Villard de Honnecourts"
+  trait_build_speed_cheat_desc:0 "Nur Barbara die Gesalbte vermag einen Sterblichen mit der Baukunst und dem Weitblick Villard de Honnecourts zu segnen."
+  trait_build_speed_cheat_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] errichtet Burgen und Kathedralen, als führe Villards eigene Hand – geleitet durch Barbara die Gesalbte."
+
+  trait_stress_gain_remove:0 "Gesegnet und sorgenfrei"
+  trait_stress_gain_remove_desc:0 "Unter Barbaras der Gesalbten Schutz kennt diese Person weder Furcht noch Sorge."
+  trait_stress_gain_remove_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] ruht in der Gnade Barbaras der Gesalbten und bleibt auf ewig frei von den Lasten der Welt."
+
+  trait_tyranny_gain_remove:0 "Gefolge der besten Rechtsgelehrten"
+  trait_tyranny_gain_remove_desc:0 "Barbara die Gesalbte schützt diese Person durch unsichtbare Fürsprecher und bewahrt sie vor jeder Anklage."
+  trait_tyranny_gain_remove_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] steht über jedem Vorwurf, denn Barbara die Gesalbte verleiht jedem Handeln göttliche Autorität."
+
+  trait_100_stat_man:0 "Allmächtig"
+  trait_100_stat_man_desc:0 "Eine von Barbara der Gesalbten erhobene Legende, ein durch göttliche Gnade gesegneter Genius. Niemand vermag dieses vorherbestimmte Wesen zu bezwingen."
+  trait_100_stat_man_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] wandelt als Erwählte[r] Barbaras der Gesalbten – eine Legende unter Legenden und Träger unaufhaltsamer Macht."
+
+  trait_immortal:0 "Unsterblich"
+  immortal:0 "Unsterblich"
+  trait_immortal_desc:0 "Barbara die Gesalbte hat diese Person über den Kreislauf von Leben und Tod erhoben."
+  trait_immortal_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] besteht für alle Ewigkeit fort, versiegelt durch die unvergängliche Gunst Barbaras der Gesalbten."

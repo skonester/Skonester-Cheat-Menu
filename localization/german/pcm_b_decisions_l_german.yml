@@ -1,0 +1,26 @@
+﻿l_german:
+ #PCM – Skonester Edition
+ pcm_b_max_all_buildings_sub_realm_decision_title:0 "#Skonester-Erlasse:#! Alle Besitzungen zur höchsten Blüte führen"
+ pcm_b_max_all_buildings_sub_realm_decision_desc:0 "Befehlt, dass jede Halle, jede Burg und jede Besitzung zu größter Stärke und höchster Pracht ausgebaut werde."
+ pcm_b_max_all_buildings_sub_realm_decision_tooltip:0 ""
+ pcm_b_max_all_buildings_sub_realm_decision_ct:0 "Ruft Steinmetze, Zimmerleute und Schmiede zusammen, um jedes Bauwerk aus Stein und Holz zu vollenden."
+
+ pcm_b_add_building_slot_7_sub_realm_decision_title:0 "#Skonester-Erlasse:#! Neues Bauland gewähren"
+ pcm_b_add_building_slot_7_sub_realm_decision_desc:0 "Jede Eurer Besitzungen soll zusätzliches Bauland erhalten, sodass bis zu sieben mächtige Bauwerke darin errichtet werden können."
+ pcm_b_add_building_slot_7_sub_realm_decision_tooltip:0 ""
+ pcm_b_add_building_slot_7_sub_realm_decision_ct:0 "Lasst neue Hütten, Hallen und Türme in allen meinen Ländereien emporragen!"
+
+ pcm_b_lucky_7_sub_realm_decision_title:0 "#Skonester-Erlasse:#! Die sieben gesegneten Bauwerke"
+ pcm_b_lucky_7_sub_realm_decision_desc:0 "Alle Eure Besitzungen erhalten sämtliche gewöhnlichen Gebäude in ihrer höchsten Ausbaustufe. (Spezial- und Herzogtumsgebäude sind ausgenommen.) Es ist #underline ratsam#!, zuvor zusätzliche Bauplätze zu schaffen."
+ pcm_b_lucky_7_sub_realm_decision_tooltip:0 ""
+ pcm_b_lucky_7_sub_realm_decision_ct:0 "Lasst alle Bauwerke mit göttlicher Eile errichten, als führe die Vorsehung selbst die Hände der Baumeister!"
+
+ pcm_b_show_decision_title:0 "--= #Skonester:#! Gnostische Baukunst offenbaren =--"
+ pcm_b_show_decision_desc:0 "Enthüllt sämtliche Skonester-Erlasse über die Kunst des Bauens."
+ pcm_b_show_decision_tooltip:0 ""
+ pcm_b_show_decision_ct:0 "So sei es – die verborgenen Erlasse sollen offenbart werden."
+
+ pcm_b_hide_decision_title:0 "--= #Skonester:#! Gnostische Baukunst verbergen =--"
+ pcm_b_hide_decision_desc:0 "Verbergt die Skonester-Erlasse über die Baukunst."
+ pcm_b_hide_decision_tooltip:0 ""
+ pcm_b_hide_decision_ct:0 "Versiegelt die Schriftrollen und bewahrt dieses Wissen vor neugierigen Blicken."

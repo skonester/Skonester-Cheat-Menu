@@ -11295,6 +11295,8 @@ dp_char_editor.46 = {
 							has_trait = beauty_good_3
 							has_trait = pure_blooded
 							has_trait = fecund
+							has_trait = strong
+							has_trait = shrewd
 						}
 					}
 					remove_health_conflict_effect = yes
@@ -11305,6 +11307,8 @@ dp_char_editor.46 = {
 					add_trait = beauty_good_3
 					add_trait = pure_blooded
 					add_trait = fecund
+					add_trait = strong
+					add_trait = shrewd
 				}
 			}
 		}

@@ -102,6 +102,7 @@ add_commander_traits_effect = {
 	add_trait = forest_fighter
 	add_trait = cautious_leader
 	add_trait = organizer
+	add_trait = winter_soldier
 }
 
 remove_commander_traits_effect = {
@@ -121,6 +122,7 @@ remove_commander_traits_effect = {
 	if = { limit = { has_trait = forest_fighter } remove_trait = forest_fighter }
 	if = { limit = { has_trait = cautious_leader } remove_trait = cautious_leader }
 	if = { limit = { has_trait = organizer } remove_trait = organizer }
+	if = { limit = { has_trait = winter_soldier } remove_trait = winter_soldier }
 }
 
 lifestyle_martial_present_effect = {

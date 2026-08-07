@@ -148,11 +148,11 @@ set_immortal_interaction = {
 	interface_priority = 100
 	is_shown = {
 		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
-		scope:recipient = { NOT = { has_trait = immortality } }
+		scope:recipient = { NOT = { has_trait = zg_buxiu } }
 	}
 	on_accept = {
 		scope:recipient = {
-			add_trait = immortality
+			add_trait = zg_buxiu
 			set_immortal_age = 25
 		}
 	}
@@ -168,10 +168,10 @@ set_mortal_interaction = {
 	interface_priority = 100
 	is_shown = {
 		scope:actor = { has_character_flag = bone_cheat_interactions_flag }
-		scope:recipient = { has_trait = immortality }
+		scope:recipient = { has_trait = zg_buxiu }
 	}
 	on_accept = {
-		scope:recipient = { remove_trait = immortality }
+		scope:recipient = { remove_trait = zg_buxiu }
 	}
 	auto_accept = yes
 }
@@ -2420,4 +2420,3 @@ dp_debug_start_great_holy_war_interaction = {
 		}
 	}
 }
-

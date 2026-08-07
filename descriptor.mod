@@ -1,4 +1,4 @@
-version="5.10.26"
+version="8.07.26"
 tags={
 	"1.19 'Scribe'"
 }

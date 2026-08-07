@@ -188,6 +188,10 @@ For modders and translators who want to ensure the consolidated file is perfectl
 
 ### 2026 Updates
 
+**August**
+
+* **Gold**:(1.19.0.6) Community additions.
+
 **May**
 
 * **Gold**:(1.19.0.5) Final Build for foreseeable future.

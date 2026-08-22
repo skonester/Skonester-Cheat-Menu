@@ -1,5 +1,0 @@
-﻿l_german:
-  jkm_send_courtier_interaction:0 "Höfling entsenden"
-  jkm_send_courtier_interaction_desc:0 "Entsendet einen Höfling an den Hof von [recipient.GetShortUIName]"
-  actor_secondary_jkm_send_courtier_interaction:0 "Höfling"
-  jkm_send_courtier_interaction_notification:0 "Höfling entsandt"

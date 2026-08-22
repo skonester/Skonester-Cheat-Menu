@@ -1,8 +1,0 @@
-﻿abs_barony_is_valid_trigger = {
-	title_province = { }
-	trigger_if = {
-		limit = {
-			holder = $CHARACTER$
-		}
-	}
-}

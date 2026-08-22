@@ -1,0 +1,178 @@
+﻿# 教义替换列表面板（布局同创建新信仰右侧），配合本体 window_faith 使用
+
+window = {
+  name = "skonester_acm_faith_pick_panel_window"
+  widgetid = "skonester_acm_faith_pick_panel_window"
+  parentanchor = top|right
+  position = { -1240 80 }
+  movable = yes
+  layer = middle
+  filter_mouse = all
+  allow_outside = yes
+  minimumsize = { 480 400 }
+  size = { 500 700 }
+
+  using = Window_Background_Sidebar
+
+  datacontext = "[GetVariableSystem]"
+  datacontext = "[GetPlayer.MakeScope.Var('skonester_selected_faith_var').Faith]"
+
+  visible = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_visible').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+
+  vbox = {
+    using = Window_Margins_Sidebar
+    layoutpolicy_horizontal = expanding
+    layoutpolicy_vertical = expanding
+    spacing = 8
+
+    header_pattern = {
+      layoutpolicy_horizontal = expanding
+
+      blockoverride "header_text" {
+        text = skonester_acm_faith_editor_pick_heading
+      }
+
+      blockoverride "button_close" {
+        onclick = "[GetVariableSystem.Clear( 'skonester_acm_faith_right_view' )]"
+        onclick = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_hide').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+      }
+    }
+
+    text_label_center = {
+      layoutpolicy_horizontal = expanding
+      text = "[VariableSystem.Get( 'doctrine_group_name' )]"
+      max_width = 420
+    }
+
+    text_single = {
+      layoutpolicy_horizontal = expanding
+      text = skonester_acm_faith_editor_pick_hint
+      default_format = "#weak"
+      align = center
+      autoresize = yes
+      max_width = 420
+    }
+
+    scrollbox = {
+      name = "contents"
+      layoutpolicy_horizontal = expanding
+      layoutpolicy_vertical = expanding
+
+      blockoverride "scrollbox_content" {
+        vbox = {
+          layoutpolicy_horizontal = expanding
+          spacing = 4
+
+          text_single = {
+            visible = "[IsDataModelEmpty( GetGlobalList('skonester_acm_fe_pick_current') )]"
+            layoutpolicy_horizontal = expanding
+            text = skonester_acm_faith_editor_pick_empty
+            default_format = "#weak"
+            align = center
+            autoresize = yes
+            max_width = 420
+          }
+
+          vbox = {
+            layoutpolicy_horizontal = expanding
+            datamodel = "[GetGlobalList('skonester_acm_fe_pick_current')]"
+
+            item = {
+              flowcontainer = {
+                layoutpolicy_horizontal = expanding
+                datacontext = "[GetDoctrine( Scope.GetFlagName )]"
+                datacontext = "[GetPlayer.MakeScope.Var('skonester_selected_faith_var').Faith]"
+
+                skonester_acm_faith_creation_pick_row = {}
+
+                divider_light = {
+                  layoutpolicy_horizontal = expanding
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    button_standard = {
+      name = "cancel"
+      onclick = "[GetVariableSystem.Clear( 'skonester_acm_faith_right_view' )]"
+      onclick = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_hide').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+      text = "CANCEL"
+      default_format = "#high"
+    }
+  }
+}
+
+types skonesterAcmFaithPickPanelTypes
+{
+  type skonester_acm_faith_creation_pick_row = button_standard_hover {
+    name = "faith_list_item"
+    layoutpolicy_horizontal = expanding
+    datacontext = "[FaithDoctrine]"
+    datacontext = "[Faith]"
+    size = { 430 80 }
+
+    onclick = "[GetScriptedGui('skonester_acm_faith_apply_pick_doctrine').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('pick_doctrine', MakeScopeFlag(Scope.GetFlagName)).End)]"
+    onclick = "[GetVariableSystem.Clear( 'skonester_acm_faith_right_view' )]"
+    onclick = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_hide').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+    onclick = "[PdxGuiTriggerAllAnimations('faith_view_refresh')]"
+    down = "[Faith.HasDoctrine( FaithDoctrine.Self )]"
+    using = tooltip_ne
+    tooltip = "skonester_acm_faith_doctrine_select_tt"
+
+    icon_doctrine = {
+      name = "doctrine_icon_main"
+      visible = "[EqualTo_string( FaithDoctrine.GetGroup.GetCategory, 'main_group' )]"
+      texture = "[FaithDoctrine.GetIcon]"
+      size = { 60 60 }
+      position = { 5 10 }
+    }
+
+    icon_doctrine = {
+      name = "doctrine_icon_other"
+      visible = "[And( Not( EqualTo_string( FaithDoctrine.GetGroup.GetCategory, 'main_group' ) ), Not( EqualTo_string( FaithDoctrine.GetGroup.GetCategory, 'core_tenets' ) ) )]"
+      texture = "[FaithDoctrine.GetGroup.GetIcon]"
+      size = { 60 60 }
+      position = { 5 10 }
+    }
+
+    widget = {
+      name = "doctrine_icon_core_bg"
+      visible = "[EqualTo_string( FaithDoctrine.GetGroup.GetCategory, 'core_tenets' )]"
+
+      background = {
+        using = Background_Area_Dark
+        alpha = 0.4
+      }
+
+      size = { 45 70 }
+      position = { 15 5 }
+    }
+
+    icon = {
+      name = "doctrine_icon_core"
+      visible = "[EqualTo_string( FaithDoctrine.GetGroup.GetCategory, 'core_tenets' )]"
+      texture = "[FaithDoctrine.GetIcon]"
+      size = { 45 70 }
+      position = { 15 5 }
+    }
+
+    text_single = {
+      name = "doctrine_name"
+      position = { 75 25 }
+      text = "[FaithDoctrine.GetNameNoTooltip( Faith.Self )]"
+      default_format = "#high"
+      using = Font_Size_Medium
+      max_width = 270
+    }
+
+    text_single = {
+      name = "piety_cost"
+      position = { 350 23 }
+      text = "[piety_i][FaithDoctrine.CalcPietyCostWithFervorDiscount( Faith.Self )]"
+      using = Font_Size_Medium
+    }
+  }
+}

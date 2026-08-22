@@ -1,0 +1,192 @@
+﻿# Skonester特质：不死不朽、延年丹（初/中/极）、鬼斧神工、幽冥诡主、万古冥主；万古 / 万财 / 万劫 见 skonester_warlord / wealth / intrigue_traits
+# birth / random_creation / inherit_chance = 0：禁止随机池、出生时与遗传。
+# 仅人类玩家通过Skonester菜单授予自制特质时打 skonester_traits_player_authorized；原版特质编辑不打标。禁止活动/随机/AI 自动获得。
+
+skonester_trait_immortal_ageless = {
+  inherit_chance = 0
+  birth = 0
+  random_creation = 0
+  genetic = no
+  physical = yes
+
+  icon = "immortality.dds"
+
+  # 引擎支持的“不老/不衰/不无能”机制
+  immortal = yes
+  opposites = { incapable }
+  no_prowess_loss_from_age = yes
+  long_reign_bonus_mult = 150
+
+  # 抗病增强 + 阴谋免疫（把针对自己的敌对阴谋成功率打到极低）
+  health = 3
+  epidemic_resistance = 300
+  enemy_hostile_scheme_success_chance_add = -1000
+  enemy_hostile_scheme_success_chance_max_add = -100
+  enemy_hostile_scheme_phase_duration_add = 999
+}
+
+skonester_trait_yannian_dan = {
+  inherit_chance = 0
+  birth = 0
+  random_creation = 0
+  genetic = no
+  physical = yes
+
+  icon = "water_of_life.dds"
+
+  # 点一次：青春定格 + 寿命 +100 年 + 强抗病（基本不会死于疾病）
+  immortal = yes
+  # 这些 flag 与原版 immortal 一致，用于“不衰外观 / 生育力按外观年龄 / 不会无能”的配套表现
+  flag = immortal_visuals
+  flag = immortal_fertility
+  flag = immortal_incapability
+  opposites = { incapable }
+  no_prowess_loss_from_age = yes
+  long_reign_bonus_mult = 150
+
+  life_expectancy = 100
+  health = 5
+  epidemic_resistance = 200
+  negate_health_penalty_add = 3
+}
+
+skonester_trait_yannian_dan_mid = {
+  inherit_chance = 0
+  birth = 0
+  random_creation = 0
+  genetic = no
+  physical = yes
+
+  icon = "zg_buxiu.dds"
+
+  # 中级延年丹：青春定格 + 寿命 +300 年 + 强抗病（基本不会死于疾病）
+  immortal = yes
+  flag = immortal_visuals
+  flag = immortal_fertility
+  flag = immortal_incapability
+  opposites = { incapable }
+  no_prowess_loss_from_age = yes
+  long_reign_bonus_mult = 150
+
+  life_expectancy = 300
+  health = 5
+  epidemic_resistance = 200
+  negate_health_penalty_add = 3
+}
+
+skonester_trait_yannian_dan_best = {
+  inherit_chance = 0
+  birth = 0
+  random_creation = 0
+  genetic = no
+  physical = yes
+
+  icon = "toc_immortal.dds"
+
+  # 极品延年丹：青春定格 + 寿命 +500 年 + 强抗病（基本不会死于疾病）
+  immortal = yes
+  flag = immortal_visuals
+  flag = immortal_fertility
+  flag = immortal_incapability
+  opposites = { incapable }
+  no_prowess_loss_from_age = yes
+  long_reign_bonus_mult = 150
+
+  life_expectancy = 500
+  health = 5
+  epidemic_resistance = 200
+  negate_health_penalty_add = 3
+}
+
+# 百毒不侵：永不染疾；配合 skonester_trait_baidubuqin_*_effects 设 immune_to_disease 并清除已有疾病
+skonester_trait_baidubuqin = {
+  inherit_chance = 0
+  birth = 0
+  random_creation = 0
+  genetic = no
+  physical = yes
+
+  category = health
+
+  name = skonester_trait_baidubuqin
+  desc = {
+    first_valid = {
+      triggered_desc = {
+        trigger = {
+          NOT = { exists = this }
+        }
+        desc = skonester_trait_baidubuqin_desc
+      }
+      desc = skonester_trait_baidubuqin_desc
+    }
+  }
+
+  icon = "skonester_trait_baidubuqin.dds"
+
+  flag = blocks_getting_non_epidemic_disease
+
+  health = 6
+  epidemic_resistance = 500
+  negate_health_penalty_add = 5
+}
+
+# 心无挂碍：压力恒为零；配合 skonester_trait_xinwuguai_*_effects 清除已有压力
+skonester_trait_xinwuguai = {
+  inherit_chance = 0
+  birth = 0
+  random_creation = 0
+  genetic = no
+  physical = no
+
+  category = lifestyle
+
+  name = skonester_trait_xinwuguai
+  desc = {
+    first_valid = {
+      triggered_desc = {
+        trigger = {
+          NOT = { exists = this }
+        }
+        desc = skonester_trait_xinwuguai_desc
+      }
+      desc = skonester_trait_xinwuguai_desc
+    }
+  }
+
+  icon = "skonester_trait_xinwuguai.dds"
+
+  stress_gain_mult = -0.99
+  stress_loss_mult = 0.99
+}
+
+# 属性100：六维锁定为 100（见 skonester_stats_100_locked_effects / skonester_stats_100_locked_monthly）
+skonester_trait_stats_100_locked = {
+
+  name = trait_skonester_trait_stats_100_locked
+  desc = trait_skonester_trait_stats_100_locked_desc
+  inherit_chance = 0
+  birth = 0
+  random_creation = 0
+  genetic = no
+  physical = no
+
+  category = lifestyle
+
+  icon = "skonester_trait_stats_100_locked.dds"
+}
+
+# 禁婚：on_marriage 立即拆散；授予时 strip 配偶与婚约；每月 playable 脉冲为本人及宫廷解除婚约；强制成婚准备可暂时移除特质（主列表「禁婚」可关）
+skonester_trait_marriage_ban = {
+
+  name = trait_skonester_trait_marriage_ban
+  desc = trait_skonester_trait_marriage_ban_desc
+  inherit_chance = 0
+  birth = 0
+  random_creation = 0
+  genetic = no
+  physical = yes
+
+  category = lifestyle
+
+  icon = "water_of_life.dds"
+}

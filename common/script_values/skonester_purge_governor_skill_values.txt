@@ -1,0 +1,188 @@
+﻿# 庸碌判定：文官看外交+管理+学识；武官看军事+勇武（与总督契约文武一致）
+# 变身大明政体 character_modifier 的固定技能加值不计入庸碌（如布政司制 stewardship +5）
+
+skonester_civil_skill_sum_for_purge_value = {
+  value = 0
+  add = diplomacy
+  add = stewardship
+  add = learning
+}
+
+skonester_military_skill_sum_for_purge_value = {
+  value = 0
+  add = martial
+  add = prowess
+}
+
+skonester_civil_skill_sum_for_purge_effective_value = {
+  value = skonester_civil_skill_sum_for_purge_value
+  if = {
+    limit = { government_has_flag = sansizhi_gov }
+    subtract = 5
+  }
+}
+
+skonester_military_skill_sum_for_purge_effective_value = {
+  value = skonester_military_skill_sum_for_purge_value
+  if = {
+    limit = { government_has_flag = weisuozhi_gov }
+    subtract = 5
+  }
+}
+
+# 与「三项均约低于中等」相当：3 × medium_skill_rating
+skonester_civil_mediocre_threshold_value = {
+  value = medium_skill_rating
+  multiply = 3
+}
+
+# 两项均约低于中等：2 × medium_skill_rating
+skonester_military_mediocre_threshold_value = {
+  value = medium_skill_rating
+  multiply = 2
+}
+
+# 多余头衔授予：按拟授头衔分档，越高要求越高（文官三项 / 武官两项之和）
+skonester_civil_grant_barony_threshold_value = {
+  value = medium_skill_rating
+  multiply = 3
+}
+
+skonester_military_grant_barony_threshold_value = {
+  value = medium_skill_rating
+  multiply = 2
+}
+
+skonester_civil_grant_county_threshold_value = {
+  value = medium_skill_rating
+  multiply = 4
+}
+
+skonester_military_grant_county_threshold_value = {
+  value = medium_skill_rating
+  multiply = 3
+}
+
+skonester_civil_grant_duchy_threshold_value = {
+  value = medium_skill_rating
+  multiply = 5
+}
+
+skonester_military_grant_duchy_threshold_value = {
+  value = medium_skill_rating
+  multiply = 4
+}
+
+skonester_civil_grant_kingdom_threshold_value = {
+  value = medium_skill_rating
+  multiply = 6
+}
+
+skonester_military_grant_kingdom_threshold_value = {
+  value = medium_skill_rating
+  multiply = 5
+}
+
+skonester_civil_grant_empire_threshold_value = {
+  value = medium_skill_rating
+  multiply = 7
+}
+
+skonester_military_grant_empire_threshold_value = {
+  value = medium_skill_rating
+  multiply = 6
+}
+
+# 兼容旧名：无特定头衔时按伯爵线
+skonester_civil_good_grant_threshold_value = {
+  value = skonester_civil_grant_county_threshold_value
+}
+
+skonester_military_good_grant_threshold_value = {
+  value = skonester_military_grant_county_threshold_value
+}
+
+# 读取 scope:skonester_grant_target_title 档位；无 scope 时按男爵线
+skonester_civil_grant_threshold_for_target_title_value = {
+  if = {
+    limit = {
+      exists = scope:skonester_grant_target_title
+      scope:skonester_grant_target_title = {
+        tier = tier_empire
+      }
+    }
+    value = skonester_civil_grant_empire_threshold_value
+  }
+  else_if = {
+    limit = {
+      exists = scope:skonester_grant_target_title
+      scope:skonester_grant_target_title = {
+        tier = tier_kingdom
+      }
+    }
+    value = skonester_civil_grant_kingdom_threshold_value
+  }
+  else_if = {
+    limit = {
+      exists = scope:skonester_grant_target_title
+      scope:skonester_grant_target_title = {
+        tier = tier_duchy
+      }
+    }
+    value = skonester_civil_grant_duchy_threshold_value
+  }
+  else_if = {
+    limit = {
+      exists = scope:skonester_grant_target_title
+      scope:skonester_grant_target_title = {
+        tier = tier_county
+      }
+    }
+    value = skonester_civil_grant_county_threshold_value
+  }
+  else = {
+    value = skonester_civil_grant_barony_threshold_value
+  }
+}
+
+skonester_military_grant_threshold_for_target_title_value = {
+  if = {
+    limit = {
+      exists = scope:skonester_grant_target_title
+      scope:skonester_grant_target_title = {
+        tier = tier_empire
+      }
+    }
+    value = skonester_military_grant_empire_threshold_value
+  }
+  else_if = {
+    limit = {
+      exists = scope:skonester_grant_target_title
+      scope:skonester_grant_target_title = {
+        tier = tier_kingdom
+      }
+    }
+    value = skonester_military_grant_kingdom_threshold_value
+  }
+  else_if = {
+    limit = {
+      exists = scope:skonester_grant_target_title
+      scope:skonester_grant_target_title = {
+        tier = tier_duchy
+      }
+    }
+    value = skonester_military_grant_duchy_threshold_value
+  }
+  else_if = {
+    limit = {
+      exists = scope:skonester_grant_target_title
+      scope:skonester_grant_target_title = {
+        tier = tier_county
+      }
+    }
+    value = skonester_military_grant_county_threshold_value
+  }
+  else = {
+    value = skonester_military_grant_barony_threshold_value
+  }
+}

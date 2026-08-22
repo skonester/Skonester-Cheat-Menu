@@ -1,0 +1,168 @@
+﻿# 宗教编辑：信仰详情窗与教义库
+
+# GUI 传入的 pick_doctrine（MakeScopeFlag）写入变量，供 resolve / add_doctrine 使用
+skonester_acm_faith_capture_pick_doctrine_effect = {
+  if = {
+    limit = { exists = scope:pick_doctrine }
+    set_variable = {
+      name = skonester_acm_pick_doctrine_key
+      value = scope:pick_doctrine
+    }
+  }
+}
+
+skonester_acm_faith_clear_pick_category_flags_effect = {
+  remove_character_flag = skonester_acm_faith_pick_cat_core_tenets
+  remove_character_flag = skonester_acm_faith_pick_cat_main_group
+  remove_character_flag = skonester_acm_faith_pick_cat_marriage
+  remove_character_flag = skonester_acm_faith_pick_cat_crimes
+  remove_character_flag = skonester_acm_faith_pick_cat_clergy
+}
+
+skonester_acm_faith_open_doctrine_picker_with_catalog_effect = {
+  skonester_acm_faith_populate_doctrine_catalog_effect = yes
+  add_character_flag = skonester_acm_faith_doctrine_picker_open
+}
+
+skonester_acm_faith_pick_open_core_tenets_effect = {
+  skonester_acm_faith_clear_pick_category_flags_effect = yes
+  add_character_flag = skonester_acm_faith_pick_cat_core_tenets
+  skonester_acm_faith_open_doctrine_picker_with_catalog_effect = yes
+}
+
+skonester_acm_faith_pick_open_main_group_effect = {
+  skonester_acm_faith_clear_pick_category_flags_effect = yes
+  add_character_flag = skonester_acm_faith_pick_cat_main_group
+  skonester_acm_faith_open_doctrine_picker_with_catalog_effect = yes
+}
+
+skonester_acm_faith_pick_open_marriage_effect = {
+  skonester_acm_faith_clear_pick_category_flags_effect = yes
+  add_character_flag = skonester_acm_faith_pick_cat_marriage
+  skonester_acm_faith_open_doctrine_picker_with_catalog_effect = yes
+}
+
+skonester_acm_faith_pick_open_crimes_effect = {
+  skonester_acm_faith_clear_pick_category_flags_effect = yes
+  add_character_flag = skonester_acm_faith_pick_cat_crimes
+  skonester_acm_faith_open_doctrine_picker_with_catalog_effect = yes
+}
+
+skonester_acm_faith_pick_open_clergy_effect = {
+  skonester_acm_faith_clear_pick_category_flags_effect = yes
+  add_character_flag = skonester_acm_faith_pick_cat_clergy
+  skonester_acm_faith_open_doctrine_picker_with_catalog_effect = yes
+}
+
+skonester_open_acm_faith_editor_effect = {
+  remove_character_flag = skonester_acm_faith_gui_locked
+  remove_character_flag = skonester_acm_faith_pick_sidebar_open
+  remove_character_flag = skonester_acm_faith_doctrine_picker_open
+  skonester_acm_faith_clear_pick_category_flags_effect = yes
+  skonester_acm_faith_init_group_catalog_effect = yes
+  skonester_acm_faith_populate_doctrine_catalog_effect = yes
+  skonester_acm_faith_refresh_display_lists_effect = yes
+  add_character_flag = skonester_acm_faith_editor_open
+  skonester_restore_skonester_selected_faith_scope_effect = yes
+  # 仅打开 skonester_acm_faith_editor 独立窗；勿 open_view_data=faith，避免劫持左下角宗教详情
+}
+
+skonester_close_acm_faith_editor_effect = {
+  remove_character_flag = skonester_acm_faith_editor_open
+  remove_character_flag = skonester_acm_faith_doctrine_picker_open
+  remove_character_flag = skonester_acm_faith_pick_sidebar_open
+  skonester_acm_faith_clear_pick_category_flags_effect = yes
+  clear_global_variable_list = skonester_acm_fe_pick_current
+  remove_variable = skonester_acm_pick_slot
+  remove_variable = skonester_acm_pick_group_name
+  remove_variable = skonester_acm_pick_doctrine_key
+}
+
+skonester_acm_faith_begin_pick_doctrine_effect = {
+  skonester_acm_faith_init_group_catalog_effect = yes
+  remove_character_flag = skonester_acm_faith_doctrine_picker_open
+  add_character_flag = skonester_acm_faith_pick_sidebar_open
+  remove_variable = skonester_acm_pick_group_name
+  skonester_acm_faith_capture_pick_doctrine_effect = yes
+  skonester_acm_faith_resolve_pick_group_effect = yes
+  skonester_acm_faith_resolve_pick_group_from_key_fallback_effect = yes
+  skonester_acm_faith_populate_pick_current_effect = yes
+}
+
+# 核心信条：记录被点击槽位，填充全部核心信条供替换
+skonester_acm_faith_begin_pick_core_tenets_effect = {
+  skonester_acm_faith_init_group_catalog_effect = yes
+  remove_character_flag = skonester_acm_faith_doctrine_picker_open
+  add_character_flag = skonester_acm_faith_pick_sidebar_open
+  skonester_acm_faith_capture_pick_doctrine_effect = yes
+  if = {
+    limit = { has_variable = skonester_acm_pick_doctrine_key }
+    set_variable = {
+      name = skonester_acm_pick_slot
+      value = var:skonester_acm_pick_doctrine_key
+    }
+  }
+  else = {
+    remove_variable = skonester_acm_pick_slot
+  }
+  set_variable = {
+    name = skonester_acm_pick_group_name
+    value = flag:doctrine_core_tenets
+  }
+  skonester_acm_faith_populate_pick_current_effect = yes
+}
+
+skonester_acm_faith_apply_pick_doctrine_effect = {
+  skonester_acm_faith_capture_pick_doctrine_effect = yes
+  # 始终以「新选教义」解析组名，避免 begin_pick 时旧组名导致 remove 未命中
+  remove_variable = skonester_acm_pick_group_name
+  skonester_acm_faith_resolve_pick_group_effect = yes
+  skonester_acm_faith_resolve_pick_group_from_key_fallback_effect = yes
+  if = {
+    limit = {
+      has_variable = skonester_acm_pick_group_name
+      var:skonester_acm_pick_group_name = flag:doctrine_core_tenets
+    }
+    skonester_acm_faith_remove_pick_slot_doctrine_effect = yes
+  }
+  else_if = {
+    limit = { has_variable = skonester_acm_pick_group_name }
+    skonester_acm_faith_remove_pick_group_members_effect = yes
+  }
+  skonester_acm_faith_add_doctrine_to_selected_effect = yes
+  remove_variable = skonester_acm_pick_slot
+  remove_variable = skonester_acm_pick_group_name
+  remove_variable = skonester_acm_pick_doctrine_key
+  skonester_acm_faith_refresh_display_lists_effect = yes
+}
+
+skonester_close_acm_faith_doctrine_picker_effect = {
+  remove_character_flag = skonester_acm_faith_doctrine_picker_open
+  skonester_acm_faith_clear_pick_category_flags_effect = yes
+  remove_character_flag = skonester_acm_faith_pick_sidebar_open
+}
+
+# 新开局/读档：清宗教编辑与撒豆成兵挂起，避免 scripted_widget 误显
+# 左下角打开原版宗教详情前：确保未处于编辑模式（仅查看，不挂编辑 UI）
+skonester_acm_faith_view_only_safety_effect = {
+  remove_character_flag = skonester_acm_faith_editor_open
+  remove_character_flag = skonester_acm_faith_doctrine_picker_open
+  remove_character_flag = skonester_acm_faith_pick_sidebar_open
+  skonester_acm_faith_clear_pick_category_flags_effect = yes
+}
+
+skonester_acm_gui_startup_cleanup_effect = {
+  add_character_flag = skonester_acm_faith_gui_locked
+  remove_character_flag = skonester_acm_faith_editor_open
+  remove_character_flag = skonester_acm_faith_doctrine_picker_open
+  remove_character_flag = skonester_acm_faith_pick_sidebar_open
+  skonester_acm_faith_clear_pick_category_flags_effect = yes
+  skonester_acm_culture_gui_startup_cleanup_effect = yes
+  skonester_close_acm_faith_editor_effect = yes
+  skonester_close_acm_religion_picker_effect = yes
+  skonester_close_sand_soldiers_effect = yes
+  remove_character_flag = skonester_sand_soldiers_pending_open
+  remove_variable = skonester_acm_pick_doctrine_key
+  remove_variable = skonester_acm_pick_group_name
+  remove_variable = skonester_acm_pick_slot
+}

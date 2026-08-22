@@ -1,0 +1,106 @@
+﻿# 君权固化：月度/年度维护、读档、玩家死亡传位给继承人
+
+monthly_playable_pulse = {
+  on_actions = {
+    skonester_realm_authority_lock_monthly_pulse
+    skonester_player_government_lock_monthly_pulse
+  }
+}
+
+yearly_playable_pulse = {
+  on_actions = {
+    skonester_realm_authority_lock_yearly_pulse
+  }
+}
+
+skonester_realm_authority_lock_monthly_pulse = {
+  effect = {
+    root = {
+      if = {
+        limit = { has_character_flag = skonester_realm_authority_locked }
+        skonester_cheat_menu_maintain_locked_realm_authority_effect = yes
+        skonester_dissolve_liberty_factions_targeting_root_effect = yes
+        skonester_clear_authority_rollback_variables_effect = yes
+      }
+      else_if = {
+        limit = {
+          has_variable = skonester_realm_authority_desired_level
+          is_independent_ruler = yes
+        }
+        skonester_cheat_menu_maintain_desired_realm_authority_effect = yes
+      }
+    }
+  }
+}
+
+skonester_realm_authority_lock_yearly_pulse = {
+  effect = {
+    root = {
+      if = {
+        limit = { has_character_flag = skonester_realm_authority_locked }
+        skonester_cheat_menu_maintain_locked_realm_authority_effect = yes
+      }
+      else_if = {
+        limit = {
+          has_variable = skonester_realm_authority_desired_level
+          is_independent_ruler = yes
+        }
+        skonester_cheat_menu_maintain_desired_realm_authority_effect = yes
+      }
+    }
+  }
+}
+
+on_game_start_after_lobby = {
+  effect = {
+    every_player = {
+      if = {
+        limit = { has_character_flag = skonester_realm_authority_locked }
+        skonester_cheat_menu_maintain_locked_realm_authority_effect = yes
+      }
+      else_if = {
+        limit = {
+          has_variable = skonester_realm_authority_desired_level
+          is_independent_ruler = yes
+        }
+        skonester_cheat_menu_maintain_desired_realm_authority_effect = yes
+      }
+    }
+  }
+}
+
+on_death = {
+  effect = {
+    if = {
+      limit = {
+        OR = {
+          has_character_flag = skonester_realm_authority_locked
+          has_variable = skonester_realm_authority_desired_level
+        }
+        exists = player_heir
+        player_heir = {
+          is_ai = no
+          is_alive = yes
+        }
+      }
+      player_heir = {
+        if = {
+          limit = { prev = { has_variable = skonester_realm_authority_desired_level } }
+          set_variable = {
+            name = skonester_realm_authority_desired_level
+            value = prev.var:skonester_realm_authority_desired_level
+          }
+        }
+        if = {
+          limit = { prev = { has_character_flag = skonester_realm_authority_locked } }
+          add_character_flag = skonester_realm_authority_locked
+          skonester_cheat_menu_maintain_locked_realm_authority_effect = yes
+        }
+        else_if = {
+          limit = { has_variable = skonester_realm_authority_desired_level }
+          skonester_cheat_menu_maintain_desired_realm_authority_effect = yes
+        }
+      }
+    }
+  }
+}

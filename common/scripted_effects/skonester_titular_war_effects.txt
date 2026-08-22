@@ -1,0 +1,71 @@
+﻿# 帝号无理由宣战：破停战 → 选伯爵领目标 → start_war
+
+skonester_titular_start_county_war_on_defender_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_war_attacker
+      exists = scope:skonester_war_defender
+      scope:skonester_war_attacker = { skonester_holds_any_cheat_titular_title_trigger = yes }
+      scope:skonester_war_defender = { is_landed = yes }
+    }
+    scope:skonester_war_defender = {
+      if = {
+        limit = { has_truce = scope:skonester_war_attacker }
+        scope:skonester_war_attacker = { break_truce = prev }
+      }
+      random_held_title = {
+        limit = { tier = tier_county }
+        save_scope_as = skonester_war_target_title
+      }
+    }
+    scope:skonester_war_attacker = {
+      if = {
+        limit = { exists = scope:skonester_war_target_title }
+        start_war = {
+          casus_belli = skonester_titular_county_conquest_cb
+          target = scope:skonester_war_defender
+          target_title = scope:skonester_war_target_title
+        }
+      }
+    }
+  }
+}
+
+skonester_titular_ai_press_neighbour_wars_effect = {
+  if = {
+    limit = {
+      is_ai = yes
+      is_at_war = no
+      skonester_holds_any_cheat_titular_title_trigger = yes
+      is_landed = yes
+    }
+    random_neighboring_top_liege_realm_owner = {
+      limit = {
+        is_alive = yes
+        is_landed = yes
+        NOT = { is_vassal_or_below_of = root }
+        NOT = { is_allied_to = root }
+      }
+      root = {
+        if = {
+          limit = { has_truce = prev }
+          break_truce = prev
+        }
+        prev = {
+          random_held_title = {
+            limit = { tier = tier_county }
+            save_scope_as = skonester_war_target_title
+          }
+        }
+        if = {
+          limit = { exists = scope:skonester_war_target_title }
+          start_war = {
+            casus_belli = skonester_titular_county_conquest_cb
+            target = prev
+            target_title = scope:skonester_war_target_title
+          }
+        }
+      }
+    }
+  }
+}

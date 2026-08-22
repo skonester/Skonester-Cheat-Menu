@@ -1,0 +1,55 @@
+﻿# 计划生育 on_birth 用：须先 effect 中 save_scope_as = skonester_fp_baby / skonester_plan_bio_dad
+# scripted_trigger 内 any_child / any_dynasty_member 下不可使用 limit = { }（会报 Unknown trigger: limit，整段触发器不加载）
+
+# 生父为 AI，且除本胎外仍有在世、同 paternity 子女则超额
+# 只计 is_alive：唯一在世子女死亡后，再出生的一胎可保留（已故子女不占名额）
+skonester_family_planning_per_ai_father_excess_child_trigger = {
+  exists = scope:skonester_fp_baby
+  exists = scope:skonester_plan_bio_dad
+  scope:skonester_plan_bio_dad = {
+    is_ai = yes
+    any_child = {
+      count >= 1
+      is_alive = yes
+      NOR = {
+        this = scope:skonester_fp_baby
+        this = scope:child
+      }
+      OR = {
+        AND = {
+          exists = real_father
+          real_father = scope:skonester_plan_bio_dad
+        }
+        AND = {
+          NOT = {
+            exists = real_father
+          }
+          father = scope:skonester_plan_bio_dad
+        }
+      }
+    }
+  }
+}
+
+# 新生儿的 [dynasty] 内存在「人类、可玩」成员 ⇒ 该宗族在 SP 中即玩家宗支；在 MP 中任一人质在该宗族即视为「有人质宗族」
+skonester_family_planning_child_in_player_dynasty_trigger = {
+  scope:child = {
+    exists = dynasty
+    dynasty = {
+      any_dynasty_member = {
+        is_playable_character = yes
+        is_ai = no
+      }
+    }
+  }
+}
+
+# 玩家宗族「男丁一孩」：该 AI 生父除本胎外仍有在世子女则超额；唯一子女死后可再留一胎
+skonester_family_planning_dynasty_excess_child_trigger = {
+  exists = scope:skonester_fp_baby
+  exists = scope:skonester_plan_bio_dad
+  scope:child = {
+    is_ai = yes
+  }
+  skonester_family_planning_per_ai_father_excess_child_trigger = yes
+}

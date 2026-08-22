@@ -1,0 +1,11 @@
+﻿l_german:
+ skonester_acm_repair_preserve_artifact_name: "[Scope.GetNameNoTooltip]"
+ skonester_acm_artifact_name_on_self: "[Creator.GetLocalizedText('skonester_acm_edit_artifact_name')]"
+ skonester_acm_artifact_desc_on_self: "[Creator.GetLocalizedText('skonester_acm_edit_artifact_desc')]"
+ skonester_acm_artifact_display_name_from_creator: "[Creator.GetLocalizedText('skonester_acm_edit_artifact_name')]"
+ skonester_acm_artifact_display_desc_from_creator: "[Creator.GetLocalizedText('skonester_acm_edit_artifact_desc')]"
+ skonester_acm_repair_preserve_artifact_desc: "[Scope.GetDescription|F]"
+ skonester_acm_edit_name_preview_custom: "[ROOT.GetLocalizedText('skonester_acm_edit_artifact_name')]"
+ skonester_acm_edit_name_preview_artifact: "[ROOT.MakeScope.Var('skonester_acm_repair_artifact_var').GetNameNoTooltip]"
+ skonester_acm_edit_desc_preview_custom: "[ROOT.GetLocalizedText('skonester_acm_edit_artifact_desc')]"
+ skonester_acm_edit_desc_preview_artifact: "[ROOT.MakeScope.Var('skonester_acm_repair_artifact_var').GetDescription|F]"

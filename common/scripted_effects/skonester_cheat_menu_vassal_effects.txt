@@ -1,0 +1,23 @@
+﻿# Skonester菜单：将 scope:recipient 变为 scope:actor 的直属封臣（与授地后 skonester_grant_force_direct_vassal_of_root_effect 同引擎路径）。
+# 已在直属封臣链上且领主为 actor 时不重复发起 change（避免空包）。
+
+skonester_cheat_menu_make_recipient_direct_vassal_of_actor_effect = {
+  if = {
+    limit = {
+      scope:recipient = {
+        NOT = { liege ?= scope:actor }
+      }
+    }
+    create_title_and_vassal_change = {
+      type = swear_fealty
+      save_scope_as = skonester_cheat_menu_vassal_change
+    }
+    scope:recipient = {
+      change_liege = {
+        liege = scope:actor
+        change = scope:skonester_cheat_menu_vassal_change
+      }
+    }
+    resolve_title_and_vassal_change = scope:skonester_cheat_menu_vassal_change
+  }
+}

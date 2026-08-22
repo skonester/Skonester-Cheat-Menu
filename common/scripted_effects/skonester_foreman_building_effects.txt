@@ -1,0 +1,752 @@
+﻿# 单线：仅新造 01 档（尚无该建线时）
+skonester_foreman_line_build_once = {
+  if = {
+    limit = { NOT = { has_building_or_higher = $BUILDING$_01 } }
+    add_next_building_tier_effect = { BUILDING = $BUILDING$ }
+  }
+}
+# 单线：在已有 01+ 时连升 7 次（01→08 最多七步；已满则无效）
+skonester_foreman_line_upgrade_7 = {
+  if = {
+    limit = { has_building_or_higher = $BUILDING$_01 }
+    add_next_building_tier_effect = { BUILDING = $BUILDING$ }
+    add_next_building_tier_effect = { BUILDING = $BUILDING$ }
+    add_next_building_tier_effect = { BUILDING = $BUILDING$ }
+    add_next_building_tier_effect = { BUILDING = $BUILDING$ }
+    add_next_building_tier_effect = { BUILDING = $BUILDING$ }
+    add_next_building_tier_effect = { BUILDING = $BUILDING$ }
+    add_next_building_tier_effect = { BUILDING = $BUILDING$ }
+  }
+}
+
+# 城市 行会：新造一档 / 在已有行会时升七档
+skonester_foreman_guild_build = {
+  if = {
+    limit = {
+      has_holding_type = city_holding
+      NOT = { has_building_or_higher = guild_halls_01 }
+    }
+    upgrade_guildhall = yes
+  }
+}
+skonester_foreman_guild_upgrade = {
+  if = {
+    limit = {
+      has_holding_type = city_holding
+      has_building_or_higher = guild_halls_01
+    }
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+  }
+}
+# 沿海 港口
+skonester_foreman_tradeport_build = {
+  if = {
+    limit = {
+      has_holding_type = city_holding
+      is_coastal = yes
+      NOT = { has_building_or_higher = common_tradeport_01 }
+    }
+    upgrade_tradeport = yes
+  }
+}
+skonester_foreman_tradeport_upgrade = {
+  if = {
+    limit = {
+      has_holding_type = city_holding
+      is_coastal = yes
+      has_building_or_higher = common_tradeport_01
+    }
+    upgrade_tradeport = yes
+    upgrade_tradeport = yes
+    upgrade_tradeport = yes
+    upgrade_tradeport = yes
+    upgrade_tradeport = yes
+    upgrade_tradeport = yes
+    upgrade_tradeport = yes
+  }
+}
+
+# 军事（边郡）— 建 / 升 — 单省
+skonester_foreman_military_in_province_build = {
+  if = {
+    limit = { has_holding_type = castle_holding }
+    skonester_foreman_line_build_once = { BUILDING = castle }
+    skonester_foreman_line_build_once = { BUILDING = barracks }
+    skonester_foreman_line_build_once = { BUILDING = regimental_grounds }
+    skonester_foreman_line_build_once = { BUILDING = curtain_walls }
+    skonester_foreman_line_build_once = { BUILDING = hill_forts }
+  }
+  if = {
+    limit = { has_holding_type = city_holding }
+    skonester_foreman_line_build_once = { BUILDING = city }
+    skonester_foreman_guild_build = yes
+    skonester_foreman_line_build_once = { BUILDING = military_camps }
+    skonester_foreman_tradeport_build = yes
+  }
+  if = {
+    limit = { has_holding_type = church_holding }
+    skonester_foreman_line_build_once = { BUILDING = temple }
+    skonester_foreman_line_build_once = { BUILDING = hospices }
+  }
+}
+skonester_foreman_military_in_province_upgrade = {
+  if = {
+    limit = { has_holding_type = castle_holding }
+    skonester_foreman_line_upgrade_7 = { BUILDING = castle }
+    skonester_foreman_line_upgrade_7 = { BUILDING = barracks }
+    skonester_foreman_line_upgrade_7 = { BUILDING = regimental_grounds }
+    skonester_foreman_line_upgrade_7 = { BUILDING = curtain_walls }
+    skonester_foreman_line_upgrade_7 = { BUILDING = hill_forts }
+  }
+  if = {
+    limit = { has_holding_type = city_holding }
+    skonester_foreman_line_upgrade_7 = { BUILDING = city }
+    skonester_foreman_guild_upgrade = yes
+    skonester_foreman_line_upgrade_7 = { BUILDING = military_camps }
+    skonester_foreman_tradeport_upgrade = yes
+  }
+  if = {
+    limit = { has_holding_type = church_holding }
+    skonester_foreman_line_upgrade_7 = { BUILDING = temple }
+    skonester_foreman_line_upgrade_7 = { BUILDING = hospices }
+  }
+}
+
+# 经济（内地）— 建 / 升
+skonester_foreman_economy_in_province_build = {
+  if = {
+    limit = { has_holding_type = castle_holding }
+    skonester_foreman_line_build_once = { BUILDING = castle }
+    skonester_foreman_line_build_once = { BUILDING = farm_estates }
+    skonester_foreman_line_build_once = { BUILDING = cereal_fields }
+  }
+  if = {
+    limit = { has_holding_type = city_holding }
+    skonester_foreman_line_build_once = { BUILDING = city }
+    skonester_foreman_guild_build = yes
+    skonester_foreman_line_build_once = { BUILDING = caravanserai }
+    skonester_foreman_tradeport_build = yes
+  }
+  if = {
+    limit = { has_holding_type = church_holding }
+    skonester_foreman_line_build_once = { BUILDING = temple }
+    skonester_foreman_line_build_once = { BUILDING = hospices }
+    skonester_foreman_line_build_once = { BUILDING = monastic_schools }
+    skonester_foreman_line_build_once = { BUILDING = scriptorium }
+  }
+}
+skonester_foreman_economy_in_province_upgrade = {
+  if = {
+    limit = { has_holding_type = castle_holding }
+    skonester_foreman_line_upgrade_7 = { BUILDING = castle }
+    skonester_foreman_line_upgrade_7 = { BUILDING = farm_estates }
+    skonester_foreman_line_upgrade_7 = { BUILDING = cereal_fields }
+  }
+  if = {
+    limit = { has_holding_type = city_holding }
+    skonester_foreman_line_upgrade_7 = { BUILDING = city }
+    skonester_foreman_guild_upgrade = yes
+    skonester_foreman_line_upgrade_7 = { BUILDING = caravanserai }
+    skonester_foreman_tradeport_upgrade = yes
+  }
+  if = {
+    limit = { has_holding_type = church_holding }
+    skonester_foreman_line_upgrade_7 = { BUILDING = temple }
+    skonester_foreman_line_upgrade_7 = { BUILDING = hospices }
+    skonester_foreman_line_upgrade_7 = { BUILDING = monastic_schools }
+    skonester_foreman_line_upgrade_7 = { BUILDING = scriptorium }
+  }
+}
+
+# 圣地 — 建 / 升
+skonester_foreman_holy_temple_in_province_build = {
+  if = {
+    limit = { has_holding_type = church_holding }
+    skonester_foreman_line_build_once = { BUILDING = temple }
+    skonester_foreman_line_build_once = { BUILDING = hospices }
+    skonester_foreman_line_build_once = { BUILDING = scriptorium }
+    skonester_foreman_line_build_once = { BUILDING = monastic_schools }
+  }
+}
+skonester_foreman_holy_temple_in_province_upgrade = {
+  if = {
+    limit = { has_holding_type = church_holding }
+    skonester_foreman_line_upgrade_7 = { BUILDING = temple }
+    skonester_foreman_line_upgrade_7 = { BUILDING = hospices }
+    skonester_foreman_line_upgrade_7 = { BUILDING = scriptorium }
+    skonester_foreman_line_upgrade_7 = { BUILDING = monastic_schools }
+  }
+}
+
+# 首都 — 建 / 升
+skonester_foreman_capital_in_province_build = {
+  if = {
+    limit = { has_holding_type = castle_holding }
+    skonester_foreman_line_build_once = { BUILDING = castle }
+    skonester_foreman_line_build_once = { BUILDING = barracks }
+    skonester_foreman_line_build_once = { BUILDING = regimental_grounds }
+    skonester_foreman_line_build_once = { BUILDING = curtain_walls }
+    skonester_foreman_line_build_once = { BUILDING = hill_forts }
+    skonester_foreman_line_build_once = { BUILDING = stables }
+    skonester_foreman_line_build_once = { BUILDING = farm_estates }
+    skonester_foreman_line_build_once = { BUILDING = cereal_fields }
+  }
+  if = {
+    limit = { has_holding_type = city_holding }
+    skonester_foreman_line_build_once = { BUILDING = city }
+    skonester_foreman_guild_build = yes
+    skonester_foreman_line_build_once = { BUILDING = caravanserai }
+    skonester_foreman_tradeport_build = yes
+  }
+  if = {
+    limit = { has_holding_type = church_holding }
+    skonester_foreman_line_build_once = { BUILDING = temple }
+    skonester_foreman_line_build_once = { BUILDING = hospices }
+    skonester_foreman_line_build_once = { BUILDING = monastic_schools }
+    skonester_foreman_line_build_once = { BUILDING = scriptorium }
+  }
+}
+skonester_foreman_capital_in_province_upgrade = {
+  if = {
+    limit = { has_holding_type = castle_holding }
+    skonester_foreman_line_upgrade_7 = { BUILDING = castle }
+    skonester_foreman_line_upgrade_7 = { BUILDING = barracks }
+    skonester_foreman_line_upgrade_7 = { BUILDING = regimental_grounds }
+    skonester_foreman_line_upgrade_7 = { BUILDING = curtain_walls }
+    skonester_foreman_line_upgrade_7 = { BUILDING = hill_forts }
+    skonester_foreman_line_upgrade_7 = { BUILDING = stables }
+    skonester_foreman_line_upgrade_7 = { BUILDING = farm_estates }
+    skonester_foreman_line_upgrade_7 = { BUILDING = cereal_fields }
+  }
+  if = {
+    limit = { has_holding_type = city_holding }
+    skonester_foreman_line_upgrade_7 = { BUILDING = city }
+    skonester_foreman_guild_upgrade = yes
+    skonester_foreman_line_upgrade_7 = { BUILDING = caravanserai }
+    skonester_foreman_tradeport_upgrade = yes
+  }
+  if = {
+    limit = { has_holding_type = church_holding }
+    skonester_foreman_line_upgrade_7 = { BUILDING = temple }
+    skonester_foreman_line_upgrade_7 = { BUILDING = hospices }
+    skonester_foreman_line_upgrade_7 = { BUILDING = monastic_schools }
+    skonester_foreman_line_upgrade_7 = { BUILDING = scriptorium }
+  }
+}
+
+# 全领拉满 8 档（新造+升满一线）
+skonester_foreman_max_line_8 = {
+  add_next_building_tier_effect = { BUILDING = $BUILDING$ }
+  add_next_building_tier_effect = { BUILDING = $BUILDING$ }
+  add_next_building_tier_effect = { BUILDING = $BUILDING$ }
+  add_next_building_tier_effect = { BUILDING = $BUILDING$ }
+  add_next_building_tier_effect = { BUILDING = $BUILDING$ }
+  add_next_building_tier_effect = { BUILDING = $BUILDING$ }
+  add_next_building_tier_effect = { BUILDING = $BUILDING$ }
+  add_next_building_tier_effect = { BUILDING = $BUILDING$ }
+}
+# 对同一建线再跑一轮 8 次（低起步或大量空槽时，一轮不够顶到最高档）
+skonester_foreman_max_line_8_twice = {
+  skonester_foreman_max_line_8 = { BUILDING = $BUILDING$ }
+  skonester_foreman_max_line_8 = { BUILDING = $BUILDING$ }
+}
+
+# 省：对原版 add_random_building 池里每条建线再跑 8 次 add-next。主模板未单独列出的附属建筑、以及本次运行前手造/低级的建筑
+# 已存在该线(任意档)时亦会连升，顶格或非法则 noop。与上方面模板重复时无害。
+skonester_foreman_upgrade_duchy_pool_all_lines_8 = {
+  skonester_foreman_max_line_8 = { BUILDING = outposts }
+  skonester_foreman_max_line_8 = { BUILDING = logging_camps }
+  skonester_foreman_max_line_8 = { BUILDING = peat_quarries }
+  skonester_foreman_max_line_8 = { BUILDING = hill_forts }
+  skonester_foreman_max_line_8 = { BUILDING = plantations }
+  skonester_foreman_max_line_8 = { BUILDING = quarries }
+  skonester_foreman_max_line_8 = { BUILDING = hunting_grounds }
+  skonester_foreman_max_line_8 = { BUILDING = military_camps }
+  skonester_foreman_max_line_8 = { BUILDING = horse_pastures }
+  skonester_foreman_max_line_8 = { BUILDING = hillside_grazing }
+  skonester_foreman_max_line_8 = { BUILDING = warrior_lodges }
+  skonester_foreman_max_line_8 = { BUILDING = pastures }
+  skonester_foreman_max_line_8 = { BUILDING = ramparts }
+  skonester_foreman_max_line_8 = { BUILDING = curtain_walls }
+  skonester_foreman_max_line_8 = { BUILDING = watchtowers }
+  skonester_foreman_max_line_8 = { BUILDING = cereal_fields }
+  skonester_foreman_max_line_8 = { BUILDING = barracks }
+  skonester_foreman_max_line_8 = { BUILDING = camel_farms }
+  skonester_foreman_max_line_8 = { BUILDING = hill_farms }
+  skonester_foreman_max_line_8 = { BUILDING = elephant_pens }
+  skonester_foreman_max_line_8 = { BUILDING = common_tradeport }
+  skonester_foreman_max_line_8 = { BUILDING = hospices }
+  skonester_foreman_max_line_8 = { BUILDING = qanats }
+  skonester_foreman_max_line_8 = { BUILDING = murex_farm }
+  skonester_foreman_max_line_8 = { BUILDING = wind_furnace }
+  skonester_foreman_max_line_8 = { BUILDING = stables }
+  skonester_foreman_max_line_8 = { BUILDING = smiths }
+  skonester_foreman_max_line_8 = { BUILDING = orchards }
+  skonester_foreman_max_line_8 = { BUILDING = farm_estates }
+  skonester_foreman_max_line_8 = { BUILDING = regimental_grounds }
+  skonester_foreman_max_line_8 = { BUILDING = caravanserai }
+  skonester_foreman_max_line_8 = { BUILDING = windmills }
+  skonester_foreman_max_line_8 = { BUILDING = watermills }
+  skonester_foreman_max_line_8 = { BUILDING = workshops }
+  skonester_foreman_max_line_8 = { BUILDING = monastic_schools }
+  skonester_foreman_max_line_8 = { BUILDING = guild_halls }
+  skonester_foreman_max_line_8 = { BUILDING = scriptorium }
+  skonester_foreman_max_line_8 = { BUILDING = megalith }
+  skonester_foreman_max_line_8 = { BUILDING = waterworks }
+  skonester_foreman_max_line_8 = { BUILDING = paddy_fields }
+}
+
+# 用原版「随机可造建筑」把剩余建筑槽位填满（不扣金；每步仍受改革/地形容忍度等限制；部落可能选项较少）
+skonester_foreman_fill_excess_building_slots = {
+  if = {
+    limit = { free_building_slots > 0 }
+    add_random_building_variable_effect = yes
+    add_random_building_construct_effect = yes
+  }
+  if = {
+    limit = { free_building_slots > 0 }
+    add_random_building_variable_effect = yes
+    add_random_building_construct_effect = yes
+  }
+  if = {
+    limit = { free_building_slots > 0 }
+    add_random_building_variable_effect = yes
+    add_random_building_construct_effect = yes
+  }
+  if = {
+    limit = { free_building_slots > 0 }
+    add_random_building_variable_effect = yes
+    add_random_building_construct_effect = yes
+  }
+  if = {
+    limit = { free_building_slots > 0 }
+    add_random_building_variable_effect = yes
+    add_random_building_construct_effect = yes
+  }
+  if = {
+    limit = { free_building_slots > 0 }
+    add_random_building_variable_effect = yes
+    add_random_building_construct_effect = yes
+  }
+  if = {
+    limit = { free_building_slots > 0 }
+    add_random_building_variable_effect = yes
+    add_random_building_construct_effect = yes
+  }
+  if = {
+    limit = { free_building_slots > 0 }
+    add_random_building_variable_effect = yes
+    add_random_building_construct_effect = yes
+  }
+  if = {
+    limit = { free_building_slots > 0 }
+    add_random_building_variable_effect = yes
+    add_random_building_construct_effect = yes
+  }
+  if = {
+    limit = { free_building_slots > 0 }
+    add_random_building_variable_effect = yes
+    add_random_building_construct_effect = yes
+  }
+  if = {
+    limit = { free_building_slots > 0 }
+    add_random_building_variable_effect = yes
+    add_random_building_construct_effect = yes
+  }
+  if = {
+    limit = { free_building_slots > 0 }
+    add_random_building_variable_effect = yes
+    add_random_building_construct_effect = yes
+  }
+}
+
+# 伯爵领：在尚无地产的地格上起一座新地产（每次至多一格）
+skonester_foreman_county_place_one_empty = {
+  if = {
+    limit = { any_county_province = { has_holding = no } }
+    if = {
+      limit = { any_county_province = { has_holding = yes has_holding_type = tribal_holding } }
+      random_county_province = {
+        limit = { has_holding = no barony_cannot_construct_holding = no }
+        set_holding_type = tribal_holding
+        skonester_ensure_tribal_holding_base_tribe_building = yes
+      }
+    }
+    else_if = {
+      limit = { holder = { government_has_flag = government_is_tribal } }
+      random_county_province = {
+        limit = { has_holding = no barony_cannot_construct_holding = no }
+        set_holding_type = tribal_holding
+        skonester_ensure_tribal_holding_base_tribe_building = yes
+      }
+    }
+    else_if = {
+      limit = { holder = { government_has_flag = government_is_nomadic } }
+      random_county_province = {
+        limit = { has_holding = no barony_cannot_construct_holding = no }
+        set_holding_type = nomad_holding
+      }
+    }
+    else = {
+      random_county_province = {
+        limit = { has_holding = no barony_cannot_construct_holding = no }
+        set_holding_type = castle_holding
+        skonester_ensure_castle_holding_base_castle_building = yes
+      }
+    }
+  }
+}
+# 同一县最多跑 7 次（可填满常见未建男爵位）
+skonester_foreman_county_fill_empty_baronies = {
+  skonester_foreman_county_place_one_empty = yes
+  skonester_foreman_county_place_one_empty = yes
+  skonester_foreman_county_place_one_empty = yes
+  skonester_foreman_county_place_one_empty = yes
+  skonester_foreman_county_place_one_empty = yes
+  skonester_foreman_county_place_one_empty = yes
+  skonester_foreman_county_place_one_empty = yes
+}
+
+# 各模板拉满版（省，供统一决议与旧互动引用）
+skonester_foreman_military_in_province_max = {
+  if = {
+    limit = { has_holding_type = castle_holding }
+    skonester_foreman_max_line_8 = { BUILDING = castle }
+    skonester_foreman_max_line_8 = { BUILDING = barracks }
+    skonester_foreman_max_line_8 = { BUILDING = regimental_grounds }
+    skonester_foreman_max_line_8 = { BUILDING = curtain_walls }
+    skonester_foreman_max_line_8 = { BUILDING = hill_forts }
+  }
+  if = {
+    limit = { has_holding_type = city_holding }
+    skonester_foreman_max_line_8 = { BUILDING = city }
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    skonester_foreman_max_line_8 = { BUILDING = military_camps }
+    if = {
+      limit = { is_coastal = yes }
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+    }
+  }
+  if = {
+    limit = { has_holding_type = church_holding }
+    skonester_foreman_max_line_8 = { BUILDING = temple }
+    skonester_foreman_max_line_8 = { BUILDING = hospices }
+  }
+}
+skonester_foreman_economy_in_province_max = {
+  if = {
+    limit = { has_holding_type = castle_holding }
+    skonester_foreman_max_line_8 = { BUILDING = castle }
+    skonester_foreman_max_line_8 = { BUILDING = farm_estates }
+    skonester_foreman_max_line_8 = { BUILDING = cereal_fields }
+  }
+  if = {
+    limit = { has_holding_type = city_holding }
+    skonester_foreman_max_line_8 = { BUILDING = city }
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    skonester_foreman_max_line_8 = { BUILDING = caravanserai }
+    if = {
+      limit = { is_coastal = yes }
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+    }
+  }
+  if = {
+    limit = { has_holding_type = church_holding }
+    skonester_foreman_max_line_8 = { BUILDING = temple }
+    skonester_foreman_max_line_8 = { BUILDING = hospices }
+    skonester_foreman_max_line_8 = { BUILDING = monastic_schools }
+    skonester_foreman_max_line_8 = { BUILDING = scriptorium }
+  }
+}
+skonester_foreman_holy_temple_in_province_max = {
+  if = {
+    limit = { has_holding_type = church_holding }
+    skonester_foreman_max_line_8_twice = { BUILDING = temple }
+    skonester_foreman_max_line_8_twice = { BUILDING = hospices }
+    skonester_foreman_max_line_8_twice = { BUILDING = scriptorium }
+    skonester_foreman_max_line_8_twice = { BUILDING = monastic_schools }
+  }
+}
+skonester_foreman_capital_in_province_max = {
+  if = {
+    limit = { has_holding_type = castle_holding }
+    skonester_foreman_max_line_8 = { BUILDING = castle }
+    skonester_foreman_max_line_8 = { BUILDING = barracks }
+    skonester_foreman_max_line_8 = { BUILDING = regimental_grounds }
+    skonester_foreman_max_line_8 = { BUILDING = curtain_walls }
+    skonester_foreman_max_line_8 = { BUILDING = hill_forts }
+    skonester_foreman_max_line_8 = { BUILDING = stables }
+    skonester_foreman_max_line_8 = { BUILDING = farm_estates }
+    skonester_foreman_max_line_8 = { BUILDING = cereal_fields }
+  }
+  if = {
+    limit = { has_holding_type = city_holding }
+    skonester_foreman_max_line_8 = { BUILDING = city }
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    skonester_foreman_max_line_8 = { BUILDING = caravanserai }
+    if = {
+      limit = { is_coastal = yes }
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+    }
+  }
+  if = {
+    limit = { has_holding_type = church_holding }
+    skonester_foreman_max_line_8 = { BUILDING = temple }
+    skonester_foreman_max_line_8 = { BUILDING = hospices }
+    skonester_foreman_max_line_8 = { BUILDING = monastic_schools }
+    skonester_foreman_max_line_8 = { BUILDING = scriptorium }
+  }
+}
+
+# 城堡线：城防、征募、马战、口粮+庄园收入（不混县优先级）
+skonester_foreman_castle_military_in_province_max = {
+  if = {
+    limit = { has_holding_type = castle_holding }
+    skonester_foreman_max_line_8_twice = { BUILDING = castle }
+    skonester_foreman_max_line_8_twice = { BUILDING = curtain_walls }
+    skonester_foreman_max_line_8_twice = { BUILDING = barracks }
+    skonester_foreman_max_line_8_twice = { BUILDING = regimental_grounds }
+    skonester_foreman_max_line_8_twice = { BUILDING = stables }
+    skonester_foreman_max_line_8_twice = { BUILDING = cereal_fields }
+    skonester_foreman_max_line_8_twice = { BUILDING = farm_estates }
+  }
+}
+# 城市线：行会(市集+商业)、商栈、港(沿海)、工匠坊、城防塔楼
+skonester_foreman_city_economy_in_province_max = {
+  if = {
+    limit = { has_holding_type = city_holding }
+    skonester_foreman_max_line_8_twice = { BUILDING = city }
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    upgrade_guildhall = yes
+    skonester_foreman_max_line_8_twice = { BUILDING = caravanserai }
+    skonester_foreman_max_line_8_twice = { BUILDING = workshops }
+    skonester_foreman_max_line_8_twice = { BUILDING = watchtowers }
+    if = {
+      limit = { is_coastal = yes }
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+      upgrade_tradeport = yes
+    }
+  }
+}
+# 部族：主寨、长屋、集村(代牧场)、战营(代猎场/兵力)、木栅
+skonester_foreman_tribal_in_province_max = {
+  if = {
+    limit = { has_holding_type = tribal_holding }
+    skonester_foreman_max_line_8_twice = { BUILDING = tribe }
+    skonester_foreman_max_line_8_twice = { BUILDING = longhouses }
+    skonester_foreman_max_line_8_twice = { BUILDING = market_villages }
+    skonester_foreman_max_line_8_twice = { BUILDING = war_camps }
+    skonester_foreman_max_line_8_twice = { BUILDING = palisades }
+  }
+}
+# 游牧 MPO 营地为单级建筑、无 02+ 链，勿用 add_next 以免引用不存在的下一档
+
+# 省：按#地产类型#选模板；主建线各两轮 add-next；再尽量用随机合法建筑塞满空槽
+skonester_foreman_unified_in_province = {
+  if = {
+    limit = { has_holding_type = castle_holding }
+    skonester_foreman_castle_military_in_province_max = yes
+  }
+  else_if = {
+    limit = { has_holding_type = city_holding }
+    skonester_foreman_city_economy_in_province_max = yes
+  }
+  else_if = {
+    limit = { has_holding_type = church_holding }
+    skonester_foreman_holy_temple_in_province_max = yes
+  }
+  else_if = {
+    limit = { has_holding_type = tribal_holding }
+    skonester_foreman_tribal_in_province_max = yes
+  }
+  if = {
+    limit = {
+      OR = {
+        has_holding_type = castle_holding
+        has_holding_type = city_holding
+        has_holding_type = church_holding
+        has_holding_type = tribal_holding
+      }
+    }
+    # 只跑一轮公爵建筑池+随机填槽。省掉第二轮池连升，避免全领决议单帧内指令量翻倍（原第二轮主要扫 fill 后新出现线；略减最终升满程度换性能）
+    skonester_foreman_upgrade_duchy_pool_all_lines_8 = yes
+    skonester_foreman_fill_excess_building_slots = yes
+  }
+}
+
+# 同上，用于对封臣直属地（规则与上完全一致；不再另套对方首都/圣地/边境）
+skonester_foreman_unified_beneficiary_in_province = {
+  if = {
+    limit = { has_holding_type = castle_holding }
+    skonester_foreman_castle_military_in_province_max = yes
+  }
+  else_if = {
+    limit = { has_holding_type = city_holding }
+    skonester_foreman_city_economy_in_province_max = yes
+  }
+  else_if = {
+    limit = { has_holding_type = church_holding }
+    skonester_foreman_holy_temple_in_province_max = yes
+  }
+  else_if = {
+    limit = { has_holding_type = tribal_holding }
+    skonester_foreman_tribal_in_province_max = yes
+  }
+  if = {
+    limit = {
+      OR = {
+        has_holding_type = castle_holding
+        has_holding_type = city_holding
+        has_holding_type = church_holding
+        has_holding_type = tribal_holding
+      }
+    }
+    # 与 skonester_foreman_unified_in_province 同：单轮池+填槽
+    skonester_foreman_upgrade_duchy_pool_all_lines_8 = yes
+    skonester_foreman_fill_excess_building_slots = yes
+  }
+}
+
+# 单县：先补空男爵格，再按统一模板拉满各省（供分批与 legacy 单帧共用）
+skonester_foreman_realm_one_county_effect = {
+  skonester_foreman_county_fill_empty_baronies = yes
+  every_county_province = { skonester_foreman_unified_in_province = yes }
+}
+
+# root=玩家：全领单帧遍历（legacy；大领地易卡顿，9110 已改走分批 9112）
+skonester_foreman_realm_unified_decision_effect = {
+  every_sub_realm_county = {
+    skonester_foreman_realm_one_county_effect = yes
+  }
+}
+
+# 分批：入队辖内全部伯爵领并启动首日脉冲
+skonester_foreman_realm_batch_start_effect = {
+  add_character_flag = skonester_foreman_realm_build_active
+  clear_variable_list = skonester_foreman_realm_county_queue
+  every_sub_realm_county = {
+    save_scope_as = skonester_foreman_batch_county
+    root = {
+      add_to_variable_list = {
+        name = skonester_foreman_realm_county_queue
+        target = scope:skonester_foreman_batch_county
+      }
+    }
+  }
+  trigger_event = { id = skonester_officials.9112 days = 0 }
+}
+
+# 分批：每脉冲处理若干县（效果与单帧版相同，仅拆开执行）
+skonester_foreman_realm_batch_step_effect = {
+  while = {
+    count = 10
+    limit = {
+      variable_list_size = {
+        name = skonester_foreman_realm_county_queue
+        value > 0
+      }
+    }
+    ordered_in_list = {
+      variable = skonester_foreman_realm_county_queue
+      order_by = skonester_foreman_batch_order_value
+      position = 0
+      save_scope_as = skonester_foreman_batch_county
+    }
+    remove_list_variable = {
+      name = skonester_foreman_realm_county_queue
+      target = scope:skonester_foreman_batch_county
+    }
+    scope:skonester_foreman_batch_county = {
+      skonester_foreman_realm_one_county_effect = yes
+    }
+  }
+}
+
+# 分批：全部跑完或中断时清理
+skonester_foreman_realm_batch_finish_effect = {
+  remove_character_flag = skonester_foreman_realm_build_active
+  clear_variable_list = skonester_foreman_realm_county_queue
+}
+
+# root=封臣/右击对象：其直属地同上（单遍）
+skonester_foreman_beneficiary_demesne_unified_effect = {
+  every_held_county = {
+    skonester_foreman_county_fill_empty_baronies = yes
+    every_county_province = { skonester_foreman_unified_beneficiary_in_province = yes }
+  }
+}

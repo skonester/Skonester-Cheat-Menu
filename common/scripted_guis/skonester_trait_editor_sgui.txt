@@ -1,0 +1,1232 @@
+﻿# AUTO-GENERATED — tools/gen_trait_editor_gui.py
+# 本体特质窗口 scripted_gui
+
+skonester_trait_gui_visible = {
+  scope = character
+  is_shown = { has_character_flag = skonester_trait_gui_open }
+  is_valid = { always = yes }
+}
+
+skonester_trait_gui_close = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_close_trait_editor_gui_effect = yes }
+}
+
+skonester_trait_gui_has = {
+  scope = character
+  saved_scopes = { trait_flag }
+  is_valid = {
+    trigger_if = {
+      limit = { scope:trait_flag = flag:bossy }
+      has_trait = bossy
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:charming }
+      has_trait = charming
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:curious }
+      has_trait = curious
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:pensive }
+      has_trait = pensive
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:rowdy }
+      has_trait = rowdy
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:ambitious }
+      has_trait = ambitious
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:arbitrary }
+      has_trait = arbitrary
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:arrogant }
+      has_trait = arrogant
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:brave }
+      has_trait = brave
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:callous }
+      has_trait = callous
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:calm }
+      has_trait = calm
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:chaste }
+      has_trait = chaste
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:compassionate }
+      has_trait = compassionate
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:content }
+      has_trait = content
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:craven }
+      has_trait = craven
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:cynical }
+      has_trait = cynical
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:deceitful }
+      has_trait = deceitful
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:diligent }
+      has_trait = diligent
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:eccentric }
+      has_trait = eccentric
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:fickle }
+      has_trait = fickle
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:forgiving }
+      has_trait = forgiving
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:generous }
+      has_trait = generous
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:gluttonous }
+      has_trait = gluttonous
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:greedy }
+      has_trait = greedy
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:gregarious }
+      has_trait = gregarious
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:honest }
+      has_trait = honest
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:humble }
+      has_trait = humble
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:impatient }
+      has_trait = impatient
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:just }
+      has_trait = just
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:lazy }
+      has_trait = lazy
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:lustful }
+      has_trait = lustful
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:paranoid }
+      has_trait = paranoid
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:patient }
+      has_trait = patient
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:sadistic }
+      has_trait = sadistic
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:shy }
+      has_trait = shy
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:stubborn }
+      has_trait = stubborn
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:temperate }
+      has_trait = temperate
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:trusting }
+      has_trait = trusting
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:vengeful }
+      has_trait = vengeful
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:wrathful }
+      has_trait = wrathful
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:zealous }
+      has_trait = zealous
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_diplomacy_1 }
+      has_trait = education_diplomacy_1
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_diplomacy_2 }
+      has_trait = education_diplomacy_2
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_diplomacy_3 }
+      has_trait = education_diplomacy_3
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_diplomacy_4 }
+      has_trait = education_diplomacy_4
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_diplomacy_5 }
+      has_trait = education_diplomacy_5
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_intrigue_1 }
+      has_trait = education_intrigue_1
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_intrigue_2 }
+      has_trait = education_intrigue_2
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_intrigue_3 }
+      has_trait = education_intrigue_3
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_intrigue_4 }
+      has_trait = education_intrigue_4
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_intrigue_5 }
+      has_trait = education_intrigue_5
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_learning_1 }
+      has_trait = education_learning_1
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_learning_2 }
+      has_trait = education_learning_2
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_learning_3 }
+      has_trait = education_learning_3
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_learning_4 }
+      has_trait = education_learning_4
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_learning_5 }
+      has_trait = education_learning_5
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_martial_1 }
+      has_trait = education_martial_1
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_martial_2 }
+      has_trait = education_martial_2
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_martial_3 }
+      has_trait = education_martial_3
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_martial_4 }
+      has_trait = education_martial_4
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_martial_5 }
+      has_trait = education_martial_5
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_stewardship_1 }
+      has_trait = education_stewardship_1
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_stewardship_2 }
+      has_trait = education_stewardship_2
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_stewardship_3 }
+      has_trait = education_stewardship_3
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_stewardship_4 }
+      has_trait = education_stewardship_4
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_stewardship_5 }
+      has_trait = education_stewardship_5
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:aggressive_attacker }
+      has_trait = aggressive_attacker
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:cautious_leader }
+      has_trait = cautious_leader
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:desert_warrior }
+      has_trait = desert_warrior
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:flexible_leader }
+      has_trait = flexible_leader
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:forder }
+      has_trait = forder
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:forest_fighter }
+      has_trait = forest_fighter
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:holy_warrior }
+      has_trait = holy_warrior
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:jungle_stalker }
+      has_trait = jungle_stalker
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:logistician }
+      has_trait = logistician
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:military_engineer }
+      has_trait = military_engineer
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:open_terrain_expert }
+      has_trait = open_terrain_expert
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:organizer }
+      has_trait = organizer
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:reaver }
+      has_trait = reaver
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:reckless }
+      has_trait = reckless
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:rough_terrain_expert }
+      has_trait = rough_terrain_expert
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:unyielding_defender }
+      has_trait = unyielding_defender
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:winter_soldier }
+      has_trait = winter_soldier
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:administrative_court_1 }
+      has_trait = administrative_court_1
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:administrative_court_2 }
+      has_trait = administrative_court_2
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:diplomatic_court_1 }
+      has_trait = diplomatic_court_1
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:diplomatic_court_2 }
+      has_trait = diplomatic_court_2
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:intrigue_court_1 }
+      has_trait = intrigue_court_1
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:intrigue_court_2 }
+      has_trait = intrigue_court_2
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:scholarly_court_1 }
+      has_trait = scholarly_court_1
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:scholarly_court_2 }
+      has_trait = scholarly_court_2
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:warlike_court_1 }
+      has_trait = warlike_court_1
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:warlike_court_2 }
+      has_trait = warlike_court_2
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:administrator }
+      has_trait = administrator
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:architect }
+      has_trait = architect
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:august }
+      has_trait = august
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:avaricious }
+      has_trait = avaricious
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:diplomat }
+      has_trait = diplomat
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:family_first }
+      has_trait = family_first
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:gallant }
+      has_trait = gallant
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:lifestyle_blademaster }
+      has_trait = lifestyle_blademaster
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:lifestyle_gardener }
+      has_trait = lifestyle_gardener
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:lifestyle_herbalist }
+      has_trait = lifestyle_herbalist
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:lifestyle_hunter }
+      has_trait = lifestyle_hunter
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:lifestyle_mystic }
+      has_trait = lifestyle_mystic
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:lifestyle_physician }
+      has_trait = lifestyle_physician
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:lifestyle_poet }
+      has_trait = lifestyle_poet
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:lifestyle_reveler }
+      has_trait = lifestyle_reveler
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:lifestyle_seasoned_pastor }
+      has_trait = lifestyle_seasoned_pastor
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:lifestyle_surveyor }
+      has_trait = lifestyle_surveyor
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:lifestyle_traveler }
+      has_trait = lifestyle_traveler
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:lifestyle_voyager }
+      has_trait = lifestyle_voyager
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:lifestyle_wayfarer }
+      has_trait = lifestyle_wayfarer
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:nomadic_philosophy }
+      has_trait = nomadic_philosophy
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:overseer }
+      has_trait = overseer
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:schemer }
+      has_trait = schemer
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:scholar }
+      has_trait = scholar
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:seducer }
+      has_trait = seducer
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:strategist }
+      has_trait = strategist
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:the_wake }
+      has_trait = the_wake
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:theologian }
+      has_trait = theologian
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:torturer }
+      has_trait = torturer
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:whole_of_body }
+      has_trait = whole_of_body
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:beardless_eunuch }
+      has_trait = beardless_eunuch
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:blind }
+      has_trait = blind
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:bubonic_plague }
+      has_trait = bubonic_plague
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:cancer }
+      has_trait = cancer
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:clouded_eyes }
+      has_trait = clouded_eyes
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:consumption }
+      has_trait = consumption
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:depressed_1 }
+      has_trait = depressed_1
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:depressed_genetic }
+      has_trait = depressed_genetic
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:disfigured }
+      has_trait = disfigured
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:dysentery }
+      has_trait = dysentery
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:early_great_pox }
+      has_trait = early_great_pox
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:ergotism }
+      has_trait = ergotism
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:eunuch_1 }
+      has_trait = eunuch_1
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:faltering_heart }
+      has_trait = faltering_heart
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:fragile_bones }
+      has_trait = fragile_bones
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:gout_ridden }
+      has_trait = gout_ridden
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:great_pox }
+      has_trait = great_pox
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:ill }
+      has_trait = ill
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:incapable }
+      has_trait = incapable
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:infirm }
+      has_trait = infirm
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:leper }
+      has_trait = leper
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:lovers_pox }
+      has_trait = lovers_pox
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:lunatic_1 }
+      has_trait = lunatic_1
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:lunatic_genetic }
+      has_trait = lunatic_genetic
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:maimed }
+      has_trait = maimed
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:measles }
+      has_trait = measles
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:one_eyed }
+      has_trait = one_eyed
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:one_legged }
+      has_trait = one_legged
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:pneumonic }
+      has_trait = pneumonic
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:possessed_1 }
+      has_trait = possessed_1
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:possessed_genetic }
+      has_trait = possessed_genetic
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:pregnant }
+      has_trait = pregnant
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:scarred }
+      has_trait = scarred
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:sickly }
+      has_trait = sickly
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:smallpox }
+      has_trait = smallpox
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:typhus }
+      has_trait = typhus
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:withering_mind }
+      has_trait = withering_mind
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:wounded_1 }
+      has_trait = wounded_1
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:wounded_2 }
+      has_trait = wounded_2
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:wounded_3 }
+      has_trait = wounded_3
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:adulterer }
+      has_trait = adulterer
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:adventurer }
+      has_trait = adventurer
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:adventurer_follower }
+      has_trait = adventurer_follower
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:athletic }
+      has_trait = athletic
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:augustus }
+      has_trait = augustus
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:bastard }
+      has_trait = bastard
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:bastard_founder }
+      has_trait = bastard_founder
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:berserker }
+      has_trait = berserker
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:blood_of_prophet }
+      has_trait = blood_of_prophet
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:born_in_the_purple }
+      has_trait = born_in_the_purple
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:burdened }
+      has_trait = burdened
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:campeador }
+      has_trait = campeador
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:cannibal }
+      has_trait = cannibal
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:celibate }
+      has_trait = celibate
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:chakravarti }
+      has_trait = chakravarti
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:charioteer_blue }
+      has_trait = charioteer_blue
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:charioteer_green }
+      has_trait = charioteer_green
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:charioteer_red }
+      has_trait = charioteer_red
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:charioteer_white }
+      has_trait = charioteer_white
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:child_of_concubine_female }
+      has_trait = child_of_concubine_female
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:child_of_concubine_male }
+      has_trait = child_of_concubine_male
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:comfort_eater }
+      has_trait = comfort_eater
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:confucian_education }
+      has_trait = confucian_education
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:conqueror }
+      has_trait = conqueror
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:consecrated_blood }
+      has_trait = consecrated_blood
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:contrite }
+      has_trait = contrite
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:crusader_king }
+      has_trait = crusader_king
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:decadent }
+      has_trait = decadent
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:denounced }
+      has_trait = denounced
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:despoiler_of_byzantium }
+      has_trait = despoiler_of_byzantium
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:deviant }
+      has_trait = deviant
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:devoted }
+      has_trait = devoted
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:disinherited }
+      has_trait = disinherited
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:disloyal }
+      has_trait = disloyal
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:disputed_heritage }
+      has_trait = disputed_heritage
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:divine_blood }
+      has_trait = divine_blood
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:drunkard }
+      has_trait = drunkard
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:excommunicated }
+      has_trait = excommunicated
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:extolled }
+      has_trait = extolled
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:faith_warrior }
+      has_trait = faith_warrior
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:flagellant }
+      has_trait = flagellant
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:former_emperor }
+      has_trait = former_emperor
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:fornicator }
+      has_trait = fornicator
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:gallivanter }
+      has_trait = gallivanter
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:gallowsbait }
+      has_trait = gallowsbait
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:golden_lineage }
+      has_trait = golden_lineage
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:governor }
+      has_trait = governor
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:greatest_of_khans }
+      has_trait = greatest_of_khans
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:hajjaj }
+      has_trait = hajjaj
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:hashishiyah }
+      has_trait = hashishiyah
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:heresiarch }
+      has_trait = heresiarch
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:historical_character }
+      has_trait = historical_character
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:improvident }
+      has_trait = improvident
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:inappetetic }
+      has_trait = inappetetic
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:incestuous }
+      has_trait = incestuous
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:irritable }
+      has_trait = irritable
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:journaller }
+      has_trait = journaller
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:kinslayer_1 }
+      has_trait = kinslayer_1
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:kinslayer_2 }
+      has_trait = kinslayer_2
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:kinslayer_3 }
+      has_trait = kinslayer_3
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:knight_errant }
+      has_trait = knight_errant
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:legend }
+      has_trait = legend
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:legitimized_bastard }
+      has_trait = legitimized_bastard
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:loyal }
+      has_trait = loyal
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:murderer }
+      has_trait = murderer
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:order_member }
+      has_trait = order_member
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:paragon }
+      has_trait = paragon
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:peasant_leader }
+      has_trait = peasant_leader
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:pilgrim }
+      has_trait = pilgrim
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:populist_leader }
+      has_trait = populist_leader
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:profligate }
+      has_trait = profligate
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:rakish }
+      has_trait = rakish
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:reclusive }
+      has_trait = reclusive
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:reincarnation }
+      has_trait = reincarnation
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:saint }
+      has_trait = saint
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:saoshyant }
+      has_trait = saoshyant
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:saoshyant_descendant }
+      has_trait = saoshyant_descendant
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:savior }
+      has_trait = savior
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:sayyid }
+      has_trait = sayyid
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:shieldmaiden }
+      has_trait = shieldmaiden
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:sodomite }
+      has_trait = sodomite
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:twin }
+      has_trait = twin
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:varangian }
+      has_trait = varangian
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:viking }
+      has_trait = viking
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:violet_poet }
+      has_trait = violet_poet
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:wild_oat }
+      has_trait = wild_oat
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:witch }
+      has_trait = witch
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:albino }
+      has_trait = albino
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:bleeder }
+      has_trait = bleeder
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:clubfooted }
+      has_trait = clubfooted
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:dwarf }
+      has_trait = dwarf
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:giant }
+      has_trait = giant
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:hunchbacked }
+      has_trait = hunchbacked
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:inbred }
+      has_trait = inbred
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:lisping }
+      has_trait = lisping
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:pure_blooded }
+      has_trait = pure_blooded
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:scaly }
+      has_trait = scaly
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:spindly }
+      has_trait = spindly
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:stuttering }
+      has_trait = stuttering
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:wheezing }
+      has_trait = wheezing
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:beauty_bad_1 }
+      has_trait = beauty_bad_1
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:beauty_bad_2 }
+      has_trait = beauty_bad_2
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:beauty_bad_3 }
+      has_trait = beauty_bad_3
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:beauty_good_1 }
+      has_trait = beauty_good_1
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:beauty_good_2 }
+      has_trait = beauty_good_2
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:beauty_good_3 }
+      has_trait = beauty_good_3
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:intellect_bad_1 }
+      has_trait = intellect_bad_1
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:intellect_bad_2 }
+      has_trait = intellect_bad_2
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:intellect_bad_3 }
+      has_trait = intellect_bad_3
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:intellect_good_1 }
+      has_trait = intellect_good_1
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:intellect_good_2 }
+      has_trait = intellect_good_2
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:intellect_good_3 }
+      has_trait = intellect_good_3
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:dull }
+      has_trait = dull
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:shrewd }
+      has_trait = shrewd
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:physique_bad_1 }
+      has_trait = physique_bad_1
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:physique_bad_2 }
+      has_trait = physique_bad_2
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:physique_bad_3 }
+      has_trait = physique_bad_3
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:physique_good_1 }
+      has_trait = physique_good_1
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:physique_good_2 }
+      has_trait = physique_good_2
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:physique_good_3 }
+      has_trait = physique_good_3
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:strong }
+      has_trait = strong
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:weak }
+      has_trait = weak
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:fecund }
+      has_trait = fecund
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:impotent }
+      has_trait = impotent
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:infertile }
+      has_trait = infertile
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_martial_prowess_1 }
+      has_trait = education_martial_prowess_1
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_martial_prowess_2 }
+      has_trait = education_martial_prowess_2
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_martial_prowess_3 }
+      has_trait = education_martial_prowess_3
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_martial_prowess_4 }
+      has_trait = education_martial_prowess_4
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_republican_knowledge_1 }
+      has_trait = education_republican_knowledge_1
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_republican_knowledge_2 }
+      has_trait = education_republican_knowledge_2
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_republican_knowledge_3 }
+      has_trait = education_republican_knowledge_3
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:education_republican_knowledge_4 }
+      has_trait = education_republican_knowledge_4
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:fp3_struggle_detractor }
+      has_trait = fp3_struggle_detractor
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:fp3_struggle_supporter }
+      has_trait = fp3_struggle_supporter
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:confider }
+      has_trait = confider
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:immortal }
+      has_trait = immortal
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:tourney_participant }
+      has_trait = tourney_participant
+    }
+  }
+}
+
+skonester_trait_gui_toggle = {
+  scope = character
+  saved_scopes = { trait_flag }
+  is_valid = { always = yes }
+  effect = { skonester_trait_gui_toggle_from_flag_effect = yes }
+}

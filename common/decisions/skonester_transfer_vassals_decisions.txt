@@ -1,0 +1,46 @@
+﻿skonester_one_click_transfer_vassals_decision = {
+  picture = {
+    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+  }
+  decision_group_type = pcm
+  sort_order = 20
+  title = skonester_one_click_transfer_vassals_decision
+  desc = skonester_one_click_transfer_vassals_decision_desc
+  selection_tooltip = skonester_one_click_transfer_vassals_decision_desc
+  confirm_text = skonester_one_click_transfer_vassals_decision_confirm
+
+  ai_potential = { always = no }
+
+  ai_check_interval_by_tier = {
+    barony = 0
+    county = 12
+    duchy = 12
+    kingdom = 12
+    empire = 12
+    hegemony = 12
+  }
+
+  is_shown = {
+
+    has_character_flag = pcm_b_show_decision_flag
+    skonester_officials_decision_visible_for_player_trigger = yes
+  }
+
+  is_valid = {
+    custom_description = {
+      text = skonester_tt_has_de_jure_transferable_direct_vassals_fail
+      skonester_has_de_jure_transferable_direct_vassals_trigger = yes
+    }
+    is_playable_character = yes
+    is_landed = yes
+    primary_title.tier >= tier_county
+  }
+
+  effect = {
+    skonester_one_click_transfer_direct_vassals_to_de_jure_liege_effect = yes
+  }
+
+  ai_will_do = {
+    base = 0
+  }
+}

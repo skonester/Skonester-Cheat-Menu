@@ -1,0 +1,15 @@
+﻿# 是否至少存在一名可尝试收监的直属封臣（含与领主交战中的；与 effect 的 limit 一致）
+
+skonester_has_imprisonable_direct_vassal_trigger = {
+  any_vassal = {
+    is_imprisoned = no
+  }
+}
+
+# 是否至少存在一名可收监的封臣（辖内全部层级，与 every_vassal_or_below 一致）
+
+skonester_has_imprisonable_realm_vassal_trigger = {
+  any_vassal_or_below = {
+    is_imprisoned = no
+  }
+}

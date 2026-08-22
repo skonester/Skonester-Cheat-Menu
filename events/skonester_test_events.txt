@@ -1,0 +1,16 @@
+﻿namespace = skonester_test
+
+# 测试事件 - 验证mod是否正确加载
+skonester_test.0001 = {
+  type = character_event
+  title = skonester_test.0001.t
+  desc = skonester_test.0001.desc
+  theme = default
+
+  option = {
+    name = skonester_test.0001.ok
+    scope:actor = { add_gold = 100
+    custom_tooltip =
+    skonester_test.0001.add_gold_tt }
+  }
+}

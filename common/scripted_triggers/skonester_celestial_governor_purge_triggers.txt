@@ -1,0 +1,144 @@
+﻿# 分级罢免：主头衔为伯爵/公国/王国/帝国四档（可选单档，或事件内「全部主衔档」一次处理四档）；庸碌按文官三项或武官两项
+# 目标可为总督，或境内有地的非总督封臣（无总督制时走同一套庸碌阈值与分档）
+
+# 变身大明：布政司制等为廷推(generate)继承，常无 primary_heir / any_heir；须查主衔继承人队列或廷推法
+skonester_purge_has_succession_candidate_trigger = {
+  OR = {
+    exists = primary_heir
+    exists = player_heir
+    any_heir = {
+      is_alive = yes
+    }
+    any_held_title = {
+      is_noble_family_title = no
+      any_title_heir = {
+        is_alive = yes
+      }
+    }
+  }
+}
+
+skonester_purge_eligible_governor_base_trigger = {
+  is_ai = yes
+  is_adult = yes
+  NOT = { has_trait = incapable }
+  is_imprisoned = no
+  NOT = { is_at_war_with_liege = yes }
+  NOR = {
+    AND = {
+      has_tgp_dlc_trigger = yes
+      tgp_is_any_minister = yes
+    }
+  }
+  skonester_is_not_h_china_emperor_title_holder_trigger = yes
+  is_governor = yes
+  skonester_purge_has_succession_candidate_trigger = yes
+}
+
+skonester_purge_eligible_non_governor_vassal_base_trigger = {
+  is_ai = yes
+  is_adult = yes
+  NOT = { has_trait = incapable }
+  is_imprisoned = no
+  NOT = { is_at_war_with_liege = yes }
+  NOR = {
+    AND = {
+      has_tgp_dlc_trigger = yes
+      tgp_is_any_minister = yes
+    }
+  }
+  skonester_is_not_h_china_emperor_title_holder_trigger = yes
+  is_landed = yes
+  is_governor = no
+  skonester_purge_has_succession_candidate_trigger = yes
+}
+
+# 武官契约：军事+勇武；否则文官：外交+管理+学识
+# 变身大明政体优先按政府类型分文武，并扣除政体固定技能加成后再比阈值
+
+skonester_governor_is_mediocre_by_branch_trigger = {
+  OR = {
+    AND = {
+      skonester_is_gm_yan_military_government_trigger = yes
+      skonester_military_skill_sum_for_purge_effective_value < skonester_military_mediocre_threshold_value
+    }
+    AND = {
+      skonester_is_gm_yan_civil_government_trigger = yes
+      skonester_civil_skill_sum_for_purge_effective_value < skonester_civil_mediocre_threshold_value
+    }
+    AND = {
+      NOT = { skonester_is_gm_yan_government_trigger = yes }
+      OR = {
+        vassal_contract_has_flag = celestial_military_appointment
+        vassal_contract_has_flag = meritocratic_military_appointment
+      }
+      skonester_military_skill_sum_for_purge_value < skonester_military_mediocre_threshold_value
+    }
+    AND = {
+      NOT = { skonester_is_gm_yan_government_trigger = yes }
+      NOR = {
+        vassal_contract_has_flag = celestial_military_appointment
+        vassal_contract_has_flag = meritocratic_military_appointment
+      }
+      skonester_civil_skill_sum_for_purge_value < skonester_civil_mediocre_threshold_value
+    }
+  }
+}
+
+skonester_has_purge_target_county_tier_trigger = {
+  any_vassal_or_below = {
+    OR = {
+      skonester_purge_eligible_governor_base_trigger = yes
+      skonester_purge_eligible_non_governor_vassal_base_trigger = yes
+    }
+    skonester_governor_is_mediocre_by_branch_trigger = yes
+    highest_held_title_tier = tier_county
+  }
+}
+
+skonester_has_purge_target_duchy_tier_trigger = {
+  any_vassal_or_below = {
+    OR = {
+      skonester_purge_eligible_governor_base_trigger = yes
+      skonester_purge_eligible_non_governor_vassal_base_trigger = yes
+    }
+    skonester_governor_is_mediocre_by_branch_trigger = yes
+    highest_held_title_tier = tier_duchy
+  }
+}
+
+skonester_has_purge_target_kingdom_tier_trigger = {
+  any_vassal_or_below = {
+    OR = {
+      skonester_purge_eligible_governor_base_trigger = yes
+      skonester_purge_eligible_non_governor_vassal_base_trigger = yes
+    }
+    skonester_governor_is_mediocre_by_branch_trigger = yes
+    highest_held_title_tier = tier_kingdom
+  }
+}
+
+skonester_has_purge_target_empire_tier_trigger = {
+  any_vassal_or_below = {
+    OR = {
+      skonester_purge_eligible_governor_base_trigger = yes
+      skonester_purge_eligible_non_governor_vassal_base_trigger = yes
+    }
+    skonester_governor_is_mediocre_by_branch_trigger = yes
+    highest_held_title_tier = tier_empire
+  }
+}
+
+skonester_has_anyone_to_purge_trigger = {
+  OR = {
+    skonester_has_purge_target_county_tier_trigger = yes
+    skonester_has_purge_target_duchy_tier_trigger = yes
+    skonester_has_purge_target_kingdom_tier_trigger = yes
+    skonester_has_purge_target_empire_tier_trigger = yes
+  }
+}
+
+# 无特定授予头衔时默认按伯爵线（更换官员、整理头衔转封等）
+skonester_is_excellent_talent_for_grant_trigger = {
+  skonester_is_talent_for_grant_tier_county_trigger = yes
+}

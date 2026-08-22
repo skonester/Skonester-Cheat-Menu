@@ -1,0 +1,17 @@
+﻿# 右键「Skonester」菜单：通用工具类 modifier
+
+skonester_cheat_menu_sterilized_modifier = {
+  icon = stewardship_positive
+  fertility = -100
+}
+
+skonester_child_gen_lock = {
+  icon = stewardship_positive
+}
+
+skonester_world_deterrence_aura = {
+  icon = dread_positive
+  dread_baseline_add = 100
+  dread_decay_mult = -1
+  dread_gain_mult = 0
+}

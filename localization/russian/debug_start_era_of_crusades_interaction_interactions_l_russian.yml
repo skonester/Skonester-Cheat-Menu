@@ -1,0 +1,10 @@
+﻿l_russian:
+ dp_debug_start_era_of_crusades_interaction:0 "Начать: Эпоху Крестовых походов (Отладка)"
+ dp_debug_launch_natural_crusade_interaction:0 "Запустить естественный крестовый поход (Отладка)"
+ dp_debug_start_era_of_jihads_interaction:0 "Начать: Эпоху Джихадов (Отладка)"
+ dp_debug_start_great_holy_war_interaction:0 "Начать Великую Священную войну (Отладка)"
+ dp_debug_start_era_of_crusades_interaction_desc:0 "Начать Эпоху Крестовых походов для тестирования."
+ dp_debug_launch_natural_crusade_interaction_desc:0 "Отладочный запуск естественного крестового похода."
+ dp_debug_start_era_of_jihads_interaction_desc:0 "Начать Эпоху Джихадов для тестирования."
+ dp_debug_start_great_holy_war_interaction_desc:0 "Отладочный запуск Великой Священной войны против любого подходящего получателя."
+

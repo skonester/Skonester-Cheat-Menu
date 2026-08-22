@@ -1,0 +1,123 @@
+﻿# 计划生育 on_birth：两档全局，见「人口与统辖」
+# A/B 超额判定共用 skonester_family_planning_per_ai_father_excess_child_trigger：
+#   只计该 AI 生父除本胎外的在世子女；已故不占名额；唯一在世子女死后可再留一胎
+# A) skonester_family_planning_active：全体 AI 生父
+# B) skonester_family_planning_dynasty_one_child_total：仅玩家 dynasty 内 AI 生父
+# 若 B 与 A 同时开：属玩家宗族的出生先按 B；非玩家宗族的出生仍按 A
+# 若 skonester_family_planning_exempt_player_dynasty：A 档不处决玩家宗族内新生儿（与 B 档在人口菜单互斥）
+
+on_birth_child = {
+  on_actions = {
+    skonester_family_planning_on_birth_pulse
+  }
+}
+
+skonester_family_planning_on_birth_pulse = {
+  trigger = {
+    OR = {
+      has_global_variable = skonester_family_planning_active
+      has_global_variable = skonester_family_planning_dynasty_one_child_total
+    }
+    scope:mother = {
+      is_alive = yes
+    }
+    scope:child = {
+      is_alive = yes
+    }
+    OR = {
+      exists = scope:real_father
+      exists = scope:father
+    }
+    # 生父为玩家（real 或合法）则整段不处理
+    NOT = {
+      AND = {
+        exists = scope:real_father
+        scope:real_father = {
+          is_ai = no
+        }
+      }
+    }
+    NOT = {
+      AND = {
+        NOT = {
+          exists = scope:real_father
+        }
+        exists = scope:father
+        scope:father = {
+          is_ai = no
+        }
+      }
+    }
+    # 可解析的 AI 生父（A/B 至少一档需要）
+    OR = {
+      AND = {
+        exists = scope:real_father
+        scope:real_father = {
+          is_ai = yes
+        }
+      }
+      AND = {
+        NOT = {
+          exists = scope:real_father
+        }
+        exists = scope:father
+        scope:father = {
+          is_ai = yes
+        }
+      }
+    }
+  }
+  effect = {
+    scope:child = {
+      save_scope_as = skonester_fp_baby
+    }
+    if = {
+      limit = {
+        exists = scope:real_father
+      }
+      scope:real_father = {
+        save_scope_as = skonester_plan_bio_dad
+      }
+    }
+    else_if = {
+      limit = {
+        exists = scope:father
+      }
+      scope:father = {
+        save_scope_as = skonester_plan_bio_dad
+      }
+    }
+    if = {
+      limit = {
+        exists = scope:skonester_plan_bio_dad
+        has_global_variable = skonester_family_planning_dynasty_one_child_total
+        skonester_family_planning_child_in_player_dynasty_trigger = yes
+        skonester_family_planning_dynasty_excess_child_trigger = yes
+      }
+      scope:child = {
+        death = natural
+      }
+    }
+    else_if = {
+      limit = {
+        has_global_variable = skonester_family_planning_active
+        OR = {
+          NOT = {
+            has_global_variable = skonester_family_planning_dynasty_one_child_total
+          }
+          skonester_family_planning_child_in_player_dynasty_trigger = no
+        }
+        NOT = {
+          AND = {
+            has_global_variable = skonester_family_planning_exempt_player_dynasty
+            skonester_family_planning_child_in_player_dynasty_trigger = yes
+          }
+        }
+        skonester_family_planning_per_ai_father_excess_child_trigger = yes
+      }
+      scope:child = {
+        death = natural
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+﻿# 包工头：与「顶头上司非你的 Top Liege」的领主所辖伯爵领接壤（边境外敌或独立邻邦）
+# root=伯爵领头衔（any_held_county 内）；须用 root.holder，勿对伯爵领用 .top_liege/.faith 以免 C 端求值异常
+skonester_county_touches_foreign_realm_trigger = {
+  exists = holder
+  any_neighboring_county = {
+    holder ?= {
+      NOT = { top_liege = root.holder.top_liege }
+    }
+  }
+}
+
+# 你信仰的圣地在该伯爵领内（root=伯爵领时 faith 在 holder 上）
+skonester_county_has_faith_holy_site_trigger = {
+  exists = holder
+  any_county_province = {
+    barony = {
+      is_holy_site_of = root.holder.faith
+    }
+  }
+}
+
+# 角色：直属地内是否有与外国接壤的伯爵领（根为领主；用于 is_valid / send_option）
+skonester_foreman_any_held_frontier_county_trigger = {
+  any_held_county = {
+    skonester_county_touches_foreign_realm_trigger = yes
+  }
+}
+skonester_foreman_any_realm_frontier_county_trigger = {
+  any_sub_realm_county = {
+    skonester_county_touches_foreign_realm_trigger = yes
+  }
+}
+# 全境内是否存在内地伯爵领（不接壤外敌）
+skonester_foreman_any_held_interior_county_trigger = {
+  any_held_county = {
+    NOT = { skonester_county_touches_foreign_realm_trigger = yes }
+  }
+}
+skonester_foreman_any_realm_interior_county_trigger = {
+  any_sub_realm_county = {
+    NOT = { skonester_county_touches_foreign_realm_trigger = yes }
+  }
+}
+skonester_foreman_any_held_faith_holy_county_trigger = {
+  any_held_county = { skonester_county_has_faith_holy_site_trigger = yes }
+}
+skonester_foreman_any_realm_faith_holy_county_trigger = {
+  any_sub_realm_county = { skonester_county_has_faith_holy_site_trigger = yes }
+}
+
+# 人物互动：有地、玩家本人或你辖下的封臣/下层（右击自己时与点封臣一样只作用其直属地）
+# 菜单预检时偶无 scope:actor，未 exists 时勿访问否则易 C 层闪退
+skonester_foreman_interaction_recipient_trigger = {
+  exists = scope:actor
+  is_landed = yes
+  OR = {
+    this = scope:actor
+    is_vassal_or_below_of = scope:actor
+  }
+}

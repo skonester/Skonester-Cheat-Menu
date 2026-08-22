@@ -1,0 +1,595 @@
+﻿# å¼ºæœ‰åœ°AIå¼ºåŒ–ï¼šå¼€å…³ï¼ˆå…¨å±€å˜é‡ skonester_world_ai_boost_disabledï¼‰+ æ‰§è¡Œå†³è®®ï¼›æ— éœ€ TGPï¼›æ— å¨æœ›æ¶ˆè€—ï¼›æ•ˆæžœä»…æ–½åŠ äºŽæœ‰åœ° AIã€‚
+
+# â€”â€” å¹´è„‰å†²ï¼šæ€»å¼€å…³ï¼ˆé»˜è®¤å…³é—­ï¼‰â€”â€”
+# å…³é—­åŽä¸å†è§¦å‘ skonester_officials.9200 åŠæœ¬æ–‡ä»¶å†…å¹´åº¦åçŽ©å®¶åŽ‹åŠ›åˆ·æ–°ï¼›å­å†³è®®ã€Œæ³•ç†è½¬å°ã€ã€Œæ”¹è¡Œæ”¿ã€ä»…åœ¨æ€»å¼€å…³å¼€å¯æ—¶ç”Ÿæ•ˆã€‚
+skonester_ai_yearly_pulse_toggle_decision = {
+  picture = {
+    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+  }
+  decision_group_type = pcm
+  sort_order = 81
+  title = {
+    first_valid = {
+      triggered_desc = {
+        trigger = {
+          NOT = { has_global_variable = skonester_ai_yearly_pulse_disabled }
+        }
+        desc = skonester_ai_yearly_pulse_toggle_title_on
+      }
+      desc = skonester_ai_yearly_pulse_toggle_title_off
+    }
+  }
+  desc = {
+    first_valid = {
+      triggered_desc = {
+        trigger = {
+          NOT = { has_global_variable = skonester_ai_yearly_pulse_disabled }
+        }
+        desc = skonester_ai_yearly_pulse_toggle_desc_on
+      }
+      desc = skonester_ai_yearly_pulse_toggle_desc_off
+    }
+  }
+  selection_tooltip = {
+    first_valid = {
+      triggered_desc = {
+        trigger = {
+          NOT = { has_global_variable = skonester_ai_yearly_pulse_disabled }
+        }
+        desc = skonester_ai_yearly_pulse_toggle_tooltip_on
+      }
+      desc = skonester_ai_yearly_pulse_toggle_tooltip_off
+    }
+  }
+  confirm_text = {
+    first_valid = {
+      triggered_desc = {
+        trigger = {
+          NOT = { has_global_variable = skonester_ai_yearly_pulse_disabled }
+        }
+        desc = skonester_ai_yearly_pulse_toggle_confirm_disable
+      }
+      desc = skonester_ai_yearly_pulse_toggle_confirm_enable
+    }
+  }
+
+  ai_potential = { always = no }
+  ai_check_interval_by_tier = {
+    barony = 0
+    county = 90
+    duchy = 90
+    kingdom = 90
+    empire = 90
+    hegemony = 90
+  }
+
+  is_shown = {
+
+    has_character_flag = pcm_b_show_decision_flag
+    skonester_officials_decision_visible_for_player_trigger = yes
+    is_playable_character = yes
+    is_ai = no
+  }
+
+  is_valid = { always = yes }
+
+  effect = {
+    if = {
+      limit = {
+        NOT = { has_global_variable = skonester_ai_yearly_pulse_disabled }
+      }
+      set_global_variable = {
+        name = skonester_ai_yearly_pulse_disabled
+        value = yes
+      }
+      custom_tooltip = skonester_ai_yearly_pulse_toggle_effect_disabled_tt
+    }
+    else = {
+      remove_global_variable = skonester_ai_yearly_pulse_disabled
+      custom_tooltip = skonester_ai_yearly_pulse_toggle_effect_enabled_tt
+    }
+  }
+
+  ai_will_do = { base = 0 }
+}
+
+# â€”â€” å¹´è„‰å†²ï¼šAI è‡ªåŠ¨æ³•ç†è½¬å°ï¼ˆå¼€å…³ï¼Œé»˜è®¤å…³é—­ï¼›éœ€æ€»å¼€å…³å¼€å¯ï¼‰â€”â€”
+# å¼€å¯åŽ 9200 æœ«å°¾æ‰§è¡Œ skonester_one_click_transfer_direct_vassals_to_de_jure_liege_effectï¼›çŽ©å®¶å†³è®®ã€Œæ³•ç†è½¬å°ã€ä¸å—å½±å“ã€‚
+skonester_ai_yearly_de_jure_transfer_toggle_decision = {
+  picture = {
+    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+  }
+  decision_group_type = pcm
+  sort_order = 80
+  title = {
+    first_valid = {
+      triggered_desc = {
+        trigger = { has_global_variable = skonester_ai_yearly_de_jure_transfer_enabled }
+        desc = skonester_ai_yearly_de_jure_transfer_toggle_title_on
+      }
+      desc = skonester_ai_yearly_de_jure_transfer_toggle_title_off
+    }
+  }
+  desc = {
+    first_valid = {
+      triggered_desc = {
+        trigger = { has_global_variable = skonester_ai_yearly_de_jure_transfer_enabled }
+        desc = skonester_ai_yearly_de_jure_transfer_toggle_desc_on
+      }
+      desc = skonester_ai_yearly_de_jure_transfer_toggle_desc_off
+    }
+  }
+  selection_tooltip = {
+    first_valid = {
+      triggered_desc = {
+        trigger = { has_global_variable = skonester_ai_yearly_de_jure_transfer_enabled }
+        desc = skonester_ai_yearly_de_jure_transfer_toggle_tooltip_on
+      }
+      desc = skonester_ai_yearly_de_jure_transfer_toggle_tooltip_off
+    }
+  }
+  confirm_text = {
+    first_valid = {
+      triggered_desc = {
+        trigger = { has_global_variable = skonester_ai_yearly_de_jure_transfer_enabled }
+        desc = skonester_ai_yearly_de_jure_transfer_toggle_confirm_disable
+      }
+      desc = skonester_ai_yearly_de_jure_transfer_toggle_confirm_enable
+    }
+  }
+
+  ai_potential = { always = no }
+  ai_check_interval_by_tier = {
+    barony = 0
+    county = 90
+    duchy = 90
+    kingdom = 90
+    empire = 90
+    hegemony = 90
+  }
+
+  is_shown = {
+
+    has_character_flag = pcm_b_show_decision_flag
+    skonester_officials_decision_visible_for_player_trigger = yes
+    is_playable_character = yes
+    is_ai = no
+    NOT = { has_global_variable = skonester_ai_yearly_pulse_disabled }
+  }
+
+  is_valid = { always = yes }
+
+  effect = {
+    if = {
+      limit = { has_global_variable = skonester_ai_yearly_de_jure_transfer_enabled }
+      remove_global_variable = skonester_ai_yearly_de_jure_transfer_enabled
+      custom_tooltip = skonester_ai_yearly_de_jure_transfer_toggle_effect_disabled_tt
+    }
+    else = {
+      set_global_variable = {
+        name = skonester_ai_yearly_de_jure_transfer_enabled
+        value = yes
+      }
+      custom_tooltip = skonester_ai_yearly_de_jure_transfer_toggle_effect_enabled_tt
+    }
+  }
+
+  ai_will_do = { base = 0 }
+}
+
+# â€”â€” å¹´è„‰å†²ï¼šAI è‡ªåŠ¨æ”¹è¡Œæ”¿ï¼ˆå¼€å…³ï¼Œé»˜è®¤å…³é—­ï¼›éœ€æ€»å¼€å…³å¼€å¯ï¼‰â€”â€”
+# å…³é—­åŽ skonester_ai_ruthless_governance_yearly_effect ä»æŠ¬å°è‡£ä¹‰åŠ¡ï¼Œä½†ä¸æ‰§è¡Œ EP3 è¡Œæ”¿è½¬æ¢ï¼›æ¸¸ç‰§/éƒ¨è½/ç‰§æ°‘å®—ä¸»ä¸æ‰¹é‡æ”¹å°è‡£æ”¿ä½“ã€‚
+skonester_ai_yearly_admin_conversion_toggle_decision = {
+  picture = {
+    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+  }
+  decision_group_type = pcm
+  sort_order = 79
+  title = {
+    first_valid = {
+      triggered_desc = {
+        trigger = {
+          NOT = { has_global_variable = skonester_ai_yearly_admin_conversion_disabled }
+        }
+        desc = skonester_ai_yearly_admin_conversion_toggle_title_on
+      }
+      desc = skonester_ai_yearly_admin_conversion_toggle_title_off
+    }
+  }
+  desc = {
+    first_valid = {
+      triggered_desc = {
+        trigger = {
+          NOT = { has_global_variable = skonester_ai_yearly_admin_conversion_disabled }
+        }
+        desc = skonester_ai_yearly_admin_conversion_toggle_desc_on
+      }
+      desc = skonester_ai_yearly_admin_conversion_toggle_desc_off
+    }
+  }
+  selection_tooltip = {
+    first_valid = {
+      triggered_desc = {
+        trigger = {
+          NOT = { has_global_variable = skonester_ai_yearly_admin_conversion_disabled }
+        }
+        desc = skonester_ai_yearly_admin_conversion_toggle_tooltip_on
+      }
+      desc = skonester_ai_yearly_admin_conversion_toggle_tooltip_off
+    }
+  }
+  confirm_text = {
+    first_valid = {
+      triggered_desc = {
+        trigger = {
+          NOT = { has_global_variable = skonester_ai_yearly_admin_conversion_disabled }
+        }
+        desc = skonester_ai_yearly_admin_conversion_toggle_confirm_disable
+      }
+      desc = skonester_ai_yearly_admin_conversion_toggle_confirm_enable
+    }
+  }
+
+  ai_potential = { always = no }
+  ai_check_interval_by_tier = {
+    barony = 0
+    county = 90
+    duchy = 90
+    kingdom = 90
+    empire = 90
+    hegemony = 90
+  }
+
+  is_shown = {
+
+    has_character_flag = pcm_b_show_decision_flag
+    skonester_officials_decision_visible_for_player_trigger = yes
+    is_playable_character = yes
+    is_ai = no
+    NOT = { has_global_variable = skonester_ai_yearly_pulse_disabled }
+  }
+
+  is_valid = { always = yes }
+
+  effect = {
+    if = {
+      limit = {
+        NOT = { has_global_variable = skonester_ai_yearly_admin_conversion_disabled }
+      }
+      set_global_variable = {
+        name = skonester_ai_yearly_admin_conversion_disabled
+        value = yes
+      }
+      custom_tooltip = skonester_ai_yearly_admin_conversion_toggle_effect_disabled_tt
+    }
+    else = {
+      remove_global_variable = skonester_ai_yearly_admin_conversion_disabled
+      custom_tooltip = skonester_ai_yearly_admin_conversion_toggle_effect_enabled_tt
+    }
+  }
+
+  ai_will_do = { base = 0 }
+}
+
+# â€”â€” åˆå¹¶ç‰ˆï¼šAIå¼ºåŒ–ï¼ˆå¼€å…³ï¼‰â€”â€”
+# å¼€å¯åŽæ¯æœˆæŒ‰â€œçŽ©å®¶é¢†åœ°â†’é‚»æŽ¥çŽ©å®¶â†’å…¨å›¾â€åˆ†æ‰¹å¼ºåŒ–æœ‰åœ° AIï¼›å†æ¬¡ç‚¹å‡»å…³é—­ã€‚
+skonester_ai_boost_toggle_decision = {
+  picture = {
+    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+  }
+  decision_group_type = pcm
+  sort_order = 78
+  title = {
+    first_valid = {
+      triggered_desc = {
+        trigger = { NOT = { has_global_variable = skonester_ai_boost_disabled } }
+        desc = skonester_ai_boost_toggle_decision_title_on
+      }
+      desc = skonester_ai_boost_toggle_decision_title_off
+    }
+  }
+  desc = {
+    first_valid = {
+      triggered_desc = {
+        trigger = { NOT = { has_global_variable = skonester_ai_boost_disabled } }
+        desc = skonester_ai_boost_toggle_decision_desc_on
+      }
+      desc = skonester_ai_boost_toggle_decision_desc_off
+    }
+  }
+  selection_tooltip = {
+    first_valid = {
+      triggered_desc = {
+        trigger = { NOT = { has_global_variable = skonester_ai_boost_disabled } }
+        desc = skonester_ai_boost_toggle_decision_desc_on
+      }
+      desc = skonester_ai_boost_toggle_decision_desc_off
+    }
+  }
+  confirm_text = {
+    first_valid = {
+      triggered_desc = {
+        trigger = { NOT = { has_global_variable = skonester_ai_boost_disabled } }
+        desc = skonester_ai_boost_toggle_decision_confirm_disable
+      }
+      desc = skonester_ai_boost_toggle_decision_confirm_enable
+    }
+  }
+
+  ai_potential = { always = no }
+  ai_check_interval_by_tier = {
+    barony = 0
+    county = 90
+    duchy = 90
+    kingdom = 90
+    empire = 90
+    hegemony = 90
+  }
+
+  is_shown = {
+
+    has_character_flag = pcm_b_show_decision_flag
+    skonester_officials_decision_visible_for_player_trigger = yes
+    is_playable_character = yes
+    is_ai = no
+  }
+
+  is_valid = { always = yes }
+
+  effect = {
+    if = {
+      limit = { NOT = { has_global_variable = skonester_ai_boost_disabled } }
+      set_global_variable = { name = skonester_ai_boost_disabled value = yes }
+      if = { limit = { has_global_variable = skonester_ai_boost_enabled } remove_global_variable = skonester_ai_boost_enabled }
+      custom_tooltip = skonester_ai_boost_toggle_effect_disabled_tt
+    }
+    else = {
+      remove_global_variable = skonester_ai_boost_disabled
+      set_global_variable = { name = skonester_ai_boost_enabled value = yes }
+      # å…¼å®¹æ—§å˜é‡ï¼šè‹¥æ—§ç‰ˆâ€œæš‚åœ/æ¢å¤â€æ®‹ç•™ï¼Œç»Ÿä¸€æ¸…æŽ‰ï¼Œé¿å…å†²çª
+      if = { limit = { has_global_variable = skonester_world_ai_boost_disabled } remove_global_variable = skonester_world_ai_boost_disabled }
+      if = { limit = { has_global_variable = skonester_world_ai_boost_active } remove_global_variable = skonester_world_ai_boost_active }
+      skonester_ai_world_ai_boost_spread_batch_effect = yes
+      custom_tooltip = skonester_ai_boost_toggle_effect_enabled_tt
+    }
+  }
+
+  ai_will_do = { base = 0 }
+}
+
+# â€”â€” æš‚åœï¼šæœ¬å±€ä¸å†æ˜¾ç¤º/æ‰§è¡Œã€Œå¼ºæœ‰åœ°AIå¼ºåŒ–ã€ï¼ˆå…¼å®¹æ—  TGPã€ç¥žå·ž/å¤§æ˜Žå˜èº«ç­‰ï¼‰â€”â€”
+skonester_world_ai_boost_pause_decision = {
+  picture = {
+    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+  }
+  # å·²éšè—ï¼›ä¸æŒ‚ skonester_officials å†³è®®ç»„ï¼Œé¿å…åˆ—è¡¨ç©ºç™½å ä½è¡Œ
+  sort_order = 77
+  title = skonester_world_ai_boost_pause_decision
+  desc = skonester_ui_no_hover_tooltip
+  selection_tooltip = skonester_ui_no_hover_tooltip
+  confirm_text = skonester_world_ai_boost_pause_decision_confirm
+
+  ai_potential = { always = no }
+  ai_check_interval_by_tier = {
+    barony = 0
+    county = 0
+    duchy = 0
+    kingdom = 0
+    empire = 0
+    hegemony = 0
+  }
+
+  is_shown = {
+    always = no
+  }
+  is_valid = {
+    is_playable_character = yes
+  }
+
+  effect = {
+    set_global_variable = {
+      name = skonester_world_ai_boost_disabled
+      value = yes
+    }
+    set_global_variable = {
+      name = skonester_ai_boost_disabled
+      value = yes
+    }
+    # åŒæ—¶åœæ­¢åˆ†æ‰¹å‘æ”¾é€»è¾‘ï¼Œé¿å…åŽå°ç»§ç»­åˆ· modifier
+    if = {
+      limit = { has_global_variable = skonester_world_ai_boost_active }
+      remove_global_variable = skonester_world_ai_boost_active
+    }
+    custom_tooltip = skonester_world_ai_boost_pause_effect_tt
+  }
+
+  ai_will_do = {
+    base = 0
+  }
+}
+
+# â€”â€” æ¢å¤ï¼šé‡æ–°å…è®¸ä½¿ç”¨ã€Œå¼ºæœ‰åœ°AIå¼ºåŒ–ã€å†³è®® â€”â€”
+skonester_world_ai_boost_resume_decision = {
+  picture = {
+    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+  }
+  # å·²éšè—ï¼›ä¸æŒ‚ skonester_officials å†³è®®ç»„ï¼Œé¿å…åˆ—è¡¨ç©ºç™½å ä½è¡Œ
+  sort_order = 76
+  title = skonester_world_ai_boost_resume_decision
+  desc = skonester_ui_no_hover_tooltip
+  selection_tooltip = skonester_ui_no_hover_tooltip
+  confirm_text = skonester_world_ai_boost_resume_decision_confirm
+
+  ai_potential = { always = no }
+  ai_check_interval_by_tier = {
+    barony = 0
+    county = 0
+    duchy = 0
+    kingdom = 0
+    empire = 0
+    hegemony = 0
+  }
+
+  is_shown = {
+    always = no
+  }
+  is_valid = {
+    is_playable_character = yes
+  }
+
+  effect = {
+    remove_global_variable = skonester_world_ai_boost_disabled
+    remove_global_variable = skonester_ai_boost_disabled
+    custom_tooltip = skonester_world_ai_boost_resume_effect_tt
+  }
+
+  ai_will_do = {
+    base = 0
+  }
+}
+
+# å†³è®®ï¼šå‘æ‰€æœ‰æœ‰åœ° AI ç»Ÿæ²»è€…å‘æ”¾ä¸´æ—¶åŠ æˆï¼ˆå»ºé€ ã€å¸¸å¤‡ã€å¼€æˆ˜æƒé‡ç­‰ï¼‰
+
+skonester_boost_world_ai_rulers_decision = {
+  picture = {
+    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+  }
+  # å·²ç”±ã€ŒAIå¼ºåŒ–ï¼ˆæœˆåº¦ï¼‰ã€å–ä»£å¹¶éšè—ï¼›ä¸æŒ‚ skonester_officials å†³è®®ç»„ï¼Œé¿å…åˆ—è¡¨ç©ºç™½å ä½è¡Œ
+  sort_order = 75
+  title = skonester_boost_world_ai_rulers_decision
+  desc = skonester_boost_world_ai_rulers_decision_desc
+  selection_tooltip = skonester_boost_world_ai_rulers_decision_desc
+  confirm_text = skonester_boost_world_ai_rulers_decision_confirm
+
+  # æˆ˜ç•¥æ¡£ä½ 100ï¼šå›´å µçŽ©å®¶ / å…¨å›¾ AI å¼ºåŒ–ã€‚CK3 æ—  ai_priorityã€ai_always_considerã€ai_ignore_weaknessï¼›ä»¥ base+ai_potential è¿‘ä¼¼ï¼›å¼±åŠ¿åˆ¤å®šè§ defines/ai/skonester_ai_unshackle.txt
+  ai_potential = { always = no }
+
+  # åŽŸä¸ºæ¯ 12 æ—¥è¯„ä¼°ä¸€æ¬¡ ai_will_doï¼ˆæ¡ç›®å¤šï¼‰ï¼Œæžæ˜“æ‹–æ…¢å­˜æ¡£ï¼›æ”¹ä¸ºçº¦å­£åº¦æ£€æŸ¥ã€‚
+  ai_check_interval_by_tier = {
+    barony = 0
+    county = 90
+    duchy = 90
+    kingdom = 90
+    empire = 90
+    hegemony = 90
+  }
+
+  is_shown = {
+    always = no
+  }
+
+  # ä¸è®¾å¯æ‰§è¡Œæ¡ä»¶ï¼ˆæ— æ”¿æƒ/å†·å´é—¨æ§›ï¼‰ï¼›ä»å¯è¢«ã€Œæš‚åœã€å†³è®®ä»Žåˆ—è¡¨ä¸­éšè—ã€‚
+  is_valid = {
+    always = yes
+  }
+
+  effect = {
+    custom_tooltip = skonester_boost_world_ai_rulers_effect_tt
+    remove_global_variable = skonester_ai_boost_disabled
+    set_global_variable = {
+      name = skonester_ai_boost_enabled
+      value = yes
+    }
+    set_global_variable = {
+      name = skonester_world_ai_boost_active
+      value = yes
+    }
+    skonester_ai_world_ai_boost_spread_batch_effect = yes
+  }
+
+  # AIï¼šbase=æˆ˜ç•¥åº•æ¿ï¼›åŽŸç‰ˆæ—  relative_power/player_nearby ç­‰ä¼ªå˜é‡ï¼Œå‡æ˜ å°„ä¸º skonester_ai_boost_* è§¦å‘å™¨ï¼ˆè§ skonester_ai_boost_decision_triggersï¼‰ï¼›cruelâ†’sadisticã€cowardlyâ†’cravenã€proudâ†’arrogantã€schemingâ†’schemerã€domineeringâ†’bossyã€cunningâ†’deceitfulã€thriftyâ†’stubbornã€isolationistâ†’shyã€cautiousâ†’patientã€fanatic å¹¶å…¥ zealous
+  ai_will_do = {
+    base = 0
+
+    modifier = { add = 70 skonester_ai_boost_neighbor_ratio_ge_080_trigger = yes }
+    modifier = { add = 45 skonester_ai_boost_neighbor_ratio_ge_065_trigger = yes }
+    modifier = { add = 30 skonester_ai_boost_neighbor_ratio_ge_050_trigger = yes }
+
+    modifier = { add = 90 skonester_ai_boost_human_neighbor_any_trigger = yes }
+    modifier = { add = 80 skonester_ai_boost_any_player_realm_gt_10_trigger = yes }
+    modifier = { add = 75 skonester_ai_boost_player_powerful_neighbor_trigger = yes }
+    modifier = { add = 85 skonester_ai_boost_any_claim_any_tier_trigger = yes }
+    modifier = { add = 80 skonester_ai_boost_neighbor_other_faith_trigger = yes }
+    modifier = { add = 70 skonester_ai_boost_neighbor_small_realm_trigger = yes }
+
+    modifier = { add = 40 skonester_ai_boost_any_sub_realm_dev_ge_10_trigger = yes }
+    modifier = { add = 65 skonester_ai_boost_capital_can_build_more_trigger = yes }
+    modifier = { add = 50 skonester_ai_boost_capital_dev_lt_15_trigger = yes }
+    modifier = { add = 55 skonester_ai_boost_three_plus_bad_dev_counties_trigger = yes }
+
+    modifier = { add = 70 has_trait = ambitious }
+    modifier = { add = 60 has_trait = brave }
+    modifier = { add = 55 has_trait = sadistic }
+    modifier = { add = 50 has_trait = wrathful }
+    modifier = { add = 65 has_trait = schemer }
+    modifier = { add = 80 has_trait = bossy }
+
+    modifier = { add = -30 days_of_continuous_peace >= 730 }
+    modifier = { add = -60 days_of_continuous_peace >= 1460 }
+    modifier = { add = -90 days_of_continuous_peace >= 2191 }
+
+    modifier = { add = -120 skonester_ai_boost_critically_weaker_than_neighbor_trigger = yes }
+    modifier = { add = -80 skonester_ai_boost_multiple_character_wars_trigger = yes }
+    modifier = { add = -15 has_trait = craven }
+    modifier = { add = -10 has_trait = patient }
+
+    modifier = { add = 55 monthly_character_income > 5 }
+    modifier = { add = 75 monthly_character_income > 15 }
+    modifier = { add = 60 gold >= 200 }
+
+    modifier = { add = 70 has_trait = diligent }
+    modifier = { add = 65 has_trait = greedy }
+    modifier = { add = 50 has_trait = stubborn }
+    modifier = { add = -10 has_trait = lazy }
+    modifier = { add = -15 has_trait = reckless }
+
+    modifier = { add = 70 skonester_ai_boost_faith_fervor_gt_40_trigger = yes }
+    modifier = { add = 60 skonester_ai_boost_wrong_faith_counties_exactly_one_trigger = yes }
+    modifier = { add = 90 skonester_ai_boost_wrong_faith_counties_two_plus_trigger = yes }
+    modifier = { add = 75 skonester_ai_boost_vassal_wrong_faith_trigger = yes }
+    modifier = { add = 80 skonester_ai_boost_any_county_wrong_faith_trigger = yes }
+    modifier = { add = 60 skonester_ai_boost_foreign_culture_count_equals_1_trigger = yes }
+    modifier = { add = 95 skonester_ai_boost_foreign_culture_count_above_2_trigger = yes }
+    modifier = { add = 85 skonester_ai_boost_any_county_wrong_culture_trigger = yes }
+
+    modifier = { add = 80 has_trait = zealous }
+    modifier = { add = 75 has_trait = arrogant }
+    modifier = { add = -10 has_trait = forgiving }
+    modifier = { add = -20 skonester_ai_boost_pluralistic_faith_trigger = yes }
+
+    modifier = { add = 85 skonester_ai_boost_has_targeting_faction_trigger = yes }
+    modifier = { add = 95 skonester_ai_boost_high_faction_discontent_trigger = yes }
+    modifier = { add = 95 skonester_ai_boost_targeting_faction_power_ge_minimal_trigger = yes }
+    modifier = { add = 100 skonester_ai_boost_targeting_faction_leader_strong_trigger = yes }
+    modifier = { add = 65 skonester_ai_boost_vassal_opinion_below_20_trigger = yes }
+    modifier = { add = 55 skonester_ai_boost_negative_vassal_opinion_trigger = yes }
+    modifier = { add = 90 skonester_ai_boost_vassal_at_war_with_root_trigger = yes }
+    modifier = { add = 70 skonester_ai_boost_vassal_has_claim_trigger = yes }
+    modifier = { add = 60 skonester_ai_boost_targeting_faction_near_max_discontent_trigger = yes }
+
+    modifier = { add = 75 has_trait = arbitrary }
+
+    modifier = { add = 90 realm_size < 20 }
+    modifier = { add = 60 realm_size > 50 }
+    modifier = { add = 75 skonester_ai_boost_neighbor_realm_stronger_trigger = yes }
+    modifier = { add = 95 skonester_ai_boost_player_blobbing_trigger = yes }
+    modifier = { add = 85 skonester_ai_boost_same_macro_region_as_any_player_trigger = yes }
+    modifier = { add = 70 skonester_ai_boost_player_military_gt_root_trigger = yes }
+
+    modifier = { add = 45 skonester_ai_boost_any_ally_weaker_military_trigger = yes }
+    modifier = { add = 55 skonester_ai_boost_any_ally_capital_dev_ge_15_trigger = yes }
+
+    modifier = { add = 65 has_trait = deceitful }
+    modifier = { add = 55 has_trait = gregarious }
+    modifier = { add = -20 has_trait = shy }
+    modifier = { add = -15 has_trait = arrogant }
+
+    modifier = { add = 50 skonester_ai_boost_direct_vassals_lt_5_trigger = yes }
+    modifier = { add = 60 skonester_ai_boost_nearby_powerful_enemy_at_war_trigger = yes }
+    modifier = { add = 45 skonester_ai_boost_any_player_realm_gt_30_trigger = yes }
+    modifier = { add = 60 skonester_ai_boost_neighbor_rel_power_090_trigger = yes }
+    modifier = { add = 35 skonester_ai_boost_neighbor_rel_power_075_trigger = yes }
+
+    modifier = { add = -30 skonester_ai_boost_all_direct_vassals_opinion_gt_50_trigger = yes }
+  }
+}

@@ -1,0 +1,44 @@
+﻿# 油画「强制结婚」用：临时改信以便 marry / create_betrothal 通过引擎校验（近亲、同性、多信仰等）。仅脚本 set_character_faith 使用。
+skonester_force_marry_religion = {
+  family = rf_pagan
+  graphical_faith = pagan_gfx
+  doctrine = pagan_hostility_doctrine
+  pagan_roots = yes
+
+  doctrine = doctrine_no_head
+  doctrine = doctrine_gender_equal
+  doctrine = doctrine_pluralism_pluralistic
+
+  doctrine = doctrine_concubines
+  doctrine = doctrine_divorce_allowed
+  doctrine = doctrine_bastardry_all
+  doctrine = doctrine_consanguinity_unrestricted
+  doctrine = doctrine_homosexuality_accepted
+  doctrine = doctrine_adultery_men_accepted
+  doctrine = doctrine_adultery_women_accepted
+  doctrine = doctrine_kinslaying_accepted
+  doctrine = doctrine_deviancy_accepted
+  doctrine = doctrine_witchcraft_accepted
+
+  traits = {
+    virtues = { }
+    sins = { }
+  }
+
+  faiths = {
+    skonester_force_marry_faith = {
+      color = { 0.22 0.2 0.24 }
+      icon = messalian
+      reformed_icon = messalian
+
+      # 神职人员否则 can_marry_common_trigger 仍可能否决（与 messalian 等可婚配信仰对齐）
+      doctrine = doctrine_clerical_marriage_allowed
+      doctrine = doctrine_clerical_gender_either
+
+      doctrine = unreformed_faith_doctrine
+      doctrine = tenet_divine_marriage
+      doctrine = tenet_ritual_celebrations
+      doctrine = tenet_natural_primitivism
+    }
+  }
+}

@@ -1,0 +1,67 @@
+﻿window = {
+  name = "skonester_console_helper_window"
+  parentanchor = center
+  position = { 0 0 }
+  size = { 480 280 }
+  layer = top
+  movable = yes
+  alwaystransparent = no
+  filter_mouse = all
+  allow_outside = yes
+  visible = "[GetScriptedGui( 'skonester_console_helper_open_visible' ).IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+  widget = {
+    parentanchor = fill
+    background = {
+      using = Background_Area_Dark
+      alpha = 1.0
+    }
+  }
+
+  vbox = {
+    using = Window_Margins
+    layoutpolicy_horizontal = expanding
+    layoutpolicy_vertical = expanding
+    spacing = 12
+
+    header_pattern = {
+      layoutpolicy_horizontal = expanding
+      blockoverride "header_text" {
+        text = "skonester_console_helper_title"
+      }
+      blockoverride "button_close" {
+        onclick = "[GetScriptedGui('skonester_console_helper_close').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+      }
+    }
+
+    text_single = {
+      layoutpolicy_horizontal = expanding
+      text = "skonester_console_helper_body"
+      autoresize = yes
+    }
+
+    button_standard = {
+      layoutpolicy_horizontal = expanding
+      size = { 0 42 }
+      text = "skonester_console_helper_toggle_debug"
+      tooltip = "skonester_console_helper_toggle_debug_tt"
+      onclick = "[ExecuteConsoleCommand('debug_mode')]"
+    }
+
+    text_single = {
+      layoutpolicy_horizontal = expanding
+      text = "skonester_console_helper_hotkey_hint"
+      default_format = "#low"
+      autoresize = yes
+    }
+
+    hbox = {
+      layoutpolicy_horizontal = expanding
+      button_standard = {
+        layoutpolicy_horizontal = expanding
+        text = "skonester_close"
+        onclick = "[GetScriptedGui('skonester_console_helper_close').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+      }
+    }
+  }
+}

@@ -1,0 +1,1379 @@
+﻿# Ported from advcm_innovation_sgui.txt (#2752613114) — tradition/innovation picker
+
+skonester_cw_military_list = {
+  scope = character
+
+  effect = {
+
+    # Tribal
+
+    add_to_global_variable_list = { name = innovation_menu_tribal_military_list target = flag:_motte}
+    add_to_global_variable_list = { name = innovation_menu_tribal_military_list target = flag:_catapult}
+    add_to_global_variable_list = { name = innovation_menu_tribal_military_list target = flag:_barracks}
+    add_to_global_variable_list = { name = innovation_menu_tribal_military_list target = flag:_mustering_grounds}
+    add_to_global_variable_list = { name = innovation_menu_tribal_military_list target = flag:_bannus}
+    add_to_global_variable_list = { name = innovation_menu_tribal_military_list target = flag:_quilted_armor}
+
+    # Early Medieval
+
+    add_to_global_variable_list = { name = innovation_menu_early_medieval_military_list target = flag:_battlements}
+    add_to_global_variable_list = { name = innovation_menu_early_medieval_military_list target = flag:_mangonel}
+    add_to_global_variable_list = { name = innovation_menu_early_medieval_military_list target = flag:_burhs}
+    add_to_global_variable_list = { name = innovation_menu_early_medieval_military_list target = flag:_house_soldiers}
+    add_to_global_variable_list = { name = innovation_menu_early_medieval_military_list target = flag:_horseshoes}
+    add_to_global_variable_list = { name = innovation_menu_early_medieval_military_list target = flag:_arched_saddle}
+
+    # High Medieval
+
+    add_to_global_variable_list = { name = innovation_menu_high_medieval_military_list target = flag:_hoardings}
+    add_to_global_variable_list = { name = innovation_menu_high_medieval_military_list target = flag:_trebuchet}
+    add_to_global_variable_list = { name = innovation_menu_high_medieval_military_list target = flag:_castle_baileys}
+    add_to_global_variable_list = { name = innovation_menu_high_medieval_military_list target = flag:_men_at_arms}
+    add_to_global_variable_list = { name = innovation_menu_high_medieval_military_list target = flag:_knighthood}
+    add_to_global_variable_list = { name = innovation_menu_high_medieval_military_list target = flag:_advanced_bowmaking}
+
+    # Late Medieval
+
+    add_to_global_variable_list = { name = innovation_menu_late_medieval_military_list target = flag:_machicolations}
+    add_to_global_variable_list = { name = innovation_menu_late_medieval_military_list target = flag:_bombard}
+    add_to_global_variable_list = { name = innovation_menu_late_medieval_military_list target = flag:_royal_armory}
+    add_to_global_variable_list = { name = innovation_menu_late_medieval_military_list target = flag:_standing_armies}
+    add_to_global_variable_list = { name = innovation_menu_late_medieval_military_list target = flag:_sappers}
+    add_to_global_variable_list = { name = innovation_menu_late_medieval_military_list target = flag:_plate_armor}
+  }
+}
+
+skonester_cw_civic_list = {
+
+  scope = character
+
+  effect = {
+
+    # Tribal
+    add_to_global_variable_list = { name = innovation_menu_tribal_civic_list target = flag:_development_01}
+    add_to_global_variable_list = { name = innovation_menu_tribal_civic_list target = flag:_currency_01}
+    add_to_global_variable_list = { name = innovation_menu_tribal_civic_list target = flag:_gavelkind}
+    add_to_global_variable_list = { name = innovation_menu_tribal_civic_list target = flag:_crop_rotation}
+    add_to_global_variable_list = { name = innovation_menu_tribal_civic_list target = flag:_city_planning}
+    add_to_global_variable_list = { name = innovation_menu_tribal_civic_list target = flag:_casus_belli}
+    add_to_global_variable_list = { name = innovation_menu_tribal_civic_list target = flag:_plenary_assemblies}
+    add_to_global_variable_list = { name = innovation_menu_tribal_civic_list target = flag:_ledger}
+
+    # Early Medieval
+
+    add_to_global_variable_list = { name = innovation_menu_early_medieval_civic_list target = flag:_hereditary_rule}
+    add_to_global_variable_list = { name = innovation_menu_early_medieval_civic_list target = flag:_manorialism}
+    add_to_global_variable_list = { name = innovation_menu_early_medieval_civic_list target = flag:_development_02}
+    add_to_global_variable_list = { name = innovation_menu_early_medieval_civic_list target = flag:_currency_02}
+    add_to_global_variable_list = { name = innovation_menu_early_medieval_civic_list target = flag:_royal_prerogative}
+    add_to_global_variable_list = { name = innovation_menu_early_medieval_civic_list target = flag:_chronicle_writing}
+    add_to_global_variable_list = { name = innovation_menu_early_medieval_civic_list target = flag:_armilary_sphere}
+    add_to_global_variable_list = { name = innovation_menu_early_medieval_civic_list target = flag:_baliffs}
+
+    # High Medieval
+
+    add_to_global_variable_list = { name = innovation_menu_high_medieval_civic_list target = flag:_heraldry}
+    add_to_global_variable_list = { name = innovation_menu_high_medieval_civic_list target = flag:_windmills}
+    add_to_global_variable_list = { name = innovation_menu_high_medieval_civic_list target = flag:_divine_right}
+    add_to_global_variable_list = { name = innovation_menu_high_medieval_civic_list target = flag:_land_grants}
+    add_to_global_variable_list = { name = innovation_menu_high_medieval_civic_list target = flag:_scutage}
+    add_to_global_variable_list = { name = innovation_menu_high_medieval_civic_list target = flag:_guilds}
+    add_to_global_variable_list = { name = innovation_menu_high_medieval_civic_list target = flag:_development_03}
+    add_to_global_variable_list = { name = innovation_menu_high_medieval_civic_list target = flag:_currency_03}
+
+    # Late Medieval
+
+    add_to_global_variable_list = { name = innovation_menu_late_medieval_civic_list target = flag:_primogeniture}
+    add_to_global_variable_list = { name = innovation_menu_late_medieval_civic_list target = flag:_cranes}
+    add_to_global_variable_list = { name = innovation_menu_late_medieval_civic_list target = flag:_noblesse_oblige}
+    add_to_global_variable_list = { name = innovation_menu_late_medieval_civic_list target = flag:_rightful_ownership}
+    add_to_global_variable_list = { name = innovation_menu_late_medieval_civic_list target = flag:_ermine_cloaks}
+    add_to_global_variable_list = { name = innovation_menu_late_medieval_civic_list target = flag:_court_officials}
+    add_to_global_variable_list = { name = innovation_menu_late_medieval_civic_list target = flag:_development_04}
+    add_to_global_variable_list = { name = innovation_menu_late_medieval_civic_list target = flag:_currency_04}
+  }
+}
+
+skonester_cw_regional_list = {
+
+  scope = character
+
+  effect = {
+
+    # Tribal
+
+    add_to_global_variable_list = { name = innovation_menu_tribal_regional_list target = flag:_caballeros}
+    add_to_global_variable_list = { name = innovation_menu_tribal_regional_list target = flag:_bamboo_bows}
+    add_to_global_variable_list = { name = innovation_menu_tribal_regional_list target = flag:_sahel_horsemen}
+    add_to_global_variable_list = { name = innovation_menu_tribal_regional_list target = flag:_repeating_crossbow}
+    add_to_global_variable_list = { name = innovation_menu_tribal_regional_list target = flag:_pole_vault}
+    add_to_global_variable_list = { name = innovation_menu_tribal_regional_list target = flag:_table_of_princes}
+    add_to_global_variable_list = { name = innovation_menu_tribal_regional_list target = flag:_longboats}
+    add_to_global_variable_list = { name = innovation_menu_tribal_regional_list target = flag:_elephantry}
+    add_to_global_variable_list = { name = innovation_menu_tribal_regional_list target = flag:_war_camels}
+    add_to_global_variable_list = { name = innovation_menu_tribal_regional_list target = flag:_wootz_steel}
+    add_to_global_variable_list = { name = innovation_menu_tribal_regional_list target = flag:_african_canoes}
+    if = {
+      limit = {
+        has_fp1_dlc_trigger = yes
+      }
+      add_to_global_variable_list = { name = innovation_menu_tribal_regional_list target = flag:_varangian_adventurers}
+      add_to_global_variable_list = { name = innovation_menu_tribal_regional_list target = flag:_all_things}
+    }
+
+    # Early Medieval
+
+    add_to_global_variable_list = { name = innovation_menu_early_medieval_regional_list target = flag:_reconquista}
+    add_to_global_variable_list = { name = innovation_menu_early_medieval_regional_list target = flag:_stem_duchies}
+    add_to_global_variable_list = { name = innovation_menu_early_medieval_regional_list target = flag:_ghilman}
+    if = {
+      limit = {
+        has_fp3_dlc_trigger = yes
+      }
+      add_to_global_variable_list = { name = innovation_menu_early_medieval_regional_list target = flag:_mural_sextant}
+    }
+
+    # High Medieval
+
+
+    add_to_global_variable_list = { name = innovation_menu_high_medieval_regional_list target = flag:_pike_columns}
+    add_to_global_variable_list = { name = innovation_menu_high_medieval_regional_list target = flag:_desert_tactics}
+    add_to_global_variable_list = { name = innovation_menu_high_medieval_regional_list target = flag:_hobbies}
+    add_to_global_variable_list = { name = innovation_menu_high_medieval_regional_list target = flag:_sarawit}
+    add_to_global_variable_list = { name = innovation_menu_high_medieval_regional_list target = flag:_east_settling}
+    add_to_global_variable_list = { name = innovation_menu_high_medieval_regional_list target = flag:_seigneurialism}
+    add_to_global_variable_list = { name = innovation_menu_high_medieval_regional_list target = flag:_muladi}
+    add_to_global_variable_list = { name = innovation_menu_high_medieval_regional_list target = flag:_french_peerage}
+    add_to_global_variable_list = { name = innovation_menu_high_medieval_regional_list target = flag:_sanitation}
+
+    # Late Medieval
+
+    if = {
+      limit = {
+        has_fp3_dlc_trigger = yes
+      }
+      add_to_global_variable_list = { name = innovation_menu_late_medieval_regional_list target = flag:_fritware}
+    }
+
+    add_to_global_variable_list = { name = innovation_menu_late_medieval_regional_list target = flag:_zweihanders}
+    add_to_global_variable_list = { name = innovation_menu_late_medieval_regional_list target = flag:_adaptive_militia}
+    add_to_global_variable_list = { name = innovation_menu_late_medieval_regional_list target = flag:_valets}
+    add_to_global_variable_list = { name = innovation_menu_late_medieval_regional_list target = flag:_legionnaires}
+    add_to_global_variable_list = { name = innovation_menu_late_medieval_regional_list target = flag:_rectilinear_schiltron}
+    add_to_global_variable_list = { name = innovation_menu_late_medieval_regional_list target = flag:_wierdijks}
+    add_to_global_variable_list = { name = innovation_menu_late_medieval_regional_list target = flag:_condottieri}
+    add_to_global_variable_list = { name = innovation_menu_late_medieval_regional_list target = flag:_deccan_unity}
+  }
+}
+
+
+skonester_cw_military_check = {
+  scope = culture
+  saved_scopes = { inno_flag }
+
+  is_valid = {
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_motte}
+      has_innovation = innovation_motte
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_catapult}
+      has_innovation = innovation_catapult
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_barracks}
+      has_innovation = innovation_barracks
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_mustering_grounds}
+      has_innovation = innovation_mustering_grounds
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_bannus}
+      has_innovation = innovation_bannus
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_quilted_armor}
+      has_innovation = innovation_quilted_armor
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_battlements}
+      has_innovation = innovation_battlements
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_mangonel}
+      has_innovation = innovation_mangonel
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_burhs}
+      has_innovation = innovation_burhs
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_house_soldiers}
+      has_innovation = innovation_house_soldiers
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_horseshoes}
+      has_innovation = innovation_horseshoes
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_arched_saddle}
+      has_innovation = innovation_arched_saddle
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_hoardings}
+      has_innovation = innovation_hoardings
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_trebuchet}
+      has_innovation = innovation_trebuchet
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_castle_baileys}
+      has_innovation = innovation_castle_baileys
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_men_at_arms}
+      has_innovation = innovation_men_at_arms
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_knighthood}
+      has_innovation = innovation_knighthood
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_advanced_bowmaking}
+      has_innovation = innovation_advanced_bowmaking
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_machicolations}
+      has_innovation = innovation_machicolations
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_bombard}
+      has_innovation = innovation_bombard
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_royal_armory}
+      has_innovation = innovation_royal_armory
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_standing_armies}
+      has_innovation = innovation_standing_armies
+    }
+
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_sappers}
+      has_innovation = innovation_sappers
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_plate_armor}
+      has_innovation = innovation_plate_armor
+    }
+
+
+  }
+}
+
+skonester_cw_civic_check = {
+  scope = culture
+  saved_scopes = { inno_flag }
+
+  is_valid = {
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_development_01}
+      has_innovation = innovation_development_01
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_currency_01}
+      has_innovation = innovation_currency_01
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_gavelkind}
+      has_innovation = innovation_gavelkind
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_crop_rotation}
+      has_innovation = innovation_crop_rotation
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_city_planning}
+      has_innovation = innovation_city_planning
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_casus_belli}
+      has_innovation = innovation_casus_belli
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_plenary_assemblies}
+      has_innovation = innovation_plenary_assemblies
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_ledger}
+      has_innovation = innovation_ledger
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_hereditary_rule}
+      has_innovation = innovation_hereditary_rule
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_manorialism}
+      has_innovation = innovation_manorialism
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_development_02}
+      has_innovation = innovation_development_02
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_currency_02}
+      has_innovation = innovation_currency_02
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_royal_prerogative}
+      has_innovation = innovation_royal_prerogative
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_chronicle_writing}
+      has_innovation = innovation_chronicle_writing
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_armilary_sphere}
+      has_innovation = innovation_armilary_sphere
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_baliffs}
+      has_innovation = innovation_baliffs
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_heraldry}
+      has_innovation = innovation_heraldry
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_windmills}
+      has_innovation = innovation_windmills
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_divine_right}
+      has_innovation = innovation_divine_right
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_land_grants}
+      has_innovation = innovation_land_grants
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_scutage}
+      has_innovation = innovation_scutage
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_guilds }
+      has_innovation = innovation_guilds
+    }
+
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_development_03}
+      has_innovation = innovation_development_03
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_currency_03}
+      has_innovation = innovation_currency_03
+    }
+
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_primogeniture }
+      has_innovation = innovation_primogeniture
+    }
+
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_cranes }
+      has_innovation = innovation_cranes
+    }
+
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_noblesse_oblige}
+      has_innovation = innovation_noblesse_oblige
+    }
+
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_rightful_ownership }
+      has_innovation = innovation_rightful_ownership
+    }
+
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_ermine_cloaks }
+      has_innovation = innovation_ermine_cloaks
+    }
+
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_court_officials }
+      has_innovation = innovation_court_officials
+    }
+
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_development_04 }
+      has_innovation = innovation_development_04
+    }
+
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_currency_04}
+      has_innovation = innovation_currency_04
+    }
+
+  }
+}
+
+skonester_cw_regional_check = {
+  scope = culture
+  saved_scopes = { inno_flag }
+
+  is_valid = {
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_caballeros}
+      has_innovation = innovation_caballeros
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_bamboo_bows}
+      has_innovation = innovation_bamboo_bows
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_sahel_horsemen}
+      has_innovation = innovation_sahel_horsemen
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_repeating_crossbow}
+      has_innovation = innovation_repeating_crossbow
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_pole_vault}
+      has_innovation = innovation_pole_vault
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_table_of_princes}
+      has_innovation = innovation_table_of_princes
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_longboats}
+      has_innovation = innovation_longboats
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_elephantry}
+      has_innovation = innovation_elephantry
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_war_camels}
+      has_innovation = innovation_war_camels
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_wootz_steel}
+      has_innovation = innovation_wootz_steel
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_african_canoes}
+      has_innovation = innovation_african_canoes
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_varangian_adventurers}
+      has_innovation = innovation_varangian_adventurers
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_all_things}
+      has_innovation = innovation_all_things
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_reconquista}
+      has_innovation = innovation_reconquista
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_stem_duchies}
+      has_innovation = innovation_stem_duchies
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_ghilman}
+      has_innovation = innovation_ghilman
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_mural_sextant}
+      has_innovation = fp3_innovation_mural_sextant
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_pike_columns}
+      has_innovation = innovation_pike_columns
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_desert_tactics}
+      has_innovation = innovation_desert_tactics
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_hobbies}
+      has_innovation = innovation_hobbies
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_sarawit}
+      has_innovation = innovation_sarawit
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_east_settling }
+      has_innovation = innovation_east_settling
+    }
+
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_seigneurialism}
+      has_innovation = innovation_seigneurialism
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_muladi}
+      has_innovation = innovation_muladi
+    }
+
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_french_peerage }
+      has_innovation = innovation_french_peerage
+    }
+
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_sanitation }
+      has_innovation = innovation_sanitation
+    }
+
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_fritware}
+      has_innovation = fp3_innovation_fritware
+    }
+
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_zweihanders }
+      has_innovation = innovation_zweihanders
+    }
+
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_adaptive_militia }
+      has_innovation = innovation_adaptive_militia
+    }
+
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_valets }
+      has_innovation = innovation_valets
+    }
+
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_legionnaires }
+      has_innovation = innovation_legionnaires
+    }
+
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_rectilinear_schiltron}
+      has_innovation = innovation_rectilinear_schiltron
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_wierdijks}
+      has_innovation = innovation_wierdijks
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_condottieri}
+      has_innovation = innovation_condottieri
+    }
+    trigger_if = {
+      limit = { scope:inno_flag = flag:_deccan_unity}
+      has_innovation = innovation_deccan_unity
+    }
+
+  }
+}
+
+skonester_cw_add_innovation = {
+  scope = character
+
+  saved_scopes = { inno_flag }
+
+  effect = {
+    var:skonester_selected_culture_var = {
+
+      if = {
+        limit = { scope:inno_flag = flag:_motte}
+        add_innovation = innovation_motte
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_catapult}
+        add_innovation = innovation_catapult
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_barracks}
+        add_innovation = innovation_barracks
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_mustering_grounds}
+        add_innovation = innovation_mustering_grounds
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_bannus}
+        add_innovation = innovation_bannus
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_quilted_armor}
+        add_innovation = innovation_quilted_armor
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_battlements}
+        add_innovation = innovation_battlements
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_mangonel}
+        add_innovation = innovation_mangonel
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_burhs}
+        add_innovation = innovation_burhs
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_house_soldiers}
+        add_innovation = innovation_house_soldiers
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_horseshoes}
+        add_innovation = innovation_horseshoes
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_arched_saddle}
+        add_innovation = innovation_arched_saddle
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_hoardings}
+        add_innovation = innovation_hoardings
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_trebuchet}
+        add_innovation = innovation_trebuchet
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_castle_baileys}
+        add_innovation = innovation_castle_baileys
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_men_at_arms}
+        add_innovation = innovation_men_at_arms
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_knighthood}
+        add_innovation = innovation_knighthood
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_advanced_bowmaking}
+        add_innovation = innovation_advanced_bowmaking
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_machicolations}
+        add_innovation = innovation_machicolations
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_bombard}
+        add_innovation = innovation_bombard
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_royal_armory}
+        add_innovation = innovation_royal_armory
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_standing_armies}
+        add_innovation = innovation_standing_armies
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_sappers}
+        add_innovation = innovation_sappers
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_plate_armor}
+        add_innovation = innovation_plate_armor
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_development_01}
+        add_innovation = innovation_development_01
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_currency_01}
+        add_innovation = innovation_currency_01
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_gavelkind}
+        add_innovation = innovation_gavelkind
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_crop_rotation}
+        add_innovation = innovation_crop_rotation
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_city_planning}
+        add_innovation = innovation_city_planning
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_casus_belli}
+        add_innovation = innovation_casus_belli
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_plenary_assemblies}
+        add_innovation = innovation_plenary_assemblies
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_ledger}
+        add_innovation = innovation_ledger
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_hereditary_rule}
+        add_innovation = innovation_hereditary_rule
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_manorialism}
+        add_innovation = innovation_manorialism
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_development_02}
+        add_innovation = innovation_development_02
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_currency_02}
+        add_innovation = innovation_currency_02
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_royal_prerogative}
+        add_innovation = innovation_royal_prerogative
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_chronicle_writing}
+        add_innovation = innovation_chronicle_writing
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_armilary_sphere}
+        add_innovation = innovation_armilary_sphere
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_baliffs}
+        add_innovation = innovation_baliffs
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_heraldry}
+        add_innovation = innovation_heraldry
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_windmills}
+        add_innovation = innovation_windmills
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_divine_right}
+        add_innovation = innovation_divine_right
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_land_grants}
+        add_innovation = innovation_land_grants
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_scutage}
+        add_innovation = innovation_scutage
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_guilds }
+        add_innovation = innovation_guilds
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_development_03}
+        add_innovation = innovation_development_03
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_currency_03}
+        add_innovation = innovation_currency_03
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_primogeniture }
+        add_innovation = innovation_primogeniture
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_cranes }
+        add_innovation = innovation_cranes
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_noblesse_oblige}
+        add_innovation = innovation_noblesse_oblige
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_rightful_ownership }
+        add_innovation = innovation_rightful_ownership
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_ermine_cloaks }
+        add_innovation = innovation_ermine_cloaks
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_court_officials }
+        add_innovation = innovation_court_officials
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_development_04 }
+        add_innovation = innovation_development_04
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_currency_04}
+        add_innovation = innovation_currency_04
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_caballeros}
+        add_innovation = innovation_caballeros
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_bamboo_bows}
+        add_innovation = innovation_bamboo_bows
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_sahel_horsemen}
+        add_innovation = innovation_sahel_horsemen
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_repeating_crossbow}
+        add_innovation = innovation_repeating_crossbow
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_pole_vault}
+        add_innovation = innovation_pole_vault
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_table_of_princes}
+        add_innovation = innovation_table_of_princes
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_longboats}
+        add_innovation = innovation_longboats
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_elephantry}
+        add_innovation = innovation_elephantry
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_war_camels}
+        add_innovation = innovation_war_camels
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_wootz_steel}
+        add_innovation = innovation_wootz_steel
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_african_canoes}
+        add_innovation = innovation_african_canoes
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_varangian_adventurers}
+        add_innovation = innovation_varangian_adventurers
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_all_things}
+        add_innovation = innovation_all_things
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_reconquista}
+        add_innovation = innovation_reconquista
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_stem_duchies}
+        add_innovation = innovation_stem_duchies
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_ghilman}
+        add_innovation = innovation_ghilman
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_mural_sextant}
+        add_innovation = fp3_innovation_mural_sextant
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_pike_columns}
+        add_innovation = innovation_pike_columns
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_desert_tactics}
+        add_innovation = innovation_desert_tactics
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_hobbies}
+        add_innovation = innovation_hobbies
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_sarawit}
+        add_innovation = innovation_sarawit
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_east_settling }
+        add_innovation = innovation_east_settling
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_seigneurialism}
+        add_innovation = innovation_seigneurialism
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_muladi}
+        add_innovation = innovation_muladi
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_french_peerage }
+        add_innovation = innovation_french_peerage
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_sanitation }
+        add_innovation = innovation_sanitation
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_fritware}
+        add_innovation = fp3_innovation_fritware
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_zweihanders }
+        add_innovation = innovation_zweihanders
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_adaptive_militia }
+        add_innovation = innovation_adaptive_militia
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_valets }
+        add_innovation = innovation_valets
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_legionnaires }
+        add_innovation = innovation_legionnaires
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_rectilinear_schiltron}
+        add_innovation = innovation_rectilinear_schiltron
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_wierdijks}
+        add_innovation = innovation_wierdijks
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_condottieri}
+        add_innovation = innovation_condottieri
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_deccan_unity}
+        add_innovation = innovation_deccan_unity
+      }
+    }
+  }
+}
+
+skonester_cw_remove_innovation = {
+  scope = character
+
+  saved_scopes = { inno_flag }
+
+  effect = {
+    var:skonester_selected_culture_var = {
+
+      if = {
+        limit = { scope:inno_flag = flag:_motte}
+        remove_innovation = innovation_motte
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_catapult}
+        remove_innovation = innovation_catapult
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_barracks}
+        remove_innovation = innovation_barracks
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_mustering_grounds}
+        remove_innovation = innovation_mustering_grounds
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_bannus}
+        remove_innovation = innovation_bannus
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_quilted_armor}
+        remove_innovation = innovation_quilted_armor
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_battlements}
+        remove_innovation = innovation_battlements
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_mangonel}
+        remove_innovation = innovation_mangonel
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_burhs}
+        remove_innovation = innovation_burhs
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_house_soldiers}
+        remove_innovation = innovation_house_soldiers
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_horseshoes}
+        remove_innovation = innovation_horseshoes
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_arched_saddle}
+        remove_innovation = innovation_arched_saddle
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_hoardings}
+        remove_innovation = innovation_hoardings
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_trebuchet}
+        remove_innovation = innovation_trebuchet
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_castle_baileys}
+        remove_innovation = innovation_castle_baileys
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_men_at_arms}
+        remove_innovation = innovation_men_at_arms
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_knighthood}
+        remove_innovation = innovation_knighthood
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_advanced_bowmaking}
+        remove_innovation = innovation_advanced_bowmaking
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_machicolations}
+        remove_innovation = innovation_machicolations
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_bombard}
+        remove_innovation = innovation_bombard
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_royal_armory}
+        remove_innovation = innovation_royal_armory
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_standing_armies}
+        remove_innovation = innovation_standing_armies
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_sappers}
+        remove_innovation = innovation_sappers
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_plate_armor}
+        remove_innovation = innovation_plate_armor
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_development_01}
+        remove_innovation = innovation_development_01
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_currency_01}
+        remove_innovation = innovation_currency_01
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_gavelkind}
+        remove_innovation = innovation_gavelkind
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_crop_rotation}
+        remove_innovation = innovation_crop_rotation
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_city_planning}
+        remove_innovation = innovation_city_planning
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_casus_belli}
+        remove_innovation = innovation_casus_belli
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_plenary_assemblies}
+        remove_innovation = innovation_plenary_assemblies
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_ledger}
+        remove_innovation = innovation_ledger
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_hereditary_rule}
+        remove_innovation = innovation_hereditary_rule
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_manorialism}
+        remove_innovation = innovation_manorialism
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_development_02}
+        remove_innovation = innovation_development_02
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_currency_02}
+        remove_innovation = innovation_currency_02
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_royal_prerogative}
+        remove_innovation = innovation_royal_prerogative
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_chronicle_writing}
+        remove_innovation = innovation_chronicle_writing
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_armilary_sphere}
+        remove_innovation = innovation_armilary_sphere
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_baliffs}
+        remove_innovation = innovation_baliffs
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_heraldry}
+        remove_innovation = innovation_heraldry
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_windmills}
+        remove_innovation = innovation_windmills
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_divine_right}
+        remove_innovation = innovation_divine_right
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_land_grants}
+        remove_innovation = innovation_land_grants
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_scutage}
+        remove_innovation = innovation_scutage
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_guilds }
+        remove_innovation = innovation_guilds
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_development_03}
+        remove_innovation = innovation_development_03
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_currency_03}
+        remove_innovation = innovation_currency_03
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_primogeniture }
+        remove_innovation = innovation_primogeniture
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_cranes }
+        remove_innovation = innovation_cranes
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_noblesse_oblige}
+        remove_innovation = innovation_noblesse_oblige
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_rightful_ownership }
+        remove_innovation = innovation_rightful_ownership
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_ermine_cloaks }
+        remove_innovation = innovation_ermine_cloaks
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_court_officials }
+        remove_innovation = innovation_court_officials
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_development_04 }
+        remove_innovation = innovation_development_04
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_currency_04}
+        remove_innovation = innovation_currency_04
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_caballeros}
+        remove_innovation = innovation_caballeros
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_bamboo_bows}
+        remove_innovation = innovation_bamboo_bows
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_sahel_horsemen}
+        remove_innovation = innovation_sahel_horsemen
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_repeating_crossbow}
+        remove_innovation = innovation_repeating_crossbow
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_pole_vault}
+        remove_innovation = innovation_pole_vault
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_table_of_princes}
+        remove_innovation = innovation_table_of_princes
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_longboats}
+        remove_innovation = innovation_longboats
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_elephantry}
+        remove_innovation = innovation_elephantry
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_war_camels}
+        remove_innovation = innovation_war_camels
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_wootz_steel}
+        remove_innovation = innovation_wootz_steel
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_african_canoes}
+        remove_innovation = innovation_african_canoes
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_varangian_adventurers}
+        remove_innovation = innovation_varangian_adventurers
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_all_things}
+        remove_innovation = innovation_all_things
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_reconquista}
+        remove_innovation = innovation_reconquista
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_stem_duchies}
+        remove_innovation = innovation_stem_duchies
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_ghilman}
+        remove_innovation = innovation_ghilman
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_mural_sextant}
+        remove_innovation = fp3_innovation_mural_sextant
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_pike_columns}
+        remove_innovation = innovation_pike_columns
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_desert_tactics}
+        remove_innovation = innovation_desert_tactics
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_hobbies}
+        remove_innovation = innovation_hobbies
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_sarawit}
+        remove_innovation = innovation_sarawit
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_east_settling }
+        remove_innovation = innovation_east_settling
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_seigneurialism}
+        remove_innovation = innovation_seigneurialism
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_muladi}
+        remove_innovation = innovation_muladi
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_french_peerage }
+        remove_innovation = innovation_french_peerage
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_sanitation }
+        remove_innovation = innovation_sanitation
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_fritware}
+        remove_innovation = fp3_innovation_fritware
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_zweihanders }
+        remove_innovation = innovation_zweihanders
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_adaptive_militia }
+        remove_innovation = innovation_adaptive_militia
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_valets }
+        remove_innovation = innovation_valets
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_legionnaires }
+        remove_innovation = innovation_legionnaires
+      }
+
+      if = {
+        limit = { scope:inno_flag = flag:_rectilinear_schiltron}
+        remove_innovation = innovation_rectilinear_schiltron
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_wierdijks}
+        remove_innovation = innovation_wierdijks
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_condottieri}
+        remove_innovation = innovation_condottieri
+      }
+      if = {
+        limit = { scope:inno_flag = flag:_deccan_unity}
+        remove_innovation = innovation_deccan_unity
+      }
+    }
+  }
+}
+
+skonester_cw_build_innovation_list_check = {
+  scope = character
+
+  is_valid = {
+    exists = global_var:innovation_menu_tribal_military_list
+  }
+}

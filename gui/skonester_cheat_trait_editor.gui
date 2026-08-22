@@ -1,0 +1,564 @@
+﻿# AUTO-GENERATED — tools/gen_cheat_trait_gui.py
+# 自制特质：单列表滚动
+
+window = {
+  name = "skonester_cheat_trait_editor_window"
+  parentanchor = center
+  position = { 0 0 }
+  size = { 720 640 }
+  layer = top
+  filter_mouse = all
+  allow_outside = no
+  alwaystransparent = no
+  movable = yes
+
+  widget = {
+    parentanchor = fill
+    size = { 100% 100% }
+    background = {
+      using = Background_Area_Dark
+      alpha = 1.0
+    }
+  }
+
+  datacontext = "[GetPlayer]"
+
+  visible = "[GetScriptedGui('skonester_cheat_trait_gui_visible').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+
+  vbox = {
+    using = Window_Margins
+    layoutpolicy_horizontal = expanding
+    layoutpolicy_vertical = expanding
+    spacing = 6
+
+    header_pattern = {
+      layoutpolicy_horizontal = expanding
+      blockoverride "header_text" {
+        text = "skonester_cheat_trait_gui_window_title"
+      }
+      blockoverride "button_close" {
+        onclick = "[GetScriptedGui('skonester_cheat_trait_gui_close').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+      }
+    }
+
+    hbox = {
+      layoutpolicy_horizontal = expanding
+      spacing = 10
+      margin = { 4 0 }
+
+      portrait_head_small = {
+        datacontext = "[GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char]"
+      }
+
+      text_single = {
+        layoutpolicy_horizontal = expanding
+        text = "[GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.GetShortUINameNoTooltip]"
+        default_format = "#high"
+        align = left|nobaseline
+        autoresize = yes
+      }
+    }
+
+    scrollbox = {
+      layoutpolicy_horizontal = expanding
+      layoutpolicy_vertical = expanding
+
+      blockoverride "scrollbox_content" {
+        vbox = {
+          layoutpolicy_horizontal = expanding
+          spacing = 4
+            button_standard_hover = {
+              layoutpolicy_horizontal = expanding
+              size = { 0 38 }
+              datacontext = "[GetTrait('skonester_trait_immortal_ageless')]"
+              datacontext = "[GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char]"
+              down = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_immortal_ageless')).End)]"
+              onclick = "[GetScriptedGui('skonester_cheat_trait_gui_toggle').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_immortal_ageless')).End)]"
+              tooltipwidget = {
+                using = character_trait_tooltip
+              }
+              hbox = {
+                margin = { 8 0 }
+                spacing = 8
+                icon = {
+                  size = { 28 28 }
+                  texture = "[GetTrait('skonester_trait_immortal_ageless').GetIcon(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                }
+                text_single = {
+                  layoutpolicy_horizontal = expanding
+                  text = "[GetTrait('skonester_trait_immortal_ageless').GetName(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                  default_format = "#clickable"
+                  autoresize = no
+                }
+                text_single = {
+                  visible = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_immortal_ageless')).End)]"
+                  text = "skonester_cheat_menu_trait_minus"
+                  default_format = "#N"
+                }
+                text_single = {
+                  visible = "[Not(GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_immortal_ageless')).End))]"
+                  text = "skonester_cheat_menu_trait_plus"
+                  default_format = "#P"
+                }
+              }
+            }
+            button_standard_hover = {
+              layoutpolicy_horizontal = expanding
+              size = { 0 38 }
+              datacontext = "[GetTrait('trait_warlord_eternal')]"
+              datacontext = "[GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char]"
+              down = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('trait_warlord_eternal')).End)]"
+              onclick = "[GetScriptedGui('skonester_cheat_trait_gui_toggle').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('trait_flag', MakeScopeFlag('trait_warlord_eternal')).End)]"
+              tooltipwidget = {
+                using = character_trait_tooltip
+              }
+              hbox = {
+                margin = { 8 0 }
+                spacing = 8
+                icon = {
+                  size = { 28 28 }
+                  texture = "[GetTrait('trait_warlord_eternal').GetIcon(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                }
+                text_single = {
+                  layoutpolicy_horizontal = expanding
+                  text = "[GetTrait('trait_warlord_eternal').GetName(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                  default_format = "#clickable"
+                  autoresize = no
+                }
+                text_single = {
+                  visible = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('trait_warlord_eternal')).End)]"
+                  text = "skonester_cheat_menu_trait_minus"
+                  default_format = "#N"
+                }
+                text_single = {
+                  visible = "[Not(GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('trait_warlord_eternal')).End))]"
+                  text = "skonester_cheat_menu_trait_plus"
+                  default_format = "#P"
+                }
+              }
+            }
+            button_standard_hover = {
+              layoutpolicy_horizontal = expanding
+              size = { 0 38 }
+              datacontext = "[GetTrait('trait_wealth_sovereign_max')]"
+              datacontext = "[GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char]"
+              down = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('trait_wealth_sovereign_max')).End)]"
+              onclick = "[GetScriptedGui('skonester_cheat_trait_gui_toggle').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('trait_flag', MakeScopeFlag('trait_wealth_sovereign_max')).End)]"
+              tooltipwidget = {
+                using = character_trait_tooltip
+              }
+              hbox = {
+                margin = { 8 0 }
+                spacing = 8
+                icon = {
+                  size = { 28 28 }
+                  texture = "[GetTrait('trait_wealth_sovereign_max').GetIcon(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                }
+                text_single = {
+                  layoutpolicy_horizontal = expanding
+                  text = "[GetTrait('trait_wealth_sovereign_max').GetName(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                  default_format = "#clickable"
+                  autoresize = no
+                }
+                text_single = {
+                  visible = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('trait_wealth_sovereign_max')).End)]"
+                  text = "skonester_cheat_menu_trait_minus"
+                  default_format = "#N"
+                }
+                text_single = {
+                  visible = "[Not(GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('trait_wealth_sovereign_max')).End))]"
+                  text = "skonester_cheat_menu_trait_plus"
+                  default_format = "#P"
+                }
+              }
+            }
+            button_standard_hover = {
+              layoutpolicy_horizontal = expanding
+              size = { 0 38 }
+              datacontext = "[GetTrait('trait_ultimate_intrigue_master')]"
+              datacontext = "[GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char]"
+              down = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('trait_ultimate_intrigue_master')).End)]"
+              onclick = "[GetScriptedGui('skonester_cheat_trait_gui_toggle').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('trait_flag', MakeScopeFlag('trait_ultimate_intrigue_master')).End)]"
+              tooltipwidget = {
+                using = character_trait_tooltip
+              }
+              hbox = {
+                margin = { 8 0 }
+                spacing = 8
+                icon = {
+                  size = { 28 28 }
+                  texture = "[GetTrait('trait_ultimate_intrigue_master').GetIcon(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                }
+                text_single = {
+                  layoutpolicy_horizontal = expanding
+                  text = "[GetTrait('trait_ultimate_intrigue_master').GetName(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                  default_format = "#clickable"
+                  autoresize = no
+                }
+                text_single = {
+                  visible = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('trait_ultimate_intrigue_master')).End)]"
+                  text = "skonester_cheat_menu_trait_minus"
+                  default_format = "#N"
+                }
+                text_single = {
+                  visible = "[Not(GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('trait_ultimate_intrigue_master')).End))]"
+                  text = "skonester_cheat_menu_trait_plus"
+                  default_format = "#P"
+                }
+              }
+            }
+            button_standard_hover = {
+              layoutpolicy_horizontal = expanding
+              size = { 0 38 }
+              datacontext = "[GetTrait('trait_great_builder_god')]"
+              datacontext = "[GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char]"
+              down = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('trait_great_builder_god')).End)]"
+              onclick = "[GetScriptedGui('skonester_cheat_trait_gui_toggle').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('trait_flag', MakeScopeFlag('trait_great_builder_god')).End)]"
+              tooltipwidget = {
+                using = character_trait_tooltip
+              }
+              hbox = {
+                margin = { 8 0 }
+                spacing = 8
+                icon = {
+                  size = { 28 28 }
+                  texture = "[GetTrait('trait_great_builder_god').GetIcon(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                }
+                text_single = {
+                  layoutpolicy_horizontal = expanding
+                  text = "[GetTrait('trait_great_builder_god').GetName(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                  default_format = "#clickable"
+                  autoresize = no
+                }
+                text_single = {
+                  visible = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('trait_great_builder_god')).End)]"
+                  text = "skonester_cheat_menu_trait_minus"
+                  default_format = "#N"
+                }
+                text_single = {
+                  visible = "[Not(GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('trait_great_builder_god')).End))]"
+                  text = "skonester_cheat_menu_trait_plus"
+                  default_format = "#P"
+                }
+              }
+            }
+            button_standard_hover = {
+              layoutpolicy_horizontal = expanding
+              size = { 0 38 }
+              datacontext = "[GetTrait('trait_nether_conspiracy_lord')]"
+              datacontext = "[GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char]"
+              down = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('trait_nether_conspiracy_lord')).End)]"
+              onclick = "[GetScriptedGui('skonester_cheat_trait_gui_toggle').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('trait_flag', MakeScopeFlag('trait_nether_conspiracy_lord')).End)]"
+              tooltipwidget = {
+                using = character_trait_tooltip
+              }
+              hbox = {
+                margin = { 8 0 }
+                spacing = 8
+                icon = {
+                  size = { 28 28 }
+                  texture = "[GetTrait('trait_nether_conspiracy_lord').GetIcon(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                }
+                text_single = {
+                  layoutpolicy_horizontal = expanding
+                  text = "[GetTrait('trait_nether_conspiracy_lord').GetName(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                  default_format = "#clickable"
+                  autoresize = no
+                }
+                text_single = {
+                  visible = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('trait_nether_conspiracy_lord')).End)]"
+                  text = "skonester_cheat_menu_trait_minus"
+                  default_format = "#N"
+                }
+                text_single = {
+                  visible = "[Not(GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('trait_nether_conspiracy_lord')).End))]"
+                  text = "skonester_cheat_menu_trait_plus"
+                  default_format = "#P"
+                }
+              }
+            }
+            button_standard_hover = {
+              layoutpolicy_horizontal = expanding
+              size = { 0 38 }
+              datacontext = "[GetTrait('trait_eternal_nether_lord')]"
+              datacontext = "[GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char]"
+              down = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('trait_eternal_nether_lord')).End)]"
+              onclick = "[GetScriptedGui('skonester_cheat_trait_gui_toggle').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('trait_flag', MakeScopeFlag('trait_eternal_nether_lord')).End)]"
+              tooltipwidget = {
+                using = character_trait_tooltip
+              }
+              hbox = {
+                margin = { 8 0 }
+                spacing = 8
+                icon = {
+                  size = { 28 28 }
+                  texture = "[GetTrait('trait_eternal_nether_lord').GetIcon(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                }
+                text_single = {
+                  layoutpolicy_horizontal = expanding
+                  text = "[GetTrait('trait_eternal_nether_lord').GetName(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                  default_format = "#clickable"
+                  autoresize = no
+                }
+                text_single = {
+                  visible = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('trait_eternal_nether_lord')).End)]"
+                  text = "skonester_cheat_menu_trait_minus"
+                  default_format = "#N"
+                }
+                text_single = {
+                  visible = "[Not(GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('trait_eternal_nether_lord')).End))]"
+                  text = "skonester_cheat_menu_trait_plus"
+                  default_format = "#P"
+                }
+              }
+            }
+            button_standard_hover = {
+              layoutpolicy_horizontal = expanding
+              size = { 0 38 }
+              datacontext = "[GetTrait('skonester_trait_yannian_dan')]"
+              datacontext = "[GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char]"
+              down = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_yannian_dan')).End)]"
+              onclick = "[GetScriptedGui('skonester_cheat_trait_gui_toggle').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_yannian_dan')).End)]"
+              tooltipwidget = {
+                using = character_trait_tooltip
+              }
+              hbox = {
+                margin = { 8 0 }
+                spacing = 8
+                icon = {
+                  size = { 28 28 }
+                  texture = "[GetTrait('skonester_trait_yannian_dan').GetIcon(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                }
+                text_single = {
+                  layoutpolicy_horizontal = expanding
+                  text = "[GetTrait('skonester_trait_yannian_dan').GetName(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                  default_format = "#clickable"
+                  autoresize = no
+                }
+                text_single = {
+                  visible = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_yannian_dan')).End)]"
+                  text = "skonester_cheat_menu_trait_minus"
+                  default_format = "#N"
+                }
+                text_single = {
+                  visible = "[Not(GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_yannian_dan')).End))]"
+                  text = "skonester_cheat_menu_trait_plus"
+                  default_format = "#P"
+                }
+              }
+            }
+            button_standard_hover = {
+              layoutpolicy_horizontal = expanding
+              size = { 0 38 }
+              datacontext = "[GetTrait('skonester_trait_yannian_dan_mid')]"
+              datacontext = "[GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char]"
+              down = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_yannian_dan_mid')).End)]"
+              onclick = "[GetScriptedGui('skonester_cheat_trait_gui_toggle').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_yannian_dan_mid')).End)]"
+              tooltipwidget = {
+                using = character_trait_tooltip
+              }
+              hbox = {
+                margin = { 8 0 }
+                spacing = 8
+                icon = {
+                  size = { 28 28 }
+                  texture = "[GetTrait('skonester_trait_yannian_dan_mid').GetIcon(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                }
+                text_single = {
+                  layoutpolicy_horizontal = expanding
+                  text = "[GetTrait('skonester_trait_yannian_dan_mid').GetName(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                  default_format = "#clickable"
+                  autoresize = no
+                }
+                text_single = {
+                  visible = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_yannian_dan_mid')).End)]"
+                  text = "skonester_cheat_menu_trait_minus"
+                  default_format = "#N"
+                }
+                text_single = {
+                  visible = "[Not(GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_yannian_dan_mid')).End))]"
+                  text = "skonester_cheat_menu_trait_plus"
+                  default_format = "#P"
+                }
+              }
+            }
+            button_standard_hover = {
+              layoutpolicy_horizontal = expanding
+              size = { 0 38 }
+              datacontext = "[GetTrait('skonester_trait_yannian_dan_best')]"
+              datacontext = "[GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char]"
+              down = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_yannian_dan_best')).End)]"
+              onclick = "[GetScriptedGui('skonester_cheat_trait_gui_toggle').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_yannian_dan_best')).End)]"
+              tooltipwidget = {
+                using = character_trait_tooltip
+              }
+              hbox = {
+                margin = { 8 0 }
+                spacing = 8
+                icon = {
+                  size = { 28 28 }
+                  texture = "[GetTrait('skonester_trait_yannian_dan_best').GetIcon(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                }
+                text_single = {
+                  layoutpolicy_horizontal = expanding
+                  text = "[GetTrait('skonester_trait_yannian_dan_best').GetName(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                  default_format = "#clickable"
+                  autoresize = no
+                }
+                text_single = {
+                  visible = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_yannian_dan_best')).End)]"
+                  text = "skonester_cheat_menu_trait_minus"
+                  default_format = "#N"
+                }
+                text_single = {
+                  visible = "[Not(GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_yannian_dan_best')).End))]"
+                  text = "skonester_cheat_menu_trait_plus"
+                  default_format = "#P"
+                }
+              }
+            }
+            button_standard_hover = {
+              layoutpolicy_horizontal = expanding
+              size = { 0 38 }
+              datacontext = "[GetTrait('skonester_trait_baidubuqin')]"
+              datacontext = "[GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char]"
+              down = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_baidubuqin')).End)]"
+              onclick = "[GetScriptedGui('skonester_cheat_trait_gui_toggle').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_baidubuqin')).End)]"
+              tooltipwidget = {
+                using = character_trait_tooltip
+              }
+              hbox = {
+                margin = { 8 0 }
+                spacing = 8
+                icon = {
+                  size = { 28 28 }
+                  texture = "[GetTrait('skonester_trait_baidubuqin').GetIcon(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                }
+                text_single = {
+                  layoutpolicy_horizontal = expanding
+                  text = "[GetTrait('skonester_trait_baidubuqin').GetName(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                  default_format = "#clickable"
+                  autoresize = no
+                }
+                text_single = {
+                  visible = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_baidubuqin')).End)]"
+                  text = "skonester_cheat_menu_trait_minus"
+                  default_format = "#N"
+                }
+                text_single = {
+                  visible = "[Not(GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_baidubuqin')).End))]"
+                  text = "skonester_cheat_menu_trait_plus"
+                  default_format = "#P"
+                }
+              }
+            }
+            button_standard_hover = {
+              layoutpolicy_horizontal = expanding
+              size = { 0 38 }
+              datacontext = "[GetTrait('skonester_trait_xinwuguai')]"
+              datacontext = "[GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char]"
+              down = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_xinwuguai')).End)]"
+              onclick = "[GetScriptedGui('skonester_cheat_trait_gui_toggle').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_xinwuguai')).End)]"
+              tooltipwidget = {
+                using = character_trait_tooltip
+              }
+              hbox = {
+                margin = { 8 0 }
+                spacing = 8
+                icon = {
+                  size = { 28 28 }
+                  texture = "[GetTrait('skonester_trait_xinwuguai').GetIcon(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                }
+                text_single = {
+                  layoutpolicy_horizontal = expanding
+                  text = "[GetTrait('skonester_trait_xinwuguai').GetName(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                  default_format = "#clickable"
+                  autoresize = no
+                }
+                text_single = {
+                  visible = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_xinwuguai')).End)]"
+                  text = "skonester_cheat_menu_trait_minus"
+                  default_format = "#N"
+                }
+                text_single = {
+                  visible = "[Not(GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_xinwuguai')).End))]"
+                  text = "skonester_cheat_menu_trait_plus"
+                  default_format = "#P"
+                }
+              }
+            }
+            button_standard_hover = {
+              layoutpolicy_horizontal = expanding
+              size = { 0 38 }
+              datacontext = "[GetTrait('skonester_trait_stats_100_locked')]"
+              datacontext = "[GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char]"
+              down = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_stats_100_locked')).End)]"
+              onclick = "[GetScriptedGui('skonester_cheat_trait_gui_toggle').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_stats_100_locked')).End)]"
+              tooltipwidget = {
+                using = character_trait_tooltip
+              }
+              hbox = {
+                margin = { 8 0 }
+                spacing = 8
+                icon = {
+                  size = { 28 28 }
+                  texture = "[GetTrait('skonester_trait_stats_100_locked').GetIcon(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                }
+                text_single = {
+                  layoutpolicy_horizontal = expanding
+                  text = "[GetTrait('skonester_trait_stats_100_locked').GetName(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                  default_format = "#clickable"
+                  autoresize = no
+                }
+                text_single = {
+                  visible = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_stats_100_locked')).End)]"
+                  text = "skonester_cheat_menu_trait_minus"
+                  default_format = "#N"
+                }
+                text_single = {
+                  visible = "[Not(GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_stats_100_locked')).End))]"
+                  text = "skonester_cheat_menu_trait_plus"
+                  default_format = "#P"
+                }
+              }
+            }
+            button_standard_hover = {
+              layoutpolicy_horizontal = expanding
+              size = { 0 38 }
+              datacontext = "[GetTrait('skonester_trait_marriage_ban')]"
+              datacontext = "[GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char]"
+              down = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_marriage_ban')).End)]"
+              onclick = "[GetScriptedGui('skonester_cheat_trait_gui_toggle').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_marriage_ban')).End)]"
+              tooltipwidget = {
+                using = character_trait_tooltip
+              }
+              hbox = {
+                margin = { 8 0 }
+                spacing = 8
+                icon = {
+                  size = { 28 28 }
+                  texture = "[GetTrait('skonester_trait_marriage_ban').GetIcon(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                }
+                text_single = {
+                  layoutpolicy_horizontal = expanding
+                  text = "[GetTrait('skonester_trait_marriage_ban').GetName(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                  default_format = "#clickable"
+                  autoresize = no
+                }
+                text_single = {
+                  visible = "[GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_marriage_ban')).End)]"
+                  text = "skonester_cheat_menu_trait_minus"
+                  default_format = "#N"
+                }
+                text_single = {
+                  visible = "[Not(GetScriptedGui('skonester_cheat_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('skonester_trait_marriage_ban')).End))]"
+                  text = "skonester_cheat_menu_trait_plus"
+                  default_format = "#P"
+                }
+              }
+            }
+        }
+      }
+    }
+  }
+}

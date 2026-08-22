@@ -1,0 +1,125 @@
+﻿on_pregnancy_mother = {
+  effect = {
+    # 清理“Skonester胎儿性别”操作的挂起旗，避免跨胎残留
+    remove_character_flag = skonester_bgp_pending
+  }
+}
+
+on_birth_child = {
+  on_actions = {
+    skonester_stealth_fp_birth_genes_pulse
+  }
+}
+
+skonester_stealth_fp_birth_genes_pulse = {
+  trigger = {
+    scope:mother = {
+      has_variable = skonester_stealth_fp_bio_dad
+    }
+    scope:child = {
+      is_alive = yes
+    }
+  }
+  effect = {
+    scope:child = {
+      skonester_stealth_fp_birth_ensure_player_genes_effect = yes
+    }
+    scope:mother = {
+      limit = {
+        is_pregnant = no
+      }
+      remove_variable = skonester_stealth_fp_bio_dad
+    }
+  }
+}
+
+on_game_start = {
+  effect = {
+    skonester_acm_faith_populate_doctrine_catalog_effect = yes
+    # 回到主菜单/新开一局时清宝物制作 GUI 挂起（scripted_widget 在部分流程仍会挂载）
+    every_player = {
+      skonester_acm_gui_startup_cleanup_effect = yes
+      remove_character_flag = skonester_cheat_menu_cheat_menu
+      remove_character_flag = skonester_character_interaction_menu_open
+      remove_character_flag = toc_showdebsflag
+      remove_character_flag = toc_showspecsflag
+      remove_character_flag = toc_showtextrasflag
+      remove_character_flag = skonester_acm_gui_open
+      remove_character_flag = skonester_acm_repair_gui_open
+      remove_character_flag = skonester_trait_gui_open
+      remove_character_flag = skonester_cheat_trait_gui_open
+      remove_character_flag = skonester_lsf_gui_open
+    }
+    every_living_character = {
+      limit = { is_ai = no }
+      skonester_acm_gui_startup_cleanup_effect = yes
+      remove_character_flag = skonester_cheat_menu_cheat_menu
+      remove_character_flag = skonester_character_interaction_menu_open
+      remove_character_flag = toc_showdebsflag
+      remove_character_flag = toc_showspecsflag
+      remove_character_flag = toc_showtextrasflag
+      remove_character_flag = skonester_acm_gui_open
+      remove_character_flag = skonester_acm_repair_gui_open
+      remove_character_flag = skonester_trait_gui_open
+      remove_character_flag = skonester_cheat_trait_gui_open
+      remove_character_flag = skonester_lsf_gui_open
+    }
+    if = {
+      limit = { has_global_variable = skonester_acm_repair_target }
+      remove_global_variable = skonester_acm_repair_target
+    }
+    if = {
+      limit = { has_global_variable = skonester_acm_recipient }
+      remove_global_variable = skonester_acm_recipient
+    }
+    if = {
+      limit = { has_global_variable = skonester_cheat_menu_recipient }
+      remove_global_variable = skonester_cheat_menu_recipient
+    }
+  }
+}
+
+# 读档进入地图后再清一次（与 on_game_start 互补，覆盖读档路径）
+on_game_start_after_lobby = {
+  effect = {
+    every_player = {
+      skonester_acm_gui_startup_cleanup_effect = yes
+      remove_character_flag = skonester_cheat_menu_cheat_menu
+      remove_character_flag = skonester_character_interaction_menu_open
+      remove_character_flag = toc_showdebsflag
+      remove_character_flag = toc_showspecsflag
+      remove_character_flag = toc_showtextrasflag
+      remove_character_flag = skonester_acm_gui_open
+      remove_character_flag = skonester_acm_repair_gui_open
+      remove_character_flag = skonester_trait_gui_open
+      remove_character_flag = skonester_cheat_trait_gui_open
+      remove_character_flag = skonester_lsf_gui_open
+    }
+    every_living_character = {
+      limit = { is_ai = no }
+      skonester_acm_gui_startup_cleanup_effect = yes
+      remove_character_flag = skonester_cheat_menu_cheat_menu
+      remove_character_flag = skonester_character_interaction_menu_open
+      remove_character_flag = toc_showdebsflag
+      remove_character_flag = toc_showspecsflag
+      remove_character_flag = toc_showtextrasflag
+      remove_character_flag = skonester_acm_gui_open
+      remove_character_flag = skonester_acm_repair_gui_open
+      remove_character_flag = skonester_trait_gui_open
+      remove_character_flag = skonester_cheat_trait_gui_open
+      remove_character_flag = skonester_lsf_gui_open
+    }
+    if = {
+      limit = { has_global_variable = skonester_acm_repair_target }
+      remove_global_variable = skonester_acm_repair_target
+    }
+    if = {
+      limit = { has_global_variable = skonester_acm_recipient }
+      remove_global_variable = skonester_acm_recipient
+    }
+    if = {
+      limit = { has_global_variable = skonester_cheat_menu_recipient }
+      remove_global_variable = skonester_cheat_menu_recipient
+    }
+  }
+}

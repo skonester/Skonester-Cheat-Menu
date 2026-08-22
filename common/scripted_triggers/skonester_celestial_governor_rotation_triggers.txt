@@ -1,0 +1,29 @@
+﻿# 天朝制：总督满三整年（主头衔 title_held_years ≥3）元日强制卸任；与辞任总督决议精神对齐。
+# 原 ≥2 为两整年即可触发（约等于「进第三年起」）；强化后须三整年届满，减少「任未满三年就被刷掉 / 可钻空子」的观感。
+
+skonester_celestial_governor_rotation_eligible_trigger = {
+  has_tgp_dlc_trigger = yes
+  government_has_flag = government_is_celestial
+  top_liege = {
+    skonester_is_h_china_emperor_title_holder_trigger = yes
+  }
+  is_governor = yes
+  is_independent_ruler = no
+  is_adult = yes
+  NOT = { has_trait = incapable }
+  is_imprisoned = no
+  is_at_war_with_liege = no
+  NOT = { tgp_is_any_minister = yes }
+  skonester_is_not_h_china_emperor_title_holder_trigger = yes
+  highest_held_title_tier >= tier_county
+  primary_title = {
+    title_held_years >= 3
+    OR = {
+      has_title_law = celestial_appointment_succession_law
+      has_title_law = celestial_military_appointment_succession_law
+    }
+  }
+  any_held_title = {
+    is_noble_family_title = yes
+  }
+}

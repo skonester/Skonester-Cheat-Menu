@@ -1,0 +1,509 @@
+﻿namespace = imperial_examination
+
+# Mod: palace phase merit = 2000 base + skill-scaled bonus (skonester_imperial_exam_palace_total_merit_value)
+
+imperial_examination.9000 = {
+  type = activity_event
+  title = imperial_examination.9000.t
+  desc = {
+    desc = imperial_examination.9000.desc.intro
+    first_valid = {
+      triggered_desc = {
+        trigger = {
+          scope:first_char = {
+            highest_skill = diplomacy
+          }
+        }
+        desc = imperial_examination.9000.desc.diplomacy
+      }
+      triggered_desc = {
+        trigger = {
+          scope:first_char = {
+            highest_skill = stewardship
+          }
+        }
+        desc = imperial_examination.9000.desc.diplomacy
+      }
+      triggered_desc = {
+        trigger = {
+          scope:first_char = {
+            highest_skill = intrigue
+          }
+        }
+        desc = imperial_examination.9000.desc.diplomacy
+      }
+      triggered_desc = {
+        trigger = {
+          scope:first_char = {
+            highest_skill = learning
+          }
+        }
+        desc = imperial_examination.9000.desc.diplomacy
+      }
+      triggered_desc = {
+        trigger = {
+          scope:first_char = {
+            highest_skill = martial
+          }
+        }
+        desc = imperial_examination.9000.desc.martial
+      }
+    }
+    desc = imperial_examination.9000.outro
+  }
+  theme = imperial_examination
+  override_background = { reference = throne_room }
+  left_portrait = {
+    character = root
+    animation = personality_content
+  }
+    center_portrait = {
+        character = scope:examiner
+        animation = admiration
+        camera = camera_event_center_pointing_left
+    }
+  right_portrait = {
+    character = scope:first_char
+    animation = gongshou
+  }
+  cooldown = { months = 6 }
+  trigger = {
+    this = scope:host
+    NOT = { has_variable = has_greeted_palace_entrants }
+  }
+  immediate = {
+    root = {
+      skonester_player_government_lock_maintain_effect = yes
+    }
+    scope:activity = {
+      ordered_guest_subset = {
+        name = palace_entrants
+        order_by = imperial_examination_score_value
+        save_scope_as = first_char
+      }
+    }
+    skonester_imperial_examination_fetch_examiner_effect = yes
+  }
+  option = { # I expected more...
+    trigger = {
+      scope:activity = {
+        OR = {
+          AND = {
+            has_activity_option = {
+              category = special_type
+              option = imperial_examination_focus_martial
+            }
+            scope:first_char = {
+              NOT = { highest_skill = martial }
+            }
+            any_guest_subset = {
+              name = palace_entrants
+              highest_skill = martial
+            }
+          }
+          AND = {
+            has_activity_option = {
+              category = special_type
+              option = imperial_examination_focus_learning
+            }
+            scope:first_char = {
+              NOT = { highest_skill = learning }
+            }
+            any_guest_subset = {
+              name = palace_entrants
+              highest_skill = learning
+            }
+          }
+          AND = {
+            has_activity_option = {
+              category = special_type
+              option = imperial_examination_focus_stewardship
+            }
+            scope:first_char = {
+              NOT = { highest_skill = stewardship }
+            }
+            any_guest_subset = {
+              name = palace_entrants
+              highest_skill = stewardship
+            }
+          }
+        }
+      }
+    }
+    name = imperial_examination.9000.a
+    if = {
+      limit = {
+        scope:activity = {
+          has_activity_option = {
+            category = special_type
+            option = imperial_examination_focus_martial
+          }
+        }
+      }
+      custom_tooltip = imperial_examination.9000.a.tt_martial
+      scope:activity = {
+        every_guest_subset = {
+          name = palace_entrants
+          limit = {
+            highest_skill = martial
+          }
+          custom = custom.every_martial_palace_entrant
+          custom_tooltip = imperial_examination.advantage.tt
+          imperial_examination_adjust_advantage_variable_effect = yes
+        }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:activity = {
+          has_activity_option = {
+            category = special_type
+            option = imperial_examination_focus_learning
+          }
+        }
+      }
+      custom_tooltip = imperial_examination.9000.a.tt_learning
+      scope:activity = {
+        every_guest_subset = {
+          name = palace_entrants
+          limit = {
+            highest_skill = learning
+          }
+          custom = custom.every_learning_palace_entrant
+          custom_tooltip = imperial_examination.advantage.tt
+          imperial_examination_adjust_advantage_variable_effect = yes
+        }
+      }
+    }
+    else = {
+      custom_tooltip = imperial_examination.9000.a.tt_stewardship
+      scope:activity = {
+        every_guest_subset = {
+          name = palace_entrants
+          limit = {
+            highest_skill = stewardship
+          }
+          custom = custom.every_stewardship_palace_entrant
+          custom_tooltip = imperial_examination.advantage.tt
+          imperial_examination_adjust_advantage_variable_effect = yes
+        }
+      }
+    }
+    add_prestige = medium_prestige_gain
+    scope:first_char = {
+      if = {
+        limit = {
+          is_ai = no
+        }
+        add_character_flag = denied_merit
+        trigger_event = imperial_examination.9001
+      }
+    }
+    stress_impact = {
+      just = medium_stress_impact_gain
+      generous = medium_stress_impact_gain
+      stubborn = minor_stress_impact_loss
+    }
+    ai_chance = {
+      base = 100
+      ai_value_modifier = {
+        ai_honor = -1
+        ai_boldness = 1
+      }
+      modifier = {
+        has_trait = stubborn
+        add = 20
+      }
+      modifier = {
+        OR = {
+          has_trait = just
+          has_trait = generous
+        }
+        factor = 0
+      }
+    }
+  }
+  option = { # Congratulations!
+    name = imperial_examination.9000.b
+    add_legitimacy = medium_legitimacy_gain
+    if = {
+      limit = {
+        scope:first_char = { is_ai = yes }
+      }
+      scope:activity = {
+        add_activity_log_entry = {
+          key = examination_first_place_entrant_noticed
+          score = 25
+          tags = { positive }
+          character = scope:host
+          target = scope:first_char
+          scope:first_char = {
+            change_merit = {
+              value = skonester_imperial_exam_palace_total_merit_value
+            }
+          }
+        }
+      }
+    }
+    else = {
+      scope:first_char = {
+        add_character_flag = gained_merit
+        trigger_event = imperial_examination.9001
+      }
+    }
+    stress_impact = {
+      base = minor_stress_impact_loss
+    }
+    ai_chance = {
+      base = 100
+    }
+  }
+
+  after = {
+    set_variable = has_greeted_palace_entrants
+  }
+}
+
+# Follow up event - Waiting for Palace Exam start (Entrant)
+imperial_examination.9001 = {
+  type = activity_event
+  title = imperial_examination.9001.t
+  desc = {
+    desc = imperial_examination.9001.desc
+    first_valid = {
+      triggered_desc = {
+        trigger = {
+          scope:activity = { activity_is_martial_focus_trigger = yes }
+        }
+        desc = imperial_examination.9001.desc_weapon
+      }
+      desc = imperial_examination.9001.desc_brush
+    }
+    desc = imperial_examination.9001.desc_bridge
+    first_valid = {
+      triggered_desc = {
+        trigger = { has_character_flag = denied_merit }
+        desc = imperial_examination.9001.desc_denied
+      }
+      desc = imperial_examination.9001.desc_merit
+    }
+  }
+
+  theme = imperial_examination
+  override_background = { reference = throne_room }
+
+  left_portrait = {
+    character = root
+    triggered_animation = {
+      trigger = { has_character_flag = denied_merit }
+      animation = shock
+    }
+    animation = gongshou
+    camera = camera_event_left_pointing_right
+  }
+
+  center_portrait = {
+    trigger = { exists = scope:favored_entrant }
+    character = scope:favored_entrant
+    animation = admiration
+    camera = camera_event_left_to_the_left
+  }
+
+  right_portrait = {
+    character = scope:host
+    animation = emperor
+    camera = camera_event_right_to_the_right
+  }
+
+  cooldown = { months = 6 }
+
+  immediate = {
+    scope:host = {
+      save_scope_as = host
+      skonester_player_government_lock_maintain_effect = yes
+    }
+    if = {
+      limit = {
+        has_character_flag = denied_merit
+      }
+      scope:activity = {
+        ordered_guest_subset = {
+          name = palace_entrants
+          order_by = imperial_examination_score_value
+          limit = {
+            OR = {
+              AND = {
+                scope:activity = {
+                  has_activity_option = {
+                    category = special_type
+                    option = imperial_examination_focus_martial
+                  }
+                }
+                highest_skill = martial
+              }
+              AND = {
+                scope:activity = {
+                  has_activity_option = {
+                    category = special_type
+                    option = imperial_examination_focus_learning
+                  }
+                }
+                highest_skill = learning
+              }
+              AND = {
+                scope:activity = {
+                  has_activity_option = {
+                    category = special_type
+                    option = imperial_examination_focus_stewardship
+                  }
+                }
+                highest_skill = stewardship
+              }
+            }
+          }
+          save_scope_as = favored_entrant
+        }
+      }
+    }
+  }
+
+  option = { # I live to serve
+    name = imperial_examination.9001.a
+    trigger = { has_character_flag = gained_merit }
+    change_merit = {
+      value = skonester_imperial_exam_palace_total_merit_value
+    }
+  }
+
+  option = { # I will never forget this!
+    name = imperial_examination.9001.b
+    trigger = {
+      has_character_flag = denied_merit
+      OR = {
+        can_set_relation_rival_trigger = { CHARACTER = scope:favored_entrant }
+        can_set_relation_nemesis_trigger = { CHARACTER = scope:favored_entrant }
+      }
+    }
+    # We should become rivals if we're not already.
+    if = {
+      limit = {
+        NOT = { has_relation_rival = scope:favored_entrant }
+      }
+      set_relation_rival = {
+        target = scope:favored_entrant
+        reason = rival_favored_entrant
+      }
+    }
+    # But if we _are_, then it's nemesis time.
+    else_if = {
+      limit = { has_relation_rival = scope:favored_entrant }
+      set_relation_nemesis = {
+        target = scope:favored_entrant
+        copy_reason = rival
+        reason = rival_favored_entrant
+      }
+    }
+    # Then add influence.
+    change_influence = major_influence_gain
+    stress_impact = {
+      forgiving = medium_stress_impact_gain
+      calm = medium_stress_impact_gain
+    }
+  }
+
+  option = { # I will do better.
+    name = imperial_examination.9001.c
+    trigger = {
+      has_character_flag = denied_merit
+      OR = {
+        AND = {
+          scope:activity = {
+            has_activity_option = {
+              category = special_type
+              option = imperial_examination_focus_martial
+            }
+          }
+          NOT = { has_lifestyle = intrigue_lifestyle }
+        }
+        AND = {
+          scope:activity = {
+            has_activity_option = {
+              category = special_type
+              option = imperial_examination_focus_learning
+            }
+          }
+          NOT = { has_lifestyle = learning_lifestyle }
+        }
+        AND = {
+          scope:activity = {
+            has_activity_option = {
+              category = special_type
+              option = imperial_examination_focus_stewardship
+            }
+          }
+          NOT = { has_lifestyle = stewardship_lifestyle }
+        }
+      }
+    }
+    if = {
+      limit = {
+        scope:activity = {
+          has_activity_option = {
+            category = special_type
+            option = imperial_examination_focus_martial
+          }
+        }
+      }
+      set_focus = martial_strategy_focus
+      add_martial_lifestyle_perk_points = 2
+    }
+    else_if = {
+      limit = {
+        scope:activity = {
+          has_activity_option = {
+            category = special_type
+            option = imperial_examination_focus_learning
+          }
+        }
+      }
+      set_focus = learning_scholarship_focus
+      add_learning_lifestyle_perk_points = 2
+    }
+    else = {
+      set_focus = stewardship_duty_focus
+      add_stewardship_lifestyle_perk_points = 2
+    }
+    if = {
+      limit = {
+        has_tgp_dlc_trigger = yes
+      }
+      add_character_modifier = {
+        modifier = tgp_changed_ways_modifier
+        years = 10
+      }
+    }
+    else = {
+      add_stress = -35
+    }
+  }
+
+  option = { # Remain calm...
+    name = imperial_examination.9001.d
+    trigger = { has_character_flag = denied_merit }
+    add_piety = medium_piety_gain
+        if = {
+            limit = {
+                NOT = { has_trait = confucian_education }
+            }
+            add_trait = confucian_education
+        }
+        add_trait_xp = {
+            trait = confucian_education
+            value = lifestyle_confucian_education_xp_gain_medium_value
+        }
+        stress_impact = {
+          base = medium_stress_impact_loss
+          arrogant = major_stress_impact_gain
+        }
+  }
+}

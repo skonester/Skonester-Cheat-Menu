@@ -1,0 +1,57 @@
+﻿sarc_disable_design = {
+	categories = {
+		game_modes
+	}
+
+	default = sarc_no_disable
+
+	sarc_no_disable = {
+	}
+
+	sarc_disable_after = {
+		flag = sarc_disable_after
+	}
+}
+
+sarc_points = {
+	categories = {
+		game_modes
+	}
+
+	default = sarc_char_design_point_system_100
+
+	no_sarc_char_design_point_system = {
+		flag = no_sarc_char_design_point_system
+	}
+
+	sarc_char_design_point_system_25 = {
+		flag = sarc_char_design_point_system_25
+	}
+
+	sarc_char_design_point_system_50 = {
+		flag = sarc_char_design_point_system_50
+	}
+
+	sarc_char_design_point_system_75 = {
+		flag = sarc_char_design_point_system_75
+	}
+
+	sarc_char_design_point_system_100 = {
+		flag = sarc_char_design_point_system_100
+	}
+}
+
+sarc_initial_skill = {
+	categories = {
+		game_modes
+	}
+
+	default = sarc_initial_ten
+
+	sarc_initial_five = {
+		flag = sarc_initial_five
+	}
+
+	sarc_initial_ten = {
+	}
+}

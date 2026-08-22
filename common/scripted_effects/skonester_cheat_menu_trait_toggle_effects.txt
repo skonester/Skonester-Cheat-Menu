@@ -1,0 +1,33 @@
+﻿# Trait editor: reliable toggle via global_var recipient + cluster cleanup
+
+skonester_cheat_menu_toggle_base_trait_effect = {
+  skonester_cheat_menu_sync_trait_edit_target_effect = yes
+  if = {
+    limit = { exists = scope:skonester_trait_edit_target }
+    scope:skonester_trait_edit_target = {
+      skonester_cheat_menu_toggle_trait_on_character_effect = { TRAIT = $TRAIT$ }
+    }
+  }
+  else_if = {
+    limit = { exists = global_var:skonester_cheat_menu_recipient }
+    global_var:skonester_cheat_menu_recipient = {
+      skonester_cheat_menu_toggle_trait_on_character_effect = { TRAIT = $TRAIT$ }
+    }
+  }
+}
+
+skonester_cheat_menu_toggle_trait_on_character_effect = {
+  if = {
+    limit = { has_trait = $TRAIT$ }
+    remove_trait = $TRAIT$
+  }
+  else_if = {
+    limit = { skonester_cheat_menu_is_cheat_trait_trigger = { TRAIT = $TRAIT$ } }
+    skonester_cheat_menu_clear_cluster_before_add_trait_effect = { TRAIT = $TRAIT$ }
+    skonester_cheat_menu_grant_cheat_trait_effect = { TRAIT = $TRAIT$ }
+  }
+  else = {
+    skonester_cheat_menu_clear_cluster_before_add_trait_effect = { TRAIT = $TRAIT$ }
+    add_trait = $TRAIT$
+  }
+}

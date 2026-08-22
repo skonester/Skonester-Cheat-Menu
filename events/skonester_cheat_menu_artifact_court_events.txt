@@ -1,0 +1,439 @@
+﻿namespace = skonester_cheat_menu
+
+# 获得头衔：右击目标 + 封臣树头衔，每页 8 条。tools/gen_title_pick_3096.py
+
+skonester_cheat_menu.3096 = {
+  type = character_event
+  title = skonester_title_pick.3096.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+  left_portrait = root
+  right_portrait = scope:skonester_title_pick_evt_recipient
+
+  immediate = {
+    clear_saved_scope = skonester_tp_slot0
+    clear_saved_scope = skonester_tp_slot1
+    clear_saved_scope = skonester_tp_slot2
+    clear_saved_scope = skonester_tp_slot3
+    clear_saved_scope = skonester_tp_slot4
+    clear_saved_scope = skonester_tp_slot5
+    clear_saved_scope = skonester_tp_slot6
+    clear_saved_scope = skonester_tp_slot7
+    clear_saved_scope = skonester_tp_pop_tmp
+    clear_saved_scope = skonester_title_pick_evt_recipient
+    skonester_title_pick_sync_recipient_effect = yes
+    skonester_title_pick_populate_queue_effect = yes
+    root = {
+      if = {
+        limit = { has_variable = skonester_title_pick_total }
+        remove_variable = skonester_title_pick_total
+      }
+      set_variable = {
+        name = skonester_title_pick_total
+        value = 0
+      }
+      every_in_list = {
+        variable = skonester_title_pick_queue
+        root = {
+          change_variable = {
+            name = skonester_title_pick_total
+            add = 1
+          }
+        }
+      }
+      if = {
+        limit = {
+          NOT = { has_variable = skonester_title_pick_page }
+        }
+        set_variable = {
+          name = skonester_title_pick_page
+          value = 0
+        }
+      }
+      if = {
+        limit = {
+          has_variable = skonester_title_pick_page
+          var:skonester_title_pick_page > 0
+          has_variable = skonester_title_pick_total
+          var:skonester_title_pick_total <= skonester_title_pick_page_offset_value
+        }
+        set_variable = {
+          name = skonester_title_pick_page
+          value = 0
+        }
+      }
+      set_variable = {
+        name = skonester_title_pick_skip
+        value = {
+          value = var:skonester_title_pick_page
+          multiply = 8
+        }
+      }
+      while = {
+        limit = {
+          var:skonester_title_pick_skip > 0
+          variable_list_size = {
+            name = skonester_title_pick_queue
+            value > 0
+          }
+        }
+        ordered_in_list = {
+          variable = skonester_title_pick_queue
+          order_by = skonester_title_pick_sort_key
+          position = 0
+          save_scope_as = skonester_tp_pop_tmp
+        }
+        remove_list_variable = {
+          name = skonester_title_pick_queue
+          target = scope:skonester_tp_pop_tmp
+        }
+        change_variable = {
+          name = skonester_title_pick_skip
+          add = -1
+        }
+      }
+      if = {
+        limit = {
+          variable_list_size = {
+            name = skonester_title_pick_queue
+            value > 0
+          }
+        }
+        ordered_in_list = {
+          variable = skonester_title_pick_queue
+          order_by = skonester_title_pick_sort_key
+          position = 0
+          save_scope_as = skonester_tp_slot0
+        }
+      }
+      if = {
+        limit = {
+          variable_list_size = {
+            name = skonester_title_pick_queue
+            value > 1
+          }
+        }
+        ordered_in_list = {
+          variable = skonester_title_pick_queue
+          order_by = skonester_title_pick_sort_key
+          position = 1
+          save_scope_as = skonester_tp_slot1
+        }
+      }
+      if = {
+        limit = {
+          variable_list_size = {
+            name = skonester_title_pick_queue
+            value > 2
+          }
+        }
+        ordered_in_list = {
+          variable = skonester_title_pick_queue
+          order_by = skonester_title_pick_sort_key
+          position = 2
+          save_scope_as = skonester_tp_slot2
+        }
+      }
+      if = {
+        limit = {
+          variable_list_size = {
+            name = skonester_title_pick_queue
+            value > 3
+          }
+        }
+        ordered_in_list = {
+          variable = skonester_title_pick_queue
+          order_by = skonester_title_pick_sort_key
+          position = 3
+          save_scope_as = skonester_tp_slot3
+        }
+      }
+      if = {
+        limit = {
+          variable_list_size = {
+            name = skonester_title_pick_queue
+            value > 4
+          }
+        }
+        ordered_in_list = {
+          variable = skonester_title_pick_queue
+          order_by = skonester_title_pick_sort_key
+          position = 4
+          save_scope_as = skonester_tp_slot4
+        }
+      }
+      if = {
+        limit = {
+          variable_list_size = {
+            name = skonester_title_pick_queue
+            value > 5
+          }
+        }
+        ordered_in_list = {
+          variable = skonester_title_pick_queue
+          order_by = skonester_title_pick_sort_key
+          position = 5
+          save_scope_as = skonester_tp_slot5
+        }
+      }
+      if = {
+        limit = {
+          variable_list_size = {
+            name = skonester_title_pick_queue
+            value > 6
+          }
+        }
+        ordered_in_list = {
+          variable = skonester_title_pick_queue
+          order_by = skonester_title_pick_sort_key
+          position = 6
+          save_scope_as = skonester_tp_slot6
+        }
+      }
+      if = {
+        limit = {
+          variable_list_size = {
+            name = skonester_title_pick_queue
+            value > 7
+          }
+        }
+        ordered_in_list = {
+          variable = skonester_title_pick_queue
+          order_by = skonester_title_pick_sort_key
+          position = 7
+          save_scope_as = skonester_tp_slot7
+        }
+      }
+      if = {
+        limit = { has_variable = skonester_title_pick_skip }
+        remove_variable = skonester_title_pick_skip
+      }
+    }
+  }
+
+  option = {
+    name = skonester_cheat_menu.00x.close
+    scope:actor = {
+      remove_character_flag = skonester_title_pick_picker_active
+      clear_variable_list = skonester_title_pick_queue
+      remove_variable = skonester_title_pick_page
+      if = {
+        limit = { has_variable = skonester_title_pick_total }
+        remove_variable = skonester_title_pick_total
+      }
+      if = {
+        limit = { has_variable = skonester_title_pick_skip }
+        remove_variable = skonester_title_pick_skip
+      }
+      if = {
+        limit = { has_variable = skonester_title_victim }
+        remove_variable = skonester_title_victim
+      }
+    }
+  }
+
+  option = {
+    name = skonester_title_pick.3096.empty
+    trigger = {
+      skonester_title_pick_picker_enabled_trigger = yes
+      NOT = {
+        variable_list_size = {
+          name = skonester_title_pick_queue
+          value > 0
+        }
+      }
+    }
+  }
+
+  option = {
+    name = skonester_title_pick.3096.prev_page
+    trigger = {
+      skonester_title_pick_picker_enabled_trigger = yes
+      var:skonester_title_pick_page > 0
+    }
+    root = {
+      change_variable = {
+        name = skonester_title_pick_page
+        add = -1
+      }
+      skonester_title_pick_reopen_effect = yes
+    }
+  }
+
+  option = {
+    name = skonester_title_pick.3096.next_page
+    trigger = {
+      skonester_title_pick_picker_enabled_trigger = yes
+      has_variable = skonester_title_pick_total
+      var:skonester_title_pick_total > skonester_title_pick_next_page_min_total_value
+    }
+    root = {
+      change_variable = {
+        name = skonester_title_pick_page
+        add = 1
+      }
+      skonester_title_pick_reopen_effect = yes
+    }
+  }
+
+  option = {
+    name = skonester_title_pick.3096.pick_0
+    trigger = {
+      skonester_title_pick_picker_enabled_trigger = yes
+      exists = scope:skonester_tp_slot0
+    }
+    hidden_effect = {
+      root = {
+        save_scope_as = skonester_title_xfer_actor
+        scope:skonester_tp_slot0 = {
+          save_scope_as = skonester_title_xfer_title
+          holder = {
+            save_scope_as = skonester_title_xfer_holder
+          }
+        }
+        skonester_cheat_menu_transfer_one_held_title_to_actor_effect = yes
+        skonester_title_pick_after_pick_effect = yes
+      }
+    }
+  }
+  option = {
+    name = skonester_title_pick.3096.pick_1
+    trigger = {
+      skonester_title_pick_picker_enabled_trigger = yes
+      exists = scope:skonester_tp_slot1
+    }
+    hidden_effect = {
+      root = {
+        save_scope_as = skonester_title_xfer_actor
+        scope:skonester_tp_slot1 = {
+          save_scope_as = skonester_title_xfer_title
+          holder = {
+            save_scope_as = skonester_title_xfer_holder
+          }
+        }
+        skonester_cheat_menu_transfer_one_held_title_to_actor_effect = yes
+        skonester_title_pick_after_pick_effect = yes
+      }
+    }
+  }
+  option = {
+    name = skonester_title_pick.3096.pick_2
+    trigger = {
+      skonester_title_pick_picker_enabled_trigger = yes
+      exists = scope:skonester_tp_slot2
+    }
+    hidden_effect = {
+      root = {
+        save_scope_as = skonester_title_xfer_actor
+        scope:skonester_tp_slot2 = {
+          save_scope_as = skonester_title_xfer_title
+          holder = {
+            save_scope_as = skonester_title_xfer_holder
+          }
+        }
+        skonester_cheat_menu_transfer_one_held_title_to_actor_effect = yes
+        skonester_title_pick_after_pick_effect = yes
+      }
+    }
+  }
+  option = {
+    name = skonester_title_pick.3096.pick_3
+    trigger = {
+      skonester_title_pick_picker_enabled_trigger = yes
+      exists = scope:skonester_tp_slot3
+    }
+    hidden_effect = {
+      root = {
+        save_scope_as = skonester_title_xfer_actor
+        scope:skonester_tp_slot3 = {
+          save_scope_as = skonester_title_xfer_title
+          holder = {
+            save_scope_as = skonester_title_xfer_holder
+          }
+        }
+        skonester_cheat_menu_transfer_one_held_title_to_actor_effect = yes
+        skonester_title_pick_after_pick_effect = yes
+      }
+    }
+  }
+  option = {
+    name = skonester_title_pick.3096.pick_4
+    trigger = {
+      skonester_title_pick_picker_enabled_trigger = yes
+      exists = scope:skonester_tp_slot4
+    }
+    hidden_effect = {
+      root = {
+        save_scope_as = skonester_title_xfer_actor
+        scope:skonester_tp_slot4 = {
+          save_scope_as = skonester_title_xfer_title
+          holder = {
+            save_scope_as = skonester_title_xfer_holder
+          }
+        }
+        skonester_cheat_menu_transfer_one_held_title_to_actor_effect = yes
+        skonester_title_pick_after_pick_effect = yes
+      }
+    }
+  }
+  option = {
+    name = skonester_title_pick.3096.pick_5
+    trigger = {
+      skonester_title_pick_picker_enabled_trigger = yes
+      exists = scope:skonester_tp_slot5
+    }
+    hidden_effect = {
+      root = {
+        save_scope_as = skonester_title_xfer_actor
+        scope:skonester_tp_slot5 = {
+          save_scope_as = skonester_title_xfer_title
+          holder = {
+            save_scope_as = skonester_title_xfer_holder
+          }
+        }
+        skonester_cheat_menu_transfer_one_held_title_to_actor_effect = yes
+        skonester_title_pick_after_pick_effect = yes
+      }
+    }
+  }
+  option = {
+    name = skonester_title_pick.3096.pick_6
+    trigger = {
+      skonester_title_pick_picker_enabled_trigger = yes
+      exists = scope:skonester_tp_slot6
+    }
+    hidden_effect = {
+      root = {
+        save_scope_as = skonester_title_xfer_actor
+        scope:skonester_tp_slot6 = {
+          save_scope_as = skonester_title_xfer_title
+          holder = {
+            save_scope_as = skonester_title_xfer_holder
+          }
+        }
+        skonester_cheat_menu_transfer_one_held_title_to_actor_effect = yes
+        skonester_title_pick_after_pick_effect = yes
+      }
+    }
+  }
+  option = {
+    name = skonester_title_pick.3096.pick_7
+    trigger = {
+      skonester_title_pick_picker_enabled_trigger = yes
+      exists = scope:skonester_tp_slot7
+    }
+    hidden_effect = {
+      root = {
+        save_scope_as = skonester_title_xfer_actor
+        scope:skonester_tp_slot7 = {
+          save_scope_as = skonester_title_xfer_title
+          holder = {
+            save_scope_as = skonester_title_xfer_holder
+          }
+        }
+        skonester_cheat_menu_transfer_one_held_title_to_actor_effect = yes
+        skonester_title_pick_after_pick_effect = yes
+      }
+    }
+  }
+}

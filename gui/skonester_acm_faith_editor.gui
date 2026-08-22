@@ -1,0 +1,811 @@
+﻿# 宗教编辑：布局复刻 window_faith_creation（创建新信仰），独立全屏窗 + 右侧教义替换列
+
+window = {
+  name = "skonester_acm_faith_editor_window"
+  widgetid = "skonester_acm_faith_editor_window"
+  parentanchor = center
+  size = { 1300 950 }
+  layer = middle
+  filter_mouse = all
+  allow_outside = yes
+  alwaystransparent = no
+  movable = yes
+
+  using = Window_Background
+  using = Window_Decoration
+
+  datacontext = "[GetVariableSystem]"
+  datacontext = "[GetPlayer.MakeScope.Var('skonester_selected_faith_var').Faith]"
+
+  visible = "[GetScriptedGui('skonester_acm_faith_editor_visible').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+
+  state = {
+    name = _show
+    using = Animation_FadeIn_Quick
+    on_start = "[GetVariableSystem.Clear('skonester_acm_faith_right_view')]"
+    on_start = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_hide').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+  }
+
+  state = {
+    name = _hide
+    using = Animation_FadeOut_Quick
+  }
+
+  vbox = {
+    using = Window_Margins
+    layoutpolicy_horizontal = expanding
+    layoutpolicy_vertical = expanding
+
+    header_pattern = {
+      layoutpolicy_horizontal = expanding
+
+      blockoverride "header_text" {
+        text = skonester_acm_faith_editor_title
+      }
+
+      blockoverride "button_close" {
+        onclick = "[GetVariableSystem.Clear('skonester_acm_faith_right_view')]"
+        onclick = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_hide').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+        onclick = "[GetScriptedGui('skonester_acm_faith_editor_close').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+      }
+    }
+
+    text_single = {
+      layoutpolicy_horizontal = expanding
+      margin = { 12 0 }
+      text = skonester_acm_faith_editor_header_label
+      default_format = "#weak"
+      align = center
+      autoresize = yes
+      max_width = 1200
+    }
+
+    hbox = {
+      name = "faith_editor_body"
+      layoutpolicy_horizontal = expanding
+      layoutpolicy_vertical = expanding
+      spacing = 12
+
+      widget = {
+        name = "left_side"
+        layoutpolicy_horizontal = expanding
+        layoutpolicy_vertical = expanding
+
+        vbox = {
+          layoutpolicy_horizontal = expanding
+          layoutpolicy_vertical = expanding
+          spacing = 10
+
+          hbox = {
+            name = "name_and_icon"
+            margin_top = 8
+            spacing = 12
+
+            icon = {
+              size = { 60 60 }
+              texture = "[Faith.GetIcon]"
+              using = tooltip_se
+            }
+
+            vbox = {
+              layoutpolicy_horizontal = expanding
+              spacing = 4
+
+              text_single = {
+                text = "[Faith.GetNameNoTooltip]"
+                default_format = "#high"
+                using = Font_Size_Big
+              }
+
+              text_single = {
+                text = skonester_acm_faith_editor_catalog_label
+                default_format = "#low"
+                autoresize = yes
+                max_width = 600
+              }
+            }
+          }
+
+          divider = {
+            layoutpolicy_horizontal = expanding
+          }
+
+          vbox = {
+            name = "tab_beliefs"
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+
+        vbox = {
+          layoutpolicy_horizontal = expanding
+          spacing = 8
+          margin = { 8 16 }
+          margin_bottom = 11
+
+          text_label_center = {
+            text = "FAITH_CORE_TENETS_HEADING"
+          }
+
+          hbox = {
+            name = "doctrines_grid_core_tenets"
+            layoutpolicy_horizontal = expanding
+            datamodel = "[GetGlobalList('skonester_acm_fe_display_core_tenets')]"
+            spacing = 10
+
+            state = {
+              name = "faith_view_refresh"
+              using = Animation_Refresh_FadeOut
+            }
+            state = {
+              using = Animation_Refresh_FadeIn
+            }
+
+            item = {
+              button_group = {
+                datacontext = "[GetDoctrine( Scope.GetFlagName )]"
+                datacontext = "[Faith]"
+                tooltip = "skonester_acm_faith_doctrine_change_tt"
+
+                onclick = "[GetVariableSystem.Set( 'skonester_acm_faith_right_view', 'doctrine_selection' )]"
+    onclick = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_show').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                onclick = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_show').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                onclick = "[GetVariableSystem.Set( 'doctrine_group_name', FaithDoctrine.GetGroup.GetName( Faith.Self ) )]"
+                onclick = "[GetScriptedGui('skonester_acm_faith_begin_pick_core_tenets').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('pick_doctrine', MakeScopeFlag(Scope.GetFlagName)).End)]"
+
+                skonester_acm_faith_tenet_banner = {}
+              }
+            }
+          }
+        }
+
+        vbox = {
+          name = "doctrines"
+          layoutpolicy_horizontal = expanding
+          layoutpolicy_vertical = expanding
+
+          scrollbox = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+
+            blockoverride "scrollbox_content" {
+              spacing = 16
+
+              hbox = {
+                name = "sins_and_virtues"
+                layoutpolicy_vertical = expanding
+                spacing = 15
+
+                expand = { layoutstretchfactor_horizontal = 1 }
+
+                vbox = {
+                  name = "sins"
+                  spacing = 3
+                  layoutpolicy_vertical = expanding
+                  layoutpolicy_horizontal = expanding
+
+                  hbox = {
+                    spacing = 5
+                    expand = {}
+                    icon = { texture = "gfx/interface/icons/traits/sin_big.dds" }
+                    text_single = {
+                      text = "FAITH_WINDOW_SINS"
+                      align = right|nobaseline
+                    }
+                  }
+
+                  hbox = {
+                    spacing = 4
+
+                    dynamicgridbox = {
+                      datamodel = "[GetGlobalList('skonester_acm_fe_display_sin_traits')]"
+                      flipdirection = yes
+                      datamodel_wrap = 6
+
+                      item = {
+                        icon = {
+                          datacontext = "[GetTrait( Scope.GetFlagName )]"
+                          size = { 40 40 }
+                          alwaystransparent = yes
+                          texture = "[Trait.GetIcon( GetPlayer )]"
+
+                          tooltipwidget = {
+                            using = faith_window_trait_tooltip
+                          }
+                        }
+                      }
+                    }
+                  }
+                  expand = {}
+                }
+
+                divider_light = { layoutpolicy_vertical = expanding }
+
+                vbox = {
+                  name = "virtues"
+                  spacing = 3
+                  layoutpolicy_vertical = expanding
+                  layoutpolicy_horizontal = expanding
+
+                  hbox = {
+                    spacing = 5
+                    expand = {}
+                    icon = { texture = "gfx/interface/icons/traits/virtue_big.dds" }
+                    text_single = {
+                      text = "FAITH_WINDOW_VIRTUES"
+                      align = nobaseline
+                    }
+                  }
+
+                  hbox = {
+                    spacing = 4
+
+                    dynamicgridbox = {
+                      datamodel = "[GetGlobalList('skonester_acm_fe_display_virtue_traits')]"
+                      flipdirection = yes
+                      datamodel_wrap = 6
+
+                      item = {
+                        icon = {
+                          datacontext = "[GetTrait( Scope.GetFlagName )]"
+                          size = { 40 40 }
+                          alwaystransparent = yes
+                          texture = "[Trait.GetIcon( GetPlayer )]"
+
+                          tooltipwidget = {
+                            using = faith_window_trait_tooltip
+                          }
+                        }
+                      }
+                    }
+                  }
+                  expand = {}
+                }
+
+                expand = { layoutstretchfactor_horizontal = 1 }
+              }
+
+              vbox = {
+                layoutpolicy_horizontal = expanding
+                spacing = 8
+                margin_bottom = -8
+
+                text_label_center = {
+                  layoutpolicy_horizontal = expanding
+                  text = "FAITH_DOCTRINES_IMPORTANT"
+                  default_format = "#low"
+                }
+
+                fixedgridbox = {
+                  layoutpolicy_horizontal = expanding
+                  datamodel = "[GetGlobalList('skonester_acm_fe_display_main_group')]"
+                  flipdirection = yes
+                  addcolumn = 270
+                  addrow = 65
+                  datamodel_wrap = 2
+
+                  state = {
+                    name = "faith_view_refresh"
+                    using = Animation_Refresh_FadeOut
+                  }
+                  state = {
+                    using = Animation_Refresh_FadeIn
+                  }
+
+                  item = {
+                    flowcontainer = {
+                      datacontext = "[GetDoctrine( Scope.GetFlagName )]"
+                      datacontext = "[Faith]"
+                      skonester_acm_faith_main_doctrine_row = {}
+                    }
+                  }
+                }
+              }
+
+              vbox = {
+                layoutpolicy_horizontal = expanding
+                spacing = 12
+                margin_bottom = -10
+
+                text_label_center = {
+                  layoutpolicy_horizontal = expanding
+                  text = "FAITH_DOCTRINES_MARRIAGE"
+                  default_format = "#low"
+                }
+
+                fixedgridbox = {
+                  datamodel = "[GetGlobalList('skonester_acm_fe_display_marriage')]"
+                  flipdirection = yes
+                  addcolumn = 270
+                  addrow = 65
+                  datamodel_wrap = 2
+
+                  item = {
+                    flowcontainer = {
+                      datacontext = "[GetDoctrine( Scope.GetFlagName )]"
+                      datacontext = "[Faith]"
+                      skonester_acm_faith_doctrine_row = {}
+                    }
+                  }
+                }
+              }
+
+              vbox = {
+                layoutpolicy_horizontal = expanding
+                spacing = 12
+                margin_bottom = -10
+
+                text_label_center = {
+                  layoutpolicy_horizontal = expanding
+                  text = "FAITH_DOCTRINES_CRIMES"
+                  default_format = "#low"
+                }
+
+                fixedgridbox = {
+                  datamodel = "[GetGlobalList('skonester_acm_fe_display_crimes')]"
+                  flipdirection = yes
+                  addcolumn = 270
+                  addrow = 65
+                  datamodel_wrap = 2
+
+                  item = {
+                    flowcontainer = {
+                      datacontext = "[GetDoctrine( Scope.GetFlagName )]"
+                      datacontext = "[Faith]"
+                      skonester_acm_faith_doctrine_row = {}
+                    }
+                  }
+                }
+              }
+
+              vbox = {
+                layoutpolicy_horizontal = expanding
+                spacing = 12
+                margin_bottom = -10
+
+                text_label_center = {
+                  layoutpolicy_horizontal = expanding
+                  text = "FAITH_DOCTRINES_CLERGY"
+                  default_format = "#low"
+                }
+
+                fixedgridbox = {
+                  datamodel = "[GetGlobalList('skonester_acm_fe_display_clergy')]"
+                  flipdirection = yes
+                  addcolumn = 270
+                  addrow = 65
+                  datamodel_wrap = 2
+
+                  item = {
+                    flowcontainer = {
+                      datacontext = "[GetDoctrine( Scope.GetFlagName )]"
+                      datacontext = "[Faith]"
+                      skonester_acm_faith_doctrine_row = {}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+          }
+
+          hbox = {
+            layoutpolicy_horizontal = expanding
+            spacing = 8
+            margin = { 8 4 }
+
+            button_standard = {
+              layoutpolicy_horizontal = expanding
+              text = skonester_acm_faith_editor_reselect
+              onclick = "[GetScriptedGui('skonester_acm_faith_reselect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+
+            button_standard = {
+              layoutpolicy_horizontal = expanding
+              text = skonester_acm_faith_editor_apply_target
+              tooltip = skonester_acm_faith_editor_apply_target_tt
+              onclick = "[GetScriptedGui('skonester_acm_faith_apply_to_target').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+
+            button_standard = {
+              layoutpolicy_horizontal = expanding
+              text = skonester_acm_faith_editor_close_btn
+              onclick = "[GetVariableSystem.Clear('skonester_acm_faith_right_view')]"
+              onclick = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_hide').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+              onclick = "[GetScriptedGui('skonester_acm_faith_editor_close').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+          }
+        }
+      }
+
+      widget = {
+        name = "right_side"
+        minimumsize = { 480 0 }
+        maximumsize = { 520 -1 }
+        layoutpolicy_vertical = expanding
+
+        vbox = {
+          name = "right_idle_hint"
+          layoutpolicy_vertical = expanding
+          visible = "[Not( GetPlayer.MakeScope.HasFlag('skonester_acm_faith_pick_sidebar_open') )]"
+          margin = { 20 40 }
+
+          text_label_center = {
+            layoutpolicy_horizontal = expanding
+            text = skonester_acm_faith_editor_pick_heading
+            default_format = "#high"
+          }
+
+          text_single = {
+            layoutpolicy_horizontal = expanding
+            margin = { 12 0 }
+            text = skonester_acm_faith_editor_right_hint
+            default_format = "#weak"
+            align = center
+            autoresize = yes
+            max_width = 420
+          }
+        }
+
+        vbox = {
+          name = "doctrine_selection"
+          layoutpolicy_vertical = expanding
+          visible = "[GetPlayer.MakeScope.HasFlag('skonester_acm_faith_pick_sidebar_open')]"
+          margin = { 0 15 }
+          spacing = 12
+
+          using = Window_Background_Sidebar
+
+          state = {
+            name = _show
+            using = Animation_FadeIn_Quick
+          }
+
+          state = {
+            name = _hide
+            alpha = 0
+          }
+
+          header_pattern = {
+            layoutpolicy_horizontal = expanding
+
+            blockoverride "header_text" {
+              text = skonester_acm_faith_editor_pick_heading
+            }
+
+            blockoverride "button_close" {
+              onclick = "[GetVariableSystem.Clear( 'skonester_acm_faith_right_view' )]"
+    onclick = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_hide').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            onclick = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_hide').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+              onclick = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_hide').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+          }
+
+          text_label_center = {
+            layoutpolicy_horizontal = expanding
+            text = "[VariableSystem.Get( 'doctrine_group_name' )]"
+            max_width = 420
+          }
+
+          text_single = {
+            layoutpolicy_horizontal = expanding
+            text = skonester_acm_faith_editor_pick_hint
+            default_format = "#weak"
+            align = center
+            autoresize = yes
+            max_width = 420
+          }
+
+          scrollbox = {
+            name = "contents"
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+
+            blockoverride "scrollbox_content" {
+              vbox = {
+                layoutpolicy_horizontal = expanding
+                spacing = 4
+
+                text_single = {
+                  visible = "[IsDataModelEmpty( GetGlobalList('skonester_acm_fe_pick_current') )]"
+                  layoutpolicy_horizontal = expanding
+                  text = skonester_acm_faith_editor_pick_empty
+                  default_format = "#weak"
+                  align = center
+                  autoresize = yes
+                  max_width = 420
+                }
+
+                vbox = {
+                  layoutpolicy_horizontal = expanding
+                  datamodel = "[GetGlobalList('skonester_acm_fe_pick_current')]"
+
+                  state = {
+                    name = "faith_view_refresh"
+                    using = Animation_Refresh_FadeOut
+                  }
+                  state = {
+                    using = Animation_Refresh_FadeIn
+                  }
+
+                  item = {
+                    flowcontainer = {
+                      layoutpolicy_horizontal = expanding
+                      datacontext = "[GetDoctrine( Scope.GetFlagName )]"
+                      datacontext = "[Faith]"
+
+                      skonester_acm_faith_creation_pick_row = {}
+
+                      divider_light = {
+                        layoutpolicy_horizontal = expanding
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          button_standard = {
+            name = "cancel"
+            onclick = "[GetVariableSystem.Clear( 'skonester_acm_faith_right_view' )]"
+    onclick = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_hide').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            onclick = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_hide').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            text = "CANCEL"
+            default_format = "#high"
+          }
+        }
+      }
+    }
+  }
+}
+
+types skonesterAcmFaithEditorTypes
+{
+  type skonester_acm_faith_tenet_banner = button_standard_hover {
+    size = { 88 112 }
+    datacontext = "[FaithDoctrine]"
+    datacontext = "[Faith]"
+    using = tooltip_ne
+    tooltip = "FAITH_WINDOW_DOCTRINE_TOOLTIP_WITH_FAITH"
+
+    alwaystransparent = yes
+
+    highlight_icon = {
+      size = { 88 112 }
+      parentanchor = center
+      texture = "[Faith.GetDoctrineBackgroundIcon]"
+    }
+
+    highlight_icon = {
+      size = { 88 140 }
+      parentanchor = center
+      texture = "[FaithDoctrine.GetIcon]"
+      alpha = 0.85
+    }
+
+    text_label_center = {
+      parentanchor = bottom|hcenter
+      widgetanchor = center
+      position = { 0 -18 }
+      maximumsize = { 88 36 }
+      fontsize_min = 12
+      multiline = yes
+      align = center
+      text = "[FaithDoctrine.GetNameNoTooltip( Faith.Self )]"
+      default_format = "#high"
+      using = Font_Size_Medium
+    }
+  }
+
+  type skonester_acm_faith_sin_virtue_icon = widget {
+    size = { 40 40 }
+    datacontext = "[FaithDoctrine]"
+
+    icon_doctrine = {
+      size = { 40 40 }
+      texture = "[FaithDoctrine.GetIcon]"
+      alwaystransparent = yes
+    }
+  }
+
+  type skonester_acm_faith_main_doctrine_row = button_standard_hover {
+    size = { 210 53 }
+    datacontext = "[FaithDoctrine]"
+    datacontext = "[Faith]"
+    using = tooltip_ne
+    tooltip = "FAITH_WINDOW_DOCTRINE_TOOLTIP_WITH_FAITH"
+
+    onclick = "[GetVariableSystem.Set( 'skonester_acm_faith_right_view', 'doctrine_selection' )]"
+    onclick = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_show').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+    onclick = "[GetVariableSystem.Set( 'doctrine_group_name', FaithDoctrine.GetGroup.GetName( Faith.Self ) )]"
+    onclick = "[GetScriptedGui('skonester_acm_faith_begin_pick_doctrine').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('pick_doctrine', MakeScopeFlag(Scope.GetFlagName)).End)]"
+
+    background = {
+      using = Background_Area
+      margin = { 5 5 }
+    }
+
+    hbox = {
+      parentanchor = center
+      spacing = 8
+      margin = { 4 0 }
+
+      icon_doctrine = {
+        size = { 50 50 }
+        texture = "[FaithDoctrine.GetIcon]"
+      }
+
+      vbox = {
+        layoutpolicy_horizontal = expanding
+
+        text_single = {
+          layoutpolicy_horizontal = expanding
+          align = left
+          autoresize = no
+          fontsize_min = 12
+          text = "[FaithDoctrine.GetGroup.GetName( Faith.Self )]"
+        }
+
+        text_single = {
+          layoutpolicy_horizontal = expanding
+          elide = right
+          autoresize = no
+          fontsize_min = 12
+          align = left
+          default_format = "#high"
+          text = "[FaithDoctrine.GetNameNoTooltip( Faith.Self )]"
+        }
+      }
+    }
+  }
+
+  type skonester_acm_faith_doctrine_row = button_standard_hover {
+    size = { 210 53 }
+    datacontext = "[FaithDoctrine]"
+    datacontext = "[Faith]"
+    using = tooltip_ne
+    tooltip = "FAITH_WINDOW_DOCTRINE_TOOLTIP_WITH_FAITH"
+
+    onclick = "[GetVariableSystem.Set( 'skonester_acm_faith_right_view', 'doctrine_selection' )]"
+    onclick = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_show').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+    onclick = "[GetVariableSystem.Set( 'doctrine_group_name', FaithDoctrine.GetGroup.GetName( Faith.Self ) )]"
+    onclick = "[GetScriptedGui('skonester_acm_faith_begin_pick_doctrine').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('pick_doctrine', MakeScopeFlag(Scope.GetFlagName)).End)]"
+
+    background = {
+      using = Background_Area
+      margin = { 5 5 }
+    }
+
+    hbox = {
+      parentanchor = center
+      spacing = 8
+      margin = { 4 0 }
+
+      icon_doctrine = {
+        size = { 50 50 }
+        texture = "[FaithDoctrine.GetGroup.GetIcon]"
+      }
+
+      vbox = {
+        layoutpolicy_horizontal = expanding
+
+        text_single = {
+          layoutpolicy_horizontal = expanding
+          align = left
+          autoresize = no
+          fontsize_min = 12
+          text = "[FaithDoctrine.GetGroup.GetName( Faith.Self )]"
+        }
+
+        text_single = {
+          layoutpolicy_horizontal = expanding
+          elide = right
+          autoresize = no
+          fontsize_min = 12
+          align = left
+          default_format = "#high"
+          text = "[FaithDoctrine.GetNameNoTooltip( Faith.Self )]"
+        }
+      }
+    }
+  }
+
+  type skonester_acm_faith_head_doctrine_content = hbox {
+    parentanchor = center
+    spacing = 8
+    margin = { 4 0 }
+
+    icon_doctrine = {
+      size = { 50 50 }
+      texture = "[FaithDoctrine.GetIcon]"
+    }
+
+    vbox = {
+      layoutpolicy_horizontal = expanding
+
+      text_single = {
+        layoutpolicy_horizontal = expanding
+        align = left
+        fontsize_min = 12
+        text = "[FaithDoctrine.GetGroup.GetName( Faith.Self )]"
+      }
+
+      text_single = {
+        layoutpolicy_horizontal = expanding
+        align = left
+        default_format = "#high"
+        fontsize_min = 12
+        text = "[FaithDoctrine.GetNameNoTooltip( Faith.Self )]"
+      }
+    }
+  }
+
+  type skonester_acm_faith_creation_pick_row = button_standard_hover {
+    name = "faith_list_item"
+    layoutpolicy_horizontal = expanding
+    datacontext = "[FaithDoctrine]"
+    datacontext = "[Faith]"
+    size = { 430 80 }
+
+    onclick = "[GetScriptedGui('skonester_acm_faith_apply_pick_doctrine').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('pick_doctrine', MakeScopeFlag(Scope.GetFlagName)).End)]"
+    onclick = "[GetVariableSystem.Clear( 'skonester_acm_faith_right_view' )]"
+    onclick = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_hide').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+    onclick = "[PdxGuiTriggerAllAnimations('faith_view_refresh')]"
+    down = "[Faith.HasDoctrine( FaithDoctrine.Self )]"
+    using = tooltip_ne
+    tooltip = "skonester_acm_faith_doctrine_select_tt"
+
+    icon_doctrine = {
+      name = "doctrine_icon_main"
+      visible = "[EqualTo_string( FaithDoctrine.GetGroup.GetCategory, 'main_group' )]"
+      texture = "[FaithDoctrine.GetIcon]"
+      size = { 60 60 }
+      position = { 5 10 }
+    }
+
+    icon_doctrine = {
+      name = "doctrine_icon_other"
+      visible = "[And( Not( EqualTo_string( FaithDoctrine.GetGroup.GetCategory, 'main_group' ) ), Not( EqualTo_string( FaithDoctrine.GetGroup.GetCategory, 'core_tenets' ) ) )]"
+      texture = "[FaithDoctrine.GetGroup.GetIcon]"
+      size = { 60 60 }
+      position = { 5 10 }
+    }
+
+    widget = {
+      name = "doctrine_icon_core_bg"
+      visible = "[EqualTo_string( FaithDoctrine.GetGroup.GetCategory, 'core_tenets' )]"
+
+      background = {
+        using = Background_Area_Dark
+        alpha = 0.4
+      }
+
+      size = { 45 70 }
+      position = { 15 5 }
+    }
+
+    icon = {
+      name = "doctrine_icon_core"
+      visible = "[EqualTo_string( FaithDoctrine.GetGroup.GetCategory, 'core_tenets' )]"
+      texture = "[FaithDoctrine.GetIcon]"
+      size = { 45 70 }
+      position = { 15 5 }
+    }
+
+    text_single = {
+      name = "doctrine_name"
+      position = { 75 25 }
+      text = "[FaithDoctrine.GetNameNoTooltip( Faith.Self )]"
+      default_format = "#high"
+      using = Font_Size_Medium
+      max_width = 270
+    }
+
+    text_single = {
+      name = "piety_cost"
+      position = { 350 23 }
+      text = "[piety_i][FaithDoctrine.CalcPietyCostWithFervorDiscount( Faith.Self )]"
+      using = Font_Size_Medium
+    }
+  }
+}

@@ -1,0 +1,676 @@
+﻿# 宝物工坊：重置变量、按 actor 标记叠「逆天包」modifier、生成宝物并转移给 recipient（若与 actor 不同则授予对方）。
+
+skonester_treasure_maker_reset_actor_settings_effect = {
+  scope:actor = {
+    remove_variable = skonester_tm_s00
+    remove_variable = skonester_tm_s01
+    remove_variable = skonester_tm_s02
+    remove_variable = skonester_tm_s03
+    remove_variable = skonester_tm_s04
+    remove_variable = skonester_tm_s05
+    remove_variable = skonester_tm_s06
+    remove_variable = skonester_tm_s07
+    remove_variable = skonester_tm_s08
+    remove_variable = skonester_tm_s09
+    remove_variable = skonester_tm_s10
+    remove_variable = skonester_tm_s11
+    remove_variable = skonester_tm_s12
+    remove_variable = skonester_tm_s13
+    remove_variable = skonester_tm_s14
+    remove_variable = skonester_tm_s15
+    remove_variable = skonester_tm_s16
+    remove_variable = skonester_tm_s17
+    remove_variable = skonester_tm_s18
+    remove_variable = skonester_tm_s19
+    remove_variable = skonester_tm_s20
+    remove_variable = skonester_tm_s21
+    remove_variable = skonester_tm_s22
+    remove_variable = skonester_tm_s23
+    remove_variable = skonester_tm_s24
+    remove_character_flag = skonester_tm_god_longlife
+    remove_character_flag = skonester_tm_god_youth
+    remove_character_flag = skonester_tm_god_army_mass
+    remove_character_flag = skonester_tm_god_scheme_kill
+    remove_character_flag = skonester_tm_god_scheme_immune
+    remove_character_flag = skonester_tm_god_genius_children
+    remove_character_flag = skonester_tm_god_tax
+    remove_character_flag = skonester_tm_god_vassal_calm
+    remove_character_flag = skonester_tm_god_faith_culture
+    remove_character_flag = skonester_tm_god_dynasty
+    remove_character_flag = skonester_tm_god_knights
+    remove_character_flag = skonester_tm_kind_armor
+    remove_character_flag = skonester_tm_kind_regalia
+    remove_character_flag = skonester_tm_kind_book
+    remove_character_flag = skonester_tm_kind_trinket
+    remove_character_flag = skonester_tm_quality_low
+    remove_character_flag = skonester_tm_quality_mid
+    remove_character_flag = skonester_tm_quality_high
+    remove_character_flag = skonester_tm_give_recipient
+  }
+}
+
+skonester_treasure_maker_apply_god_packs_from_actor_effect = {
+  if = {
+    limit = { scope:actor = { has_character_flag = skonester_tm_god_longlife } }
+    add_artifact_modifier = skonester_tm_godpack_vitality
+  }
+  if = {
+    limit = { scope:actor = { has_character_flag = skonester_tm_god_youth } }
+    add_artifact_modifier = skonester_tm_godpack_youth
+  }
+  if = {
+    limit = { scope:actor = { has_character_flag = skonester_tm_god_army_mass } }
+    add_artifact_modifier = skonester_tm_godpack_army
+  }
+  if = {
+    limit = { scope:actor = { has_character_flag = skonester_tm_god_scheme_kill } }
+    add_artifact_modifier = skonester_tm_godpack_scheme_attack
+  }
+  if = {
+    limit = { scope:actor = { has_character_flag = skonester_tm_god_scheme_immune } }
+    add_artifact_modifier = skonester_tm_godpack_scheme_defense
+  }
+  if = {
+    limit = { scope:actor = { has_character_flag = skonester_tm_god_genius_children } }
+    add_artifact_modifier = skonester_tm_godpack_dynasty
+  }
+  if = {
+    limit = { scope:actor = { has_character_flag = skonester_tm_god_tax } }
+    add_artifact_modifier = skonester_tm_godpack_tax
+  }
+  if = {
+    limit = { scope:actor = { has_character_flag = skonester_tm_god_vassal_calm } }
+    add_artifact_modifier = skonester_tm_godpack_vassal
+  }
+  if = {
+    limit = { scope:actor = { has_character_flag = skonester_tm_god_faith_culture } }
+    add_artifact_modifier = skonester_tm_godpack_faith_culture
+  }
+  if = {
+    limit = { scope:actor = { has_character_flag = skonester_tm_god_dynasty } }
+    add_artifact_modifier = skonester_tm_godpack_dread_piety
+  }
+  if = {
+    limit = { scope:actor = { has_character_flag = skonester_tm_god_knights } }
+    add_artifact_modifier = skonester_tm_godpack_knight_army
+  }
+  if = {
+    limit = {
+      scope:actor = {
+        OR = {
+          has_character_flag = skonester_tm_god_longlife
+          has_character_flag = skonester_tm_god_army_mass
+        }
+      }
+    }
+    add_artifact_modifier = skonester_tm_godpack_mobility
+  }
+}
+
+skonester_treasure_maker_randomize_settings_effect = {
+  scope:actor = {
+    remove_character_flag = skonester_tm_god_longlife
+    remove_character_flag = skonester_tm_god_youth
+    remove_character_flag = skonester_tm_god_army_mass
+    remove_character_flag = skonester_tm_god_scheme_kill
+    remove_character_flag = skonester_tm_god_scheme_immune
+    remove_character_flag = skonester_tm_god_genius_children
+    remove_character_flag = skonester_tm_god_tax
+    remove_character_flag = skonester_tm_god_vassal_calm
+    remove_character_flag = skonester_tm_god_faith_culture
+    remove_character_flag = skonester_tm_god_dynasty
+    remove_character_flag = skonester_tm_god_knights
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s00 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s00 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s00 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s00 value = 3 } }
+    }
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s01 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s01 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s01 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s01 value = 3 } }
+    }
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s02 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s02 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s02 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s02 value = 3 } }
+    }
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s03 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s03 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s03 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s03 value = 3 } }
+    }
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s04 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s04 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s04 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s04 value = 3 } }
+    }
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s05 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s05 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s05 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s05 value = 3 } }
+    }
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s06 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s06 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s06 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s06 value = 3 } }
+    }
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s07 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s07 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s07 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s07 value = 3 } }
+    }
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s08 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s08 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s08 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s08 value = 3 } }
+    }
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s09 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s09 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s09 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s09 value = 3 } }
+    }
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s10 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s10 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s10 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s10 value = 3 } }
+    }
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s11 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s11 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s11 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s11 value = 3 } }
+    }
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s12 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s12 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s12 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s12 value = 3 } }
+    }
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s13 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s13 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s13 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s13 value = 3 } }
+    }
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s14 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s14 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s14 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s14 value = 3 } }
+    }
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s15 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s15 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s15 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s15 value = 3 } }
+    }
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s16 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s16 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s16 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s16 value = 3 } }
+    }
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s17 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s17 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s17 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s17 value = 3 } }
+    }
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s18 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s18 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s18 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s18 value = 3 } }
+    }
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s19 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s19 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s19 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s19 value = 3 } }
+    }
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s20 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s20 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s20 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s20 value = 3 } }
+    }
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s21 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s21 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s21 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s21 value = 3 } }
+    }
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s22 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s22 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s22 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s22 value = 3 } }
+    }
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s23 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s23 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s23 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s23 value = 3 } }
+    }
+    random_list = {
+      25 = { set_variable = { name = skonester_tm_s24 value = 0 } }
+      25 = { set_variable = { name = skonester_tm_s24 value = 1 } }
+      25 = { set_variable = { name = skonester_tm_s24 value = 2 } }
+      25 = { set_variable = { name = skonester_tm_s24 value = 3 } }
+    }
+    random = {
+      chance = 32
+      add_character_flag = skonester_tm_god_longlife
+    }
+    random = {
+      chance = 32
+      add_character_flag = skonester_tm_god_youth
+    }
+    random = {
+      chance = 32
+      add_character_flag = skonester_tm_god_army_mass
+    }
+    random = {
+      chance = 32
+      add_character_flag = skonester_tm_god_scheme_kill
+    }
+    random = {
+      chance = 32
+      add_character_flag = skonester_tm_god_scheme_immune
+    }
+    random = {
+      chance = 32
+      add_character_flag = skonester_tm_god_genius_children
+    }
+    random = {
+      chance = 32
+      add_character_flag = skonester_tm_god_tax
+    }
+    random = {
+      chance = 32
+      add_character_flag = skonester_tm_god_vassal_calm
+    }
+    random = {
+      chance = 32
+      add_character_flag = skonester_tm_god_faith_culture
+    }
+    random = {
+      chance = 32
+      add_character_flag = skonester_tm_god_dynasty
+    }
+    random = {
+      chance = 32
+      add_character_flag = skonester_tm_god_knights
+    }
+  }
+}
+
+# 在互动 on_accept 根语境调用；内部用 actor/recipient；生成后默认交给 recipient（右击对象）。
+skonester_treasure_maker_spawn_for_recipient_effect = {
+  if = {
+    limit = {
+      exists = scope:actor
+      scope:actor = { skonester_player_may_use_artifact_craft_trigger = yes }
+    }
+  scope:actor = {
+    if = {
+      limit = { has_character_flag = skonester_tm_kind_armor }
+      if = {
+        limit = { has_character_flag = skonester_tm_quality_low }
+        create_artifact = {
+          name = skonester_tm_artifact_name
+          description = skonester_tm_artifact_desc
+          creator = scope:actor
+          template = unique_artifact_template
+          type = armor_plate
+          visuals = armor
+          wealth = 20
+          quality = 20
+          decaying = no
+          modifier = artifact_placeholder_modifier
+          save_scope_as = skonester_tm_new_art
+        }
+      }
+      else_if = {
+        limit = { has_character_flag = skonester_tm_quality_mid }
+        create_artifact = {
+          name = skonester_tm_artifact_name
+          description = skonester_tm_artifact_desc
+          creator = scope:actor
+          template = unique_artifact_template
+          type = armor_plate
+          visuals = armor
+          wealth = 50
+          quality = 50
+          decaying = no
+          modifier = artifact_placeholder_modifier
+          save_scope_as = skonester_tm_new_art
+        }
+      }
+      else_if = {
+        limit = { has_character_flag = skonester_tm_quality_high }
+        create_artifact = {
+          name = skonester_tm_artifact_name
+          description = skonester_tm_artifact_desc
+          creator = scope:actor
+          template = unique_artifact_template
+          type = armor_plate
+          visuals = armor
+          wealth = 95
+          quality = 95
+          decaying = no
+          modifier = artifact_placeholder_modifier
+          save_scope_as = skonester_tm_new_art
+        }
+      }
+      else = {
+        create_artifact = {
+          name = skonester_tm_artifact_name
+          description = skonester_tm_artifact_desc
+          creator = scope:actor
+          template = unique_artifact_template
+          type = armor_plate
+          visuals = armor
+          wealth = 85
+          quality = 85
+          decaying = no
+          modifier = artifact_placeholder_modifier
+          save_scope_as = skonester_tm_new_art
+        }
+      }
+    }
+    else_if = {
+      limit = { has_character_flag = skonester_tm_kind_regalia }
+      if = {
+        limit = { has_character_flag = skonester_tm_quality_low }
+        create_artifact = {
+          name = skonester_tm_artifact_name
+          description = skonester_tm_artifact_desc
+          creator = scope:actor
+          template = unique_artifact_template
+          type = regalia
+          visuals = regalia
+          wealth = 20
+          quality = 20
+          decaying = no
+          modifier = artifact_placeholder_modifier
+          save_scope_as = skonester_tm_new_art
+        }
+      }
+      else_if = {
+        limit = { has_character_flag = skonester_tm_quality_mid }
+        create_artifact = {
+          name = skonester_tm_artifact_name
+          description = skonester_tm_artifact_desc
+          creator = scope:actor
+          template = unique_artifact_template
+          type = regalia
+          visuals = regalia
+          wealth = 50
+          quality = 50
+          decaying = no
+          modifier = artifact_placeholder_modifier
+          save_scope_as = skonester_tm_new_art
+        }
+      }
+      else_if = {
+        limit = { has_character_flag = skonester_tm_quality_high }
+        create_artifact = {
+          name = skonester_tm_artifact_name
+          description = skonester_tm_artifact_desc
+          creator = scope:actor
+          template = unique_artifact_template
+          type = regalia
+          visuals = regalia
+          wealth = 95
+          quality = 95
+          decaying = no
+          modifier = artifact_placeholder_modifier
+          save_scope_as = skonester_tm_new_art
+        }
+      }
+      else = {
+        create_artifact = {
+          name = skonester_tm_artifact_name
+          description = skonester_tm_artifact_desc
+          creator = scope:actor
+          template = unique_artifact_template
+          type = regalia
+          visuals = regalia
+          wealth = 85
+          quality = 85
+          decaying = no
+          modifier = artifact_placeholder_modifier
+          save_scope_as = skonester_tm_new_art
+        }
+      }
+    }
+    else_if = {
+      limit = { has_character_flag = skonester_tm_kind_book }
+      if = {
+        limit = { has_character_flag = skonester_tm_quality_low }
+        create_artifact = {
+          name = skonester_tm_artifact_name
+          description = skonester_tm_artifact_desc
+          creator = scope:actor
+          template = unique_artifact_template
+          type = book
+          visuals = book
+          wealth = 20
+          quality = 20
+          decaying = no
+          modifier = artifact_placeholder_modifier
+          save_scope_as = skonester_tm_new_art
+        }
+      }
+      else_if = {
+        limit = { has_character_flag = skonester_tm_quality_mid }
+        create_artifact = {
+          name = skonester_tm_artifact_name
+          description = skonester_tm_artifact_desc
+          creator = scope:actor
+          template = unique_artifact_template
+          type = book
+          visuals = book
+          wealth = 50
+          quality = 50
+          decaying = no
+          modifier = artifact_placeholder_modifier
+          save_scope_as = skonester_tm_new_art
+        }
+      }
+      else_if = {
+        limit = { has_character_flag = skonester_tm_quality_high }
+        create_artifact = {
+          name = skonester_tm_artifact_name
+          description = skonester_tm_artifact_desc
+          creator = scope:actor
+          template = unique_artifact_template
+          type = book
+          visuals = book
+          wealth = 95
+          quality = 95
+          decaying = no
+          modifier = artifact_placeholder_modifier
+          save_scope_as = skonester_tm_new_art
+        }
+      }
+      else = {
+        create_artifact = {
+          name = skonester_tm_artifact_name
+          description = skonester_tm_artifact_desc
+          creator = scope:actor
+          template = unique_artifact_template
+          type = book
+          visuals = book
+          wealth = 85
+          quality = 85
+          decaying = no
+          modifier = artifact_placeholder_modifier
+          save_scope_as = skonester_tm_new_art
+        }
+      }
+    }
+    else_if = {
+      limit = { has_character_flag = skonester_tm_kind_trinket }
+      if = {
+        limit = { has_character_flag = skonester_tm_quality_low }
+        create_artifact = {
+          name = skonester_tm_artifact_name
+          description = skonester_tm_artifact_desc
+          creator = scope:actor
+          template = unique_artifact_template
+          type = miscellaneous_when_not_court
+          visuals = trinket_icon
+          wealth = 20
+          quality = 20
+          decaying = no
+          modifier = artifact_placeholder_modifier
+          save_scope_as = skonester_tm_new_art
+        }
+      }
+      else_if = {
+        limit = { has_character_flag = skonester_tm_quality_mid }
+        create_artifact = {
+          name = skonester_tm_artifact_name
+          description = skonester_tm_artifact_desc
+          creator = scope:actor
+          template = unique_artifact_template
+          type = miscellaneous_when_not_court
+          visuals = trinket_icon
+          wealth = 50
+          quality = 50
+          decaying = no
+          modifier = artifact_placeholder_modifier
+          save_scope_as = skonester_tm_new_art
+        }
+      }
+      else_if = {
+        limit = { has_character_flag = skonester_tm_quality_high }
+        create_artifact = {
+          name = skonester_tm_artifact_name
+          description = skonester_tm_artifact_desc
+          creator = scope:actor
+          template = unique_artifact_template
+          type = miscellaneous_when_not_court
+          visuals = trinket_icon
+          wealth = 95
+          quality = 95
+          decaying = no
+          modifier = artifact_placeholder_modifier
+          save_scope_as = skonester_tm_new_art
+        }
+      }
+      else = {
+        create_artifact = {
+          name = skonester_tm_artifact_name
+          description = skonester_tm_artifact_desc
+          creator = scope:actor
+          template = unique_artifact_template
+          type = miscellaneous_when_not_court
+          visuals = trinket_icon
+          wealth = 85
+          quality = 85
+          decaying = no
+          modifier = artifact_placeholder_modifier
+          save_scope_as = skonester_tm_new_art
+        }
+      }
+    }
+    else = {
+      if = {
+        limit = { has_character_flag = skonester_tm_quality_low }
+        create_artifact = {
+          name = skonester_tm_artifact_name
+          description = skonester_tm_artifact_desc
+          creator = scope:actor
+          template = unique_artifact_template
+          type = sword
+          visuals = sword
+          wealth = 20
+          quality = 20
+          decaying = no
+          modifier = artifact_placeholder_modifier
+          save_scope_as = skonester_tm_new_art
+        }
+      }
+      else_if = {
+        limit = { has_character_flag = skonester_tm_quality_mid }
+        create_artifact = {
+          name = skonester_tm_artifact_name
+          description = skonester_tm_artifact_desc
+          creator = scope:actor
+          template = unique_artifact_template
+          type = sword
+          visuals = sword
+          wealth = 50
+          quality = 50
+          decaying = no
+          modifier = artifact_placeholder_modifier
+          save_scope_as = skonester_tm_new_art
+        }
+      }
+      else_if = {
+        limit = { has_character_flag = skonester_tm_quality_high }
+        create_artifact = {
+          name = skonester_tm_artifact_name
+          description = skonester_tm_artifact_desc
+          creator = scope:actor
+          template = unique_artifact_template
+          type = sword
+          visuals = sword
+          wealth = 95
+          quality = 95
+          decaying = no
+          modifier = artifact_placeholder_modifier
+          save_scope_as = skonester_tm_new_art
+        }
+      }
+      else = {
+        create_artifact = {
+          name = skonester_tm_artifact_name
+          description = skonester_tm_artifact_desc
+          creator = scope:actor
+          template = unique_artifact_template
+          type = sword
+          visuals = sword
+          wealth = 85
+          quality = 85
+          decaying = no
+          modifier = artifact_placeholder_modifier
+          save_scope_as = skonester_tm_new_art
+        }
+      }
+    }
+  }
+  scope:skonester_tm_new_art = {
+    remove_artifact_modifier = artifact_placeholder_modifier
+    set_variable = { name = historical_unique_artifact value = yes }
+    skonester_treasure_maker_apply_stat_tiers_from_actor_effect = yes
+    skonester_treasure_maker_apply_god_packs_from_actor_effect = yes
+    if = {
+      limit = {
+        scope:actor = { has_character_flag = skonester_tm_give_recipient }
+        exists = scope:recipient
+        NOT = { scope:recipient = { this = scope:actor } }
+      }
+      set_owner = scope:recipient
+    }
+  }
+  scope:actor = {
+    skonester_treasure_maker_reset_actor_settings_effect = yes
+  }
+  }
+}

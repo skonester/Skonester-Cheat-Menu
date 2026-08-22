@@ -1,0 +1,7 @@
+﻿version="8.22.26-PreChapterV"
+tags={
+	"1.19 'Scribe'"
+}
+name="Skonester Cheat Menu"
+supported_version="1.19.*"
+remote_file_id="3398662167"

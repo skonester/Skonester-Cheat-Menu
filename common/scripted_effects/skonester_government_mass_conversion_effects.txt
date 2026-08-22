@@ -1,0 +1,683 @@
+﻿# 首都部落/游牧/牧民地产改为城堡，再换东亚宅邸并改政府（对齐原版行政转换）
+
+skonester_convert_character_to_celestial_government_effect = {
+  if = {
+    limit = {
+      has_tgp_dlc_trigger = yes
+      NOT = { has_government = celestial_government }
+    }
+    if = {
+      limit = { is_landed = yes }
+      capital_province = {
+        if = {
+          limit = {
+            OR = {
+              has_holding_type = tribal_holding
+              has_holding_type = herder_holding
+              has_holding_type = nomad_holding
+            }
+          }
+          set_holding_type = castle_holding
+          skonester_ensure_castle_holding_base_castle_building = yes
+        }
+      }
+    }
+    if = {
+      limit = { has_tgp_dlc_trigger = yes }
+      tgp_domicile_conversion_when_changing_government_type = {
+        NEW_DOMICILE_TYPE = east_asian_estate
+        NEW_GOVERNMENT_TYPE = celestial_government
+      }
+    }
+    change_government = celestial_government
+  }
+}
+
+skonester_convert_character_to_meritocratic_government_effect = {
+  if = {
+    limit = {
+      has_tgp_dlc_trigger = yes
+      NOT = { has_government = meritocratic_government }
+    }
+    if = {
+      limit = { is_landed = yes }
+      capital_province = {
+        if = {
+          limit = {
+            OR = {
+              has_holding_type = tribal_holding
+              has_holding_type = herder_holding
+              has_holding_type = nomad_holding
+            }
+          }
+          set_holding_type = castle_holding
+          skonester_ensure_castle_holding_base_castle_building = yes
+        }
+      }
+    }
+    if = {
+      limit = { has_tgp_dlc_trigger = yes }
+      tgp_domicile_conversion_when_changing_government_type = {
+        NEW_DOMICILE_TYPE = east_asian_estate
+        NEW_GOVERNMENT_TYPE = meritocratic_government
+      }
+    }
+    change_government = meritocratic_government
+    skonester_player_government_lock_apply_effect = yes
+  }
+}
+
+skonester_convert_character_to_administrative_government_effect = {
+  if = {
+    limit = { NOT = { has_government = administrative_government } }
+    if = {
+      limit = { is_landed = yes }
+      capital_province = {
+        if = {
+          limit = {
+            OR = {
+              has_holding_type = tribal_holding
+              has_holding_type = herder_holding
+              has_holding_type = nomad_holding
+            }
+          }
+          set_holding_type = castle_holding
+          skonester_ensure_castle_holding_base_castle_building = yes
+        }
+      }
+    }
+    if = {
+      limit = { has_tgp_dlc_trigger = yes }
+      add_character_flag = new_government_is_byz_admin
+      tgp_domicile_conversion_when_changing_government_type = {
+        NEW_DOMICILE_TYPE = estate
+        NEW_GOVERNMENT_TYPE = administrative_government
+      }
+      remove_character_flag = new_government_is_byz_admin
+    }
+    change_government = administrative_government
+  }
+}
+
+skonester_convert_character_to_japan_administrative_government_effect = {
+  if = {
+    limit = {
+      has_tgp_dlc_trigger = yes
+      NOT = { has_government = japan_administrative_government }
+      tgp_can_become_japan_administrative_trigger = yes
+    }
+    if = {
+      limit = { is_landed = yes }
+      capital_province = {
+        if = {
+          limit = {
+            OR = {
+              has_holding_type = tribal_holding
+              has_holding_type = herder_holding
+              has_holding_type = nomad_holding
+            }
+          }
+          set_holding_type = castle_holding
+          skonester_ensure_castle_holding_base_castle_building = yes
+        }
+      }
+    }
+    if = {
+      limit = { has_tgp_dlc_trigger = yes }
+      tgp_domicile_conversion_when_changing_government_type = {
+        NEW_DOMICILE_TYPE = japanese_manor
+        NEW_GOVERNMENT_TYPE = japan_administrative_government
+      }
+    }
+    change_government = japan_administrative_government
+  }
+}
+
+skonester_convert_character_to_steppe_admin_government_effect = {
+  if = {
+    limit = {
+      has_tgp_dlc_trigger = yes
+      NOT = { has_government = steppe_admin_government }
+    }
+    if = {
+      limit = { is_landed = yes }
+      capital_province = {
+        if = {
+          limit = {
+            OR = {
+              has_holding_type = tribal_holding
+              has_holding_type = herder_holding
+              has_holding_type = nomad_holding
+            }
+          }
+          set_holding_type = castle_holding
+          skonester_ensure_castle_holding_base_castle_building = yes
+        }
+      }
+    }
+    if = {
+      limit = { has_tgp_dlc_trigger = yes }
+      tgp_domicile_conversion_when_changing_government_type = {
+        NEW_DOMICILE_TYPE = east_asian_estate
+        NEW_GOVERNMENT_TYPE = steppe_admin_government
+      }
+    }
+    change_government = steppe_admin_government
+  }
+}
+
+skonester_mass_convert_vassals_to_celestial_effect = {
+  every_vassal_or_below = {
+    limit = {
+      has_tgp_dlc_trigger = yes
+      skonester_mass_gov_conversion_target_trigger = yes
+      NOT = { has_government = celestial_government }
+      OR = {
+        root = { has_character_flag = skonester_chenzhi_target_vassals }
+        NOT = { skonester_protected_from_forced_feudal_conversion_trigger = yes }
+      }
+    }
+    skonester_convert_character_to_celestial_government_effect = yes
+  }
+}
+
+skonester_mass_convert_vassals_to_meritocratic_effect = {
+  every_vassal_or_below = {
+    limit = {
+      has_tgp_dlc_trigger = yes
+      skonester_mass_gov_conversion_target_trigger = yes
+      NOT = { has_government = meritocratic_government }
+      OR = {
+        root = { has_character_flag = skonester_chenzhi_target_vassals }
+        NOT = { skonester_protected_from_forced_feudal_conversion_trigger = yes }
+      }
+    }
+    skonester_convert_character_to_meritocratic_government_effect = yes
+  }
+}
+
+skonester_mass_convert_vassals_to_administrative_effect = {
+  every_vassal_or_below = {
+    limit = {
+      skonester_mass_gov_conversion_target_trigger = yes
+      NOT = { has_government = administrative_government }
+      OR = {
+        root = { has_character_flag = skonester_chenzhi_target_vassals }
+        NOT = { skonester_protected_from_forced_feudal_conversion_trigger = yes }
+      }
+    }
+    skonester_convert_character_to_administrative_government_effect = yes
+  }
+}
+
+skonester_mass_convert_vassals_to_japan_administrative_effect = {
+  every_vassal_or_below = {
+    limit = {
+      has_tgp_dlc_trigger = yes
+      skonester_mass_gov_conversion_target_trigger = yes
+      NOT = { has_government = japan_administrative_government }
+      tgp_can_become_japan_administrative_trigger = yes
+      OR = {
+        root = { has_character_flag = skonester_chenzhi_target_vassals }
+        NOT = { skonester_protected_from_forced_feudal_conversion_trigger = yes }
+      }
+    }
+    skonester_convert_character_to_japan_administrative_government_effect = yes
+  }
+}
+
+skonester_mass_convert_vassals_to_steppe_admin_effect = {
+  every_vassal_or_below = {
+    limit = {
+      has_tgp_dlc_trigger = yes
+      skonester_mass_gov_conversion_target_trigger = yes
+      NOT = { has_government = steppe_admin_government }
+      OR = {
+        root = { has_character_flag = skonester_chenzhi_target_vassals }
+        NOT = { skonester_protected_from_forced_feudal_conversion_trigger = yes }
+      }
+    }
+    skonester_convert_character_to_steppe_admin_government_effect = yes
+  }
+}
+
+skonester_convert_character_to_feudal_government_effect = {
+  if = {
+    limit = {
+      NOT = { has_government = feudal_government }
+      OR = {
+        has_character_flag = skonester_chenzhi_force_feudal_conversion
+        AND = {
+          exists = liege
+          liege = { has_character_flag = skonester_chenzhi_force_mass_feudal }
+        }
+        NOT = { skonester_protected_from_forced_feudal_conversion_trigger = yes }
+      }
+      # 修复：开局日本律令（japan_administrative_government）不应被通用“转封建”误改
+      NOT = { has_government = japan_administrative_government }
+      NOT = { has_government = japan_feudal_government }
+      # 额外保护：日本文化角色不应被强制转封建
+      NOT = {
+        AND = {
+          culture = japanese
+          OR = {
+            has_government = japan_administrative_government
+            has_government = japan_feudal_government
+          }
+        }
+      }
+      # 额外保护：日本帝国头衔持有者不应被强制转封建
+      NOT = {
+        AND = {
+          highest_held_title_tier >= tier_empire
+          culture = japanese
+          OR = {
+            has_government = japan_administrative_government
+            has_government = japan_feudal_government
+          }
+        }
+      }
+    }
+    if = {
+      limit = { is_landed = yes }
+      capital_province = {
+        if = {
+          limit = {
+            OR = {
+              has_holding_type = tribal_holding
+              has_holding_type = herder_holding
+              has_holding_type = nomad_holding
+            }
+          }
+          set_holding_type = castle_holding
+          skonester_ensure_castle_holding_base_castle_building = yes
+        }
+      }
+    }
+    change_government = feudal_government
+    if = {
+      limit = { is_ai = no }
+      send_interface_toast = {
+        title = skonester_government_changed_feudal_toast_title
+        desc = skonester_government_changed_feudal_toast_desc
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      is_ai = no
+      is_playable_character = yes
+      NOT = { has_government = feudal_government }
+      skonester_protected_from_forced_feudal_conversion_trigger = yes
+      NOT = { has_character_flag = skonester_chenzhi_force_feudal_conversion }
+      NOR = {
+        AND = {
+          exists = liege
+          liege = { has_character_flag = skonester_chenzhi_force_mass_feudal }
+        }
+      }
+    }
+    skonester_player_government_feudal_blocked_notify_effect = yes
+  }
+}
+
+skonester_convert_character_to_tribal_government_effect = {
+  if = {
+    limit = {
+      NOT = { has_government = tribal_government }
+      # 保护日本政府不被转部落制
+      NOT = { has_government = japan_administrative_government }
+      NOT = { has_government = japan_feudal_government }
+      # 额外保护：日本文化角色不应被强制转部落制
+      NOT = {
+        AND = {
+          culture = japanese
+          OR = {
+            has_government = japan_administrative_government
+            has_government = japan_feudal_government
+          }
+        }
+      }
+      # 额外保护：日本帝国头衔持有者不应被强制转部落制
+      NOT = {
+        AND = {
+          highest_held_title_tier >= tier_empire
+          culture = japanese
+          OR = {
+            has_government = japan_administrative_government
+            has_government = japan_feudal_government
+          }
+        }
+      }
+    }
+    if = {
+      limit = { is_landed = yes }
+      capital_province = {
+        if = {
+          limit = {
+            OR = {
+              has_holding_type = castle_holding
+              has_holding_type = city_holding
+              has_holding_type = church_holding
+            }
+          }
+          set_holding_type = tribal_holding
+          skonester_ensure_tribal_holding_base_tribe_building = yes
+        }
+      }
+    }
+    change_government = tribal_government
+  }
+}
+
+skonester_convert_character_to_clan_government_effect = {
+  if = {
+    limit = {
+      NOT = { has_government = clan_government }
+      # 保护日本政府不被转氏族制
+      NOT = { has_government = japan_administrative_government }
+      NOT = { has_government = japan_feudal_government }
+      # 额外保护：日本文化角色不应被强制转氏族制
+      NOT = {
+        AND = {
+          culture = japanese
+          OR = {
+            has_government = japan_administrative_government
+            has_government = japan_feudal_government
+          }
+        }
+      }
+      # 额外保护：日本帝国头衔持有者不应被强制转氏族制
+      NOT = {
+        AND = {
+          highest_held_title_tier >= tier_empire
+          culture = japanese
+          OR = {
+            has_government = japan_administrative_government
+            has_government = japan_feudal_government
+          }
+        }
+      }
+    }
+    if = {
+      limit = { is_landed = yes }
+      capital_province = {
+        if = {
+          limit = {
+            OR = {
+              has_holding_type = tribal_holding
+              has_holding_type = herder_holding
+              has_holding_type = nomad_holding
+            }
+          }
+          set_holding_type = castle_holding
+          skonester_ensure_castle_holding_base_castle_building = yes
+        }
+      }
+    }
+    change_government = clan_government
+  }
+}
+
+skonester_convert_character_to_republic_government_effect = {
+  if = {
+    limit = {
+      NOT = { has_government = republic_government }
+      # 保护日本政府不被转共和制
+      NOT = { has_government = japan_administrative_government }
+      NOT = { has_government = japan_feudal_government }
+      # 额外保护：日本文化角色不应被强制转共和制
+      NOT = {
+        AND = {
+          culture = japanese
+          OR = {
+            has_government = japan_administrative_government
+            has_government = japan_feudal_government
+          }
+        }
+      }
+      # 额外保护：日本帝国头衔持有者不应被强制转共和制
+      NOT = {
+        AND = {
+          highest_held_title_tier >= tier_empire
+          culture = japanese
+          OR = {
+            has_government = japan_administrative_government
+            has_government = japan_feudal_government
+          }
+        }
+      }
+    }
+    change_government = republic_government
+  }
+}
+
+skonester_convert_character_to_mandala_government_effect = {
+  if = {
+    limit = { NOT = { has_government = mandala_government } }
+    change_government = mandala_government
+  }
+}
+
+skonester_convert_character_to_nomadic_government_effect = {
+  if = {
+    limit = {
+      has_mpo_dlc_trigger = yes
+      NOT = { has_government = nomad_government }
+    }
+    if = {
+      limit = { is_landed = yes }
+      capital_province = {
+        if = {
+          limit = {
+            NOT = { has_holding_type = nomad_holding }
+          }
+          if = {
+            limit = {
+              OR = {
+                has_holding_type = castle_holding
+                has_holding_type = city_holding
+                has_holding_type = church_holding
+                has_holding_type = tribal_holding
+                has_holding_type = herder_holding
+              }
+            }
+            set_holding_type = nomad_holding
+          }
+        }
+      }
+    }
+    change_government = nomad_government
+  }
+}
+
+skonester_mass_convert_vassals_to_feudal_effect = {
+  every_vassal_or_below = {
+    limit = {
+      skonester_mass_gov_conversion_target_trigger = yes
+      NOT = { has_government = feudal_government }
+      OR = {
+        root = { has_character_flag = skonester_chenzhi_force_mass_feudal }
+        NOT = { skonester_protected_from_forced_feudal_conversion_trigger = yes }
+      }
+    }
+    skonester_convert_character_to_feudal_government_effect = yes
+  }
+}
+
+skonester_mass_convert_vassals_to_tribal_effect = {
+  every_vassal_or_below = {
+    limit = {
+      skonester_mass_gov_conversion_target_trigger = yes
+      NOT = { has_government = tribal_government }
+      OR = {
+        root = { has_character_flag = skonester_chenzhi_target_vassals }
+        NOT = { skonester_protected_from_forced_feudal_conversion_trigger = yes }
+      }
+    }
+    skonester_convert_character_to_tribal_government_effect = yes
+  }
+}
+
+skonester_mass_convert_vassals_to_clan_effect = {
+  every_vassal_or_below = {
+    limit = {
+      skonester_mass_gov_conversion_target_trigger = yes
+      NOT = { has_government = clan_government }
+      OR = {
+        root = { has_character_flag = skonester_chenzhi_target_vassals }
+        NOT = { skonester_protected_from_forced_feudal_conversion_trigger = yes }
+      }
+    }
+    skonester_convert_character_to_clan_government_effect = yes
+  }
+}
+
+skonester_mass_convert_vassals_to_republic_effect = {
+  every_vassal_or_below = {
+    limit = {
+      skonester_mass_gov_conversion_target_trigger = yes
+      NOT = { has_government = republic_government }
+      OR = {
+        root = { has_character_flag = skonester_chenzhi_target_vassals }
+        NOT = { skonester_protected_from_forced_feudal_conversion_trigger = yes }
+      }
+    }
+    skonester_convert_character_to_republic_government_effect = yes
+  }
+}
+
+skonester_mass_convert_vassals_to_mandala_effect = {
+  every_vassal_or_below = {
+    limit = {
+      skonester_mass_gov_conversion_target_trigger = yes
+      NOT = { has_government = mandala_government }
+    }
+    skonester_convert_character_to_mandala_government_effect = yes
+  }
+}
+
+skonester_mass_convert_vassals_to_nomadic_effect = {
+  every_vassal_or_below = {
+    limit = {
+      skonester_mass_gov_conversion_target_trigger = yes
+      NOT = { has_government = nomad_government }
+    }
+    skonester_convert_character_to_nomadic_government_effect = yes
+  }
+}
+
+skonester_convert_character_to_theocracy_government_effect = {
+  if = {
+    limit = { NOT = { has_government = theocracy_government } }
+    change_government = theocracy_government
+  }
+}
+
+skonester_mass_convert_vassals_to_theocracy_effect = {
+  every_vassal_or_below = {
+    limit = {
+      skonester_mass_gov_conversion_target_trigger = yes
+      NOT = { has_government = theocracy_government }
+      OR = {
+        root = { has_character_flag = skonester_chenzhi_target_vassals }
+        NOT = { skonester_protected_from_forced_feudal_conversion_trigger = yes }
+      }
+    }
+    skonester_convert_character_to_theocracy_government_effect = yes
+  }
+}
+
+skonester_convert_character_to_japan_feudal_government_effect = {
+  if = {
+    limit = {
+      has_tgp_dlc_trigger = yes
+      NOT = { has_government = japan_feudal_government }
+    }
+    if = {
+      limit = { is_landed = yes }
+      capital_province = {
+        if = {
+          limit = {
+            OR = {
+              has_holding_type = tribal_holding
+              has_holding_type = herder_holding
+              has_holding_type = nomad_holding
+            }
+          }
+          set_holding_type = castle_holding
+          skonester_ensure_castle_holding_base_castle_building = yes
+        }
+      }
+    }
+    if = {
+      limit = { has_tgp_dlc_trigger = yes }
+      tgp_domicile_conversion_when_changing_government_type = {
+        NEW_DOMICILE_TYPE = japanese_manor
+        NEW_GOVERNMENT_TYPE = japan_feudal_government
+      }
+    }
+    change_government = japan_feudal_government
+  }
+}
+
+skonester_mass_convert_vassals_to_japan_feudal_effect = {
+  every_vassal_or_below = {
+    limit = {
+      has_tgp_dlc_trigger = yes
+      skonester_mass_gov_conversion_target_trigger = yes
+      NOT = { has_government = japan_feudal_government }
+      OR = {
+        root = { has_character_flag = skonester_chenzhi_target_vassals }
+        NOT = { skonester_protected_from_forced_feudal_conversion_trigger = yes }
+      }
+    }
+    skonester_convert_character_to_japan_feudal_government_effect = yes
+  }
+}
+
+skonester_convert_character_to_herder_government_effect = {
+  if = {
+    limit = {
+      has_mpo_dlc_trigger = yes
+      NOT = { has_government = herder_government }
+    }
+    if = {
+      limit = { is_landed = yes }
+      capital_province = {
+        if = {
+          limit = {
+            NOT = { has_holding_type = herder_holding }
+          }
+          if = {
+            limit = {
+              OR = {
+                has_holding_type = castle_holding
+                has_holding_type = city_holding
+                has_holding_type = church_holding
+                has_holding_type = tribal_holding
+                has_holding_type = nomad_holding
+              }
+            }
+            set_holding_type = herder_holding
+          }
+        }
+      }
+    }
+    change_government = herder_government
+  }
+}
+
+skonester_mass_convert_vassals_to_herder_effect = {
+  every_vassal_or_below = {
+    limit = {
+      skonester_mass_gov_conversion_target_trigger = yes
+      NOT = { has_government = herder_government }
+      OR = {
+        root = { has_character_flag = skonester_chenzhi_target_vassals }
+        NOT = { skonester_protected_from_forced_feudal_conversion_trigger = yes }
+      }
+    }
+    skonester_convert_character_to_herder_government_effect = yes
+  }
+}

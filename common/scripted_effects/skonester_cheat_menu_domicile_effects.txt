@@ -1,0 +1,806 @@
+﻿# Skonester「庄园编辑」：须在 scope:recipient 或 scope:skonester_cheat_menu_target 上调用。
+# 外槽/内建沿用原版 fill_external_* 与 add_random_internal_*；主建筑逐级 add_domicile_building。
+
+# 行政/贤能等：庄园多在世族头衔或宗族族长名下；帝国/公国/伯爵持有者本人常无 domicile。
+skonester_cheat_menu_resolve_domicile_holder_effect = {
+  if = {
+    limit = {
+      is_alive = yes
+      has_domicile = yes
+    }
+    save_scope_as = skonester_domicile_holder
+  }
+  else_if = {
+    limit = {
+      is_alive = yes
+      exists = house.house_head
+      house.house_head = {
+        is_alive = yes
+        has_domicile = yes
+      }
+    }
+    house.house_head = {
+      save_scope_as = skonester_domicile_holder
+    }
+  }
+  else_if = {
+    limit = {
+      is_alive = yes
+      exists = house
+    }
+    house = {
+      ordered_house_member = {
+        limit = {
+          is_alive = yes
+          has_domicile = yes
+          is_house_head = yes
+        }
+        order_by = age
+        save_scope_as = skonester_domicile_holder
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      is_alive = yes
+      exists = house
+    }
+    house = {
+      ordered_house_member = {
+        limit = {
+          is_alive = yes
+          has_domicile = yes
+          any_held_title = { is_noble_family_title = yes }
+        }
+        order_by = age
+        save_scope_as = skonester_domicile_holder
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      is_alive = yes
+      exists = house
+    }
+    house = {
+      random_house_member = {
+        limit = {
+          is_alive = yes
+          has_domicile = yes
+        }
+        save_scope_as = skonester_domicile_holder
+      }
+    }
+  }
+}
+
+skonester_cheat_menu_domicile_warn_no_holder_effect = {
+  if = {
+    limit = { NOT = { exists = scope:skonester_domicile_holder } }
+    root = {
+      send_interface_toast = {
+        type = event_toast_effect_bad
+        title = skonester_cheat_menu_fill_domicile_must_have_estate_tt
+        left_icon = root
+      }
+    }
+  }
+}
+
+# 绕过 can_construct 革新门槛与建造费用（行政制国库 / 西式金币）。
+skonester_domicile_cheat_prereqs_effect = {
+  owner = {
+    if = {
+      limit = { has_treasury = yes }
+      add_treasury = 50000
+    }
+    else = {
+      add_gold = 50000
+    }
+    culture = {
+      if = {
+        limit = { NOT = { has_innovation = innovation_city_planning } }
+        add_innovation = innovation_city_planning
+      }
+      if = {
+        limit = { NOT = { has_innovation = innovation_manorialism } }
+        add_innovation = innovation_manorialism
+      }
+      if = {
+        limit = { NOT = { has_innovation = innovation_development_03 } }
+        add_innovation = innovation_development_03
+      }
+      if = {
+        limit = { NOT = { has_innovation = innovation_cranes } }
+        add_innovation = innovation_cranes
+      }
+    }
+  }
+  switch = {
+    trigger = is_domicile_type
+    estate = {
+      if = {
+        limit = { NOT = { has_domicile_building_or_higher = estate_main_01 } }
+        add_domicile_building = estate_main_01
+      }
+    }
+    east_asian_estate = {
+      if = {
+        limit = { NOT = { has_domicile_building_or_higher = east_asian_estate_main_01 } }
+        add_domicile_building = east_asian_estate_main_01
+      }
+    }
+    japanese_manor = {
+      if = {
+        limit = { NOT = { has_domicile_building_or_higher = japanese_manor_main_01 } }
+        add_domicile_building = japanese_manor_main_01
+      }
+    }
+  }
+}
+
+skonester_cheat_menu_estate_edit_full_effect = {
+  if = {
+    limit = {
+      is_alive = yes
+      domicile ?= {
+        OR = {
+          is_domicile_type = estate
+          is_domicile_type = japanese_manor
+          is_domicile_type = east_asian_estate
+        }
+      }
+    }
+    domicile = {
+      skonester_domicile_cheat_prereqs_effect = yes
+      switch = {
+        trigger = is_domicile_type
+        estate = {
+          skonester_cheat_menu_maximize_estate_domicile_inner_effect = yes
+        }
+        japanese_manor = {
+          skonester_cheat_menu_maximize_japanese_manor_domicile_inner_effect = yes
+        }
+        east_asian_estate = {
+          skonester_cheat_menu_maximize_east_asian_estate_domicile_inner_effect = yes
+        }
+      }
+    }
+  }
+}
+
+skonester_cheat_menu_estate_edit_external_effect = {
+  if = {
+    limit = {
+      is_alive = yes
+      domicile ?= {
+        OR = {
+          is_domicile_type = estate
+          is_domicile_type = japanese_manor
+          is_domicile_type = east_asian_estate
+        }
+      }
+    }
+    domicile = {
+      skonester_domicile_cheat_prereqs_effect = yes
+      switch = {
+        trigger = is_domicile_type
+        estate = {
+          skonester_estate_edit_estate_external_effect = yes
+        }
+        japanese_manor = {
+          skonester_estate_edit_japanese_manor_external_effect = yes
+        }
+        east_asian_estate = {
+          skonester_estate_edit_east_asian_estate_external_effect = yes
+        }
+      }
+    }
+  }
+}
+
+skonester_cheat_menu_estate_edit_upgrade_effect = {
+  if = {
+    limit = {
+      is_alive = yes
+      domicile ?= {
+        OR = {
+          is_domicile_type = estate
+          is_domicile_type = japanese_manor
+          is_domicile_type = east_asian_estate
+        }
+      }
+    }
+    domicile = {
+      skonester_domicile_cheat_prereqs_effect = yes
+      switch = {
+        trigger = is_domicile_type
+        estate = {
+          skonester_estate_edit_estate_upgrade_effect = yes
+        }
+        japanese_manor = {
+          skonester_estate_edit_japanese_manor_upgrade_effect = yes
+        }
+        east_asian_estate = {
+          skonester_estate_edit_east_asian_estate_upgrade_effect = yes
+        }
+      }
+    }
+  }
+}
+
+skonester_cheat_menu_estate_edit_internal_effect = {
+  if = {
+    limit = {
+      is_alive = yes
+      domicile ?= {
+        OR = {
+          is_domicile_type = estate
+          is_domicile_type = japanese_manor
+          is_domicile_type = east_asian_estate
+        }
+      }
+    }
+    domicile = {
+      skonester_domicile_cheat_prereqs_effect = yes
+      switch = {
+        trigger = is_domicile_type
+        estate = {
+          skonester_estate_edit_estate_internal_effect = yes
+        }
+        japanese_manor = {
+          skonester_estate_edit_japanese_manor_internal_effect = yes
+        }
+        east_asian_estate = {
+          skonester_estate_edit_east_asian_estate_internal_effect = yes
+        }
+      }
+    }
+  }
+}
+
+skonester_cheat_menu_recipient_maximize_domicile_effect = {
+  scope:recipient = {
+    skonester_cheat_menu_estate_edit_full_effect = yes
+  }
+}
+
+skonester_cheat_menu_maximize_estate_domicile_inner_effect = {
+  skonester_domicile_residence_full_max_effect = yes
+}
+
+skonester_cheat_menu_maximize_japanese_manor_domicile_inner_effect = {
+  skonester_domicile_residence_full_max_effect = yes
+}
+
+skonester_cheat_menu_maximize_east_asian_estate_domicile_inner_effect = {
+  skonester_domicile_residence_full_max_effect = yes
+}
+
+# --- 庄园编辑分项（西式庄园）---
+
+skonester_estate_edit_estate_main_max_effect = {
+  if = {
+    limit = {
+      NOT = { has_domicile_building_or_higher = estate_main_02 }
+    }
+    add_domicile_building = estate_main_02
+  }
+  if = {
+    limit = {
+      NOT = { has_domicile_building_or_higher = estate_main_03 }
+    }
+    add_domicile_building = estate_main_03
+  }
+  if = {
+    limit = {
+      NOT = { has_domicile_building_or_higher = estate_main_04 }
+    }
+    add_domicile_building = estate_main_04
+  }
+  if = {
+    limit = {
+      NOT = { has_domicile_building_or_higher = estate_main_05 }
+    }
+    add_domicile_building = estate_main_05
+  }
+}
+
+skonester_estate_edit_estate_external_effect = {
+  skonester_estate_edit_estate_main_max_effect = yes
+  fill_external_estate_building_effect = yes
+  hidden_effect = {
+    while = {
+      count = 40
+      limit = {
+        free_external_domicile_building_slots >= 1
+      }
+      add_random_external_estate_building = yes
+    }
+  }
+}
+
+skonester_estate_edit_estate_bump_tiers_effect = {
+  if = {
+    limit = {
+      has_domicile_building_or_higher = estate_main_03
+    }
+    if = {
+      limit = {
+        has_domicile_building = servants_quarters_01
+        NOT = { has_domicile_building_or_higher = servants_quarters_02 }
+      }
+      add_domicile_building = servants_quarters_02
+    }
+    if = {
+      limit = {
+        has_domicile_building = library_01
+        NOT = { has_domicile_building_or_higher = library_02 }
+      }
+      add_domicile_building = library_02
+    }
+    if = {
+      limit = {
+        has_domicile_building = bath_01
+        NOT = { has_domicile_building_or_higher = bath_02 }
+      }
+      add_domicile_building = bath_02
+    }
+    if = {
+      limit = {
+        has_domicile_building = courtyard_01
+        NOT = { has_domicile_building_or_higher = courtyard_02 }
+      }
+      add_domicile_building = courtyard_02
+    }
+    if = {
+      limit = {
+        has_domicile_building = prison_01
+        NOT = { has_domicile_building_or_higher = prison_02 }
+      }
+      add_domicile_building = prison_02
+    }
+    if = {
+      limit = {
+        has_domicile_building = living_quarters_01
+        NOT = { has_domicile_building_or_higher = living_quarters_02 }
+      }
+      add_domicile_building = living_quarters_02
+    }
+    if = {
+      limit = {
+        has_domicile_building = trophy_room_01
+        NOT = { has_domicile_building_or_higher = trophy_room_02 }
+      }
+      add_domicile_building = trophy_room_02
+    }
+    if = {
+      limit = {
+        has_domicile_building = office_01
+        NOT = { has_domicile_building_or_higher = office_02 }
+      }
+      add_domicile_building = office_02
+    }
+    if = {
+      limit = {
+        has_domicile_building = guest_room_01
+        NOT = { has_domicile_building_or_higher = guest_room_02 }
+      }
+      add_domicile_building = guest_room_02
+    }
+    if = {
+      limit = {
+        has_domicile_building = wine_cellar_01
+        NOT = { has_domicile_building_or_higher = wine_cellar_02 }
+      }
+      add_domicile_building = wine_cellar_02
+    }
+    if = {
+      limit = {
+        has_domicile_building = temple_small_01
+        NOT = { has_domicile_building_or_higher = temple_small_02 }
+      }
+      add_domicile_building = temple_small_02
+    }
+    if = {
+      limit = {
+        has_domicile_building = barracks_01
+        NOT = { has_domicile_building_or_higher = barracks_02 }
+      }
+      add_domicile_building = barracks_02
+    }
+    if = {
+      limit = {
+        has_domicile_building = watchtower_01
+        NOT = { has_domicile_building_or_higher = watchtower_02 }
+      }
+      add_domicile_building = watchtower_02
+    }
+    if = {
+      limit = {
+        has_domicile_building = vineyard_01
+        NOT = { has_domicile_building_or_higher = vineyard_02 }
+      }
+      add_domicile_building = vineyard_02
+    }
+    if = {
+      limit = {
+        has_domicile_building = guardhouse_01
+        NOT = { has_domicile_building_or_higher = guardhouse_02 }
+      }
+      add_domicile_building = guardhouse_02
+    }
+    if = {
+      limit = {
+        has_domicile_building = garden_01
+        NOT = { has_domicile_building_or_higher = garden_02 }
+      }
+      add_domicile_building = garden_02
+    }
+    if = {
+      limit = {
+        has_domicile_building = storage_01
+        NOT = { has_domicile_building_or_higher = storage_02 }
+      }
+      add_domicile_building = storage_02
+    }
+    if = {
+      limit = {
+        has_domicile_building = stable_01
+        NOT = { has_domicile_building_or_higher = stable_02 }
+      }
+      add_domicile_building = stable_02
+    }
+    if = {
+      limit = {
+        has_domicile_building = workshop_01
+        NOT = { has_domicile_building_or_higher = workshop_02 }
+      }
+      add_domicile_building = workshop_02
+    }
+    if = {
+      limit = {
+        has_domicile_building = market_01
+        NOT = { has_domicile_building_or_higher = market_02 }
+      }
+      add_domicile_building = market_02
+    }
+    if = {
+      limit = {
+        has_domicile_building = grazing_land_01
+        NOT = { has_domicile_building_or_higher = grazing_land_02 }
+      }
+      add_domicile_building = grazing_land_02
+    }
+    if = {
+      limit = {
+        has_domicile_building = grain_field_01
+        NOT = { has_domicile_building_or_higher = grain_field_02 }
+      }
+      add_domicile_building = grain_field_02
+    }
+    if = {
+      limit = {
+        has_domicile_building = rice_field_01
+        NOT = { has_domicile_building_or_higher = rice_field_02 }
+      }
+      add_domicile_building = rice_field_02
+    }
+    if = {
+      limit = {
+        has_domicile_building = olive_01
+        NOT = { has_domicile_building_or_higher = olive_02 }
+      }
+      add_domicile_building = olive_02
+    }
+  }
+}
+
+skonester_estate_edit_estate_upgrade_effect = {
+  skonester_estate_edit_estate_external_effect = yes
+  skonester_domicile_residence_full_max_effect = yes
+}
+
+skonester_estate_edit_estate_internal_effect = {
+  skonester_domicile_residence_full_max_effect = yes
+}
+
+# --- 庄园编辑分项（日式邸宅）---
+
+skonester_estate_edit_japanese_manor_main_max_effect = {
+  if = {
+    limit = {
+      NOT = { has_domicile_building_or_higher = japanese_manor_main_02 }
+    }
+    add_domicile_building = japanese_manor_main_02
+  }
+  if = {
+    limit = {
+      NOT = { has_domicile_building_or_higher = japanese_manor_main_03 }
+    }
+    add_domicile_building = japanese_manor_main_03
+  }
+  if = {
+    limit = {
+      NOT = { has_domicile_building_or_higher = japanese_manor_main_04 }
+    }
+    add_domicile_building = japanese_manor_main_04
+  }
+  if = {
+    limit = {
+      NOT = { has_domicile_building_or_higher = japanese_manor_main_05 }
+    }
+    add_domicile_building = japanese_manor_main_05
+  }
+  if = {
+    limit = {
+      NOT = { has_domicile_building_or_higher = japanese_manor_main_06 }
+    }
+    add_domicile_building = japanese_manor_main_06
+  }
+}
+
+skonester_estate_edit_japanese_manor_external_effect = {
+  skonester_estate_edit_japanese_manor_main_max_effect = yes
+  fill_external_japanese_manor_building_effect = yes
+  hidden_effect = {
+    while = {
+      count = 40
+      limit = {
+        free_external_domicile_building_slots >= 1
+      }
+      add_random_external_japanese_manor_building = yes
+    }
+  }
+}
+
+skonester_estate_edit_japanese_manor_upgrade_effect = {
+  skonester_estate_edit_japanese_manor_external_effect = yes
+  skonester_domicile_residence_full_max_effect = yes
+}
+
+skonester_estate_edit_japanese_manor_internal_effect = {
+  skonester_domicile_residence_full_max_effect = yes
+}
+
+# --- 庄园编辑分项（东亚庄园）---
+
+skonester_estate_edit_east_asian_estate_main_max_effect = {
+  if = {
+    limit = {
+      NOT = { has_domicile_building_or_higher = east_asian_estate_main_02 }
+    }
+    add_domicile_building = east_asian_estate_main_02
+  }
+  if = {
+    limit = {
+      NOT = { has_domicile_building_or_higher = east_asian_estate_main_03 }
+    }
+    add_domicile_building = east_asian_estate_main_03
+  }
+  if = {
+    limit = {
+      NOT = { has_domicile_building_or_higher = east_asian_estate_main_04 }
+    }
+    add_domicile_building = east_asian_estate_main_04
+  }
+  if = {
+    limit = {
+      NOT = { has_domicile_building_or_higher = east_asian_estate_main_05 }
+    }
+    add_domicile_building = east_asian_estate_main_05
+  }
+}
+
+skonester_estate_edit_east_asian_estate_external_effect = {
+  skonester_estate_edit_east_asian_estate_main_max_effect = yes
+  fill_external_east_asian_estate_building_effect = yes
+  hidden_effect = {
+    while = {
+      count = 40
+      limit = {
+        free_external_domicile_building_slots >= 1
+      }
+      add_random_external_east_asian_estate_building = yes
+    }
+  }
+}
+
+skonester_estate_edit_east_asian_estate_upgrade_effect = {
+  skonester_estate_edit_east_asian_estate_external_effect = yes
+  skonester_domicile_residence_full_max_effect = yes
+}
+
+skonester_estate_edit_east_asian_estate_internal_effect = {
+  skonester_domicile_residence_full_max_effect = yes
+}
+
+# Skonester「宫廷内阁」：一键任命全部宫廷内阁职位，按称职度任命
+skonester_cheat_menu_court_cabinet_effect = {
+  scope:recipient = {
+    if = {
+      limit = {
+        is_alive = yes
+        has_council = yes
+      }
+
+      # 标准五席制任命（适用于大多数政府制度）
+      hidden_effect = {
+        # 任命宰相 (Chancellor)
+        if = {
+          limit = { NOT = { has_council_position = councillor_chancellor } }
+          every_vassal = {
+            limit = {
+              is_adult = yes
+              is_imprisoned = no
+              NOT = { is_incapable = yes }
+              NOT = { this = scope:recipient }
+              NOT = { is_councillor_of = scope:recipient }
+            }
+            add_character_modifier = {
+              modifier = skonester_court_cabinet_chancellor_candidate
+              days = 1
+            }
+          }
+          ordered_vassal = {
+            limit = {
+              has_character_modifier = skonester_court_cabinet_chancellor_candidate
+            }
+            order_by = aptitude:councillor_chancellor
+            max = 1
+            check_range_bounds = no
+            save_scope_as = skonester_pos_pick
+          }
+          if = {
+            limit = { exists = scope:skonester_pos_pick }
+            appoint_councillor = scope:skonester_pos_pick
+          }
+          every_vassal = {
+            limit = { has_character_modifier = skonester_court_cabinet_chancellor_candidate }
+            remove_character_modifier = skonester_court_cabinet_chancellor_candidate
+          }
+        }
+
+        # 任命军事统帅 (Marshal)
+        if = {
+          limit = { NOT = { has_council_position = councillor_marshal } }
+          every_vassal = {
+            limit = {
+              is_adult = yes
+              is_imprisoned = no
+              NOT = { is_incapable = yes }
+              NOT = { this = scope:recipient }
+              NOT = { is_councillor_of = scope:recipient }
+            }
+            add_character_modifier = {
+              modifier = skonester_court_cabinet_marshal_candidate
+              days = 1
+            }
+          }
+          ordered_vassal = {
+            limit = {
+              has_character_modifier = skonester_court_cabinet_marshal_candidate
+            }
+            order_by = aptitude:councillor_marshal
+            max = 1
+            check_range_bounds = no
+            save_scope_as = skonester_pos_pick
+          }
+          if = {
+            limit = { exists = scope:skonester_pos_pick }
+            appoint_councillor = scope:skonester_pos_pick
+          }
+          every_vassal = {
+            limit = { has_character_modifier = skonester_court_cabinet_marshal_candidate }
+            remove_character_modifier = skonester_court_cabinet_marshal_candidate
+          }
+        }
+
+        # 任命财政大臣 (Steward)
+        if = {
+          limit = { NOT = { has_council_position = councillor_steward } }
+          every_vassal = {
+            limit = {
+              is_adult = yes
+              is_imprisoned = no
+              NOT = { is_incapable = yes }
+              NOT = { this = scope:recipient }
+              NOT = { is_councillor_of = scope:recipient }
+            }
+            add_character_modifier = {
+              modifier = skonester_court_cabinet_steward_candidate
+              days = 1
+            }
+          }
+          ordered_vassal = {
+            limit = {
+              has_character_modifier = skonester_court_cabinet_steward_candidate
+            }
+            order_by = aptitude:councillor_steward
+            max = 1
+            check_range_bounds = no
+            save_scope_as = skonester_pos_pick
+          }
+          if = {
+            limit = { exists = scope:skonester_pos_pick }
+            appoint_councillor = scope:skonester_pos_pick
+          }
+          every_vassal = {
+            limit = { has_character_modifier = skonester_court_cabinet_steward_candidate }
+            remove_character_modifier = skonester_court_cabinet_steward_candidate
+          }
+        }
+
+        # 任命间谍首脑 (Spymaster)
+        if = {
+          limit = { NOT = { has_council_position = councillor_spymaster } }
+          every_vassal = {
+            limit = {
+              is_adult = yes
+              is_imprisoned = no
+              NOT = { is_incapable = yes }
+              NOT = { this = scope:recipient }
+              NOT = { is_councillor_of = scope:recipient }
+            }
+            add_character_modifier = {
+              modifier = skonester_court_cabinet_spymaster_candidate
+              days = 1
+            }
+          }
+          ordered_vassal = {
+            limit = {
+              has_character_modifier = skonester_court_cabinet_spymaster_candidate
+            }
+            order_by = aptitude:councillor_spymaster
+            max = 1
+            check_range_bounds = no
+            save_scope_as = skonester_pos_pick
+          }
+          if = {
+            limit = { exists = scope:skonester_pos_pick }
+            appoint_councillor = scope:skonester_pos_pick
+          }
+          every_vassal = {
+            limit = { has_character_modifier = skonester_court_cabinet_spymaster_candidate }
+            remove_character_modifier = skonester_court_cabinet_spymaster_candidate
+          }
+        }
+
+        # 任命宫廷教士 (Court Chaplain)
+        if = {
+          limit = { NOT = { has_council_position = councillor_court_chaplain } }
+          every_vassal = {
+            limit = {
+              is_adult = yes
+              is_imprisoned = no
+              NOT = { is_incapable = yes }
+              NOT = { this = scope:recipient }
+              NOT = { is_councillor_of = scope:recipient }
+            }
+            add_character_modifier = {
+              modifier = skonester_court_cabinet_chaplain_candidate
+              days = 1
+            }
+          }
+          ordered_vassal = {
+            limit = {
+              has_character_modifier = skonester_court_cabinet_chaplain_candidate
+            }
+            order_by = aptitude:councillor_court_chaplain
+            max = 1
+            check_range_bounds = no
+            save_scope_as = skonester_pos_pick
+          }
+          if = {
+            limit = { exists = scope:skonester_pos_pick }
+            appoint_councillor = scope:skonester_pos_pick
+          }
+          every_vassal = {
+            limit = { has_character_modifier = skonester_court_cabinet_chaplain_candidate }
+            remove_character_modifier = skonester_court_cabinet_chaplain_candidate
+          }
+        }
+      }
+    }
+  }
+}

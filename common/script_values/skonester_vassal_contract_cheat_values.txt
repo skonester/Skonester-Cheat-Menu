@@ -1,0 +1,176 @@
+﻿# 官吏统辖「修改封臣契约」：放宽单次改动上限；契约编辑期间不计暴君惩罚；行政类型上限/冷却
+
+count_obligation_improvements_for_vassal = {
+  if = {
+    limit = {
+      OR = {
+        scope:actor = { has_character_flag = skonester_cheat_vassal_contract_edit }
+        scope:liege = { has_character_flag = skonester_cheat_vassal_contract_edit }
+      }
+    }
+    value = 0
+  }
+  else = {
+    value = 0
+    save_temporary_scope_as = vassal
+    every_in_list = {
+      list = changed_obligations
+      vassal_contract_type = {
+        save_temporary_scope_as = contract_type
+      }
+      add = {
+        value = obligation_level_score
+        subtract = "scope:vassal.vassal_contract_obligation_level_score( scope:contract_type )"
+      }
+    }
+  }
+}
+
+admin_contract_cooldown_value = {
+  if = {
+    limit = {
+      OR = {
+        scope:actor = { has_character_flag = skonester_cheat_vassal_contract_edit }
+        scope:recipient = { has_character_flag = skonester_cheat_vassal_contract_edit }
+        scope:liege = { has_character_flag = skonester_cheat_vassal_contract_edit }
+      }
+    }
+    value = 0
+  }
+  else = {
+    value = 5
+  }
+}
+
+skonester_celestial_province_cheat_max = 999
+
+celestial_province_military_max_value = {
+  if = {
+    limit = {
+      OR = {
+        scope:actor = { has_character_flag = skonester_cheat_vassal_contract_edit }
+        scope:liege = { has_character_flag = skonester_cheat_vassal_contract_edit }
+      }
+    }
+    value = skonester_celestial_province_cheat_max
+  }
+  else = {
+    value = 8
+  }
+}
+
+celestial_province_industrial_max_value = {
+  if = {
+    limit = {
+      OR = {
+        scope:actor = { has_character_flag = skonester_cheat_vassal_contract_edit }
+        scope:liege = { has_character_flag = skonester_cheat_vassal_contract_edit }
+      }
+    }
+    value = skonester_celestial_province_cheat_max
+  }
+  else = {
+    value = 8
+  }
+}
+
+celestial_province_metropolitan_max_value = {
+  if = {
+    limit = {
+      OR = {
+        scope:actor = { has_character_flag = skonester_cheat_vassal_contract_edit }
+        scope:liege = { has_character_flag = skonester_cheat_vassal_contract_edit }
+      }
+    }
+    value = skonester_celestial_province_cheat_max
+  }
+  else = {
+    value = 5
+  }
+}
+
+celestial_province_protectorate_max_value = {
+  if = {
+    limit = {
+      OR = {
+        scope:actor = { has_character_flag = skonester_cheat_vassal_contract_edit }
+        scope:liege = { has_character_flag = skonester_cheat_vassal_contract_edit }
+      }
+    }
+    value = skonester_celestial_province_cheat_max
+  }
+  else = {
+    value = 5
+  }
+}
+
+max_contract_changes = {
+  if = {
+    limit = {
+      scope:actor = {
+        OR = {
+          has_character_flag = skonester_cheat_vassal_contract_edit
+          has_character_flag = skonester_cheat_menu_cheat_menu
+        }
+      }
+    }
+    value = 99
+  }
+  else = {
+    value = 4
+  }
+}
+
+vassal_obligation_increase_tyranny_gain_multiplier = {
+  if = {
+    limit = {
+      scope:actor = {
+        OR = {
+          has_character_flag = skonester_cheat_vassal_contract_edit
+          has_character_flag = skonester_cheat_menu_cheat_menu
+        }
+      }
+    }
+    value = 0
+  }
+  else = {
+    subtract = scope:recipient.count_obligation_improvements_for_vassal
+    if = {
+      limit = { always = scope:hook }
+      subtract = 1
+    }
+    min = 0
+  }
+}
+
+vassal_obligation_increase_tyranny_gain = {
+  if = {
+    limit = {
+      scope:actor = {
+        OR = {
+          has_character_flag = skonester_cheat_vassal_contract_edit
+          has_character_flag = skonester_cheat_menu_cheat_menu
+        }
+      }
+    }
+    value = 0
+  }
+  else = {
+    value = vassal_obligation_increase_tyranny_gain_base
+    multiply = vassal_obligation_increase_tyranny_gain_multiplier
+    if = {
+      limit = {
+        is_ai = no
+        has_game_rule = hard_difficulty
+      }
+      multiply = 3
+    }
+    else_if = {
+      limit = {
+        is_ai = no
+        has_game_rule = very_hard_difficulty
+      }
+      multiply = 5
+    }
+  }
+}

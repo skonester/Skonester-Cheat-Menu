@@ -1,0 +1,62 @@
+﻿# 在 scope:recipient 上调用：对 scope:actor 清掉内帑谢恩类好感（原版 grateful + 本模组两条），避免叠多条。
+# 由互动加好感时，strip 包在 hidden_effect 内，确认窗不列出「对你失去感谢/领主赏赐/宗主赏赐」等移除行。
+
+skonester_strip_grant_patron_opinions_toward_actor_effect = {
+  remove_opinion = {
+    target = scope:actor
+    modifier = grateful_opinion
+    single = no
+  }
+  remove_opinion = {
+    target = scope:actor
+    modifier = skonester_grateful_patron_short_opinion
+    single = no
+  }
+  remove_opinion = {
+    target = scope:actor
+    modifier = skonester_grateful_patron_tributary_opinion
+    single = no
+  }
+}
+
+# 封臣：+30、3 个月；刷新不叠
+skonester_interaction_add_grant_vassal_patron_opinion_effect = {
+  hidden_effect = {
+    skonester_strip_grant_patron_opinions_toward_actor_effect = yes
+  }
+  add_opinion = {
+    modifier = skonester_grateful_patron_short_opinion
+    target = scope:actor
+    opinion = 30
+    months = 3
+  }
+}
+
+# 贡臣：+60、3 个月；刷新不叠
+skonester_interaction_add_grant_tributary_patron_opinion_effect = {
+  hidden_effect = {
+    skonester_strip_grant_patron_opinions_toward_actor_effect = yes
+  }
+  add_opinion = {
+    modifier = skonester_grateful_patron_tributary_opinion
+    target = scope:actor
+    opinion = 60
+    months = 3
+  }
+}
+
+# 内帑打赏：若无忠臣特质则赋予 loyal，并挂旗；约 365 日后由 skonester_officials.9101 移除（原本已有 loyal 的不动）
+
+skonester_grant_loyal_trait_one_year_effect = {
+  if = {
+    limit = {
+      NOT = { has_trait = loyal }
+    }
+    add_trait = loyal
+    add_character_flag = skonester_patron_loyal_strip_pending
+    trigger_event = {
+      id = skonester_officials.9101
+      days = 365
+    }
+  }
+}

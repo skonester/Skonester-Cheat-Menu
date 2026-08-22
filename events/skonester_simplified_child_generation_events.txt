@@ -1,0 +1,43 @@
+﻿namespace = skonester_child_gen
+
+skonester_child_gen.1000 = {
+  type = character_event
+  title = skonester_child_gen.1000.t
+  desc = skonester_child_gen.1000.desc
+  theme = family
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+    scope:skonester_char_gen_target = {
+      save_scope_as = skonester_child_gen_parent
+    }
+  }
+
+  right_portrait = scope:skonester_child_gen_parent
+
+  option = {
+    name = skonester_child_gen.1000.generate_son
+    skonester_child_gen_generate_son_effect = yes
+  }
+
+  option = {
+    name = skonester_child_gen.1000.generate_daughter
+    skonester_child_gen_generate_daughter_effect = yes
+  }
+
+  option = {
+    name = skonester_child_gen.1000.generate_twins
+    skonester_child_gen_generate_twins_effect = yes
+  }
+
+  option = {
+    name = skonester_cheat_menu.00x.back
+    scope:actor = {
+    trigger_event = skonester_cheat_menu.0245 }
+  }
+
+  option = {
+    name = skonester_child_gen.1000.close
+    skonester_char_gen_clear_recipient_global_effect = yes
+  }
+}

@@ -1,0 +1,11 @@
+﻿random_yearly_everyone_pulse = {
+	events = {
+		auto_marriage.0001
+		auto_marriage.0002
+		auto_marriage.0003
+		auto_marriage.0004
+		auto_marriage.0005
+		auto_marriage.0006
+		auto_marriage.0007
+	}
+}

@@ -1,0 +1,276 @@
+﻿# AUTO-GENERATED — tools/gen_acm_culture_list_effects.py
+# 各大区独立 global list；GUI 用 VariableSystem + Concatenate 切换（打开窗时一次性填充）
+
+skonester_acm_heritages_list_refresh_all_effect = {
+  clear_global_variable_list = skonester_acm_heritage_list_all
+  every_culture_global = {
+    if = {
+      limit = {
+        NOT = {
+          any_in_global_list = {
+            variable = skonester_acm_heritage_list_all
+            has_same_culture_heritage = prev
+          }
+        }
+      }
+      add_to_global_variable_list = { name = skonester_acm_heritage_list_all target = this }
+    }
+  }
+}
+
+
+skonester_acm_heritages_list_refresh_europe_effect = {
+  clear_global_variable_list = skonester_acm_heritage_list_europe
+  every_culture_global = {
+    if = {
+      limit = {
+        OR = {
+          this = culture:anglo_saxon
+          this = culture:english
+          this = culture:frisian
+          this = culture:dutch
+          this = culture:saxon
+          this = culture:bavarian
+          this = culture:swabian
+          this = culture:franconian
+          this = culture:frankish
+          this = culture:norman
+          this = culture:norse
+          this = culture:danish
+          this = culture:norwegian
+          this = culture:swedish
+          this = culture:irish
+          this = culture:scottish
+          this = culture:welsh
+          this = culture:cornish
+          this = culture:breton
+          this = culture:pictish
+          this = culture:italian
+          this = culture:lombard
+          this = culture:roman
+          this = culture:sardinian
+          this = culture:sicilian
+          this = culture:french
+          this = culture:occitan
+          this = culture:catalan
+          this = culture:castilian
+          this = culture:portuguese
+          this = culture:basque
+          this = culture:andalusian
+          this = culture:visigothic
+          this = culture:greek
+          this = culture:albanian
+          this = culture:bulgarian
+          this = culture:serbian
+          this = culture:croatian
+          this = culture:bosnian
+          this = culture:vlach
+          this = culture:polish
+          this = culture:czech
+          this = culture:slovien
+          this = culture:pommeranian
+          this = culture:russian
+          this = culture:severian
+          this = culture:volhynian
+          this = culture:ilmenian
+          this = culture:lithuanian
+          this = culture:latgalian
+          this = culture:prussian
+          this = culture:finnish
+          this = culture:estonian
+          this = culture:mordvin
+          this = culture:mari
+          this = culture:komi
+          this = culture:khanty
+          this = culture:samoyed
+          this = culture:hungarian
+        }
+        NOT = {
+          any_in_global_list = {
+            variable = skonester_acm_heritage_list_europe
+            has_same_culture_heritage = prev
+          }
+        }
+      }
+      add_to_global_variable_list = { name = skonester_acm_heritage_list_europe target = this }
+    }
+  }
+}
+
+
+skonester_acm_heritages_list_refresh_central_asia_effect = {
+  clear_global_variable_list = skonester_acm_heritage_list_central_asia
+  every_culture_global = {
+    if = {
+      limit = {
+        OR = {
+          this = culture:turkish
+          this = culture:pecheneg
+          this = culture:cuman
+          this = culture:khazar
+          this = culture:bashkir
+          this = culture:chuvash
+          this = culture:avar
+          this = culture:uyghur
+          this = culture:kirghiz
+          this = culture:turkmen
+          this = culture:mongol
+          this = culture:buryat
+          this = culture:oirat
+          this = culture:jurchen
+          this = culture:kerait
+          this = culture:naiman
+          this = culture:khitan
+          this = culture:persian
+          this = culture:afghan
+          this = culture:baloch
+          this = culture:kurdish
+          this = culture:tajik
+          this = culture:sogdian
+          this = culture:khwarezmian
+        }
+        NOT = {
+          any_in_global_list = {
+            variable = skonester_acm_heritage_list_central_asia
+            has_same_culture_heritage = prev
+          }
+        }
+      }
+      add_to_global_variable_list = { name = skonester_acm_heritage_list_central_asia target = this }
+    }
+  }
+}
+
+
+skonester_acm_heritages_list_refresh_mena_effect = {
+  clear_global_variable_list = skonester_acm_heritage_list_mena
+  every_culture_global = {
+    if = {
+      limit = {
+        OR = {
+          this = culture:bedouin
+          this = culture:levantine
+          this = culture:egyptian
+          this = culture:assyrian
+          this = culture:maghrebi
+          this = culture:yemeni
+          this = culture:baranis
+          this = culture:butr
+          this = culture:guanches
+          this = culture:ashkenazi
+          this = culture:sephardi
+          this = culture:radhanite
+          this = culture:ethiopian
+          this = culture:welayta
+        }
+        NOT = {
+          any_in_global_list = {
+            variable = skonester_acm_heritage_list_mena
+            has_same_culture_heritage = prev
+          }
+        }
+      }
+      add_to_global_variable_list = { name = skonester_acm_heritage_list_mena target = this }
+    }
+  }
+}
+
+
+skonester_acm_heritages_list_refresh_africa_effect = {
+  clear_global_variable_list = skonester_acm_heritage_list_africa
+  every_culture_global = {
+    if = {
+      limit = {
+        OR = {
+          this = culture:akan
+          this = culture:mossi
+          this = culture:songhai
+          this = culture:malinke
+          this = culture:wolof
+          this = culture:pulaar
+          this = culture:gur
+          this = culture:swahili
+          this = culture:somali
+          this = culture:afar
+          this = culture:east_bantu
+        }
+        NOT = {
+          any_in_global_list = {
+            variable = skonester_acm_heritage_list_africa
+            has_same_culture_heritage = prev
+          }
+        }
+      }
+      add_to_global_variable_list = { name = skonester_acm_heritage_list_africa target = this }
+    }
+  }
+}
+
+
+skonester_acm_heritages_list_refresh_asia_effect = {
+  clear_global_variable_list = skonester_acm_heritage_list_asia
+  every_culture_global = {
+    if = {
+      limit = {
+        OR = {
+          this = culture:hindustani
+          this = culture:bengali
+          this = culture:punjabi
+          this = culture:rajput
+          this = culture:gujarati
+          this = culture:marathi
+          this = culture:kannada
+          this = culture:telugu
+          this = culture:tamil
+          this = culture:sinhala
+          this = culture:malvi
+          this = culture:kashmiri
+          this = culture:gond
+          this = culture:malay
+          this = culture:javanese
+          this = culture:cham
+          this = culture:khmer
+          this = culture:viet
+          this = culture:tai
+          this = culture:bouxcuengh
+          this = culture:burmese
+          this = culture:mon
+          this = culture:bisayan
+          this = culture:bugis
+          this = culture:han
+          this = culture:goryeo
+          this = culture:silla
+          this = culture:baekje
+          this = culture:japanese
+          this = culture:ryukyuan
+          this = culture:bodpa
+          this = culture:zhangzhung
+          this = culture:qiang
+          this = culture:tangut
+          this = culture:lhomon
+        }
+        NOT = {
+          any_in_global_list = {
+            variable = skonester_acm_heritage_list_asia
+            has_same_culture_heritage = prev
+          }
+        }
+      }
+      add_to_global_variable_list = { name = skonester_acm_heritage_list_asia target = this }
+    }
+  }
+}
+
+
+skonester_acm_culture_picker_refresh_all_region_lists_effect = {
+  skonester_acm_heritages_list_refresh_all_effect = yes
+  skonester_acm_heritages_list_refresh_europe_effect = yes
+  skonester_acm_heritages_list_refresh_central_asia_effect = yes
+  skonester_acm_heritages_list_refresh_mena_effect = yes
+  skonester_acm_heritages_list_refresh_africa_effect = yes
+  skonester_acm_heritages_list_refresh_asia_effect = yes
+}
+
+skonester_acm_heritages_list_refresh_effect = {
+  skonester_acm_heritages_list_refresh_all_effect = yes
+}

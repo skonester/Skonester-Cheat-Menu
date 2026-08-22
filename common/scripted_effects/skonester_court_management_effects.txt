@@ -1,0 +1,423 @@
+﻿# 管理廷臣：統計人數；決議「廷臣立即整頓」在同一 effect 內重複全量遣散直至無候選（每輪 ordered_courtier 至多 500），再裁至廷臣≤40，再循環招募至約 40 人。
+
+skonester_court_mgmt_recount_court_size_effect = {
+  root = {
+    set_variable = {
+      name = skonester_court_n
+      value = 0
+    }
+    every_courtier = {
+      root = {
+        change_variable = {
+          name = skonester_court_n
+          add = 1
+        }
+      }
+    }
+  }
+}
+
+skonester_court_mgmt_build_recruit_pool_effect = {
+  root = {
+    clear_variable_list = skonester_court_mgmt_recruit_pool
+    every_living_character = {
+      limit = {
+        skonester_court_mgmt_recruit_candidate_trigger = yes
+      }
+      root = {
+        add_to_variable_list = {
+          name = skonester_court_mgmt_recruit_pool
+          target = prev
+        }
+      }
+    }
+  }
+}
+
+# 在 ordered_courtier 內呼叫；this 為待遣散廷臣。先解內閣、禁止騎士身分，再以宿主移除廷臣（較能處理宮廷職位等阻擋），最後仍留宮則 move_to_pool。
+skonester_court_mgmt_prepare_dismiss_courtier_effect = {
+  save_scope_as = skonester_court_mgmt_dismiss
+  root = {
+    if = {
+      limit = {
+        scope:skonester_court_mgmt_dismiss = {
+          is_councillor_of = root
+        }
+      }
+      fire_councillor = scope:skonester_court_mgmt_dismiss
+    }
+  }
+  scope:skonester_court_mgmt_dismiss = {
+    set_knight_status = not
+  }
+  root = {
+    if = {
+      limit = {
+        scope:skonester_court_mgmt_dismiss = {
+          is_courtier_of = root
+        }
+      }
+      remove_courtier_or_guest = {
+        character = scope:skonester_court_mgmt_dismiss
+      }
+    }
+  }
+  scope:skonester_court_mgmt_dismiss = {
+    if = {
+      limit = {
+        is_courtier_of = root
+      }
+      move_to_pool = yes
+    }
+  }
+}
+
+skonester_court_mgmt_purge_one_pass_effect = {
+  root = {
+    if = {
+      limit = {
+        any_courtier = {
+          skonester_court_mgmt_purge_candidate_trigger = yes
+        }
+      }
+      ordered_courtier = {
+        limit = {
+          skonester_court_mgmt_purge_candidate_trigger = yes
+        }
+        order_by = skonester_court_mgmt_purge_priority_value
+        max = 1
+        check_range_bounds = no
+        skonester_court_mgmt_prepare_dismiss_courtier_effect = yes
+      }
+    }
+  }
+  skonester_court_mgmt_recount_court_size_effect = yes
+}
+
+# 手動整頓用：單輪移出至多 500 名符合 purge_candidate 的廷臣（優先序同 purge_one_pass）；由 run_effect 外層 while 重複直至無人可遣。
+skonester_court_mgmt_purge_all_candidates_effect = {
+  root = {
+    if = {
+      limit = {
+        any_courtier = {
+          skonester_court_mgmt_purge_candidate_trigger = yes
+        }
+      }
+      ordered_courtier = {
+        limit = {
+          skonester_court_mgmt_purge_candidate_trigger = yes
+        }
+        order_by = skonester_court_mgmt_purge_priority_value
+        max = 500
+        check_range_bounds = no
+        skonester_court_mgmt_prepare_dismiss_courtier_effect = yes
+      }
+    }
+  }
+  skonester_court_mgmt_recount_court_size_effect = yes
+}
+
+# 自動遣散用：與 purge_one_pass 相同，但每成功遣散 1 人為 root 的 skonester_court_mgmt_auto_dismissed_today +1
+skonester_court_mgmt_purge_one_pass_and_tally_effect = {
+  root = {
+    if = {
+      limit = {
+        any_courtier = {
+          skonester_court_mgmt_purge_candidate_trigger = yes
+        }
+      }
+      ordered_courtier = {
+        limit = {
+          skonester_court_mgmt_purge_candidate_trigger = yes
+        }
+        order_by = skonester_court_mgmt_purge_priority_value
+        max = 1
+        check_range_bounds = no
+        skonester_court_mgmt_prepare_dismiss_courtier_effect = yes
+      }
+      change_variable = {
+        name = skonester_court_mgmt_auto_dismissed_today
+        add = 1
+      }
+    }
+  }
+  skonester_court_mgmt_recount_court_size_effect = yes
+}
+
+# 國內招募失敗或人才池為空時，用 create_character 生成一名同信仰同文化的廷臣並入宮；輪換招牌（哲學/軍事+勇武教育/管理/謀略/外交/純勇武）見 skonester_court_mgmt_signature_effects.txt
+skonester_court_mgmt_spawn_generated_courtier_effect = {
+  root = {
+    create_character = {
+      employer = root
+      culture = root.culture
+      faith = root.faith
+      gender_female_chance = 50
+      age = 28
+      random_traits = no
+      dynasty = none
+      save_scope_as = skonester_court_mgmt_spawned
+      after_creation = {
+        save_scope_as = skonester_court_elite_target
+        root = {
+          set_variable = {
+            name = skonester_court_mgmt_sig_apply_mode
+            value = 1
+          }
+          skonester_court_mgmt_apply_rotated_signature_effect = yes
+        }
+      }
+    }
+  }
+}
+
+# 人類玩家：逐出宮廷內所有池賓客與外來賓客（禁止賓客逗留）
+skonester_court_mgmt_kick_all_guests_effect = {
+  root = {
+    every_pool_guest = {
+      save_scope_as = skonester_court_guest_kick
+      root = {
+        remove_courtier_or_guest = {
+          character = scope:skonester_court_guest_kick
+        }
+      }
+    }
+    every_foreign_court_guest = {
+      save_scope_as = skonester_court_guest_kick
+      root = {
+        remove_courtier_or_guest = {
+          character = scope:skonester_court_guest_kick
+        }
+      }
+    }
+  }
+}
+
+# 廷臣數 >40：一次盡量遣散「多出的人數」（每批至多 500，與 purge_priority 同序）；受保護者仍不動，故必要時多批直至 ≤40 或無人可裁
+skonester_court_mgmt_purge_cap_overflow_one_pass_effect = {
+  skonester_court_mgmt_recount_court_size_effect = yes
+  root = {
+    while = {
+      count = 25
+      limit = {
+        var:skonester_court_n > 40
+        any_courtier = {
+          skonester_court_mgmt_cap_overflow_candidate_trigger = yes
+        }
+      }
+      set_variable = {
+        name = skonester_court_cap_to_remove
+        value = var:skonester_court_n
+      }
+      change_variable = {
+        name = skonester_court_cap_to_remove
+        add = -40
+      }
+      if = {
+        limit = {
+          var:skonester_court_cap_to_remove > 500
+        }
+        set_variable = {
+          name = skonester_court_cap_to_remove
+          value = 500
+        }
+      }
+      ordered_courtier = {
+        limit = {
+          skonester_court_mgmt_cap_overflow_candidate_trigger = yes
+        }
+        order_by = skonester_court_mgmt_purge_priority_value
+        max = skonester_court_cap_ordered_max_value
+        check_range_bounds = no
+        skonester_court_mgmt_prepare_dismiss_courtier_effect = yes
+      }
+      if = {
+        limit = {
+          has_variable = skonester_court_cap_to_remove
+        }
+        remove_variable = skonester_court_cap_to_remove
+      }
+      skonester_court_mgmt_recount_court_size_effect = yes
+    }
+  }
+}
+
+skonester_court_mgmt_recruit_one_effect = {
+  skonester_court_mgmt_build_recruit_pool_effect = yes
+  root = {
+    if = {
+      limit = {
+        has_variable_list = skonester_court_mgmt_recruit_pool
+        variable_list_size = {
+          name = skonester_court_mgmt_recruit_pool
+          value > 0
+        }
+      }
+      if = {
+        limit = {
+          exists = scope:skonester_court_mgmt_pick
+        }
+        clear_saved_scope = skonester_court_mgmt_pick
+      }
+      ordered_in_list = {
+        variable = skonester_court_mgmt_recruit_pool
+        order_by = skonester_court_mgmt_recruit_score_value
+        limit = {
+          skonester_court_mgmt_recruit_candidate_trigger = yes
+        }
+        save_scope_as = skonester_court_mgmt_pick
+      }
+      if = {
+        limit = {
+          exists = scope:skonester_court_mgmt_pick
+        }
+        scope:skonester_court_mgmt_pick = {
+          set_employer = root
+          save_scope_as = skonester_court_elite_target
+        }
+        root = {
+          set_variable = {
+            name = skonester_court_mgmt_sig_apply_mode
+            value = 0
+          }
+          skonester_court_mgmt_apply_rotated_signature_effect = yes
+        }
+      }
+      if = {
+        limit = {
+          OR = {
+            NOT = {
+              exists = scope:skonester_court_mgmt_pick
+            }
+            scope:skonester_court_mgmt_pick = {
+              NOT = {
+                is_courtier_of = root
+              }
+            }
+          }
+        }
+        add_character_flag = skonester_court_mgmt_spawn_fallback
+      }
+    }
+    else = {
+      if = {
+        limit = {
+          exists = scope:skonester_court_mgmt_pick
+        }
+        clear_saved_scope = skonester_court_mgmt_pick
+      }
+      add_character_flag = skonester_court_mgmt_spawn_fallback
+    }
+  }
+  if = {
+    limit = {
+      root = {
+        has_character_flag = skonester_court_mgmt_spawn_fallback
+      }
+    }
+    skonester_court_mgmt_spawn_generated_courtier_effect = yes
+    root = {
+      remove_character_flag = skonester_court_mgmt_spawn_fallback
+    }
+  }
+  root = {
+    clear_variable_list = skonester_court_mgmt_recruit_pool
+  }
+}
+
+# 自動模式：每日執行；清退不合格廷臣（規則與手動整頓相同），不發介面消息；遣散幾人即按相同次數執行招募（與手動「廷臣整頓」同一套招募／生成邏輯）。
+skonester_court_mgmt_auto_daily_purge_effect = {
+  root = {
+    set_variable = {
+      name = skonester_court_mgmt_auto_dismissed_today
+      value = 0
+    }
+  }
+  skonester_court_mgmt_recount_court_size_effect = yes
+  while = {
+    count = 40
+    limit = {
+      root = {
+        any_courtier = {
+          skonester_court_mgmt_purge_candidate_trigger = yes
+        }
+      }
+    }
+    skonester_court_mgmt_purge_one_pass_and_tally_effect = yes
+  }
+  while = {
+    count = 40
+    limit = {
+      root = {
+        var:skonester_court_mgmt_auto_dismissed_today > 0
+      }
+    }
+    skonester_court_mgmt_recruit_one_effect = yes
+    root = {
+      change_variable = {
+        name = skonester_court_mgmt_auto_dismissed_today
+        add = -1
+      }
+    }
+  }
+  root = {
+    if = {
+      limit = {
+        has_variable = skonester_court_mgmt_auto_dismissed_today
+      }
+      remove_variable = skonester_court_mgmt_auto_dismissed_today
+    }
+    if = {
+      limit = {
+        has_variable = skonester_court_n
+      }
+      remove_variable = skonester_court_n
+    }
+  }
+}
+
+skonester_court_mgmt_run_effect = {
+  skonester_court_mgmt_recount_court_size_effect = yes
+  while = {
+    count = 100
+    limit = {
+      root = {
+        any_courtier = {
+          skonester_court_mgmt_purge_candidate_trigger = yes
+        }
+      }
+    }
+    skonester_court_mgmt_purge_all_candidates_effect = yes
+  }
+  skonester_court_mgmt_purge_cap_overflow_one_pass_effect = yes
+  while = {
+    count = 100
+    limit = {
+      root = {
+        var:skonester_court_n < 40
+      }
+    }
+    skonester_court_mgmt_recruit_one_effect = yes
+    skonester_court_mgmt_recount_court_size_effect = yes
+  }
+  skonester_court_mgmt_kick_all_guests_effect = yes
+  root = {
+    if = {
+      limit = {
+        has_variable = skonester_court_cap_to_remove
+      }
+      remove_variable = skonester_court_cap_to_remove
+    }
+    remove_variable = skonester_court_n
+    clear_variable_list = skonester_court_mgmt_recruit_pool
+  }
+  if = {
+    limit = {
+      is_ai = no
+    }
+    send_interface_toast = {
+      type = event_toast_effect_good
+      title = skonester_court_mgmt_msg_title
+      desc = skonester_court_mgmt_msg_desc
+    }
+  }
+}

@@ -1,0 +1,16 @@
+﻿# 威慑天下：月度维持封臣禁派系与恐怖值
+
+monthly_playable_pulse = {
+  on_actions = {
+    skonester_world_deterrence_monthly_pulse
+  }
+}
+
+skonester_world_deterrence_monthly_pulse = {
+  effect = {
+    if = {
+      limit = { is_ai = no }
+      skonester_cheat_menu_world_deterrence_monthly_on_liege_effect = yes
+    }
+  }
+}

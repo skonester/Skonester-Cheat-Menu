@@ -1,0 +1,160 @@
+﻿# 美女佳人：在「雇主」宫廷生成 18 岁女性，最高美貌 + 忠贞(chaste) + 随机三条正面性格 + 三条本领类生活方式特质
+# 依赖事件先 culture:<key> = { save_scope_as = skonester_beauty_spawn_culture }，且 scope:recipient = { save_scope_as = skonester_spawn_talent_employer }（Skonester右键目标）
+# 创建时即用所选文化（肖像/姓名与该文化池一致）；信仰取该文化任一郡县的 faith；若无郡县则退回雇主信仰；性取向固定为异性恋
+
+skonester_cheat_menu_spawn_beauty_companion_effect = {
+  if = {
+    limit = {
+      scope:skonester_beauty_spawn_culture = {
+        any_culture_county = { count >= 1 }
+      }
+    }
+    scope:skonester_beauty_spawn_culture = {
+      random_culture_county = {
+        faith = { save_scope_as = skonester_beauty_spawn_faith }
+      }
+    }
+  }
+  if = {
+    limit = {
+      NOT = { exists = scope:skonester_beauty_spawn_faith }
+    }
+    scope:skonester_spawn_talent_employer = {
+      faith = { save_scope_as = skonester_beauty_spawn_faith }
+    }
+  }
+  create_character = {
+    employer = scope:skonester_spawn_talent_employer
+    age = 18
+    gender_female_chance = 100
+    culture = scope:skonester_beauty_spawn_culture
+    faith = scope:skonester_beauty_spawn_faith
+    random_traits = no
+    trait = beauty_good_3
+    trait = chaste
+    random_traits_list = {
+      count = 3
+      just = {}
+      compassionate = {}
+      generous = {}
+      humble = {}
+      calm = {}
+      gregarious = {}
+      diligent = {}
+      patient = {}
+      honest = {}
+      trusting = {}
+      brave = {}
+      temperate = {}
+    }
+    random_traits_list = {
+      count = 3
+      diplomat = {}
+      gallant = {}
+      lifestyle_poet = {}
+      scholar = {}
+      lifestyle_physician = {}
+      lifestyle_gardener = {}
+      lifestyle_hunter = {}
+      lifestyle_herbalist = {}
+      august = {}
+      lifestyle_reveler = {}
+      lifestyle_traveler = {}
+      theologian = {}
+      lifestyle_mystic = {}
+      lifestyle_blademaster = {}
+      overseer = {}
+      architect = {}
+    }
+    diplomacy = { min_template_average_skill max_template_high_skill }
+    martial = { min_template_average_skill max_template_high_skill }
+    stewardship = { min_template_average_skill max_template_high_skill }
+    intrigue = { min_template_average_skill max_template_high_skill }
+    learning = { min_template_average_skill max_template_high_skill }
+    prowess = { min_template_average_skill max_template_high_skill }
+    after_creation = {
+      set_sexuality = heterosexual
+      change_current_weight = -35
+    }
+    save_scope_as = skonester_beauty_new_courtier
+  }
+}
+
+# 美男子：在「雇主」宫廷生成 18 岁男性，最高档男性美貌 beauty_good_3 + 忠贞(chaste) + 与美女佳人相同的三条正面性格 + 三条生活方式特质
+# 依赖事件先 culture:<key> = { save_scope_as = skonester_handsome_spawn_culture }，且 recipient 已 save_scope_as = skonester_spawn_talent_employer
+skonester_cheat_menu_spawn_handsome_companion_effect = {
+  if = {
+    limit = {
+      scope:skonester_handsome_spawn_culture = {
+        any_culture_county = { count >= 1 }
+      }
+    }
+    scope:skonester_handsome_spawn_culture = {
+      random_culture_county = {
+        faith = { save_scope_as = skonester_handsome_spawn_faith }
+      }
+    }
+  }
+  if = {
+    limit = {
+      NOT = { exists = scope:skonester_handsome_spawn_faith }
+    }
+    scope:skonester_spawn_talent_employer = {
+      faith = { save_scope_as = skonester_handsome_spawn_faith }
+    }
+  }
+  create_character = {
+    employer = scope:skonester_spawn_talent_employer
+    age = 18
+    gender_female_chance = 0
+    culture = scope:skonester_handsome_spawn_culture
+    faith = scope:skonester_handsome_spawn_faith
+    random_traits = no
+    trait = beauty_good_3
+    trait = chaste
+    random_traits_list = {
+      count = 3
+      just = {}
+      compassionate = {}
+      generous = {}
+      humble = {}
+      calm = {}
+      gregarious = {}
+      diligent = {}
+      patient = {}
+      honest = {}
+      trusting = {}
+      brave = {}
+      temperate = {}
+    }
+    random_traits_list = {
+      count = 3
+      diplomat = {}
+      gallant = {}
+      lifestyle_poet = {}
+      scholar = {}
+      lifestyle_physician = {}
+      lifestyle_gardener = {}
+      lifestyle_hunter = {}
+      lifestyle_herbalist = {}
+      august = {}
+      lifestyle_reveler = {}
+      lifestyle_traveler = {}
+      theologian = {}
+      lifestyle_mystic = {}
+      lifestyle_blademaster = {}
+      overseer = {}
+      architect = {}
+    }
+    diplomacy = { min_template_average_skill max_template_high_skill }
+    martial = { min_template_average_skill max_template_high_skill }
+    stewardship = { min_template_average_skill max_template_high_skill }
+    intrigue = { min_template_average_skill max_template_high_skill }
+    learning = { min_template_average_skill max_template_high_skill }
+    prowess = { min_template_average_skill max_template_high_skill }
+    after_creation = {
+      set_sexuality = heterosexual
+    }
+    save_scope_as = skonester_handsome_new_courtier
+  }
+}

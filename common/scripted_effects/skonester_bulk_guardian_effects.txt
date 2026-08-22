@@ -1,0 +1,253 @@
+﻿# 批量監護人：童年特質定教育軸 → 教育重心 → 每次執行先徹底拆掉學童側全部監護人（含多條/殘留），滿 6 歲再從「當前無學童」候選擇優掛關係（一人一師）；由決議手動執行
+
+# 學童 scope:skonester_bulk_ward：while + every_relation 多輪拆除（避免單輪迭代漏拆）；再拆 education 主監護人鏈接
+# 僅用 hidden_effect：不顯示專用提示行，且隱去每條 remove_relation_* 的明細
+skonester_bulk_guardian_strip_all_guardians_from_ward_effect = {
+  hidden_effect = {
+    scope:skonester_bulk_ward = {
+      while = {
+        count = 30
+        limit = {
+          any_relation = {
+            type = guardian
+          }
+        }
+        every_relation = {
+          type = guardian
+          remove_relation_ward = scope:skonester_bulk_ward
+          scope:skonester_bulk_ward = {
+            remove_relation_guardian = prev
+          }
+        }
+      }
+    }
+  }
+}
+
+# 監護人 scope:skonester_chosen_guardian：拆掉其名下全部學童，避免一人多童殘留
+skonester_bulk_guardian_strip_all_wards_from_tutor_effect = {
+  hidden_effect = {
+    scope:skonester_chosen_guardian = {
+      while = {
+        count = 30
+        limit = {
+          any_relation = {
+            type = ward
+          }
+        }
+        every_relation = {
+          type = ward
+          remove_relation_guardian = scope:skonester_chosen_guardian
+          scope:skonester_chosen_guardian = {
+            remove_relation_ward = prev
+          }
+        }
+      }
+    }
+  }
+}
+
+skonester_bulk_guardian_set_axis_for_ward_effect = {
+  scope:skonester_bulk_ward = {
+    if = {
+      limit = {
+        has_trait = rowdy
+      }
+      set_variable = {
+        name = skonester_guar_axis
+        value = 1
+      }
+    }
+    else_if = {
+      limit = {
+        has_trait = bossy
+      }
+      set_variable = {
+        name = skonester_guar_axis
+        value = 1
+      }
+    }
+    else_if = {
+      limit = {
+        has_trait = charming
+      }
+      set_variable = {
+        name = skonester_guar_axis
+        value = 4
+      }
+    }
+    else_if = {
+      limit = {
+        has_trait = curious
+      }
+      set_variable = {
+        name = skonester_guar_axis
+        value = 5
+      }
+    }
+    else_if = {
+      limit = {
+        has_trait = pensive
+      }
+      set_variable = {
+        name = skonester_guar_axis
+        value = 3
+      }
+    }
+    else = {
+      set_variable = {
+        name = skonester_guar_axis
+        value = 3
+      }
+    }
+  }
+}
+
+skonester_bulk_guardian_apply_focus_for_ward_effect = {
+  scope:skonester_bulk_ward = {
+    if = {
+      limit = {
+        age >= 6
+      }
+      if = {
+        limit = {
+          var:skonester_guar_axis = 1
+        }
+        set_focus = education_martial
+      }
+      else_if = {
+        limit = {
+          var:skonester_guar_axis = 2
+        }
+        set_focus = education_diplomacy
+      }
+      else_if = {
+        limit = {
+          var:skonester_guar_axis = 3
+        }
+        set_focus = education_stewardship
+      }
+      else_if = {
+        limit = {
+          var:skonester_guar_axis = 4
+        }
+        set_focus = education_intrigue
+      }
+      else_if = {
+        limit = {
+          var:skonester_guar_axis = 5
+        }
+        set_focus = education_learning
+      }
+    }
+    else_if = {
+      limit = {
+        age >= 3
+      }
+      if = {
+        limit = {
+          var:skonester_guar_axis = 1
+        }
+        set_focus = education_martial
+      }
+      else_if = {
+        limit = {
+          var:skonester_guar_axis = 2
+        }
+        set_focus = education_diplomacy
+      }
+      else_if = {
+        limit = {
+          var:skonester_guar_axis = 3
+        }
+        set_focus = education_stewardship
+      }
+      else_if = {
+        limit = {
+          var:skonester_guar_axis = 4
+        }
+        set_focus = education_intrigue
+      }
+      else_if = {
+        limit = {
+          var:skonester_guar_axis = 5
+        }
+        set_focus = education_learning
+      }
+    }
+  }
+}
+
+skonester_bulk_guardian_pick_and_assign_for_ward_effect = {
+  # 再清一次學童側（流水線開頭已清；此處雙保險）
+  skonester_bulk_guardian_strip_all_guardians_from_ward_effect = yes
+  if = {
+    limit = {
+      root = {
+        any_courtier = {
+          skonester_bulk_guardian_candidate_trigger = yes
+        }
+      }
+    }
+    root = {
+      ordered_courtier = {
+        limit = {
+          skonester_bulk_guardian_candidate_trigger = yes
+        }
+        order_by = skonester_guardian_pick_score_value
+        max = 1
+        check_range_bounds = no
+        save_scope_as = skonester_chosen_guardian
+      }
+    }
+    skonester_bulk_guardian_strip_all_wards_from_tutor_effect = yes
+    scope:skonester_bulk_ward = {
+      set_relation_guardian = {
+        target = scope:skonester_chosen_guardian
+      }
+    }
+  }
+}
+
+skonester_bulk_guardian_run_ward_pipeline_effect = {
+  save_scope_as = skonester_bulk_ward
+  skonester_bulk_guardian_strip_all_guardians_from_ward_effect = yes
+  skonester_bulk_guardian_set_axis_for_ward_effect = yes
+  skonester_bulk_guardian_apply_focus_for_ward_effect = yes
+  if = {
+    limit = {
+      scope:skonester_bulk_ward = {
+        skonester_bulk_guardian_ward_needs_guardian_relation_trigger = yes
+      }
+    }
+    skonester_bulk_guardian_pick_and_assign_for_ward_effect = yes
+  }
+  if = {
+    limit = {
+      scope:skonester_bulk_ward = {
+        has_variable = skonester_guar_axis
+      }
+    }
+    scope:skonester_bulk_ward = {
+      remove_variable = skonester_guar_axis
+    }
+  }
+}
+
+# 舊名保留：原每日自動邏輯；現僅由決議「批量分配監護人（一次性）」手動呼叫。
+skonester_bulk_guardian_auto_daily_effect = {
+  root = {
+    every_courtier = {
+      limit = {
+        skonester_bulk_guardian_ward_at_court_trigger = yes
+      }
+      skonester_bulk_guardian_run_ward_pipeline_effect = yes
+    }
+    every_child = {
+      limit = {
+        skonester_bulk_guardian_ward_player_off_court_child_trigger = yes
+      }
+      skonester_bulk_guardian_run_ward_pipeline_effect = yes
+    }
+  }
+}

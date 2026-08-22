@@ -1,0 +1,14 @@
+﻿# 官吏「优秀身体特质」互动标题：已套用 bundle 时显示「失去…」，否则「获得…」
+skonester_physique_interaction_name = {
+  type = character
+  random_valid = no
+  text = {
+    trigger = { has_character_flag = skonester_excellent_body_bundle_active }
+    localization_key = skonester_cheat_menu_gain_good_physique_interaction_remove_loc
+  }
+  text = {
+    trigger = { always = yes }
+    localization_key = skonester_cheat_menu_gain_good_physique_interaction_gain_loc
+    fallback = yes
+  }
+}

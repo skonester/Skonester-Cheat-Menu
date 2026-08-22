@@ -1,0 +1,163 @@
+﻿# 宗教编辑：信仰详情 + 教义库
+
+skonester_acm_faith_view_open_safety = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_acm_faith_view_only_safety_effect = yes }
+}
+
+skonester_acm_faith_editor_visible = {
+  scope = character
+  is_shown = {
+    NOT = { has_character_flag = skonester_acm_faith_gui_locked }
+    has_character_flag = skonester_acm_faith_editor_open
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_faith_editor_close = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_close_acm_faith_editor_effect = yes
+  }
+}
+
+skonester_acm_faith_editor_close_from_window = {
+  scope = character
+  is_valid = { has_character_flag = skonester_acm_faith_editor_open }
+  effect = {
+    skonester_close_acm_faith_editor_effect = yes
+  }
+}
+
+skonester_acm_faith_editor_init = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_acm_faith_init_group_catalog_effect = yes
+    skonester_acm_faith_refresh_display_lists_effect = yes
+  }
+}
+
+skonester_acm_faith_begin_pick_doctrine = {
+  scope = character
+  saved_scopes = { pick_doctrine }
+  is_valid = { has_variable = skonester_selected_faith_var }
+  effect = {
+    skonester_acm_faith_begin_pick_doctrine_effect = yes
+  }
+}
+
+skonester_acm_faith_begin_pick_core_tenets = {
+  scope = character
+  saved_scopes = { pick_doctrine }
+  is_valid = { has_variable = skonester_selected_faith_var }
+  effect = {
+    skonester_acm_faith_begin_pick_core_tenets_effect = yes
+  }
+}
+
+skonester_acm_faith_apply_pick_doctrine = {
+  scope = character
+  saved_scopes = { pick_doctrine }
+  is_valid = { has_variable = skonester_selected_faith_var }
+  effect = {
+    skonester_acm_faith_apply_pick_doctrine_effect = yes
+  }
+}
+
+skonester_acm_faith_doctrine_picker_visible = {
+  scope = character
+  is_shown = {
+    NOT = { has_character_flag = skonester_acm_faith_gui_locked }
+    has_character_flag = skonester_acm_faith_doctrine_picker_open
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_faith_pick_sidebar_visible = {
+  scope = character
+  is_shown = {
+    NOT = { has_character_flag = skonester_acm_faith_gui_locked }
+    has_character_flag = skonester_acm_faith_editor_open
+    has_character_flag = skonester_acm_faith_pick_sidebar_open
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_faith_pick_sidebar_show = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    add_character_flag = skonester_acm_faith_pick_sidebar_open
+  }
+}
+
+skonester_acm_faith_pick_sidebar_hide = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    remove_character_flag = skonester_acm_faith_pick_sidebar_open
+  }
+}
+
+skonester_acm_faith_doctrine_picker_close = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_close_acm_faith_doctrine_picker_effect = yes
+  }
+}
+
+skonester_acm_faith_editor_add_doctrine = {
+  scope = character
+  saved_scopes = { pick_doctrine }
+  is_valid = {
+    has_variable = skonester_selected_faith_var
+  }
+  effect = {
+    skonester_acm_faith_apply_pick_doctrine_effect = yes
+    skonester_close_acm_faith_doctrine_picker_effect = yes
+  }
+}
+
+skonester_acm_faith_reselect = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_close_acm_faith_editor_effect = yes
+    skonester_open_acm_religion_picker_effect = yes
+  }
+}
+
+skonester_acm_faith_pick_open_core_tenets = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_acm_faith_pick_open_core_tenets_effect = yes }
+}
+
+skonester_acm_faith_pick_open_main_group = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_acm_faith_pick_open_main_group_effect = yes }
+}
+
+skonester_acm_faith_pick_open_marriage = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_acm_faith_pick_open_marriage_effect = yes }
+}
+
+skonester_acm_faith_pick_open_crimes = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_acm_faith_pick_open_crimes_effect = yes }
+}
+
+skonester_acm_faith_pick_open_clergy = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_acm_faith_pick_open_clergy_effect = yes }
+}
+

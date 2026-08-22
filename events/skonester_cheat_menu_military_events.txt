@@ -1,0 +1,162 @@
+﻿namespace = skonester_cheat_menu
+
+# 军事管理主菜单（CK3 事件窗约最多 4 条选项，其余进子菜单）
+skonester_cheat_menu.3080 = {
+  type = character_event
+  title = skonester_cheat_menu.3080.t
+  desc = skonester_cheat_menu.3080.desc
+  theme = martial
+  left_portrait = root
+  right_portrait = scope:skonester_cheat_menu_target
+
+  immediate = {
+    skonester_military_event_immediate_effect = yes
+  }
+
+  option = {
+    name = skonester_cheat_menu.3080.close
+    skonester_cheat_menu_clear_recipient_effect = yes
+  }
+
+  option = {
+    name = skonester_cheat_menu.3080.opt_submenu_levies_maa
+    custom_tooltip = skonester_cheat_menu.3080.opt_submenu_levies_maa_tt
+    root = {
+      skonester_military_ensure_target_effect = yes
+      trigger_event = { id = skonester_cheat_menu.3085 days = 0 }
+    }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3080.opt_submenu_army_buff
+    custom_tooltip = skonester_cheat_menu.3080.opt_submenu_army_buff_tt
+    root = {
+      skonester_military_ensure_target_effect = yes
+      trigger_event = { id = skonester_cheat_menu.3086 days = 0 }
+    }
+  }
+}
+
+# 征兵与常备
+skonester_cheat_menu.3085 = {
+  type = character_event
+  title = skonester_cheat_menu.3085.t
+  desc = skonester_cheat_menu.3085.desc
+  theme = martial
+  left_portrait = root
+  right_portrait = scope:skonester_cheat_menu_target
+
+  immediate = {
+    skonester_military_event_immediate_effect = yes
+  }
+
+  option = {
+    name = skonester_cheat_menu.3080.back_main
+    root = {
+      skonester_military_ensure_target_effect = yes
+      trigger_event = { id = skonester_cheat_menu.3080 days = 0 }
+    }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3080.opt_raise_levies
+    custom_tooltip = skonester_cheat_menu.3080.opt_raise_levies_tt
+    root = {
+      skonester_cheat_menu_raise_all_levies_effect = yes
+      trigger_event = { id = skonester_cheat_menu.3085 days = 0 }
+    }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3080.opt_sand_soldiers
+    custom_tooltip = skonester_cheat_menu.3080.opt_sand_soldiers_tt
+    root = {
+      skonester_military_ensure_target_effect = yes
+      skonester_sand_soldiers_request_open_effect = yes
+      hidden_effect = {
+        skonester_open_sand_soldiers_effect = yes
+      }
+    }
+  }
+}
+
+# 军队增益（补给 / 征兵 / 无敌）
+skonester_cheat_menu.3086 = {
+  type = character_event
+  title = skonester_cheat_menu.3086.t
+  desc = skonester_cheat_menu.3086.desc
+  theme = martial
+  left_portrait = root
+  right_portrait = scope:skonester_cheat_menu_target
+
+  immediate = {
+    skonester_military_event_immediate_effect = yes
+  }
+
+  option = {
+    name = skonester_cheat_menu.3080.back_main
+    root = {
+      skonester_military_ensure_target_effect = yes
+      trigger_event = { id = skonester_cheat_menu.3080 days = 0 }
+    }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3080.opt_instant_replenish
+    custom_tooltip = skonester_cheat_menu.3080.opt_instant_replenish_tt
+    root = {
+      skonester_cheat_menu_instant_army_replenish_effect = yes
+      trigger_event = { id = skonester_cheat_menu.3086 days = 0 }
+    }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3080.opt_levy_multiplier
+    custom_tooltip = skonester_cheat_menu.3080.opt_levy_multiplier_tt
+    root = {
+      skonester_cheat_menu_set_levy_size_multiplier_effect = yes
+      trigger_event = { id = skonester_cheat_menu.3086 days = 0 }
+    }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3080.opt_god_mode
+    custom_tooltip = skonester_cheat_menu.3080.opt_god_mode_tt
+    root = {
+      skonester_cheat_menu_army_god_mode_effect = yes
+      trigger_event = { id = skonester_cheat_menu.3086 days = 0 }
+    }
+  }
+}
+
+# 战争中每 7 天拉满军团补给（仅玩家且已开启军需修正）
+skonester_cheat_menu.3099 = {
+  type = character_event
+  hidden = yes
+  immediate = {
+    if = {
+      limit = {
+        is_alive = yes
+        has_character_modifier = skonester_military_instant_replenish_modifier
+      }
+      skonester_cheat_menu_refill_all_army_supply_on_character_effect = yes
+      if = {
+        limit = { is_at_war = yes }
+        trigger_event = { id = skonester_cheat_menu.3099 days = 7 }
+      }
+    }
+  }
+}
+
+# 撒豆成兵 GUI 桥接（备用：互动等路径仍走 pending + 本事件）
+skonester_cheat_menu.3082 = {
+  type = character_event
+  hidden = yes
+  immediate = {
+    if = {
+      limit = { has_character_flag = skonester_sand_soldiers_pending_open }
+      skonester_military_ensure_target_effect = yes
+      skonester_open_sand_soldiers_effect = yes
+    }
+  }
+}

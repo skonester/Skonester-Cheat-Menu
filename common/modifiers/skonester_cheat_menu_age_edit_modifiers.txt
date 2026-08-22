@@ -1,0 +1,73 @@
+﻿# Skonester「年龄修改」：set_age 不会重算与年龄相关的健康，用永久 modifier 按「菜单累计偏移」近似同步健康条（±60 岁封顶）。
+# hp_n* = 菜单净减岁（更年轻）→ 正向 health；hp_p* = 菜单净加岁（更老）→ 负向 health。
+# hp_elder* = 在仍有「加岁累计」时，按当前实际年龄叠加（高龄加岁更伤身体）。
+
+skonester_age_menu_hp_n60 = {
+  icon = health_positive
+  health = 0.6
+}
+
+skonester_age_menu_hp_n50 = {
+  icon = health_positive
+  health = 0.5
+}
+
+skonester_age_menu_hp_n40 = {
+  icon = health_positive
+  health = 0.4
+}
+
+skonester_age_menu_hp_n30 = {
+  icon = health_positive
+  health = 0.3
+}
+
+skonester_age_menu_hp_n20 = {
+  icon = health_positive
+  health = 0.2
+}
+
+skonester_age_menu_hp_n10 = {
+  icon = health_positive
+  health = 0.1
+}
+
+skonester_age_menu_hp_p10 = {
+  icon = health_negative
+  health = -0.1
+}
+
+skonester_age_menu_hp_p20 = {
+  icon = health_negative
+  health = -0.2
+}
+
+skonester_age_menu_hp_p30 = {
+  icon = health_negative
+  health = -0.3
+}
+
+skonester_age_menu_hp_p40 = {
+  icon = health_negative
+  health = -0.4
+}
+
+skonester_age_menu_hp_p50 = {
+  icon = health_negative
+  health = -0.5
+}
+
+skonester_age_menu_hp_p60 = {
+  icon = health_negative
+  health = -0.6
+}
+
+skonester_age_menu_hp_elder45 = {
+  icon = health_negative
+  health = -0.06
+}
+
+skonester_age_menu_hp_elder60 = {
+  icon = health_negative
+  health = -0.12
+}

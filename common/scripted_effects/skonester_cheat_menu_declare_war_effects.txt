@@ -1,0 +1,37 @@
+﻿# Skonester菜单：对独立右击目标宣战（强制朝贡 / 征服全领地）
+
+skonester_cheat_menu_break_truce_with_recipient_effect = {
+  scope:recipient = {
+    if = {
+      limit = {
+        exists = scope:actor
+        has_truce = scope:actor
+      }
+      scope:actor = { break_truce = prev }
+    }
+  }
+}
+
+skonester_cheat_menu_start_force_tributary_war_effect = {
+  scope:actor = { save_scope_as = skonester_war_attacker }
+  scope:recipient = { save_scope_as = skonester_war_defender }
+  skonester_cheat_menu_break_truce_with_recipient_effect = yes
+  scope:skonester_war_attacker = {
+    start_war = {
+      casus_belli = skonester_cheat_menu_force_tributary_cb
+      target = scope:skonester_war_defender
+    }
+  }
+}
+
+skonester_cheat_menu_start_conquer_realm_war_effect = {
+  scope:actor = { save_scope_as = skonester_war_attacker }
+  scope:recipient = { save_scope_as = skonester_war_defender }
+  skonester_cheat_menu_break_truce_with_recipient_effect = yes
+  scope:skonester_war_attacker = {
+    start_war = {
+      casus_belli = skonester_cheat_menu_conquer_realm_cb
+      target = scope:skonester_war_defender
+    }
+  }
+}

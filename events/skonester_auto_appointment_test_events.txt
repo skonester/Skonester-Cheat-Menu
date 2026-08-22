@@ -1,0 +1,84 @@
+﻿# 自动任免功能测试事件
+
+namespace = skonester_auto_appointment_test
+
+# 测试自动内阁任免功能
+skonester_auto_appointment_test.1000 = {
+  type = character_event
+  title = skonester_auto_appointment_test.1000.t
+  desc = skonester_auto_appointment_test.1000.desc
+  theme = administration
+
+  option = {
+    name = skonester_auto_appointment_test.1000.test_cabinet
+    trigger_event = skonester_auto_appointment_test.1100
+  }
+
+  option = {
+    name = skonester_auto_appointment_test.1000.test_court_positions
+    trigger_event = skonester_auto_appointment_test.1200
+  }
+
+  option = {
+    name = skonester_auto_appointment_test.1000.test_both
+    trigger_event = skonester_auto_appointment_test.1300
+  }
+
+  option = {
+    name = skonester_auto_appointment_test.1000.close
+  }
+}
+
+# 测试自动内阁任免
+skonester_auto_appointment_test.1100 = {
+  type = character_event
+  title = skonester_auto_appointment_test.1100.t
+  desc = skonester_auto_appointment_test.1100.desc
+  theme = administration
+
+  option = {
+    name = skonester_auto_appointment_test.1100.execute
+    effect = { skonester_cheat_menu_court_cabinet_effect = yes custom_tooltip = skonester_auto_appointment_test.1100.effect_tt }
+  }
+
+  option = {
+    name = skonester_auto_appointment_test.1100.back
+    trigger_event = skonester_auto_appointment_test.1000
+  }
+}
+
+# 测试自动宫廷职位任免
+skonester_auto_appointment_test.1200 = {
+  type = character_event
+  title = skonester_auto_appointment_test.1200.t
+  desc = skonester_auto_appointment_test.1200.desc
+  theme = administration
+
+  option = {
+    name = skonester_auto_appointment_test.1200.execute
+    effect = { skonester_positions_sync_liege_player_effect = yes skonester_auto_court_positions_15day_tick_effect = yes custom_tooltip = skonester_auto_appointment_test.1200.effect_tt }
+  }
+
+  option = {
+    name = skonester_auto_appointment_test.1200.back
+    trigger_event = skonester_auto_appointment_test.1000
+  }
+}
+
+# 测试同时执行两种自动任免
+skonester_auto_appointment_test.1300 = {
+  type = character_event
+  title = skonester_auto_appointment_test.1300.t
+  desc = skonester_auto_appointment_test.1300.desc
+  theme = administration
+
+  option = {
+    name = skonester_auto_appointment_test.1300.execute
+    effect = { skonester_cheat_menu_court_cabinet_effect = yes skonester_positions_sync_liege_player_effect = yes skonester_auto_court_positions_15day_tick_effect = yes custom_tooltip = skonester_auto_appointment_test.1300.effect_tt }
+  }
+
+  option = {
+    name = skonester_auto_appointment_test.1300.back
+    trigger_event = skonester_auto_appointment_test.1000
+  }
+}

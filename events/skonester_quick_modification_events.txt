@@ -1,0 +1,321 @@
+﻿namespace = skonester_quick_modifications
+
+# Modern replacement for the legacy cheateb Quick Modification event chain.
+
+skonester_quick_modifications.1000 = {
+	type = character_event
+	title = skonester_quick_modifications.1000.t
+	desc = skonester_quick_modifications.1000.desc
+	theme = realm
+	immediate = { skonester_cheat_menu_sync_target_effect = yes }
+	option = { name = skonester_quick_modifications.1000.character trigger_event = skonester_quick_modifications.1100 }
+	option = { name = skonester_quick_modifications.1000.editors trigger_event = skonester_quick_modifications.1200 }
+	option = { name = skonester_quick_modifications.1000.modifiers trigger_event = skonester_quick_modifications.1300 }
+	option = { name = skonester_quick_modifications.1000.realm trigger_event = skonester_quick_modifications.1400 }
+	option = {
+		name = skonester_quick_modifications.1000.innovations
+		trigger = { scope:skonester_cheat_menu_target = { exists = culture } }
+		scope:skonester_cheat_menu_target.culture = { save_scope_as = skonester_selected_culture }
+		scope:actor = {
+			remove_character_flag = skonester_culture_innov_from_0120
+			remove_character_flag = skonester_culture_innov_from_global_selected
+			add_character_flag = skonester_quick_modifications_innovation_entry
+			trigger_event = skonester_cheat_menu.0130
+		}
+	}
+	option = { name = skonester_quick_modifications.close }
+}
+
+skonester_quick_modifications.1100 = {
+	type = character_event
+	title = skonester_quick_modifications.1100.t
+	desc = skonester_quick_modifications.1100.desc
+	theme = realm
+	immediate = { skonester_cheat_menu_sync_target_effect = yes }
+	option = { name = skonester_quick_modifications.1100.rename trigger_event = skonester_quick_modifications.1110 }
+	option = { name = skonester_quick_modifications.1100.clear_stress scope:skonester_cheat_menu_target = { add_stress = -1000 } trigger_event = skonester_quick_modifications.1100 }
+	option = { name = skonester_quick_modifications.1100.skills trigger_event = skonester_quick_modifications.1120 }
+	option = { name = skonester_quick_modifications.back_main trigger_event = skonester_quick_modifications.1000 }
+	option = { name = skonester_quick_modifications.close }
+}
+
+skonester_quick_modifications.1110 = {
+	type = character_event
+	title = skonester_quick_modifications.1110.t
+	desc = skonester_quick_modifications.1110.desc
+	theme = realm
+	immediate = { skonester_cheat_menu_sync_target_effect = yes }
+	widgets = {
+		widget = {
+			gui = "event_window_widget_name_child"
+			container = "dynamic_birth_name"
+			controller = name_character
+			setup_scope = { scope:skonester_cheat_menu_target = { save_scope_as = name_character_target } }
+		}
+	}
+	option = { name = skonester_quick_modifications.back_character trigger_event = skonester_quick_modifications.1100 }
+	option = { name = skonester_quick_modifications.close }
+}
+
+skonester_quick_modifications.1120 = {
+	type = character_event
+	title = skonester_quick_modifications.1120.t
+	desc = skonester_quick_modifications.1120.desc
+	theme = realm
+	immediate = { skonester_cheat_menu_sync_target_effect = yes }
+	option = {
+		name = skonester_quick_modifications.1120.all_plus
+		scope:skonester_cheat_menu_target = {
+			add_diplomacy_skill = 5
+			add_martial_skill = 5
+			add_stewardship_skill = 5
+			add_intrigue_skill = 5
+			add_learning_skill = 5
+			add_prowess_skill = 5
+		}
+		trigger_event = skonester_quick_modifications.1120
+	}
+	option = {
+		name = skonester_quick_modifications.1120.all_minus
+		scope:skonester_cheat_menu_target = {
+			add_diplomacy_skill = -5
+			add_martial_skill = -5
+			add_stewardship_skill = -5
+			add_intrigue_skill = -5
+			add_learning_skill = -5
+			add_prowess_skill = -5
+		}
+		trigger_event = skonester_quick_modifications.1120
+	}
+	option = { name = skonester_quick_modifications.skill.diplomacy trigger_event = skonester_quick_modifications.1121 }
+	option = { name = skonester_quick_modifications.skill.martial trigger_event = skonester_quick_modifications.1122 }
+	option = { name = skonester_quick_modifications.skill.stewardship trigger_event = skonester_quick_modifications.1123 }
+	option = { name = skonester_quick_modifications.skill.intrigue trigger_event = skonester_quick_modifications.1124 }
+	option = { name = skonester_quick_modifications.skill.learning trigger_event = skonester_quick_modifications.1125 }
+	option = { name = skonester_quick_modifications.skill.prowess trigger_event = skonester_quick_modifications.1126 }
+	option = { name = skonester_quick_modifications.back_character trigger_event = skonester_quick_modifications.1100 }
+	option = { name = skonester_quick_modifications.close }
+}
+
+skonester_quick_modifications.1121 = {
+	type = character_event
+	title = skonester_quick_modifications.skill.diplomacy
+	desc = skonester_quick_modifications.skill.desc
+	theme = realm
+	immediate = { skonester_cheat_menu_sync_target_effect = yes }
+	option = { name = skonester_quick_modifications.plus10 scope:skonester_cheat_menu_target = { add_diplomacy_skill = 10 } trigger_event = skonester_quick_modifications.1121 }
+	option = { name = skonester_quick_modifications.plus5 scope:skonester_cheat_menu_target = { add_diplomacy_skill = 5 } trigger_event = skonester_quick_modifications.1121 }
+	option = { name = skonester_quick_modifications.minus5 scope:skonester_cheat_menu_target = { add_diplomacy_skill = -5 } trigger_event = skonester_quick_modifications.1121 }
+	option = { name = skonester_quick_modifications.minus10 scope:skonester_cheat_menu_target = { add_diplomacy_skill = -10 } trigger_event = skonester_quick_modifications.1121 }
+	option = { name = skonester_quick_modifications.back_skills trigger_event = skonester_quick_modifications.1120 }
+	option = { name = skonester_quick_modifications.close }
+}
+
+skonester_quick_modifications.1122 = {
+	type = character_event
+	title = skonester_quick_modifications.skill.martial
+	desc = skonester_quick_modifications.skill.desc
+	theme = realm
+	immediate = { skonester_cheat_menu_sync_target_effect = yes }
+	option = { name = skonester_quick_modifications.plus10 scope:skonester_cheat_menu_target = { add_martial_skill = 10 } trigger_event = skonester_quick_modifications.1122 }
+	option = { name = skonester_quick_modifications.plus5 scope:skonester_cheat_menu_target = { add_martial_skill = 5 } trigger_event = skonester_quick_modifications.1122 }
+	option = { name = skonester_quick_modifications.minus5 scope:skonester_cheat_menu_target = { add_martial_skill = -5 } trigger_event = skonester_quick_modifications.1122 }
+	option = { name = skonester_quick_modifications.minus10 scope:skonester_cheat_menu_target = { add_martial_skill = -10 } trigger_event = skonester_quick_modifications.1122 }
+	option = { name = skonester_quick_modifications.back_skills trigger_event = skonester_quick_modifications.1120 }
+	option = { name = skonester_quick_modifications.close }
+}
+
+skonester_quick_modifications.1123 = {
+	type = character_event
+	title = skonester_quick_modifications.skill.stewardship
+	desc = skonester_quick_modifications.skill.desc
+	theme = realm
+	immediate = { skonester_cheat_menu_sync_target_effect = yes }
+	option = { name = skonester_quick_modifications.plus10 scope:skonester_cheat_menu_target = { add_stewardship_skill = 10 } trigger_event = skonester_quick_modifications.1123 }
+	option = { name = skonester_quick_modifications.plus5 scope:skonester_cheat_menu_target = { add_stewardship_skill = 5 } trigger_event = skonester_quick_modifications.1123 }
+	option = { name = skonester_quick_modifications.minus5 scope:skonester_cheat_menu_target = { add_stewardship_skill = -5 } trigger_event = skonester_quick_modifications.1123 }
+	option = { name = skonester_quick_modifications.minus10 scope:skonester_cheat_menu_target = { add_stewardship_skill = -10 } trigger_event = skonester_quick_modifications.1123 }
+	option = { name = skonester_quick_modifications.back_skills trigger_event = skonester_quick_modifications.1120 }
+	option = { name = skonester_quick_modifications.close }
+}
+
+skonester_quick_modifications.1124 = {
+	type = character_event
+	title = skonester_quick_modifications.skill.intrigue
+	desc = skonester_quick_modifications.skill.desc
+	theme = realm
+	immediate = { skonester_cheat_menu_sync_target_effect = yes }
+	option = { name = skonester_quick_modifications.plus10 scope:skonester_cheat_menu_target = { add_intrigue_skill = 10 } trigger_event = skonester_quick_modifications.1124 }
+	option = { name = skonester_quick_modifications.plus5 scope:skonester_cheat_menu_target = { add_intrigue_skill = 5 } trigger_event = skonester_quick_modifications.1124 }
+	option = { name = skonester_quick_modifications.minus5 scope:skonester_cheat_menu_target = { add_intrigue_skill = -5 } trigger_event = skonester_quick_modifications.1124 }
+	option = { name = skonester_quick_modifications.minus10 scope:skonester_cheat_menu_target = { add_intrigue_skill = -10 } trigger_event = skonester_quick_modifications.1124 }
+	option = { name = skonester_quick_modifications.back_skills trigger_event = skonester_quick_modifications.1120 }
+	option = { name = skonester_quick_modifications.close }
+}
+
+skonester_quick_modifications.1125 = {
+	type = character_event
+	title = skonester_quick_modifications.skill.learning
+	desc = skonester_quick_modifications.skill.desc
+	theme = realm
+	immediate = { skonester_cheat_menu_sync_target_effect = yes }
+	option = { name = skonester_quick_modifications.plus10 scope:skonester_cheat_menu_target = { add_learning_skill = 10 } trigger_event = skonester_quick_modifications.1125 }
+	option = { name = skonester_quick_modifications.plus5 scope:skonester_cheat_menu_target = { add_learning_skill = 5 } trigger_event = skonester_quick_modifications.1125 }
+	option = { name = skonester_quick_modifications.minus5 scope:skonester_cheat_menu_target = { add_learning_skill = -5 } trigger_event = skonester_quick_modifications.1125 }
+	option = { name = skonester_quick_modifications.minus10 scope:skonester_cheat_menu_target = { add_learning_skill = -10 } trigger_event = skonester_quick_modifications.1125 }
+	option = { name = skonester_quick_modifications.back_skills trigger_event = skonester_quick_modifications.1120 }
+	option = { name = skonester_quick_modifications.close }
+}
+
+skonester_quick_modifications.1126 = {
+	type = character_event
+	title = skonester_quick_modifications.skill.prowess
+	desc = skonester_quick_modifications.skill.desc
+	theme = realm
+	immediate = { skonester_cheat_menu_sync_target_effect = yes }
+	option = { name = skonester_quick_modifications.plus10 scope:skonester_cheat_menu_target = { add_prowess_skill = 10 } trigger_event = skonester_quick_modifications.1126 }
+	option = { name = skonester_quick_modifications.plus5 scope:skonester_cheat_menu_target = { add_prowess_skill = 5 } trigger_event = skonester_quick_modifications.1126 }
+	option = { name = skonester_quick_modifications.minus5 scope:skonester_cheat_menu_target = { add_prowess_skill = -5 } trigger_event = skonester_quick_modifications.1126 }
+	option = { name = skonester_quick_modifications.minus10 scope:skonester_cheat_menu_target = { add_prowess_skill = -10 } trigger_event = skonester_quick_modifications.1126 }
+	option = { name = skonester_quick_modifications.back_skills trigger_event = skonester_quick_modifications.1120 }
+	option = { name = skonester_quick_modifications.close }
+}
+
+skonester_quick_modifications.1200 = {
+	type = character_event
+	title = skonester_quick_modifications.1200.t
+	desc = skonester_quick_modifications.1200.desc
+	theme = realm
+	immediate = { skonester_cheat_menu_sync_target_effect = yes }
+	option = { name = skonester_quick_modifications.1200.traits skonester_cheat_menu_open_base_game_traits_effect = yes }
+	option = { name = skonester_quick_modifications.1200.cheat_traits skonester_cheat_menu_open_new_traits_effect = yes }
+	option = { name = skonester_quick_modifications.1200.lifestyle skonester_cheat_menu_open_lifestyle_effect = yes }
+	option = { name = skonester_quick_modifications.1200.culture skonester_cheat_menu_open_culture_edit_effect = yes }
+	option = { name = skonester_quick_modifications.1200.faith skonester_cheat_menu_open_religion_edit_effect = yes }
+	option = { name = skonester_quick_modifications.back_main trigger_event = skonester_quick_modifications.1000 }
+	option = { name = skonester_quick_modifications.close }
+}
+
+skonester_quick_modifications.1300 = {
+	type = character_event
+	title = skonester_quick_modifications.1300.t
+	desc = skonester_quick_modifications.1300.desc
+	theme = realm
+	immediate = { skonester_cheat_menu_sync_target_effect = yes }
+	option = { name = cheateb_stat20_modifier scope:skonester_cheat_menu_target = { if = { limit = { has_character_modifier = cheateb_stat20_modifier } remove_character_modifier = cheateb_stat20_modifier } else = { add_character_modifier = cheateb_stat20_modifier } } trigger_event = skonester_quick_modifications.1300 }
+	option = { name = cheateb_stat7_modifier scope:skonester_cheat_menu_target = { if = { limit = { has_character_modifier = cheateb_stat7_modifier } remove_character_modifier = cheateb_stat7_modifier } else = { add_character_modifier = cheateb_stat7_modifier } } trigger_event = skonester_quick_modifications.1300 }
+	option = { name = cheateb_niverdie_modifier scope:skonester_cheat_menu_target = { if = { limit = { has_character_modifier = cheateb_niverdie_modifier } remove_character_modifier = cheateb_niverdie_modifier } else = { add_character_modifier = cheateb_niverdie_modifier } } trigger_event = skonester_quick_modifications.1300 }
+	option = { name = cheateb_army_modifier scope:skonester_cheat_menu_target = { if = { limit = { has_character_modifier = cheateb_army_modifier } remove_character_modifier = cheateb_army_modifier } else = { add_character_modifier = cheateb_army_modifier } } trigger_event = skonester_quick_modifications.1300 }
+	option = { name = cheateb_development_modifier scope:skonester_cheat_menu_target = { if = { limit = { has_character_modifier = cheateb_development_modifier } remove_character_modifier = cheateb_development_modifier } else = { add_character_modifier = cheateb_development_modifier } } trigger_event = skonester_quick_modifications.1300 }
+	option = { name = cheateb_nofertility_modifier scope:skonester_cheat_menu_target = { if = { limit = { has_character_modifier = cheateb_nofertility_modifier } remove_character_modifier = cheateb_nofertility_modifier } else = { add_character_modifier = cheateb_nofertility_modifier } } trigger_event = skonester_quick_modifications.1300 }
+	option = { name = cheateb_fullfertility_modifier scope:skonester_cheat_menu_target = { if = { limit = { has_character_modifier = cheateb_fullfertility_modifier } remove_character_modifier = cheateb_fullfertility_modifier } else = { add_character_modifier = cheateb_fullfertility_modifier } } trigger_event = skonester_quick_modifications.1300 }
+	option = { name = cheateb_defence_modifier scope:skonester_cheat_menu_target = { if = { limit = { has_character_modifier = cheateb_defence_modifier } remove_character_modifier = cheateb_defence_modifier } else = { add_character_modifier = cheateb_defence_modifier } } trigger_event = skonester_quick_modifications.1300 }
+	option = { name = skonester_quick_modifications.back_main trigger_event = skonester_quick_modifications.1000 }
+	option = { name = skonester_quick_modifications.close }
+}
+
+skonester_quick_modifications.1400 = {
+	type = character_event
+	title = skonester_quick_modifications.1400.t
+	desc = skonester_quick_modifications.1400.desc
+	theme = realm
+	immediate = { skonester_cheat_menu_sync_target_effect = yes }
+	option = {
+		name = skonester_quick_modifications.1400.county
+		trigger = { scope:skonester_cheat_menu_target = { is_landed = yes } }
+		trigger_event = skonester_quick_modifications.1410
+	}
+	option = {
+		name = skonester_quick_modifications.1400.army
+		trigger = { scope:skonester_cheat_menu_target = { is_landed = yes } }
+		skonester_cheat_menu_open_sand_soldiers_effect = yes
+	}
+	option = { name = skonester_quick_modifications.1400.generator skonester_cheat_menu_open_character_gen_hub_effect = yes }
+	option = { name = skonester_quick_modifications.back_main trigger_event = skonester_quick_modifications.1000 }
+	option = { name = skonester_quick_modifications.close }
+}
+
+# Government Menu — Page 1: core governments
+skonester_quick_modifications.1410 = {
+	type = character_event
+	title = skonester_quick_modifications.government.page1.t
+	desc = skonester_quick_modifications.government.desc
+	theme = realm
+	immediate = { skonester_cheat_menu_sync_target_effect = yes }
+	option = {
+		name = feudal_government
+		scope:skonester_cheat_menu_target = {
+			add_character_flag = skonester_chenzhi_force_feudal_conversion
+			skonester_convert_character_to_feudal_government_effect = yes
+			remove_character_flag = skonester_chenzhi_force_feudal_conversion
+			skonester_player_government_lock_sync_from_character_effect = yes
+		}
+		trigger_event = skonester_quick_modifications.1410
+	}
+	option = { name = clan_government scope:skonester_cheat_menu_target = { skonester_convert_character_to_clan_government_effect = yes skonester_player_government_lock_sync_from_character_effect = yes } trigger_event = skonester_quick_modifications.1410 }
+	option = { name = tribal_government scope:skonester_cheat_menu_target = { skonester_convert_character_to_tribal_government_effect = yes skonester_player_government_lock_sync_from_character_effect = yes } trigger_event = skonester_quick_modifications.1410 }
+	option = { name = republic_government scope:skonester_cheat_menu_target = { skonester_convert_character_to_republic_government_effect = yes skonester_player_government_lock_sync_from_character_effect = yes } trigger_event = skonester_quick_modifications.1410 }
+	option = { name = theocracy_government scope:skonester_cheat_menu_target = { skonester_convert_character_to_theocracy_government_effect = yes skonester_player_government_lock_sync_from_character_effect = yes } trigger_event = skonester_quick_modifications.1410 }
+	option = { name = skonester_quick_modifications.next trigger_event = skonester_quick_modifications.1411 }
+	option = { name = skonester_quick_modifications.back_realm trigger_event = skonester_quick_modifications.1400 }
+	option = { name = skonester_quick_modifications.close }
+}
+
+# Government Menu — Page 2: administrative and East Asian governments
+skonester_quick_modifications.1411 = {
+	type = character_event
+	title = skonester_quick_modifications.government.page2.t
+	desc = skonester_quick_modifications.government.desc
+	theme = realm
+	immediate = { skonester_cheat_menu_sync_target_effect = yes }
+	option = { name = administrative_government scope:skonester_cheat_menu_target = { skonester_convert_character_to_administrative_government_effect = yes skonester_player_government_lock_sync_from_character_effect = yes } trigger_event = skonester_quick_modifications.1411 }
+	option = { name = celestial_government scope:skonester_cheat_menu_target = { skonester_convert_character_to_celestial_government_effect = yes skonester_player_government_lock_sync_from_character_effect = yes } trigger_event = skonester_quick_modifications.1411 }
+	option = { name = meritocratic_government scope:skonester_cheat_menu_target = { skonester_convert_character_to_meritocratic_government_effect = yes skonester_player_government_lock_sync_from_character_effect = yes } trigger_event = skonester_quick_modifications.1411 }
+	option = { name = steppe_admin_government scope:skonester_cheat_menu_target = { skonester_convert_character_to_steppe_admin_government_effect = yes skonester_player_government_lock_sync_from_character_effect = yes } trigger_event = skonester_quick_modifications.1411 }
+	option = { name = mandala_government scope:skonester_cheat_menu_target = { change_government = mandala_government skonester_player_government_lock_sync_from_character_effect = yes } trigger_event = skonester_quick_modifications.1411 }
+	option = { name = skonester_quick_modifications.previous trigger_event = skonester_quick_modifications.1410 }
+	option = { name = skonester_quick_modifications.next trigger_event = skonester_quick_modifications.1412 }
+	option = { name = skonester_quick_modifications.back_realm trigger_event = skonester_quick_modifications.1400 }
+	option = { name = skonester_quick_modifications.close }
+}
+
+# Government Menu — Page 3: nomadic and regional governments
+skonester_quick_modifications.1412 = {
+	type = character_event
+	title = skonester_quick_modifications.government.page3.t
+	desc = skonester_quick_modifications.government.desc
+	theme = realm
+	immediate = { skonester_cheat_menu_sync_target_effect = yes }
+	option = { name = nomad_government scope:skonester_cheat_menu_target = { skonester_convert_character_to_nomadic_government_effect = yes skonester_player_government_lock_sync_from_character_effect = yes } trigger_event = skonester_quick_modifications.1412 }
+	option = { name = herder_government scope:skonester_cheat_menu_target = { skonester_convert_character_to_herder_government_effect = yes skonester_player_government_lock_sync_from_character_effect = yes } trigger_event = skonester_quick_modifications.1412 }
+	option = { name = wanua_government scope:skonester_cheat_menu_target = { change_government = wanua_government skonester_player_government_lock_sync_from_character_effect = yes } trigger_event = skonester_quick_modifications.1412 }
+	option = {
+		name = japan_administrative_government
+		scope:skonester_cheat_menu_target = {
+			skonester_convert_character_to_japan_administrative_government_effect = yes
+			if = { limit = { NOT = { has_government = japan_administrative_government } } change_government = japan_administrative_government }
+			skonester_player_government_lock_sync_from_character_effect = yes
+		}
+		trigger_event = skonester_quick_modifications.1412
+	}
+	option = { name = japan_feudal_government scope:skonester_cheat_menu_target = { skonester_convert_character_to_japan_feudal_government_effect = yes skonester_player_government_lock_sync_from_character_effect = yes } trigger_event = skonester_quick_modifications.1412 }
+	option = { name = skonester_quick_modifications.previous trigger_event = skonester_quick_modifications.1411 }
+	option = { name = skonester_quick_modifications.next trigger_event = skonester_quick_modifications.1413 }
+	option = { name = skonester_quick_modifications.back_realm trigger_event = skonester_quick_modifications.1400 }
+	option = { name = skonester_quick_modifications.close }
+}
+
+# Government Menu — Page 4: special-purpose governments
+skonester_quick_modifications.1413 = {
+	type = character_event
+	title = skonester_quick_modifications.government.page4.t
+	desc = skonester_quick_modifications.government.special_desc
+	theme = realm
+	immediate = { skonester_cheat_menu_sync_target_effect = yes }
+	option = { name = holy_order_government scope:skonester_cheat_menu_target = { change_government = holy_order_government skonester_player_government_lock_sync_from_character_effect = yes } trigger_event = skonester_quick_modifications.1413 }
+	option = { name = mercenary_government scope:skonester_cheat_menu_target = { change_government = mercenary_government skonester_player_government_lock_sync_from_character_effect = yes } trigger_event = skonester_quick_modifications.1413 }
+	option = { name = landless_adventurer_government scope:skonester_cheat_menu_target = { change_government = landless_adventurer_government skonester_player_government_lock_sync_from_character_effect = yes } trigger_event = skonester_quick_modifications.1413 }
+	option = { name = skonester_quick_modifications.previous trigger_event = skonester_quick_modifications.1412 }
+	option = { name = skonester_quick_modifications.back_realm trigger_event = skonester_quick_modifications.1400 }
+	option = { name = skonester_quick_modifications.close }
+}

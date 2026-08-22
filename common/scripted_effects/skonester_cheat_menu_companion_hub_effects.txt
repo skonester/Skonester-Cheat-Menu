@@ -1,0 +1,37 @@
+﻿# 生成帅哥美女 hub：按目标角色上保存的文化变量与性别变量调用原有生成效果
+skonester_cheat_menu_spawn_companion_from_hub_prefs_effect = {
+  skonester_char_gen_sync_recipient_to_scope_effect = yes
+  scope:skonester_char_gen_target = {
+    save_scope_as = skonester_spawn_talent_employer
+    if = {
+      limit = {
+        OR = {
+          NOT = { has_variable = skonester_companion_female_chance }
+          var:skonester_companion_female_chance >= 50
+        }
+      }
+      var:skonester_companion_stored_culture = {
+        save_scope_as = skonester_beauty_spawn_culture
+      }
+    }
+    else = {
+      var:skonester_companion_stored_culture = {
+        save_scope_as = skonester_handsome_spawn_culture
+      }
+    }
+  }
+  if = {
+    limit = {
+      scope:skonester_char_gen_target = {
+        OR = {
+          NOT = { has_variable = skonester_companion_female_chance }
+          var:skonester_companion_female_chance >= 50
+        }
+      }
+    }
+    skonester_cheat_menu_spawn_beauty_companion_effect = yes
+  }
+  else = {
+    skonester_cheat_menu_spawn_handsome_companion_effect = yes
+  }
+}

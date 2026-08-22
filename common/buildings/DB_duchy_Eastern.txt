@@ -1,0 +1,174 @@
+﻿######Duchy Building For Eastern Religion#######
+######Hinduism######
+######Royal Mandir######
+db_royal_hindu_01 = { # Royal Mandir
+	construction_time = standard_construction_time
+
+	type_icon = "icon_structure_brihadeeswarar_temple.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		scope:holder = {
+			religion = religion:hinduism_religion
+		}
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_plenary_assemblies
+			}
+		}
+	}
+	
+	cost_gold = 300
+	
+	character_modifier = {
+		monthly_piety = 0.5
+		monthly_piety_gain_mult = 0.1
+		same_faith_opinion = 5
+	}
+	province_modifier = {
+		monthly_income = 0.5
+	}
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.05
+		county_opinion_add = 5
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+		scope:holder = {
+			religion = religion:hinduism_religion
+		}
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_royal_hindu_02
+	
+	type = duchy_capital
+}
+
+db_royal_hindu_02 = { # Expanded Royal Mandir : Calai
+	construction_time = standard_construction_time
+
+	type_icon = "icon_structure_brihadeeswarar_temple.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		scope:holder = {
+			religion = religion:hinduism_religion
+		}
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_development_02 
+			}
+		}
+	}
+	
+	cost_gold = 400
+	
+	character_modifier = {
+		monthly_piety = 0.75
+		monthly_piety_gain_mult = 0.15
+		cultural_head_fascination_mult = 0.15
+		learning_per_piety_level = 1
+	}
+	province_modifier = {
+		monthly_income = 1
+	}
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.1
+		county_opinion_add = 10
+	}
+	
+	is_enabled = {
+		county.duchy.holder = county.holder
+		scope:holder = {
+			religion = religion:hinduism_religion
+		}
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+
+	next_building = db_royal_hindu_03
+	
+	type = duchy_capital
+}
+
+db_royal_hindu_03 = { # Royal Mandir : Hospital
+	construction_time = standard_construction_time
+
+	type_icon = "icon_structure_brihadeeswarar_temple.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_requirement_castle_city_church = { LEVEL = 03 }
+		scope:holder = {
+			religion = religion:hinduism_religion
+		}
+	}
+
+	can_construct = {
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_divine_right
+			}
+		}
+	}
+	
+	cost_gold = 500
+	
+	character_modifier = {
+		monthly_piety = 1
+		monthly_piety_gain_mult = 0.2
+		cultural_head_fascination_mult = 0.2
+		learning_per_piety_level = 1
+		life_expectancy = 1
+	}
+	province_modifier = {
+		monthly_income = 1.5
+	}
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.15
+		county_opinion_add = 15
+	}
+
+	is_enabled = {
+		county.duchy.holder = county.holder
+		scope:holder = {
+			religion = religion:hinduism_religion
+		}
+	}
+	show_disabled = yes
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+	
+	type = duchy_capital
+}

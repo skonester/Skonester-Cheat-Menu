@@ -1,0 +1,46 @@
+﻿# AUTO-GENERATED — CE ethics slot groups
+doctrine_ethics_unl_sins = {
+  category = "sins"
+  number_of_picks = 16
+  doctrine_types = {
+    doctrine_ethics_unl_sins_1
+    doctrine_ethics_unl_sins_2
+    doctrine_ethics_unl_sins_3
+    doctrine_ethics_unl_sins_4
+    doctrine_ethics_unl_sins_5
+    doctrine_ethics_unl_sins_6
+    doctrine_ethics_unl_sins_7
+    doctrine_ethics_unl_sins_8
+    doctrine_ethics_unl_sins_9
+    doctrine_ethics_unl_sins_10
+    doctrine_ethics_unl_sins_11
+    doctrine_ethics_unl_sins_12
+    doctrine_ethics_unl_sins_13
+    doctrine_ethics_unl_sins_14
+    doctrine_ethics_unl_sins_15
+    doctrine_ethics_unl_sins_16
+  }
+}
+
+doctrine_ethics_unl_virtues = {
+  category = "virtues"
+  number_of_picks = 16
+  doctrine_types = {
+    doctrine_ethics_unl_virtues_1
+    doctrine_ethics_unl_virtues_2
+    doctrine_ethics_unl_virtues_3
+    doctrine_ethics_unl_virtues_4
+    doctrine_ethics_unl_virtues_5
+    doctrine_ethics_unl_virtues_6
+    doctrine_ethics_unl_virtues_7
+    doctrine_ethics_unl_virtues_8
+    doctrine_ethics_unl_virtues_9
+    doctrine_ethics_unl_virtues_10
+    doctrine_ethics_unl_virtues_11
+    doctrine_ethics_unl_virtues_12
+    doctrine_ethics_unl_virtues_13
+    doctrine_ethics_unl_virtues_14
+    doctrine_ethics_unl_virtues_15
+    doctrine_ethics_unl_virtues_16
+  }
+}

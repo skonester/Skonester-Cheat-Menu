@@ -1,0 +1,27 @@
+﻿# å½“è‡ªåŠ¨æŽ¢æµ‹æœªå‘½ä¸­æ—¶ï¼Œæœ¬å±€å¯æ‰‹åŠ¨ä¸€æ¬¡å¼€å¯å¤§æ˜Žæ”¿ä½“èœå•ï¼›å·²å¼€å¯æ—¶ä¸å†æ˜¾ç¤º
+skonester_daming_ming_gov_menu_unlock_decision = {
+  picture = {
+    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+  }
+  decision_group_type = pcm
+  sort_order = 5
+  title = skonester_daming_ming_gov_menu_unlock_decision
+  desc = skonester_ui_no_hover_tooltip
+  selection_tooltip = skonester_ui_no_hover_tooltip
+  confirm_text = skonester_daming_ming_gov_menu_unlock_decision_confirm
+  ai_check_interval_by_tier = { barony = 0 county = 0 duchy = 0 kingdom = 0 empire = 0 hegemony = 0 }
+  is_shown = {
+    # The installed database does not register the governments used by this
+    # optional compatibility page. Keep it inaccessible instead of exposing a
+    # decision that can only lead to invalid change_government effects.
+    always = no
+  }
+  is_valid = { is_playable_character = yes }
+  effect = {
+    set_global_variable = {
+      name = skonester_daming_ming_gov_menu_unlocked
+      value = 1
+    }
+  }
+  ai_will_do = { base = 0 }
+}

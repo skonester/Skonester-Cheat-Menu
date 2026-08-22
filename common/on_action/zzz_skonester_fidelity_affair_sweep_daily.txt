@@ -1,0 +1,171 @@
+﻿# 与椒房护持配合：由 daily_playable_pulse 每日执行；解除针对家眷的入向密谋及家眷对外的出向密谋（勾引/浪漫/绑架/私奔）。
+# 与 allow/valid 双保险；另每日补刷节欲/忠诚、清除家眷与非家主的恋人关系。root=启护持的人类可玩者。
+# 同一条 daily_playable_pulse 亦挂载：封臣 grateful 日清；人類可玩者逐出賓客（見 skonester_court_guest_block_daily.txt）。（廷臣遣散/招募与监护人分配已改为仅决议手动执行，不再挂日脉冲。）
+# 文件名 zzz_ 使本模组对 daily_playable_pulse 的整段定义尽量晚于其它 skonester_*.txt，避免被无 zzz 前缀文件覆盖而丢失上述钩子。
+
+daily_playable_pulse = {
+  on_actions = {
+    skonester_fidelity_affair_sweep_playable
+    skonester_vassal_opinion_grateful_daily_pulse
+    skonester_court_guest_kick_playable
+    skonester_trait_ai_guard_daily_batch_pulse
+    skonester_military_cheat_guard_daily_batch_pulse
+    skonester_player_government_lock_daily_pulse
+  }
+}
+
+# 自制特质：每日分批剥除未获Skonester菜单授权的角色
+skonester_trait_ai_guard_daily_batch_pulse = {
+  effect = {
+    skonester_cheat_menu_strip_unauthorized_skonester_traits_batch_effect = yes
+  }
+}
+
+# 军事管理增益：每日分批剥除未获Skonester军事菜单授权的角色
+skonester_military_cheat_guard_daily_batch_pulse = {
+  effect = {
+    skonester_military_cheat_strip_unauthorized_batch_effect = yes
+  }
+}
+
+# 封臣對領主：每日清除可無限疊加的 grateful 修正（原月脈衝）
+skonester_vassal_opinion_grateful_daily_pulse = {
+  effect = {
+    if = {
+      limit = {
+        is_ai = no
+      }
+      every_vassal_or_below = {
+        limit = {
+          top_liege = root
+          NOT = {
+            this = root
+          }
+        }
+        remove_opinion = {
+          target = root
+          modifier = grateful_opinion
+          single = no
+        }
+      }
+    }
+  }
+}
+
+skonester_fidelity_affair_sweep_playable = {
+  effect = {
+    if = {
+      limit = {
+        is_ai = no
+        has_character_flag = skonester_seduce_shield_active
+      }
+      every_spouse = {
+        limit = { is_alive = yes }
+        save_scope_as = skonester_fid_ward
+        # 入向
+        every_targeting_scheme = {
+          if = {
+            limit = {
+              OR = {
+                scheme_type = seduce
+                scheme_type = romance
+                scheme_type = abduct
+                scheme_type = elope
+              }
+              scope:skonester_fid_ward = {
+                skonester_seduce_shield_active_for_target_trigger = yes
+              }
+              scheme_owner = {
+                NOR = {
+                  is_spouse_of = scope:skonester_fid_ward
+                  AND = {
+                    scope:skonester_fid_ward = { is_concubine = yes }
+                    this = scope:skonester_fid_ward.concubinist
+                  }
+                }
+              }
+            }
+            end_scheme = yes
+          }
+        }
+        # 出向（与 skonester_seduce_scheme_blocked_outgoing 等义：家主护持 + 非对配偶/对妾主关系）
+        every_scheme = {
+          scheme_target_character = { save_scope_as = skonester_fid_paramour }
+          if = {
+            limit = {
+              OR = {
+                scheme_type = seduce
+                scheme_type = romance
+                scheme_type = abduct
+                scheme_type = elope
+              }
+              scheme_owner = { this = scope:skonester_fid_ward }
+              scope:skonester_fid_ward = { skonester_fidelity_ward_is_shielded_harem_of_patron_trigger = yes }
+              NOT = {
+                OR = {
+                  scope:skonester_fid_ward = { is_spouse_of = scope:skonester_fid_paramour }
+                  scope:skonester_fid_ward = { is_concubine_of = scope:skonester_fid_paramour }
+                }
+              }
+            }
+            end_scheme = yes
+          }
+        }
+      }
+      every_concubine = {
+        limit = { is_alive = yes }
+        save_scope_as = skonester_fid_ward
+        every_targeting_scheme = {
+          if = {
+            limit = {
+              OR = {
+                scheme_type = seduce
+                scheme_type = romance
+                scheme_type = abduct
+                scheme_type = elope
+              }
+              scope:skonester_fid_ward = {
+                skonester_seduce_shield_active_for_target_trigger = yes
+              }
+              scheme_owner = {
+                NOR = {
+                  is_spouse_of = scope:skonester_fid_ward
+                  AND = {
+                    scope:skonester_fid_ward = { is_concubine = yes }
+                    this = scope:skonester_fid_ward.concubinist
+                  }
+                }
+              }
+            }
+            end_scheme = yes
+          }
+        }
+        every_scheme = {
+          scheme_target_character = { save_scope_as = skonester_fid_paramour }
+          if = {
+            limit = {
+              OR = {
+                scheme_type = seduce
+                scheme_type = romance
+                scheme_type = abduct
+                scheme_type = elope
+              }
+              scheme_owner = { this = scope:skonester_fid_ward }
+              scope:skonester_fid_ward = { skonester_fidelity_ward_is_shielded_harem_of_patron_trigger = yes }
+              NOT = {
+                OR = {
+                  scope:skonester_fid_ward = { is_spouse_of = scope:skonester_fid_paramour }
+                  scope:skonester_fid_ward = { is_concubine_of = scope:skonester_fid_paramour }
+                }
+              }
+            }
+            end_scheme = yes
+          }
+        }
+      }
+      skonester_seduce_shield_grant_chastity_traits_to_consorts_effect = yes
+      skonester_seduce_shield_strip_non_patron_lovers_from_consorts_effect = yes
+      skonester_seduce_shield_enforce_global_ai_fidelity_rules_effect = yes
+    }
+  }
+}

@@ -1,0 +1,16 @@
+﻿namespace = skonester_artifact_repair
+
+# 宝物修复 GUI：保存修复（清除旧修饰 → 套用新品质与修饰）
+skonester_artifact_repair.9001 = {
+  type = character_event
+  hidden = yes
+
+  immediate = {
+    root = {
+      save_scope_as = skonester_acm_craft_creator
+      save_scope_as = actor
+      skonester_acm_clamp_craft_slot_layers_to_quality_effect = yes
+    }
+    skonester_acm_gui_finish_repair_effect = yes
+  }
+}

@@ -1,0 +1,18 @@
+﻿# 心无挂碍：授予与每月维护时将压力清零。
+
+skonester_trait_xinwuguai_clear_stress_effect = {
+  if = {
+    limit = {
+      stress > 0
+    }
+    add_stress = -500
+  }
+}
+
+skonester_trait_xinwuguai_apply_effect = {
+  skonester_trait_xinwuguai_clear_stress_effect = yes
+}
+
+skonester_trait_xinwuguai_upkeep_effect = {
+  skonester_trait_xinwuguai_clear_stress_effect = yes
+}

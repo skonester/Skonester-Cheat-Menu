@@ -1,0 +1,313 @@
+﻿# 管理廷臣：遣散優先序（越高越先被移出人才池）、招募評分（越高越優先邀入宮）
+
+# root 須先設 skonester_court_cap_to_remove（廷臣數減 40，已夾在 1–500）；供超员批量遣散 ordered_courtier.max
+skonester_court_cap_ordered_max_value = {
+  value = root.var:skonester_court_cap_to_remove
+}
+
+skonester_court_mgmt_purge_priority_value = {
+  value = 480
+  subtract = martial
+  subtract = diplomacy
+  subtract = stewardship
+  subtract = intrigue
+  subtract = learning
+  if = {
+    limit = {
+      has_trait = lazy
+    }
+    add = 8000
+  }
+  if = {
+    limit = {
+      has_trait = wrathful
+    }
+    add = 7000
+  }
+  if = {
+    limit = {
+      has_trait = arrogant
+    }
+    add = 6000
+  }
+  if = {
+    limit = {
+      has_trait = sadistic
+    }
+    add = 8000
+  }
+  if = {
+    limit = {
+      has_trait = deceitful
+    }
+    add = 6500
+  }
+  if = {
+    limit = {
+      has_trait = lustful
+    }
+    add = 5000
+  }
+  if = {
+    limit = {
+      has_trait = gluttonous
+    }
+    add = 4000
+  }
+  if = {
+    limit = {
+      has_trait = drunkard
+    }
+    add = 4500
+  }
+  if = {
+    limit = {
+      has_trait = arbitrary
+    }
+    add = 5500
+  }
+  if = {
+    limit = {
+      has_trait = vengeful
+    }
+    add = 6000
+  }
+  if = {
+    limit = {
+      has_trait = paranoid
+    }
+    add = 5500
+  }
+  if = {
+    limit = {
+      has_trait = impatient
+    }
+    add = 4000
+  }
+}
+
+skonester_court_mgmt_recruit_score_value = {
+  value = 0
+  if = {
+    limit = {
+      has_trait = intellect_good_3
+    }
+    add = 120
+  }
+  if = {
+    limit = {
+      has_trait = intellect_good_2
+    }
+    add = 75
+  }
+  if = {
+    limit = {
+      has_trait = shrewd
+    }
+    add = 40
+  }
+  add = {
+    value = learning
+    multiply = 4
+  }
+  add = {
+    value = martial
+    multiply = 2
+  }
+  add = {
+    value = prowess
+    multiply = 2
+  }
+  if = {
+    limit = {
+      learning >= 22
+    }
+    add = 90
+  }
+  if = {
+    limit = {
+      learning >= 15
+    }
+    add = 25
+  }
+  if = {
+    limit = {
+      prowess >= 25
+    }
+    add = 40
+  }
+  if = {
+    limit = {
+      martial >= 25
+    }
+    add = 35
+  }
+  if = {
+    limit = {
+      has_trait = patient
+    }
+    add = 20
+  }
+  if = {
+    limit = {
+      has_trait = diligent
+    }
+    add = 20
+  }
+  if = {
+    limit = {
+      has_trait = temperate
+    }
+    add = 12
+  }
+  if = {
+    limit = {
+      has_trait = gregarious
+    }
+    add = 15
+  }
+  if = {
+    limit = {
+      has_trait = brave
+    }
+    add = 15
+  }
+  if = {
+    limit = {
+      has_trait = strong
+    }
+    add = 18
+  }
+  if = {
+    limit = {
+      has_trait = honest
+    }
+    add = 12
+  }
+  if = {
+    limit = {
+      has_trait = humble
+    }
+    add = 12
+  }
+  if = {
+    limit = {
+      has_trait = generous
+    }
+    add = 12
+  }
+  if = {
+    limit = {
+      has_trait = calm
+    }
+    add = 12
+  }
+  if = {
+    limit = {
+      has_trait = compassionate
+    }
+    add = 15
+  }
+  if = {
+    limit = {
+      has_trait = just
+    }
+    add = 10
+  }
+  if = {
+    limit = {
+      has_trait = education_martial_4
+    }
+    add = 35
+  }
+  if = {
+    limit = {
+      has_trait = education_diplomacy_4
+    }
+    add = 35
+  }
+  if = {
+    limit = {
+      has_trait = education_stewardship_4
+    }
+    add = 35
+  }
+  if = {
+    limit = {
+      has_trait = education_intrigue_4
+    }
+    add = 35
+  }
+  if = {
+    limit = {
+      has_trait = education_learning_4
+    }
+    add = 35
+  }
+  if = {
+    limit = {
+      has_trait = education_learning_5
+    }
+    add = 55
+  }
+  if = {
+    limit = {
+      has_trait = education_martial_5
+    }
+    add = 55
+  }
+  if = {
+    limit = {
+      has_trait = education_stewardship_5
+    }
+    add = 55
+  }
+  if = {
+    limit = {
+      has_trait = education_intrigue_5
+    }
+    add = 55
+  }
+  if = {
+    limit = {
+      has_trait = education_diplomacy_5
+    }
+    add = 55
+  }
+  if = {
+    limit = {
+      has_trait = education_martial_prowess_4
+    }
+    add = 45
+  }
+  if = {
+    limit = {
+      has_trait = education_martial_prowess_3
+    }
+    add = 28
+  }
+  if = {
+    limit = {
+      has_trait = education_learning_3
+    }
+    add = 20
+  }
+  if = {
+    limit = {
+      has_trait = lifestyle_blademaster
+    }
+    add = 25
+  }
+  if = {
+    limit = {
+      has_trait = lifestyle_physician
+    }
+    add = 30
+  }
+  if = {
+    limit = {
+      has_trait = whole_of_body
+    }
+    add = 15
+  }
+}

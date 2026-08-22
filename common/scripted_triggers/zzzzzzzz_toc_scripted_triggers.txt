@@ -1,0 +1,80 @@
+﻿can_be_chancellor_trigger = {
+	can_be_councillor_basics_trigger = yes
+	NOT = { has_council_position = councillor_spouse }
+	OR = {
+		is_ruler = yes
+		AND = {
+			is_female = yes
+			$COURT_OWNER$.faith = { NOT = { has_doctrine_parameter = male_dominated_council } }
+		}
+		AND = {
+			is_male = yes
+			$COURT_OWNER$.faith = { NOT = { has_doctrine_parameter = female_dominated_council } }
+		}
+		$COURT_OWNER$ = { is_ai = no }
+	}
+}
+
+can_be_steward_trigger = {
+	can_be_councillor_basics_trigger = yes
+	NOT = { has_council_position = councillor_spouse }
+	OR = {
+		is_ruler = yes
+		AND = {
+			is_female = yes
+			$COURT_OWNER$.faith = { NOT = { has_doctrine_parameter = male_dominated_council } }
+		}
+		AND = {
+			is_male = yes
+			$COURT_OWNER$.faith = { NOT = { has_doctrine_parameter = female_dominated_council } }
+		}
+		$COURT_OWNER$ = { is_ai = no }
+	}
+}
+
+can_be_marshal_trigger = {
+	can_be_councillor_basics_trigger = yes
+	NOT = { has_council_position = councillor_spouse }
+	OR = {
+		is_ruler = yes
+		AND = {
+			is_female = yes
+			$COURT_OWNER$.faith = { NOT = { has_doctrine_parameter = male_dominated_council } }
+		}
+		AND = {
+			is_male = yes
+			$COURT_OWNER$.faith = { NOT = { has_doctrine_parameter = female_dominated_council } }
+		}
+		$COURT_OWNER$ = { is_ai = no }
+	}
+}
+
+
+can_be_granted_titles_by = { #This is set up with trigger-ifs to allow for nice tooltip printouts in grant title interaction
+	save_temporary_scope_as = title_grantee
+	#Gender check
+	trigger_if = {
+		limit = {
+			is_ruler = no #Rulers can always get additional titles
+			is_theocratic_lessee = no #Theocratic lessees use other gender checks
+			NOT = {
+				$RULER$.faith = {
+					has_dominant_ruling_gender = scope:title_grantee
+				}
+				$RULER$ = { is_ai = no }
+			}
+		}
+		$RULER$.faith = {
+			has_dominant_ruling_gender = scope:title_grantee
+		}
+	}
+	trigger_else_if = {
+		limit = { is_theocratic_lessee = yes }
+		is_theocratic_lessee = yes
+		liege = $RULER$
+		#If this is ever visible anywhere, we need to write a custom desc "Theocratic lessees cannot only be given titles by their ruler"
+	}
+	trigger_else = {
+		always = yes
+	}
+}

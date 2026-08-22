@@ -1,0 +1,299 @@
+﻿# Skonester年龄菜单：set_age 跳过年龄相关健康重算；用角色变量 skonester_age_menu_cheat_delta（Skonester加减岁累计，±60 封顶）驱动永久 health modifier。
+
+skonester_cheat_menu_age_edit_health_sync_from_cheat_delta_effect = {
+  scope:skonester_cheat_menu_target = {
+    remove_character_modifier = skonester_age_menu_hp_n60
+    remove_character_modifier = skonester_age_menu_hp_n50
+    remove_character_modifier = skonester_age_menu_hp_n40
+    remove_character_modifier = skonester_age_menu_hp_n30
+    remove_character_modifier = skonester_age_menu_hp_n20
+    remove_character_modifier = skonester_age_menu_hp_n10
+    remove_character_modifier = skonester_age_menu_hp_p10
+    remove_character_modifier = skonester_age_menu_hp_p20
+    remove_character_modifier = skonester_age_menu_hp_p30
+    remove_character_modifier = skonester_age_menu_hp_p40
+    remove_character_modifier = skonester_age_menu_hp_p50
+    remove_character_modifier = skonester_age_menu_hp_p60
+    remove_character_modifier = skonester_age_menu_hp_elder45
+    remove_character_modifier = skonester_age_menu_hp_elder60
+    if = {
+      limit = {
+        var:skonester_age_menu_cheat_delta <= -60
+      }
+      add_character_modifier = skonester_age_menu_hp_n60
+    }
+    else_if = {
+      limit = {
+        var:skonester_age_menu_cheat_delta <= -50
+        var:skonester_age_menu_cheat_delta > -60
+      }
+      add_character_modifier = skonester_age_menu_hp_n50
+    }
+    else_if = {
+      limit = {
+        var:skonester_age_menu_cheat_delta <= -40
+        var:skonester_age_menu_cheat_delta > -50
+      }
+      add_character_modifier = skonester_age_menu_hp_n40
+    }
+    else_if = {
+      limit = {
+        var:skonester_age_menu_cheat_delta <= -30
+        var:skonester_age_menu_cheat_delta > -40
+      }
+      add_character_modifier = skonester_age_menu_hp_n30
+    }
+    else_if = {
+      limit = {
+        var:skonester_age_menu_cheat_delta <= -20
+        var:skonester_age_menu_cheat_delta > -30
+      }
+      add_character_modifier = skonester_age_menu_hp_n20
+    }
+    else_if = {
+      limit = {
+        var:skonester_age_menu_cheat_delta <= -10
+        var:skonester_age_menu_cheat_delta > -20
+      }
+      add_character_modifier = skonester_age_menu_hp_n10
+    }
+    else_if = {
+      limit = {
+        var:skonester_age_menu_cheat_delta <= 10
+        var:skonester_age_menu_cheat_delta > 0
+      }
+      add_character_modifier = skonester_age_menu_hp_p10
+    }
+    else_if = {
+      limit = {
+        var:skonester_age_menu_cheat_delta <= 20
+        var:skonester_age_menu_cheat_delta > 10
+      }
+      add_character_modifier = skonester_age_menu_hp_p20
+    }
+    else_if = {
+      limit = {
+        var:skonester_age_menu_cheat_delta <= 30
+        var:skonester_age_menu_cheat_delta > 20
+      }
+      add_character_modifier = skonester_age_menu_hp_p30
+    }
+    else_if = {
+      limit = {
+        var:skonester_age_menu_cheat_delta <= 40
+        var:skonester_age_menu_cheat_delta > 30
+      }
+      add_character_modifier = skonester_age_menu_hp_p40
+    }
+    else_if = {
+      limit = {
+        var:skonester_age_menu_cheat_delta <= 50
+        var:skonester_age_menu_cheat_delta > 40
+      }
+      add_character_modifier = skonester_age_menu_hp_p50
+    }
+    else_if = {
+      limit = {
+        var:skonester_age_menu_cheat_delta <= 60
+        var:skonester_age_menu_cheat_delta > 50
+      }
+      add_character_modifier = skonester_age_menu_hp_p60
+    }
+    if = {
+      limit = {
+        has_variable = skonester_age_menu_cheat_delta
+        var:skonester_age_menu_cheat_delta > 0
+        age >= 60
+      }
+      add_character_modifier = skonester_age_menu_hp_elder60
+    }
+    else_if = {
+      limit = {
+        has_variable = skonester_age_menu_cheat_delta
+        var:skonester_age_menu_cheat_delta > 0
+        age >= 45
+      }
+      add_character_modifier = skonester_age_menu_hp_elder45
+    }
+  }
+}
+
+skonester_cheat_menu_age_edit_after_plus_10_effect = {
+  scope:skonester_cheat_menu_target = {
+    if = {
+      limit = {
+        NOT = {
+          has_variable = skonester_age_menu_cheat_delta
+        }
+      }
+      set_variable = {
+        name = skonester_age_menu_cheat_delta
+        value = 0
+      }
+    }
+    change_variable = {
+      name = skonester_age_menu_cheat_delta
+      add = 10
+    }
+    if = {
+      limit = {
+        var:skonester_age_menu_cheat_delta > 60
+      }
+      set_variable = {
+        name = skonester_age_menu_cheat_delta
+        value = 60
+      }
+    }
+    skonester_cheat_menu_age_edit_health_sync_from_cheat_delta_effect = yes
+  }
+}
+
+skonester_cheat_menu_age_edit_after_plus_20_effect = {
+  scope:skonester_cheat_menu_target = {
+    if = {
+      limit = {
+        NOT = {
+          has_variable = skonester_age_menu_cheat_delta
+        }
+      }
+      set_variable = {
+        name = skonester_age_menu_cheat_delta
+        value = 0
+      }
+    }
+    change_variable = {
+      name = skonester_age_menu_cheat_delta
+      add = 20
+    }
+    if = {
+      limit = {
+        var:skonester_age_menu_cheat_delta > 60
+      }
+      set_variable = {
+        name = skonester_age_menu_cheat_delta
+        value = 60
+      }
+    }
+    skonester_cheat_menu_age_edit_health_sync_from_cheat_delta_effect = yes
+  }
+}
+
+skonester_cheat_menu_age_edit_after_plus_30_effect = {
+  scope:skonester_cheat_menu_target = {
+    if = {
+      limit = {
+        NOT = {
+          has_variable = skonester_age_menu_cheat_delta
+        }
+      }
+      set_variable = {
+        name = skonester_age_menu_cheat_delta
+        value = 0
+      }
+    }
+    change_variable = {
+      name = skonester_age_menu_cheat_delta
+      add = 30
+    }
+    if = {
+      limit = {
+        var:skonester_age_menu_cheat_delta > 60
+      }
+      set_variable = {
+        name = skonester_age_menu_cheat_delta
+        value = 60
+      }
+    }
+    skonester_cheat_menu_age_edit_health_sync_from_cheat_delta_effect = yes
+  }
+}
+
+skonester_cheat_menu_age_edit_after_minus_10_effect = {
+  scope:skonester_cheat_menu_target = {
+    if = {
+      limit = {
+        NOT = {
+          has_variable = skonester_age_menu_cheat_delta
+        }
+      }
+      set_variable = {
+        name = skonester_age_menu_cheat_delta
+        value = 0
+      }
+    }
+    change_variable = {
+      name = skonester_age_menu_cheat_delta
+      add = -10
+    }
+    if = {
+      limit = {
+        var:skonester_age_menu_cheat_delta < -60
+      }
+      set_variable = {
+        name = skonester_age_menu_cheat_delta
+        value = -60
+      }
+    }
+    skonester_cheat_menu_age_edit_health_sync_from_cheat_delta_effect = yes
+  }
+}
+
+skonester_cheat_menu_age_edit_after_minus_20_effect = {
+  scope:skonester_cheat_menu_target = {
+    if = {
+      limit = {
+        NOT = {
+          has_variable = skonester_age_menu_cheat_delta
+        }
+      }
+      set_variable = {
+        name = skonester_age_menu_cheat_delta
+        value = 0
+      }
+    }
+    change_variable = {
+      name = skonester_age_menu_cheat_delta
+      add = -20
+    }
+    if = {
+      limit = {
+        var:skonester_age_menu_cheat_delta < -60
+      }
+      set_variable = {
+        name = skonester_age_menu_cheat_delta
+        value = -60
+      }
+    }
+    skonester_cheat_menu_age_edit_health_sync_from_cheat_delta_effect = yes
+  }
+}
+
+skonester_cheat_menu_age_edit_after_minus_30_effect = {
+  scope:skonester_cheat_menu_target = {
+    if = {
+      limit = {
+        NOT = {
+          has_variable = skonester_age_menu_cheat_delta
+        }
+      }
+      set_variable = {
+        name = skonester_age_menu_cheat_delta
+        value = 0
+      }
+    }
+    change_variable = {
+      name = skonester_age_menu_cheat_delta
+      add = -30
+    }
+    if = {
+      limit = {
+        var:skonester_age_menu_cheat_delta < -60
+      }
+      set_variable = {
+        name = skonester_age_menu_cheat_delta
+        value = -60
+      }
+    }
+    skonester_cheat_menu_age_edit_health_sync_from_cheat_delta_effect = yes
+  }
+}

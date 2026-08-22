@@ -1,0 +1,75 @@
+﻿# 义子：须在角色互动的 on_accept 中调用（存在 scope:actor / scope:recipient）。
+# 先 save 养父母，再在 recipient 上清私生子特质、设父/母、改 house，避免 scripted_effect 内 scope 歧义导致仅改 house 无效。
+# 若对方年龄 ≥ 养父母，引擎往往拒设亲子关系：先记下原年龄、临时改为养父母年龄−1（至少为 1），设亲后再 set_age 还原。
+
+skonester_adopted_son_from_actor_effect = {
+  scope:actor = {
+    save_scope_as = skonester_adopt_parent
+  }
+  scope:recipient = {
+    if = {
+      limit = {
+        age >= scope:skonester_adopt_parent.age
+      }
+      set_variable = {
+        name = skonester_adopt_saved_age
+        value = age
+      }
+      set_variable = {
+        name = skonester_adopt_temp_age
+        value = scope:skonester_adopt_parent.age
+      }
+      change_variable = {
+        name = skonester_adopt_temp_age
+        add = -1
+      }
+      if = {
+        limit = {
+          var:skonester_adopt_temp_age < 1
+        }
+        set_variable = {
+          name = skonester_adopt_temp_age
+          value = 1
+        }
+      }
+      set_age = var:skonester_adopt_temp_age
+      remove_variable = skonester_adopt_temp_age
+    }
+    if = {
+      limit = { has_trait = bastard }
+      remove_trait = bastard
+    }
+    if = {
+      limit = { has_trait = bastard_founder }
+      remove_trait = bastard_founder
+    }
+    if = {
+      limit = { has_trait = legitimized_bastard }
+      remove_trait = legitimized_bastard
+    }
+    if = {
+      limit = { scope:skonester_adopt_parent = { is_male = yes } }
+      set_father = scope:skonester_adopt_parent
+      set_real_father = scope:skonester_adopt_parent
+    }
+    else = {
+      set_mother = scope:skonester_adopt_parent
+    }
+    if = {
+      limit = {
+        scope:skonester_adopt_parent = {
+          house ?= { always = yes }
+        }
+      }
+      set_house = scope:skonester_adopt_parent.house
+    }
+    if = {
+      limit = {
+        has_variable = skonester_adopt_saved_age
+      }
+      set_age = var:skonester_adopt_saved_age
+      remove_variable = skonester_adopt_saved_age
+    }
+  }
+  clear_saved_scope = skonester_adopt_parent
+}

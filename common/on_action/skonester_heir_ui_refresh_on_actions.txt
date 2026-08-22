@@ -1,0 +1,2 @@
+﻿# 玩家继承人头像：gui/window_character.gui 双槽（GetDesignatedHeir / GetPlayerHeir）。
+# 指定后刷新：skonester_cheat_menu_heir_ui_refresh_effect + skonester_cheat_menu.0098 + heir_player 的 character_window_refresh 脉冲。

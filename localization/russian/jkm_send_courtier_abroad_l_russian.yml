@@ -1,0 +1,5 @@
+﻿l_russian:
+ jkm_send_courtier_interaction:0 "Отправить придворного"
+ jkm_send_courtier_interaction_desc:0 "Отправить придворного ко двору [recipient.GetShortUIName]"
+ actor_secondary_jkm_send_courtier_interaction:0 "Придворный"
+ jkm_send_courtier_interaction_notification:0 "Придворный отправлен"

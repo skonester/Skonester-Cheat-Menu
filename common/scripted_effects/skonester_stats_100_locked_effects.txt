@@ -1,0 +1,52 @@
+﻿# 属性100：将六维钳制在 100；由特质授予时立即执行，并由 monthly_global_pulse 持续校正。
+
+skonester_stats_100_clamp_all_skills_effect = {
+  while = {
+    limit = { diplomacy < 100 }
+    add_diplomacy_skill = 1
+  }
+  while = {
+    limit = { diplomacy > 100 }
+    add_diplomacy_skill = -1
+  }
+  while = {
+    limit = { martial < 100 }
+    add_martial_skill = 1
+  }
+  while = {
+    limit = { martial > 100 }
+    add_martial_skill = -1
+  }
+  while = {
+    limit = { stewardship < 100 }
+    add_stewardship_skill = 1
+  }
+  while = {
+    limit = { stewardship > 100 }
+    add_stewardship_skill = -1
+  }
+  while = {
+    limit = { intrigue < 100 }
+    add_intrigue_skill = 1
+  }
+  while = {
+    limit = { intrigue > 100 }
+    add_intrigue_skill = -1
+  }
+  while = {
+    limit = { learning < 100 }
+    add_learning_skill = 1
+  }
+  while = {
+    limit = { learning > 100 }
+    add_learning_skill = -1
+  }
+  while = {
+    limit = { prowess < 100 }
+    add_prowess_skill = 1
+  }
+  while = {
+    limit = { prowess > 100 }
+    add_prowess_skill = -1
+  }
+}

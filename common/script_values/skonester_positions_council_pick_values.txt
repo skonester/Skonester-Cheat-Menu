@@ -1,0 +1,46 @@
+﻿# 旧版一键内阁择优用 script value；一键任免宫廷/内阁现已改为引擎称职度 aptitude（本文件可留作它用或参考）。
+
+skonester_pos_pick_chancellor_value = {
+  value = 0
+  add = diplomacy
+  add = intrigue
+  add = learning
+}
+
+skonester_pos_pick_marshal_value = {
+  value = 0
+  add = martial
+  add = prowess
+}
+
+skonester_pos_pick_steward_value = {
+  value = 0
+  add = stewardship
+  add = diplomacy
+  add = martial
+}
+
+skonester_pos_pick_spymaster_value = {
+  value = 0
+  add = intrigue
+  add = diplomacy
+  add = learning
+}
+
+skonester_pos_pick_chaplain_value = {
+  value = 0
+  add = learning
+  add = stewardship
+}
+
+skonester_pos_pick_minister_works_value = {
+  value = 0
+  add = stewardship
+  add = learning
+}
+
+skonester_pos_pick_minister_justice_value = {
+  value = 0
+  add = learning
+  add = intrigue
+}

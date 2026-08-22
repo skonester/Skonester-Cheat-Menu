@@ -1,0 +1,184 @@
+﻿#base_modifier = {
+#}
+
+# Skill modifiers, applied to each character
+# *_with_offset versions first subtract the NCharacter.SKILL_MODIFIER_OFFSET value from the skill
+
+
+toc_stabilizeland_modifier = {
+	icon = county_modifier_opinion_positive
+	county_opinion_add = 140
+}
+
+toc_allfiefs_modifier = {
+	icon = stress_positive	
+	domain_limit = 5005
+	vassal_limit = 5005
+}
+
+#men_at_arms_limit -men_at_arms_cap	-min_combat_roll	-max_combat_roll	-general_opinion -same_faith_opinion	-direct_vassal_opinion	-knight_limit	-years_of_fertility	?-diplomatic_range_mult-
+#scheme_discovery_chance_mult	-movement_speed -build_speed -
+
+toc_diplomacy_modifier = {
+	icon = diplomacy_positive
+	diplomacy = 128
+}
+
+toc_martial_modifier = {
+	icon = martial_positive	
+	martial = 128
+}
+
+toc_stewardship_modifier = {
+	icon = stewardship_positive	
+	stewardship = 128
+}
+
+toc_intrigue_modifier = {
+	icon = intrigue_positive	
+	intrigue = 128
+}
+
+toc_learning_modifier = {
+	icon = learning_positive	
+	learning = 128
+}
+
+toc_prowess_modifier = {
+	icon = prowess_positive
+	prowess = 128
+}
+
+toc_luckinbattle_modifier = {
+	icon = prowess_positive
+	min_combat_roll = 10
+	max_combat_roll = 8
+}
+
+toc_privatearmy_modifier = {
+	icon = stress_positive
+	men_at_arms_limit = 100
+	men_at_arms_cap = 100
+}
+
+
+toc_belovedgeneralopinion_modifier = {
+	icon = social_positive
+	general_opinion = 10000
+}
+
+toc_speedy_modifier = {
+	icon = social_positive
+	movement_speed = 100
+	build_speed = -1
+}
+
+toc_diplomaticrange_modifier = {
+	icon = social_positive
+	diplomatic_range_mult = 4.20
+}
+
+# toc_diplomaticrange_modifier = {
+	# icon = social_positive
+	# diplomatic_range_mult = 4.20
+# }
+
+toc_cityland_modifier = {
+	icon = county_modifier_development_positive	
+		development_growth = 1
+		development_growth_factor = 1
+		levy_size = 4
+		tax_mult = 4
+		#holdingstuff
+}
+
+toc_bigcityland_modifier = {
+	icon = county_modifier_development_positive	
+		development_growth = 1
+		development_growth_factor = 1
+		levy_size = 10
+		tax_mult = 10
+}
+
+toc_imperialcityland_modifier = {
+	icon = county_modifier_development_positive	
+		development_growth = 1
+		development_growth_factor = 1
+		levy_size = 20
+		tax_mult = 20
+}
+
+toc_hordeland_modifier = {
+	icon = county_modifier_development_positive	
+		development_growth = 1
+		development_growth_factor = 1
+		levy_size = 100
+		tax_mult = 100
+
+		# fort_level = 5
+		# garrison_size = 1
+		# hostile_raid_time = 0.5
+
+}
+
+#levy_reinforcement_rate / build_speed	 / garrison_size	 /holding_build_speed
+
+toc_grandwallland_modifier = {
+	icon = county_modifier_development_positive	
+		development_growth = 4
+		development_growth_factor = 3
+		fort_level = 30
+		garrison_size = 10
+		hostile_raid_time = 10
+
+}
+
+#
+
+toc_exoticcourtbonus = {
+	icon = cat_positive
+	court_grandeur_baseline_add = 200
+	# monthly_prestige_gain_mult = 0.15
+}
+
+toc_fertile_modifier = {
+	icon = fertility_positive
+	fertility = 4
+	#years_of_fertility
+}
+
+toc_dreadful_modifier = {
+	icon = stress_positive
+	monthly_dread = 400
+	dread_decay_mult = -10
+}
+
+toc_notyranny_modifier = {
+	icon = stress_positive
+	monthly_tyranny = -4000
+	tyranny_gain_mult = -10
+}
+
+toc_superknights_modifier = {
+	icon = stress_positive
+	knight_limit = 34
+	knight_effectiveness_mult = 34
+}
+#100-1000levies strength base 10 to maximum
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,125 @@
+﻿# 每月一检：同步反玩家压力；独立有地 AI 内政/宗教文化/军事派系分项修饰（详见 skonester_ai_monthly_audit_effects）
+# 仅追加 monthly_global_pulse，不覆盖 monthly_playable_pulse
+
+monthly_global_pulse = {
+  on_actions = {
+    skonester_ai_monthly_independent_ai_audit_pulse
+    skonester_ai_world_ai_boost_spread_pulse
+    skonester_ai_counter_player_quarterly_refresh_pulse
+    skonester_ai_player_vassal_opposition_quarterly_pulse
+    skonester_ai_guardian_assignment_quarterly_pulse
+  }
+}
+
+skonester_ai_monthly_independent_ai_audit_pulse = {
+  effect = {
+    # 性能：原逻辑每月对所有独立 AI 逐个触发 9210，后期国家多时会造成明显月初卡顿。
+    # 改为「约每季度执行一次」的整批审计（平均降低 ~66% 触发与遍历成本）。
+    random = {
+      chance = 34
+      every_independent_ruler = {
+        limit = {
+          is_ai = yes
+          is_landed = yes
+        }
+        trigger_event = {
+          id = skonester_officials.9210
+          days = 0
+        }
+      }
+    }
+  }
+}
+
+# 反玩家压力：维持“更勤外交结盟/更积极评估对抗”的加压修正。
+# 为避免月初固定卡顿，这里用约季度概率刷新；年度脉冲仍会兜底刷新一次。
+skonester_ai_counter_player_quarterly_refresh_pulse = {
+  effect = {
+    random = {
+      chance = 34
+      skonester_ai_apply_counter_player_pressure_global_effect = yes
+    }
+  }
+}
+
+# 玩家领国内：AI 封臣“更反对玩家”（覆盖全部直辖封臣，但用分批抽样避免一次性全扫）
+skonester_ai_player_vassal_opposition_quarterly_pulse = {
+  effect = {
+    random = {
+      chance = 34
+      every_independent_ruler = {
+        limit = {
+          is_ai = no
+          is_landed = yes
+          realm_size > 10
+        }
+        # 每个玩家领主：每轮随机抽样若干直辖封臣加压；已加压者跳过
+        while = {
+          count = 150
+          limit = {
+            any_vassal = {
+              is_ai = yes
+              is_landed = yes
+              NOT = { has_character_modifier = skonester_ai_anti_player_vassal_pressure }
+            }
+          }
+          random_vassal = {
+            limit = {
+              is_ai = yes
+              is_landed = yes
+              NOT = { has_character_modifier = skonester_ai_anti_player_vassal_pressure }
+            }
+            weight = { base = 1 }
+            add_character_modifier = {
+              modifier = skonester_ai_anti_player_vassal_pressure
+              months = 12
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+# AI 自动安排优质监护（抽样）：把“批量监护流水线”低频用于 AI 统治者
+# 目标：AI 更像玩家一样给孩子/廷臣配优质教育者；避免全图遍历，按季度抽样若干名有地 AI 统治者执行一次。
+skonester_ai_guardian_assignment_quarterly_pulse = {
+  effect = {
+    random = {
+      chance = 34
+      while = {
+        count = 120
+        limit = {
+          any_living_character = {
+            is_ai = yes
+            is_landed = yes
+            is_ruler = yes
+          }
+        }
+        random_living_character = {
+          limit = {
+            is_ai = yes
+            is_landed = yes
+            is_ruler = yes
+          }
+          weight = { base = 1 }
+          skonester_bulk_guardian_auto_daily_effect = yes
+        }
+      }
+    }
+  }
+}
+
+# 强有地AI强化：分批发放（避免决议一次性全图遍历造成卡顿）
+# 开启后每月补发一批给尚未获得 modifier 的有地 AI（含封臣 AI），直至覆盖完毕；优先从玩家领地向外扩散。
+skonester_ai_world_ai_boost_spread_pulse = {
+  effect = {
+    if = {
+      limit = {
+        NOT = { has_global_variable = skonester_ai_boost_disabled }
+        NOT = { has_global_variable = skonester_world_ai_boost_disabled }
+      }
+      skonester_ai_world_ai_boost_spread_batch_effect = yes
+    }
+  }
+}

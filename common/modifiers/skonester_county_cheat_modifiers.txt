@@ -1,0 +1,4 @@
+﻿skonester_cnt_popular_surge = {
+  icon = county_modifier_opinion_positive
+  county_opinion_add = 100
+}

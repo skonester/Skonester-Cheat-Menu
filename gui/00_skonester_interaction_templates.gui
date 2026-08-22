@@ -1,0 +1,289 @@
+﻿@interaction_item_column_width = 30
+
+types CharacterInteraction
+{
+
+	type dynamicgridbox_interaction_list = dynamicgridbox {
+		name = "interaction_list"
+
+		item = {
+			container = {
+				name = "interaction_widget"
+				ignoreinvisible = yes
+
+				button = {
+					visible = "[Not(InteractionItem.IsMarriageSetting)]"
+					tooltip = "[InteractionItem.GetTooltip]"
+					size = { 317 30 }
+
+					icon = {
+						name = "interaction_glow"
+						visible = "[InteractionItem.IsHighlighted]"
+						size = { 100% 100% }
+
+						spriteType = Corneredtiled
+						spriteborder = { 10 10 }
+
+						texture = "gfx/interface/component_effects/attention_text.dds"
+						color = { 1 0.8 0.6 0.8 }
+
+						state = {
+							trigger_on_create = yes
+							name = a
+							next = b
+
+							using = Animation_Curve_Default
+							duration = 0.8
+							alpha = 0.4
+						}
+
+						state = {
+							name = b
+							next = a
+
+							using = Animation_Curve_Default
+							duration = 1.5
+							alpha = 0.1
+						}
+					}
+
+					state = {
+						name = _mouse_hierarchy_enter
+						on_start = "[PdxGuiWidget.FindChild('button_favorite').TriggerAnimation('hover_enter')]"
+					}
+
+					state = {
+						name = _mouse_hierarchy_leave
+						on_start = "[PdxGuiWidget.FindChild('button_favorite').TriggerAnimation('hover_leave')]"
+					}
+
+
+					# To get a hover glow for the entire row
+					button_standard_hover = {
+						visible = "[InteractionItem.IsValid]"
+						size = { 100% 100% }
+					}
+
+					hbox = {
+						layoutpolicy_horizontal = expanding
+						layoutpolicy_vertical = expanding
+						margin = { 8 0 }
+
+						button = {
+							name = "interaction_button"
+
+							enabled = "[InteractionItem.IsValid]"
+							onclick = "[InteractionItem.OnClick]"
+
+							layoutpolicy_horizontal = growing
+							layoutpolicy_vertical = expanding
+
+							hbox = {
+								spacing = 4
+
+								icon = {
+									visible = "[InteractionItem.IsCharacterInteraction]"
+									name = "interaction_icon"
+									size = { 30 30 }
+									texture = "[InteractionItem.GetCharacterInteraction.GetIcon( CharacterInteractionMenuWindow.GetCharacter.Self )]"
+								}
+
+								spacer = {
+									name = "no_icon_margin_adjust"
+									visible = "[Not(InteractionItem.IsCharacterInteraction)]"
+									size = { 0 0 }
+								}
+
+								textbox = {
+									layoutpolicy_horizontal = growing
+									alwaystransparent = yes
+									raw_text = "[Select_CString( InteractionItem.IsValid, '#clickable', '#weak' )] [InteractionItem.GetName]"
+									align = nobaseline
+									elide = right
+									using = Font_Size_Small # mod
+								}
+							}
+						}
+
+						button_star_frames = {
+							name = "button_favorite"
+							visible = "[InteractionItem.IsCharacterInteraction]"
+
+							size = { 0 @interaction_item_column_width }
+
+							onclick = "[InteractionItem.ToggleFavorite]"
+							down = "[InteractionItem.IsFavorite]"
+							inherit_visual_state = no
+
+							alpha = 0
+
+							#tooltip = "CHARACTER_INTERACTION_TOGGLE_FAVORITE" # Interferes with instant tooltips too much
+
+							state = {
+								name = hover_enter
+								alpha = 1
+								duration = 0.1
+								using = Animation_Curve_Default
+								size = { @interaction_item_column_width  @interaction_item_column_width  }
+							}
+
+							state = {
+								name = hover_leave
+								alpha = 0
+								duration = 0.2
+								using = Animation_Curve_Default
+								size = { 0 @interaction_item_column_width }
+							}
+						}
+
+						hbox = {
+
+							enabled = "[InteractionItem.IsValid]"
+
+							#wrap in button widget to make all align nicely on regular intervals, regardless of actual icon sizes
+
+							button = {
+								onclick = "[InteractionItem.OnClick]"
+
+								size = { @interaction_item_column_width @interaction_item_column_width }
+
+								visible = "[InteractionItem.GetSchemeType.IsValid]"
+								datacontext = "[InteractionItem.GetSchemeType]"
+
+								widget = {
+									name = "scheme_category_icon"
+									parentanchor = center
+									size = { 30 30 }
+
+									icon = {
+										visible = "[SchemeType.IsPersonal]"
+										size = {100% 100%}
+										texture = "gfx/interface/icons/scheme_types/icon_scheme_personal.dds"
+									}
+
+									icon = {
+										visible = "[SchemeType.IsPolitical]"
+										size = {100% 100%}
+										texture = "gfx/interface/icons/scheme_types/icon_scheme_political.dds"
+									}
+
+									icon = {
+										visible = "[SchemeType.IsHostile]"
+										size = {100% 100%}
+										texture = "gfx/interface/icons/scheme_types/icon_scheme_hostile.dds"
+									}
+								}
+
+								widget = {
+									name = "odds_icon"
+									visible = "[InteractionItem.HasPreviewSchemeOdds]"
+
+									parentanchor = bottom|right
+
+									size = { 20 20 }
+
+									icon = {
+										size = {120% 120%}
+										texture = "gfx/interface/colors/black.dds"
+										parentanchor = center
+										modify_texture = {
+											texture = "gfx/interface/component_masks/mask_fade_circle.dds"
+											blend_mode = alphaMultiply
+										}
+									}
+
+									icon = {
+										parentanchor = center
+										size = {100% 100%}
+										framesize = { 26 26 }
+										frame = "[GetSchemeOddsLevelFrameFromValue(InteractionItem.GetPreviewSchemeOdds)]"
+										texture = "gfx/interface/icons/change_indicator_icons_colored_up_good.dds"
+									}
+								}
+							}
+
+
+							button = {
+								onclick = "[InteractionItem.OnClick]"
+
+								visible = "[InteractionItem.ShouldUseExtraIcon]"
+								size = { @interaction_item_column_width  @interaction_item_column_width  }
+
+								icon = {
+									size = { 25 25 }
+									name = "extra_icon"
+									texture = "[InteractionItem.GetExtraIcon]"
+									parentanchor = center
+								}
+							}
+
+							button = {
+								onclick = "[InteractionItem.OnClick]"
+
+								visible = "[And(Not(InteractionItem.IsMore),Not(InteractionItem.IsPotentialAccept))]"
+								size = { @interaction_item_column_width  @interaction_item_column_width  }
+
+								icon = {
+									enabled = "[InteractionItem.IsValid]"
+									size = { @interaction_item_column_width  @interaction_item_column_width  }
+
+									name = "dont_accept"
+									texture = "gfx/interface/icons/symbols/icon_cross.dds"
+								}
+							}
+
+							button = {
+								onclick = "[InteractionItem.OnClick]"
+
+								visible = "[InteractionItem.HasWarningIcon]"
+								tooltip = "[InteractionItem.GetWarningTooltipDesc]"
+								size = { @interaction_item_column_width  @interaction_item_column_width  }
+
+								warning_icon = {
+									name = "warning_icon"
+									size = { 25 25 }
+
+									parentanchor = center
+								}
+							}
+						}
+					}
+				}
+
+				button_standard_hover = {
+					visible = "[InteractionItem.IsMarriageSetting]"
+					tooltip = "[InteractionItem.GetCheckboxTooltip]"
+					onclick = "[InteractionItem.OnClickCheckbox]"
+					size = { 317 30 }
+
+					hbox = {
+						margin_left = 12
+
+						button_checkbox_label = {
+							alwaystransparent = yes
+							name = "button"
+
+							enabled = "[InteractionItem.CheckboxEnabled]"
+							blockoverride "checkbox_label_spacing"
+							{
+								spacing = 10
+							}
+
+							blockoverride "checkbox"
+							{
+								alwaystransparent = yes
+								size = { 20 20 }
+								checked = "[EqualTo_int32(InteractionItem.GetCheckboxFrame, '(int32)2')]"
+							}
+							blockoverride "text"
+							{
+								text = "CHARACTER_INTERACTION_ALLOWED_TO_MARRY"
+							}
+						}
+						expand = {}
+					}
+				}
+			}
+		}
+	}
+}

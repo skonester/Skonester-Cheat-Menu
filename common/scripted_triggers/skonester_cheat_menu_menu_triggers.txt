@@ -1,0 +1,40 @@
+﻿# 菜单已打开：旗标在右键发起者 scope:actor（玩家）上，必须显式 scope:actor 判定
+# 否则 is_shown 在 scope:recipient 块之后会误查目标角色的旗标，导致打开菜单后选项反而消失
+skonester_cheat_menu_menu_enabled_trigger = {
+  OR = {
+    scope:actor = { has_character_flag = skonester_cheat_menu_cheat_menu }
+    AND = {
+      NOT = { exists = scope:actor }
+      has_character_flag = skonester_cheat_menu_cheat_menu
+    }
+  }
+}
+
+# 宝物修改选择列表（不依赖Skonester主菜单旗标，避免翻页后选项全部消失）
+skonester_acm_repair_picker_enabled_trigger = {
+  OR = {
+    skonester_cheat_menu_menu_enabled_trigger = yes
+    has_character_flag = skonester_acm_repair_picker_active
+  }
+}
+
+# 获得头衔列表（翻页后仍显示选项）
+skonester_title_pick_picker_enabled_trigger = {
+  OR = {
+    skonester_cheat_menu_menu_enabled_trigger = yes
+    has_character_flag = skonester_title_pick_picker_active
+  }
+}
+
+# 宝物窃取列表（翻页后勿因主菜单旗标丢失而整页选项消失）
+skonester_steal_picker_enabled_trigger = {
+  OR = {
+    skonester_cheat_menu_menu_enabled_trigger = yes
+    has_character_flag = skonester_steal_picker_active
+  }
+}
+
+# 宝物制作/生成：仅人类玩家（禁止 AI 走 GUI、事件或 scripted_effect 造宝）
+skonester_player_may_use_artifact_craft_trigger = {
+  is_ai = no
+}

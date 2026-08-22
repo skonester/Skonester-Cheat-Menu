@@ -1,0 +1,120 @@
+﻿l_english:
+
+ skonester_treasure_maker.tier_off: "Disabled"
+
+ skonester_treasure_maker.tier_1: "Tier 1"
+
+ skonester_treasure_maker.tier_2: "Tier 2"
+
+ skonester_treasure_maker.tier_3: "Tier 3 (Maximum)"
+
+
+
+
+ skonester_treasure_maker.0001.t: "Artifact Workshop"
+
+ skonester_treasure_maker.0001.desc: "Adjust tiers for 25 attributes and powerful modifier sets. Choose artifact form and quality, then craft your item. When 'Grant to Target' is enabled, the artifact will be given to the character you right-clicked.\nCK3 does not support sliders, so this menu uses event-based navigation. Artifact names and descriptions rely on fixed localization entries."
+
+ skonester_treasure_maker.0001.owner_self: "Recipient: Self"
+
+ skonester_treasure_maker.0001.owner_recipient: "Recipient: Selected Target"
+
+ skonester_treasure_maker.0001.page_stats_1: "All Attributes · Page 1 (1–5)"
+
+ skonester_treasure_maker.0001.page_stats_2: "All Attributes · Page 2 (6–10)"
+
+ skonester_treasure_maker.0001.page_stats_3: "All Attributes · Page 3 (11–15)"
+
+ skonester_treasure_maker.0001.page_stats_4: "All Attributes · Page 4 (16–20)"
+
+ skonester_treasure_maker.0001.page_stats_5: "All Attributes · Page 5 (21–25)"
+
+ skonester_treasure_maker.0001.god_perks: "Powerful Modifier Sets"
+
+ skonester_treasure_maker.0001.kind_menu: "Artifact Type (Sword / Armor / Regalia / Tome / Trinket)"
+
+ skonester_treasure_maker.0001.quality_menu: "Quality Grade"
+
+ skonester_treasure_maker.0001.randomize: "Randomize All Settings"
+
+ skonester_treasure_maker.0001.reset: "Reset to Default"
+
+ skonester_treasure_maker.0001.spawn: "Craft Artifact"
+
+
+
+
+ skonester_treasure_maker.2000.t: "Powerful Modifier Sets"
+
+ skonester_treasure_maker.2000.desc: "Click to toggle each set. These are potent yet legitimate effects; they do not grant true immortality or instant assassinations."
+
+ skonester_treasure_maker.2000.toggle_longlife: "Toggle: Longevity & Health"
+
+ skonester_treasure_maker.2000.toggle_youth: "Toggle: Youth & Stress Resistance"
+
+ skonester_treasure_maker.2000.toggle_army: "Toggle: Levies & Army Toughness"
+
+ skonester_treasure_maker.2000.toggle_scheme_kill: "Toggle: Hostile Scheme Offense"
+
+ skonester_treasure_maker.2000.toggle_scheme_immune: "Toggle: Hostile Scheme Defense"
+
+ skonester_treasure_maker.2000.toggle_dynasty_children: "Toggle: Fertility & Dynasty Growth"
+
+ skonester_treasure_maker.2000.toggle_tax: "Toggle: Income & Tax Bonuses"
+
+ skonester_treasure_maker.2000.toggle_vassal: "Toggle: Vassal Opinion"
+
+ skonester_treasure_maker.2000.toggle_faith_culture: "Toggle: Faith & Culture Opinion"
+
+ skonester_treasure_maker.2000.toggle_dynasty_piety: "Toggle: Dread & Piety"
+
+ skonester_treasure_maker.2000.toggle_knights: "Toggle: Knight & Reinforcement Bonuses"
+
+
+
+ skonester_treasure_maker.3000.t: "Artifact Type"
+
+ skonester_treasure_maker.3000.desc: "Sword is selected by default. Regalia uses the game's standard regalia template."
+
+ skonester_treasure_maker.3000.kind_sword: "Sword (Default)"
+
+ skonester_treasure_maker.3000.kind_armor: "Plate Armor"
+
+ skonester_treasure_maker.3000.kind_regalia: "Regalia"
+
+ skonester_treasure_maker.3000.kind_book: "Tome"
+
+ skonester_treasure_maker.3000.kind_trinket: "Court Trinket"
+
+
+
+ skonester_treasure_maker.3001.t: "Quality Grade"
+
+ skonester_treasure_maker.3001.desc: "Default quality value: 85/85. Low: 20/20, Medium: 50/50, High: 95/95."
+
+ skonester_treasure_maker.3001.q_low: "Low (20)"
+
+ skonester_treasure_maker.3001.q_mid: "Medium (50)"
+
+ skonester_treasure_maker.3001.q_high: "High (95)"
+
+ skonester_treasure_maker.3001.q_clear: "Revert to Default (85)"
+
+
+
+ skonester_treasure_maker.3999.t: "Creation Complete"
+
+ skonester_treasure_maker.3999.desc: "Your artifact has been crafted following your choices. Ownership uses the selected recipient rule. All workshop settings have been reset, ready for another creation."
+
+
+
+ skonester_treasure_maker_workshop: "Artifact Workshop"
+
+ skonester_treasure_maker_workshop_desc: "Open the artifact workshop. Adjust 25 attribute tiers, enable powerful modifier sets, select type and quality, then craft Royal Court-style artifacts."
+
+
+
+ skonester_tm_artifact_name: "Wondrous Forging"
+
+ skonester_tm_artifact_desc: "Forged within the artifact workshop. Its blessings push mortal power to extraordinary heights."
+

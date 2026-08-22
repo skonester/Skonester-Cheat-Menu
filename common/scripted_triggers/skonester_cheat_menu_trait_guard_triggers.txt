@@ -1,0 +1,59 @@
+﻿# Skonester特质「保险丝」：检测持有 / 可否授予（与 trait 文件列表对齐）
+
+# 当前角色（root）可否被Skonester菜单赋予自制特质：玩家本人，或 AI（须 scope:actor 为人类玩家）
+skonester_cheat_menu_may_receive_cheat_trait_trigger = {
+  OR = {
+    is_ai = no
+    AND = {
+      exists = scope:actor
+      scope:actor = {
+        is_ai = no
+      }
+    }
+  }
+}
+
+# 须剥除自制特质：未获玩家Skonester菜单授权者（AI 仅玩家授予后可保留 authorized）
+skonester_cheat_menu_must_strip_skonester_traits_trigger = {
+  skonester_has_any_cheat_menu_trait_trigger = yes
+  NOT = { has_character_flag = skonester_traits_player_authorized }
+}
+
+# 参数 $TRAIT$：是否为本模组Skonester作弊特质（须走 grant_cheat_trait 授权链）
+skonester_cheat_menu_is_cheat_trait_trigger = {
+  OR = {
+    trait:$TRAIT$ = trait:skonester_trait_immortal_ageless
+    trait:$TRAIT$ = trait:skonester_trait_yannian_dan
+    trait:$TRAIT$ = trait:skonester_trait_yannian_dan_mid
+    trait:$TRAIT$ = trait:skonester_trait_yannian_dan_best
+    trait:$TRAIT$ = trait:skonester_trait_baidubuqin
+    trait:$TRAIT$ = trait:skonester_trait_xinwuguai
+    trait:$TRAIT$ = trait:skonester_trait_marriage_ban
+    trait:$TRAIT$ = trait:skonester_trait_stats_100_locked
+    trait:$TRAIT$ = trait:trait_warlord_eternal
+    trait:$TRAIT$ = trait:trait_wealth_sovereign_max
+    trait:$TRAIT$ = trait:trait_ultimate_intrigue_master
+    trait:$TRAIT$ = trait:trait_great_builder_god
+    trait:$TRAIT$ = trait:trait_nether_conspiracy_lord
+    trait:$TRAIT$ = trait:trait_eternal_nether_lord
+  }
+}
+
+skonester_has_any_cheat_menu_trait_trigger = {
+  OR = {
+    has_trait = skonester_trait_immortal_ageless
+    has_trait = skonester_trait_yannian_dan
+    has_trait = skonester_trait_yannian_dan_mid
+    has_trait = skonester_trait_yannian_dan_best
+    has_trait = skonester_trait_baidubuqin
+    has_trait = skonester_trait_xinwuguai
+    has_trait = skonester_trait_marriage_ban
+    has_trait = skonester_trait_stats_100_locked
+    has_trait = trait_warlord_eternal
+    has_trait = trait_wealth_sovereign_max
+    has_trait = trait_ultimate_intrigue_master
+    has_trait = trait_great_builder_god
+    has_trait = trait_nether_conspiracy_lord
+    has_trait = trait_eternal_nether_lord
+  }
+}

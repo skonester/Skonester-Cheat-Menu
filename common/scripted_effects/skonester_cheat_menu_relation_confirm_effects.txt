@@ -1,0 +1,326 @@
+﻿# Skonester「关系确认」：在 scope:actor（玩家）与 scope:skonester_relation_target（右键目标）之间强制设定关系；先清理互斥/名额占用。
+
+# 原版 can_set_relation_lover 要求双方成年且互有性向吸引；作弊菜单下若未满足则临时改为双性恋以便 set_relation_lover 生效。
+skonester_cheat_menu_relation_confirm_force_mutual_romance_if_needed_effect = {
+  scope:actor = {
+    if = {
+      limit = {
+        is_adult = yes
+        scope:skonester_relation_target = {
+          is_adult = yes
+          NOT = { this = scope:actor }
+        }
+        NOT = { can_set_relation_lover_trigger = { CHARACTER = scope:skonester_relation_target } }
+      }
+      hidden_effect = {
+        set_sexuality = bisexual
+        scope:skonester_relation_target = { set_sexuality = bisexual }
+      }
+    }
+  }
+}
+
+skonester_cheat_menu_relation_confirm_best_friend_effect = {
+  scope:actor = {
+    if = {
+      limit = { has_relation_nemesis = scope:skonester_relation_target }
+      remove_relation_nemesis = scope:skonester_relation_target
+    }
+    if = {
+      limit = { has_relation_rival = scope:skonester_relation_target }
+      remove_relation_rival = scope:skonester_relation_target
+    }
+    if = {
+      limit = { has_relation_lover = scope:skonester_relation_target }
+      remove_relation_lover = scope:skonester_relation_target
+    }
+    if = {
+      limit = { has_relation_soulmate = scope:skonester_relation_target }
+      remove_relation_soulmate = scope:skonester_relation_target
+    }
+    if = {
+      limit = { has_relation_potential_lover = scope:skonester_relation_target }
+      remove_relation_potential_lover = scope:skonester_relation_target
+    }
+    every_relation = {
+      type = best_friend
+      limit = { NOT = { this = scope:skonester_relation_target } }
+      remove_relation_best_friend = this
+    }
+  }
+  scope:skonester_relation_target = {
+    if = {
+      limit = { has_relation_nemesis = scope:actor }
+      remove_relation_nemesis = scope:actor
+    }
+    if = {
+      limit = { has_relation_rival = scope:actor }
+      remove_relation_rival = scope:actor
+    }
+    if = {
+      limit = { has_relation_lover = scope:actor }
+      remove_relation_lover = scope:actor
+    }
+    if = {
+      limit = { has_relation_soulmate = scope:actor }
+      remove_relation_soulmate = scope:actor
+    }
+    if = {
+      limit = { has_relation_potential_lover = scope:actor }
+      remove_relation_potential_lover = scope:actor
+    }
+    every_relation = {
+      type = best_friend
+      limit = { NOT = { this = scope:actor } }
+      remove_relation_best_friend = this
+    }
+  }
+  scope:actor = {
+    if = {
+      limit = {
+        NOT = { has_relation_best_friend = scope:skonester_relation_target }
+      }
+      set_relation_best_friend = {
+        reason = best_friend_make_time
+        target = scope:skonester_relation_target
+      }
+    }
+  }
+}
+
+skonester_cheat_menu_relation_confirm_lover_effect = {
+  skonester_cheat_menu_relation_confirm_force_mutual_romance_if_needed_effect = yes
+  scope:actor = {
+    if = {
+      limit = { has_relation_nemesis = scope:skonester_relation_target }
+      remove_relation_nemesis = scope:skonester_relation_target
+    }
+    if = {
+      limit = { has_relation_rival = scope:skonester_relation_target }
+      remove_relation_rival = scope:skonester_relation_target
+    }
+    if = {
+      limit = { has_relation_best_friend = scope:skonester_relation_target }
+      remove_relation_best_friend = scope:skonester_relation_target
+    }
+    if = {
+      limit = { has_relation_friend = scope:skonester_relation_target }
+      remove_relation_friend = scope:skonester_relation_target
+    }
+    if = {
+      limit = { has_relation_potential_lover = scope:skonester_relation_target }
+      remove_relation_potential_lover = scope:skonester_relation_target
+    }
+    every_relation = {
+      type = lover
+      limit = { NOT = { this = scope:skonester_relation_target } }
+      remove_relation_lover = this
+    }
+  }
+  scope:skonester_relation_target = {
+    if = {
+      limit = { has_relation_nemesis = scope:actor }
+      remove_relation_nemesis = scope:actor
+    }
+    if = {
+      limit = { has_relation_rival = scope:actor }
+      remove_relation_rival = scope:actor
+    }
+    if = {
+      limit = { has_relation_best_friend = scope:actor }
+      remove_relation_best_friend = scope:actor
+    }
+    if = {
+      limit = { has_relation_friend = scope:actor }
+      remove_relation_friend = scope:actor
+    }
+    if = {
+      limit = { has_relation_potential_lover = scope:actor }
+      remove_relation_potential_lover = scope:actor
+    }
+    if = {
+      limit = { has_relation_soulmate = scope:actor }
+      remove_relation_soulmate = scope:actor
+    }
+    every_relation = {
+      type = lover
+      limit = { NOT = { this = scope:actor } }
+      remove_relation_lover = this
+    }
+  }
+  scope:actor = {
+    if = {
+      limit = { has_relation_soulmate = scope:skonester_relation_target }
+      remove_relation_soulmate = scope:skonester_relation_target
+    }
+    if = {
+      limit = {
+        NOT = { has_relation_lover = scope:skonester_relation_target }
+      }
+      set_relation_lover = {
+        reason = lover_random_1
+        target = scope:skonester_relation_target
+      }
+    }
+  }
+}
+
+skonester_cheat_menu_relation_confirm_soulmate_effect = {
+  skonester_cheat_menu_relation_confirm_force_mutual_romance_if_needed_effect = yes
+  scope:actor = {
+    every_relation = {
+      type = soulmate
+      limit = { NOT = { this = scope:skonester_relation_target } }
+      remove_relation_soulmate = this
+    }
+  }
+  scope:skonester_relation_target = {
+    every_relation = {
+      type = soulmate
+      limit = { NOT = { this = scope:actor } }
+      remove_relation_soulmate = this
+    }
+  }
+  skonester_cheat_menu_relation_confirm_lover_effect = yes
+  scope:actor = {
+    if = {
+      limit = {
+        NOT = { has_relation_soulmate = scope:skonester_relation_target }
+      }
+      hidden_effect = {
+        skonester_cheat_menu_relation_confirm_force_mutual_romance_if_needed_effect = yes
+      }
+      if = {
+        limit = {
+          can_set_relation_soulmate_trigger = { CHARACTER = scope:skonester_relation_target }
+        }
+        set_relation_soulmate = {
+          reason = soulmate_professed_love
+          copy_reason = lover
+          target = scope:skonester_relation_target
+        }
+      }
+    }
+  }
+}
+
+skonester_cheat_menu_relation_confirm_nemesis_effect = {
+  scope:actor = {
+    every_relation = {
+      type = nemesis
+      limit = { NOT = { this = scope:skonester_relation_target } }
+      remove_relation_nemesis = this
+    }
+  }
+  scope:skonester_relation_target = {
+    every_relation = {
+      type = nemesis
+      limit = { NOT = { this = scope:actor } }
+      remove_relation_nemesis = this
+    }
+  }
+  scope:actor = {
+    if = {
+      limit = { has_relation_friend = scope:skonester_relation_target }
+      remove_relation_friend = scope:skonester_relation_target
+    }
+    if = {
+      limit = { has_relation_best_friend = scope:skonester_relation_target }
+      remove_relation_best_friend = scope:skonester_relation_target
+    }
+    if = {
+      limit = { has_relation_lover = scope:skonester_relation_target }
+      remove_relation_lover = scope:skonester_relation_target
+    }
+    if = {
+      limit = { has_relation_soulmate = scope:skonester_relation_target }
+      remove_relation_soulmate = scope:skonester_relation_target
+    }
+    if = {
+      limit = { has_relation_potential_lover = scope:skonester_relation_target }
+      remove_relation_potential_lover = scope:skonester_relation_target
+    }
+    if = {
+      limit = { has_relation_nemesis = scope:skonester_relation_target }
+      remove_relation_nemesis = scope:skonester_relation_target
+    }
+  }
+  scope:skonester_relation_target = {
+    if = {
+      limit = { has_relation_friend = scope:actor }
+      remove_relation_friend = scope:actor
+    }
+    if = {
+      limit = { has_relation_best_friend = scope:actor }
+      remove_relation_best_friend = scope:actor
+    }
+    if = {
+      limit = { has_relation_lover = scope:actor }
+      remove_relation_lover = scope:actor
+    }
+    if = {
+      limit = { has_relation_soulmate = scope:actor }
+      remove_relation_soulmate = scope:actor
+    }
+    if = {
+      limit = { has_relation_potential_lover = scope:actor }
+      remove_relation_potential_lover = scope:actor
+    }
+    if = {
+      limit = { has_relation_nemesis = scope:actor }
+      remove_relation_nemesis = scope:actor
+    }
+  }
+  scope:actor = {
+    if = {
+      limit = {
+        NOT = { has_relation_nemesis = scope:skonester_relation_target }
+      }
+      if = {
+        limit = {
+          NOT = { has_relation_rival = scope:skonester_relation_target }
+        }
+        set_relation_rival = {
+          target = scope:skonester_relation_target
+          reason = rival_disbelieved
+        }
+      }
+      set_relation_nemesis = {
+        target = scope:skonester_relation_target
+        copy_reason = rival
+        reason = nemesis_downgrade_from_rival
+      }
+    }
+  }
+}
+
+# Skonester「安插秘密」之通奸：用栽赃菜单保存的 menu_actor/menu_recipient，避免互动结束后 scope 丢失。
+skonester_cheat_menu_plant_adultery_secret_via_actor_effect = {
+  skonester_plant_lover_effect_plant_menu_effect = yes
+  scope:skonester_plant_menu_recipient = {
+    if = {
+      limit = {
+        has_relation_lover = scope:skonester_plant_menu_actor
+        NOT = { is_consort_of = scope:skonester_plant_menu_actor }
+      }
+      add_secret = {
+        type = secret_lover
+        target = scope:skonester_plant_menu_actor
+      }
+    }
+  }
+  scope:skonester_plant_menu_actor = {
+    if = {
+      limit = {
+        scope:skonester_plant_menu_recipient = {
+          has_relation_lover = scope:skonester_plant_menu_actor
+          NOT = { is_consort_of = scope:skonester_plant_menu_recipient }
+        }
+      }
+      add_secret = {
+        type = secret_lover
+        target = scope:skonester_plant_menu_recipient
+      }
+    }
+  }
+}

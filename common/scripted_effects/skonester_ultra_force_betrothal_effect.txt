@@ -1,0 +1,102 @@
+﻿# 强制订婚核心（无视规则）：须 scope:skonester_ultra_betrothal_charA / charB
+# 流程同 skonester_ultra_force_marry_effect，末段为 create_betrothal
+
+skonester_ultra_force_betrothal_effect = {
+  scope:skonester_ultra_betrothal_charB = {
+    if = {
+      limit = { exists = faith }
+      set_variable = { name = skonester_betrothal_original_faith value = scope:skonester_ultra_betrothal_charB.faith }
+    }
+    if = {
+      limit = { exists = culture }
+      set_variable = { name = skonester_betrothal_original_culture value = scope:skonester_ultra_betrothal_charB.culture }
+    }
+    while = {
+      limit = { exists = primary_spouse }
+      divorce = primary_spouse
+    }
+    if = {
+      limit = { exists = betrothed }
+      break_betrothal = betrothed
+    }
+    if = {
+      limit = { is_concubine = yes }
+      remove_concubine = yes
+    }
+  }
+
+  scope:skonester_ultra_betrothal_charA = {
+    if = {
+      limit = { exists = faith }
+      set_variable = { name = skonester_betrothal_actor_original_faith value = scope:skonester_ultra_betrothal_charA.faith }
+    }
+    if = {
+      limit = { exists = culture }
+      set_variable = { name = skonester_betrothal_actor_original_culture value = scope:skonester_ultra_betrothal_charA.culture }
+    }
+    while = {
+      limit = { exists = primary_spouse }
+      divorce = primary_spouse
+    }
+    if = {
+      limit = { exists = betrothed }
+      break_betrothal = betrothed
+    }
+    if = {
+      limit = { is_concubine = yes }
+      remove_concubine = yes
+    }
+  }
+
+  scope:skonester_ultra_betrothal_charB = {
+    set_character_faith = faith:skonester_force_marry_faith
+  }
+  scope:skonester_ultra_betrothal_charA = {
+    set_character_faith = faith:skonester_force_marry_faith
+  }
+  scope:skonester_ultra_betrothal_charA = {
+    if = {
+      limit = { has_character_flag = skonester_ultra_betrothal_use_matrilineal }
+      create_betrothal_matrilineal = scope:skonester_ultra_betrothal_charB
+    }
+    else = {
+      create_betrothal = scope:skonester_ultra_betrothal_charB
+    }
+  }
+
+  scope:skonester_ultra_betrothal_charA = {
+    if = {
+      limit = { has_variable = skonester_betrothal_actor_original_faith }
+      set_character_faith = var:skonester_betrothal_actor_original_faith
+      remove_variable = skonester_betrothal_actor_original_faith
+    }
+    if = {
+      limit = { has_variable = skonester_betrothal_actor_original_culture }
+      set_culture = var:skonester_betrothal_actor_original_culture
+      remove_variable = skonester_betrothal_actor_original_culture
+    }
+  }
+
+  scope:skonester_ultra_betrothal_charB = {
+    if = {
+      limit = { has_variable = skonester_betrothal_original_faith }
+      set_character_faith = var:skonester_betrothal_original_faith
+      remove_variable = skonester_betrothal_original_faith
+    }
+    if = {
+      limit = { has_variable = skonester_betrothal_original_culture }
+      set_culture = var:skonester_betrothal_original_culture
+      remove_variable = skonester_betrothal_original_culture
+    }
+    set_character_faith = scope:skonester_ultra_betrothal_charA.faith
+    set_culture = scope:skonester_ultra_betrothal_charA.culture
+    if = {
+      limit = { is_courtier = yes }
+      set_employer = scope:skonester_ultra_betrothal_charA
+    }
+    else_if = {
+      limit = { NOT = { is_landed = yes } }
+      set_employer = scope:skonester_ultra_betrothal_charA
+    }
+  }
+}

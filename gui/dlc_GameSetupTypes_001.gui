@@ -1,0 +1,84 @@
+﻿types GameSetupTypes
+{
+	type dlc_button = button {
+		datacontext = "[DlcItem.GetDlc]"
+		size = "[Dlc.GetIconSize]"
+		texture = "[Dlc.GetIcon]"
+		onclick = "[DlcItem.ShowInStore]"
+		tooltip = "MODDED_DLC_BUTTON_TOOLTIP"
+
+		modify_texture = {
+			visible = "[DlcIconDisabled]"
+			texture = "gfx/interface/colors/black.dds"
+			blend_mode = normal
+			alpha = 0.4
+		}
+	}
+
+	type vbox_dlc_list_entry = vbox {
+		datacontext = "[DlcItem.GetDlc]"
+
+		spacing = 4
+
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			spacing = 8
+			margin = { 16 6 }
+
+			background = {
+				using = Background_Area_Dark
+			}
+
+			container = {
+				# let the icons height determine the height of this header, 
+				# but have it be fixed width so that the text does not move horizontally based on the icon size
+
+				min_width = 47
+
+				icon = {
+					size = "[Dlc.GetIconSize]"
+					texture = "[Dlc.GetIcon]"
+					parentanchor = hcenter
+
+					modify_texture = {
+						visible = "[DlcIconDisabled]"
+						texture = "gfx/interface/colors/black.dds"
+						blend_mode = normal
+						alpha = 0.4
+					}
+				}
+			}
+
+			text_single = {
+				text = "[Dlc.GetName]"
+				layoutpolicy_horizontal = expanding
+				using = Font_Size_Medium
+				using = Font_Type_Flavor
+				align = nobaseline
+				alpha = "[Select_float(Not(DlcIconDisabled),'(float)1.0','(float)0.5')]"
+			}
+
+			text_single = {
+				text = "MODDED_DLC_ENABLED_DISABLED_SHORT"
+				align = nobaseline
+			}
+
+			button_standard = {
+				text =  "DLC_VISIT_STORE"
+				visible = "[Not(IsFakeDlc)]"
+				onclick = "[DlcItem.ShowInStore]"
+			}
+		}
+
+		text_multi = {
+			text = "[Dlc.GetDesc]"
+			autoresize = yes
+			default_format = "#F"
+			max_width = 700
+			min_width = 700
+
+			margin = { 16 0 }
+		}
+
+	}
+}

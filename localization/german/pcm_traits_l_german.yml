@@ -1,0 +1,17 @@
+﻿l_german:
+ #Skonester Edition
+ trait_immortality:0 "Unsterblich"
+ trait_immortality_desc:0 "Dieser Charakter hat an der Heiligen Gabe der Unsterblichkeit teilgehabt. Sein Antlitz bleibt ewig jung, und der natürliche Tod vermag ihn nicht zu ereilen."
+ trait_immortality_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] wurde mit der Heiligen Gabe der Unsterblichkeit gesegnet. [ROOT.GetCharacter.GetSheHe|U] wird niemals über das Alter von fünfundzwanzig Jahren hinaus altern und dem natürlichen Tod niemals erliegen."
+
+ trait_super:0 "Vorbild"
+ trait_super_desc:0 "Dieser Charakter ist ein Vorbild unter den Sterblichen und verfügt über unübertroffene Eigenschaften, Kraft, Ausstrahlung und Fähigkeiten, die [ROOT.GetCharacter.GetHerHim] über alle anderen erheben."
+ trait_super_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] wurde zu einem Vorbild erhoben und mit grenzenloser Stärke, Weisheit und Ruhm beschenkt."
+
+ trait_super_governor:0 "Wunderverwalter"
+ trait_super_governor_desc:0 "Dieser Charakter regiert mit beinahe göttlicher Weisheit. Seine Ländereien gedeihen, Städte blühen auf und Ordnung herrscht, als ruhe der Segen des Himmels auf ihnen."
+ trait_super_governor_character_desc:0 "Unter der Herrschaft von [ROOT.GetCharacter.GetFirstNameNoTooltip] gedeiht das Reich, die Felder tragen reiche Ernte und selbst der einfachste Bauer preist den Namen seines Verwalters."
+
+ trait_super_general:0 "Gesegneter Kriegsherr"
+ trait_super_general_desc:0 "Dieser Charakter führt seine Heere, als leite das Schicksal selbst seine Hand. Seine Truppen kämpfen mit unerschütterlichem Mut und erringen Sieg um Sieg."
+ trait_super_general_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] führt seine Heere mit unvergleichlichem Genie. Von Feinden gefürchtet und von seinen Soldaten verehrt, erringt [ROOT.GetCharacter.GetSheHe] einen Triumph nach dem anderen."

@@ -1,0 +1,559 @@
+﻿namespace = skonester_legend_master
+
+skonester_legend_master.0001 = {
+  type = character_event
+  title = skonester_legend_master.0001.t
+  desc = skonester_legend_master.0001.desc
+  theme = fame
+  override_background = { reference = study }
+  immediate = { skonester_cheat_menu_sync_target_effect = yes }
+  right_portrait = scope:skonester_cheat_menu_target
+  option = {
+    name = skonester_legend_master.0001.cat_0010
+    scope:actor = { trigger_event = skonester_legend_master.0010 }
+  }
+  option = {
+    name = skonester_legend_master.0001.cat_0020
+    scope:actor = { trigger_event = skonester_legend_master.0020 }
+  }
+  option = {
+    name = skonester_legend_master.0001.cat_0030
+    scope:actor = { trigger_event = skonester_legend_master.0030 }
+  }
+  option = {
+    name = skonester_legend_master.0001.cat_0040
+    scope:actor = { trigger_event = skonester_legend_master.0040 }
+  }
+  option = {
+    name = skonester_legend_master.0001.cat_0050
+    scope:actor = { trigger_event = skonester_legend_master.0050 }
+  }
+  option = {
+    name = skonester_legend_master.0001.cat_0060
+    scope:actor = { trigger_event = skonester_legend_master.0060 }
+  }
+  option = {
+    name = skonester_legend_master.0001.cat_0070
+    scope:actor = { trigger_event = skonester_legend_master.0070 }
+  }
+  option = {
+    name = skonester_cheat_menu.page_next
+    scope:actor = { trigger_event = skonester_legend_master.0002 }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_legend_master.0002 = {
+  type = character_event
+  title = skonester_legend_master.0001.t
+  desc = skonester_legend_master.0002.desc
+  theme = fame
+  override_background = { reference = study }
+  immediate = { skonester_cheat_menu_sync_target_effect = yes }
+  right_portrait = scope:skonester_cheat_menu_target
+  option = {
+    name = skonester_legend_master.0001.cat_0080
+    scope:actor = { trigger_event = skonester_legend_master.0902 }
+  }
+  option = {
+    name = skonester_legend_master.0001.clear_all
+    custom_tooltip = skonester_legend_master.0001.clear_all_tt
+    scope:actor = {
+      skonester_legend_master_clear_owned_legends_effect = yes
+      trigger_event = { id = skonester_legend_master.0002 days = 0 }
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.page_prev
+    scope:actor = { trigger_event = skonester_legend_master.0001 }
+  }
+  option = {
+    name = skonester_legend_master.back_main
+    scope:actor = { trigger_event = skonester_legend_master.0001 }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_legend_master.0010 = {
+  type = character_event
+  title = skonester_legend_master.0010.t
+  desc = skonester_legend_master.category_desc
+  theme = fame
+  override_background = { reference = study }
+  immediate = { skonester_cheat_menu_sync_target_effect = yes }
+  right_portrait = scope:skonester_cheat_menu_target
+  option = {
+    name = skonester_legend_master.0010.opt_saintly_life
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_saintly_life_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0010 }
+  }
+  option = {
+    name = skonester_legend_master.0010.opt_pilgrim
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_pilgrim_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0010 }
+  }
+  option = {
+    name = skonester_legend_master.0010.opt_holy_hermit
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_holy_hermit_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0010 }
+  }
+  option = {
+    name = skonester_legend_master.0010.opt_miracle_worker
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_miracle_worker_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0010 }
+  }
+  option = {
+    name = skonester_legend_master.back_main
+    scope:actor = { trigger_event = skonester_legend_master.0001 }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_legend_master.0020 = {
+  type = character_event
+  title = skonester_legend_master.0020.t
+  desc = skonester_legend_master.category_desc
+  theme = fame
+  override_background = { reference = study }
+  immediate = { skonester_cheat_menu_sync_target_effect = yes }
+  right_portrait = scope:skonester_cheat_menu_target
+  option = {
+    name = skonester_legend_master.0020.opt_conqueror
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_conqueror_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0020 }
+  }
+  option = {
+    name = skonester_legend_master.0020.opt_dragon_slayer
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_dragon_slayer_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0020 }
+  }
+  option = {
+    name = skonester_legend_master.0020.opt_knight_hero
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_knight_hero_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0020 }
+  }
+  option = {
+    name = skonester_legend_master.0020.opt_viking
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_viking_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0020 }
+  }
+  option = {
+    name = skonester_legend_master.0020.opt_warlord
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_warlord_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0020 }
+  }
+  option = {
+    name = skonester_legend_master.0020.opt_giant_slayer
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_giant_slayer_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0020 }
+  }
+  option = {
+    name = skonester_legend_master.0020.opt_undead_hunter
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_undead_hunter_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0020 }
+  }
+  option = {
+    name = skonester_legend_master.back_main
+    scope:actor = { trigger_event = skonester_legend_master.0001 }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_legend_master.0030 = {
+  type = character_event
+  title = skonester_legend_master.0030.t
+  desc = skonester_legend_master.category_desc
+  theme = fame
+  override_background = { reference = study }
+  immediate = { skonester_cheat_menu_sync_target_effect = yes }
+  right_portrait = scope:skonester_cheat_menu_target
+  option = {
+    name = skonester_legend_master.0030.opt_wise_scholar
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_wise_scholar_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0030 }
+  }
+  option = {
+    name = skonester_legend_master.0030.opt_builder
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_builder_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0030 }
+  }
+  option = {
+    name = skonester_legend_master.0030.opt_healer
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_healer_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0030 }
+  }
+  option = {
+    name = skonester_legend_master.0030.opt_master_crafter
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_master_crafter_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0030 }
+  }
+  option = {
+    name = skonester_legend_master.0030.opt_tactician
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_tactician_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0030 }
+  }
+  option = {
+    name = skonester_legend_master.back_main
+    scope:actor = { trigger_event = skonester_legend_master.0001 }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_legend_master.0040 = {
+  type = character_event
+  title = skonester_legend_master.0040.t
+  desc = skonester_legend_master.category_desc
+  theme = fame
+  override_background = { reference = study }
+  immediate = { skonester_cheat_menu_sync_target_effect = yes }
+  right_portrait = scope:skonester_cheat_menu_target
+  option = {
+    name = skonester_legend_master.0040.opt_beauty
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_beauty_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0040 }
+  }
+  option = {
+    name = skonester_legend_master.0040.opt_enchanter
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_enchanter_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0040 }
+  }
+  option = {
+    name = skonester_legend_master.0040.opt_golden_voice
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_golden_voice_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0040 }
+  }
+  option = {
+    name = skonester_legend_master.back_main
+    scope:actor = { trigger_event = skonester_legend_master.0001 }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_legend_master.0050 = {
+  type = character_event
+  title = skonester_legend_master.0050.t
+  desc = skonester_legend_master.category_desc
+  theme = fame
+  override_background = { reference = study }
+  immediate = { skonester_cheat_menu_sync_target_effect = yes }
+  right_portrait = scope:skonester_cheat_menu_target
+  option = {
+    name = skonester_legend_master.0050.opt_tyrant
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_tyrant_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0050 }
+  }
+  option = {
+    name = skonester_legend_master.0050.opt_wanderer
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_wanderer_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0050 }
+  }
+  option = {
+    name = skonester_legend_master.0050.opt_court_intriguer
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_court_intriguer_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0050 }
+  }
+  option = {
+    name = skonester_legend_master.0050.opt_just_ruler
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_just_ruler_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0050 }
+  }
+  option = {
+    name = skonester_legend_master.0050.opt_black_heart
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_black_heart_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0050 }
+  }
+  option = {
+    name = skonester_legend_master.0050.opt_eternal_watcher
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_eternal_watcher_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0050 }
+  }
+  option = {
+    name = skonester_legend_master.0050.opt_fate_weaver
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_fate_weaver_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0050 }
+  }
+  option = {
+    name = skonester_legend_master.back_main
+    scope:actor = { trigger_event = skonester_legend_master.0001 }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_legend_master.0060 = {
+  type = character_event
+  title = skonester_legend_master.0060.t
+  desc = skonester_legend_master.category_desc
+  theme = fame
+  override_background = { reference = study }
+  immediate = { skonester_cheat_menu_sync_target_effect = yes }
+  right_portrait = scope:skonester_cheat_menu_target
+  option = {
+    name = skonester_legend_master.0060.opt_motion_divine
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_motion_divine_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0060 }
+  }
+  option = {
+    name = skonester_legend_master.0060.opt_divine_blood
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_divine_blood_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0060 }
+  }
+  option = {
+    name = skonester_legend_master.0060.opt_savior
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_savior_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0060 }
+  }
+  option = {
+    name = skonester_legend_master.0060.opt_saint_blood
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_saint_blood_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0060 }
+  }
+  option = {
+    name = skonester_legend_master.0060.opt_dragon_blood
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_dragon_blood_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0060 }
+  }
+  option = {
+    name = skonester_legend_master.0060.opt_giant_blood
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_giant_blood_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0060 }
+  }
+  option = {
+    name = skonester_legend_master.0060.opt_undead_blood
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_undead_blood_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0060 }
+  }
+  option = {
+    name = skonester_legend_master.back_main
+    scope:actor = { trigger_event = skonester_legend_master.0001 }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_legend_master.0070 = {
+  type = character_event
+  title = skonester_legend_master.0070.t
+  desc = skonester_legend_master.category_desc
+  theme = fame
+  override_background = { reference = study }
+  immediate = { skonester_cheat_menu_sync_target_effect = yes }
+  right_portrait = scope:skonester_cheat_menu_target
+  option = {
+    name = skonester_legend_master.0070.opt_arthurian_legacy
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_seed_arthurian_legacy_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0070 }
+  }
+  option = {
+    name = skonester_legend_master.0070.opt_lodbrok_sons
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_seed_lodbrok_sons_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0070 }
+  }
+  option = {
+    name = skonester_legend_master.0070.opt_red_hand_ulster
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_seed_red_hand_ulster_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0070 }
+  }
+  option = {
+    name = skonester_legend_master.0070.opt_gothic_kings
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_seed_gothic_kings_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0070 }
+  }
+  option = {
+    name = skonester_legend_master.0070.opt_carolingian_legacy
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_seed_carolingian_legacy_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0070 }
+  }
+  option = {
+    name = skonester_legend_master.0070.opt_yngling_dynasty
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_seed_yngling_dynasty_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0070 }
+  }
+  option = {
+    name = skonester_legend_master.0070.opt_roman_legacy
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_seed_roman_legacy_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0070 }
+  }
+  option = {
+    name = skonester_cheat_menu.page_next
+    scope:actor = { trigger_event = skonester_legend_master.0071 }
+  }
+  option = {
+    name = skonester_legend_master.back_main
+    scope:actor = { trigger_event = skonester_legend_master.0001 }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_legend_master.0071 = {
+  type = character_event
+  title = skonester_legend_master.0070.t
+  desc = skonester_legend_master.category_desc
+  theme = fame
+  override_background = { reference = study }
+  immediate = { skonester_cheat_menu_sync_target_effect = yes }
+  right_portrait = scope:skonester_cheat_menu_target
+  option = {
+    name = skonester_legend_master.0070.opt_egyptian_god
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_seed_egyptian_god_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0071 }
+  }
+  option = {
+    name = skonester_legend_master.0070.opt_indian_hero
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_seed_indian_hero_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0071 }
+  }
+  option = {
+    name = skonester_legend_master.0070.opt_chinese_emperor
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_seed_chinese_emperor_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0071 }
+  }
+  option = {
+    name = skonester_legend_master.0070.opt_mongol_conqueror
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_seed_mongol_conqueror_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0071 }
+  }
+  option = {
+    name = skonester_legend_master.0070.opt_african_hero
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_add_seed_african_hero_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0071 }
+  }
+  option = {
+    name = skonester_cheat_menu.page_prev
+    scope:actor = { trigger_event = skonester_legend_master.0070 }
+  }
+  option = {
+    name = skonester_legend_master.back_main
+    scope:actor = { trigger_event = skonester_legend_master.0001 }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_legend_master.0902 = {
+  type = character_event
+  title = skonester_legend_master.0902.t
+  desc = skonester_legend_master.spread_speed_desc
+  theme = fame
+  override_background = { reference = study }
+  immediate = { skonester_cheat_menu_sync_target_effect = yes }
+  right_portrait = scope:skonester_cheat_menu_target
+  option = {
+    name = skonester_legend_master.0902.speed_normal
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_set_spread_speed_normal_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0902 }
+  }
+  option = {
+    name = skonester_legend_master.0902.speed_fast
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_set_spread_speed_fast_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0902 }
+  }
+  option = {
+    name = skonester_legend_master.0902.speed_very_fast
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_set_spread_speed_very_fast_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0902 }
+  }
+  option = {
+    name = skonester_legend_master.0902.speed_instant
+    scope:skonester_cheat_menu_target = {
+      skonester_legend_master_set_spread_speed_instant_effect = yes
+    }
+    scope:actor = { trigger_event = skonester_legend_master.0902 }
+  }
+  option = {
+    name = skonester_legend_master.back_main
+    scope:actor = { trigger_event = skonester_legend_master.0002 }
+  }
+}

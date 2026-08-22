@@ -1,0 +1,26 @@
+﻿# 同家族：将 recipient 改入 actor 的宗族（dynasty）与家族（house）；须在互动的 on_accept 中调用。
+
+skonester_same_house_from_actor_effect = {
+  scope:actor = {
+    save_scope_as = skonester_same_house_src
+  }
+  scope:recipient = {
+    if = {
+      limit = {
+        scope:skonester_same_house_src = {
+          has_dynasty = yes
+        }
+      }
+      set_house = scope:skonester_same_house_src.house
+    }
+    if = {
+      limit = {
+        scope:skonester_same_house_src = {
+          house ?= { always = yes }
+        }
+      }
+      set_house = scope:skonester_same_house_src.house
+    }
+  }
+  clear_saved_scope = skonester_same_house_src
+}

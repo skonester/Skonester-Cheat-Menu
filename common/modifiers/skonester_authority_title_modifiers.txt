@@ -1,0 +1,95 @@
+﻿# 权限帝号 · 持有者修正（统治/君权/派系/密谋/压力，数值极端）
+
+skonester_authority_absolute_holder = {
+  icon = diplomacy_positive
+  diplomacy = 12
+  stewardship = 12
+  intrigue = 10
+  tyranny_loss_mult = 8.0
+  tyranny_gain_mult = -0.95
+  vassal_limit = 80
+  domain_limit = 25
+  dread_baseline_add = 120
+  dread_gain_mult = 1.5
+  dread_decay_mult = -0.85
+  vassal_opinion = 60
+  general_opinion = 40
+  legitimacy_gain_mult = 0.80
+  long_reign_bonus_mult = 120
+  monthly_income_mult = 0.60
+  vassal_tax_contribution_mult = 0.70
+  vassal_levy_contribution_mult = 0.60
+  stress_gain_mult = -0.90
+  stress_loss_mult = 4.0
+}
+
+skonester_authority_overlord_holder = {
+  icon = stewardship_positive
+  stewardship = 14
+  diplomacy = 10
+  vassal_limit = 100
+  domain_limit = 30
+  vassal_opinion = 80
+  vassal_tax_contribution_mult = 0.90
+  vassal_levy_contribution_mult = 0.75
+  monthly_income_mult = 0.75
+  tyranny_loss_mult = 6.0
+  tyranny_gain_mult = -0.90
+  dread_baseline_add = 80
+  build_speed = 0.70
+  holding_build_speed = 0.70
+}
+
+skonester_authority_iron_fist_holder = {
+  icon = intrigue_positive
+  intrigue = 16
+  martial = 8
+  dread_baseline_add = 200
+  dread_gain_mult = 2.0
+  dread_decay_mult = -0.95
+  tyranny_loss_mult = 10.0
+  tyranny_gain_mult = -0.98
+  scheme_discovery_chance_mult = 50
+  enemy_hostile_scheme_success_chance_add = -500
+  enemy_hostile_scheme_success_chance_max_add = -80
+  hostile_scheme_resistance_add = 500
+  personal_scheme_resistance_add = 500
+  max_hostile_schemes_add = 8
+  max_personal_schemes_add = 8
+  scheme_success_chance = 200
+  scheme_success_chance_growth = 100
+  scheme_success_chance_max = 500
+}
+
+skonester_authority_unbound_holder = {
+  icon = learning_positive
+  learning = 12
+  stewardship = 10
+  diplomacy = 10
+  domain_limit = 35
+  vassal_limit = 60
+  tyranny_loss_mult = 12.0
+  tyranny_gain_mult = -0.99
+  stress_gain_mult = -0.95
+  stress_loss_mult = 6.0
+  monthly_lifestyle_xp_gain_mult = 2.0
+  court_grandeur_baseline_add = 5000
+  legitimacy_gain_mult = 1.0
+  vassal_opinion = 50
+  general_opinion = 50
+}
+
+skonester_authority_regent_holder = {
+  icon = diplomacy_positive
+  diplomacy = 8
+  stewardship = 8
+  vassal_limit = 40
+  domain_limit = 15
+  tyranny_loss_mult = 4.0
+  tyranny_gain_mult = -0.85
+  vassal_opinion = 40
+  vassal_tax_contribution_mult = 0.50
+  dread_baseline_add = 50
+  stress_gain_mult = -0.70
+  stress_loss_mult = 2.5
+}

@@ -1,0 +1,197 @@
+﻿# 是否存在可授予的头衔：男爵（直辖郡法理）或本人持有的帝/王/公/伯（不含主头衔、不含与主衔同级者、直辖首都县除外）
+
+# 可一键分封的「余衔」：非主衔、非与主衔同级；县另排除首都县
+skonester_enfeoffment_excess_held_title_grantable_trigger = {
+  holder = root
+  NOT = { this = root.primary_title }
+  NOT = { tier = root.primary_title.tier }
+  is_leased_out = no
+  is_nomad_title = no
+  is_landless_type_title = no
+  trigger_if = {
+    limit = {
+      tier = tier_county
+    }
+    NOT = { this = root.capital_county }
+  }
+}
+
+# 直辖郡法理下可分的男爵领：须低于主衔阶
+skonester_enfeoffment_excess_barony_grantable_trigger = {
+  tier = tier_barony
+  NOT = { tier = root.primary_title.tier }
+  is_leased_out = no
+  is_nomad_title = no
+  OR = {
+    NOT = { exists = holder }
+    holder = root
+  }
+}
+
+skonester_has_grantable_title_for_one_click_trigger = {
+  OR = {
+    any_sub_realm_county = {
+      holder = root
+      tier = tier_county
+      any_in_de_jure_hierarchy = {
+        skonester_enfeoffment_excess_barony_grantable_trigger = yes
+      }
+    }
+    any_held_title = {
+      OR = {
+        tier = tier_county
+        tier = tier_duchy
+        tier = tier_kingdom
+        tier = tier_empire
+      }
+      skonester_enfeoffment_excess_held_title_grantable_trigger = yes
+    }
+  }
+}
+
+# 人才池人选：全境（你及封臣治下）无地的成年人、或仅有世族头衔且无帝/王/公/伯级非世族领地者；可受封
+skonester_grant_recipient_candidate_trigger = {
+  is_adult = yes
+  is_imprisoned = no
+  NOR = {
+    has_trait = devoted
+    has_trait = gallivanter
+  }
+  can_be_granted_titles_by = { RULER = root }
+  NOT = {
+    any_held_title = {
+      is_noble_family_title = no
+      OR = {
+        tier = tier_empire
+        tier = tier_kingdom
+        tier = tier_duchy
+        tier = tier_county
+      }
+    }
+  }
+}
+
+# 至少一名合格人选：公国→伯爵；王国→公爵；帝国→国王；县/男→原人才池（无地等）
+skonester_has_grant_recipient_available_trigger = {
+  any_living_character = {
+    top_liege = root
+    OR = {
+      skonester_grant_duchy_recipient_trigger = yes
+      skonester_grant_kingdom_recipient_trigger = yes
+      skonester_grant_empire_recipient_trigger = yes
+      skonester_grant_recipient_candidate_trigger = yes
+    }
+  }
+}
+
+# 族人授衔：至少一名同宗族亲满足与「册命维城」相同的一档候选人条件
+skonester_has_dynasty_grant_recipient_available_trigger = {
+  any_living_character = {
+    top_liege = root
+    exists = dynasty
+    dynasty = root.dynasty
+    OR = {
+      skonester_grant_duchy_recipient_trigger = yes
+      skonester_grant_kingdom_recipient_trigger = yes
+      skonester_grant_empire_recipient_trigger = yes
+      skonester_grant_recipient_candidate_trigger = yes
+    }
+  }
+}
+
+# 公国：授予对象为伯爵（最高头衔为伯爵级、有地）
+skonester_grant_duchy_recipient_trigger = {
+  is_adult = yes
+  is_imprisoned = no
+  NOR = {
+    has_trait = devoted
+    has_trait = gallivanter
+  }
+  can_be_granted_titles_by = { RULER = root }
+  top_liege = root
+  highest_held_title_tier = tier_county
+}
+
+# 王国：授予对象须已持公国（公爵）
+skonester_grant_kingdom_recipient_trigger = {
+  is_adult = yes
+  is_imprisoned = no
+  NOR = {
+    has_trait = devoted
+    has_trait = gallivanter
+  }
+  can_be_granted_titles_by = { RULER = root }
+  top_liege = root
+  highest_held_title_tier = tier_duchy
+}
+
+# 帝国：授予对象须已持王国（国王）
+skonester_grant_empire_recipient_trigger = {
+  is_adult = yes
+  is_imprisoned = no
+  NOR = {
+    has_trait = devoted
+    has_trait = gallivanter
+  }
+  can_be_granted_titles_by = { RULER = root }
+  top_liege = root
+  highest_held_title_tier = tier_kingdom
+}
+
+# 以下三项需在 effect 中已 save_scope_as = skonester_grant_target_title 指向「即将授予的那一头衔」。
+# 防止把公国/王国封给法理上毫无关联的封臣，导致头衔因无法理领地等被游戏注销。
+
+skonester_grant_count_holder_land_in_target_duchy_de_jure_trigger = {
+  any_held_title = {
+    tier = tier_county
+    OR = {
+      is_de_jure_liege_or_above_target = scope:skonester_grant_target_title
+      target_is_de_jure_liege_or_above = scope:skonester_grant_target_title
+    }
+  }
+}
+
+skonester_grant_duke_holder_land_in_target_kingdom_de_jure_trigger = {
+  OR = {
+    any_held_title = {
+      tier = tier_county
+      OR = {
+        is_de_jure_liege_or_above_target = scope:skonester_grant_target_title
+        target_is_de_jure_liege_or_above = scope:skonester_grant_target_title
+      }
+    }
+    any_held_title = {
+      tier = tier_duchy
+      OR = {
+        is_de_jure_liege_or_above_target = scope:skonester_grant_target_title
+        target_is_de_jure_liege_or_above = scope:skonester_grant_target_title
+      }
+    }
+  }
+}
+
+skonester_grant_king_holder_land_in_target_empire_de_jure_trigger = {
+  OR = {
+    any_held_title = {
+      tier = tier_county
+      OR = {
+        is_de_jure_liege_or_above_target = scope:skonester_grant_target_title
+        target_is_de_jure_liege_or_above = scope:skonester_grant_target_title
+      }
+    }
+    any_held_title = {
+      tier = tier_duchy
+      OR = {
+        is_de_jure_liege_or_above_target = scope:skonester_grant_target_title
+        target_is_de_jure_liege_or_above = scope:skonester_grant_target_title
+      }
+    }
+    any_held_title = {
+      tier = tier_kingdom
+      OR = {
+        is_de_jure_liege_or_above_target = scope:skonester_grant_target_title
+        target_is_de_jure_liege_or_above = scope:skonester_grant_target_title
+      }
+    }
+  }
+}

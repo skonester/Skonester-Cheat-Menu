@@ -1,0 +1,101 @@
+﻿# 扩张帝号 · 持有者人物修正（疯狂扩张向；与 AI 扩张脉冲同类键名）
+
+skonester_expansion_hegemon_holder = {
+  icon = martial_positive
+  martial = 10
+  dread_baseline_add = 60
+  dread_gain_mult = 1.2
+  domain_limit = 10
+  monthly_war_income_mult = 1.0
+  army_maintenance_mult = -0.65
+  men_at_arms_cap = 600
+  men_at_arms_limit = 18
+  men_at_arms_maintenance = -0.75
+  levy_size = 0.65
+  levy_maintenance = -0.45
+  vassal_levy_contribution_mult = 0.55
+  vassal_tax_contribution_mult = 0.35
+  tyranny_loss_mult = 0.35
+  legitimacy_gain_mult = 0.25
+  movement_speed = 0.35
+  army_siege_value_mult = 0.75
+}
+
+skonester_expansion_devourer_holder = {
+  icon = stewardship_positive
+  stewardship = 10
+  domain_limit = 15
+  domain_tax_mult = 0.45
+  build_speed = 0.85
+  holding_build_speed = 0.85
+  county_opinion_add = 25
+  vassal_opinion = 20
+  vassal_levy_contribution_mult = 0.65
+  vassal_tax_contribution_mult = 0.50
+  monthly_income_mult = 0.55
+  levy_size = 0.55
+  men_at_arms_cap = 400
+  men_at_arms_limit = 12
+  army_maintenance_mult = -0.55
+  tyranny_loss_mult = 0.40
+}
+
+skonester_expansion_war_path_holder = {
+  icon = martial_positive
+  martial = 12
+  prowess = 8
+  advantage = 25
+  army_damage_mult = 0.55
+  army_toughness_mult = 0.45
+  army_pursuit_mult = 0.50
+  army_screen_mult = 0.40
+  levy_attack = 200
+  levy_toughness = 200
+  levy_pursuit = 150
+  levy_siege = 4
+  men_at_arms_cap = 800
+  men_at_arms_limit = 22
+  men_at_arms_maintenance = -0.80
+  army_maintenance_mult = -0.70
+  monthly_war_income_mult = 0.85
+  movement_speed = 0.50
+  winter_movement_speed = 0.40
+  army_siege_value_mult = 1.0
+  retreat_losses = -0.50
+}
+
+skonester_expansion_mandate_holder = {
+  icon = diplomacy_positive
+  diplomacy = 8
+  martial = 6
+  stewardship = 8
+  legitimacy_gain_mult = 0.55
+  long_reign_bonus_mult = 80
+  monthly_prestige_gain_mult = 0.40
+  monthly_piety_gain_mult = 0.20
+  faith_conversion_piety_cost_mult = -0.35
+  culture_conversion_speed = 0.50
+  build_speed = 0.60
+  holding_build_speed = 0.60
+  domain_limit = 8
+  vassal_opinion = 30
+  vassal_tax_contribution_mult = 0.40
+  levy_size = 0.40
+  tyranny_loss_mult = 0.50
+  dread_gain_mult = 0.65
+}
+
+skonester_expansion_predator_holder = {
+  icon = martial_positive
+  martial = 6
+  domain_limit = 6
+  levy_size = 0.45
+  men_at_arms_cap = 250
+  men_at_arms_limit = 8
+  men_at_arms_maintenance = -0.55
+  army_maintenance_mult = -0.45
+  monthly_war_income_mult = 0.50
+  movement_speed = 0.30
+  army_siege_value_mult = 0.50
+  vassal_levy_contribution_mult = 0.35
+}

@@ -1,0 +1,43 @@
+﻿# 一键授予择优：公国→伯爵档按文官分（外交+管理+学识），边区 March 改武官分。
+# 王/帝国至伯（县段）仍用 skonester_grant_empire_to_county_pick_value；男爵武官。
+
+skonester_grant_duchy_pick_value = {
+  if = {
+    limit = {
+      vassal_contract_has_flag = march
+    }
+    add = martial
+    add = prowess
+  }
+  else = {
+    add = diplomacy
+    add = stewardship
+    add = learning
+  }
+}
+
+skonester_grant_civil_sum_value = {
+  add = diplomacy
+  add = stewardship
+  add = learning
+}
+
+skonester_grant_military_sum_value = {
+  add = martial
+  add = prowess
+}
+
+skonester_grant_empire_to_county_pick_value = {
+  if = {
+    limit = {
+      vassal_contract_has_flag = march
+    }
+    add = martial
+    add = prowess
+  }
+  else = {
+    add = diplomacy
+    add = stewardship
+    add = learning
+  }
+}

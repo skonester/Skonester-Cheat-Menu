@@ -1,0 +1,117 @@
+﻿# 庸碌罢免：按 root.var:skonester_purge_tier（0 = 伯至帝主衔一次全清；1–4 = 仅该档）；总督走辞任 modifier + 强制卸任；非总督仅有地封臣走强制卸任（不套总督辞任 modifier）
+# 罢免结束后：整理头衔 + 多余头衔授予，仅择优非庸碌人选（root.var:skonester_grant_excellent_only）
+
+skonester_purge_auto_grant_excellent_talent_effect = {
+  root = {
+    set_variable = {
+      name = skonester_grant_excellent_only
+      value = 1
+    }
+  }
+  skonester_official_land_cap_full_effect = yes
+  skonester_one_click_grant_realm_titles_effect = yes
+  root = {
+    if = {
+      limit = {
+        has_variable = skonester_grant_excellent_only
+      }
+      remove_variable = skonester_grant_excellent_only
+    }
+  }
+}
+
+skonester_purge_mediocre_governors_at_selected_tier_effect = {
+  every_vassal_or_below = {
+    limit = {
+      OR = {
+        skonester_purge_eligible_governor_base_trigger = yes
+        skonester_purge_eligible_non_governor_vassal_base_trigger = yes
+      }
+      skonester_governor_is_mediocre_by_branch_trigger = yes
+      OR = {
+        AND = {
+          root = { var:skonester_purge_tier = 1 }
+          highest_held_title_tier = tier_county
+        }
+        AND = {
+          root = { var:skonester_purge_tier = 2 }
+          highest_held_title_tier = tier_duchy
+        }
+        AND = {
+          root = { var:skonester_purge_tier = 3 }
+          highest_held_title_tier = tier_kingdom
+        }
+        AND = {
+          root = { var:skonester_purge_tier = 4 }
+          highest_held_title_tier = tier_empire
+        }
+        AND = {
+          root = { var:skonester_purge_tier = 0 }
+          OR = {
+            highest_held_title_tier = tier_county
+            highest_held_title_tier = tier_duchy
+            highest_held_title_tier = tier_kingdom
+            highest_held_title_tier = tier_empire
+          }
+        }
+      }
+    }
+    save_scope_as = skonester_purge_victim
+    scope:skonester_purge_victim = {
+      remove_opinion = {
+        target = root
+        modifier = forced_me_step_down_opinion
+        single = no
+      }
+      add_opinion = {
+        target = root
+        modifier = forced_me_step_down_opinion
+      }
+      add_character_flag = skonester_grant_pool_eligible
+      if = {
+        limit = {
+          is_governor = yes
+        }
+        if = {
+          limit = {
+            government_allows = merit
+          }
+          add_character_modifier = {
+            modifier = ep3_renounced_governorship_merit
+            years = 15
+          }
+          set_appointment_timeout = {
+            years = 3
+            desc = appointment_timeout_desc_retired_governor
+          }
+        }
+        else_if = {
+          limit = {
+            government_is_japanese_trigger = yes
+          }
+          add_gold = major_gold_value
+          change_influence = major_influence_value
+          add_character_modifier = {
+            modifier = renounced_governorship_japan
+            years = 15
+          }
+        }
+        else = {
+          add_gold = massive_gold_value
+          add_character_modifier = {
+            modifier = ep3_renounced_governorship
+            years = 15
+          }
+        }
+      }
+      force_step_down_landed_titles = yes
+      if = {
+        limit = { has_tgp_dlc_trigger = yes }
+        tgp_step_down_title_recipient_tooltip_effect = yes
+      }
+    }
+  }
+  root = {
+    skonester_purge_auto_grant_excellent_talent_effect = yes
+  }
+}

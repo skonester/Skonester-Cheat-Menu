@@ -1,0 +1,335 @@
+﻿# 法理转封：凡境内领地与封臣关系不符合法理链，一律强制 change_liege 拉回。
+# 优先最近一层境内法理上级（含 root）；该链上无境内持有者时再上溯；仍无解则挂 root。
+
+skonester_de_jure_transfer_valid_liege_in_realm_trigger = {
+  is_vassal_or_below_of = root
+  NOT = { is_at_war_with = root }
+}
+
+# —— 头衔 scope（this = 伯爵领/男爵领/公国等）：第 N 层法理上级在境内且持有人须改 liege ——
+
+skonester_land_title_de_jure_layer_1_resolved_trigger = {
+  exists = de_jure_liege
+  exists = de_jure_liege.holder
+  exists = holder
+  NOT = { holder = de_jure_liege.holder }
+  de_jure_liege.holder = {
+    skonester_de_jure_transfer_valid_liege_in_realm_trigger = yes
+  }
+}
+
+skonester_land_title_de_jure_layer_1_needs_fix_trigger = {
+  exists = holder
+  exists = de_jure_liege
+  exists = de_jure_liege.holder
+  NOT = { holder = de_jure_liege.holder }
+  NOT = { holder.liege = de_jure_liege.holder }
+  de_jure_liege.holder = {
+    skonester_de_jure_transfer_valid_liege_in_realm_trigger = yes
+  }
+}
+
+skonester_land_title_de_jure_layer_2_resolved_trigger = {
+  exists = de_jure_liege.de_jure_liege
+  exists = de_jure_liege.de_jure_liege.holder
+  exists = holder
+  NOT = { holder = de_jure_liege.de_jure_liege.holder }
+  de_jure_liege.de_jure_liege.holder = {
+    skonester_de_jure_transfer_valid_liege_in_realm_trigger = yes
+  }
+}
+
+skonester_land_title_de_jure_layer_2_needs_fix_trigger = {
+  NOT = { skonester_land_title_de_jure_layer_1_resolved_trigger = yes }
+  exists = holder
+  exists = de_jure_liege.de_jure_liege
+  exists = de_jure_liege.de_jure_liege.holder
+  NOT = { holder = de_jure_liege.de_jure_liege.holder }
+  NOT = { holder.liege = de_jure_liege.de_jure_liege.holder }
+  de_jure_liege.de_jure_liege.holder = {
+    skonester_de_jure_transfer_valid_liege_in_realm_trigger = yes
+  }
+}
+
+skonester_land_title_de_jure_layer_3_resolved_trigger = {
+  exists = de_jure_liege.de_jure_liege.de_jure_liege
+  exists = de_jure_liege.de_jure_liege.de_jure_liege.holder
+  exists = holder
+  NOT = { holder = de_jure_liege.de_jure_liege.de_jure_liege.holder }
+  de_jure_liege.de_jure_liege.de_jure_liege.holder = {
+    skonester_de_jure_transfer_valid_liege_in_realm_trigger = yes
+  }
+}
+
+skonester_land_title_de_jure_layer_3_needs_fix_trigger = {
+  NOT = { skonester_land_title_de_jure_layer_1_resolved_trigger = yes }
+  NOT = { skonester_land_title_de_jure_layer_2_resolved_trigger = yes }
+  exists = holder
+  exists = de_jure_liege.de_jure_liege.de_jure_liege
+  exists = de_jure_liege.de_jure_liege.de_jure_liege.holder
+  NOT = { holder = de_jure_liege.de_jure_liege.de_jure_liege.holder }
+  NOT = { holder.liege = de_jure_liege.de_jure_liege.de_jure_liege.holder }
+  de_jure_liege.de_jure_liege.de_jure_liege.holder = {
+    skonester_de_jure_transfer_valid_liege_in_realm_trigger = yes
+  }
+}
+
+skonester_land_title_de_jure_layer_4_resolved_trigger = {
+  exists = de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege
+  exists = de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder
+  exists = holder
+  NOT = { holder = de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder }
+  de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder = {
+    skonester_de_jure_transfer_valid_liege_in_realm_trigger = yes
+  }
+}
+
+skonester_land_title_de_jure_layer_4_needs_fix_trigger = {
+  NOT = { skonester_land_title_de_jure_layer_1_resolved_trigger = yes }
+  NOT = { skonester_land_title_de_jure_layer_2_resolved_trigger = yes }
+  NOT = { skonester_land_title_de_jure_layer_3_resolved_trigger = yes }
+  exists = holder
+  exists = de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege
+  exists = de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder
+  NOT = { holder = de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder }
+  NOT = { holder.liege = de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder }
+  de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder = {
+    skonester_de_jure_transfer_valid_liege_in_realm_trigger = yes
+  }
+}
+
+skonester_land_title_de_jure_layer_5_resolved_trigger = {
+  exists = de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege
+  exists = de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder
+  exists = holder
+  NOT = { holder = de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder }
+  de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder = {
+    skonester_de_jure_transfer_valid_liege_in_realm_trigger = yes
+  }
+}
+
+skonester_land_title_de_jure_layer_5_needs_fix_trigger = {
+  NOT = { skonester_land_title_de_jure_layer_1_resolved_trigger = yes }
+  NOT = { skonester_land_title_de_jure_layer_2_resolved_trigger = yes }
+  NOT = { skonester_land_title_de_jure_layer_3_resolved_trigger = yes }
+  NOT = { skonester_land_title_de_jure_layer_4_resolved_trigger = yes }
+  exists = holder
+  exists = de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege
+  exists = de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder
+  NOT = { holder = de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder }
+  NOT = { holder.liege = de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder }
+  de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder = {
+    skonester_de_jure_transfer_valid_liege_in_realm_trigger = yes
+  }
+}
+
+skonester_land_title_de_jure_layer_6_resolved_trigger = {
+  exists = de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege
+  exists = de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder
+  exists = holder
+  NOT = { holder = de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder }
+  de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder = {
+    skonester_de_jure_transfer_valid_liege_in_realm_trigger = yes
+  }
+}
+
+skonester_land_title_de_jure_layer_6_needs_fix_trigger = {
+  NOT = { skonester_land_title_de_jure_layer_1_resolved_trigger = yes }
+  NOT = { skonester_land_title_de_jure_layer_2_resolved_trigger = yes }
+  NOT = { skonester_land_title_de_jure_layer_3_resolved_trigger = yes }
+  NOT = { skonester_land_title_de_jure_layer_4_resolved_trigger = yes }
+  NOT = { skonester_land_title_de_jure_layer_5_resolved_trigger = yes }
+  exists = holder
+  exists = de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege
+  exists = de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder
+  NOT = { holder = de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder }
+  NOT = { holder.liege = de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder }
+  de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder = {
+    skonester_de_jure_transfer_valid_liege_in_realm_trigger = yes
+  }
+}
+
+# 法理链上无境内持有者：强制直属 root（仍在 root 版图内）
+skonester_land_title_de_jure_fallback_root_trigger = {
+  exists = holder
+  NOT = { holder = root }
+  NOT = { holder.liege = root }
+  holder = {
+    is_vassal_or_below_of = root
+    is_landed = yes
+    NOT = { is_at_war_with = root }
+  }
+  NOR = {
+    skonester_land_title_de_jure_layer_1_needs_fix_trigger = yes
+    skonester_land_title_de_jure_layer_2_needs_fix_trigger = yes
+    skonester_land_title_de_jure_layer_3_needs_fix_trigger = yes
+    skonester_land_title_de_jure_layer_4_needs_fix_trigger = yes
+    skonester_land_title_de_jure_layer_5_needs_fix_trigger = yes
+    skonester_land_title_de_jure_layer_6_needs_fix_trigger = yes
+  }
+  OR = {
+    skonester_land_title_de_jure_layer_1_resolved_trigger = yes
+    skonester_land_title_de_jure_layer_2_resolved_trigger = yes
+    skonester_land_title_de_jure_layer_3_resolved_trigger = yes
+    skonester_land_title_de_jure_layer_4_resolved_trigger = yes
+    skonester_land_title_de_jure_layer_5_resolved_trigger = yes
+    skonester_land_title_de_jure_layer_6_resolved_trigger = yes
+    NOT = {
+      holder.liege = {
+        skonester_de_jure_transfer_valid_liege_in_realm_trigger = yes
+      }
+    }
+  }
+}
+
+skonester_land_title_de_jure_needs_fix_trigger = {
+  OR = {
+    skonester_land_title_de_jure_layer_1_needs_fix_trigger = yes
+    skonester_land_title_de_jure_layer_2_needs_fix_trigger = yes
+    skonester_land_title_de_jure_layer_3_needs_fix_trigger = yes
+    skonester_land_title_de_jure_layer_4_needs_fix_trigger = yes
+    skonester_land_title_de_jure_layer_5_needs_fix_trigger = yes
+    skonester_land_title_de_jure_layer_6_needs_fix_trigger = yes
+    skonester_land_title_de_jure_fallback_root_trigger = yes
+  }
+}
+
+# —— 人物 scope：沿主头衔法理链向上查找可转封目标 ——
+
+skonester_vassal_has_de_jure_transfer_target_in_realm_trigger = {
+  OR = {
+    AND = {
+      exists = primary_title.de_jure_liege
+      exists = primary_title.de_jure_liege.holder
+      primary_title.de_jure_liege.holder = {
+        NOT = { this = root }
+        is_vassal_or_below_of = root
+        NOT = { is_at_war_with = root }
+      }
+      NOT = { liege = primary_title.de_jure_liege.holder }
+    }
+    AND = {
+      exists = primary_title.de_jure_liege.de_jure_liege
+      exists = primary_title.de_jure_liege.de_jure_liege.holder
+      OR = {
+        NOT = { exists = primary_title.de_jure_liege.holder }
+        primary_title.de_jure_liege.holder = root
+      }
+      primary_title.de_jure_liege.de_jure_liege.holder = {
+        NOT = { this = root }
+        is_vassal_or_below_of = root
+        NOT = { is_at_war_with = root }
+      }
+      NOT = { liege = primary_title.de_jure_liege.de_jure_liege.holder }
+    }
+    AND = {
+      exists = primary_title.de_jure_liege.de_jure_liege.de_jure_liege
+      exists = primary_title.de_jure_liege.de_jure_liege.de_jure_liege.holder
+      OR = {
+        NOT = { exists = primary_title.de_jure_liege.holder }
+        primary_title.de_jure_liege.holder = root
+      }
+      OR = {
+        NOT = { exists = primary_title.de_jure_liege.de_jure_liege.holder }
+        primary_title.de_jure_liege.de_jure_liege.holder = root
+      }
+      primary_title.de_jure_liege.de_jure_liege.de_jure_liege.holder = {
+        NOT = { this = root }
+        is_vassal_or_below_of = root
+        NOT = { is_at_war_with = root }
+      }
+      NOT = { liege = primary_title.de_jure_liege.de_jure_liege.de_jure_liege.holder }
+    }
+    AND = {
+      exists = primary_title.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege
+      exists = primary_title.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder
+      OR = {
+        NOT = { exists = primary_title.de_jure_liege.holder }
+        primary_title.de_jure_liege.holder = root
+      }
+      OR = {
+        NOT = { exists = primary_title.de_jure_liege.de_jure_liege.holder }
+        primary_title.de_jure_liege.de_jure_liege.holder = root
+      }
+      OR = {
+        NOT = { exists = primary_title.de_jure_liege.de_jure_liege.de_jure_liege.holder }
+        primary_title.de_jure_liege.de_jure_liege.de_jure_liege.holder = root
+      }
+      primary_title.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder = {
+        NOT = { this = root }
+        is_vassal_or_below_of = root
+        NOT = { is_at_war_with = root }
+      }
+      NOT = { liege = primary_title.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder }
+    }
+    AND = {
+      exists = primary_title.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege
+      exists = primary_title.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder
+      OR = {
+        NOT = { exists = primary_title.de_jure_liege.holder }
+        primary_title.de_jure_liege.holder = root
+      }
+      OR = {
+        NOT = { exists = primary_title.de_jure_liege.de_jure_liege.holder }
+        primary_title.de_jure_liege.de_jure_liege.holder = root
+      }
+      OR = {
+        NOT = { exists = primary_title.de_jure_liege.de_jure_liege.de_jure_liege.holder }
+        primary_title.de_jure_liege.de_jure_liege.de_jure_liege.holder = root
+      }
+      OR = {
+        NOT = { exists = primary_title.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder }
+        primary_title.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder = root
+      }
+      primary_title.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder = {
+        NOT = { this = root }
+        is_vassal_or_below_of = root
+        NOT = { is_at_war_with = root }
+      }
+      NOT = { liege = primary_title.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder }
+    }
+    AND = {
+      exists = primary_title.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege
+      exists = primary_title.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder
+      OR = {
+        NOT = { exists = primary_title.de_jure_liege.holder }
+        primary_title.de_jure_liege.holder = root
+      }
+      OR = {
+        NOT = { exists = primary_title.de_jure_liege.de_jure_liege.holder }
+        primary_title.de_jure_liege.de_jure_liege.holder = root
+      }
+      OR = {
+        NOT = { exists = primary_title.de_jure_liege.de_jure_liege.de_jure_liege.holder }
+        primary_title.de_jure_liege.de_jure_liege.de_jure_liege.holder = root
+      }
+      OR = {
+        NOT = { exists = primary_title.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder }
+        primary_title.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder = root
+      }
+      OR = {
+        NOT = { exists = primary_title.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder }
+        primary_title.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder = root
+      }
+      primary_title.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder = {
+        NOT = { this = root }
+        is_vassal_or_below_of = root
+        NOT = { is_at_war_with = root }
+      }
+      NOT = { liege = primary_title.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.de_jure_liege.holder }
+    }
+  }
+}
+
+skonester_vassal_needs_de_jure_transfer_trigger = {
+  is_landed = yes
+  exists = primary_title
+  NOT = { is_at_war_with = root }
+  skonester_vassal_has_de_jure_transfer_target_in_realm_trigger = yes
+}
+
+skonester_has_de_jure_transferable_direct_vassals_trigger = {
+  any_vassal_or_below = {
+    skonester_vassal_needs_de_jure_transfer_trigger = yes
+  }
+}

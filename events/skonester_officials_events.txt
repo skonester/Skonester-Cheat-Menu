@@ -1,0 +1,732 @@
+﻿namespace = skonester_officials
+
+# 天朝制：总督主头衔满三整年（title_held_years ≥3）后元日强制卸任；同条件另有一月分脉冲备份。效果对齐辞任总督决议与 ep3 辞任类 modifier。
+skonester_officials.0003 = {
+  type = character_event
+  hidden = yes
+
+  trigger = {
+    skonester_celestial_governor_rotation_eligible_trigger = yes
+  }
+
+  immediate = {
+    if = {
+      limit = {
+        government_allows = merit
+      }
+      add_character_modifier = {
+        modifier = ep3_renounced_governorship_merit
+        years = 15
+      }
+      set_appointment_timeout = {
+        years = 3
+        desc = appointment_timeout_desc_retired_governor
+      }
+    }
+    else = {
+      add_gold = massive_gold_value
+      add_character_modifier = {
+        modifier = ep3_renounced_governorship
+        years = 15
+      }
+    }
+    force_step_down_landed_titles = yes
+    # 1.19+：此处不再使用 send_interface_message（旧 type 在部分环境下不存在，会导致脚本错误/不稳定）
+  }
+}
+
+# 庸官罢免：按主头衔等级分档（伯/公/王/帝）；可选单档或一次罢免全部主衔档；庸碌依文官三项或武官两项
+
+skonester_officials.9040 = {
+  type = character_event
+  title = skonester_officials.9040.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = realm
+
+  option = {
+    name = skonester_officials.9040.all_tiers
+    trigger = { skonester_has_anyone_to_purge_trigger = yes }
+    root = {
+      set_variable = { name = skonester_purge_tier value = 0 }
+      skonester_purge_mediocre_governors_at_selected_tier_effect = yes
+      if = {
+        limit = { has_variable = skonester_purge_tier }
+        remove_variable = skonester_purge_tier
+      }
+    }
+  }
+
+  option = {
+    name = skonester_officials.9040.county
+    trigger = { skonester_has_purge_target_county_tier_trigger = yes }
+    root = {
+      set_variable = { name = skonester_purge_tier value = 1 }
+      skonester_purge_mediocre_governors_at_selected_tier_effect = yes
+      if = {
+        limit = { has_variable = skonester_purge_tier }
+        remove_variable = skonester_purge_tier
+      }
+    }
+  }
+
+  option = {
+    name = skonester_officials.9040.duchy
+    trigger = { skonester_has_purge_target_duchy_tier_trigger = yes }
+    root = {
+      set_variable = { name = skonester_purge_tier value = 2 }
+      skonester_purge_mediocre_governors_at_selected_tier_effect = yes
+      if = {
+        limit = { has_variable = skonester_purge_tier }
+        remove_variable = skonester_purge_tier
+      }
+    }
+  }
+
+  option = {
+    name = skonester_officials.9040.kingdom
+    trigger = { skonester_has_purge_target_kingdom_tier_trigger = yes }
+    root = {
+      set_variable = { name = skonester_purge_tier value = 3 }
+      skonester_purge_mediocre_governors_at_selected_tier_effect = yes
+      if = {
+        limit = { has_variable = skonester_purge_tier }
+        remove_variable = skonester_purge_tier
+      }
+    }
+  }
+
+  option = {
+    name = skonester_officials.9040.empire
+    trigger = { skonester_has_purge_target_empire_tier_trigger = yes }
+    root = {
+      set_variable = { name = skonester_purge_tier value = 4 }
+      skonester_purge_mediocre_governors_at_selected_tier_effect = yes
+      if = {
+        limit = { has_variable = skonester_purge_tier }
+        remove_variable = skonester_purge_tier
+      }
+    }
+  }
+
+  option = {
+    name = skonester_officials.9040.close
+  }
+}
+
+# 人口与统辖：族内人口清理（16+、五主属性之和<50，不含勇武）/ 世界无地清理
+skonester_officials.9080 = {
+  type = character_event
+  title = skonester_officials.9080.t
+  desc = skonester_officials.9080.desc
+  theme = realm
+
+  option = {
+    name = skonester_officials.9080.option_dynasty
+    trigger_event = { id = skonester_officials.9081 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.9080.option_world
+    trigger_event = { id = skonester_officials.9083 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.9080.option_family_planning
+    trigger_event = { id = skonester_officials.9084 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.9080.option_samge
+    trigger_event = { id = skonester_officials.9085 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.9080.close
+  }
+}
+
+skonester_officials.9081 = {
+  type = character_event
+  title = skonester_officials.9081.t
+  desc = skonester_officials.9081.desc
+  theme = realm
+
+  option = {
+    name = skonester_officials.9081.execute
+    custom_tooltip = skonester_officials.9081.execute_tt
+    skonester_dynasty_cull_unlanded_weak_effect = yes
+    trigger_event = { id = skonester_officials.9080 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.9081.back
+    trigger_event = { id = skonester_officials.9080 days = 0 }
+  }
+}
+
+skonester_officials.9083 = {
+  type = character_event
+  title = skonester_officials.9083.t
+  desc = skonester_officials.9083.desc
+  theme = realm
+
+  option = {
+    name = skonester_officials.9083.cap_1000
+    custom_tooltip = skonester_officials.9083.cap_1000_tt
+    trigger = {
+      NOT = { has_character_flag = skonester_world_purge_active }
+    }
+    add_character_flag = skonester_world_purge_active
+    set_variable = {
+      name = skonester_world_purge_remaining
+      value = 1000
+    }
+    skonester_world_purge_landless_ai_effect = yes
+    trigger_event = { id = skonester_officials.9080 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.9083.cap_2000
+    custom_tooltip = skonester_officials.9083.cap_2000_tt
+    trigger = {
+      NOT = { has_character_flag = skonester_world_purge_active }
+    }
+    add_character_flag = skonester_world_purge_active
+    set_variable = {
+      name = skonester_world_purge_remaining
+      value = 2000
+    }
+    skonester_world_purge_landless_ai_effect = yes
+    trigger_event = { id = skonester_officials.9080 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.9083.cap_3000
+    custom_tooltip = skonester_officials.9083.cap_3000_tt
+    trigger = {
+      NOT = { has_character_flag = skonester_world_purge_active }
+    }
+    add_character_flag = skonester_world_purge_active
+    set_variable = {
+      name = skonester_world_purge_remaining
+      value = 3000
+    }
+    skonester_world_purge_landless_ai_effect = yes
+    trigger_event = { id = skonester_officials.9080 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.9083.cancel
+    custom_tooltip = skonester_officials.9083.cancel_tt
+    trigger = {
+      has_character_flag = skonester_world_purge_active
+    }
+    remove_character_flag = skonester_world_purge_active
+    if = {
+      limit = { has_variable = skonester_world_purge_remaining }
+      remove_variable = skonester_world_purge_remaining
+    }
+    trigger_event = { id = skonester_officials.9080 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.9083.back
+    trigger_event = { id = skonester_officials.9080 days = 0 }
+  }
+}
+
+# Safe asynchronous continuation for the rootless-commoner purge.
+skonester_officials.9088 = {
+  type = character_event
+  hidden = yes
+
+  trigger = {
+    has_character_flag = skonester_world_purge_active
+    has_variable = skonester_world_purge_remaining
+    var:skonester_world_purge_remaining > 0
+  }
+
+  immediate = {
+    skonester_world_purge_landless_ai_effect = yes
+  }
+}
+
+# 人口与统辖：计划生育合并窗（9084）：一父一孩主开关、保护玩家宗族、玩家宗族男丁一孩（原 9087）；见 skonester_family_planning_on_birth.txt
+skonester_officials.9084 = {
+  type = character_event
+  title = skonester_officials.9084.t
+  desc = skonester_officials.9084.desc
+  theme = realm
+
+  option = {
+    name = skonester_officials.9084.enable
+    trigger = {
+      NOT = { has_global_variable = skonester_family_planning_active }
+    }
+    set_global_variable = {
+      name = skonester_family_planning_active
+      value = yes
+    }
+    trigger_event = { id = skonester_officials.9084 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.9084.disable
+    trigger = {
+      has_global_variable = skonester_family_planning_active
+    }
+    remove_global_variable = skonester_family_planning_active
+    remove_global_variable = skonester_family_planning_exempt_player_dynasty
+    trigger_event = { id = skonester_officials.9084 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.9084.exempt_dynasty_on
+    trigger = {
+      has_global_variable = skonester_family_planning_active
+      NOT = { has_global_variable = skonester_family_planning_exempt_player_dynasty }
+    }
+    set_global_variable = {
+      name = skonester_family_planning_exempt_player_dynasty
+      value = yes
+    }
+    if = {
+      limit = { has_global_variable = skonester_family_planning_dynasty_one_child_total }
+      remove_global_variable = skonester_family_planning_dynasty_one_child_total
+    }
+    trigger_event = { id = skonester_officials.9084 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.9084.exempt_dynasty_off
+    trigger = {
+      has_global_variable = skonester_family_planning_exempt_player_dynasty
+    }
+    remove_global_variable = skonester_family_planning_exempt_player_dynasty
+    trigger_event = { id = skonester_officials.9084 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.9087.enable
+    trigger = {
+      NOT = { has_global_variable = skonester_family_planning_dynasty_one_child_total }
+    }
+    set_global_variable = {
+      name = skonester_family_planning_dynasty_one_child_total
+      value = yes
+    }
+    if = {
+      limit = { has_global_variable = skonester_family_planning_exempt_player_dynasty }
+      remove_global_variable = skonester_family_planning_exempt_player_dynasty
+    }
+    trigger_event = { id = skonester_officials.9084 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.9087.disable
+    trigger = {
+      has_global_variable = skonester_family_planning_dynasty_one_child_total
+    }
+    remove_global_variable = skonester_family_planning_dynasty_one_child_total
+    trigger_event = { id = skonester_officials.9084 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.9084.back
+    trigger_event = { id = skonester_officials.9080 days = 0 }
+  }
+}
+
+# 人口与统辖：旧版独立窗口；现并入 9084，保留 id 供旧存档或外部引用
+skonester_officials.9087 = {
+  type = character_event
+  hidden = yes
+
+  immediate = {
+    trigger_event = {
+      id = skonester_officials.9084
+      days = 0
+    }
+  }
+}
+
+# 人口与统辖：厉鬼勾魂；「开启」= 立即执行一轮 9086，执行完毕由 9086 清全局开关（旧存档年循环可仍由 on_action 触发 9086，同轮一并清理）
+skonester_officials.9085 = {
+  type = character_event
+  title = skonester_officials.9085.t
+  desc = skonester_officials.9085.desc
+  theme = realm
+
+  option = {
+    name = skonester_officials.9085.enable
+    # 设旗后立刻跑 9086；处决完毕由 9086 去旗并回到 9080（年脉冲触发的 9086 无此旗、不弹菜单）
+    add_character_flag = skonester_samge_reopen_pop_9080_after_samge_wave
+    trigger_event = { id = skonester_officials.9086 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.9085.disable
+    trigger = {
+      has_global_variable = skonester_samge_reaping_active
+    }
+    remove_global_variable = skonester_samge_reaping_active
+    remove_global_variable = skonester_samge_years_accum
+    trigger_event = { id = skonester_officials.9080 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.9085.back
+    trigger_event = { id = skonester_officials.9080 days = 0 }
+  }
+}
+
+# 厉鬼勾魂：处决波次（手点「开启」可立即触发，或由 yearly 满 5 年时触发）
+# 仅你顶层领国（与 is_in_same_realm_as=root 一致）；死因为随机疫病；人类玩家对每名死者发界面提示条（与瘟疫式提示类似）。清全局开关/年计。
+skonester_officials.9086 = {
+  type = character_event
+  hidden = yes
+
+  immediate = {
+    root = {
+      set_variable = {
+        name = skonester_samge_left
+        value = 1000
+      }
+      set_variable = {
+        name = skonester_samge_guard
+        value = 0
+      }
+    }
+    while = {
+      limit = {
+        root = {
+          var:skonester_samge_left > 0
+          var:skonester_samge_guard < 12000
+        }
+      }
+      root = {
+        change_variable = {
+          name = skonester_samge_guard
+          add = 1
+        }
+      }
+      if = {
+        limit = {
+          any_living_character = {
+            is_ai = yes
+            is_alive = yes
+            NOT = { this = root }
+            top_liege = root.top_liege
+          }
+        }
+        random_living_character = {
+          limit = {
+            is_ai = yes
+            is_alive = yes
+            NOT = { this = root }
+            top_liege = root.top_liege
+          }
+          weight = {
+            base = 1
+          }
+          save_scope_as = skonester_samge_victim
+          root = {
+            if = {
+              limit = { is_ai = no }
+              send_interface_toast = {
+                type = event_toast_effect_neutral
+                title = skonester_samge_realm_death_toast_t
+                left_icon = scope:skonester_samge_victim
+                custom_description_no_bullet = {
+                  object = scope:skonester_samge_victim
+                  text = skonester_samge_realm_death_toast_desc
+                }
+              }
+            }
+          }
+          random_list = {
+            25 = {
+              death = {
+                death_reason = death_great_pox
+              }
+            }
+            25 = {
+              death = {
+                death_reason = death_typhus
+              }
+            }
+            25 = {
+              death = {
+                death_reason = death_smallpox
+              }
+            }
+            25 = {
+              death = {
+                death_reason = death_measles
+              }
+            }
+          }
+        }
+        root = {
+          change_variable = {
+            name = skonester_samge_left
+            add = -1
+          }
+        }
+      }
+      else = {
+        root = {
+          set_variable = {
+            name = skonester_samge_left
+            value = 0
+          }
+        }
+      }
+    }
+    root = {
+      if = {
+        limit = {
+          has_variable = skonester_samge_left
+        }
+        remove_variable = skonester_samge_left
+      }
+      if = {
+        limit = {
+          has_variable = skonester_samge_guard
+        }
+        remove_variable = skonester_samge_guard
+      }
+    }
+    # 一轮结束即关「开」、清年计（新逻辑点按一次一轮；旧存档年循环在开关仍亮时由 yearly 触发的也一并收尾）
+    if = {
+      limit = {
+        has_global_variable = skonester_samge_reaping_active
+      }
+      remove_global_variable = skonester_samge_reaping_active
+    }
+    if = {
+      limit = {
+        has_global_variable = skonester_samge_years_accum
+      }
+      remove_global_variable = skonester_samge_years_accum
+    }
+    if = {
+      limit = {
+        root = {
+          has_character_flag = skonester_samge_reopen_pop_9080_after_samge_wave
+        }
+      }
+      root = {
+        remove_character_flag = skonester_samge_reopen_pop_9080_after_samge_wave
+        trigger_event = {
+          id = skonester_officials.9080
+          days = 0
+        }
+      }
+    }
+  }
+}
+
+# 内帑：由 skonester_grant_loyal_trait_one_year_effect 预约；仅移除本模组挂旗期间赋予的 loyal
+skonester_officials.9101 = {
+  type = character_event
+  hidden = yes
+
+  immediate = {
+    if = {
+      limit = {
+        has_character_flag = skonester_patron_loyal_strip_pending
+      }
+      if = {
+        limit = {
+          has_trait = loyal
+        }
+        remove_trait = loyal
+      }
+      remove_character_flag = skonester_patron_loyal_strip_pending
+    }
+  }
+}
+
+# 一键收监：由 skonester_imprison_vassals_decision 触发；二选一，沿用原选项本地化键
+skonester_officials.9102 = {
+  type = character_event
+  title = skonester_officials.9102.t
+  desc = skonester_officials.9102.desc
+  theme = realm
+  left_portrait = {
+    character = root
+    animation = personality_zealous
+  }
+
+  option = {
+    name = skonester_imprison_all_direct_vassals_decision
+    trigger = { skonester_has_imprisonable_direct_vassal_trigger = yes }
+    skonester_imprison_all_direct_vassals_effect = yes
+  }
+
+  option = {
+    name = skonester_imprison_all_realm_vassals_decision
+    trigger = { skonester_has_imprisonable_realm_vassal_trigger = yes }
+    skonester_imprison_all_realm_vassals_effect = yes
+  }
+
+  option = {
+    name = skonester_officials.9102.c
+    trigger = { always = yes }
+  }
+}
+
+# CK 包工头 9110：全领智能建造入队；9112 每日脉冲逐批执行（效果同原单帧，防大领地卡顿）
+skonester_officials.9110 = {
+  type = character_event
+  hidden = yes
+  immediate = {
+    if = {
+      limit = {
+        is_alive = yes
+        is_landed = yes
+        NOT = { has_character_flag = skonester_foreman_realm_build_active }
+      }
+      skonester_foreman_realm_batch_start_effect = yes
+    }
+  }
+}
+
+skonester_officials.9112 = {
+  type = character_event
+  hidden = yes
+  immediate = {
+    if = {
+      limit = {
+        is_alive = yes
+        is_landed = yes
+        has_character_flag = skonester_foreman_realm_build_active
+      }
+      skonester_foreman_realm_batch_step_effect = yes
+      if = {
+        limit = {
+          variable_list_size = {
+            name = skonester_foreman_realm_county_queue
+            value > 0
+          }
+        }
+        trigger_event = { id = skonester_officials.9112 days = 1 }
+      }
+      else = {
+        skonester_foreman_realm_batch_finish_effect = yes
+      }
+    }
+    else = {
+      skonester_foreman_realm_batch_finish_effect = yes
+    }
+  }
+}
+
+# 法理转封：9130 分批脉冲（点击即跑首批；每轮 12 封臣 + 20 郡，隔日续跑）
+skonester_officials.9130 = {
+  type = character_event
+  hidden = yes
+  immediate = {
+    if = {
+      limit = {
+        is_alive = yes
+        is_landed = yes
+        has_character_flag = skonester_de_jure_transfer_batch_active
+      }
+      skonester_de_jure_transfer_batch_step_effect = yes
+      if = {
+        limit = {
+          skonester_has_de_jure_transferable_direct_vassals_trigger = yes
+        }
+        skonester_de_jure_transfer_batch_build_vassal_queue_effect = yes
+        trigger_event = { id = skonester_officials.9130 days = 1 }
+      }
+      else = {
+        skonester_de_jure_transfer_batch_finish_effect = yes
+      }
+    }
+    else = {
+      skonester_de_jure_transfer_batch_finish_effect = yes
+    }
+  }
+}
+
+# 整理头衔：9140 分批脉冲（点击即跑首批；每轮 2 官×8 衔，隔日续跑）
+skonester_officials.9140 = {
+  type = character_event
+  hidden = yes
+  immediate = {
+    if = {
+      limit = {
+        is_alive = yes
+        is_landed = yes
+        has_character_flag = skonester_land_cap_batch_active
+      }
+      skonester_land_cap_batch_step_effect = yes
+      if = {
+        limit = {
+          variable_list_size = {
+            name = skonester_land_cap_official_queue
+            value > 0
+          }
+        }
+        trigger_event = { id = skonester_officials.9140 days = 1 }
+      }
+      else = {
+        skonester_land_cap_batch_finish_effect = yes
+      }
+    }
+    else = {
+      skonester_land_cap_batch_finish_effect = yes
+    }
+  }
+}
+
+# 右击 9111：仅对方直属地 foremen（不先全图主建补；需时另点全国修补或手改）
+skonester_officials.9111 = {
+  type = character_event
+  hidden = yes
+  immediate = {
+    skonester_foreman_beneficiary_demesne_unified_effect = yes
+  }
+}
+
+# AI 年脉冲：常备扩张偏置 + 猛攻倾向 + 铁腕改革；（可选）法理转封
+skonester_officials.9200 = {
+  type = character_event
+  hidden = yes
+  immediate = {
+    add_character_modifier = {
+      modifier = skonester_ai_expansion_push
+      months = 11
+    }
+    add_character_modifier = {
+      modifier = skonester_ai_stable_surge
+      months = 11
+    }
+    skonester_ai_ruthless_governance_yearly_effect = yes
+    if = {
+      limit = { has_global_variable = skonester_ai_yearly_de_jure_transfer_enabled }
+      skonester_one_click_transfer_direct_vassals_to_de_jure_liege_effect = yes
+    }
+  }
+}
+
+# AI 月脉冲：内政建设·经济改革·建筑节奏 / 宗教同化·文化统一·外交联姻 / 军事扩张·派系镇压（每月 on_action）
+skonester_officials.9210 = {
+  type = character_event
+  hidden = yes
+  # 性能：该事件可能被脉冲批量触发；加冷却避免短期内重复评估昂贵的辖内遍历触发器。
+  cooldown = { months = 2 }
+
+  trigger = {
+    is_ai = yes
+    is_landed = yes
+    is_independent_ruler = yes
+  }
+
+  immediate = {
+    skonester_ai_monthly_strategic_audit_character_effect = yes
+  }
+}

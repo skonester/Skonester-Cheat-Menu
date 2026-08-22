@@ -1,0 +1,444 @@
+﻿namespace = skonester_treasure_maker
+
+# 宝物工坊主菜单（25 项分档见 skonester_treasure_maker_stat_menu_generated.txt）
+skonester_treasure_maker.0001 = {
+  type = character_event
+  title = skonester_treasure_maker.0001.t
+  desc = skonester_treasure_maker.0001.desc
+  theme = stewardship
+  right_portrait = scope:actor
+
+  option = {
+    name = skonester_treasure_maker.0001.owner_self
+    trigger = { exists = scope:recipient NOT = { scope:recipient = { this = scope:actor } } scope:actor = { remove_character_flag = skonester_tm_give_recipient trigger_event = skonester_treasure_maker.0001 }
+    }
+  }
+
+  option = {
+    name = skonester_treasure_maker.0001.owner_recipient
+    trigger = { exists = scope:recipient NOT = { scope:recipient = { this = scope:actor } } scope:actor = { add_character_flag = skonester_tm_give_recipient trigger_event = skonester_treasure_maker.0001 }
+    }
+  }
+
+  option = {
+    name = skonester_treasure_maker.0001.page_stats_1
+    scope:actor = {
+    trigger_event = skonester_treasure_maker.1100 }
+  }
+  option = {
+    name = skonester_treasure_maker.0001.page_stats_2
+    scope:actor = {
+    trigger_event = skonester_treasure_maker.1101 }
+  }
+  option = {
+    name = skonester_treasure_maker.0001.page_stats_3
+    scope:actor = {
+    trigger_event = skonester_treasure_maker.1102 }
+  }
+  option = {
+    name = skonester_treasure_maker.0001.page_stats_4
+    scope:actor = {
+    trigger_event = skonester_treasure_maker.1103 }
+  }
+  option = {
+    name = skonester_treasure_maker.0001.page_stats_5
+    scope:actor = {
+    trigger_event = skonester_treasure_maker.1104 }
+  }
+
+  option = {
+    name = skonester_treasure_maker.0001.god_perks
+    scope:actor = {
+    trigger_event = skonester_treasure_maker.2000 }
+  }
+
+  option = {
+    name = skonester_treasure_maker.0001.kind_menu
+    scope:actor = {
+    trigger_event = skonester_treasure_maker.3000 }
+  }
+
+  option = {
+    name = skonester_treasure_maker.0001.quality_menu
+    scope:actor = {
+    trigger_event = skonester_treasure_maker.3001 }
+  }
+
+  option = {
+    name = skonester_treasure_maker.0001.randomize
+    scope:actor = {
+    skonester_treasure_maker_randomize_settings_effect = yes
+    trigger_event = skonester_treasure_maker.0001 }
+  }
+
+  option = {
+    name = skonester_treasure_maker.0001.reset
+    scope:actor = {
+    skonester_treasure_maker_reset_actor_settings_effect = yes
+    trigger_event = skonester_treasure_maker.0001 }
+  }
+
+  option = {
+    name = skonester_treasure_maker.0001.spawn
+    trigger = { scope:actor = { skonester_player_may_use_artifact_craft_trigger = yes } scope:actor = { skonester_treasure_maker_spawn_for_recipient_effect = yes scope:actor = { trigger_event = skonester_treasure_maker.3999 } }
+    }
+  }
+
+  option = {
+    name = skonester_treasure_maker.0001.close
+  }
+}
+
+# 逆天词条（多选开关；以 modifier 近似，见 skonester_treasure_maker_god_packs）
+skonester_treasure_maker.2000 = {
+  type = character_event
+  title = skonester_treasure_maker.2000.t
+  desc = skonester_treasure_maker.2000.desc
+  theme = stewardship
+
+  option = {
+    name = skonester_treasure_maker.2000.toggle_longlife
+    scope:actor = {
+    if = {
+
+      limit = { has_character_flag = skonester_tm_god_longlife }
+
+      remove_character_flag = skonester_tm_god_longlife
+
+    }
+
+    else = {
+
+      add_character_flag = skonester_tm_god_longlife
+
+    }
+
+    trigger_event = skonester_treasure_maker.2000 }
+  }
+  option = {
+    name = skonester_treasure_maker.2000.toggle_youth
+    scope:actor = {
+    if = {
+
+      limit = { has_character_flag = skonester_tm_god_youth }
+
+      remove_character_flag = skonester_tm_god_youth
+
+    }
+
+    else = {
+
+      add_character_flag = skonester_tm_god_youth
+
+    }
+
+    trigger_event = skonester_treasure_maker.2000 }
+  }
+  option = {
+    name = skonester_treasure_maker.2000.toggle_army
+    scope:actor = {
+    if = {
+
+      limit = { has_character_flag = skonester_tm_god_army_mass }
+
+      remove_character_flag = skonester_tm_god_army_mass
+
+    }
+
+    else = {
+
+      add_character_flag = skonester_tm_god_army_mass
+
+    }
+
+    trigger_event = skonester_treasure_maker.2000 }
+  }
+  option = {
+    name = skonester_treasure_maker.2000.toggle_scheme_kill
+    scope:actor = {
+    if = {
+
+      limit = { has_character_flag = skonester_tm_god_scheme_kill }
+
+      remove_character_flag = skonester_tm_god_scheme_kill
+
+    }
+
+    else = {
+
+      add_character_flag = skonester_tm_god_scheme_kill
+
+    }
+
+    trigger_event = skonester_treasure_maker.2000 }
+  }
+  option = {
+    name = skonester_treasure_maker.2000.toggle_scheme_immune
+    scope:actor = {
+    if = {
+
+      limit = { has_character_flag = skonester_tm_god_scheme_immune }
+
+      remove_character_flag = skonester_tm_god_scheme_immune
+
+    }
+
+    else = {
+
+      add_character_flag = skonester_tm_god_scheme_immune
+
+    }
+
+    trigger_event = skonester_treasure_maker.2000 }
+  }
+  option = {
+    name = skonester_treasure_maker.2000.toggle_dynasty_children
+    scope:actor = {
+    if = {
+
+      limit = { has_character_flag = skonester_tm_god_genius_children }
+
+      remove_character_flag = skonester_tm_god_genius_children
+
+    }
+
+    else = {
+
+      add_character_flag = skonester_tm_god_genius_children
+
+    }
+
+    trigger_event = skonester_treasure_maker.2000 }
+  }
+  option = {
+    name = skonester_treasure_maker.2000.toggle_tax
+    scope:actor = {
+    if = {
+
+      limit = { has_character_flag = skonester_tm_god_tax }
+
+      remove_character_flag = skonester_tm_god_tax
+
+    }
+
+    else = {
+
+      add_character_flag = skonester_tm_god_tax
+
+    }
+
+    trigger_event = skonester_treasure_maker.2000 }
+  }
+  option = {
+    name = skonester_treasure_maker.2000.toggle_vassal
+    scope:actor = {
+    if = {
+
+      limit = { has_character_flag = skonester_tm_god_vassal_calm }
+
+      remove_character_flag = skonester_tm_god_vassal_calm
+
+    }
+
+    else = {
+
+      add_character_flag = skonester_tm_god_vassal_calm
+
+    }
+
+    trigger_event = skonester_treasure_maker.2000 }
+  }
+  option = {
+    name = skonester_treasure_maker.2000.toggle_faith_culture
+    scope:actor = {
+    if = {
+
+      limit = { has_character_flag = skonester_tm_god_faith_culture }
+
+      remove_character_flag = skonester_tm_god_faith_culture
+
+    }
+
+    else = {
+
+      add_character_flag = skonester_tm_god_faith_culture
+
+    }
+
+    trigger_event = skonester_treasure_maker.2000 }
+  }
+  option = {
+    name = skonester_treasure_maker.2000.toggle_dynasty_piety
+    scope:actor = {
+    if = {
+
+      limit = { has_character_flag = skonester_tm_god_dynasty }
+
+      remove_character_flag = skonester_tm_god_dynasty
+
+    }
+
+    else = {
+
+      add_character_flag = skonester_tm_god_dynasty
+
+    }
+
+    trigger_event = skonester_treasure_maker.2000 }
+  }
+  option = {
+    name = skonester_treasure_maker.2000.toggle_knights
+    scope:actor = {
+    if = {
+
+      limit = { has_character_flag = skonester_tm_god_knights }
+
+      remove_character_flag = skonester_tm_god_knights
+
+    }
+
+    else = {
+
+      add_character_flag = skonester_tm_god_knights
+
+    }
+
+    trigger_event = skonester_treasure_maker.2000 }
+  }
+
+  option = {
+    name = skonester_treasure_maker.back_hub
+    scope:actor = {
+    trigger_event = skonester_treasure_maker.0001 }
+  }
+}
+
+# 宝物外形（剑为默认：无甲/礼器/书/饰品旗时）
+skonester_treasure_maker.3000 = {
+  type = character_event
+  title = skonester_treasure_maker.3000.t
+  desc = skonester_treasure_maker.3000.desc
+  theme = stewardship
+
+  option = {
+    name = skonester_treasure_maker.3000.kind_sword
+    scope:actor = { remove_character_flag =
+    skonester_tm_kind_armor remove_character_flag =
+    skonester_tm_kind_regalia remove_character_flag =
+    skonester_tm_kind_book remove_character_flag =
+    skonester_tm_kind_trinket
+    trigger_event = skonester_treasure_maker.0001 }
+  }
+  option = {
+    name = skonester_treasure_maker.3000.kind_armor
+    scope:actor = { remove_character_flag =
+    skonester_tm_kind_regalia remove_character_flag =
+    skonester_tm_kind_book remove_character_flag =
+    skonester_tm_kind_trinket
+    add_character_flag =
+    skonester_tm_kind_armor
+    trigger_event = skonester_treasure_maker.0001 }
+  }
+  option = {
+    name = skonester_treasure_maker.3000.kind_regalia
+    scope:actor = { remove_character_flag =
+    skonester_tm_kind_armor remove_character_flag =
+    skonester_tm_kind_book remove_character_flag =
+    skonester_tm_kind_trinket
+    add_character_flag =
+    skonester_tm_kind_regalia
+    trigger_event = skonester_treasure_maker.0001 }
+  }
+  option = {
+    name = skonester_treasure_maker.3000.kind_book
+    scope:actor = { remove_character_flag =
+    skonester_tm_kind_armor remove_character_flag =
+    skonester_tm_kind_regalia remove_character_flag =
+    skonester_tm_kind_trinket
+    add_character_flag =
+    skonester_tm_kind_book
+    trigger_event = skonester_treasure_maker.0001 }
+  }
+  option = {
+    name = skonester_treasure_maker.3000.kind_trinket
+    scope:actor = { remove_character_flag =
+    skonester_tm_kind_armor remove_character_flag =
+    skonester_tm_kind_regalia remove_character_flag =
+    skonester_tm_kind_book
+    add_character_flag =
+    skonester_tm_kind_trinket
+    trigger_event = skonester_treasure_maker.0001 }
+  }
+
+  option = {
+    name = skonester_treasure_maker.back_hub
+    scope:actor = {
+    trigger_event = skonester_treasure_maker.0001 }
+  }
+}
+
+# 品质 → wealth/quality 数值（见 spawn effect）
+skonester_treasure_maker.3001 = {
+  type = character_event
+  title = skonester_treasure_maker.3001.t
+  desc = skonester_treasure_maker.3001.desc
+  theme = stewardship
+
+  option = {
+    name = skonester_treasure_maker.3001.q_low
+    scope:actor = { remove_character_flag =
+    skonester_tm_quality_mid remove_character_flag =
+    skonester_tm_quality_high
+    add_character_flag =
+    skonester_tm_quality_low
+    trigger_event = skonester_treasure_maker.0001 }
+  }
+  option = {
+    name = skonester_treasure_maker.3001.q_mid
+    scope:actor = { remove_character_flag =
+    skonester_tm_quality_low remove_character_flag =
+    skonester_tm_quality_high
+    add_character_flag =
+    skonester_tm_quality_mid
+    trigger_event = skonester_treasure_maker.0001 }
+  }
+  option = {
+    name = skonester_treasure_maker.3001.q_high
+    scope:actor = { remove_character_flag =
+    skonester_tm_quality_low remove_character_flag =
+    skonester_tm_quality_mid
+    add_character_flag =
+    skonester_tm_quality_high
+    trigger_event = skonester_treasure_maker.0001 }
+  }
+  option = {
+    name = skonester_treasure_maker.3001.q_clear
+    scope:actor = { remove_character_flag =
+    skonester_tm_quality_low remove_character_flag =
+    skonester_tm_quality_mid remove_character_flag =
+    skonester_tm_quality_high
+    trigger_event = skonester_treasure_maker.0001 }
+  }
+
+  option = {
+    name = skonester_treasure_maker.back_hub
+    scope:actor = {
+    trigger_event = skonester_treasure_maker.0001 }
+  }
+}
+
+skonester_treasure_maker.3999 = {
+  type = character_event
+  title = skonester_treasure_maker.3999.t
+  desc = skonester_treasure_maker.3999.desc
+  theme = stewardship
+
+  option = {
+    name = skonester_treasure_maker.back_hub
+    scope:actor = {
+    trigger_event = skonester_treasure_maker.0001 }
+  }
+  option = {
+    name = skonester_treasure_maker.0001.close
+  }
+}

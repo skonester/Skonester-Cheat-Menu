@@ -1,0 +1,118 @@
+﻿namespace = skonester_artifact_repair
+
+# 中继打开文本编辑（days=0；GUI 用 skonester_acm_gui_text_edit_active 暂隐，勿删 gui_open）
+skonester_artifact_repair.9012 = {
+  type = character_event
+  hidden = yes
+  immediate = {
+    root = {
+      trigger_event = { id = skonester_artifact_repair.9010 days = 0 }
+    }
+  }
+}
+
+skonester_artifact_repair.9013 = {
+  type = character_event
+  hidden = yes
+  immediate = {
+    root = {
+      trigger_event = { id = skonester_artifact_repair.9011 days = 0 }
+    }
+  }
+}
+
+# 宝物制作/修改：自定义名称
+skonester_artifact_repair.9010 = {
+  type = character_event
+  title = skonester_acm_edit_name_evt_t
+  desc = skonester_acm_edit_name_evt_d
+  theme = stewardship
+  left_portrait = root
+
+  widget = {
+    gui = "event_window_widget_enter_text"
+    container = "dynamic_birth_name"
+    controller = {
+      type = text
+      data = {
+        key = skonester_acm_edit_artifact_name
+        default = skonester_acm_edit_name_default
+      }
+    }
+    setup_scope = {
+      root = { save_scope_as = text_target }
+    }
+  }
+
+  option = {
+    name = skonester_acm_custom_text_confirm
+    root = {
+      add_character_flag = skonester_acm_edit_name_confirmed
+      skonester_acm_refresh_artifact_text_preview_effect = yes
+      skonester_acm_reopen_artifact_text_editor_gui_effect = yes
+    }
+  }
+
+  option = {
+    name = skonester_acm_custom_text_clear
+    root = {
+      skonester_acm_clear_custom_artifact_name_effect = yes
+      skonester_acm_reopen_artifact_text_editor_gui_effect = yes
+    }
+  }
+
+  option = {
+    name = skonester_cheat_menu.00x.close
+    root = {
+      skonester_acm_reopen_artifact_text_editor_gui_effect = yes
+    }
+  }
+}
+
+# 宝物制作/修改：自定义描述
+skonester_artifact_repair.9011 = {
+  type = character_event
+  title = skonester_acm_edit_desc_evt_t
+  desc = skonester_acm_edit_desc_evt_d
+  theme = stewardship
+  left_portrait = root
+
+  widget = {
+    gui = "event_window_widget_enter_text"
+    container = "dynamic_birth_name"
+    controller = {
+      type = text
+      data = {
+        key = skonester_acm_edit_artifact_desc
+        default = skonester_cheat_menu_artifact_generic_desc
+      }
+    }
+    setup_scope = {
+      root = { save_scope_as = text_target }
+    }
+  }
+
+  option = {
+    name = skonester_acm_custom_text_confirm
+    root = {
+      add_character_flag = skonester_acm_edit_desc_confirmed
+      skonester_acm_refresh_artifact_text_preview_effect = yes
+      skonester_acm_reopen_artifact_text_editor_gui_effect = yes
+    }
+  }
+
+  option = {
+    name = skonester_acm_custom_text_clear
+    root = {
+      skonester_acm_clear_custom_artifact_desc_effect = yes
+      skonester_acm_reopen_artifact_text_editor_gui_effect = yes
+    }
+  }
+
+  option = {
+    name = skonester_cheat_menu.00x.close
+    root = {
+      skonester_acm_reopen_artifact_text_editor_gui_effect = yes
+    }
+  }
+}

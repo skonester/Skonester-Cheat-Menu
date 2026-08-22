@@ -1,0 +1,28 @@
+﻿on_marriage = {
+  effect = {
+    # 任一方带禁婚或旧版不婚誓约：立即拆散本段婚姻（多配偶则循环离婚）
+    if = {
+      limit = {
+        NOT = { has_character_flag = skonester_free_marriage_ui_prepared }
+        OR = {
+          has_trait = skonester_trait_marriage_ban
+          has_character_flag = skonester_no_marry_vow
+        }
+      }
+      skonester_cheat_menu_marriage_ban_strip_wedlocks_effect = yes
+    }
+    else_if = {
+      limit = {
+        exists = primary_spouse
+        primary_spouse = {
+          NOT = { has_character_flag = skonester_free_marriage_ui_prepared }
+          OR = {
+            has_trait = skonester_trait_marriage_ban
+            has_character_flag = skonester_no_marry_vow
+          }
+        }
+      }
+      divorce = primary_spouse
+    }
+  }
+}

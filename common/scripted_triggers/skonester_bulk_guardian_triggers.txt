@@ -1,0 +1,91 @@
+﻿# 自動分配監護人：學童 3–15 歲；含你宮廷內廷臣孩童，以及#非廷臣#但父或母為你的親生子女（同領地）；候選監護人篩選見 candidate_trigger
+
+skonester_bulk_guardian_ward_base_trigger = {
+  is_alive = yes
+  is_adult = no
+  age >= 3
+  age < 16
+  is_imprisoned = no
+}
+
+# 在你宮廷的學童（廷臣）
+skonester_bulk_guardian_ward_at_court_trigger = {
+  skonester_bulk_guardian_ward_base_trigger = yes
+  is_courtier_of = root
+}
+
+# 你的親生子女且非廷臣（避免與 every_courtier 重複），仍在同領地內
+skonester_bulk_guardian_ward_player_off_court_child_trigger = {
+  skonester_bulk_guardian_ward_base_trigger = yes
+  NOT = {
+    is_courtier_of = root
+  }
+  top_liege = root.top_liege
+  OR = {
+    father = root
+    mother = root
+  }
+}
+
+skonester_bulk_guardian_ward_eligible_trigger = {
+  skonester_bulk_guardian_ward_base_trigger = yes
+  OR = {
+    is_courtier_of = root
+    AND = {
+      NOT = {
+        is_courtier_of = root
+      }
+      OR = {
+        father = root
+        mother = root
+      }
+      top_liege = root.top_liege
+    }
+  }
+}
+
+# 滿 6 歲起可掛監護人關係；3–5 歲仍處理教育重心
+skonester_bulk_guardian_ward_needs_guardian_relation_trigger = {
+  skonester_bulk_guardian_ward_eligible_trigger = yes
+  age >= 6
+}
+
+# this = 候選監護人；需存在 scope:skonester_bulk_ward = 學童
+skonester_bulk_guardian_candidate_trigger = {
+  is_alive = yes
+  is_adult = yes
+  is_imprisoned = no
+  learning >= 15
+  culture = scope:skonester_bulk_ward.culture
+  NOT = {
+    this = scope:skonester_bulk_ward
+  }
+  # 每位監護人同時只能帶一名學童：用 any_relation 涵蓋 num_of_relation_ward 可能漏計的秘密學童等
+  NOT = {
+    any_relation = {
+      type = ward
+    }
+  }
+  NOR = {
+    has_trait = lazy
+    has_trait = wrathful
+    has_trait = arrogant
+    has_trait = deceitful
+    has_trait = sadistic
+    has_trait = lustful
+  }
+  NOR = {
+    has_trait = incapable
+  }
+}
+
+skonester_bulk_guardian_any_ward_trigger = {
+  OR = {
+    any_courtier = {
+      skonester_bulk_guardian_ward_at_court_trigger = yes
+    }
+    any_child = {
+      skonester_bulk_guardian_ward_player_off_court_child_trigger = yes
+    }
+  }
+}

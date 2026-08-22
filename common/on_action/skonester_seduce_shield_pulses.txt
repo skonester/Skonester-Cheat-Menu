@@ -1,0 +1,18 @@
+﻿# 椒房护持：新局默认关闭，由决议手动开启；每年为有护持的人类领主重刷配偶与妾的忠贞相关特质（防事件洗掉）。每日清密谋/恋人/补特质见 zzz_skonester_fidelity_affair_sweep_daily.txt。
+
+# 子行动挂在 yearly_playable_pulse 上，root 即为当前可玩者（与原版天朝类 on_action 追加方式一致，勿整段覆盖）
+yearly_playable_pulse = {
+  on_actions = { skonester_seduce_shield_yearly_traits }
+}
+
+skonester_seduce_shield_yearly_traits = {
+  effect = {
+    if = {
+      limit = {
+        is_ai = no
+        has_character_flag = skonester_seduce_shield_active
+      }
+      skonester_seduce_shield_grant_chastity_traits_to_consorts_effect = yes
+    }
+  }
+}

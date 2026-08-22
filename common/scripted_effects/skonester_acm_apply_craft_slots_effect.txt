@@ -1,0 +1,21 @@
+﻿# ACM: GUI 五修饰槽（m1–m5）+ 层数 skonester_craft_m{1..5}_cnt；在宝物 scope 上注入 advcm 叠层修饰符。
+skonester_apply_crafted_artifact_modifiers_effect = {
+  if = {
+    limit = {
+      NOT = { exists = scope:skonester_acm_craft_creator }
+      exists = scope:actor
+    }
+    scope:actor = { save_scope_as = skonester_acm_craft_creator }
+  }
+  if = {
+    limit = { exists = scope:skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_add_artifact_modifier_slot_1 = yes
+      skonester_acm_add_artifact_modifier_slot_2 = yes
+      skonester_acm_add_artifact_modifier_slot_3 = yes
+      skonester_acm_add_artifact_modifier_slot_4 = yes
+      skonester_acm_add_artifact_modifier_slot_5 = yes
+      skonester_acm_persist_craft_slots_on_artifact_effect = yes
+    }
+  }
+}

@@ -1,0 +1,13 @@
+﻿l_german:
+ skonester_domicile_preset_economy_bonus_modifier: "Wohnsitz-Voreinstellung · Wirtschaftsbonus"
+ skonester_domicile_preset_military_bonus_modifier: "Wohnsitz-Voreinstellung · Militärbonus"
+ skonester_domicile_preset_balanced_bonus_modifier: "Wohnsitz-Voreinstellung · Ausgewogener Bonus"
+ skonester_domicile_cheat.0100.t: "Güter-System Modifikationspanel"
+ skonester_domicile_cheat.0100.desc: "Wähle den Umfang der Güterverbesserung aus. Automatische Synchronisation kultureller Traditionen und Schutz vor doppelter Ausführung sind integriert."
+ skonester_domicile_cheat.0100.own: "Alle familiären Güter verbessern"
+ skonester_domicile_cheat.0100.own_tt: "Betrifft nur deine Familienmitglieder und fügt vordefinierte kulturelle Traditionen hinzu."
+ skonester_domicile_cheat.0100.global: "Alle Güter weltweit verbessern"
+ skonester_domicile_cheat.0100.global_tt: "Durchsucht die gesamte Karte nach allen existierenden Charakteren und verbessert deren Güter. (Nur für unabhängige Herrscher sichtbar)"
+ skonester_domicile_cheat.0100.close: "Panel schließen"
+ skonester_domicile_cheat_done: "Abgeschlossen"
+ skonester_domicile_cheat_active: "Reformsystem aktiv"

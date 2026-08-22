@@ -1,0 +1,28 @@
+﻿l_english:
+
+ skonester_cheat_menu_ai_ai_interaction: "Intimacy"
+
+ skonester_cheat_menu_ai_ai_interaction_desc: "Spend a quiet private evening with [recipient.GetShortUIName]. You may give fully to the moment, or choose to hold back before going too far."
+
+ skonester_cheat_menu.0010.t: "Intimacy — The Night Awaits"
+
+ skonester_cheat_menu.0010.desc: "The servants have departed, leaving you alone with [skonester_cheat_menu_target.GetShortUIName]. Silken veils seal away the outside world. Their warm breath brushes your skin, candlelight dancing within their eyes. Wars and state affairs shall wait for another hour."
+
+ skonester_cheat_menu.0010.desc_lover: "Alone with your lover [skonester_cheat_menu_target.GetShortUIName], all pretense fades away. Every gentle touch carries the passion of past trysts. Scent and flesh blend as the night itself wraps the two of you in embrace."
+
+ skonester_cheat_menu.0010.desc_spouse: "Your spouse [skonester_cheat_menu_target.GetShortUIName] undresses you with familiar grace, their gaze filled with long-known desire. This marriage bed is theirs by right, and tonight they mean to remind you of the bond you share."
+
+ skonester_cheat_menu.0010.desc_concubine: "Your concubine [skonester_cheat_menu_target.GetShortUIName] lowers their gaze while loosening their garments. They know their station well — and know just how to keep you here, with soft whispers and light caresses."
+
+ skonester_cheat_menu.0010.desc_camp: "Winds howl across the camp beyond the tent, yet warmth and sweet fragrance fill the space within. You rest beside [skonester_cheat_menu_target.GetShortUIName] upon a simple campaign cot; armor still holds the day's heat, while your skin burns hotter still. A stolen moment amid war, far sweeter than any triumph on the battlefield."
+
+ skonester_cheat_menu.0010.continue: "Surrender to desire…"
+
+ skonester_cheat_menu.0010.cancel: "Draw away"
+
+ skonester_cheat_menu.0012.t: "Intimacy — Afterglow"
+
+ skonester_cheat_menu.0012.desc: "Both weary, you remain reclined together. [skonester_cheat_menu_target.GetShortUIName]'s cheeks glow with warmth, their fingers resting lightly upon your wrist. The distant calls of night guards drift past the curtains, yet the lingering warmth between you does not fade."
+
+ skonester_cheat_menu.0012.ok: "Help them dress"
+

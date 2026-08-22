@@ -1,0 +1,408 @@
+﻿# 供 skonester_boost_world_ai_rulers_decision 的 ai_will_do 使用（与邻国兵力比、宣称、多线战争等）
+
+# 相对邻国：己方 max 兵力 ≥ 对方 × 0.9（微弱优势 / 均势偏强）
+skonester_ai_boost_neighbor_rel_power_090_trigger = {
+  any_neighboring_top_liege_realm_owner = {
+    root.max_military_strength >= {
+      value = this.max_military_strength
+      multiply = 0.9
+    }
+  }
+}
+
+# 相对邻国：己方 max 兵力 ≥ 对方 × 0.75
+skonester_ai_boost_neighbor_rel_power_075_trigger = {
+  any_neighboring_top_liege_realm_owner = {
+    root.max_military_strength >= {
+      value = this.max_military_strength
+      multiply = 0.75
+    }
+  }
+}
+
+# 相对某一邻国明显劣势（max 兵力 < 对方 × 0.4，仅极端弱势才大幅扣分）
+skonester_ai_boost_critically_weaker_than_neighbor_trigger = {
+  any_neighboring_top_liege_realm_owner = {
+    root.max_military_strength < {
+      value = this.max_military_strength
+      multiply = 0.4
+    }
+  }
+}
+
+# 持有伯爵及以上宣称（近似「有法理/宣称线」）
+skonester_ai_boost_has_notable_claim_trigger = {
+  any_claim = {
+    tier >= tier_county
+  }
+}
+
+# 邻国统治者信仰不同（异端/异教邻居）
+skonester_ai_boost_neighbor_other_faith_trigger = {
+  any_neighboring_top_liege_realm_owner = {
+    NOT = { faith = root.faith }
+  }
+}
+
+# 邻国弱邦（realm_size ≤ minor_realm_size，原版 12）
+skonester_ai_boost_neighbor_small_realm_trigger = {
+  any_neighboring_top_liege_realm_owner = {
+    realm_size <= minor_realm_size
+  }
+}
+
+# 同时至少三场战争（略收敛）
+skonester_ai_boost_multiple_character_wars_trigger = {
+  any_character_war = {
+    count >= 3
+  }
+}
+
+# 直辖/封臣领地内：与统治者文化不同的「异文化种类」计数（glob 文化 + prev 绑定）
+# foreign_culture_count == 1
+skonester_ai_boost_foreign_culture_count_equals_1_trigger = {
+  any_culture_global = {
+    count = 1
+    NOR = { this = root.culture }
+    root = {
+      any_sub_realm_county = {
+        culture = prev
+      }
+    }
+  }
+}
+
+# foreign_culture_count > 2（≥3 种外来文化圈的县份出现在境内）
+skonester_ai_boost_foreign_culture_count_above_2_trigger = {
+  any_culture_global = {
+    count >= 3
+    NOR = { this = root.culture }
+    root = {
+      any_sub_realm_county = {
+        culture = prev
+      }
+    }
+  }
+}
+
+# 至少一支针对玩家的派系（近似 any_faction）
+skonester_ai_boost_has_targeting_faction_trigger = {
+  any_targeting_faction = {
+    always = yes
+  }
+}
+
+# 任意针对玩家的派系处于「高危」不满（原版 is_dangerous_faction_trigger：农奴 ≤12 个月满条；其它派系 discontent_per_month > 0）
+skonester_ai_boost_high_faction_discontent_trigger = {
+  any_targeting_faction = {
+    is_dangerous_faction_trigger = yes
+  }
+}
+
+# 至少一名封臣对领主好感 < 0（原版无 aggregate vassal_opinion，用语义等价）
+skonester_ai_boost_negative_vassal_opinion_trigger = {
+  any_vassal = {
+    opinion = {
+      target = root
+      value < 0
+    }
+  }
+}
+
+# 边境上与玩家交战的邻国独立统治者，且对方 max 兵力 ≥ 己方 × 0.65（近似「附近有强敌」；原版无 nearby_power_enemy）
+skonester_ai_boost_nearby_powerful_enemy_at_war_trigger = {
+  any_neighboring_top_liege_realm_owner = {
+    is_at_war_with = root
+    max_military_strength >= {
+      value = root.max_military_strength
+      multiply = 0.65
+    }
+  }
+}
+
+# —— 制衡玩家（ai_will_do）：检测人类统治者；无主控玩家时全部为否 ——
+
+# 邻国独立统治者中存在人类玩家，且其 max 兵力 ≥ root × 0.75（强邻玩家）
+skonester_ai_boost_player_powerful_neighbor_trigger = {
+  any_neighboring_top_liege_realm_owner = {
+    is_ai = no
+    max_military_strength >= {
+      value = root.max_military_strength
+      multiply = 0.75
+    }
+  }
+}
+
+# 任一独立游玩的人类统治者 realm_size > 30（全局「大户玩家」加压）
+skonester_ai_boost_any_player_realm_gt_30_trigger = {
+  any_living_character = {
+    is_ai = no
+    is_playable_character = yes
+    is_independent_ruler = yes
+    realm_size > 30
+  }
+}
+
+# root 与人类独立统治者首都同属 de jure empire 或 kingdom（近似「与玩家同城际宏观区」，原版无 same_region）
+skonester_ai_boost_same_macro_region_as_any_player_trigger = {
+  any_living_character = {
+    is_ai = no
+    is_playable_character = yes
+    is_independent_ruler = yes
+    OR = {
+      capital_county.empire ?= root.capital_county.empire
+      capital_county.kingdom ?= root.capital_county.kingdom
+    }
+  }
+}
+
+# 「吞地」：任一人类独立 ruler realm≥55 / realm≥38 且在战 / 征服者（加压全域 AI）
+skonester_ai_boost_player_blobbing_trigger = {
+  any_living_character = {
+    is_ai = no
+    is_playable_character = yes
+    is_independent_ruler = yes
+    OR = {
+      realm_size >= 55
+      AND = {
+        realm_size >= 38
+        is_at_war = yes
+      }
+      has_trait = conqueror
+    }
+  }
+}
+
+# —— 以下为 skonester_boost_world_ai_rulers_decision 超大 ai_will_do 增补 ——
+
+skonester_ai_boost_neighbor_ratio_ge_080_trigger = {
+  any_neighboring_top_liege_realm_owner = {
+    root.max_military_strength >= {
+      value = this.max_military_strength
+      multiply = 0.8
+    }
+  }
+}
+
+skonester_ai_boost_neighbor_ratio_ge_065_trigger = {
+  any_neighboring_top_liege_realm_owner = {
+    root.max_military_strength >= {
+      value = this.max_military_strength
+      multiply = 0.65
+    }
+  }
+}
+
+skonester_ai_boost_neighbor_ratio_ge_050_trigger = {
+  any_neighboring_top_liege_realm_owner = {
+    root.max_military_strength >= {
+      value = this.max_military_strength
+      multiply = 0.5
+    }
+  }
+}
+
+skonester_ai_boost_human_neighbor_any_trigger = {
+  any_neighboring_top_liege_realm_owner = {
+    is_ai = no
+  }
+}
+
+skonester_ai_boost_any_player_realm_gt_10_trigger = {
+  any_living_character = {
+    is_ai = no
+    is_playable_character = yes
+    is_independent_ruler = yes
+    realm_size > 10
+  }
+}
+
+skonester_ai_boost_player_military_gt_root_trigger = {
+  any_living_character = {
+    is_ai = no
+    is_playable_character = yes
+    is_independent_ruler = yes
+    max_military_strength > root.max_military_strength
+  }
+}
+
+skonester_ai_boost_any_claim_any_tier_trigger = {
+  any_claim = {
+    tier >= tier_barony
+  }
+}
+
+skonester_ai_boost_any_sub_realm_dev_ge_10_trigger = {
+  any_sub_realm_county = {
+    development_level >= 10
+  }
+}
+
+skonester_ai_boost_capital_dev_lt_15_trigger = {
+  capital_county = {
+    development_level < 15
+  }
+}
+
+skonester_ai_boost_three_plus_bad_dev_counties_trigger = {
+  calc_true_if = {
+    amount >= 3
+    any_sub_realm_county = {
+      development_level < bad_development_level
+    }
+  }
+}
+
+skonester_ai_boost_capital_can_build_more_trigger = {
+  capital_county = {
+    title_province = {
+      OR = {
+        free_building_slots > 0
+        combined_building_level < 25
+      }
+    }
+  }
+}
+
+skonester_ai_boost_faith_fervor_gt_40_trigger = {
+  faith = {
+    fervor > 40
+  }
+}
+
+skonester_ai_boost_wrong_faith_counties_exactly_one_trigger = {
+  calc_true_if = {
+    amount = 1
+    any_sub_realm_county = {
+      NOT = { faith = root.faith }
+    }
+  }
+}
+
+skonester_ai_boost_wrong_faith_counties_two_plus_trigger = {
+  calc_true_if = {
+    amount >= 2
+    any_sub_realm_county = {
+      NOT = { faith = root.faith }
+    }
+  }
+}
+
+skonester_ai_boost_vassal_wrong_faith_trigger = {
+  any_vassal = {
+    NOT = { faith = root.faith }
+  }
+}
+
+skonester_ai_boost_any_county_wrong_faith_trigger = {
+  any_sub_realm_county = {
+    NOT = { faith = root.faith }
+  }
+}
+
+skonester_ai_boost_any_county_wrong_culture_trigger = {
+  any_sub_realm_county = {
+    NOT = { culture = root.culture }
+  }
+}
+
+skonester_ai_boost_vassal_at_war_with_root_trigger = {
+  any_vassal = {
+    is_at_war_with = root
+  }
+}
+
+skonester_ai_boost_vassal_has_claim_trigger = {
+  any_vassal = {
+    any_claim = {
+      always = yes
+    }
+  }
+}
+
+skonester_ai_boost_direct_vassals_lt_5_trigger = {
+  NOT = {
+    calc_true_if = {
+      amount >= 5
+      any_vassal = {
+        always = yes
+      }
+    }
+  }
+}
+
+skonester_ai_boost_pluralistic_faith_trigger = {
+  faith = {
+    has_doctrine = doctrine_pluralism_pluralistic
+  }
+}
+
+skonester_ai_boost_vassal_opinion_below_20_trigger = {
+  any_vassal = {
+    opinion = {
+      target = root
+      value < 20
+    }
+  }
+}
+
+skonester_ai_boost_neighbor_realm_stronger_trigger = {
+  any_neighboring_top_liege_realm_owner = {
+    max_military_strength > root.max_military_strength
+  }
+}
+
+skonester_ai_boost_any_ally_weaker_military_trigger = {
+  any_ally = {
+    max_military_strength < root.max_military_strength
+  }
+}
+
+skonester_ai_boost_any_ally_capital_dev_ge_15_trigger = {
+  any_ally = {
+    capital_county = {
+      development_level >= 15
+    }
+  }
+}
+
+# 任一针对玩家的派系战力已达原版「最低有效档」之上（近似 faction_strength > 20% 量级）
+skonester_ai_boost_targeting_faction_power_ge_minimal_trigger = {
+  any_targeting_faction = {
+    faction_power >= faction_power_minimal
+  }
+}
+
+# 派系首领兵力 ≥ 领主 max 兵力的 35%（近似「首领实力强」）
+skonester_ai_boost_targeting_faction_leader_strong_trigger = {
+  any_targeting_faction = {
+    faction_leader ?= {
+      max_military_strength >= {
+        value = root.max_military_strength
+        multiply = 0.35
+      }
+    }
+  }
+}
+
+# 派系不满条将满（近似「叛乱风险高」；原版无 vassal_revolt_risk 数值）
+skonester_ai_boost_targeting_faction_near_max_discontent_trigger = {
+  any_targeting_faction = {
+    months_until_max_discontent <= 18
+  }
+}
+
+# 所有直属封臣对领主好感均 >50（无则不算「全民拥戴」）
+skonester_ai_boost_all_direct_vassals_opinion_gt_50_trigger = {
+  any_vassal = {
+    always = yes
+  }
+  NOT = {
+    any_vassal = {
+      opinion = {
+        target = root
+        value <= 50
+      }
+    }
+  }
+}

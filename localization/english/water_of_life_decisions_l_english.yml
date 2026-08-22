@@ -1,0 +1,20 @@
+﻿l_english:
+
+ start_searching_for_water_of_life_decision:0 "A Day Without Death"
+ start_searching_for_water_of_life_decision_tooltip:1 "Clavius found the peace he sought not in Rome, but in the #E Nous#! of Mary. He secures their bloodline forever."
+ 
+ start_searching_for_water_of_life_decision_desc:0 "#F 'I have seen two things which cannot reconcile: A man dead without question, and that same man alive again.'#!\n\nWhen Tribune Clavius Aquila fled the madness of Rome, he followed the one the others rejected. As the *Gospel of Mary* records, Peter challenged her: 'Did He really speak with a woman without our knowledge?' But Levi answered: 'If the Savior made her worthy, who are you indeed to reject her?'\n\nClavius became the sword of that worthiness. To protect Mary—disguised by hair dyed red as Roman clay—and their secret children, he drank from the Cup. He became the anchor against the dissolution of matter, guarding the truth she taught: #'The Son of Man is within you. Follow after Him!'#!\n\n#P The Tribune never died. He walks the earth still, the eternal sentinel of the Gnosis.#!\n\n#X #bold ~ TRIBUNE OF THE TENTH, KEEPER OF THE SILENCE ~ \n   ~ 'HE LOVED HER MORE THAN US' ~ \n~ BARBARA, THE REBORN, SHALL RISE ~ #! #!"
+ 
+ start_searching_for_water_of_life_decision_start:0 "#Y #bold *'Peace be with you. Acquire my peace within yourselves.'#!"
+ 
+ start_searching_for_water_of_life_decision_proceed:0 "The seal on the tomb was broken, and so was the hold of death. Clavius endures in the shadows, waiting for the descendant who bears the #E Nous#! (Mind) of his beloved Mary. Accept to join the #P Line of Barbara#!—Magdalene reborn. Gain #Z The Tribune's Protection#! and #E claim to the Grail#!, but beware the jealousy of the orthodox."
+ 
+ start_searching_for_water_of_life_decision_stress:0 "Mary taught: 'For where the mind is, there is the treasure.' Yet Clavius has lingered in the flesh for centuries, while she ascended to rest in the Silence. Can I bear this separation?"
+ 
+ start_searching_for_water_of_life_decision_stress_lazy:0 "#N 'Guard yourselves so that no one leads you astray.' A Guardian cannot sleep. With [GetTrait('lazy').GetName( GetPlayer )], the discipline required to seek the #E Son of Man within#! turns to dust.#!"
+ 
+ start_searching_for_water_of_life_decision_confirm:0 "All natures are resolved into their roots."
+ 
+ water_of_life_modifier_knight_and_maa_limit_and_cap_increased:0 "Guardians of the Nous"
+ water_of_life_modifier_hunting_trophy:0 "The Secret Gospel"
+ water_of_life_modifier_good_deal:0 "Blood of the Beloved"

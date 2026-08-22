@@ -1,0 +1,731 @@
+﻿# 一键任免：在「严格择优」内阁与宫廷之后，对仍空缺的席位先宽松直属封臣择优，再廷臣择优，再 create_character 入廷并任命。
+# 须在 scope:skonester_pos_reshuffle_liege 已存在时由 skonester_positions_mass_reshuffle_liege_effect 调用。
+
+skonester_positions_spawn_one_generic_courtier_for_pos_reshuffle_effect = {
+  scope:skonester_pos_reshuffle_liege = {
+    create_character = {
+      employer = scope:skonester_pos_reshuffle_liege
+      culture = scope:skonester_pos_reshuffle_liege.culture
+      faith = scope:skonester_pos_reshuffle_liege.faith
+      gender_female_chance = 50
+      age = 28
+      random_traits = no
+      dynasty = none
+      diplomacy = { min_template_average_skill max_template_high_skill }
+      martial = { min_template_average_skill max_template_high_skill }
+      stewardship = { min_template_average_skill max_template_high_skill }
+      intrigue = { min_template_average_skill max_template_high_skill }
+      learning = { min_template_average_skill max_template_high_skill }
+      prowess = { min_template_average_skill max_template_high_skill }
+      save_scope_as = skonester_pos_spawned
+    }
+  }
+}
+
+# 标准五席 + 库里台：仅处理「当前仍无阁员」的席位；先 ordered_vassal（直属封臣），再 ordered_courtier，再生成一人并 assign。
+skonester_positions_fill_remaining_council_loose_then_spawn_effect = {
+  scope:skonester_pos_reshuffle_liege = {
+    if = {
+      limit = {
+        NOT = { has_council_position = councillor_chancellor }
+        any_vassal = {
+          skonester_positions_council_reshuffle_vassal_candidate_trigger = yes
+        }
+      }
+      ordered_vassal = {
+        limit = {
+          skonester_positions_council_reshuffle_vassal_candidate_trigger = yes
+        }
+        order_by = diplomacy
+        max = 1
+        check_range_bounds = no
+        save_scope_as = skonester_pos_pick
+      }
+      if = {
+        limit = { exists = scope:skonester_pos_pick }
+        assign_councillor_type = {
+          type = councillor_chancellor
+          target = scope:skonester_pos_pick
+        }
+        clear_saved_scope = skonester_pos_pick
+      }
+    }
+
+    if = {
+      limit = {
+        NOT = { has_council_position = councillor_chancellor }
+        any_courtier = {
+          is_adult = yes
+          is_imprisoned = no
+          NOT = { is_incapable = yes }
+          NOT = { this = scope:skonester_pos_reshuffle_liege }
+          NOT = { is_councillor_of = scope:skonester_pos_reshuffle_liege }
+        }
+      }
+      ordered_courtier = {
+        limit = {
+          is_adult = yes
+          is_imprisoned = no
+          NOT = { is_incapable = yes }
+          NOT = { this = scope:skonester_pos_reshuffle_liege }
+          NOT = { is_councillor_of = scope:skonester_pos_reshuffle_liege }
+        }
+        order_by = diplomacy
+        max = 1
+        check_range_bounds = no
+        save_scope_as = skonester_pos_pick
+      }
+      if = {
+        limit = { exists = scope:skonester_pos_pick }
+        assign_councillor_type = {
+          type = councillor_chancellor
+          target = scope:skonester_pos_pick
+        }
+        clear_saved_scope = skonester_pos_pick
+      }
+    }
+    if = {
+      limit = { NOT = { has_council_position = councillor_chancellor } }
+      skonester_positions_spawn_one_generic_courtier_for_pos_reshuffle_effect = yes
+      if = {
+        limit = { exists = scope:skonester_pos_spawned }
+        assign_councillor_type = {
+          type = councillor_chancellor
+          target = scope:skonester_pos_spawned
+        }
+        clear_saved_scope = skonester_pos_spawned
+      }
+    }
+
+    if = {
+      limit = {
+        NOT = { has_council_position = councillor_marshal }
+        any_vassal = {
+          skonester_positions_council_reshuffle_vassal_candidate_trigger = yes
+        }
+      }
+      ordered_vassal = {
+        limit = {
+          skonester_positions_council_reshuffle_vassal_candidate_trigger = yes
+        }
+        order_by = martial
+        max = 1
+        check_range_bounds = no
+        save_scope_as = skonester_pos_pick
+      }
+      if = {
+        limit = { exists = scope:skonester_pos_pick }
+        assign_councillor_type = {
+          type = councillor_marshal
+          target = scope:skonester_pos_pick
+        }
+        clear_saved_scope = skonester_pos_pick
+      }
+    }
+
+    if = {
+      limit = {
+        NOT = { has_council_position = councillor_marshal }
+        any_courtier = {
+          is_adult = yes
+          is_imprisoned = no
+          NOT = { is_incapable = yes }
+          NOT = { this = scope:skonester_pos_reshuffle_liege }
+          NOT = { is_councillor_of = scope:skonester_pos_reshuffle_liege }
+        }
+      }
+      ordered_courtier = {
+        limit = {
+          is_adult = yes
+          is_imprisoned = no
+          NOT = { is_incapable = yes }
+          NOT = { this = scope:skonester_pos_reshuffle_liege }
+          NOT = { is_councillor_of = scope:skonester_pos_reshuffle_liege }
+        }
+        order_by = martial
+        max = 1
+        check_range_bounds = no
+        save_scope_as = skonester_pos_pick
+      }
+      if = {
+        limit = { exists = scope:skonester_pos_pick }
+        assign_councillor_type = {
+          type = councillor_marshal
+          target = scope:skonester_pos_pick
+        }
+        clear_saved_scope = skonester_pos_pick
+      }
+    }
+    if = {
+      limit = { NOT = { has_council_position = councillor_marshal } }
+      skonester_positions_spawn_one_generic_courtier_for_pos_reshuffle_effect = yes
+      if = {
+        limit = { exists = scope:skonester_pos_spawned }
+        assign_councillor_type = {
+          type = councillor_marshal
+          target = scope:skonester_pos_spawned
+        }
+        clear_saved_scope = skonester_pos_spawned
+      }
+    }
+
+    if = {
+      limit = {
+        NOT = { has_council_position = councillor_steward }
+        any_vassal = {
+          skonester_positions_council_reshuffle_vassal_candidate_trigger = yes
+        }
+      }
+      ordered_vassal = {
+        limit = {
+          skonester_positions_council_reshuffle_vassal_candidate_trigger = yes
+        }
+        order_by = stewardship
+        max = 1
+        check_range_bounds = no
+        save_scope_as = skonester_pos_pick
+      }
+      if = {
+        limit = { exists = scope:skonester_pos_pick }
+        assign_councillor_type = {
+          type = councillor_steward
+          target = scope:skonester_pos_pick
+        }
+        clear_saved_scope = skonester_pos_pick
+      }
+    }
+
+    if = {
+      limit = {
+        NOT = { has_council_position = councillor_steward }
+        any_courtier = {
+          is_adult = yes
+          is_imprisoned = no
+          NOT = { is_incapable = yes }
+          NOT = { this = scope:skonester_pos_reshuffle_liege }
+          NOT = { is_councillor_of = scope:skonester_pos_reshuffle_liege }
+        }
+      }
+      ordered_courtier = {
+        limit = {
+          is_adult = yes
+          is_imprisoned = no
+          NOT = { is_incapable = yes }
+          NOT = { this = scope:skonester_pos_reshuffle_liege }
+          NOT = { is_councillor_of = scope:skonester_pos_reshuffle_liege }
+        }
+        order_by = stewardship
+        max = 1
+        check_range_bounds = no
+        save_scope_as = skonester_pos_pick
+      }
+      if = {
+        limit = { exists = scope:skonester_pos_pick }
+        assign_councillor_type = {
+          type = councillor_steward
+          target = scope:skonester_pos_pick
+        }
+        clear_saved_scope = skonester_pos_pick
+      }
+    }
+    if = {
+      limit = { NOT = { has_council_position = councillor_steward } }
+      skonester_positions_spawn_one_generic_courtier_for_pos_reshuffle_effect = yes
+      if = {
+        limit = { exists = scope:skonester_pos_spawned }
+        assign_councillor_type = {
+          type = councillor_steward
+          target = scope:skonester_pos_spawned
+        }
+        clear_saved_scope = skonester_pos_spawned
+      }
+    }
+
+    if = {
+      limit = {
+        NOT = { has_council_position = councillor_spymaster }
+        any_vassal = {
+          skonester_positions_council_reshuffle_vassal_candidate_trigger = yes
+        }
+      }
+      ordered_vassal = {
+        limit = {
+          skonester_positions_council_reshuffle_vassal_candidate_trigger = yes
+        }
+        order_by = intrigue
+        max = 1
+        check_range_bounds = no
+        save_scope_as = skonester_pos_pick
+      }
+      if = {
+        limit = { exists = scope:skonester_pos_pick }
+        assign_councillor_type = {
+          type = councillor_spymaster
+          target = scope:skonester_pos_pick
+        }
+        clear_saved_scope = skonester_pos_pick
+      }
+    }
+
+    if = {
+      limit = {
+        NOT = { has_council_position = councillor_spymaster }
+        any_courtier = {
+          is_adult = yes
+          is_imprisoned = no
+          NOT = { is_incapable = yes }
+          NOT = { this = scope:skonester_pos_reshuffle_liege }
+          NOT = { is_councillor_of = scope:skonester_pos_reshuffle_liege }
+        }
+      }
+      ordered_courtier = {
+        limit = {
+          is_adult = yes
+          is_imprisoned = no
+          NOT = { is_incapable = yes }
+          NOT = { this = scope:skonester_pos_reshuffle_liege }
+          NOT = { is_councillor_of = scope:skonester_pos_reshuffle_liege }
+        }
+        order_by = intrigue
+        max = 1
+        check_range_bounds = no
+        save_scope_as = skonester_pos_pick
+      }
+      if = {
+        limit = { exists = scope:skonester_pos_pick }
+        assign_councillor_type = {
+          type = councillor_spymaster
+          target = scope:skonester_pos_pick
+        }
+        clear_saved_scope = skonester_pos_pick
+      }
+    }
+    if = {
+      limit = { NOT = { has_council_position = councillor_spymaster } }
+      skonester_positions_spawn_one_generic_courtier_for_pos_reshuffle_effect = yes
+      if = {
+        limit = { exists = scope:skonester_pos_spawned }
+        assign_councillor_type = {
+          type = councillor_spymaster
+          target = scope:skonester_pos_spawned
+        }
+        clear_saved_scope = skonester_pos_spawned
+      }
+    }
+
+    if = {
+      limit = {
+        NOT = { has_council_position = councillor_court_chaplain }
+        any_vassal = {
+          skonester_positions_council_reshuffle_vassal_candidate_trigger = yes
+          faith = scope:skonester_pos_reshuffle_liege.faith
+        }
+      }
+      ordered_vassal = {
+        limit = {
+          skonester_positions_council_reshuffle_vassal_candidate_trigger = yes
+          faith = scope:skonester_pos_reshuffle_liege.faith
+        }
+        order_by = learning
+        max = 1
+        check_range_bounds = no
+        save_scope_as = skonester_pos_pick
+      }
+      if = {
+        limit = { exists = scope:skonester_pos_pick }
+        assign_councillor_type = {
+          type = councillor_court_chaplain
+          target = scope:skonester_pos_pick
+        }
+        clear_saved_scope = skonester_pos_pick
+      }
+    }
+
+    if = {
+      limit = {
+        NOT = { has_council_position = councillor_court_chaplain }
+        any_courtier = {
+          is_adult = yes
+          is_imprisoned = no
+          NOT = { is_incapable = yes }
+          NOT = { this = scope:skonester_pos_reshuffle_liege }
+          NOT = { is_councillor_of = scope:skonester_pos_reshuffle_liege }
+          faith = scope:skonester_pos_reshuffle_liege.faith
+        }
+      }
+      ordered_courtier = {
+        limit = {
+          is_adult = yes
+          is_imprisoned = no
+          NOT = { is_incapable = yes }
+          NOT = { this = scope:skonester_pos_reshuffle_liege }
+          NOT = { is_councillor_of = scope:skonester_pos_reshuffle_liege }
+          faith = scope:skonester_pos_reshuffle_liege.faith
+        }
+        order_by = learning
+        max = 1
+        check_range_bounds = no
+        save_scope_as = skonester_pos_pick
+      }
+      if = {
+        limit = { exists = scope:skonester_pos_pick }
+        assign_councillor_type = {
+          type = councillor_court_chaplain
+          target = scope:skonester_pos_pick
+        }
+        clear_saved_scope = skonester_pos_pick
+      }
+    }
+    if = {
+      limit = { NOT = { has_council_position = councillor_court_chaplain } }
+      skonester_positions_spawn_one_generic_courtier_for_pos_reshuffle_effect = yes
+      if = {
+        limit = { exists = scope:skonester_pos_spawned }
+        assign_councillor_type = {
+          type = councillor_court_chaplain
+          target = scope:skonester_pos_spawned
+        }
+        clear_saved_scope = skonester_pos_spawned
+      }
+    }
+
+    if = {
+      limit = { has_mpo_dlc_trigger = yes }
+      if = {
+        limit = {
+          NOT = { has_council_position = councillor_kurultai_1 }
+          any_vassal = {
+            skonester_positions_council_reshuffle_vassal_candidate_trigger = yes
+          }
+        }
+        ordered_vassal = {
+          limit = {
+            skonester_positions_council_reshuffle_vassal_candidate_trigger = yes
+          }
+        order_by = sum_of_all_skills_value
+          max = 1
+          check_range_bounds = no
+          save_scope_as = skonester_pos_pick
+        }
+        if = {
+          limit = { exists = scope:skonester_pos_pick }
+          assign_councillor_type = {
+            type = councillor_kurultai_1
+            target = scope:skonester_pos_pick
+          }
+          clear_saved_scope = skonester_pos_pick
+        }
+      }
+
+      if = {
+        limit = {
+          NOT = { has_council_position = councillor_kurultai_1 }
+          any_courtier = {
+            is_adult = yes
+            is_imprisoned = no
+            NOT = { is_incapable = yes }
+            NOT = { this = scope:skonester_pos_reshuffle_liege }
+            NOT = { is_councillor_of = scope:skonester_pos_reshuffle_liege }
+          }
+        }
+        ordered_courtier = {
+          limit = {
+            is_adult = yes
+            is_imprisoned = no
+            NOT = { is_incapable = yes }
+            NOT = { this = scope:skonester_pos_reshuffle_liege }
+            NOT = { is_councillor_of = scope:skonester_pos_reshuffle_liege }
+          }
+        order_by = sum_of_all_skills_value
+          max = 1
+          check_range_bounds = no
+          save_scope_as = skonester_pos_pick
+        }
+        if = {
+          limit = { exists = scope:skonester_pos_pick }
+          assign_councillor_type = {
+            type = councillor_kurultai_1
+            target = scope:skonester_pos_pick
+          }
+          clear_saved_scope = skonester_pos_pick
+        }
+      }
+      if = {
+        limit = { NOT = { has_council_position = councillor_kurultai_1 } }
+        skonester_positions_spawn_one_generic_courtier_for_pos_reshuffle_effect = yes
+        if = {
+          limit = { exists = scope:skonester_pos_spawned }
+          assign_councillor_type = {
+            type = councillor_kurultai_1
+            target = scope:skonester_pos_spawned
+          }
+          clear_saved_scope = skonester_pos_spawned
+        }
+      }
+
+      if = {
+        limit = {
+          NOT = { has_council_position = councillor_kurultai_2 }
+          any_vassal = {
+            skonester_positions_council_reshuffle_vassal_candidate_trigger = yes
+          }
+        }
+        ordered_vassal = {
+          limit = {
+            skonester_positions_council_reshuffle_vassal_candidate_trigger = yes
+          }
+        order_by = sum_of_all_skills_value
+          max = 1
+          check_range_bounds = no
+          save_scope_as = skonester_pos_pick
+        }
+        if = {
+          limit = { exists = scope:skonester_pos_pick }
+          assign_councillor_type = {
+            type = councillor_kurultai_2
+            target = scope:skonester_pos_pick
+          }
+          clear_saved_scope = skonester_pos_pick
+        }
+      }
+
+      if = {
+        limit = {
+          NOT = { has_council_position = councillor_kurultai_2 }
+          any_courtier = {
+            is_adult = yes
+            is_imprisoned = no
+            NOT = { is_incapable = yes }
+            NOT = { this = scope:skonester_pos_reshuffle_liege }
+            NOT = { is_councillor_of = scope:skonester_pos_reshuffle_liege }
+          }
+        }
+        ordered_courtier = {
+          limit = {
+            is_adult = yes
+            is_imprisoned = no
+            NOT = { is_incapable = yes }
+            NOT = { this = scope:skonester_pos_reshuffle_liege }
+            NOT = { is_councillor_of = scope:skonester_pos_reshuffle_liege }
+          }
+        order_by = sum_of_all_skills_value
+          max = 1
+          check_range_bounds = no
+          save_scope_as = skonester_pos_pick
+        }
+        if = {
+          limit = { exists = scope:skonester_pos_pick }
+          assign_councillor_type = {
+            type = councillor_kurultai_2
+            target = scope:skonester_pos_pick
+          }
+          clear_saved_scope = skonester_pos_pick
+        }
+      }
+      if = {
+        limit = { NOT = { has_council_position = councillor_kurultai_2 } }
+        skonester_positions_spawn_one_generic_courtier_for_pos_reshuffle_effect = yes
+        if = {
+          limit = { exists = scope:skonester_pos_spawned }
+          assign_councillor_type = {
+            type = councillor_kurultai_2
+            target = scope:skonester_pos_spawned
+          }
+          clear_saved_scope = skonester_pos_spawned
+        }
+      }
+
+      if = {
+        limit = {
+          NOT = { has_council_position = councillor_kurultai_3 }
+          any_vassal = {
+            skonester_positions_council_reshuffle_vassal_candidate_trigger = yes
+          }
+        }
+        ordered_vassal = {
+          limit = {
+            skonester_positions_council_reshuffle_vassal_candidate_trigger = yes
+          }
+        order_by = sum_of_all_skills_value
+          max = 1
+          check_range_bounds = no
+          save_scope_as = skonester_pos_pick
+        }
+        if = {
+          limit = { exists = scope:skonester_pos_pick }
+          assign_councillor_type = {
+            type = councillor_kurultai_3
+            target = scope:skonester_pos_pick
+          }
+          clear_saved_scope = skonester_pos_pick
+        }
+      }
+
+      if = {
+        limit = {
+          NOT = { has_council_position = councillor_kurultai_3 }
+          any_courtier = {
+            is_adult = yes
+            is_imprisoned = no
+            NOT = { is_incapable = yes }
+            NOT = { this = scope:skonester_pos_reshuffle_liege }
+            NOT = { is_councillor_of = scope:skonester_pos_reshuffle_liege }
+          }
+        }
+        ordered_courtier = {
+          limit = {
+            is_adult = yes
+            is_imprisoned = no
+            NOT = { is_incapable = yes }
+            NOT = { this = scope:skonester_pos_reshuffle_liege }
+            NOT = { is_councillor_of = scope:skonester_pos_reshuffle_liege }
+          }
+        order_by = sum_of_all_skills_value
+          max = 1
+          check_range_bounds = no
+          save_scope_as = skonester_pos_pick
+        }
+        if = {
+          limit = { exists = scope:skonester_pos_pick }
+          assign_councillor_type = {
+            type = councillor_kurultai_3
+            target = scope:skonester_pos_pick
+          }
+          clear_saved_scope = skonester_pos_pick
+        }
+      }
+      if = {
+        limit = { NOT = { has_council_position = councillor_kurultai_3 } }
+        skonester_positions_spawn_one_generic_courtier_for_pos_reshuffle_effect = yes
+        if = {
+          limit = { exists = scope:skonester_pos_spawned }
+          assign_councillor_type = {
+            type = councillor_kurultai_3
+            target = scope:skonester_pos_spawned
+          }
+          clear_saved_scope = skonester_pos_spawned
+        }
+      }
+
+      if = {
+        limit = {
+          NOT = { has_council_position = councillor_kurultai_4 }
+          any_vassal = {
+            skonester_positions_council_reshuffle_vassal_candidate_trigger = yes
+          }
+        }
+        ordered_vassal = {
+          limit = {
+            skonester_positions_council_reshuffle_vassal_candidate_trigger = yes
+          }
+        order_by = sum_of_all_skills_value
+          max = 1
+          check_range_bounds = no
+          save_scope_as = skonester_pos_pick
+        }
+        if = {
+          limit = { exists = scope:skonester_pos_pick }
+          assign_councillor_type = {
+            type = councillor_kurultai_4
+            target = scope:skonester_pos_pick
+          }
+          clear_saved_scope = skonester_pos_pick
+        }
+      }
+
+      if = {
+        limit = {
+          NOT = { has_council_position = councillor_kurultai_4 }
+          any_courtier = {
+            is_adult = yes
+            is_imprisoned = no
+            NOT = { is_incapable = yes }
+            NOT = { this = scope:skonester_pos_reshuffle_liege }
+            NOT = { is_councillor_of = scope:skonester_pos_reshuffle_liege }
+          }
+        }
+        ordered_courtier = {
+          limit = {
+            is_adult = yes
+            is_imprisoned = no
+            NOT = { is_incapable = yes }
+            NOT = { this = scope:skonester_pos_reshuffle_liege }
+            NOT = { is_councillor_of = scope:skonester_pos_reshuffle_liege }
+          }
+        order_by = sum_of_all_skills_value
+          max = 1
+          check_range_bounds = no
+          save_scope_as = skonester_pos_pick
+        }
+        if = {
+          limit = { exists = scope:skonester_pos_pick }
+          assign_councillor_type = {
+            type = councillor_kurultai_4
+            target = scope:skonester_pos_pick
+          }
+          clear_saved_scope = skonester_pos_pick
+        }
+      }
+      if = {
+        limit = { NOT = { has_council_position = councillor_kurultai_4 } }
+        skonester_positions_spawn_one_generic_courtier_for_pos_reshuffle_effect = yes
+        if = {
+          limit = { exists = scope:skonester_pos_spawned }
+          assign_councillor_type = {
+            type = councillor_kurultai_4
+            target = scope:skonester_pos_spawned
+          }
+          clear_saved_scope = skonester_pos_spawned
+        }
+      }
+    }
+  }
+}
+
+# 单一宫廷职：严格 can_be_employed_as → 宽松 aptitude → 按职种生成廷臣；多槽循环至满
+skonester_positions_try_appoint_court_slot_strict_loose_spawn_effect = {
+  scope:skonester_pos_reshuffle_liege = {
+    set_local_variable = {
+      name = skonester_pos_slot_fill_iter
+      value = 0
+    }
+    while = {
+      limit = {
+        can_employ_court_position_type = $COURT_POS$
+        local_var:skonester_pos_slot_fill_iter < 8
+      }
+      skonester_positions_try_appoint_court_slot_strict_effect = { COURT_POS = $COURT_POS$ }
+      skonester_positions_try_appoint_court_slot_best_vacant_effect = { COURT_POS = $COURT_POS$ }
+      if = {
+        limit = {
+          can_employ_court_position_type = $COURT_POS$
+        }
+        skonester_positions_spawn_one_generic_courtier_for_pos_reshuffle_effect = yes
+        if = {
+          limit = {
+            exists = scope:skonester_pos_spawned
+            scope:skonester_pos_spawned = {
+              can_be_employed_as = $COURT_POS$
+            }
+          }
+          appoint_court_position = {
+            recipient = scope:skonester_pos_spawned
+            court_position = $COURT_POS$
+          }
+          clear_saved_scope = skonester_pos_spawned
+        }
+        else_if = {
+          limit = { exists = scope:skonester_pos_spawned }
+          clear_saved_scope = skonester_pos_spawned
+        }
+      }
+      change_local_variable = {
+        name = skonester_pos_slot_fill_iter
+        add = 1
+      }
+    }
+  }
+}
+
+# skonester_positions_appoint_all_named_court_positions_strict_loose_spawn_effect → see skonester_positions_court_slots_generated.txt
+

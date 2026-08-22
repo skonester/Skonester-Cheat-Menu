@@ -1,0 +1,142 @@
+﻿# å†³è®®ï¼šä¸€é”®çŸ¥ç§˜å¯†ã€é…å¶å¦¾å®¤å‹¾å¼•é˜²æŠ¤å¼€å…³
+
+skonester_learn_all_realm_officials_secrets_decision = {
+  picture = {
+    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+  }
+  decision_group_type = pcm
+  sort_order = 70
+  title = skonester_learn_all_realm_officials_secrets_decision
+  desc = skonester_learn_all_realm_officials_secrets_decision_desc
+  selection_tooltip = skonester_learn_all_realm_officials_secrets_decision_desc
+  confirm_text = skonester_learn_all_realm_officials_secrets_decision_confirm
+
+  ai_potential = { always = no }
+
+  ai_check_interval_by_tier = {
+    barony = 0
+    county = 12
+    duchy = 12
+    kingdom = 12
+    empire = 12
+    hegemony = 12
+  }
+
+  is_shown = {
+
+    has_character_flag = pcm_b_show_decision_flag
+    skonester_officials_decision_visible_for_player_trigger = yes
+  }
+
+  is_valid = {
+    is_playable_character = yes
+    has_tgp_dlc_trigger = yes
+    skonester_toolbox_supported_player_government_trigger = yes
+  }
+
+  effect = {
+    skonester_learn_all_realm_merit_officials_secrets_effect = yes
+  }
+
+  ai_will_do = {
+    base = 0
+  }
+}
+
+skonester_seduce_shield_for_consorts_decision = {
+  picture = {
+    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+  }
+  decision_group_type = pcm
+  sort_order = 72
+  title = {
+    first_valid = {
+      triggered_desc = {
+        trigger = {
+          has_character_flag = skonester_seduce_shield_active
+        }
+        desc = skonester_seduce_shield_for_consorts_decision_title_on
+      }
+      desc = skonester_seduce_shield_for_consorts_decision_title_off
+    }
+  }
+  desc = {
+    first_valid = {
+      triggered_desc = {
+        trigger = {
+          has_character_flag = skonester_seduce_shield_active
+        }
+        desc = skonester_seduce_shield_for_consorts_decision_desc_on
+      }
+      desc = skonester_seduce_shield_for_consorts_decision_desc_off
+    }
+  }
+  selection_tooltip = {
+    first_valid = {
+      triggered_desc = {
+        trigger = {
+          has_character_flag = skonester_seduce_shield_active
+        }
+        desc = skonester_seduce_shield_for_consorts_decision_desc_on
+      }
+      desc = skonester_seduce_shield_for_consorts_decision_desc_off
+    }
+  }
+  confirm_text = {
+    first_valid = {
+      triggered_desc = {
+        trigger = {
+          has_character_flag = skonester_seduce_shield_active
+        }
+        desc = skonester_seduce_shield_for_consorts_decision_confirm_disable
+      }
+      desc = skonester_seduce_shield_for_consorts_decision_confirm_enable
+    }
+  }
+
+  ai_check_interval_by_tier = {
+    barony = 0
+    county = 12
+    duchy = 12
+    kingdom = 12
+    empire = 12
+    hegemony = 12
+  }
+
+  is_shown = {
+
+    has_character_flag = pcm_b_show_decision_flag
+    is_playable_character = yes
+    is_ai = no
+  }
+
+  is_valid = {
+    is_playable_character = yes
+  }
+
+  effect = {
+    if = {
+      limit = {
+        has_character_flag = skonester_seduce_shield_active
+      }
+      remove_character_flag = skonester_seduce_shield_active
+      # è®°å½•ã€Œå®¶ä¸»å·²ä¸»åŠ¨å…³é—­ã€ï¼Œä¾¿äºŽ on_game_start_after_lobby ä¸è¦å†æ¬¡é»˜è®¤æ‰“å¼€
+      add_character_flag = skonester_seduce_shield_opted_out
+    }
+    else = {
+      add_character_flag = skonester_seduce_shield_active
+      if = {
+        limit = {
+          has_character_flag = skonester_seduce_shield_opted_out
+        }
+        remove_character_flag = skonester_seduce_shield_opted_out
+      }
+      skonester_seduce_shield_grant_chastity_traits_to_consorts_effect = yes
+      skonester_seduce_shield_enforce_global_ai_fidelity_rules_effect = yes
+    }
+  }
+
+  ai_will_do = {
+    base = 0
+  }
+}

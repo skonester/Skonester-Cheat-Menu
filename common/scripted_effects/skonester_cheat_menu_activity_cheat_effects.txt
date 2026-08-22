@@ -1,0 +1,149 @@
+﻿# 生活方式活动 / Activities 作弊
+
+skonester_activity_cheat_ensure_target_scope_effect = {
+  skonester_cheat_menu_sync_target_effect = yes
+  if = {
+    limit = { NOT = { exists = scope:skonester_cheat_menu_target } }
+    scope:actor = { save_scope_as = skonester_cheat_menu_target }
+  }
+}
+
+skonester_activity_cheat_grant_host_funds_effect = {
+  add_gold = 25000
+  add_prestige = 5000
+  add_piety = 3000
+}
+
+skonester_activity_cheat_toggle_skip_cost_effect = {
+  skonester_activity_cheat_ensure_target_scope_effect = yes
+  scope:skonester_cheat_menu_target = {
+    if = {
+      limit = { has_character_flag = skonester_activity_cheat_skip_cost }
+      remove_character_flag = skonester_activity_cheat_skip_cost
+      remove_character_flag = feast_ai_override
+    }
+    else = {
+      add_character_flag = skonester_activity_cheat_skip_cost
+      add_character_flag = feast_ai_override
+    }
+  }
+  scope:actor = {
+    send_interface_toast = {
+      title = skonester_activity_cheat_toast_toggle_title
+      desc = skonester_activity_cheat_toast_toggle_desc
+    }
+  }
+}
+
+# $TYPE$ = activity_feast 等
+skonester_activity_cheat_host_type_effect = {
+  skonester_activity_cheat_ensure_target_scope_effect = yes
+  scope:skonester_cheat_menu_target = {
+    remove_character_flag = planning_an_activity
+    if = {
+      limit = { has_character_flag = skonester_activity_cheat_skip_cost }
+      add_character_flag = feast_ai_override
+    }
+    skonester_activity_cheat_grant_host_funds_effect = yes
+    ai_attempt_to_host_activity = $TYPE$
+    if = {
+      limit = { exists = capital_province }
+      capital_province = {
+        spawn_activity = {
+          type = $TYPE$
+          owner = scope:skonester_cheat_menu_target
+        }
+      }
+    }
+    if = {
+      limit = {
+        NOT = { exists = capital_province }
+        exists = location
+      }
+      location = {
+        spawn_activity = {
+          type = $TYPE$
+          owner = scope:skonester_cheat_menu_target
+        }
+      }
+    }
+  }
+  scope:actor = {
+    send_interface_toast = {
+      title = skonester_activity_cheat_toast_host_title
+      desc = skonester_activity_cheat_toast_host_desc
+    }
+  }
+}
+
+skonester_activity_cheat_skip_phase_effect = {
+  skonester_activity_cheat_ensure_target_scope_effect = yes
+  scope:skonester_cheat_menu_target = {
+    if = {
+      limit = { exists = involved_activity }
+      involved_activity = {
+        skip_activity_phase = yes
+      }
+    }
+  }
+  scope:actor = {
+    send_interface_toast = {
+      title = skonester_activity_cheat_toast_skip_phase_title
+      left_icon = scope:skonester_cheat_menu_target
+    }
+  }
+}
+
+skonester_activity_cheat_fast_phase_effect = {
+  skonester_activity_cheat_ensure_target_scope_effect = yes
+  scope:skonester_cheat_menu_target = {
+    if = {
+      limit = { exists = involved_activity }
+      involved_activity = {
+        progress_activity_phase_after = { days = 1 }
+      }
+    }
+  }
+  scope:actor = {
+    send_interface_toast = {
+      title = skonester_activity_cheat_toast_fast_phase_title
+      left_icon = scope:skonester_cheat_menu_target
+    }
+  }
+}
+
+skonester_activity_cheat_complete_effect = {
+  skonester_activity_cheat_ensure_target_scope_effect = yes
+  scope:skonester_cheat_menu_target = {
+    if = {
+      limit = { exists = involved_activity }
+      involved_activity = {
+        complete_activity = yes
+      }
+    }
+  }
+  scope:actor = {
+    send_interface_toast = {
+      title = skonester_activity_cheat_toast_complete_title
+      left_icon = scope:skonester_cheat_menu_target
+    }
+  }
+}
+
+skonester_activity_cheat_invalidate_effect = {
+  skonester_activity_cheat_ensure_target_scope_effect = yes
+  scope:skonester_cheat_menu_target = {
+    if = {
+      limit = { exists = involved_activity }
+      involved_activity = {
+        invalidate_activity = prev
+      }
+    }
+  }
+  scope:actor = {
+    send_interface_toast = {
+      title = skonester_activity_cheat_toast_cancel_title
+      left_icon = scope:skonester_cheat_menu_target
+    }
+  }
+}

@@ -1,0 +1,22 @@
+﻿l_russian:
+ # Title with alternating colors as requested
+ special_gift_interaction:0 "#bold #X Ж#!#N и#!#X в#!#N а#!#X я#! #X В#!#N о#!#X д#!#N а#! #!"
+ special_gift_interaction_desc:0 "Даровать [recipient.GetShortUINameNoTooltip] истину, которую Клавий нашел в пустой гробнице — напиток, отделяющий Дух от оков материи."
+ special_gift_interaction_tooltip:0 "Встань, [recipient.GetShortUINameNoTooltip]. Империи обращаются в прах, но мы остаемся. Пей и обрети #E Покой#! внутри себя."
+
+ special_gift_interaction_2:0 "#bold #X Ж#!#N и#!#X в#!#N а#!#X я#! #X В#!#N о#!#X д#!#N а#! #!"
+ special_gift_interaction_desc_2:0 "Разделить Чашу с [recipient.GetShortUINameNoTooltip], связывая ваши души вне досягаемости Сил, что правят этим миром."
+ special_gift_interaction_tooltip_2:0 "Моя любовь, [recipient.GetFirstNameNoTooltip], «две вещи, которые невозможно примирить», обрели единство в нас. Пей, и да пребудем мы в Безмолвии вместе навеки."
+
+ special_gift_interaction_3:0 "#bold #X Ж#!#N и#!#X в#!#N а#!#X я#! #X В#!#N о#!#X д#!#N а#! #!"
+ special_gift_interaction_desc_3:0 "Передать бремя Стражи [recipient.GetShortUINameNoTooltip], дабы род Марии возвысился над тлением природы."
+ special_gift_interaction_tooltip_3:0 "Дитя моё, #E Сын Человеческий#! внутри тебя. Следуй за Ним! Пей и стань якорем, удерживающим прилив времени."
+
+ special_gift_interaction_4:0 "#bold #X Ж#!#N и#!#X в#!#N а#!#X я#! #X В#!#N о#!#X д#!#N а#! #!"
+ special_gift_interaction_desc_4:0 "Даровать [recipient.GetShortUINameNoTooltip] жизненную силу Десятого легиона — верность, выкованную не в золоте, но в вечности Духа."
+ special_gift_interaction_tooltip_4:0 "Брат по оружию, [recipient.GetShortUINameNoTooltip] — пей. Эта война долгая, а смерть — сон, который мы больше не можем себе позволить. Держи строй вместе со мной."
+
+ trait_water_of_life:0 "Страж Слова"
+ trait_water_of_life_desc:0 "Этот персонаж узрел Воскресшего и испил из Чаши. Он возвысился над тлением материи."
+ trait_water_of_life_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] хранит тайну Сионской горницы. [ROOT.GetCharacter.GetSheHe|U] более не [ROOT.GetCharacter.Custom('GetBound_RU')] законами природы, но являет собой свидетельство #E Живого Духа#!."
+

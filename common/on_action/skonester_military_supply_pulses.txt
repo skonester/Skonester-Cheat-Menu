@@ -1,0 +1,46 @@
+﻿# 无限补给·零损耗：战争与每月为已开启者拉满全部军团补给（不改编制人数）
+
+monthly_global_pulse = {
+  on_actions = { skonester_military_supply_monthly_pulse }
+}
+
+skonester_military_supply_monthly_pulse = {
+  effect = {
+    every_living_character = {
+      limit = {
+        is_alive = yes
+        has_character_modifier = skonester_military_instant_replenish_modifier
+        has_character_flag = skonester_military_cheat_player_authorized
+      }
+      skonester_cheat_menu_refill_all_army_supply_on_character_effect = yes
+      skonester_cheat_menu_apply_supply_overflow_stacks_effect = yes
+    }
+  }
+}
+
+on_war_started = {
+  on_actions = { skonester_military_supply_war_started_pulse }
+}
+
+skonester_military_supply_war_started_pulse = {
+  effect = {
+    scope:attacker = {
+      limit = {
+        is_alive = yes
+        has_character_modifier = skonester_military_instant_replenish_modifier
+        has_character_flag = skonester_military_cheat_player_authorized
+      }
+      skonester_cheat_menu_refill_all_army_supply_on_character_effect = yes
+      skonester_cheat_menu_start_supply_war_loop_effect = yes
+    }
+    scope:defender = {
+      limit = {
+        is_alive = yes
+        has_character_modifier = skonester_military_instant_replenish_modifier
+        has_character_flag = skonester_military_cheat_player_authorized
+      }
+      skonester_cheat_menu_refill_all_army_supply_on_character_effect = yes
+      skonester_cheat_menu_start_supply_war_loop_effect = yes
+    }
+  }
+}

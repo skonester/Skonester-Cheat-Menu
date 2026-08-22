@@ -1,0 +1,40 @@
+﻿# 角色生成 hub（复用 skonester_cheat_menu_recipient）
+
+skonester_char_gen_sync_recipient_to_scope_effect = {
+  skonester_cheat_menu_sync_target_effect = yes
+  scope:skonester_cheat_menu_target = {
+    save_scope_as = skonester_char_gen_target
+  }
+}
+
+skonester_cheat_menu_open_character_gen_hub_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  scope:actor = {
+    trigger_event = skonester_cheat_menu.0245
+  }
+}
+
+skonester_char_gen_hub_open_spawn_talent_effect = {
+  skonester_cheat_menu_sync_target_effect = yes
+  scope:actor = {
+    trigger_event = skonester_cheat_menu.0155
+  }
+}
+
+skonester_char_gen_hub_open_beauty_effect = {
+  skonester_cheat_menu_sync_target_effect = yes
+  scope:actor = {
+    trigger_event = skonester_cheat_menu.0180
+  }
+}
+
+skonester_char_gen_hub_open_children_effect = {
+  skonester_cheat_menu_sync_target_effect = yes
+  scope:actor = {
+    trigger_event = skonester_child_gen.1000
+  }
+}
+
+skonester_char_gen_clear_recipient_global_effect = {
+  skonester_cheat_menu_clear_recipient_effect = yes
+}

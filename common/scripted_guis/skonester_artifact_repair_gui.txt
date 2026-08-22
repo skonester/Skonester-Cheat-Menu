@@ -1,0 +1,81 @@
+﻿# 宝物修复独立窗口（gui/skonester_artifact_repair.gui）
+# 须同时写 is_valid，否则部分版本下 Execute 不生效。
+
+skonester_acm_repair_gui_open_visible = {
+  scope = character
+  is_shown = {
+    has_character_flag = skonester_acm_repair_gui_open
+    NOT = { has_character_flag = skonester_acm_gui_text_edit_active }
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_repair_gui_close = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = {
+    remove_character_flag = skonester_acm_repair_gui_open
+    remove_character_flag = skonester_acm_edit_from_repair_gui
+    remove_character_flag = skonester_acm_edit_from_craft_gui
+    remove_character_flag = skonester_acm_gui_text_edit_active
+    if = {
+      limit = { has_global_variable = skonester_acm_repair_target }
+      remove_global_variable = skonester_acm_repair_target
+    }
+    if = {
+      limit = { has_variable = skonester_acm_repair_artifact_var }
+      remove_variable = skonester_acm_repair_artifact_var
+    }
+  }
+}
+
+skonester_acm_repair_gui_save = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = {
+    has_global_variable = skonester_acm_repair_target
+  }
+  effect = {
+    trigger_event = {
+      id = skonester_artifact_repair.9001
+      days = 0
+    }
+  }
+}
+
+skonester_acm_repair_gui_edit_name = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = {
+    skonester_acm_open_artifact_name_editor_effect = yes
+  }
+}
+
+skonester_acm_repair_gui_edit_desc = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = {
+    skonester_acm_open_artifact_desc_editor_effect = yes
+  }
+}
+
+skonester_acm_repair_gui_repick = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = {
+    remove_character_flag = skonester_acm_repair_gui_open
+    if = {
+      limit = { has_global_variable = skonester_acm_repair_target }
+      remove_global_variable = skonester_acm_repair_target
+    }
+    if = {
+      limit = { has_variable = skonester_acm_repair_artifact_var }
+      remove_variable = skonester_acm_repair_artifact_var
+    }
+    skonester_acm_gui_open_repair_picker_effect = yes
+  }
+}

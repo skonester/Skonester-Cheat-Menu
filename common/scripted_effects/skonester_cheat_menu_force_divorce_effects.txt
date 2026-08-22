@@ -1,0 +1,14 @@
+﻿# 强制离婚：解除接收者的婚姻关系
+# 注意：此效果在交互中直接调用了 marriage_ban_strip_wedlocks_effect
+# 并额外处理妾室解除，此文件保持完整性以作备用
+
+# 须在角色互动的 on_accept 等存在 scope:recipient 的上下文中调用；on_accept 无隐式 root，须显式 recipient。
+skonester_cheat_menu_force_divorce_recipient_effect = {
+  scope:recipient = {
+    skonester_cheat_menu_marriage_ban_strip_wedlocks_effect = yes
+    if = {
+      limit = { is_concubine = yes }
+      remove_concubine = yes
+    }
+  }
+}

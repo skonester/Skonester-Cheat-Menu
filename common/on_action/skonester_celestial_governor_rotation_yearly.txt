@@ -1,0 +1,44 @@
+﻿# 天朝总督三年轮换：只追加 yearly_global_pulse.on_actions，绝不覆盖 yearly_playable_pulse（覆盖会导致内阁/吏部等异常）。
+# 官员限地已改为决议「整顿官员领地」手动执行，见 skonester_official_land_cap_decisions.txt
+# 新局首年跳过轮换（与 9200 年脉冲 grace 同理），避免开局书签里已任职≥3年的总督被元日批量 force_step_down 炸碎宋辽等天朝版图。
+
+on_game_start_after_lobby = {
+  on_actions = {
+    skonester_celestial_governor_rotation_startup_pulse
+  }
+}
+
+skonester_celestial_governor_rotation_startup_pulse = {
+  effect = {
+    set_global_variable = {
+      name = skonester_celestial_governor_rotation_grace_skip
+      value = yes
+    }
+  }
+}
+
+yearly_global_pulse = {
+  on_actions = {
+    skonester_celestial_governor_rotation_pulse
+  }
+}
+
+skonester_celestial_governor_rotation_pulse = {
+  effect = {
+    if = {
+      limit = { has_global_variable = skonester_celestial_governor_rotation_grace_skip }
+      remove_global_variable = skonester_celestial_governor_rotation_grace_skip
+    }
+    else = {
+      every_ruler = {
+        limit = {
+          skonester_celestial_governor_rotation_eligible_trigger = yes
+        }
+        trigger_event = {
+          id = skonester_officials.0003
+          days = 1
+        }
+      }
+    }
+  }
+}

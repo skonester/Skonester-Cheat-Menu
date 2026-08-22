@@ -1,0 +1,11 @@
+﻿# Skonester deliberately uses CK3's built-in interaction categories instead of custom indexes.
+# This prevents total conversions such as AGOT from replacing or shifting our categories.
+# Normal tools: interaction_category_uncategorized (vanilla index 10)
+# Debug tools:  interaction_debug_main (vanilla index 11)
+
+# Interaction ordering inside both Skonester menus:
+# 12000 shared open/close control; 11000 navigation/editors;
+# 10000 character tools; 9000 family/dynasty; 8000 relationships;
+# 7000 court/appointments; 6000 culture/faith; 5000 realm/titles;
+# 4000 artifacts/resources; 3000 warfare/activities; 2000 destructive;
+# 1000 miscellaneous/test actions. Entries are alphabetized within each band.

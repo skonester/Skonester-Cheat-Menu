@@ -1,0 +1,28 @@
+﻿dynasty_grandmaster_story = {
+	visible = no
+	on_setup = {}
+	on_end = {}
+	on_owner_death = {}
+}
+
+dynasty_grandmaster_completed_story = {
+	visible = no
+	on_setup = {}
+	on_end = {}
+	on_owner_death = {}
+}
+
+dynasty_pope_story = {
+	visible = no
+	on_setup = {}
+	on_end = {}
+	on_owner_death = {}
+}
+
+dynasty_pope_completed_story = {
+	visible = no
+	on_setup = {}
+	on_end = {}
+	on_owner_death = {}
+}
+

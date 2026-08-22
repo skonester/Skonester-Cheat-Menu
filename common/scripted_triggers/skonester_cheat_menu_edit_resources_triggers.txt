@@ -1,0 +1,69 @@
+﻿# 官吏统辖「修改资源」：影响力 / 功绩 / 恐怖值等政体差异
+
+# 子菜单翻页后仍显示选项（勿仅依赖主Skonester菜单旗标）
+skonester_edit_resources_menu_enabled_trigger = {
+  OR = {
+    skonester_cheat_menu_menu_enabled_trigger = yes
+    scope:actor = { has_character_flag = skonester_edit_resources_active }
+    AND = {
+      NOT = { exists = scope:actor }
+      has_character_flag = skonester_edit_resources_active
+    }
+  }
+}
+
+skonester_cheat_menu_dread_cap_150_trigger = {
+  OR = {
+    has_government = nomad_government
+    has_government = steppe_admin_government
+  }
+}
+
+skonester_edit_resources_can_change_influence_trigger = {
+  scope:recipient = {
+    OR = {
+      government_allows = administrative
+      government_allows = merit
+      government_is_japanese_trigger = yes
+      government_has_flag = government_has_influence
+    }
+  }
+}
+
+# 贤能值：仅天朝、贤能制、宫帐制（草原行政）及变身大明等有品级政体的目标显示
+skonester_edit_resources_can_change_merit_trigger = {
+  scope:recipient = {
+    OR = {
+      skonester_is_gm_yan_government_trigger = yes
+      AND = {
+        has_tgp_dlc_trigger = yes
+        OR = {
+          government_has_flag = government_has_merit
+          government_has_flag = government_is_celestial
+          has_government = celestial_government
+          has_government = meritocratic_government
+          has_government = steppe_admin_government
+          government_allows = merit
+        }
+      }
+    }
+  }
+}
+
+# 子事件链点击选项时 scope:recipient 可能丢失，须同时检查 global_var 锁定目标
+skonester_edit_resources_recipient_gold_at_least_trigger = {
+  OR = {
+    AND = {
+      exists = scope:recipient
+      scope:recipient = { gold >= $MIN$ }
+    }
+    AND = {
+      has_global_variable = skonester_cheat_menu_recipient
+      global_var:skonester_cheat_menu_recipient = { gold >= $MIN$ }
+    }
+    AND = {
+      exists = scope:skonester_cheat_menu_target
+      scope:skonester_cheat_menu_target = { gold >= $MIN$ }
+    }
+  }
+}

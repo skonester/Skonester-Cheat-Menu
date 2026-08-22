@@ -1,0 +1,95 @@
+﻿# 自制特质窗口：打开 / 关闭 / 分发 toggle
+
+skonester_open_cheat_trait_editor_gui_effect = {
+  skonester_cheat_menu_sync_trait_edit_target_effect = yes
+  if = {
+    limit = { exists = scope:actor }
+    scope:actor = {
+      if = {
+        limit = { exists = global_var:skonester_cheat_menu_recipient }
+        set_variable = {
+          name = skonester_trait_gui_target
+          value = global_var:skonester_cheat_menu_recipient
+        }
+      }
+      remove_character_flag = skonester_cheat_trait_gui_open
+      add_character_flag = skonester_cheat_trait_gui_open
+    }
+  }
+  else = {
+    if = {
+      limit = { exists = global_var:skonester_cheat_menu_recipient }
+      set_variable = {
+        name = skonester_trait_gui_target
+        value = global_var:skonester_cheat_menu_recipient
+      }
+    }
+    remove_character_flag = skonester_cheat_trait_gui_open
+    add_character_flag = skonester_cheat_trait_gui_open
+  }
+}
+
+skonester_close_cheat_trait_editor_gui_effect = {
+  remove_character_flag = skonester_cheat_trait_gui_open
+}
+
+skonester_cheat_trait_gui_toggle_from_flag_effect = {
+  skonester_cheat_menu_sync_trait_edit_target_effect = yes
+  save_scope_as = actor
+  if = {
+    limit = { scope:trait_flag = flag:skonester_trait_immortal_ageless }
+    skonester_cheat_trait_gui_toggle_immortal_effect = yes
+  }
+  else_if = {
+    limit = { scope:trait_flag = flag:trait_warlord_eternal }
+    skonester_cheat_trait_gui_toggle_warlord_effect = yes
+  }
+  else_if = {
+    limit = { scope:trait_flag = flag:trait_wealth_sovereign_max }
+    skonester_cheat_trait_gui_toggle_wealth_effect = yes
+  }
+  else_if = {
+    limit = { scope:trait_flag = flag:trait_ultimate_intrigue_master }
+    skonester_cheat_trait_gui_toggle_intrigue_effect = yes
+  }
+  else_if = {
+    limit = { scope:trait_flag = flag:trait_great_builder_god }
+    skonester_cheat_trait_gui_toggle_great_builder_effect = yes
+  }
+  else_if = {
+    limit = { scope:trait_flag = flag:trait_nether_conspiracy_lord }
+    skonester_cheat_trait_gui_toggle_nether_lord_effect = yes
+  }
+  else_if = {
+    limit = { scope:trait_flag = flag:trait_eternal_nether_lord }
+    skonester_cheat_trait_gui_toggle_eternal_nether_effect = yes
+  }
+  else_if = {
+    limit = { scope:trait_flag = flag:skonester_trait_yannian_dan }
+    skonester_cheat_trait_gui_toggle_yannian_dan_effect = yes
+  }
+  else_if = {
+    limit = { scope:trait_flag = flag:skonester_trait_yannian_dan_mid }
+    skonester_cheat_trait_gui_toggle_yannian_dan_mid_effect = yes
+  }
+  else_if = {
+    limit = { scope:trait_flag = flag:skonester_trait_yannian_dan_best }
+    skonester_cheat_trait_gui_toggle_yannian_dan_best_effect = yes
+  }
+  else_if = {
+    limit = { scope:trait_flag = flag:skonester_trait_baidubuqin }
+    skonester_cheat_trait_gui_toggle_baidubuqin_effect = yes
+  }
+  else_if = {
+    limit = { scope:trait_flag = flag:skonester_trait_xinwuguai }
+    skonester_cheat_trait_gui_toggle_xinwuguai_effect = yes
+  }
+  else_if = {
+    limit = { scope:trait_flag = flag:skonester_trait_stats_100_locked }
+    skonester_cheat_trait_gui_toggle_stats_100_effect = yes
+  }
+  else_if = {
+    limit = { scope:trait_flag = flag:skonester_trait_marriage_ban }
+    skonester_cheat_trait_gui_toggle_marriage_ban_effect = yes
+  }
+}

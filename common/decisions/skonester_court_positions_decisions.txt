@@ -1,0 +1,40 @@
+﻿# å®˜åç»Ÿè¾– Â· å®«å»·èŒä½ä»»å…
+
+skonester_positions_mass_reshuffle_decision = {
+  decision_group_type = pcm
+  picture = {
+    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+  }
+  # åŠŸèƒ½å·²å¹¶å…¥å³é”®èœå•ï¼›ä¸æŒ‚ skonester_officials å†³è®®ç»„ï¼Œé¿å…åˆ—è¡¨å‡ºçŽ°ç©ºç™½å ä½è¡Œ
+  sort_order = 85
+  title = skonester_positions_mass_reshuffle_decision
+  desc = skonester_positions_mass_reshuffle_decision_desc
+  selection_tooltip = skonester_positions_mass_reshuffle_decision_tooltip
+  confirm_text = skonester_positions_mass_reshuffle_decision_confirm
+
+  ai_goal = no
+  ai_potential = { always = no }
+
+  # åŠŸèƒ½å·²å¹¶å…¥å³é”®ã€Œä»»å…å®«å»·èŒä½ã€èœå•ï¼Œå†³è®®åˆ—è¡¨ä¸­éšè—
+  is_shown = {
+    has_character_flag = pcm_b_show_decision_flag
+    always = no
+  }
+
+  is_valid = {
+    is_alive = yes
+    is_ruler = yes
+  }
+
+  effect = {
+    skonester_positions_sync_liege_player_effect = yes
+    skonester_positions_mass_reshuffle_court_only_liege_effect = yes
+    send_interface_message = {
+      type = event_toast_effect_good
+      title = skonester_court_positions.toast_mass_done_t
+      left_icon = root
+    }
+  }
+
+  ai_will_do = { base = 0 }
+}

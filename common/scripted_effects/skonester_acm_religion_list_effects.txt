@@ -1,0 +1,15 @@
+﻿# 宗教目录：49 个宗教大类（every_religion_global）
+
+skonester_acm_religions_list_refresh_all_effect = {
+  clear_global_variable_list = skonester_acm_religion_list_all
+  every_religion_global = {
+    add_to_global_variable_list = {
+      name = skonester_acm_religion_list_all
+      target = this
+    }
+  }
+}
+
+skonester_acm_religion_picker_refresh_all_lists_effect = {
+  skonester_acm_religions_list_refresh_all_effect = yes
+}

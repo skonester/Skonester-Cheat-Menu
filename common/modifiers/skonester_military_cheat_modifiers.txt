@@ -1,0 +1,133 @@
+﻿# Skonester · 军事管理（持续型加成）
+# 仅人类玩家通过军事管理菜单开启时打 skonester_military_cheat_player_authorized；AI 强化/庄园预设等其它修正不在此列。
+# 注：CK3 修正键名为 supply_limit_mult / army_maintenance_mult（对应控制台 supply/army upkeep 倍率）
+
+skonester_military_instant_replenish_modifier = {
+  icon = martial_positive
+  # 基础军需：超大补给池 + 极慢消耗（具体倍率由 stacking 层叠加，见 supply_overflow）
+  supply_limit_mult = 9
+  supply_duration = 9
+  supply_capacity_mult = 9
+  supply_capacity_add = 99999
+  supply_loss_winter = -99
+  # 军队维持费 ≈ 0（≈ set_army_upkeep_multiplier 0）
+  army_maintenance_mult = -0.99
+  men_at_arms_maintenance = -0.99
+  levy_maintenance = -0.99
+  # 零战损/零损耗（不提高征兵速率，避免自动改变士兵数量）
+  hard_casualty_modifier = -0.99
+  retreat_losses = -0.99
+  hostile_county_attrition = -0.99
+  # 全地形零损耗 + 取消负补给
+  forest_attrition_mult = -0.99
+  jungle_attrition_mult = -0.99
+  taiga_attrition_mult = -0.99
+  wetlands_attrition_mult = -0.99
+  mountains_attrition_mult = -0.99
+  hills_attrition_mult = -0.99
+  desert_mountains_attrition_mult = -0.99
+  plains_attrition_mult = -0.99
+  steppe_attrition_mult = -0.99
+  farmlands_attrition_mult = -0.99
+  floodplains_attrition_mult = -0.99
+  drylands_attrition_mult = -0.99
+  desert_attrition_mult = -0.99
+  oasis_attrition_mult = -0.99
+  forest_cancel_negative_supply = yes
+  jungle_cancel_negative_supply = yes
+  taiga_cancel_negative_supply = yes
+  wetlands_cancel_negative_supply = yes
+  mountains_cancel_negative_supply = yes
+  hills_cancel_negative_supply = yes
+  desert_mountains_cancel_negative_supply = yes
+  plains_cancel_negative_supply = yes
+  steppe_cancel_negative_supply = yes
+  farmlands_cancel_negative_supply = yes
+  floodplains_cancel_negative_supply = yes
+  drylands_cancel_negative_supply = yes
+  desert_cancel_negative_supply = yes
+  oasis_cancel_negative_supply = yes
+}
+
+# 军需 stacking：与征兵×100 同理，单层过高会被引擎折减，叠层抬高补给上限与持续时间
+skonester_military_supply_overflow_modifier = {
+  icon = martial_positive
+  stacking = yes
+  supply_limit_mult = 9
+  supply_duration = 9
+  supply_capacity_mult = 9
+  supply_capacity_add = 50000
+}
+
+skonester_military_levy_overflow_modifier = {
+  icon = martial_positive
+  # 单层 levy_size≥10 会被引擎折减（99→约+9，仅×10）；stacking 叠 11 层×9≈+99→×100
+  stacking = yes
+  levy_size = 9
+  men_at_arms_cap = 50000
+  men_at_arms_limit = 50
+  vassal_levy_contribution_mult = 0.99
+}
+
+# 未集结维护费归零：征召×100 后基数极大，须多组不同 modifier 名叠乘（单层 -0.99 仍会有余费）
+skonester_military_maintenance_waive_a_modifier = {
+  icon = martial_positive
+  stacking = yes
+  levy_maintenance = -0.99
+  men_at_arms_maintenance = -0.99
+  army_maintenance_mult = -0.99
+  men_at_arms_maintenance_per_dread_mult = -0.99
+}
+
+skonester_military_maintenance_waive_b_modifier = {
+  icon = martial_positive
+  stacking = yes
+  levy_maintenance = -0.99
+  men_at_arms_maintenance = -0.99
+  army_maintenance_mult = -0.99
+}
+
+skonester_military_maintenance_waive_c_modifier = {
+  icon = martial_positive
+  stacking = yes
+  levy_maintenance = -0.99
+  men_at_arms_maintenance = -0.99
+  army_maintenance_mult = -0.99
+}
+
+skonester_military_knight_limit_modifier = {
+  icon = martial_positive
+  stacking = yes
+  knight_limit = 1
+}
+
+skonester_military_knight_power_modifier = {
+  icon = martial_positive
+  knight_effectiveness_mult = 2
+  knight_effectiveness_per_prowess = 0.5
+  knight_effectiveness_per_martial = 0.5
+}
+
+skonester_military_god_mode_modifier = {
+  icon = martial_positive
+  hard_casualty_modifier = -0.99
+  enemy_hard_casualty_modifier = 0.99
+  army_damage_mult = 2.0
+  army_toughness_mult = 2.0
+  army_pursuit_mult = 2.0
+  army_screen_mult = 2.0
+  levy_attack = 500
+  levy_toughness = 500
+  levy_pursuit = 500
+  levy_screen = 500
+  advantage = 50
+  counter_efficiency = 5
+  counter_resistance = 5
+  # 步队/军团行军速度拉满（与战神特质同量级；CK3 无硬封顶键）
+  movement_speed = 10
+  winter_movement_speed = 10
+  movement_speed_land_raiding = 10
+  no_water_crossing_penalty = yes
+  no_disembark_penalty = yes
+  enemy_terrain_advantage = -1
+}

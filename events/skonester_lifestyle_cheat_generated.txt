@@ -1,0 +1,4306 @@
+﻿namespace = skonester_cheat_menu
+## AUTO-GENERATED START (lifestyle_cheat_menu) — tools/generate_lifestyle_cheat_menu.py
+## 专长选项显示名：name = skonester_lsf.pk_<perk_id>，文案见 localization/**/skonester_lifestyle_perk_options_l_*.yml（tools/gen_lifestyle_perk_option_loc.py）
+skonester_cheat_menu.0600 = {
+  type = character_event
+  title = skonester_lsf.hub_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_lsf.open_diplomacy
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0601
+    }
+  }
+  option = {
+    name = skonester_lsf.open_martial
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0602
+    }
+  }
+  option = {
+    name = skonester_lsf.open_stewardship
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0603
+    }
+  }
+  option = {
+    name = skonester_lsf.open_intrigue
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0604
+    }
+  }
+  option = {
+    name = skonester_lsf.open_learning
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0605
+    }
+  }
+  option = {
+    name = skonester_lsf.all_xp_250
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_diplomacy_lifestyle_xp = 250
+      add_martial_lifestyle_xp = 250
+      add_stewardship_lifestyle_xp = 250
+      add_intrigue_lifestyle_xp = 250
+      add_learning_lifestyle_xp = 250
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0600
+    }
+  }
+  option = {
+    name = skonester_lsf.all_xp_1000
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_diplomacy_lifestyle_xp = 1000
+      add_martial_lifestyle_xp = 1000
+      add_stewardship_lifestyle_xp = 1000
+      add_intrigue_lifestyle_xp = 1000
+      add_learning_lifestyle_xp = 1000
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0600
+    }
+  }
+  option = {
+    name = skonester_lsf.all_xp_3000
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_diplomacy_lifestyle_xp = 3000
+      add_martial_lifestyle_xp = 3000
+      add_stewardship_lifestyle_xp = 3000
+      add_intrigue_lifestyle_xp = 3000
+      add_learning_lifestyle_xp = 3000
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0600
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0601 = {
+  type = character_event
+  title = skonester_lsf.diplomacy_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_lsf.xp_250
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_diplomacy_lifestyle_xp = 250
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0601
+    }
+  }
+  option = {
+    name = skonester_lsf.xp_1000
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_diplomacy_lifestyle_xp = 1000
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0601
+    }
+  }
+  option = {
+    name = skonester_lsf.xp_3000
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_diplomacy_lifestyle_xp = 3000
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0601
+    }
+  }
+  option = {
+    name = skonester_lsf.add_perk_point_1
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_diplomacy_lifestyle_perk_points = 1
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0601
+    }
+  }
+  option = {
+    name = skonester_lsf.add_perk_point_3
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_diplomacy_lifestyle_perk_points = 3
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0601
+    }
+  }
+  option = {
+    name = skonester_lsf.reset_tree
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0685
+    }
+  }
+  option = {
+    name = skonester_lsf.open_perk_pages
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0610
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0600
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0610 = {
+  type = character_event
+  title = skonester_lsf.diplomacy_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_lsf.pk_befriend_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = befriend_perk }
+        remove_perk = befriend_perk
+      }
+      else = {
+        add_perk = befriend_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0610
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_flatterer_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = flatterer_perk }
+        remove_perk = flatterer_perk
+      }
+      else = {
+        add_perk = flatterer_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0610
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_confidants_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = confidants_perk }
+        remove_perk = confidants_perk
+      }
+      else = {
+        add_perk = confidants_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0610
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_friendly_counsel_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = friendly_counsel_perk }
+        remove_perk = friendly_counsel_perk
+      }
+      else = {
+        add_perk = friendly_counsel_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0610
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_familial_familiar_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = familial_familiar_perk }
+        remove_perk = familial_familiar_perk
+      }
+      else = {
+        add_perk = familial_familiar_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0610
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.page_next
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0611
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0601
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0611 = {
+  type = character_event
+  title = skonester_lsf.diplomacy_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_cheat_menu.page_prev
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0610
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_groomed_to_rule_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = groomed_to_rule_perk }
+        remove_perk = groomed_to_rule_perk
+      }
+      else = {
+        add_perk = groomed_to_rule_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0611
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_sound_foundations_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = sound_foundations_perk }
+        remove_perk = sound_foundations_perk
+      }
+      else = {
+        add_perk = sound_foundations_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0611
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_thicker_than_water_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = thicker_than_water_perk }
+        remove_perk = thicker_than_water_perk
+      }
+      else = {
+        add_perk = thicker_than_water_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0611
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_family_man_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = family_man_perk }
+        remove_perk = family_man_perk
+        remove_trait = family_first
+      }
+      else = {
+        add_perk = family_man_perk
+        add_trait = family_first
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0611
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_a_life_of_glory_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = a_life_of_glory_perk }
+        remove_perk = a_life_of_glory_perk
+      }
+      else = {
+        add_perk = a_life_of_glory_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0611
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_august_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = august_perk }
+        remove_perk = august_perk
+      }
+      else = {
+        add_perk = august_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0611
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_benevolent_intent_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = benevolent_intent_perk }
+        remove_perk = benevolent_intent_perk
+      }
+      else = {
+        add_perk = benevolent_intent_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0611
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.page_next
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0612
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0601
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0612 = {
+  type = character_event
+  title = skonester_lsf.diplomacy_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_cheat_menu.page_prev
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0611
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_dignitas_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = dignitas_perk }
+        remove_perk = dignitas_perk
+      }
+      else = {
+        add_perk = dignitas_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0612
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_firm_hand_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = firm_hand_perk }
+        remove_perk = firm_hand_perk
+      }
+      else = {
+        add_perk = firm_hand_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0612
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_inspiring_rule_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = inspiring_rule_perk }
+        remove_perk = inspiring_rule_perk
+      }
+      else = {
+        add_perk = inspiring_rule_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0612
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_praetorian_guard_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = praetorian_guard_perk }
+        remove_perk = praetorian_guard_perk
+      }
+      else = {
+        add_perk = praetorian_guard_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0612
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_true_ruler_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = true_ruler_perk }
+        remove_perk = true_ruler_perk
+      }
+      else = {
+        add_perk = true_ruler_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0612
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_writing_history_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = writing_history_perk }
+        remove_perk = writing_history_perk
+      }
+      else = {
+        add_perk = writing_history_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0612
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.page_next
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0613
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0601
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0613 = {
+  type = character_event
+  title = skonester_lsf.diplomacy_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_cheat_menu.page_prev
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0612
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_thoughtful_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = thoughtful_perk }
+        remove_perk = thoughtful_perk
+      }
+      else = {
+        add_perk = thoughtful_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0613
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_adaptive_traditions_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = adaptive_traditions_perk }
+        remove_perk = adaptive_traditions_perk
+      }
+      else = {
+        add_perk = adaptive_traditions_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0613
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_defensive_negotiations_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = defensive_negotiations_perk }
+        remove_perk = defensive_negotiations_perk
+      }
+      else = {
+        add_perk = defensive_negotiations_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0613
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_diplomat_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = diplomat_perk }
+        remove_perk = diplomat_perk
+      }
+      else = {
+        add_perk = diplomat_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0613
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_flexible_truces_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = flexible_truces_perk }
+        remove_perk = flexible_truces_perk
+      }
+      else = {
+        add_perk = flexible_truces_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0613
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_ducal_conquest_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = ducal_conquest_perk }
+        remove_perk = ducal_conquest_perk
+      }
+      else = {
+        add_perk = ducal_conquest_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0613
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.page_next
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0614
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0601
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0614 = {
+  type = character_event
+  title = skonester_lsf.diplomacy_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_cheat_menu.page_prev
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0613
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_accomplished_forger_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = accomplished_forger_perk }
+        remove_perk = accomplished_forger_perk
+      }
+      else = {
+        add_perk = accomplished_forger_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0614
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_embassies_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = embassies_perk }
+        remove_perk = embassies_perk
+      }
+      else = {
+        add_perk = embassies_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0614
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_forced_vassalage_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = forced_vassalage_perk }
+        remove_perk = forced_vassalage_perk
+      }
+      else = {
+        add_perk = forced_vassalage_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0614
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0601
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0685 = {
+  type = character_event
+  title = skonester_lsf.reset_confirm_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_lsf.reset_yes
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      refund_perks = diplomacy_lifestyle
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0601
+    }
+  }
+  option = {
+    name = skonester_lsf.reset_no
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0601
+    }
+  }
+}
+skonester_cheat_menu.0602 = {
+  type = character_event
+  title = skonester_lsf.martial_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_lsf.xp_250
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_martial_lifestyle_xp = 250
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0602
+    }
+  }
+  option = {
+    name = skonester_lsf.xp_1000
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_martial_lifestyle_xp = 1000
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0602
+    }
+  }
+  option = {
+    name = skonester_lsf.xp_3000
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_martial_lifestyle_xp = 3000
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0602
+    }
+  }
+  option = {
+    name = skonester_lsf.add_perk_point_1
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_martial_lifestyle_perk_points = 1
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0602
+    }
+  }
+  option = {
+    name = skonester_lsf.add_perk_point_3
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_martial_lifestyle_perk_points = 3
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0602
+    }
+  }
+  option = {
+    name = skonester_lsf.reset_tree
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0686
+    }
+  }
+  option = {
+    name = skonester_lsf.open_perk_pages
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0625
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0600
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0625 = {
+  type = character_event
+  title = skonester_lsf.martial_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_lsf.pk_a_mans_home_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = a_mans_home_perk }
+        remove_perk = a_mans_home_perk
+      }
+      else = {
+        add_perk = a_mans_home_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0625
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_absolute_control_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = absolute_control_perk }
+        remove_perk = absolute_control_perk
+      }
+      else = {
+        add_perk = absolute_control_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0625
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_enduring_hardships_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = enduring_hardships_perk }
+        remove_perk = enduring_hardships_perk
+      }
+      else = {
+        add_perk = enduring_hardships_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0625
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_hard_rule_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = hard_rule_perk }
+        remove_perk = hard_rule_perk
+      }
+      else = {
+        add_perk = hard_rule_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0625
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_overseer_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = overseer_perk }
+        remove_perk = overseer_perk
+      }
+      else = {
+        add_perk = overseer_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0625
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.page_next
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0626
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0602
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0626 = {
+  type = character_event
+  title = skonester_lsf.martial_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_cheat_menu.page_prev
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0625
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_prepared_conscription_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = prepared_conscription_perk }
+        remove_perk = prepared_conscription_perk
+      }
+      else = {
+        add_perk = prepared_conscription_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0626
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_serve_the_crown_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = serve_the_crown_perk }
+        remove_perk = serve_the_crown_perk
+      }
+      else = {
+        add_perk = serve_the_crown_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0626
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_soldiers_of_lesser_fortune_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = soldiers_of_lesser_fortune_perk }
+        remove_perk = soldiers_of_lesser_fortune_perk
+      }
+      else = {
+        add_perk = soldiers_of_lesser_fortune_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0626
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_strict_organization_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = strict_organization_perk }
+        remove_perk = strict_organization_perk
+      }
+      else = {
+        add_perk = strict_organization_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0626
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_chivalric_dominance_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = chivalric_dominance_perk }
+        remove_perk = chivalric_dominance_perk
+      }
+      else = {
+        add_perk = chivalric_dominance_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0626
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_courtship_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = courtship_perk }
+        remove_perk = courtship_perk
+      }
+      else = {
+        add_perk = courtship_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0626
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.page_next
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0627
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0602
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0627 = {
+  type = character_event
+  title = skonester_lsf.martial_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_cheat_menu.page_prev
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0626
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_gallant_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = gallant_perk }
+        remove_perk = gallant_perk
+      }
+      else = {
+        add_perk = gallant_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0627
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_kingsguard_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = kingsguard_perk }
+        remove_perk = kingsguard_perk
+      }
+      else = {
+        add_perk = kingsguard_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0627
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_loyalty_and_respect_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = loyalty_and_respect_perk }
+        remove_perk = loyalty_and_respect_perk
+      }
+      else = {
+        add_perk = loyalty_and_respect_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0627
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_never_back_down_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = never_back_down_perk }
+        remove_perk = never_back_down_perk
+      }
+      else = {
+        add_perk = never_back_down_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0627
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_peacemaker_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = peacemaker_perk }
+        remove_perk = peacemaker_perk
+      }
+      else = {
+        add_perk = peacemaker_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0627
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_promising_prospects_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = promising_prospects_perk }
+        remove_perk = promising_prospects_perk
+      }
+      else = {
+        add_perk = promising_prospects_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0627
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.page_next
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0628
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0602
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0628 = {
+  type = character_event
+  title = skonester_lsf.martial_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_cheat_menu.page_prev
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0627
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_stalwart_leader_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = stalwart_leader_perk }
+        remove_perk = stalwart_leader_perk
+      }
+      else = {
+        add_perk = stalwart_leader_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0628
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_bellum_justum_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = bellum_justum_perk }
+        remove_perk = bellum_justum_perk
+      }
+      else = {
+        add_perk = bellum_justum_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0628
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_engineered_for_destruction_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = engineered_for_destruction_perk }
+        remove_perk = engineered_for_destruction_perk
+      }
+      else = {
+        add_perk = engineered_for_destruction_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0628
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_envelopment_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = envelopment_perk }
+        remove_perk = envelopment_perk
+      }
+      else = {
+        add_perk = envelopment_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0628
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_hit_and_run_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = hit_and_run_perk }
+        remove_perk = hit_and_run_perk
+      }
+      else = {
+        add_perk = hit_and_run_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0628
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_living_off_the_land_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = living_off_the_land_perk }
+        remove_perk = living_off_the_land_perk
+      }
+      else = {
+        add_perk = living_off_the_land_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0628
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.page_next
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0629
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0602
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0629 = {
+  type = character_event
+  title = skonester_lsf.martial_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_cheat_menu.page_prev
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0628
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_organized_retreat_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = organized_retreat_perk }
+        remove_perk = organized_retreat_perk
+      }
+      else = {
+        add_perk = organized_retreat_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0629
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_parthian_tactics_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = parthian_tactics_perk }
+        remove_perk = parthian_tactics_perk
+      }
+      else = {
+        add_perk = parthian_tactics_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0629
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_sappers_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = sappers_perk }
+        remove_perk = sappers_perk
+      }
+      else = {
+        add_perk = sappers_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0629
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_strategist_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = strategist_perk }
+        remove_perk = strategist_perk
+      }
+      else = {
+        add_perk = strategist_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0629
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0602
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0686 = {
+  type = character_event
+  title = skonester_lsf.reset_confirm_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_lsf.reset_yes
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      refund_perks = martial_lifestyle
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0602
+    }
+  }
+  option = {
+    name = skonester_lsf.reset_no
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0602
+    }
+  }
+}
+skonester_cheat_menu.0603 = {
+  type = character_event
+  title = skonester_lsf.stewardship_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_lsf.xp_250
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_stewardship_lifestyle_xp = 250
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0603
+    }
+  }
+  option = {
+    name = skonester_lsf.xp_1000
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_stewardship_lifestyle_xp = 1000
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0603
+    }
+  }
+  option = {
+    name = skonester_lsf.xp_3000
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_stewardship_lifestyle_xp = 3000
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0603
+    }
+  }
+  option = {
+    name = skonester_lsf.add_perk_point_1
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_stewardship_lifestyle_perk_points = 1
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0603
+    }
+  }
+  option = {
+    name = skonester_lsf.add_perk_point_3
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_stewardship_lifestyle_perk_points = 3
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0603
+    }
+  }
+  option = {
+    name = skonester_lsf.reset_tree
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0687
+    }
+  }
+  option = {
+    name = skonester_lsf.open_perk_pages
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0640
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0600
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0640 = {
+  type = character_event
+  title = skonester_lsf.stewardship_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_lsf.pk_architect_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = architect_perk }
+        remove_perk = architect_perk
+      }
+      else = {
+        add_perk = architect_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0640
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_centralization_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = centralization_perk }
+        remove_perk = centralization_perk
+      }
+      else = {
+        add_perk = centralization_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0640
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_cutting_corners_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = cutting_corners_perk }
+        remove_perk = cutting_corners_perk
+      }
+      else = {
+        add_perk = cutting_corners_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0640
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_defensive_measures_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = defensive_measures_perk }
+        remove_perk = defensive_measures_perk
+      }
+      else = {
+        add_perk = defensive_measures_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0640
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_divided_attention_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = divided_attention_perk }
+        remove_perk = divided_attention_perk
+      }
+      else = {
+        add_perk = divided_attention_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0640
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_organized_muster_rolls_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = organized_muster_rolls_perk }
+        remove_perk = organized_muster_rolls_perk
+      }
+      else = {
+        add_perk = organized_muster_rolls_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0640
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.page_next
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0641
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0603
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0641 = {
+  type = character_event
+  title = skonester_lsf.stewardship_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_cheat_menu.page_prev
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0640
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_popular_figurehead_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = popular_figurehead_perk }
+        remove_perk = popular_figurehead_perk
+      }
+      else = {
+        add_perk = popular_figurehead_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0641
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_professional_workforce_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = professional_workforce_perk }
+        remove_perk = professional_workforce_perk
+      }
+      else = {
+        add_perk = professional_workforce_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0641
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_tax_man_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = tax_man_perk }
+        remove_perk = tax_man_perk
+      }
+      else = {
+        add_perk = tax_man_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0641
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_administrator_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = administrator_perk }
+        remove_perk = administrator_perk
+      }
+      else = {
+        add_perk = administrator_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0641
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_chains_of_loyalty_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = chains_of_loyalty_perk }
+        remove_perk = chains_of_loyalty_perk
+      }
+      else = {
+        add_perk = chains_of_loyalty_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0641
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.page_next
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0642
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0603
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0642 = {
+  type = character_event
+  title = skonester_lsf.stewardship_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_cheat_menu.page_prev
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0641
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_honored_to_serve_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = honored_to_serve_perk }
+        remove_perk = honored_to_serve_perk
+      }
+      else = {
+        add_perk = honored_to_serve_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0642
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_large_levies_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = large_levies_perk }
+        remove_perk = large_levies_perk
+      }
+      else = {
+        add_perk = large_levies_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0642
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_likable_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = likable_perk }
+        remove_perk = likable_perk
+      }
+      else = {
+        add_perk = likable_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0642
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_meritocracy_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = meritocracy_perk }
+        remove_perk = meritocracy_perk
+      }
+      else = {
+        add_perk = meritocracy_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0642
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_positions_of_power_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = positions_of_power_perk }
+        remove_perk = positions_of_power_perk
+      }
+      else = {
+        add_perk = positions_of_power_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0642
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_soon_forgiven_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = soon_forgiven_perk }
+        remove_perk = soon_forgiven_perk
+      }
+      else = {
+        add_perk = soon_forgiven_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0642
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.page_next
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0643
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0603
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0643 = {
+  type = character_event
+  title = skonester_lsf.stewardship_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_cheat_menu.page_prev
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0642
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_toe_the_line_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = toe_the_line_perk }
+        remove_perk = toe_the_line_perk
+      }
+      else = {
+        add_perk = toe_the_line_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0643
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_at_any_cost_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = at_any_cost_perk }
+        remove_perk = at_any_cost_perk
+      }
+      else = {
+        add_perk = at_any_cost_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0643
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_avaricious_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = avaricious_perk }
+        remove_perk = avaricious_perk
+      }
+      else = {
+        add_perk = avaricious_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0643
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_detailed_ledgers_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = detailed_ledgers_perk }
+        remove_perk = detailed_ledgers_perk
+      }
+      else = {
+        add_perk = detailed_ledgers_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0643
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_fearful_troops_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = fearful_troops_perk }
+        remove_perk = fearful_troops_perk
+      }
+      else = {
+        add_perk = fearful_troops_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0643
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_golden_aplomb_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = golden_aplomb_perk }
+        remove_perk = golden_aplomb_perk
+      }
+      else = {
+        add_perk = golden_aplomb_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0643
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.page_next
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0644
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0603
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0644 = {
+  type = character_event
+  title = skonester_lsf.stewardship_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_cheat_menu.page_prev
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0643
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_golden_obligations_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = golden_obligations_perk }
+        remove_perk = golden_obligations_perk
+      }
+      else = {
+        add_perk = golden_obligations_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0644
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_heregeld_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = heregeld_perk }
+        remove_perk = heregeld_perk
+      }
+      else = {
+        add_perk = heregeld_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0644
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_it_is_my_domain_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = it_is_my_domain_perk }
+        remove_perk = it_is_my_domain_perk
+      }
+      else = {
+        add_perk = it_is_my_domain_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0644
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_war_profiteer_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = war_profiteer_perk }
+        remove_perk = war_profiteer_perk
+      }
+      else = {
+        add_perk = war_profiteer_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0644
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0603
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0687 = {
+  type = character_event
+  title = skonester_lsf.reset_confirm_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_lsf.reset_yes
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      refund_perks = stewardship_lifestyle
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0603
+    }
+  }
+  option = {
+    name = skonester_lsf.reset_no
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0603
+    }
+  }
+}
+skonester_cheat_menu.0604 = {
+  type = character_event
+  title = skonester_lsf.intrigue_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_lsf.xp_250
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_intrigue_lifestyle_xp = 250
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0604
+    }
+  }
+  option = {
+    name = skonester_lsf.xp_1000
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_intrigue_lifestyle_xp = 1000
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0604
+    }
+  }
+  option = {
+    name = skonester_lsf.xp_3000
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_intrigue_lifestyle_xp = 3000
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0604
+    }
+  }
+  option = {
+    name = skonester_lsf.add_perk_point_1
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_intrigue_lifestyle_perk_points = 1
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0604
+    }
+  }
+  option = {
+    name = skonester_lsf.add_perk_point_3
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_intrigue_lifestyle_perk_points = 3
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0604
+    }
+  }
+  option = {
+    name = skonester_lsf.reset_tree
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0688
+    }
+  }
+  option = {
+    name = skonester_lsf.open_perk_pages
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0655
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0600
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0655 = {
+  type = character_event
+  title = skonester_lsf.intrigue_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_lsf.pk_a_job_done_right_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = a_job_done_right_perk }
+        remove_perk = a_job_done_right_perk
+      }
+      else = {
+        add_perk = a_job_done_right_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0655
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_court_of_shadows_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = court_of_shadows_perk }
+        remove_perk = court_of_shadows_perk
+      }
+      else = {
+        add_perk = court_of_shadows_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0655
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_digging_for_dirt_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = digging_for_dirt_perk }
+        remove_perk = digging_for_dirt_perk
+      }
+      else = {
+        add_perk = digging_for_dirt_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0655
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_kidnapper_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = kidnapper_perk }
+        remove_perk = kidnapper_perk
+      }
+      else = {
+        add_perk = kidnapper_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0655
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_prepared_for_anything_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = prepared_for_anything_perk }
+        remove_perk = prepared_for_anything_perk
+      }
+      else = {
+        add_perk = prepared_for_anything_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0655
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_schemer_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = schemer_perk }
+        remove_perk = schemer_perk
+      }
+      else = {
+        add_perk = schemer_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0655
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.page_next
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0656
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0604
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0656 = {
+  type = character_event
+  title = skonester_lsf.intrigue_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_cheat_menu.page_prev
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0655
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_swift_execution_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = swift_execution_perk }
+        remove_perk = swift_execution_perk
+      }
+      else = {
+        add_perk = swift_execution_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0656
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_truth_is_relative_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = truth_is_relative_perk }
+        remove_perk = truth_is_relative_perk
+      }
+      else = {
+        add_perk = truth_is_relative_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0656
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_twice_schemed_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = twice_schemed_perk }
+        remove_perk = twice_schemed_perk
+      }
+      else = {
+        add_perk = twice_schemed_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0656
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_dark_insights_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = dark_insights_perk }
+        remove_perk = dark_insights_perk
+      }
+      else = {
+        add_perk = dark_insights_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0656
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_divine_retribution_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = divine_retribution_perk }
+        remove_perk = divine_retribution_perk
+      }
+      else = {
+        add_perk = divine_retribution_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0656
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_dreadful_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = dreadful_perk }
+        remove_perk = dreadful_perk
+      }
+      else = {
+        add_perk = dreadful_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0656
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.page_next
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0657
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0604
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0657 = {
+  type = character_event
+  title = skonester_lsf.intrigue_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_cheat_menu.page_prev
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0656
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_fear_tax_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = fear_tax_perk }
+        remove_perk = fear_tax_perk
+      }
+      else = {
+        add_perk = fear_tax_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0657
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_forever_infamous_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = forever_infamous_perk }
+        remove_perk = forever_infamous_perk
+      }
+      else = {
+        add_perk = forever_infamous_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0657
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_malice_implicit_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = malice_implicit_perk }
+        remove_perk = malice_implicit_perk
+      }
+      else = {
+        add_perk = malice_implicit_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0657
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_prison_feudal_complex_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = prison_feudal_complex_perk }
+        remove_perk = prison_feudal_complex_perk
+      }
+      else = {
+        add_perk = prison_feudal_complex_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0657
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_thriving_in_chaos_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = thriving_in_chaos_perk }
+        remove_perk = thriving_in_chaos_perk
+      }
+      else = {
+        add_perk = thriving_in_chaos_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0657
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_torturer_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = torturer_perk }
+        remove_perk = torturer_perk
+      }
+      else = {
+        add_perk = torturer_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0657
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.page_next
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0658
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0604
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0658 = {
+  type = character_event
+  title = skonester_lsf.intrigue_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_cheat_menu.page_prev
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0657
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_enticing_opportunity_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = enticing_opportunity_perk }
+        remove_perk = enticing_opportunity_perk
+      }
+      else = {
+        add_perk = enticing_opportunity_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0658
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_graceful_recovery_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = graceful_recovery_perk }
+        remove_perk = graceful_recovery_perk
+      }
+      else = {
+        add_perk = graceful_recovery_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0658
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_home_advantage_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = home_advantage_perk }
+        remove_perk = home_advantage_perk
+      }
+      else = {
+        add_perk = home_advantage_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0658
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_like_weed_in_a_garden_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = like_weed_in_a_garden_perk }
+        remove_perk = like_weed_in_a_garden_perk
+      }
+      else = {
+        add_perk = like_weed_in_a_garden_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0658
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_mortal_adoration_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = mortal_adoration_perk }
+        remove_perk = mortal_adoration_perk
+      }
+      else = {
+        add_perk = mortal_adoration_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0658
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_seducer_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = seducer_perk }
+        remove_perk = seducer_perk
+      }
+      else = {
+        add_perk = seducer_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0658
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.page_next
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0659
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0604
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0659 = {
+  type = character_event
+  title = skonester_lsf.intrigue_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_cheat_menu.page_prev
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0658
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_smooth_operator_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = smooth_operator_perk }
+        remove_perk = smooth_operator_perk
+      }
+      else = {
+        add_perk = smooth_operator_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0659
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_subtle_desire_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = subtle_desire_perk }
+        remove_perk = subtle_desire_perk
+      }
+      else = {
+        add_perk = subtle_desire_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0659
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_unshackled_lust_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = unshackled_lust_perk }
+        remove_perk = unshackled_lust_perk
+      }
+      else = {
+        add_perk = unshackled_lust_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0659
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0604
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0688 = {
+  type = character_event
+  title = skonester_lsf.reset_confirm_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_lsf.reset_yes
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      refund_perks = intrigue_lifestyle
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0604
+    }
+  }
+  option = {
+    name = skonester_lsf.reset_no
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0604
+    }
+  }
+}
+skonester_cheat_menu.0605 = {
+  type = character_event
+  title = skonester_lsf.learning_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_lsf.xp_250
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_learning_lifestyle_xp = 250
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0605
+    }
+  }
+  option = {
+    name = skonester_lsf.xp_1000
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_learning_lifestyle_xp = 1000
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0605
+    }
+  }
+  option = {
+    name = skonester_lsf.xp_3000
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_learning_lifestyle_xp = 3000
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0605
+    }
+  }
+  option = {
+    name = skonester_lsf.add_perk_point_1
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_learning_lifestyle_perk_points = 1
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0605
+    }
+  }
+  option = {
+    name = skonester_lsf.add_perk_point_3
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      add_learning_lifestyle_perk_points = 3
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0605
+    }
+  }
+  option = {
+    name = skonester_lsf.reset_tree
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0689
+    }
+  }
+  option = {
+    name = skonester_lsf.open_perk_pages
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0670
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0600
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0670 = {
+  type = character_event
+  title = skonester_lsf.learning_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_lsf.pk_anatomical_studies_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = anatomical_studies_perk }
+        remove_perk = anatomical_studies_perk
+      }
+      else = {
+        add_perk = anatomical_studies_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0670
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_carefree_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = carefree_perk }
+        remove_perk = carefree_perk
+      }
+      else = {
+        add_perk = carefree_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0670
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_healthy_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = healthy_perk }
+        remove_perk = healthy_perk
+      }
+      else = {
+        add_perk = healthy_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0670
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_iron_constitution_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = iron_constitution_perk }
+        remove_perk = iron_constitution_perk
+      }
+      else = {
+        add_perk = iron_constitution_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0670
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_know_thyself_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = know_thyself_perk }
+        remove_perk = know_thyself_perk
+      }
+      else = {
+        add_perk = know_thyself_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0670
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_mental_resilience_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = mental_resilience_perk }
+        remove_perk = mental_resilience_perk
+      }
+      else = {
+        add_perk = mental_resilience_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0670
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.page_next
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0671
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0605
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0671 = {
+  type = character_event
+  title = skonester_lsf.learning_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_cheat_menu.page_prev
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0670
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_restraint_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = restraint_perk }
+        remove_perk = restraint_perk
+      }
+      else = {
+        add_perk = restraint_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0671
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_wash_your_hands_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = wash_your_hands_perk }
+        remove_perk = wash_your_hands_perk
+      }
+      else = {
+        add_perk = wash_your_hands_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0671
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_whole_of_body_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = whole_of_body_perk }
+        remove_perk = whole_of_body_perk
+      }
+      else = {
+        add_perk = whole_of_body_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0671
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_apostate_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = apostate_perk }
+        remove_perk = apostate_perk
+      }
+      else = {
+        add_perk = apostate_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0671
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_church_and_state_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = church_and_state_perk }
+        remove_perk = church_and_state_perk
+      }
+      else = {
+        add_perk = church_and_state_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0671
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_clerical_justifications_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = clerical_justifications_perk }
+        remove_perk = clerical_justifications_perk
+      }
+      else = {
+        add_perk = clerical_justifications_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0671
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.page_next
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0672
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0605
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0672 = {
+  type = character_event
+  title = skonester_lsf.learning_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_cheat_menu.page_prev
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0671
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_defender_of_the_faith_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = defender_of_the_faith_perk }
+        remove_perk = defender_of_the_faith_perk
+      }
+      else = {
+        add_perk = defender_of_the_faith_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0672
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_faithful_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = faithful_perk }
+        remove_perk = faithful_perk
+      }
+      else = {
+        add_perk = faithful_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0672
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_radiant_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = radiant_perk }
+        remove_perk = radiant_perk
+      }
+      else = {
+        add_perk = radiant_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0672
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_religious_icon_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = religious_icon_perk }
+        remove_perk = religious_icon_perk
+      }
+      else = {
+        add_perk = religious_icon_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0672
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_theologian_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = theologian_perk }
+        remove_perk = theologian_perk
+      }
+      else = {
+        add_perk = theologian_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0672
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_zealous_proselytizer_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = zealous_proselytizer_perk }
+        remove_perk = zealous_proselytizer_perk
+      }
+      else = {
+        add_perk = zealous_proselytizer_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0672
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.page_next
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0673
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0605
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0673 = {
+  type = character_event
+  title = skonester_lsf.learning_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_cheat_menu.page_prev
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0672
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_learn_on_the_job_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = learn_on_the_job_perk }
+        remove_perk = learn_on_the_job_perk
+      }
+      else = {
+        add_perk = learn_on_the_job_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0673
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_open_minded_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = open_minded_perk }
+        remove_perk = open_minded_perk
+      }
+      else = {
+        add_perk = open_minded_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0673
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_pedagogy_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = pedagogy_perk }
+        remove_perk = pedagogy_perk
+      }
+      else = {
+        add_perk = pedagogy_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0673
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_planned_cultivation_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = planned_cultivation_perk }
+        remove_perk = planned_cultivation_perk
+      }
+      else = {
+        add_perk = planned_cultivation_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0673
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_prophet_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = prophet_perk }
+        remove_perk = prophet_perk
+      }
+      else = {
+        add_perk = prophet_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0673
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_scholar_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = scholar_perk }
+        remove_perk = scholar_perk
+      }
+      else = {
+        add_perk = scholar_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0673
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.page_next
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0674
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0605
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0674 = {
+  type = character_event
+  title = skonester_lsf.learning_perks_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_cheat_menu.page_prev
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0673
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_scholarly_circles_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = scholarly_circles_perk }
+        remove_perk = scholarly_circles_perk
+      }
+      else = {
+        add_perk = scholarly_circles_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0674
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_scientific_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = scientific_perk }
+        remove_perk = scientific_perk
+      }
+      else = {
+        add_perk = scientific_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0674
+    }
+  }
+  option = {
+    name = skonester_lsf.pk_sanctioned_loopholes_perk
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      if = {
+        limit = { has_perk = sanctioned_loopholes_perk }
+        remove_perk = sanctioned_loopholes_perk
+      }
+      else = {
+        add_perk = sanctioned_loopholes_perk
+      }
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0674
+    }
+  }
+  option = {
+    name = skonester_cheat_menu.00x.back
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0605
+    }
+  }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+skonester_cheat_menu.0689 = {
+  type = character_event
+  title = skonester_lsf.reset_confirm_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_lsf.reset_yes
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      refund_perks = learning_lifestyle
+    }
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0605
+    }
+  }
+  option = {
+    name = skonester_lsf.reset_no
+    scope:actor = {
+      trigger_event = skonester_cheat_menu.0605
+    }
+  }
+}
+skonester_cheat_menu.0690 = {
+  type = character_event
+  title = skonester_lsf.reset_confirm_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = learning
+  right_portrait = scope:skonester_lifestyle_target
+  immediate = {
+    skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  }
+  option = {
+    name = skonester_lsf.reset_yes
+    trigger = {
+      skonester_cheat_menu_menu_enabled_trigger = yes
+      exists = scope:skonester_lifestyle_target
+    }
+    scope:skonester_lifestyle_target = {
+      refund_perks = wanderer_lifestyle
+    }
+  }
+  option = {
+    name = skonester_lsf.reset_no
+  }
+}
+## AUTO-GENERATED END (lifestyle_cheat_menu)

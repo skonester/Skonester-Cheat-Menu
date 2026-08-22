@@ -1,0 +1,73 @@
+﻿# 宝物工坊「逆天」词条（扁平 modifier + stacking）
+
+skonester_tm_godpack_vitality = {
+  health = 1.0
+  epidemic_resistance = 0.5
+  stacking = yes
+}
+
+skonester_tm_godpack_youth = {
+  fertility = 0.35
+  stress_gain_mult = -0.35
+  stacking = yes
+}
+
+skonester_tm_godpack_army = {
+  levy_size = 0.35
+  men_at_arms_maintenance = -0.2
+  stacking = yes
+}
+
+skonester_tm_godpack_scheme_attack = {
+  owned_hostile_scheme_success_chance_add = 25
+  stacking = yes
+}
+
+skonester_tm_godpack_scheme_defense = {
+  enemy_hostile_scheme_success_chance_add = -25
+  enemy_hostile_scheme_phase_duration_add = 30
+  stacking = yes
+}
+
+skonester_tm_godpack_dynasty = {
+  fertility = 0.25
+  monthly_dynasty_prestige_mult = 0.2
+  dynasty_opinion = 15
+  stacking = yes
+}
+
+skonester_tm_godpack_tax = {
+  monthly_income_mult = 0.2
+  vassal_tax_contribution_mult = 0.15
+  stacking = yes
+}
+
+skonester_tm_godpack_vassal = {
+  vassal_opinion = 20
+  powerful_vassal_opinion = 15
+  stacking = yes
+}
+
+skonester_tm_godpack_faith_culture = {
+  same_faith_opinion = 15
+  cultural_head_fascination_mult = 0.25
+  stacking = yes
+}
+
+skonester_tm_godpack_dread_piety = {
+  dread_gain_mult = 0.35
+  monthly_piety = 0.35
+  stacking = yes
+}
+
+skonester_tm_godpack_knight_army = {
+  knight_limit = 5
+  knight_effectiveness_mult = 0.25
+  levy_reinforcement_rate = 0.35
+  stacking = yes
+}
+
+skonester_tm_godpack_mobility = {
+  character_travel_speed_mult = 0.35
+  stacking = yes
+}

@@ -1,0 +1,7 @@
+﻿############################################
+# Paradox plans to use till 300
+
+pcm = {
+	sort_order = 301
+	gui_tags = { big_button }
+}

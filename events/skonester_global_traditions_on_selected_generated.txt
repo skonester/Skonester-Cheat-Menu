@@ -1,0 +1,627 @@
+﻿namespace = skonester_cheat_menu
+
+## AUTO-GENERATED (add-only traditions on scope:skonester_selected_culture; re-opens picker after add)
+
+skonester_cheat_menu.2600 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_adaptive_skirmishing scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_adaptive_skirmishing = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_adaptive_skirmishing } } root = { trigger_event = skonester_cheat_menu.2600 } }
+  option = { name = tradition_african_tolerance scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_african_tolerance = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_african_tolerance } } root = { trigger_event = skonester_cheat_menu.2600 } }
+  option = { name = tradition_agrarian scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_agrarian = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_agrarian } } root = { trigger_event = skonester_cheat_menu.2600 } }
+  option = { name = tradition_amharic_highlanders scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_amharic_highlanders = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_amharic_highlanders } } root = { trigger_event = skonester_cheat_menu.2600 } }
+  option = { name = tradition_ancient_miners scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_ancient_miners = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_ancient_miners } } root = { trigger_event = skonester_cheat_menu.2600 } }
+  option = { name = tradition_artisans scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_artisans = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_artisans } } root = { trigger_event = skonester_cheat_menu.2600 } }
+
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2601 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2601 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_astute_diplomats scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_astute_diplomats = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_astute_diplomats } } root = { trigger_event = skonester_cheat_menu.2601 } }
+  option = { name = tradition_battlefield_looters scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_battlefield_looters = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_battlefield_looters } } root = { trigger_event = skonester_cheat_menu.2601 } }
+  option = { name = tradition_brewery scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_brewery = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_brewery } } root = { trigger_event = skonester_cheat_menu.2601 } }
+  option = { name = tradition_burman_royal_army scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_burman_royal_army = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_burman_royal_army } } root = { trigger_event = skonester_cheat_menu.2601 } }
+  option = { name = tradition_bush_hunting scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_bush_hunting = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_bush_hunting } } root = { trigger_event = skonester_cheat_menu.2601 } }
+  option = { name = tradition_by_the_sword scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_by_the_sword = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_by_the_sword } } root = { trigger_event = skonester_cheat_menu.2601 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2600 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2602 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2602 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_byzantine_succession scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_byzantine_succession = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_byzantine_succession } } root = { trigger_event = skonester_cheat_menu.2602 } }
+  option = { name = tradition_caravaneers scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_caravaneers = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_caravaneers } } root = { trigger_event = skonester_cheat_menu.2602 } }
+  option = { name = tradition_castle_keepers scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_castle_keepers = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_castle_keepers } } root = { trigger_event = skonester_cheat_menu.2602 } }
+  option = { name = tradition_caucasian_wolves scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_caucasian_wolves = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_caucasian_wolves } } root = { trigger_event = skonester_cheat_menu.2602 } }
+  option = { name = tradition_ce1_ritual_washing scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_ce1_ritual_washing = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_ce1_ritual_washing } } root = { trigger_event = skonester_cheat_menu.2602 } }
+  option = { name = tradition_chanson_de_geste scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_chanson_de_geste = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_chanson_de_geste } } root = { trigger_event = skonester_cheat_menu.2602 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2601 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2603 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2603 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_charitable scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_charitable = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_charitable } } root = { trigger_event = skonester_cheat_menu.2603 } }
+  option = { name = tradition_chivalry scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_chivalry = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_chivalry } } root = { trigger_event = skonester_cheat_menu.2603 } }
+  option = { name = tradition_city_keepers scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_city_keepers = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_city_keepers } } root = { trigger_event = skonester_cheat_menu.2603 } }
+  option = { name = tradition_collective_lands scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_collective_lands = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_collective_lands } } root = { trigger_event = skonester_cheat_menu.2603 } }
+  option = { name = tradition_concubines scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_concubines = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_concubines } } root = { trigger_event = skonester_cheat_menu.2603 } }
+  option = { name = tradition_court_eunuchs scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_court_eunuchs = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_court_eunuchs } } root = { trigger_event = skonester_cheat_menu.2603 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2602 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2604 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2604 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_culinary_art scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_culinary_art = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_culinary_art } } root = { trigger_event = skonester_cheat_menu.2604 } }
+  option = { name = tradition_cultivation scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_cultivation = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_cultivation } } root = { trigger_event = skonester_cheat_menu.2604 } }
+  option = { name = tradition_cultural_primacy scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_cultural_primacy = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_cultural_primacy } } root = { trigger_event = skonester_cheat_menu.2604 } }
+  option = { name = tradition_culture_blending scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_culture_blending = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_culture_blending } } root = { trigger_event = skonester_cheat_menu.2604 } }
+  option = { name = tradition_debug scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_debug = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_debug } } root = { trigger_event = skonester_cheat_menu.2604 } }
+  option = { name = tradition_desert_nomads scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_desert_nomads = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_desert_nomads } } root = { trigger_event = skonester_cheat_menu.2604 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2603 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2605 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2605 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_desert_ribat scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_desert_ribat = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_desert_ribat } } root = { trigger_event = skonester_cheat_menu.2605 } }
+  option = { name = tradition_devoted_horsemanship scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_devoted_horsemanship = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_devoted_horsemanship } } root = { trigger_event = skonester_cheat_menu.2605 } }
+  option = { name = tradition_diasporic scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_diasporic = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_diasporic } } root = { trigger_event = skonester_cheat_menu.2605 } }
+  option = { name = tradition_druzhina scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_druzhina = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_druzhina } } root = { trigger_event = skonester_cheat_menu.2605 } }
+  option = { name = tradition_dryland_dwellers scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_dryland_dwellers = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_dryland_dwellers } } root = { trigger_event = skonester_cheat_menu.2605 } }
+  option = { name = tradition_ep2_avid_falconers scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_ep2_avid_falconers = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_ep2_avid_falconers } } root = { trigger_event = skonester_cheat_menu.2605 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2604 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2606 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2606 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_ep3_audacious_cadets scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_ep3_audacious_cadets = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_ep3_audacious_cadets } } root = { trigger_event = skonester_cheat_menu.2606 } }
+  option = { name = tradition_ep3_cultivated_sophistication scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_ep3_cultivated_sophistication = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_ep3_cultivated_sophistication } } root = { trigger_event = skonester_cheat_menu.2606 } }
+  option = { name = tradition_ep3_imperial_tagmata scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_ep3_imperial_tagmata = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_ep3_imperial_tagmata } } root = { trigger_event = skonester_cheat_menu.2606 } }
+  option = { name = tradition_ep3_indomitable_azatani scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_ep3_indomitable_azatani = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_ep3_indomitable_azatani } } root = { trigger_event = skonester_cheat_menu.2606 } }
+  option = { name = tradition_ep3_palace_politics scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_ep3_palace_politics = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_ep3_palace_politics } } root = { trigger_event = skonester_cheat_menu.2606 } }
+  option = { name = tradition_ep3_roman_ceremonies scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_ep3_roman_ceremonies = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_ep3_roman_ceremonies } } root = { trigger_event = skonester_cheat_menu.2606 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2605 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2607 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2607 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_equal_inheritance scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_equal_inheritance = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_equal_inheritance } } root = { trigger_event = skonester_cheat_menu.2607 } }
+  option = { name = tradition_equitable scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_equitable = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_equitable } } root = { trigger_event = skonester_cheat_menu.2607 } }
+  option = { name = tradition_esteemed_hospitality scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_esteemed_hospitality = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_esteemed_hospitality } } root = { trigger_event = skonester_cheat_menu.2607 } }
+  option = { name = tradition_eye_for_an_eye scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_eye_for_an_eye = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_eye_for_an_eye } } root = { trigger_event = skonester_cheat_menu.2607 } }
+  option = { name = tradition_faith_bound scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_faith_bound = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_faith_bound } } root = { trigger_event = skonester_cheat_menu.2607 } }
+  option = { name = tradition_family_entrepreneurship scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_family_entrepreneurship = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_family_entrepreneurship } } root = { trigger_event = skonester_cheat_menu.2607 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2606 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2608 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2608 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_female_only_inheritance scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_female_only_inheritance = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_female_only_inheritance } } root = { trigger_event = skonester_cheat_menu.2608 } }
+  option = { name = tradition_fervent_temple_builders scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_fervent_temple_builders = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_fervent_temple_builders } } root = { trigger_event = skonester_cheat_menu.2608 } }
+  option = { name = tradition_festivities scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_festivities = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_festivities } } root = { trigger_event = skonester_cheat_menu.2608 } }
+  option = { name = tradition_fishermen scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_fishermen = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_fishermen } } root = { trigger_event = skonester_cheat_menu.2608 } }
+  option = { name = tradition_forbearing scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_forbearing = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_forbearing } } root = { trigger_event = skonester_cheat_menu.2608 } }
+  option = { name = tradition_forest_fighters scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_forest_fighters = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_forest_fighters } } root = { trigger_event = skonester_cheat_menu.2608 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2607 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2609 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2609 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_forest_folk scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_forest_folk = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_forest_folk } } root = { trigger_event = skonester_cheat_menu.2609 } }
+  option = { name = tradition_forest_wardens scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_forest_wardens = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_forest_wardens } } root = { trigger_event = skonester_cheat_menu.2609 } }
+  option = { name = tradition_formation_fighting scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_formation_fighting = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_formation_fighting } } root = { trigger_event = skonester_cheat_menu.2609 } }
+  option = { name = tradition_fp1_coastal_warriors scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_fp1_coastal_warriors = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_fp1_coastal_warriors } } root = { trigger_event = skonester_cheat_menu.2609 } }
+  option = { name = tradition_fp1_northern_stories scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_fp1_northern_stories = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_fp1_northern_stories } } root = { trigger_event = skonester_cheat_menu.2609 } }
+  option = { name = tradition_fp1_performative_honour scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_fp1_performative_honour = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_fp1_performative_honour } } root = { trigger_event = skonester_cheat_menu.2609 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2608 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2610 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2610 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_fp1_the_right_to_prove scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_fp1_the_right_to_prove = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_fp1_the_right_to_prove } } root = { trigger_event = skonester_cheat_menu.2610 } }
+  option = { name = tradition_fp1_trials_by_combat scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_fp1_trials_by_combat = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_fp1_trials_by_combat } } root = { trigger_event = skonester_cheat_menu.2610 } }
+  option = { name = tradition_fp2_malleable_subjects scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_fp2_malleable_subjects = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_fp2_malleable_subjects } } root = { trigger_event = skonester_cheat_menu.2610 } }
+  option = { name = tradition_fp2_ritualised_friendship scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_fp2_ritualised_friendship = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_fp2_ritualised_friendship } } root = { trigger_event = skonester_cheat_menu.2610 } }
+  option = { name = tradition_fp2_state_ransoming scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_fp2_state_ransoming = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_fp2_state_ransoming } } root = { trigger_event = skonester_cheat_menu.2610 } }
+  option = { name = tradition_fp2_strategy_gamers scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_fp2_strategy_gamers = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_fp2_strategy_gamers } } root = { trigger_event = skonester_cheat_menu.2610 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2609 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2611 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2611 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_fp3_beacon_of_learning scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_fp3_beacon_of_learning = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_fp3_beacon_of_learning } } root = { trigger_event = skonester_cheat_menu.2611 } }
+  option = { name = tradition_fp3_enlightened_magnates scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_fp3_enlightened_magnates = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_fp3_enlightened_magnates } } root = { trigger_event = skonester_cheat_menu.2611 } }
+  option = { name = tradition_fp3_fierce_independence scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_fp3_fierce_independence = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_fp3_fierce_independence } } root = { trigger_event = skonester_cheat_menu.2611 } }
+  option = { name = tradition_fp3_frontier_warriors scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_fp3_frontier_warriors = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_fp3_frontier_warriors } } root = { trigger_event = skonester_cheat_menu.2611 } }
+  option = { name = tradition_fp3_irrigation_experts scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_fp3_irrigation_experts = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_fp3_irrigation_experts } } root = { trigger_event = skonester_cheat_menu.2611 } }
+  option = { name = tradition_fp3_jirga scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_fp3_jirga = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_fp3_jirga } } root = { trigger_event = skonester_cheat_menu.2611 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2610 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2612 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2612 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_fp3_pragmatic_creed scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_fp3_pragmatic_creed = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_fp3_pragmatic_creed } } root = { trigger_event = skonester_cheat_menu.2612 } }
+  option = { name = tradition_frugal_armorsmiths scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_frugal_armorsmiths = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_frugal_armorsmiths } } root = { trigger_event = skonester_cheat_menu.2612 } }
+  option = { name = tradition_futuwaa scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_futuwaa = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_futuwaa } } root = { trigger_event = skonester_cheat_menu.2612 } }
+  option = { name = tradition_gardening scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_gardening = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_gardening } } root = { trigger_event = skonester_cheat_menu.2612 } }
+  option = { name = tradition_garuda_warriors scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_garuda_warriors = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_garuda_warriors } } root = { trigger_event = skonester_cheat_menu.2612 } }
+  option = { name = tradition_hard_working scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_hard_working = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_hard_working } } root = { trigger_event = skonester_cheat_menu.2612 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2611 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2613 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2613 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_hereditary_hierarchy scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_hereditary_hierarchy = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_hereditary_hierarchy } } root = { trigger_event = skonester_cheat_menu.2613 } }
+  option = { name = tradition_hidden_cities scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_hidden_cities = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_hidden_cities } } root = { trigger_event = skonester_cheat_menu.2613 } }
+  option = { name = tradition_highland_warriors scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_highland_warriors = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_highland_warriors } } root = { trigger_event = skonester_cheat_menu.2613 } }
+  option = { name = tradition_hill_dwellers scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_hill_dwellers = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_hill_dwellers } } root = { trigger_event = skonester_cheat_menu.2613 } }
+  option = { name = tradition_himalayan_settlers scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_himalayan_settlers = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_himalayan_settlers } } root = { trigger_event = skonester_cheat_menu.2613 } }
+  option = { name = tradition_hird scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_hird = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_hird } } root = { trigger_event = skonester_cheat_menu.2613 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2612 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2614 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2614 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_hit_and_run scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_hit_and_run = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_hit_and_run } } root = { trigger_event = skonester_cheat_menu.2614 } }
+  option = { name = tradition_horn_mountain_skirmishing scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_horn_mountain_skirmishing = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_horn_mountain_skirmishing } } root = { trigger_event = skonester_cheat_menu.2614 } }
+  option = { name = tradition_horse_breeder scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_horse_breeder = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_horse_breeder } } root = { trigger_event = skonester_cheat_menu.2614 } }
+  option = { name = tradition_horse_lords scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_horse_lords = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_horse_lords } } root = { trigger_event = skonester_cheat_menu.2614 } }
+  option = { name = tradition_hunters scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_hunters = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_hunters } } root = { trigger_event = skonester_cheat_menu.2614 } }
+  option = { name = tradition_hussar scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_hussar = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_hussar } } root = { trigger_event = skonester_cheat_menu.2614 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2613 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2615 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2615 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_intensive_farming scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_intensive_farming = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_intensive_farming } } root = { trigger_event = skonester_cheat_menu.2615 } }
+  option = { name = tradition_isolationist scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_isolationist = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_isolationist } } root = { trigger_event = skonester_cheat_menu.2615 } }
+  option = { name = tradition_jungle_dwellers scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_jungle_dwellers = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_jungle_dwellers } } root = { trigger_event = skonester_cheat_menu.2615 } }
+  option = { name = tradition_jungle_warriors scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_jungle_warriors = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_jungle_warriors } } root = { trigger_event = skonester_cheat_menu.2615 } }
+  option = { name = tradition_khadga_puja scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_khadga_puja = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_khadga_puja } } root = { trigger_event = skonester_cheat_menu.2615 } }
+  option = { name = tradition_land_of_the_bow scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_land_of_the_bow = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_land_of_the_bow } } root = { trigger_event = skonester_cheat_menu.2615 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2614 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2616 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2616 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_language_scholars scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_language_scholars = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_language_scholars } } root = { trigger_event = skonester_cheat_menu.2616 } }
+  option = { name = tradition_legalistic scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_legalistic = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_legalistic } } root = { trigger_event = skonester_cheat_menu.2616 } }
+  option = { name = tradition_life_is_just_a_joke scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_life_is_just_a_joke = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_life_is_just_a_joke } } root = { trigger_event = skonester_cheat_menu.2616 } }
+  option = { name = tradition_longbow_competitions scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_longbow_competitions = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_longbow_competitions } } root = { trigger_event = skonester_cheat_menu.2616 } }
+  option = { name = tradition_lords_of_the_elephant scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_lords_of_the_elephant = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_lords_of_the_elephant } } root = { trigger_event = skonester_cheat_menu.2616 } }
+  option = { name = tradition_loyal_soldiers scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_loyal_soldiers = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_loyal_soldiers } } root = { trigger_event = skonester_cheat_menu.2616 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2615 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2617 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2617 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_malleable_invaders scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_malleable_invaders = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_malleable_invaders } } root = { trigger_event = skonester_cheat_menu.2617 } }
+  option = { name = tradition_maritime_mercantilism scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_maritime_mercantilism = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_maritime_mercantilism } } root = { trigger_event = skonester_cheat_menu.2617 } }
+  option = { name = tradition_maritime_way_of_life scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_maritime_way_of_life = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_maritime_way_of_life } } root = { trigger_event = skonester_cheat_menu.2617 } }
+  option = { name = tradition_martial_admiration scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_martial_admiration = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_martial_admiration } } root = { trigger_event = skonester_cheat_menu.2617 } }
+  option = { name = tradition_medicinal_plants scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_medicinal_plants = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_medicinal_plants } } root = { trigger_event = skonester_cheat_menu.2617 } }
+  option = { name = tradition_mendicant_mystics scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_mendicant_mystics = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_mendicant_mystics } } root = { trigger_event = skonester_cheat_menu.2617 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2616 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2618 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2618 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_merciful_blindings scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_merciful_blindings = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_merciful_blindings } } root = { trigger_event = skonester_cheat_menu.2618 } }
+  option = { name = tradition_metal_craftsmanship scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_metal_craftsmanship = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_metal_craftsmanship } } root = { trigger_event = skonester_cheat_menu.2618 } }
+  option = { name = tradition_mobile_guards scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_mobile_guards = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_mobile_guards } } root = { trigger_event = skonester_cheat_menu.2618 } }
+  option = { name = tradition_modest scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_modest = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_modest } } root = { trigger_event = skonester_cheat_menu.2618 } }
+  option = { name = tradition_monastic_communities scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_monastic_communities = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_monastic_communities } } root = { trigger_event = skonester_cheat_menu.2618 } }
+  option = { name = tradition_monogamous scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_monogamous = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_monogamous } } root = { trigger_event = skonester_cheat_menu.2618 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2617 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2619 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2619 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_mountain_herding scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_mountain_herding = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_mountain_herding } } root = { trigger_event = skonester_cheat_menu.2619 } }
+  option = { name = tradition_mountain_homes scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_mountain_homes = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_mountain_homes } } root = { trigger_event = skonester_cheat_menu.2619 } }
+  option = { name = tradition_mountaineer_ruralism scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_mountaineer_ruralism = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_mountaineer_ruralism } } root = { trigger_event = skonester_cheat_menu.2619 } }
+  option = { name = tradition_mountaineers scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_mountaineers = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_mountaineers } } root = { trigger_event = skonester_cheat_menu.2619 } }
+  option = { name = tradition_mpo_iron_cavalry scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_mpo_iron_cavalry = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_mpo_iron_cavalry } } root = { trigger_event = skonester_cheat_menu.2619 } }
+  option = { name = tradition_mpo_northern_tribes scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_mpo_northern_tribes = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_mpo_northern_tribes } } root = { trigger_event = skonester_cheat_menu.2619 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2618 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2620 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2620 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_mpo_wolves_of_the_deep_steppe scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_mpo_wolves_of_the_deep_steppe = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_mpo_wolves_of_the_deep_steppe } } root = { trigger_event = skonester_cheat_menu.2620 } }
+  option = { name = tradition_mubarizuns scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_mubarizuns = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_mubarizuns } } root = { trigger_event = skonester_cheat_menu.2620 } }
+  option = { name = tradition_music_theory scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_music_theory = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_music_theory } } root = { trigger_event = skonester_cheat_menu.2620 } }
+  option = { name = tradition_mystical_ancestors scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_mystical_ancestors = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_mystical_ancestors } } root = { trigger_event = skonester_cheat_menu.2620 } }
+  option = { name = tradition_noble_adoption scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_noble_adoption = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_noble_adoption } } root = { trigger_event = skonester_cheat_menu.2620 } }
+  option = { name = tradition_nubian_warrior_kings scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_nubian_warrior_kings = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_nubian_warrior_kings } } root = { trigger_event = skonester_cheat_menu.2620 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2619 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2621 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2621 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_nubian_warrior_queens scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_nubian_warrior_queens = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_nubian_warrior_queens } } root = { trigger_event = skonester_cheat_menu.2621 } }
+  option = { name = tradition_nudists scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_nudists = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_nudists } } root = { trigger_event = skonester_cheat_menu.2621 } }
+  option = { name = tradition_only_the_strong scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_only_the_strong = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_only_the_strong } } root = { trigger_event = skonester_cheat_menu.2621 } }
+  option = { name = tradition_pacifism scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_pacifism = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_pacifism } } root = { trigger_event = skonester_cheat_menu.2621 } }
+  option = { name = tradition_parochialism scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_parochialism = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_parochialism } } root = { trigger_event = skonester_cheat_menu.2621 } }
+  option = { name = tradition_pastoralists scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_pastoralists = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_pastoralists } } root = { trigger_event = skonester_cheat_menu.2621 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2620 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2622 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2622 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_philosopher_culture scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_philosopher_culture = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_philosopher_culture } } root = { trigger_event = skonester_cheat_menu.2622 } }
+  option = { name = tradition_poetry scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_poetry = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_poetry } } root = { trigger_event = skonester_cheat_menu.2622 } }
+  option = { name = tradition_polders scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_polders = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_polders } } root = { trigger_event = skonester_cheat_menu.2622 } }
+  option = { name = tradition_polygamous scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_polygamous = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_polygamous } } root = { trigger_event = skonester_cheat_menu.2622 } }
+  option = { name = tradition_practiced_pirates scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_practiced_pirates = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_practiced_pirates } } root = { trigger_event = skonester_cheat_menu.2622 } }
+  option = { name = tradition_quarrelsome scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_quarrelsome = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_quarrelsome } } root = { trigger_event = skonester_cheat_menu.2622 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2621 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2623 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2623 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_religion_blending scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_religion_blending = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_religion_blending } } root = { trigger_event = skonester_cheat_menu.2623 } }
+  option = { name = tradition_religious_patronage scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_religious_patronage = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_religious_patronage } } root = { trigger_event = skonester_cheat_menu.2623 } }
+  option = { name = tradition_republican_legacy scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_republican_legacy = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_republican_legacy } } root = { trigger_event = skonester_cheat_menu.2623 } }
+  option = { name = tradition_reverence_for_veterans scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_reverence_for_veterans = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_reverence_for_veterans } } root = { trigger_event = skonester_cheat_menu.2623 } }
+  option = { name = tradition_roman_legacy scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_roman_legacy = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_roman_legacy } } root = { trigger_event = skonester_cheat_menu.2623 } }
+  option = { name = tradition_ruling_caste scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_ruling_caste = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_ruling_caste } } root = { trigger_event = skonester_cheat_menu.2623 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2622 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2624 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2624 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_runestones scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_runestones = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_runestones } } root = { trigger_event = skonester_cheat_menu.2624 } }
+  option = { name = tradition_sacred_groves scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_sacred_groves = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_sacred_groves } } root = { trigger_event = skonester_cheat_menu.2624 } }
+  option = { name = tradition_sacred_hunts scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_sacred_hunts = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_sacred_hunts } } root = { trigger_event = skonester_cheat_menu.2624 } }
+  option = { name = tradition_sacred_mountains scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_sacred_mountains = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_sacred_mountains } } root = { trigger_event = skonester_cheat_menu.2624 } }
+  option = { name = tradition_saharan_nomads scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_saharan_nomads = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_saharan_nomads } } root = { trigger_event = skonester_cheat_menu.2624 } }
+  option = { name = tradition_scholar_officials scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_scholar_officials = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_scholar_officials } } root = { trigger_event = skonester_cheat_menu.2624 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2623 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2625 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2625 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_seafaring scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_seafaring = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_seafaring } } root = { trigger_event = skonester_cheat_menu.2625 } }
+  option = { name = tradition_sinophilic scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_sinophilic = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_sinophilic } } root = { trigger_event = skonester_cheat_menu.2625 } }
+  option = { name = tradition_sorcerous_metallurgy scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_sorcerous_metallurgy = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_sorcerous_metallurgy } } root = { trigger_event = skonester_cheat_menu.2625 } }
+  option = { name = tradition_spartan scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_spartan = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_spartan } } root = { trigger_event = skonester_cheat_menu.2625 } }
+  option = { name = tradition_stalwart_defenders scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_stalwart_defenders = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_stalwart_defenders } } root = { trigger_event = skonester_cheat_menu.2625 } }
+  option = { name = tradition_stand_and_fight scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_stand_and_fight = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_stand_and_fight } } root = { trigger_event = skonester_cheat_menu.2625 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2624 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2626 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2626 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_staunch_traditionalists scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_staunch_traditionalists = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_staunch_traditionalists } } root = { trigger_event = skonester_cheat_menu.2626 } }
+  option = { name = tradition_steppe_tolerance scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_steppe_tolerance = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_steppe_tolerance } } root = { trigger_event = skonester_cheat_menu.2626 } }
+  option = { name = tradition_storytellers scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_storytellers = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_storytellers } } root = { trigger_event = skonester_cheat_menu.2626 } }
+  option = { name = tradition_stratified_society scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_stratified_society = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_stratified_society } } root = { trigger_event = skonester_cheat_menu.2626 } }
+  option = { name = tradition_strength_in_numbers scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_strength_in_numbers = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_strength_in_numbers } } root = { trigger_event = skonester_cheat_menu.2626 } }
+  option = { name = tradition_strong_kinship scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_strong_kinship = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_strong_kinship } } root = { trigger_event = skonester_cheat_menu.2626 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2625 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2627 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2627 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_swords_for_hire scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_swords_for_hire = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_swords_for_hire } } root = { trigger_event = skonester_cheat_menu.2627 } }
+  option = { name = tradition_talent_acquisition scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_talent_acquisition = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_talent_acquisition } } root = { trigger_event = skonester_cheat_menu.2627 } }
+  option = { name = tradition_tgp_art_of_war scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_tgp_art_of_war = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_tgp_art_of_war } } root = { trigger_event = skonester_cheat_menu.2627 } }
+  option = { name = tradition_tgp_barangay_confederations scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_tgp_barangay_confederations = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_tgp_barangay_confederations } } root = { trigger_event = skonester_cheat_menu.2627 } }
+  option = { name = tradition_tgp_bushido scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_tgp_bushido = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_tgp_bushido } } root = { trigger_event = skonester_cheat_menu.2627 } }
+  option = { name = tradition_tgp_court_machinations scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_tgp_court_machinations = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_tgp_court_machinations } } root = { trigger_event = skonester_cheat_menu.2627 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2626 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2628 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2628 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_tgp_defiant_ambushers scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_tgp_defiant_ambushers = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_tgp_defiant_ambushers } } root = { trigger_event = skonester_cheat_menu.2628 } }
+  option = { name = tradition_tgp_ephemeral_grace scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_tgp_ephemeral_grace = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_tgp_ephemeral_grace } } root = { trigger_event = skonester_cheat_menu.2628 } }
+  option = { name = tradition_tgp_esoteric_power scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_tgp_esoteric_power = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_tgp_esoteric_power } } root = { trigger_event = skonester_cheat_menu.2628 } }
+  option = { name = tradition_tgp_fortified_strongholds scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_tgp_fortified_strongholds = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_tgp_fortified_strongholds } } root = { trigger_event = skonester_cheat_menu.2628 } }
+  option = { name = tradition_tgp_hydraulic_builders scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_tgp_hydraulic_builders = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_tgp_hydraulic_builders } } root = { trigger_event = skonester_cheat_menu.2628 } }
+  option = { name = tradition_tgp_imperial_peace scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_tgp_imperial_peace = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_tgp_imperial_peace } } root = { trigger_event = skonester_cheat_menu.2628 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2627 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2629 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2629 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_tgp_inward_perfection scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_tgp_inward_perfection = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_tgp_inward_perfection } } root = { trigger_event = skonester_cheat_menu.2629 } }
+  option = { name = tradition_tgp_japanese_houses scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_tgp_japanese_houses = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_tgp_japanese_houses } } root = { trigger_event = skonester_cheat_menu.2629 } }
+  option = { name = tradition_tgp_mountain_island scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_tgp_mountain_island = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_tgp_mountain_island } } root = { trigger_event = skonester_cheat_menu.2629 } }
+  option = { name = tradition_tgp_religious_hospitality scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_tgp_religious_hospitality = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_tgp_religious_hospitality } } root = { trigger_event = skonester_cheat_menu.2629 } }
+  option = { name = tradition_tgp_rice_cultivators scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_tgp_rice_cultivators = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_tgp_rice_cultivators } } root = { trigger_event = skonester_cheat_menu.2629 } }
+  option = { name = tradition_tgp_warrior_monks scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_tgp_warrior_monks = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_tgp_warrior_monks } } root = { trigger_event = skonester_cheat_menu.2629 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2628 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2630 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2630 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_the_witenagemot scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_the_witenagemot = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_the_witenagemot } } root = { trigger_event = skonester_cheat_menu.2630 } }
+  option = { name = tradition_things scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_things = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_things } } root = { trigger_event = skonester_cheat_menu.2630 } }
+  option = { name = tradition_tribe_unity scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_tribe_unity = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_tribe_unity } } root = { trigger_event = skonester_cheat_menu.2630 } }
+  option = { name = tradition_upland_skirmishing scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_upland_skirmishing = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_upland_skirmishing } } root = { trigger_event = skonester_cheat_menu.2630 } }
+  option = { name = tradition_vegetarianism scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_vegetarianism = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_vegetarianism } } root = { trigger_event = skonester_cheat_menu.2630 } }
+  option = { name = tradition_visigothic_codes scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_visigothic_codes = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_visigothic_codes } } root = { trigger_event = skonester_cheat_menu.2630 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2629 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2631 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2631 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_warrior_culture scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_warrior_culture = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_warrior_culture } } root = { trigger_event = skonester_cheat_menu.2631 } }
+  option = { name = tradition_warrior_monks scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_warrior_monks = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_warrior_monks } } root = { trigger_event = skonester_cheat_menu.2631 } }
+  option = { name = tradition_warriors_by_merit scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_warriors_by_merit = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_warriors_by_merit } } root = { trigger_event = skonester_cheat_menu.2631 } }
+  option = { name = tradition_warriors_of_the_dry scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_warriors_of_the_dry = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_warriors_of_the_dry } } root = { trigger_event = skonester_cheat_menu.2631 } }
+  option = { name = tradition_wedding_ceremonies scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_wedding_ceremonies = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_wedding_ceremonies } } root = { trigger_event = skonester_cheat_menu.2631 } }
+  option = { name = tradition_welcoming scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_welcoming = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_welcoming } } root = { trigger_event = skonester_cheat_menu.2631 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2630 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2632 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2632 = {
+  type = character_event
+  title = skonester_cheat_menu.0179.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = tradition_wetlanders scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_wetlanders = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_wetlanders } } root = { trigger_event = skonester_cheat_menu.2632 } }
+  option = { name = tradition_winter_warriors scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_winter_warriors = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_winter_warriors } } root = { trigger_event = skonester_cheat_menu.2632 } }
+  option = { name = tradition_xenophilic scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_xenophilic = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_xenophilic } } root = { trigger_event = skonester_cheat_menu.2632 } }
+  option = { name = tradition_zealous_people scope:skonester_selected_culture = { if = { limit = { culture_tradition:tradition_zealous_people = { NOT = { is_in_list = traits } } } add_culture_tradition = tradition_zealous_people } } root = { trigger_event = skonester_cheat_menu.2632 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2631 } }
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0177 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+

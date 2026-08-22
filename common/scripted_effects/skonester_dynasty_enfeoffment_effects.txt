@@ -1,0 +1,19 @@
+﻿# 族人授衔：与「册命维城」相同授衔链，但人才池仅限与 root 同宗族且仍在境内的成年候选人（由 skonester_grant_dynasty_only 变量收紧池）
+
+skonester_dynasty_one_click_grant_realm_titles_effect = {
+  root = {
+    set_variable = {
+      name = skonester_grant_dynasty_only
+      value = 1
+    }
+  }
+  skonester_one_click_grant_realm_titles_effect = yes
+  root = {
+    if = {
+      limit = {
+        has_variable = skonester_grant_dynasty_only
+      }
+      remove_variable = skonester_grant_dynasty_only
+    }
+  }
+}

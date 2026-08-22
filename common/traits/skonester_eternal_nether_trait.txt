@@ -1,0 +1,44 @@
+﻿# Skonester特质：万古冥主（压力/恐怖/抗谋顶配）
+
+trait_eternal_nether_lord = {
+
+  name = trait_trait_eternal_nether_lord
+  desc = trait_trait_eternal_nether_lord_desc
+  inherit_chance = 0
+  birth = 0
+  random_creation = 0
+  genetic = no
+  congenital = no
+  education = no
+
+  category = fame
+
+  icon = "crazyminded_psycho.dds"
+
+  long_reign_bonus_mult = 150
+
+  stress_gain_mult = -0.99
+  stress_loss_mult = 5.00
+
+  monthly_dread = 8
+  dread_baseline_add = 200
+  dread_gain_mult = 2.50
+
+  intrigue = 45
+
+  scheme_discovery_chance_mult = 999
+
+  enemy_hostile_scheme_success_chance_add = -1000
+  enemy_hostile_scheme_success_chance_max_add = -100
+  enemy_hostile_scheme_phase_duration_add = 999
+  enemy_scheme_secrecy_add = -500
+
+  intrigue_scheme_resistance = 9999
+  scheme_resistance = 9999
+
+  vassal_opinion = 80
+  courtier_opinion = 80
+  powerful_vassal_opinion = 60
+  general_opinion = 60
+  county_opinion_add = 40
+}

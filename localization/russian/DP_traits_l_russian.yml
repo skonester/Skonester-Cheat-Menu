@@ -1,0 +1,26 @@
+﻿l_russian:
+  trait_nnn_challenger:0 "Много детей — много благословений"
+  trait_nnn_challenger_desc:0 "Барбара Помазанница учит, что удача приходит через многочисленных потомков, каждый из которых — живое благословение."
+  trait_nnn_challenger_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] следует мудрости Барбары Помазанницы, находя силу и процветание в своих многочисленных детях."
+
+  trait_build_speed_cheat:0 "Перерождение Виллара де Оннекура"
+  trait_build_speed_cheat_desc:0 "Только Барбара Помазанница могла одарить смертного скоростью и прозрением Виллара де Оннекура."
+  trait_build_speed_cheat_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] возводит замки и соборы так, словно его ведёт рука Виллара и благословляет Барбара Помазанница."
+
+  trait_stress_gain_remove:0 "Благословенный и беззаботный"
+  trait_stress_gain_remove_desc:0 "Под защитой Барбары Помазанницы этот персонаж идёт по жизни без страха и тревог."
+  trait_stress_gain_remove_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] пребывает в благодати Барбары Помазанницы, навсегда свободный от мирских забот."
+
+  trait_tyranny_gain_remove:0 "Команда лучших адвокатов"
+  trait_tyranny_gain_remove_desc:0 "Барбара Помазанница окружает этого персонажа невидимыми защитниками, оберегающими от всех обвинений."
+  trait_tyranny_gain_remove_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] стоит вне упрёков, ибо Барбара Помазанница придаёт божественный авторитет каждому его поступку."
+
+  trait_100_stat_man:0 "Всемогущий"
+  trait_100_stat_man_desc:0 "Легенда, возвышенная Барбарой Помазанницей, гений, помазанный божественной благодатью. Никто не сможет одолеть эту предназначенную душу."
+  trait_100_stat_man_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] идёт как избранник Барбары Помазанницы, легенда среди легенд и носитель неудержимой мощи."
+
+  trait_immortal:0 "Бессмертный"
+  immortal:0 "Бессмертный"
+  trait_immortal_desc:0 "Барбара Помазанница возвысила этого персонажа над круговоротом смерти."
+  trait_immortal_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] будет жить вечно, запечатанный в вечной милости Барбары Помазанницы."
+рбары."

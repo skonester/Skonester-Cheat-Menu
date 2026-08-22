@@ -1,0 +1,17 @@
+﻿# 征兵×100 + 零维护费：每月重同步叠层（征召规模与维护费减免分开叠）
+
+monthly_global_pulse = {
+  on_actions = { skonester_military_levy_overflow_monthly_pulse }
+}
+
+skonester_military_levy_overflow_monthly_pulse = {
+  effect = {
+    every_living_character = {
+      limit = {
+        has_character_modifier = skonester_military_levy_overflow_modifier
+        has_character_flag = skonester_military_cheat_player_authorized
+      }
+      skonester_cheat_menu_apply_levy_overflow_full_effect = yes
+    }
+  }
+}

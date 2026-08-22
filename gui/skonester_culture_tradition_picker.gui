@@ -1,0 +1,416 @@
+﻿window = {
+  name = "skonester_culture_tradition_picker_window"
+  parentanchor = top|right
+  position = { -50 100 }
+  size = { 700 650 }
+  layer = windows_layer
+  filter_mouse = all
+  allow_outside = yes
+  alwaystransparent = no
+  max_height = 950
+
+  using = Window_Background
+  using = Window_Decoration
+  movable = yes
+
+  visible = "[GetScriptedGui('skonester_cw_tradition_picker_visible').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+
+  datacontext = "[GetVariableSystem]"
+  datacontext = "[GetPlayer]"
+
+  state = {
+    name = init
+
+    trigger_on_create = yes
+    on_start = "[GetVariableSystem.Set('skonester_cw_culture_tradition_category', 'realm')]"
+  }
+
+  state = {
+    name = _show
+
+    using = Animation_FadeIn_Quick
+    on_start = "[GetVariableSystem.Set('skonester_cw_tradition_picker_visible', 'yes')]"
+    on_start = "[GetVariableSystem.Set('skonester_cw_culture_tradition_category', 'realm')]"
+  }
+
+  state = {
+    name = _hide
+
+    using = Animation_FadeOut_Quick
+    duration = 0.1
+    on_start = "[GetVariableSystem.Clear('skonester_cw_tradition_picker_visible')]"
+    on_start = "[GetVariableSystem.Set('skonester_cw_culture_tradition_category', 'realm')]"
+  }
+
+
+  vbox = {
+
+    using = skonesterCw_Tradition_Picker_Header
+
+    vbox = {
+      layoutpolicy_horizontal = expanding
+      layoutpolicy_vertical = expanding
+      visible = yes
+
+      hbox = {
+        layoutpolicy_horizontal = expanding
+        margin_bottom = -4
+        skonester_cw_add_tradition_category = {
+          blockoverride "button_check"
+          {
+            onclick = "[GetVariableSystem.Set('skonester_cw_culture_tradition_category', 'realm')]"
+            down = "[GetVariableSystem.HasValue('skonester_cw_culture_tradition_category', 'realm')]"
+          }
+
+          blockoverride "tab_text" {
+            text = tradition_group_realm
+          }
+        }
+
+        skonester_cw_add_tradition_category = {
+          blockoverride "button_check"
+          {
+            onclick = "[GetVariableSystem.Set('skonester_cw_culture_tradition_category', 'combat')]"
+            down = "[GetVariableSystem.HasValue('skonester_cw_culture_tradition_category', 'combat')]"
+          }
+
+          blockoverride "tab_text" {
+            text = tradition_group_combat
+          }
+        }
+
+        skonester_cw_add_tradition_category = {
+          blockoverride "button_check"
+          {
+            onclick = "[GetVariableSystem.Set('skonester_cw_culture_tradition_category', 'societal')]"
+            down = "[GetVariableSystem.HasValue('skonester_cw_culture_tradition_category', 'societal')]"
+          }
+
+          blockoverride "tab_text" {
+            text = tradition_group_societal
+          }
+        }
+      }
+
+      hbox = {
+        margin_bottom = 5
+        layoutpolicy_horizontal = expanding
+        skonester_cw_add_tradition_category = {
+          blockoverride "button_check"
+          {
+            onclick = "[GetVariableSystem.Set('skonester_cw_culture_tradition_category', 'ritual')]"
+            down = "[GetVariableSystem.HasValue('skonester_cw_culture_tradition_category', 'ritual')]"
+          }
+
+          blockoverride "tab_text" {
+            text = tradition_group_ritual
+          }
+        }
+
+        skonester_cw_add_tradition_category = {
+          blockoverride "button_check"
+          {
+            onclick = "[GetVariableSystem.Set('skonester_cw_culture_tradition_category', 'regional')]"
+            down = "[GetVariableSystem.HasValue('skonester_cw_culture_tradition_category', 'regional')]"
+          }
+
+          blockoverride "tab_text" {
+            text = tradition_group_regional
+          }
+        }
+
+      }
+
+      spacer = {
+        size = { 70 10 }
+      }
+
+      scrollbox = {
+        layoutpolicy_horizontal = expanding
+        layoutpolicy_vertical = expanding
+        visible = "[GetVariableSystem.HasValue('skonester_cw_culture_tradition_category', 'realm')]"
+
+        blockoverride "scrollbox_content"
+        {
+
+          vbox = {
+            vbox = {
+              layoutpolicy_horizontal = expanding
+              datacontext = "[GetPlayer.MakeScope.Var('skonester_selected_culture_var').Culture]"
+
+
+              dynamicgridbox = {
+                datamodel = "[GetGlobalList('skonester_cw_realm_tradition_list')]"
+                datamodel_wrap = 3
+                flipdirection = yes
+
+                item = {
+                  skonester_cw_widget_tradition_item = {
+                    datacontext = "[Scope.CultureTradition]"
+                  }
+                }
+              }
+            }
+          }
+
+        }
+      }
+
+      scrollbox = {
+        layoutpolicy_horizontal = expanding
+        layoutpolicy_vertical = expanding
+        visible = "[GetVariableSystem.HasValue('skonester_cw_culture_tradition_category', 'combat')]"
+
+        blockoverride "scrollbox_content"
+        {
+
+          vbox = {
+            vbox = {
+              layoutpolicy_horizontal = expanding
+              datacontext = "[GetPlayer.MakeScope.Var('skonester_selected_culture_var').Culture]"
+
+
+              dynamicgridbox = {
+                datamodel = "[GetGlobalList('skonester_cw_combat_tradition_list')]"
+                datamodel_wrap = 3
+                flipdirection = yes
+
+                item = {
+                  skonester_cw_widget_tradition_item = {
+                    datacontext = "[Scope.CultureTradition]"
+                  }
+                }
+              }
+            }
+          }
+
+        }
+      }
+
+      scrollbox = {
+        layoutpolicy_horizontal = expanding
+        layoutpolicy_vertical = expanding
+        visible = "[GetVariableSystem.HasValue('skonester_cw_culture_tradition_category', 'societal')]"
+
+        blockoverride "scrollbox_content"
+        {
+
+          vbox = {
+            vbox = {
+              layoutpolicy_horizontal = expanding
+              datacontext = "[GetPlayer.MakeScope.Var('skonester_selected_culture_var').Culture]"
+
+
+              dynamicgridbox = {
+                datamodel = "[GetGlobalList('skonester_cw_societal_tradition_list')]"
+                datamodel_wrap = 3
+                flipdirection = yes
+
+                item = {
+                  skonester_cw_widget_tradition_item = {
+                    datacontext = "[Scope.CultureTradition]"
+                  }
+                }
+              }
+            }
+          }
+
+        }
+      }
+
+      scrollbox = {
+        layoutpolicy_horizontal = expanding
+        layoutpolicy_vertical = expanding
+        visible = "[GetVariableSystem.HasValue('skonester_cw_culture_tradition_category', 'ritual')]"
+
+        blockoverride "scrollbox_content"
+        {
+
+          vbox = {
+            vbox = {
+              layoutpolicy_horizontal = expanding
+              datacontext = "[GetPlayer.MakeScope.Var('skonester_selected_culture_var').Culture]"
+
+
+              dynamicgridbox = {
+                datamodel = "[GetGlobalList('skonester_cw_ritual_tradition_list')]"
+                datamodel_wrap = 3
+                flipdirection = yes
+
+                item = {
+                  skonester_cw_widget_tradition_item = {
+                    datacontext = "[Scope.CultureTradition]"
+                  }
+                }
+              }
+            }
+          }
+
+        }
+      }
+
+      scrollbox = {
+        layoutpolicy_horizontal = expanding
+        layoutpolicy_vertical = expanding
+        visible = "[GetVariableSystem.HasValue('skonester_cw_culture_tradition_category', 'regional')]"
+
+        blockoverride "scrollbox_content"
+        {
+
+          vbox = {
+            vbox = {
+              layoutpolicy_horizontal = expanding
+              datacontext = "[GetPlayer.MakeScope.Var('skonester_selected_culture_var').Culture]"
+
+
+              dynamicgridbox = {
+                datamodel = "[GetGlobalList('skonester_cw_regional_tradition_list')]"
+                datamodel_wrap = 3
+                flipdirection = yes
+
+                item = {
+                  skonester_cw_widget_tradition_item = {
+                    datacontext = "[Scope.CultureTradition]"
+                  }
+                }
+              }
+            }
+          }
+
+        }
+      }
+
+      expand = {}
+    }
+
+    expand = {}
+  }
+}
+
+types skonesterCwTraditionPickerTypes
+{
+
+
+  type skonester_cw_add_tradition_category = button_tab {
+    layoutpolicy_horizontal = expanding
+    block button_check
+    {
+      onclick = "[NOP]"
+      down = "[NOP]"
+    }
+
+    hbox = {
+      text_single = {
+        layoutpolicy_horizontal = expanding
+        align = center
+        block tab_text
+        {
+          text = "placeholder"
+        }
+        default_format = "#low"
+      }
+    }
+  }
+
+  type skonester_cw_widget_tradition_item = widget {
+    size = {  167 140  }
+
+    tooltipwidget = {
+      using = culture_tradition_tooltip_clickable
+
+      blockoverride "above_description_text" {
+        visible = "[Not(GetScriptedGui('skonester_cw_tradition_dlc_check').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('tradition', CultureTradition.MakeScope).End))]"
+        text = skonester_cw_tradition_warning
+      }
+
+    }
+
+    vbox = {
+
+      button_standard = {
+        enabled = "[GetScriptedGui('skonester_cw_tradition_dlc_check').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('tradition', CultureTradition.MakeScope).End)]"
+        size = {  158 85  }
+        onclick = "[GetScriptedGui('skonester_cw_add_tradition').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('tradition', CultureTradition.MakeScope).End)]"
+        onrightclick = "[GetScriptedGui('skonester_cw_remove_tradition').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('tradition', CultureTradition.MakeScope).End)]"
+        button_ignore = none
+        rightclicksound = "event:/SFX/UI/Generic/sfx_ui_generic_icon_select"
+
+        widget_tradition_icon = {
+          block "icon_size" {
+            size = { 158 85 }
+          }
+        }
+
+        icon = {
+          name = "selection_glow"
+          visible = "[GetScriptedGui('skonester_cw_culture_has_tradition').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('tradition', CultureTradition.MakeScope).End)]"
+          parentanchor = center
+          size = { 100% 100% }
+
+          state = {
+            trigger_on_create = yes
+
+            name = max_glow
+            next = min_glow
+            duration = 1
+            using = Animation_Curve_Default
+            alpha = 0.5
+          }
+
+          state = {
+            name = min_glow
+            next = max_glow
+            duration = 1.6
+            using = Animation_Curve_Default
+            alpha = 0.3
+          }
+
+          background = {
+            texture = "gfx/interface/component_effects/effect_shimmer.dds"
+            margin = { 14 12 }
+            spriteType = Corneredstretched
+            spriteborder = { 30 30 }
+            tintcolor = { 1 0.8 0.6 1 }
+          }
+        }
+      }
+      hbox = {
+        margin_top = 4
+
+        text_label_center = {
+          name = "name"
+          text = "[CultureTradition.GetNameNoTooltip]"
+          maximumsize = { 158 44 }
+          multiline = yes
+          align = center|nobaseline
+
+          using = Font_Size_Small
+        }
+
+        widget = {
+          size = { 0 20 }
+          allow_outside = yes
+
+          warning_icon = {
+            visible = "[Not(GetScriptedGui('skonester_cw_tradition_dlc_check').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('tradition', CultureTradition.MakeScope).End))]"
+            position = { 6 -2 }
+            widgetanchor = left
+            size = { 20 20 }
+          }
+        }
+      }
+    }
+  }
+
+  type skonester_cw_widget_tradition_selectable_glow = widget
+  {
+
+    size = { 276 138 }
+
+    button_standard_clean = {
+      onclick = "[Culture.OpenReplaceTraditionWindow(CultureTradition.Self)]"
+      size = { 276 138 }
+    }
+  }
+
+}

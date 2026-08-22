@@ -1,0 +1,224 @@
+﻿# 多余头衔授予：拟授头衔越高，文/武能力线越高（见 skonester_purge_governor_skill_values.txt）
+
+skonester_is_talent_for_grant_tier_barony_trigger = {
+  OR = {
+    AND = {
+      skonester_is_gm_yan_military_government_trigger = yes
+      skonester_military_skill_sum_for_purge_effective_value >= skonester_military_grant_barony_threshold_value
+    }
+    AND = {
+      skonester_is_gm_yan_civil_government_trigger = yes
+      skonester_civil_skill_sum_for_purge_effective_value >= skonester_civil_grant_barony_threshold_value
+    }
+    AND = {
+      NOT = { skonester_is_gm_yan_government_trigger = yes }
+      OR = {
+        vassal_contract_has_flag = celestial_military_appointment
+        vassal_contract_has_flag = meritocratic_military_appointment
+      }
+      skonester_military_skill_sum_for_purge_value >= skonester_military_grant_barony_threshold_value
+    }
+    AND = {
+      NOT = { skonester_is_gm_yan_government_trigger = yes }
+      NOR = {
+        vassal_contract_has_flag = celestial_military_appointment
+        vassal_contract_has_flag = meritocratic_military_appointment
+      }
+      is_landed = yes
+      skonester_civil_skill_sum_for_purge_effective_value >= skonester_civil_grant_barony_threshold_value
+    }
+    AND = {
+      NOT = { is_landed = yes }
+      OR = {
+        skonester_civil_skill_sum_for_purge_value >= skonester_civil_grant_barony_threshold_value
+        skonester_military_skill_sum_for_purge_value >= skonester_military_grant_barony_threshold_value
+      }
+    }
+  }
+}
+
+skonester_is_talent_for_grant_tier_county_trigger = {
+  OR = {
+    AND = {
+      skonester_is_gm_yan_military_government_trigger = yes
+      skonester_military_skill_sum_for_purge_effective_value >= skonester_military_grant_county_threshold_value
+    }
+    AND = {
+      skonester_is_gm_yan_civil_government_trigger = yes
+      skonester_civil_skill_sum_for_purge_effective_value >= skonester_civil_grant_county_threshold_value
+    }
+    AND = {
+      NOT = { skonester_is_gm_yan_government_trigger = yes }
+      OR = {
+        vassal_contract_has_flag = celestial_military_appointment
+        vassal_contract_has_flag = meritocratic_military_appointment
+      }
+      skonester_military_skill_sum_for_purge_value >= skonester_military_grant_county_threshold_value
+    }
+    AND = {
+      NOT = { skonester_is_gm_yan_government_trigger = yes }
+      NOR = {
+        vassal_contract_has_flag = celestial_military_appointment
+        vassal_contract_has_flag = meritocratic_military_appointment
+      }
+      is_landed = yes
+      skonester_civil_skill_sum_for_purge_effective_value >= skonester_civil_grant_county_threshold_value
+    }
+    AND = {
+      NOT = { is_landed = yes }
+      OR = {
+        skonester_civil_skill_sum_for_purge_value >= skonester_civil_grant_county_threshold_value
+        skonester_military_skill_sum_for_purge_value >= skonester_military_grant_county_threshold_value
+      }
+    }
+  }
+}
+
+skonester_is_talent_for_grant_tier_duchy_trigger = {
+  OR = {
+    AND = {
+      skonester_is_gm_yan_military_government_trigger = yes
+      skonester_military_skill_sum_for_purge_effective_value >= skonester_military_grant_duchy_threshold_value
+    }
+    AND = {
+      skonester_is_gm_yan_civil_government_trigger = yes
+      skonester_civil_skill_sum_for_purge_effective_value >= skonester_civil_grant_duchy_threshold_value
+    }
+    AND = {
+      NOT = { skonester_is_gm_yan_government_trigger = yes }
+      OR = {
+        vassal_contract_has_flag = celestial_military_appointment
+        vassal_contract_has_flag = meritocratic_military_appointment
+      }
+      skonester_military_skill_sum_for_purge_value >= skonester_military_grant_duchy_threshold_value
+    }
+    AND = {
+      NOT = { skonester_is_gm_yan_government_trigger = yes }
+      NOR = {
+        vassal_contract_has_flag = celestial_military_appointment
+        vassal_contract_has_flag = meritocratic_military_appointment
+      }
+      is_landed = yes
+      skonester_civil_skill_sum_for_purge_effective_value >= skonester_civil_grant_duchy_threshold_value
+    }
+    AND = {
+      NOT = { is_landed = yes }
+      OR = {
+        skonester_civil_skill_sum_for_purge_value >= skonester_civil_grant_duchy_threshold_value
+        skonester_military_skill_sum_for_purge_value >= skonester_military_grant_duchy_threshold_value
+      }
+    }
+  }
+}
+
+skonester_is_talent_for_grant_tier_kingdom_trigger = {
+  OR = {
+    AND = {
+      skonester_is_gm_yan_military_government_trigger = yes
+      skonester_military_skill_sum_for_purge_effective_value >= skonester_military_grant_kingdom_threshold_value
+    }
+    AND = {
+      skonester_is_gm_yan_civil_government_trigger = yes
+      skonester_civil_skill_sum_for_purge_effective_value >= skonester_civil_grant_kingdom_threshold_value
+    }
+    AND = {
+      NOT = { skonester_is_gm_yan_government_trigger = yes }
+      OR = {
+        vassal_contract_has_flag = celestial_military_appointment
+        vassal_contract_has_flag = meritocratic_military_appointment
+      }
+      skonester_military_skill_sum_for_purge_value >= skonester_military_grant_kingdom_threshold_value
+    }
+    AND = {
+      NOT = { skonester_is_gm_yan_government_trigger = yes }
+      NOR = {
+        vassal_contract_has_flag = celestial_military_appointment
+        vassal_contract_has_flag = meritocratic_military_appointment
+      }
+      is_landed = yes
+      skonester_civil_skill_sum_for_purge_effective_value >= skonester_civil_grant_kingdom_threshold_value
+    }
+    AND = {
+      NOT = { is_landed = yes }
+      OR = {
+        skonester_civil_skill_sum_for_purge_value >= skonester_civil_grant_kingdom_threshold_value
+        skonester_military_skill_sum_for_purge_value >= skonester_military_grant_kingdom_threshold_value
+      }
+    }
+  }
+}
+
+skonester_is_talent_for_grant_tier_empire_trigger = {
+  OR = {
+    AND = {
+      skonester_is_gm_yan_military_government_trigger = yes
+      skonester_military_skill_sum_for_purge_effective_value >= skonester_military_grant_empire_threshold_value
+    }
+    AND = {
+      skonester_is_gm_yan_civil_government_trigger = yes
+      skonester_civil_skill_sum_for_purge_effective_value >= skonester_civil_grant_empire_threshold_value
+    }
+    AND = {
+      NOT = { skonester_is_gm_yan_government_trigger = yes }
+      OR = {
+        vassal_contract_has_flag = celestial_military_appointment
+        vassal_contract_has_flag = meritocratic_military_appointment
+      }
+      skonester_military_skill_sum_for_purge_value >= skonester_military_grant_empire_threshold_value
+    }
+    AND = {
+      NOT = { skonester_is_gm_yan_government_trigger = yes }
+      NOR = {
+        vassal_contract_has_flag = celestial_military_appointment
+        vassal_contract_has_flag = meritocratic_military_appointment
+      }
+      is_landed = yes
+      skonester_civil_skill_sum_for_purge_effective_value >= skonester_civil_grant_empire_threshold_value
+    }
+    AND = {
+      NOT = { is_landed = yes }
+      OR = {
+        skonester_civil_skill_sum_for_purge_value >= skonester_civil_grant_empire_threshold_value
+        skonester_military_skill_sum_for_purge_value >= skonester_military_grant_empire_threshold_value
+      }
+    }
+  }
+}
+
+# 须已 save_scope_as = skonester_grant_target_title；按该头衔档位取阈值
+skonester_is_talent_for_grant_target_title_trigger = {
+  OR = {
+    AND = {
+      skonester_is_gm_yan_military_government_trigger = yes
+      skonester_military_skill_sum_for_purge_effective_value >= skonester_military_grant_threshold_for_target_title_value
+    }
+    AND = {
+      skonester_is_gm_yan_civil_government_trigger = yes
+      skonester_civil_skill_sum_for_purge_effective_value >= skonester_civil_grant_threshold_for_target_title_value
+    }
+    AND = {
+      NOT = { skonester_is_gm_yan_government_trigger = yes }
+      OR = {
+        vassal_contract_has_flag = celestial_military_appointment
+        vassal_contract_has_flag = meritocratic_military_appointment
+      }
+      skonester_military_skill_sum_for_purge_value >= skonester_military_grant_threshold_for_target_title_value
+    }
+    AND = {
+      NOT = { skonester_is_gm_yan_government_trigger = yes }
+      NOR = {
+        vassal_contract_has_flag = celestial_military_appointment
+        vassal_contract_has_flag = meritocratic_military_appointment
+      }
+      is_landed = yes
+      skonester_civil_skill_sum_for_purge_effective_value >= skonester_civil_grant_threshold_for_target_title_value
+    }
+    AND = {
+      NOT = { is_landed = yes }
+      OR = {
+        skonester_civil_skill_sum_for_purge_value >= skonester_civil_grant_threshold_for_target_title_value
+        skonester_military_skill_sum_for_purge_value >= skonester_military_grant_threshold_for_target_title_value
+      }
+    }
+  }
+}

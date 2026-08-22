@@ -1,0 +1,45 @@
+﻿# 酷刑后：受害者对你 −100 意见（「对我行刑」）、并尽可能结为仇敌（rival）
+skonester_prisoner_torture_aftermath_effect = {
+  scope:recipient = {
+    if = {
+      limit = {
+        has_opinion_modifier = {
+          modifier = skonester_tortured_me_execution_style_opinion
+          target = scope:actor
+        }
+      }
+      remove_opinion = {
+        modifier = skonester_tortured_me_execution_style_opinion
+        target = scope:actor
+      }
+    }
+    add_opinion = {
+      modifier = skonester_tortured_me_execution_style_opinion
+      target = scope:actor
+    }
+    if = {
+      limit = {
+        NOT = { has_relation_rival = scope:actor }
+        NOT = { has_relation_nemesis = scope:actor }
+        can_set_relation_rival_trigger = { CHARACTER = scope:actor }
+      }
+      hidden_effect = {
+        if = {
+          limit = { has_relation_potential_rival = scope:actor }
+          remove_relation_potential_rival = scope:actor
+        }
+      }
+      set_relation_rival = scope:actor
+    }
+    stress_impact = {
+      craven = medium_stress_impact_gain
+      compassionate = medium_stress_impact_gain
+    }
+  }
+  scope:actor = {
+    stress_impact = {
+      compassionate = minor_stress_impact_gain
+      forgiving = minor_stress_impact_gain
+    }
+  }
+}

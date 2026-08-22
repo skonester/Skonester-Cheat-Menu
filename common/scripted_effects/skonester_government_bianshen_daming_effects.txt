@@ -1,0 +1,320 @@
+﻿# 变身大明十政体（政体须由《变身大明》workshop 模组在 common/governments 中提供；本包不再带占位，避免覆盖对方完整定义导致无地产/国库收入等异常）— 批量/本人转换；游牧部落首都先改为城堡（土司/海盗改为部落）
+
+skonester_convert_character_to_gm_zongfan_effect = {
+  if = {
+    limit = {
+      skonester_actor_has_bianshen_daming_government_access_trigger = yes
+      NOT = { has_government = zongfan_government }
+    }
+    if = {
+      limit = { is_landed = yes }
+      capital_province = {
+        if = {
+          limit = {
+            OR = {
+              has_holding_type = tribal_holding
+              has_holding_type = herder_holding
+              has_holding_type = nomad_holding
+            }
+          }
+          set_holding_type = castle_holding
+          skonester_ensure_castle_holding_base_castle_building = yes
+        }
+      }
+    }
+    change_government = zongfan_government
+  }
+}
+
+skonester_mass_convert_vassals_to_gm_zongfan_effect = {
+  every_vassal_or_below = {
+    limit = {
+      skonester_mass_gov_conversion_target_trigger = yes
+      NOT = { has_government = zongfan_government }
+    }
+    skonester_convert_character_to_gm_zongfan_effect = yes
+  }
+}
+
+skonester_convert_character_to_gm_sansizhi_effect = {
+  if = {
+    limit = { NOT = { has_government = sansizhi_government } }
+    if = {
+      limit = { is_landed = yes }
+      capital_province = {
+        if = {
+          limit = {
+            OR = {
+              has_holding_type = tribal_holding
+              has_holding_type = herder_holding
+              has_holding_type = nomad_holding
+            }
+          }
+          set_holding_type = castle_holding
+          skonester_ensure_castle_holding_base_castle_building = yes
+        }
+      }
+    }
+    if = {
+      limit = { has_tgp_dlc_trigger = yes }
+      tgp_domicile_conversion_when_changing_government_type = {
+        NEW_DOMICILE_TYPE = east_asian_estate
+        NEW_GOVERNMENT_TYPE = sansizhi_government
+      }
+    }
+    change_government = sansizhi_government
+  }
+}
+
+skonester_mass_convert_vassals_to_gm_sansizhi_effect = {
+  every_vassal_or_below = {
+    limit = {
+      skonester_mass_gov_conversion_target_trigger = yes
+      NOT = { has_government = sansizhi_government }
+    }
+    skonester_convert_character_to_gm_sansizhi_effect = yes
+  }
+}
+
+skonester_convert_character_to_gm_weisuozhi_effect = {
+  if = {
+    limit = { NOT = { has_government = weisuozhi_government } }
+    if = {
+      limit = { is_landed = yes }
+      capital_province = {
+        if = {
+          limit = {
+            OR = {
+              has_holding_type = tribal_holding
+              has_holding_type = herder_holding
+              has_holding_type = nomad_holding
+            }
+          }
+          set_holding_type = castle_holding
+          skonester_ensure_castle_holding_base_castle_building = yes
+        }
+      }
+    }
+    change_government = weisuozhi_government
+  }
+}
+
+skonester_mass_convert_vassals_to_gm_weisuozhi_effect = {
+  every_vassal_or_below = {
+    limit = {
+      skonester_mass_gov_conversion_target_trigger = yes
+      NOT = { has_government = weisuozhi_government }
+    }
+    skonester_convert_character_to_gm_weisuozhi_effect = yes
+  }
+}
+
+skonester_convert_character_to_gm_tusizhi_effect = {
+  if = {
+    limit = { NOT = { has_government = tusizhi_government } }
+    if = {
+      limit = { is_landed = yes }
+      capital_province = {
+        if = {
+          limit = {
+            OR = {
+              has_holding_type = castle_holding
+              has_holding_type = city_holding
+              has_holding_type = church_holding
+            }
+          }
+          set_holding_type = tribal_holding
+          skonester_ensure_tribal_holding_base_tribe_building = yes
+        }
+      }
+    }
+    change_government = tusizhi_government
+  }
+}
+
+skonester_mass_convert_vassals_to_gm_tusizhi_effect = {
+  every_vassal_or_below = {
+    limit = {
+      skonester_mass_gov_conversion_target_trigger = yes
+      NOT = { has_government = tusizhi_government }
+    }
+    skonester_convert_character_to_gm_tusizhi_effect = yes
+  }
+}
+
+skonester_convert_character_to_gm_neige_effect = {
+  if = {
+    limit = { NOT = { has_government = neige_government } }
+    change_government = neige_government
+  }
+}
+
+skonester_mass_convert_vassals_to_gm_neige_effect = {
+  every_vassal_or_below = {
+    limit = {
+      skonester_mass_gov_conversion_target_trigger = yes
+      NOT = { has_government = neige_government }
+    }
+    skonester_convert_character_to_gm_neige_effect = yes
+  }
+}
+
+skonester_convert_character_to_gm_baqizhi_effect = {
+  if = {
+    limit = { NOT = { has_government = baqizhi_government } }
+    if = {
+      limit = { is_landed = yes }
+      capital_province = {
+        if = {
+          limit = {
+            OR = {
+              has_holding_type = tribal_holding
+              has_holding_type = herder_holding
+              has_holding_type = nomad_holding
+            }
+          }
+          set_holding_type = castle_holding
+          skonester_ensure_castle_holding_base_castle_building = yes
+        }
+      }
+    }
+    change_government = baqizhi_government
+  }
+}
+
+skonester_mass_convert_vassals_to_gm_baqizhi_effect = {
+  every_vassal_or_below = {
+    limit = {
+      skonester_mass_gov_conversion_target_trigger = yes
+      NOT = { has_government = baqizhi_government }
+    }
+    skonester_convert_character_to_gm_baqizhi_effect = yes
+  }
+}
+
+skonester_convert_character_to_gm_daiyizhi_effect = {
+  if = {
+    limit = { NOT = { has_government = daiyizhi_government } }
+    if = {
+      limit = { is_landed = yes }
+      capital_province = {
+        if = {
+          limit = {
+            OR = {
+              has_holding_type = tribal_holding
+              has_holding_type = herder_holding
+              has_holding_type = nomad_holding
+            }
+          }
+          set_holding_type = castle_holding
+          skonester_ensure_castle_holding_base_castle_building = yes
+        }
+      }
+    }
+    change_government = daiyizhi_government
+  }
+}
+
+skonester_mass_convert_vassals_to_gm_daiyizhi_effect = {
+  every_vassal_or_below = {
+    limit = {
+      skonester_mass_gov_conversion_target_trigger = yes
+      NOT = { has_government = daiyizhi_government }
+    }
+    skonester_convert_character_to_gm_daiyizhi_effect = yes
+  }
+}
+
+skonester_convert_character_to_gm_zhimin_effect = {
+  if = {
+    limit = { NOT = { has_government = zhimin_government } }
+    if = {
+      limit = { is_landed = yes }
+      capital_province = {
+        if = {
+          limit = {
+            NOT = { has_holding_type = city_holding }
+          }
+          if = {
+            limit = {
+              OR = {
+                has_holding_type = castle_holding
+                has_holding_type = church_holding
+                has_holding_type = tribal_holding
+              }
+            }
+            set_holding_type = city_holding
+            skonester_ensure_city_holding_base_city_building = yes
+          }
+        }
+      }
+    }
+    change_government = zhimin_government
+  }
+}
+
+skonester_mass_convert_vassals_to_gm_zhimin_effect = {
+  every_vassal_or_below = {
+    limit = {
+      skonester_mass_gov_conversion_target_trigger = yes
+      NOT = { has_government = zhimin_government }
+    }
+    skonester_convert_character_to_gm_zhimin_effect = yes
+  }
+}
+
+skonester_convert_character_to_gm_zuzhi_effect = {
+  if = {
+    limit = {
+      NOT = { has_government = zuzhi_government }
+      is_landed = no
+      any_held_title = {
+        tier >= tier_barony
+      }
+    }
+    change_government = zuzhi_government
+  }
+}
+
+skonester_mass_convert_vassals_to_gm_zuzhi_effect = {
+  every_vassal_or_below = {
+    limit = {
+      skonester_mass_gov_conversion_target_trigger = yes
+      NOT = { has_government = zuzhi_government }
+    }
+    skonester_convert_character_to_gm_zuzhi_effect = yes
+  }
+}
+
+skonester_convert_character_to_gm_pirate_effect = {
+  if = {
+    limit = { NOT = { has_government = pirate_government } }
+    if = {
+      limit = { is_landed = yes }
+      capital_province = {
+        if = {
+          limit = {
+            OR = {
+              has_holding_type = castle_holding
+              has_holding_type = city_holding
+              has_holding_type = church_holding
+            }
+          }
+          set_holding_type = tribal_holding
+          skonester_ensure_tribal_holding_base_tribe_building = yes
+        }
+      }
+    }
+    change_government = pirate_government
+  }
+}
+
+skonester_mass_convert_vassals_to_gm_pirate_effect = {
+  every_vassal_or_below = {
+    limit = {
+      skonester_mass_gov_conversion_target_trigger = yes
+      NOT = { has_government = pirate_government }
+    }
+    skonester_convert_character_to_gm_pirate_effect = yes
+  }
+}

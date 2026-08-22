@@ -1,0 +1,29 @@
+﻿template skonesterCw_Military_Group
+{
+  text_label_left = {
+    layoutpolicy_horizontal = expanding
+    align = left
+    margin = { 0 3 }
+    text = "culture_group_military"
+  }
+}
+
+template skonesterCw_Civic_Group
+{
+  text_label_left = {
+    layoutpolicy_horizontal = expanding
+    align = left
+    margin = { 0 3 }
+    text = "culture_group_civic"
+  }
+}
+
+template skonesterCw_Regional_Group
+{
+  text_label_left = {
+    layoutpolicy_horizontal = expanding
+    align = left
+    margin = { 0 3 }
+    text = "culture_group_regional"
+  }
+}

@@ -1,0 +1,82 @@
+﻿# 自 Divine Intervention #2986538297 移植（订婚双槽，与结婚槽分离）
+# 源：DI_diplomacy_sgui.txt — DI_select_primary/tertiary、DI_dip_arrange_betrothal*
+# 使用前：scope:skonester_betrothal_pick_char、scope:actor
+
+skonester_di_select_betrothal_primary_effect = {
+  scope:skonester_betrothal_pick_char = {
+    save_scope_as = select_char
+  }
+  scope:actor = {
+    set_variable = {
+      name = skonester_betrothal_slot_primary
+      value = scope:select_char
+    }
+    if = {
+      limit = {
+        scope:select_char = {
+          exists = primary_partner
+        }
+      }
+      scope:select_char = {
+        primary_partner = {
+          save_scope_as = skonester_di_auto_betrothal_tertiary
+        }
+      }
+      set_variable = {
+        name = skonester_betrothal_slot_tertiary
+        value = scope:skonester_di_auto_betrothal_tertiary
+      }
+    }
+    else = {
+      remove_variable ?= skonester_betrothal_slot_tertiary
+    }
+  }
+}
+
+skonester_di_clear_betrothal_primary_effect = {
+  scope:actor = {
+    remove_variable ?= skonester_betrothal_slot_primary
+  }
+}
+
+skonester_di_select_betrothal_tertiary_effect = {
+  scope:skonester_betrothal_pick_char = {
+    save_scope_as = select_char
+  }
+  scope:actor = {
+    set_variable = {
+      name = skonester_betrothal_slot_tertiary
+      value = scope:select_char
+    }
+  }
+}
+
+skonester_di_clear_betrothal_tertiary_effect = {
+  scope:actor = {
+    remove_variable ?= skonester_betrothal_slot_tertiary
+  }
+}
+
+# DI_dip_arrange_betrothal
+skonester_di_dip_betrothal_effect = {
+  scope:actor = {
+    var:skonester_betrothal_slot_primary = {
+      create_betrothal = scope:actor.var:skonester_betrothal_slot_tertiary
+    }
+  }
+}
+
+# DI_dip_arrange_betrothal_matrilineal
+skonester_di_dip_betrothal_matrilineal_effect = {
+  scope:actor = {
+    if = {
+      limit = {
+        has_variable = skonester_betrothal_slot_primary
+        has_variable = skonester_betrothal_slot_tertiary
+      }
+      var:skonester_betrothal_slot_primary = {
+        create_betrothal_matrilineal = scope:actor.var:skonester_betrothal_slot_tertiary
+      }
+    }
+  }
+}

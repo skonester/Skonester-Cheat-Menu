@@ -1,0 +1,44 @@
+﻿skonester_one_click_purge_bad_governors_decision = {
+  picture = {
+    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+  }
+  decision_group_type = pcm
+  sort_order = 30
+  title = skonester_one_click_purge_bad_governors_decision
+  desc = skonester_one_click_purge_bad_governors_decision_desc
+  selection_tooltip = skonester_one_click_purge_bad_governors_decision_desc
+  confirm_text = skonester_one_click_purge_bad_governors_decision_confirm
+
+  ai_potential = { always = no }
+
+  ai_check_interval_by_tier = {
+    barony = 0
+    county = 12
+    duchy = 12
+    kingdom = 12
+    empire = 12
+    hegemony = 12
+  }
+
+  is_shown = {
+
+    has_character_flag = pcm_b_show_decision_flag
+    skonester_officials_decision_visible_for_player_trigger = yes
+  }
+
+  is_valid = {
+    is_playable_character = yes
+    skonester_has_anyone_to_purge_trigger = yes
+  }
+
+  effect = {
+    trigger_event = {
+      id = skonester_officials.9040
+      days = 0
+    }
+  }
+
+  ai_will_do = {
+    base = 0
+  }
+}

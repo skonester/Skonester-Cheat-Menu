@@ -1,0 +1,54 @@
+﻿# 三端兼容：原版 / 变身大明 / 东方王朝
+# 由 on_action 开局探测写入全局变量；各功能在引用对方 mod 专有 ID 前应检查对应 trigger。
+
+skonester_compat_daming_loaded_trigger = {
+  OR = {
+    has_global_variable = skonester_compat_daming_loaded
+    has_global_variable = skonester_daming_ming_gov_menu_unlocked
+    exists = global_var:Data_tuiju
+    exists = global_var:hq_check
+  }
+}
+
+# 须 OE 本体在当次启动中已加载（orient_empires_loaded 由 OE on_game_start 写入）
+skonester_compat_orient_loaded_trigger = {
+  exists = global_var:orient_empires_loaded
+}
+
+# 文化兵种扩展（2846371321）；用其独有决议探测，避免存档残留变量误显示页签
+skonester_compat_orient_expansion_loaded_trigger = {
+  exists = decision:dfbz_zfz_001_decision
+}
+
+# 变身大明政体：优先用政府 flag（大明 mod 推荐），避免无大明时 has_government = sansizhi_government 解析问题
+skonester_is_gm_yan_government_trigger = {
+  skonester_compat_daming_loaded_trigger = yes
+  OR = {
+    government_has_flag = sansizhi_gov
+    government_has_flag = zongfan_gov
+    government_has_flag = tusizhi_gov
+    government_has_flag = zhimin_gov
+    government_has_flag = weisuozhi_gov
+    government_has_flag = baqizhi_gov
+    government_has_flag = daiyizhi_gov
+  }
+}
+
+skonester_is_gm_yan_civil_government_trigger = {
+  skonester_compat_daming_loaded_trigger = yes
+  OR = {
+    government_has_flag = sansizhi_gov
+    government_has_flag = zongfan_gov
+    government_has_flag = tusizhi_gov
+    government_has_flag = zhimin_gov
+  }
+}
+
+skonester_is_gm_yan_military_government_trigger = {
+  skonester_compat_daming_loaded_trigger = yes
+  OR = {
+    government_has_flag = weisuozhi_gov
+    government_has_flag = baqizhi_gov
+    government_has_flag = daiyizhi_gov
+  }
+}

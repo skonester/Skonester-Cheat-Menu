@@ -1,0 +1,46 @@
+﻿trait_wealth_sovereign_max = {
+
+  name = trait_trait_wealth_sovereign_max
+  desc = trait_trait_wealth_sovereign_max_desc
+  inherit_chance = 0
+  birth = 0
+  random_creation = 0
+  genetic = no
+  congenital = no
+  education = no
+
+  category = stewardship
+
+  # 自定义图标（模组内提供）
+  icon = "boost_daiming.dds"
+
+  # 个人管理属性顶配
+  stewardship = 20
+  diplomacy = 8
+  learning = 5
+
+  # 【核心：爆炸税收】
+  tax_mult = 6.00
+  domain_tax_mult = 5.50
+  domain_tax_mult_even_if_baron = 5.50
+  vassal_tax_mult = 5.00
+  monthly_income_mult = 5.00
+
+  # 【长期统治加成】
+  long_reign_bonus_mult = 150
+
+  # 【发展 超速成型】
+  development_growth_factor = 6.00
+  monthly_county_control_growth_add = 5.00
+
+  # 【军事维护极低】
+  army_maintenance_mult = -0.99
+  men_at_arms_maintenance = -0.99
+
+  # 直辖&封臣上限彻底放开（用有效键）
+  domain_limit = 80
+  vassal_limit = 200
+
+  # 额外贵族好感
+  vassal_opinion = 30
+}

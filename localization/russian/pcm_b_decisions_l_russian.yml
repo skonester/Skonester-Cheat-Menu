@@ -1,0 +1,56 @@
+﻿l_russian:
+  #PCM – Skonester Edition
+  pcm_b_max_all_buildings_sub_realm_decision_title:0 "#Указы Skonester:#! Возвести все владения в их величие"
+  pcm_b_max_all_buildings_sub_realm_decision_desc:0 "Повели, чтобы каждый зал, замок и владение были подняты до наивысшей силы и великолепия."
+  pcm_b_max_all_buildings_sub_realm_decision_tooltip:0 ""
+  pcm_b_max_all_buildings_sub_realm_decision_ct:0 "Созвать каменщиков, плотников и кузнецов для совершенства всех творений из камня и дерева."
+
+  pcm_b_add_building_slot_7_sub_realm_decision_title:0 "#Указы Skonester:#! Даровать новые земли под строительство"
+  pcm_b_add_building_slot_7_sub_realm_decision_desc:0 "Каждое из твоих владений получит свободное место, пока в них не смогут стоять семь великих сооружений."
+  pcm_b_add_building_slot_7_sub_realm_decision_tooltip:0 ""
+  pcm_b_add_building_slot_7_sub_realm_decision_ct:0 "Пусть в каждой земле поднимутся новые дома, залы и башни!"
+
+  pcm_b_lucky_7_sub_realm_decision_title:0 "#Указы Skonester:#! Благословенные семь строений"
+  pcm_b_lucky_7_sub_realm_decision_desc:0 "Все твои владения получат каждое достойное сооружение, возведённое до высшей формы. (Особые и герцогские здания не включены). #underline Мудро#! сначала выделить новые земли под строительство."
+  pcm_b_lucky_7_sub_realm_decision_tooltip:0 ""
+  pcm_b_lucky_7_sub_realm_decision_ct:0 "Пусть все здания будут возведены в спешке, словно по божественному провидению!"
+
+  pcm_b_show_decision_title:0 "--= #Skonester:#! Явить ремесло строителя =--"
+  pcm_b_show_decision_desc:0 "Открой все указы Skonester, касающиеся искусства возведения строений."
+  pcm_b_show_decision_tooltip:0 ""
+  pcm_b_show_decision_ct:0 "Да будет так — пусть скрытые указы станут известны."
+
+  pcm_b_hide_decision_title:0 "--= #Skonester:#! Скрыть ремесло строителя =--"
+  pcm_b_hide_decision_desc:0 "Спрячь указы Skonester, касающиеся строительного искусства."
+  pcm_b_hide_decision_tooltip:0 ""
+  pcm_b_hide_decision_ct:0 "Запечатай свитки и убереги знания от посторонних глаз."
+
+  pcm_b_cheaper_sub_realm_decision_title:0 "#Указы Skonester:#! Милость строителям"
+  pcm_b_cheaper_sub_realm_decision_desc:0 "Снизить расходы на возведение строений в твоём владении."
+  pcm_b_cheaper_sub_realm_decision_tooltip:0 ""
+  pcm_b_cheaper_sub_realm_decision_ct:0 "Камень и дерево доставлены, труд дешевеет!"
+
+  pcm_b_fast_sub_realm_decision_title:0 "#Указы Skonester:#! Ускорение строительства"
+  pcm_b_fast_sub_realm_decision_desc:0 "Все здания в твоём владении будут возводиться в разы быстрее."
+  pcm_b_fast_sub_realm_decision_tooltip:0 ""
+  pcm_b_fast_sub_realm_decision_ct:0 "Города оживут под стуком молотов!"
+
+  pcm_b_cities_sub_realm_decision_title:0 "#Указы Skonester:#! Городское процветание"
+  pcm_b_cities_sub_realm_decision_desc:0 "Города во владениях будут возведены и расцветут."
+  pcm_b_cities_sub_realm_decision_tooltip:0 ""
+  pcm_b_cities_sub_realm_decision_ct:0 "Торговые площади и рынки наполняются жизнью!"
+
+  pcm_b_temple_sub_realm_decision_title:0 "#Указы Skonester:#! Храмы истины"
+  pcm_b_temple_sub_realm_decision_desc:0 "В каждом владении возводятся величественные храмы."
+  pcm_b_temple_sub_realm_decision_tooltip:0 ""
+  pcm_b_temple_sub_realm_decision_ct:0 "Да будет вера утверждена в камне и молитве!"
+
+  pcm_b_castle_sub_realm_decision_title:0 "#Указы Skonester:#! Господство замков"
+  pcm_b_castle_sub_realm_decision_desc:0 "Все замки возводятся и укрепляются до небывалой мощи."
+  pcm_b_castle_sub_realm_decision_tooltip:0 ""
+  pcm_b_castle_sub_realm_decision_ct:0 "Башни и стены поднимаются к небесам!"
+
+  pcm_b_legendary_sub_realm_decision_title:0 "#Указы Skonester:#! Легендарные сооружения"
+  pcm_b_legendary_sub_realm_decision_desc:0 "В каждом владении возведутся чудеса, достойные легенд."
+  pcm_b_legendary_sub_realm_decision_tooltip:0 ""
+  pcm_b_legendary_sub_realm_decision_ct:0 "Да восхищаются потомки творениями наших рук!"

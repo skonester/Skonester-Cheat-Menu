@@ -1,0 +1,122 @@
+﻿# Skonester / 文化编辑：advcm 式动态文化选择窗
+
+skonester_restore_skonester_selected_culture_scope_effect = {
+  if = {
+    limit = { has_variable = skonester_selected_culture_var }
+    var:skonester_selected_culture_var = {
+      save_scope_as = skonester_selected_culture
+    }
+  }
+}
+
+skonester_save_skonester_selected_culture_effect = {
+  scope:selected_culture = {
+    save_scope_as = skonester_selected_culture
+  }
+  set_variable = {
+    name = skonester_selected_culture_var
+    value = scope:selected_culture
+  }
+}
+
+# GUI callbacks run on the player. Apply the selected culture to the character
+# whose interaction menu opened the picker, matching Daddy Pika's direct
+# set_culture behavior while retaining Skonester's persistent target lock.
+skonester_acm_apply_selected_culture_to_target_effect = {
+  if = {
+    limit = { NOT = { exists = scope:selected_culture } }
+    skonester_restore_skonester_selected_culture_scope_effect = yes
+  }
+  if = {
+    limit = {
+      exists = scope:selected_culture
+      exists = global_var:skonester_cheat_menu_recipient
+    }
+    global_var:skonester_cheat_menu_recipient = {
+      if = {
+        limit = { NOT = { culture = scope:selected_culture } }
+        set_culture = scope:selected_culture
+      }
+    }
+  }
+  else_if = {
+    limit = { exists = scope:selected_culture }
+    set_culture = scope:selected_culture
+  }
+}
+
+skonester_open_acm_culture_picker_effect = {
+  # The picker is always owned by the player/root character.  The character
+  # being edited is kept separately by skonester_cheat_menu_recipient.
+  skonester_cheat_menu_sync_target_effect = yes
+  if = {
+    limit = {
+      exists = scope:skonester_cheat_menu_target
+      scope:skonester_cheat_menu_target = { exists = culture }
+    }
+    scope:skonester_cheat_menu_target = {
+      culture = { save_scope_as = selected_culture }
+    }
+    skonester_save_skonester_selected_culture_effect = yes
+  }
+  skonester_acm_culture_picker_refresh_all_region_lists_effect = yes
+  add_character_flag = skonester_acm_culture_picker_open
+}
+
+skonester_close_acm_culture_picker_effect = {
+  remove_character_flag = skonester_acm_culture_picker_open
+}
+
+skonester_close_acm_culture_editor_effect = {
+  remove_character_flag = skonester_culture_vanilla_edit_toolbar
+}
+
+# 新开局/读档：清文化编辑挂起，避免桥接窗误开空 culture_window
+skonester_acm_culture_gui_startup_cleanup_effect = {
+  remove_character_flag = skonester_acm_culture_picker_open
+  remove_character_flag = skonester_culture_vanilla_edit_toolbar
+  remove_character_flag = skonester_cw_tradition_picker_open
+  if = {
+    limit = { has_variable = skonester_selected_culture_var }
+    remove_variable = skonester_selected_culture_var
+  }
+}
+
+skonester_acm_open_culture_vanilla_editor_effect = {
+  skonester_restore_skonester_selected_culture_scope_effect = yes
+  if = {
+    limit = { exists = scope:skonester_selected_culture }
+    add_character_flag = skonester_culture_vanilla_edit_toolbar
+    scope:skonester_selected_culture = {
+      open_view_data = {
+        view = culture_window
+      }
+    }
+  }
+}
+
+skonester_acm_apply_selected_culture_and_open_vanilla_effect = {
+  scope:selected_culture = {
+    save_scope_as = skonester_selected_culture
+  }
+  set_variable = {
+    name = skonester_selected_culture_var
+    value = scope:selected_culture
+  }
+  skonester_close_acm_culture_picker_effect = yes
+  skonester_acm_open_culture_vanilla_editor_effect = yes
+}
+
+# 文化目录：点文化名 → Skonester文化编辑主菜单（2900）
+skonester_acm_apply_selected_culture_and_open_hub_effect = {
+  scope:selected_culture = {
+    save_scope_as = skonester_selected_culture
+  }
+  set_variable = {
+    name = skonester_selected_culture_var
+    value = scope:selected_culture
+  }
+  skonester_close_acm_culture_picker_effect = yes
+  add_character_flag = skonester_culture_vanilla_edit_toolbar
+  trigger_event = skonester_cheat_menu.2900
+}

@@ -1,0 +1,9 @@
+﻿# More Tenets Slots：创建信仰时清除占位空槽
+
+on_faith_created = {
+  on_actions = { skonester_on_mts_faith_creation }
+}
+
+skonester_on_mts_faith_creation = {
+  events = { skonester_mts_faith_creation.001 }
+}

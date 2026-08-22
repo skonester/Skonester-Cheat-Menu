@@ -1,0 +1,68 @@
+﻿# 部分脚本 set_holding_type 后主建筑链可能未落档，男爵地显示无税/0 税；补主建线最低一档
+# 省域 scope；与 skonester_foreman 中 has_building_or_higher = *_01 一致
+# 全帝国修补 = root 与 every_vassal_or_below 上：every_held_county 扫伯爵领内每格，再 every_held_title(tier=男爵) 仅男爵主衔者漏掉的格
+
+skonester_ensure_castle_holding_base_castle_building = {
+  if = {
+    limit = {
+      has_holding_type = castle_holding
+      NOT = { has_building_or_higher = castle_01 }
+    }
+    add_next_building_tier_effect = { BUILDING = castle }
+  }
+}
+skonester_ensure_city_holding_base_city_building = {
+  if = {
+    limit = {
+      has_holding_type = city_holding
+      NOT = { has_building_or_higher = city_01 }
+    }
+    add_next_building_tier_effect = { BUILDING = city }
+  }
+}
+skonester_ensure_church_holding_base_temple_building = {
+  if = {
+    limit = {
+      has_holding_type = church_holding
+      NOT = { has_building_or_higher = temple_01 }
+    }
+    add_next_building_tier_effect = { BUILDING = temple }
+  }
+}
+skonester_ensure_tribal_holding_base_tribe_building = {
+  if = {
+    limit = {
+      has_holding_type = tribal_holding
+      NOT = { has_building_or_higher = tribe_01 }
+    }
+    add_next_building_tier_effect = { BUILDING = tribe }
+  }
+}
+
+# root=最高领主：帝国内对每位有地者扫其男爵地（全等级地产类型见各 ensure；游牧/营地为 MPO 独立机制，不强行补）
+skonester_realm_repair_broken_holding_bases_effect = {
+  skonester_held_titles_repair_broken_holding_bases_effect = yes
+  every_vassal_or_below = {
+    limit = { is_landed = yes }
+    skonester_held_titles_repair_broken_holding_bases_effect = yes
+  }
+}
+
+# root=角色：其作为伯爵+主衔时直辖各县每格，再补「仅持男爵衔」者主衔所在格；全帝国 = skonester_realm_repair_broken_holding_bases_effect，供「全国无税/零税」决议与封建化等调用
+skonester_held_titles_repair_broken_holding_bases_effect = {
+  every_held_county = {
+    every_county_province = { skonester_repair_holding_bases_in_province_once = yes }
+  }
+  every_held_title = {
+    limit = { tier = tier_barony }
+    title_province = { skonester_repair_holding_bases_in_province_once = yes }
+  }
+}
+
+# 省上：四类主建线各试补一档（有则 no-op）
+skonester_repair_holding_bases_in_province_once = {
+  skonester_ensure_castle_holding_base_castle_building = yes
+  skonester_ensure_city_holding_base_city_building = yes
+  skonester_ensure_church_holding_base_temple_building = yes
+  skonester_ensure_tribal_holding_base_tribe_building = yes
+}

@@ -1,0 +1,76 @@
+﻿# 扩张/权限帝号 · 战争霸权（破停战、月增 5000 常备、共用修正）
+
+skonester_titular_break_all_truces_effect = {
+  every_living_character = {
+    limit = {
+      is_alive = yes
+      has_truce = root
+    }
+    root = { break_truce = prev }
+  }
+}
+
+# 约 5000 人：50 队 × size 1（轻步兵/草原骑 stack≈100）
+skonester_titular_spawn_5000_maa_effect = {
+  if = {
+    limit = {
+      OR = {
+        government_has_flag = government_is_nomadic
+        government_has_flag = government_is_herder
+      }
+      has_mpo_dlc_trigger = yes
+    }
+    while = {
+      count = 50
+      create_maa_regiment = {
+        type = steppe_raiders
+        check_can_recruit = no
+        size = 1
+      }
+    }
+  }
+  else = {
+    while = {
+      count = 50
+      create_maa_regiment = {
+        type = light_footmen
+        check_can_recruit = no
+        size = 1
+      }
+    }
+  }
+}
+
+skonester_apply_titular_supremacy_bundle_effect = {
+  if = {
+    limit = { NOT = { has_character_modifier = skonester_titular_supremacy_holder } }
+    add_character_modifier = { modifier = skonester_titular_supremacy_holder }
+  }
+  add_character_flag = skonester_titular_unrestricted_war
+  skonester_titular_break_all_truces_effect = yes
+  skonester_titular_spawn_5000_maa_effect = yes
+}
+
+skonester_remove_titular_supremacy_bundle_effect = {
+  remove_character_modifier = skonester_titular_supremacy_holder
+  remove_character_flag = skonester_titular_unrestricted_war
+}
+
+skonester_sync_titular_supremacy_if_holding_cheat_title_effect = {
+  if = {
+    limit = { skonester_holds_any_cheat_titular_title_trigger = yes }
+    if = {
+      limit = { NOT = { has_character_modifier = skonester_titular_supremacy_holder } }
+      add_character_modifier = { modifier = skonester_titular_supremacy_holder }
+    }
+  }
+  else = {
+    skonester_remove_titular_supremacy_bundle_effect = yes
+  }
+}
+
+skonester_titular_supremacy_monthly_pulse_effect = {
+  skonester_sync_titular_supremacy_if_holding_cheat_title_effect = yes
+  skonester_titular_break_all_truces_effect = yes
+  skonester_titular_spawn_5000_maa_effect = yes
+}

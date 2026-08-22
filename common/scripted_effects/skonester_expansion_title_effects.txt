@@ -1,0 +1,188 @@
+﻿# 扩张帝号：剥离其它扩张头衔/修正 → 创建或篡夺名义头衔 → 刷新持有者修正
+
+skonester_remove_all_expansion_title_holder_modifiers_effect = {
+  remove_character_modifier = skonester_expansion_hegemon_holder
+  remove_character_modifier = skonester_expansion_devourer_holder
+  remove_character_modifier = skonester_expansion_war_path_holder
+  remove_character_modifier = skonester_expansion_mandate_holder
+  remove_character_modifier = skonester_expansion_predator_holder
+}
+
+skonester_destroy_all_held_expansion_titular_titles_effect = {
+  every_held_title = {
+    limit = { skonester_is_expansion_titular_title_trigger = yes }
+    prev = { destroy_title = prev }
+  }
+}
+
+# 在 scope:skonester_expansion_grant_title 已设为将授予之法理头衔后，于 scope:skonester_cheat_menu_target 上调用。
+skonester_grant_expansion_titular_title_to_character_effect = {
+  skonester_remove_all_expansion_title_holder_modifiers_effect = yes
+  skonester_destroy_all_held_expansion_titular_titles_effect = yes
+  if = {
+    limit = {
+      exists = scope:skonester_expansion_grant_title
+      scope:skonester_expansion_grant_title = { exists = holder }
+    }
+    scope:skonester_expansion_grant_title = {
+      create_title_and_vassal_change = {
+        type = usurped
+        save_scope_as = skonester_exp_title_change
+      }
+      change_title_holder = {
+        holder = scope:skonester_cheat_menu_target
+        change = scope:skonester_exp_title_change
+      }
+      resolve_title_and_vassal_change = scope:skonester_exp_title_change
+    }
+  }
+  else_if = {
+    limit = { exists = scope:skonester_expansion_grant_title }
+    create_title_and_vassal_change = {
+      type = created
+      save_scope_as = skonester_exp_title_change
+    }
+    change_title_holder = {
+      holder = scope:skonester_cheat_menu_target
+      change = scope:skonester_exp_title_change
+      title = scope:skonester_expansion_grant_title
+    }
+    resolve_title_and_vassal_change = scope:skonester_exp_title_change
+  }
+  if = {
+    limit = {
+      exists = scope:skonester_expansion_grant_title
+      exists = primary_title
+      scope:skonester_expansion_grant_title = { tier > prev.primary_title.tier }
+    }
+    set_primary_title_to = scope:skonester_expansion_grant_title
+  }
+  if = {
+    limit = {
+      scope:skonester_expansion_grant_title = title:e_skonester_expansion_hegemon
+    }
+    add_character_modifier = { modifier = skonester_expansion_hegemon_holder }
+  }
+  else_if = {
+    limit = {
+      scope:skonester_expansion_grant_title = title:e_skonester_expansion_devourer
+    }
+    add_character_modifier = { modifier = skonester_expansion_devourer_holder }
+  }
+  else_if = {
+    limit = {
+      scope:skonester_expansion_grant_title = title:e_skonester_expansion_war_path
+    }
+    add_character_modifier = { modifier = skonester_expansion_war_path_holder }
+  }
+  else_if = {
+    limit = {
+      scope:skonester_expansion_grant_title = title:e_skonester_expansion_mandate
+    }
+    add_character_modifier = { modifier = skonester_expansion_mandate_holder }
+  }
+  else_if = {
+    limit = {
+      scope:skonester_expansion_grant_title = title:k_skonester_expansion_predator
+    }
+    add_character_modifier = { modifier = skonester_expansion_predator_holder }
+  }
+  skonester_apply_titular_supremacy_bundle_effect = yes
+}
+
+skonester_grant_expansion_hegemon_title_effect = {
+  scope:skonester_cheat_menu_target = {
+    title:e_skonester_expansion_hegemon = { save_scope_as = skonester_expansion_grant_title }
+    skonester_grant_expansion_titular_title_to_character_effect = yes
+  }
+}
+
+skonester_grant_expansion_devourer_title_effect = {
+  scope:skonester_cheat_menu_target = {
+    title:e_skonester_expansion_devourer = { save_scope_as = skonester_expansion_grant_title }
+    skonester_grant_expansion_titular_title_to_character_effect = yes
+  }
+}
+
+skonester_grant_expansion_war_path_title_effect = {
+  scope:skonester_cheat_menu_target = {
+    title:e_skonester_expansion_war_path = { save_scope_as = skonester_expansion_grant_title }
+    skonester_grant_expansion_titular_title_to_character_effect = yes
+  }
+}
+
+skonester_grant_expansion_mandate_title_effect = {
+  scope:skonester_cheat_menu_target = {
+    title:e_skonester_expansion_mandate = { save_scope_as = skonester_expansion_grant_title }
+    skonester_grant_expansion_titular_title_to_character_effect = yes
+  }
+}
+
+skonester_grant_expansion_predator_title_effect = {
+  scope:skonester_cheat_menu_target = {
+    title:k_skonester_expansion_predator = { save_scope_as = skonester_expansion_grant_title }
+    skonester_grant_expansion_titular_title_to_character_effect = yes
+  }
+}
+
+skonester_sync_expansion_title_holder_modifiers_effect = {
+  if = {
+    limit = { has_title = title:e_skonester_expansion_hegemon }
+    remove_character_modifier = skonester_expansion_devourer_holder
+    remove_character_modifier = skonester_expansion_war_path_holder
+    remove_character_modifier = skonester_expansion_mandate_holder
+    remove_character_modifier = skonester_expansion_predator_holder
+    if = {
+      limit = { NOT = { has_character_modifier = skonester_expansion_hegemon_holder } }
+      add_character_modifier = { modifier = skonester_expansion_hegemon_holder }
+    }
+  }
+  else_if = {
+    limit = { has_title = title:e_skonester_expansion_devourer }
+    remove_character_modifier = skonester_expansion_hegemon_holder
+    remove_character_modifier = skonester_expansion_war_path_holder
+    remove_character_modifier = skonester_expansion_mandate_holder
+    remove_character_modifier = skonester_expansion_predator_holder
+    if = {
+      limit = { NOT = { has_character_modifier = skonester_expansion_devourer_holder } }
+      add_character_modifier = { modifier = skonester_expansion_devourer_holder }
+    }
+  }
+  else_if = {
+    limit = { has_title = title:e_skonester_expansion_war_path }
+    remove_character_modifier = skonester_expansion_hegemon_holder
+    remove_character_modifier = skonester_expansion_devourer_holder
+    remove_character_modifier = skonester_expansion_mandate_holder
+    remove_character_modifier = skonester_expansion_predator_holder
+    if = {
+      limit = { NOT = { has_character_modifier = skonester_expansion_war_path_holder } }
+      add_character_modifier = { modifier = skonester_expansion_war_path_holder }
+    }
+  }
+  else_if = {
+    limit = { has_title = title:e_skonester_expansion_mandate }
+    remove_character_modifier = skonester_expansion_hegemon_holder
+    remove_character_modifier = skonester_expansion_devourer_holder
+    remove_character_modifier = skonester_expansion_war_path_holder
+    remove_character_modifier = skonester_expansion_predator_holder
+    if = {
+      limit = { NOT = { has_character_modifier = skonester_expansion_mandate_holder } }
+      add_character_modifier = { modifier = skonester_expansion_mandate_holder }
+    }
+  }
+  else_if = {
+    limit = { has_title = title:k_skonester_expansion_predator }
+    remove_character_modifier = skonester_expansion_hegemon_holder
+    remove_character_modifier = skonester_expansion_devourer_holder
+    remove_character_modifier = skonester_expansion_war_path_holder
+    remove_character_modifier = skonester_expansion_mandate_holder
+    if = {
+      limit = { NOT = { has_character_modifier = skonester_expansion_predator_holder } }
+      add_character_modifier = { modifier = skonester_expansion_predator_holder }
+    }
+  }
+  else = {
+    skonester_remove_all_expansion_title_holder_modifiers_effect = yes
+  }
+  skonester_sync_titular_supremacy_if_holding_cheat_title_effect = yes
+}

@@ -1,0 +1,117 @@
+﻿
+widget = {
+  name = "yyz_cmd_buttons"
+  size = { 0 0 }
+  visible = "[IsDefaultGUIMode]"
+  layer = bottom
+
+##########################################################################################
+# main entry point for base mod that doesn't require updating shortcuts - overrides the 
+# functionality of the 'redo' key at the main window level to open our main window and
+# start the Court Positions panel
+
+  # mode 6 - invisible shortcut button for Court Positions
+  yyz_character_list_shortcut = {
+    name = "shortcut_main"
+    blockoverride "command"  { datacontext = "[GetScriptedGui('open_yyz_courtPositions_list')]" }
+    blockoverride "cmd_key"  { shortcut = "redo" }
+  }
+
+##########################################################################################
+# base entry points for all the buttons in the UI
+
+  # mode 1 - invisible shortcut button for Viceroy List
+  yyz_character_list_shortcut = {
+    name = "shortcut_viceroy"
+    blockoverride "command"  { datacontext = "[GetScriptedGui('open_yyz_viceroy_list')]" }
+    blockoverride "cmd_key"  { shortcut = "yyz_viceroy_cmd" }
+  }
+  
+  # mode 3 - invisible shortcut button for Recruit Knights
+  yyz_character_list_shortcut = {
+    name = "shortcut_recruitKnights"
+    blockoverride "command"  { datacontext = "[GetScriptedGui('open_yyz_knight_list')]" }
+    blockoverride "cmd_key"  { shortcut = "yyz_knight_cmd" }
+  }
+  
+  # mode 4 - invisible shortcut button for Special Organizers list
+  yyz_character_list_shortcut = {
+    name = "shortcut_specialCmdrs"
+    blockoverride "command"  { datacontext = "[GetScriptedGui('open_yyz_specialOrganizers_list')]" }
+    blockoverride "cmd_key"  { shortcut = "yyz_organizers_cmd" }
+  }
+  
+  # mode 6 - invisible shortcut button for Court Positions
+  yyz_character_list_shortcut = {
+    name = "shortcut_courtPositions"
+    blockoverride "command" { datacontext = "[GetScriptedGui('open_yyz_courtPositions_list')]" }
+    blockoverride "cmd_key" { shortcut = "yyz_courtPositions_cmd" }
+  }
+  
+  # mode 7 - invisible shortcut button for Criminal Gold
+  yyz_character_list_shortcut = {
+    name = "shortcut_criminalGold"
+    blockoverride "command" { datacontext = "[GetScriptedGui('open_yyz_criminalGold_list')]" }
+    blockoverride "cmd_key" { shortcut = "yyz_criminalGold_cmd" }
+  }
+  
+  # mode 8 - invisible shortcut button for inspirations
+  yyz_character_list_shortcut = {
+    name = "shortcut_inspiration"
+    blockoverride "command" { datacontext = "[GetScriptedGui('open_yyz_inspiration_list')]" }
+    blockoverride "cmd_key" { shortcut = "yyz_inspiration_cmd" }
+  }
+  
+  # mode 12 - invisible shortcut button for fertility list
+  yyz_character_list_shortcut = {
+    blockoverride "command"  { datacontext = "[GetScriptedGui('open_yyz_fertility_list')]" }
+    blockoverride "cmd_key"  { shortcut = "yyz_fertility_cmd" }
+  }
+
+
+##########################################################################################
+# specialty entry points for existing modes with different filter and/or sort presets
+
+  # mode 2 - invisible shortcut button for Unlanded Dynasty list - females selected
+  yyz_character_list_shortcut = {
+    name = "shortcut_dynasty_female"
+    blockoverride "command"  { datacontext = "[GetScriptedGui('open_yyz_femaleDynasty_list')]" }
+    blockoverride "cmd_key"  { shortcut = "yyz_female_dyn_cmd" }
+  }
+  
+  # mode 2 - invisible shortcut button for Unlanded Dynasty list - males selected
+  yyz_character_list_shortcut = {
+    name = "shortcut_dynasty_male"
+    blockoverride "command"  { datacontext = "[GetScriptedGui('open_yyz_maleDynasty_list')]" }
+    blockoverride "cmd_key"  { shortcut = "yyz_male_dyn_cmd" }
+  }
+
+  # mode 5 - invisible shortcut button for Unlanded Dynasty list - males selected
+  yyz_character_list_shortcut = {
+    name = "shortcut_killTargets"
+    blockoverride "command"  { datacontext = "[GetScriptedGui('open_yyz_killTarget_list')]" }
+    blockoverride "cmd_key"  { shortcut = "yyz_killTarget_cmd" }
+  }
+
+  # mode 7 - invisible shortcut button for Old Money
+  yyz_character_list_shortcut = {
+    name = "shortcut_oldMoney"
+    blockoverride "command" { datacontext = "[GetScriptedGui('open_yyz_oldMoney_list')]" }
+    blockoverride "cmd_key" { shortcut = "yyz_oldMoney_cmd" }
+  }
+  
+  # 0 size button for shortcut to work
+  button_normal = {
+    name = "yyz_quicksave"
+  
+    onclick = "[ExecuteConsoleCommand('save quicksave')]"
+    shortcut = "yyz_quicksave_cmd"
+  }
+  # 0 size button for shortcut to work
+  button_normal = {
+    name = "yyz_quickload"
+  
+    onclick = "[ExecuteConsoleCommand('load quicksave')]"
+    shortcut = "yyz_quickload_cmd"
+  }
+}

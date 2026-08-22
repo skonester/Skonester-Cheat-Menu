@@ -1,0 +1,41 @@
+﻿# ä¸€é¡¹å†³è®®ï¼šæ‰“å¼€å¼¹çª—åœ¨ã€Œåªæ”¶ç›´å±ž / å…¨è¾–å†…å°è‡£ã€äºŒé€‰ä¸€ï¼Œé¿å…åˆ—è¡¨é‡Œå‡ºçŽ°ä¸¤æ¡åŒåŠŸèƒ½å†³è®®ã€‚
+
+skonester_imprison_vassals_decision = {
+  picture = {
+    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+  }
+  decision_group_type = pcm
+  sort_order = 60
+  title = skonester_imprison_vassals_decision
+  desc = skonester_imprison_vassals_decision_desc
+  selection_tooltip = skonester_imprison_vassals_decision_desc
+  confirm_text = skonester_imprison_vassals_decision_confirm
+
+  ai_check_interval = 0
+  ai_potential = { always = no }
+
+  is_shown = {
+
+    has_character_flag = pcm_b_show_decision_flag
+    skonester_officials_decision_visible_for_player_trigger = yes
+  }
+
+  is_valid = {
+    is_playable_character = yes
+    OR = {
+      skonester_has_imprisonable_direct_vassal_trigger = yes
+      skonester_has_imprisonable_realm_vassal_trigger = yes
+    }
+  }
+
+  effect = {
+    trigger_event = {
+      id = skonester_officials.9102
+      days = 0
+    }
+  }
+
+  ai_will_do = {
+    base = 0
+  }
+}

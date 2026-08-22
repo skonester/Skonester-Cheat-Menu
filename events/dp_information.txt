@@ -1,0 +1,73 @@
+﻿
+namespace = dp_information
+
+dp_information.1 = {
+	type = character_event
+	title = daddy_pika_information
+	desc = information_desc
+	theme = default
+	left_portrait = {
+		character = scope:actor
+		animation = personality_bold
+	}
+	option = {
+		name = dp_information.changelog.t
+		trigger_event = dp_information.2
+	}
+	option = {
+		name = dp_information.useful_tips.t
+		trigger_event = dp_information.3
+	}
+	option = {
+		name = dp_information.locations.t
+		trigger_event = dp_information.4
+	}
+	option = {
+		name = CONFIRM_OKAY
+	}
+}
+
+dp_information.2 = {
+	type = character_event
+	title = dp_information.changelog.t
+	desc = dp_information.changelog.d
+	theme = default
+	left_portrait = {
+		character = scope:actor
+		animation = personality_bold
+	}
+	option = {
+		name = CONFIRM_OKAY
+		trigger_event = dp_information.1
+	}
+}
+
+dp_information.3 = {
+	type = character_event
+	title = dp_information.useful_tips.t
+	desc = dp_information.useful_tips.d
+	theme = default
+	left_portrait = {
+		character = scope:actor
+		animation = personality_bold
+	}
+	option = {
+		name = CONFIRM_OKAY
+		trigger_event = dp_information.1
+	}
+}
+
+dp_information.4 = {
+	type = character_event
+	title = dp_information.locations.t
+	desc = dp_information.locations.d
+	theme = default
+	left_portrait = {
+		character = scope:actor
+		animation = personality_bold
+	}
+	option = {
+		name = CONFIRM_OKAY
+		trigger_event = dp_information.1
+	}
+}

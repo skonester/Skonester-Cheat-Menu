@@ -1,0 +1,5 @@
+﻿# Used for tooltip
+nick_a_random_nickname = {} 
+nick_test = {}
+
+nick_the_bloodline_god_3 = {}

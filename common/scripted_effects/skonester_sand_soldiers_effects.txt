@@ -1,0 +1,232 @@
+﻿# Skonester「撒豆成兵」· 界面「规模」每级 = 100 名士兵；征召 size = (规模×100)÷兵种单队人数
+
+skonester_sand_soldiers_request_open_effect = {
+  add_character_flag = skonester_sand_soldiers_pending_open
+}
+
+skonester_open_sand_soldiers_effect = {
+  if = {
+    limit = { has_character_flag = skonester_sand_soldiers_pending_open }
+    remove_character_flag = skonester_sand_soldiers_pending_open
+  }
+  remove_character_flag = skonester_sand_soldiers_open
+  add_character_flag = skonester_sand_soldiers_open
+  if = {
+    limit = { NOT = { has_variable = skonester_sand_maa_scale } }
+    set_variable = { name = skonester_sand_maa_scale value = 1 }
+  }
+  skonester_sand_refresh_scale_preview_effect = yes
+}
+
+skonester_close_sand_soldiers_effect = {
+  remove_character_flag = skonester_sand_soldiers_open
+  remove_character_flag = skonester_sand_has_maa_pick
+  if = {
+    limit = { has_global_variable = skonester_cheat_menu_recipient }
+    skonester_military_reopen_3085_effect = yes
+  }
+}
+
+# 预览：实际士兵 = 规模 × 100
+skonester_sand_refresh_scale_preview_effect = {
+  if = {
+    limit = {
+      has_variable = skonester_sand_maa_scale
+      var:skonester_sand_maa_scale >= 1
+    }
+    set_variable = {
+      name = skonester_sand_actual_men
+      value = {
+        value = var:skonester_sand_maa_scale
+        multiply = 100
+      }
+    }
+  }
+}
+
+skonester_sand_pick_maa_effect = {
+  if = {
+    limit = { exists = scope:maa_flag }
+    set_variable = {
+      name = skonester_sand_maa_pick
+      value = scope:maa_flag
+    }
+    add_character_flag = skonester_sand_has_maa_pick
+    skonester_sand_set_stack_from_pick_effect = yes
+    skonester_sand_refresh_scale_preview_effect = yes
+  }
+}
+
+skonester_sand_scale_inc_effect = {
+  if = {
+    limit = { var:skonester_sand_maa_scale < 100 }
+    change_variable = { name = skonester_sand_maa_scale add = 1 }
+  }
+  skonester_sand_refresh_scale_preview_effect = yes
+}
+
+skonester_sand_scale_dec_effect = {
+  if = {
+    limit = { var:skonester_sand_maa_scale > 1 }
+    change_variable = { name = skonester_sand_maa_scale subtract = 1 }
+  }
+  skonester_sand_refresh_scale_preview_effect = yes
+}
+
+skonester_sand_stage_spawn_vars_on_target_effect = {
+  remove_variable = skonester_sand_staged_scale
+  remove_variable = skonester_sand_staged_stack
+  remove_variable = skonester_sand_spawn_actual_men
+  if = {
+    limit = {
+      exists = scope:skonester_sand_player
+      scope:skonester_sand_player = { has_variable = skonester_sand_maa_scale }
+      scope:skonester_sand_player = { has_variable = skonester_sand_maa_stack }
+    }
+    set_variable = {
+      name = skonester_sand_staged_stack
+      value = scope:skonester_sand_player.var:skonester_sand_maa_stack
+    }
+    set_variable = {
+      name = skonester_sand_target_men
+      value = {
+        value = scope:skonester_sand_player.var:skonester_sand_maa_scale
+        multiply = 100
+      }
+    }
+    set_variable = {
+      name = skonester_sand_staged_scale
+      value = {
+        value = var:skonester_sand_target_men
+        divide = var:skonester_sand_staged_stack
+      }
+    }
+    if = {
+      limit = { var:skonester_sand_staged_scale < 1 }
+      set_variable = { name = skonester_sand_staged_scale value = 1 }
+    }
+    if = {
+      limit = { var:skonester_sand_staged_scale > 100 }
+      set_variable = { name = skonester_sand_staged_scale value = 100 }
+    }
+    remove_variable = skonester_sand_target_men
+    skonester_sand_compute_regiment_size_effect = yes
+  }
+}
+
+skonester_sand_spawn_current_effect = {
+  skonester_military_ensure_target_effect = yes
+  root = { save_scope_as = skonester_sand_player }
+  if = {
+    limit = {
+      exists = scope:skonester_cheat_menu_target
+      scope:skonester_sand_player = { has_variable = skonester_sand_maa_pick }
+      scope:skonester_sand_player = { var:skonester_sand_maa_scale >= 1 }
+    }
+    scope:skonester_sand_player = {
+      if = {
+        limit = { NOT = { has_variable = skonester_sand_maa_stack } }
+        skonester_sand_set_stack_from_pick_effect = yes
+      }
+      if = {
+        limit = { NOT = { has_variable = skonester_sand_maa_stack } }
+        set_variable = {
+          name = skonester_sand_maa_stack
+          value = 100
+        }
+      }
+    }
+    scope:skonester_cheat_menu_target = {
+      set_variable = {
+        name = skonester_sand_maa_count_before
+        value = maa_regiments_count
+      }
+      skonester_sand_stage_spawn_vars_on_target_effect = yes
+      save_scope_as = skonester_sand_spawn_tgt
+    }
+    if = {
+      limit = {
+        exists = scope:skonester_sand_spawn_tgt
+        scope:skonester_sand_spawn_tgt = {
+          has_variable = skonester_sand_staged_scale
+          var:skonester_sand_staged_scale >= 1
+        }
+      }
+      scope:skonester_sand_player = {
+        skonester_sand_spawn_from_player_pick_effect = yes
+        set_variable = {
+          name = skonester_sand_toast_scale
+          value = var:skonester_sand_maa_scale
+        }
+        if = {
+          limit = {
+            exists = scope:skonester_sand_spawn_tgt
+            scope:skonester_sand_spawn_tgt = { has_variable = skonester_sand_spawn_actual_men }
+          }
+          set_variable = {
+            name = skonester_sand_toast_actual_men
+            value = scope:skonester_sand_spawn_tgt.var:skonester_sand_spawn_actual_men
+          }
+        }
+      }
+      if = {
+        limit = {
+          scope:skonester_sand_spawn_tgt = {
+            OR = {
+              has_variable = skonester_sand_spawn_ok
+              AND = {
+                has_variable = skonester_sand_maa_count_before
+                maa_regiments_count > var:skonester_sand_maa_count_before
+              }
+            }
+          }
+        }
+        send_interface_toast = {
+          type = event_toast_effect_good
+          title = skonester_sand_spawn_ok_toast_title
+          desc = skonester_sand_spawn_ok_toast_desc
+          left_icon = scope:skonester_cheat_menu_target
+        }
+      }
+      else = {
+        send_interface_toast = {
+          type = event_toast_effect_bad
+          title = skonester_sand_spawn_fail_toast_title
+          desc = skonester_sand_spawn_fail_maa_toast_desc
+        }
+      }
+      scope:skonester_cheat_menu_target = {
+        remove_variable = skonester_sand_staged_scale
+        remove_variable = skonester_sand_staged_stack
+        remove_variable = skonester_sand_spawn_actual_men
+        remove_variable = skonester_sand_spawn_ok
+        remove_variable = skonester_sand_maa_count_before
+      }
+    }
+    else = {
+      scope:skonester_cheat_menu_target = {
+        remove_variable = skonester_sand_staged_scale
+        remove_variable = skonester_sand_staged_stack
+        remove_variable = skonester_sand_spawn_actual_men
+        remove_variable = skonester_sand_spawn_ok
+        remove_variable = skonester_sand_maa_count_before
+      }
+      send_interface_toast = {
+        type = event_toast_effect_bad
+        title = skonester_sand_spawn_fail_toast_title
+        desc = skonester_sand_spawn_fail_maa_toast_desc
+      }
+    }
+  }
+  else = {
+    send_interface_toast = {
+      type = event_toast_effect_bad
+      title = skonester_sand_spawn_fail_toast_title
+      desc = skonester_sand_spawn_fail_toast_desc
+    }
+  }
+}
+
+skonester_sand_raise_levies_effect = {
+  skonester_cheat_menu_raise_all_levies_effect = yes
+}

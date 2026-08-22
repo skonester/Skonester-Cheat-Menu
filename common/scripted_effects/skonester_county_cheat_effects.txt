@@ -1,0 +1,146 @@
+﻿# 伯爵领作弊：按 actor 上的 domain/vassal 旗标对 skonester_cnt_realm_holder 领地生效
+
+skonester_cnt_apply_max_control_effect = {
+  if = {
+    limit = {
+      scope:actor = { has_character_flag = skonester_cnt_domain_scope }
+      exists = scope:skonester_cnt_realm_holder
+    }
+    scope:skonester_cnt_realm_holder = {
+      every_held_title = {
+        limit = { tier = tier_county }
+        change_county_control = 100
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      scope:actor = { has_character_flag = skonester_cnt_vassal_scope }
+      exists = scope:skonester_cnt_realm_holder
+    }
+    scope:skonester_cnt_realm_holder = {
+      every_sub_realm_county = {
+        limit = {
+          holder = {
+            NOT = { this = scope:skonester_cnt_realm_holder }
+            is_vassal_or_below_of = scope:skonester_cnt_realm_holder
+          }
+        }
+        change_county_control = 100
+      }
+    }
+  }
+}
+
+skonester_cnt_apply_max_development_effect = {
+  if = {
+    limit = {
+      scope:actor = { has_character_flag = skonester_cnt_domain_scope }
+      exists = scope:skonester_cnt_realm_holder
+    }
+    scope:skonester_cnt_realm_holder = {
+      every_held_title = {
+        limit = { tier = tier_county }
+        change_development_progress_with_overflow = 10000
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      scope:actor = { has_character_flag = skonester_cnt_vassal_scope }
+      exists = scope:skonester_cnt_realm_holder
+    }
+    scope:skonester_cnt_realm_holder = {
+      every_sub_realm_county = {
+        limit = {
+          holder = {
+            NOT = { this = scope:skonester_cnt_realm_holder }
+            is_vassal_or_below_of = scope:skonester_cnt_realm_holder
+          }
+        }
+        change_development_progress_with_overflow = 10000
+      }
+    }
+  }
+}
+
+skonester_cnt_apply_popular_surge_effect = {
+  if = {
+    limit = {
+      scope:actor = { has_character_flag = skonester_cnt_domain_scope }
+      exists = scope:skonester_cnt_realm_holder
+    }
+    scope:skonester_cnt_realm_holder = {
+      every_held_title = {
+        limit = { tier = tier_county }
+        remove_all_county_modifier_instances = skonester_cnt_popular_surge
+        add_county_modifier = {
+          modifier = skonester_cnt_popular_surge
+          years = 100
+        }
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      scope:actor = { has_character_flag = skonester_cnt_vassal_scope }
+      exists = scope:skonester_cnt_realm_holder
+    }
+    scope:skonester_cnt_realm_holder = {
+      every_sub_realm_county = {
+        limit = {
+          holder = {
+            NOT = { this = scope:skonester_cnt_realm_holder }
+            is_vassal_or_below_of = scope:skonester_cnt_realm_holder
+          }
+        }
+        remove_all_county_modifier_instances = skonester_cnt_popular_surge
+        add_county_modifier = {
+          modifier = skonester_cnt_popular_surge
+          years = 100
+        }
+      }
+    }
+  }
+}
+
+skonester_cnt_apply_culture_faith_effect = {
+  if = {
+    limit = {
+      scope:actor = { has_character_flag = skonester_cnt_domain_scope }
+      exists = scope:skonester_cnt_realm_holder
+    }
+    scope:skonester_cnt_realm_holder = {
+      every_held_title = {
+        limit = { tier = tier_county }
+        set_county_culture = scope:skonester_cnt_realm_holder.culture
+        set_county_faith = scope:skonester_cnt_realm_holder.faith
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      scope:actor = { has_character_flag = skonester_cnt_vassal_scope }
+      exists = scope:skonester_cnt_realm_holder
+    }
+    scope:skonester_cnt_realm_holder = {
+      every_sub_realm_county = {
+        limit = {
+          holder = {
+            NOT = { this = scope:skonester_cnt_realm_holder }
+            is_vassal_or_below_of = scope:skonester_cnt_realm_holder
+          }
+        }
+        set_county_culture = scope:skonester_cnt_realm_holder.culture
+        set_county_faith = scope:skonester_cnt_realm_holder.faith
+      }
+    }
+  }
+}
+
+skonester_cnt_clear_scope_flags_effect = {
+  scope:actor = {
+    remove_character_flag = skonester_cnt_domain_scope
+    remove_character_flag = skonester_cnt_vassal_scope
+  }
+}

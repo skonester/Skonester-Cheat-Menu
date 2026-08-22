@@ -1,0 +1,84 @@
+﻿# 变身大明十政体：政体定义由《变身大明》提供；探测见 skonester_compat_triggers.txt / zzz_skonester_compat_probe.txt
+# — 开局若存在 Data_tuiju / hq_check 或 orient 侧变量则自动标记
+# — 或玩家通过决议「大明政体：本局启用显示」设 skonester_daming_ming_gov_menu_unlocked
+
+skonester_daming_ming_gov_menu_unlocked_trigger = {
+  has_global_variable = skonester_daming_ming_gov_menu_unlocked
+}
+
+# 须变身大明模组本体在局内（Data_tuiju / hq_check）；仅用手动决议解锁不足以注册政体定义
+skonester_actor_has_bianshen_daming_government_access_trigger = {
+  OR = {
+    exists = global_var:Data_tuiju
+    exists = global_var:hq_check
+    has_global_variable = skonester_compat_daming_loaded
+  }
+}
+
+skonester_has_any_vassal_for_gm_zongfan_conversion_trigger = {
+  any_vassal_or_below = {
+    skonester_mass_gov_conversion_target_trigger = yes
+    NOT = { has_government = zongfan_government }
+  }
+}
+
+skonester_has_any_vassal_for_gm_sansizhi_conversion_trigger = {
+  any_vassal_or_below = {
+    skonester_mass_gov_conversion_target_trigger = yes
+    NOT = { has_government = sansizhi_government }
+  }
+}
+
+skonester_has_any_vassal_for_gm_weisuozhi_conversion_trigger = {
+  any_vassal_or_below = {
+    skonester_mass_gov_conversion_target_trigger = yes
+    NOT = { has_government = weisuozhi_government }
+  }
+}
+
+skonester_has_any_vassal_for_gm_tusizhi_conversion_trigger = {
+  any_vassal_or_below = {
+    skonester_mass_gov_conversion_target_trigger = yes
+    NOT = { has_government = tusizhi_government }
+  }
+}
+
+skonester_has_any_vassal_for_gm_neige_conversion_trigger = {
+  any_vassal_or_below = {
+    always = no
+  }
+}
+
+skonester_has_any_vassal_for_gm_baqizhi_conversion_trigger = {
+  any_vassal_or_below = {
+    skonester_mass_gov_conversion_target_trigger = yes
+    NOT = { has_government = baqizhi_government }
+  }
+}
+
+skonester_has_any_vassal_for_gm_daiyizhi_conversion_trigger = {
+  any_vassal_or_below = {
+    skonester_mass_gov_conversion_target_trigger = yes
+    NOT = { has_government = daiyizhi_government }
+  }
+}
+
+skonester_has_any_vassal_for_gm_zhimin_conversion_trigger = {
+  any_vassal_or_below = {
+    skonester_mass_gov_conversion_target_trigger = yes
+    NOT = { has_government = zhimin_government }
+  }
+}
+
+skonester_has_any_vassal_for_gm_zuzhi_conversion_trigger = {
+  any_vassal_or_below = {
+    always = no
+  }
+}
+
+skonester_has_any_vassal_for_gm_pirate_conversion_trigger = {
+  any_vassal_or_below = {
+    skonester_mass_gov_conversion_target_trigger = yes
+    NOT = { has_government = pirate_government }
+  }
+}

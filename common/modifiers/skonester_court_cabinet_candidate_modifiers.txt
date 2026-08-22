@@ -1,0 +1,8 @@
+# Internal marker modifiers used while selecting replacement cabinet members.
+# They intentionally provide no stat changes.
+
+skonester_court_cabinet_chancellor_candidate = { }
+skonester_court_cabinet_marshal_candidate = { }
+skonester_court_cabinet_steward_candidate = { }
+skonester_court_cabinet_spymaster_candidate = { }
+skonester_court_cabinet_chaplain_candidate = { }

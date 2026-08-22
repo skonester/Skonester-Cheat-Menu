@@ -1,0 +1,25 @@
+﻿# Skonester特质：鬼斧神工（营造向顶配）
+
+trait_great_builder_god = {
+
+  name = trait_trait_great_builder_god
+  desc = trait_trait_great_builder_god_desc
+  inherit_chance = 0
+  birth = 0
+  random_creation = 0
+  genetic = no
+  congenital = no
+  education = no
+
+  category = fame
+
+  icon = "build_speed_cheat.dds"
+
+  long_reign_bonus_mult = 500
+
+  # 营造：负值加快建造/地产建设（-9999.99 ≈ UI 上 -999999% 建造时间）
+  build_speed = -9999.99
+  holding_build_speed = -9999.99
+  build_gold_cost = -99999.99
+  holding_build_gold_cost = -99999.99
+}

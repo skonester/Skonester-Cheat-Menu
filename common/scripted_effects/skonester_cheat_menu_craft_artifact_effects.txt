@@ -1,0 +1,561 @@
+﻿# 制作宝物：打开面板时默认修饰槽 1–4 为「外交」、层数 1；槽 5 为无；槽 6 仅事件用
+skonester_craft_init_modifier_slot_defaults_effect = {
+  if = {
+    limit = { NOT = { has_variable = skonester_acm_craft_quality_wealth } }
+    set_variable = { name = skonester_acm_craft_quality_wealth value = 10 }
+  }
+  if = {
+    limit = { NOT = { has_variable = skonester_craft_m1 } }
+    set_variable = { name = skonester_craft_m1 value = 1 }
+  }
+  if = {
+    limit = { NOT = { has_variable = skonester_craft_m2 } }
+    set_variable = { name = skonester_craft_m2 value = 1 }
+  }
+  if = {
+    limit = { NOT = { has_variable = skonester_craft_m3 } }
+    set_variable = { name = skonester_craft_m3 value = 1 }
+  }
+  if = {
+    limit = { NOT = { has_variable = skonester_craft_m4 } }
+    set_variable = { name = skonester_craft_m4 value = 1 }
+  }
+  if = {
+    limit = { NOT = { has_variable = skonester_craft_m5 } }
+    set_variable = { name = skonester_craft_m5 value = 0 }
+  }
+  if = {
+    limit = { NOT = { has_variable = skonester_craft_m6 } }
+    set_variable = { name = skonester_craft_m6 value = 0 }
+  }
+  skonester_acm_sync_craft_layer_quality_effect = yes
+  if = {
+    limit = { NOT = { has_variable = skonester_craft_m1_cnt } }
+    set_variable = {
+      name = skonester_craft_m1_cnt
+      value = var:skonester_craft_quality_min_layers
+    }
+  }
+  if = {
+    limit = { NOT = { has_variable = skonester_craft_m2_cnt } }
+    set_variable = {
+      name = skonester_craft_m2_cnt
+      value = var:skonester_craft_quality_min_layers
+    }
+  }
+  if = {
+    limit = { NOT = { has_variable = skonester_craft_m3_cnt } }
+    set_variable = {
+      name = skonester_craft_m3_cnt
+      value = var:skonester_craft_quality_min_layers
+    }
+  }
+  if = {
+    limit = { NOT = { has_variable = skonester_craft_m4_cnt } }
+    set_variable = {
+      name = skonester_craft_m4_cnt
+      value = var:skonester_craft_quality_min_layers
+    }
+  }
+  if = {
+    limit = { NOT = { has_variable = skonester_craft_m5_cnt } }
+    set_variable = { name = skonester_craft_m5_cnt value = 0 }
+  }
+}
+
+# 按宝物品质决定每槽最低叠层（对齐 advcm_artifact_frame：普通1/大师2/名作3/卓越5）
+skonester_acm_sync_craft_layer_quality_body_effect = {
+  if = {
+    limit = { var:skonester_acm_craft_quality_wealth = 500 }
+    set_variable = { name = skonester_craft_quality_min_layers value = 5 }
+  }
+  else_if = {
+    limit = { var:skonester_acm_craft_quality_wealth = 250 }
+    set_variable = { name = skonester_craft_quality_min_layers value = 3 }
+  }
+  else_if = {
+    limit = { var:skonester_acm_craft_quality_wealth = 100 }
+    set_variable = { name = skonester_craft_quality_min_layers value = 2 }
+  }
+  else = {
+    set_variable = { name = skonester_craft_quality_min_layers value = 1 }
+  }
+}
+
+skonester_acm_sync_craft_layer_quality_effect = {
+  if = {
+    limit = { exists = scope:skonester_acm_craft_creator }
+    scope:skonester_acm_craft_creator = {
+      skonester_acm_sync_craft_layer_quality_body_effect = yes
+    }
+  }
+  else = {
+    skonester_acm_sync_craft_layer_quality_body_effect = yes
+  }
+}
+
+# 切换品质后：各槽层数对齐当前品质下限（降低品质时也会下调过高层数，避免稀有度被叠层抬高）
+skonester_acm_clamp_craft_slot_layers_to_quality_effect = {
+  skonester_acm_sync_craft_layer_quality_effect = yes
+  if = {
+    limit = { NOT = { var:skonester_craft_m1 = 0 } }
+    if = {
+      limit = {
+        OR = {
+          NOT = { has_variable = skonester_craft_m1_cnt }
+          var:skonester_craft_m1_cnt < var:skonester_craft_quality_min_layers
+          var:skonester_craft_m1_cnt > var:skonester_craft_quality_min_layers
+        }
+      }
+      set_variable = {
+        name = skonester_craft_m1_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+  }
+  if = {
+    limit = { NOT = { var:skonester_craft_m2 = 0 } }
+    if = {
+      limit = {
+        OR = {
+          NOT = { has_variable = skonester_craft_m2_cnt }
+          var:skonester_craft_m2_cnt < var:skonester_craft_quality_min_layers
+          var:skonester_craft_m2_cnt > var:skonester_craft_quality_min_layers
+        }
+      }
+      set_variable = {
+        name = skonester_craft_m2_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+  }
+  if = {
+    limit = { NOT = { var:skonester_craft_m3 = 0 } }
+    if = {
+      limit = {
+        OR = {
+          NOT = { has_variable = skonester_craft_m3_cnt }
+          var:skonester_craft_m3_cnt < var:skonester_craft_quality_min_layers
+          var:skonester_craft_m3_cnt > var:skonester_craft_quality_min_layers
+        }
+      }
+      set_variable = {
+        name = skonester_craft_m3_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+  }
+  if = {
+    limit = { NOT = { var:skonester_craft_m4 = 0 } }
+    if = {
+      limit = {
+        OR = {
+          NOT = { has_variable = skonester_craft_m4_cnt }
+          var:skonester_craft_m4_cnt < var:skonester_craft_quality_min_layers
+          var:skonester_craft_m4_cnt > var:skonester_craft_quality_min_layers
+        }
+      }
+      set_variable = {
+        name = skonester_craft_m4_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+  }
+  if = {
+    limit = { NOT = { var:skonester_craft_m5 = 0 } }
+    if = {
+      limit = {
+        OR = {
+          NOT = { has_variable = skonester_craft_m5_cnt }
+          var:skonester_craft_m5_cnt < var:skonester_craft_quality_min_layers
+          var:skonester_craft_m5_cnt > var:skonester_craft_quality_min_layers
+        }
+      }
+      set_variable = {
+        name = skonester_craft_m5_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+  }
+}
+
+# 单槽：保证层数 ≥ 1，且不低于当前品质最低层数（玩家手动调高时保留）
+skonester_acm_ensure_craft_slot_layers_1 = {
+  scope:skonester_acm_craft_creator = {
+    skonester_acm_sync_craft_layer_quality_effect = yes
+    if = {
+      limit = { NOT = { has_variable = skonester_craft_m1_cnt } }
+      set_variable = { name = skonester_craft_m1_cnt value = 1 }
+    }
+    if = {
+      limit = { var:skonester_craft_m1_cnt < 1 }
+      set_variable = { name = skonester_craft_m1_cnt value = 1 }
+    }
+    if = {
+      limit = {
+        var:skonester_craft_m1_cnt < var:skonester_craft_quality_min_layers
+      }
+      set_variable = {
+        name = skonester_craft_m1_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+  }
+}
+skonester_acm_ensure_craft_slot_layers_2 = {
+  scope:skonester_acm_craft_creator = {
+    skonester_acm_sync_craft_layer_quality_effect = yes
+    if = {
+      limit = { NOT = { has_variable = skonester_craft_m2_cnt } }
+      set_variable = { name = skonester_craft_m2_cnt value = 1 }
+    }
+    if = {
+      limit = { var:skonester_craft_m2_cnt < 1 }
+      set_variable = { name = skonester_craft_m2_cnt value = 1 }
+    }
+    if = {
+      limit = {
+        var:skonester_craft_m2_cnt < var:skonester_craft_quality_min_layers
+      }
+      set_variable = {
+        name = skonester_craft_m2_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+  }
+}
+skonester_acm_ensure_craft_slot_layers_3 = {
+  scope:skonester_acm_craft_creator = {
+    skonester_acm_sync_craft_layer_quality_effect = yes
+    if = {
+      limit = { NOT = { has_variable = skonester_craft_m3_cnt } }
+      set_variable = { name = skonester_craft_m3_cnt value = 1 }
+    }
+    if = {
+      limit = { var:skonester_craft_m3_cnt < 1 }
+      set_variable = { name = skonester_craft_m3_cnt value = 1 }
+    }
+    if = {
+      limit = {
+        var:skonester_craft_m3_cnt < var:skonester_craft_quality_min_layers
+      }
+      set_variable = {
+        name = skonester_craft_m3_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+  }
+}
+skonester_acm_ensure_craft_slot_layers_4 = {
+  scope:skonester_acm_craft_creator = {
+    skonester_acm_sync_craft_layer_quality_effect = yes
+    if = {
+      limit = { NOT = { has_variable = skonester_craft_m4_cnt } }
+      set_variable = { name = skonester_craft_m4_cnt value = 1 }
+    }
+    if = {
+      limit = { var:skonester_craft_m4_cnt < 1 }
+      set_variable = { name = skonester_craft_m4_cnt value = 1 }
+    }
+    if = {
+      limit = {
+        var:skonester_craft_m4_cnt < var:skonester_craft_quality_min_layers
+      }
+      set_variable = {
+        name = skonester_craft_m4_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+  }
+}
+skonester_acm_ensure_craft_slot_layers_5 = {
+  scope:skonester_acm_craft_creator = {
+    skonester_acm_sync_craft_layer_quality_effect = yes
+    if = {
+      limit = { NOT = { has_variable = skonester_craft_m5_cnt } }
+      set_variable = { name = skonester_craft_m5_cnt value = 1 }
+    }
+    if = {
+      limit = { var:skonester_craft_m5_cnt < 1 }
+      set_variable = { name = skonester_craft_m5_cnt value = 1 }
+    }
+    if = {
+      limit = {
+        var:skonester_craft_m5_cnt < var:skonester_craft_quality_min_layers
+      }
+      set_variable = {
+        name = skonester_craft_m5_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+  }
+}
+skonester_acm_ensure_craft_slot_layers_6 = {
+  scope:skonester_acm_craft_creator = {
+    skonester_acm_sync_craft_layer_quality_effect = yes
+    if = {
+      limit = { NOT = { has_variable = skonester_craft_m6_cnt } }
+      set_variable = { name = skonester_craft_m6_cnt value = 1 }
+    }
+    if = {
+      limit = { var:skonester_craft_m6_cnt < 1 }
+      set_variable = { name = skonester_craft_m6_cnt value = 1 }
+    }
+    if = {
+      limit = {
+        var:skonester_craft_m6_cnt < var:skonester_craft_quality_min_layers
+      }
+      set_variable = {
+        name = skonester_craft_m6_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+  }
+}
+
+# skonester_apply_crafted_artifact_modifiers_effect 见 skonester_acm_apply_craft_slots_effect.txt（五槽层数 + 兼容 m6）
+
+# 从品质旗标同步 wealth 变量（create_artifact 分支用，避免收宝人 scope 内 scope:actor 失效）
+skonester_acm_sync_craft_quality_wealth_from_flags_body_effect = {
+  if = {
+    limit = { has_character_flag = skonester_artifact_quality_illustrious }
+    set_variable = { name = skonester_acm_craft_quality_wealth value = 500 }
+  }
+  else_if = {
+    limit = { has_character_flag = skonester_artifact_quality_famed }
+    set_variable = { name = skonester_acm_craft_quality_wealth value = 250 }
+  }
+  else_if = {
+    limit = { has_character_flag = skonester_artifact_quality_masterwork }
+    set_variable = { name = skonester_acm_craft_quality_wealth value = 100 }
+  }
+  else_if = {
+    limit = { has_character_flag = skonester_artifact_quality_common }
+    set_variable = { name = skonester_acm_craft_quality_wealth value = 10 }
+  }
+  else = {
+    set_variable = { name = skonester_acm_craft_quality_wealth value = 250 }
+  }
+}
+
+skonester_acm_sync_craft_quality_wealth_from_flags_effect = {
+  if = {
+    limit = { exists = scope:skonester_acm_craft_creator }
+    scope:skonester_acm_craft_creator = {
+      skonester_acm_sync_craft_quality_wealth_from_flags_body_effect = yes
+    }
+  }
+  else = {
+    skonester_acm_sync_craft_quality_wealth_from_flags_body_effect = yes
+  }
+}
+
+# 创建前：保证 skonester_acm_craft_creator 指向制作窗玩家（hidden 事件无 scope:actor）
+skonester_acm_ensure_craft_creator_scope_effect = {
+  if = {
+    limit = { NOT = { exists = scope:skonester_acm_craft_creator } }
+    if = {
+      limit = { exists = scope:actor }
+      scope:actor = { save_scope_as = skonester_acm_craft_creator }
+    }
+    else = {
+      root = { save_scope_as = skonester_acm_craft_creator }
+    }
+  }
+  if = {
+    limit = {
+      exists = scope:skonester_acm_craft_creator
+      scope:skonester_acm_craft_creator = {
+        NOT = { has_character_flag = skonester_artifact_quality_set }
+      }
+    }
+    scope:skonester_acm_craft_creator = {
+      skonester_acm_sync_craft_quality_wealth_from_flags_body_effect = yes
+    }
+  }
+  else_if = {
+    limit = {
+      NOT = { exists = scope:skonester_acm_craft_creator }
+      NOT = { has_character_flag = skonester_artifact_quality_set }
+    }
+    skonester_acm_sync_craft_quality_wealth_from_flags_body_effect = yes
+  }
+}
+
+# GUI/事件创建前：锁持有人 scope（右键目标 → skonester_acm_artifact_owner）
+skonester_acm_sync_artifact_owner_scopes_effect = {
+  if = {
+    limit = { exists = global_var:skonester_acm_recipient }
+    global_var:skonester_acm_recipient = { save_scope_as = skonester_acm_artifact_owner }
+  }
+  else_if = {
+    limit = {
+      scope:actor = { has_character_flag = skonester_craft_give_to_recipient }
+      exists = scope:recipient
+    }
+    scope:recipient = { save_scope_as = skonester_acm_artifact_owner }
+  }
+  else_if = {
+    limit = { exists = scope:actor }
+    scope:actor = { save_scope_as = skonester_acm_artifact_owner }
+  }
+  else = {
+    root = { save_scope_as = skonester_acm_artifact_owner }
+  }
+}
+
+# 在宝物 scope 上按 craft_creator 的 skonester_acm_craft_quality_wealth 写入稀有度（勿在收宝人身上调用 set_artifact_rarity_*）
+skonester_acm_apply_craft_quality_rarity_from_craft_creator_effect = {
+  if = {
+    limit = {
+      OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      }
+    }
+    set_artifact_rarity = illustrious
+  }
+  else_if = {
+    limit = {
+      OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      }
+    }
+    set_artifact_rarity = famed
+  }
+  else_if = {
+    limit = {
+      OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      }
+    }
+    set_artifact_rarity = masterwork
+  }
+  else = {
+    set_artifact_rarity = common
+  }
+}
+
+# 创建后收尾（宝物已在收宝人 scope 上 create_artifact，无需 set_owner）
+skonester_acm_finalize_crafted_artifact_effect = {
+  skonester_acm_ensure_craft_creator_scope_effect = yes
+  scope:skonester_new_crafted_artifact = {
+    remove_artifact_modifier = artifact_prowess_1_modifier
+    remove_artifact_modifier = artifact_placeholder_modifier
+    set_variable = { name = historical_unique_artifact value = yes }
+    set_variable = { name = skonester_acm_from_gui_craft value = yes }
+    skonester_acm_apply_craft_quality_rarity_from_craft_creator_effect = yes
+    if = {
+      limit = {
+        exists = scope:skonester_acm_craft_creator
+        scope:skonester_acm_craft_creator = {
+          NOT = { has_character_flag = skonester_acm_edit_name_confirmed }
+        }
+      }
+      skonester_acm_craft_subtype_name_effect = yes
+    }
+    skonester_apply_crafted_artifact_modifiers_effect = yes
+    skonester_acm_apply_custom_artifact_text_effect = yes
+  }
+  scope:skonester_acm_craft_creator = {
+    add_character_flag = skonester_acm_artifact_created
+    skonester_acm_cleanup_artifact_edit_buffer_effect = yes
+  }
+}
+
+# 兼容旧调用名
+skonester_finish_crafted_artifact_owner_effect = {
+  skonester_acm_finalize_crafted_artifact_effect = yes
+}
+
+# 在右击目标（或 sync 出的 skonester_acm_artifact_owner）上执行制作体
+skonester_acm_run_create_on_artifact_owner_effect = {
+  if = {
+    limit = {
+      OR = {
+        AND = {
+          exists = scope:skonester_acm_craft_creator
+          scope:skonester_acm_craft_creator = { skonester_player_may_use_artifact_craft_trigger = yes }
+        }
+        root = { skonester_player_may_use_artifact_craft_trigger = yes }
+      }
+    }
+    skonester_acm_ensure_craft_creator_scope_effect = yes
+    if = {
+      limit = { exists = scope:skonester_acm_craft_creator }
+      scope:skonester_acm_craft_creator = {
+        skonester_acm_clamp_craft_slot_layers_to_quality_effect = yes
+      }
+    }
+    else = {
+      skonester_acm_clamp_craft_slot_layers_to_quality_effect = yes
+    }
+    if = {
+      limit = { exists = global_var:skonester_acm_recipient }
+      global_var:skonester_acm_recipient = {
+        skonester_acm_artifact_craft_body_on_owner_effect = yes
+      }
+    }
+    else_if = {
+      limit = { exists = scope:skonester_acm_artifact_owner }
+      scope:skonester_acm_artifact_owner = {
+        skonester_acm_artifact_craft_body_on_owner_effect = yes
+      }
+    }
+  }
+}
+
+# 独立制作窗「创建宝物」：hidden 事件无 scope:actor，须在 root 上建立 actor + 持有人后再 create_artifact
+skonester_acm_gui_finish_create_effect = {
+  remove_character_flag = skonester_acm_artifact_created
+  if = {
+    limit = { root = { skonester_player_may_use_artifact_craft_trigger = yes } }
+    root = {
+      save_scope_as = actor
+      save_scope_as = skonester_acm_craft_creator
+      skonester_acm_run_make_now_body_effect = yes
+    }
+    if = {
+      limit = {
+        OR = {
+          has_character_flag = skonester_acm_artifact_created
+          scope:skonester_acm_craft_creator = { has_character_flag = skonester_acm_artifact_created }
+        }
+      }
+      if = {
+        limit = { exists = global_var:skonester_acm_recipient }
+        global_var:skonester_acm_recipient = { save_scope_as = skonester_acm_toast_recipient }
+      }
+      send_interface_toast = {
+        type = event_toast_effect_good
+        title = skonester_acm_create_success_toast_t
+        left_icon = root
+        right_icon = scope:skonester_acm_toast_recipient
+      }
+    }
+    else = {
+      send_interface_toast = {
+        type = event_toast_effect_bad
+        title = skonester_acm_create_failed_toast_t
+        left_icon = root
+      }
+    }
+  }
+  remove_character_flag = skonester_acm_artifact_created
+  remove_character_flag = skonester_acm_gui_open
+  if = {
+    limit = { has_global_variable = skonester_acm_recipient }
+    remove_global_variable = skonester_acm_recipient
+  }
+}

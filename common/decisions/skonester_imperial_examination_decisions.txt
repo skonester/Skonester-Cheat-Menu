@@ -1,0 +1,35 @@
+﻿skonester_one_click_imperial_examination_promote_decision = {
+  picture = {
+    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+  }
+  decision_group_type = pcm
+  sort_order = 35
+  title = skonester_one_click_imperial_examination_promote_decision
+  desc = skonester_one_click_imperial_examination_promote_decision_desc
+  selection_tooltip = skonester_one_click_imperial_examination_promote_decision_desc
+  confirm_text = skonester_one_click_imperial_examination_promote_decision_confirm
+
+  ai_check_interval = 0
+  ai_potential = { always = no }
+
+  is_shown = {
+
+    has_character_flag = pcm_b_show_decision_flag
+    skonester_officials_decision_visible_for_player_trigger = yes
+  }
+
+  is_valid = {
+    is_playable_character = yes
+    has_tgp_dlc_trigger = yes
+    skonester_toolbox_supported_player_government_trigger = yes
+    skonester_has_any_merit_official_to_promote_trigger = yes
+  }
+
+  effect = {
+    skonester_imperial_examination_promote_all_officials_effect = yes
+  }
+
+  ai_will_do = {
+    base = 0
+  }
+}

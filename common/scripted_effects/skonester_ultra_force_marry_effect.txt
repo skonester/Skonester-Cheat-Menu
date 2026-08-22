@@ -1,0 +1,126 @@
+﻿# Ultra_Force_Marry 核心效果
+# 使用前须保存两个角色作用域：
+#   scope:skonester_ultra_marry_charA = 角色A
+#   scope:skonester_ultra_marry_charB = 角色B
+# 流程：解除婚约/离婚/清情人 → 临时改信 → 强制结婚 → 恢复信仰 → 同步文化信仰 → 拉入宫廷 → 好感拉满
+
+skonester_ultra_force_marry_effect = {
+  # ===== 角色B：解除婚约/离婚/清情人 =====
+  scope:skonester_ultra_marry_charB = {
+    if = {
+      limit = { exists = faith }
+      set_variable = { name = skonester_original_faith value = scope:skonester_ultra_marry_charB.faith }
+    }
+    if = {
+      limit = { exists = culture }
+      set_variable = { name = skonester_original_culture value = scope:skonester_ultra_marry_charB.culture }
+    }
+    while = {
+      limit = { exists = primary_spouse }
+      divorce = primary_spouse
+    }
+    if = {
+      limit = { exists = betrothed }
+      break_betrothal = betrothed
+    }
+    if = {
+      limit = { is_concubine = yes }
+      remove_concubine = yes
+    }
+    every_player_lover = {
+      remove_relation_lover = prev
+    }
+    every_soulmate = {
+      remove_relation_soulmate = prev
+    }
+  }
+
+  # ===== 角色A：解除婚约/离婚/清情人 =====
+  scope:skonester_ultra_marry_charA = {
+    if = {
+      limit = { exists = faith }
+      set_variable = { name = skonester_actor_original_faith value = scope:skonester_ultra_marry_charA.faith }
+    }
+    if = {
+      limit = { exists = culture }
+      set_variable = { name = skonester_actor_original_culture value = scope:skonester_ultra_marry_charA.culture }
+    }
+    while = {
+      limit = { exists = primary_spouse }
+      divorce = primary_spouse
+    }
+    if = {
+      limit = { exists = betrothed }
+      break_betrothal = betrothed
+    }
+    if = {
+      limit = { is_concubine = yes }
+      remove_concubine = yes
+    }
+    every_player_lover = {
+      remove_relation_lover = prev
+    }
+    every_soulmate = {
+      remove_relation_soulmate = prev
+    }
+  }
+
+  # ===== 临时改信 → 强制结婚 → 恢复原信仰 =====
+  scope:skonester_ultra_marry_charB = {
+    set_character_faith = faith:skonester_force_marry_faith
+  }
+  scope:skonester_ultra_marry_charA = {
+    set_character_faith = faith:skonester_force_marry_faith
+  }
+  scope:skonester_ultra_marry_charA = {
+    if = {
+      limit = { has_character_flag = skonester_ultra_marry_use_matrilineal }
+      marry_matrilineal = scope:skonester_ultra_marry_charB
+    }
+    else = {
+      marry = scope:skonester_ultra_marry_charB
+    }
+  }
+
+  # ===== 角色A：恢复原信仰/文化 =====
+  scope:skonester_ultra_marry_charA = {
+    if = {
+      limit = { has_variable = skonester_actor_original_faith }
+      set_character_faith = var:skonester_actor_original_faith
+      remove_variable = skonester_actor_original_faith
+    }
+    if = {
+      limit = { has_variable = skonester_actor_original_culture }
+      set_culture = var:skonester_actor_original_culture
+      remove_variable = skonester_actor_original_culture
+    }
+  }
+
+  # ===== 角色B：恢复原信仰 → 同步A的文化信仰 → 拉入A的宫廷 → 好感拉满 =====
+  scope:skonester_ultra_marry_charB = {
+    if = {
+      limit = { has_variable = skonester_original_faith }
+      set_character_faith = var:skonester_original_faith
+      remove_variable = skonester_original_faith
+    }
+    if = {
+      limit = { has_variable = skonester_original_culture }
+      set_culture = var:skonester_original_culture
+      remove_variable = skonester_original_culture
+    }
+    set_character_faith = scope:skonester_ultra_marry_charA.faith
+    set_culture = scope:skonester_ultra_marry_charA.culture
+    if = {
+      limit = { is_courtier = yes }
+      set_employer = scope:skonester_ultra_marry_charA
+    }
+    else_if = {
+      limit = { NOT = { is_landed = yes } }
+      set_employer = scope:skonester_ultra_marry_charA
+    }
+    add_opinion = { target = scope:skonester_ultra_marry_charA opinion = 200 }
+  }
+  scope:skonester_ultra_marry_charA = {
+    add_opinion = { target = scope:skonester_ultra_marry_charB opinion = 200 }
+  }
+}

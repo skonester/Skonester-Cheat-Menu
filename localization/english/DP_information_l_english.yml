@@ -1,0 +1,15 @@
+﻿l_english:
+  daddy_pika_information:0 "Skonester Cheat Menu Gold - Pre Chapter V"
+  information_desc:0 "This is the GitHub test build for Skonester Cheat Menu Gold - Pre Chapter V. Features may be unfinished or unstable. Please report all bugs and script errors on GitHub and include your CK3 error.log, mod load order, and steps to reproduce."
+  information_TT:0 "Click to view information about the Pre Chapter V GitHub test build."
+  
+  dp_information.changelog.t:0 "Skonester Cheat Menu Gold - Pre Chapter V"
+  dp_information.changelog.d:0 "Pre Chapter V GitHub testing build. This release is intended for public testing before Chapter V. Please report broken menus, missing localization, event errors, crashes, and unexpected behavior on GitHub."
+  dp_information.useful_tips.t:0 "Useful Tips"
+  dp_information.useful_tips.d:0 "Feature Menu\n- Click once to add, click again to remove.\n- If a feature doesn’t appear, it doesn’t mean the mod is broken; it can indicate a hardcoded override from Paradox or that AGOT,etc.overode a base game factor.This is why some decisions don't work.\n- Due to DLC factors, some interactions may not appear on certain characters.\n- Test this mod with only base game/DLC.Then with say a 1066 character like Duchess Matilda to see if this mod is causing your isses. Some older mods that havent been updated can be the real issue."
+  dp_information.locations.t:0 "GitHub Test Build — Bug Reports"
+  dp_information.locations.d:0 "Report bugs and errors on GitHub. Include what you clicked, what happened, what you expected, your mod load order, and the relevant lines from Documents/Paradox Interactive/Crusader Kings III/logs/error.log."
+  
+  use_new_system:0 "New System"
+  use_new_system_desc:0 "The old system has been replaced by the new one. Would you like to try it?"
+  use_new_system_tooltip:0 "Clicking this will trigger an event."

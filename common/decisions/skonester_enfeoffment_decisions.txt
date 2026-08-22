@@ -1,0 +1,90 @@
+﻿skonester_dynasty_grant_titles_decision = {
+  picture = {
+    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+  }
+  decision_group_type = pcm
+  sort_order = 15
+  title = skonester_dynasty_grant_titles_decision
+  desc = skonester_dynasty_grant_titles_decision_desc
+  selection_tooltip = skonester_dynasty_grant_titles_decision_desc
+  confirm_text = skonester_dynasty_grant_titles_decision_confirm
+
+  ai_potential = { always = no }
+
+  ai_check_interval_by_tier = {
+    barony = 0
+    county = 12
+    duchy = 12
+    kingdom = 12
+    empire = 12
+    hegemony = 12
+  }
+
+  is_shown = {
+
+    has_character_flag = pcm_b_show_decision_flag
+    skonester_officials_decision_visible_for_player_trigger = yes
+  }
+
+  is_valid = {
+    is_playable_character = yes
+    is_landed = yes
+    primary_title.tier >= tier_county
+    exists = dynasty
+    skonester_has_grantable_title_for_one_click_trigger = yes
+    skonester_has_dynasty_grant_recipient_available_trigger = yes
+  }
+
+  effect = {
+    skonester_dynasty_one_click_grant_realm_titles_effect = yes
+  }
+
+  ai_will_do = {
+    base = 0
+  }
+}
+
+skonester_one_click_grant_titles_decision = {
+  picture = {
+    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+  }
+  decision_group_type = pcm
+  sort_order = 10
+  title = skonester_one_click_grant_titles_decision
+  desc = skonester_one_click_grant_titles_decision_desc
+  selection_tooltip = skonester_one_click_grant_titles_decision_desc
+  confirm_text = skonester_one_click_grant_titles_decision_confirm
+
+  ai_potential = { always = no }
+
+  ai_check_interval_by_tier = {
+    barony = 0
+    county = 12
+    duchy = 12
+    kingdom = 12
+    empire = 12
+    hegemony = 12
+  }
+
+  is_shown = {
+
+    has_character_flag = pcm_b_show_decision_flag
+    skonester_officials_decision_visible_for_player_trigger = yes
+  }
+
+  is_valid = {
+    is_playable_character = yes
+    is_landed = yes
+    primary_title.tier >= tier_county
+    skonester_has_grantable_title_for_one_click_trigger = yes
+    skonester_has_grant_recipient_available_trigger = yes
+  }
+
+  effect = {
+    skonester_one_click_grant_realm_titles_effect = yes
+  }
+
+  ai_will_do = {
+    base = 0
+  }
+}

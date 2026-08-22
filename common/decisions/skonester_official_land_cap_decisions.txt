@@ -1,0 +1,76 @@
+﻿# å®˜å‘˜é™åœ°ï¼šä¼¯çˆµåŠä»¥ä¸Šæœ‰åœ°å°è‡£ã€Œä¸»è¡” + ä¸€çˆµã€ï¼ˆä¸€å—ä¼¯çˆµé¢†ï¼‰ï¼›ä½™è¡”å¢ƒå†…ä¼˜å…ˆä¸‹åˆ†ï¼Œç›´æŽ¥æŽˆäºˆä»–äººï¼ˆä¸å«çŽ©å®¶ï¼‰ï¼›å„æ”¿ä½“é€šç”¨
+
+skonester_official_land_cap_decision = {
+  picture = {
+    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+  }
+  decision_group_type = pcm
+  sort_order = 25
+  title = skonester_official_land_cap_decision
+  desc = skonester_official_land_cap_decision_desc
+  selection_tooltip = skonester_official_land_cap_decision_desc
+  confirm_text = skonester_official_land_cap_decision_confirm
+
+  ai_check_interval = 0
+  ai_potential = { always = no }
+
+  is_shown = {
+
+    has_character_flag = pcm_b_show_decision_flag
+    skonester_officials_decision_visible_for_player_trigger = yes
+  }
+
+  is_valid = {
+    custom_description = {
+      text = skonester_tt_no_official_for_land_cap_fail
+      skonester_has_any_official_for_land_cap_decision_trigger = yes
+    }
+    is_playable_character = yes
+  }
+
+  effect = {
+    skonester_official_land_cap_full_effect = yes
+  }
+
+  ai_will_do = {
+    base = 0
+  }
+}
+
+skonester_one_click_strip_official_titles_decision = {
+  picture = {
+    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+  }
+  decision_group_type = pcm
+  sort_order = 26
+  title = skonester_one_click_strip_official_titles_decision
+  desc = skonester_one_click_strip_official_titles_decision_desc
+  selection_tooltip = skonester_one_click_strip_official_titles_decision_tooltip
+  confirm_text = skonester_one_click_strip_official_titles_decision_confirm
+
+  ai_check_interval = 0
+  ai_potential = { always = no }
+
+  is_shown = {
+
+    has_character_flag = pcm_b_show_decision_flag
+    skonester_officials_decision_visible_for_player_trigger = yes
+  }
+
+  is_valid = {
+    custom_description = {
+      text = skonester_tt_no_landed_vassal_for_strip_fail
+      skonester_has_any_landed_vassal_for_strip_decision_trigger = yes
+    }
+    is_playable_character = yes
+  }
+
+  effect = {
+    custom_tooltip = skonester_one_click_strip_official_titles_effect_tt
+    skonester_one_click_strip_realm_titles_full_effect = yes
+  }
+
+  ai_will_do = {
+    base = 0
+  }
+}

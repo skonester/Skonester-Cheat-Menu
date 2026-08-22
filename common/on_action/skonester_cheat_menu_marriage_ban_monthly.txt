@@ -1,0 +1,66 @@
+﻿# 禁婚：每月为可玩者本人及其宫廷成员解除婚约（不覆盖 monthly_playable_pulse，仅追加）
+# 成婚瞬间由 on_marriage 处理；此处兜底仍挂着婚约的情况
+
+monthly_playable_pulse = {
+  on_actions = {
+    skonester_marriage_ban_betrothal_monthly_pulse
+  }
+}
+
+skonester_marriage_ban_betrothal_monthly_pulse = {
+  effect = {
+    root = {
+      if = {
+        limit = {
+          is_ai = no
+          has_trait = skonester_trait_marriage_ban
+          is_betrothed = yes
+        }
+        betrothed = {
+          break_betrothal = prev
+        }
+      }
+      if = {
+        limit = {
+          is_ai = no
+          is_betrothed = yes
+          betrothed = {
+            OR = {
+              has_trait = skonester_trait_marriage_ban
+              has_character_flag = skonester_no_marry_vow
+            }
+          }
+        }
+        betrothed = {
+          break_betrothal = prev
+        }
+      }
+      every_courtier = {
+        limit = {
+          OR = {
+            has_trait = skonester_trait_marriage_ban
+            has_character_flag = skonester_no_marry_vow
+          }
+          is_betrothed = yes
+        }
+        betrothed = {
+          break_betrothal = prev
+        }
+      }
+      every_courtier = {
+        limit = {
+          is_betrothed = yes
+          betrothed = {
+            OR = {
+              has_trait = skonester_trait_marriage_ban
+              has_character_flag = skonester_no_marry_vow
+            }
+          }
+        }
+        betrothed = {
+          break_betrothal = prev
+        }
+      }
+    }
+  }
+}

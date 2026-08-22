@@ -1,0 +1,170 @@
+﻿# 不可被「自动/批量转封建」降级的政体（玩家在手改政体菜单中显式确认时仍可通过 force 旗标转换）
+skonester_protected_from_forced_feudal_conversion_trigger = {
+  OR = {
+    has_government = meritocratic_government
+    has_government = celestial_government
+    has_government = administrative_government
+    has_government = steppe_admin_government
+    has_government = japan_administrative_government
+    has_government = japan_feudal_government
+  }
+}
+
+# 一键改封臣政府：可转化的有地封臣（含下级封臣），主头衔须伯爵及以上；不含玩家本人与内阁大臣职位持有者
+
+skonester_mass_gov_conversion_target_trigger = {
+  is_adult = yes
+  NOT = { has_trait = incapable }
+  is_imprisoned = no
+  NOT = { is_at_war_with_liege = yes }
+  is_landed = yes
+  highest_held_title_tier >= tier_county
+  NOT = { this = root }
+  NOR = {
+    AND = {
+      has_tgp_dlc_trigger = yes
+      tgp_is_any_minister = yes
+    }
+  }
+}
+
+# 「改变政体」事件菜单：领内存在任一伯爵主衔及以上的有地臣属即显示政体选项（不按大臣排除）；批量效果仍仅用 skonester_mass_gov_conversion_target_trigger，大臣等不会被误转。
+skonester_has_any_vassal_for_mass_gov_menu_trigger = {
+  any_vassal_or_below = {
+    is_adult = yes
+    NOT = { has_trait = incapable }
+    is_imprisoned = no
+    NOT = { is_at_war_with_liege = yes }
+    is_landed = yes
+    highest_held_title_tier >= tier_county
+    NOT = { this = root }
+  }
+}
+
+skonester_has_any_vassal_for_celestial_conversion_trigger = {
+  has_tgp_dlc_trigger = yes
+  any_vassal_or_below = {
+    skonester_mass_gov_conversion_target_trigger = yes
+    NOT = { has_government = celestial_government }
+  }
+}
+
+skonester_has_any_vassal_for_administrative_conversion_trigger = {
+  any_vassal_or_below = {
+    skonester_mass_gov_conversion_target_trigger = yes
+    NOT = { has_government = administrative_government }
+  }
+}
+
+skonester_has_any_vassal_for_meritocratic_conversion_trigger = {
+  has_tgp_dlc_trigger = yes
+  any_vassal_or_below = {
+    skonester_mass_gov_conversion_target_trigger = yes
+    NOT = { has_government = meritocratic_government }
+  }
+}
+
+skonester_has_any_vassal_for_japan_administrative_conversion_trigger = {
+  has_tgp_dlc_trigger = yes
+  any_vassal_or_below = {
+    skonester_mass_gov_conversion_target_trigger = yes
+    NOT = { has_government = japan_administrative_government }
+    tgp_can_become_japan_administrative_trigger = yes
+  }
+}
+
+skonester_has_any_vassal_for_steppe_admin_conversion_trigger = {
+  has_tgp_dlc_trigger = yes
+  any_vassal_or_below = {
+    skonester_mass_gov_conversion_target_trigger = yes
+    NOT = { has_government = steppe_admin_government }
+  }
+}
+
+skonester_has_any_vassal_for_feudal_conversion_trigger = {
+  any_vassal_or_below = {
+    skonester_mass_gov_conversion_target_trigger = yes
+    NOT = { has_government = feudal_government }
+  }
+}
+
+skonester_has_any_vassal_for_tribal_conversion_trigger = {
+  any_vassal_or_below = {
+    skonester_mass_gov_conversion_target_trigger = yes
+    NOT = { has_government = tribal_government }
+  }
+}
+
+skonester_has_any_vassal_for_clan_conversion_trigger = {
+  any_vassal_or_below = {
+    skonester_mass_gov_conversion_target_trigger = yes
+    NOT = { has_government = clan_government }
+  }
+}
+
+skonester_has_any_vassal_for_republic_conversion_trigger = {
+  any_vassal_or_below = {
+    skonester_mass_gov_conversion_target_trigger = yes
+    NOT = { has_government = republic_government }
+  }
+}
+
+skonester_has_any_vassal_for_mandala_conversion_trigger = {
+  any_vassal_or_below = {
+    skonester_mass_gov_conversion_target_trigger = yes
+    NOT = { has_government = mandala_government }
+  }
+}
+
+skonester_has_any_vassal_for_nomadic_conversion_trigger = {
+  has_mpo_dlc_trigger = yes
+  any_vassal_or_below = {
+    skonester_mass_gov_conversion_target_trigger = yes
+    NOT = { has_government = nomad_government }
+  }
+}
+
+skonester_has_any_vassal_for_theocracy_conversion_trigger = {
+  any_vassal_or_below = {
+    skonester_mass_gov_conversion_target_trigger = yes
+    NOT = { has_government = theocracy_government }
+  }
+}
+
+skonester_has_any_vassal_for_japan_feudal_conversion_trigger = {
+  has_tgp_dlc_trigger = yes
+  any_vassal_or_below = {
+    skonester_mass_gov_conversion_target_trigger = yes
+    NOT = { has_government = japan_feudal_government }
+  }
+}
+
+skonester_has_any_vassal_for_herder_conversion_trigger = {
+  has_mpo_dlc_trigger = yes
+  any_vassal_or_below = {
+    skonester_mass_gov_conversion_target_trigger = yes
+    NOT = { has_government = herder_government }
+  }
+}
+
+# 单人封臣改臣制（右键互动）：对齐 every_vassal 批量前的单格条件，显式排除发起方（不依赖 root，避免互动菜单里 root 与 this 歧义）
+# 同上：无 actor 时不能比较 this = scope:actor
+skonester_convert_vassal_government_recipient_trigger = {
+  exists = scope:actor
+  is_adult = yes
+  NOT = { has_trait = incapable }
+  is_imprisoned = no
+  NOT = { is_at_war_with_liege = yes }
+  is_landed = yes
+  highest_held_title_tier >= tier_county
+  NOT = { this = scope:actor }
+  NOR = {
+    AND = {
+      has_tgp_dlc_trigger = yes
+      tgp_is_any_minister = yes
+    }
+  }
+  is_vassal_or_below_of = scope:actor
+  skonester_is_not_h_china_emperor_title_holder_trigger = yes
+  NOT = { is_at_war_with = scope:actor }
+}

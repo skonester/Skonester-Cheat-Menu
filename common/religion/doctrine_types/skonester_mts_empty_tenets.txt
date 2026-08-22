@@ -1,0 +1,141 @@
+﻿# More Tenets Slots 空槽信条（整合自 Workshop 2904268802）
+
+tenet_zz_empty_1 = {
+  icon = core_tenet_empty
+  piety_cost = { value = 0 }
+  is_shown = { always = yes }
+  can_pick = { always = yes }
+}
+
+tenet_zz_empty_2 = {
+  icon = core_tenet_empty
+  piety_cost = { value = 0 }
+  is_shown = { always = yes }
+  can_pick = { always = yes }
+}
+
+tenet_zz_empty_3 = {
+  icon = core_tenet_empty
+  piety_cost = { value = 0 }
+  is_shown = { always = yes }
+  can_pick = { always = yes }
+}
+
+tenet_zz_empty_4 = {
+  icon = core_tenet_empty
+  piety_cost = { value = 0 }
+  is_shown = { always = yes }
+  can_pick = { always = yes }
+}
+
+tenet_zz_empty_5 = {
+  icon = core_tenet_empty
+  piety_cost = { value = 0 }
+  is_shown = { always = yes }
+  can_pick = { always = yes }
+}
+
+tenet_zz_empty_6 = {
+  icon = core_tenet_empty
+  piety_cost = { value = 0 }
+  is_shown = { always = yes }
+  can_pick = { always = yes }
+}
+
+tenet_zz_empty_7 = {
+  icon = core_tenet_empty
+  piety_cost = { value = 0 }
+  is_shown = { always = yes }
+  can_pick = { always = yes }
+}
+
+tenet_zz_empty_8 = {
+  icon = core_tenet_empty
+  piety_cost = { value = 0 }
+  is_shown = { always = yes }
+  can_pick = { always = yes }
+}
+
+tenet_zz_empty_9 = {
+  icon = core_tenet_empty
+  piety_cost = { value = 0 }
+  is_shown = { always = yes }
+  can_pick = { always = yes }
+}
+
+tenet_zz_empty_10 = {
+  icon = core_tenet_empty
+  piety_cost = { value = 0 }
+  is_shown = { always = yes }
+  can_pick = { always = yes }
+}
+
+tenet_zz_empty_11 = {
+  icon = core_tenet_empty
+  piety_cost = { value = 0 }
+  is_shown = { always = yes }
+  can_pick = { always = yes }
+}
+
+tenet_zz_empty_12 = {
+  icon = core_tenet_empty
+  piety_cost = { value = 0 }
+  is_shown = { always = yes }
+  can_pick = { always = yes }
+}
+
+tenet_zz_empty_13 = {
+  icon = core_tenet_empty
+  piety_cost = { value = 0 }
+  is_shown = { always = yes }
+  can_pick = { always = yes }
+}
+
+tenet_zz_empty_14 = {
+  icon = core_tenet_empty
+  piety_cost = { value = 0 }
+  is_shown = { always = yes }
+  can_pick = { always = yes }
+}
+
+tenet_zz_empty_15 = {
+  icon = core_tenet_empty
+  piety_cost = { value = 0 }
+  is_shown = { always = yes }
+  can_pick = { always = yes }
+}
+
+tenet_zz_empty_16 = {
+  icon = core_tenet_empty
+  piety_cost = { value = 0 }
+  is_shown = { always = yes }
+  can_pick = { always = yes }
+}
+
+tenet_zz_empty_17 = {
+  icon = core_tenet_empty
+  piety_cost = { value = 0 }
+  is_shown = { always = yes }
+  can_pick = { always = yes }
+}
+
+tenet_zz_empty_18 = {
+  icon = core_tenet_empty
+  piety_cost = { value = 0 }
+  is_shown = { always = yes }
+  can_pick = { always = yes }
+}
+
+tenet_zz_empty_19 = {
+  icon = core_tenet_empty
+  piety_cost = { value = 0 }
+  is_shown = { always = yes }
+  can_pick = { always = yes }
+}
+
+tenet_zz_empty_20 = {
+  icon = core_tenet_empty
+  piety_cost = { value = 0 }
+  is_shown = { always = yes }
+  can_pick = { always = yes }
+}

@@ -1,0 +1,29 @@
+﻿# 进入地图时清理 GUI 挂起（须在 scripted_widget 初始化前/后各清一次）
+
+on_game_start = {
+  effect = {
+    every_player = {
+      skonester_acm_gui_startup_cleanup_effect = yes
+    }
+    every_living_character = {
+      limit = { is_ai = no }
+      skonester_acm_gui_startup_cleanup_effect = yes
+    }
+  }
+}
+
+on_game_start_after_lobby = {
+  effect = {
+    every_player = {
+      skonester_acm_gui_startup_cleanup_effect = yes
+      trigger_event = {
+        id = skonester_acm_faith_gui.0001
+        days = 1
+      }
+    }
+    every_living_character = {
+      limit = { is_ai = no }
+      skonester_acm_gui_startup_cleanup_effect = yes
+    }
+  }
+}

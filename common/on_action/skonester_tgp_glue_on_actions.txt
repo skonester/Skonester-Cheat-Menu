@@ -1,0 +1,50 @@
+﻿# 文化加速
+on_tradition_added = {
+  effect = {
+    every_player = {
+      limit = {
+        culture = root
+      }
+      trigger_event = {
+        id = culture_notification.0011
+        days = 0
+      }
+    }
+
+    every_ruler = {
+      limit = {
+        is_ruler = yes
+        should_have_same_faith_succession_trigger = yes
+        NOT = {
+          has_realm_law = same_faith_only_law
+        }
+      }
+      add_realm_law_skip_effects = same_faith_only_law
+    }
+  }
+}
+
+
+#大明兼容-备用（若见变身大明代设变量，则本局开启大明政体相关 UI，再按原样清理之）
+yearly_global_pulse = {
+    effect = {
+        if = {
+            limit = {
+                OR = {
+                    exists = global_var:Data_tuiju
+                    exists = global_var:hq_check
+                }
+            }
+            set_global_variable = {
+                name = skonester_daming_ming_gov_menu_unlocked
+                value = 1
+            }
+            set_global_variable = {
+                name = skonester_compat_daming_loaded
+                value = 1
+            }
+            remove_global_variable = Data_tuiju
+            remove_global_variable = hq_check
+        }
+    }
+}

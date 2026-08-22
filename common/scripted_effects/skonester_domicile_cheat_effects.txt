@@ -1,0 +1,68 @@
+﻿# ==========================================
+# 你华官员模组 - 庄园魔改核心逻辑
+# 功能: 安全升级庄园、自动应用传统、防重复执行、DLC门控
+# ==========================================
+
+# 1. 传统配置池（按需增删）
+skonester_domicile_cheat_traditions = {
+  tradition_astronomy
+  tradition_scholarly_tradition
+  tradition_religious_studies
+  tradition_martial_admiration
+  tradition_war_poets
+  tradition_legalistic
+  tradition_castle_keepers
+  tradition_philosopher_culture
+}
+
+# 2. 单角色庄园升级执行器（Scope: Character）
+skonester_domicile_cheat_upgrade_effect = {
+  limit = { is_character = yes has_dlc = "Tours & Tournaments" }
+
+  every_domicile = {
+    limit = { NOT = { has_variable = skonester_domicile_cheat_done } }
+    set_variable = skonester_domicile_cheat_done
+
+    # 按类型强制升至满级
+    if = {
+      limit = { is_domicile_type = estate }
+      set_domicile_level = estate_level_5
+    }
+    else_if = {
+      limit = { is_domicile_type = japanese_manor }
+      set_domicile_level = japanese_manor_level_6
+    }
+    else_if = {
+      limit = { is_domicile_type = east_asian_estate }
+      set_domicile_level = east_asian_estate_level_5
+    }
+
+    # 自动为所有者文化添加配置池中的传统（已去重防报错）
+    owner = {
+      culture = {
+        every_in_list = {
+          list = skonester_domicile_cheat_traditions
+          limit = { NOT = { has_cultural_tradition = this } }
+          add_cultural_tradition = this
+        }
+      }
+    }
+  }
+}
+
+# 3. 玩家自身家族应用
+skonester_domicile_cheat_player_effect = {
+  set_global_variable = { name = skonester_domicile_cheat_active value = yes }
+  skonester_domicile_cheat_upgrade_effect = yes
+  debug_log = "[skonester] 已升级玩家家族所有庄园并应用文化传统。"
+}
+
+# 4. 全局所有家族应用
+skonester_domicile_cheat_all_effect = {
+  set_global_variable = { name = skonester_domicile_cheat_active value = yes }
+  every_character = {
+    limit = { is_alive = yes }
+    skonester_domicile_cheat_upgrade_effect = yes
+  }
+  debug_log = "[skonester] 已全局扫描并升级所有庄园。大型存档可能需要数秒。"
+}

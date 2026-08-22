@@ -1,0 +1,10 @@
+﻿# 族内人口清理：五主属性之和（不含勇武），与「庸碌罢免」里文官三项/武官两项的写法一致
+
+skonester_dynasty_cull_five_skills_sum_value = {
+  value = 0
+  add = diplomacy
+  add = martial
+  add = stewardship
+  add = intrigue
+  add = learning
+}

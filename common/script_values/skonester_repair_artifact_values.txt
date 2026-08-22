@@ -1,0 +1,41 @@
+﻿# 宝物修改列表翻页：当前页起始下标 = 页号 × 5（与 skonester_artifact_repair.8001 每页选项数一致）
+
+skonester_acm_repair_page_offset_value = {
+  value = var:skonester_acm_repair_page
+  multiply = 5
+}
+
+skonester_acm_repair_next_page_min_total_value = {
+  value = var:skonester_acm_repair_page
+  add = 1
+  multiply = 5
+}
+
+skonester_acm_repair_slot0_list_index_value = {
+  value = var:skonester_acm_repair_page
+  multiply = 5
+}
+
+skonester_acm_repair_slot1_list_index_value = {
+  value = var:skonester_acm_repair_page
+  multiply = 5
+  add = 1
+}
+
+skonester_acm_repair_slot2_list_index_value = {
+  value = var:skonester_acm_repair_page
+  multiply = 5
+  add = 2
+}
+
+skonester_acm_repair_slot3_list_index_value = {
+  value = var:skonester_acm_repair_page
+  multiply = 5
+  add = 3
+}
+
+skonester_acm_repair_slot4_list_index_value = {
+  value = var:skonester_acm_repair_page
+  multiply = 5
+  add = 4
+}

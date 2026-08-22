@@ -1,0 +1,67 @@
+﻿# 宗教目录：49 大类 → 155 教派
+
+skonester_acm_religion_picker_visible = {
+  scope = character
+  is_shown = { has_character_flag = skonester_acm_religion_picker_open }
+  is_valid = { always = yes }
+}
+
+skonester_acm_religion_list_load = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_acm_religion_picker_refresh_all_lists_effect = yes
+  }
+}
+
+skonester_acm_religion_picker_close = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_close_acm_religion_picker_effect = yes
+  }
+}
+
+skonester_acm_faith_pick = {
+  scope = character
+  saved_scopes = { selected_faith }
+  is_valid = { always = yes }
+  effect = {
+    skonester_save_skonester_selected_faith_effect = yes
+    skonester_acm_apply_selected_faith_to_target_effect = yes
+  }
+}
+
+skonester_acm_faith_pick_edit = {
+  scope = character
+  saved_scopes = { selected_faith }
+  is_valid = { always = yes }
+  effect = {
+    skonester_acm_apply_selected_faith_and_open_editor_effect = yes
+  }
+}
+
+skonester_acm_religion_picker_continue_edit = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_selected_faith_var
+  }
+  effect = {
+    var:skonester_selected_faith_var = {
+      save_scope_as = skonester_selected_faith
+    }
+    skonester_close_acm_religion_picker_effect = yes
+    skonester_acm_open_custom_faith_editor_effect = yes
+  }
+}
+
+skonester_acm_faith_apply_to_target = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_selected_faith_var
+  }
+  effect = {
+    skonester_restore_skonester_selected_faith_scope_effect = yes
+    skonester_acm_apply_selected_faith_to_target_effect = yes
+  }
+}

@@ -1,0 +1,39 @@
+﻿# 一键下狱。使用 temporary scope + 限制 alive/非本人，避免一帧内嵌套 root/scope 异常导致闪退。
+
+skonester_imprison_all_direct_vassals_effect = {
+  root = {
+    every_vassal = {
+      limit = {
+        is_alive = yes
+        is_imprisoned = no
+        NOT = { this = root }
+      }
+      this = { save_temporary_scope_as = skonester_ipr }
+      root = {
+        imprison = {
+          target = scope:skonester_ipr
+          type = house_arrest
+        }
+      }
+    }
+  }
+}
+
+skonester_imprison_all_realm_vassals_effect = {
+  root = {
+    every_vassal_or_below = {
+      limit = {
+        is_alive = yes
+        is_imprisoned = no
+        NOT = { this = root }
+      }
+      this = { save_temporary_scope_as = skonester_ipr }
+      root = {
+        imprison = {
+          target = scope:skonester_ipr
+          type = house_arrest
+        }
+      }
+    }
+  }
+}

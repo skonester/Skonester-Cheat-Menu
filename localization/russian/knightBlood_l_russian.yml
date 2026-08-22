@@ -1,0 +1,79 @@
+﻿l_russian:
+ #########################################
+ # Inheritable Lineages / Наследственные черты
+ #########################################
+
+ trait_blood_ancester:0 "Родословная предков"
+ trait_blood_knight:0 "Рыцарская кровь"
+
+ # --- Cat ---
+ trait_blood_ancester_1:0 "Кошачья грация"
+ trait_blood_ancester_1_desc:0 "В жилах этого рода течет кровь великого зверя. Она проявляется в неестественной гибкости костей и бесшумной походке хищника, передаваясь из поколения в поколение как бесценный дар."
+ trait_blood_ancester_1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] обладает врожденной кошачьей грацией; [ROOT.GetCharacter.GetHerHis] движения полны смертоносного изящества, унаследованного от далеких предков."
+
+ # --- Dog ---
+ trait_blood_ancester_2:0 "Верный пес"
+ trait_blood_ancester_2_desc:0 "Потомки легендарного рыцаря, связанного узами с великим псом Хатико. Их семя несет в себе врожденную, непоколебимую преданность своему роду, которая сильнее любых клятв."
+ trait_blood_ancester_2_character_desc:0 "В жилах [ROOT.GetCharacter.GetFirstNameNoTooltip] течет кровь Верного пса, дарующая [ROOT.GetCharacter.GetHerHim] преданность и стойкость, недоступную простым смертным."
+
+ # --- Moon ---
+ trait_blood_ancester_4:0 "Лунное дитя"
+ trait_blood_ancester_4_desc:0 "Небесная ясность вплетена в саму суть этой династии. Говорят, сама Серебряная Луна благословила их предка, и этот свет до сих пор мерцает в глазах его потомков."
+ trait_blood_ancester_4_character_desc:0 "Как Лунное дитя, [ROOT.GetCharacter.GetFirstNameNoTooltip] обладает чистотой помыслов и душевным спокойствием, переданным через кровь предков."
+
+ # --- Wind ---
+ trait_blood_ancester_7:0 "Бегущий по ветру"
+ trait_blood_ancester_7_desc:0 "Потомки этого рода известны своей легкостью и неукротимым духом. Кажется, сам ветер благоволит их шагу, словно стихия помнит древний договор их прародителя."
+ trait_blood_ancester_7_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] — Бегущий по ветру; унаследованная стремительность позволяет [ROOT.GetCharacter.GetHerHim] буквально скользить по земле."
+
+ # --- Boar ---
+ trait_blood_ancester_5:0 "Сердце вепря"
+ trait_blood_ancester_5_desc:0 "Свирепая и крепкая кровь. Те, кто наследует дух Дикого Вепря, обладают ужасающей стойкостью и нравом, не признающим ничего, кроме сокрушительного натиска."
+ trait_blood_ancester_5_character_desc:0 "Унаследованное [ROOT.GetCharacter.GetFirstNameNoTooltip] Сердце вепря проявляется в неудержимой ярости, ставшей визитной карточкой [ROOT.GetCharacter.GetHerHis] дома."
+
+ # --- Darkness ---
+ trait_blood_ancester_6:0 "Ночная кровь"
+ trait_blood_ancester_6_desc:0 "Эта родословная несет в себе частицу пустоты. Их чувства обостряются с уходом солнца, а тени кажутся им родным домом."
+ trait_blood_ancester_6_character_desc:0 "Происходя из рода Ночной крови, [ROOT.GetCharacter.GetFirstNameNoTooltip] является созданием теней, унаследовав неестественную скрытность своих предков."
+
+ # --- Venus/Hope ---
+ trait_blood_ancester_8:0 "Свет надежды"
+ trait_blood_ancester_8_desc:0 "Даже в самой глубокой тьме кровь Утренней звезды дает силы. Эта искра дарует династии железную решимость, которую невозможно сломить никакими бедствиями."
+ trait_blood_ancester_8_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] несет в себе Свет надежды — наследственную стойкость, что сияет ярче всего в час полного отчаяния."
+
+ # --- Clown/Jester ---
+ trait_blood_ancester_9:0 "Мудрость шута"
+ trait_blood_ancester_9_desc:0 "Редкая и странная родословная. Эти потомки наследуют особый взгляд на мир: они находят силу в абсурде и радость там, где другие видят лишь трагедию."
+ trait_blood_ancester_9_character_desc:0 "Обладая унаследованной Мудростью шута, [ROOT.GetCharacter.GetFirstNameNoTooltip] взирает на превратности судьбы с доброй и лукавой улыбкой."
+
+ # --- Raven ---
+ trait_blood_ancester_10:0 "Взор ворона"
+ trait_blood_ancester_10_desc:0 "Дар Ворона — тяжелое бремя. Он дарует мрачную мудрость и инстинктивное предчувствие грядущих бед, словно сама кровь жаждет прорицания."
+ trait_blood_ancester_10_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] обладает Взором ворона, унаследовав от предков-рыцарей дар предвидения и суровую мудрость."
+
+ # --- Dragon ---
+ trait_blood_ancester_11:0 "Драконий ихор"
+ trait_blood_ancester_11_desc:0 "Самая запретная из родословных. Кровь Серебряного дракона изменила этот род, порождая потомков, наделенных пугающим величием и холодной, первобытной мощью."
+ trait_blood_ancester_11_character_desc:0 "Драконий ихор в жилах [ROOT.GetCharacter.GetFirstNameNoTooltip] — свидетельство древнего святотатства, дарующее [ROOT.GetCharacter.GetHerHim] величие великого змея."
+
+ # --- Special Arts / Искусства (Not Inheritable) ---
+ trait_blood_art_1:0 "Путь мягкости"
+ trait_blood_art_1_desc:0 "Этот персонаж был посвящен в тайны восточного искусства 'Тайцзи'. Постигнув внутренние потоки энергии, он способен обращать силу противника против него самого."
+ trait_blood_art_1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] владеет Путем мягкости — дисциплиной Востока, ставящей равновесие выше грубой силы."
+
+ # --- Knight Ranks / Рыцарские ранги (Not Inheritable) ---
+ trait_blood_knight_1:0 "Оруженосец крови"
+ trait_blood_knight_1_desc:0 "Благодаря усердию и вере этот персонаж начал пробуждать дремлющий потенциал своей родословной."
+ trait_blood_knight_1_character_desc:0 "Кровь пробудилась; [ROOT.GetCharacter.GetFirstNameNoTooltip] сделал первый шаг к овладению своим наследием в качестве Оруженосца крови."
+
+ trait_blood_knight_2:0 "Посвященный рыцарь"
+ trait_blood_knight_2_desc:0 "Пройдя через суровые испытания, этот персонаж сумел обуздать древнюю силу и стать истинным мастером своего наследия."
+ trait_blood_knight_2_character_desc:0 "Как Посвященный рыцарь, [ROOT.GetCharacter.GetFirstNameNoTooltip] владеет силой предков так же искусно, как и своим мечом."
+
+ trait_blood_knight_3:0 "Великий магистр крови"
+ trait_blood_knight_3_desc:0 "Лишь немногие достигают такого единения с духом предков. Этот персонаж является живым воплощением доблести своего рода."
+ trait_blood_knight_3_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] возвысился до ранга Великого магистра, став живым памятником могуществу своей крови."
+
+ trait_blood_knight_4:0 "Небесный рыцарь"
+ trait_blood_knight_4_desc:0 "Этот персонаж достиг вершины боевой и духовной эволюции. Он покорил землю, небеса и самого себя, встав на вершине человеческого могущества."
+ trait_blood_knight_4_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] — Небесный рыцарь, чей триумф над плотью и духом ставит [ROOT.GetCharacter.GetHerHim] в один ряд с легендами."

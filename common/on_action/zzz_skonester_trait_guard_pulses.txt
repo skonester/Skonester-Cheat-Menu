@@ -1,0 +1,45 @@
+﻿# Skonester特质防护脉冲：zzz_ 前缀尽量晚于其它 skonester_*.txt 加载，避免 daily_global_pulse / ai_character_pulse 钩子被同模组内覆盖丢失。
+# 与 skonester_cheat_menu_trait_guard_on_actions.txt 分工：本文件只管「高频/逐人」脉冲；月度全图与开局清场仍在那边。
+
+daily_global_pulse = {
+  on_actions = {
+    skonester_trait_ai_guard_daily_batch_pulse
+  }
+}
+
+# 每名 AI 角色引擎脉冲：未授权Skonester特质即时剥除（比每日 250 随机批扫更可靠）
+ai_character_pulse = {
+  on_actions = {
+    skonester_trait_ai_guard_ai_character_pulse
+  }
+}
+
+# 获封/失封头衔时补刀（部分随机池在 title 变更后赋 trait）
+on_title_gain = {
+  on_actions = {
+    skonester_trait_ai_guard_on_title_gain_pulse
+  }
+}
+
+skonester_trait_ai_guard_ai_character_pulse = {
+  effect = {
+    if = {
+      limit = {
+        is_ai = yes
+        skonester_cheat_menu_must_strip_skonester_traits_trigger = yes
+      }
+      skonester_cheat_menu_strip_oob_skonester_traits_on_this_character_effect = yes
+    }
+  }
+}
+
+skonester_trait_ai_guard_on_title_gain_pulse = {
+  effect = {
+    if = {
+      limit = {
+        skonester_cheat_menu_must_strip_skonester_traits_trigger = yes
+      }
+      skonester_cheat_menu_strip_oob_skonester_traits_on_this_character_effect = yes
+    }
+  }
+}

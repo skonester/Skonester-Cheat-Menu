@@ -1,0 +1,36 @@
+﻿# 子类默认名：制作旗标在 skonester_acm_craft_creator（或 scope:actor）上
+skonester_acm_craft_subtype_has_flag_effect = {
+  if = {
+    limit = {
+      OR = {
+        AND = {
+          exists = scope:skonester_acm_craft_creator
+          scope:skonester_acm_craft_creator = { has_character_flag = $FLAG$ }
+        }
+        AND = {
+          exists = scope:actor
+          scope:actor = { has_character_flag = $FLAG$ }
+        }
+      }
+    }
+    set_artifact_name = $NAME$
+    set_artifact_description = skonester_acm_ades_craft_subtype
+  }
+}
+
+skonester_acm_craft_subtype_name_effect = {
+  skonester_acm_craft_subtype_has_flag_effect = { FLAG = skonester_acm_wpn_longsword NAME = skonester_acm_anm_wpn_longsword }
+  skonester_acm_craft_subtype_has_flag_effect = { FLAG = skonester_acm_wpn_greatsword NAME = skonester_acm_anm_wpn_greatsword }
+  skonester_acm_craft_subtype_has_flag_effect = { FLAG = skonester_acm_wpn_dagger NAME = skonester_acm_anm_wpn_dagger }
+  skonester_acm_craft_subtype_has_flag_effect = { FLAG = skonester_acm_wpn_battleaxe NAME = skonester_acm_anm_wpn_battleaxe }
+  skonester_acm_craft_subtype_has_flag_effect = { FLAG = skonester_acm_wpn_greataxe NAME = skonester_acm_anm_wpn_greataxe }
+  skonester_acm_craft_subtype_has_flag_effect = { FLAG = skonester_acm_wpn_mace NAME = skonester_acm_anm_wpn_mace }
+  skonester_acm_craft_subtype_has_flag_effect = { FLAG = skonester_acm_wpn_flail NAME = skonester_acm_anm_wpn_flail }
+  skonester_acm_craft_subtype_has_flag_effect = { FLAG = skonester_acm_wpn_spear NAME = skonester_acm_anm_wpn_spear }
+  skonester_acm_craft_subtype_has_flag_effect = { FLAG = skonester_acm_wpn_halberd NAME = skonester_acm_anm_wpn_halberd }
+  skonester_acm_craft_subtype_has_flag_effect = { FLAG = skonester_acm_wpn_staff NAME = skonester_acm_anm_wpn_staff }
+  skonester_acm_craft_subtype_has_flag_effect = { FLAG = skonester_acm_wpn_fistblade NAME = skonester_acm_anm_wpn_fistblade }
+  skonester_acm_craft_subtype_has_flag_effect = { FLAG = skonester_acm_wpn_longbow NAME = skonester_acm_anm_wpn_longbow }
+  skonester_acm_craft_subtype_has_flag_effect = { FLAG = skonester_acm_wpn_crossbow NAME = skonester_acm_anm_wpn_crossbow }
+  skonester_acm_craft_subtype_has_flag_effect = { FLAG = skonester_acm_wpn_shortbow NAME = skonester_acm_anm_wpn_shortbow }
+}

@@ -1,0 +1,3040 @@
+﻿# AUTO-GENERATED — tools/gen_sand_soldiers_maa.py
+# create_maa_regiment.size = (界面规模×100)÷stack；预览/实际士兵 ≈ 界面规模×100
+# 生成兵种在玩家 var:skonester_sand_maa_pick 上分支，避免复制 flag 到目标后匹配失败
+
+skonester_sand_compute_regiment_size_effect = {
+  if = {
+    limit = {
+      has_variable = skonester_sand_staged_scale
+      has_variable = skonester_sand_staged_stack
+      var:skonester_sand_staged_scale >= 1
+      var:skonester_sand_staged_stack >= 1
+    }
+    set_variable = {
+      name = skonester_sand_spawn_actual_men
+      value = {
+        value = var:skonester_sand_staged_scale
+        multiply = var:skonester_sand_staged_stack
+      }
+    }
+  }
+}
+
+skonester_sand_set_stack_from_pick_effect = {
+  if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:light_footmen
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:armored_footmen
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:pikemen_unit
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:pikemen_militia
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:schiltron
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:goedendag
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:picchieri
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:skoutatoi
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:house_guard
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:palace_guards
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:praetorian
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:varangian_guards
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:varangian_veterans
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:teutonic_knights
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:warrior_monks
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:samurai
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:druzhina
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:huscarl
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:bondi
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:landsknecht
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:zbrojnosh
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:handpicked_faithful
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:mubarizun
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:shomer
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:tawashi
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:khandayat
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:paiks
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:sarawit
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:zhanmadao_infantry
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:fire_lancers
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:guanch_vaulter
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:zupin_warrior
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:burenjia
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:tiefutu
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:shenbigong
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:pesilat_warriors
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:maturkan_warriors
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:torch_bearers
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 10
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:black_armor_cavalry
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:light_horsemen
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:armored_horsemen
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:horse_archers
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:heavy_horse_archers
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:cataphract
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:cataphract_archers
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:camel_rider
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:war_elephant
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 25
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:ballista_elephant
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 25
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:conrois
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:caballero
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:gendarme
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:hussar
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:hobelar
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:kheshig
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:monaspa
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:asawira
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:akritai
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:nomadic_riders
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:nomad_lancers
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:steppe_raiders
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:mangudai
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:tarkhan
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:ayrudzi
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:sahel_horsemen
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:emishi_horse_archers
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:japanese_horse_archers
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:gakgung_archers
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:garudas
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:jomsviking_pirates
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:teulu
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:vigmen
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:mulaththamun
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:abudrar
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:bowmen
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:archers_of_the_nile
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:longbowmen
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:crossbowmen
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:handgunners
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:chasseur
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:mountaineer
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:bush_hunter
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:horn_warrior
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:metsanvartija
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:guinea_warrior
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:siege_tower
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 10
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:cloud_ladder
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 10
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:ballista
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 10
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:ballistrai
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:onager
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 10
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:mangonel
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 10
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:trebuchet
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 10
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:bombard
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 10
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:cannon
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 10
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:rocket_carts
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:accolade_maa_archers
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:accolade_maa_cameliers
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:accolade_maa_crossbowers
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:accolade_maa_elephantiers
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 25
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:accolade_maa_handgunners
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:accolade_maa_horse_archers
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:accolade_maa_lancers
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:accolade_maa_outriders
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:accolade_maa_pikes
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:accolade_maa_skirmishers
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:accolade_maa_vanguards
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:maa_bandits
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:maa_marauders
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:maa_poachers
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:maa_thieves
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:ayyar
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:alihachaoha
+      skonester_compat_daming_loaded_trigger = yes
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:alihachaohaa
+      skonester_compat_daming_loaded_trigger = yes
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:asia_tunguse_ss
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:cangtou_jun
+      skonester_compat_daming_loaded_trigger = yes
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 200
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:cathay_ps
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 60
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:china_centre_jj
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:china_east_ms
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:china_south_wd
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:china_west_modao
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:da_bing
+      skonester_compat_daming_loaded_trigger = yes
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:fanshang_suwei
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:folangjipao
+      skonester_compat_daming_loaded_trigger = yes
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 25
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:guanning_jun
+      skonester_compat_daming_loaded_trigger = yes
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:java_warrior
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:jin_tiefutu
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:lang_bing
+      skonester_compat_daming_loaded_trigger = yes
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:liao_pishijun
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 60
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:liao_woluduojun
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:niaochongshou
+      skonester_compat_daming_loaded_trigger = yes
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:paoche
+      skonester_compat_daming_loaded_trigger = yes
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 25
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:song_burenjia
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:song_dianqiansi
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:song_shiweiqinjun
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:tang_beiyajinjun
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:tang_xuanjiajun
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:thunder
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 10
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:tiancejun
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:tianxiong_jun
+      skonester_compat_daming_loaded_trigger = yes
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:wo_ding
+      skonester_compat_daming_loaded_trigger = yes
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 100
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:xia_qianjun
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 300
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:xia_tieyaozi
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 60
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:xinjun
+      skonester_compat_daming_loaded_trigger = yes
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 150
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:xinjun_jiqiang
+      skonester_compat_daming_loaded_trigger = yes
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 6
+    }
+  }
+  else_if = {
+    limit = {
+      var:skonester_sand_maa_pick = flag:xinjun_pao
+      skonester_compat_daming_loaded_trigger = yes
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 6
+    }
+  }
+}
+
+
+# size 必须为字面量；与界面 skonester_sand_maa_scale（1–100）一致
+skonester_sand_spawn_maa_at_staged_scale_effect = {
+  if = {
+    limit = {
+      has_variable = skonester_sand_staged_scale
+      var:skonester_sand_staged_scale >= 1
+    }
+    if = {
+      limit = { var:skonester_sand_staged_scale = 1 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 1
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 2 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 2
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 3 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 3
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 4 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 4
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 5 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 5
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 6 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 6
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 7 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 7
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 8 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 8
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 9 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 9
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 10 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 10
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 11 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 11
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 12 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 12
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 13 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 13
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 14 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 14
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 15 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 15
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 16 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 16
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 17 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 17
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 18 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 18
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 19 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 19
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 20 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 20
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 21 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 21
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 22 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 22
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 23 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 23
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 24 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 24
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 25 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 25
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 26 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 26
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 27 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 27
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 28 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 28
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 29 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 29
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 30 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 30
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 31 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 31
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 32 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 32
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 33 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 33
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 34 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 34
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 35 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 35
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 36 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 36
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 37 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 37
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 38 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 38
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 39 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 39
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 40 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 40
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 41 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 41
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 42 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 42
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 43 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 43
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 44 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 44
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 45 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 45
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 46 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 46
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 47 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 47
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 48 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 48
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 49 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 49
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 50 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 50
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 51 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 51
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 52 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 52
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 53 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 53
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 54 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 54
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 55 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 55
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 56 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 56
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 57 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 57
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 58 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 58
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 59 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 59
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 60 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 60
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 61 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 61
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 62 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 62
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 63 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 63
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 64 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 64
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 65 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 65
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 66 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 66
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 67 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 67
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 68 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 68
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 69 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 69
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 70 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 70
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 71 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 71
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 72 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 72
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 73 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 73
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 74 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 74
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 75 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 75
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 76 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 76
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 77 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 77
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 78 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 78
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 79 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 79
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 80 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 80
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 81 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 81
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 82 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 82
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 83 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 83
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 84 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 84
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 85 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 85
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 86 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 86
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 87 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 87
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 88 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 88
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 89 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 89
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 90 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 90
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 91 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 91
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 92 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 92
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 93 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 93
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 94 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 94
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 95 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 95
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 96 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 96
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 97 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 97
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 98 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 98
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 99 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 99
+      }
+    }
+    else_if = {
+      limit = { var:skonester_sand_staged_scale = 100 }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        size = 100
+      }
+    }
+  }
+}
+
+
+skonester_sand_spawn_from_player_pick_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_sand_spawn_tgt
+      exists = scope:skonester_sand_player
+      scope:skonester_sand_player = { has_variable = skonester_sand_maa_pick }
+      scope:skonester_sand_spawn_tgt = {
+        has_variable = skonester_sand_staged_scale
+        var:skonester_sand_staged_scale >= 1
+      }
+    }
+    if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:light_footmen }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = light_footmen }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:armored_footmen }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = armored_footmen }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:pikemen_unit }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = pikemen_unit }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:pikemen_militia }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = pikemen_militia }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:schiltron }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = schiltron }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:goedendag }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = goedendag }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:picchieri }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = picchieri }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:skoutatoi }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = skoutatoi }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:house_guard }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = house_guard }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:palace_guards }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = palace_guards }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:praetorian }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = praetorian }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:varangian_guards }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = varangian_guards }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:varangian_veterans }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = varangian_veterans }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:teutonic_knights }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = teutonic_knights }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:warrior_monks }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = warrior_monks }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:samurai }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = samurai }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:druzhina }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = druzhina }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:huscarl }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = huscarl }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:bondi }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = bondi }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:landsknecht }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = landsknecht }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:zbrojnosh }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = zbrojnosh }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:handpicked_faithful }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = handpicked_faithful }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:mubarizun }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = mubarizun }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:shomer }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = shomer }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:tawashi }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = tawashi }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:khandayat }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = khandayat }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:paiks }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = paiks }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:sarawit }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = sarawit }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:zhanmadao_infantry }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = zhanmadao_infantry }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:fire_lancers }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = fire_lancers }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:guanch_vaulter }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = guanch_vaulter }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:zupin_warrior }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = zupin_warrior }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:burenjia }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = burenjia }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:tiefutu }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = tiefutu }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:shenbigong }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = shenbigong }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:pesilat_warriors }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = pesilat_warriors }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:maturkan_warriors }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = maturkan_warriors }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:torch_bearers }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = torch_bearers }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:black_armor_cavalry }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = black_armor_cavalry }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:light_horsemen }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = light_horsemen }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:armored_horsemen }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = armored_horsemen }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:horse_archers }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = horse_archers }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:heavy_horse_archers }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = heavy_horse_archers }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:cataphract }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = cataphract }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:cataphract_archers }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = cataphract_archers }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:camel_rider }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = camel_rider }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:war_elephant }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = war_elephant }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:ballista_elephant }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = ballista_elephant }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:conrois }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = conrois }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:caballero }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = caballero }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:gendarme }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = gendarme }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:hussar }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = hussar }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:hobelar }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = hobelar }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:kheshig }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = kheshig }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:monaspa }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = monaspa }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:asawira }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = asawira }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:akritai }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = akritai }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:nomadic_riders }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = nomadic_riders }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:nomad_lancers }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = nomad_lancers }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:steppe_raiders }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = steppe_raiders }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:mangudai }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = mangudai }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:tarkhan }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = tarkhan }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:ayrudzi }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = ayrudzi }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:sahel_horsemen }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = sahel_horsemen }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:emishi_horse_archers }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = emishi_horse_archers }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:japanese_horse_archers }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = japanese_horse_archers }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:gakgung_archers }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = gakgung_archers }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:garudas }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = garudas }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:jomsviking_pirates }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = jomsviking_pirates }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:teulu }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = teulu }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:vigmen }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = vigmen }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:mulaththamun }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = mulaththamun }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:abudrar }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = abudrar }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:bowmen }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = bowmen }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:archers_of_the_nile }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = archers_of_the_nile }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:longbowmen }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = longbowmen }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:crossbowmen }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = crossbowmen }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:handgunners }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = handgunners }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:chasseur }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = chasseur }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:mountaineer }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = mountaineer }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:bush_hunter }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = bush_hunter }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:horn_warrior }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = horn_warrior }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:metsanvartija }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = metsanvartija }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:guinea_warrior }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = guinea_warrior }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:siege_tower }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = siege_tower }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:cloud_ladder }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = cloud_ladder }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:ballista }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = ballista }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:ballistrai }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = ballistrai }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:onager }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = onager }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:mangonel }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = mangonel }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:trebuchet }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = trebuchet }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:bombard }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = bombard }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:cannon }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = cannon }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:rocket_carts }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = rocket_carts }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:accolade_maa_archers }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = accolade_maa_archers }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:accolade_maa_cameliers }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = accolade_maa_cameliers }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:accolade_maa_crossbowers }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = accolade_maa_crossbowers }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:accolade_maa_elephantiers }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = accolade_maa_elephantiers }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:accolade_maa_handgunners }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = accolade_maa_handgunners }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:accolade_maa_horse_archers }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = accolade_maa_horse_archers }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:accolade_maa_lancers }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = accolade_maa_lancers }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:accolade_maa_outriders }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = accolade_maa_outriders }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:accolade_maa_pikes }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = accolade_maa_pikes }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:accolade_maa_skirmishers }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = accolade_maa_skirmishers }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:accolade_maa_vanguards }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = accolade_maa_vanguards }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:maa_bandits }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = maa_bandits }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:maa_marauders }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = maa_marauders }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:maa_poachers }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = maa_poachers }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:maa_thieves }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = maa_thieves }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:ayyar }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = ayyar }
+      }
+    }
+  }
+}

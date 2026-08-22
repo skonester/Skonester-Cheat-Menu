@@ -1,0 +1,154 @@
+﻿# 右键目标：解锁全部宗族传承。add_dynasty_perk 会扣威望；先注入缓冲供扣费，解锁后将宗族威望清零。
+
+skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = {
+  if = {
+    limit = { NOT = { has_dynasty_perk = $PERK$ } }
+    add_dynasty_perk = $PERK$
+  }
+}
+
+skonester_cheat_menu_clear_dynasty_renown_after_legacies_effect = {
+  add_dynasty_prestige = {
+    value = 0
+    subtract = dynasty_prestige
+  }
+  while = {
+    limit = { dynasty_prestige_level > 0 }
+    add_dynasty_prestige_level = -1
+  }
+}
+
+skonester_cheat_menu_max_recipient_dynasty_legacies_effect = {
+  scope:recipient = {
+    if = {
+      limit = { has_dynasty = yes }
+      dynasty = {
+        add_dynasty_prestige = 3000000
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = warfare_legacy_1 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = warfare_legacy_2 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = warfare_legacy_3 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = warfare_legacy_4 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = warfare_legacy_5 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = law_legacy_1 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = law_legacy_2 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = law_legacy_3 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = law_legacy_4 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = law_legacy_5 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = guile_legacy_1 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = guile_legacy_2 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = guile_legacy_3 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = guile_legacy_4 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = guile_legacy_5 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = blood_legacy_1 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = blood_legacy_2 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = blood_legacy_3 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = blood_legacy_4 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = blood_legacy_5 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = erudition_legacy_1 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = erudition_legacy_2 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = erudition_legacy_3 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = erudition_legacy_4 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = erudition_legacy_5 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = glory_legacy_1 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = glory_legacy_2 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = glory_legacy_3 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = glory_legacy_4 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = glory_legacy_5 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = kin_legacy_1 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = kin_legacy_2 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = kin_legacy_3 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = kin_legacy_4 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = kin_legacy_5 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ep1_culture_legacy_1 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ep1_culture_legacy_2 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ep1_culture_legacy_3 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ep1_culture_legacy_4 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ep1_culture_legacy_5 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ep2_activities_legacy_1 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ep2_activities_legacy_2 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ep2_activities_legacy_3 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ep2_activities_legacy_4 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ep2_activities_legacy_5 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ce1_heroic_legacy_1 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ce1_heroic_legacy_2 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ce1_heroic_legacy_3 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ce1_heroic_legacy_4 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ce1_heroic_legacy_5 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ce1_legitimacy_legacy_1 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ce1_legitimacy_legacy_2 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ce1_legitimacy_legacy_3 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ce1_legitimacy_legacy_4 }
+        skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ce1_legitimacy_legacy_5 }
+        trigger_if = {
+          limit = { scope:recipient = { has_fp1_dlc_trigger = yes } }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp1_adventure_legacy_1 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp1_adventure_legacy_2 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp1_adventure_legacy_3 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp1_adventure_legacy_4 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp1_adventure_legacy_5 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp1_pillage_legacy_1 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp1_pillage_legacy_2 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp1_pillage_legacy_3 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp1_pillage_legacy_4 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp1_pillage_legacy_5 }
+        }
+        trigger_if = {
+          limit = { scope:recipient = { has_fp2_dlc_trigger = yes } }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp2_urbanism_legacy_1 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp2_urbanism_legacy_2 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp2_urbanism_legacy_3 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp2_urbanism_legacy_4 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp2_urbanism_legacy_5 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp2_coterie_legacy_1 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp2_coterie_legacy_2 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp2_coterie_legacy_3 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp2_coterie_legacy_4 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp2_coterie_legacy_5 }
+        }
+        trigger_if = {
+          limit = { scope:recipient = { has_fp3_dlc_trigger = yes } }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp3_khvarenah_legacy_1 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp3_khvarenah_legacy_2 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp3_khvarenah_legacy_3 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp3_khvarenah_legacy_4 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp3_khvarenah_legacy_5 }
+        }
+        trigger_if = {
+          limit = { scope:recipient = { has_ep3_dlc_trigger = yes } }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ep3_administrative_legacy_1 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ep3_administrative_legacy_2 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ep3_administrative_legacy_3 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ep3_administrative_legacy_4 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ep3_administrative_legacy_5 }
+        }
+        trigger_if = {
+          limit = { scope:recipient = { has_mpo_dlc_trigger = yes } }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = mpo_nomad_legacy_1 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = mpo_nomad_legacy_2 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = mpo_nomad_legacy_3 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = mpo_nomad_legacy_4 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = mpo_nomad_legacy_5 }
+        }
+        trigger_if = {
+          limit = { scope:recipient = { has_tgp_dlc_trigger = yes } }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = tgp_chinese_legacy_1 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = tgp_chinese_legacy_2 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = tgp_chinese_legacy_3 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = tgp_chinese_legacy_4 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = tgp_chinese_legacy_5 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = tgp_japan_legacy_1 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = tgp_japan_legacy_2 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = tgp_japan_legacy_3 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = tgp_japan_legacy_4 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = tgp_japan_legacy_5 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = tgp_sea_legacy_1 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = tgp_sea_legacy_2 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = tgp_sea_legacy_3 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = tgp_sea_legacy_4 }
+          skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = tgp_sea_legacy_5 }
+        }
+        skonester_cheat_menu_clear_dynasty_renown_after_legacies_effect = yes
+      }
+    }
+  }
+}

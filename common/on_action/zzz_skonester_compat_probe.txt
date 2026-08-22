@@ -1,0 +1,45 @@
+﻿# 开局探测可选依赖 mod，供宫廷任免 / 罢免庸官 / 大明政体菜单等使用（不修改对方变量）。
+on_game_start_after_lobby = {
+  effect = {
+    if = {
+      limit = {
+        OR = {
+          exists = global_var:Data_tuiju
+          exists = global_var:hq_check
+        }
+      }
+      set_global_variable = {
+        name = skonester_daming_ming_gov_menu_unlocked
+        value = 1
+      }
+      set_global_variable = {
+        name = skonester_compat_daming_loaded
+        value = 1
+      }
+    }
+    if = {
+      limit = {
+        exists = global_var:orient_empires_loaded
+      }
+      set_global_variable = {
+        name = skonester_compat_orient_loaded
+        value = 1
+      }
+    }
+    else = {
+      remove_global_variable = skonester_compat_orient_loaded
+    }
+    if = {
+      limit = {
+        exists = decision:dfbz_zfz_001_decision
+      }
+      set_global_variable = {
+        name = skonester_compat_orient_expansion_loaded
+        value = 1
+      }
+    }
+    else = {
+      remove_global_variable = skonester_compat_orient_expansion_loaded
+    }
+  }
+}

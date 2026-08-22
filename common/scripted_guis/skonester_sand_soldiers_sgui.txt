@@ -1,0 +1,122 @@
+﻿# 撒豆成兵
+
+skonester_sand_show_daming_tab = {
+  scope = character
+  is_shown = { skonester_compat_daming_loaded_trigger = yes }
+  is_valid = { always = yes }
+}
+
+skonester_sand_show_orient_tab = {
+  scope = character
+  is_shown = {
+    skonester_compat_orient_loaded_trigger = yes
+  }
+  is_valid = { always = yes }
+}
+
+skonester_sand_show_orient_expansion_tab = {
+  scope = character
+  is_shown = {
+    skonester_compat_orient_expansion_loaded_trigger = yes
+  }
+  is_valid = { always = yes }
+}
+
+skonester_sand_window_init = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_sand_maa_populate_catalog_effect = yes }
+}
+
+skonester_sand_soldiers_visible = {
+  scope = character
+  is_shown = { has_character_flag = skonester_sand_soldiers_open }
+  is_valid = { always = yes }
+}
+
+skonester_sand_soldiers_close = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_close_sand_soldiers_effect = yes }
+}
+
+skonester_sand_has_maa_pick = {
+  scope = character
+  is_shown = { has_character_flag = skonester_sand_has_maa_pick }
+  is_valid = { always = yes }
+}
+
+skonester_sand_is_picked_maa = {
+  scope = character
+  saved_scopes = { maa_flag }
+  is_shown = {
+    has_variable = skonester_sand_maa_pick
+    var:skonester_sand_maa_pick = scope:maa_flag
+  }
+  is_valid = { always = yes }
+}
+
+skonester_sand_pick_maa = {
+  scope = character
+  saved_scopes = { maa_flag }
+  is_valid = { always = yes }
+  effect = { skonester_sand_pick_maa_effect = yes }
+}
+
+skonester_sand_spawn_btn = {
+  scope = character
+  is_valid = {
+    has_character_flag = skonester_sand_has_maa_pick
+    has_variable = skonester_sand_maa_pick
+    var:skonester_sand_maa_scale >= 1
+  }
+  effect = { skonester_sand_spawn_current_effect = yes }
+}
+
+skonester_sand_scale_inc = {
+  scope = character
+  is_valid = { var:skonester_sand_maa_scale < 100 }
+  effect = { skonester_sand_scale_inc_effect = yes }
+}
+
+skonester_sand_scale_dec = {
+  scope = character
+  is_valid = { var:skonester_sand_maa_scale > 1 }
+  effect = { skonester_sand_scale_dec_effect = yes }
+}
+
+skonester_sand_scale_quick_5 = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    set_variable = { name = skonester_sand_maa_scale value = 5 }
+    skonester_sand_refresh_scale_preview_effect = yes
+  }
+}
+
+skonester_sand_scale_quick_10 = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    set_variable = { name = skonester_sand_maa_scale value = 10 }
+    skonester_sand_refresh_scale_preview_effect = yes
+  }
+}
+
+skonester_sand_scale_quick_20 = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    set_variable = { name = skonester_sand_maa_scale value = 20 }
+    skonester_sand_refresh_scale_preview_effect = yes
+  }
+}
+
+skonester_sand_scale_quick_50 = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    set_variable = { name = skonester_sand_maa_scale value = 50 }
+    skonester_sand_refresh_scale_preview_effect = yes
+  }
+}

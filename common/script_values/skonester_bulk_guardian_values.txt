@@ -1,0 +1,126 @@
+﻿# 自動分配監護人：評分 = 主修能力×4 + 學識×2（對應原版 0.4/0.2 排序）+ 智力特質 + 學識檔位 + 性格加分
+# scope:skonester_bulk_ward 須帶變量 skonester_guar_axis：1 軍事 2 外交 3 管理 4 謀略 5 學識（童年「迷人」對應 4 謀略）
+# this = 候選監護人
+
+skonester_guardian_pick_score_value = {
+  value = 0
+  add = {
+    value = learning
+    multiply = 2
+  }
+  if = {
+    limit = {
+      scope:skonester_bulk_ward = {
+        var:skonester_guar_axis = 1
+      }
+    }
+    add = {
+      value = martial
+      multiply = 4
+    }
+  }
+  if = {
+    limit = {
+      scope:skonester_bulk_ward = {
+        var:skonester_guar_axis = 2
+      }
+    }
+    add = {
+      value = diplomacy
+      multiply = 4
+    }
+  }
+  if = {
+    limit = {
+      scope:skonester_bulk_ward = {
+        var:skonester_guar_axis = 3
+      }
+    }
+    add = {
+      value = stewardship
+      multiply = 4
+    }
+  }
+  if = {
+    limit = {
+      scope:skonester_bulk_ward = {
+        var:skonester_guar_axis = 4
+      }
+    }
+    add = {
+      value = intrigue
+      multiply = 4
+    }
+  }
+  if = {
+    limit = {
+      scope:skonester_bulk_ward = {
+        var:skonester_guar_axis = 5
+      }
+    }
+    add = {
+      value = learning
+      multiply = 4
+    }
+  }
+  if = {
+    limit = {
+      learning >= 22
+    }
+    add = 30
+  }
+  if = {
+    limit = {
+      has_trait = intellect_good_3
+    }
+    add = 20
+  }
+  if = {
+    limit = {
+      has_trait = intellect_good_2
+    }
+    add = 10
+  }
+  if = {
+    limit = {
+      has_trait = shrewd
+    }
+    add = 5
+  }
+  if = {
+    limit = {
+      has_trait = diligent
+    }
+    add = 5
+  }
+  if = {
+    limit = {
+      has_trait = patient
+    }
+    add = 5
+  }
+  if = {
+    limit = {
+      has_trait = temperate
+    }
+    add = 5
+  }
+  if = {
+    limit = {
+      has_trait = brave
+    }
+    add = 5
+  }
+  if = {
+    limit = {
+      has_trait = honest
+    }
+    add = 5
+  }
+  if = {
+    limit = {
+      has_trait = generous
+    }
+    add = 5
+  }
+}

@@ -1,0 +1,89 @@
+﻿# 隐秘怀孕触发器 - 用于隐藏玩家父亲身份
+# 根据女性婚姻状况决定是否隐藏父亲身份
+
+# 检查是否需要隐藏玩家父亲身份
+skonester_stealth_hide_father_trigger = {
+  # 已婚女性 - 需要隐藏玩家身份，显示主配偶为父亲
+  if = {
+    limit = {
+      exists = primary_spouse
+    }
+    always = yes
+  }
+  # 侧室/小妾 - 需要隐藏玩家身份，显示领主为父亲
+  else_if = {
+    limit = {
+      has_trait = concubine
+      exists = liege
+    }
+    always = yes
+  }
+  # 未婚女性 - 不设置假定父亲，只显示母亲
+  else = {
+    always = yes
+  }
+}
+
+# 检查女性是否有合法的假定父亲
+skonester_stealth_has_assumed_father_trigger = {
+  # 已婚
+  if = {
+    limit = {
+      exists = primary_spouse
+    }
+    always = yes
+  }
+  # 侧室/小妾
+  else_if = {
+    limit = {
+      has_trait = concubine
+      exists = liege
+    }
+    always = yes
+  }
+  # 情人
+  else_if = {
+    limit = {
+      has_trait = lover
+      exists = lover
+    }
+    always = yes
+  }
+  # 其他情况
+  else = {
+    always = no
+  }
+}
+
+# 获取假定父亲的作用域
+skonester_stealth_get_assumed_father_trigger = {
+  # 已婚 - 返回主配偶
+  if = {
+    limit = {
+      exists = primary_spouse
+    }
+    primary_spouse = {
+      save_scope_as = skonester_stealth_assumed_father
+    }
+  }
+  # 侧室/小妾 - 返回领主
+  else_if = {
+    limit = {
+      has_trait = concubine
+      exists = liege
+    }
+    liege = {
+      save_scope_as = skonester_stealth_assumed_father
+    }
+  }
+  # 情人 - 返回情人
+  else_if = {
+    limit = {
+      has_trait = lover
+      exists = lover
+    }
+    lover = {
+      save_scope_as = skonester_stealth_assumed_father
+    }
+  }
+}

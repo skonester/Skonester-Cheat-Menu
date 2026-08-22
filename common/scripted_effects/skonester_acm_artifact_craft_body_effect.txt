@@ -1,0 +1,20 @@
+﻿# 入口：保存 actor；在收宝人 scope 上按 skonester_acm_artifact_type 创建（类型同 #2752613114）
+skonester_acm_run_make_now_body_effect = {
+  save_scope_as = actor
+  skonester_acm_sync_artifact_owner_scopes_effect = yes
+  scope:actor = {
+    skonester_craft_init_modifier_slot_defaults_effect = yes
+    skonester_acm_sync_gui_kind_to_artifact_type_effect = yes
+    if = {
+      limit = { NOT = { has_variable = skonester_acm_artifact_type } }
+      skonester_acm_init_artifact_type_defaults_effect = yes
+    }
+    if = {
+      limit = { NOT = { has_character_flag = skonester_artifact_decay_set } }
+      add_character_flag = skonester_artifact_no_decay
+      add_character_flag = skonester_artifact_decay_set
+    }
+    skonester_acm_clamp_craft_slot_layers_to_quality_effect = yes
+  }
+  skonester_acm_run_create_on_artifact_owner_effect = yes
+}

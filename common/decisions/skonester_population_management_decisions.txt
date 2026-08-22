@@ -1,0 +1,37 @@
+﻿# äººå£ä¸Žç»Ÿè¾–ï¼šæ—å†…äººå£æ¸…ç†ï¼ˆæ— åœ°åŒå®—ã€16+ã€äº”ä¸»å±žæ€§ä¹‹å’Œ<50ï¼Œä¸å«å‹‡æ­¦ï¼‰/ ä¸–ç•Œæ— åœ°æ¸…ç†ï¼ˆä¸å«åº¦æ”¯å†…å¸‘ï¼‰
+
+skonester_population_management_hub_decision = {
+  picture = {
+    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+  }
+  decision_group_type = pcm
+  sort_order = 105
+  title = skonester_population_management_hub_decision
+  desc = skonester_population_management_hub_decision_desc
+  selection_tooltip = skonester_population_management_hub_decision_desc
+  confirm_text = skonester_population_management_hub_decision_confirm
+
+  # This is an interactive player utility. AI activation would open player-facing
+  # menu events and can start population work without the player's consent.
+  ai_check_interval = 0
+  ai_potential = { always = no }
+
+  is_shown = {
+
+    has_character_flag = pcm_b_show_decision_flag
+    skonester_officials_decision_visible_for_player_trigger = yes
+  }
+
+  is_valid = {
+    is_playable_character = yes
+  }
+
+  effect = {
+    trigger_event = {
+      id = skonester_officials.9080
+      days = 0
+    }
+  }
+
+  ai_will_do = { base = 0 }
+}

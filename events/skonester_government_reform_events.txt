@@ -1,0 +1,652 @@
+﻿namespace = skonester_officials
+
+# 臣制变动：本人 / 有地臣属
+skonester_officials.0010 = {
+  type = character_event
+  title = skonester_officials.0010.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = realm
+
+  trigger = {
+    has_character_flag = skonester_chenzhi_menu_pending
+  }
+
+  left_portrait = {
+    character = root
+    animation = personality_rational
+  }
+
+  option = {
+    name = skonester_officials.0010.a_vassals
+    trigger = { skonester_has_any_vassal_for_mass_gov_menu_trigger = yes }
+    show_as_unavailable = {
+      NOT = { skonester_has_any_vassal_for_mass_gov_menu_trigger = yes }
+    }
+    custom_tooltip = skonester_officials.0010.a_vassals_req_tt
+    add_character_flag = skonester_chenzhi_target_vassals
+    trigger_event = { id = skonester_officials.0011 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.0010.b_self
+    add_character_flag = skonester_chenzhi_target_self
+    trigger_event = { id = skonester_officials.0011 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.0010.c_cancel
+    ai_chance = {
+      base = 100
+    }
+    skonester_chenzhi_clear_menu_pending_effect = yes
+  }
+}
+
+# 臣制变动：政体列表第 1 页
+skonester_officials.0011 = {
+  type = character_event
+  title = skonester_officials.0011.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = realm
+
+  trigger = {
+    has_character_flag = skonester_chenzhi_menu_pending
+  }
+
+  left_portrait = {
+    character = root
+    animation = personality_rational
+  }
+
+  option = {
+    name = skonester_officials.0011.opt_celestial
+    trigger = {
+      has_tgp_dlc_trigger = yes
+      OR = {
+        AND = {
+                  has_character_flag = skonester_chenzhi_target_self
+                  NOT = { has_government = celestial_government }
+        }
+        AND = {
+          has_character_flag = skonester_chenzhi_target_vassals
+          skonester_has_any_vassal_for_mass_gov_menu_trigger = yes
+        }
+      }
+    }
+    custom_tooltip = skonester_officials.0011.opt_celestial_tt
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_self }
+      skonester_convert_character_to_celestial_government_effect = yes
+    }
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_vassals }
+      skonester_mass_convert_vassals_to_celestial_effect = yes
+    }
+    skonester_chenzhi_finish_menu_option_effect = yes
+  }
+  option = {
+    name = skonester_officials.0011.opt_administrative
+    trigger = {
+      has_ep3_dlc_trigger = yes
+      OR = {
+        AND = {
+                  has_character_flag = skonester_chenzhi_target_self
+                  NOT = { has_government = administrative_government }
+        }
+        AND = {
+          has_character_flag = skonester_chenzhi_target_vassals
+          skonester_has_any_vassal_for_mass_gov_menu_trigger = yes
+        }
+      }
+    }
+    custom_tooltip = skonester_officials.0011.opt_administrative_tt
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_self }
+      skonester_convert_character_to_administrative_government_effect = yes
+    }
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_vassals }
+      skonester_mass_convert_vassals_to_administrative_effect = yes
+    }
+    skonester_chenzhi_finish_menu_option_effect = yes
+  }
+  option = {
+    name = skonester_officials.0011.opt_japan_admin
+    trigger = {
+      has_tgp_dlc_trigger = yes
+      OR = {
+        AND = {
+                  has_character_flag = skonester_chenzhi_target_self
+                  tgp_can_become_japan_administrative_trigger = yes
+                  NOT = { has_government = japan_administrative_government }
+        }
+        AND = {
+          has_character_flag = skonester_chenzhi_target_vassals
+          skonester_has_any_vassal_for_mass_gov_menu_trigger = yes
+        }
+      }
+    }
+    custom_tooltip = skonester_officials.0011.opt_japan_admin_tt
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_self }
+      skonester_convert_character_to_japan_administrative_government_effect = yes
+    }
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_vassals }
+      skonester_mass_convert_vassals_to_japan_administrative_effect = yes
+    }
+    skonester_chenzhi_finish_menu_option_effect = yes
+  }
+  option = {
+    name = skonester_officials.0011.opt_meritocratic
+    trigger = {
+      has_tgp_dlc_trigger = yes
+      OR = {
+        AND = {
+                  has_character_flag = skonester_chenzhi_target_self
+                  NOT = { has_government = meritocratic_government }
+        }
+        AND = {
+          has_character_flag = skonester_chenzhi_target_vassals
+          skonester_has_any_vassal_for_mass_gov_menu_trigger = yes
+        }
+      }
+    }
+    custom_tooltip = skonester_officials.0011.opt_meritocratic_tt
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_self }
+      skonester_convert_character_to_meritocratic_government_effect = yes
+    }
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_vassals }
+      skonester_mass_convert_vassals_to_meritocratic_effect = yes
+    }
+    skonester_chenzhi_finish_menu_option_effect = yes
+  }
+  option = {
+    name = skonester_officials.0011.opt_steppe_admin
+    trigger = {
+      has_tgp_dlc_trigger = yes
+      OR = {
+        AND = {
+                  has_character_flag = skonester_chenzhi_target_self
+                  NOT = { has_government = steppe_admin_government }
+        }
+        AND = {
+          has_character_flag = skonester_chenzhi_target_vassals
+          skonester_has_any_vassal_for_mass_gov_menu_trigger = yes
+        }
+      }
+    }
+    custom_tooltip = skonester_officials.0011.opt_steppe_admin_tt
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_self }
+      skonester_convert_character_to_steppe_admin_government_effect = yes
+    }
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_vassals }
+      skonester_mass_convert_vassals_to_steppe_admin_effect = yes
+    }
+    skonester_chenzhi_finish_menu_option_effect = yes
+  }
+
+  option = {
+    name = skonester_officials.0011.next_page
+    trigger_event = { id = skonester_officials.0012 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.0011.back
+    skonester_chenzhi_clear_menu_target_flags_effect = yes
+    trigger_event = { id = skonester_officials.0010 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.0011.close
+    skonester_chenzhi_clear_menu_pending_effect = yes
+  }
+}
+
+# 臣制变动：政体列表第 2 页
+skonester_officials.0012 = {
+  type = character_event
+  title = skonester_officials.0012.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = realm
+
+  trigger = {
+    has_character_flag = skonester_chenzhi_menu_pending
+  }
+
+  left_portrait = {
+    character = root
+    animation = personality_rational
+  }
+
+  option = {
+    name = skonester_officials.0011.opt_feudal
+    trigger = {
+      OR = {
+        AND = {
+                  has_character_flag = skonester_chenzhi_target_self
+                  NOT = { has_government = feudal_government }
+        }
+        AND = {
+          has_character_flag = skonester_chenzhi_target_vassals
+          skonester_has_any_vassal_for_mass_gov_menu_trigger = yes
+        }
+      }
+    }
+    custom_tooltip = skonester_officials.0011.opt_feudal_tt
+    ai_chance = {
+      base = 0
+    }
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_self }
+      add_character_flag = skonester_chenzhi_force_feudal_conversion
+      skonester_convert_character_to_feudal_government_effect = yes
+      remove_character_flag = skonester_chenzhi_force_feudal_conversion
+    }
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_vassals }
+      add_character_flag = skonester_chenzhi_force_mass_feudal
+      skonester_mass_convert_vassals_to_feudal_effect = yes
+      remove_character_flag = skonester_chenzhi_force_mass_feudal
+    }
+    skonester_chenzhi_finish_menu_option_effect = yes
+  }
+  option = {
+    name = skonester_officials.0011.opt_republic
+    trigger = {
+      OR = {
+        AND = {
+                  has_character_flag = skonester_chenzhi_target_self
+                  NOT = { has_government = republic_government }
+        }
+        AND = {
+          has_character_flag = skonester_chenzhi_target_vassals
+          skonester_has_any_vassal_for_mass_gov_menu_trigger = yes
+        }
+      }
+    }
+    custom_tooltip = skonester_officials.0011.opt_republic_tt
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_self }
+      skonester_convert_character_to_republic_government_effect = yes
+    }
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_vassals }
+      skonester_mass_convert_vassals_to_republic_effect = yes
+    }
+    skonester_chenzhi_finish_menu_option_effect = yes
+  }
+  option = {
+    name = skonester_officials.0011.opt_tribal
+    trigger = {
+      OR = {
+        AND = {
+                  has_character_flag = skonester_chenzhi_target_self
+                  NOT = { has_government = tribal_government }
+        }
+        AND = {
+          has_character_flag = skonester_chenzhi_target_vassals
+          skonester_has_any_vassal_for_mass_gov_menu_trigger = yes
+        }
+      }
+    }
+    custom_tooltip = skonester_officials.0011.opt_tribal_tt
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_self }
+      skonester_convert_character_to_tribal_government_effect = yes
+    }
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_vassals }
+      skonester_mass_convert_vassals_to_tribal_effect = yes
+    }
+    skonester_chenzhi_finish_menu_option_effect = yes
+  }
+  option = {
+    name = skonester_officials.0011.opt_theocracy
+    trigger = {
+      OR = {
+        AND = {
+                  has_character_flag = skonester_chenzhi_target_self
+                  NOT = { has_government = theocracy_government }
+        }
+        AND = {
+          has_character_flag = skonester_chenzhi_target_vassals
+          skonester_has_any_vassal_for_mass_gov_menu_trigger = yes
+        }
+      }
+    }
+    custom_tooltip = skonester_officials.0011.opt_theocracy_tt
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_self }
+      skonester_convert_character_to_theocracy_government_effect = yes
+    }
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_vassals }
+      skonester_mass_convert_vassals_to_theocracy_effect = yes
+    }
+    skonester_chenzhi_finish_menu_option_effect = yes
+  }
+  option = {
+    name = skonester_officials.0011.opt_herder
+    trigger = {
+      has_mpo_dlc_trigger = yes
+      OR = {
+        AND = {
+                  has_character_flag = skonester_chenzhi_target_self
+                  NOT = { has_government = herder_government }
+        }
+        AND = {
+          has_character_flag = skonester_chenzhi_target_vassals
+          skonester_has_any_vassal_for_mass_gov_menu_trigger = yes
+        }
+      }
+    }
+    custom_tooltip = skonester_officials.0011.opt_herder_tt
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_self }
+      skonester_convert_character_to_herder_government_effect = yes
+    }
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_vassals }
+      skonester_mass_convert_vassals_to_herder_effect = yes
+    }
+    skonester_chenzhi_finish_menu_option_effect = yes
+  }
+
+  option = {
+    name = skonester_officials.0012.next_gm_ming
+    trigger = { always = no }
+    custom_tooltip = skonester_officials.0012.next_gm_ming_tt
+    trigger_event = { id = skonester_officials.0013 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.0012.prev_page
+    trigger_event = { id = skonester_officials.0011 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.0011.back
+    skonester_chenzhi_clear_menu_target_flags_effect = yes
+    trigger_event = { id = skonester_officials.0010 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.0011.close
+    skonester_chenzhi_clear_menu_pending_effect = yes
+  }
+}
+
+# 臣制变动：大明十种政体
+skonester_officials.0013 = {
+  type = character_event
+  title = skonester_officials.0013.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = realm
+
+  trigger = {
+    has_character_flag = skonester_chenzhi_menu_pending
+  }
+
+  left_portrait = {
+    character = root
+    animation = personality_rational
+  }
+
+  option = {
+    name = skonester_officials.0013.opt_gm_zongfan
+    trigger = {
+      skonester_actor_has_bianshen_daming_government_access_trigger = yes
+      OR = {
+        AND = {
+                  has_character_flag = skonester_chenzhi_target_self
+                  NOT = { has_government = zongfan_government }
+        }
+        AND = {
+          has_character_flag = skonester_chenzhi_target_vassals
+          skonester_has_any_vassal_for_mass_gov_menu_trigger = yes
+        }
+      }
+    }
+    custom_tooltip = skonester_officials.0013.opt_gm_zongfan_tt
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_self }
+      skonester_convert_character_to_gm_zongfan_effect = yes
+    }
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_vassals }
+      skonester_mass_convert_vassals_to_gm_zongfan_effect = yes
+    }
+    skonester_chenzhi_finish_menu_option_effect = yes
+  }
+  option = {
+    name = skonester_officials.0013.opt_gm_sansizhi
+    trigger = {
+      skonester_actor_has_bianshen_daming_government_access_trigger = yes
+      OR = {
+        AND = {
+                  has_character_flag = skonester_chenzhi_target_self
+                  NOT = { has_government = sansizhi_government }
+        }
+        AND = {
+          has_character_flag = skonester_chenzhi_target_vassals
+          skonester_has_any_vassal_for_gm_sansizhi_conversion_trigger = yes
+        }
+      }
+    }
+    custom_tooltip = skonester_officials.0013.opt_gm_sansizhi_tt
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_self }
+      skonester_convert_character_to_gm_sansizhi_effect = yes
+    }
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_vassals }
+      skonester_mass_convert_vassals_to_gm_sansizhi_effect = yes
+    }
+    skonester_chenzhi_finish_menu_option_effect = yes
+  }
+  option = {
+    name = skonester_officials.0013.opt_gm_weisuozhi
+    trigger = {
+      skonester_actor_has_bianshen_daming_government_access_trigger = yes
+      OR = {
+        AND = {
+                  has_character_flag = skonester_chenzhi_target_self
+                  NOT = { has_government = weisuozhi_government }
+        }
+        AND = {
+          has_character_flag = skonester_chenzhi_target_vassals
+          skonester_has_any_vassal_for_gm_weisuozhi_conversion_trigger = yes
+        }
+      }
+    }
+    custom_tooltip = skonester_officials.0013.opt_gm_weisuozhi_tt
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_self }
+      skonester_convert_character_to_gm_weisuozhi_effect = yes
+    }
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_vassals }
+      skonester_mass_convert_vassals_to_gm_weisuozhi_effect = yes
+    }
+    skonester_chenzhi_finish_menu_option_effect = yes
+  }
+  option = {
+    name = skonester_officials.0013.opt_gm_tusizhi
+    trigger = {
+      skonester_actor_has_bianshen_daming_government_access_trigger = yes
+      OR = {
+        AND = {
+                  has_character_flag = skonester_chenzhi_target_self
+                  NOT = { has_government = tusizhi_government }
+        }
+        AND = {
+          has_character_flag = skonester_chenzhi_target_vassals
+          skonester_has_any_vassal_for_gm_tusizhi_conversion_trigger = yes
+        }
+      }
+    }
+    custom_tooltip = skonester_officials.0013.opt_gm_tusizhi_tt
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_self }
+      skonester_convert_character_to_gm_tusizhi_effect = yes
+    }
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_vassals }
+      skonester_mass_convert_vassals_to_gm_tusizhi_effect = yes
+    }
+    skonester_chenzhi_finish_menu_option_effect = yes
+  }
+  option = {
+    name = skonester_officials.0013.opt_gm_neige
+    trigger = {
+      skonester_actor_has_bianshen_daming_government_access_trigger = yes
+      OR = {
+        AND = {
+                  has_character_flag = skonester_chenzhi_target_self
+                  NOT = { has_government = neige_government }
+        }
+        AND = {
+          has_character_flag = skonester_chenzhi_target_vassals
+          skonester_has_any_vassal_for_gm_neige_conversion_trigger = yes
+        }
+      }
+    }
+    custom_tooltip = skonester_officials.0013.opt_gm_neige_tt
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_self }
+      skonester_convert_character_to_gm_neige_effect = yes
+    }
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_vassals }
+      skonester_mass_convert_vassals_to_gm_neige_effect = yes
+    }
+    skonester_chenzhi_finish_menu_option_effect = yes
+  }
+  option = {
+    name = skonester_officials.0013.opt_gm_baqizhi
+    trigger = {
+      skonester_actor_has_bianshen_daming_government_access_trigger = yes
+      OR = {
+        AND = {
+                  has_character_flag = skonester_chenzhi_target_self
+                  NOT = { has_government = baqizhi_government }
+        }
+        AND = {
+          has_character_flag = skonester_chenzhi_target_vassals
+          skonester_has_any_vassal_for_gm_baqizhi_conversion_trigger = yes
+        }
+      }
+    }
+    custom_tooltip = skonester_officials.0013.opt_gm_baqizhi_tt
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_self }
+      skonester_convert_character_to_gm_baqizhi_effect = yes
+    }
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_vassals }
+      skonester_mass_convert_vassals_to_gm_baqizhi_effect = yes
+    }
+    skonester_chenzhi_finish_menu_option_effect = yes
+  }
+  option = {
+    name = skonester_officials.0013.opt_gm_daiyizhi
+    trigger = {
+      skonester_actor_has_bianshen_daming_government_access_trigger = yes
+      OR = {
+        AND = {
+                  has_character_flag = skonester_chenzhi_target_self
+                  NOT = { has_government = daiyizhi_government }
+        }
+        AND = {
+          has_character_flag = skonester_chenzhi_target_vassals
+          skonester_has_any_vassal_for_gm_daiyizhi_conversion_trigger = yes
+        }
+      }
+    }
+    custom_tooltip = skonester_officials.0013.opt_gm_daiyizhi_tt
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_self }
+      skonester_convert_character_to_gm_daiyizhi_effect = yes
+    }
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_vassals }
+      skonester_mass_convert_vassals_to_gm_daiyizhi_effect = yes
+    }
+    skonester_chenzhi_finish_menu_option_effect = yes
+  }
+  option = {
+    name = skonester_officials.0013.opt_gm_zhimin
+    trigger = {
+      skonester_actor_has_bianshen_daming_government_access_trigger = yes
+      OR = {
+        AND = {
+                  has_character_flag = skonester_chenzhi_target_self
+                  NOT = { has_government = zhimin_government }
+        }
+        AND = {
+          has_character_flag = skonester_chenzhi_target_vassals
+          skonester_has_any_vassal_for_gm_zhimin_conversion_trigger = yes
+        }
+      }
+    }
+    custom_tooltip = skonester_officials.0013.opt_gm_zhimin_tt
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_self }
+      skonester_convert_character_to_gm_zhimin_effect = yes
+    }
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_vassals }
+      skonester_mass_convert_vassals_to_gm_zhimin_effect = yes
+    }
+    skonester_chenzhi_finish_menu_option_effect = yes
+  }
+  option = {
+    name = skonester_officials.0013.opt_gm_zuzhi
+    trigger = {
+      skonester_actor_has_bianshen_daming_government_access_trigger = yes
+      OR = {
+        AND = {
+          has_character_flag = skonester_chenzhi_target_self
+          NOT = { has_government = zuzhi_government }
+          is_landed = no
+          any_held_title = { tier >= tier_barony }
+        }
+        AND = {
+          has_character_flag = skonester_chenzhi_target_vassals
+          skonester_has_any_vassal_for_gm_zuzhi_conversion_trigger = yes
+        }
+      }
+    }
+    custom_tooltip = skonester_officials.0013.opt_gm_zuzhi_tt
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_self }
+      skonester_convert_character_to_gm_zuzhi_effect = yes
+    }
+    if = {
+      limit = { has_character_flag = skonester_chenzhi_target_vassals }
+      skonester_mass_convert_vassals_to_gm_zuzhi_effect = yes
+    }
+    skonester_chenzhi_finish_menu_option_effect = yes
+  }
+
+  option = {
+    name = skonester_officials.0013.prev_page
+    trigger_event = { id = skonester_officials.0012 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.0011.back
+    skonester_chenzhi_clear_menu_target_flags_effect = yes
+    trigger_event = { id = skonester_officials.0010 days = 0 }
+  }
+
+  option = {
+    name = skonester_officials.0011.close
+    skonester_chenzhi_clear_menu_pending_effect = yes
+  }
+}

@@ -1,0 +1,61 @@
+﻿# AI 铁腕治理年脉冲：抬高直属封臣契约义务（≈高税收档）、条件允许时本人+封臣改行政制（与臣制变动 · EP3 行政线一致）
+
+skonester_ai_ruthless_governance_yearly_effect = {
+  every_vassal = {
+    limit = {
+      vassal_contract_has_modifiable_obligations = yes
+      NOT = { is_at_war_with_liege = yes }
+    }
+    vassal_contract_increase_obligation_level = feudal_government_taxes
+  }
+  every_vassal = {
+    limit = {
+      vassal_contract_has_modifiable_obligations = yes
+      NOT = { is_at_war_with_liege = yes }
+    }
+    vassal_contract_increase_obligation_level = feudal_government_taxes
+  }
+  if = {
+    limit = {
+      NOT = { has_global_variable = skonester_ai_yearly_admin_conversion_disabled }
+      has_ep3_dlc_trigger = yes
+      is_landed = yes
+      NOR = {
+        has_government = administrative_government
+        skonester_protected_from_forced_feudal_conversion_trigger = yes
+        has_government = tribal_government
+        has_government = nomad_government
+        has_government = herder_government
+      }
+    }
+    skonester_convert_character_to_administrative_government_effect = yes
+    skonester_ai_yearly_mass_convert_vassals_to_administrative_effect = yes
+  }
+}
+
+# 年脉冲专用：游牧/部落/牧民宗主不改辖内封臣政体；封臣侧亦排除上述政体，避免游牧封臣被强改行政而脱离宗主。
+skonester_ai_yearly_mass_convert_vassals_to_administrative_effect = {
+  if = {
+    limit = {
+      NOR = {
+        skonester_protected_from_forced_feudal_conversion_trigger = yes
+        has_government = tribal_government
+        has_government = nomad_government
+        has_government = herder_government
+      }
+    }
+    every_vassal_or_below = {
+      limit = {
+        skonester_mass_gov_conversion_target_trigger = yes
+        NOT = { has_government = administrative_government }
+        NOT = { skonester_protected_from_forced_feudal_conversion_trigger = yes }
+        NOR = {
+          has_government = tribal_government
+          has_government = nomad_government
+          has_government = herder_government
+        }
+      }
+      skonester_convert_character_to_administrative_government_effect = yes
+    }
+  }
+}

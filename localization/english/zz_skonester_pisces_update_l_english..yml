@@ -1,0 +1,36 @@
+﻿l_english:
+ cheat_decition_tradition:0 "Establish Cultural Supremacy"
+ cheat_description_tradition:0 "By decree, we shall adopt the wisdom of every corner of the earth. From the Rice Fields of the East to the Longbowmen of the West, our people will know no equal."
+ culture_cheat_tooltip:0 "Over 100 traditions to be established."
+ 
+ # Modifiers
+ culture_acceptance_gain_mult:0 "Cultural Openness"
+ 
+ # Decision Menu
+ yyz_open_menu_decision:0 "Talent Finder Menu"
+ yyz_open_menu_decision_desc:0 "Our current plans require specialized expertise. By formalizing our search for talent, we can ensure that our court remains a destination for the elite, providing us with the skills necessary for success."
+ yyz_open_menu_decision_confirm:0 "Open Menu"
+ yyz_open_menu_decision_tooltip:0 "Initialize the list."
+ 
+ # Traditions
+ tradition_zz_cultural_polygamy_three_wives_name:0 "Cultural Polygamy"
+ tradition_zz_cultural_polygamy_three_wives_desc:0 "In this culture, it is tradition for the highest-ranking rulers to maintain a household of multiple spouses and concubines to ensure a vast and stable lineage."
+ 
+ 
+ 
+ skonester_change_age_interaction:0 "Change Character Age"
+    flag_age_6:0 "6 years old"
+    flag_age_16:0 "16 years old"
+    flag_age_25:0 "25 years old"
+    flag_age_42:0 "42 years old"
+    flag_age_64:0 "64 years old"
+  
+ siege_weapon_max_size_mult:0 "Max Siege Weapon Size"
+  
+ 
+
+ change_govt_steppe_admin:0 "Become a Meritocratic Khagan"
+ change_govt_steppe_admin_desc:0 "Abandon the old ways and embrace the meritocratic traditions of the steppe, ruling through merit and treasury rather than birth and levy."
+ change_govt_steppe_admin_tt:0 "Transform your realm into a Meritocratic Khanate."
+
+ 

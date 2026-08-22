@@ -1,0 +1,12 @@
+﻿# 窃宝列表翻页：当前页起始下标 = 页号 × 3（与 skonester_cheat_menu.3094 每页选项数一致）
+
+skonester_steal_page_offset_value = {
+  value = var:skonester_steal_page
+  multiply = 3
+}
+
+skonester_steal_next_page_min_total_value = {
+  value = var:skonester_steal_page
+  add = 1
+  multiply = 3
+}

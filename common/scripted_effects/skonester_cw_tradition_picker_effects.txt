@@ -1,0 +1,30 @@
+﻿# Clears global tradition category lists before picker rebuild (advcm pattern).
+# GUI 列表构建：打开时 category=debug 遍历传统（advcm 同款），_show 结束后切 realm；显隐用 VariableSystem。
+skonester_cw_clear_tradition_picker_lists_effect = {
+  clear_global_variable_list = skonester_cw_realm_tradition_list
+  clear_global_variable_list = skonester_cw_combat_tradition_list
+  clear_global_variable_list = skonester_cw_societal_tradition_list
+  clear_global_variable_list = skonester_cw_ritual_tradition_list
+  clear_global_variable_list = skonester_cw_regional_tradition_list
+}
+
+# 文化侧栏「+」：写入目标文化并打开独立传统 GUI（scripted_widget）
+skonester_cw_open_tradition_picker_effect = {
+  if = {
+    limit = { exists = scope:culture }
+    scope:culture = {
+      save_scope_as = skonester_selected_culture
+    }
+    set_variable = {
+      name = skonester_selected_culture_var
+      value = scope:culture
+    }
+  }
+  else_if = {
+    limit = { exists = var:skonester_selected_culture_var }
+    var:skonester_selected_culture_var = {
+      save_scope_as = skonester_selected_culture
+    }
+  }
+  skonester_cw_build_tradition_picker_lists_effect = yes
+}

@@ -1,0 +1,147 @@
+﻿# Skonester菜单 · 威慑天下：恐怖值锁定 100；直属封臣畏服、禁派系；封臣好感冻结
+
+skonester_cheat_menu_lock_dread_at_100_effect = {
+  if = {
+    limit = { dread < 100 }
+    while = {
+      count = 150
+      limit = { dread < 100 }
+      add_dread = 1
+    }
+  }
+  if = {
+    limit = { dread > 100 }
+    while = {
+      count = 150
+      limit = { dread > 100 }
+      add_dread = -1
+    }
+  }
+}
+
+skonester_cheat_menu_save_world_deterrence_opinion_effect = {
+  if = {
+    limit = { NOT = { has_variable = skonester_world_deterrence_opinion_saved } }
+    set_variable = {
+      name = skonester_world_deterrence_opinion_saved
+      value = "opinion(scope:skonester_deterrence_liege)"
+    }
+  }
+}
+
+skonester_cheat_menu_restore_world_deterrence_opinion_effect = {
+  if = {
+    limit = { has_variable = skonester_world_deterrence_opinion_saved }
+    set_variable = {
+      name = skonester_world_deterrence_opinion_delta
+      value = var:skonester_world_deterrence_opinion_saved
+      subtract = "opinion(scope:skonester_deterrence_liege)"
+    }
+    if = {
+      limit = { NOT = { var:skonester_world_deterrence_opinion_delta = 0 } }
+      add_opinion = {
+        target = scope:skonester_deterrence_liege
+        opinion = { value = var:skonester_world_deterrence_opinion_delta }
+      }
+    }
+    remove_variable = skonester_world_deterrence_opinion_delta
+  }
+}
+
+skonester_cheat_menu_apply_world_deterrence_on_vassal_effect = {
+  scope:skonester_deterrence_vassal = {
+    remove_opinion = {
+      target = scope:skonester_deterrence_liege
+      modifier = skonester_world_deterrence_fear_opinion
+    }
+    skonester_cheat_menu_save_world_deterrence_opinion_effect = yes
+    skonester_cheat_menu_strong_deterrence_leave_factions_vs_liege_effect = yes
+    skonester_cheat_menu_strong_deterrence_end_wars_vs_liege_effect = yes
+    if = {
+      limit = { NOT = { has_character_flag = joining_faction_block } }
+      add_character_flag = joining_faction_block
+    }
+    if = {
+      limit = { NOT = { has_character_flag = skonester_world_deterrence_vassal } }
+      add_character_flag = skonester_world_deterrence_vassal
+    }
+    set_variable = {
+      name = skonester_world_deterrence_liege
+      value = scope:skonester_deterrence_liege
+    }
+  }
+  scope:skonester_deterrence_liege = {
+    skonester_cheat_menu_strong_deterrence_give_liege_hook_effect = yes
+  }
+}
+
+skonester_cheat_menu_apply_world_deterrence_direct_vassals_effect = {
+  every_vassal = {
+    limit = { is_alive = yes }
+    save_scope_as = skonester_deterrence_vassal
+    skonester_cheat_menu_apply_world_deterrence_on_vassal_effect = yes
+  }
+}
+
+skonester_cheat_menu_apply_world_deterrence_effect = {
+  scope:actor = {
+    save_scope_as = skonester_deterrence_liege
+    if = {
+      limit = { NOT = { has_character_flag = skonester_world_deterrence_active } }
+      add_character_flag = skonester_world_deterrence_active
+    }
+    if = {
+      limit = { NOT = { has_character_modifier = skonester_world_deterrence_aura } }
+      add_character_modifier = {
+        modifier = skonester_world_deterrence_aura
+      }
+    }
+    skonester_cheat_menu_lock_dread_at_100_effect = yes
+    skonester_cheat_menu_apply_world_deterrence_direct_vassals_effect = yes
+    send_interface_toast = {
+      type = event_toast_effect_good
+      title = skonester_world_deterrence_toast_title
+      desc = skonester_world_deterrence_toast_desc
+      left_icon = scope:actor
+    }
+  }
+}
+
+# 月度：维持恐怖值 100、为新直属封臣补效果、冻结好感
+skonester_cheat_menu_world_deterrence_monthly_on_liege_effect = {
+  if = {
+    limit = { has_character_flag = skonester_world_deterrence_active }
+    root = { save_scope_as = skonester_deterrence_liege }
+    skonester_cheat_menu_lock_dread_at_100_effect = yes
+    if = {
+      limit = { NOT = { has_character_modifier = skonester_world_deterrence_aura } }
+      add_character_modifier = {
+        modifier = skonester_world_deterrence_aura
+      }
+    }
+    every_vassal = {
+      limit = {
+        is_alive = yes
+        OR = {
+          NOT = { has_character_flag = skonester_world_deterrence_vassal }
+          NOT = {
+            var:skonester_world_deterrence_liege ?= scope:skonester_deterrence_liege
+          }
+        }
+      }
+      save_scope_as = skonester_deterrence_vassal
+      skonester_cheat_menu_apply_world_deterrence_on_vassal_effect = yes
+    }
+    every_vassal = {
+      limit = {
+        is_alive = yes
+        has_character_flag = skonester_world_deterrence_vassal
+        var:skonester_world_deterrence_liege ?= scope:skonester_deterrence_liege
+      }
+      save_scope_as = skonester_deterrence_vassal
+      skonester_cheat_menu_restore_world_deterrence_opinion_effect = yes
+      skonester_cheat_menu_strong_deterrence_leave_factions_vs_liege_effect = yes
+      skonester_cheat_menu_strong_deterrence_end_wars_vs_liege_effect = yes
+    }
+  }
+}

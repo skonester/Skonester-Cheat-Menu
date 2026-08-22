@@ -1,0 +1,653 @@
+﻿# 宝物制作独立 GUI：与 skonester_cheat_menu.0031–0038 事件选项相同的旗帜切换（供 scripted_gui 调用）
+
+skonester_acm_set_kind_weapon_sword_effect = {
+  skonester_acm_clear_all_craft_subtype_flags_effect = yes
+  remove_character_flag = skonester_artifact_kind_armor
+  remove_character_flag = skonester_artifact_kind_crown
+  remove_character_flag = skonester_artifact_kind_regalia
+  remove_character_flag = skonester_artifact_kind_trinket
+  remove_character_flag = skonester_artifact_kind_book
+  remove_character_flag = skonester_artifact_kind_court
+  add_character_flag = skonester_artifact_kind_weapon
+  add_character_flag = skonester_artifact_kind_set
+  remove_character_flag = skonester_artifact_subtype_axe
+  remove_character_flag = skonester_artifact_subtype_spear
+  add_character_flag = skonester_artifact_subtype_sword
+  add_character_flag = skonester_artifact_subtype_set
+}
+
+skonester_acm_set_kind_weapon_axe_effect = {
+  skonester_acm_clear_all_craft_subtype_flags_effect = yes
+  remove_character_flag = skonester_artifact_kind_armor
+  remove_character_flag = skonester_artifact_kind_crown
+  remove_character_flag = skonester_artifact_kind_regalia
+  remove_character_flag = skonester_artifact_kind_trinket
+  remove_character_flag = skonester_artifact_kind_book
+  remove_character_flag = skonester_artifact_kind_court
+  add_character_flag = skonester_artifact_kind_weapon
+  add_character_flag = skonester_artifact_kind_set
+  remove_character_flag = skonester_artifact_subtype_sword
+  remove_character_flag = skonester_artifact_subtype_spear
+  add_character_flag = skonester_artifact_subtype_axe
+  add_character_flag = skonester_artifact_subtype_set
+}
+
+skonester_acm_set_kind_weapon_spear_effect = {
+  skonester_acm_clear_all_craft_subtype_flags_effect = yes
+  remove_character_flag = skonester_artifact_kind_armor
+  remove_character_flag = skonester_artifact_kind_crown
+  remove_character_flag = skonester_artifact_kind_regalia
+  remove_character_flag = skonester_artifact_kind_trinket
+  remove_character_flag = skonester_artifact_kind_book
+  remove_character_flag = skonester_artifact_kind_court
+  add_character_flag = skonester_artifact_kind_weapon
+  add_character_flag = skonester_artifact_kind_set
+  remove_character_flag = skonester_artifact_subtype_sword
+  remove_character_flag = skonester_artifact_subtype_axe
+  add_character_flag = skonester_artifact_subtype_spear
+  add_character_flag = skonester_artifact_subtype_set
+}
+
+skonester_acm_set_kind_armor_effect = {
+  skonester_acm_clear_all_craft_subtype_flags_effect = yes
+  remove_character_flag = skonester_artifact_subtype_sword
+  remove_character_flag = skonester_artifact_subtype_axe
+  remove_character_flag = skonester_artifact_subtype_spear
+  remove_character_flag = skonester_artifact_kind_weapon
+  remove_character_flag = skonester_artifact_kind_crown
+  remove_character_flag = skonester_artifact_kind_regalia
+  remove_character_flag = skonester_artifact_kind_trinket
+  remove_character_flag = skonester_artifact_kind_book
+  remove_character_flag = skonester_artifact_kind_court
+  add_character_flag = skonester_artifact_kind_armor
+  add_character_flag = skonester_artifact_kind_set
+  add_character_flag = skonester_artifact_subtype_set
+  add_character_flag = skonester_acm_arm_plate
+}
+
+skonester_acm_set_kind_crown_effect = {
+  skonester_acm_clear_all_craft_subtype_flags_effect = yes
+  remove_character_flag = skonester_artifact_subtype_sword
+  remove_character_flag = skonester_artifact_subtype_axe
+  remove_character_flag = skonester_artifact_subtype_spear
+  remove_character_flag = skonester_artifact_kind_weapon
+  remove_character_flag = skonester_artifact_kind_armor
+  remove_character_flag = skonester_artifact_kind_regalia
+  remove_character_flag = skonester_artifact_kind_trinket
+  remove_character_flag = skonester_artifact_kind_book
+  remove_character_flag = skonester_artifact_kind_court
+  add_character_flag = skonester_artifact_kind_crown
+  add_character_flag = skonester_artifact_kind_set
+  add_character_flag = skonester_artifact_subtype_set
+  add_character_flag = skonester_acm_crown_kingdom
+}
+
+skonester_acm_set_kind_regalia_effect = {
+  skonester_acm_clear_all_craft_subtype_flags_effect = yes
+  remove_character_flag = skonester_artifact_subtype_sword
+  remove_character_flag = skonester_artifact_subtype_axe
+  remove_character_flag = skonester_artifact_subtype_spear
+  remove_character_flag = skonester_artifact_kind_weapon
+  remove_character_flag = skonester_artifact_kind_armor
+  remove_character_flag = skonester_artifact_kind_crown
+  remove_character_flag = skonester_artifact_kind_trinket
+  remove_character_flag = skonester_artifact_kind_book
+  remove_character_flag = skonester_artifact_kind_court
+  add_character_flag = skonester_artifact_kind_regalia
+  add_character_flag = skonester_artifact_kind_set
+  add_character_flag = skonester_artifact_subtype_set
+  add_character_flag = skonester_acm_reg_scepter
+}
+
+skonester_acm_set_kind_trinket_effect = {
+  skonester_acm_clear_all_craft_subtype_flags_effect = yes
+  remove_character_flag = skonester_artifact_subtype_sword
+  remove_character_flag = skonester_artifact_subtype_axe
+  remove_character_flag = skonester_artifact_subtype_spear
+  remove_character_flag = skonester_artifact_kind_weapon
+  remove_character_flag = skonester_artifact_kind_armor
+  remove_character_flag = skonester_artifact_kind_crown
+  remove_character_flag = skonester_artifact_kind_regalia
+  remove_character_flag = skonester_artifact_kind_book
+  remove_character_flag = skonester_artifact_kind_court
+  add_character_flag = skonester_artifact_kind_trinket
+  add_character_flag = skonester_artifact_kind_set
+  add_character_flag = skonester_artifact_subtype_set
+  add_character_flag = skonester_acm_trink_ring
+}
+
+skonester_acm_set_kind_book_effect = {
+  skonester_acm_clear_all_craft_subtype_flags_effect = yes
+  remove_character_flag = skonester_artifact_subtype_sword
+  remove_character_flag = skonester_artifact_subtype_axe
+  remove_character_flag = skonester_artifact_subtype_spear
+  remove_character_flag = skonester_artifact_kind_weapon
+  remove_character_flag = skonester_artifact_kind_armor
+  remove_character_flag = skonester_artifact_kind_crown
+  remove_character_flag = skonester_artifact_kind_regalia
+  remove_character_flag = skonester_artifact_kind_trinket
+  remove_character_flag = skonester_artifact_kind_court
+  add_character_flag = skonester_artifact_kind_book
+  add_character_flag = skonester_artifact_kind_set
+  add_character_flag = skonester_artifact_subtype_set
+  add_character_flag = skonester_acm_book_martial
+}
+
+skonester_acm_set_kind_court_effect = {
+  skonester_acm_clear_all_craft_subtype_flags_effect = yes
+  remove_character_flag = skonester_artifact_subtype_sword
+  remove_character_flag = skonester_artifact_subtype_axe
+  remove_character_flag = skonester_artifact_subtype_spear
+  remove_character_flag = skonester_artifact_kind_weapon
+  remove_character_flag = skonester_artifact_kind_armor
+  remove_character_flag = skonester_artifact_kind_crown
+  remove_character_flag = skonester_artifact_kind_regalia
+  remove_character_flag = skonester_artifact_kind_trinket
+  remove_character_flag = skonester_artifact_kind_book
+  add_character_flag = skonester_artifact_kind_court
+  add_character_flag = skonester_artifact_kind_set
+  add_character_flag = skonester_artifact_subtype_set
+  add_character_flag = skonester_acm_crt_throne_gold
+}
+
+skonester_acm_set_quality_common_effect = {
+  remove_character_flag = skonester_artifact_quality_masterwork
+  remove_character_flag = skonester_artifact_quality_famed
+  remove_character_flag = skonester_artifact_quality_illustrious
+  add_character_flag = skonester_artifact_quality_common
+  add_character_flag = skonester_artifact_quality_set
+  set_variable = { name = skonester_acm_craft_quality_wealth value = 10 }
+  skonester_acm_sync_craft_layer_quality_effect = yes
+  skonester_acm_clamp_craft_slot_layers_to_quality_effect = yes
+}
+
+skonester_acm_set_quality_masterwork_effect = {
+  remove_character_flag = skonester_artifact_quality_common
+  remove_character_flag = skonester_artifact_quality_famed
+  remove_character_flag = skonester_artifact_quality_illustrious
+  add_character_flag = skonester_artifact_quality_masterwork
+  add_character_flag = skonester_artifact_quality_set
+  set_variable = { name = skonester_acm_craft_quality_wealth value = 100 }
+  skonester_acm_sync_craft_layer_quality_effect = yes
+  skonester_acm_clamp_craft_slot_layers_to_quality_effect = yes
+}
+
+skonester_acm_set_quality_famed_effect = {
+  remove_character_flag = skonester_artifact_quality_common
+  remove_character_flag = skonester_artifact_quality_masterwork
+  remove_character_flag = skonester_artifact_quality_illustrious
+  add_character_flag = skonester_artifact_quality_famed
+  add_character_flag = skonester_artifact_quality_set
+  set_variable = { name = skonester_acm_craft_quality_wealth value = 250 }
+  skonester_acm_sync_craft_layer_quality_effect = yes
+  skonester_acm_clamp_craft_slot_layers_to_quality_effect = yes
+}
+
+skonester_acm_set_quality_illustrious_effect = {
+  remove_character_flag = skonester_artifact_quality_common
+  remove_character_flag = skonester_artifact_quality_masterwork
+  remove_character_flag = skonester_artifact_quality_famed
+  add_character_flag = skonester_artifact_quality_illustrious
+  add_character_flag = skonester_artifact_quality_set
+  set_variable = { name = skonester_acm_craft_quality_wealth value = 500 }
+  skonester_acm_sync_craft_layer_quality_effect = yes
+  skonester_acm_clamp_craft_slot_layers_to_quality_effect = yes
+}
+
+skonester_acm_toggle_give_recipient_effect = {
+  if = {
+    limit = { has_character_flag = skonester_craft_give_to_recipient }
+    remove_character_flag = skonester_craft_give_to_recipient
+  }
+  else = {
+    add_character_flag = skonester_craft_give_to_recipient
+  }
+}
+
+skonester_acm_cycle_craft_m1_effect = {
+  if = {
+    limit = { NOT = { has_variable = skonester_craft_m1 } }
+    set_variable = { name = skonester_craft_m1 value = 0 }
+  }
+  change_variable = { name = skonester_craft_m1 add = 1 }
+  if = {
+    limit = { var:skonester_craft_m1 > 64 }
+    set_variable = { name = skonester_craft_m1 value = 0 }
+  }
+  if = {
+    limit = { var:skonester_craft_m1 = 0 }
+    set_variable = { name = skonester_craft_m1_cnt value = 0 }
+  }
+  if = {
+    limit = { NOT = { var:skonester_craft_m1 = 0 } }
+    if = {
+      limit = {
+        OR = {
+          NOT = { has_variable = skonester_craft_m1_cnt }
+          var:skonester_craft_m1_cnt = 0
+        }
+      }
+      set_variable = { name = skonester_craft_m1_cnt value = 1 }
+    }
+  }
+}
+
+skonester_acm_cycle_craft_m2_effect = {
+  if = {
+    limit = { NOT = { has_variable = skonester_craft_m2 } }
+    set_variable = { name = skonester_craft_m2 value = 0 }
+  }
+  change_variable = { name = skonester_craft_m2 add = 1 }
+  if = {
+    limit = { var:skonester_craft_m2 > 64 }
+    set_variable = { name = skonester_craft_m2 value = 0 }
+  }
+  if = {
+    limit = { var:skonester_craft_m2 = 0 }
+    set_variable = { name = skonester_craft_m2_cnt value = 0 }
+  }
+  if = {
+    limit = { NOT = { var:skonester_craft_m2 = 0 } }
+    if = {
+      limit = {
+        OR = {
+          NOT = { has_variable = skonester_craft_m2_cnt }
+          var:skonester_craft_m2_cnt = 0
+        }
+      }
+      set_variable = { name = skonester_craft_m2_cnt value = 1 }
+    }
+  }
+}
+
+skonester_acm_cycle_craft_m3_effect = {
+  if = {
+    limit = { NOT = { has_variable = skonester_craft_m3 } }
+    set_variable = { name = skonester_craft_m3 value = 0 }
+  }
+  change_variable = { name = skonester_craft_m3 add = 1 }
+  if = {
+    limit = { var:skonester_craft_m3 > 64 }
+    set_variable = { name = skonester_craft_m3 value = 0 }
+  }
+  if = {
+    limit = { var:skonester_craft_m3 = 0 }
+    set_variable = { name = skonester_craft_m3_cnt value = 0 }
+  }
+  if = {
+    limit = { NOT = { var:skonester_craft_m3 = 0 } }
+    if = {
+      limit = {
+        OR = {
+          NOT = { has_variable = skonester_craft_m3_cnt }
+          var:skonester_craft_m3_cnt = 0
+        }
+      }
+      set_variable = { name = skonester_craft_m3_cnt value = 1 }
+    }
+  }
+}
+
+skonester_acm_cycle_craft_m4_effect = {
+  if = {
+    limit = { NOT = { has_variable = skonester_craft_m4 } }
+    set_variable = { name = skonester_craft_m4 value = 0 }
+  }
+  change_variable = { name = skonester_craft_m4 add = 1 }
+  if = {
+    limit = { var:skonester_craft_m4 > 64 }
+    set_variable = { name = skonester_craft_m4 value = 0 }
+  }
+  if = {
+    limit = { var:skonester_craft_m4 = 0 }
+    set_variable = { name = skonester_craft_m4_cnt value = 0 }
+  }
+  if = {
+    limit = { NOT = { var:skonester_craft_m4 = 0 } }
+    if = {
+      limit = {
+        OR = {
+          NOT = { has_variable = skonester_craft_m4_cnt }
+          var:skonester_craft_m4_cnt = 0
+        }
+      }
+      set_variable = { name = skonester_craft_m4_cnt value = 1 }
+    }
+  }
+}
+
+skonester_acm_cycle_craft_m5_effect = {
+  if = {
+    limit = { NOT = { has_variable = skonester_craft_m5 } }
+    set_variable = { name = skonester_craft_m5 value = 0 }
+  }
+  change_variable = { name = skonester_craft_m5 add = 1 }
+  if = {
+    limit = { var:skonester_craft_m5 > 64 }
+    set_variable = { name = skonester_craft_m5 value = 0 }
+  }
+  if = {
+    limit = { var:skonester_craft_m5 = 0 }
+    set_variable = { name = skonester_craft_m5_cnt value = 0 }
+  }
+  if = {
+    limit = { NOT = { var:skonester_craft_m5 = 0 } }
+    if = {
+      limit = {
+        OR = {
+          NOT = { has_variable = skonester_craft_m5_cnt }
+          var:skonester_craft_m5_cnt = 0
+        }
+      }
+      set_variable = { name = skonester_craft_m5_cnt value = 1 }
+    }
+  }
+}
+
+# 事件链等仍可用 m6（无层数 GUI）
+skonester_acm_cycle_craft_m6_effect = {
+  if = {
+    limit = { NOT = { has_variable = skonester_craft_m6 } }
+    set_variable = { name = skonester_craft_m6 value = 0 }
+  }
+  change_variable = { name = skonester_craft_m6 add = 1 }
+  if = {
+    limit = { var:skonester_craft_m6 > 64 }
+    set_variable = { name = skonester_craft_m6 value = 0 }
+  }
+}
+
+skonester_acm_inc_craft_m1_cnt_effect = {
+  if = {
+    limit = { NOT = { var:skonester_craft_m1 = 0 } }
+    skonester_acm_sync_craft_layer_quality_effect = yes
+    if = {
+      limit = { NOT = { has_variable = skonester_craft_m1_cnt } }
+      set_variable = {
+        name = skonester_craft_m1_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+    if = {
+      limit = {
+        var:skonester_craft_m1_cnt < var:skonester_craft_quality_min_layers
+      }
+      set_variable = {
+        name = skonester_craft_m1_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+    change_variable = { name = skonester_craft_m1_cnt add = 1 }
+    if = {
+      limit = { var:skonester_craft_m1_cnt > 999 }
+      set_variable = { name = skonester_craft_m1_cnt value = 999 }
+    }
+  }
+}
+
+skonester_acm_dec_craft_m1_cnt_effect = {
+  if = {
+    limit = { NOT = { var:skonester_craft_m1 = 0 } }
+    skonester_acm_sync_craft_layer_quality_effect = yes
+    if = {
+      limit = { NOT = { has_variable = skonester_craft_m1_cnt } }
+      set_variable = {
+        name = skonester_craft_m1_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+    change_variable = { name = skonester_craft_m1_cnt add = -1 }
+    if = {
+      limit = { var:skonester_craft_m1_cnt < var:skonester_craft_quality_min_layers }
+      set_variable = {
+        name = skonester_craft_m1_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+  }
+}
+
+skonester_acm_inc_craft_m2_cnt_effect = {
+  if = {
+    limit = { NOT = { var:skonester_craft_m2 = 0 } }
+    skonester_acm_sync_craft_layer_quality_effect = yes
+    if = {
+      limit = { NOT = { has_variable = skonester_craft_m2_cnt } }
+      set_variable = {
+        name = skonester_craft_m2_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+    if = {
+      limit = {
+        var:skonester_craft_m2_cnt < var:skonester_craft_quality_min_layers
+      }
+      set_variable = {
+        name = skonester_craft_m2_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+    change_variable = { name = skonester_craft_m2_cnt add = 1 }
+    if = {
+      limit = { var:skonester_craft_m2_cnt > 999 }
+      set_variable = { name = skonester_craft_m2_cnt value = 999 }
+    }
+  }
+}
+
+skonester_acm_dec_craft_m2_cnt_effect = {
+  if = {
+    limit = { NOT = { var:skonester_craft_m2 = 0 } }
+    skonester_acm_sync_craft_layer_quality_effect = yes
+    if = {
+      limit = { NOT = { has_variable = skonester_craft_m2_cnt } }
+      set_variable = {
+        name = skonester_craft_m2_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+    change_variable = { name = skonester_craft_m2_cnt add = -1 }
+    if = {
+      limit = { var:skonester_craft_m2_cnt < var:skonester_craft_quality_min_layers }
+      set_variable = {
+        name = skonester_craft_m2_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+  }
+}
+
+skonester_acm_inc_craft_m3_cnt_effect = {
+  if = {
+    limit = { NOT = { var:skonester_craft_m3 = 0 } }
+    skonester_acm_sync_craft_layer_quality_effect = yes
+    if = {
+      limit = { NOT = { has_variable = skonester_craft_m3_cnt } }
+      set_variable = {
+        name = skonester_craft_m3_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+    if = {
+      limit = {
+        var:skonester_craft_m3_cnt < var:skonester_craft_quality_min_layers
+      }
+      set_variable = {
+        name = skonester_craft_m3_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+    change_variable = { name = skonester_craft_m3_cnt add = 1 }
+    if = {
+      limit = { var:skonester_craft_m3_cnt > 999 }
+      set_variable = { name = skonester_craft_m3_cnt value = 999 }
+    }
+  }
+}
+
+skonester_acm_dec_craft_m3_cnt_effect = {
+  if = {
+    limit = { NOT = { var:skonester_craft_m3 = 0 } }
+    skonester_acm_sync_craft_layer_quality_effect = yes
+    if = {
+      limit = { NOT = { has_variable = skonester_craft_m3_cnt } }
+      set_variable = {
+        name = skonester_craft_m3_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+    change_variable = { name = skonester_craft_m3_cnt add = -1 }
+    if = {
+      limit = { var:skonester_craft_m3_cnt < var:skonester_craft_quality_min_layers }
+      set_variable = {
+        name = skonester_craft_m3_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+  }
+}
+
+skonester_acm_inc_craft_m4_cnt_effect = {
+  if = {
+    limit = { NOT = { var:skonester_craft_m4 = 0 } }
+    skonester_acm_sync_craft_layer_quality_effect = yes
+    if = {
+      limit = { NOT = { has_variable = skonester_craft_m4_cnt } }
+      set_variable = {
+        name = skonester_craft_m4_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+    if = {
+      limit = {
+        var:skonester_craft_m4_cnt < var:skonester_craft_quality_min_layers
+      }
+      set_variable = {
+        name = skonester_craft_m4_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+    change_variable = { name = skonester_craft_m4_cnt add = 1 }
+    if = {
+      limit = { var:skonester_craft_m4_cnt > 999 }
+      set_variable = { name = skonester_craft_m4_cnt value = 999 }
+    }
+  }
+}
+
+skonester_acm_dec_craft_m4_cnt_effect = {
+  if = {
+    limit = { NOT = { var:skonester_craft_m4 = 0 } }
+    skonester_acm_sync_craft_layer_quality_effect = yes
+    if = {
+      limit = { NOT = { has_variable = skonester_craft_m4_cnt } }
+      set_variable = {
+        name = skonester_craft_m4_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+    change_variable = { name = skonester_craft_m4_cnt add = -1 }
+    if = {
+      limit = { var:skonester_craft_m4_cnt < var:skonester_craft_quality_min_layers }
+      set_variable = {
+        name = skonester_craft_m4_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+  }
+}
+
+skonester_acm_inc_craft_m5_cnt_effect = {
+  if = {
+    limit = { NOT = { var:skonester_craft_m5 = 0 } }
+    skonester_acm_sync_craft_layer_quality_effect = yes
+    if = {
+      limit = { NOT = { has_variable = skonester_craft_m5_cnt } }
+      set_variable = {
+        name = skonester_craft_m5_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+    if = {
+      limit = {
+        var:skonester_craft_m5_cnt < var:skonester_craft_quality_min_layers
+      }
+      set_variable = {
+        name = skonester_craft_m5_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+    change_variable = { name = skonester_craft_m5_cnt add = 1 }
+    if = {
+      limit = { var:skonester_craft_m5_cnt > 999 }
+      set_variable = { name = skonester_craft_m5_cnt value = 999 }
+    }
+  }
+}
+
+skonester_acm_dec_craft_m5_cnt_effect = {
+  if = {
+    limit = { NOT = { var:skonester_craft_m5 = 0 } }
+    skonester_acm_sync_craft_layer_quality_effect = yes
+    if = {
+      limit = { NOT = { has_variable = skonester_craft_m5_cnt } }
+      set_variable = {
+        name = skonester_craft_m5_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+    change_variable = { name = skonester_craft_m5_cnt add = -1 }
+    if = {
+      limit = { var:skonester_craft_m5_cnt < var:skonester_craft_quality_min_layers }
+      set_variable = {
+        name = skonester_craft_m5_cnt
+        value = var:skonester_craft_quality_min_layers
+      }
+    }
+  }
+}
+
+# 旧 GUI 旗帜 → skonester_acm_artifact_type（create 分支用）；须在 scope:actor 上调用
+skonester_acm_sync_gui_kind_to_artifact_type_effect = {
+  if = {
+    limit = { has_character_flag = skonester_artifact_subtype_sword }
+    set_variable = { name = skonester_acm_artifact_type value = flag:skonester_acm_sword }
+  }
+  else_if = {
+    limit = { has_character_flag = skonester_artifact_subtype_axe }
+    set_variable = { name = skonester_acm_artifact_type value = flag:skonester_acm_axe }
+  }
+  else_if = {
+    limit = { has_character_flag = skonester_artifact_subtype_spear }
+    set_variable = { name = skonester_acm_artifact_type value = flag:skonester_acm_spear }
+  }
+  else_if = {
+    limit = { has_character_flag = skonester_artifact_kind_armor }
+    set_variable = { name = skonester_acm_artifact_type value = flag:skonester_acm_armor }
+  }
+  else_if = {
+    limit = { has_character_flag = skonester_artifact_kind_crown }
+    set_variable = { name = skonester_acm_artifact_type value = flag:skonester_acm_crown }
+  }
+  else_if = {
+    limit = { has_character_flag = skonester_artifact_kind_regalia }
+    set_variable = { name = skonester_acm_artifact_type value = flag:skonester_acm_regalia }
+  }
+  else_if = {
+    limit = { has_character_flag = skonester_artifact_kind_trinket }
+    set_variable = { name = skonester_acm_artifact_type value = flag:skonester_acm_necklace }
+  }
+  else_if = {
+    limit = { has_character_flag = skonester_artifact_kind_book }
+    # advcm 类型表无 book，暂用 goblet 模板生成典籍外形宝物
+    set_variable = { name = skonester_acm_artifact_type value = flag:skonester_acm_goblet }
+  }
+  else_if = {
+    limit = { has_character_flag = skonester_artifact_kind_court }
+    set_variable = { name = skonester_acm_artifact_type value = flag:skonester_acm_throne }
+  }
+  else_if = {
+    limit = { has_character_flag = skonester_artifact_kind_weapon }
+    set_variable = { name = skonester_acm_artifact_type value = flag:skonester_acm_sword }
+  }
+}

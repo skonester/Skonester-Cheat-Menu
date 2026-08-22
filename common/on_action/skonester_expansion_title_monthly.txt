@@ -1,0 +1,39 @@
+﻿# 扩张/权限帝号：每月校正修正 + 破停战 + 增发约 5000 常备
+
+monthly_global_pulse = {
+  on_actions = {
+    skonester_expansion_title_modifiers_monthly_pulse
+    skonester_authority_title_modifiers_monthly_pulse
+    skonester_titular_supremacy_monthly_pulse
+  }
+}
+
+skonester_expansion_title_modifiers_monthly_pulse = {
+  effect = {
+    every_living_character = {
+      limit = { skonester_holds_any_expansion_titular_title_trigger = yes }
+      skonester_sync_expansion_title_holder_modifiers_effect = yes
+    }
+  }
+}
+
+skonester_authority_title_modifiers_monthly_pulse = {
+  effect = {
+    every_living_character = {
+      limit = { skonester_holds_any_authority_titular_title_trigger = yes }
+      skonester_sync_authority_title_holder_modifiers_effect = yes
+    }
+  }
+}
+
+skonester_titular_supremacy_monthly_pulse = {
+  effect = {
+    every_living_character = {
+      limit = {
+        is_alive = yes
+        skonester_holds_any_cheat_titular_title_trigger = yes
+      }
+      skonester_titular_supremacy_monthly_pulse_effect = yes
+    }
+  }
+}

@@ -1,0 +1,110 @@
+﻿# 班禄澄叙：凡顶层领主麾下、伯爵领主及以上的有地封臣（总督/内阁/封建/行政等不限政体）
+
+skonester_is_official_subject_to_land_cap_trigger = {
+  is_landed = yes
+  highest_held_title_tier >= tier_county
+  NOT = { this = root }
+  top_liege = root
+  NOR = {
+    is_imprisoned = yes
+    is_incapable = yes
+  }
+}
+
+# 仍持多余头衔（多块伯爵领，或非主衔的公/王/帝）
+
+skonester_official_needs_land_cap_enforcement_trigger = {
+  skonester_is_official_subject_to_land_cap_trigger = yes
+  OR = {
+    calc_true_if = {
+      amount >= 2
+      any_held_title = {
+        tier = tier_county
+        is_noble_family_title = no
+        is_leased_out = no
+      }
+    }
+    any_held_title = {
+      OR = {
+        tier = tier_duchy
+        tier = tier_kingdom
+        tier = tier_empire
+      }
+      NOT = { this = primary_title }
+      is_noble_family_title = no
+      is_landless_type_title = no
+    }
+  }
+}
+
+# 决议用：疆域内至少一名上述封臣仍须整理
+
+skonester_has_any_official_for_land_cap_decision_trigger = {
+  any_vassal_or_below = {
+    skonester_official_needs_land_cap_enforcement_trigger = yes
+  }
+}
+
+# 剥衔受赠人：不可为被整顿者本人，亦不可为顶层领主（玩家）
+
+skonester_land_cap_valid_grantee_character_trigger = {
+  NOT = { this = scope:skonester_off }
+  NOT = { this = scope:skonester_off.top_liege }
+  is_alive = yes
+  can_be_granted_titles_by = {
+    RULER = scope:skonester_off
+  }
+}
+
+skonester_land_cap_grantee_needs_fallback_trigger = {
+  OR = {
+    NOT = { exists = scope:skonester_land_cap_grantee }
+    scope:skonester_land_cap_grantee = scope:skonester_off.top_liege
+  }
+}
+
+# 一键洗地：辖内伯爵领与公国及以上收归 root（不含世族、租出、无地类型头衔）
+
+skonester_realm_title_needs_reclaim_to_root_trigger = {
+  is_noble_family_title = no
+  is_landless_type_title = no
+  is_leased_out = no
+  exists = holder
+  NOT = { holder = root }
+  holder = {
+    top_liege = root
+    NOT = { is_at_war_with = root }
+  }
+  OR = {
+    tier >= tier_duchy
+    AND = {
+      tier = tier_county
+      OR = {
+        root = { is_landed = yes }
+        root = {
+          NOR = {
+            government_has_flag = government_is_celestial
+            government_has_flag = government_is_meritocratic
+          }
+        }
+      }
+    }
+  }
+}
+
+skonester_has_realm_strip_work_remaining_trigger = {
+  OR = {
+    any_sub_realm_county = {
+      skonester_realm_title_needs_reclaim_to_root_trigger = yes
+    }
+    any_vassal_or_below = {
+      any_held_title = {
+        skonester_realm_title_needs_reclaim_to_root_trigger = yes
+      }
+    }
+  }
+}
+
+skonester_has_any_landed_vassal_for_strip_decision_trigger = {
+  skonester_has_realm_strip_work_remaining_trigger = yes
+}

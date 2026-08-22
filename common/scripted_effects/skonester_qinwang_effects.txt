@@ -1,0 +1,168 @@
+﻿# 知晓秘密互动窗口；开启「椒房护持」时为配偶与妾室赋予忠贞相关特质
+
+skonester_seduce_shield_grant_chastity_traits_to_consorts_effect = {
+  root = {
+    every_spouse = {
+      limit = {
+        is_alive = yes
+      }
+      if = {
+        limit = {
+          NOT = { has_trait = chaste }
+        }
+        add_trait = chaste
+      }
+      if = {
+        limit = {
+          NOT = { has_trait = loyal }
+        }
+        add_trait = loyal
+      }
+    }
+    every_concubine = {
+      limit = {
+        is_alive = yes
+      }
+      if = {
+        limit = {
+          NOT = { has_trait = chaste }
+        }
+        add_trait = chaste
+      }
+      if = {
+        limit = {
+          NOT = { has_trait = loyal }
+        }
+        add_trait = loyal
+      }
+    }
+  }
+}
+
+# 椒房护持：解除配偶、妾与「非家主 root」的恋人关系（含 AI），防事件/秘密绕开密谋
+skonester_seduce_shield_strip_non_patron_lovers_from_consorts_effect = {
+  root = {
+    every_spouse = {
+      limit = {
+        is_alive = yes
+      }
+      save_scope_as = skonester_lover_strip_ward
+      every_relation = {
+        type = lover
+        limit = {
+          NOT = {
+            this = root
+          }
+        }
+        scope:skonester_lover_strip_ward = {
+          remove_relation_lover = this
+        }
+      }
+    }
+    every_concubine = {
+      limit = {
+        is_alive = yes
+      }
+      save_scope_as = skonester_lover_strip_ward
+      every_relation = {
+        type = lover
+        limit = {
+          NOT = {
+            this = root
+          }
+        }
+        scope:skonester_lover_strip_ward = {
+          remove_relation_lover = this
+        }
+      }
+    }
+  }
+}
+
+# 椒房护持·全局规则：全体 AI 终止勾引/求爱/私奔密谋，已婚者清除婚外情人
+skonester_seduce_shield_enforce_global_ai_fidelity_rules_effect = {
+  if = {
+    limit = { skonester_seduce_shield_global_ai_rules_active_trigger = yes }
+    every_living_character = {
+      limit = {
+        is_ai = yes
+        is_adult = yes
+      }
+      save_scope_as = skonester_global_fid_ai
+      every_scheme = {
+        limit = {
+          scheme_owner = scope:skonester_global_fid_ai
+          OR = {
+            scheme_type = seduce
+            scheme_type = courting
+            scheme_type = elope
+          }
+        }
+        end_scheme = yes
+      }
+      any_targeting_scheme = {
+        if = {
+          limit = {
+            OR = {
+              scheme_type = seduce
+              scheme_type = courting
+              scheme_type = elope
+            }
+            scheme_owner = { is_ai = yes }
+            scheme_target_character = scope:skonester_global_fid_ai
+          }
+          end_scheme = yes
+        }
+      }
+      if = {
+        limit = { is_married = yes }
+        every_relation = {
+          type = lover
+          limit = {
+            NOR = {
+              scope:skonester_global_fid_ai = { is_spouse_of = this }
+              scope:skonester_global_fid_ai = { is_concubine_of = this }
+              this = { is_concubine_of = scope:skonester_global_fid_ai }
+            }
+          }
+          scope:skonester_global_fid_ai = {
+            remove_relation_lover = this
+          }
+        }
+      }
+    }
+  }
+}
+
+skonester_open_learn_official_secrets_interaction_effect = {
+  if = {
+    limit = {
+      any_vassal = {
+        this != root
+        top_liege = root
+        skonester_realm_landed_patronage_recipient_trigger = yes
+        any_secret = {
+          NOT = { is_known_by = root }
+        }
+      }
+    }
+    ordered_vassal = {
+      order_by = prestige
+      max = 1
+      limit = {
+        this != root
+        top_liege = root
+        skonester_realm_landed_patronage_recipient_trigger = yes
+        any_secret = {
+          NOT = { is_known_by = root }
+        }
+      }
+      save_scope_as = skonester_interaction_pick
+    }
+    open_interaction_window = {
+      interaction = skonester_learn_official_secrets_interaction
+      actor = root
+      recipient = scope:skonester_interaction_pick
+    }
+  }
+}

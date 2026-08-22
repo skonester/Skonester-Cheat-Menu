@@ -1,0 +1,35 @@
+﻿# æ‰¹é‡åˆ†é…ç›‘æŠ¤äººï¼šä»…å†³è®®æ‰‹åŠ¨æ‰§è¡Œä¸€æ¬¡ï¼ˆæ•™è‚²é‡å¿ƒ + æ»¡ 6 å²æŒ‡æ´¾ç›‘æŠ¤äººï¼‰ï¼Œä¸ŽåŽŸå…ˆè‡ªåŠ¨æ—¥è„‰å†²é€»è¾‘ç›¸åŒï¼Œä¸å†æ¯æ—¥è¿è¡Œã€‚
+
+skonester_bulk_guardian_run_decision = {
+  picture = {
+    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+  }
+  decision_group_type = pcm
+  sort_order = 100
+  title = skonester_bulk_guardian_run_decision
+  desc = skonester_bulk_guardian_run_decision_desc
+  selection_tooltip = skonester_bulk_guardian_run_decision_desc
+  confirm_text = skonester_bulk_guardian_run_decision_confirm
+
+  ai_check_interval = 0
+  ai_potential = { always = no }
+
+  is_shown = {
+
+    has_character_flag = pcm_b_show_decision_flag
+    skonester_officials_decision_visible_for_player_trigger = yes
+  }
+
+  is_valid = {
+    is_playable_character = yes
+    skonester_bulk_guardian_any_ward_trigger = yes
+  }
+
+  effect = {
+    skonester_bulk_guardian_auto_daily_effect = yes
+  }
+
+  ai_will_do = {
+    base = 0
+  }
+}

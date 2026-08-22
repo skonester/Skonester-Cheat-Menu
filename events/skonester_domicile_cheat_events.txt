@@ -1,0 +1,28 @@
+﻿namespace = skonester_domicile_cheat
+
+# 主菜单
+skonester_domicile_cheat.0100 = {
+  type = character_event
+  title = skonester_domicile_cheat.0100.t
+  desc = skonester_domicile_cheat.0100.desc
+  theme = court
+  left_portrait = root
+
+  # 无DLC时自动隐藏该事件
+  trigger = { has_dlc = "Tours & Tournaments" }
+
+  option = {
+    name = skonester_domicile_cheat.0100.own
+    ai_chance = { base = 0 } skonester_domicile_cheat_player_effect = yes
+  }
+
+  option = {
+    name = skonester_domicile_cheat.0100.global
+    ai_chance = { base = 0 } trigger = { is_independent_ruler = yes } skonester_domicile_cheat_all_effect = yes
+  }
+
+  option = {
+    name = skonester_domicile_cheat.0100.close
+    ai_chance = { base = 0 }
+  }
+}

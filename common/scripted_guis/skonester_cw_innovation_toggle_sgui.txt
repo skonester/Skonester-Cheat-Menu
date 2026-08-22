@@ -1,0 +1,41 @@
+﻿# 文化窗口革新 +/-（GUI 传入 culture + CultureInnovation.GetType scope）
+
+skonester_cw_unlock_innovation = {
+  scope = character
+  saved_scopes = { culture innovation }
+  is_shown = { is_ai = no }
+  is_valid = { always = yes }
+  effect = {
+    if = {
+      limit = { exists = scope:culture }
+      scope:culture = {
+        save_scope_as = skonester_selected_culture
+        add_innovation = scope:innovation
+      }
+      set_variable = {
+        name = skonester_selected_culture_var
+        value = scope:culture
+      }
+    }
+  }
+}
+
+skonester_cw_remove_innovation = {
+  scope = character
+  saved_scopes = { culture innovation }
+  is_shown = { is_ai = no }
+  is_valid = { always = yes }
+  effect = {
+    if = {
+      limit = { exists = scope:culture }
+      scope:culture = {
+        save_scope_as = skonester_selected_culture
+        remove_innovation = scope:innovation
+      }
+      set_variable = {
+        name = skonester_selected_culture_var
+        value = scope:culture
+      }
+    }
+  }
+}

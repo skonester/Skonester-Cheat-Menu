@@ -1,0 +1,3151 @@
+﻿# Skonester菜单 · 更换官员：granter=玩家；统一由旧官领主 resolve 交接，先郡后主衔，新官授衔剥余
+
+skonester_replace_official_begin_handover_title_change_effect = {
+  if = {
+    limit = { exists = scope:skonester_ro_handover_granter }
+    scope:skonester_ro_handover_granter = {
+      create_title_and_vassal_change = {
+        type = granted
+        save_scope_as = skonester_ro_title_change
+        add_claim_on_loss = no
+      }
+    }
+  }
+  else = {
+    scope:skonester_ro_granter = {
+      create_title_and_vassal_change = {
+        type = granted
+        save_scope_as = skonester_ro_title_change
+        add_claim_on_loss = no
+      }
+    }
+  }
+}
+
+skonester_replace_official_resolve_handover_title_change_effect = {
+  if = {
+    limit = { exists = scope:skonester_ro_handover_granter }
+    scope:skonester_ro_handover_granter = {
+      resolve_title_and_vassal_change = scope:skonester_ro_title_change
+    }
+  }
+  else = {
+    scope:skonester_ro_granter = {
+      resolve_title_and_vassal_change = scope:skonester_ro_title_change
+    }
+  }
+}
+
+skonester_replace_official_begin_regrant_title_change_effect = {
+  if = {
+    limit = { exists = scope:skonester_ro_regrant_authority }
+    scope:skonester_ro_regrant_authority = {
+      create_title_and_vassal_change = {
+        type = granted
+        save_scope_as = skonester_ro_title_change
+        add_claim_on_loss = no
+      }
+    }
+  }
+  else = {
+    scope:skonester_ro_granter = {
+      create_title_and_vassal_change = {
+        type = granted
+        save_scope_as = skonester_ro_title_change
+        add_claim_on_loss = no
+      }
+    }
+  }
+}
+
+skonester_replace_official_resolve_regrant_title_change_effect = {
+  if = {
+    limit = { exists = scope:skonester_ro_regrant_authority }
+    scope:skonester_ro_regrant_authority = {
+      resolve_title_and_vassal_change = scope:skonester_ro_title_change
+    }
+  }
+  else = {
+    scope:skonester_ro_granter = {
+      resolve_title_and_vassal_change = scope:skonester_ro_title_change
+    }
+  }
+}
+
+skonester_replace_official_begin_regrant_land_cap_change_effect = {
+  if = {
+    limit = { exists = scope:skonester_ro_regrant_authority }
+    scope:skonester_ro_regrant_authority = {
+      create_title_and_vassal_change = {
+        type = granted
+        save_scope_as = skonester_land_cap_change
+        add_claim_on_loss = no
+      }
+    }
+  }
+  else = {
+    scope:skonester_ro_granter = {
+      create_title_and_vassal_change = {
+        type = granted
+        save_scope_as = skonester_land_cap_change
+        add_claim_on_loss = no
+      }
+    }
+  }
+}
+
+skonester_replace_official_resolve_regrant_land_cap_change_effect = {
+  if = {
+    limit = { exists = scope:skonester_ro_regrant_authority }
+    scope:skonester_ro_regrant_authority = {
+      resolve_title_and_vassal_change = scope:skonester_land_cap_change
+    }
+  }
+  else = {
+    scope:skonester_ro_granter = {
+      resolve_title_and_vassal_change = scope:skonester_land_cap_change
+    }
+  }
+}
+
+skonester_replace_official_apply_one_title_grant_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_xfer_title
+      exists = scope:skonester_ro_replacement
+    }
+    scope:skonester_ro_replacement = {
+      save_scope_as = skonester_ro_grant_target
+    }
+    skonester_replace_official_try_handover_grant_with_fallback_effect = yes
+    clear_saved_scope = skonester_ro_grant_target
+  }
+  clear_saved_scope = skonester_ro_xfer_title
+}
+
+# 授衔失败时：先收归 handover_granter，再授予；仍失败则由现持有人自授（对齐整理头衔三步兜底）
+skonester_replace_official_revoke_xfer_to_handover_granter_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_xfer_title
+      scope:skonester_ro_xfer_title = {
+        exists = holder
+      }
+      OR = {
+        exists = scope:skonester_ro_handover_granter
+        exists = scope:skonester_ro_granter
+      }
+    }
+    if = {
+      limit = {
+        exists = scope:skonester_ro_handover_granter
+      }
+      scope:skonester_ro_handover_granter = {
+        create_title_and_vassal_change = {
+          type = revoked
+          save_scope_as = skonester_ro_title_change
+          add_claim_on_loss = no
+        }
+      }
+      scope:skonester_ro_xfer_title = {
+        change_title_holder = {
+          holder = scope:skonester_ro_handover_granter
+          change = scope:skonester_ro_title_change
+        }
+      }
+      scope:skonester_ro_handover_granter = {
+        resolve_title_and_vassal_change = scope:skonester_ro_title_change
+      }
+    }
+    else = {
+      scope:skonester_ro_granter = {
+        create_title_and_vassal_change = {
+          type = revoked
+          save_scope_as = skonester_ro_title_change
+          add_claim_on_loss = no
+        }
+      }
+      scope:skonester_ro_xfer_title = {
+        change_title_holder = {
+          holder = scope:skonester_ro_granter
+          change = scope:skonester_ro_title_change
+        }
+      }
+      scope:skonester_ro_granter = {
+        resolve_title_and_vassal_change = scope:skonester_ro_title_change
+      }
+    }
+  }
+}
+
+skonester_replace_official_begin_granter_title_change_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_granter
+    }
+    scope:skonester_ro_granter = {
+      create_title_and_vassal_change = {
+        type = granted
+        save_scope_as = skonester_ro_title_change
+        add_claim_on_loss = no
+      }
+    }
+  }
+}
+
+skonester_replace_official_resolve_granter_title_change_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_granter
+    }
+    scope:skonester_ro_granter = {
+      resolve_title_and_vassal_change = scope:skonester_ro_title_change
+    }
+  }
+}
+
+skonester_replace_official_revoke_xfer_to_granter_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_xfer_title
+      exists = scope:skonester_ro_granter
+      scope:skonester_ro_xfer_title = {
+        exists = holder
+        NOT = { holder = scope:skonester_ro_granter }
+      }
+    }
+    scope:skonester_ro_granter = {
+      create_title_and_vassal_change = {
+        type = revoked
+        save_scope_as = skonester_ro_title_change
+        add_claim_on_loss = no
+      }
+    }
+    scope:skonester_ro_xfer_title = {
+      change_title_holder = {
+        holder = scope:skonester_ro_granter
+        change = scope:skonester_ro_title_change
+      }
+    }
+    scope:skonester_ro_granter = {
+      resolve_title_and_vassal_change = scope:skonester_ro_title_change
+    }
+  }
+}
+
+# 转封彻底失败时：郡/男优先收归新官，避免堆到玩家名下
+skonester_replace_official_absorb_strip_title_to_granter_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_xfer_title
+      exists = scope:skonester_ro_strip_holder
+      scope:skonester_ro_xfer_title = {
+        holder = scope:skonester_ro_strip_holder
+        skonester_replace_official_transferable_title_trigger = yes
+      }
+      NOR = {
+        AND = {
+          exists = scope:skonester_ro_evt_victim
+          scope:skonester_ro_strip_holder = scope:skonester_ro_evt_victim
+          exists = scope:skonester_ro_evt_victim.primary_title
+          scope:skonester_ro_xfer_title = scope:skonester_ro_evt_victim.primary_title
+        }
+        AND = {
+          exists = scope:skonester_ro_evt_victim
+          scope:skonester_ro_strip_holder = scope:skonester_ro_evt_victim
+          exists = scope:skonester_ro_victim_main_title
+          scope:skonester_ro_xfer_title = scope:skonester_ro_victim_main_title
+        }
+        AND = {
+          exists = scope:skonester_ro_evt_victim
+          scope:skonester_ro_strip_holder = scope:skonester_ro_evt_victim
+          exists = scope:skonester_ro_handover_county
+          scope:skonester_ro_xfer_title = scope:skonester_ro_handover_county
+        }
+      }
+      OR = {
+        scope:skonester_ro_xfer_title = {
+          OR = {
+            tier = tier_county
+            tier = tier_barony
+          }
+        }
+        AND = {
+          exists = scope:skonester_land_cap_grantee
+          exists = scope:skonester_strip_title
+          skonester_replace_official_grant_safe_for_realm_trigger = yes
+        }
+      }
+    }
+    if = {
+      limit = {
+        exists = scope:skonester_ro_replacement
+        scope:skonester_ro_replacement = {
+          is_landed = yes
+        }
+        NOT = {
+          scope:skonester_ro_strip_holder = scope:skonester_ro_replacement
+        }
+        scope:skonester_ro_xfer_title = {
+          OR = {
+            tier = tier_county
+            tier = tier_barony
+          }
+        }
+      }
+      scope:skonester_ro_replacement = {
+        create_title_and_vassal_change = {
+          type = revoked
+          save_scope_as = skonester_ro_title_change
+          add_claim_on_loss = no
+        }
+      }
+      scope:skonester_ro_xfer_title = {
+        change_title_holder = {
+          holder = scope:skonester_ro_replacement
+          change = scope:skonester_ro_title_change
+        }
+      }
+      scope:skonester_ro_replacement = {
+        resolve_title_and_vassal_change = scope:skonester_ro_title_change
+      }
+    }
+    else_if = {
+      limit = {
+        exists = scope:skonester_ro_regrant_authority
+        NOT = {
+          scope:skonester_ro_strip_holder = scope:skonester_ro_regrant_authority
+        }
+      }
+      scope:skonester_ro_regrant_authority = {
+        create_title_and_vassal_change = {
+          type = revoked
+          save_scope_as = skonester_ro_title_change
+          add_claim_on_loss = no
+        }
+      }
+      scope:skonester_ro_xfer_title = {
+        change_title_holder = {
+          holder = scope:skonester_ro_regrant_authority
+          change = scope:skonester_ro_title_change
+        }
+      }
+      scope:skonester_ro_regrant_authority = {
+        resolve_title_and_vassal_change = scope:skonester_ro_title_change
+      }
+    }
+    else = {
+      if = {
+        limit = {
+          scope:skonester_ro_xfer_title = {
+            OR = {
+              tier = tier_county
+              tier = tier_barony
+            }
+          }
+        }
+        root = {
+          destroy_title = scope:skonester_ro_xfer_title
+        }
+      }
+    }
+  }
+}
+
+skonester_replace_official_try_granter_grant_fallback_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_xfer_title
+      exists = scope:skonester_ro_grant_target
+      exists = scope:skonester_ro_granter
+      scope:skonester_ro_xfer_title = {
+        exists = holder
+        NOT = { holder = scope:skonester_ro_grant_target }
+      }
+    }
+    skonester_replace_official_revoke_xfer_to_granter_effect = yes
+    skonester_replace_official_begin_granter_title_change_effect = yes
+    scope:skonester_ro_xfer_title = {
+      change_title_holder = {
+        holder = scope:skonester_ro_grant_target
+        change = scope:skonester_ro_title_change
+      }
+    }
+    skonester_replace_official_resolve_granter_title_change_effect = yes
+  }
+}
+
+skonester_replace_official_revoke_xfer_to_regrant_authority_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_xfer_title
+      scope:skonester_ro_xfer_title = {
+        exists = holder
+      }
+      OR = {
+        exists = scope:skonester_ro_regrant_authority
+        exists = scope:skonester_ro_granter
+      }
+    }
+    if = {
+      limit = {
+        exists = scope:skonester_ro_regrant_authority
+      }
+      scope:skonester_ro_regrant_authority = {
+        create_title_and_vassal_change = {
+          type = revoked
+          save_scope_as = skonester_ro_title_change
+          add_claim_on_loss = no
+        }
+      }
+      scope:skonester_ro_xfer_title = {
+        change_title_holder = {
+          holder = scope:skonester_ro_regrant_authority
+          change = scope:skonester_ro_title_change
+        }
+      }
+      scope:skonester_ro_regrant_authority = {
+        resolve_title_and_vassal_change = scope:skonester_ro_title_change
+      }
+    }
+    else = {
+      scope:skonester_ro_granter = {
+        create_title_and_vassal_change = {
+          type = revoked
+          save_scope_as = skonester_ro_title_change
+          add_claim_on_loss = no
+        }
+      }
+      scope:skonester_ro_xfer_title = {
+        change_title_holder = {
+          holder = scope:skonester_ro_granter
+          change = scope:skonester_ro_title_change
+        }
+      }
+      scope:skonester_ro_granter = {
+        resolve_title_and_vassal_change = scope:skonester_ro_title_change
+      }
+    }
+  }
+}
+
+skonester_replace_official_try_handover_grant_with_fallback_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_xfer_title
+      exists = scope:skonester_ro_grant_target
+    }
+    skonester_replace_official_begin_handover_title_change_effect = yes
+    scope:skonester_ro_xfer_title = {
+      change_title_holder = {
+        holder = scope:skonester_ro_grant_target
+        change = scope:skonester_ro_title_change
+      }
+    }
+    skonester_replace_official_resolve_handover_title_change_effect = yes
+    if = {
+      limit = {
+        scope:skonester_ro_xfer_title = {
+          exists = holder
+          NOT = { holder = scope:skonester_ro_grant_target }
+        }
+      }
+      scope:skonester_ro_xfer_title = {
+        holder = {
+          save_scope_as = skonester_ro_strip_holder
+        }
+      }
+      skonester_replace_official_revoke_xfer_to_handover_granter_effect = yes
+      skonester_replace_official_begin_handover_title_change_effect = yes
+      scope:skonester_ro_xfer_title = {
+        change_title_holder = {
+          holder = scope:skonester_ro_grant_target
+          change = scope:skonester_ro_title_change
+        }
+      }
+      skonester_replace_official_resolve_handover_title_change_effect = yes
+    }
+    if = {
+      limit = {
+        exists = scope:skonester_ro_strip_holder
+        scope:skonester_ro_xfer_title = {
+          holder = scope:skonester_ro_strip_holder
+          NOT = { holder = scope:skonester_ro_grant_target }
+        }
+      }
+      scope:skonester_ro_strip_holder = {
+        create_title_and_vassal_change = {
+          type = granted
+          save_scope_as = skonester_ro_title_change
+          add_claim_on_loss = no
+        }
+      }
+      scope:skonester_ro_xfer_title = {
+        change_title_holder = {
+          holder = scope:skonester_ro_grant_target
+          change = scope:skonester_ro_title_change
+        }
+      }
+      scope:skonester_ro_strip_holder = {
+        resolve_title_and_vassal_change = scope:skonester_ro_title_change
+      }
+    }
+    if = {
+      limit = {
+        exists = scope:skonester_ro_granter
+        scope:skonester_ro_granter = {
+          is_ai = no
+        }
+        scope:skonester_ro_xfer_title = {
+          exists = holder
+          NOT = { holder = scope:skonester_ro_grant_target }
+        }
+        OR = {
+          NOT = { exists = scope:skonester_ro_handover_granter }
+          NOT = { scope:skonester_ro_handover_granter = scope:skonester_ro_granter }
+        }
+        trigger_if = {
+          limit = {
+            OR = {
+              AND = {
+                exists = scope:skonester_ro_victim_main_title
+                scope:skonester_ro_xfer_title = scope:skonester_ro_victim_main_title
+              }
+              AND = {
+                exists = scope:skonester_ro_handover_county
+                scope:skonester_ro_xfer_title = scope:skonester_ro_handover_county
+              }
+            }
+          }
+          always = no
+        }
+      }
+      skonester_replace_official_try_granter_grant_fallback_effect = yes
+    }
+    if = {
+      limit = {
+        exists = scope:skonester_ro_xfer_title
+        exists = scope:skonester_ro_grant_target
+        scope:skonester_ro_xfer_title = {
+          holder = scope:skonester_ro_grant_target
+        }
+      }
+      skonester_replace_official_attach_grantee_under_replacement_effect = yes
+    }
+    clear_saved_scope = skonester_ro_strip_holder
+  }
+}
+
+skonester_replace_official_try_regrant_grant_with_fallback_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_xfer_title
+      exists = scope:skonester_ro_grant_target
+    }
+    skonester_replace_official_begin_regrant_title_change_effect = yes
+    scope:skonester_ro_xfer_title = {
+      change_title_holder = {
+        holder = scope:skonester_ro_grant_target
+        change = scope:skonester_ro_title_change
+      }
+    }
+    skonester_replace_official_resolve_regrant_title_change_effect = yes
+    if = {
+      limit = {
+        scope:skonester_ro_xfer_title = {
+          exists = holder
+          NOT = { holder = scope:skonester_ro_grant_target }
+        }
+      }
+      scope:skonester_ro_xfer_title = {
+        holder = {
+          save_scope_as = skonester_ro_strip_holder
+        }
+      }
+      skonester_replace_official_revoke_xfer_to_regrant_authority_effect = yes
+      skonester_replace_official_begin_regrant_title_change_effect = yes
+      scope:skonester_ro_xfer_title = {
+        change_title_holder = {
+          holder = scope:skonester_ro_grant_target
+          change = scope:skonester_ro_title_change
+        }
+      }
+      skonester_replace_official_resolve_regrant_title_change_effect = yes
+    }
+    if = {
+      limit = {
+        exists = scope:skonester_ro_strip_holder
+        scope:skonester_ro_xfer_title = {
+          holder = scope:skonester_ro_strip_holder
+          NOT = { holder = scope:skonester_ro_grant_target }
+        }
+      }
+      scope:skonester_ro_strip_holder = {
+        create_title_and_vassal_change = {
+          type = granted
+          save_scope_as = skonester_ro_title_change
+          add_claim_on_loss = no
+        }
+      }
+      scope:skonester_ro_xfer_title = {
+        change_title_holder = {
+          holder = scope:skonester_ro_grant_target
+          change = scope:skonester_ro_title_change
+        }
+      }
+      scope:skonester_ro_strip_holder = {
+        resolve_title_and_vassal_change = scope:skonester_ro_title_change
+      }
+    }
+    if = {
+      limit = {
+        exists = scope:skonester_ro_granter
+        scope:skonester_ro_granter = {
+          is_ai = no
+        }
+        scope:skonester_ro_xfer_title = {
+          exists = holder
+          NOT = { holder = scope:skonester_ro_grant_target }
+        }
+        OR = {
+          NOT = { exists = scope:skonester_ro_regrant_authority }
+          NOT = { scope:skonester_ro_regrant_authority = scope:skonester_ro_granter }
+        }
+        trigger_if = {
+          limit = {
+            exists = scope:skonester_ro_replacement
+            scope:skonester_ro_replacement = {
+              is_landed = yes
+            }
+            exists = scope:skonester_ro_xfer_title
+          }
+          scope:skonester_ro_xfer_title = {
+            NOR = {
+              tier = tier_county
+              tier = tier_barony
+            }
+          }
+        }
+      }
+      skonester_replace_official_try_granter_grant_fallback_effect = yes
+    }
+    if = {
+      limit = {
+        exists = scope:skonester_ro_xfer_title
+        exists = scope:skonester_ro_grant_target
+        scope:skonester_ro_xfer_title = {
+          holder = scope:skonester_ro_grant_target
+        }
+      }
+      skonester_replace_official_attach_grantee_under_replacement_effect = yes
+    }
+    clear_saved_scope = skonester_ro_strip_holder
+  }
+}
+
+# 剥余衔转封：新官已接岗则始终由其授衔（方案B）；未接岗时才回落旧逻辑
+skonester_replace_official_refresh_regrant_authority_for_strip_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_replacement
+      scope:skonester_ro_replacement = {
+        is_landed = yes
+      }
+    }
+    scope:skonester_ro_replacement = {
+      save_scope_as = skonester_ro_regrant_authority
+    }
+  }
+  else = {
+    clear_saved_scope = skonester_ro_regrant_authority
+    if = {
+      limit = {
+        exists = scope:skonester_ro_victim_liege
+      }
+      scope:skonester_ro_victim_liege = {
+        save_scope_as = skonester_ro_regrant_authority
+      }
+    }
+    else = {
+      skonester_replace_official_resolve_regrant_authority_scope_effect = yes
+    }
+  }
+}
+
+# 受封人与郡/男爵法理属新官，却仍是玩家或旧官直属 → 改宣誓新官
+skonester_replace_official_attach_grantee_under_replacement_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_grant_target
+      scope:skonester_ro_grant_target = {
+        skonester_replace_official_grantee_should_serve_replacement_trigger = yes
+      }
+    }
+    scope:skonester_ro_replacement = {
+      create_title_and_vassal_change = {
+        type = swear_fealty
+        save_scope_as = skonester_ro_attach_change
+        add_claim_on_loss = no
+      }
+    }
+    scope:skonester_ro_grant_target = {
+      change_liege = {
+        liege = scope:skonester_ro_replacement
+        change = scope:skonester_ro_attach_change
+      }
+    }
+    scope:skonester_ro_replacement = {
+      resolve_title_and_vassal_change = scope:skonester_ro_attach_change
+    }
+    clear_saved_scope = skonester_ro_attach_change
+  }
+}
+
+# 收尾：把仍挂在玩家名下的「新官法理郡/男」扫回新官
+skonester_replace_official_reattach_orphan_county_vassals_to_replacement_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_replacement
+      exists = scope:skonester_ro_granter
+      scope:skonester_ro_replacement = {
+        is_landed = yes
+        exists = primary_title
+      }
+    }
+    scope:skonester_ro_granter = {
+      every_vassal = {
+        limit = {
+          skonester_replace_official_grantee_should_serve_replacement_trigger = yes
+        }
+        save_scope_as = skonester_ro_grant_target
+        skonester_replace_official_attach_grantee_under_replacement_effect = yes
+        clear_saved_scope = skonester_ro_grant_target
+      }
+    }
+  }
+}
+
+# 交接前快照辖内每块伯爵领原持有人（用于误剥封臣郡时归还）
+skonester_replace_official_snapshot_county_holders_effect = {
+  scope:skonester_ro_granter = {
+    clear_variable_list = skonester_ro_county_snapshot_list
+  }
+  scope:skonester_ro_evt_victim = {
+    every_sub_realm_county = {
+      limit = {
+        tier = tier_county
+        exists = holder
+      }
+      set_variable = {
+        name = skonester_ro_snap_holder
+        value = holder
+      }
+      scope:skonester_ro_granter = {
+        add_to_variable_list = {
+          name = skonester_ro_county_snapshot_list
+          target = prev
+        }
+      }
+    }
+  }
+}
+
+# 将误从封臣（非旧官）手中剥夺的郡归还快照持有人；scope:skonester_ro_xfer_title = 目标郡
+skonester_replace_official_restore_one_county_to_snapshot_holder_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_xfer_title
+      exists = scope:skonester_ro_granter
+      scope:skonester_ro_xfer_title = {
+        tier = tier_county
+        has_variable = skonester_ro_snap_holder
+        exists = var:skonester_ro_snap_holder
+        exists = holder
+        var:skonester_ro_snap_holder = {
+          is_alive = yes
+          NOT = { this = scope:skonester_ro_evt_victim }
+        }
+        NOT = { holder = var:skonester_ro_snap_holder }
+        trigger_if = {
+          limit = { exists = scope:skonester_ro_handover_county }
+          NOT = { this = scope:skonester_ro_handover_county }
+        }
+      }
+    }
+    scope:skonester_ro_xfer_title = {
+      var:skonester_ro_snap_holder = {
+        save_scope_as = skonester_ro_restore_holder
+      }
+    }
+    skonester_replace_official_begin_regrant_title_change_effect = yes
+    scope:skonester_ro_xfer_title = {
+      change_title_holder = {
+        holder = scope:skonester_ro_restore_holder
+        change = scope:skonester_ro_title_change
+      }
+    }
+    skonester_replace_official_resolve_regrant_title_change_effect = yes
+    clear_saved_scope = skonester_ro_restore_holder
+  }
+}
+
+# 单次遍历快照列表，归还所有被误夺的封臣郡
+skonester_replace_official_restore_stolen_counties_from_snapshot_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_granter
+      scope:skonester_ro_granter = {
+        has_variable_list = skonester_ro_county_snapshot_list
+        variable_list_size = {
+          name = skonester_ro_county_snapshot_list
+          value > 0
+        }
+      }
+    }
+    scope:skonester_ro_granter = {
+      every_in_list = {
+        variable = skonester_ro_county_snapshot_list
+        limit = {
+          tier = tier_county
+          has_variable = skonester_ro_snap_holder
+          exists = var:skonester_ro_snap_holder
+          exists = holder
+          var:skonester_ro_snap_holder = {
+            is_alive = yes
+            NOT = { this = scope:skonester_ro_evt_victim }
+          }
+          NOT = { holder = var:skonester_ro_snap_holder }
+          trigger_if = {
+            limit = { exists = scope:skonester_ro_handover_county }
+            NOT = { this = scope:skonester_ro_handover_county }
+          }
+        }
+        save_scope_as = skonester_ro_xfer_title
+        skonester_replace_official_restore_one_county_to_snapshot_holder_effect = yes
+        clear_saved_scope = skonester_ro_xfer_title
+      }
+    }
+  }
+}
+
+skonester_replace_official_clear_county_snapshot_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_granter
+      scope:skonester_ro_granter = {
+        has_variable_list = skonester_ro_county_snapshot_list
+      }
+    }
+    scope:skonester_ro_granter = {
+      every_in_list = {
+        variable = skonester_ro_county_snapshot_list
+        limit = {
+          has_variable = skonester_ro_snap_holder
+        }
+        remove_variable = skonester_ro_snap_holder
+      }
+      clear_variable_list = skonester_ro_county_snapshot_list
+    }
+  }
+}
+
+# 引擎误挂到新官的旧官直辖郡（非指定交接郡）先还旧官，勿随机转封致销毁
+skonester_replace_official_restore_victim_personal_counties_on_replacement_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_evt_victim
+      exists = scope:skonester_ro_replacement
+      exists = scope:skonester_ro_granter
+      scope:skonester_ro_granter = {
+        has_variable_list = skonester_ro_county_snapshot_list
+        variable_list_size = {
+          name = skonester_ro_county_snapshot_list
+          value > 0
+        }
+      }
+    }
+    scope:skonester_ro_granter = {
+      every_in_list = {
+        variable = skonester_ro_county_snapshot_list
+        limit = {
+          tier = tier_county
+          has_variable = skonester_ro_snap_holder
+          exists = var:skonester_ro_snap_holder
+          exists = holder
+          var:skonester_ro_snap_holder = scope:skonester_ro_evt_victim
+          holder = scope:skonester_ro_replacement
+          trigger_if = {
+            limit = { exists = scope:skonester_ro_handover_county }
+            NOT = { this = scope:skonester_ro_handover_county }
+          }
+        }
+        save_scope_as = skonester_ro_xfer_title
+        scope:skonester_ro_evt_victim = {
+          save_scope_as = skonester_ro_grant_target
+        }
+        skonester_replace_official_try_handover_grant_with_fallback_effect = yes
+        clear_saved_scope = skonester_ro_grant_target
+        clear_saved_scope = skonester_ro_xfer_title
+      }
+    }
+  }
+}
+
+# 每次 grant 后立刻剥掉新官多出来的伯爵领（含引擎 resolve 误从封臣收来的郡）
+skonester_replace_official_sanitize_replacement_extra_counties_effect = {
+  skonester_replace_official_restore_victim_personal_counties_on_replacement_effect = yes
+  skonester_replace_official_restore_stolen_counties_from_snapshot_effect = yes
+  if = {
+    limit = {
+      exists = scope:skonester_ro_replacement
+      exists = scope:skonester_ro_granter
+      exists = scope:skonester_ro_handover_county
+      scope:skonester_ro_replacement = {
+        is_landed = yes
+        any_held_title = {
+          tier = tier_county
+          skonester_replace_official_transferable_title_trigger = yes
+          NOT = { this = scope:skonester_ro_handover_county }
+        }
+      }
+    }
+    while = {
+      count = 8
+      limit = {
+        scope:skonester_ro_replacement = {
+          any_held_title = {
+            tier = tier_county
+            skonester_replace_official_transferable_title_trigger = yes
+            NOT = { this = scope:skonester_ro_handover_county }
+          }
+        }
+      }
+      scope:skonester_ro_replacement = {
+        random_held_title = {
+          limit = {
+            tier = tier_county
+            skonester_replace_official_transferable_title_trigger = yes
+            NOT = { this = scope:skonester_ro_handover_county }
+          }
+          save_scope_as = skonester_ro_xfer_title
+        }
+      }
+      scope:skonester_ro_replacement = {
+        save_scope_as = skonester_ro_strip_holder
+      }
+      skonester_replace_official_regrant_saved_title_effect = yes
+    }
+  }
+}
+
+# 剥余衔择优转封境内他人（须 regrant_authority/granter + strip_holder + xfer_title）
+skonester_replace_official_regrant_saved_title_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_strip_holder
+      exists = scope:skonester_ro_xfer_title
+      OR = {
+        exists = scope:skonester_ro_regrant_authority
+        exists = scope:skonester_ro_granter
+      }
+      scope:skonester_ro_xfer_title = {
+        holder = scope:skonester_ro_strip_holder
+      }
+    }
+    scope:skonester_ro_strip_holder = {
+      save_scope_as = skonester_off
+    }
+    scope:skonester_ro_xfer_title = {
+      save_scope_as = skonester_strip_title
+    }
+    skonester_replace_official_refresh_regrant_authority_for_strip_effect = yes
+    skonester_replace_official_resolve_grantee_effect = yes
+    if = {
+      limit = {
+        exists = scope:skonester_land_cap_grantee
+        scope:skonester_land_cap_grantee = scope:skonester_off.top_liege
+      }
+      clear_saved_scope = skonester_land_cap_grantee
+    }
+    if = {
+      limit = {
+        exists = scope:skonester_land_cap_grantee
+        NOT = {
+          scope:skonester_land_cap_grantee = scope:skonester_off.top_liege
+        }
+        exists = scope:skonester_strip_title
+        scope:skonester_strip_title = {
+          holder = scope:skonester_ro_strip_holder
+        }
+        skonester_replace_official_grant_safe_for_realm_trigger = yes
+      }
+      scope:skonester_land_cap_grantee = {
+        save_scope_as = skonester_ro_grant_target
+      }
+      scope:skonester_strip_title = {
+        save_scope_as = skonester_ro_xfer_title
+      }
+      skonester_replace_official_try_regrant_grant_with_fallback_effect = yes
+      skonester_replace_official_attach_grantee_under_replacement_effect = yes
+      clear_saved_scope = skonester_ro_grant_target
+      clear_saved_scope = skonester_ro_xfer_title
+    }
+    if = {
+      limit = {
+        exists = scope:skonester_strip_title
+        exists = scope:skonester_ro_strip_holder
+        scope:skonester_strip_title = {
+          holder = scope:skonester_ro_strip_holder
+        }
+        skonester_replace_official_may_absorb_strip_title_trigger = yes
+      }
+      scope:skonester_strip_title = {
+        save_scope_as = skonester_ro_xfer_title
+      }
+      skonester_replace_official_absorb_strip_title_to_granter_effect = yes
+      clear_saved_scope = skonester_ro_xfer_title
+    }
+    if = {
+      limit = {
+        exists = scope:skonester_strip_title
+        exists = scope:skonester_ro_strip_holder
+        scope:skonester_strip_title = {
+          holder = scope:skonester_ro_strip_holder
+        }
+      }
+      scope:skonester_strip_title = {
+        save_scope_as = skonester_ro_xfer_title
+      }
+      skonester_replace_official_destroy_stuck_strip_title_if_needed_effect = yes
+      clear_saved_scope = skonester_ro_xfer_title
+    }
+    clear_saved_scope = skonester_off
+    clear_saved_scope = skonester_strip_title
+    clear_saved_scope = skonester_land_cap_grantee
+  }
+}
+
+# 法理转封等步骤可能把新官辖内伯爵领误挂到 regrant_authority；收回后再转封出去
+skonester_replace_official_redistribute_granter_stray_counties_effect = {
+  if = {
+    limit = {
+      OR = {
+        exists = scope:skonester_ro_regrant_authority
+        exists = scope:skonester_ro_granter
+      }
+      exists = scope:skonester_ro_replacement
+      scope:skonester_ro_replacement = {
+        is_landed = yes
+        exists = primary_title
+      }
+    }
+    skonester_replace_official_return_granter_stray_counties_to_replacement_effect = yes
+    skonester_replace_official_return_regrant_stray_counties_to_replacement_effect = yes
+    while = {
+      count = 16
+      limit = {
+        trigger_if = {
+          limit = { exists = scope:skonester_ro_regrant_authority }
+          scope:skonester_ro_regrant_authority = {
+            any_held_title = {
+              tier = tier_county
+              skonester_replace_official_transferable_title_trigger = yes
+              target_is_de_jure_liege_or_above = scope:skonester_ro_replacement.primary_title
+            }
+          }
+        }
+        trigger_else = {
+          scope:skonester_ro_granter = {
+            any_held_title = {
+              tier = tier_county
+              skonester_replace_official_transferable_title_trigger = yes
+              target_is_de_jure_liege_or_above = scope:skonester_ro_replacement.primary_title
+            }
+          }
+        }
+      }
+      if = {
+        limit = { exists = scope:skonester_ro_regrant_authority }
+        scope:skonester_ro_regrant_authority = {
+          random_held_title = {
+            limit = {
+              tier = tier_county
+              skonester_replace_official_transferable_title_trigger = yes
+              target_is_de_jure_liege_or_above = scope:skonester_ro_replacement.primary_title
+            }
+            save_scope_as = skonester_ro_xfer_title
+          }
+          save_scope_as = skonester_ro_strip_holder
+        }
+      }
+      else = {
+        scope:skonester_ro_granter = {
+          random_held_title = {
+            limit = {
+              tier = tier_county
+              skonester_replace_official_transferable_title_trigger = yes
+              target_is_de_jure_liege_or_above = scope:skonester_ro_replacement.primary_title
+            }
+            save_scope_as = skonester_ro_xfer_title
+          }
+          save_scope_as = skonester_ro_strip_holder
+        }
+      }
+      skonester_replace_official_regrant_saved_title_effect = yes
+    }
+  }
+}
+
+# 模块3：交接前回收新官全部可剥夺头衔（含公/王/帝与直辖），转封他人而非收归 granter
+skonester_replace_official_strip_replacement_all_prior_titles_effect = {
+  while = {
+    count = 32
+    limit = {
+      scope:skonester_ro_replacement = {
+        any_held_title = {
+          skonester_replace_official_transferable_title_trigger = yes
+        }
+      }
+    }
+    scope:skonester_ro_replacement = {
+      random_held_title = {
+        limit = {
+          skonester_replace_official_transferable_title_trigger = yes
+        }
+        save_scope_as = skonester_ro_xfer_title
+      }
+    }
+    scope:skonester_ro_replacement = {
+      save_scope_as = skonester_ro_strip_holder
+    }
+    skonester_replace_official_regrant_saved_title_effect = yes
+  }
+}
+
+# 旧官实际最高头衔（仅用于主衔仍为伯爵时的法理裁剪，不用于向新官移交）
+skonester_replace_official_save_victim_high_title_effect = {
+  clear_saved_scope = skonester_ro_victim_high_title
+  scope:skonester_ro_evt_victim = {
+    if = {
+      limit = {
+        highest_held_title_tier > tier_county
+        any_held_title = {
+          tier = tier_hegemony
+          is_noble_family_title = no
+          is_landless_type_title = no
+        }
+      }
+      if = {
+        limit = {
+          primary_title = {
+            tier = tier_hegemony
+            is_noble_family_title = no
+            is_landless_type_title = no
+          }
+        }
+        primary_title = {
+          save_scope_as = skonester_ro_victim_high_title
+        }
+      }
+      else = {
+        random_held_title = {
+          limit = {
+            tier = tier_hegemony
+            is_noble_family_title = no
+            is_landless_type_title = no
+          }
+          save_scope_as = skonester_ro_victim_high_title
+        }
+      }
+    }
+    else_if = {
+      limit = {
+        highest_held_title_tier > tier_county
+        any_held_title = {
+          tier = tier_empire
+          is_noble_family_title = no
+          is_landless_type_title = no
+        }
+      }
+      if = {
+        limit = {
+          primary_title = {
+            tier = tier_empire
+            is_noble_family_title = no
+            is_landless_type_title = no
+          }
+        }
+        primary_title = {
+          save_scope_as = skonester_ro_victim_high_title
+        }
+      }
+      else = {
+        random_held_title = {
+          limit = {
+            tier = tier_empire
+            is_noble_family_title = no
+            is_landless_type_title = no
+          }
+          save_scope_as = skonester_ro_victim_high_title
+        }
+      }
+    }
+    else_if = {
+      limit = {
+        highest_held_title_tier > tier_county
+        any_held_title = {
+          tier = tier_kingdom
+          is_noble_family_title = no
+          is_landless_type_title = no
+        }
+      }
+      if = {
+        limit = {
+          primary_title = {
+            tier = tier_kingdom
+            is_noble_family_title = no
+            is_landless_type_title = no
+          }
+        }
+        primary_title = {
+          save_scope_as = skonester_ro_victim_high_title
+        }
+      }
+      else = {
+        random_held_title = {
+          limit = {
+            tier = tier_kingdom
+            is_noble_family_title = no
+            is_landless_type_title = no
+          }
+          save_scope_as = skonester_ro_victim_high_title
+        }
+      }
+    }
+    else_if = {
+      limit = {
+        highest_held_title_tier > tier_county
+        any_held_title = {
+          tier = tier_duchy
+          is_noble_family_title = no
+          is_landless_type_title = no
+        }
+      }
+      if = {
+        limit = {
+          primary_title = {
+            tier = tier_duchy
+            is_noble_family_title = no
+            is_landless_type_title = no
+          }
+        }
+        primary_title = {
+          save_scope_as = skonester_ro_victim_high_title
+        }
+      }
+      else = {
+        random_held_title = {
+          limit = {
+            tier = tier_duchy
+            is_noble_family_title = no
+            is_landless_type_title = no
+          }
+          save_scope_as = skonester_ro_victim_high_title
+        }
+      }
+    }
+  }
+}
+
+# 旧官应移交的最高主衔（primary≥公国 否则取实际最高公国+；勿把误设伯爵 primary 当主衔漏转公国）
+skonester_replace_official_save_victim_main_title_effect = {
+  clear_saved_scope = skonester_ro_victim_main_title
+  if = {
+    limit = {
+      exists = scope:skonester_ro_victim_primary
+      scope:skonester_ro_victim_primary = {
+        tier >= tier_duchy
+      }
+    }
+    scope:skonester_ro_victim_primary = {
+      save_scope_as = skonester_ro_victim_main_title
+    }
+  }
+  else_if = {
+    limit = {
+      exists = scope:skonester_ro_victim_high_title
+      scope:skonester_ro_victim_high_title = {
+        tier >= tier_duchy
+      }
+    }
+    scope:skonester_ro_victim_high_title = {
+      save_scope_as = skonester_ro_victim_main_title
+    }
+  }
+}
+
+skonester_replace_official_select_handover_county_effect = {
+  clear_saved_scope = skonester_ro_handover_county
+  scope:skonester_ro_evt_victim = {
+    if = {
+      limit = {
+        exists = scope:skonester_ro_victim_primary
+        scope:skonester_ro_victim_primary = {
+          tier = tier_county
+          holder = scope:skonester_ro_evt_victim
+          is_noble_family_title = no
+          is_leased_out = no
+        }
+      }
+      scope:skonester_ro_victim_primary = {
+        save_scope_as = skonester_ro_handover_county
+      }
+    }
+    else_if = {
+      limit = {
+        exists = scope:skonester_ro_victim_main_title
+        scope:skonester_ro_victim_main_title = {
+          tier >= tier_duchy
+          exists = capital_county
+          capital_county = {
+            holder = scope:skonester_ro_evt_victim
+            is_noble_family_title = no
+            is_leased_out = no
+          }
+        }
+      }
+      scope:skonester_ro_victim_main_title.capital_county = {
+        save_scope_as = skonester_ro_handover_county
+      }
+    }
+    else_if = {
+      limit = {
+        exists = scope:skonester_ro_victim_primary
+        scope:skonester_ro_victim_primary = {
+          tier >= tier_duchy
+          exists = capital_county
+          capital_county = {
+            holder = scope:skonester_ro_evt_victim
+            is_noble_family_title = no
+            is_leased_out = no
+          }
+        }
+      }
+      scope:skonester_ro_victim_primary.capital_county = {
+        save_scope_as = skonester_ro_handover_county
+      }
+    }
+    else_if = {
+      limit = {
+        exists = scope:skonester_ro_victim_high_title
+        scope:skonester_ro_victim_high_title = {
+          tier >= tier_duchy
+          exists = capital_county
+          capital_county = {
+            holder = scope:skonester_ro_evt_victim
+            is_noble_family_title = no
+            is_leased_out = no
+          }
+        }
+      }
+      scope:skonester_ro_victim_high_title.capital_county = {
+        save_scope_as = skonester_ro_handover_county
+      }
+    }
+    else_if = {
+      limit = {
+        exists = capital_county
+        capital_county = {
+          holder = scope:skonester_ro_evt_victim
+          is_noble_family_title = no
+          is_leased_out = no
+        }
+      }
+      capital_county = {
+        save_scope_as = skonester_ro_handover_county
+      }
+    }
+    else_if = {
+      limit = {
+        any_held_title = {
+          tier = tier_county
+          holder = scope:skonester_ro_evt_victim
+          is_noble_family_title = no
+          is_leased_out = no
+        }
+      }
+      ordered_held_title = {
+        title_tier = county
+        limit = {
+          holder = scope:skonester_ro_evt_victim
+          is_noble_family_title = no
+          is_leased_out = no
+        }
+        order_by = development_level
+        save_scope_as = skonester_ro_handover_county
+      }
+    }
+  }
+}
+
+# 模块2：仅剥旧官本人多余直辖郡（不改动封臣郡之法理、不触碰封臣持有地）
+skonester_replace_official_trim_victim_extra_personal_counties_effect = {
+  if = {
+    limit = {
+      scope:skonester_ro_evt_victim = {
+        any_held_title = {
+          tier = tier_county
+          skonester_replace_official_victim_regrantable_excess_title_trigger = yes
+        }
+      }
+    }
+    while = {
+      count = 8
+      limit = {
+        scope:skonester_ro_evt_victim = {
+          any_held_title = {
+            tier = tier_county
+            skonester_replace_official_victim_regrantable_excess_title_trigger = yes
+          }
+        }
+      }
+      scope:skonester_ro_evt_victim = {
+        random_held_title = {
+          limit = {
+            tier = tier_county
+            skonester_replace_official_victim_regrantable_excess_title_trigger = yes
+          }
+          save_scope_as = skonester_ro_xfer_title
+        }
+        save_scope_as = skonester_ro_strip_holder
+      }
+      skonester_replace_official_regrant_saved_title_effect = yes
+    }
+  }
+}
+
+# 中间领主授衔失败时：重试全套兜底；仍失败则至少 preserve 新官封臣关系
+skonester_replace_official_retry_failed_handover_titles_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_replacement
+      exists = scope:skonester_ro_victim_main_title
+      scope:skonester_ro_victim_main_title = {
+        tier >= tier_duchy
+        skonester_replace_official_transferable_title_trigger = yes
+        holder = scope:skonester_ro_evt_victim
+      }
+    }
+    scope:skonester_ro_victim_main_title = {
+      save_scope_as = skonester_ro_xfer_title
+    }
+    scope:skonester_ro_replacement = {
+      save_scope_as = skonester_ro_grant_target
+    }
+    skonester_replace_official_try_handover_grant_with_fallback_effect = yes
+    clear_saved_scope = skonester_ro_grant_target
+    clear_saved_scope = skonester_ro_xfer_title
+  }
+  if = {
+    limit = {
+      exists = scope:skonester_ro_replacement
+      exists = scope:skonester_ro_handover_county
+      scope:skonester_ro_handover_county = {
+        tier = tier_county
+        skonester_replace_official_transferable_title_trigger = yes
+        holder = scope:skonester_ro_evt_victim
+      }
+    }
+    scope:skonester_ro_handover_county = {
+      save_scope_as = skonester_ro_xfer_title
+    }
+    scope:skonester_ro_replacement = {
+      save_scope_as = skonester_ro_grant_target
+    }
+    skonester_replace_official_try_handover_grant_with_fallback_effect = yes
+    clear_saved_scope = skonester_ro_grant_target
+    clear_saved_scope = skonester_ro_xfer_title
+  }
+  skonester_replace_official_preserve_vassal_liege_effect = yes
+}
+
+skonester_replace_official_transfer_handover_county_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_handover_county
+      scope:skonester_ro_handover_county = {
+        tier = tier_county
+        skonester_replace_official_transferable_title_trigger = yes
+        holder = scope:skonester_ro_evt_victim
+      }
+    }
+    scope:skonester_ro_handover_county = {
+      save_scope_as = skonester_ro_xfer_title
+    }
+    skonester_replace_official_apply_one_title_grant_effect = yes
+  }
+}
+
+skonester_replace_official_transfer_handover_main_title_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_victim_main_title
+      scope:skonester_ro_victim_main_title = {
+        tier >= tier_duchy
+        skonester_replace_official_transferable_title_trigger = yes
+        holder = scope:skonester_ro_evt_victim
+      }
+    }
+    scope:skonester_ro_victim_main_title = {
+      save_scope_as = skonester_ro_xfer_title
+    }
+    skonester_replace_official_apply_one_title_grant_effect = yes
+  }
+  skonester_replace_official_retry_failed_handover_titles_effect = yes
+}
+
+# 旧版合一入口（保留兼容）
+skonester_replace_official_transfer_handover_titles_effect = {
+  skonester_replace_official_transfer_handover_county_effect = yes
+  skonester_replace_official_transfer_handover_main_title_effect = yes
+}
+
+# 主衔已交接后，若旧官仍持指定交接郡则补交（封建公级先交主衔时用）
+skonester_replace_official_transfer_handover_county_if_needed_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_handover_county
+      scope:skonester_ro_handover_county = {
+        tier = tier_county
+        skonester_replace_official_transferable_title_trigger = yes
+        holder = scope:skonester_ro_evt_victim
+      }
+      OR = {
+        NOT = { exists = scope:skonester_ro_replacement }
+        NOT = {
+          scope:skonester_ro_handover_county = {
+            holder = scope:skonester_ro_replacement
+          }
+        }
+      }
+    }
+    skonester_replace_official_transfer_handover_county_effect = yes
+  }
+}
+
+# 阶段1：统一先郡后主衔（全政体同序）
+skonester_replace_official_execute_handover_sequence_effect = {
+  skonester_replace_official_transfer_handover_county_effect = yes
+  skonester_replace_official_set_replacement_primary_to_handover_county_effect = yes
+  skonester_replace_official_transfer_handover_main_title_effect = yes
+}
+
+# 误挂玩家/授衔人名下的新官法理郡：直接还新官，勿随机转封成玩家直属
+skonester_replace_official_return_granter_stray_counties_to_replacement_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_granter
+      exists = scope:skonester_ro_replacement
+      scope:skonester_ro_replacement = {
+        is_landed = yes
+        exists = primary_title
+      }
+      scope:skonester_ro_granter = {
+        any_held_title = {
+          tier = tier_county
+          skonester_replace_official_transferable_title_trigger = yes
+          target_is_de_jure_liege_or_above = scope:skonester_ro_replacement.primary_title
+        }
+      }
+    }
+    while = {
+      count = 16
+      limit = {
+        scope:skonester_ro_granter = {
+          any_held_title = {
+            tier = tier_county
+            skonester_replace_official_transferable_title_trigger = yes
+            target_is_de_jure_liege_or_above = scope:skonester_ro_replacement.primary_title
+          }
+        }
+      }
+      scope:skonester_ro_granter = {
+        random_held_title = {
+          limit = {
+            tier = tier_county
+            skonester_replace_official_transferable_title_trigger = yes
+            target_is_de_jure_liege_or_above = scope:skonester_ro_replacement.primary_title
+          }
+          save_scope_as = skonester_ro_xfer_title
+        }
+      }
+      scope:skonester_ro_replacement = {
+        save_scope_as = skonester_ro_grant_target
+      }
+      skonester_replace_official_begin_granter_title_change_effect = yes
+      scope:skonester_ro_xfer_title = {
+        change_title_holder = {
+          holder = scope:skonester_ro_grant_target
+          change = scope:skonester_ro_title_change
+        }
+      }
+      skonester_replace_official_resolve_granter_title_change_effect = yes
+      clear_saved_scope = skonester_ro_grant_target
+      clear_saved_scope = skonester_ro_xfer_title
+    }
+  }
+}
+
+skonester_replace_official_return_regrant_stray_counties_to_replacement_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_regrant_authority
+      exists = scope:skonester_ro_replacement
+      NOT = { scope:skonester_ro_regrant_authority = scope:skonester_ro_replacement }
+      scope:skonester_ro_replacement = {
+        is_landed = yes
+        exists = primary_title
+      }
+      scope:skonester_ro_regrant_authority = {
+        any_held_title = {
+          tier = tier_county
+          skonester_replace_official_transferable_title_trigger = yes
+          target_is_de_jure_liege_or_above = scope:skonester_ro_replacement.primary_title
+        }
+      }
+    }
+    while = {
+      count = 16
+      limit = {
+        scope:skonester_ro_regrant_authority = {
+          any_held_title = {
+            tier = tier_county
+            skonester_replace_official_transferable_title_trigger = yes
+            target_is_de_jure_liege_or_above = scope:skonester_ro_replacement.primary_title
+          }
+        }
+      }
+      scope:skonester_ro_regrant_authority = {
+        random_held_title = {
+          limit = {
+            tier = tier_county
+            skonester_replace_official_transferable_title_trigger = yes
+            target_is_de_jure_liege_or_above = scope:skonester_ro_replacement.primary_title
+          }
+          save_scope_as = skonester_ro_xfer_title
+        }
+      }
+      scope:skonester_ro_replacement = {
+        save_scope_as = skonester_ro_grant_target
+      }
+      skonester_replace_official_begin_regrant_title_change_effect = yes
+      scope:skonester_ro_xfer_title = {
+        change_title_holder = {
+          holder = scope:skonester_ro_grant_target
+          change = scope:skonester_ro_title_change
+        }
+      }
+      skonester_replace_official_resolve_regrant_title_change_effect = yes
+      clear_saved_scope = skonester_ro_grant_target
+      clear_saved_scope = skonester_ro_xfer_title
+    }
+  }
+}
+
+skonester_replace_official_set_replacement_primary_to_handover_county_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_replacement
+      exists = scope:skonester_ro_handover_county
+      scope:skonester_ro_replacement = {
+        is_landed = yes
+      }
+      scope:skonester_ro_handover_county = {
+        tier = tier_county
+        holder = scope:skonester_ro_replacement
+      }
+    }
+    scope:skonester_ro_replacement = {
+      set_primary_title_to = scope:skonester_ro_handover_county
+    }
+  }
+}
+
+# 交接后锁定新官唯一可保留的伯爵领（限地与转封均以此为准；仅认交接前选定的旧官直辖郡）
+skonester_replace_official_resolve_replacement_kept_county_effect = {
+  clear_saved_scope = skonester_ro_kept_county
+  if = {
+    limit = {
+      exists = scope:skonester_ro_replacement
+      exists = scope:skonester_ro_handover_county
+      scope:skonester_ro_replacement = {
+        is_landed = yes
+      }
+      scope:skonester_ro_handover_county = {
+        tier = tier_county
+        holder = scope:skonester_ro_replacement
+      }
+    }
+    scope:skonester_ro_handover_county = {
+      save_scope_as = skonester_ro_kept_county
+    }
+  }
+}
+
+# 择优转封失败时走统一剥余衔流程（含安全授衔与 absorb 限制）
+skonester_replace_official_force_regrant_excess_from_replacement_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_replacement
+      OR = {
+        exists = scope:skonester_ro_regrant_authority
+        exists = scope:skonester_ro_granter
+      }
+      scope:skonester_ro_replacement = {
+        any_held_title = {
+          skonester_replace_official_transferable_title_trigger = yes
+          NOT = {
+            skonester_replace_official_replacement_may_keep_title_trigger = yes
+          }
+        }
+      }
+    }
+    scope:skonester_ro_replacement = {
+      random_held_title = {
+        limit = {
+          skonester_replace_official_transferable_title_trigger = yes
+          NOT = {
+            skonester_replace_official_replacement_may_keep_title_trigger = yes
+          }
+        }
+        save_scope_as = skonester_ro_xfer_title
+      }
+      save_scope_as = skonester_ro_strip_holder
+    }
+    skonester_replace_official_regrant_saved_title_effect = yes
+  }
+}
+
+# 按封臣当前直属领主逐人转隶（中间层/玩家名下均可）
+skonester_replace_official_transfer_one_cached_vassal_to_replacement_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_vassal_xfer
+      exists = scope:skonester_ro_replacement
+      scope:skonester_ro_vassal_xfer = {
+        is_alive = yes
+        NOT = { this = scope:skonester_ro_replacement }
+        NOT = { liege = scope:skonester_ro_replacement }
+        exists = liege
+      }
+    }
+    scope:skonester_ro_vassal_xfer = {
+      liege = {
+        save_scope_as = skonester_ro_vassal_old_liege
+        create_title_and_vassal_change = {
+          type = swear_fealty
+          save_scope_as = skonester_ro_vassal_xfer_change
+          add_claim_on_loss = no
+        }
+      }
+      change_liege = {
+        liege = scope:skonester_ro_replacement
+        change = scope:skonester_ro_vassal_xfer_change
+      }
+    }
+    scope:skonester_ro_vassal_old_liege = {
+      resolve_title_and_vassal_change = scope:skonester_ro_vassal_xfer_change
+    }
+    if = {
+      limit = {
+        scope:skonester_ro_replacement = {
+          is_landed = yes
+        }
+        scope:skonester_ro_vassal_xfer = {
+          top_liege = scope:skonester_ro_replacement.top_liege
+          NOT = { liege = scope:skonester_ro_replacement }
+        }
+      }
+      scope:skonester_ro_replacement = {
+        create_title_and_vassal_change = {
+          type = swear_fealty
+          save_scope_as = skonester_ro_vassal_xfer_change
+          add_claim_on_loss = no
+        }
+      }
+      scope:skonester_ro_vassal_xfer = {
+        change_liege = {
+          liege = scope:skonester_ro_replacement
+          change = scope:skonester_ro_vassal_xfer_change
+        }
+      }
+      scope:skonester_ro_replacement = {
+        resolve_title_and_vassal_change = scope:skonester_ro_vassal_xfer_change
+      }
+    }
+    clear_saved_scope = skonester_ro_vassal_old_liege
+    clear_saved_scope = skonester_ro_vassal_xfer_change
+  }
+}
+
+skonester_replace_official_transfer_victim_vassals_to_replacement_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_replacement
+      scope:skonester_ro_replacement = {
+        is_landed = yes
+        exists = primary_title
+      }
+      scope:skonester_ro_granter = {
+        has_variable_list = skonester_ro_victim_vassal_queue
+        variable_list_size = {
+          name = skonester_ro_victim_vassal_queue
+          value > 0
+        }
+      }
+    }
+    scope:skonester_ro_granter = {
+      every_in_list = {
+        variable = skonester_ro_victim_vassal_queue
+        limit = {
+          is_alive = yes
+          NOT = { this = scope:skonester_ro_replacement }
+          NOT = { liege = scope:skonester_ro_replacement }
+        }
+        save_scope_as = skonester_ro_vassal_xfer
+        skonester_replace_official_transfer_one_cached_vassal_to_replacement_effect = yes
+        clear_saved_scope = skonester_ro_vassal_xfer
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      exists = scope:skonester_ro_replacement
+      scope:skonester_ro_replacement = {
+        is_landed = yes
+        exists = primary_title
+      }
+      scope:skonester_ro_evt_victim = {
+        any_vassal = {
+          NOT = { this = scope:skonester_ro_replacement }
+        }
+      }
+    }
+    scope:skonester_ro_evt_victim = {
+      every_vassal = {
+        limit = {
+          NOT = { this = scope:skonester_ro_replacement }
+          NOT = { liege = scope:skonester_ro_replacement }
+        }
+        save_scope_as = skonester_ro_vassal_xfer
+        skonester_replace_official_transfer_one_cached_vassal_to_replacement_effect = yes
+        clear_saved_scope = skonester_ro_vassal_xfer
+      }
+    }
+  }
+}
+
+# 收尾：把仍散落在外、本应随岗的旧直属封臣挂回新官
+
+skonester_replace_official_reattach_vassals_to_replacement_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_replacement
+      exists = scope:skonester_ro_granter
+      scope:skonester_ro_replacement = {
+        is_landed = yes
+        exists = primary_title
+      }
+      scope:skonester_ro_granter = {
+        has_variable_list = skonester_ro_victim_vassal_queue
+        variable_list_size = {
+          name = skonester_ro_victim_vassal_queue
+          value > 0
+        }
+      }
+    }
+    scope:skonester_ro_granter = {
+      every_in_list = {
+        variable = skonester_ro_victim_vassal_queue
+        limit = {
+          is_alive = yes
+          NOT = { this = scope:skonester_ro_replacement }
+          NOT = { liege = scope:skonester_ro_replacement }
+          OR = {
+            skonester_replace_official_should_reattach_all_cached_vassals_trigger = yes
+            skonester_replace_official_vassal_de_jure_under_replacement_trigger = yes
+          }
+        }
+        save_scope_as = skonester_ro_vassal_xfer
+        skonester_replace_official_transfer_one_cached_vassal_to_replacement_effect = yes
+        clear_saved_scope = skonester_ro_vassal_xfer
+      }
+    }
+  }
+}
+
+skonester_replace_official_reattach_de_jure_vassals_to_replacement_effect = {
+  skonester_replace_official_reattach_vassals_to_replacement_effect = yes
+}
+
+# 交接开始前缓存旧官直属封臣，避免后续收地/法理转封冲掉名单
+skonester_replace_official_cache_victim_direct_vassals_effect = {
+  scope:skonester_ro_granter = {
+    clear_variable_list = skonester_ro_victim_vassal_queue
+  }
+  scope:skonester_ro_evt_victim = {
+    every_vassal = {
+      limit = {
+        NOT = { this = scope:skonester_ro_replacement }
+      }
+      scope:skonester_ro_granter = {
+        add_to_variable_list = {
+          name = skonester_ro_victim_vassal_queue
+          target = prev
+        }
+      }
+    }
+  }
+}
+
+skonester_replace_official_clear_victim_vassal_queue_effect = {
+  scope:skonester_ro_granter = {
+    if = {
+      limit = {
+        has_variable_list = skonester_ro_victim_vassal_queue
+      }
+      clear_variable_list = skonester_ro_victim_vassal_queue
+    }
+  }
+}
+
+skonester_replace_official_organize_replacement_de_jure_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_replacement
+      scope:skonester_ro_replacement = {
+        is_landed = yes
+        exists = primary_title
+      }
+    }
+    scope:skonester_ro_replacement = {
+      every_held_title = {
+        limit = {
+          is_noble_family_title = no
+          is_landless_type_title = no
+          NOT = { this = scope:skonester_ro_replacement.primary_title }
+        }
+        set_de_jure_liege_title = scope:skonester_ro_replacement.primary_title
+      }
+    }
+  }
+}
+
+skonester_replace_official_mark_office_holder_flags_effect = {
+  scope:skonester_ro_evt_victim = {
+    remove_character_flag = skonester_ro_office_holder
+  }
+  scope:skonester_ro_replacement = {
+    add_character_flag = skonester_ro_office_holder
+  }
+}
+
+# 阶段3：新官已接岗后，转封授权固定为新官本人
+skonester_replace_official_lock_regrant_authority_to_replacement_effect = {
+  clear_saved_scope = skonester_ro_regrant_authority
+  if = {
+    limit = {
+      exists = scope:skonester_ro_replacement
+      scope:skonester_ro_replacement = {
+        is_landed = yes
+      }
+    }
+    scope:skonester_ro_replacement = {
+      save_scope_as = skonester_ro_regrant_authority
+    }
+  }
+}
+
+# 阶段5：仅在新官法理子树内做法理转封（change_liege），不扫全图
+skonester_replace_official_scoped_de_jure_transfer_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_granter
+      exists = scope:skonester_ro_replacement
+      scope:skonester_ro_replacement = {
+        is_landed = yes
+        exists = primary_title
+      }
+    }
+    scope:skonester_ro_granter = {
+      create_title_and_vassal_change = {
+        type = granted
+        save_scope_as = skonester_ro_de_jure_change
+        add_claim_on_loss = no
+      }
+      every_vassal_or_below = {
+        limit = {
+          skonester_replace_official_scoped_de_jure_vassal_trigger = yes
+        }
+        if = {
+          limit = {
+            exists = primary_title.de_jure_liege
+            exists = primary_title.de_jure_liege.holder
+            primary_title.de_jure_liege.holder = {
+              NOT = { this = scope:skonester_ro_granter }
+              is_vassal_or_below_of = scope:skonester_ro_granter
+              NOT = { is_at_war_with = scope:skonester_ro_granter }
+            }
+          }
+          change_liege = {
+            liege = primary_title.de_jure_liege.holder
+            change = scope:skonester_ro_de_jure_change
+          }
+        }
+        else_if = {
+          limit = {
+            exists = primary_title.de_jure_liege.de_jure_liege
+            exists = primary_title.de_jure_liege.de_jure_liege.holder
+            OR = {
+              NOT = { exists = primary_title.de_jure_liege.holder }
+              primary_title.de_jure_liege.holder = scope:skonester_ro_granter
+            }
+            primary_title.de_jure_liege.de_jure_liege.holder = {
+              NOT = { this = scope:skonester_ro_granter }
+              is_vassal_or_below_of = scope:skonester_ro_granter
+              NOT = { is_at_war_with = scope:skonester_ro_granter }
+            }
+          }
+          change_liege = {
+            liege = primary_title.de_jure_liege.de_jure_liege.holder
+            change = scope:skonester_ro_de_jure_change
+          }
+        }
+        else_if = {
+          limit = {
+            exists = primary_title.de_jure_liege.de_jure_liege.de_jure_liege
+            exists = primary_title.de_jure_liege.de_jure_liege.de_jure_liege.holder
+            OR = {
+              NOT = { exists = primary_title.de_jure_liege.holder }
+              primary_title.de_jure_liege.holder = scope:skonester_ro_granter
+            }
+            OR = {
+              NOT = { exists = primary_title.de_jure_liege.de_jure_liege.holder }
+              primary_title.de_jure_liege.de_jure_liege.holder = scope:skonester_ro_granter
+            }
+            primary_title.de_jure_liege.de_jure_liege.de_jure_liege.holder = {
+              NOT = { this = scope:skonester_ro_granter }
+              is_vassal_or_below_of = scope:skonester_ro_granter
+              NOT = { is_at_war_with = scope:skonester_ro_granter }
+            }
+          }
+          change_liege = {
+            liege = primary_title.de_jure_liege.de_jure_liege.de_jure_liege.holder
+            change = scope:skonester_ro_de_jure_change
+          }
+        }
+      }
+      resolve_title_and_vassal_change = scope:skonester_ro_de_jure_change
+    }
+    clear_saved_scope = skonester_ro_de_jure_change
+  }
+}
+
+# 阶段5 收尾：扫 granter / 旧官领主名下误挂新官法理封臣
+skonester_replace_official_final_orphan_sweep_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_replacement
+      scope:skonester_ro_replacement = {
+        is_landed = yes
+        exists = primary_title
+      }
+    }
+    if = {
+      limit = { exists = scope:skonester_ro_granter }
+      scope:skonester_ro_granter = {
+        every_vassal = {
+          limit = {
+            skonester_replace_official_grantee_should_serve_replacement_trigger = yes
+          }
+          save_scope_as = skonester_ro_grant_target
+          skonester_replace_official_attach_grantee_under_replacement_effect = yes
+          clear_saved_scope = skonester_ro_grant_target
+        }
+      }
+    }
+    if = {
+      limit = {
+        exists = scope:skonester_ro_victim_liege
+        NOT = {
+          scope:skonester_ro_victim_liege = scope:skonester_ro_granter
+        }
+      }
+      scope:skonester_ro_victim_liege = {
+        every_vassal = {
+          limit = {
+            skonester_replace_official_grantee_should_serve_replacement_trigger = yes
+          }
+          save_scope_as = skonester_ro_grant_target
+          skonester_replace_official_attach_grantee_under_replacement_effect = yes
+          clear_saved_scope = skonester_ro_grant_target
+        }
+      }
+    }
+  }
+}
+
+skonester_replace_official_post_handover_de_jure_transfer_effect = {
+  skonester_replace_official_final_orphan_sweep_effect = yes
+  skonester_replace_official_reattach_orphan_county_vassals_to_replacement_effect = yes
+}
+
+# 转封彻底失败且仍为郡/男：销毁头衔，避免堆到玩家名下
+skonester_replace_official_destroy_stuck_strip_title_if_needed_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_xfer_title
+      exists = scope:skonester_ro_strip_holder
+      scope:skonester_ro_xfer_title = {
+        holder = scope:skonester_ro_strip_holder
+        OR = {
+          tier = tier_county
+          tier = tier_barony
+        }
+      }
+    }
+    root = {
+      destroy_title = scope:skonester_ro_xfer_title
+    }
+  }
+}
+
+# 收尾：归还新官法理郡、挂回封臣、限地；并清掉误堆在玩家名下的郡
+skonester_replace_official_post_cleanup_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_replacement
+      scope:skonester_ro_replacement = {
+        is_landed = yes
+      }
+    }
+    skonester_replace_official_resolve_replacement_kept_county_effect = yes
+  }
+  skonester_replace_official_return_granter_stray_counties_to_replacement_effect = yes
+  skonester_replace_official_return_regrant_stray_counties_to_replacement_effect = yes
+  skonester_replace_official_reattach_orphan_county_vassals_to_replacement_effect = yes
+  skonester_replace_official_final_orphan_sweep_effect = yes
+  if = {
+    limit = {
+      exists = scope:skonester_ro_granter
+      scope:skonester_ro_granter = {
+        any_held_title = {
+          tier = tier_county
+          skonester_replace_official_transferable_title_trigger = yes
+          NOR = {
+            this = scope:skonester_ro_granter.primary_title
+            AND = {
+              exists = scope:skonester_ro_granter.capital_county
+              this = scope:skonester_ro_granter.capital_county
+            }
+          }
+        }
+      }
+    }
+    while = {
+      count = 16
+      limit = {
+        scope:skonester_ro_granter = {
+          any_held_title = {
+            tier = tier_county
+            skonester_replace_official_transferable_title_trigger = yes
+            NOR = {
+              this = scope:skonester_ro_granter.primary_title
+              AND = {
+                exists = scope:skonester_ro_granter.capital_county
+                this = scope:skonester_ro_granter.capital_county
+              }
+            }
+          }
+        }
+      }
+      scope:skonester_ro_granter = {
+        random_held_title = {
+          limit = {
+            tier = tier_county
+            skonester_replace_official_transferable_title_trigger = yes
+            NOR = {
+              this = scope:skonester_ro_granter.primary_title
+              AND = {
+                exists = scope:skonester_ro_granter.capital_county
+                this = scope:skonester_ro_granter.capital_county
+              }
+            }
+          }
+          save_scope_as = skonester_ro_xfer_title
+        }
+        save_scope_as = skonester_ro_strip_holder
+      }
+      skonester_replace_official_regrant_saved_title_effect = yes
+    }
+  }
+  if = {
+    limit = {
+      exists = scope:skonester_ro_replacement
+      scope:skonester_ro_replacement = {
+        is_landed = yes
+      }
+    }
+    scope:skonester_ro_replacement = {
+      skonester_enforce_official_land_cap_effect = yes
+    }
+  }
+  if = {
+    limit = {
+      exists = scope:skonester_ro_evt_victim
+      scope:skonester_ro_evt_victim = {
+        is_landed = yes
+      }
+    }
+    scope:skonester_ro_evt_victim = {
+      skonester_enforce_official_land_cap_effect = yes
+    }
+  }
+}
+
+# 新官仅保留主头衔+一块伯爵领（该领下男爵除外），其余择优转封境内他人
+skonester_replace_official_enforce_replacement_land_cap_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_replacement
+      exists = scope:skonester_ro_granter
+      scope:skonester_ro_replacement = {
+        is_landed = yes
+      }
+    }
+    while = {
+      count = 32
+      limit = {
+        scope:skonester_ro_replacement = {
+          any_held_title = {
+            skonester_replace_official_transferable_title_trigger = yes
+            NOT = {
+              skonester_replace_official_replacement_may_keep_title_trigger = yes
+            }
+          }
+        }
+      }
+      scope:skonester_ro_replacement = {
+        random_held_title = {
+          limit = {
+            skonester_replace_official_transferable_title_trigger = yes
+            NOT = {
+              skonester_replace_official_replacement_may_keep_title_trigger = yes
+            }
+          }
+          save_scope_as = skonester_ro_xfer_title
+        }
+      }
+      scope:skonester_ro_replacement = {
+        save_scope_as = skonester_ro_strip_holder
+      }
+      skonester_replace_official_regrant_saved_title_effect = yes
+    }
+    while = {
+      count = 8
+      limit = {
+        scope:skonester_ro_replacement = {
+          any_held_title = {
+            skonester_replace_official_transferable_title_trigger = yes
+            NOT = {
+              skonester_replace_official_replacement_may_keep_title_trigger = yes
+            }
+          }
+        }
+      }
+      skonester_replace_official_force_regrant_excess_from_replacement_effect = yes
+    }
+  }
+}
+
+skonester_replace_official_revoke_victim_remaining_to_granter_effect = {
+  while = {
+    count = 32
+    limit = {
+      scope:skonester_ro_evt_victim = {
+        any_held_title = {
+          skonester_replace_official_victim_regrantable_excess_title_trigger = yes
+        }
+      }
+    }
+    scope:skonester_ro_evt_victim = {
+      random_held_title = {
+        limit = {
+          skonester_replace_official_victim_regrantable_excess_title_trigger = yes
+        }
+        save_scope_as = skonester_ro_xfer_title
+      }
+      save_scope_as = skonester_ro_strip_holder
+    }
+    skonester_replace_official_regrant_saved_title_effect = yes
+  }
+}
+
+skonester_replace_official_ui_add_character_effect = {
+  if = {
+    limit = {
+      skonester_replace_official_ui_candidate_trigger = yes
+      NOT = { is_in_list = characters }
+    }
+    add_to_list = characters
+  }
+}
+
+# populate 专用：仅预筛入列，can_be_granted 留给 can_be_picked（避免打开界面时全表扫描）
+skonester_replace_official_ui_add_prefiltered_character_effect = {
+  if = {
+    limit = {
+      NOT = { is_in_list = characters }
+    }
+    add_to_list = characters
+  }
+}
+
+skonester_replace_official_populate_ui_list_effect = {
+  scope:actor = {
+    every_courtier = {
+      limit = {
+        skonester_replace_official_ui_courtier_prefilter_trigger = yes
+      }
+      skonester_replace_official_ui_add_character_effect = yes
+    }
+    every_close_or_extended_family_member = {
+      limit = {
+        skonester_replace_official_ui_candidate_prefilter_base_trigger = yes
+        top_liege = scope:actor
+        NOT = { is_in_list = characters }
+      }
+      skonester_replace_official_ui_add_character_effect = yes
+    }
+    if = {
+      limit = { exists = dynasty }
+      dynasty = {
+        every_dynasty_member = {
+          limit = {
+            skonester_replace_official_ui_dynasty_kin_prefilter_trigger = yes
+            NOT = { is_in_list = characters }
+          }
+          skonester_replace_official_ui_add_character_effect = yes
+        }
+      }
+    }
+    skonester_replace_official_populate_top_landless_talents_effect = yes
+  }
+}
+
+# 境内封臣廷臣 + 首都池：超高属性无地 AI 按五维择优，最多 50 人（staging 仅轻量预筛，授衔校验留给 can_be_picked）
+
+skonester_replace_official_populate_top_landless_talents_effect = {
+  clear_variable_list = skonester_ro_landless_staging
+  every_vassal = {
+    limit = {
+      NOT = { this = scope:actor }
+    }
+    every_courtier = {
+      limit = {
+        skonester_replace_official_ui_landless_high_skill_prefilter_trigger = yes
+        NOT = { is_in_list = characters }
+      }
+      scope:actor = {
+        add_to_variable_list = {
+          name = skonester_ro_landless_staging
+          target = prev
+        }
+      }
+    }
+  }
+  every_pool_character = {
+    limit = {
+      location = capital_province
+      skonester_replace_official_ui_landless_high_skill_prefilter_trigger = yes
+      NOT = { is_in_list = characters }
+    }
+    scope:actor = {
+      add_to_variable_list = {
+        name = skonester_ro_landless_staging
+        target = prev
+      }
+    }
+  }
+  while = {
+    count = 50
+    limit = {
+      scope:actor = {
+        variable_list_size = {
+          name = skonester_ro_landless_staging
+          value > 0
+        }
+      }
+    }
+    scope:actor = {
+      ordered_in_list = {
+        variable = skonester_ro_landless_staging
+        order_by = skonester_replace_official_landless_pick_sort_value
+        position = 0
+        save_scope_as = skonester_ro_landless_pick
+      }
+    }
+    scope:skonester_ro_landless_pick = {
+      if = {
+        limit = {
+          skonester_replace_official_ui_candidate_trigger = yes
+        }
+        skonester_replace_official_ui_add_prefiltered_character_effect = yes
+      }
+    }
+    scope:actor = {
+      remove_list_variable = {
+        name = skonester_ro_landless_staging
+        target = scope:skonester_ro_landless_pick
+      }
+    }
+    clear_saved_scope = skonester_ro_landless_pick
+  }
+  clear_variable_list = skonester_ro_landless_staging
+}
+
+skonester_replace_official_resolve_granter_scope_effect = {
+  if = {
+    limit = { exists = scope:actor }
+    scope:actor = {
+      save_scope_as = skonester_ro_granter
+    }
+  }
+  else = {
+    root = {
+      save_scope_as = skonester_ro_granter
+    }
+  }
+}
+
+# 剥余衔/转封授权：新官已接岗→新官；未接岗→旧官领主或 handover 层；最后 granter
+skonester_replace_official_resolve_regrant_authority_scope_effect = {
+  clear_saved_scope = skonester_ro_regrant_authority
+  if = {
+    limit = {
+      exists = scope:skonester_ro_replacement
+      scope:skonester_ro_replacement = {
+        is_landed = yes
+      }
+    }
+    scope:skonester_ro_replacement = {
+      save_scope_as = skonester_ro_regrant_authority
+    }
+  }
+  else_if = {
+    limit = {
+      exists = scope:skonester_ro_victim_liege
+    }
+    scope:skonester_ro_victim_liege = {
+      save_scope_as = skonester_ro_regrant_authority
+    }
+  }
+  else_if = {
+    limit = {
+      exists = scope:skonester_ro_handover_granter
+      exists = scope:skonester_ro_granter
+      NOT = { scope:skonester_ro_handover_granter = scope:skonester_ro_granter }
+    }
+    scope:skonester_ro_handover_granter = {
+      save_scope_as = skonester_ro_regrant_authority
+    }
+  }
+  else_if = {
+    limit = {
+      exists = scope:skonester_ro_granter
+    }
+    scope:skonester_ro_granter = {
+      save_scope_as = skonester_ro_regrant_authority
+    }
+  }
+}
+
+# 主衔/郡交接：统一由旧官直属领主 resolve（玩家直属封建亦同）；无领主时 granter
+
+skonester_replace_official_resolve_handover_granter_scope_effect = {
+  clear_saved_scope = skonester_ro_handover_granter
+  if = {
+    limit = {
+      skonester_replace_official_handover_via_liege_preferred_trigger = yes
+    }
+    scope:skonester_ro_victim_liege = {
+      save_scope_as = skonester_ro_handover_granter
+    }
+  }
+  else_if = {
+    limit = {
+      exists = scope:skonester_ro_granter
+    }
+    scope:skonester_ro_granter = {
+      save_scope_as = skonester_ro_handover_granter
+    }
+  }
+}
+
+# 剥余衔转封：禁止回落顶层领主（防伯爵/公国挂到玩家）；优先旧官直属封臣或新官
+skonester_replace_official_resolve_grantee_effect = {
+  clear_saved_scope = skonester_land_cap_grantee
+  if = {
+    limit = {
+      exists = scope:skonester_strip_title
+      scope:skonester_strip_title = {
+        tier = tier_county
+      }
+    }
+    scope:skonester_off = {
+      random_vassal_or_below = {
+        limit = {
+          is_landed = yes
+          NOT = { this = scope:skonester_off }
+          skonester_replace_official_can_be_granted_by_regrant_authority_trigger = yes
+          any_held_title = {
+            tier = tier_barony
+            de_jure_liege = scope:skonester_strip_title
+          }
+        }
+        save_scope_as = skonester_land_cap_grantee
+      }
+    }
+  }
+  else = {
+    scope:skonester_off = {
+      random_vassal_or_below = {
+        limit = {
+          is_landed = yes
+          NOT = { this = scope:skonester_off }
+          skonester_replace_official_can_be_granted_by_regrant_authority_trigger = yes
+          skonester_replace_official_strip_title_grantee_tier_ok_trigger = yes
+        }
+        save_scope_as = skonester_land_cap_grantee
+      }
+    }
+  }
+  if = {
+    limit = {
+      NOT = { exists = scope:skonester_land_cap_grantee }
+      exists = scope:skonester_ro_replacement
+      scope:skonester_ro_replacement = {
+        is_landed = yes
+      }
+      exists = scope:skonester_strip_title
+      scope:skonester_strip_title = {
+        tier = tier_county
+      }
+    }
+    scope:skonester_ro_replacement = {
+      random_vassal_or_below = {
+        limit = {
+          is_landed = yes
+          NOT = { this = scope:skonester_off }
+          NOT = { this = scope:skonester_ro_replacement }
+          skonester_replace_official_cheat_grantee_base_trigger = yes
+          any_held_title = {
+            tier = tier_barony
+            de_jure_liege = scope:skonester_strip_title
+          }
+        }
+        save_scope_as = skonester_land_cap_grantee
+      }
+    }
+  }
+  if = {
+    limit = {
+      NOT = { exists = scope:skonester_land_cap_grantee }
+      exists = scope:skonester_strip_title
+      scope:skonester_strip_title = {
+        tier = tier_county
+      }
+    }
+    scope:skonester_off = {
+      random_vassal_or_below = {
+        limit = {
+          is_landed = yes
+          NOT = { this = scope:skonester_off }
+          skonester_replace_official_cheat_grantee_base_trigger = yes
+          any_held_title = {
+            tier = tier_barony
+            de_jure_liege = scope:skonester_strip_title
+          }
+        }
+        save_scope_as = skonester_land_cap_grantee
+      }
+    }
+  }
+  if = {
+    limit = {
+      NOT = { exists = scope:skonester_land_cap_grantee }
+      exists = scope:skonester_ro_replacement
+      scope:skonester_ro_replacement != scope:skonester_off
+      scope:skonester_ro_replacement = {
+        skonester_replace_official_can_be_granted_by_regrant_authority_trigger = yes
+        skonester_replace_official_strip_title_grantee_tier_ok_trigger = yes
+      }
+    }
+    scope:skonester_ro_replacement = {
+      save_scope_as = skonester_land_cap_grantee
+    }
+  }
+  if = {
+    limit = {
+      NOT = { exists = scope:skonester_land_cap_grantee }
+      exists = scope:skonester_ro_granter
+      scope:skonester_ro_granter = {
+        has_variable_list = skonester_ro_victim_vassal_queue
+      }
+    }
+    scope:skonester_ro_granter = {
+      random_in_list = {
+        variable = skonester_ro_victim_vassal_queue
+        limit = {
+          is_alive = yes
+          NOT = { this = scope:skonester_off }
+          NOT = { this = scope:skonester_ro_replacement }
+          skonester_replace_official_can_be_granted_by_regrant_authority_trigger = yes
+        }
+        save_scope_as = skonester_land_cap_grantee
+      }
+    }
+  }
+  if = {
+    limit = {
+      NOT = { exists = scope:skonester_land_cap_grantee }
+      exists = scope:skonester_ro_regrant_authority
+    }
+    scope:skonester_ro_regrant_authority = {
+      random_vassal_or_below = {
+        limit = {
+          is_landed = yes
+          NOT = { this = scope:skonester_off }
+          NOT = { this = scope:skonester_ro_replacement }
+          OR = {
+            AND = {
+              exists = scope:skonester_ro_granter
+              NOT = { scope:skonester_ro_regrant_authority = scope:skonester_ro_granter }
+              NOT = { this = scope:skonester_ro_granter }
+            }
+            AND = {
+              OR = {
+                NOT = { exists = scope:skonester_ro_granter }
+                scope:skonester_ro_regrant_authority = scope:skonester_ro_granter
+              }
+            }
+          }
+          skonester_replace_official_can_be_granted_by_regrant_authority_trigger = yes
+        }
+        save_scope_as = skonester_land_cap_grantee
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      NOT = { exists = scope:skonester_land_cap_grantee }
+      exists = scope:skonester_ro_granter
+      OR = {
+        NOT = { exists = scope:skonester_strip_title }
+        scope:skonester_strip_title = {
+          tier >= tier_duchy
+        }
+      }
+    }
+    scope:skonester_ro_granter = {
+      random_vassal_or_below = {
+        limit = {
+          is_landed = yes
+          NOT = { this = scope:skonester_off }
+          NOT = { this = scope:skonester_ro_replacement }
+          skonester_replace_official_can_be_granted_by_regrant_authority_trigger = yes
+        }
+        save_scope_as = skonester_land_cap_grantee
+      }
+    }
+  }
+  if = {
+    limit = {
+      NOT = { exists = scope:skonester_land_cap_grantee }
+      exists = scope:skonester_ro_replacement
+      scope:skonester_ro_replacement = {
+        is_landed = yes
+      }
+      exists = scope:skonester_strip_title
+      scope:skonester_strip_title = {
+        OR = {
+          tier = tier_county
+          tier = tier_barony
+        }
+      }
+      exists = scope:skonester_off
+      scope:skonester_off = {
+        exists = top_liege
+        top_liege = {
+          exists = primary_title
+          primary_title.tier > scope:skonester_strip_title.tier
+        }
+      }
+    }
+    scope:skonester_ro_replacement = {
+      create_character = {
+        employer = scope:skonester_ro_replacement
+        culture = scope:skonester_off.culture
+        faith = scope:skonester_off.faith
+        gender_female_chance = 50
+        age = 28
+        dynasty = none
+        save_scope_as = skonester_land_cap_grantee
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      NOT = { exists = scope:skonester_land_cap_grantee }
+      exists = scope:skonester_ro_regrant_authority
+      exists = scope:skonester_strip_title
+      scope:skonester_strip_title = {
+        OR = {
+          tier = tier_county
+          tier = tier_barony
+        }
+      }
+      exists = scope:skonester_off
+      scope:skonester_off = {
+        exists = top_liege
+        top_liege = {
+          exists = primary_title
+          primary_title.tier > scope:skonester_strip_title.tier
+        }
+      }
+    }
+    scope:skonester_ro_regrant_authority = {
+      create_character = {
+        employer = scope:skonester_ro_regrant_authority
+        culture = scope:skonester_off.culture
+        faith = scope:skonester_off.faith
+        gender_female_chance = 50
+        age = 28
+        dynasty = none
+        save_scope_as = skonester_land_cap_grantee
+      }
+    }
+  }
+}
+
+# 新官须先挂到旧官直属领主（无领主时挂 granter/玩家）；无地者先入廷再宣誓
+skonester_replace_official_prepare_replacement_under_granter_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_replacement
+      scope:skonester_ro_replacement = {
+        is_alive = yes
+        is_landed = no
+      }
+    }
+    if = {
+      limit = {
+        exists = scope:skonester_ro_victim_liege
+        NOT = {
+          scope:skonester_ro_replacement = {
+            is_courtier_of = scope:skonester_ro_victim_liege
+          }
+        }
+      }
+      scope:skonester_ro_replacement = {
+        set_employer = scope:skonester_ro_victim_liege
+      }
+    }
+    else_if = {
+      limit = {
+        exists = scope:skonester_ro_granter
+        NOT = {
+          scope:skonester_ro_replacement = {
+            is_courtier_of = scope:skonester_ro_granter
+          }
+        }
+      }
+      scope:skonester_ro_replacement = {
+        set_employer = scope:skonester_ro_granter
+      }
+    }
+  }
+  if = {
+    limit = {
+      exists = scope:skonester_ro_replacement
+      scope:skonester_ro_replacement = {
+        is_alive = yes
+        OR = {
+          NOT = { exists = liege }
+          AND = {
+            exists = scope:skonester_ro_victim_liege
+            NOT = { liege = scope:skonester_ro_victim_liege }
+          }
+          AND = {
+            NOT = { exists = scope:skonester_ro_victim_liege }
+            exists = scope:skonester_ro_granter
+            NOT = { liege = scope:skonester_ro_granter }
+          }
+        }
+      }
+    }
+    if = {
+      limit = {
+        exists = scope:skonester_ro_victim_liege
+      }
+      scope:skonester_ro_victim_liege = {
+        create_title_and_vassal_change = {
+          type = swear_fealty
+          save_scope_as = skonester_ro_vassal_change
+        }
+      }
+      scope:skonester_ro_replacement = {
+        change_liege = {
+          liege = scope:skonester_ro_victim_liege
+          change = scope:skonester_ro_vassal_change
+        }
+      }
+      scope:skonester_ro_victim_liege = {
+        resolve_title_and_vassal_change = scope:skonester_ro_vassal_change
+      }
+    }
+    else = {
+      scope:skonester_ro_granter = {
+        create_title_and_vassal_change = {
+          type = swear_fealty
+          save_scope_as = skonester_ro_vassal_change
+        }
+      }
+      scope:skonester_ro_replacement = {
+        change_liege = {
+          liege = scope:skonester_ro_granter
+          change = scope:skonester_ro_vassal_change
+        }
+      }
+      scope:skonester_ro_granter = {
+        resolve_title_and_vassal_change = scope:skonester_ro_vassal_change
+      }
+    }
+  }
+}
+
+skonester_replace_official_revoke_victim_leases_effect = {
+  scope:skonester_ro_evt_victim = {
+    every_held_title = {
+      limit = {
+        is_leased_out = yes
+      }
+      revoke_lease = yes
+    }
+  }
+}
+
+skonester_replace_official_preserve_vassal_liege_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_victim_liege
+      exists = scope:skonester_ro_replacement
+      scope:skonester_ro_replacement = {
+        is_landed = yes
+        OR = {
+          NOT = { exists = liege }
+          NOT = { liege = scope:skonester_ro_victim_liege }
+        }
+      }
+    }
+    scope:skonester_ro_victim_liege = {
+      create_title_and_vassal_change = {
+        type = swear_fealty
+        save_scope_as = skonester_ro_vassal_change
+      }
+    }
+    scope:skonester_ro_replacement = {
+      change_liege = {
+        liege = scope:skonester_ro_victim_liege
+        change = scope:skonester_ro_vassal_change
+      }
+    }
+    scope:skonester_ro_victim_liege = {
+      resolve_title_and_vassal_change = scope:skonester_ro_vassal_change
+    }
+  }
+}
+
+# 阶段6 轻量兜底：仅重试未交出的主衔/郡，并校正新官封臣关系
+skonester_replace_official_salvage_execute_failures_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_replacement
+      exists = scope:skonester_ro_evt_victim
+    }
+    skonester_replace_official_retry_failed_handover_titles_effect = yes
+    skonester_replace_official_preserve_vassal_liege_effect = yes
+  }
+}
+
+# 统一路径 + 方案B：先交接→迁封臣→锁定新官授衔→剥余/限地→子树法理→兜底
+skonester_replace_official_execute_core_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_ro_replacement
+      exists = scope:skonester_ro_evt_victim
+      scope:skonester_ro_replacement != scope:skonester_ro_evt_victim
+    }
+    skonester_replace_official_resolve_granter_scope_effect = yes
+    scope:skonester_ro_evt_victim = {
+      if = {
+        limit = { exists = liege }
+        liege = {
+          save_scope_as = skonester_ro_victim_liege
+        }
+      }
+      if = {
+        limit = { exists = primary_title }
+        primary_title = {
+          save_scope_as = skonester_ro_victim_primary
+        }
+      }
+    }
+    skonester_replace_official_resolve_handover_granter_scope_effect = yes
+    skonester_replace_official_cache_victim_direct_vassals_effect = yes
+    scope:skonester_ro_evt_victim = {
+      add_character_flag = skonester_ro_grant_excluded
+    }
+    scope:skonester_ro_replacement = {
+      add_character_flag = skonester_ro_grant_excluded
+    }
+    skonester_replace_official_revoke_victim_leases_effect = yes
+    skonester_replace_official_prepare_replacement_under_granter_effect = yes
+    skonester_replace_official_save_victim_high_title_effect = yes
+    skonester_replace_official_save_victim_main_title_effect = yes
+    skonester_replace_official_select_handover_county_effect = yes
+    skonester_replace_official_snapshot_county_holders_effect = yes
+    # 阶段1：主衔 + 指定交接郡
+    skonester_replace_official_execute_handover_sequence_effect = yes
+    scope:skonester_ro_replacement = {
+      if = {
+        limit = {
+          exists = scope:skonester_ro_victim_main_title
+          scope:skonester_ro_victim_main_title = {
+            holder = scope:skonester_ro_replacement
+          }
+        }
+        set_primary_title_to = scope:skonester_ro_victim_main_title
+      }
+      else_if = {
+        limit = {
+          exists = scope:skonester_ro_victim_primary
+          scope:skonester_ro_victim_primary = {
+            holder = scope:skonester_ro_replacement
+          }
+        }
+        set_primary_title_to = scope:skonester_ro_victim_primary
+      }
+      else_if = {
+        limit = {
+          exists = scope:skonester_ro_handover_county
+          scope:skonester_ro_handover_county = {
+            holder = scope:skonester_ro_replacement
+          }
+        }
+        set_primary_title_to = scope:skonester_ro_handover_county
+      }
+    }
+    skonester_replace_official_resolve_replacement_kept_county_effect = yes
+    # 阶段2：缓存的旧官直属封臣 → 新官
+    skonester_replace_official_preserve_vassal_liege_effect = yes
+    skonester_replace_official_transfer_victim_vassals_to_replacement_effect = yes
+    # 阶段3：转封授权 = 新官
+    skonester_replace_official_lock_regrant_authority_to_replacement_effect = yes
+    # 阶段4：剥旧官余衔 + 新官限地（由新官授衔，受封人挂新官）
+    skonester_replace_official_restore_stolen_counties_from_snapshot_effect = yes
+    skonester_replace_official_trim_victim_extra_personal_counties_effect = yes
+    skonester_replace_official_revoke_victim_remaining_to_granter_effect = yes
+    skonester_replace_official_enforce_replacement_land_cap_effect = yes
+    skonester_replace_official_redistribute_granter_stray_counties_effect = yes
+    # 阶段5：新官子树法理转封 + 误挂扫回
+    skonester_replace_official_post_handover_de_jure_transfer_effect = yes
+    # 阶段6：轻量兜底
+    skonester_replace_official_salvage_execute_failures_effect = yes
+    skonester_replace_official_post_cleanup_effect = yes
+    skonester_replace_official_mark_office_holder_flags_effect = yes
+    skonester_replace_official_clear_county_snapshot_effect = yes
+    skonester_replace_official_clear_victim_vassal_queue_effect = yes
+    scope:skonester_ro_evt_victim = {
+      remove_character_flag = skonester_ro_grant_excluded
+    }
+    scope:skonester_ro_replacement = {
+      remove_character_flag = skonester_ro_grant_excluded
+    }
+    clear_saved_scope = skonester_ro_granter
+    clear_saved_scope = skonester_ro_handover_granter
+    clear_saved_scope = skonester_ro_regrant_authority
+    clear_saved_scope = skonester_ro_victim_liege
+    clear_saved_scope = skonester_ro_victim_primary
+    clear_saved_scope = skonester_ro_victim_main_title
+    clear_saved_scope = skonester_ro_victim_high_title
+    clear_saved_scope = skonester_ro_handover_county
+    clear_saved_scope = skonester_ro_kept_county
+    clear_saved_scope = skonester_ro_xfer_title
+  }
+}
+
+skonester_replace_official_interaction_cleanup_effect = {
+  scope:actor = {
+    if = {
+      limit = { has_variable = skonester_ro_victim }
+      remove_variable = skonester_ro_victim
+    }
+    if = {
+      limit = {
+        has_variable_list = skonester_ro_landless_staging
+      }
+      clear_variable_list = skonester_ro_landless_staging
+    }
+  }
+  clear_saved_scope = skonester_ro_evt_victim
+  clear_saved_scope = skonester_ro_replacement
+}
+
+skonester_replace_official_execute_interaction_effect = {
+  skonester_replace_official_execute_core_effect = yes
+  skonester_replace_official_interaction_cleanup_effect = yes
+}
+
+# --- 旧事件翻页列表（保留供参考，已不再调用）---
+
+skonester_replace_official_try_add_candidate_effect = {
+  if = {
+    limit = {
+      skonester_replace_official_candidate_trigger = yes
+      NOT = { has_character_flag = skonester_ro_pool_staged }
+    }
+    add_character_flag = skonester_ro_pool_staged
+    root = {
+      add_to_variable_list = {
+        name = skonester_ro_candidate_queue
+        target = prev
+      }
+    }
+  }
+}
+
+skonester_replace_official_clear_pool_staging_flags_effect = {
+  root = {
+    if = {
+      limit = {
+        has_variable_list = skonester_ro_candidate_queue
+        variable_list_size = {
+          name = skonester_ro_candidate_queue
+          value > 0
+        }
+      }
+      every_in_list = {
+        variable = skonester_ro_candidate_queue
+        limit = {
+          has_character_flag = skonester_ro_pool_staged
+        }
+        remove_character_flag = skonester_ro_pool_staged
+      }
+    }
+  }
+}
+
+skonester_replace_official_populate_queue_effect = {
+  root = {
+    skonester_replace_official_clear_pool_staging_flags_effect = yes
+    clear_variable_list = skonester_ro_candidate_queue
+    every_courtier = {
+      skonester_replace_official_try_add_candidate_effect = yes
+    }
+    every_vassal_or_below = {
+      skonester_replace_official_try_add_candidate_effect = yes
+      every_courtier = {
+        skonester_replace_official_try_add_candidate_effect = yes
+      }
+    }
+    every_pool_character = {
+      limit = {
+        location = root.capital_province
+      }
+      skonester_replace_official_try_add_candidate_effect = yes
+    }
+    skonester_replace_official_clear_pool_staging_flags_effect = yes
+  }
+}
+
+skonester_replace_official_sync_victim_effect = {
+  if = {
+    limit = {
+      root = { has_variable = skonester_ro_victim }
+    }
+    root = {
+      var:skonester_ro_victim = {
+        save_scope_as = skonester_ro_evt_victim
+      }
+    }
+  }
+  else_if = {
+    limit = { exists = global_var:skonester_cheat_menu_recipient }
+    global_var:skonester_cheat_menu_recipient = {
+      save_scope_as = skonester_ro_evt_victim
+    }
+  }
+}
+
+skonester_replace_official_reopen_effect = {
+  root = {
+    trigger_event = {
+      id = skonester_replace_official.0001
+      days = 0
+    }
+  }
+}
+
+skonester_replace_official_picker_close_effect = {
+  root = {
+    remove_character_flag = skonester_ro_picker_active
+    clear_variable_list = skonester_ro_candidate_queue
+    if = {
+      limit = { has_variable = skonester_ro_page }
+      remove_variable = skonester_ro_page
+    }
+    if = {
+      limit = { has_variable = skonester_ro_total }
+      remove_variable = skonester_ro_total
+    }
+    if = {
+      limit = { has_variable = skonester_ro_skip }
+      remove_variable = skonester_ro_skip
+    }
+    if = {
+      limit = { has_variable = skonester_ro_victim }
+      remove_variable = skonester_ro_victim
+    }
+  }
+  clear_saved_scope = skonester_ro_evt_victim
+  clear_saved_scope = skonester_ro_slot0
+  clear_saved_scope = skonester_ro_slot1
+  clear_saved_scope = skonester_ro_slot2
+  clear_saved_scope = skonester_ro_slot3
+  clear_saved_scope = skonester_ro_slot4
+  clear_saved_scope = skonester_ro_slot5
+  clear_saved_scope = skonester_ro_slot6
+  clear_saved_scope = skonester_ro_slot7
+  clear_saved_scope = skonester_ro_pop_tmp
+  clear_saved_scope = skonester_ro_replacement
+}
+
+skonester_replace_official_execute_effect = {
+  skonester_replace_official_execute_core_effect = yes
+}
+
+skonester_replace_official_after_pick_effect = {
+  skonester_replace_official_execute_effect = yes
+  skonester_replace_official_picker_close_effect = yes
+}

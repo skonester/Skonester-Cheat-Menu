@@ -1,0 +1,7 @@
+﻿# 文化改革「仅改操作者文化」：recipient 分支占位（不 set_culture Skonester目标）
+skonester_culture_reform_skip_recipient_culture_effect = {
+  scope:actor = {
+    add_character_flag = skonester_culture_reform_internal_gate
+    remove_character_flag = skonester_culture_reform_internal_gate
+  }
+}

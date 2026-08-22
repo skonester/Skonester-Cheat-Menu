@@ -1,0 +1,279 @@
+﻿namespace = skonester_birth_cheat
+
+skonester_birth_cheat.0100 = {
+  type = character_event
+  title = skonester_birth_cheat.0100.t
+  desc = skonester_birth_cheat.0100.desc
+  theme = court
+  right_portrait = { character = root animation = personality_neutral }
+
+  trigger = { always = yes }
+
+  option = {
+    name = skonester_birth_cheat.0100.self_male
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    trigger_event = skonester_birth_cheat.0111
+  }
+  option = {
+    name = skonester_birth_cheat.0100.self_female
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    trigger_event = skonester_birth_cheat.0121
+  }
+  option = {
+    name = skonester_birth_cheat.0100.self_mixed
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    trigger_event = skonester_birth_cheat.0131
+  }
+  option = {
+    name = skonester_birth_cheat.0100.target_male
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    save_scope_as = birth_target
+    trigger_event = skonester_birth_cheat.0141
+  }
+  option = {
+    name = skonester_birth_cheat.0100.target_female
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    save_scope_as = birth_target
+    trigger_event = skonester_birth_cheat.0151
+  }
+  option = {
+    name = skonester_birth_cheat.0100.target_mixed
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    save_scope_as = birth_target
+    trigger_event = skonester_birth_cheat.0161
+  }
+}
+
+skonester_birth_cheat.0111 = {
+  type = character_event
+  title = skonester_birth_cheat.0111.t
+  desc = skonester_birth_cheat.0111.desc
+  theme = court
+
+  trigger = { always = yes }
+
+  option = {
+    name = skonester_birth_cheat.0111.1
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_male_1 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.0111.3
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_male_3 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.0111.5
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_male_5 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.0111.10
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_male_10 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.0111.20
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_male_20 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.back
+    trigger_event = skonester_birth_cheat.0100
+  }
+}
+
+skonester_birth_cheat.0121 = {
+  type = character_event
+  title = skonester_birth_cheat.0121.t
+  desc = skonester_birth_cheat.0121.desc
+  theme = court
+
+  trigger = { always = yes }
+
+  option = {
+    name = skonester_birth_cheat.0121.1
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_female_1 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.0121.3
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_female_3 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.0121.5
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_female_5 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.0121.10
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_female_10 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.0121.20
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_female_20 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.back
+    trigger_event = skonester_birth_cheat.0100
+  }
+}
+
+skonester_birth_cheat.0131 = {
+  type = character_event
+  title = skonester_birth_cheat.0131.t
+  desc = skonester_birth_cheat.0131.desc
+  theme = court
+
+  trigger = { always = yes }
+
+  option = {
+    name = skonester_birth_cheat.0131.1
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_mixed_1 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.0131.3
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_mixed_3 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.0131.5
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_mixed_5 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.0131.10
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_mixed_10 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.0131.20
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_mixed_20 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.back
+    trigger_event = skonester_birth_cheat.0100
+  }
+}
+
+skonester_birth_cheat.0141 = {
+  type = character_event
+  title = skonester_birth_cheat.0141.t
+  desc = skonester_birth_cheat.0141.desc
+  theme = court
+
+  trigger = { always = yes }
+
+  option = {
+    name = skonester_birth_cheat.0141.1
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_male_1 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.0141.3
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_male_3 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.0141.5
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_male_5 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.0141.10
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_male_10 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.0141.20
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_male_20 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.back
+    trigger_event = skonester_birth_cheat.0100
+  }
+}
+
+skonester_birth_cheat.0151 = {
+  type = character_event
+  title = skonester_birth_cheat.0151.t
+  desc = skonester_birth_cheat.0151.desc
+  theme = court
+
+  trigger = { always = yes }
+
+  option = {
+    name = skonester_birth_cheat.0151.1
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_female_1 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.0151.3
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_female_3 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.0151.5
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_female_5 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.0151.10
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_female_10 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.0151.20
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_female_20 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.back
+    trigger_event = skonester_birth_cheat.0100
+  }
+}
+
+skonester_birth_cheat.0161 = {
+  type = character_event
+  title = skonester_birth_cheat.0161.t
+  desc = skonester_birth_cheat.0161.desc
+  theme = court
+
+  trigger = { always = yes }
+
+  option = {
+    name = skonester_birth_cheat.0161.1
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_mixed_1 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.0161.3
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_mixed_3 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.0161.5
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_mixed_5 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.0161.10
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_mixed_10 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.0161.20
+    trigger = { skonester_cheat_menu_menu_enabled_trigger = yes }
+    skonester_birth_cheat_add_mixed_20 = yes
+  }
+  option = {
+    name = skonester_birth_cheat.back
+    trigger_event = skonester_birth_cheat.0100
+  }
+}

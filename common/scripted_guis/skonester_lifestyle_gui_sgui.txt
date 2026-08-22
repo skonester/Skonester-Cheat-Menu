@@ -1,0 +1,2856 @@
+﻿# AUTO-GENERATED — tools/gen_lifestyle_gui.py
+
+skonester_lsf_gui_visible = {
+  scope = character
+  is_shown = { has_character_flag = skonester_lsf_gui_open }
+  is_valid = { always = yes }
+}
+
+skonester_lsf_gui_close = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_close_lifestyle_gui_effect = yes }
+}
+
+skonester_lsf_gui_has_befriend_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = befriend_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_befriend_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_befriend_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_flatterer_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = flatterer_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_flatterer_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_flatterer_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_confidants_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = confidants_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_confidants_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_confidants_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_friendly_counsel_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = friendly_counsel_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_friendly_counsel_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_friendly_counsel_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_familial_familiar_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = familial_familiar_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_familial_familiar_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_familial_familiar_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_groomed_to_rule_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = groomed_to_rule_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_groomed_to_rule_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_groomed_to_rule_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_sound_foundations_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = sound_foundations_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_sound_foundations_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_sound_foundations_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_thicker_than_water_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = thicker_than_water_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_thicker_than_water_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_thicker_than_water_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_family_man_perk_male = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = family_man_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_family_man_perk_male = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_family_man_perk_male_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_family_man_perk_female = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = family_man_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_family_man_perk_female = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_family_man_perk_female_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_a_life_of_glory_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = a_life_of_glory_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_a_life_of_glory_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_a_life_of_glory_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_august_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = august_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_august_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_august_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_benevolent_intent_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = benevolent_intent_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_benevolent_intent_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_benevolent_intent_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_dignitas_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = dignitas_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_dignitas_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_dignitas_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_firm_hand_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = firm_hand_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_firm_hand_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_firm_hand_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_inspiring_rule_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = inspiring_rule_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_inspiring_rule_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_inspiring_rule_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_praetorian_guard_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = praetorian_guard_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_praetorian_guard_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_praetorian_guard_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_true_ruler_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = true_ruler_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_true_ruler_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_true_ruler_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_writing_history_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = writing_history_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_writing_history_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_writing_history_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_thoughtful_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = thoughtful_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_thoughtful_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_thoughtful_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_adaptive_traditions_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = adaptive_traditions_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_adaptive_traditions_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_adaptive_traditions_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_defensive_negotiations_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = defensive_negotiations_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_defensive_negotiations_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_defensive_negotiations_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_diplomat_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = diplomat_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_diplomat_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_diplomat_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_flexible_truces_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = flexible_truces_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_flexible_truces_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_flexible_truces_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_ducal_conquest_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = ducal_conquest_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_ducal_conquest_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_ducal_conquest_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_accomplished_forger_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = accomplished_forger_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_accomplished_forger_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_accomplished_forger_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_embassies_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = embassies_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_embassies_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_embassies_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_forced_vassalage_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = forced_vassalage_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_forced_vassalage_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_forced_vassalage_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_a_mans_home_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = a_mans_home_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_a_mans_home_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_a_mans_home_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_absolute_control_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = absolute_control_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_absolute_control_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_absolute_control_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_enduring_hardships_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = enduring_hardships_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_enduring_hardships_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_enduring_hardships_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_hard_rule_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = hard_rule_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_hard_rule_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_hard_rule_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_overseer_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = overseer_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_overseer_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_overseer_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_prepared_conscription_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = prepared_conscription_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_prepared_conscription_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_prepared_conscription_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_serve_the_crown_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = serve_the_crown_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_serve_the_crown_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_serve_the_crown_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_soldiers_of_lesser_fortune_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = soldiers_of_lesser_fortune_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_soldiers_of_lesser_fortune_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_soldiers_of_lesser_fortune_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_strict_organization_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = strict_organization_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_strict_organization_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_strict_organization_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_chivalric_dominance_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = chivalric_dominance_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_chivalric_dominance_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_chivalric_dominance_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_courtship_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = courtship_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_courtship_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_courtship_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_gallant_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = gallant_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_gallant_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_gallant_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_kingsguard_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = kingsguard_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_kingsguard_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_kingsguard_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_loyalty_and_respect_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = loyalty_and_respect_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_loyalty_and_respect_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_loyalty_and_respect_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_never_back_down_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = never_back_down_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_never_back_down_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_never_back_down_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_peacemaker_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = peacemaker_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_peacemaker_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_peacemaker_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_promising_prospects_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = promising_prospects_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_promising_prospects_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_promising_prospects_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_stalwart_leader_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = stalwart_leader_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_stalwart_leader_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_stalwart_leader_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_bellum_justum_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = bellum_justum_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_bellum_justum_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_bellum_justum_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_engineered_for_destruction_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = engineered_for_destruction_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_engineered_for_destruction_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_engineered_for_destruction_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_envelopment_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = envelopment_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_envelopment_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_envelopment_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_hit_and_run_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = hit_and_run_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_hit_and_run_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_hit_and_run_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_living_off_the_land_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = living_off_the_land_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_living_off_the_land_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_living_off_the_land_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_organized_retreat_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = organized_retreat_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_organized_retreat_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_organized_retreat_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_parthian_tactics_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = parthian_tactics_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_parthian_tactics_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_parthian_tactics_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_sappers_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = sappers_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_sappers_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_sappers_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_strategist_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = strategist_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_strategist_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_strategist_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_architect_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = architect_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_architect_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_architect_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_centralization_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = centralization_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_centralization_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_centralization_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_cutting_corners_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = cutting_corners_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_cutting_corners_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_cutting_corners_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_defensive_measures_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = defensive_measures_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_defensive_measures_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_defensive_measures_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_divided_attention_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = divided_attention_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_divided_attention_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_divided_attention_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_organized_muster_rolls_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = organized_muster_rolls_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_organized_muster_rolls_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_organized_muster_rolls_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_popular_figurehead_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = popular_figurehead_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_popular_figurehead_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_popular_figurehead_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_professional_workforce_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = professional_workforce_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_professional_workforce_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_professional_workforce_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_tax_man_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = tax_man_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_tax_man_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_tax_man_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_administrator_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = administrator_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_administrator_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_administrator_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_chains_of_loyalty_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = chains_of_loyalty_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_chains_of_loyalty_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_chains_of_loyalty_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_honored_to_serve_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = honored_to_serve_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_honored_to_serve_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_honored_to_serve_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_large_levies_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = large_levies_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_large_levies_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_large_levies_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_likable_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = likable_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_likable_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_likable_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_meritocracy_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = meritocracy_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_meritocracy_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_meritocracy_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_positions_of_power_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = positions_of_power_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_positions_of_power_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_positions_of_power_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_soon_forgiven_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = soon_forgiven_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_soon_forgiven_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_soon_forgiven_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_toe_the_line_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = toe_the_line_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_toe_the_line_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_toe_the_line_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_at_any_cost_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = at_any_cost_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_at_any_cost_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_at_any_cost_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_avaricious_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = avaricious_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_avaricious_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_avaricious_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_detailed_ledgers_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = detailed_ledgers_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_detailed_ledgers_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_detailed_ledgers_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_fearful_troops_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = fearful_troops_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_fearful_troops_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_fearful_troops_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_golden_aplomb_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = golden_aplomb_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_golden_aplomb_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_golden_aplomb_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_golden_obligations_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = golden_obligations_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_golden_obligations_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_golden_obligations_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_heregeld_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = heregeld_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_heregeld_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_heregeld_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_it_is_my_domain_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = it_is_my_domain_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_it_is_my_domain_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_it_is_my_domain_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_war_profiteer_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = war_profiteer_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_war_profiteer_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_war_profiteer_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_a_job_done_right_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = a_job_done_right_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_a_job_done_right_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_a_job_done_right_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_court_of_shadows_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = court_of_shadows_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_court_of_shadows_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_court_of_shadows_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_digging_for_dirt_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = digging_for_dirt_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_digging_for_dirt_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_digging_for_dirt_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_kidnapper_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = kidnapper_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_kidnapper_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_kidnapper_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_prepared_for_anything_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = prepared_for_anything_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_prepared_for_anything_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_prepared_for_anything_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_schemer_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = schemer_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_schemer_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_schemer_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_swift_execution_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = swift_execution_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_swift_execution_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_swift_execution_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_truth_is_relative_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = truth_is_relative_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_truth_is_relative_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_truth_is_relative_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_twice_schemed_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = twice_schemed_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_twice_schemed_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_twice_schemed_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_dark_insights_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = dark_insights_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_dark_insights_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_dark_insights_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_divine_retribution_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = divine_retribution_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_divine_retribution_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_divine_retribution_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_dreadful_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = dreadful_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_dreadful_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_dreadful_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_fear_tax_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = fear_tax_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_fear_tax_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_fear_tax_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_forever_infamous_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = forever_infamous_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_forever_infamous_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_forever_infamous_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_malice_implicit_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = malice_implicit_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_malice_implicit_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_malice_implicit_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_prison_feudal_complex_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = prison_feudal_complex_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_prison_feudal_complex_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_prison_feudal_complex_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_thriving_in_chaos_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = thriving_in_chaos_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_thriving_in_chaos_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_thriving_in_chaos_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_torturer_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = torturer_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_torturer_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_torturer_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_enticing_opportunity_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = enticing_opportunity_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_enticing_opportunity_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_enticing_opportunity_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_graceful_recovery_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = graceful_recovery_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_graceful_recovery_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_graceful_recovery_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_home_advantage_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = home_advantage_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_home_advantage_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_home_advantage_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_like_weed_in_a_garden_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = like_weed_in_a_garden_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_like_weed_in_a_garden_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_like_weed_in_a_garden_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_mortal_adoration_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = mortal_adoration_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_mortal_adoration_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_mortal_adoration_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_seducer_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = seducer_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_seducer_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_seducer_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_smooth_operator_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = smooth_operator_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_smooth_operator_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_smooth_operator_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_subtle_desire_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = subtle_desire_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_subtle_desire_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_subtle_desire_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_unshackled_lust_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = unshackled_lust_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_unshackled_lust_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_unshackled_lust_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_anatomical_studies_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = anatomical_studies_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_anatomical_studies_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_anatomical_studies_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_carefree_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = carefree_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_carefree_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_carefree_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_healthy_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = healthy_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_healthy_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_healthy_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_iron_constitution_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = iron_constitution_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_iron_constitution_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_iron_constitution_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_know_thyself_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = know_thyself_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_know_thyself_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_know_thyself_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_mental_resilience_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = mental_resilience_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_mental_resilience_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_mental_resilience_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_restraint_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = restraint_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_restraint_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_restraint_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_wash_your_hands_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = wash_your_hands_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_wash_your_hands_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_wash_your_hands_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_whole_of_body_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = whole_of_body_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_whole_of_body_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_whole_of_body_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_apostate_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = apostate_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_apostate_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_apostate_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_church_and_state_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = church_and_state_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_church_and_state_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_church_and_state_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_clerical_justifications_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = clerical_justifications_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_clerical_justifications_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_clerical_justifications_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_defender_of_the_faith_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = defender_of_the_faith_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_defender_of_the_faith_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_defender_of_the_faith_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_faithful_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = faithful_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_faithful_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_faithful_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_radiant_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = radiant_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_radiant_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_radiant_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_religious_icon_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = religious_icon_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_religious_icon_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_religious_icon_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_theologian_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = theologian_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_theologian_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_theologian_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_zealous_proselytizer_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = zealous_proselytizer_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_zealous_proselytizer_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_zealous_proselytizer_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_learn_on_the_job_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = learn_on_the_job_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_learn_on_the_job_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_learn_on_the_job_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_open_minded_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = open_minded_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_open_minded_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_open_minded_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_pedagogy_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = pedagogy_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_pedagogy_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_pedagogy_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_planned_cultivation_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = planned_cultivation_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_planned_cultivation_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_planned_cultivation_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_prophet_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = prophet_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_prophet_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_prophet_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_scholar_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = scholar_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_scholar_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_scholar_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_scholarly_circles_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = scholarly_circles_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_scholarly_circles_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_scholarly_circles_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_scientific_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = scientific_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_scientific_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_scientific_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_sanctioned_loopholes_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = sanctioned_loopholes_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_sanctioned_loopholes_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_sanctioned_loopholes_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_mustering_the_troops_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = mustering_the_troops_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_mustering_the_troops_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_mustering_the_troops_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_local_inspection_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = local_inspection_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_local_inspection_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_local_inspection_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_know_your_land_know_your_people_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = know_your_land_know_your_people_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_know_your_land_know_your_people_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_know_your_land_know_your_people_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_no_stone_unturned_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = no_stone_unturned_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_no_stone_unturned_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_no_stone_unturned_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_travel_logs_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = travel_logs_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_travel_logs_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_travel_logs_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_local_arbitration_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = local_arbitration_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_local_arbitration_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_local_arbitration_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_realm_charts_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = realm_charts_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_realm_charts_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_realm_charts_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_personal_touch_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = personal_touch_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_personal_touch_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_personal_touch_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_surveyor_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = surveyor_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_surveyor_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_surveyor_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_well_prepared_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = well_prepared_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_well_prepared_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_well_prepared_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_roaming_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = roaming_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_roaming_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_roaming_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_far_and_wide_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = far_and_wide_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_far_and_wide_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_far_and_wide_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_just_one_more_hill_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = just_one_more_hill_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_just_one_more_hill_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_just_one_more_hill_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_of_the_people_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = of_the_people_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_of_the_people_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_of_the_people_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_local_hero_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = local_hero_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_local_hero_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_local_hero_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_travel_companion_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = travel_companion_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_travel_companion_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_travel_companion_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_the_home_away_from_home_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = the_home_away_from_home_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_the_home_away_from_home_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_the_home_away_from_home_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_wayfarer_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = wayfarer_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_wayfarer_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_wayfarer_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_power_at_home_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = power_at_home_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_power_at_home_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_power_at_home_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_mercenary_contacts_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = mercenary_contacts_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_mercenary_contacts_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_mercenary_contacts_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_journey_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = journey_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_journey_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_journey_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_been_there_done_that_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = been_there_done_that_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_been_there_done_that_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_been_there_done_that_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_finally_there_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = finally_there_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_finally_there_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_finally_there_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_souvenirs_aplenty_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = souvenirs_aplenty_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_souvenirs_aplenty_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_souvenirs_aplenty_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_gracious_host_impeccable_guest_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = gracious_host_impeccable_guest_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_gracious_host_impeccable_guest_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_gracious_host_impeccable_guest_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_journey_planner_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = journey_planner_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_journey_planner_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_journey_planner_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_has_voyager_perk = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_lsf_gui_target
+    var:skonester_lsf_gui_target = { has_perk = voyager_perk }
+  }
+}
+
+skonester_lsf_gui_toggle_voyager_perk = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_lsf_gui_toggle_voyager_perk_effect = yes
+  }
+}
+
+skonester_lsf_gui_xp250_diplomacy = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_xp250_diplomacy_effect = yes }
+}
+
+skonester_lsf_gui_xp1000_diplomacy = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_xp1000_diplomacy_effect = yes }
+}
+
+skonester_lsf_gui_xp3000_diplomacy = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_xp3000_diplomacy_effect = yes }
+}
+
+skonester_lsf_gui_perk1_diplomacy = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_perk1_diplomacy_effect = yes }
+}
+
+skonester_lsf_gui_perk3_diplomacy = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_perk3_diplomacy_effect = yes }
+}
+
+skonester_lsf_gui_reset_diplomacy = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_reset_diplomacy_effect = yes }
+}
+
+skonester_lsf_gui_xp250_martial = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_xp250_martial_effect = yes }
+}
+
+skonester_lsf_gui_xp1000_martial = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_xp1000_martial_effect = yes }
+}
+
+skonester_lsf_gui_xp3000_martial = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_xp3000_martial_effect = yes }
+}
+
+skonester_lsf_gui_perk1_martial = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_perk1_martial_effect = yes }
+}
+
+skonester_lsf_gui_perk3_martial = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_perk3_martial_effect = yes }
+}
+
+skonester_lsf_gui_reset_martial = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_reset_martial_effect = yes }
+}
+
+skonester_lsf_gui_xp250_stewardship = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_xp250_stewardship_effect = yes }
+}
+
+skonester_lsf_gui_xp1000_stewardship = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_xp1000_stewardship_effect = yes }
+}
+
+skonester_lsf_gui_xp3000_stewardship = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_xp3000_stewardship_effect = yes }
+}
+
+skonester_lsf_gui_perk1_stewardship = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_perk1_stewardship_effect = yes }
+}
+
+skonester_lsf_gui_perk3_stewardship = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_perk3_stewardship_effect = yes }
+}
+
+skonester_lsf_gui_reset_stewardship = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_reset_stewardship_effect = yes }
+}
+
+skonester_lsf_gui_xp250_intrigue = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_xp250_intrigue_effect = yes }
+}
+
+skonester_lsf_gui_xp1000_intrigue = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_xp1000_intrigue_effect = yes }
+}
+
+skonester_lsf_gui_xp3000_intrigue = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_xp3000_intrigue_effect = yes }
+}
+
+skonester_lsf_gui_perk1_intrigue = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_perk1_intrigue_effect = yes }
+}
+
+skonester_lsf_gui_perk3_intrigue = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_perk3_intrigue_effect = yes }
+}
+
+skonester_lsf_gui_reset_intrigue = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_reset_intrigue_effect = yes }
+}
+
+skonester_lsf_gui_xp250_learning = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_xp250_learning_effect = yes }
+}
+
+skonester_lsf_gui_xp1000_learning = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_xp1000_learning_effect = yes }
+}
+
+skonester_lsf_gui_xp3000_learning = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_xp3000_learning_effect = yes }
+}
+
+skonester_lsf_gui_perk1_learning = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_perk1_learning_effect = yes }
+}
+
+skonester_lsf_gui_perk3_learning = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_perk3_learning_effect = yes }
+}
+
+skonester_lsf_gui_reset_learning = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_reset_learning_effect = yes }
+}
+
+skonester_lsf_gui_xp250_wanderer = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_xp250_wanderer_effect = yes }
+}
+
+skonester_lsf_gui_xp1000_wanderer = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_xp1000_wanderer_effect = yes }
+}
+
+skonester_lsf_gui_xp3000_wanderer = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_xp3000_wanderer_effect = yes }
+}
+
+skonester_lsf_gui_perk1_wanderer = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_perk1_wanderer_effect = yes }
+}
+
+skonester_lsf_gui_perk3_wanderer = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_perk3_wanderer_effect = yes }
+}
+
+skonester_lsf_gui_reset_wanderer = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_reset_wanderer_effect = yes }
+}
+
+skonester_lsf_gui_all_xp250 = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_all_xp250_effect = yes }
+}
+
+skonester_lsf_gui_all_xp1000 = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_all_xp1000_effect = yes }
+}
+
+skonester_lsf_gui_all_xp3000 = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_lsf_gui_all_xp3000_effect = yes }
+}
+

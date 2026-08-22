@@ -1,0 +1,290 @@
+﻿# 宝物窃取：列出目标个人宝物栏，每页 3 件；翻页 days=0。由 tools/gen_steal_picker.py 生成。
+namespace = skonester_cheat_menu
+
+skonester_cheat_menu.3094 = {
+  type = character_event
+  title = skonester_art.3094.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+  left_portrait = root
+  right_portrait = scope:skonester_steal_evt_recipient
+
+  immediate = {
+    clear_saved_scope = skonester_steal_slot0
+    clear_saved_scope = skonester_steal_slot1
+    clear_saved_scope = skonester_steal_slot2
+    clear_saved_scope = skonester_steal_pop_tmp
+    clear_saved_scope = skonester_steal_chosen
+    clear_saved_scope = skonester_steal_evt_recipient
+    root = {
+      clear_variable_list = skonester_steal_art_queue
+      var:skonester_steal_victim ?= {
+        save_scope_as = skonester_steal_evt_recipient
+      }
+      if = {
+        limit = {
+          NOT = {
+            has_variable = skonester_steal_page
+          }
+        }
+        set_variable = {
+          name = skonester_steal_page
+          value = 0
+        }
+      }
+      if = {
+        limit = {
+          exists = scope:skonester_steal_evt_recipient
+        }
+        scope:skonester_steal_evt_recipient = {
+          every_character_artifact = {
+            save_scope_as = skonester_steal_art_iter
+            root = {
+              add_to_variable_list = {
+                name = skonester_steal_art_queue
+                target = scope:skonester_steal_art_iter
+              }
+            }
+            clear_saved_scope = skonester_steal_art_iter
+          }
+        }
+      }
+      set_variable = {
+        name = skonester_steal_art_total
+        value = 0
+      }
+      every_in_list = {
+        variable = skonester_steal_art_queue
+        root = {
+          change_variable = {
+            name = skonester_steal_art_total
+            add = 1
+          }
+        }
+      }
+      if = {
+        limit = {
+          has_variable = skonester_steal_page
+          var:skonester_steal_page > 0
+          has_variable = skonester_steal_art_total
+          var:skonester_steal_art_total <= skonester_steal_page_offset_value
+        }
+        set_variable = {
+          name = skonester_steal_page
+          value = 0
+        }
+      }
+      set_variable = {
+        name = skonester_steal_skip
+        value = {
+          value = var:skonester_steal_page
+          multiply = 3
+        }
+      }
+      while = {
+        limit = {
+          var:skonester_steal_skip > 0
+          variable_list_size = {
+            name = skonester_steal_art_queue
+            value > 0
+          }
+        }
+        ordered_in_list = {
+          variable = skonester_steal_art_queue
+          order_by = artifact_wealth
+          position = 0
+          save_scope_as = skonester_steal_pop_tmp
+        }
+        remove_list_variable = {
+          name = skonester_steal_art_queue
+          target = scope:skonester_steal_pop_tmp
+        }
+        change_variable = {
+          name = skonester_steal_skip
+          add = -1
+        }
+      }
+      if = {
+        limit = {
+          variable_list_size = {
+            name = skonester_steal_art_queue
+            value > 0
+          }
+        }
+        ordered_in_list = {
+          variable = skonester_steal_art_queue
+          order_by = artifact_wealth
+          position = 0
+          save_scope_as = skonester_steal_slot0
+        }
+      }
+      if = {
+        limit = {
+          variable_list_size = {
+            name = skonester_steal_art_queue
+            value > 1
+          }
+        }
+        ordered_in_list = {
+          variable = skonester_steal_art_queue
+          order_by = artifact_wealth
+          position = 1
+          save_scope_as = skonester_steal_slot1
+        }
+      }
+      if = {
+        limit = {
+          variable_list_size = {
+            name = skonester_steal_art_queue
+            value > 2
+          }
+        }
+        ordered_in_list = {
+          variable = skonester_steal_art_queue
+          order_by = artifact_wealth
+          position = 2
+          save_scope_as = skonester_steal_slot2
+        }
+      }
+      if = {
+        limit = {
+          has_variable = skonester_steal_skip
+        }
+        remove_variable = skonester_steal_skip
+      }
+    }
+  }
+
+  option = {
+    skill = learning
+    name = skonester_art.3094.prev_page
+    trigger = {
+      skonester_steal_picker_enabled_trigger = yes
+      var:skonester_steal_page > 0
+    }
+    root = {
+      change_variable = {
+        name = skonester_steal_page
+        add = -1
+      }
+      skonester_steal_picker_reopen_effect = yes
+    }
+  }
+
+  option = {
+    skill = learning
+    name = skonester_art.3094.next_page
+    trigger = {
+      skonester_steal_picker_enabled_trigger = yes
+      has_variable = skonester_steal_art_total
+      var:skonester_steal_art_total > skonester_steal_next_page_min_total_value
+    }
+    root = {
+      change_variable = {
+        name = skonester_steal_page
+        add = 1
+      }
+      skonester_steal_picker_reopen_effect = yes
+    }
+  }
+
+  option = {
+    skill = intrigue
+    name = skonester_art.3094.steal_0
+    trigger = {
+      skonester_steal_picker_enabled_trigger = yes
+      exists = scope:skonester_steal_slot0
+    }
+    custom_tooltip = skonester_art.3094.steal_0_tt
+    scope:skonester_steal_slot0 = {
+      show_as_tooltip = {
+        custom_description = {
+          text = skonester_art.3094.steal_0_tt
+          object = this
+        }
+      }
+    }
+    hidden_effect = {
+      scope:skonester_steal_slot0 = {
+        set_owner = root
+      }
+      skonester_steal_after_pick_effect = yes
+    }
+  }
+
+  option = {
+    skill = intrigue
+    name = skonester_art.3094.steal_1
+    trigger = {
+      skonester_steal_picker_enabled_trigger = yes
+      exists = scope:skonester_steal_slot1
+    }
+    custom_tooltip = skonester_art.3094.steal_1_tt
+    scope:skonester_steal_slot1 = {
+      show_as_tooltip = {
+        custom_description = {
+          text = skonester_art.3094.steal_1_tt
+          object = this
+        }
+      }
+    }
+    hidden_effect = {
+      scope:skonester_steal_slot1 = {
+        set_owner = root
+      }
+      skonester_steal_after_pick_effect = yes
+    }
+  }
+
+  option = {
+    skill = intrigue
+    name = skonester_art.3094.steal_2
+    trigger = {
+      skonester_steal_picker_enabled_trigger = yes
+      exists = scope:skonester_steal_slot2
+    }
+    custom_tooltip = skonester_art.3094.steal_2_tt
+    scope:skonester_steal_slot2 = {
+      show_as_tooltip = {
+        custom_description = {
+          text = skonester_art.3094.steal_2_tt
+          object = this
+        }
+      }
+    }
+    hidden_effect = {
+      scope:skonester_steal_slot2 = {
+        set_owner = root
+      }
+      skonester_steal_after_pick_effect = yes
+    }
+  }
+
+  option = {
+    skill = stewardship
+    name = skonester_art.3094.steal_all
+    trigger = {
+      skonester_steal_picker_enabled_trigger = yes
+      has_variable = skonester_steal_art_total
+      NOT = {
+        var:skonester_steal_art_total > skonester_steal_next_page_min_total_value
+      }
+    }
+    hidden_effect = {
+      var:skonester_steal_victim = {
+        every_character_artifact = {
+          set_owner = root
+        }
+      }
+      skonester_steal_picker_close_effect = yes
+    }
+  }
+
+  option = {
+    skill = learning
+    name = skonester_cheat_menu.00x.close
+    root = {
+      skonester_steal_picker_close_effect = yes
+    }
+  }
+}

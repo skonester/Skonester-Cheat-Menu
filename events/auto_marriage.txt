@@ -1,0 +1,900 @@
+﻿namespace = auto_marriage
+
+auto_marriage.0001 = {
+	hidden = yes
+	trigger = {
+		OR = {
+			any_in_global_list = {
+				variable = dynasty_marry_males
+				this = root.dynasty
+			}
+			any_in_global_list = {
+				variable = house_marry_males
+				this = root.house
+			}
+		}
+		NOT = {
+			any_in_global_list = {
+				variable = individual_marry_exempt
+				this = root
+			}
+		}
+		OR = {
+			NOR = {
+				any_in_global_list = {
+					variable = dynasty_eugenic_males
+					this = root.dynasty
+				}
+				any_in_global_list = {
+					variable = house_eugenic_males
+					this = root.house
+				}
+			}
+			NOR = {
+				has_trait = intellect_good_1
+				has_trait = intellect_good_2
+				has_trait = intellect_good_3
+				has_trait = beauty_good_1
+				has_trait = beauty_good_2
+				has_trait = beauty_good_3
+				has_trait = physique_good_1
+				has_trait = physique_good_2
+				has_trait = physique_good_3
+				has_trait = fecund
+			}
+		}		
+		is_male = yes
+		allowed_more_spouses = yes
+		is_adult = yes
+		is_visibly_fertile = yes
+		trigger_if = {
+			limit = {
+				OR = {
+					any_in_global_list = {
+						variable = dynasty_marry_inbreed
+						this = root.dynasty
+					}
+					any_in_global_list = {
+						variable = house_marry_inbreed
+						this = root.house
+					}
+				}
+			}
+			NOT = {
+				any_close_or_extended_family_member = {
+					could_marry_character_trigger = { CHARACTER = root }
+					is_female = yes
+					allowed_more_spouses = yes
+					OR = {
+						AND = {
+							is_adult = yes
+							is_visibly_fertile = yes
+						}
+						is_child = yes #Don't want to prematurely marry off a 16 year old if a 15 year old relative is available
+					}
+					OR = {
+						AND = {
+							is_sibling_of = prev
+							OR = {
+								prev.mother != mother
+								prev.father != father
+							}
+						}
+						is_nibling_of = prev
+						is_cousin_of = prev
+						is_uncle_or_aunt_of = prev
+					}
+				}
+			}
+		}
+	}
+	immediate = {
+		create_character = {
+			random_traits = yes
+			gender = female
+			employer = prev
+			faith = prev.faith
+			age = { #half your age plus seven
+				value = 0
+				add = root.age
+				divide = 2
+				add = 7
+				min = 16 #It may be historically accurate to marry younger but game no like
+				max = 30 #No hags allowed
+			}
+			after_creation = {
+				marry = ROOT
+			}
+		}
+		if = {
+			limit = {
+				allowed_more_spouses = yes
+			}
+			trigger_event = {
+				id = auto_marriage.0001
+				delayed = yes
+			}
+		}
+	}
+	option = {
+	}
+}
+
+auto_marriage.0002 = {
+	hidden = yes
+	trigger = {
+		OR = {
+			any_in_global_list = {
+				variable = dynasty_marry_females
+				this = root.dynasty
+			}
+			any_in_global_list = {
+				variable = house_marry_females
+				this = root.house
+			}
+		}
+		NOT = {
+			any_in_global_list = {
+				variable = individual_marry_exempt
+				this = root
+			}
+		}
+		OR = {
+			NOR = {
+				any_in_global_list = {
+					variable = dynasty_eugenic_females
+					this = root.dynasty
+				}
+				any_in_global_list = {
+					variable = house_eugenic_females
+					this = root.house
+				}
+			}
+			NOR = {
+				has_trait = intellect_good_1
+				has_trait = intellect_good_2
+				has_trait = intellect_good_3
+				has_trait = beauty_good_1
+				has_trait = beauty_good_2
+				has_trait = beauty_good_3
+				has_trait = physique_good_1
+				has_trait = physique_good_2
+				has_trait = physique_good_3
+				has_trait = fecund
+			}
+		}
+		is_female = yes
+		allowed_more_spouses = yes
+		is_adult = yes
+		is_visibly_fertile = yes
+		trigger_if = {
+			limit = {
+				OR = {
+					any_in_global_list = {
+						variable = dynasty_marry_inbreed
+						this = root.dynasty
+					}
+					any_in_global_list = {
+						variable = house_marry_inbreed
+						this = root.house
+					}
+				}
+			}
+			NOT = {
+				any_close_or_extended_family_member = {
+					could_marry_character_trigger = { CHARACTER = root }
+					is_male = yes
+					allowed_more_spouses = yes
+					OR = {
+						AND = {
+							is_adult = yes
+							is_visibly_fertile = yes
+						}
+						is_child = yes #Don't want to prematurely marry off a 16 year old if a 15 year old relative is available
+					}
+					OR = {
+						AND = {
+							is_sibling_of = prev
+							OR = {
+								prev.mother != mother
+								prev.father != father
+							}
+						}
+						is_nibling_of = prev
+						is_cousin_of = prev
+						is_uncle_or_aunt_of = prev
+					}
+				}
+			}
+		}
+	}
+	immediate = {
+		create_character = {
+			random_traits = yes
+			gender = male
+			employer = prev
+			faith = prev.faith
+			age = { #Inverse of half your age plus 7
+				value = 0
+				add = ROOT.age
+				subtract = 7
+				multiply = 2
+				min = 16 #Not sure how you would get lower than 16 while still being able to marry
+				#No need for max, men stay fertile forever
+			}
+			after_creation = {
+				marry_matrilineal = prev
+			}
+		}
+		if = {
+			limit = {
+				allowed_more_spouses = yes
+			}
+			trigger_event = {
+				id = auto_marriage.0002
+				delayed = yes
+			}
+		}
+	}
+}
+
+auto_marriage.0003 = {
+	hidden = yes
+	trigger = {
+		OR = {
+			any_in_global_list = {
+				variable = dynasty_marry_inbreed
+				this = root.dynasty
+			}
+			any_in_global_list = {
+				variable = house_marry_inbreed
+				this = root.house
+			}
+		}
+		NOT = {
+			any_in_global_list = {
+				variable = individual_marry_exempt
+				this = root
+			}
+		}
+		#is_male = yes
+		allowed_more_spouses = yes
+		is_adult = yes
+		is_visibly_fertile = yes
+		any_close_or_extended_family_member = {
+			sex_opposite_of = root
+			allowed_more_spouses = yes
+			is_adult = yes
+			is_visibly_fertile = yes
+			could_marry_character_trigger = { CHARACTER = root }
+			OR = {
+				AND = {
+					is_sibling_of = prev
+					OR = {
+						prev.mother != mother
+						prev.father != father
+					}
+				}
+				is_nibling_of = prev
+				is_cousin_of = prev
+				is_uncle_or_aunt_of = prev
+			}
+		}
+	}
+	option = {
+		random_close_or_extended_family_member = {
+			limit = {
+				sex_opposite_of = root
+				allowed_more_spouses = yes
+				is_adult = yes
+				is_visibly_fertile = yes
+				could_marry_character_trigger = { CHARACTER = root }
+				OR = {
+					AND = {
+						is_sibling_of = prev
+						OR = {
+							prev.mother != mother
+							prev.father != father
+						}
+					}
+					is_nibling_of = prev
+					is_cousin_of = prev
+					is_uncle_or_aunt_of = prev
+				}
+			}
+			weight = {
+				base = 0
+				modifier = { #Only half-siblings, full siblings are too close and will never make pure-blooded
+					AND = {
+						is_sibling_of = prev
+						OR = {
+							mother != prev.mother
+							father != prev.father
+						}
+					}
+					add = 3
+				}
+				modifier = {
+					is_cousin_of = prev
+					add = 2
+				}
+				modifier = {
+					is_nibling_of = prev
+					add = 1
+				}
+				modifier = {
+					is_uncle_or_aunt_of = prev
+					add = 1
+				}
+				modifier = {
+					has_trait = pure_blooded
+					prev = {
+						has_trait = pure_blooded
+					}
+					add = 100
+				}
+			}
+			marry = prev
+		}
+	}
+}
+
+auto_marriage.0004 = {
+	hidden = yes
+	trigger = {
+		OR = {
+			any_in_global_list = {
+				variable = dynasty_conc_males
+				this = root.dynasty
+			}
+			any_in_global_list = {
+				variable = house_conc_males
+				this = root.house
+			}
+		}
+		NOT = {
+			any_in_global_list = {
+				variable = individual_marry_exempt
+				this = root
+			}
+		}
+		is_male = yes
+		allowed_more_concubines = yes
+		is_adult = yes
+		is_visibly_fertile = yes
+	}
+	immediate = {
+		create_character = {
+			random_traits = yes
+			gender = female
+			employer = prev
+			employer = prev
+			faith = prev.faith
+			age = { #half your age plus seven
+				value = 0
+				add = root.age
+				divide = 2
+				add = 7
+				min = 16 #It may be historically accurate to marry younger but game no like
+				max = 30 #No hags allowed
+			}
+			after_creation = {
+				ROOT = {
+					make_concubine = prev
+				}
+			}
+		}
+		if = {
+			limit = {
+				allowed_more_concubines = yes
+			}
+			trigger_event = {
+				id = auto_marriage.0004
+				delayed = yes
+			}
+		}
+	}
+}
+
+auto_marriage.0005 = {
+	hidden = yes
+	trigger = {
+		OR = {
+			any_in_global_list = {
+				variable = dynasty_conc_females
+				this = root.dynasty
+			}
+			any_in_global_list = {
+				variable = house_conc_females
+				this = root.house
+			}
+		}
+		NOT = {
+			any_in_global_list = {
+				variable = individual_marry_exempt
+				this = root
+			}
+		}
+		is_female = yes
+		allowed_more_concubines = yes
+		is_adult = yes
+		is_visibly_fertile = yes
+	}
+	immediate = {
+		create_character = {
+			random_traits = yes
+			gender = male
+			employer = prev
+			faith = prev.faith
+			culture = prev.culture
+			age = { #Inverse of half your age plus 7
+				value = 0
+				add = ROOT.age
+				subtract = 7
+				multiply = 2
+				min = 16 #Not sure how you would get lower than 16 while still being able to marry
+				#No need for max, men stay fertile forever
+			}						
+			after_creation = {
+				ROOT = {
+					make_concubine = prev
+				}
+			}
+		}
+		if = {
+			limit = {
+				allowed_more_concubines = yes
+			}
+			trigger_event = {
+				id = auto_marriage.0005
+				delayed = yes
+			}
+		}
+	}
+}
+
+auto_marriage.0006 = { #These are obviously very cheaty and make the already trivial game of eugenics even easier, up to you to use them
+	hidden = yes
+	trigger = {
+		OR = {
+			any_in_global_list = {
+				variable = dynasty_eugenic_males
+				this = root.dynasty
+			}
+			any_in_global_list = {
+				variable = house_eugenic_males
+				this = root.house
+			}
+		}
+		NOT = {
+			any_in_global_list = {
+				variable = individual_marry_exempt
+				this = root
+			}
+		}
+		OR = {
+			has_trait = intellect_good_1
+			has_trait = intellect_good_2
+			has_trait = intellect_good_3
+			has_trait = beauty_good_1
+			has_trait = beauty_good_2
+			has_trait = beauty_good_3
+			has_trait = physique_good_1
+			has_trait = physique_good_2
+			has_trait = physique_good_3
+			has_trait = fecund
+		}
+		is_male = yes
+		allowed_more_spouses = yes
+		is_adult = yes
+		is_visibly_fertile = yes
+		trigger_if = {
+			limit = {
+				OR = {
+					any_in_global_list = {
+						variable = dynasty_marry_inbreed
+						this = root.dynasty
+					}
+					any_in_global_list = {
+						variable = house_marry_inbreed
+						this = root.house
+					}
+				}
+			}
+			NOT = {
+				any_close_or_extended_family_member = {
+					could_marry_character_trigger = { CHARACTER = root }
+					is_female = yes
+					allowed_more_spouses = yes
+					OR = {
+						AND = {
+							is_adult = yes
+							is_visibly_fertile = yes
+						}
+						is_child = yes #Don't want to prematurely marry off a 16 year old if a 15 year old relative is available
+					}
+					OR = {
+						AND = {
+							is_sibling_of = prev
+							OR = {
+								prev.mother != mother
+								prev.father != father
+							}
+						}
+						is_nibling_of = prev
+						is_cousin_of = prev
+						is_uncle_or_aunt_of = prev
+					}
+				}
+			}
+		}
+	}
+	immediate = {
+		create_character = {
+			save_scope_as = eugenic_spouse
+			random_traits = yes
+			gender = female
+			employer = prev
+			faith = prev.faith
+			age = { #half your age plus seven
+				value = 0
+				add = root.age
+				divide = 2
+				add = 7
+				min = 16 #It may be historically accurate to marry younger but game no like
+				max = 30 #No hags allowed
+			}
+			after_creation = {
+				marry = ROOT
+				if = {
+					limit = {
+						ROOT = {
+							has_trait = intellect_good_3
+						}
+					}
+					scope:eugenic_spouse = {
+						add_trait = intellect_good_3
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_trait = intellect_good_2
+						}
+					}
+					scope:eugenic_spouse = {
+						add_trait = intellect_good_2
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_trait = intellect_good_1
+						}
+					}
+					scope:eugenic_spouse = {
+						add_trait = intellect_good_1
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							has_trait = physique_good_3
+						}
+					}
+					scope:eugenic_spouse = {
+						add_trait = physique_good_3
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_trait = physique_good_2
+						}
+					}
+					scope:eugenic_spouse = {
+						add_trait = physique_good_2
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_trait = physique_good_1
+						}
+					}
+					scope:eugenic_spouse = {
+						add_trait = physique_good_1
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							has_trait = beauty_good_3
+						}
+					}
+					scope:eugenic_spouse = {
+						add_trait = beauty_good_3
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_trait = beauty_good_2
+						}
+					}
+					scope:eugenic_spouse = {
+						add_trait = beauty_good_2
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_trait = beauty_good_1
+						}
+					}
+					scope:eugenic_spouse = {
+						add_trait = beauty_good_1
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							has_trait = fecund
+						}
+					}
+					scope:eugenic_spouse = {
+						add_trait = fecund
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				allowed_more_spouses = yes
+			}
+			trigger_event = {
+				id = auto_marriage.0006
+				delayed = yes
+			}
+		}
+	}
+	option = {
+		
+	}
+}
+
+auto_marriage.0007 = {
+	hidden = yes
+	trigger = {
+		OR = {
+			any_in_global_list = {
+				variable = dynasty_eugenic_females
+				this = root.dynasty
+			}
+			any_in_global_list = {
+				variable = house_eugenic_females
+				this = root.house
+			}
+		}
+		NOT = {
+			any_in_global_list = {
+				variable = individual_marry_exempt
+				this = root
+			}
+		}
+		OR = {
+			has_trait = intellect_good_1
+			has_trait = intellect_good_2
+			has_trait = intellect_good_3
+			has_trait = beauty_good_1
+			has_trait = beauty_good_2
+			has_trait = beauty_good_3
+			has_trait = physique_good_1
+			has_trait = physique_good_2
+			has_trait = physique_good_3
+			has_trait = fecund
+		}
+		is_female = yes
+		allowed_more_spouses = yes
+		is_adult = yes
+		is_visibly_fertile = yes
+		trigger_if = {
+			limit = {
+				OR = {
+					any_in_global_list = {
+						variable = dynasty_marry_inbreed
+						this = root.dynasty
+					}
+					any_in_global_list = {
+						variable = house_marry_inbreed
+						this = root.house
+					}
+				}
+			}
+			NOT = {
+				any_close_or_extended_family_member = {
+					could_marry_character_trigger = { CHARACTER = root }
+					is_female = yes
+					allowed_more_spouses = yes
+					OR = {
+						AND = {
+							is_adult = yes
+							is_visibly_fertile = yes
+						}
+						is_child = yes #Don't want to prematurely marry off a 16 year old if a 15 year old relative is available
+					}
+					OR = {
+						AND = {
+							is_sibling_of = prev
+							OR = {
+								prev.mother != mother
+								prev.father != father
+							}
+						}
+						is_nibling_of = prev
+						is_cousin_of = prev
+						is_uncle_or_aunt_of = prev
+					}
+				}
+			}
+		}
+	}
+	immediate = {
+		create_character = {
+			save_scope_as = eugenic_spouse
+			random_traits = yes
+			gender = male
+			employer = prev
+			faith = prev.faith
+			age = {
+				value = 0
+				add = root.age
+				subtract = 7
+				multiply = 2
+				min = 16
+			}
+			after_creation = {
+				marry_matrilineal = ROOT
+				if = {
+					limit = {
+						ROOT = {
+							has_trait = intellect_good_3
+						}
+					}
+					scope:eugenic_spouse = {
+						add_trait = intellect_good_3
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_trait = intellect_good_2
+						}
+					}
+					scope:eugenic_spouse = {
+						add_trait = intellect_good_2
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_trait = intellect_good_1
+						}
+					}
+					scope:eugenic_spouse = {
+						add_trait = intellect_good_1
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							has_trait = physique_good_3
+						}
+					}
+					scope:eugenic_spouse = {
+						add_trait = physique_good_3
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_trait = physique_good_2
+						}
+					}
+					scope:eugenic_spouse = {
+						add_trait = physique_good_2
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_trait = physique_good_1
+						}
+					}
+					scope:eugenic_spouse = {
+						add_trait = physique_good_1
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							has_trait = beauty_good_3
+						}
+					}
+					scope:eugenic_spouse = {
+						add_trait = beauty_good_3
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_trait = beauty_good_2
+						}
+					}
+					scope:eugenic_spouse = {
+						add_trait = beauty_good_2
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_trait = beauty_good_1
+						}
+					}
+					scope:eugenic_spouse = {
+						add_trait = beauty_good_1
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							has_trait = fecund
+						}
+					}
+					scope:eugenic_spouse = {
+						add_trait = fecund
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				allowed_more_spouses = yes
+			}
+			trigger_event = {
+				id = auto_marriage.0007
+				delayed = yes
+			}
+		}
+	}
+	option = {
+	}
+}
+	
+
+#for testing the inbreed marry
+
+#effect = {
+#	house = {
+#		every_house_member = {
+#			set_age = 16
+#		}
+#	}
+#}
+#
+#
+#effect = {
+#	house = {
+#		every_house_member = {
+#			limit = {
+#				is_male = yes
+#			}
+#			every_spouse = {
+#				make_pregnant = {
+#					father = prev
+#					number_of_children = 10
+#				}
+#			}
+#		}
+#	}
+#}

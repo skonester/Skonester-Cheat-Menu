@@ -1,0 +1,86 @@
+﻿# 每月一检（skonester_officials.9210）：内政建设·经济改革·建筑升级 / 宗教同化·文化统一·外交联姻 / 军事·扩张·宣战·派系镇压
+# 以条件修饰刷新为主，不替代年度 9200 铁腕/法理转封；与「玩家吞地」全域加压（skonester_ai_player_realm_overwhelming_trigger）联动
+
+skonester_ai_monthly_strategic_audit_character_effect = {
+  # —— 玩家式「打仗思维」：按局势切换进攻/防守姿态（短期修正，按季度刷新）——
+  # 防守优先：极端弱势/多线/高派系压力时，先稳住、先拉盟友
+  if = {
+    limit = {
+      OR = {
+        skonester_ai_boost_critically_weaker_than_neighbor_trigger = yes
+        skonester_ai_boost_multiple_character_wars_trigger = yes
+        skonester_ai_boost_high_faction_discontent_trigger = yes
+      }
+    }
+    add_character_modifier = {
+      modifier = skonester_ai_war_planner_defensive
+      months = 3
+    }
+  }
+  # 进攻窗口：有宣称且邻国相对弱/均势偏强时，更像玩家那样抓机会连续出手
+  else_if = {
+    limit = {
+      skonester_ai_boost_has_notable_claim_trigger = yes
+      OR = {
+        skonester_ai_boost_neighbor_ratio_ge_065_trigger = yes
+        skonester_ai_boost_neighbor_small_realm_trigger = yes
+      }
+    }
+    add_character_modifier = {
+      modifier = skonester_ai_war_planner_offensive
+      months = 3
+    }
+  }
+
+  # 军事 / 扩张 / 宣战：玩家版图压迫时全员进入短期「战时扩张」修饰叠层
+  if = {
+    limit = {
+      skonester_ai_player_realm_overwhelming_trigger = yes
+    }
+    add_character_modifier = {
+      modifier = skonester_ai_expansion_push
+      months = 3
+    }
+    add_character_modifier = {
+      modifier = skonester_ai_stable_surge
+      months = 3
+    }
+  }
+  # 派系镇压：存在针对本人的派系时叠稳定/开战倾向（stable_surge）
+  if = {
+    limit = {
+      any_targeting_faction = {
+        always = yes
+      }
+    }
+    add_character_modifier = {
+      modifier = skonester_ai_stable_surge
+      months = 2
+    }
+  }
+  # 宗教同化 / 文化统一：辖内有异信仰或异文化县份时略抬扩张 AI（缩短间隔类修饰）
+  if = {
+    limit = {
+      any_sub_realm_county = {
+        OR = {
+          NOT = { faith = root.faith }
+          NOT = { culture = root.culture }
+        }
+      }
+    }
+    add_character_modifier = {
+      modifier = skonester_ai_expansion_push
+      months = 2
+    }
+  }
+  # 内政建设 / 经济改革 / 建筑升级：首府发展偏低时微量敛财减压（不改建筑队列）
+  if = {
+    limit = {
+      capital_county = {
+        development_level < bad_development_level
+      }
+      monthly_character_income < 25
+    }
+    add_gold = tiny_gold_value
+  }
+}

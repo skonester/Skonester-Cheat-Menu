@@ -1,0 +1,480 @@
+﻿# 人才池：公/王/帝分段重建；县/男用原无地人才池。公→王→帝 段末清除「本轮已授予」以便连升。
+# 公国：文官分择优伯爵（March 则武官分）；王国：公爵；帝国：国王；县/伯：文官分；男爵：武官分。
+
+skonester_build_grant_recipient_pool_effect = {
+  root = {
+    clear_variable_list = skonester_grant_recipient_pool
+    every_living_character = {
+      limit = {
+        top_liege = root
+        skonester_grant_recipient_candidate_trigger = yes
+        trigger_if = {
+          limit = {
+            root = {
+              has_variable = skonester_grant_dynasty_only
+            }
+          }
+          dynasty = root.dynasty
+        }
+      }
+      root = {
+        add_to_variable_list = {
+          name = skonester_grant_recipient_pool
+          target = prev
+        }
+      }
+    }
+  }
+}
+
+skonester_build_grant_recipient_pool_for_duchy_effect = {
+  root = {
+    clear_variable_list = skonester_grant_recipient_pool
+    every_living_character = {
+      limit = {
+        top_liege = root
+        skonester_grant_duchy_recipient_trigger = yes
+        skonester_grant_count_holder_land_in_target_duchy_de_jure_trigger = yes
+        trigger_if = {
+          limit = {
+            root = {
+              has_variable = skonester_grant_dynasty_only
+            }
+          }
+          dynasty = root.dynasty
+        }
+      }
+      root = {
+        add_to_variable_list = {
+          name = skonester_grant_recipient_pool
+          target = prev
+        }
+      }
+    }
+  }
+}
+
+skonester_build_grant_recipient_pool_for_kingdom_effect = {
+  root = {
+    clear_variable_list = skonester_grant_recipient_pool
+    every_living_character = {
+      limit = {
+        top_liege = root
+        skonester_grant_kingdom_recipient_trigger = yes
+        skonester_grant_duke_holder_land_in_target_kingdom_de_jure_trigger = yes
+        trigger_if = {
+          limit = {
+            root = {
+              has_variable = skonester_grant_dynasty_only
+            }
+          }
+          dynasty = root.dynasty
+        }
+      }
+      root = {
+        add_to_variable_list = {
+          name = skonester_grant_recipient_pool
+          target = prev
+        }
+      }
+    }
+  }
+}
+
+skonester_build_grant_recipient_pool_for_empire_effect = {
+  root = {
+    clear_variable_list = skonester_grant_recipient_pool
+    every_living_character = {
+      limit = {
+        top_liege = root
+        skonester_grant_empire_recipient_trigger = yes
+        skonester_grant_king_holder_land_in_target_empire_de_jure_trigger = yes
+        trigger_if = {
+          limit = {
+            root = {
+              has_variable = skonester_grant_dynasty_only
+            }
+          }
+          dynasty = root.dynasty
+        }
+      }
+      root = {
+        add_to_variable_list = {
+          name = skonester_grant_recipient_pool
+          target = prev
+        }
+      }
+    }
+  }
+}
+
+skonester_pick_grant_recipient_tier_empire_effect = {
+  root = {
+    ordered_in_list = {
+      variable = skonester_grant_recipient_pool
+      order_by = skonester_grant_empire_to_county_pick_value
+      limit = {
+        skonester_grant_empire_recipient_trigger = yes
+        skonester_grant_king_holder_land_in_target_empire_de_jure_trigger = yes
+        NOT = { has_character_flag = skonester_grant_used_this_click }
+      }
+      max = 1
+      check_range_bounds = no
+      save_scope_as = skonester_grant_recipient
+    }
+  }
+}
+
+skonester_pick_grant_recipient_tier_kingdom_effect = {
+  root = {
+    ordered_in_list = {
+      variable = skonester_grant_recipient_pool
+      order_by = skonester_grant_empire_to_county_pick_value
+      limit = {
+        skonester_grant_kingdom_recipient_trigger = yes
+        skonester_grant_duke_holder_land_in_target_kingdom_de_jure_trigger = yes
+        NOT = { has_character_flag = skonester_grant_used_this_click }
+      }
+      max = 1
+      check_range_bounds = no
+      save_scope_as = skonester_grant_recipient
+    }
+  }
+}
+
+skonester_pick_grant_recipient_tier_duchy_effect = {
+  root = {
+    ordered_in_list = {
+      variable = skonester_grant_recipient_pool
+      order_by = skonester_grant_duchy_pick_value
+      limit = {
+        skonester_grant_duchy_recipient_trigger = yes
+        skonester_grant_count_holder_land_in_target_duchy_de_jure_trigger = yes
+        NOT = { has_character_flag = skonester_grant_used_this_click }
+      }
+      max = 1
+      check_range_bounds = no
+      save_scope_as = skonester_grant_recipient
+    }
+  }
+}
+
+skonester_pick_grant_recipient_tier_county_effect = {
+  root = {
+    ordered_in_list = {
+      variable = skonester_grant_recipient_pool
+      order_by = skonester_grant_empire_to_county_pick_value
+      limit = {
+        skonester_grant_recipient_candidate_trigger = yes
+        NOT = { has_character_flag = skonester_grant_used_this_click }
+      }
+      max = 1
+      check_range_bounds = no
+      save_scope_as = skonester_grant_recipient
+    }
+  }
+}
+
+skonester_pick_grant_recipient_tier_barony_effect = {
+  root = {
+    ordered_in_list = {
+      variable = skonester_grant_recipient_pool
+      order_by = skonester_grant_military_sum_value
+      limit = {
+        skonester_grant_recipient_candidate_trigger = yes
+        NOT = { has_character_flag = skonester_grant_used_this_click }
+      }
+      max = 1
+      check_range_bounds = no
+      save_scope_as = skonester_grant_recipient
+    }
+  }
+}
+
+skonester_grant_mark_recipient_used_this_round_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_grant_recipient
+    }
+    scope:skonester_grant_recipient = {
+      add_character_flag = skonester_grant_used_this_click
+    }
+    root = {
+      add_to_variable_list = {
+        name = skonester_grant_round_used_list
+        target = scope:skonester_grant_recipient
+      }
+    }
+  }
+}
+
+skonester_grant_clear_round_flags_effect = {
+  root = {
+    if = {
+      limit = {
+        has_variable_list = skonester_grant_round_used_list
+        variable_list_size = {
+          name = skonester_grant_round_used_list
+          value > 0
+        }
+      }
+      every_in_list = {
+        variable = skonester_grant_round_used_list
+        limit = {
+          has_character_flag = skonester_grant_used_this_click
+        }
+        remove_character_flag = skonester_grant_used_this_click
+      }
+      clear_variable_list = skonester_grant_round_used_list
+    }
+  }
+}
+
+skonester_grant_remove_pool_flag_if_used_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_grant_recipient
+    }
+    scope:skonester_grant_recipient = {
+      remove_character_flag = skonester_grant_pool_eligible
+    }
+  }
+}
+
+# 授地后若新领主成了其他封臣的封臣，则改为玩家的直属封臣（仍须在玩家顶层领地内）
+skonester_grant_force_direct_vassal_of_root_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_grant_recipient
+      scope:skonester_grant_recipient = {
+        top_liege = root
+        liege != root
+      }
+    }
+    create_title_and_vassal_change = {
+      type = swear_fealty
+      save_scope_as = skonester_direct_vassal_change
+    }
+    scope:skonester_grant_recipient = {
+      change_liege = {
+        liege = root
+        change = scope:skonester_direct_vassal_change
+      }
+    }
+    resolve_title_and_vassal_change = scope:skonester_direct_vassal_change
+  }
+}
+
+# 族人授衔：择优未命中时从同宗成年人中兜底（公国及以上仍须满足法理内已有领地）
+skonester_grant_ensure_dynasty_recipient_fallback_effect = {
+  if = {
+    limit = {
+      NOT = { exists = scope:skonester_grant_recipient }
+      root = {
+        has_variable = skonester_grant_dynasty_only
+      }
+      exists = scope:skonester_grant_target_title
+      root = {
+        exists = dynasty
+      }
+    }
+    if = {
+      limit = {
+        scope:skonester_grant_target_title = {
+          tier = tier_duchy
+        }
+      }
+      random_living_character = {
+        limit = {
+          dynasty = root.dynasty
+          top_liege = root
+          skonester_grant_duchy_recipient_trigger = yes
+          skonester_grant_count_holder_land_in_target_duchy_de_jure_trigger = yes
+          NOT = { has_character_flag = skonester_grant_used_this_click }
+        }
+        save_scope_as = skonester_grant_recipient
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_grant_target_title = {
+          tier = tier_kingdom
+        }
+      }
+      random_living_character = {
+        limit = {
+          dynasty = root.dynasty
+          top_liege = root
+          skonester_grant_kingdom_recipient_trigger = yes
+          skonester_grant_duke_holder_land_in_target_kingdom_de_jure_trigger = yes
+          NOT = { has_character_flag = skonester_grant_used_this_click }
+        }
+        save_scope_as = skonester_grant_recipient
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_grant_target_title = {
+          tier = tier_empire
+        }
+      }
+      random_living_character = {
+        limit = {
+          dynasty = root.dynasty
+          top_liege = root
+          skonester_grant_empire_recipient_trigger = yes
+          skonester_grant_king_holder_land_in_target_empire_de_jure_trigger = yes
+          NOT = { has_character_flag = skonester_grant_used_this_click }
+        }
+        save_scope_as = skonester_grant_recipient
+      }
+    }
+    else = {
+      root = {
+        random_courtier = {
+          limit = {
+            dynasty = root.dynasty
+            skonester_grant_recipient_candidate_trigger = yes
+            NOT = { has_character_flag = skonester_grant_used_this_click }
+          }
+          save_scope_as = skonester_grant_recipient
+        }
+      }
+      if = {
+        limit = {
+          NOT = { exists = scope:skonester_grant_recipient }
+        }
+        random_living_character = {
+          limit = {
+            dynasty = root.dynasty
+            top_liege = root
+            skonester_grant_recipient_candidate_trigger = yes
+            NOT = { has_character_flag = skonester_grant_used_this_click }
+          }
+          save_scope_as = skonester_grant_recipient
+        }
+      }
+      if = {
+        limit = {
+          NOT = { exists = scope:skonester_grant_recipient }
+        }
+        root = {
+          create_character = {
+            employer = root
+            dynasty = root.dynasty
+            culture = root.culture
+            faith = root.faith
+            gender_female_chance = 50
+            age = 28
+            save_scope_as = skonester_grant_recipient
+          }
+        }
+      }
+    }
+  }
+}
+
+# 须在 root 上创建/结算 title change（every_held_title 内 scope 为头衔）
+skonester_apply_grant_target_to_recipient_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_grant_recipient
+      exists = scope:skonester_grant_target_title
+      scope:skonester_grant_recipient = {
+        NOT = { has_character_flag = skonester_grant_used_this_click }
+      }
+    }
+    root = {
+      create_title_and_vassal_change = {
+        type = granted
+        save_scope_as = skonester_grant_change
+      }
+    }
+    scope:skonester_grant_target_title = {
+      change_title_holder = {
+        holder = scope:skonester_grant_recipient
+        change = scope:skonester_grant_change
+      }
+    }
+    root = {
+      resolve_title_and_vassal_change = scope:skonester_grant_change
+    }
+    skonester_grant_force_direct_vassal_of_root_effect = yes
+    skonester_grant_mark_recipient_used_this_round_effect = yes
+    skonester_grant_remove_pool_flag_if_used_effect = yes
+  }
+}
+
+# 一键授予：公 → 王 → 帝 → 县 → 男。公国按文官分（边区 March 则武官分）择优伯爵；王国授公爵；帝国授国王。
+# 公/王/帝段内每人仍仅一头衔；段末清除「本轮已授予」，以便同一人本决议内可自伯爵升公爵再升国王/皇帝。
+# 人选须在「当前要授的那一头衔」之法理下已有领地（与原版授予校验一致），避免头衔被注销。
+
+skonester_one_click_grant_realm_titles_effect = {
+  root = {
+    clear_variable_list = skonester_grant_round_used_list
+  }
+  every_held_title = {
+    limit = {
+      tier = tier_duchy
+      skonester_enfeoffment_excess_held_title_grantable_trigger = yes
+    }
+    save_scope_as = skonester_grant_target_title
+    skonester_build_grant_recipient_pool_for_duchy_effect = yes
+    skonester_pick_grant_recipient_tier_duchy_effect = yes
+    skonester_grant_ensure_dynasty_recipient_fallback_effect = yes
+    skonester_apply_grant_target_to_recipient_effect = yes
+  }
+  skonester_grant_clear_round_flags_effect = yes
+  every_held_title = {
+    limit = {
+      tier = tier_kingdom
+      skonester_enfeoffment_excess_held_title_grantable_trigger = yes
+    }
+    save_scope_as = skonester_grant_target_title
+    skonester_build_grant_recipient_pool_for_kingdom_effect = yes
+    skonester_pick_grant_recipient_tier_kingdom_effect = yes
+    skonester_grant_ensure_dynasty_recipient_fallback_effect = yes
+    skonester_apply_grant_target_to_recipient_effect = yes
+  }
+  skonester_grant_clear_round_flags_effect = yes
+  every_held_title = {
+    limit = {
+      tier = tier_empire
+      skonester_enfeoffment_excess_held_title_grantable_trigger = yes
+    }
+    save_scope_as = skonester_grant_target_title
+    skonester_build_grant_recipient_pool_for_empire_effect = yes
+    skonester_pick_grant_recipient_tier_empire_effect = yes
+    skonester_grant_ensure_dynasty_recipient_fallback_effect = yes
+    skonester_apply_grant_target_to_recipient_effect = yes
+  }
+  skonester_grant_clear_round_flags_effect = yes
+  every_held_title = {
+    limit = {
+      tier = tier_county
+      skonester_enfeoffment_excess_held_title_grantable_trigger = yes
+    }
+    skonester_build_grant_recipient_pool_effect = yes
+    save_scope_as = skonester_grant_target_title
+    skonester_pick_grant_recipient_tier_county_effect = yes
+    skonester_grant_ensure_dynasty_recipient_fallback_effect = yes
+    skonester_apply_grant_target_to_recipient_effect = yes
+  }
+  every_sub_realm_county = {
+    limit = {
+      holder = root
+      tier = tier_county
+    }
+    every_in_de_jure_hierarchy = {
+      limit = {
+        skonester_enfeoffment_excess_barony_grantable_trigger = yes
+      }
+      skonester_build_grant_recipient_pool_effect = yes
+      save_scope_as = skonester_grant_target_title
+      skonester_pick_grant_recipient_tier_barony_effect = yes
+      skonester_grant_ensure_dynasty_recipient_fallback_effect = yes
+      skonester_apply_grant_target_to_recipient_effect = yes
+    }
+  }
+  skonester_grant_clear_round_flags_effect = yes
+}

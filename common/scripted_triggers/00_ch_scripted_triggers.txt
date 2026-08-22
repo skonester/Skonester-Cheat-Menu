@@ -1,0 +1,59 @@
+﻿#	Example:
+#
+#	example_trigger = {
+#		is_country_type = default
+#		free_leader_slots > 0
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		example_trigger = yes
+#	}
+#
+
+ch_barony_is_valid_for_castle_trigger = {
+	title_province = {
+		NOT = { has_holding_type = castle_holding }
+		has_ongoing_construction = no
+	}
+	trigger_if = {
+		limit = {
+			holder = $CHARACTER$
+		}
+	}
+	trigger_else = {
+		holder.primary_title.tier = tier_barony
+	}
+}
+
+ch_barony_is_valid_for_city_trigger = {
+	title_province = {
+		NOT = { has_holding_type = city_holding }
+		has_ongoing_construction = no
+	}
+	trigger_if = {
+		limit = {
+			holder = $CHARACTER$
+		}
+	}
+	trigger_else = {
+		holder.primary_title.tier = tier_barony
+	}
+}
+
+ch_barony_is_valid_for_temple_trigger = {
+	title_province = {
+		NOT = { has_holding_type = church_holding }
+		has_ongoing_construction = no
+	}
+	trigger_if = {
+		limit = {
+			holder = $CHARACTER$
+		}
+	}
+	trigger_else = {
+		holder.primary_title.tier = tier_barony
+	}
+}

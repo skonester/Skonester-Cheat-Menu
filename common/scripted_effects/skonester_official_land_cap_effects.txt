@@ -1,0 +1,888 @@
+﻿# 官员限地：仅保留主头衔 + 一爵（实现为一块伯爵领）；世族头衔不剥夺。
+# 剥余衔：境内优先下分；绝不授予玩家（top_liege），无合适封臣则廷臣/廷臣池/生成角色。
+
+skonester_land_cap_resolve_grantee_fallback_effect = {
+  if = {
+    limit = { skonester_land_cap_grantee_needs_fallback_trigger = yes }
+    scope:skonester_off = {
+      random_vassal_or_below = {
+        limit = {
+          skonester_land_cap_valid_grantee_character_trigger = yes
+          is_landed = yes
+        }
+        save_scope_as = skonester_land_cap_grantee
+      }
+    }
+  }
+  if = {
+    limit = { skonester_land_cap_grantee_needs_fallback_trigger = yes }
+    scope:skonester_off = {
+      random_vassal_or_below = {
+        limit = {
+          skonester_land_cap_valid_grantee_character_trigger = yes
+        }
+        save_scope_as = skonester_land_cap_grantee
+      }
+    }
+  }
+  if = {
+    limit = { skonester_land_cap_grantee_needs_fallback_trigger = yes }
+    scope:skonester_off = {
+      random_courtier = {
+        limit = {
+          skonester_land_cap_valid_grantee_character_trigger = yes
+          is_adult = yes
+        }
+        save_scope_as = skonester_land_cap_grantee
+      }
+    }
+  }
+  if = {
+    limit = { skonester_land_cap_grantee_needs_fallback_trigger = yes }
+    scope:skonester_off.top_liege = {
+      random_courtier = {
+        limit = {
+          NOT = { this = scope:skonester_off.top_liege }
+          is_adult = yes
+          can_be_granted_titles_by = {
+            RULER = scope:skonester_off
+          }
+        }
+        save_scope_as = skonester_land_cap_grantee
+      }
+    }
+  }
+  if = {
+    limit = { skonester_land_cap_grantee_needs_fallback_trigger = yes }
+    scope:skonester_off = {
+      create_character = {
+        employer = scope:skonester_off
+        culture = scope:skonester_off.culture
+        faith = scope:skonester_off.faith
+        gender_female_chance = 50
+        age = 28
+        dynasty = none
+        save_scope_as = skonester_land_cap_grantee
+      }
+    }
+  }
+}
+
+skonester_land_cap_resolve_grantee_effect = {
+  if = {
+    limit = {
+      scope:skonester_strip_title = {
+        tier = tier_county
+      }
+    }
+    scope:skonester_off = {
+      random_vassal_or_below = {
+        limit = {
+          is_landed = yes
+          can_be_granted_titles_by = {
+            RULER = scope:skonester_off
+          }
+          any_held_title = {
+            tier = tier_barony
+            de_jure_liege = scope:skonester_strip_title
+          }
+        }
+        save_scope_as = skonester_land_cap_grantee
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      scope:skonester_strip_title = {
+        tier = tier_duchy
+      }
+    }
+    if = {
+      limit = {
+        scope:skonester_off = {
+          var:skonester_land_cap_official_only_high_tier = 1
+        }
+      }
+      scope:skonester_strip_title = {
+        random_de_jure_county_holder = {
+          limit = {
+            is_landed = yes
+            OR = {
+              is_governor = yes
+              AND = {
+                has_tgp_dlc_trigger = yes
+                tgp_is_any_minister = yes
+              }
+            }
+            is_vassal_or_below_of = scope:skonester_off
+            can_be_granted_titles_by = {
+              RULER = scope:skonester_off
+            }
+          }
+          save_scope_as = skonester_land_cap_grantee
+        }
+      }
+    }
+    else = {
+      scope:skonester_off = {
+        random_vassal_or_below = {
+          limit = {
+            is_landed = yes
+            OR = {
+              is_governor = yes
+              AND = {
+                has_tgp_dlc_trigger = yes
+                tgp_is_any_minister = yes
+              }
+            }
+            can_be_granted_titles_by = {
+              RULER = scope:skonester_off
+            }
+            any_held_title = {
+              tier = tier_county
+              de_jure_liege = scope:skonester_strip_title
+            }
+          }
+          save_scope_as = skonester_land_cap_grantee
+        }
+      }
+    }
+    if = {
+      limit = {
+        skonester_land_cap_grantee_needs_fallback_trigger = yes
+        scope:skonester_off = {
+          NOT = {
+            var:skonester_land_cap_official_only_high_tier = 1
+          }
+        }
+      }
+      scope:skonester_off = {
+        random_vassal_or_below = {
+          limit = {
+            is_landed = yes
+            can_be_granted_titles_by = {
+              RULER = scope:skonester_off
+            }
+            any_held_title = {
+              tier = tier_county
+              de_jure_liege = scope:skonester_strip_title
+            }
+          }
+          save_scope_as = skonester_land_cap_grantee
+        }
+      }
+    }
+    if = {
+      limit = {
+        skonester_land_cap_grantee_needs_fallback_trigger = yes
+        scope:skonester_off = {
+          NOT = {
+            var:skonester_land_cap_official_only_high_tier = 1
+          }
+        }
+      }
+      scope:skonester_off = {
+        random_vassal_or_below = {
+          limit = {
+            is_landed = yes
+            can_be_granted_titles_by = {
+              RULER = scope:skonester_off
+            }
+            any_held_title = {
+              tier = tier_county
+            }
+          }
+          save_scope_as = skonester_land_cap_grantee
+        }
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      scope:skonester_strip_title = {
+        tier = tier_kingdom
+      }
+    }
+    if = {
+      limit = {
+        scope:skonester_off = {
+          var:skonester_land_cap_official_only_high_tier = 1
+        }
+      }
+      scope:skonester_strip_title = {
+        random_de_jure_county_holder = {
+          limit = {
+            is_landed = yes
+            OR = {
+              is_governor = yes
+              AND = {
+                has_tgp_dlc_trigger = yes
+                tgp_is_any_minister = yes
+              }
+            }
+            is_vassal_or_below_of = scope:skonester_off
+            can_be_granted_titles_by = {
+              RULER = scope:skonester_off
+            }
+          }
+          save_scope_as = skonester_land_cap_grantee
+        }
+      }
+    }
+    else = {
+      scope:skonester_off = {
+        random_vassal_or_below = {
+          limit = {
+            is_landed = yes
+            OR = {
+              is_governor = yes
+              AND = {
+                has_tgp_dlc_trigger = yes
+                tgp_is_any_minister = yes
+              }
+            }
+            can_be_granted_titles_by = {
+              RULER = scope:skonester_off
+            }
+            any_held_title = {
+              tier = tier_duchy
+              de_jure_liege = scope:skonester_strip_title
+            }
+          }
+          save_scope_as = skonester_land_cap_grantee
+        }
+      }
+    }
+    if = {
+      limit = {
+        skonester_land_cap_grantee_needs_fallback_trigger = yes
+        scope:skonester_off = {
+          NOT = {
+            var:skonester_land_cap_official_only_high_tier = 1
+          }
+        }
+      }
+      scope:skonester_off = {
+        random_vassal_or_below = {
+          limit = {
+            is_landed = yes
+            can_be_granted_titles_by = {
+              RULER = scope:skonester_off
+            }
+            any_held_title = {
+              tier = tier_duchy
+              de_jure_liege = scope:skonester_strip_title
+            }
+          }
+          save_scope_as = skonester_land_cap_grantee
+        }
+      }
+    }
+    if = {
+      limit = {
+        skonester_land_cap_grantee_needs_fallback_trigger = yes
+        scope:skonester_off = {
+          NOT = {
+            var:skonester_land_cap_official_only_high_tier = 1
+          }
+        }
+      }
+      scope:skonester_off = {
+        random_vassal_or_below = {
+          limit = {
+            is_landed = yes
+            can_be_granted_titles_by = {
+              RULER = scope:skonester_off
+            }
+            any_held_title = {
+              tier = tier_duchy
+            }
+          }
+          save_scope_as = skonester_land_cap_grantee
+        }
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      scope:skonester_strip_title = {
+        tier = tier_empire
+      }
+    }
+    if = {
+      limit = {
+        scope:skonester_off = {
+          var:skonester_land_cap_official_only_high_tier = 1
+        }
+      }
+      scope:skonester_strip_title = {
+        random_de_jure_county_holder = {
+          limit = {
+            is_landed = yes
+            OR = {
+              is_governor = yes
+              AND = {
+                has_tgp_dlc_trigger = yes
+                tgp_is_any_minister = yes
+              }
+            }
+            is_vassal_or_below_of = scope:skonester_off
+            can_be_granted_titles_by = {
+              RULER = scope:skonester_off
+            }
+          }
+          save_scope_as = skonester_land_cap_grantee
+        }
+      }
+    }
+    else = {
+      scope:skonester_off = {
+        random_vassal_or_below = {
+          limit = {
+            is_landed = yes
+            OR = {
+              is_governor = yes
+              AND = {
+                has_tgp_dlc_trigger = yes
+                tgp_is_any_minister = yes
+              }
+            }
+            can_be_granted_titles_by = {
+              RULER = scope:skonester_off
+            }
+            any_held_title = {
+              tier = tier_kingdom
+              de_jure_liege = scope:skonester_strip_title
+            }
+          }
+          save_scope_as = skonester_land_cap_grantee
+        }
+      }
+    }
+    if = {
+      limit = {
+        skonester_land_cap_grantee_needs_fallback_trigger = yes
+        scope:skonester_off = {
+          NOT = {
+            var:skonester_land_cap_official_only_high_tier = 1
+          }
+        }
+      }
+      scope:skonester_off = {
+        random_vassal_or_below = {
+          limit = {
+            is_landed = yes
+            can_be_granted_titles_by = {
+              RULER = scope:skonester_off
+            }
+            any_held_title = {
+              tier = tier_kingdom
+              de_jure_liege = scope:skonester_strip_title
+            }
+          }
+          save_scope_as = skonester_land_cap_grantee
+        }
+      }
+    }
+    if = {
+      limit = {
+        skonester_land_cap_grantee_needs_fallback_trigger = yes
+        scope:skonester_off = {
+          NOT = {
+            var:skonester_land_cap_official_only_high_tier = 1
+          }
+        }
+      }
+      scope:skonester_off = {
+        random_vassal_or_below = {
+          limit = {
+            is_landed = yes
+            can_be_granted_titles_by = {
+              RULER = scope:skonester_off
+            }
+            any_held_title = {
+              tier = tier_kingdom
+            }
+          }
+          save_scope_as = skonester_land_cap_grantee
+        }
+      }
+    }
+  }
+  skonester_land_cap_resolve_grantee_fallback_effect = yes
+  if = {
+    limit = {
+      exists = scope:skonester_land_cap_grantee
+      scope:skonester_land_cap_grantee = scope:skonester_off.top_liege
+    }
+    clear_saved_scope = skonester_land_cap_grantee
+    scope:skonester_off = {
+      create_character = {
+        employer = scope:skonester_off
+        culture = scope:skonester_off.culture
+        faith = scope:skonester_off.faith
+        gender_female_chance = 50
+        age = 28
+        dynasty = none
+        save_scope_as = skonester_land_cap_grantee
+      }
+    }
+  }
+}
+
+# 转封失败时销毁该衔，避免 while 空转卡死
+skonester_land_cap_destroy_stuck_strip_title_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_strip_title
+      exists = scope:skonester_off
+      scope:skonester_strip_title = {
+        holder = scope:skonester_off
+      }
+    }
+    root = {
+      destroy_title = scope:skonester_strip_title
+    }
+  }
+}
+
+skonester_land_cap_try_transfer_strip_title_effect = {
+  clear_saved_scope = skonester_land_cap_grantee
+  skonester_land_cap_resolve_grantee_effect = yes
+  if = {
+    limit = {
+      exists = scope:skonester_land_cap_grantee
+      NOT = {
+        scope:skonester_land_cap_grantee = scope:skonester_off.top_liege
+      }
+      exists = scope:skonester_strip_title
+    }
+    create_title_and_vassal_change = {
+      type = granted
+      save_scope_as = skonester_land_cap_change
+      add_claim_on_loss = no
+    }
+    scope:skonester_strip_title = {
+      change_title_holder = {
+        holder = scope:skonester_land_cap_grantee
+        change = scope:skonester_land_cap_change
+      }
+    }
+    resolve_title_and_vassal_change = scope:skonester_land_cap_change
+  }
+  else = {
+    skonester_land_cap_destroy_stuck_strip_title_effect = yes
+  }
+  clear_saved_scope = skonester_land_cap_grantee
+}
+
+skonester_land_cap_cleanup_official_vars_effect = {
+  if = {
+    limit = {
+      has_variable = skonester_land_cap_official_only_high_tier
+    }
+    remove_variable = skonester_land_cap_official_only_high_tier
+  }
+  remove_character_flag = skonester_land_cap_strip_in_progress
+}
+
+skonester_land_cap_setup_kept_county_effect = {
+  if = {
+    limit = {
+      scope:skonester_off = {
+        primary_title = {
+          tier = tier_county
+        }
+      }
+    }
+    scope:skonester_off.primary_title = {
+      save_scope_as = skonester_kept_county
+    }
+  }
+  else_if = {
+    limit = {
+      scope:skonester_off = {
+        exists = capital_county
+        capital_county.holder = scope:skonester_off
+      }
+    }
+    scope:skonester_off.capital_county = {
+      save_scope_as = skonester_kept_county
+    }
+  }
+  else_if = {
+    limit = {
+      scope:skonester_off = {
+        any_held_title = {
+          tier = tier_county
+          is_noble_family_title = no
+          is_leased_out = no
+        }
+      }
+    }
+    scope:skonester_off = {
+      ordered_held_title = {
+        title_tier = county
+        limit = {
+          is_noble_family_title = no
+          is_leased_out = no
+        }
+        order_by = development_level
+        save_scope_as = skonester_kept_county
+      }
+    }
+  }
+}
+
+skonester_land_cap_strip_one_excess_county_effect = {
+  scope:skonester_off = {
+    random_held_title = {
+      title_tier = county
+      limit = {
+        NOT = { this = scope:skonester_kept_county }
+        is_noble_family_title = no
+        is_leased_out = no
+      }
+      save_scope_as = skonester_strip_title
+    }
+  }
+  skonester_land_cap_try_transfer_strip_title_effect = yes
+  clear_saved_scope = skonester_strip_title
+}
+
+skonester_land_cap_strip_one_excess_high_tier_effect = {
+  scope:skonester_off = {
+    random_held_title = {
+      limit = {
+        OR = {
+          tier = tier_duchy
+          tier = tier_kingdom
+          tier = tier_empire
+        }
+        NOT = { this = scope:skonester_off.primary_title }
+        is_noble_family_title = no
+        is_landless_type_title = no
+      }
+      save_scope_as = skonester_strip_title
+    }
+  }
+  scope:skonester_off = {
+    if = {
+      limit = {
+        OR = {
+          AND = {
+            exists = scope:skonester_kept_county
+            NOT = {
+              any_held_title = {
+                title_tier = county
+                NOT = {
+                  this = scope:skonester_kept_county
+                }
+                is_noble_family_title = no
+                is_leased_out = no
+              }
+            }
+          }
+          AND = {
+            NOT = {
+              any_held_title = {
+                title_tier = county
+                is_noble_family_title = no
+                is_leased_out = no
+              }
+            }
+          }
+        }
+      }
+      set_variable = {
+        name = skonester_land_cap_official_only_high_tier
+        value = 1
+      }
+    }
+    else = {
+      set_variable = {
+        name = skonester_land_cap_official_only_high_tier
+        value = 0
+      }
+    }
+  }
+  skonester_land_cap_try_transfer_strip_title_effect = yes
+  clear_saved_scope = skonester_strip_title
+}
+
+skonester_enforce_official_land_cap_effect = {
+  save_scope_as = skonester_off
+  if = {
+    limit = {
+      exists = scope:skonester_off.top_liege
+      scope:skonester_off = {
+        is_landed = yes
+      }
+    }
+    skonester_land_cap_setup_kept_county_effect = yes
+    while = {
+      limit = {
+        exists = scope:skonester_kept_county
+        scope:skonester_off = {
+          any_held_title = {
+            title_tier = county
+            NOT = { this = scope:skonester_kept_county }
+            is_noble_family_title = no
+            is_leased_out = no
+          }
+        }
+      }
+      skonester_land_cap_strip_one_excess_county_effect = yes
+    }
+    while = {
+      limit = {
+        scope:skonester_off = {
+          any_held_title = {
+            OR = {
+              tier = tier_duchy
+              tier = tier_kingdom
+              tier = tier_empire
+            }
+            NOT = { this = scope:skonester_off.primary_title }
+            is_noble_family_title = no
+            is_landless_type_title = no
+          }
+        }
+      }
+      skonester_land_cap_strip_one_excess_high_tier_effect = yes
+    }
+    scope:skonester_off = {
+      skonester_land_cap_cleanup_official_vars_effect = yes
+    }
+    clear_saved_scope = skonester_kept_county
+  }
+}
+
+# 分批脉冲：每名官员每轮最多剥 8 件头衔
+skonester_enforce_official_land_cap_bounded_effect = {
+  save_scope_as = skonester_off
+  if = {
+    limit = {
+      exists = scope:skonester_off.top_liege
+      scope:skonester_off = {
+        is_landed = yes
+      }
+    }
+    add_character_flag = skonester_land_cap_strip_in_progress
+    skonester_land_cap_setup_kept_county_effect = yes
+    while = {
+      count = 8
+      limit = {
+        exists = scope:skonester_kept_county
+        scope:skonester_off = {
+          any_held_title = {
+            title_tier = county
+            NOT = { this = scope:skonester_kept_county }
+            is_noble_family_title = no
+            is_leased_out = no
+          }
+        }
+      }
+      skonester_land_cap_strip_one_excess_county_effect = yes
+    }
+    while = {
+      count = 8
+      limit = {
+        scope:skonester_off = {
+          any_held_title = {
+            OR = {
+              tier = tier_duchy
+              tier = tier_kingdom
+              tier = tier_empire
+            }
+            NOT = { this = scope:skonester_off.primary_title }
+            is_noble_family_title = no
+            is_landless_type_title = no
+          }
+        }
+      }
+      skonester_land_cap_strip_one_excess_high_tier_effect = yes
+    }
+    scope:skonester_off = {
+      skonester_land_cap_cleanup_official_vars_effect = yes
+    }
+    clear_saved_scope = skonester_kept_county
+  }
+}
+
+skonester_land_cap_send_start_toast_effect = {
+  send_interface_toast = {
+    type = event_toast_effect_neutral
+    title = skonester_land_cap_batch_start_toast_title
+    desc = skonester_land_cap_batch_start_toast_desc
+  }
+}
+
+skonester_land_cap_send_complete_toast_effect = {
+  send_interface_toast = {
+    type = event_toast_effect_good
+    title = skonester_land_cap_batch_complete_toast_title
+    desc = skonester_land_cap_batch_complete_toast_desc
+  }
+}
+
+skonester_land_cap_batch_build_official_queue_effect = {
+  clear_variable_list = skonester_land_cap_official_queue
+  every_vassal_or_below = {
+    limit = {
+      skonester_official_needs_land_cap_enforcement_trigger = yes
+    }
+    save_scope_as = skonester_land_cap_queue_official
+    root = {
+      add_to_variable_list = {
+        name = skonester_land_cap_official_queue
+        target = scope:skonester_land_cap_queue_official
+      }
+    }
+  }
+}
+
+skonester_land_cap_batch_finish_effect = {
+  remove_character_flag = skonester_land_cap_batch_active
+  clear_variable_list = skonester_land_cap_official_queue
+  every_vassal_or_below = {
+    limit = {
+      has_character_flag = skonester_land_cap_strip_in_progress
+    }
+    remove_character_flag = skonester_land_cap_strip_in_progress
+  }
+  skonester_land_cap_send_complete_toast_effect = yes
+}
+
+skonester_land_cap_batch_step_effect = {
+  while = {
+    count = 2
+    limit = {
+      variable_list_size = {
+        name = skonester_land_cap_official_queue
+        value > 0
+      }
+    }
+    ordered_in_list = {
+      variable = skonester_land_cap_official_queue
+      order_by = highest_held_title_tier
+      position = 0
+      save_scope_as = skonester_land_cap_queue_official
+    }
+    scope:skonester_land_cap_queue_official = {
+      skonester_enforce_official_land_cap_bounded_effect = yes
+    }
+    if = {
+      limit = {
+        scope:skonester_land_cap_queue_official = {
+          skonester_official_needs_land_cap_enforcement_trigger = yes
+        }
+      }
+      remove_list_variable = {
+        name = skonester_land_cap_official_queue
+        target = scope:skonester_land_cap_queue_official
+      }
+      root = {
+        add_to_variable_list = {
+          name = skonester_land_cap_official_queue
+          target = scope:skonester_land_cap_queue_official
+        }
+      }
+    }
+    else = {
+      remove_list_variable = {
+        name = skonester_land_cap_official_queue
+        target = scope:skonester_land_cap_queue_official
+      }
+    }
+    clear_saved_scope = skonester_land_cap_queue_official
+  }
+}
+
+skonester_land_cap_batch_start_effect = {
+  root = {
+    if = {
+      limit = {
+        has_character_flag = skonester_land_cap_batch_active
+      }
+      skonester_land_cap_batch_finish_effect = yes
+    }
+    add_character_flag = skonester_land_cap_batch_active
+    skonester_land_cap_batch_build_official_queue_effect = yes
+    skonester_land_cap_send_start_toast_effect = yes
+    trigger_event = { id = skonester_officials.9140 days = 0 }
+  }
+}
+
+# 整理头衔完整流程：点击一次，全领地同步整理直至无多余头衔（多轮扫尾）
+skonester_official_land_cap_full_effect = {
+  root = {
+    if = {
+      limit = {
+        has_character_flag = skonester_land_cap_batch_active
+      }
+      skonester_land_cap_batch_finish_effect = yes
+    }
+    while = {
+      count = 24
+      limit = {
+        any_vassal_or_below = {
+          skonester_official_needs_land_cap_enforcement_trigger = yes
+        }
+      }
+      skonester_official_land_cap_yearly_effect = yes
+    }
+    skonester_land_cap_send_complete_toast_effect = yes
+  }
+}
+
+skonester_official_land_cap_yearly_effect = {
+  every_vassal_or_below = {
+    limit = {
+      skonester_official_needs_land_cap_enforcement_trigger = yes
+    }
+    skonester_enforce_official_land_cap_effect = yes
+  }
+}
+
+# 一键洗地：多轮 revoke 收归，直至辖内无可收归的伯爵领与公国及以上头衔
+skonester_one_click_strip_reclaim_pass_effect = {
+  every_vassal_or_below = {
+    every_held_title = {
+      limit = {
+        skonester_realm_title_needs_reclaim_to_root_trigger = yes
+      }
+      change_title_holder = {
+        holder = root
+        change = scope:skonester_strip_realm_change
+      }
+    }
+  }
+  every_sub_realm_county = {
+    limit = {
+      skonester_realm_title_needs_reclaim_to_root_trigger = yes
+    }
+    change_title_holder = {
+      holder = root
+      change = scope:skonester_strip_realm_change
+    }
+  }
+}
+
+skonester_one_click_strip_realm_titles_full_effect = {
+  root = {
+    create_title_and_vassal_change = {
+      type = revoked
+      save_scope_as = skonester_strip_realm_change
+      add_claim_on_loss = no
+    }
+    while = {
+      count = 48
+      limit = {
+        skonester_has_realm_strip_work_remaining_trigger = yes
+      }
+      skonester_one_click_strip_reclaim_pass_effect = yes
+    }
+    resolve_title_and_vassal_change = scope:skonester_strip_realm_change
+  }
+}

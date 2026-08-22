@@ -1,0 +1,189 @@
+﻿# 权限帝号：剥离其它权限名义头衔 → 授予 → 拉满君权/封臣义务 → 人物修正
+
+skonester_remove_all_authority_title_holder_modifiers_effect = {
+  remove_character_modifier = skonester_authority_absolute_holder
+  remove_character_modifier = skonester_authority_overlord_holder
+  remove_character_modifier = skonester_authority_iron_fist_holder
+  remove_character_modifier = skonester_authority_unbound_holder
+  remove_character_modifier = skonester_authority_regent_holder
+}
+
+skonester_destroy_all_held_authority_titular_titles_effect = {
+  every_held_title = {
+    limit = { skonester_is_authority_titular_title_trigger = yes }
+    prev = { destroy_title = prev }
+  }
+}
+
+skonester_grant_authority_titular_title_to_character_effect = {
+  skonester_remove_all_authority_title_holder_modifiers_effect = yes
+  skonester_destroy_all_held_authority_titular_titles_effect = yes
+  if = {
+    limit = {
+      exists = scope:skonester_authority_grant_title
+      scope:skonester_authority_grant_title = { exists = holder }
+    }
+    scope:skonester_authority_grant_title = {
+      create_title_and_vassal_change = {
+        type = usurped
+        save_scope_as = skonester_auth_title_change
+      }
+      change_title_holder = {
+        holder = scope:skonester_cheat_menu_target
+        change = scope:skonester_auth_title_change
+      }
+      resolve_title_and_vassal_change = scope:skonester_auth_title_change
+    }
+  }
+  else_if = {
+    limit = { exists = scope:skonester_authority_grant_title }
+    scope:skonester_authority_grant_title = {
+      create_title_and_vassal_change = {
+        type = created
+        save_scope_as = skonester_auth_title_change
+      }
+      change_title_holder = {
+        holder = scope:skonester_cheat_menu_target
+        change = scope:skonester_auth_title_change
+      }
+      resolve_title_and_vassal_change = scope:skonester_auth_title_change
+    }
+  }
+  if = {
+    limit = {
+      exists = scope:skonester_authority_grant_title
+      exists = primary_title
+      scope:skonester_authority_grant_title = { tier > prev.primary_title.tier }
+    }
+    set_primary_title_to = scope:skonester_authority_grant_title
+  }
+  skonester_authority_title_post_grant_bootstrap_effect = yes
+  if = {
+    limit = {
+      scope:skonester_authority_grant_title = title:e_skonester_authority_absolute
+    }
+    add_character_modifier = { modifier = skonester_authority_absolute_holder }
+  }
+  else_if = {
+    limit = {
+      scope:skonester_authority_grant_title = title:e_skonester_authority_overlord
+    }
+    add_character_modifier = { modifier = skonester_authority_overlord_holder }
+  }
+  else_if = {
+    limit = {
+      scope:skonester_authority_grant_title = title:e_skonester_authority_iron_fist
+    }
+    add_character_modifier = { modifier = skonester_authority_iron_fist_holder }
+  }
+  else_if = {
+    limit = {
+      scope:skonester_authority_grant_title = title:e_skonester_authority_unbound
+    }
+    add_character_modifier = { modifier = skonester_authority_unbound_holder }
+  }
+  else_if = {
+    limit = {
+      scope:skonester_authority_grant_title = title:k_skonester_authority_regent
+    }
+    add_character_modifier = { modifier = skonester_authority_regent_holder }
+  }
+  skonester_apply_titular_supremacy_bundle_effect = yes
+}
+
+skonester_grant_authority_absolute_title_effect = {
+  scope:skonester_cheat_menu_target = {
+    title:e_skonester_authority_absolute = { save_scope_as = skonester_authority_grant_title }
+    skonester_grant_authority_titular_title_to_character_effect = yes
+  }
+}
+
+skonester_grant_authority_overlord_title_effect = {
+  scope:skonester_cheat_menu_target = {
+    title:e_skonester_authority_overlord = { save_scope_as = skonester_authority_grant_title }
+    skonester_grant_authority_titular_title_to_character_effect = yes
+  }
+}
+
+skonester_grant_authority_iron_fist_title_effect = {
+  scope:skonester_cheat_menu_target = {
+    title:e_skonester_authority_iron_fist = { save_scope_as = skonester_authority_grant_title }
+    skonester_grant_authority_titular_title_to_character_effect = yes
+  }
+}
+
+skonester_grant_authority_unbound_title_effect = {
+  scope:skonester_cheat_menu_target = {
+    title:e_skonester_authority_unbound = { save_scope_as = skonester_authority_grant_title }
+    skonester_grant_authority_titular_title_to_character_effect = yes
+  }
+}
+
+skonester_grant_authority_regent_title_effect = {
+  scope:skonester_cheat_menu_target = {
+    title:k_skonester_authority_regent = { save_scope_as = skonester_authority_grant_title }
+    skonester_grant_authority_titular_title_to_character_effect = yes
+  }
+}
+
+skonester_sync_authority_title_holder_modifiers_effect = {
+  if = {
+    limit = { has_title = title:e_skonester_authority_absolute }
+    remove_character_modifier = skonester_authority_overlord_holder
+    remove_character_modifier = skonester_authority_iron_fist_holder
+    remove_character_modifier = skonester_authority_unbound_holder
+    remove_character_modifier = skonester_authority_regent_holder
+    if = {
+      limit = { NOT = { has_character_modifier = skonester_authority_absolute_holder } }
+      add_character_modifier = { modifier = skonester_authority_absolute_holder }
+    }
+  }
+  else_if = {
+    limit = { has_title = title:e_skonester_authority_overlord }
+    remove_character_modifier = skonester_authority_absolute_holder
+    remove_character_modifier = skonester_authority_iron_fist_holder
+    remove_character_modifier = skonester_authority_unbound_holder
+    remove_character_modifier = skonester_authority_regent_holder
+    if = {
+      limit = { NOT = { has_character_modifier = skonester_authority_overlord_holder } }
+      add_character_modifier = { modifier = skonester_authority_overlord_holder }
+    }
+  }
+  else_if = {
+    limit = { has_title = title:e_skonester_authority_iron_fist }
+    remove_character_modifier = skonester_authority_absolute_holder
+    remove_character_modifier = skonester_authority_overlord_holder
+    remove_character_modifier = skonester_authority_unbound_holder
+    remove_character_modifier = skonester_authority_regent_holder
+    if = {
+      limit = { NOT = { has_character_modifier = skonester_authority_iron_fist_holder } }
+      add_character_modifier = { modifier = skonester_authority_iron_fist_holder }
+    }
+  }
+  else_if = {
+    limit = { has_title = title:e_skonester_authority_unbound }
+    remove_character_modifier = skonester_authority_absolute_holder
+    remove_character_modifier = skonester_authority_overlord_holder
+    remove_character_modifier = skonester_authority_iron_fist_holder
+    remove_character_modifier = skonester_authority_regent_holder
+    if = {
+      limit = { NOT = { has_character_modifier = skonester_authority_unbound_holder } }
+      add_character_modifier = { modifier = skonester_authority_unbound_holder }
+    }
+  }
+  else_if = {
+    limit = { has_title = title:k_skonester_authority_regent }
+    remove_character_modifier = skonester_authority_absolute_holder
+    remove_character_modifier = skonester_authority_overlord_holder
+    remove_character_modifier = skonester_authority_iron_fist_holder
+    remove_character_modifier = skonester_authority_unbound_holder
+    if = {
+      limit = { NOT = { has_character_modifier = skonester_authority_regent_holder } }
+      add_character_modifier = { modifier = skonester_authority_regent_holder }
+    }
+  }
+  else = {
+    skonester_remove_all_authority_title_holder_modifiers_effect = yes
+  }
+  skonester_sync_titular_supremacy_if_holding_cheat_title_effect = yes
+}

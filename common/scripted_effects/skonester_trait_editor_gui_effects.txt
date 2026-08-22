@@ -1,0 +1,1242 @@
+﻿# 本体特质窗口：打开/关闭（手写部分；toggle 链由 gen_trait_editor_gui.py 追加）
+
+skonester_open_trait_editor_gui_effect = {
+  skonester_cheat_menu_sync_trait_edit_target_effect = yes
+  if = {
+    limit = { exists = scope:actor }
+    scope:actor = {
+      if = {
+        limit = { exists = global_var:skonester_cheat_menu_recipient }
+        set_variable = {
+          name = skonester_trait_gui_target
+          value = global_var:skonester_cheat_menu_recipient
+        }
+      }
+      remove_character_flag = skonester_trait_gui_open
+      add_character_flag = skonester_trait_gui_open
+    }
+  }
+  else = {
+    if = {
+      limit = { exists = global_var:skonester_cheat_menu_recipient }
+      set_variable = {
+        name = skonester_trait_gui_target
+        value = global_var:skonester_cheat_menu_recipient
+      }
+    }
+    remove_character_flag = skonester_trait_gui_open
+    add_character_flag = skonester_trait_gui_open
+  }
+}
+
+skonester_close_trait_editor_gui_effect = {
+  remove_character_flag = skonester_trait_gui_open
+}
+
+skonester_trait_gui_toggle_from_flag_effect = {
+  skonester_cheat_menu_sync_trait_edit_target_effect = yes
+  if = {
+    limit = { scope:trait_flag = flag:bossy }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = bossy }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:charming }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = charming }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:curious }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = curious }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:pensive }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = pensive }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:rowdy }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = rowdy }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:ambitious }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = ambitious }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:arbitrary }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = arbitrary }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:arrogant }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = arrogant }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:brave }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = brave }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:callous }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = callous }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:calm }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = calm }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:chaste }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = chaste }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:compassionate }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = compassionate }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:content }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = content }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:craven }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = craven }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:cynical }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = cynical }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:deceitful }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = deceitful }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:diligent }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = diligent }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:eccentric }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = eccentric }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:fickle }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = fickle }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:forgiving }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = forgiving }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:generous }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = generous }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:gluttonous }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = gluttonous }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:greedy }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = greedy }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:gregarious }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = gregarious }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:honest }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = honest }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:humble }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = humble }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:impatient }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = impatient }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:just }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = just }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:lazy }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = lazy }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:lustful }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = lustful }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:paranoid }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = paranoid }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:patient }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = patient }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:sadistic }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = sadistic }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:shy }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = shy }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:stubborn }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = stubborn }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:temperate }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = temperate }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:trusting }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = trusting }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:vengeful }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = vengeful }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:wrathful }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = wrathful }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:zealous }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = zealous }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_diplomacy_1 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_diplomacy_1 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_diplomacy_2 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_diplomacy_2 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_diplomacy_3 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_diplomacy_3 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_diplomacy_4 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_diplomacy_4 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_diplomacy_5 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_diplomacy_5 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_intrigue_1 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_intrigue_1 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_intrigue_2 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_intrigue_2 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_intrigue_3 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_intrigue_3 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_intrigue_4 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_intrigue_4 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_intrigue_5 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_intrigue_5 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_learning_1 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_learning_1 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_learning_2 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_learning_2 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_learning_3 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_learning_3 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_learning_4 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_learning_4 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_learning_5 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_learning_5 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_martial_1 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_martial_1 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_martial_2 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_martial_2 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_martial_3 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_martial_3 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_martial_4 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_martial_4 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_martial_5 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_martial_5 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_stewardship_1 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_stewardship_1 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_stewardship_2 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_stewardship_2 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_stewardship_3 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_stewardship_3 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_stewardship_4 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_stewardship_4 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_stewardship_5 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_stewardship_5 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:aggressive_attacker }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = aggressive_attacker }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:cautious_leader }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = cautious_leader }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:desert_warrior }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = desert_warrior }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:flexible_leader }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = flexible_leader }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:forder }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = forder }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:forest_fighter }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = forest_fighter }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:holy_warrior }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = holy_warrior }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:jungle_stalker }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = jungle_stalker }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:logistician }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = logistician }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:military_engineer }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = military_engineer }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:open_terrain_expert }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = open_terrain_expert }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:organizer }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = organizer }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:reaver }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = reaver }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:reckless }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = reckless }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:rough_terrain_expert }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = rough_terrain_expert }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:unyielding_defender }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = unyielding_defender }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:winter_soldier }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = winter_soldier }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:administrative_court_1 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = administrative_court_1 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:administrative_court_2 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = administrative_court_2 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:diplomatic_court_1 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = diplomatic_court_1 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:diplomatic_court_2 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = diplomatic_court_2 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:intrigue_court_1 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = intrigue_court_1 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:intrigue_court_2 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = intrigue_court_2 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:scholarly_court_1 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = scholarly_court_1 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:scholarly_court_2 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = scholarly_court_2 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:warlike_court_1 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = warlike_court_1 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:warlike_court_2 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = warlike_court_2 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:administrator }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = administrator }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:architect }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = architect }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:august }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = august }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:avaricious }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = avaricious }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:diplomat }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = diplomat }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:family_first }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = family_first }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:gallant }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = gallant }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:lifestyle_blademaster }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = lifestyle_blademaster }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:lifestyle_gardener }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = lifestyle_gardener }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:lifestyle_herbalist }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = lifestyle_herbalist }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:lifestyle_hunter }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = lifestyle_hunter }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:lifestyle_mystic }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = lifestyle_mystic }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:lifestyle_physician }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = lifestyle_physician }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:lifestyle_poet }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = lifestyle_poet }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:lifestyle_reveler }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = lifestyle_reveler }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:lifestyle_seasoned_pastor }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = lifestyle_seasoned_pastor }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:lifestyle_surveyor }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = lifestyle_surveyor }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:lifestyle_traveler }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = lifestyle_traveler }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:lifestyle_voyager }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = lifestyle_voyager }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:lifestyle_wayfarer }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = lifestyle_wayfarer }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:nomadic_philosophy }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = nomadic_philosophy }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:overseer }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = overseer }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:schemer }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = schemer }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:scholar }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = scholar }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:seducer }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = seducer }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:strategist }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = strategist }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:the_wake }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = the_wake }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:theologian }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = theologian }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:torturer }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = torturer }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:whole_of_body }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = whole_of_body }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:beardless_eunuch }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = beardless_eunuch }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:blind }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = blind }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:bubonic_plague }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = bubonic_plague }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:cancer }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = cancer }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:clouded_eyes }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = clouded_eyes }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:consumption }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = consumption }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:depressed_1 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = depressed_1 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:depressed_genetic }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = depressed_genetic }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:disfigured }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = disfigured }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:dysentery }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = dysentery }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:early_great_pox }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = early_great_pox }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:ergotism }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = ergotism }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:eunuch_1 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = eunuch_1 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:faltering_heart }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = faltering_heart }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:fragile_bones }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = fragile_bones }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:gout_ridden }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = gout_ridden }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:great_pox }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = great_pox }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:ill }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = ill }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:incapable }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = incapable }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:infirm }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = infirm }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:leper }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = leper }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:lovers_pox }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = lovers_pox }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:lunatic_1 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = lunatic_1 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:lunatic_genetic }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = lunatic_genetic }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:maimed }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = maimed }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:measles }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = measles }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:one_eyed }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = one_eyed }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:one_legged }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = one_legged }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:pneumonic }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = pneumonic }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:possessed_1 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = possessed_1 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:possessed_genetic }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = possessed_genetic }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:pregnant }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = pregnant }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:scarred }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = scarred }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:sickly }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = sickly }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:smallpox }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = smallpox }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:typhus }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = typhus }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:withering_mind }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = withering_mind }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:wounded_1 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = wounded_1 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:wounded_2 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = wounded_2 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:wounded_3 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = wounded_3 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:adulterer }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = adulterer }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:adventurer }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = adventurer }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:adventurer_follower }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = adventurer_follower }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:athletic }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = athletic }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:augustus }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = augustus }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:bastard }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = bastard }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:bastard_founder }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = bastard_founder }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:berserker }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = berserker }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:blood_of_prophet }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = blood_of_prophet }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:born_in_the_purple }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = born_in_the_purple }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:burdened }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = burdened }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:campeador }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = campeador }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:cannibal }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = cannibal }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:celibate }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = celibate }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:chakravarti }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = chakravarti }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:charioteer_blue }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = charioteer_blue }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:charioteer_green }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = charioteer_green }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:charioteer_red }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = charioteer_red }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:charioteer_white }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = charioteer_white }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:child_of_concubine_female }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = child_of_concubine_female }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:child_of_concubine_male }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = child_of_concubine_male }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:comfort_eater }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = comfort_eater }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:confucian_education }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = confucian_education }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:conqueror }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = conqueror }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:consecrated_blood }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = consecrated_blood }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:contrite }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = contrite }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:crusader_king }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = crusader_king }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:decadent }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = decadent }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:denounced }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = denounced }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:despoiler_of_byzantium }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = despoiler_of_byzantium }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:deviant }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = deviant }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:devoted }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = devoted }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:disinherited }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = disinherited }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:disloyal }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = disloyal }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:disputed_heritage }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = disputed_heritage }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:divine_blood }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = divine_blood }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:drunkard }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = drunkard }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:excommunicated }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = excommunicated }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:extolled }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = extolled }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:faith_warrior }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = faith_warrior }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:flagellant }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = flagellant }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:former_emperor }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = former_emperor }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:fornicator }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = fornicator }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:gallivanter }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = gallivanter }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:gallowsbait }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = gallowsbait }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:golden_lineage }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = golden_lineage }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:governor }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = governor }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:greatest_of_khans }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = greatest_of_khans }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:hajjaj }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = hajjaj }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:hashishiyah }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = hashishiyah }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:heresiarch }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = heresiarch }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:historical_character }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = historical_character }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:improvident }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = improvident }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:inappetetic }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = inappetetic }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:incestuous }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = incestuous }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:irritable }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = irritable }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:journaller }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = journaller }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:kinslayer_1 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = kinslayer_1 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:kinslayer_2 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = kinslayer_2 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:kinslayer_3 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = kinslayer_3 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:knight_errant }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = knight_errant }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:legend }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = legend }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:legitimized_bastard }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = legitimized_bastard }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:loyal }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = loyal }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:murderer }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = murderer }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:order_member }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = order_member }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:paragon }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = paragon }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:peasant_leader }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = peasant_leader }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:pilgrim }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = pilgrim }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:populist_leader }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = populist_leader }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:profligate }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = profligate }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:rakish }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = rakish }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:reclusive }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = reclusive }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:reincarnation }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = reincarnation }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:saint }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = saint }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:saoshyant }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = saoshyant }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:saoshyant_descendant }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = saoshyant_descendant }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:savior }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = savior }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:sayyid }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = sayyid }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:shieldmaiden }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = shieldmaiden }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:sodomite }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = sodomite }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:twin }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = twin }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:varangian }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = varangian }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:viking }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = viking }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:violet_poet }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = violet_poet }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:wild_oat }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = wild_oat }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:witch }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = witch }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:albino }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = albino }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:bleeder }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = bleeder }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:clubfooted }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = clubfooted }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:dwarf }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = dwarf }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:giant }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = giant }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:hunchbacked }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = hunchbacked }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:inbred }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = inbred }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:lisping }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = lisping }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:pure_blooded }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = pure_blooded }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:scaly }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = scaly }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:spindly }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = spindly }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:stuttering }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = stuttering }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:wheezing }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = wheezing }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:beauty_bad_1 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = beauty_bad_1 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:beauty_bad_2 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = beauty_bad_2 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:beauty_bad_3 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = beauty_bad_3 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:beauty_good_1 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = beauty_good_1 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:beauty_good_2 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = beauty_good_2 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:beauty_good_3 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = beauty_good_3 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:intellect_bad_1 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = intellect_bad_1 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:intellect_bad_2 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = intellect_bad_2 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:intellect_bad_3 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = intellect_bad_3 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:intellect_good_1 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = intellect_good_1 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:intellect_good_2 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = intellect_good_2 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:intellect_good_3 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = intellect_good_3 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:dull }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = dull }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:shrewd }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = shrewd }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:physique_bad_1 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = physique_bad_1 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:physique_bad_2 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = physique_bad_2 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:physique_bad_3 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = physique_bad_3 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:physique_good_1 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = physique_good_1 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:physique_good_2 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = physique_good_2 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:physique_good_3 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = physique_good_3 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:strong }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = strong }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:weak }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = weak }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:fecund }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = fecund }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:impotent }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = impotent }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:infertile }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = infertile }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_martial_prowess_1 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_martial_prowess_1 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_martial_prowess_2 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_martial_prowess_2 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_martial_prowess_3 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_martial_prowess_3 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_martial_prowess_4 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_martial_prowess_4 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_republican_knowledge_1 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_republican_knowledge_1 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_republican_knowledge_2 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_republican_knowledge_2 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_republican_knowledge_3 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_republican_knowledge_3 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:education_republican_knowledge_4 }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = education_republican_knowledge_4 }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:fp3_struggle_detractor }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = fp3_struggle_detractor }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:fp3_struggle_supporter }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = fp3_struggle_supporter }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:confider }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = confider }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:immortal }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = immortal }
+  }
+  if = {
+    limit = { scope:trait_flag = flag:tourney_participant }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = tourney_participant }
+  }
+}

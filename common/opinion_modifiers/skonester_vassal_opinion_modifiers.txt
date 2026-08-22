@@ -1,0 +1,20 @@
+﻿# 内帑拨款谢恩：封臣 +30、贡臣 +60；加前 strip 同系与原版 grateful，不叠多条。
+# 显示名在本地化中须非空，否则工具提示会回退为内部 key；详情见各语言 skonester_grateful_patron_*_opinion_desc。
+
+skonester_grateful_patron_short_opinion = {
+  opinion = 30
+}
+
+skonester_grateful_patron_tributary_opinion = {
+  opinion = 60
+}
+
+# 变忠臣：对宗主 +999 好感
+skonester_loyal_vassal_opinion = {
+  opinion = 999
+}
+
+# 威慑天下：仅用于 remove_opinion 清除旧档残留（已不再施加负好感）
+skonester_world_deterrence_fear_opinion = {
+  opinion = 0
+}

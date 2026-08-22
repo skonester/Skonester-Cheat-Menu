@@ -1,0 +1,129 @@
+﻿# Skonester「强制订婚（结婚）」：打开原版 arrange_marriage 界面前的预备/收尾
+# 注意：actor 多为玩家（媒人），不得在 on_send 阶段离婚；婚约障碍仅在 on_accept 时对联姻双方清理。
+
+skonester_cheat_menu_clear_marriage_blockers_for_force_ui_effect = {
+  while = {
+    limit = { exists = primary_spouse }
+    divorce = primary_spouse
+  }
+  if = {
+    limit = { exists = betrothed }
+    break_betrothal = betrothed
+  }
+  if = {
+    limit = { is_concubine = yes }
+    remove_concubine = yes
+  }
+}
+
+skonester_cheat_menu_prepare_char_for_free_marriage_ui_effect = {
+  if = {
+    limit = { is_imprisoned = yes }
+    release_from_prison = yes
+  }
+  if = {
+    limit = { has_trait = skonester_trait_marriage_ban }
+    add_character_flag = skonester_force_marry_had_ban
+    remove_trait = skonester_trait_marriage_ban
+  }
+  if = {
+    limit = { has_character_flag = skonester_no_marry_vow }
+    add_character_flag = skonester_force_marry_had_vow
+    remove_character_flag = skonester_no_marry_vow
+  }
+  if = {
+    limit = { exists = faith }
+    set_variable = { name = skonester_free_marry_saved_faith value = faith }
+  }
+  if = {
+    limit = { exists = culture }
+    set_variable = { name = skonester_free_marry_saved_culture value = culture }
+  }
+  set_character_faith = faith:skonester_force_marry_faith
+  add_character_flag = skonester_free_marriage_ui_prepared
+}
+
+skonester_cheat_menu_restore_char_after_free_marriage_ui_effect = {
+  if = {
+    limit = { has_character_flag = skonester_force_marry_had_ban }
+    remove_character_flag = skonester_force_marry_had_ban
+    add_trait = skonester_trait_marriage_ban
+  }
+  if = {
+    limit = { has_character_flag = skonester_force_marry_had_vow }
+    remove_character_flag = skonester_force_marry_had_vow
+    add_character_flag = skonester_no_marry_vow
+  }
+  if = {
+    limit = { has_variable = skonester_free_marry_saved_faith }
+    set_character_faith = var:skonester_free_marry_saved_faith
+    remove_variable = skonester_free_marry_saved_faith
+  }
+  if = {
+    limit = { has_variable = skonester_free_marry_saved_culture }
+    set_culture = var:skonester_free_marry_saved_culture
+    remove_variable = skonester_free_marry_saved_culture
+  }
+  remove_character_flag = skonester_free_marriage_ui_prepared
+}
+
+skonester_cheat_menu_begin_free_marriage_ui_session_effect = {
+  set_global_variable = skonester_force_marriage_ui_active
+}
+
+skonester_cheat_menu_end_free_marriage_ui_session_effect = {
+  remove_global_variable = skonester_force_marriage_ui_active
+}
+
+skonester_cheat_menu_prepare_free_marriage_ui_effect = {
+  skonester_cheat_menu_begin_free_marriage_ui_session_effect = yes
+  scope:actor = {
+    skonester_cheat_menu_prepare_char_for_free_marriage_ui_effect = yes
+  }
+  scope:recipient = {
+    skonester_cheat_menu_prepare_char_for_free_marriage_ui_effect = yes
+    if = {
+      limit = {
+        is_alive = yes
+        NOT = { is_courtier_of = scope:actor }
+        NOT = { is_vassal_of = scope:actor }
+        NOT = { is_landed = yes }
+      }
+      set_employer = scope:actor
+    }
+  }
+  if = {
+    limit = { exists = scope:secondary_actor }
+    scope:secondary_actor = {
+      skonester_cheat_menu_prepare_char_for_free_marriage_ui_effect = yes
+    }
+  }
+  if = {
+    limit = { exists = scope:secondary_recipient }
+    scope:secondary_recipient = {
+      skonester_cheat_menu_prepare_char_for_free_marriage_ui_effect = yes
+    }
+  }
+}
+
+skonester_cheat_menu_restore_free_marriage_ui_pair_effect = {
+  skonester_cheat_menu_end_free_marriage_ui_session_effect = yes
+  scope:actor = {
+    skonester_cheat_menu_restore_char_after_free_marriage_ui_effect = yes
+  }
+  scope:recipient = {
+    skonester_cheat_menu_restore_char_after_free_marriage_ui_effect = yes
+  }
+  if = {
+    limit = { exists = scope:secondary_actor }
+    scope:secondary_actor = {
+      skonester_cheat_menu_restore_char_after_free_marriage_ui_effect = yes
+    }
+  }
+  if = {
+    limit = { exists = scope:secondary_recipient }
+    scope:secondary_recipient = {
+      skonester_cheat_menu_restore_char_after_free_marriage_ui_effect = yes
+    }
+  }
+}

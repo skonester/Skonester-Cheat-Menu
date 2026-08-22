@@ -1,0 +1,21 @@
+﻿# 庄园三套预设专属加成（与路线独立；切换预设时替换同类 modifier）
+
+skonester_domicile_preset_economy_bonus_modifier = {
+  icon = economy_positive
+  tax_mult = 0.15
+  monthly_income_mult = 0.1
+}
+
+skonester_domicile_preset_military_bonus_modifier = {
+  icon = martial_positive
+  levy_size = 0.2
+  men_at_arms_maintenance = -0.15
+  defender_advantage = 5
+}
+
+skonester_domicile_preset_balanced_bonus_modifier = {
+  icon = stewardship_positive
+  tax_mult = 0.08
+  levy_size = 0.1
+  defender_advantage = 3
+}

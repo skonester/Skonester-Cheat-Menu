@@ -1,0 +1,91 @@
+﻿# 独立、有地 AI：每年 skonester_officials.9200——常备扩张 + 扩张猛攻 + 铁腕改革（无控制力/派系门槛）/（可选）法理转封。
+# 玩家版图威胁：`skonester_ai_counter_player_pressure`（反玩家结盟/谍报权重）由本文件年脉冲 + skonester_ai_monthly_strategic_audit.txt 月脉冲共同刷新。
+# 新局首年跳过 9200（grace）；总开关见 skonester_ai_yearly_pulse_toggle_decision；子项：法理转封（默认关）、改行政（默认关）。
+
+on_game_start = {
+  on_actions = {
+    skonester_ai_features_new_campaign_defaults_pulse
+  }
+}
+
+# 仅新开局写入默认关；读档不覆盖玩家已改开关
+skonester_ai_features_new_campaign_defaults_pulse = {
+  effect = {
+    set_global_variable = {
+      name = skonester_ai_yearly_pulse_disabled
+      value = yes
+    }
+    set_global_variable = {
+      name = skonester_ai_yearly_admin_conversion_disabled
+      value = yes
+    }
+    set_global_variable = {
+      name = skonester_ai_boost_disabled
+      value = yes
+    }
+    # Explicitly keep the annual de-jure transfer sub-feature disabled in new campaigns.
+    if = {
+      limit = { has_global_variable = skonester_ai_yearly_de_jure_transfer_enabled }
+      remove_global_variable = skonester_ai_yearly_de_jure_transfer_enabled
+    }
+  }
+}
+
+on_game_start_after_lobby = {
+  on_actions = {
+    skonester_ai_yearly_pulse_startup_pulse
+  }
+}
+
+skonester_ai_yearly_pulse_startup_pulse = {
+  effect = {
+    set_global_variable = {
+      name = skonester_ai_yearly_pulse_grace_skip
+      value = yes
+    }
+  }
+}
+
+yearly_global_pulse = {
+  on_actions = {
+    skonester_ai_de_jure_transfer_yearly_pulse
+    skonester_ai_counter_player_pulse
+  }
+}
+
+skonester_ai_counter_player_pulse = {
+  effect = {
+    if = {
+      limit = {
+        NOT = { has_global_variable = skonester_ai_yearly_pulse_disabled }
+      }
+      skonester_ai_apply_counter_player_pressure_global_effect = yes
+    }
+  }
+}
+
+skonester_ai_de_jure_transfer_yearly_pulse = {
+  effect = {
+    if = {
+      limit = {
+        NOT = { has_global_variable = skonester_ai_yearly_pulse_disabled }
+      }
+      if = {
+        limit = { has_global_variable = skonester_ai_yearly_pulse_grace_skip }
+        remove_global_variable = skonester_ai_yearly_pulse_grace_skip
+      }
+      else = {
+        every_independent_ruler = {
+          limit = {
+            is_ai = yes
+            is_landed = yes
+          }
+          trigger_event = {
+            id = skonester_officials.9200
+            days = 0
+          }
+        }
+      }
+    }
+  }
+}

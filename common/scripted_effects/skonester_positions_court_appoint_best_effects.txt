@@ -1,0 +1,232 @@
+﻿# 廷臣 + 直属封臣合一候选池，按 aptitude 择优任命/替换（不依赖 can_be_employed_as 严格筛选）
+
+skonester_positions_clear_court_candidate_list_effect = {
+  scope:skonester_pos_reshuffle_liege = {
+    if = {
+      limit = { has_variable_list = skonester_pos_court_candidate_list }
+      clear_variable_list = skonester_pos_court_candidate_list
+    }
+  }
+}
+
+skonester_positions_build_court_candidate_list_effect = {
+  skonester_positions_clear_court_candidate_list_effect = yes
+  scope:skonester_pos_reshuffle_liege = {
+    every_courtier = {
+      limit = {
+        skonester_positions_loose_court_appointment_candidate_for_reshuffle_trigger = yes
+        NOT = { has_court_position = $COURT_POS$ }
+      }
+      save_scope_as = skonester_pos_cand
+      scope:skonester_pos_reshuffle_liege = {
+        add_to_variable_list = {
+          name = skonester_pos_court_candidate_list
+          target = scope:skonester_pos_cand
+        }
+      }
+      clear_saved_scope = skonester_pos_cand
+    }
+    every_vassal = {
+      limit = {
+        skonester_positions_court_reshuffle_vassal_loose_candidate_trigger = yes
+        NOT = { has_court_position = $COURT_POS$ }
+      }
+      save_scope_as = skonester_pos_cand
+      scope:skonester_pos_reshuffle_liege = {
+        add_to_variable_list = {
+          name = skonester_pos_court_candidate_list
+          target = scope:skonester_pos_cand
+        }
+      }
+      clear_saved_scope = skonester_pos_cand
+    }
+  }
+}
+
+skonester_positions_bring_pick_to_court_if_vassal_effect = {
+  scope:skonester_pos_court_pick = {
+    if = {
+      limit = {
+        is_vassal_of = scope:skonester_pos_reshuffle_liege
+        NOT = { is_courtier_of = scope:skonester_pos_reshuffle_liege }
+      }
+      set_employer = scope:skonester_pos_reshuffle_liege
+    }
+  }
+}
+
+# 填满该职种全部空缺（max_available_positions>1 时循环，如贴身侍卫×2）
+skonester_positions_try_fill_all_vacant_court_slots_for_pos_effect = {
+  scope:skonester_pos_reshuffle_liege = {
+    set_local_variable = {
+      name = skonester_pos_slot_fill_iter
+      value = 0
+    }
+    while = {
+      limit = {
+        can_employ_court_position_type = $COURT_POS$
+        local_var:skonester_pos_slot_fill_iter < 8
+      }
+      skonester_positions_try_appoint_court_slot_best_vacant_effect = { COURT_POS = $COURT_POS$ }
+      change_local_variable = {
+        name = skonester_pos_slot_fill_iter
+        add = 1
+      }
+    }
+  }
+}
+
+skonester_positions_try_appoint_court_slot_best_vacant_effect = {
+  scope:skonester_pos_reshuffle_liege = {
+    if = {
+      limit = {
+        can_employ_court_position_type = $COURT_POS$
+      }
+      # 先 can_be_employed_as 择优（拜占庭都长、冠军战车手、游牧将军/颉于伽思等）
+      if = {
+        limit = {
+          any_courtier = {
+            skonester_positions_loose_court_appointment_candidate_for_reshuffle_trigger = yes
+            can_be_employed_as = $COURT_POS$
+            NOT = { has_court_position = $COURT_POS$ }
+          }
+        }
+        ordered_courtier = {
+          limit = {
+            skonester_positions_loose_court_appointment_candidate_for_reshuffle_trigger = yes
+            can_be_employed_as = $COURT_POS$
+            NOT = { has_court_position = $COURT_POS$ }
+          }
+          order_by = aptitude:$COURT_POS$
+          max = 1
+          check_range_bounds = no
+          save_scope_as = skonester_pos_court_pick
+        }
+        if = {
+          limit = { exists = scope:skonester_pos_court_pick }
+          skonester_positions_bring_pick_to_court_if_vassal_effect = yes
+          appoint_court_position = {
+            recipient = scope:skonester_pos_court_pick
+            court_position = $COURT_POS$
+          }
+          clear_saved_scope = skonester_pos_court_pick
+        }
+      }
+      else_if = {
+        limit = {
+          any_vassal = {
+            skonester_positions_court_reshuffle_vassal_loose_candidate_trigger = yes
+            can_be_employed_as = $COURT_POS$
+            NOT = { has_court_position = $COURT_POS$ }
+          }
+        }
+        ordered_vassal = {
+          limit = {
+            skonester_positions_court_reshuffle_vassal_loose_candidate_trigger = yes
+            can_be_employed_as = $COURT_POS$
+            NOT = { has_court_position = $COURT_POS$ }
+          }
+          order_by = aptitude:$COURT_POS$
+          max = 1
+          check_range_bounds = no
+          save_scope_as = skonester_pos_court_pick
+        }
+        if = {
+          limit = { exists = scope:skonester_pos_court_pick }
+          skonester_positions_bring_pick_to_court_if_vassal_effect = yes
+          appoint_court_position = {
+            recipient = scope:skonester_pos_court_pick
+            court_position = $COURT_POS$
+          }
+          clear_saved_scope = skonester_pos_court_pick
+        }
+      }
+      else = {
+        skonester_positions_build_court_candidate_list_effect = { COURT_POS = $COURT_POS$ }
+        if = {
+          limit = {
+            has_variable_list = skonester_pos_court_candidate_list
+            variable_list_size = {
+              name = skonester_pos_court_candidate_list
+              value > 0
+            }
+          }
+          ordered_in_list = {
+            variable = skonester_pos_court_candidate_list
+            order_by = aptitude:$COURT_POS$
+            max = 1
+            check_range_bounds = no
+            save_scope_as = skonester_pos_court_pick
+          }
+          if = {
+            limit = { exists = scope:skonester_pos_court_pick }
+            skonester_positions_bring_pick_to_court_if_vassal_effect = yes
+            appoint_court_position = {
+              recipient = scope:skonester_pos_court_pick
+              court_position = $COURT_POS$
+            }
+            clear_saved_scope = skonester_pos_court_pick
+          }
+        }
+        skonester_positions_clear_court_candidate_list_effect = yes
+      }
+    }
+  }
+}
+
+skonester_positions_try_upgrade_court_slot_if_better_effect = {
+  scope:skonester_pos_reshuffle_liege = {
+    if = {
+      limit = {
+        can_employ_court_position_type = $COURT_POS$
+        employs_court_position = $COURT_POS$
+        any_court_position_holder = {
+          type = $COURT_POS$
+        }
+      }
+      random_court_position_holder = {
+        type = $COURT_POS$
+        save_scope_as = skonester_pos_court_incumbent
+      }
+      skonester_positions_build_court_candidate_list_effect = { COURT_POS = $COURT_POS$ }
+      if = {
+        limit = {
+          has_variable_list = skonester_pos_court_candidate_list
+          variable_list_size = {
+            name = skonester_pos_court_candidate_list
+            value > 0
+          }
+        }
+        ordered_in_list = {
+          variable = skonester_pos_court_candidate_list
+          order_by = aptitude:$COURT_POS$
+          max = 1
+          check_range_bounds = no
+          save_scope_as = skonester_pos_court_pick
+        }
+        if = {
+          limit = {
+            exists = scope:skonester_pos_court_pick
+            exists = scope:skonester_pos_court_incumbent
+            NOT = { scope:skonester_pos_court_pick = scope:skonester_pos_court_incumbent }
+            scope:skonester_pos_court_pick = {
+              aptitude:$COURT_POS$ > scope:skonester_pos_court_incumbent.aptitude:$COURT_POS$
+            }
+          }
+          revoke_court_position = {
+            recipient = scope:skonester_pos_court_incumbent
+            court_position = $COURT_POS$
+          }
+          skonester_positions_bring_pick_to_court_if_vassal_effect = yes
+          appoint_court_position = {
+            recipient = scope:skonester_pos_court_pick
+            court_position = $COURT_POS$
+          }
+        }
+        clear_saved_scope = skonester_pos_court_pick
+        clear_saved_scope = skonester_pos_court_incumbent
+      }
+      skonester_positions_clear_court_candidate_list_effect = yes
+    }
+  }
+}

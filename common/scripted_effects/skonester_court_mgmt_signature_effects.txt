@@ -1,0 +1,344 @@
+﻿# 廷臣「招牌」輪換：根節點變量 skonester_court_mgmt_sig_slot 0–5 循環，使宮廷陸續補齊
+# 0 哲學大師 learning_5、1 天才軍事家 martial_5+勇武教育、2 點石成金 stewardship_5、
+# 3 難以摸透的影子 intrigue_5、4 幕後操作人 diplomacy_5、5 純勇武 martial_prowess_4+體魄+高勇武
+# 呼叫前須設 scope:skonester_court_elite_target；root 須設 var:skonester_court_mgmt_sig_apply_mode（1=生成 0=招募）
+
+skonester_court_mgmt_apply_rotated_signature_effect = {
+  root = {
+    if = {
+      limit = {
+        NOT = {
+          has_variable = skonester_court_mgmt_sig_slot
+        }
+      }
+      set_variable = {
+        name = skonester_court_mgmt_sig_slot
+        value = 0
+      }
+    }
+  }
+  scope:skonester_court_elite_target = {
+    if = {
+      limit = {
+        root = {
+          var:skonester_court_mgmt_sig_apply_mode = 1
+        }
+      }
+      add_trait = diligent
+      add_trait = patient
+      add_trait = temperate
+    }
+    if = {
+      limit = {
+        root = {
+          var:skonester_court_mgmt_sig_apply_mode = 0
+        }
+      }
+      if = {
+        limit = {
+          NOT = {
+            has_trait = diligent
+          }
+        }
+        add_trait = diligent
+      }
+      if = {
+        limit = {
+          NOT = {
+            has_trait = patient
+          }
+        }
+        add_trait = patient
+      }
+      if = {
+        limit = {
+          NOT = {
+            has_trait = temperate
+          }
+        }
+        add_trait = temperate
+      }
+    }
+  }
+  root = {
+    if = {
+      limit = {
+        var:skonester_court_mgmt_sig_slot = 0
+      }
+      scope:skonester_court_elite_target = {
+        if = {
+          limit = {
+            root = {
+              var:skonester_court_mgmt_sig_apply_mode = 1
+            }
+          }
+          add_trait = education_learning_5
+          random = {
+            chance = 12
+            add_trait = intellect_good_3
+          }
+        }
+        if = {
+          limit = {
+            root = {
+              var:skonester_court_mgmt_sig_apply_mode = 0
+            }
+          }
+          if = {
+            limit = {
+              skonester_court_mgmt_recruit_can_add_learning_education_trigger = yes
+            }
+            add_trait = education_learning_5
+          }
+        }
+        add_learning_skill = 10
+        add_martial_skill = 2
+        add_diplomacy_skill = 2
+        add_stewardship_skill = 2
+        add_intrigue_skill = 2
+        add_prowess_skill = 2
+      }
+    }
+    else_if = {
+      limit = {
+        var:skonester_court_mgmt_sig_slot = 1
+      }
+      scope:skonester_court_elite_target = {
+        if = {
+          limit = {
+            root = {
+              var:skonester_court_mgmt_sig_apply_mode = 1
+            }
+          }
+          add_trait = education_martial_5
+          add_trait = education_martial_prowess_4
+        }
+        if = {
+          limit = {
+            root = {
+              var:skonester_court_mgmt_sig_apply_mode = 0
+            }
+          }
+          if = {
+            limit = {
+              skonester_court_mgmt_recruit_can_add_martial_education_trigger = yes
+            }
+            add_trait = education_martial_5
+          }
+          if = {
+            limit = {
+              skonester_court_mgmt_recruit_can_add_prowess_education_trigger = yes
+            }
+            add_trait = education_martial_prowess_4
+          }
+        }
+        add_martial_skill = 10
+        add_learning_skill = 4
+        add_prowess_skill = 10
+        add_diplomacy_skill = 2
+        add_stewardship_skill = 2
+        add_intrigue_skill = 2
+        random = {
+          chance = 35
+          add_trait = brave
+        }
+      }
+    }
+    else_if = {
+      limit = {
+        var:skonester_court_mgmt_sig_slot = 2
+      }
+      scope:skonester_court_elite_target = {
+        if = {
+          limit = {
+            root = {
+              var:skonester_court_mgmt_sig_apply_mode = 1
+            }
+          }
+          add_trait = education_stewardship_5
+        }
+        if = {
+          limit = {
+            root = {
+              var:skonester_court_mgmt_sig_apply_mode = 0
+            }
+          }
+          if = {
+            limit = {
+              skonester_court_mgmt_recruit_can_add_stewardship_education_trigger = yes
+            }
+            add_trait = education_stewardship_5
+          }
+        }
+        add_stewardship_skill = 10
+        add_learning_skill = 5
+        add_martial_skill = 2
+        add_diplomacy_skill = 3
+        add_intrigue_skill = 2
+        add_prowess_skill = 2
+      }
+    }
+    else_if = {
+      limit = {
+        var:skonester_court_mgmt_sig_slot = 3
+      }
+      scope:skonester_court_elite_target = {
+        if = {
+          limit = {
+            root = {
+              var:skonester_court_mgmt_sig_apply_mode = 1
+            }
+          }
+          add_trait = education_intrigue_5
+        }
+        if = {
+          limit = {
+            root = {
+              var:skonester_court_mgmt_sig_apply_mode = 0
+            }
+          }
+          if = {
+            limit = {
+              skonester_court_mgmt_recruit_can_add_intrigue_education_trigger = yes
+            }
+            add_trait = education_intrigue_5
+          }
+        }
+        add_intrigue_skill = 10
+        add_learning_skill = 5
+        add_martial_skill = 2
+        add_diplomacy_skill = 2
+        add_stewardship_skill = 2
+        add_prowess_skill = 3
+      }
+    }
+    else_if = {
+      limit = {
+        var:skonester_court_mgmt_sig_slot = 4
+      }
+      scope:skonester_court_elite_target = {
+        if = {
+          limit = {
+            root = {
+              var:skonester_court_mgmt_sig_apply_mode = 1
+            }
+          }
+          add_trait = education_diplomacy_5
+        }
+        if = {
+          limit = {
+            root = {
+              var:skonester_court_mgmt_sig_apply_mode = 0
+            }
+          }
+          if = {
+            limit = {
+              skonester_court_mgmt_recruit_can_add_diplomacy_education_trigger = yes
+            }
+            add_trait = education_diplomacy_5
+          }
+        }
+        add_diplomacy_skill = 10
+        add_learning_skill = 5
+        add_martial_skill = 2
+        add_stewardship_skill = 3
+        add_intrigue_skill = 3
+        add_prowess_skill = 2
+      }
+    }
+    else_if = {
+      limit = {
+        var:skonester_court_mgmt_sig_slot = 5
+      }
+      scope:skonester_court_elite_target = {
+        if = {
+          limit = {
+            root = {
+              var:skonester_court_mgmt_sig_apply_mode = 1
+            }
+          }
+          add_trait = education_martial_4
+          add_trait = education_martial_prowess_4
+          if = {
+            limit = {
+              NOR = {
+                has_trait = physique_good_1
+                has_trait = physique_good_2
+                has_trait = physique_good_3
+                has_trait = physique_bad_1
+                has_trait = physique_bad_2
+                has_trait = physique_bad_3
+              }
+            }
+            add_trait = physique_good_3
+          }
+        }
+        if = {
+          limit = {
+            root = {
+              var:skonester_court_mgmt_sig_apply_mode = 0
+            }
+          }
+          if = {
+            limit = {
+              skonester_court_mgmt_recruit_can_add_martial_education_trigger = yes
+            }
+            add_trait = education_martial_4
+          }
+          if = {
+            limit = {
+              skonester_court_mgmt_recruit_can_add_prowess_education_trigger = yes
+            }
+            add_trait = education_martial_prowess_4
+          }
+          if = {
+            limit = {
+              NOR = {
+                has_trait = physique_good_1
+                has_trait = physique_good_2
+                has_trait = physique_good_3
+                has_trait = physique_bad_1
+                has_trait = physique_bad_2
+                has_trait = physique_bad_3
+              }
+            }
+            add_trait = physique_good_3
+          }
+        }
+        add_prowess_skill = 14
+        add_martial_skill = 8
+        add_learning_skill = 3
+        add_diplomacy_skill = 2
+        add_stewardship_skill = 2
+        add_intrigue_skill = 2
+        random = {
+          chance = 40
+          add_trait = strong
+        }
+        random = {
+          chance = 25
+          add_trait = brave
+        }
+      }
+    }
+    change_variable = {
+      name = skonester_court_mgmt_sig_slot
+      add = 1
+    }
+    if = {
+      limit = {
+        var:skonester_court_mgmt_sig_slot > 5
+      }
+      set_variable = {
+        name = skonester_court_mgmt_sig_slot
+        value = 0
+      }
+    }
+    if = {
+      limit = {
+        has_variable = skonester_court_mgmt_sig_apply_mode
+      }
+      remove_variable = skonester_court_mgmt_sig_apply_mode
+    }
+  }
+}

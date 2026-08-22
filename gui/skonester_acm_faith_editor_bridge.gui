@@ -1,0 +1,16 @@
+﻿# 打开本体信仰详情（window_faith），编辑模式由角色 flag 控制
+# 不在 trigger_on_create 中自动 OpenGameView，避免读档残留旗标误开信仰界面
+
+window = {
+  name = "skonester_acm_faith_editor_bridge_window"
+  widgetid = "skonester_acm_faith_editor_bridge_window"
+  size = { 1 1 }
+  parentanchor = top|left
+  position = { 0 0 }
+  layer = bottom
+  alwaystransparent = yes
+  filter_mouse = none
+
+  visible = "[GetScriptedGui('skonester_acm_faith_editor_visible').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+
+}

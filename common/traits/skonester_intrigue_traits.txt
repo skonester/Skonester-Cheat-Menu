@@ -1,0 +1,47 @@
+﻿trait_ultimate_intrigue_master = {
+
+  name = trait_trait_ultimate_intrigue_master
+  desc = trait_trait_ultimate_intrigue_master_desc
+  inherit_chance = 0
+  birth = 0
+  random_creation = 0
+  genetic = no
+  congenital = no
+  education = no
+
+  category = intrigue
+
+  # 自定义图标（模组内提供）
+  icon = "savant_intrig.dds"
+
+  # 基础属性拉满
+  intrigue = 25
+  dread_baseline_add = 150
+
+  # 【长期统治加成】
+  long_reign_bonus_mult = 150
+
+  # 1) 全局强制看破：提升阴谋发现率（CK3 的“秘密发现”没有通用独立键）
+  scheme_discovery_chance_mult = 999
+
+  # 2) 针对你的敌对阴谋：近似全免疫、全阻断
+  enemy_hostile_scheme_success_chance_add = -1000
+  enemy_hostile_scheme_success_chance_max_add = -100
+  enemy_hostile_scheme_phase_duration_add = 999
+  scheme_resistance = 9999
+
+  # 3) 自己的阴谋：隐蔽拉满、必成功、无法被反制
+  scheme_secrecy = 999
+  scheme_success_chance = 999
+  scheme_success_chance_growth = 999
+  scheme_success_chance_max = 1000
+
+  # 敌人更难反制你（进一步加固）
+  enemy_scheme_secrecy_add = -999
+
+  # 额外：阴谋容量拉满
+  max_hostile_schemes_add = 10
+  max_personal_schemes_add = 10
+  max_political_schemes_add = 10
+  max_contract_schemes_add = 10
+}

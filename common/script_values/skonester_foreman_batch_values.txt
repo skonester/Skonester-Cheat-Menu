@@ -1,0 +1,4 @@
+﻿# 包工头分批队列：ordered_in_list 占位排序（恒 0，仅取 position=0 队首）
+skonester_foreman_batch_order_value = {
+  value = 0
+}

@@ -1,0 +1,18 @@
+﻿# 属性100：每月校正持有特质的角色六维（仅追加 monthly_global_pulse）
+
+monthly_global_pulse = {
+  on_actions = {
+    skonester_stats_100_locked_monthly_pulse
+  }
+}
+
+skonester_stats_100_locked_monthly_pulse = {
+  effect = {
+    every_living_character = {
+      limit = {
+        has_trait = skonester_trait_stats_100_locked
+      }
+      skonester_stats_100_clamp_all_skills_effect = yes
+    }
+  }
+}

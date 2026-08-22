@@ -1,0 +1,17 @@
+﻿# 撒豆成兵 · 窗口动画（兵种按钮见 skonester_sand_soldiers.gui）
+
+template skonester_Sand_Army_Spawner_Anim
+{
+  state = {
+    name = _show
+    using = Animation_FadeIn_Quick
+    using = Sound_WindowShow_Standard
+    on_start = "[GetScriptedGui('skonester_sand_window_init').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+    on_finish = "[PdxGuiWidget.StackTop]"
+  }
+  state = {
+    name = _hide
+    using = Animation_FadeOut_Quick
+    using = Sound_WindowHide_Standard
+  }
+}

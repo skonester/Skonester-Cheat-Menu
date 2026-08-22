@@ -1,0 +1,111 @@
+﻿# 族内人口清理：无地同宗成员，年满 16 且五主属性之和低于 50（外交+军事+管理+谋略+学识，不含勇武）；不清理玩家本人、人类玩家、玩家子女与孙辈；不分性别
+skonester_dynasty_cull_unlanded_weak_effect = {
+  dynasty ?= {
+    every_dynasty_member = {
+      limit = {
+        is_alive = yes
+        NOT = {
+          this = root
+        }
+        is_landed = no
+        NOR = {
+          AND = {
+            is_playable_character = yes
+            is_ai = no
+          }
+        }
+        NOR = {
+          father = root
+          mother = root
+        }
+        NOR = {
+          father = {
+            OR = {
+              father = root
+              mother = root
+            }
+          }
+        }
+        NOR = {
+          mother = {
+            OR = {
+              father = root
+              mother = root
+            }
+          }
+        }
+        age >= 16
+        skonester_dynasty_cull_five_skills_sum_value < 50
+      }
+      death = {
+        death_reason = death_natural_causes
+      }
+    }
+  }
+}
+
+# World cleanup: process one small batch, then continue through hidden event 9088.
+# This deliberately avoids the legacy quota x realms x world-character nested loop.
+# Quota: root.var:skonester_world_purge_remaining (set to 1000/2000/3000 by event 9083).
+skonester_world_purge_landless_ai_effect = {
+  root = {
+    set_variable = {
+      name = skonester_world_purge_batch_kills
+      value = 0
+    }
+  }
+
+  every_living_character = {
+    limit = {
+      skonester_world_purge_landless_base_eligible_trigger = yes
+      root = {
+        has_character_flag = skonester_world_purge_active
+        has_variable = skonester_world_purge_remaining
+        var:skonester_world_purge_remaining > 0
+        var:skonester_world_purge_batch_kills < 25
+      }
+    }
+
+    root = {
+      change_variable = {
+        name = skonester_world_purge_remaining
+        add = -1
+      }
+      change_variable = {
+        name = skonester_world_purge_batch_kills
+        add = 1
+      }
+    }
+
+    # Pool characters have no active place in the simulation. Removing them
+    # silently avoids death events, notifications, memories and on-action cascades.
+    silent_disappearance_effect = yes
+  }
+
+  root = {
+    if = {
+      limit = {
+        has_character_flag = skonester_world_purge_active
+        has_variable = skonester_world_purge_remaining
+        var:skonester_world_purge_remaining > 0
+        var:skonester_world_purge_batch_kills > 0
+      }
+
+      # Spread expensive world scans across time instead of freezing one frame.
+      trigger_event = {
+        id = skonester_officials.9088
+        days = 3
+      }
+    }
+
+    else = {
+      remove_character_flag = skonester_world_purge_active
+      if = {
+        limit = { has_variable = skonester_world_purge_remaining }
+        remove_variable = skonester_world_purge_remaining
+      }
+    }
+
+    remove_variable = skonester_world_purge_batch_kills
+  }
+}

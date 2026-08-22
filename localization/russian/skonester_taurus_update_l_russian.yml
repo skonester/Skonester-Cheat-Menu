@@ -1,0 +1,22 @@
+﻿l_russian:
+ # Культурные группы
+ japonic_group:0 "Японская"
+ ainuic_group:0 "Айнуйская"
+ korean_group:0 "Корейская"
+ buyeo_group:0 "Пуёская"
+ viet_group:0 "Вьетская"
+ mon_khmer_group:0 "Мон-кхмерская"
+ tai_group:0 "Тайская"
+ austronesian_group:0 "Австронезийская"
+ hmongic_group:0 "Хмонгская"
+ bantu_group:0 "Банту"
+ amuric_group:0 "Амурская"
+ qiangic_group:0 "Цянская"
+ tungusic_group:0 "Тунгусская"
+ caucasian_group:0 "Кавказская"
+ vlach_group:0 "Влахская"
+ syriac_group:0 "Сирийская"
+ # Драконье рождение
+ dp_char_editor.dragon_birth:0 "Драконье рождение"
+ dp_char_editor.dragon_birth.t:0 "Черты драконьего рождения"
+ dp_char_editor.dragon_birth.d:0 "Выберите мифические черты телосложения и рождения, связанные с драконами, для вашего персонажа."

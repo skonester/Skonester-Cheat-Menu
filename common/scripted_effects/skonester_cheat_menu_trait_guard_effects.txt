@@ -1,0 +1,207 @@
+﻿# Skonester特质保险丝：birth/random=0；仅玩家通过Skonester菜单授予时打 skonester_traits_player_authorized。
+# AI 仅在被玩家授予且带授权标时可保留；脚本/随机/未授权一律脉冲剥除。
+
+# 授予Skonester作弊特质：仅人类玩家为 actor 时可赋予（目标可为 AI 或玩家本人）
+skonester_cheat_menu_grant_cheat_trait_effect = {
+  if = {
+    limit = {
+      exists = scope:actor
+      scope:actor = {
+        is_ai = no
+      }
+      skonester_cheat_menu_may_receive_cheat_trait_trigger = yes
+    }
+    add_trait = $TRAIT$
+    if = {
+      limit = {
+        trait:$TRAIT$ = trait:skonester_trait_baidubuqin
+      }
+      skonester_trait_baidubuqin_apply_effect = yes
+    }
+    if = {
+      limit = {
+        trait:$TRAIT$ = trait:skonester_trait_xinwuguai
+      }
+      skonester_trait_xinwuguai_apply_effect = yes
+    }
+    # 仅自制Skonester特质授予时打授权标；原版/其它特质编辑不调用本 effect
+    skonester_traits_authorize_recipient_if_player_actor_effect = yes
+  }
+}
+
+# 玩家通过Skonester菜单授予自制特质时给目标打标（人类或 AI 均可，防止脉冲误剥）
+skonester_traits_authorize_recipient_if_player_actor_effect = {
+  skonester_cheat_menu_sync_trait_edit_target_effect = yes
+  if = {
+    limit = {
+      scope:actor = {
+        is_ai = no
+      }
+      exists = scope:skonester_trait_edit_target
+    }
+    scope:skonester_trait_edit_target = {
+      add_character_flag = skonester_traits_player_authorized
+    }
+  }
+  else_if = {
+    limit = {
+      scope:actor = {
+        is_ai = no
+      }
+      exists = scope:skonester_cheat_menu_target
+    }
+    scope:skonester_cheat_menu_target = {
+      add_character_flag = skonester_traits_player_authorized
+    }
+  }
+  else_if = {
+    limit = {
+      scope:actor = {
+        is_ai = no
+      }
+      exists = scope:recipient
+    }
+    scope:recipient = {
+      add_character_flag = skonester_traits_player_authorized
+    }
+  }
+}
+
+# 全图剥除未获玩家Skonester菜单授权的自制特质
+skonester_cheat_menu_strip_all_unauthorized_skonester_traits_effect = {
+  every_living_character = {
+    limit = {
+      skonester_cheat_menu_must_strip_skonester_traits_trigger = yes
+    }
+    skonester_cheat_menu_strip_oob_skonester_traits_on_this_character_effect = yes
+  }
+}
+
+# 分批快扫：每日补刀（与 daily_global_pulse + ai_character_pulse 双保险）
+skonester_cheat_menu_strip_unauthorized_skonester_traits_batch_effect = {
+  while = {
+    count = 2000
+    limit = {
+      any_living_character = {
+        skonester_cheat_menu_must_strip_skonester_traits_trigger = yes
+      }
+    }
+    random_living_character = {
+      limit = {
+        skonester_cheat_menu_must_strip_skonester_traits_trigger = yes
+      }
+      weight = { base = 1 }
+      skonester_cheat_menu_strip_oob_skonester_traits_on_this_character_effect = yes
+    }
+  }
+}
+
+# 对 root = 当前角色：移除全部Skonester特质及延年丹相关状态（与 skonester_cheat_menu.0015.disable_all Skonester段对齐）。
+skonester_cheat_menu_strip_oob_skonester_traits_on_this_character_effect = {
+  if = {
+    limit = {
+      has_trait = skonester_trait_immortal_ageless
+    }
+    remove_trait = skonester_trait_immortal_ageless
+  }
+  if = {
+    limit = {
+      has_trait = trait_warlord_eternal
+    }
+    remove_trait = trait_warlord_eternal
+  }
+  if = {
+    limit = {
+      has_trait = trait_wealth_sovereign_max
+    }
+    remove_trait = trait_wealth_sovereign_max
+  }
+  if = {
+    limit = {
+      has_trait = trait_ultimate_intrigue_master
+    }
+    remove_trait = trait_ultimate_intrigue_master
+  }
+  if = {
+    limit = {
+      has_trait = trait_great_builder_god
+    }
+    remove_trait = trait_great_builder_god
+  }
+  if = {
+    limit = {
+      has_trait = trait_nether_conspiracy_lord
+    }
+    remove_trait = trait_nether_conspiracy_lord
+  }
+  if = {
+    limit = {
+      has_trait = trait_eternal_nether_lord
+    }
+    remove_trait = trait_eternal_nether_lord
+  }
+  if = {
+    limit = {
+      has_trait = skonester_trait_baidubuqin
+    }
+    skonester_trait_baidubuqin_revoke_effect = yes
+    remove_trait = skonester_trait_baidubuqin
+  }
+  if = {
+    limit = {
+      has_trait = skonester_trait_xinwuguai
+    }
+    remove_trait = skonester_trait_xinwuguai
+  }
+  if = {
+    limit = {
+      has_trait = skonester_trait_marriage_ban
+    }
+    remove_trait = skonester_trait_marriage_ban
+  }
+  if = {
+    limit = {
+      has_trait = skonester_trait_stats_100_locked
+    }
+    remove_trait = skonester_trait_stats_100_locked
+  }
+  remove_character_flag = skonester_yannian_dan_active
+  remove_character_flag = skonester_yannian_dan_mid_active
+  remove_character_flag = skonester_yannian_dan_best_active
+  if = {
+    limit = {
+      has_trait = skonester_trait_yannian_dan
+    }
+    remove_trait = skonester_trait_yannian_dan
+  }
+  if = {
+    limit = {
+      has_trait = skonester_trait_yannian_dan_mid
+    }
+    remove_trait = skonester_trait_yannian_dan_mid
+  }
+  if = {
+    limit = {
+      has_trait = skonester_trait_yannian_dan_best
+    }
+    remove_trait = skonester_trait_yannian_dan_best
+  }
+  if = {
+    limit = {
+      has_variable = skonester_yannian_dan_original_age
+    }
+    remove_variable = skonester_yannian_dan_original_age
+  }
+  if = {
+    limit = {
+      has_variable = skonester_yannian_dan_mid_original_age
+    }
+    remove_variable = skonester_yannian_dan_mid_original_age
+  }
+  if = {
+    limit = {
+      has_variable = skonester_yannian_dan_best_original_age
+    }
+    remove_variable = skonester_yannian_dan_best_original_age
+  }
+}

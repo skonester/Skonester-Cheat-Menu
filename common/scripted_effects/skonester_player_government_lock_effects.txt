@@ -1,0 +1,225 @@
+﻿# 人类玩家政体锁定：开局记录 TGP/特殊政体；仅在手改政体菜单确认后同步新政体；异常变更自动恢复。
+
+skonester_player_government_lock_apply_effect = {
+  if = {
+    limit = {
+      is_ai = no
+      is_playable_character = yes
+      skonester_player_government_lock_eligible_trigger = yes
+    }
+    add_character_flag = skonester_player_government_locked
+    skonester_player_government_lock_sync_from_character_effect = yes
+  }
+}
+
+skonester_player_government_lock_sync_from_character_effect = {
+  if = {
+    limit = { has_government = meritocratic_government }
+    set_variable = {
+      name = skonester_locked_government_type
+      value = 1
+    }
+  }
+  else_if = {
+    limit = { has_government = celestial_government }
+    set_variable = {
+      name = skonester_locked_government_type
+      value = 2
+    }
+  }
+  else_if = {
+    limit = { has_government = administrative_government }
+    set_variable = {
+      name = skonester_locked_government_type
+      value = 3
+    }
+  }
+  else_if = {
+    limit = { has_government = steppe_admin_government }
+    set_variable = {
+      name = skonester_locked_government_type
+      value = 4
+    }
+  }
+  else_if = {
+    limit = { has_government = japan_administrative_government }
+    set_variable = {
+      name = skonester_locked_government_type
+      value = 5
+    }
+  }
+  else_if = {
+    limit = { has_government = japan_feudal_government }
+    set_variable = {
+      name = skonester_locked_government_type
+      value = 6
+    }
+  }
+  else_if = {
+    limit = { has_government = feudal_government }
+    set_variable = {
+      name = skonester_locked_government_type
+      value = 7
+    }
+  }
+  else_if = {
+    limit = { has_government = tribal_government }
+    set_variable = {
+      name = skonester_locked_government_type
+      value = 8
+    }
+  }
+  else_if = {
+    limit = { has_government = clan_government }
+    set_variable = {
+      name = skonester_locked_government_type
+      value = 9
+    }
+  }
+  else_if = {
+    limit = { has_government = republic_government }
+    set_variable = {
+      name = skonester_locked_government_type
+      value = 10
+    }
+  }
+  else = {
+    remove_character_flag = skonester_player_government_locked
+    if = {
+      limit = { has_variable = skonester_locked_government_type }
+      remove_variable = skonester_locked_government_type
+    }
+  }
+}
+
+skonester_player_government_lock_maintain_effect = {
+  if = {
+    limit = {
+      is_ai = no
+      has_character_flag = skonester_player_government_locked
+      has_variable = skonester_locked_government_type
+    }
+    if = {
+      limit = {
+        var:skonester_locked_government_type = 1
+        NOT = { has_government = meritocratic_government }
+      }
+      skonester_convert_character_to_meritocratic_government_effect = yes
+      skonester_player_government_lock_send_revert_toast_effect = yes
+    }
+    else_if = {
+      limit = {
+        var:skonester_locked_government_type = 2
+        NOT = { has_government = celestial_government }
+      }
+      skonester_convert_character_to_celestial_government_effect = yes
+      skonester_player_government_lock_send_revert_toast_effect = yes
+    }
+    else_if = {
+      limit = {
+        var:skonester_locked_government_type = 3
+        NOT = { has_government = administrative_government }
+      }
+      skonester_convert_character_to_administrative_government_effect = yes
+      skonester_player_government_lock_send_revert_toast_effect = yes
+    }
+    else_if = {
+      limit = {
+        var:skonester_locked_government_type = 4
+        NOT = { has_government = steppe_admin_government }
+      }
+      skonester_convert_character_to_steppe_admin_government_effect = yes
+      skonester_player_government_lock_send_revert_toast_effect = yes
+    }
+    else_if = {
+      limit = {
+        var:skonester_locked_government_type = 5
+        NOT = { has_government = japan_administrative_government }
+      }
+      skonester_convert_character_to_japan_administrative_government_effect = yes
+      skonester_player_government_lock_send_revert_toast_effect = yes
+    }
+    else_if = {
+      limit = {
+        var:skonester_locked_government_type = 6
+        NOT = { has_government = japan_feudal_government }
+      }
+      skonester_convert_character_to_japan_feudal_government_effect = yes
+      skonester_player_government_lock_send_revert_toast_effect = yes
+    }
+    else_if = {
+      limit = {
+        var:skonester_locked_government_type = 7
+        NOT = { has_government = feudal_government }
+      }
+      skonester_convert_character_to_feudal_government_effect = yes
+      skonester_player_government_lock_send_revert_toast_effect = yes
+    }
+    else_if = {
+      limit = {
+        var:skonester_locked_government_type = 8
+        NOT = { has_government = tribal_government }
+      }
+      skonester_convert_character_to_tribal_government_effect = yes
+      skonester_player_government_lock_send_revert_toast_effect = yes
+    }
+    else_if = {
+      limit = {
+        var:skonester_locked_government_type = 9
+        NOT = { has_government = clan_government }
+      }
+      skonester_convert_character_to_clan_government_effect = yes
+      skonester_player_government_lock_send_revert_toast_effect = yes
+    }
+    else_if = {
+      limit = {
+        var:skonester_locked_government_type = 10
+        NOT = { has_government = republic_government }
+      }
+      skonester_convert_character_to_republic_government_effect = yes
+      skonester_player_government_lock_send_revert_toast_effect = yes
+    }
+  }
+}
+
+skonester_player_government_lock_send_revert_toast_effect = {
+  send_interface_toast = {
+    title = skonester_government_lock_reverted_toast_title
+    desc = skonester_government_lock_reverted_toast_desc
+  }
+}
+
+# 模组脚本尝试误转封建被拦截时提示（冷却 30 日，避免脉冲重复弹窗）
+skonester_player_government_feudal_blocked_notify_effect = {
+  if = {
+    limit = {
+      NOT = { has_character_flag = skonester_government_feudal_block_toast_recent }
+    }
+    send_interface_toast = {
+      title = skonester_government_feudal_blocked_toast_title
+      desc = skonester_government_feudal_blocked_toast_desc
+    }
+    add_character_flag = {
+      flag = skonester_government_feudal_block_toast_recent
+      days = 30
+    }
+  }
+}
+
+skonester_chenzhi_clear_menu_target_flags_effect = {
+  remove_character_flag = skonester_chenzhi_target_self
+  remove_character_flag = skonester_chenzhi_target_vassals
+}
+
+skonester_chenzhi_clear_menu_pending_effect = {
+  remove_character_flag = skonester_chenzhi_menu_pending
+  skonester_chenzhi_clear_menu_target_flags_effect = yes
+}
+
+skonester_chenzhi_finish_menu_option_effect = {
+  if = {
+    limit = { has_character_flag = skonester_chenzhi_target_self }
+    skonester_player_government_lock_sync_from_character_effect = yes
+  }
+  skonester_chenzhi_clear_menu_pending_effect = yes
+}

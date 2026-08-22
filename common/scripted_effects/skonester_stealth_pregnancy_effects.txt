@@ -1,0 +1,164 @@
+﻿# 隐秘怀孕效果 - 隐藏玩家父亲身份
+# 根据女性婚姻状况设置不同的假定父亲
+
+skonester_stealth_force_pregnancy_effect = {
+  scope:recipient = {
+    # 检查女性的婚姻状况
+    if = {
+      limit = {
+        # 已婚且有主配偶
+        exists = primary_spouse
+      }
+      # 设置主配偶为假定父亲
+      make_pregnant = {
+        father = scope:actor
+        known_bastard = no
+      }
+      primary_spouse = {
+        save_scope_as = skonester_stealth_assumed_father
+      }
+      set_pregnancy_assumed_father = scope:skonester_stealth_assumed_father
+      clear_saved_scope = skonester_stealth_assumed_father
+    }
+    else_if = {
+      limit = {
+        # 检查是否是侧室或小妾
+        has_trait = concubine
+        exists = liege
+      }
+      # 设置领主为假定父亲
+      make_pregnant = {
+        father = scope:actor
+        known_bastard = no
+      }
+      liege = {
+        save_scope_as = skonester_stealth_assumed_father
+      }
+      set_pregnancy_assumed_father = scope:skonester_stealth_assumed_father
+      clear_saved_scope = skonester_stealth_assumed_father
+    }
+    else_if = {
+      limit = {
+        # 检查是否是情人
+        has_trait = lover
+        exists = lover
+      }
+      # 设置情人为假定父亲
+      make_pregnant = {
+        father = scope:actor
+        known_bastard = no
+      }
+      lover = {
+        save_scope_as = skonester_stealth_assumed_father
+      }
+      set_pregnancy_assumed_father = scope:skonester_stealth_assumed_father
+      clear_saved_scope = skonester_stealth_assumed_father
+    }
+    else = {
+      # 未婚女性 - 不设置假定父亲，只显示母亲
+      make_pregnant = {
+        father = scope:actor
+        known_bastard = no
+      }
+      # 不设置假定父亲，让孩子只显示母亲
+    }
+  }
+}
+
+# 隐秘怀孕效果 - 增强版（处理更复杂的婚姻状况）
+skonester_stealth_force_pregnancy_enhanced_effect = {
+  scope:recipient = {
+    # 检查女性的婚姻状况
+    if = {
+      limit = {
+        # 已婚且有主配偶
+        exists = primary_spouse
+      }
+      # 设置主配偶为假定父亲
+      make_pregnant = {
+        father = scope:actor
+        known_bastard = no
+      }
+      primary_spouse = {
+        save_scope_as = skonester_stealth_assumed_father
+      }
+      set_pregnancy_assumed_father = scope:skonester_stealth_assumed_father
+      clear_saved_scope = skonester_stealth_assumed_father
+    }
+    else_if = {
+      limit = {
+        # 检查是否是侧室或小妾
+        has_trait = concubine
+        exists = liege
+      }
+      # 设置领主为假定父亲
+      make_pregnant = {
+        father = scope:actor
+        known_bastard = no
+      }
+      liege = {
+        save_scope_as = skonester_stealth_assumed_father
+      }
+      set_pregnancy_assumed_father = scope:skonester_stealth_assumed_father
+      clear_saved_scope = skonester_stealth_assumed_father
+    }
+    else_if = {
+      limit = {
+        # 检查是否有未婚夫/未婚妻
+        has_character_flag = betrothed
+        exists = betrothed
+      }
+      # 设置未婚夫为假定父亲
+      make_pregnant = {
+        father = scope:actor
+        known_bastard = no
+      }
+      betrothed = {
+        save_scope_as = skonester_stealth_assumed_father
+      }
+      set_pregnancy_assumed_father = scope:skonester_stealth_assumed_father
+      clear_saved_scope = skonester_stealth_assumed_father
+    }
+    else_if = {
+      limit = {
+        # 检查是否是情人
+        has_trait = lover
+        exists = lover
+      }
+      # 设置情人为假定父亲
+      make_pregnant = {
+        father = scope:actor
+        known_bastard = no
+      }
+      lover = {
+        save_scope_as = skonester_stealth_assumed_father
+      }
+      set_pregnancy_assumed_father = scope:skonester_stealth_assumed_father
+      clear_saved_scope = skonester_stealth_assumed_father
+    }
+    else_if = {
+      limit = {
+        # 检查是否有最近的前配偶
+        exists = most_recent_divorced_spouse
+      }
+      # 设置前配偶为假定父亲（增加复杂性）
+      make_pregnant = {
+        father = scope:actor
+        known_bastard = no
+      }
+      most_recent_divorced_spouse = {
+        save_scope_as = skonester_stealth_assumed_father
+      }
+      set_pregnancy_assumed_father = scope:skonester_stealth_assumed_father
+      clear_saved_scope = skonester_stealth_assumed_father
+    }
+    else = {
+      # 未婚女性 - 不设置假定父亲，只显示母亲
+      make_pregnant = {
+        father = scope:actor
+        known_bastard = no
+      }
+      # 不设置假定父亲，让孩子只显示母亲
+    }
+  }
+}

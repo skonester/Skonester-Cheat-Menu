@@ -1,0 +1,195 @@
+﻿# Skonester宗教目录：49 宗教大类 → 155 教派；» 进入信仰详情
+
+window = {
+  name = "skonester_acm_religion_picker_window"
+  parentanchor = top|right
+  position = { -720 80 }
+  size = { 520 780 }
+  layer = windows_layer
+  filter_mouse = all
+  allow_outside = yes
+  alwaystransparent = no
+  movable = yes
+
+  using = Window_Background
+  using = Window_Decoration
+
+  datacontext = "[GetVariableSystem]"
+  datacontext = "[GetPlayer]"
+
+  visible = "[GetScriptedGui('skonester_acm_religion_picker_visible').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+
+  state = {
+    name = init
+    trigger_on_create = yes
+    on_start = "[GetScriptedGui('skonester_acm_religion_list_load').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+  }
+
+  vbox = {
+    using = Window_Margins
+    layoutpolicy_horizontal = expanding
+    layoutpolicy_vertical = expanding
+    spacing = 6
+
+    header_pattern = {
+      layoutpolicy_horizontal = expanding
+      blockoverride "header_text" {
+        text = skonester_acm_religion_picker_title
+      }
+      blockoverride "button_close" {
+        onclick = "[GetScriptedGui('skonester_acm_religion_picker_close').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+      }
+    }
+
+    vbox = {
+      layoutpolicy_horizontal = expanding
+      margin = { 12 0 }
+      spacing = 2
+
+      text_single = {
+        layoutpolicy_horizontal = expanding
+        text = skonester_acm_religion_picker_subtitle
+        default_format = "#high"
+        autoresize = yes
+        max_width = 480
+      }
+
+      text_single = {
+        layoutpolicy_horizontal = expanding
+        text = skonester_acm_religion_picker_hint
+        default_format = "#weak"
+        autoresize = yes
+        max_width = 480
+      }
+    }
+
+    vbox = {
+      layoutpolicy_horizontal = expanding
+      layoutpolicy_vertical = expanding
+      spacing = 4
+
+      text_single = {
+        layoutpolicy_horizontal = expanding
+        text = skonester_acm_religion_picker_list_caption
+        default_format = "#low"
+        autoresize = yes
+      }
+
+      scrollbox = {
+        layoutpolicy_vertical = expanding
+        layoutpolicy_horizontal = expanding
+
+        blockoverride "scrollbox_content" {
+          vbox = {
+            name = "religions"
+            layoutpolicy_horizontal = expanding
+            datamodel = "[GetGlobalList('skonester_acm_religion_list_all')]"
+
+            item = {
+              vbox = {
+                name = "religion_group"
+                layoutpolicy_horizontal = expanding
+                datacontext = "[Scope.Religion]"
+                margin_bottom = 4
+
+                button_standard_hover = {
+                  layoutpolicy_horizontal = expanding
+                  size = { 0 38 }
+                  onclick = "[GetVariableSystem.Toggle(ConcatIfNeitherEmpty(Religion.GetNameNoTooltip,'children_visible'))]"
+                  tooltip = RULER_DESIGNER_LIST_FAITH_ENTRY_TOOLTIP
+
+                  background = {
+                    texture = "gfx/interface/component_tiles/tile_title_bg_01.dds"
+                    spriteType = Corneredstretched
+                    spriteborder = { 8 8 }
+                    alpha = 0.55
+                  }
+
+                  hbox = {
+                    margin = { 8 0 }
+                    spacing = 8
+
+                    button_list_expand = {
+                      checked = "[GetVariableSystem.Exists(ConcatIfNeitherEmpty(Religion.GetNameNoTooltip,'children_visible'))]"
+                      onclick = "[GetVariableSystem.Toggle(ConcatIfNeitherEmpty(Religion.GetNameNoTooltip,'children_visible'))]"
+                    }
+
+                    text_single = {
+                      layoutpolicy_horizontal = expanding
+                      text = "[Religion.GetNameNoTooltip]"
+                      default_format = "#high"
+                      autoresize = no
+                    }
+                  }
+                }
+
+                vbox = {
+                  name = "faiths"
+                  layoutpolicy_horizontal = expanding
+                  datamodel = "[Religion.GetFaiths]"
+                  visible = "[GetVariableSystem.Exists(ConcatIfNeitherEmpty(Religion.GetNameNoTooltip,'children_visible'))]"
+                  margin_left = 12
+
+                  item = {
+                    hbox = {
+                      layoutpolicy_horizontal = expanding
+                      button_standard_hover = {
+                        name = "faith_item"
+                        layoutpolicy_horizontal = expanding
+                        size = { 0 32 }
+                        tooltipwidget = {
+                          faith_tooltip_click = {}
+                        }
+                        onclick = "[GetScriptedGui('skonester_acm_faith_pick').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('selected_faith', Faith.MakeScope).End)]"
+
+                        hbox = {
+                          margin = { 4 0 }
+                          spacing = 6
+
+                          text_single = {
+                            raw_text = "—"
+                            default_format = "#weak"
+                            align = nobaseline
+                          }
+
+                          text_single = {
+                            margin = { 2 0 }
+                            layoutpolicy_horizontal = expanding
+                            text = "[Faith.GetNameNoTooltip]"
+                            default_format = "#clickable"
+                            align = nobaseline
+                          }
+
+                          button_round = {
+                            size = { 26 26 }
+                            tooltip = skonester_acm_religion_picker_open_editor_tt
+                            onclick = "[GetScriptedGui('skonester_acm_faith_pick_edit').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('selected_faith', Faith.MakeScope).End)]"
+                            raw_text = "»"
+                            default_format = "#high"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    hbox = {
+      layoutpolicy_horizontal = expanding
+      margin = { 8 4 }
+      spacing = 8
+
+      button_standard = {
+        layoutpolicy_horizontal = expanding
+        text = skonester_acm_religion_picker_footer_edit
+        tooltip = skonester_acm_religion_picker_footer_edit_tt
+        onclick = "[GetScriptedGui('skonester_acm_religion_picker_continue_edit').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+      }
+    }
+  }
+}

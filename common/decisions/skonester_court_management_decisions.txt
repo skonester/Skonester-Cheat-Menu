@@ -1,0 +1,34 @@
+﻿# å»·è‡£æ•´é “ï¼šåƒ…æ±ºè­°æ‰‹å‹•åŸ·è¡Œï¼›åŒä¸€æ±ºè­°å…§é‡è¤‡é£æ•£ç›´è‡³ç„¡å€™é¸ï¼ˆæ¯æ‰¹è‡³å¤š 500ï¼‰+ è£œå“¡è‡³ç´„ 50 äººã€‚å·²å–æ¶ˆæ¯æ—¥è‡ªå‹•é£æ•£èˆ‡è‡ªå‹•è£œæ‹›ã€‚
+
+skonester_court_management_decision = {
+  picture = {
+    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+  }
+  decision_group_type = pcm
+  sort_order = 90
+  title = skonester_court_management_decision
+  desc = skonester_court_management_decision_desc
+  selection_tooltip = skonester_court_management_decision_desc
+  confirm_text = skonester_court_management_decision_confirm
+
+  ai_check_interval = 0
+  ai_potential = { always = no }
+
+  is_shown = {
+
+    has_character_flag = pcm_b_show_decision_flag
+    skonester_officials_decision_visible_for_player_trigger = yes
+  }
+
+  is_valid = {
+    is_playable_character = yes
+  }
+
+  effect = {
+    skonester_court_mgmt_run_effect = yes
+  }
+
+  ai_will_do = {
+    base = 0
+  }
+}

@@ -1,0 +1,1165 @@
+﻿# AUTO-GENERATED — tools/gen_sand_soldiers_maa.py
+# 来源 tools/CK3全部兵种列表.txt + 变身大明/东方王朝 Workshop — 144 种常备
+
+skonester_sand_maa_populate_catalog_effect = {
+  clear_global_variable_list = skonester_sand_maa_list_all
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:light_footmen
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:armored_footmen
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:pikemen_unit
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:pikemen_militia
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:schiltron
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:goedendag
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:picchieri
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:skoutatoi
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:house_guard
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:palace_guards
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:praetorian
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:varangian_guards
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:varangian_veterans
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:teutonic_knights
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:warrior_monks
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:samurai
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:druzhina
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:huscarl
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:bondi
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:landsknecht
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:zbrojnosh
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:handpicked_faithful
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:mubarizun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:shomer
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:tawashi
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:khandayat
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:paiks
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:sarawit
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:zhanmadao_infantry
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:fire_lancers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:guanch_vaulter
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:zupin_warrior
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:burenjia
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:tiefutu
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:shenbigong
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:pesilat_warriors
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:maturkan_warriors
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:torch_bearers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:black_armor_cavalry
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:light_horsemen
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:armored_horsemen
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:horse_archers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:heavy_horse_archers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:cataphract
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:cataphract_archers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:camel_rider
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:war_elephant
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:ballista_elephant
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:conrois
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:caballero
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:gendarme
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:hussar
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:hobelar
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:kheshig
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:monaspa
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:asawira
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:akritai
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:nomadic_riders
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:nomad_lancers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:steppe_raiders
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:mangudai
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:tarkhan
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:ayrudzi
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:sahel_horsemen
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:emishi_horse_archers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:japanese_horse_archers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:gakgung_archers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:garudas
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:jomsviking_pirates
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:teulu
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:vigmen
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:mulaththamun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:abudrar
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:bowmen
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:archers_of_the_nile
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:longbowmen
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:crossbowmen
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:handgunners
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:chasseur
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:mountaineer
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:bush_hunter
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:horn_warrior
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:metsanvartija
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:guinea_warrior
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:siege_tower
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:cloud_ladder
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:ballista
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:ballistrai
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:onager
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:mangonel
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:trebuchet
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:bombard
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:cannon
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:rocket_carts
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:accolade_maa_archers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:accolade_maa_cameliers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:accolade_maa_crossbowers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:accolade_maa_elephantiers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:accolade_maa_handgunners
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:accolade_maa_horse_archers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:accolade_maa_lancers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:accolade_maa_outriders
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:accolade_maa_pikes
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:accolade_maa_skirmishers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:accolade_maa_vanguards
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:maa_bandits
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:maa_marauders
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:maa_poachers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:maa_thieves
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:ayyar
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:alihachaoha
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:alihachaohaa
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:asia_tunguse_ss
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:cangtou_jun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:cathay_ps
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:china_centre_jj
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:china_east_ms
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:china_south_wd
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:china_west_modao
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:da_bing
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:fanshang_suwei
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:folangjipao
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:guanning_jun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:java_warrior
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:jin_tiefutu
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:lang_bing
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:liao_pishijun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:liao_woluduojun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:niaochongshou
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:paoche
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:song_burenjia
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:song_dianqiansi
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:song_shiweiqinjun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:tang_beiyajinjun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:tang_xuanjiajun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:thunder
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:tiancejun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:tianxiong_jun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:wo_ding
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:xia_qianjun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:xia_tieyaozi
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:xinjun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:xinjun_jiqiang
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:xinjun_pao
+  }
+  clear_global_variable_list = skonester_sand_maa_list_infantry
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:light_footmen
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:armored_footmen
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:pikemen_unit
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:pikemen_militia
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:schiltron
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:goedendag
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:picchieri
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:skoutatoi
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:house_guard
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:palace_guards
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:praetorian
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:varangian_guards
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:varangian_veterans
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:teutonic_knights
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:warrior_monks
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:samurai
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:druzhina
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:huscarl
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:bondi
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:landsknecht
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:zbrojnosh
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:handpicked_faithful
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:mubarizun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:shomer
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:khandayat
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:sarawit
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:zhanmadao_infantry
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:guanch_vaulter
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:zupin_warrior
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:burenjia
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:pesilat_warriors
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:akritai
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:nomadic_riders
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:garudas
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:abudrar
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:cangtou_jun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:china_centre_jj
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:china_east_ms
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:china_south_wd
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:china_west_modao
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:fanshang_suwei
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:java_warrior
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:lang_bing
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:song_burenjia
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:song_dianqiansi
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:tang_beiyajinjun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:wo_ding
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_infantry
+    target = flag:xia_qianjun
+  }
+  clear_global_variable_list = skonester_sand_maa_list_cavalry
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:tawashi
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:tiefutu
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:black_armor_cavalry
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:light_horsemen
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:armored_horsemen
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:horse_archers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:heavy_horse_archers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:cataphract
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:cataphract_archers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:camel_rider
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:war_elephant
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:ballista_elephant
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:conrois
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:caballero
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:gendarme
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:hussar
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:hobelar
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:kheshig
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:monaspa
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:asawira
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:nomad_lancers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:steppe_raiders
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:mangudai
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:tarkhan
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:ayrudzi
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:sahel_horsemen
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:emishi_horse_archers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:japanese_horse_archers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:teulu
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:mulaththamun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:chasseur
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:alihachaoha
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:alihachaohaa
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:cathay_ps
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:da_bing
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:guanning_jun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:jin_tiefutu
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:liao_pishijun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:liao_woluduojun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:song_shiweiqinjun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:tang_xuanjiajun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:tiancejun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:xia_tieyaozi
+  }
+  clear_global_variable_list = skonester_sand_maa_list_archers
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_archers
+    target = flag:paiks
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_archers
+    target = flag:fire_lancers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_archers
+    target = flag:shenbigong
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_archers
+    target = flag:maturkan_warriors
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_archers
+    target = flag:gakgung_archers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_archers
+    target = flag:vigmen
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_archers
+    target = flag:bowmen
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_archers
+    target = flag:archers_of_the_nile
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_archers
+    target = flag:longbowmen
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_archers
+    target = flag:crossbowmen
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_archers
+    target = flag:handgunners
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_archers
+    target = flag:ballistrai
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_archers
+    target = flag:rocket_carts
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_archers
+    target = flag:asia_tunguse_ss
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_archers
+    target = flag:folangjipao
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_archers
+    target = flag:niaochongshou
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_archers
+    target = flag:tianxiong_jun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_archers
+    target = flag:xinjun
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_archers
+    target = flag:xinjun_jiqiang
+  }
+  clear_global_variable_list = skonester_sand_maa_list_special_terrain
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_special_terrain
+    target = flag:torch_bearers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_special_terrain
+    target = flag:mountaineer
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_special_terrain
+    target = flag:bush_hunter
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_special_terrain
+    target = flag:horn_warrior
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_special_terrain
+    target = flag:metsanvartija
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_special_terrain
+    target = flag:guinea_warrior
+  }
+  clear_global_variable_list = skonester_sand_maa_list_siege
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_siege
+    target = flag:siege_tower
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_siege
+    target = flag:cloud_ladder
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_siege
+    target = flag:ballista
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_siege
+    target = flag:onager
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_siege
+    target = flag:mangonel
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_siege
+    target = flag:trebuchet
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_siege
+    target = flag:bombard
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_siege
+    target = flag:cannon
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_siege
+    target = flag:paoche
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_siege
+    target = flag:thunder
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_siege
+    target = flag:xinjun_pao
+  }
+  clear_global_variable_list = skonester_sand_maa_list_accolade
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_accolade
+    target = flag:accolade_maa_archers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_accolade
+    target = flag:accolade_maa_cameliers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_accolade
+    target = flag:accolade_maa_crossbowers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_accolade
+    target = flag:accolade_maa_elephantiers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_accolade
+    target = flag:accolade_maa_handgunners
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_accolade
+    target = flag:accolade_maa_horse_archers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_accolade
+    target = flag:accolade_maa_lancers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_accolade
+    target = flag:accolade_maa_outriders
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_accolade
+    target = flag:accolade_maa_pikes
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_accolade
+    target = flag:accolade_maa_skirmishers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_accolade
+    target = flag:accolade_maa_vanguards
+  }
+  clear_global_variable_list = skonester_sand_maa_list_bandit
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_bandit
+    target = flag:jomsviking_pirates
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_bandit
+    target = flag:maa_bandits
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_bandit
+    target = flag:maa_marauders
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_bandit
+    target = flag:maa_poachers
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_bandit
+    target = flag:maa_thieves
+  }
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_bandit
+    target = flag:ayyar
+  }
+}

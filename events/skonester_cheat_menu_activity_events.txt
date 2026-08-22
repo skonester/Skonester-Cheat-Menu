@@ -1,0 +1,607 @@
+﻿namespace = skonester_cheat_menu
+
+# 活动作弊主菜单（≤4 可见项：关闭 + 操控 + 娱乐 + 其他）
+skonester_cheat_menu.3091 = {
+  type = character_event
+  title = skonester_cheat_menu.3091.t
+  desc = skonester_cheat_menu.3091.desc
+  theme = feast_activity
+  left_portrait = scope:actor
+  right_portrait = scope:skonester_cheat_menu_target
+
+  immediate = {
+    root = { save_scope_as = actor }
+    skonester_activity_cheat_ensure_target_scope_effect = yes
+  }
+
+  option = {
+    name = skonester_cheat_menu.00x.close
+  }
+
+  option = {
+    name = skonester_cheat_menu.3091.opt_toggle_skip_cost
+    custom_tooltip = skonester_cheat_menu.3091.opt_toggle_skip_cost_tt
+    skonester_activity_cheat_toggle_skip_cost_effect = yes
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.3091 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3091.opt_activity_controls
+    custom_tooltip = skonester_cheat_menu.3091.opt_activity_controls_tt
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8981 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3091.opt_host_entertainment
+    custom_tooltip = skonester_cheat_menu.3091.opt_host_entertainment_tt
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.3092 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3091.opt_host_more
+    custom_tooltip = skonester_cheat_menu.3091.opt_host_more_tt
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.3097 days = 0 }
+  }
+  }
+}
+
+# 活动阶段操控（跳过 / 快进 / 完成 / 取消）
+skonester_cheat_menu.8981 = {
+  type = character_event
+  title = skonester_cheat_menu.8981.t
+  desc = skonester_cheat_menu.8981.desc
+  theme = feast_activity
+  left_portrait = scope:actor
+  right_portrait = scope:skonester_cheat_menu_target
+
+  immediate = {
+    root = { save_scope_as = actor }
+    skonester_activity_cheat_ensure_target_scope_effect = yes
+  }
+
+  option = {
+    name = skonester_cheat_menu.3091.back
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.3091 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3091.opt_skip_phase
+    custom_tooltip = skonester_cheat_menu.3091.opt_skip_phase_tt
+    trigger = {
+      exists = scope:skonester_cheat_menu_target
+      scope:skonester_cheat_menu_target = { exists = involved_activity }
+    }
+    skonester_activity_cheat_skip_phase_effect = yes
+    scope:actor = {
+      trigger_event = { id = skonester_cheat_menu.8981 days = 0 }
+    }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3091.opt_fast_phase
+    custom_tooltip = skonester_cheat_menu.3091.opt_fast_phase_tt
+    trigger = {
+      exists = scope:skonester_cheat_menu_target
+      scope:skonester_cheat_menu_target = { exists = involved_activity }
+    }
+    skonester_activity_cheat_fast_phase_effect = yes
+    scope:actor = {
+      trigger_event = { id = skonester_cheat_menu.8981 days = 0 }
+    }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3091.opt_finish_activity
+    custom_tooltip = skonester_cheat_menu.3091.opt_finish_activity_tt
+    trigger = {
+      exists = scope:skonester_cheat_menu_target
+      scope:skonester_cheat_menu_target = { exists = involved_activity }
+    }
+    scope:actor = {
+      trigger_event = { id = skonester_cheat_menu.8982 days = 0 }
+    }
+  }
+}
+
+# 结束 / 取消活动
+skonester_cheat_menu.8982 = {
+  type = character_event
+  title = skonester_cheat_menu.8982.t
+  desc = skonester_cheat_menu.8981.desc
+  theme = feast_activity
+  left_portrait = scope:actor
+  right_portrait = scope:skonester_cheat_menu_target
+
+  immediate = {
+    root = { save_scope_as = actor }
+    skonester_activity_cheat_ensure_target_scope_effect = yes
+  }
+
+  option = {
+    name = skonester_cheat_menu.3091.back
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8981 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3091.opt_complete
+    custom_tooltip = skonester_cheat_menu.3091.opt_complete_tt
+    trigger = {
+      exists = scope:skonester_cheat_menu_target
+      scope:skonester_cheat_menu_target = { exists = involved_activity }
+    }
+    skonester_activity_cheat_complete_effect = yes
+    scope:actor = {
+      trigger_event = { id = skonester_cheat_menu.8982 days = 0 }
+    }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3091.opt_cancel
+    custom_tooltip = skonester_cheat_menu.3091.opt_cancel_tt
+    trigger = {
+      exists = scope:skonester_cheat_menu_target
+      scope:skonester_cheat_menu_target = { exists = involved_activity }
+    }
+    skonester_activity_cheat_invalidate_effect = yes
+    scope:actor = {
+      trigger_event = { id = skonester_cheat_menu.8982 days = 0 }
+    }
+  }
+}
+
+# 娱乐向（第一页）
+skonester_cheat_menu.3092 = {
+  type = character_event
+  title = skonester_cheat_menu.3092.t
+  desc = skonester_cheat_menu.3092.desc
+  theme = feast_activity
+  left_portrait = scope:actor
+  right_portrait = scope:skonester_cheat_menu_target
+
+  immediate = {
+    root = { save_scope_as = actor }
+    skonester_activity_cheat_ensure_target_scope_effect = yes
+  }
+
+  option = {
+    name = skonester_cheat_menu.3091.back
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.3091 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3092.opt_feast
+    custom_tooltip = skonester_cheat_menu.3092.opt_host_tt
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_feast }
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.3092 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3092.opt_hunt
+    custom_tooltip = skonester_cheat_menu.3092.opt_host_tt
+    trigger = { has_dlc_feature = tours_and_tournaments }
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_hunt }
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.3092 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3092.opt_more_entertainment
+    custom_tooltip = skonester_cheat_menu.3092.opt_more_entertainment_tt
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8921 days = 0 }
+  }
+  }
+}
+
+# 娱乐向（第二页）
+skonester_cheat_menu.8921 = {
+  type = character_event
+  title = skonester_cheat_menu.8921.t
+  desc = skonester_cheat_menu.3092.desc
+  theme = feast_activity
+  left_portrait = scope:actor
+  right_portrait = scope:skonester_cheat_menu_target
+
+  immediate = {
+    root = { save_scope_as = actor }
+    skonester_activity_cheat_ensure_target_scope_effect = yes
+  }
+
+  option = {
+    name = skonester_cheat_menu.3092.back_page1
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.3092 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3092.opt_tournament
+    custom_tooltip = skonester_cheat_menu.3092.opt_host_tt
+    trigger = { has_dlc_feature = tours_and_tournaments }
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_tournament }
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8921 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3092.opt_camp_party
+    custom_tooltip = skonester_cheat_menu.3092.opt_host_tt
+    trigger = { has_dlc_feature = tours_and_tournaments }
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_camp_party }
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8921 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3092.opt_more_entertainment
+    custom_tooltip = skonester_cheat_menu.3092.opt_more_entertainment_tt
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8922 days = 0 }
+  }
+  }
+}
+
+# 娱乐向（第三页）
+skonester_cheat_menu.8922 = {
+  type = character_event
+  title = skonester_cheat_menu.8922.t
+  desc = skonester_cheat_menu.3092.desc
+  theme = feast_activity
+  left_portrait = scope:actor
+  right_portrait = scope:skonester_cheat_menu_target
+
+  immediate = {
+    root = { save_scope_as = actor }
+    skonester_activity_cheat_ensure_target_scope_effect = yes
+  }
+
+  option = {
+    name = skonester_cheat_menu.3092.back_page1
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8921 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3092.opt_festival
+    custom_tooltip = skonester_cheat_menu.3092.opt_host_tt
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_festival }
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8922 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3092.opt_playdate
+    custom_tooltip = skonester_cheat_menu.3092.opt_host_tt
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_playdate }
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8922 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3092.opt_hike
+    custom_tooltip = skonester_cheat_menu.3092.opt_host_tt
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_hike }
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8922 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3092.opt_chariot_race
+    custom_tooltip = skonester_cheat_menu.3092.opt_chariot_race_tt
+    trigger = { has_dlc_feature = roads_to_power }
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_chariot_race }
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8922 days = 0 }
+  }
+  }
+}
+
+# 其他活动（第一页）
+skonester_cheat_menu.3097 = {
+  type = character_event
+  title = skonester_cheat_menu.3097.t
+  desc = skonester_cheat_menu.3097.desc
+  theme = pilgrimage_activity
+  left_portrait = scope:actor
+  right_portrait = scope:skonester_cheat_menu_target
+
+  immediate = {
+    root = { save_scope_as = actor }
+    skonester_activity_cheat_ensure_target_scope_effect = yes
+  }
+
+  option = {
+    name = skonester_cheat_menu.3091.back
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.3091 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3097.opt_tour
+    custom_tooltip = skonester_cheat_menu.3092.opt_host_tt
+    trigger = { has_dlc_feature = tours_and_tournaments }
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_tour }
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.3097 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3097.opt_wedding
+    custom_tooltip = skonester_cheat_menu.3092.opt_host_tt
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_wedding }
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.3097 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3097.opt_more_other
+    custom_tooltip = skonester_cheat_menu.3097.opt_more_other_tt
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8971 days = 0 }
+  }
+  }
+}
+
+skonester_cheat_menu.8971 = {
+  type = character_event
+  title = skonester_cheat_menu.8971.t
+  desc = skonester_cheat_menu.3097.desc
+  theme = pilgrimage_activity
+  left_portrait = scope:actor
+  right_portrait = scope:skonester_cheat_menu_target
+
+  immediate = {
+    root = { save_scope_as = actor }
+    skonester_activity_cheat_ensure_target_scope_effect = yes
+  }
+
+  option = {
+    name = skonester_cheat_menu.3097.back_page1
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.3097 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3097.opt_pilgrimage
+    custom_tooltip = skonester_cheat_menu.3092.opt_host_tt
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_pilgrimage }
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8971 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3097.opt_coronation
+    custom_tooltip = skonester_cheat_menu.3092.opt_host_tt
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_coronation }
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8971 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3097.opt_more_other
+    custom_tooltip = skonester_cheat_menu.3097.opt_more_other_tt
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8972 days = 0 }
+  }
+  }
+}
+
+skonester_cheat_menu.8972 = {
+  type = character_event
+  title = skonester_cheat_menu.8972.t
+  desc = skonester_cheat_menu.3097.desc
+  theme = pilgrimage_activity
+  left_portrait = scope:actor
+  right_portrait = scope:skonester_cheat_menu_target
+
+  immediate = {
+    root = { save_scope_as = actor }
+    skonester_activity_cheat_ensure_target_scope_effect = yes
+  }
+
+  option = {
+    name = skonester_cheat_menu.3097.back_page1
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8971 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3097.opt_debate
+    custom_tooltip = skonester_cheat_menu.3092.opt_host_tt
+    trigger = { has_tgp_dlc_trigger = yes }
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_debate }
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8972 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3097.opt_imperial_exam
+    custom_tooltip = skonester_cheat_menu.3092.opt_host_tt
+    trigger = { has_tgp_dlc_trigger = yes }
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_imperial_examination }
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8972 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3097.opt_local_exam
+    custom_tooltip = skonester_cheat_menu.3092.opt_host_tt
+    trigger = { has_tgp_dlc_trigger = yes }
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_local_examination }
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8972 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3097.opt_more_other
+    custom_tooltip = skonester_cheat_menu.3097.opt_more_other_tt
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8973 days = 0 }
+  }
+  }
+}
+
+skonester_cheat_menu.8973 = {
+  type = character_event
+  title = skonester_cheat_menu.8973.t
+  desc = skonester_cheat_menu.3097.desc
+  theme = pilgrimage_activity
+  left_portrait = scope:actor
+  right_portrait = scope:skonester_cheat_menu_target
+
+  immediate = {
+    root = { save_scope_as = actor }
+    skonester_activity_cheat_ensure_target_scope_effect = yes
+  }
+
+  option = {
+    name = skonester_cheat_menu.3097.back_page1
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8972 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3097.opt_witch_ritual
+    custom_tooltip = skonester_cheat_menu.3092.opt_host_tt
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_witch_ritual }
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8973 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3097.opt_funeral
+    custom_tooltip = skonester_cheat_menu.3092.opt_host_tt
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_funeral }
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8973 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3097.opt_more_other
+    custom_tooltip = skonester_cheat_menu.3097.opt_more_other_tt
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8974 days = 0 }
+  }
+  }
+}
+
+skonester_cheat_menu.8974 = {
+  type = character_event
+  title = skonester_cheat_menu.8974.t
+  desc = skonester_cheat_menu.3097.desc
+  theme = pilgrimage_activity
+  left_portrait = scope:actor
+  right_portrait = scope:skonester_cheat_menu_target
+
+  immediate = {
+    root = { save_scope_as = actor }
+    skonester_activity_cheat_ensure_target_scope_effect = yes
+  }
+
+  option = {
+    name = skonester_cheat_menu.3097.back_page1
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8973 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3097.opt_inspection
+    custom_tooltip = skonester_cheat_menu.3092.opt_host_tt
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_inspection }
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8974 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3097.opt_university
+    custom_tooltip = skonester_cheat_menu.3092.opt_host_tt
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_university_visit }
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8974 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3097.opt_more_other
+    custom_tooltip = skonester_cheat_menu.3097.opt_more_other_tt
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8975 days = 0 }
+  }
+  }
+}
+
+skonester_cheat_menu.8975 = {
+  type = character_event
+  title = skonester_cheat_menu.8975.t
+  desc = skonester_cheat_menu.3097.desc
+  theme = pilgrimage_activity
+  left_portrait = scope:actor
+  right_portrait = scope:skonester_cheat_menu_target
+
+  immediate = {
+    root = { save_scope_as = actor }
+    skonester_activity_cheat_ensure_target_scope_effect = yes
+  }
+
+  option = {
+    name = skonester_cheat_menu.3097.back_page1
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8974 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3097.opt_gruesome
+    custom_tooltip = skonester_cheat_menu.3092.opt_host_tt
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_gruesome_festival }
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8975 days = 0 }
+  }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3097.opt_monument
+    custom_tooltip = skonester_cheat_menu.3092.opt_host_tt
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_monument_expedition }
+    scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.8975 days = 0 }
+  }
+  }
+}

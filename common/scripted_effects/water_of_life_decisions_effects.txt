@@ -1,0 +1,21 @@
+﻿water_of_life_effect_chosen_one = {
+	add_character_modifier = {
+		modifier = water_of_life_modifier_knight_and_maa_limit_and_cap_increased
+	}
+}
+
+water_of_life_effect_trophy = {
+	add_character_modifier = {
+		modifier = water_of_life_modifier_hunting_trophy
+	}
+}
+
+water_of_life_effect_merchant = {
+	add_character_modifier = {
+		modifier = water_of_life_modifier_good_deal
+	}
+}
+
+water_of_life_effect = {
+	add_trait = water_of_life
+}

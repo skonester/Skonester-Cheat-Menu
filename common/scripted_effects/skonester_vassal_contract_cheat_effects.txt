@@ -1,0 +1,125 @@
+﻿# 官吏统辖「修改封臣契约」：解锁冷却、应用义务、保存/恢复好感
+
+skonester_vassal_contract_unlock_edit_effect = {
+  scope:actor = {
+    add_character_flag = skonester_cheat_vassal_contract_edit
+  }
+  scope:recipient = {
+    add_character_flag = skonester_cheat_vassal_contract_edit
+    set_subject_contract_modification_blocked = no
+    if = {
+      limit = { has_variable = liege_recently_adjusted_mandala_vassal_contract }
+      remove_variable = liege_recently_adjusted_mandala_vassal_contract
+    }
+    if = {
+      limit = { has_variable = admin_contract_cooldown }
+      remove_variable = admin_contract_cooldown
+    }
+    if = {
+      limit = { has_variable = admin_contract_request_cooldown }
+      remove_variable = admin_contract_request_cooldown
+    }
+    skonester_vassal_contract_save_opinion_effect = yes
+  }
+  scope:actor = {
+    if = {
+      limit = { has_variable = admin_contract_cooldown }
+      remove_variable = admin_contract_cooldown
+    }
+    if = {
+      limit = { has_variable = admin_contract_request_cooldown }
+      remove_variable = admin_contract_request_cooldown
+    }
+  }
+}
+
+skonester_vassal_contract_save_opinion_effect = {
+  scope:recipient = {
+    set_variable = {
+      name = skonester_vassal_contract_opinion_saved
+      value = "opinion(scope:actor)"
+    }
+  }
+}
+
+skonester_vassal_contract_restore_opinion_effect = {
+  scope:recipient = {
+    if = {
+      limit = { has_variable = skonester_vassal_contract_opinion_saved }
+      set_variable = {
+        name = skonester_vassal_contract_opinion_delta
+        value = var:skonester_vassal_contract_opinion_saved
+        subtract = "opinion(scope:actor)"
+      }
+      if = {
+        limit = {
+          NOT = { var:skonester_vassal_contract_opinion_delta = 0 }
+        }
+        add_opinion = {
+          target = scope:actor
+          opinion = { value = var:skonester_vassal_contract_opinion_delta }
+        }
+      }
+      remove_variable = skonester_vassal_contract_opinion_saved
+      remove_variable = skonester_vassal_contract_opinion_delta
+    }
+  }
+}
+
+skonester_vassal_contract_apply_changes_effect = {
+  scope:actor = {
+    every_in_list = {
+      list = changed_obligations
+      save_scope_as = obligation
+      scope:recipient = {
+        vassal_contract_set_obligation_level = {
+          type = scope:obligation.vassal_contract_type
+          level = scope:obligation
+        }
+        if = {
+          limit = {
+            government_has_flag = government_is_celestial
+            scope:obligation.vassal_contract_type = vassal_contract:celestial_provinces
+          }
+          if = {
+            limit = {
+              OR = {
+                vassal_contract_has_flag = celestial_province_military
+                vassal_contract_has_flag = celestial_province_protectorate
+              }
+              NOT = { has_realm_law = celestial_military_appointment_succession_law }
+            }
+            add_realm_law_skip_effects = celestial_military_appointment_succession_law
+          }
+          else_if = {
+            limit = {
+              OR = {
+                vassal_contract_has_flag = celestial_province_standard
+                vassal_contract_has_flag = celestial_province_industrial
+                vassal_contract_has_flag = celestial_province_metropolitan
+              }
+              NOT = { has_realm_law = celestial_appointment_succession_law }
+            }
+            add_realm_law_skip_effects = celestial_appointment_succession_law
+          }
+        }
+      }
+    }
+    remove_character_flag = skonester_cheat_vassal_contract_edit
+  }
+  scope:recipient = {
+    set_subject_contract_modification_blocked = no
+    remove_character_flag = skonester_cheat_vassal_contract_edit
+    skonester_vassal_contract_restore_opinion_effect = yes
+  }
+}
+
+skonester_vassal_contract_clear_edit_effect = {
+  scope:actor = {
+    remove_character_flag = skonester_cheat_vassal_contract_edit
+  }
+  scope:recipient = {
+    remove_character_flag = skonester_cheat_vassal_contract_edit
+    skonester_vassal_contract_restore_opinion_effect = yes
+  }
+}

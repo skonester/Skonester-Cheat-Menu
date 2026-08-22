@@ -1,0 +1,481 @@
+﻿# AUTO-GENERATED — tools/gen_acm_advcm_align.py
+
+skonester_acm_gui_is_weapons_category = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_category = flag:skonester_acm_weapons
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_category_weapons = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_set_category_weapons_effect = yes }
+}
+
+skonester_acm_gui_is_armors_category = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_category = flag:skonester_acm_armors
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_category_armors = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_set_category_armors_effect = yes }
+}
+
+skonester_acm_gui_is_regalia_category = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_category = flag:skonester_acm_regalia
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_category_regalia = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_set_category_regalia_effect = yes }
+}
+
+skonester_acm_gui_is_court_category = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_category = flag:skonester_acm_court
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_category_court = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_set_category_court_effect = yes }
+}
+
+skonester_acm_gui_pick_type_axe = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_axe_effect = yes }
+}
+
+skonester_acm_gui_sel_type_axe = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_axe
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_dagger = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_dagger_effect = yes }
+}
+
+skonester_acm_gui_sel_type_dagger = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_dagger
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_hammer = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_hammer_effect = yes }
+}
+
+skonester_acm_gui_sel_type_hammer = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_hammer
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_mace = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_mace_effect = yes }
+}
+
+skonester_acm_gui_sel_type_mace = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_mace
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_spear = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_spear_effect = yes }
+}
+
+skonester_acm_gui_sel_type_spear = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_spear
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_sword = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_sword_effect = yes }
+}
+
+skonester_acm_gui_sel_type_sword = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_sword
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_longsword = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_longsword_effect = yes }
+}
+
+skonester_acm_gui_sel_type_longsword = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_longsword
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_sassanian_sword = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_sassanian_sword_effect = yes }
+}
+
+skonester_acm_gui_sel_type_sassanian_sword = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_sassanian_sword
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_bow = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_bow_effect = yes }
+}
+
+skonester_acm_gui_sel_type_bow = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_bow
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_longbow = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_longbow_effect = yes }
+}
+
+skonester_acm_gui_sel_type_longbow = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_longbow
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_composite_bow = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_composite_bow_effect = yes }
+}
+
+skonester_acm_gui_sel_type_composite_bow = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_composite_bow
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_crossbow = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_crossbow_effect = yes }
+}
+
+skonester_acm_gui_sel_type_crossbow = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_crossbow
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_armor = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_armor_effect = yes }
+}
+
+skonester_acm_gui_sel_type_armor = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_armor
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_crown = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_crown_effect = yes }
+}
+
+skonester_acm_gui_sel_type_crown = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_crown
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_regalia = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_regalia_effect = yes }
+}
+
+skonester_acm_gui_sel_type_regalia = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_regalia
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_necklace = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_necklace_effect = yes }
+}
+
+skonester_acm_gui_sel_type_necklace = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_necklace
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_brooch = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_brooch_effect = yes }
+}
+
+skonester_acm_gui_sel_type_brooch = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_brooch
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_small_shield = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_small_shield_effect = yes }
+}
+
+skonester_acm_gui_sel_type_small_shield = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_small_shield
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_large_shield = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_large_shield_effect = yes }
+}
+
+skonester_acm_gui_sel_type_large_shield = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_large_shield
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_tapestry = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_tapestry_effect = yes }
+}
+
+skonester_acm_gui_sel_type_tapestry = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_tapestry
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_throne = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_throne_effect = yes }
+}
+
+skonester_acm_gui_sel_type_throne = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_throne
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_small_box = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_small_box_effect = yes }
+}
+
+skonester_acm_gui_sel_type_small_box = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_small_box
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_medium_box = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_medium_box_effect = yes }
+}
+
+skonester_acm_gui_sel_type_medium_box = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_medium_box
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_goblet = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_goblet_effect = yes }
+}
+
+skonester_acm_gui_sel_type_goblet = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_goblet
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_cabinet = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_cabinet_effect = yes }
+}
+
+skonester_acm_gui_sel_type_cabinet = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_cabinet
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_chest = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_chest_effect = yes }
+}
+
+skonester_acm_gui_sel_type_chest = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_chest
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_divan = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_divan_effect = yes }
+}
+
+skonester_acm_gui_sel_type_divan = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_divan
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_type_table = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_type_table_effect = yes }
+}
+
+skonester_acm_gui_sel_type_table = {
+  scope = character
+  is_shown = {
+    var:skonester_acm_artifact_type = flag:skonester_acm_table
+  }
+  is_valid = { always = yes }
+}

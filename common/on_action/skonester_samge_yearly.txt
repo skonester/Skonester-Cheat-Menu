@@ -1,0 +1,58 @@
+﻿# 厉鬼勾魂：旧版可由 skonester_samge_reaping_active 年计 5 年拉一波 9086；现菜单为「点开启」立即跑一轮且执行后自关。仍保留以兼容旧档。
+# 与 skonester_celestial_governor_rotation_yearly 相同，仅追加 yearly_global_pulse.on_actions，不覆盖。
+
+yearly_global_pulse = {
+  on_actions = {
+    skonester_samge_reaping_yearly_pulse
+  }
+}
+
+skonester_samge_reaping_yearly_pulse = {
+  effect = {
+    if = {
+      limit = {
+        has_global_variable = skonester_samge_reaping_active
+      }
+      if = {
+        limit = {
+          NOT = {
+            exists = global_var:skonester_samge_years_accum
+          }
+        }
+        set_global_variable = {
+          name = skonester_samge_years_accum
+          value = 0
+        }
+      }
+      change_global_variable = {
+        name = skonester_samge_years_accum
+        add = 1
+      }
+      if = {
+        limit = {
+          global_var:skonester_samge_years_accum >= 5
+        }
+        set_global_variable = {
+          name = skonester_samge_years_accum
+          value = 0
+        }
+        if = {
+          limit = {
+            any_player = {
+              is_ai = no
+            }
+          }
+          random_player = {
+            limit = {
+              is_ai = no
+            }
+            trigger_event = {
+              id = skonester_officials.9086
+              days = 0
+            }
+          }
+        }
+      }
+    }
+  }
+}

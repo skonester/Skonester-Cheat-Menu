@@ -1,0 +1,179 @@
+﻿# 教义库：按类别自由选择教义/信条
+
+window = {
+  name = "skonester_acm_faith_doctrine_picker_window"
+  parentanchor = center
+  position = { 0 0 }
+  size = { 720 700 }
+  layer = popup
+  filter_mouse = all
+  allow_outside = yes
+  alwaystransparent = no
+  movable = yes
+
+  using = Window_Background
+  using = Window_Decoration
+
+  datacontext = "[GetVariableSystem]"
+  datacontext = "[GetPlayer.MakeScope.Var('skonester_selected_faith_var').Faith]"
+
+  visible = "[GetScriptedGui('skonester_acm_faith_doctrine_picker_visible').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+
+  vbox = {
+    using = Window_Margins
+    layoutpolicy_horizontal = expanding
+    layoutpolicy_vertical = expanding
+    spacing = 6
+
+    header_pattern = {
+      layoutpolicy_horizontal = expanding
+      blockoverride "header_text" {
+        text = skonester_acm_faith_picker_title
+      }
+      blockoverride "button_close" {
+        onclick = "[GetScriptedGui('skonester_acm_faith_doctrine_picker_close').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+      }
+    }
+
+    text_single = {
+      layoutpolicy_horizontal = expanding
+      text = skonester_acm_faith_picker_hint
+      default_format = "#weak"
+      autoresize = yes
+      max_width = 660
+    }
+
+    scrollbox = {
+      layoutpolicy_vertical = expanding
+      layoutpolicy_horizontal = expanding
+      visible = "[GetPlayer.MakeScope.HasFlag('skonester_acm_faith_pick_cat_core_tenets')]"
+
+      blockoverride "scrollbox_content" {
+        dynamicgridbox = {
+          datamodel = "[GetGlobalList('skonester_acm_doctrine_list_core_tenets')]"
+          datamodel_wrap = 2
+          flipdirection = yes
+          item = {
+            widget = {
+              datacontext = "[GetFaithDoctrine( Scope.GetFlagName )]"
+              datacontext = "[GetPlayer.MakeScope.Var('skonester_selected_faith_var').Faith]"
+              skonester_acm_faith_doctrine_picker_tile = {}
+            }
+          }
+        }
+      }
+    }
+
+    scrollbox = {
+      layoutpolicy_vertical = expanding
+      layoutpolicy_horizontal = expanding
+      visible = "[GetPlayer.MakeScope.HasFlag('skonester_acm_faith_pick_cat_main_group')]"
+
+      blockoverride "scrollbox_content" {
+        dynamicgridbox = {
+          datamodel = "[GetGlobalList('skonester_acm_doctrine_list_main_group')]"
+          datamodel_wrap = 2
+          flipdirection = yes
+          item = {
+            widget = {
+              datacontext = "[GetFaithDoctrine( Scope.GetFlagName )]"
+              datacontext = "[GetPlayer.MakeScope.Var('skonester_selected_faith_var').Faith]"
+              skonester_acm_faith_doctrine_picker_tile = {}
+            }
+          }
+        }
+      }
+    }
+
+    scrollbox = {
+      layoutpolicy_vertical = expanding
+      layoutpolicy_horizontal = expanding
+      visible = "[GetPlayer.MakeScope.HasFlag('skonester_acm_faith_pick_cat_marriage')]"
+
+      blockoverride "scrollbox_content" {
+        dynamicgridbox = {
+          datamodel = "[GetGlobalList('skonester_acm_doctrine_list_marriage')]"
+          datamodel_wrap = 2
+          flipdirection = yes
+          item = {
+            widget = {
+              datacontext = "[GetFaithDoctrine( Scope.GetFlagName )]"
+              datacontext = "[GetPlayer.MakeScope.Var('skonester_selected_faith_var').Faith]"
+              skonester_acm_faith_doctrine_picker_tile = {}
+            }
+          }
+        }
+      }
+    }
+
+    scrollbox = {
+      layoutpolicy_vertical = expanding
+      layoutpolicy_horizontal = expanding
+      visible = "[GetPlayer.MakeScope.HasFlag('skonester_acm_faith_pick_cat_crimes')]"
+
+      blockoverride "scrollbox_content" {
+        dynamicgridbox = {
+          datamodel = "[GetGlobalList('skonester_acm_doctrine_list_crimes')]"
+          datamodel_wrap = 2
+          flipdirection = yes
+          item = {
+            widget = {
+              datacontext = "[GetFaithDoctrine( Scope.GetFlagName )]"
+              datacontext = "[GetPlayer.MakeScope.Var('skonester_selected_faith_var').Faith]"
+              skonester_acm_faith_doctrine_picker_tile = {}
+            }
+          }
+        }
+      }
+    }
+
+    scrollbox = {
+      layoutpolicy_vertical = expanding
+      layoutpolicy_horizontal = expanding
+      visible = "[GetPlayer.MakeScope.HasFlag('skonester_acm_faith_pick_cat_clergy')]"
+
+      blockoverride "scrollbox_content" {
+        dynamicgridbox = {
+          datamodel = "[GetGlobalList('skonester_acm_doctrine_list_clergy')]"
+          datamodel_wrap = 2
+          flipdirection = yes
+          item = {
+            widget = {
+              datacontext = "[GetFaithDoctrine( Scope.GetFlagName )]"
+              datacontext = "[GetPlayer.MakeScope.Var('skonester_selected_faith_var').Faith]"
+              skonester_acm_faith_doctrine_picker_tile = {}
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+types skonesterAcmFaithDoctrinePickerTypes
+{
+  type skonester_acm_faith_doctrine_picker_tile = button_standard_hover {
+    size = { 320 52 }
+    tooltip = "skonester_acm_faith_doctrine_picker_tt"
+
+    onclick = "[GetScriptedGui('skonester_acm_faith_editor_add_doctrine').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('pick_doctrine', MakeScopeFlag(Scope.GetFlagName)).End)]"
+
+    hbox = {
+      margin = { 8 0 }
+      spacing = 8
+
+      icon_doctrine = {
+        size = { 40 40 }
+        texture = "[FaithDoctrine.GetIcon]"
+      }
+
+      text_single = {
+        layoutpolicy_horizontal = expanding
+        text = "[FaithDoctrine.GetNameNoTooltip(Faith.Self)]"
+        default_format = "#clickable"
+        autoresize = no
+      }
+    }
+  }
+}

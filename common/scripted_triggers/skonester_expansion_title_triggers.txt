@@ -1,0 +1,26 @@
+﻿skonester_holds_any_expansion_titular_title_trigger = {
+  OR = {
+    has_title = title:e_skonester_expansion_hegemon
+    has_title = title:e_skonester_expansion_devourer
+    has_title = title:e_skonester_expansion_war_path
+    has_title = title:e_skonester_expansion_mandate
+    has_title = title:k_skonester_expansion_predator
+  }
+}
+
+skonester_is_expansion_titular_title_trigger = {
+  OR = {
+    this = title:e_skonester_expansion_hegemon
+    this = title:e_skonester_expansion_devourer
+    this = title:e_skonester_expansion_war_path
+    this = title:e_skonester_expansion_mandate
+    this = title:k_skonester_expansion_predator
+  }
+}
+
+skonester_holds_any_cheat_titular_title_trigger = {
+  OR = {
+    skonester_holds_any_expansion_titular_title_trigger = yes
+    skonester_holds_any_authority_titular_title_trigger = yes
+  }
+}

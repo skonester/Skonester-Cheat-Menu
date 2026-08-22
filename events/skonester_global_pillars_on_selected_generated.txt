@@ -1,0 +1,991 @@
+﻿namespace = skonester_cheat_menu
+
+## AUTO-GENERATED (set pillars on scope:skonester_selected_culture)
+
+skonester_cheat_menu.2680 = {
+  type = character_event
+  title = skonester_cheat_menu.0173.t
+  desc = skonester_cheat_menu.0173.hub_desc
+  theme = default
+
+  option = { name = skonester_gc_macro_europe root = { trigger_event = skonester_cheat_menu.2689 } }
+  option = { name = skonester_gc_macro_mena_central_asia root = { trigger_event = skonester_cheat_menu.2693 } }
+  option = { name = skonester_gc_macro_south_asia root = { trigger_event = skonester_cheat_menu.2695 } }
+  option = { name = skonester_gc_macro_east_asia root = { trigger_event = skonester_cheat_menu.2696 } }
+  option = { name = skonester_gc_macro_sea_oceania root = { trigger_event = skonester_cheat_menu.2698 } }
+  option = { name = skonester_gc_macro_subsaharan_africa root = { trigger_event = skonester_cheat_menu.2699 } }
+  option = { name = skonester_gc_macro_other root = { trigger_event = skonester_cheat_menu.2701 } }
+
+  option = { name = skonester_cheat_menu.1420.browse_all_flat root = { skonester_open_acm_culture_picker_effect = yes } }
+
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0171 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2689 = {
+  type = character_event
+  title = skonester_cheat_menu.0173.t
+  desc = skonester_gc_macro_europe
+  theme = default
+
+  option = { name = heritage_albanian scope:skonester_selected_culture = { set_culture_pillar = heritage_albanian } root = { trigger_event = skonester_cheat_menu.2689 } }
+  option = { name = heritage_ancient_greek scope:skonester_selected_culture = { set_culture_pillar = heritage_ancient_greek } root = { trigger_event = skonester_cheat_menu.2689 } }
+  option = { name = heritage_baltic scope:skonester_selected_culture = { set_culture_pillar = heritage_baltic } root = { trigger_event = skonester_cheat_menu.2689 } }
+  option = { name = heritage_balto_finnic scope:skonester_selected_culture = { set_culture_pillar = heritage_balto_finnic } root = { trigger_event = skonester_cheat_menu.2689 } }
+  option = { name = heritage_brythonic scope:skonester_selected_culture = { set_culture_pillar = heritage_brythonic } root = { trigger_event = skonester_cheat_menu.2689 } }
+  option = { name = heritage_byzantine scope:skonester_selected_culture = { set_culture_pillar = heritage_byzantine } root = { trigger_event = skonester_cheat_menu.2689 } }
+  option = { name = heritage_caucasian scope:skonester_selected_culture = { set_culture_pillar = heritage_caucasian } root = { trigger_event = skonester_cheat_menu.2689 } }
+
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2690 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2680 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2690 = {
+  type = character_event
+  title = skonester_cheat_menu.0173.t
+  desc = skonester_gc_macro_europe
+  theme = default
+
+  option = { name = heritage_central_germanic scope:skonester_selected_culture = { set_culture_pillar = heritage_central_germanic } root = { trigger_event = skonester_cheat_menu.2690 } }
+  option = { name = heritage_east_slavic scope:skonester_selected_culture = { set_culture_pillar = heritage_east_slavic } root = { trigger_event = skonester_cheat_menu.2690 } }
+  option = { name = heritage_frankish scope:skonester_selected_culture = { set_culture_pillar = heritage_frankish } root = { trigger_event = skonester_cheat_menu.2690 } }
+  option = { name = heritage_goidelic scope:skonester_selected_culture = { set_culture_pillar = heritage_goidelic } root = { trigger_event = skonester_cheat_menu.2690 } }
+  option = { name = heritage_gothic scope:skonester_selected_culture = { set_culture_pillar = heritage_gothic } root = { trigger_event = skonester_cheat_menu.2690 } }
+  option = { name = heritage_hunnic scope:skonester_selected_culture = { set_culture_pillar = heritage_hunnic } root = { trigger_event = skonester_cheat_menu.2690 } }
+  option = { name = heritage_iberian scope:skonester_selected_culture = { set_culture_pillar = heritage_iberian } root = { trigger_event = skonester_cheat_menu.2690 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2689 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2691 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2680 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2691 = {
+  type = character_event
+  title = skonester_cheat_menu.0173.t
+  desc = skonester_gc_macro_europe
+  theme = default
+
+  option = { name = heritage_latin scope:skonester_selected_culture = { set_culture_pillar = heritage_latin } root = { trigger_event = skonester_cheat_menu.2691 } }
+  option = { name = heritage_magyar scope:skonester_selected_culture = { set_culture_pillar = heritage_magyar } root = { trigger_event = skonester_cheat_menu.2691 } }
+  option = { name = heritage_north_germanic scope:skonester_selected_culture = { set_culture_pillar = heritage_north_germanic } root = { trigger_event = skonester_cheat_menu.2691 } }
+  option = { name = heritage_south_slavic scope:skonester_selected_culture = { set_culture_pillar = heritage_south_slavic } root = { trigger_event = skonester_cheat_menu.2691 } }
+  option = { name = heritage_ugro_permian scope:skonester_selected_culture = { set_culture_pillar = heritage_ugro_permian } root = { trigger_event = skonester_cheat_menu.2691 } }
+  option = { name = heritage_vlach scope:skonester_selected_culture = { set_culture_pillar = heritage_vlach } root = { trigger_event = skonester_cheat_menu.2691 } }
+  option = { name = heritage_volga_finnic scope:skonester_selected_culture = { set_culture_pillar = heritage_volga_finnic } root = { trigger_event = skonester_cheat_menu.2691 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2690 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2692 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2680 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2692 = {
+  type = character_event
+  title = skonester_cheat_menu.0173.t
+  desc = skonester_gc_macro_europe
+  theme = default
+
+  option = { name = heritage_west_germanic scope:skonester_selected_culture = { set_culture_pillar = heritage_west_germanic } root = { trigger_event = skonester_cheat_menu.2692 } }
+  option = { name = heritage_west_slavic scope:skonester_selected_culture = { set_culture_pillar = heritage_west_slavic } root = { trigger_event = skonester_cheat_menu.2692 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2691 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2680 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2693 = {
+  type = character_event
+  title = skonester_cheat_menu.0173.t
+  desc = skonester_gc_macro_mena_central_asia
+  theme = default
+
+  option = { name = heritage_arabic scope:skonester_selected_culture = { set_culture_pillar = heritage_arabic } root = { trigger_event = skonester_cheat_menu.2693 } }
+  option = { name = heritage_berber scope:skonester_selected_culture = { set_culture_pillar = heritage_berber } root = { trigger_event = skonester_cheat_menu.2693 } }
+  option = { name = heritage_egyptian scope:skonester_selected_culture = { set_culture_pillar = heritage_egyptian } root = { trigger_event = skonester_cheat_menu.2693 } }
+  option = { name = heritage_iranian scope:skonester_selected_culture = { set_culture_pillar = heritage_iranian } root = { trigger_event = skonester_cheat_menu.2693 } }
+  option = { name = heritage_israelite scope:skonester_selected_culture = { set_culture_pillar = heritage_israelite } root = { trigger_event = skonester_cheat_menu.2693 } }
+  option = { name = heritage_syriac scope:skonester_selected_culture = { set_culture_pillar = heritage_syriac } root = { trigger_event = skonester_cheat_menu.2693 } }
+  option = { name = heritage_tocharian scope:skonester_selected_culture = { set_culture_pillar = heritage_tocharian } root = { trigger_event = skonester_cheat_menu.2693 } }
+
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2694 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2680 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2694 = {
+  type = character_event
+  title = skonester_cheat_menu.0173.t
+  desc = skonester_gc_macro_mena_central_asia
+  theme = default
+
+  option = { name = heritage_turkic scope:skonester_selected_culture = { set_culture_pillar = heritage_turkic } root = { trigger_event = skonester_cheat_menu.2694 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2693 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2680 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2695 = {
+  type = character_event
+  title = skonester_cheat_menu.0173.t
+  desc = skonester_gc_macro_south_asia
+  theme = default
+
+  option = { name = heritage_dravidian scope:skonester_selected_culture = { set_culture_pillar = heritage_dravidian } root = { trigger_event = skonester_cheat_menu.2695 } }
+  option = { name = heritage_indo_aryan scope:skonester_selected_culture = { set_culture_pillar = heritage_indo_aryan } root = { trigger_event = skonester_cheat_menu.2695 } }
+
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2680 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2696 = {
+  type = character_event
+  title = skonester_cheat_menu.0173.t
+  desc = skonester_gc_macro_east_asia
+  theme = default
+
+  option = { name = heritage_ainuic scope:skonester_selected_culture = { set_culture_pillar = heritage_ainuic } root = { trigger_event = skonester_cheat_menu.2696 } }
+  option = { name = heritage_buyeo scope:skonester_selected_culture = { set_culture_pillar = heritage_buyeo } root = { trigger_event = skonester_cheat_menu.2696 } }
+  option = { name = heritage_chinese scope:skonester_selected_culture = { set_culture_pillar = heritage_chinese } root = { trigger_event = skonester_cheat_menu.2696 } }
+  option = { name = heritage_hmongic scope:skonester_selected_culture = { set_culture_pillar = heritage_hmongic } root = { trigger_event = skonester_cheat_menu.2696 } }
+  option = { name = heritage_japonic scope:skonester_selected_culture = { set_culture_pillar = heritage_japonic } root = { trigger_event = skonester_cheat_menu.2696 } }
+  option = { name = heritage_korean scope:skonester_selected_culture = { set_culture_pillar = heritage_korean } root = { trigger_event = skonester_cheat_menu.2696 } }
+  option = { name = heritage_mongolic scope:skonester_selected_culture = { set_culture_pillar = heritage_mongolic } root = { trigger_event = skonester_cheat_menu.2696 } }
+
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2697 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2680 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2697 = {
+  type = character_event
+  title = skonester_cheat_menu.0173.t
+  desc = skonester_gc_macro_east_asia
+  theme = default
+
+  option = { name = heritage_nivkh scope:skonester_selected_culture = { set_culture_pillar = heritage_nivkh } root = { trigger_event = skonester_cheat_menu.2697 } }
+  option = { name = heritage_qiangic scope:skonester_selected_culture = { set_culture_pillar = heritage_qiangic } root = { trigger_event = skonester_cheat_menu.2697 } }
+  option = { name = heritage_tibetan scope:skonester_selected_culture = { set_culture_pillar = heritage_tibetan } root = { trigger_event = skonester_cheat_menu.2697 } }
+  option = { name = heritage_tungusic scope:skonester_selected_culture = { set_culture_pillar = heritage_tungusic } root = { trigger_event = skonester_cheat_menu.2697 } }
+  option = { name = heritage_viet scope:skonester_selected_culture = { set_culture_pillar = heritage_viet } root = { trigger_event = skonester_cheat_menu.2697 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2696 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2680 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2698 = {
+  type = character_event
+  title = skonester_cheat_menu.0173.t
+  desc = skonester_gc_macro_sea_oceania
+  theme = default
+
+  option = { name = heritage_austronesian scope:skonester_selected_culture = { set_culture_pillar = heritage_austronesian } root = { trigger_event = skonester_cheat_menu.2698 } }
+  option = { name = heritage_burman scope:skonester_selected_culture = { set_culture_pillar = heritage_burman } root = { trigger_event = skonester_cheat_menu.2698 } }
+  option = { name = heritage_mon_khmer scope:skonester_selected_culture = { set_culture_pillar = heritage_mon_khmer } root = { trigger_event = skonester_cheat_menu.2698 } }
+  option = { name = heritage_tai scope:skonester_selected_culture = { set_culture_pillar = heritage_tai } root = { trigger_event = skonester_cheat_menu.2698 } }
+
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2680 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2699 = {
+  type = character_event
+  title = skonester_cheat_menu.0173.t
+  desc = skonester_gc_macro_subsaharan_africa
+  theme = default
+
+  option = { name = heritage_bantu scope:skonester_selected_culture = { set_culture_pillar = heritage_bantu } root = { trigger_event = skonester_cheat_menu.2699 } }
+  option = { name = heritage_central_african scope:skonester_selected_culture = { set_culture_pillar = heritage_central_african } root = { trigger_event = skonester_cheat_menu.2699 } }
+  option = { name = heritage_east_african scope:skonester_selected_culture = { set_culture_pillar = heritage_east_african } root = { trigger_event = skonester_cheat_menu.2699 } }
+  option = { name = heritage_sahelian scope:skonester_selected_culture = { set_culture_pillar = heritage_sahelian } root = { trigger_event = skonester_cheat_menu.2699 } }
+  option = { name = heritage_senegambian scope:skonester_selected_culture = { set_culture_pillar = heritage_senegambian } root = { trigger_event = skonester_cheat_menu.2699 } }
+  option = { name = heritage_somalian scope:skonester_selected_culture = { set_culture_pillar = heritage_somalian } root = { trigger_event = skonester_cheat_menu.2699 } }
+  option = { name = heritage_west_african scope:skonester_selected_culture = { set_culture_pillar = heritage_west_african } root = { trigger_event = skonester_cheat_menu.2699 } }
+
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2700 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2680 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2700 = {
+  type = character_event
+  title = skonester_cheat_menu.0173.t
+  desc = skonester_gc_macro_subsaharan_africa
+  theme = default
+
+  option = { name = heritage_yoruba scope:skonester_selected_culture = { set_culture_pillar = heritage_yoruba } root = { trigger_event = skonester_cheat_menu.2700 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2699 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2680 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2701 = {
+  type = character_event
+  title = skonester_cheat_menu.0173.t
+  desc = skonester_gc_macro_other
+  theme = default
+
+  option = { name = heritage_phoenician scope:skonester_selected_culture = { set_culture_pillar = heritage_phoenician } root = { trigger_event = skonester_cheat_menu.2701 } }
+
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2680 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2702 = {
+  type = character_event
+  title = skonester_cheat_menu.0173.t
+  desc = skonester_cheat_menu.0173.flat_desc
+  theme = default
+
+  option = { name = heritage_ainuic scope:skonester_selected_culture = { set_culture_pillar = heritage_ainuic } root = { trigger_event = skonester_cheat_menu.2702 } }
+  option = { name = heritage_albanian scope:skonester_selected_culture = { set_culture_pillar = heritage_albanian } root = { trigger_event = skonester_cheat_menu.2702 } }
+  option = { name = heritage_ancient_greek scope:skonester_selected_culture = { set_culture_pillar = heritage_ancient_greek } root = { trigger_event = skonester_cheat_menu.2702 } }
+  option = { name = heritage_arabic scope:skonester_selected_culture = { set_culture_pillar = heritage_arabic } root = { trigger_event = skonester_cheat_menu.2702 } }
+  option = { name = heritage_austronesian scope:skonester_selected_culture = { set_culture_pillar = heritage_austronesian } root = { trigger_event = skonester_cheat_menu.2702 } }
+  option = { name = heritage_baltic scope:skonester_selected_culture = { set_culture_pillar = heritage_baltic } root = { trigger_event = skonester_cheat_menu.2702 } }
+  option = { name = heritage_balto_finnic scope:skonester_selected_culture = { set_culture_pillar = heritage_balto_finnic } root = { trigger_event = skonester_cheat_menu.2702 } }
+
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2703 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2680 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2703 = {
+  type = character_event
+  title = skonester_cheat_menu.0173.t
+  desc = skonester_cheat_menu.0173.flat_desc
+  theme = default
+
+  option = { name = heritage_bantu scope:skonester_selected_culture = { set_culture_pillar = heritage_bantu } root = { trigger_event = skonester_cheat_menu.2703 } }
+  option = { name = heritage_berber scope:skonester_selected_culture = { set_culture_pillar = heritage_berber } root = { trigger_event = skonester_cheat_menu.2703 } }
+  option = { name = heritage_brythonic scope:skonester_selected_culture = { set_culture_pillar = heritage_brythonic } root = { trigger_event = skonester_cheat_menu.2703 } }
+  option = { name = heritage_burman scope:skonester_selected_culture = { set_culture_pillar = heritage_burman } root = { trigger_event = skonester_cheat_menu.2703 } }
+  option = { name = heritage_buyeo scope:skonester_selected_culture = { set_culture_pillar = heritage_buyeo } root = { trigger_event = skonester_cheat_menu.2703 } }
+  option = { name = heritage_byzantine scope:skonester_selected_culture = { set_culture_pillar = heritage_byzantine } root = { trigger_event = skonester_cheat_menu.2703 } }
+  option = { name = heritage_caucasian scope:skonester_selected_culture = { set_culture_pillar = heritage_caucasian } root = { trigger_event = skonester_cheat_menu.2703 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2702 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2704 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2680 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2704 = {
+  type = character_event
+  title = skonester_cheat_menu.0173.t
+  desc = skonester_cheat_menu.0173.flat_desc
+  theme = default
+
+  option = { name = heritage_central_african scope:skonester_selected_culture = { set_culture_pillar = heritage_central_african } root = { trigger_event = skonester_cheat_menu.2704 } }
+  option = { name = heritage_central_germanic scope:skonester_selected_culture = { set_culture_pillar = heritage_central_germanic } root = { trigger_event = skonester_cheat_menu.2704 } }
+  option = { name = heritage_chinese scope:skonester_selected_culture = { set_culture_pillar = heritage_chinese } root = { trigger_event = skonester_cheat_menu.2704 } }
+  option = { name = heritage_dravidian scope:skonester_selected_culture = { set_culture_pillar = heritage_dravidian } root = { trigger_event = skonester_cheat_menu.2704 } }
+  option = { name = heritage_east_african scope:skonester_selected_culture = { set_culture_pillar = heritage_east_african } root = { trigger_event = skonester_cheat_menu.2704 } }
+  option = { name = heritage_east_slavic scope:skonester_selected_culture = { set_culture_pillar = heritage_east_slavic } root = { trigger_event = skonester_cheat_menu.2704 } }
+  option = { name = heritage_egyptian scope:skonester_selected_culture = { set_culture_pillar = heritage_egyptian } root = { trigger_event = skonester_cheat_menu.2704 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2703 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2705 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2680 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2705 = {
+  type = character_event
+  title = skonester_cheat_menu.0173.t
+  desc = skonester_cheat_menu.0173.flat_desc
+  theme = default
+
+  option = { name = heritage_frankish scope:skonester_selected_culture = { set_culture_pillar = heritage_frankish } root = { trigger_event = skonester_cheat_menu.2705 } }
+  option = { name = heritage_goidelic scope:skonester_selected_culture = { set_culture_pillar = heritage_goidelic } root = { trigger_event = skonester_cheat_menu.2705 } }
+  option = { name = heritage_gothic scope:skonester_selected_culture = { set_culture_pillar = heritage_gothic } root = { trigger_event = skonester_cheat_menu.2705 } }
+  option = { name = heritage_hmongic scope:skonester_selected_culture = { set_culture_pillar = heritage_hmongic } root = { trigger_event = skonester_cheat_menu.2705 } }
+  option = { name = heritage_hunnic scope:skonester_selected_culture = { set_culture_pillar = heritage_hunnic } root = { trigger_event = skonester_cheat_menu.2705 } }
+  option = { name = heritage_iberian scope:skonester_selected_culture = { set_culture_pillar = heritage_iberian } root = { trigger_event = skonester_cheat_menu.2705 } }
+  option = { name = heritage_indo_aryan scope:skonester_selected_culture = { set_culture_pillar = heritage_indo_aryan } root = { trigger_event = skonester_cheat_menu.2705 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2704 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2706 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2680 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2706 = {
+  type = character_event
+  title = skonester_cheat_menu.0173.t
+  desc = skonester_cheat_menu.0173.flat_desc
+  theme = default
+
+  option = { name = heritage_iranian scope:skonester_selected_culture = { set_culture_pillar = heritage_iranian } root = { trigger_event = skonester_cheat_menu.2706 } }
+  option = { name = heritage_israelite scope:skonester_selected_culture = { set_culture_pillar = heritage_israelite } root = { trigger_event = skonester_cheat_menu.2706 } }
+  option = { name = heritage_japonic scope:skonester_selected_culture = { set_culture_pillar = heritage_japonic } root = { trigger_event = skonester_cheat_menu.2706 } }
+  option = { name = heritage_korean scope:skonester_selected_culture = { set_culture_pillar = heritage_korean } root = { trigger_event = skonester_cheat_menu.2706 } }
+  option = { name = heritage_latin scope:skonester_selected_culture = { set_culture_pillar = heritage_latin } root = { trigger_event = skonester_cheat_menu.2706 } }
+  option = { name = heritage_magyar scope:skonester_selected_culture = { set_culture_pillar = heritage_magyar } root = { trigger_event = skonester_cheat_menu.2706 } }
+  option = { name = heritage_mon_khmer scope:skonester_selected_culture = { set_culture_pillar = heritage_mon_khmer } root = { trigger_event = skonester_cheat_menu.2706 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2705 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2707 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2680 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2707 = {
+  type = character_event
+  title = skonester_cheat_menu.0173.t
+  desc = skonester_cheat_menu.0173.flat_desc
+  theme = default
+
+  option = { name = heritage_mongolic scope:skonester_selected_culture = { set_culture_pillar = heritage_mongolic } root = { trigger_event = skonester_cheat_menu.2707 } }
+  option = { name = heritage_nivkh scope:skonester_selected_culture = { set_culture_pillar = heritage_nivkh } root = { trigger_event = skonester_cheat_menu.2707 } }
+  option = { name = heritage_north_germanic scope:skonester_selected_culture = { set_culture_pillar = heritage_north_germanic } root = { trigger_event = skonester_cheat_menu.2707 } }
+  option = { name = heritage_phoenician scope:skonester_selected_culture = { set_culture_pillar = heritage_phoenician } root = { trigger_event = skonester_cheat_menu.2707 } }
+  option = { name = heritage_qiangic scope:skonester_selected_culture = { set_culture_pillar = heritage_qiangic } root = { trigger_event = skonester_cheat_menu.2707 } }
+  option = { name = heritage_sahelian scope:skonester_selected_culture = { set_culture_pillar = heritage_sahelian } root = { trigger_event = skonester_cheat_menu.2707 } }
+  option = { name = heritage_senegambian scope:skonester_selected_culture = { set_culture_pillar = heritage_senegambian } root = { trigger_event = skonester_cheat_menu.2707 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2706 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2708 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2680 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2708 = {
+  type = character_event
+  title = skonester_cheat_menu.0173.t
+  desc = skonester_cheat_menu.0173.flat_desc
+  theme = default
+
+  option = { name = heritage_somalian scope:skonester_selected_culture = { set_culture_pillar = heritage_somalian } root = { trigger_event = skonester_cheat_menu.2708 } }
+  option = { name = heritage_south_slavic scope:skonester_selected_culture = { set_culture_pillar = heritage_south_slavic } root = { trigger_event = skonester_cheat_menu.2708 } }
+  option = { name = heritage_syriac scope:skonester_selected_culture = { set_culture_pillar = heritage_syriac } root = { trigger_event = skonester_cheat_menu.2708 } }
+  option = { name = heritage_tai scope:skonester_selected_culture = { set_culture_pillar = heritage_tai } root = { trigger_event = skonester_cheat_menu.2708 } }
+  option = { name = heritage_tibetan scope:skonester_selected_culture = { set_culture_pillar = heritage_tibetan } root = { trigger_event = skonester_cheat_menu.2708 } }
+  option = { name = heritage_tocharian scope:skonester_selected_culture = { set_culture_pillar = heritage_tocharian } root = { trigger_event = skonester_cheat_menu.2708 } }
+  option = { name = heritage_tungusic scope:skonester_selected_culture = { set_culture_pillar = heritage_tungusic } root = { trigger_event = skonester_cheat_menu.2708 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2707 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2709 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2680 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2709 = {
+  type = character_event
+  title = skonester_cheat_menu.0173.t
+  desc = skonester_cheat_menu.0173.flat_desc
+  theme = default
+
+  option = { name = heritage_turkic scope:skonester_selected_culture = { set_culture_pillar = heritage_turkic } root = { trigger_event = skonester_cheat_menu.2709 } }
+  option = { name = heritage_ugro_permian scope:skonester_selected_culture = { set_culture_pillar = heritage_ugro_permian } root = { trigger_event = skonester_cheat_menu.2709 } }
+  option = { name = heritage_viet scope:skonester_selected_culture = { set_culture_pillar = heritage_viet } root = { trigger_event = skonester_cheat_menu.2709 } }
+  option = { name = heritage_vlach scope:skonester_selected_culture = { set_culture_pillar = heritage_vlach } root = { trigger_event = skonester_cheat_menu.2709 } }
+  option = { name = heritage_volga_finnic scope:skonester_selected_culture = { set_culture_pillar = heritage_volga_finnic } root = { trigger_event = skonester_cheat_menu.2709 } }
+  option = { name = heritage_west_african scope:skonester_selected_culture = { set_culture_pillar = heritage_west_african } root = { trigger_event = skonester_cheat_menu.2709 } }
+  option = { name = heritage_west_germanic scope:skonester_selected_culture = { set_culture_pillar = heritage_west_germanic } root = { trigger_event = skonester_cheat_menu.2709 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2708 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2710 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2680 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2710 = {
+  type = character_event
+  title = skonester_cheat_menu.0173.t
+  desc = skonester_cheat_menu.0173.flat_desc
+  theme = default
+
+  option = { name = heritage_west_slavic scope:skonester_selected_culture = { set_culture_pillar = heritage_west_slavic } root = { trigger_event = skonester_cheat_menu.2710 } }
+  option = { name = heritage_yoruba scope:skonester_selected_culture = { set_culture_pillar = heritage_yoruba } root = { trigger_event = skonester_cheat_menu.2710 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2709 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2680 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2750 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_cheat_menu.0174.hub_desc
+  theme = default
+
+  option = { name = skonester_gc_macro_europe root = { trigger_event = skonester_cheat_menu.2751 } }
+  option = { name = skonester_gc_macro_mena_central_asia root = { trigger_event = skonester_cheat_menu.2756 } }
+  option = { name = skonester_gc_macro_south_asia root = { trigger_event = skonester_cheat_menu.2758 } }
+  option = { name = skonester_gc_macro_east_asia root = { trigger_event = skonester_cheat_menu.2760 } }
+  option = { name = skonester_gc_macro_sea_oceania root = { trigger_event = skonester_cheat_menu.2762 } }
+  option = { name = skonester_gc_macro_subsaharan_africa root = { trigger_event = skonester_cheat_menu.2764 } }
+
+  option = { name = skonester_cheat_menu.1420.browse_all_flat root = { skonester_open_acm_culture_picker_effect = yes } }
+
+  option = { name = skonester_cheat_menu.00x.back root = { if = { limit = { has_character_flag = skonester_culture_vanilla_edit_toolbar } trigger_event = skonester_cheat_menu.0181 } else = { trigger_event = skonester_cheat_menu.0171 } } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2751 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_gc_macro_europe
+  theme = default
+
+  option = { name = language_albanian scope:skonester_selected_culture = { set_culture_pillar = language_albanian } root = { trigger_event = skonester_cheat_menu.2751 } }
+  option = { name = language_ancient_greek scope:skonester_selected_culture = { set_culture_pillar = language_ancient_greek } root = { trigger_event = skonester_cheat_menu.2751 } }
+  option = { name = language_armenian scope:skonester_selected_culture = { set_culture_pillar = language_armenian } root = { trigger_event = skonester_cheat_menu.2751 } }
+  option = { name = language_baltic scope:skonester_selected_culture = { set_culture_pillar = language_baltic } root = { trigger_event = skonester_cheat_menu.2751 } }
+  option = { name = language_basque scope:skonester_selected_culture = { set_culture_pillar = language_basque } root = { trigger_event = skonester_cheat_menu.2751 } }
+  option = { name = language_brythonic scope:skonester_selected_culture = { set_culture_pillar = language_brythonic } root = { trigger_event = skonester_cheat_menu.2751 } }
+  option = { name = language_central_germanic scope:skonester_selected_culture = { set_culture_pillar = language_central_germanic } root = { trigger_event = skonester_cheat_menu.2751 } }
+
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2752 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2752 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_gc_macro_europe
+  theme = default
+
+  option = { name = language_czech_slovak scope:skonester_selected_culture = { set_culture_pillar = language_czech_slovak } root = { trigger_event = skonester_cheat_menu.2752 } }
+  option = { name = language_dutch scope:skonester_selected_culture = { set_culture_pillar = language_dutch } root = { trigger_event = skonester_cheat_menu.2752 } }
+  option = { name = language_east_slavic scope:skonester_selected_culture = { set_culture_pillar = language_east_slavic } root = { trigger_event = skonester_cheat_menu.2752 } }
+  option = { name = language_finnic scope:skonester_selected_culture = { set_culture_pillar = language_finnic } root = { trigger_event = skonester_cheat_menu.2752 } }
+  option = { name = language_frankish scope:skonester_selected_culture = { set_culture_pillar = language_frankish } root = { trigger_event = skonester_cheat_menu.2752 } }
+  option = { name = language_french scope:skonester_selected_culture = { set_culture_pillar = language_french } root = { trigger_event = skonester_cheat_menu.2752 } }
+  option = { name = language_georgian scope:skonester_selected_culture = { set_culture_pillar = language_georgian } root = { trigger_event = skonester_cheat_menu.2752 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2751 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2753 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2753 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_gc_macro_europe
+  theme = default
+
+  option = { name = language_goidelic scope:skonester_selected_culture = { set_culture_pillar = language_goidelic } root = { trigger_event = skonester_cheat_menu.2753 } }
+  option = { name = language_greek scope:skonester_selected_culture = { set_culture_pillar = language_greek } root = { trigger_event = skonester_cheat_menu.2753 } }
+  option = { name = language_high_german scope:skonester_selected_culture = { set_culture_pillar = language_high_german } root = { trigger_event = skonester_cheat_menu.2753 } }
+  option = { name = language_hunnic scope:skonester_selected_culture = { set_culture_pillar = language_hunnic } root = { trigger_event = skonester_cheat_menu.2753 } }
+  option = { name = language_iberian scope:skonester_selected_culture = { set_culture_pillar = language_iberian } root = { trigger_event = skonester_cheat_menu.2753 } }
+  option = { name = language_italian scope:skonester_selected_culture = { set_culture_pillar = language_italian } root = { trigger_event = skonester_cheat_menu.2753 } }
+  option = { name = language_latin scope:skonester_selected_culture = { set_culture_pillar = language_latin } root = { trigger_event = skonester_cheat_menu.2753 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2752 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2754 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2754 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_gc_macro_europe
+  theme = default
+
+  option = { name = language_lechitic scope:skonester_selected_culture = { set_culture_pillar = language_lechitic } root = { trigger_event = skonester_cheat_menu.2754 } }
+  option = { name = language_magyar scope:skonester_selected_culture = { set_culture_pillar = language_magyar } root = { trigger_event = skonester_cheat_menu.2754 } }
+  option = { name = language_norse scope:skonester_selected_culture = { set_culture_pillar = language_norse } root = { trigger_event = skonester_cheat_menu.2754 } }
+  option = { name = language_occitano_romance scope:skonester_selected_culture = { set_culture_pillar = language_occitano_romance } root = { trigger_event = skonester_cheat_menu.2754 } }
+  option = { name = language_sami scope:skonester_selected_culture = { set_culture_pillar = language_sami } root = { trigger_event = skonester_cheat_menu.2754 } }
+  option = { name = language_sardinian scope:skonester_selected_culture = { set_culture_pillar = language_sardinian } root = { trigger_event = skonester_cheat_menu.2754 } }
+  option = { name = language_saxon scope:skonester_selected_culture = { set_culture_pillar = language_saxon } root = { trigger_event = skonester_cheat_menu.2754 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2753 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2755 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2755 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_gc_macro_europe
+  theme = default
+
+  option = { name = language_slavonic scope:skonester_selected_culture = { set_culture_pillar = language_slavonic } root = { trigger_event = skonester_cheat_menu.2755 } }
+  option = { name = language_south_slavic scope:skonester_selected_culture = { set_culture_pillar = language_south_slavic } root = { trigger_event = skonester_cheat_menu.2755 } }
+  option = { name = language_ugro_permian scope:skonester_selected_culture = { set_culture_pillar = language_ugro_permian } root = { trigger_event = skonester_cheat_menu.2755 } }
+  option = { name = language_volga_finnic scope:skonester_selected_culture = { set_culture_pillar = language_volga_finnic } root = { trigger_event = skonester_cheat_menu.2755 } }
+  option = { name = language_wallachian scope:skonester_selected_culture = { set_culture_pillar = language_wallachian } root = { trigger_event = skonester_cheat_menu.2755 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2754 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2756 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_gc_macro_mena_central_asia
+  theme = default
+
+  option = { name = language_arabic scope:skonester_selected_culture = { set_culture_pillar = language_arabic } root = { trigger_event = skonester_cheat_menu.2756 } }
+  option = { name = language_aramaic scope:skonester_selected_culture = { set_culture_pillar = language_aramaic } root = { trigger_event = skonester_cheat_menu.2756 } }
+  option = { name = language_berber scope:skonester_selected_culture = { set_culture_pillar = language_berber } root = { trigger_event = skonester_cheat_menu.2756 } }
+  option = { name = language_carthaginian scope:skonester_selected_culture = { set_culture_pillar = language_carthaginian } root = { trigger_event = skonester_cheat_menu.2756 } }
+  option = { name = language_egyptian scope:skonester_selected_culture = { set_culture_pillar = language_egyptian } root = { trigger_event = skonester_cheat_menu.2756 } }
+  option = { name = language_iranian scope:skonester_selected_culture = { set_culture_pillar = language_iranian } root = { trigger_event = skonester_cheat_menu.2756 } }
+  option = { name = language_israelite scope:skonester_selected_culture = { set_culture_pillar = language_israelite } root = { trigger_event = skonester_cheat_menu.2756 } }
+
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2757 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2757 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_gc_macro_mena_central_asia
+  theme = default
+
+  option = { name = language_oghur scope:skonester_selected_culture = { set_culture_pillar = language_oghur } root = { trigger_event = skonester_cheat_menu.2757 } }
+  option = { name = language_scythian scope:skonester_selected_culture = { set_culture_pillar = language_scythian } root = { trigger_event = skonester_cheat_menu.2757 } }
+  option = { name = language_tocharian scope:skonester_selected_culture = { set_culture_pillar = language_tocharian } root = { trigger_event = skonester_cheat_menu.2757 } }
+  option = { name = language_turkic scope:skonester_selected_culture = { set_culture_pillar = language_turkic } root = { trigger_event = skonester_cheat_menu.2757 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2756 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2758 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_gc_macro_south_asia
+  theme = default
+
+  option = { name = language_kannada scope:skonester_selected_culture = { set_culture_pillar = language_kannada } root = { trigger_event = skonester_cheat_menu.2758 } }
+  option = { name = language_kashmiri scope:skonester_selected_culture = { set_culture_pillar = language_kashmiri } root = { trigger_event = skonester_cheat_menu.2758 } }
+  option = { name = language_magadhan scope:skonester_selected_culture = { set_culture_pillar = language_magadhan } root = { trigger_event = skonester_cheat_menu.2758 } }
+  option = { name = language_marathi scope:skonester_selected_culture = { set_culture_pillar = language_marathi } root = { trigger_event = skonester_cheat_menu.2758 } }
+  option = { name = language_north_dravidian scope:skonester_selected_culture = { set_culture_pillar = language_north_dravidian } root = { trigger_event = skonester_cheat_menu.2758 } }
+  option = { name = language_pahari scope:skonester_selected_culture = { set_culture_pillar = language_pahari } root = { trigger_event = skonester_cheat_menu.2758 } }
+  option = { name = language_rajasthani scope:skonester_selected_culture = { set_culture_pillar = language_rajasthani } root = { trigger_event = skonester_cheat_menu.2758 } }
+
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2759 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2759 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_gc_macro_south_asia
+  theme = default
+
+  option = { name = language_sauraseni scope:skonester_selected_culture = { set_culture_pillar = language_sauraseni } root = { trigger_event = skonester_cheat_menu.2759 } }
+  option = { name = language_sinhalese scope:skonester_selected_culture = { set_culture_pillar = language_sinhalese } root = { trigger_event = skonester_cheat_menu.2759 } }
+  option = { name = language_tamil scope:skonester_selected_culture = { set_culture_pillar = language_tamil } root = { trigger_event = skonester_cheat_menu.2759 } }
+  option = { name = language_telugu scope:skonester_selected_culture = { set_culture_pillar = language_telugu } root = { trigger_event = skonester_cheat_menu.2759 } }
+  option = { name = language_vrachada scope:skonester_selected_culture = { set_culture_pillar = language_vrachada } root = { trigger_event = skonester_cheat_menu.2759 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2758 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2760 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_gc_macro_east_asia
+  theme = default
+
+  option = { name = language_ainu scope:skonester_selected_culture = { set_culture_pillar = language_ainu } root = { trigger_event = skonester_cheat_menu.2760 } }
+  option = { name = language_chinese scope:skonester_selected_culture = { set_culture_pillar = language_chinese } root = { trigger_event = skonester_cheat_menu.2760 } }
+  option = { name = language_hmongic scope:skonester_selected_culture = { set_culture_pillar = language_hmongic } root = { trigger_event = skonester_cheat_menu.2760 } }
+  option = { name = language_japonic scope:skonester_selected_culture = { set_culture_pillar = language_japonic } root = { trigger_event = skonester_cheat_menu.2760 } }
+  option = { name = language_khitan scope:skonester_selected_culture = { set_culture_pillar = language_khitan } root = { trigger_event = skonester_cheat_menu.2760 } }
+  option = { name = language_korean scope:skonester_selected_culture = { set_culture_pillar = language_korean } root = { trigger_event = skonester_cheat_menu.2760 } }
+  option = { name = language_mongolic scope:skonester_selected_culture = { set_culture_pillar = language_mongolic } root = { trigger_event = skonester_cheat_menu.2760 } }
+
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2761 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2761 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_gc_macro_east_asia
+  theme = default
+
+  option = { name = language_nivkh scope:skonester_selected_culture = { set_culture_pillar = language_nivkh } root = { trigger_event = skonester_cheat_menu.2761 } }
+  option = { name = language_qiangic scope:skonester_selected_culture = { set_culture_pillar = language_qiangic } root = { trigger_event = skonester_cheat_menu.2761 } }
+  option = { name = language_tibetan scope:skonester_selected_culture = { set_culture_pillar = language_tibetan } root = { trigger_event = skonester_cheat_menu.2761 } }
+  option = { name = language_tubu scope:skonester_selected_culture = { set_culture_pillar = language_tubu } root = { trigger_event = skonester_cheat_menu.2761 } }
+  option = { name = language_tungusic scope:skonester_selected_culture = { set_culture_pillar = language_tungusic } root = { trigger_event = skonester_cheat_menu.2761 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2760 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2762 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_gc_macro_sea_oceania
+  theme = default
+
+  option = { name = language_asli scope:skonester_selected_culture = { set_culture_pillar = language_asli } root = { trigger_event = skonester_cheat_menu.2762 } }
+  option = { name = language_austronesian scope:skonester_selected_culture = { set_culture_pillar = language_austronesian } root = { trigger_event = skonester_cheat_menu.2762 } }
+  option = { name = language_ayneha scope:skonester_selected_culture = { set_culture_pillar = language_ayneha } root = { trigger_event = skonester_cheat_menu.2762 } }
+  option = { name = language_burmese scope:skonester_selected_culture = { set_culture_pillar = language_burmese } root = { trigger_event = skonester_cheat_menu.2762 } }
+  option = { name = language_chamic scope:skonester_selected_culture = { set_culture_pillar = language_chamic } root = { trigger_event = skonester_cheat_menu.2762 } }
+  option = { name = language_mon_khmer scope:skonester_selected_culture = { set_culture_pillar = language_mon_khmer } root = { trigger_event = skonester_cheat_menu.2762 } }
+  option = { name = language_papuan scope:skonester_selected_culture = { set_culture_pillar = language_papuan } root = { trigger_event = skonester_cheat_menu.2762 } }
+
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2763 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2763 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_gc_macro_sea_oceania
+  theme = default
+
+  option = { name = language_tai scope:skonester_selected_culture = { set_culture_pillar = language_tai } root = { trigger_event = skonester_cheat_menu.2763 } }
+  option = { name = language_vietnamese scope:skonester_selected_culture = { set_culture_pillar = language_vietnamese } root = { trigger_event = skonester_cheat_menu.2763 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2762 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2764 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_gc_macro_subsaharan_africa
+  theme = default
+
+  option = { name = language_chadic scope:skonester_selected_culture = { set_culture_pillar = language_chadic } root = { trigger_event = skonester_cheat_menu.2764 } }
+  option = { name = language_cushitic scope:skonester_selected_culture = { set_culture_pillar = language_cushitic } root = { trigger_event = skonester_cheat_menu.2764 } }
+  option = { name = language_ethiopic scope:skonester_selected_culture = { set_culture_pillar = language_ethiopic } root = { trigger_event = skonester_cheat_menu.2764 } }
+  option = { name = language_gur scope:skonester_selected_culture = { set_culture_pillar = language_gur } root = { trigger_event = skonester_cheat_menu.2764 } }
+  option = { name = language_kru scope:skonester_selected_culture = { set_culture_pillar = language_kru } root = { trigger_event = skonester_cheat_menu.2764 } }
+  option = { name = language_kwa scope:skonester_selected_culture = { set_culture_pillar = language_kwa } root = { trigger_event = skonester_cheat_menu.2764 } }
+  option = { name = language_manding scope:skonester_selected_culture = { set_culture_pillar = language_manding } root = { trigger_event = skonester_cheat_menu.2764 } }
+
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2765 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2765 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_gc_macro_subsaharan_africa
+  theme = default
+
+  option = { name = language_omotic scope:skonester_selected_culture = { set_culture_pillar = language_omotic } root = { trigger_event = skonester_cheat_menu.2765 } }
+  option = { name = language_sabaki scope:skonester_selected_culture = { set_culture_pillar = language_sabaki } root = { trigger_event = skonester_cheat_menu.2765 } }
+  option = { name = language_senegambian scope:skonester_selected_culture = { set_culture_pillar = language_senegambian } root = { trigger_event = skonester_cheat_menu.2765 } }
+  option = { name = language_soninke scope:skonester_selected_culture = { set_culture_pillar = language_soninke } root = { trigger_event = skonester_cheat_menu.2765 } }
+  option = { name = language_sudanic scope:skonester_selected_culture = { set_culture_pillar = language_sudanic } root = { trigger_event = skonester_cheat_menu.2765 } }
+  option = { name = language_yoruba scope:skonester_selected_culture = { set_culture_pillar = language_yoruba } root = { trigger_event = skonester_cheat_menu.2765 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2764 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2766 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_cheat_menu.0174.flat_desc
+  theme = default
+
+  option = { name = language_ainu scope:skonester_selected_culture = { set_culture_pillar = language_ainu } root = { trigger_event = skonester_cheat_menu.2766 } }
+  option = { name = language_albanian scope:skonester_selected_culture = { set_culture_pillar = language_albanian } root = { trigger_event = skonester_cheat_menu.2766 } }
+  option = { name = language_ancient_greek scope:skonester_selected_culture = { set_culture_pillar = language_ancient_greek } root = { trigger_event = skonester_cheat_menu.2766 } }
+  option = { name = language_arabic scope:skonester_selected_culture = { set_culture_pillar = language_arabic } root = { trigger_event = skonester_cheat_menu.2766 } }
+  option = { name = language_aramaic scope:skonester_selected_culture = { set_culture_pillar = language_aramaic } root = { trigger_event = skonester_cheat_menu.2766 } }
+  option = { name = language_armenian scope:skonester_selected_culture = { set_culture_pillar = language_armenian } root = { trigger_event = skonester_cheat_menu.2766 } }
+  option = { name = language_asli scope:skonester_selected_culture = { set_culture_pillar = language_asli } root = { trigger_event = skonester_cheat_menu.2766 } }
+
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2767 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2767 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_cheat_menu.0174.flat_desc
+  theme = default
+
+  option = { name = language_austronesian scope:skonester_selected_culture = { set_culture_pillar = language_austronesian } root = { trigger_event = skonester_cheat_menu.2767 } }
+  option = { name = language_ayneha scope:skonester_selected_culture = { set_culture_pillar = language_ayneha } root = { trigger_event = skonester_cheat_menu.2767 } }
+  option = { name = language_baltic scope:skonester_selected_culture = { set_culture_pillar = language_baltic } root = { trigger_event = skonester_cheat_menu.2767 } }
+  option = { name = language_basque scope:skonester_selected_culture = { set_culture_pillar = language_basque } root = { trigger_event = skonester_cheat_menu.2767 } }
+  option = { name = language_berber scope:skonester_selected_culture = { set_culture_pillar = language_berber } root = { trigger_event = skonester_cheat_menu.2767 } }
+  option = { name = language_brythonic scope:skonester_selected_culture = { set_culture_pillar = language_brythonic } root = { trigger_event = skonester_cheat_menu.2767 } }
+  option = { name = language_burmese scope:skonester_selected_culture = { set_culture_pillar = language_burmese } root = { trigger_event = skonester_cheat_menu.2767 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2766 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2768 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2768 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_cheat_menu.0174.flat_desc
+  theme = default
+
+  option = { name = language_carthaginian scope:skonester_selected_culture = { set_culture_pillar = language_carthaginian } root = { trigger_event = skonester_cheat_menu.2768 } }
+  option = { name = language_central_germanic scope:skonester_selected_culture = { set_culture_pillar = language_central_germanic } root = { trigger_event = skonester_cheat_menu.2768 } }
+  option = { name = language_chadic scope:skonester_selected_culture = { set_culture_pillar = language_chadic } root = { trigger_event = skonester_cheat_menu.2768 } }
+  option = { name = language_chamic scope:skonester_selected_culture = { set_culture_pillar = language_chamic } root = { trigger_event = skonester_cheat_menu.2768 } }
+  option = { name = language_chinese scope:skonester_selected_culture = { set_culture_pillar = language_chinese } root = { trigger_event = skonester_cheat_menu.2768 } }
+  option = { name = language_cushitic scope:skonester_selected_culture = { set_culture_pillar = language_cushitic } root = { trigger_event = skonester_cheat_menu.2768 } }
+  option = { name = language_czech_slovak scope:skonester_selected_culture = { set_culture_pillar = language_czech_slovak } root = { trigger_event = skonester_cheat_menu.2768 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2767 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2769 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2769 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_cheat_menu.0174.flat_desc
+  theme = default
+
+  option = { name = language_dutch scope:skonester_selected_culture = { set_culture_pillar = language_dutch } root = { trigger_event = skonester_cheat_menu.2769 } }
+  option = { name = language_east_slavic scope:skonester_selected_culture = { set_culture_pillar = language_east_slavic } root = { trigger_event = skonester_cheat_menu.2769 } }
+  option = { name = language_egyptian scope:skonester_selected_culture = { set_culture_pillar = language_egyptian } root = { trigger_event = skonester_cheat_menu.2769 } }
+  option = { name = language_ethiopic scope:skonester_selected_culture = { set_culture_pillar = language_ethiopic } root = { trigger_event = skonester_cheat_menu.2769 } }
+  option = { name = language_finnic scope:skonester_selected_culture = { set_culture_pillar = language_finnic } root = { trigger_event = skonester_cheat_menu.2769 } }
+  option = { name = language_frankish scope:skonester_selected_culture = { set_culture_pillar = language_frankish } root = { trigger_event = skonester_cheat_menu.2769 } }
+  option = { name = language_french scope:skonester_selected_culture = { set_culture_pillar = language_french } root = { trigger_event = skonester_cheat_menu.2769 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2768 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2770 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2770 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_cheat_menu.0174.flat_desc
+  theme = default
+
+  option = { name = language_georgian scope:skonester_selected_culture = { set_culture_pillar = language_georgian } root = { trigger_event = skonester_cheat_menu.2770 } }
+  option = { name = language_goidelic scope:skonester_selected_culture = { set_culture_pillar = language_goidelic } root = { trigger_event = skonester_cheat_menu.2770 } }
+  option = { name = language_greek scope:skonester_selected_culture = { set_culture_pillar = language_greek } root = { trigger_event = skonester_cheat_menu.2770 } }
+  option = { name = language_gur scope:skonester_selected_culture = { set_culture_pillar = language_gur } root = { trigger_event = skonester_cheat_menu.2770 } }
+  option = { name = language_high_german scope:skonester_selected_culture = { set_culture_pillar = language_high_german } root = { trigger_event = skonester_cheat_menu.2770 } }
+  option = { name = language_hmongic scope:skonester_selected_culture = { set_culture_pillar = language_hmongic } root = { trigger_event = skonester_cheat_menu.2770 } }
+  option = { name = language_hunnic scope:skonester_selected_culture = { set_culture_pillar = language_hunnic } root = { trigger_event = skonester_cheat_menu.2770 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2769 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2771 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2771 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_cheat_menu.0174.flat_desc
+  theme = default
+
+  option = { name = language_iberian scope:skonester_selected_culture = { set_culture_pillar = language_iberian } root = { trigger_event = skonester_cheat_menu.2771 } }
+  option = { name = language_iranian scope:skonester_selected_culture = { set_culture_pillar = language_iranian } root = { trigger_event = skonester_cheat_menu.2771 } }
+  option = { name = language_israelite scope:skonester_selected_culture = { set_culture_pillar = language_israelite } root = { trigger_event = skonester_cheat_menu.2771 } }
+  option = { name = language_italian scope:skonester_selected_culture = { set_culture_pillar = language_italian } root = { trigger_event = skonester_cheat_menu.2771 } }
+  option = { name = language_japonic scope:skonester_selected_culture = { set_culture_pillar = language_japonic } root = { trigger_event = skonester_cheat_menu.2771 } }
+  option = { name = language_kannada scope:skonester_selected_culture = { set_culture_pillar = language_kannada } root = { trigger_event = skonester_cheat_menu.2771 } }
+  option = { name = language_kashmiri scope:skonester_selected_culture = { set_culture_pillar = language_kashmiri } root = { trigger_event = skonester_cheat_menu.2771 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2770 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2772 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2772 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_cheat_menu.0174.flat_desc
+  theme = default
+
+  option = { name = language_khitan scope:skonester_selected_culture = { set_culture_pillar = language_khitan } root = { trigger_event = skonester_cheat_menu.2772 } }
+  option = { name = language_korean scope:skonester_selected_culture = { set_culture_pillar = language_korean } root = { trigger_event = skonester_cheat_menu.2772 } }
+  option = { name = language_kru scope:skonester_selected_culture = { set_culture_pillar = language_kru } root = { trigger_event = skonester_cheat_menu.2772 } }
+  option = { name = language_kwa scope:skonester_selected_culture = { set_culture_pillar = language_kwa } root = { trigger_event = skonester_cheat_menu.2772 } }
+  option = { name = language_latin scope:skonester_selected_culture = { set_culture_pillar = language_latin } root = { trigger_event = skonester_cheat_menu.2772 } }
+  option = { name = language_lechitic scope:skonester_selected_culture = { set_culture_pillar = language_lechitic } root = { trigger_event = skonester_cheat_menu.2772 } }
+  option = { name = language_magadhan scope:skonester_selected_culture = { set_culture_pillar = language_magadhan } root = { trigger_event = skonester_cheat_menu.2772 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2771 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2773 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2773 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_cheat_menu.0174.flat_desc
+  theme = default
+
+  option = { name = language_magyar scope:skonester_selected_culture = { set_culture_pillar = language_magyar } root = { trigger_event = skonester_cheat_menu.2773 } }
+  option = { name = language_manding scope:skonester_selected_culture = { set_culture_pillar = language_manding } root = { trigger_event = skonester_cheat_menu.2773 } }
+  option = { name = language_marathi scope:skonester_selected_culture = { set_culture_pillar = language_marathi } root = { trigger_event = skonester_cheat_menu.2773 } }
+  option = { name = language_mon_khmer scope:skonester_selected_culture = { set_culture_pillar = language_mon_khmer } root = { trigger_event = skonester_cheat_menu.2773 } }
+  option = { name = language_mongolic scope:skonester_selected_culture = { set_culture_pillar = language_mongolic } root = { trigger_event = skonester_cheat_menu.2773 } }
+  option = { name = language_nivkh scope:skonester_selected_culture = { set_culture_pillar = language_nivkh } root = { trigger_event = skonester_cheat_menu.2773 } }
+  option = { name = language_norse scope:skonester_selected_culture = { set_culture_pillar = language_norse } root = { trigger_event = skonester_cheat_menu.2773 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2772 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2774 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2774 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_cheat_menu.0174.flat_desc
+  theme = default
+
+  option = { name = language_north_dravidian scope:skonester_selected_culture = { set_culture_pillar = language_north_dravidian } root = { trigger_event = skonester_cheat_menu.2774 } }
+  option = { name = language_occitano_romance scope:skonester_selected_culture = { set_culture_pillar = language_occitano_romance } root = { trigger_event = skonester_cheat_menu.2774 } }
+  option = { name = language_oghur scope:skonester_selected_culture = { set_culture_pillar = language_oghur } root = { trigger_event = skonester_cheat_menu.2774 } }
+  option = { name = language_omotic scope:skonester_selected_culture = { set_culture_pillar = language_omotic } root = { trigger_event = skonester_cheat_menu.2774 } }
+  option = { name = language_pahari scope:skonester_selected_culture = { set_culture_pillar = language_pahari } root = { trigger_event = skonester_cheat_menu.2774 } }
+  option = { name = language_papuan scope:skonester_selected_culture = { set_culture_pillar = language_papuan } root = { trigger_event = skonester_cheat_menu.2774 } }
+  option = { name = language_qiangic scope:skonester_selected_culture = { set_culture_pillar = language_qiangic } root = { trigger_event = skonester_cheat_menu.2774 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2773 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2775 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2775 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_cheat_menu.0174.flat_desc
+  theme = default
+
+  option = { name = language_rajasthani scope:skonester_selected_culture = { set_culture_pillar = language_rajasthani } root = { trigger_event = skonester_cheat_menu.2775 } }
+  option = { name = language_sabaki scope:skonester_selected_culture = { set_culture_pillar = language_sabaki } root = { trigger_event = skonester_cheat_menu.2775 } }
+  option = { name = language_sami scope:skonester_selected_culture = { set_culture_pillar = language_sami } root = { trigger_event = skonester_cheat_menu.2775 } }
+  option = { name = language_sardinian scope:skonester_selected_culture = { set_culture_pillar = language_sardinian } root = { trigger_event = skonester_cheat_menu.2775 } }
+  option = { name = language_sauraseni scope:skonester_selected_culture = { set_culture_pillar = language_sauraseni } root = { trigger_event = skonester_cheat_menu.2775 } }
+  option = { name = language_saxon scope:skonester_selected_culture = { set_culture_pillar = language_saxon } root = { trigger_event = skonester_cheat_menu.2775 } }
+  option = { name = language_scythian scope:skonester_selected_culture = { set_culture_pillar = language_scythian } root = { trigger_event = skonester_cheat_menu.2775 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2774 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2776 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2776 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_cheat_menu.0174.flat_desc
+  theme = default
+
+  option = { name = language_senegambian scope:skonester_selected_culture = { set_culture_pillar = language_senegambian } root = { trigger_event = skonester_cheat_menu.2776 } }
+  option = { name = language_sinhalese scope:skonester_selected_culture = { set_culture_pillar = language_sinhalese } root = { trigger_event = skonester_cheat_menu.2776 } }
+  option = { name = language_slavonic scope:skonester_selected_culture = { set_culture_pillar = language_slavonic } root = { trigger_event = skonester_cheat_menu.2776 } }
+  option = { name = language_soninke scope:skonester_selected_culture = { set_culture_pillar = language_soninke } root = { trigger_event = skonester_cheat_menu.2776 } }
+  option = { name = language_south_slavic scope:skonester_selected_culture = { set_culture_pillar = language_south_slavic } root = { trigger_event = skonester_cheat_menu.2776 } }
+  option = { name = language_sudanic scope:skonester_selected_culture = { set_culture_pillar = language_sudanic } root = { trigger_event = skonester_cheat_menu.2776 } }
+  option = { name = language_tai scope:skonester_selected_culture = { set_culture_pillar = language_tai } root = { trigger_event = skonester_cheat_menu.2776 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2775 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2777 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2777 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_cheat_menu.0174.flat_desc
+  theme = default
+
+  option = { name = language_tamil scope:skonester_selected_culture = { set_culture_pillar = language_tamil } root = { trigger_event = skonester_cheat_menu.2777 } }
+  option = { name = language_telugu scope:skonester_selected_culture = { set_culture_pillar = language_telugu } root = { trigger_event = skonester_cheat_menu.2777 } }
+  option = { name = language_tibetan scope:skonester_selected_culture = { set_culture_pillar = language_tibetan } root = { trigger_event = skonester_cheat_menu.2777 } }
+  option = { name = language_tocharian scope:skonester_selected_culture = { set_culture_pillar = language_tocharian } root = { trigger_event = skonester_cheat_menu.2777 } }
+  option = { name = language_tubu scope:skonester_selected_culture = { set_culture_pillar = language_tubu } root = { trigger_event = skonester_cheat_menu.2777 } }
+  option = { name = language_tungusic scope:skonester_selected_culture = { set_culture_pillar = language_tungusic } root = { trigger_event = skonester_cheat_menu.2777 } }
+  option = { name = language_turkic scope:skonester_selected_culture = { set_culture_pillar = language_turkic } root = { trigger_event = skonester_cheat_menu.2777 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2776 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.2778 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2778 = {
+  type = character_event
+  title = skonester_cheat_menu.0174.t
+  desc = skonester_cheat_menu.0174.flat_desc
+  theme = default
+
+  option = { name = language_ugro_permian scope:skonester_selected_culture = { set_culture_pillar = language_ugro_permian } root = { trigger_event = skonester_cheat_menu.2778 } }
+  option = { name = language_vietnamese scope:skonester_selected_culture = { set_culture_pillar = language_vietnamese } root = { trigger_event = skonester_cheat_menu.2778 } }
+  option = { name = language_volga_finnic scope:skonester_selected_culture = { set_culture_pillar = language_volga_finnic } root = { trigger_event = skonester_cheat_menu.2778 } }
+  option = { name = language_vrachada scope:skonester_selected_culture = { set_culture_pillar = language_vrachada } root = { trigger_event = skonester_cheat_menu.2778 } }
+  option = { name = language_wallachian scope:skonester_selected_culture = { set_culture_pillar = language_wallachian } root = { trigger_event = skonester_cheat_menu.2778 } }
+  option = { name = language_yoruba scope:skonester_selected_culture = { set_culture_pillar = language_yoruba } root = { trigger_event = skonester_cheat_menu.2778 } }
+
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.2777 } }
+  option = { name = skonester_gc_back_to_regions root = { trigger_event = skonester_cheat_menu.2750 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2730 = {
+  type = character_event
+  title = skonester_cheat_menu.0175.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+  immediate = {
+    skonester_restore_skonester_selected_culture_scope_effect = yes
+  }
+  option = { name = martial_custom_equal scope:skonester_selected_culture = { set_culture_pillar = martial_custom_equal } root = { trigger_event = skonester_cheat_menu.2730 } }
+  option = { name = martial_custom_male_only scope:skonester_selected_culture = { set_culture_pillar = martial_custom_male_only } root = { trigger_event = skonester_cheat_menu.2730 } }
+  option = { name = martial_custom_female_only scope:skonester_selected_culture = { set_culture_pillar = martial_custom_female_only } root = { trigger_event = skonester_cheat_menu.2730 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.2731 = {
+  type = character_event
+  title = skonester_cheat_menu.0178.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+  immediate = {
+    skonester_restore_skonester_selected_culture_scope_effect = yes
+  }
+  option = { name = ethos_bellicose scope:skonester_selected_culture = { set_culture_pillar = ethos_bellicose } root = { trigger_event = skonester_cheat_menu.2731 } }
+  option = { name = ethos_bureaucratic scope:skonester_selected_culture = { set_culture_pillar = ethos_bureaucratic } root = { trigger_event = skonester_cheat_menu.2731 } }
+  option = { name = ethos_communal scope:skonester_selected_culture = { set_culture_pillar = ethos_communal } root = { trigger_event = skonester_cheat_menu.2731 } }
+  option = { name = ethos_courtly scope:skonester_selected_culture = { set_culture_pillar = ethos_courtly } root = { trigger_event = skonester_cheat_menu.2731 } }
+  option = { name = ethos_egalitarian scope:skonester_selected_culture = { set_culture_pillar = ethos_egalitarian } root = { trigger_event = skonester_cheat_menu.2731 } }
+  option = { name = ethos_spiritual scope:skonester_selected_culture = { set_culture_pillar = ethos_spiritual } root = { trigger_event = skonester_cheat_menu.2731 } }
+  option = { name = ethos_stoic scope:skonester_selected_culture = { set_culture_pillar = ethos_stoic } root = { trigger_event = skonester_cheat_menu.2731 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+

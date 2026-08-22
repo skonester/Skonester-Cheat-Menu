@@ -1,0 +1,66 @@
+﻿trait_warlord_eternal = {
+
+  name = trait_trait_warlord_eternal
+  desc = trait_trait_warlord_eternal_desc
+  inherit_chance = 0
+  birth = 0
+  random_creation = 0
+  genetic = no
+  congenital = no
+  education = no
+  physical = no
+  shown_in_ruler_designer = no
+
+  # Skonester自制特质：用 fame，勿用 lifestyle（生活方式事件池）或 commander（将领栏/将领池）
+  category = fame
+
+  # 自定义图标（模组内提供）
+  icon = "super_general.dds"
+
+  # 角色个人军事属性
+  martial = 15
+  prowess = 12
+  advantage = 20
+
+  # 【长期统治加成】
+  long_reign_bonus_mult = 150
+
+  # 【1. 全体士兵 & 骑士 战斗力暴涨】
+  army_damage_mult = 0.60
+  army_toughness_mult = 0.60
+  army_pursuit_mult = 0.60
+  army_screen_mult = 0.60
+  # 骑士战斗力（面板“骑士战斗力”）——直接拉到极高，确保肉眼可见
+  knight_effectiveness_mult = 10.00
+  knight_effectiveness_per_prowess = 2.00
+  knight_effectiveness_per_martial = 2.00
+  knight_limit = 40
+
+  # 征召兵也一起抬（很多情况下体感更明显）
+  levy_attack = 300
+  levy_toughness = 300
+  levy_siege = 5
+  levy_pursuit = 300
+  levy_screen = 300
+
+  # 【2. 近似“无视地形惩罚”】【注：CK3 没有完全通用的“全地形免疫”键】
+  no_water_crossing_penalty = yes
+  no_disembark_penalty = yes
+  enemy_terrain_advantage = -1.0
+
+  # 【3. 行军速度拉满】
+  # 说明：CK3 没有“最快上限”硬封顶键，这里直接给到极高倍率
+  movement_speed = 10.00
+  winter_movement_speed = 10.00
+  movement_speed_land_raiding = 10.00
+
+  # 从“万劫窥探”挪过来的两条克制相关加成
+  counter_resistance = 9999
+  counter_efficiency = 9999
+
+  # 附加：几乎不缺补给 + 超低溃退损耗 + 围城加速
+  supply_duration = 5.00
+  supply_limit_mult = 1.00
+  retreat_losses = -0.99
+  army_siege_value_mult = 2.00
+}

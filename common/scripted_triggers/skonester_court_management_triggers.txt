@@ -1,0 +1,291 @@
+﻿# 管理廷臣：受保護角色、惡質特質、招募候選門檻（this = 廷臣或候選人；root = 玩家）
+# 遣散保護收窄：僅父母、同胞、配偶、妾、與玩家有法親/血親之子女；同宗族遠親可遣散。
+# 另保護：人質；玩家為其監護人之未成年；與玩家有 guardian 腳本關係者（事件常見）。
+
+skonester_court_mgmt_protected_trigger = {
+  OR = {
+    this = root
+    is_spouse_of = root
+    is_concubine_of = root
+    is_parent_of = root
+    is_sibling_of = root
+    AND = {
+      is_child_of = root
+      OR = {
+        father = root
+        mother = root
+      }
+    }
+    is_hostage = yes
+    has_relation_guardian = root
+    has_secret_relation_guardian = root
+  }
+}
+
+# 惡劣性格（與一鍵監護人對齊並擴充：偏執、暴食、嗜酒、刻薄、報復、善妒等）
+skonester_court_mgmt_barred_trait_trigger = {
+  OR = {
+    has_trait = lazy
+    has_trait = wrathful
+    has_trait = arrogant
+    has_trait = sadistic
+    has_trait = deceitful
+    has_trait = lustful
+    has_trait = gluttonous
+    has_trait = drunkard
+    has_trait = arbitrary
+    has_trait = vengeful
+    has_trait = paranoid
+    has_trait = impatient
+  }
+}
+
+# 頂級教育／勇武教育（廷臣招牌輪換與招募加分用）
+skonester_court_mgmt_signature_star_trigger = {
+  OR = {
+    has_trait = education_learning_5
+    has_trait = education_martial_5
+    has_trait = education_stewardship_5
+    has_trait = education_intrigue_5
+    has_trait = education_diplomacy_5
+    has_trait = education_martial_prowess_4
+  }
+}
+
+# 招募補頂級教育：該維度尚無任何 education_* 等級時才可 add_trait（避免疊加衝突）
+skonester_court_mgmt_recruit_can_add_martial_education_trigger = {
+  NOR = {
+    has_trait = education_martial_1
+    has_trait = education_martial_2
+    has_trait = education_martial_3
+    has_trait = education_martial_4
+    has_trait = education_martial_5
+  }
+}
+skonester_court_mgmt_recruit_can_add_learning_education_trigger = {
+  NOR = {
+    has_trait = education_learning_1
+    has_trait = education_learning_2
+    has_trait = education_learning_3
+    has_trait = education_learning_4
+    has_trait = education_learning_5
+  }
+}
+skonester_court_mgmt_recruit_can_add_stewardship_education_trigger = {
+  NOR = {
+    has_trait = education_stewardship_1
+    has_trait = education_stewardship_2
+    has_trait = education_stewardship_3
+    has_trait = education_stewardship_4
+    has_trait = education_stewardship_5
+  }
+}
+skonester_court_mgmt_recruit_can_add_intrigue_education_trigger = {
+  NOR = {
+    has_trait = education_intrigue_1
+    has_trait = education_intrigue_2
+    has_trait = education_intrigue_3
+    has_trait = education_intrigue_4
+    has_trait = education_intrigue_5
+  }
+}
+skonester_court_mgmt_recruit_can_add_diplomacy_education_trigger = {
+  NOR = {
+    has_trait = education_diplomacy_1
+    has_trait = education_diplomacy_2
+    has_trait = education_diplomacy_3
+    has_trait = education_diplomacy_4
+    has_trait = education_diplomacy_5
+  }
+}
+skonester_court_mgmt_recruit_can_add_prowess_education_trigger = {
+  NOR = {
+    has_trait = education_martial_prowess_1
+    has_trait = education_martial_prowess_2
+    has_trait = education_martial_prowess_3
+    has_trait = education_martial_prowess_4
+  }
+}
+
+# 人數較多時優先保留：頂級教育／勇武教育直接保留；其餘須天才系 + 五維均達標
+skonester_court_mgmt_elite_keep_trigger = {
+  OR = {
+    skonester_court_mgmt_signature_star_trigger = yes
+    AND = {
+      OR = {
+        has_trait = intellect_good_3
+        AND = {
+          has_trait = intellect_good_2
+          learning >= 18
+        }
+        AND = {
+          has_trait = shrewd
+          learning >= 20
+        }
+      }
+      martial >= 16
+      diplomacy >= 16
+      stewardship >= 16
+      intrigue >= 16
+      learning >= 16
+    }
+  }
+}
+
+# 人數偏高：遣散「無智力線特質且總能力偏低」者（頂級教育／勇武教育招牌不觸發此條）
+skonester_court_mgmt_soft_cull_trigger = {
+  NOT = {
+    skonester_court_mgmt_signature_star_trigger = yes
+  }
+  NOR = {
+    has_trait = intellect_good_3
+    has_trait = intellect_good_2
+    has_trait = shrewd
+  }
+  sum_of_all_skills_value < 95
+}
+
+# 外交/軍事/管理/謀略/學識中至少三項 <10（個位數水準），非受保護者一律可遣散
+skonester_court_mgmt_three_main_skills_under_10_trigger = {
+  OR = {
+    AND = {
+      diplomacy < 10
+      martial < 10
+      stewardship < 10
+    }
+    AND = {
+      diplomacy < 10
+      martial < 10
+      intrigue < 10
+    }
+    AND = {
+      diplomacy < 10
+      martial < 10
+      learning < 10
+    }
+    AND = {
+      diplomacy < 10
+      stewardship < 10
+      intrigue < 10
+    }
+    AND = {
+      diplomacy < 10
+      stewardship < 10
+      learning < 10
+    }
+    AND = {
+      diplomacy < 10
+      intrigue < 10
+      learning < 10
+    }
+    AND = {
+      martial < 10
+      stewardship < 10
+      intrigue < 10
+    }
+    AND = {
+      martial < 10
+      stewardship < 10
+      learning < 10
+    }
+    AND = {
+      martial < 10
+      intrigue < 10
+      learning < 10
+    }
+    AND = {
+      stewardship < 10
+      intrigue < 10
+      learning < 10
+    }
+  }
+}
+
+skonester_court_mgmt_purge_candidate_trigger = {
+  NOT = {
+    skonester_court_mgmt_protected_trigger = yes
+  }
+  OR = {
+    skonester_court_mgmt_barred_trait_trigger = yes
+    skonester_court_mgmt_three_main_skills_under_10_trigger = yes
+    AND = {
+      root = {
+        var:skonester_court_n > 45
+      }
+      NOT = {
+        skonester_court_mgmt_elite_keep_trigger = yes
+      }
+    }
+    AND = {
+      root = {
+        var:skonester_court_n > 38
+      }
+      skonester_court_mgmt_soft_cull_trigger = yes
+    }
+  }
+}
+
+# 廷臣硬上限：超過定額時可遣散的非受保護廷臣（與 purge 優先序相同）
+skonester_court_mgmt_cap_overflow_candidate_trigger = {
+  is_courtier_of = root
+  NOT = {
+    skonester_court_mgmt_protected_trigger = yes
+  }
+}
+
+# 從本國拉人進宮：同文化、16–50 歲、無地、非已在玩家宮廷、無黑名單；素質或正面性格至少滿足一組
+skonester_court_mgmt_recruit_candidate_trigger = {
+  is_alive = yes
+  is_adult = yes
+  age >= 16
+  age <= 50
+  is_imprisoned = no
+  top_liege = root.top_liege
+  culture = root.culture
+  is_landed = no
+  is_playable_character = no
+  NOT = {
+    this = root
+  }
+  NOT = {
+    is_courtier_of = root
+  }
+  NOR = {
+    skonester_court_mgmt_barred_trait_trigger = yes
+  }
+  OR = {
+    has_trait = intellect_good_3
+    has_trait = intellect_good_2
+    has_trait = shrewd
+    has_trait = education_martial_4
+    has_trait = education_martial_5
+    has_trait = education_diplomacy_4
+    has_trait = education_diplomacy_5
+    has_trait = education_stewardship_4
+    has_trait = education_stewardship_5
+    has_trait = education_intrigue_4
+    has_trait = education_intrigue_5
+    has_trait = education_learning_4
+    has_trait = education_learning_5
+    has_trait = education_martial_prowess_3
+    has_trait = education_martial_prowess_4
+    learning >= 22
+    prowess >= 25
+    martial >= 26
+  }
+  OR = {
+    has_trait = patient
+    has_trait = diligent
+    has_trait = temperate
+    has_trait = gregarious
+    has_trait = brave
+    has_trait = strong
+    has_trait = honest
+    has_trait = humble
+    has_trait = generous
+    has_trait = calm
+    has_trait = compassionate
+    has_trait = just
+    learning >= 16
+  }
+}

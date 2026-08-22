@@ -1,0 +1,71 @@
+﻿building_forest_requirement = {
+	or = {
+		terrain = farmlands
+		terrain = plains
+	}
+}
+
+
+building_caravan_requirement = {
+	AND = {
+		OR = {
+			terrain = oasis
+			terrain = steppe
+			terrain = drylands
+			terrain = desert
+			terrain = desert_mountains
+			terrain = plains
+			terrain = mountains
+			terrain = hills
+		}
+	}
+}
+
+building_insular_requirement = {
+	always = yes
+}
+
+building_pillage_requirment = {
+	NOT = {
+		AND = {
+			OR = {
+				scope:holder = {
+					faith = { has_doctrine = tenet_pacifism }
+				}
+				scope:holder = {
+					faith = { has_doctrine = tenet_dharmic_pacifism }
+				}
+			}
+			scope:holder = {
+				culture = {
+					has_cultural_tradition = tradition_horse_lords
+				}
+			}
+		}
+	}
+}
+
+building_steppe_requirement = {
+	scope:holder = {
+		culture = {
+			has_cultural_tradition = tradition_horse_lords
+		}
+	}
+}
+			
+building_things_requirment = {
+	always = no
+}
+
+building_tribal_council_requirement = {
+	AND = {
+		scope:holder = {
+			has_government = tribal_government
+		}
+		
+	}
+}
+
+building_fair_requirement = {
+	always = yes
+}

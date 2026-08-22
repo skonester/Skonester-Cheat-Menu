@@ -1,0 +1,215 @@
+﻿# Skonester菜单：在「右键目标」recipient 的宫廷生成 18 岁 AI 廷臣（四星教育、忠臣；性格与路线特质固定，不再随机池抽）
+# 调用前：scope:recipient = { save_scope_as = skonester_spawn_talent_employer }
+# 性别：雇主（recipient）变量 skonester_spawn_talent_female_chance，0=男、100=女；未设置时在本效果内默认 0
+
+skonester_cheat_menu_spawn_talent_military_effect = {
+  if = {
+    limit = { scope:skonester_spawn_talent_employer = { NOT = { has_variable = skonester_spawn_talent_female_chance } } }
+    scope:skonester_spawn_talent_employer = { set_variable = { name = skonester_spawn_talent_female_chance value = 0 } }
+  }
+  create_character = {
+    employer = scope:skonester_spawn_talent_employer
+    age = 18
+    culture = scope:skonester_spawn_talent_employer.culture
+    faith = scope:skonester_spawn_talent_employer.faith
+    gender_female_chance = scope:skonester_spawn_talent_employer.var:skonester_spawn_talent_female_chance
+    random_traits = no
+    random_traits_list = {
+      count = 1
+      education_martial_4 = {}
+    }
+    random_traits_list = {
+      count = 1
+      loyal = {}
+    }
+    random_traits_list = {
+      count = 1
+      diligent = {}
+    }
+    random_traits_list = {
+      count = 1
+      patient = {}
+    }
+    random_traits_list = {
+      count = 1
+      temperate = {}
+    }
+    random_traits_list = {
+      count = 1
+      aggressive_attacker = {}
+    }
+    random_traits_list = {
+      count = 1
+      organizer = {}
+    }
+    random_traits_list = {
+      count = 1
+      logistician = {}
+    }
+    martial = { 16 30 }
+    prowess = { 16 30 }
+    learning = { 16 30 }
+    diplomacy = { 5 14 }
+    stewardship = { 5 14 }
+    intrigue = { 5 14 }
+  }
+}
+
+skonester_cheat_menu_spawn_talent_stewardship_effect = {
+  if = {
+    limit = { scope:skonester_spawn_talent_employer = { NOT = { has_variable = skonester_spawn_talent_female_chance } } }
+    scope:skonester_spawn_talent_employer = { set_variable = { name = skonester_spawn_talent_female_chance value = 0 } }
+  }
+  create_character = {
+    employer = scope:skonester_spawn_talent_employer
+    age = 18
+    culture = scope:skonester_spawn_talent_employer.culture
+    faith = scope:skonester_spawn_talent_employer.faith
+    gender_female_chance = scope:skonester_spawn_talent_employer.var:skonester_spawn_talent_female_chance
+    random_traits = no
+    random_traits_list = {
+      count = 1
+      education_stewardship_4 = {}
+    }
+    random_traits_list = {
+      count = 1
+      loyal = {}
+    }
+    random_traits_list = {
+      count = 1
+      just = {}
+    }
+    random_traits_list = {
+      count = 1
+      calm = {}
+    }
+    random_traits_list = {
+      count = 1
+      diligent = {}
+    }
+    random_traits_list = {
+      count = 1
+      overseer = {}
+    }
+    random_traits_list = {
+      count = 1
+      architect = {}
+    }
+    random_traits_list = {
+      count = 1
+      administrator = {}
+    }
+    stewardship = { 16 30 }
+    learning = { 16 30 }
+    diplomacy = { 5 14 }
+    martial = { 5 14 }
+    intrigue = { 5 14 }
+    prowess = { 5 16 }
+  }
+}
+
+skonester_cheat_menu_spawn_talent_diplomacy_effect = {
+  if = {
+    limit = { scope:skonester_spawn_talent_employer = { NOT = { has_variable = skonester_spawn_talent_female_chance } } }
+    scope:skonester_spawn_talent_employer = { set_variable = { name = skonester_spawn_talent_female_chance value = 0 } }
+  }
+  create_character = {
+    employer = scope:skonester_spawn_talent_employer
+    age = 18
+    culture = scope:skonester_spawn_talent_employer.culture
+    faith = scope:skonester_spawn_talent_employer.faith
+    gender_female_chance = scope:skonester_spawn_talent_employer.var:skonester_spawn_talent_female_chance
+    random_traits = no
+    random_traits_list = {
+      count = 1
+      education_diplomacy_4 = {}
+    }
+    random_traits_list = {
+      count = 1
+      loyal = {}
+    }
+    random_traits_list = {
+      count = 1
+      gregarious = {}
+    }
+    random_traits_list = {
+      count = 1
+      generous = {}
+    }
+    random_traits_list = {
+      count = 1
+      compassionate = {}
+    }
+    random_traits_list = {
+      count = 1
+      diplomat = {}
+    }
+    random_traits_list = {
+      count = 1
+      august = {}
+    }
+    random_traits_list = {
+      count = 1
+      gallant = {}
+    }
+    diplomacy = { 16 30 }
+    learning = { 16 30 }
+    martial = { 5 14 }
+    stewardship = { 5 14 }
+    intrigue = { 5 14 }
+    prowess = { 5 16 }
+  }
+}
+
+skonester_cheat_menu_spawn_talent_intrigue_effect = {
+  if = {
+    limit = { scope:skonester_spawn_talent_employer = { NOT = { has_variable = skonester_spawn_talent_female_chance } } }
+    scope:skonester_spawn_talent_employer = { set_variable = { name = skonester_spawn_talent_female_chance value = 0 } }
+  }
+  create_character = {
+    employer = scope:skonester_spawn_talent_employer
+    age = 18
+    culture = scope:skonester_spawn_talent_employer.culture
+    faith = scope:skonester_spawn_talent_employer.faith
+    gender_female_chance = scope:skonester_spawn_talent_employer.var:skonester_spawn_talent_female_chance
+    random_traits = no
+    random_traits_list = {
+      count = 1
+      education_intrigue_4 = {}
+    }
+    random_traits_list = {
+      count = 1
+      loyal = {}
+    }
+    random_traits_list = {
+      count = 1
+      patient = {}
+    }
+    random_traits_list = {
+      count = 1
+      calm = {}
+    }
+    random_traits_list = {
+      count = 1
+      temperate = {}
+    }
+    random_traits_list = {
+      count = 1
+      schemer = {}
+    }
+    random_traits_list = {
+      count = 1
+      lifestyle_mystic = {}
+    }
+    random_traits_list = {
+      count = 1
+      whole_of_body = {}
+    }
+    intrigue = { 16 30 }
+    learning = { 16 30 }
+    diplomacy = { 5 14 }
+    martial = { 5 14 }
+    stewardship = { 5 14 }
+    prowess = { 5 16 }
+  }
+}

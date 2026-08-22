@@ -1,0 +1,212 @@
+﻿# Skonester GUI launchers belong in the character interaction menu so the
+# clicked character is available as scope:recipient. Ordinary decisions only
+# have the decision-taker as root and therefore cannot target the open character.
+
+skonester_open_trait_editor_decision = {
+	category = interaction_category_uncategorized
+	interface_priority = 11900
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = debug_chars
+	desc = skonester_open_trait_editor_decision_desc
+	is_shown = {
+		scope:actor = { is_ai = no has_character_flag = skonester_character_interaction_menu_open }
+		scope:recipient = { is_alive = yes }
+	}
+	is_valid = { always = yes }
+	can_send = { always = yes }
+	on_accept = { skonester_cheat_menu_open_base_game_traits_effect = yes }
+	ai_will_do = 0
+}
+
+skonester_open_cheat_trait_editor_decision = {
+	category = interaction_category_uncategorized
+	interface_priority = 11890
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = debug_chars
+	desc = skonester_open_cheat_trait_editor_decision_desc
+	is_shown = {
+		scope:actor = { is_ai = no has_character_flag = skonester_character_interaction_menu_open }
+		scope:recipient = { is_alive = yes }
+	}
+	is_valid = { always = yes }
+	can_send = { always = yes }
+	on_accept = { skonester_cheat_menu_open_new_traits_effect = yes }
+	ai_will_do = 0
+}
+
+skonester_open_lifestyle_editor_decision = {
+	category = interaction_category_uncategorized
+	interface_priority = 11880
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = debug_chars
+	desc = skonester_open_lifestyle_editor_decision_desc
+	is_shown = {
+		scope:actor = { is_ai = no has_character_flag = skonester_character_interaction_menu_open }
+		scope:recipient = { is_alive = yes }
+	}
+	is_valid = { always = yes }
+	can_send = { always = yes }
+	on_accept = { skonester_cheat_menu_open_lifestyle_effect = yes }
+	ai_will_do = 0
+}
+
+skonester_open_sand_soldiers_decision = {
+	category = interaction_category_uncategorized
+	interface_priority = 11870
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = debug_chars
+	desc = skonester_open_sand_soldiers_decision_desc
+	is_shown = {
+		scope:actor = { is_ai = no has_character_flag = skonester_character_interaction_menu_open }
+		scope:recipient = { is_alive = yes }
+	}
+	is_valid = { always = yes }
+	can_send = { always = yes }
+	on_accept = { skonester_cheat_menu_open_sand_soldiers_effect = yes }
+	ai_will_do = 0
+}
+
+skonester_open_culture_picker_decision = {
+	category = interaction_category_uncategorized
+	interface_priority = 11860
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = debug_chars
+	desc = skonester_open_culture_picker_decision_desc
+	is_shown = {
+		scope:actor = { is_ai = no has_character_flag = skonester_character_interaction_menu_open }
+		scope:recipient = { is_alive = yes exists = culture }
+	}
+	is_valid = { always = yes }
+	can_send = { always = yes }
+	on_accept = {
+		skonester_cheat_menu_lock_recipient_effect = yes
+		scope:actor = {
+			skonester_cheat_menu_sync_target_effect = yes
+			skonester_open_acm_culture_picker_effect = yes
+		}
+	}
+	ai_will_do = 0
+}
+
+skonester_open_religion_picker_decision = {
+	category = interaction_category_uncategorized
+	interface_priority = 11850
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = debug_chars
+	desc = skonester_open_religion_picker_decision_desc
+	is_shown = {
+		scope:actor = { is_ai = no has_character_flag = skonester_character_interaction_menu_open }
+		scope:recipient = { is_alive = yes exists = faith }
+	}
+	is_valid = { always = yes }
+	can_send = { always = yes }
+	on_accept = {
+		skonester_cheat_menu_lock_recipient_effect = yes
+		scope:recipient = { faith = { save_scope_as = selected_faith } }
+		scope:actor = {
+			skonester_save_skonester_selected_faith_effect = yes
+			skonester_open_acm_religion_picker_effect = yes
+		}
+	}
+	ai_will_do = 0
+}
+
+skonester_open_tradition_picker_decision = {
+	category = interaction_category_uncategorized
+	interface_priority = 11840
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = debug_chars
+	desc = skonester_open_tradition_picker_decision_desc
+	is_shown = {
+		scope:actor = { is_ai = no has_character_flag = skonester_character_interaction_menu_open }
+		scope:recipient = { is_alive = yes exists = culture }
+	}
+	is_valid = { always = yes }
+	can_send = { always = yes }
+	on_accept = {
+		skonester_cheat_menu_lock_recipient_effect = yes
+		scope:recipient = { culture = { save_scope_as = culture } }
+		scope:actor = {
+			skonester_cw_open_tradition_picker_effect = yes
+			add_character_flag = skonester_cw_tradition_picker_open
+		}
+	}
+	ai_will_do = 0
+}
+
+skonester_open_artifact_crafter_decision = {
+	category = interaction_category_uncategorized
+	interface_priority = 11830
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = debug_chars
+	desc = skonester_open_artifact_crafter_decision_desc
+	is_shown = {
+		scope:actor = { is_ai = no has_character_flag = skonester_character_interaction_menu_open }
+		scope:recipient = { is_alive = yes }
+	}
+	is_valid = { always = yes }
+	can_send = { always = yes }
+	on_accept = { skonester_cheat_menu_open_artifact_craft_effect = yes }
+	ai_will_do = 0
+}
+
+skonester_open_artifact_repair_decision = {
+	category = interaction_category_uncategorized
+	interface_priority = 11820
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = debug_chars
+	desc = skonester_open_artifact_repair_decision_desc
+	is_shown = {
+		scope:actor = { is_ai = no has_character_flag = skonester_character_interaction_menu_open }
+		scope:recipient = { is_alive = yes }
+	}
+	is_valid = { always = yes }
+	can_send = { always = yes }
+	on_accept = { skonester_cheat_menu_open_artifact_repair_effect = yes }
+	ai_will_do = 0
+}
+
+skonester_open_console_helper_decision = {
+	category = interaction_category_uncategorized
+	interface_priority = 11810
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = debug_chars
+	desc = skonester_open_console_helper_decision_desc
+	is_shown = {
+		scope:actor = { is_ai = no has_character_flag = skonester_character_interaction_menu_open }
+	}
+	is_valid = { always = yes }
+	can_send = { always = yes }
+	on_accept = { skonester_cheat_menu_open_console_helper_effect = yes }
+	ai_will_do = 0
+}

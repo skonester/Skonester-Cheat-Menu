@@ -1,0 +1,58 @@
+﻿# Skonester特质：幽冥诡主（阴谋进攻向顶配）
+# 数值对齐模组内 trait_ultimate_intrigue_master 一档
+
+trait_nether_conspiracy_lord = {
+
+  name = trait_trait_nether_conspiracy_lord
+  desc = trait_trait_nether_conspiracy_lord_desc
+  inherit_chance = 0
+  birth = 0
+  random_creation = 0
+  genetic = no
+  congenital = no
+  education = no
+
+  category = fame
+
+  icon = "zhuge_kill_02.dds"
+
+  long_reign_bonus_mult = 150
+
+  intrigue = 50
+
+  # 发现率（被发现相关）
+  scheme_discovery_chance_mult = 9999
+
+  scheme_secrecy = 999
+  # 初始成功概率（基础成功率相关）
+  scheme_success_chance = 9999
+  scheme_success_chance_growth = 999
+  scheme_success_chance_max = 1000
+
+  owned_scheme_secrecy_add = 999
+  owned_hostile_scheme_success_chance_add = 9999
+
+  # 敌方阴谋：初始成功率、成功率上限（等效“潜力”）
+  enemy_hostile_scheme_success_chance_add = -9999
+  enemy_hostile_scheme_success_chance_max_add = -99999
+  enemy_hostile_scheme_phase_duration_add = 999
+  enemy_scheme_secrecy_add = -999
+
+  # 计谋阻力
+  intrigue_scheme_resistance = 999
+  scheme_resistance = 999
+
+  max_hostile_schemes_add = 10
+  max_personal_schemes_add = 10
+  max_political_schemes_add = 10
+  max_contract_schemes_add = 10
+
+  monthly_dread = 5
+  dread_baseline_add = 150
+  dread_gain_mult = 2.00
+
+  vassal_opinion = 80
+  courtier_opinion = 80
+  powerful_vassal_opinion = 50
+  general_opinion = 60
+}

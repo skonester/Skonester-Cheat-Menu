@@ -1,0 +1,41 @@
+﻿l_german:
+ #Skonester Edition
+ pcm_money_decision_title:0 "#Skonester:#! Schatzkammer des Reiches"
+ pcm_money_decision_desc:0 "Ruft einen gewaltigen Staatsschatz herbei und erhaltet eine Fülle an Gold, Frömmigkeit und Ruhm."
+ pcm_money_decision_tooltip:0 "Erhaltet einen großen Vorrat an Gold, Frömmigkeit und Prestige, um Eure Herrschaft mit Stärke zu beginnen."
+ pcm_money_decision_ct:0 "Die Schatzkammern der Könige fließen über vor Reichtum!"
+
+ pcm_subrealm_to_culture_decision_title:0 "#Skonester:#! Kulturerlass"
+ pcm_subrealm_to_culture_decision_desc:0 "Verkündet einen Erlass, der alle Vasallen und Ländereien die Kultur ihres Lehnsherrn annehmen lässt."
+ pcm_subrealm_to_culture_decision_tooltip:0 "Vereint Euer Reich unter einer einzigen Kultur."
+ pcm_subrealm_to_culture_decision_ct:0 "Von nun an spricht das Reich mit einer Stimme und lebt nach denselben Sitten."
+
+ pcm_convert_subrealm_to_religion_decision_title:0 "#Skonester:#! Glaubenserlass"
+ pcm_convert_subrealm_to_religion_decision_desc:0 "Verkündet einen Erlass, der Eure Vasallen und Unterreiche zu Eurem Glauben bekehrt."
+ pcm_convert_subrealm_to_religion_decision_tooltip:0 "Vereint Euer Reich unter einem einzigen heiligen Banner."
+ pcm_convert_subrealm_to_religion_decision_ct:0 "Möge das Licht der Wahrheit die Irrenden erleuchten!"
+
+ pcm_show_decision_title:0 "--= #Skonester:#! Verborgene Erlasse offenbaren =--"
+ pcm_show_decision_desc:0 "Offenbart sämtliche Skonester-Erlasse."
+ pcm_show_decision_tooltip:0 ""
+ pcm_show_decision_ct:0 "So sei es niedergeschrieben, so soll es bekannt werden."
+
+ pcm_hide_decision_title:0 "--= #Skonester:#! Erlasse verbergen =--"
+ pcm_hide_decision_desc:0 "Verbergt die Skonester-Erlasse vor neugierigen Blicken."
+ pcm_hide_decision_tooltip:0 ""
+ pcm_hide_decision_ct:0 "Versiegelt die Pergamente und bringt die Zungen zum Schweigen."
+
+ pcm_cure_pox_decision_title:0 "#Skonester:#! Reinigung von Gebrechen"
+ pcm_cure_pox_decision_desc:0 "Per Erlass werden alle fleischlichen Leiden und gewöhnlichen Krankheiten aus dem Reich verbannt."
+ pcm_cure_pox_decision_tooltip:0 "Befreit das Reich von Krankheiten des Fleisches."
+ pcm_cure_pox_decision_ct:0 "Die Kräuter des Heilers und heilige Salben stellen meine Reinheit wieder her!"
+
+ pcm_cure_all_decision_title:0 "#Skonester:#! Allheilmittel des Reiches"
+ pcm_cure_all_decision_desc:0 "Ein wundersames Elixier wird verkündet und heilt sämtliche Krankheiten im ganzen Reich."
+ pcm_cure_all_decision_tooltip:0 "Heilt alle Krankheiten und Seuchen im gesamten Reich."
+ pcm_cure_all_decision_ct:0 "Frohlocket! Der Schatten der Krankheit weicht von unserem Volk."
+
+ pcm_cure_inbred_decision_title:0 "#Skonester:#! Reinigung der Blutlinien"
+ pcm_cure_inbred_decision_desc:0 "Durch mystische Rituale und göttlichen Beistand werden die Makel Eures Reiches getilgt."
+ pcm_cure_inbred_decision_tooltip:0 "Entfernt alle Gebrechen und Erbfehler aus dem Reich."
+ pcm_cure_inbred_decision_ct:0 "Das Blut meines Reiches fließt wieder rein und stark!"

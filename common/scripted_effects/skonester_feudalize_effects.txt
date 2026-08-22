@@ -1,0 +1,21 @@
+﻿# 全国疆域（every_sub_realm_county）：直属与封臣伯爵领内，部落 / 游牧 / 牧民男爵领 → 城堡（封建）；不强行改政府类型。
+
+skonester_one_click_feudalize_tribal_holdings_effect = {
+  root = {
+    every_sub_realm_county = {
+      every_county_province = {
+        limit = {
+          OR = {
+            has_holding_type = tribal_holding
+            has_holding_type = nomad_holding
+            has_holding_type = herder_holding
+          }
+        }
+        set_holding_type = castle_holding
+        skonester_ensure_castle_holding_base_castle_building = yes
+      }
+    }
+    # 子封臣格子上省域补建可能无效，再按人扫一遍直属男爵
+    skonester_realm_repair_broken_holding_bases_effect = yes
+  }
+}

@@ -1,0 +1,14 @@
+﻿# 禁婚：解除一切主婚姻与婚约（供授予特质时与 on_marriage 等调用；作用域须为角色本人）
+
+skonester_cheat_menu_marriage_ban_strip_wedlocks_effect = {
+  # 首先检查自己是否有配偶
+  while = {
+    limit = { exists = primary_spouse }
+    divorce = primary_spouse
+  }
+  # 与 vanilla marriage_interaction 一致：exists = betrothed，避免 is_betrothed 与链接不同步时漏拆
+  if = {
+    limit = { exists = betrothed }
+    break_betrothal = betrothed
+  }
+}

@@ -1,0 +1,17 @@
+﻿l_german:
+  daddy_pika_information:0 "Skonester Cheat Menu Gold - Pre Chapter V"
+  information_desc:0 "Dies ist der GitHub-Testbuild von Skonester Cheat Menu Gold - Pre Chapter V. Funktionen können unfertig oder instabil sein. Bitte melde alle Fehler und Skriptfehler auf GitHub und füge deine CK3-Datei error.log, die Mod-Ladereihenfolge und Schritte zum Reproduzieren hinzu."
+  information_TT:0 "Klicken, um Informationen zum Pre-Chapter-V-GitHub-Testbuild anzuzeigen."
+
+  dp_information.changelog.t:0 "Skonester Cheat Menu Gold - Pre Chapter V"
+  dp_information.changelog.d:0 "GitHub-Testbuild vor Chapter V. Diese Version ist für öffentliche Tests vor Chapter V bestimmt. Bitte melde fehlerhafte Menüs, fehlende Lokalisierungen, Ereignisfehler, Abstürze und unerwartetes Verhalten auf GitHub."
+
+  dp_information.useful_tips.t:0 "Nützliche Hinweise"
+  dp_information.useful_tips.d:0 "Funktionsmenü\n- Einmal klicken zum Aktivieren, erneut klicken zum Deaktivieren.\n- Wenn eine Funktion nicht erscheint, bedeutet das nicht, dass der Mod fehlerhaft ist. Möglicherweise wird sie durch eine fest integrierte Paradox-Funktion überschrieben.\n- Aufgrund von DLC-Inhalten können einige Interaktionen bei bestimmten Charakteren nicht verfügbar sein.\n- Knightblood-Eigenschaften werden zu Beginn eines neuen Spiels in geringer Anzahl zufällig an NSCs vergeben, um interessante Werte zu erzeugen. Falls die Spieler damit nicht zufrieden sind, werde ich diese Funktion wieder entfernen.\n- Dieser Mod unterstützt auch ältere Spielversionen, falls du auf eine frühere Version zurückwechseln möchtest."
+
+  dp_information.locations.t:0 "GitHub-Testbuild — Fehlerberichte"
+  dp_information.locations.d:0 "Melde Fehler auf GitHub. Gib an, worauf du geklickt hast, was passiert ist, was du erwartet hast, deine Mod-Ladereihenfolge und die relevanten Zeilen aus Documents/Paradox Interactive/Crusader Kings III/logs/error.log."
+
+  use_new_system:0 "Neues System"
+  use_new_system_desc:0 "Das alte System wurde durch das neue ersetzt. Möchtest du es ausprobieren?"
+  use_new_system_tooltip:0 "Ein Klick löst ein Ereignis aus."

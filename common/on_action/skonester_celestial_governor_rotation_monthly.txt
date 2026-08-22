@@ -1,0 +1,28 @@
+﻿# 一月双保险：若 yearly_global_pulse 被其他 mod 覆盖或乱序，每月仍会在 current_month=1 再扫一次总督，避免三整年强休漏人。
+# 不覆盖 monthly_playable_pulse，仅 append monthly_global_pulse。
+
+monthly_global_pulse = {
+  on_actions = {
+    skonester_celestial_governor_rotation_january_backup_pulse
+  }
+}
+
+skonester_celestial_governor_rotation_january_backup_pulse = {
+  effect = {
+    if = {
+      limit = {
+        current_month = 1
+        NOT = { has_global_variable = skonester_celestial_governor_rotation_grace_skip }
+      }
+      every_ruler = {
+        limit = {
+          skonester_celestial_governor_rotation_eligible_trigger = yes
+        }
+        trigger_event = {
+          id = skonester_officials.0003
+          days = 1
+        }
+      }
+    }
+  }
+}

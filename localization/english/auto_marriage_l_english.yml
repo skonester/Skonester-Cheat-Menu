@@ -1,0 +1,73 @@
+﻿l_english:
+ males_marry:0 "Mark Dynasty/House for Male Marriages"
+ males_marry_desc:0 "Eligible men will be wed once per year until they reach the maximum number of spouses. Arranged as standard (patrilineal) marriages."
+
+ females_marry:0 "Mark Dynasty/House for Female Marriages"
+ females_marry_desc:0 "Eligible women will be wed once per year until they reach the maximum number of spouses. Arranged as matrilineal marriages to preserve their bloodline."
+
+ inbreed_marry:0 "Enable Close-Kin Marriages"
+ inbreed_marry_desc:0 "Relatives of marked dynasties or houses will be married to one another when possible. The system prefers half-siblings, cousins, or avunculate matches, while following religious rules, and aims for pure-blooded offspring."
+
+ males_concubine:0 "Assign Concubines to Men"
+ males_concubine_desc:0 "Eligible men from marked dynasties or houses will be assigned concubines until they reach the limit allowed by faith and laws."
+
+ females_concubine:0 "Assign Concubines to Women"
+ females_concubine_desc:0 "Eligible women from marked dynasties or houses will be assigned concubines until they reach the allowed maximum, respecting religious and cultural limits."
+
+ dynasty_marry:0 "Mark Entire Dynasty"
+ dynasty_marry_desc:0 "Marks an entire dynasty so that its members are automatically married, concubined, or subject to eugenics rules, depending on what is set. A visible dynasty modifier tracks this status."
+
+ house_marry:0 "Mark Entire House"
+ house_marry_desc:0 "Marks a single house within a dynasty for automatic marriage and concubinage rules. A house modifier will identify the house as marked."
+
+ individual_marry_exempt:0 "Exempt an Individual"
+ individual_marry_exempt_desc:0 "Marks an individual character to be skipped by automatic marriage or concubinage arrangements. A modifier identifies them as exempt."
+
+ males_marry_dynasty:0 "Dynasty Men to be Married"
+ males_marry_dynasty_desc:0 "This dynasty’s men are automatically arranged into marriages by the system once per year."
+
+ females_marry_dynasty:0 "Dynasty Women to be Married"
+ females_marry_dynasty_desc:0 "This dynasty’s women are automatically arranged into matrilineal marriages once per year."
+
+ inbreed_marry_dynasty:0 "Dynasty Bound by Kinship"
+ inbreed_marry_dynasty_desc:0 "This dynasty encourages close-kin marriages among its members, preferring unions between siblings, cousins, or uncles/aunts with nieces/nephews."
+
+ males_concubine_dynasty:0 "Dynasty Men with Concubines"
+ males_concubine_dynasty_desc:0 "Men of this dynasty will automatically be given concubines in accordance with faith and laws."
+
+ females_concubine_dynasty:0 "Dynasty Women with Concubines"
+ females_concubine_dynasty_desc:0 "Women of this dynasty will automatically be given concubines, as faith and custom allow."
+
+ males_marry_house:0 "House Men to be Married"
+ males_marry_house_desc:0 "The men of this house are automatically arranged into marriages once per year."
+
+ females_marry_house:0 "House Women to be Married"
+ females_marry_house_desc:0 "The women of this house are automatically arranged into matrilineal marriages once per year."
+
+ inbreed_marry_house:0 "House Practices Kin Marriages"
+ inbreed_marry_house_desc:0 "This house arranges close-relative marriages among its members, biasing toward unions that reinforce bloodlines."
+
+ males_concubine_house:0 "House Men with Concubines"
+ males_concubine_house_desc:0 "The men of this house will automatically be assigned concubines."
+
+ females_concubine_house:0 "House Women with Concubines"
+ females_concubine_house_desc:0 "The women of this house will automatically be assigned concubines, as permitted by custom."
+
+ males_eugenic:0 "Male Eugenic Marriages"
+ males_eugenic_desc:0 "Eligible men of marked dynasties or houses will be wed in marriages biased toward pure and strong bloodlines, with preference for genetically desirable unions."
+
+ females_eugenic:0 "Female Eugenic Marriages"
+ females_eugenic_desc:0 "Eligible women of marked dynasties or houses will be wed (matrilineally if possible) to preserve or strengthen bloodlines."
+
+ males_eugenic_dynasty:0 "Dynasty Pursues Male Eugenics"
+ males_eugenic_dynasty_desc:0 "This dynasty arranges marriages for its men with the intent of producing strong, pure-blooded descendants."
+
+ females_eugenic_dynasty:0 "Dynasty Pursues Female Eugenics"
+ females_eugenic_dynasty_desc:0 "This dynasty arranges marriages for its women with the intent of producing strong, pure-blooded descendants."
+
+ males_eugenic_house:0 "House Pursues Male Eugenics"
+ males_eugenic_house_desc:0 "This house arranges marriages for its men in pursuit of bloodline purity and strength."
+
+ females_eugenic_house:0 "House Pursues Female Eugenics"
+ females_eugenic_house_desc:0 "This house arranges marriages for its women in pursuit of bloodline purity and strength."
+

@@ -1,0 +1,83 @@
+﻿# AUTO-GENERATED — tools/gen_cheat_trait_gui.py
+
+skonester_cheat_trait_gui_visible = {
+  scope = character
+  is_shown = { has_character_flag = skonester_cheat_trait_gui_open }
+  is_valid = { always = yes }
+}
+
+skonester_cheat_trait_gui_close = {
+  scope = character
+  is_valid = { always = yes }
+  effect = { skonester_close_cheat_trait_editor_gui_effect = yes }
+}
+
+skonester_cheat_trait_gui_has = {
+  scope = character
+  saved_scopes = { trait_flag }
+  is_valid = {
+    trigger_if = {
+      limit = { scope:trait_flag = flag:skonester_trait_immortal_ageless }
+      has_trait = skonester_trait_immortal_ageless
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:trait_warlord_eternal }
+      has_trait = trait_warlord_eternal
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:trait_wealth_sovereign_max }
+      has_trait = trait_wealth_sovereign_max
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:trait_ultimate_intrigue_master }
+      has_trait = trait_ultimate_intrigue_master
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:trait_great_builder_god }
+      has_trait = trait_great_builder_god
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:trait_nether_conspiracy_lord }
+      has_trait = trait_nether_conspiracy_lord
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:trait_eternal_nether_lord }
+      has_trait = trait_eternal_nether_lord
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:skonester_trait_yannian_dan }
+      has_trait = skonester_trait_yannian_dan
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:skonester_trait_yannian_dan_mid }
+      has_trait = skonester_trait_yannian_dan_mid
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:skonester_trait_yannian_dan_best }
+      has_trait = skonester_trait_yannian_dan_best
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:skonester_trait_baidubuqin }
+      has_trait = skonester_trait_baidubuqin
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:skonester_trait_xinwuguai }
+      has_trait = skonester_trait_xinwuguai
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:skonester_trait_stats_100_locked }
+      has_trait = skonester_trait_stats_100_locked
+    }
+    trigger_if = {
+      limit = { scope:trait_flag = flag:skonester_trait_marriage_ban }
+      has_trait = skonester_trait_marriage_ban
+    }
+  }
+}
+
+skonester_cheat_trait_gui_toggle = {
+  scope = character
+  saved_scopes = { trait_flag }
+  is_valid = { always = yes }
+  effect = { skonester_cheat_trait_gui_toggle_from_flag_effect = yes }
+}

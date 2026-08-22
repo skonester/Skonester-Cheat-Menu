@@ -1,0 +1,44 @@
+﻿# 人类版图威胁时：为全体独立有地 AI 叠加反玩家外交/开战权重修正（可与年脉冲共用）
+
+skonester_ai_apply_counter_player_pressure_to_character_effect = {
+  if = {
+    limit = {
+      skonester_ai_player_realm_critical_trigger = yes
+    }
+    add_character_modifier = {
+      modifier = skonester_ai_counter_player_pressure_heavy
+      months = 12
+    }
+  }
+  else = {
+    add_character_modifier = {
+      modifier = skonester_ai_counter_player_pressure
+      months = 12
+    }
+  }
+}
+
+skonester_ai_apply_counter_player_pressure_global_effect = {
+  if = {
+    limit = {
+      skonester_ai_player_realm_overwhelming_trigger = yes
+    }
+    every_independent_ruler = {
+      limit = {
+        is_ai = yes
+        is_landed = yes
+      }
+      skonester_ai_apply_counter_player_pressure_to_character_effect = yes
+      # 反玩家“围堵圈”不仅看顶层：强力封臣往往直接顶在前线、也最适合联姻/结盟与搞破坏。
+      # 仅点名强力封臣以控制遍历规模。
+      every_vassal = {
+        limit = {
+          is_ai = yes
+          is_landed = yes
+          is_powerful_vassal_of = root
+        }
+        skonester_ai_apply_counter_player_pressure_to_character_effect = yes
+      }
+    }
+  }
+}

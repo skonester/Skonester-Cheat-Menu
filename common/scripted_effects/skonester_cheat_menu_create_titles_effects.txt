@@ -1,0 +1,74 @@
+﻿# Skonester「创建头衔」：须由角色互动传入 scope:actor 与 scope:recipient；在 on_accept 根语境调用本效果（内部用 recipient）。
+# every_alert_creatable_title 仅在 alerts 语境有效，在互动/事件中常为空；故改用 character 语境的
+# every_realm_de_jure_duchy / kingdom / empire（目标领内至少一块法理郡即纳入），筛「尚无持有者 + 目标完全控制
+# 其法理郡县」的公/王/帝，再以 create_title_and_vassal_change → change_title_holder → resolve 链授予右击对象。
+# 未创建的静态法理头衔不会出现在 every_sub_realm_title 中，realm de jure 迭代才能覆盖。
+# type = conquest 与常见「自建头衔」脚本一致。
+
+skonester_cheat_menu_recipient_create_all_creatable_titles_effect = {
+  scope:recipient = {
+    every_realm_de_jure_duchy = {
+      limit = {
+        NOT = { exists = holder }
+        is_nomad_title = no
+        is_landless_type_title = no
+        prev = { completely_controls = this }
+      }
+      prev = {
+        create_title_and_vassal_change = {
+          type = conquest
+          save_scope_as = skonester_ct_create_change
+        }
+      }
+      change_title_holder = {
+        holder = prev
+        change = scope:skonester_ct_create_change
+      }
+      prev = {
+        resolve_title_and_vassal_change = scope:skonester_ct_create_change
+      }
+    }
+    every_realm_de_jure_kingdom = {
+      limit = {
+        NOT = { exists = holder }
+        is_nomad_title = no
+        is_landless_type_title = no
+        prev = { completely_controls = this }
+      }
+      prev = {
+        create_title_and_vassal_change = {
+          type = conquest
+          save_scope_as = skonester_ct_create_change
+        }
+      }
+      change_title_holder = {
+        holder = prev
+        change = scope:skonester_ct_create_change
+      }
+      prev = {
+        resolve_title_and_vassal_change = scope:skonester_ct_create_change
+      }
+    }
+    every_realm_de_jure_empire = {
+      limit = {
+        NOT = { exists = holder }
+        is_nomad_title = no
+        is_landless_type_title = no
+        prev = { completely_controls = this }
+      }
+      prev = {
+        create_title_and_vassal_change = {
+          type = conquest
+          save_scope_as = skonester_ct_create_change
+        }
+      }
+      change_title_holder = {
+        holder = prev
+        change = scope:skonester_ct_create_change
+      }
+      prev = {
+        resolve_title_and_vassal_change = scope:skonester_ct_create_change
+      }
+    }
+  }
+}

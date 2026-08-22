@@ -1,0 +1,446 @@
+﻿# 切换玩家：在 actor 上弹出确认事件；目标以互动 recipient 为准（见 skonester_cheat_menu.0099）。
+# 选项须带 add_internal_flag = special（同 EP3 冒险者/迁徙等原版合法换角），避免引擎按「ESC 换角/控制台 play」处理而永久关闭成就。
+skonester_cheat_menu_switch_player_effect = {
+  scope:actor = {
+    trigger_event = {
+      id = skonester_cheat_menu.0099
+      days = 0
+    }
+  }
+}
+
+skonester_switch_playable_character_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_switch_target
+      scope:skonester_switch_target = {
+        is_alive = yes
+        is_playable_character = yes
+        is_ai = yes
+        NOT = { this = root }
+      }
+    }
+    set_player_character = scope:skonester_switch_target
+  }
+}
+
+skonester_cheat_menu_add_concubine_effect = {
+  scope:recipient = {
+    if = {
+      limit = { is_imprisoned = yes }
+      release_from_prison = yes
+    }
+    if = {
+      limit = {
+        is_concubine = yes
+        exists = concubinist
+        NOT = { is_concubine_of = scope:actor }
+      }
+      concubinist = {
+        remove_concubine = scope:recipient
+      }
+    }
+    else_if = {
+      limit = { is_concubine = yes }
+      remove_concubine = yes
+    }
+    while = {
+      limit = { exists = primary_spouse }
+      divorce = primary_spouse
+    }
+    if = {
+      limit = { exists = betrothed }
+      break_betrothal = betrothed
+    }
+    if = {
+      limit = { exists = faith }
+      set_variable = { name = skonester_concub_rec_saved_faith value = faith }
+    }
+    set_character_faith = faith:skonester_force_marry_faith
+    if = {
+      limit = { is_courtier = yes }
+      set_employer = scope:actor
+    }
+    else_if = {
+      limit = { NOT = { is_landed = yes } }
+      set_employer = scope:actor
+    }
+    else = {
+      set_employer = scope:actor
+    }
+  }
+  scope:actor = {
+    if = {
+      limit = { exists = faith }
+      set_variable = { name = skonester_concubine_original_faith value = faith }
+    }
+    set_character_faith = faith:skonester_force_marry_faith
+    make_concubine = scope:recipient
+  }
+  scope:recipient = {
+    if = {
+      limit = { has_variable = skonester_concub_rec_saved_faith }
+      set_character_faith = var:skonester_concub_rec_saved_faith
+      remove_variable = skonester_concub_rec_saved_faith
+    }
+  }
+  scope:actor = {
+    if = {
+      limit = { has_variable = skonester_concubine_original_faith }
+      set_character_faith = var:skonester_concubine_original_faith
+      remove_variable = skonester_concubine_original_faith
+    }
+  }
+}
+
+skonester_cheat_menu_match_actor_faith_effect = {
+  scope:recipient = {
+    set_character_faith = scope:actor.faith
+  }
+}
+
+skonester_cheat_menu_match_actor_culture_effect = {
+  scope:recipient = {
+    set_culture = scope:actor.culture
+  }
+}
+
+# 兼容旧调用
+skonester_cheat_menu_match_actor_faith_culture_effect = {
+  skonester_cheat_menu_match_actor_faith_effect = yes
+  skonester_cheat_menu_match_actor_culture_effect = yes
+}
+
+# 指定继承人前：仅清除引擎拒收特质（不改宗族/家族/父母关系）
+skonester_cheat_menu_prepare_designated_heir_target_effect = {
+  $TARGET$ = {
+    if = {
+      limit = { has_trait = bastard }
+      remove_trait = bastard
+    }
+    if = {
+      limit = { has_trait = bastard_founder }
+      remove_trait = bastard_founder
+    }
+    if = {
+      limit = { has_trait = legitimized_bastard }
+      remove_trait = legitimized_bastard
+    }
+    if = {
+      limit = { has_trait = disinherited }
+      remove_trait = disinherited
+    }
+    if = {
+      limit = { has_trait = devoted }
+      remove_trait = devoted
+    }
+    if = {
+      limit = { has_trait = order_member }
+      remove_trait = order_member
+    }
+  }
+}
+
+# 指定继承人后刷新玩家界面（角色窗继承人头像、继承顺位等）
+skonester_cheat_menu_heir_ui_refresh_effect = {
+  if = {
+    limit = { exists = scope:actor }
+    scope:actor = {
+      if = {
+        limit = { NOT = { has_variable = skonester_heir_ui_refresh_counter } }
+        set_variable = {
+          name = skonester_heir_ui_refresh_counter
+          value = 1
+        }
+      }
+      else = {
+        change_variable = {
+          name = skonester_heir_ui_refresh_counter
+          add = 1
+        }
+      }
+    }
+  }
+  if = {
+    limit = { exists = $TARGET$ }
+    $TARGET$ = {
+    }
+  }
+}
+
+# 指定继承人（事件/脚本调用）：优先 recipient，再 global 锁定目标
+skonester_cheat_menu_set_designated_heir_effect = {
+  if = {
+    limit = { exists = scope:recipient }
+    scope:recipient = {
+      set_global_variable = {
+        name = skonester_cheat_menu_recipient
+        value = this
+      }
+      save_scope_as = skonester_heir_pick
+    }
+  }
+  else = {
+    skonester_cheat_menu_lock_recipient_effect = yes
+    skonester_cheat_menu_sync_target_effect = yes
+    if = {
+      limit = { exists = scope:skonester_cheat_menu_target }
+      scope:skonester_cheat_menu_target = {
+        save_scope_as = skonester_heir_pick
+      }
+    }
+  }
+  if = {
+    limit = {
+      exists = scope:actor
+      exists = scope:skonester_heir_pick
+      scope:actor = {
+        is_alive = yes
+        is_playable_character = yes
+      }
+      NOT = { scope:skonester_heir_pick = scope:actor }
+    }
+    scope:actor = {
+      skonester_cheat_menu_prepare_designated_heir_target_effect = {
+        TARGET = scope:skonester_heir_pick
+      }
+      skonester_cheat_menu_apply_designated_heir_to_character_effect = {
+        TARGET = scope:skonester_heir_pick
+      }
+      trigger_event = {
+        id = skonester_cheat_menu.0098
+        days = 0
+      }
+    }
+    clear_saved_scope = skonester_heir_pick
+  }
+}
+
+# 写入指定继承人：仅 unsafe（无子女/性别/威望限制）；须在 scope:actor 内执行
+skonester_cheat_menu_apply_designated_heir_to_character_effect = {
+  scope:actor = {
+    $TARGET$ = {
+      save_scope_as = skonester_designated_heir_pick
+    }
+    if = {
+      limit = { exists = designated_heir }
+      clear_designated_heir = yes
+    }
+    set_designated_heir_unsafe = scope:skonester_designated_heir_pick
+    scriptedtests_recalculate_succession = yes
+    skonester_cheat_menu_heir_ui_refresh_effect = {
+      TARGET = scope:skonester_designated_heir_pick
+    }
+    clear_saved_scope = skonester_designated_heir_pick
+  }
+}
+
+# 整理法理：源自 workshop 2939268227 zhuge_organize_titles。将被右击者及其封臣所持各头衔之法理上级设为其主头衔。
+skonester_cheat_menu_organize_de_jure_titles_effect = {
+  scope:recipient = {
+    every_held_title = {
+      set_de_jure_liege_title = scope:recipient.primary_title
+    }
+    every_vassal = {
+      every_held_title = {
+        set_de_jure_liege_title = scope:recipient.primary_title
+      }
+    }
+  }
+}
+
+# 朝贡：宗主 actor 对 recipient 使用 start_tributary_interaction_effect（1.19+ 新朝贡系统）。
+# 若目标原为他人贡国，先 end_tributary。自动选择合适的 contract_group。
+skonester_cheat_menu_force_tributary_effect = {
+  scope:recipient = {
+    if = {
+      limit = { is_imprisoned = yes }
+      release_from_prison = yes
+    }
+    if = {
+      limit = {
+        exists = suzerain
+        NOT = { suzerain = { this = scope:actor } }
+      }
+      hidden_effect = {
+        end_tributary = yes
+      }
+    }
+  }
+  if = {
+    limit = {
+      scope:recipient = {
+        NOT = { is_tributary_of = scope:actor }
+      }
+    }
+    start_tributary_interaction_effect = {
+      TRIBUTARY = scope:recipient
+      SUZERAIN = scope:actor
+    }
+  }
+}
+
+# 须走 create_title_and_vassal_change → change_title_holder → resolve（简写 change_title_holder = 角色 已无效）
+skonester_cheat_menu_get_primary_title_effect = {
+  scope:recipient = {
+    if = {
+      limit = { exists = primary_title }
+      create_title_and_vassal_change = {
+        type = granted
+        save_scope_as = skonester_title_xfer_change
+      }
+      primary_title = {
+        change_title_holder = {
+          holder = scope:actor
+          change = scope:skonester_title_xfer_change
+        }
+      }
+      resolve_title_and_vassal_change = scope:skonester_title_xfer_change
+    }
+  }
+}
+
+skonester_cheat_menu_get_all_titles_effect = {
+  scope:actor = {
+    skonester_get_title_apply_domain_cap_bypass_effect = yes
+  }
+  scope:recipient = {
+    every_held_title = {
+      limit = {
+        is_landless_type_title = no
+        is_noble_family_title = no
+      }
+      prev = {
+        create_title_and_vassal_change = {
+          type = granted
+          save_scope_as = skonester_title_xfer_change
+        }
+      }
+      change_title_holder = {
+        holder = scope:actor
+        change = scope:skonester_title_xfer_change
+      }
+      prev = {
+        resolve_title_and_vassal_change = scope:skonester_title_xfer_change
+      }
+    }
+  }
+}
+
+# 废除头衔：确认窗 target_titles。须在引擎 hardcoded revoke 剥夺之前销毁（见 pre_auto_accept）
+skonester_cheat_menu_destroy_title_from_target_titles_effect = {
+  every_in_list = {
+    list = target_titles
+    save_scope_as = skonester_destroy_title_pick
+    if = {
+      limit = { exists = holder }
+      holder = {
+        destroy_title = scope:skonester_destroy_title_pick
+      }
+    }
+    else = {
+      root = {
+        destroy_title = scope:skonester_destroy_title_pick
+      }
+    }
+  }
+  # 兜底：若剥夺已发生，从 actor 再销毁一次
+  scope:actor = {
+    every_in_list = {
+      list = target_titles
+      limit = {
+        exists = holder
+        holder = scope:actor
+      }
+      save_scope_as = skonester_destroy_title_pick
+      scope:actor = {
+        destroy_title = scope:skonester_destroy_title_pick
+      }
+    }
+  }
+}
+
+# 旧：直接废除主头衔（保留供脚本引用）
+skonester_cheat_menu_destroy_primary_title_effect = {
+  scope:recipient = {
+    if = {
+      limit = { exists = primary_title }
+      destroy_title = primary_title
+    }
+  }
+}
+
+# 变忠臣：对宗主 +999 好感、忠臣特质；游牧/行政封臣另清不顺从并加顺从好感。
+skonester_cheat_menu_loyalize_vassal_toward_liege_effect = {
+  if = {
+    limit = {
+      is_alive = yes
+      exists = $LIEGE$
+      NOT = { this = $LIEGE$ }
+    }
+    if = {
+      limit = { has_trait = disloyal }
+      remove_trait = disloyal
+    }
+    if = {
+      limit = { NOT = { has_trait = loyal } }
+      add_trait = loyal
+    }
+    remove_opinion = {
+      target = $LIEGE$
+      modifier = skonester_loyal_vassal_opinion
+    }
+    add_opinion = {
+      target = $LIEGE$
+      modifier = skonester_loyal_vassal_opinion
+      opinion = 999
+    }
+    if = {
+      limit = {
+        exists = obedience_target
+        obedience_target = $LIEGE$
+        NOT = { is_obedient_to = $LIEGE$ }
+      }
+      if = {
+        limit = {
+          has_variable = not_obedient_humiliation_var
+          var:not_obedient_humiliation_var = $LIEGE$
+        }
+        remove_variable = not_obedient_humiliation_var
+      }
+      if = {
+        limit = {
+          has_variable = not_obedient_declined_call
+          var:not_obedient_declined_call = $LIEGE$
+        }
+        remove_variable = not_obedient_declined_call
+      }
+      add_opinion = {
+        target = $LIEGE$
+        modifier = obedience_opinion
+      }
+    }
+  }
+}
+
+# 一律对玩家（actor）的全部直属封臣：+999 好感、忠臣特质（与右击目标无关）。
+skonester_cheat_menu_make_all_vassals_loyal_effect = {
+  if = {
+    limit = { exists = scope:actor }
+    scope:actor = {
+      every_vassal = {
+        limit = {
+          is_alive = yes
+          NOT = { this = scope:actor }
+        }
+        skonester_cheat_menu_loyalize_vassal_toward_liege_effect = { LIEGE = scope:actor }
+      }
+      send_interface_toast = {
+        type = event_toast_effect_good
+        title = skonester_loyal_vassals_toast_title
+        desc = skonester_loyal_vassals_toast_desc
+        left_icon = scope:actor
+      }
+    }
+  }
+}

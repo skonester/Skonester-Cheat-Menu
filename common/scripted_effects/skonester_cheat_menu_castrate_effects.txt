@@ -1,0 +1,8 @@
+﻿# Skonester菜单：阉割目标（仅男性；任意年龄均施加 eunuch_1；与 vanilla 宦官判定一致；不释放监狱）
+# 需在角色互动中调用，且存在 scope:actor、scope:recipient
+
+skonester_cheat_menu_castrate_recipient_effect = {
+  scope:recipient = {
+    add_trait = eunuch_1
+  }
+}

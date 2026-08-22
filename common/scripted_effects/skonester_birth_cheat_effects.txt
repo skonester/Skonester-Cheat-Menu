@@ -1,0 +1,548 @@
+﻿skonester_birth_cheat_add_male_1 = {
+  # 检查是否有事件目标（指定人物生成）
+  if = {
+    limit = { exists = scope:birth_target }
+    create_character = {
+      location = scope:birth_target.location
+      age = 18
+      gender = male
+      culture = scope:birth_target.culture
+      faith = scope:birth_target.faith
+      dynasty = scope:birth_target.dynasty
+      save_scope_as = skonester_new_child
+    }
+    scope:skonester_new_child = {
+      # 确保子女继承父母的姓氏
+      if = {
+        limit = { scope:birth_target = { is_male = yes } }
+        set_house = scope:birth_target.house
+      }
+      if = {
+        limit = { scope:birth_target = { is_female = yes } }
+        set_house = scope:birth_target.house
+      }
+      # 强制特质：倾国倾城和强壮
+      add_trait = beauty_good_3
+      add_trait = strong
+
+      # 随机分配2个正面性格特质
+      random_list = { 25 = { add_trait = generous } 75 = { } }
+      random_list = { 25 = { add_trait = brave } 75 = { } }
+      random_list = { 25 = { add_trait = honest } 75 = { } }
+      random_list = { 25 = { add_trait = patient } 75 = { } }
+      random_list = { 25 = { add_trait = humble } 75 = { } }
+      random_list = { 25 = { add_trait = compassionate } 75 = { } }
+      random_list = { 25 = { add_trait = forgiving } 75 = { } }
+      random_list = { 25 = { add_trait = trusting } 75 = { } }
+
+      # 随机分配2个指挥官特质（游戏本体16个指挥官特质）
+      random_list = { 16 = { add_trait = strategist } 84 = { } }
+      random_list = { 16 = { add_trait = logistician } 84 = { } }
+      random_list = { 16 = { add_trait = organizer } 84 = { } }
+      random_list = { 16 = { add_trait = forder } 84 = { } }
+      random_list = { 16 = { add_trait = military_engineer } 84 = { } }
+      random_list = { 16 = { add_trait = winter_soldier } 84 = { } }
+      random_list = { 16 = { add_trait = desert_warrior } 84 = { } }
+      random_list = { 16 = { add_trait = holy_warrior } 84 = { } }
+      random_list = { 16 = { add_trait = cautious_leader } 84 = { } }
+      random_list = { 16 = { add_trait = flexible_leader } 84 = { } }
+
+      # 随机分配1个四星教育特质
+      random_list = { 25 = { add_trait = education_martial_4 } 75 = { } }
+      random_list = { 25 = { add_trait = education_diplomacy_4 } 75 = { } }
+      random_list = { 25 = { add_trait = education_stewardship_4 } 75 = { } }
+      random_list = { 25 = { add_trait = education_intrigue_4 } 75 = { } }
+      random_list = { 25 = { add_trait = education_learning_4 } 75 = { } }
+
+      # 随机分配1个生活特质（游戏本体30个生活特质）
+      random_list = { 10 = { add_trait = lifestyle_hunter } 90 = { } }
+      random_list = { 10 = { add_trait = lifestyle_poet } 90 = { } }
+      random_list = { 10 = { add_trait = lifestyle_gardener } 90 = { } }
+      random_list = { 10 = { add_trait = architect } 90 = { } }
+      random_list = { 10 = { add_trait = lifestyle_herbalist } 90 = { } }
+      random_list = { 10 = { add_trait = lifestyle_mystic } 90 = { } }
+      random_list = { 10 = { add_trait = scholar } 90 = { } }
+
+      # 强制添加聪慧特质
+      add_trait = intellect_good_3
+      # 设置合理属性加成
+      add_martial_skill = 8
+      change_diplomacy = 8
+      change_stewardship = 8
+      change_intrigue = 8
+      change_learning = 8
+      change_prowess = 8
+
+      # 建立与父母的关系
+      if = {
+        limit = { scope:birth_target = { is_male = yes } }
+        set_father = scope:birth_target
+      }
+      if = {
+        limit = { scope:birth_target = { is_female = yes } }
+        set_mother = scope:birth_target
+      }
+      # 如果有配偶，也建立关系
+      if = {
+        limit = { scope:birth_target = { is_married = yes } }
+        if = {
+          limit = { scope:birth_target = { is_male = yes } }
+          set_mother = scope:birth_target.primary_spouse
+        }
+        if = {
+          limit = { scope:birth_target = { is_female = yes } }
+          set_father = scope:birth_target.primary_spouse
+        }
+      }
+    }
+  }
+  else = {
+    # 为自己生成
+    create_character = {
+      location = root.location
+      age = 18
+      gender = male
+      culture = root.culture
+      faith = root.faith
+      dynasty = root.dynasty
+      save_scope_as = skonester_new_child
+    }
+    scope:skonester_new_child = {
+      # 确保子女继承父母的姓氏
+      if = {
+        limit = { root = { is_male = yes } }
+        set_house = root.house
+      }
+      if = {
+        limit = { root = { is_female = yes } }
+        set_house = root.house
+      }
+      # 强制特质：倾国倾城和强壮
+      add_trait = beauty_good_3
+      add_trait = strong
+
+      # 随机分配2个正面性格特质
+      random_list = { 25 = { add_trait = generous } 75 = { } }
+      random_list = { 25 = { add_trait = brave } 75 = { } }
+      random_list = { 25 = { add_trait = honest } 75 = { } }
+      random_list = { 25 = { add_trait = patient } 75 = { } }
+      random_list = { 25 = { add_trait = humble } 75 = { } }
+      random_list = { 25 = { add_trait = compassionate } 75 = { } }
+      random_list = { 25 = { add_trait = forgiving } 75 = { } }
+      random_list = { 25 = { add_trait = trusting } 75 = { } }
+
+      # 随机分配2个指挥官特质（游戏本体16个指挥官特质）
+      random_list = { 16 = { add_trait = strategist } 84 = { } }
+      random_list = { 16 = { add_trait = logistician } 84 = { } }
+      random_list = { 16 = { add_trait = organizer } 84 = { } }
+      random_list = { 16 = { add_trait = forder } 84 = { } }
+      random_list = { 16 = { add_trait = military_engineer } 84 = { } }
+      random_list = { 16 = { add_trait = winter_soldier } 84 = { } }
+      random_list = { 16 = { add_trait = desert_warrior } 84 = { } }
+      random_list = { 16 = { add_trait = holy_warrior } 84 = { } }
+      random_list = { 16 = { add_trait = cautious_leader } 84 = { } }
+      random_list = { 16 = { add_trait = flexible_leader } 84 = { } }
+
+      # 随机分配1个四星教育特质
+      random_list = { 25 = { add_trait = education_martial_4 } 75 = { } }
+      random_list = { 25 = { add_trait = education_diplomacy_4 } 75 = { } }
+      random_list = { 25 = { add_trait = education_stewardship_4 } 75 = { } }
+      random_list = { 25 = { add_trait = education_intrigue_4 } 75 = { } }
+      random_list = { 25 = { add_trait = education_learning_4 } 75 = { } }
+
+      # 随机分配1个生活特质（游戏本体30个生活特质）
+      random_list = { 10 = { add_trait = lifestyle_hunter } 90 = { } }
+      random_list = { 10 = { add_trait = lifestyle_poet } 90 = { } }
+      random_list = { 10 = { add_trait = lifestyle_gardener } 90 = { } }
+      random_list = { 10 = { add_trait = architect } 90 = { } }
+      random_list = { 10 = { add_trait = lifestyle_herbalist } 90 = { } }
+      random_list = { 10 = { add_trait = lifestyle_mystic } 90 = { } }
+      random_list = { 10 = { add_trait = scholar } 90 = { } }
+
+      # 强制添加聪慧特质
+      add_trait = intellect_good_3
+      # 设置合理属性加成
+      add_martial_skill = 8
+      change_diplomacy = 8
+      change_stewardship = 8
+      change_intrigue = 8
+      change_learning = 8
+      change_prowess = 8
+
+      # 建立与父母的关系
+      if = {
+        limit = { root = { is_male = yes } }
+        set_father = root
+      }
+      if = {
+        limit = { root = { is_female = yes } }
+        set_mother = root
+      }
+      # 如果有配偶，也建立关系
+      if = {
+        limit = { root = { is_married = yes } }
+        if = {
+          limit = { root = { is_male = yes } }
+          set_mother = root.primary_spouse
+        }
+        if = {
+          limit = { root = { is_female = yes } }
+          set_father = root.primary_spouse
+        }
+      }
+    }
+  }
+}
+
+skonester_birth_cheat_add_female_1 = {
+  # 检查是否有事件目标（指定人物生成）
+  if = {
+    limit = { exists = scope:birth_target }
+    create_character = {
+      location = scope:birth_target.location
+      age = 18
+      gender = female
+      culture = scope:birth_target.culture
+      faith = scope:birth_target.faith
+      dynasty = scope:birth_target.dynasty
+      save_scope_as = skonester_new_child
+    }
+    scope:skonester_new_child = {
+      # 确保子女继承父母的姓氏
+      if = {
+        limit = { scope:birth_target = { is_male = yes } }
+        set_house = scope:birth_target.house
+      }
+      if = {
+        limit = { scope:birth_target = { is_female = yes } }
+        set_house = scope:birth_target.house
+      }
+      # 强制特质：倾国倾城和强壮
+      add_trait = beauty_good_3
+      add_trait = strong
+
+      # 随机分配2个正面性格特质
+      random_list = { 25 = { add_trait = generous } 75 = { } }
+      random_list = { 25 = { add_trait = brave } 75 = { } }
+      random_list = { 25 = { add_trait = honest } 75 = { } }
+      random_list = { 25 = { add_trait = patient } 75 = { } }
+      random_list = { 25 = { add_trait = humble } 75 = { } }
+      random_list = { 25 = { add_trait = compassionate } 75 = { } }
+      random_list = { 25 = { add_trait = forgiving } 75 = { } }
+      random_list = { 25 = { add_trait = trusting } 75 = { } }
+
+      # 随机分配2个指挥官特质（游戏本体16个指挥官特质）
+      random_list = { 16 = { add_trait = strategist } 84 = { } }
+      random_list = { 16 = { add_trait = logistician } 84 = { } }
+      random_list = { 16 = { add_trait = organizer } 84 = { } }
+      random_list = { 16 = { add_trait = forder } 84 = { } }
+      random_list = { 16 = { add_trait = military_engineer } 84 = { } }
+      random_list = { 16 = { add_trait = winter_soldier } 84 = { } }
+      random_list = { 16 = { add_trait = desert_warrior } 84 = { } }
+      random_list = { 16 = { add_trait = holy_warrior } 84 = { } }
+      random_list = { 16 = { add_trait = cautious_leader } 84 = { } }
+      random_list = { 16 = { add_trait = flexible_leader } 84 = { } }
+
+      # 随机分配1个四星教育特质
+      random_list = { 25 = { add_trait = education_martial_4 } 75 = { } }
+      random_list = { 25 = { add_trait = education_diplomacy_4 } 75 = { } }
+      random_list = { 25 = { add_trait = education_stewardship_4 } 75 = { } }
+      random_list = { 25 = { add_trait = education_intrigue_4 } 75 = { } }
+      random_list = { 25 = { add_trait = education_learning_4 } 75 = { } }
+
+      # 随机分配1个生活特质（游戏本体30个生活特质）
+      random_list = { 10 = { add_trait = lifestyle_hunter } 90 = { } }
+      random_list = { 10 = { add_trait = lifestyle_poet } 90 = { } }
+      random_list = { 10 = { add_trait = lifestyle_gardener } 90 = { } }
+      random_list = { 10 = { add_trait = architect } 90 = { } }
+      random_list = { 10 = { add_trait = lifestyle_herbalist } 90 = { } }
+      random_list = { 10 = { add_trait = lifestyle_mystic } 90 = { } }
+      random_list = { 10 = { add_trait = scholar } 90 = { } }
+
+      # 强制添加聪慧特质
+      add_trait = intellect_good_3
+      # 设置合理属性加成
+      add_martial_skill = 8
+      change_diplomacy = 8
+      change_stewardship = 8
+      change_intrigue = 8
+      change_learning = 8
+      change_prowess = 8
+
+      # 建立与父母的关系
+      if = {
+        limit = { scope:birth_target = { is_male = yes } }
+        set_father = scope:birth_target
+      }
+      if = {
+        limit = { scope:birth_target = { is_female = yes } }
+        set_mother = scope:birth_target
+      }
+      # 如果有配偶，也建立关系
+      if = {
+        limit = { scope:birth_target = { is_married = yes } }
+        if = {
+          limit = { scope:birth_target = { is_male = yes } }
+          set_mother = scope:birth_target.primary_spouse
+        }
+        if = {
+          limit = { scope:birth_target = { is_female = yes } }
+          set_father = scope:birth_target.primary_spouse
+        }
+      }
+    }
+  }
+  else = {
+    # 为自己生成
+    create_character = {
+      location = root.location
+      age = 18
+      gender = female
+      culture = root.culture
+      faith = root.faith
+      dynasty = root.dynasty
+      save_scope_as = skonester_new_child
+    }
+    scope:skonester_new_child = {
+      # 确保子女继承父母的姓氏
+      if = {
+        limit = { root = { is_male = yes } }
+        set_house = root.house
+      }
+      if = {
+        limit = { root = { is_female = yes } }
+        set_house = root.house
+      }
+      # 强制特质：倾国倾城和强壮
+      add_trait = beauty_good_3
+      add_trait = strong
+
+      # 随机分配2个正面性格特质
+      random_list = { 25 = { add_trait = generous } 75 = { } }
+      random_list = { 25 = { add_trait = brave } 75 = { } }
+      random_list = { 25 = { add_trait = honest } 75 = { } }
+      random_list = { 25 = { add_trait = patient } 75 = { } }
+      random_list = { 25 = { add_trait = humble } 75 = { } }
+      random_list = { 25 = { add_trait = compassionate } 75 = { } }
+      random_list = { 25 = { add_trait = forgiving } 75 = { } }
+      random_list = { 25 = { add_trait = trusting } 75 = { } }
+
+      # 随机分配2个指挥官特质（游戏本体16个指挥官特质）
+      random_list = { 16 = { add_trait = strategist } 84 = { } }
+      random_list = { 16 = { add_trait = logistician } 84 = { } }
+      random_list = { 16 = { add_trait = organizer } 84 = { } }
+      random_list = { 16 = { add_trait = forder } 84 = { } }
+      random_list = { 16 = { add_trait = military_engineer } 84 = { } }
+      random_list = { 16 = { add_trait = winter_soldier } 84 = { } }
+      random_list = { 16 = { add_trait = desert_warrior } 84 = { } }
+      random_list = { 16 = { add_trait = holy_warrior } 84 = { } }
+      random_list = { 16 = { add_trait = cautious_leader } 84 = { } }
+      random_list = { 16 = { add_trait = flexible_leader } 84 = { } }
+
+      # 随机分配1个四星教育特质
+      random_list = { 25 = { add_trait = education_martial_4 } 75 = { } }
+      random_list = { 25 = { add_trait = education_diplomacy_4 } 75 = { } }
+      random_list = { 25 = { add_trait = education_stewardship_4 } 75 = { } }
+      random_list = { 25 = { add_trait = education_intrigue_4 } 75 = { } }
+      random_list = { 25 = { add_trait = education_learning_4 } 75 = { } }
+
+      # 随机分配1个生活特质（游戏本体30个生活特质）
+      random_list = { 10 = { add_trait = lifestyle_hunter } 90 = { } }
+      random_list = { 10 = { add_trait = lifestyle_poet } 90 = { } }
+      random_list = { 10 = { add_trait = lifestyle_gardener } 90 = { } }
+      random_list = { 10 = { add_trait = architect } 90 = { } }
+      random_list = { 10 = { add_trait = lifestyle_herbalist } 90 = { } }
+      random_list = { 10 = { add_trait = lifestyle_mystic } 90 = { } }
+      random_list = { 10 = { add_trait = scholar } 90 = { } }
+
+      # 强制添加聪慧特质
+      add_trait = intellect_good_3
+      # 设置合理属性加成
+      add_martial_skill = 8
+      change_diplomacy = 8
+      change_stewardship = 8
+      change_intrigue = 8
+      change_learning = 8
+      change_prowess = 8
+
+      # 建立与父母的关系
+      if = {
+        limit = { root = { is_male = yes } }
+        set_father = root
+      }
+      if = {
+        limit = { root = { is_female = yes } }
+        set_mother = root
+      }
+      # 如果有配偶，也建立关系
+      if = {
+        limit = { root = { is_married = yes } }
+        if = {
+          limit = { root = { is_male = yes } }
+          set_mother = root.primary_spouse
+        }
+        if = {
+          limit = { root = { is_female = yes } }
+          set_father = root.primary_spouse
+        }
+      }
+    }
+  }
+}
+
+skonester_birth_cheat_add_male_3 = {
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+}
+
+skonester_birth_cheat_add_male_5 = {
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+}
+
+skonester_birth_cheat_add_male_10 = {
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+}
+
+skonester_birth_cheat_add_male_20 = {
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+  skonester_birth_cheat_add_male_1 = yes
+}
+
+skonester_birth_cheat_add_female_3 = {
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+}
+
+skonester_birth_cheat_add_female_5 = {
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+}
+
+skonester_birth_cheat_add_female_10 = {
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+}
+
+skonester_birth_cheat_add_female_20 = {
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+  skonester_birth_cheat_add_female_1 = yes
+}
+
+skonester_birth_cheat_add_mixed_1 = {
+  random_list = {
+    50 = { skonester_birth_cheat_add_male_1 = yes }
+    50 = { skonester_birth_cheat_add_female_1 = yes }
+  }
+}
+
+skonester_birth_cheat_add_mixed_3 = {
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+}
+
+skonester_birth_cheat_add_mixed_5 = {
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+}
+
+skonester_birth_cheat_add_mixed_10 = {
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+}
+
+skonester_birth_cheat_add_mixed_20 = {
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+  skonester_birth_cheat_add_mixed_1 = yes
+}

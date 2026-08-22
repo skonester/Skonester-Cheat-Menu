@@ -1,0 +1,170 @@
+﻿l_english:
+# Unrestricted War Interaction
+sol_expansion_war_interaction:0 "War Without Bounds"
+sol_expansion_war_interaction_desc:0 "Proclaim open [war|E] upon [recipient.GetShortUINameNoTooltip], unshackled by [casus_belli|E] or claim."
+
+# Capture prisoners on victory
+sol_captive_war_cb_prisoners.tt_attacker:1 "Upon victory, many of [defender.GetShortUINamePossessive] [courtiers|E] shall become your captives, their number determined by [defender.GetHerHis] station."
+
+# Decision to show/hide expanded troops on war declaration
+sol_expanded_war_special_troops_activate:0 "Summon Skonester Warbands"
+sol_expanded_war_special_troops_activate_title:0 "Summon Free Company"
+sol_expanded_war_special_troops_activate_desc:0 "Call forth warbands loyal to your cause. These fierce cohorts do not linger after the war, draw not upon your coffers nor stores, and hail from your seat of power alone."
+sol_expanded_war_special_troops_activate_tooltip:0 "Special warbands will join your banners upon declaration of war."
+sol_expanded_war_special_troops_activate_confirm:0 "Summon Them"
+
+sol_expanded_war_special_troops_deactivate:0 "Disband Skonester Warbands"
+sol_expanded_war_special_troops_deactivate_title:0 "Dismiss Free Company"
+sol_expanded_war_special_troops_deactivate_desc:0 "Disband your summoned warriors. No warbands shall rally to your banner at the onset of war, nor shall your levies or garrisons be restored by magic or command."
+sol_expanded_war_special_troops_deactivate_tooltip:0 "No warbands will answer your call upon declaration of war."
+sol_expanded_war_special_troops_deactivate_confirm:0 "Dismiss Them"
+
+show_sol_expanded_war_troops_flag_effect_tooltip:0 "Upon the drums of war, special warbands shall arise in each holding that owes fealty to you, vanishing once peace returns. Your garrisons and levies will be restored at the outset of the struggle."
+hide_sol_expanded_war_troops_flag_effect_tooltip:0 "Rescind the blessings of instant garrison and levy restoration, and revoke the right to summon warbands."
+
+# Names of Special Troop Squad (Military Tab, Tooltip)
+game_concept_sol_expanded_warfare_attack_troops:0 "Warbands of Conquest"
+game_concept_sol_expanded_warfare_attack_troops_desc:0 "[sol_expanded_warfare_attack_troops|E] surge forward to crush foes and break sieges."
+sol_expanded_warfare_attack_troops:0 "[sol_expanded_warfare_attack_troops|E]"
+sol_expanded_warfare_attack_troops_flavor:0 "[sol_expanded_warfare_attack_troops|E] will stand ready with your vanguard, relentless and resolute."
+
+game_concept_sol_expanded_warfare_support_troops:0 "Warbands of the Shield"
+game_concept_sol_expanded_warfare_support_troops_desc:0 "[sol_expanded_warfare_support_troops|E] hold the line wherever your ranks are thin."
+sol_expanded_warfare_support_troops:0 "[sol_expanded_warfare_support_troops|E]"
+sol_expanded_warfare_support_troops_flavor:0 "[sol_expanded_warfare_support_troops|E] strengthen your war host, filling the shieldwall."
+
+game_concept_sol_expanded_warfare_defense_troops:0 "Warbands of the Realm"
+game_concept_sol_expanded_warfare_defense_troops_desc:0 "[sol_expanded_warfare_defense_troops|E] defend your lands in dire times."
+sol_expanded_warfare_defense_troops:0 "[sol_expanded_warfare_defense_troops|E]"
+sol_expanded_warfare_troops_defense_flavor:0 "[sol_expanded_warfare_defense_troops|E] shield your holdings while the main host rides forth."
+
+game_concept_sol_expanded_warfare_fighting_troops:0 "Warbands of Blood"
+game_concept_sol_expanded_warfare_fighting_troops_desc:0 "[sol_expanded_warfare_fighting_troops|E] answer the call wherever the fighting is fiercest."
+sol_expanded_warfare_fighting_troops:0 "[sol_expanded_warfare_fighting_troops|E]"
+sol_expanded_warfare_troops_fighting_flavor:0 "[sol_expanded_warfare_fighting_troops|E] wade into any fray without fear."
+
+game_concept_sol_expanded_warfare_realm_levy_troops:0 "Warbands of the Levy"
+game_concept_sol_expanded_warfare_realm_levy_troops_desc:0 "[sol_expanded_warfare_realm_levy_troops|E] serve where bodies are needed most."
+sol_expanded_warfare_realm_levy_troops:0 "[sol_expanded_warfare_realm_levy_troops|E]"
+sol_expanded_warfare_troops_realm_levy_flavor:0 "[sol_expanded_warfare_realm_levy_troops|E] are sworn to take up arms for crown and country."
+
+# Expansion Wars Group
+game_concept_sol_expansion:0 "Ambition"
+game_concept_sol_expansion_desc:1 "[sol_expansion_war|E] is a war of unbridled ambition, a march to claim new lands. [sol_expansion_wars|E] heed no [claim|E] nor [casus_belli|E], only might and will."
+sol_expansion:0 "[sol_expansion|E]"
+sol_expansion_flavor:0 "[sol_expansion|E] Warfare is for those who would see their banners spread far and wide. Follow in the footsteps of conquerors old."
+sol_expansion_desc:0 "[sol_expansion|E] Warfare is for those who seek the steel-forged seat of lords past: Alexander, Attila, and Temujin."
+
+# Expansion War
+game_concept_sol_expansion_war:0 "War of Ambition"
+game_concept_sol_expansion_war_desc:0 "[sol_expansion_war|E] is a war waged for gain alone, without justification."
+game_concept_sol_expansion_wars:0 "Wars of Ambition"
+game_concept_sol_expansion_wars_desc:0 "[sol_expansion_wars|E] are fought to swell your realm, justice be damned."
+game_concept_sol_expansion_warring:0 "Waging Ambition"
+game_concept_sol_expansion_warring_desc:0 "[sol_expansion_warring|E] is for those who see only new lands, caring not for law or right."
+
+sol_expansion_war:0 "[sol_expansion_war|E]"
+sol_expansion_war_desc:1 "[sol_expansion_war|E] is a war for those who heed no bounds, seeking only new dominions. $sol_expansion_warring$ spurns [claim|E] and [casus_belli|E], knowing only conquest."
+sol_expansion_wars:0 "[sol_expansion_wars|E]"
+sol_expansion_wars_desc:1 "[sol_expansion_wars|E] are waged with neither [claim|E] nor [casus_belli|E], only the sword’s right."
+sol_expansion_warring:0 "[sol_expansion_warring|E]"
+sol_expansion_warring_desc:1 "[sol_expansion_warring|E] is war for war’s sake – no laws, no claims, only might prevails."
+
+SOL_EXPANSION_CB_NAME:0 "$sol_expansion_war$"
+SOL_EXPANSION_CB_TITLE:3 "All [defender.GetShortUINamePossessive] [realm|E], forfeit by war, shall come under your banner."
+SOL_EXPANSION_CB_SPECIFIC_NAME:1 "Conquest of [TITLE.GetBaseName]"
+
+SOL_EXPANSION_WAR_NAME:2 "$ORDER$ [ATTACKER.GetPrimaryTitle.GetAdjective] Conquest of [TITLE.GetBaseName]"
+SOL_EXPANSION_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+SOL_EXPANSION_VICTORY_DESC:0 "The day is yours. Your banners now fly over new dominions."
+SOL_EXPANSION_WHITE_PEACE_DESC:0 "Neither side bends; the gods grant no victor."
+SOL_EXPANSION_DEFEAT_DESC:0 "Your ambitions lie broken. The foe stands unbowed."
+SOL_EXPANSION_TRANSFER_TT:0 "You shall seize their titles, by right of conquest."
+SOL_EXPANSION_TRANSFER_2_TT:0 "Baronies swept up in conquest shall be folded into your realm."
+
+sol_expansion_war_defeat_desc:0 "[defender.GetShortUIName|U] retains their lands and titles."
+sol_expansion_war_defeat_desc_defender:0 "Your house and realm endure."
+sol_expansion_war_defeat_desc_attacker:0 "[defender.GetShortUIName|U] keeps their titles."
+sol_expansion_war_white_peace_desc_defender:0 "Victory by stalemate. Peace, stained but whole."
+sol_expansion_war_white_peace_desc_attacker:0 "You yield to peace, ambitions deferred."
+sol_expansion_war_white_peace_desc:0 "[defender.GetShortUIName|U] clings to their titles still."
+sol_expansion_war_victory_desc_defender:0 "[attacker.GetShortUIName|U] divests you of land and loyal vassals."
+sol_expansion_war_victory_desc_attacker:0 "You claim all that [defender.GetShortUIName|U] held."
+sol_expansion_war_victory_desc:0 "[attacker.GetShortUIName|U] seizes every title and holding from [defender.GetShortUIName|U]."
+
+msg_expansion_war_invalidated_message:0 "The war has ended in futility."
+expansion_vassal_transfer_tt: "All [de_jure|E] [vassals|E] pledged to the conquered lands"
+expansion_title_transfer_tt: "Every [de_jure|E] [county|E] in the target falls under your rule"
+expansion_title_transfer_2_tt: "All [occupied|E] [counties|E] beyond the claim now answer to [attacker.GetShortUIName]"
+expansion_titles_destroyed_tt: "All target titles are wiped from the rolls"
+
+# Unrestricted Expansion War 
+game_concept_sol_expansion_war_unrestricted:0 "Conquest Unleashed"
+game_concept_sol_expansion_war_unrestricted_desc:0 "An unchained [sol_expansion|E] war, heedless of boundaries."
+sol_expansion_war_unrestricted:0 "[sol_expansion|E] – War Without Limit"
+sol_expansion_war_unrestricted_desc:0 "The most ruthless form of [sol_expansion|E] war; there are no limits, only the sword."
+
+SOL_EXPANSION_UNRESTRICTED_CB_NAME:0 "$sol_expansion_war_unrestricted$"
+SOL_EXPANSION_UNRESTRICTED_WAR_NAME:1 "[sol_expansion|E] War upon the Lands of [TITLE.GetBaseName]"
+SOL_EXPANSION_UNRESTRICTED_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+# Barony Expansion War 
+game_concept_sol_expansion_war_barony:0 "Conquest of Baronies"
+game_concept_sol_expansion_war_barony_desc:0 "A narrower form of [sol_expansion|E] war, for baronies alone."
+sol_expansion_war_barony:0 "[sol_expansion|E] – Barony March"
+sol_expansion_war_barony_desc:0 "Focus your ambition upon a single barony with this war."
+
+SOL_EXPANSION_BARONY_CB_NAME:0 "$sol_expansion_war_barony$"
+SOL_EXPANSION_BARONY_WAR_NAME:1 "[sol_expansion|E] War for the Lands of [TITLE.GetBaseName]"
+SOL_EXPANSION_BARONY_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+# County Expansion War 
+game_concept_sol_expansion_war_county:0 "Conquest of Counties"
+game_concept_sol_expansion_war_county_desc:0 "[sol_expansion|E] war, forged for county-scale ambition."
+sol_expansion_war_county:0 "[sol_expansion|E] – County March"
+sol_expansion_war_county_desc:0 "March your banners forth to seize a county."
+
+SOL_EXPANSION_COUNTY_CB_NAME:0 "$sol_expansion_war_county$"
+SOL_EXPANSION_COUNTY_WAR_NAME:1 "[sol_expansion|E] War for the Lands of [TITLE.GetBaseName]"
+SOL_EXPANSION_COUNTY_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+# Duchy Expansion War 
+game_concept_sol_expansion_war_duchy:0 "Conquest of Duchies"
+game_concept_sol_expansion_war_duchy_desc:0 "[sol_expansion|E] war, for those with eyes on duchal thrones."
+sol_expansion_war_duchy:0 "[sol_expansion|E] – Duchy March"
+sol_expansion_war_duchy_desc:0 "Wage war for an entire duchy, leaving lesser lords trembling."
+
+SOL_EXPANSION_DUCHY_CB_NAME:0 "$sol_expansion_war_duchy$"
+SOL_EXPANSION_DUCHY_WAR_NAME:1 "[sol_expansion|E] War for the Lands of [TITLE.GetBaseName]"
+SOL_EXPANSION_DUCHY_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+# Kingdom Expansion War 
+game_concept_sol_expansion_war_kingdom:0 "Conquest of Kingdoms"
+game_concept_sol_expansion_war_kingdom_desc:0 "[sol_expansion|E] war, for highborns hungry for crowns."
+sol_expansion_war_kingdom:0 "[sol_expansion|E] – Kingdom March"
+sol_expansion_war_kingdom_desc:0 "War for the throne that crowns all the lesser lords in a land."
+
+SOL_EXPANSION_KINGDOM_CB_NAME:0 "$sol_expansion_war_kingdom$"
+SOL_EXPANSION_KINGDOM_WAR_NAME:1 "[sol_expansion|E] War for the Lands of [TITLE.GetBaseName]"
+SOL_EXPANSION_KINGDOM_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+# Empire Expansion War 
+game_concept_sol_expansion_war_empire:0 "Conquest of Empires"
+game_concept_sol_expansion_war_empire_desc:0 "[sol_expansion|E] war, for those who would rule all."
+sol_expansion_war_empire:0 "[sol_expansion|E] – Empire March"
+sol_expansion_war_empire_desc:0 "Take up the sword for the mightiest of all wars: the conquest of an empire."
+
+SOL_EXPANSION_EMPIRE_CB_NAME:0 "$sol_expansion_war_empire$"
+SOL_EXPANSION_EMPIRE_WAR_NAME:1 "[sol_expansion|E] War for the Lands of [TITLE.GetBaseName]"
+SOL_EXPANSION_EMPIRE_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"
+
+# Not Varangian Adventurer War
+game_concept_sol_unrestricted_adventurer_conquest:0 "Adventure Without Bounds"
+game_concept_sol_unrestricted_adventurer_conquest_desc:0 "To wage this war is to abandon all, forging a new destiny in enemy lands."
+sol_unrestricted_adventurer_conquest:0 "[sol_expansion|E] – Adventurer’s War"
+sol_unrestricted_adventurer_conquest_desc:0 "Carve out your fate anew, leaving your old lands behind for the promise of conquest."
+
+SOL_UNRESTRICTED_ADVENTURER_CB_NAME:0 "$sol_unrestricted_adventurer_conquest$"
+SOL_UNRESTRICTED_ADVENTURER_WAR_NAME:1 "[sol_expansion|E] Adventurer’s War for the Lands of [TITLE.GetBaseName]"
+SOL_UNRESTRICTED_ADVENTURER_WAR_NAME_BASE:0 "[ATTACKER.GetPrimaryTitle.GetAdjective][DEFENDER.GetPrimaryTitle.GetName]"

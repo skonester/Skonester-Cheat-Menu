@@ -71,7 +71,7 @@
       change_stewardship = 8
       change_intrigue = 8
       change_learning = 8
-      change_prowess = 8
+      add_prowess_skill = 8
 
       # 建立与父母的关系
       if = {
@@ -167,7 +167,7 @@
       change_stewardship = 8
       change_intrigue = 8
       change_learning = 8
-      change_prowess = 8
+      add_prowess_skill = 8
 
       # 建立与父母的关系
       if = {
@@ -267,7 +267,7 @@ skonester_birth_cheat_add_female_1 = {
       change_stewardship = 8
       change_intrigue = 8
       change_learning = 8
-      change_prowess = 8
+      add_prowess_skill = 8
 
       # 建立与父母的关系
       if = {
@@ -363,7 +363,7 @@ skonester_birth_cheat_add_female_1 = {
       change_stewardship = 8
       change_intrigue = 8
       change_learning = 8
-      change_prowess = 8
+      add_prowess_skill = 8
 
       # 建立与父母的关系
       if = {

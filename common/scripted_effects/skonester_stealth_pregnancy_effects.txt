@@ -40,15 +40,15 @@ skonester_stealth_force_pregnancy_effect = {
     else_if = {
       limit = {
         # 检查是否是情人
-        has_trait = lover
-        exists = lover
+        any_relation = { type = lover }
       }
       # 设置情人为假定父亲
       make_pregnant = {
         father = scope:actor
         known_bastard = no
       }
-      lover = {
+      random_relation = {
+        type = lover
         save_scope_as = skonester_stealth_assumed_father
       }
       set_pregnancy_assumed_father = scope:skonester_stealth_assumed_father
@@ -122,15 +122,15 @@ skonester_stealth_force_pregnancy_enhanced_effect = {
     else_if = {
       limit = {
         # 检查是否是情人
-        has_trait = lover
-        exists = lover
+        any_relation = { type = lover }
       }
       # 设置情人为假定父亲
       make_pregnant = {
         father = scope:actor
         known_bastard = no
       }
-      lover = {
+      random_relation = {
+        type = lover
         save_scope_as = skonester_stealth_assumed_father
       }
       set_pregnancy_assumed_father = scope:skonester_stealth_assumed_father

@@ -46,27 +46,6 @@ skonester_activity_cheat_host_type_effect = {
     }
     skonester_activity_cheat_grant_host_funds_effect = yes
     ai_attempt_to_host_activity = $TYPE$
-    if = {
-      limit = { exists = capital_province }
-      capital_province = {
-        spawn_activity = {
-          type = $TYPE$
-          owner = scope:skonester_cheat_menu_target
-        }
-      }
-    }
-    if = {
-      limit = {
-        NOT = { exists = capital_province }
-        exists = location
-      }
-      location = {
-        spawn_activity = {
-          type = $TYPE$
-          owner = scope:skonester_cheat_menu_target
-        }
-      }
-    }
   }
   scope:actor = {
     send_interface_toast = {
@@ -118,7 +97,15 @@ skonester_activity_cheat_complete_effect = {
     if = {
       limit = { exists = involved_activity }
       involved_activity = {
-        complete_activity = yes
+        # complete_activity isn't a real effect; fast-forward through every remaining phase instead
+        skip_activity_phase = yes
+        skip_activity_phase = yes
+        skip_activity_phase = yes
+        skip_activity_phase = yes
+        skip_activity_phase = yes
+        skip_activity_phase = yes
+        skip_activity_phase = yes
+        skip_activity_phase = yes
       }
     }
   }

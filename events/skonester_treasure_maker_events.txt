@@ -10,13 +10,25 @@ skonester_treasure_maker.0001 = {
 
   option = {
     name = skonester_treasure_maker.0001.owner_self
-    trigger = { exists = scope:recipient NOT = { scope:recipient = { this = scope:actor } } scope:actor = { remove_character_flag = skonester_tm_give_recipient trigger_event = skonester_treasure_maker.0001 }
+    trigger = {
+      exists = scope:recipient
+      NOT = { scope:recipient = { this = scope:actor } }
+    }
+    scope:actor = {
+      remove_character_flag = skonester_tm_give_recipient
+      trigger_event = skonester_treasure_maker.0001
     }
   }
 
   option = {
     name = skonester_treasure_maker.0001.owner_recipient
-    trigger = { exists = scope:recipient NOT = { scope:recipient = { this = scope:actor } } scope:actor = { add_character_flag = skonester_tm_give_recipient trigger_event = skonester_treasure_maker.0001 }
+    trigger = {
+      exists = scope:recipient
+      NOT = { scope:recipient = { this = scope:actor } }
+    }
+    scope:actor = {
+      add_character_flag = skonester_tm_give_recipient
+      trigger_event = skonester_treasure_maker.0001
     }
   }
 
@@ -80,7 +92,12 @@ skonester_treasure_maker.0001 = {
 
   option = {
     name = skonester_treasure_maker.0001.spawn
-    trigger = { scope:actor = { skonester_player_may_use_artifact_craft_trigger = yes } scope:actor = { skonester_treasure_maker_spawn_for_recipient_effect = yes scope:actor = { trigger_event = skonester_treasure_maker.3999 } }
+    trigger = {
+      scope:actor = { skonester_player_may_use_artifact_craft_trigger = yes }
+    }
+    scope:actor = {
+      skonester_treasure_maker_spawn_for_recipient_effect = yes
+      trigger_event = skonester_treasure_maker.3999
     }
   }
 

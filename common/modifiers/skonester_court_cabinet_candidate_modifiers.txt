@@ -1,4 +1,4 @@
-# Internal marker modifiers used while selecting replacement cabinet members.
+﻿# Internal marker modifiers used while selecting replacement cabinet members.
 # They intentionally provide no stat changes.
 
 skonester_court_cabinet_chancellor_candidate = { }

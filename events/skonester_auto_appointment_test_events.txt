@@ -7,7 +7,7 @@ skonester_auto_appointment_test.1000 = {
   type = character_event
   title = skonester_auto_appointment_test.1000.t
   desc = skonester_auto_appointment_test.1000.desc
-  theme = administration
+  theme = stewardship
 
   option = {
     name = skonester_auto_appointment_test.1000.test_cabinet
@@ -34,11 +34,12 @@ skonester_auto_appointment_test.1100 = {
   type = character_event
   title = skonester_auto_appointment_test.1100.t
   desc = skonester_auto_appointment_test.1100.desc
-  theme = administration
+  theme = stewardship
 
   option = {
     name = skonester_auto_appointment_test.1100.execute
-    effect = { skonester_cheat_menu_court_cabinet_effect = yes custom_tooltip = skonester_auto_appointment_test.1100.effect_tt }
+    skonester_cheat_menu_court_cabinet_effect = yes
+    custom_tooltip = skonester_auto_appointment_test.1100.effect_tt
   }
 
   option = {
@@ -52,11 +53,13 @@ skonester_auto_appointment_test.1200 = {
   type = character_event
   title = skonester_auto_appointment_test.1200.t
   desc = skonester_auto_appointment_test.1200.desc
-  theme = administration
+  theme = stewardship
 
   option = {
     name = skonester_auto_appointment_test.1200.execute
-    effect = { skonester_positions_sync_liege_player_effect = yes skonester_auto_court_positions_15day_tick_effect = yes custom_tooltip = skonester_auto_appointment_test.1200.effect_tt }
+    skonester_positions_sync_liege_player_effect = yes
+    skonester_auto_court_positions_15day_tick_effect = yes
+    custom_tooltip = skonester_auto_appointment_test.1200.effect_tt
   }
 
   option = {
@@ -70,11 +73,14 @@ skonester_auto_appointment_test.1300 = {
   type = character_event
   title = skonester_auto_appointment_test.1300.t
   desc = skonester_auto_appointment_test.1300.desc
-  theme = administration
+  theme = stewardship
 
   option = {
     name = skonester_auto_appointment_test.1300.execute
-    effect = { skonester_cheat_menu_court_cabinet_effect = yes skonester_positions_sync_liege_player_effect = yes skonester_auto_court_positions_15day_tick_effect = yes custom_tooltip = skonester_auto_appointment_test.1300.effect_tt }
+    skonester_cheat_menu_court_cabinet_effect = yes
+    skonester_positions_sync_liege_player_effect = yes
+    skonester_auto_court_positions_15day_tick_effect = yes
+    custom_tooltip = skonester_auto_appointment_test.1300.effect_tt
   }
 
   option = {

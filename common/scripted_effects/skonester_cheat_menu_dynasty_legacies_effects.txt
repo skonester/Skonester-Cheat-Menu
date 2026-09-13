@@ -79,7 +79,7 @@ skonester_cheat_menu_max_recipient_dynasty_legacies_effect = {
         skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ce1_legitimacy_legacy_3 }
         skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ce1_legitimacy_legacy_4 }
         skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ce1_legitimacy_legacy_5 }
-        trigger_if = {
+        if = {
           limit = { scope:recipient = { has_fp1_dlc_trigger = yes } }
           skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp1_adventure_legacy_1 }
           skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp1_adventure_legacy_2 }
@@ -92,7 +92,7 @@ skonester_cheat_menu_max_recipient_dynasty_legacies_effect = {
           skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp1_pillage_legacy_4 }
           skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp1_pillage_legacy_5 }
         }
-        trigger_if = {
+        if = {
           limit = { scope:recipient = { has_fp2_dlc_trigger = yes } }
           skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp2_urbanism_legacy_1 }
           skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp2_urbanism_legacy_2 }
@@ -105,7 +105,7 @@ skonester_cheat_menu_max_recipient_dynasty_legacies_effect = {
           skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp2_coterie_legacy_4 }
           skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp2_coterie_legacy_5 }
         }
-        trigger_if = {
+        if = {
           limit = { scope:recipient = { has_fp3_dlc_trigger = yes } }
           skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp3_khvarenah_legacy_1 }
           skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp3_khvarenah_legacy_2 }
@@ -113,7 +113,7 @@ skonester_cheat_menu_max_recipient_dynasty_legacies_effect = {
           skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp3_khvarenah_legacy_4 }
           skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = fp3_khvarenah_legacy_5 }
         }
-        trigger_if = {
+        if = {
           limit = { scope:recipient = { has_ep3_dlc_trigger = yes } }
           skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ep3_administrative_legacy_1 }
           skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ep3_administrative_legacy_2 }
@@ -121,7 +121,7 @@ skonester_cheat_menu_max_recipient_dynasty_legacies_effect = {
           skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ep3_administrative_legacy_4 }
           skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = ep3_administrative_legacy_5 }
         }
-        trigger_if = {
+        if = {
           limit = { scope:recipient = { has_mpo_dlc_trigger = yes } }
           skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = mpo_nomad_legacy_1 }
           skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = mpo_nomad_legacy_2 }
@@ -129,7 +129,7 @@ skonester_cheat_menu_max_recipient_dynasty_legacies_effect = {
           skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = mpo_nomad_legacy_4 }
           skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = mpo_nomad_legacy_5 }
         }
-        trigger_if = {
+        if = {
           limit = { scope:recipient = { has_tgp_dlc_trigger = yes } }
           skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = tgp_chinese_legacy_1 }
           skonester_cheat_menu_add_dynasty_legacy_perk_if_missing_effect = { PERK = tgp_chinese_legacy_2 }

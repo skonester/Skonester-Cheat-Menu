@@ -1,3 +1,3 @@
-# Retired CK3 2023 generic council-seat adapter.
+﻿# Retired CK3 2023 generic council-seat adapter.
 # Current supported council appointments are implemented directly in
 # skonester_positions_mass_reshuffle_effects.txt and its fill/spawn helper.

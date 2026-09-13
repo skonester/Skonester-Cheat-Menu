@@ -3236,31 +3236,11 @@ skonester_domicile_clear_external_japanese_manor_buildings_effect = {
   skonester_domicile_clear_external_japanese_manor_sweep_effect = yes
 }
 
-# 扫尾：拆除随机外建直至全部外槽为空（含 add_random_external_* 填入的建筑）
+# 扫尾：与 estate/east_asian_estate 不同，Paradox 并未为 japanese_manor 提供
+# destroy_random_japanese_manor_building(_variable)_effect（只是官方文件里的一条注释，从未真正实现），
+# 因此这里不再调用不存在的效果；上方 skonester_domicile_clear_external_chain_fully_effect
+# 已按 CHAIN 逐条清空全部 12 条外置建筑链，已能完成清理，此函数保留作为空占位以维持调用链不变。
 skonester_domicile_clear_external_japanese_manor_sweep_effect = {
-  hidden_effect = {
-    while = {
-      count = 72
-      limit = {
-OR = {
-      has_domicile_building_or_higher = japanese_fields_01
-      has_domicile_building_or_higher = japanese_workshop_01
-      has_domicile_building_or_higher = japanese_tea_plantation_01
-      has_domicile_building_or_higher = japanese_stables_01
-      has_domicile_building_or_higher = japanese_tea_house_01
-      has_domicile_building_or_higher = japanese_garden_01
-      has_domicile_building_or_higher = japanese_armory_01
-      has_domicile_building_or_higher = japanese_horse_pastures_01
-      has_domicile_building_or_higher = japanese_watch_house_01
-      has_domicile_building_or_higher = japanese_shrine_01
-      has_domicile_building_or_higher = japanese_brewery_01
-      has_domicile_building_or_higher = japanese_archive_01
-    }
-      }
-      destroy_random_japanese_manor_building_variable_effect = yes
-      destroy_random_japanese_manor_building_effect = yes
-    }
-  }
 }
 
 

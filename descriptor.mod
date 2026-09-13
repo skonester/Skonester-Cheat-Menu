@@ -1,4 +1,4 @@
-﻿version="8.22.26-PreChapterV"
+﻿version="9.13.26-PreChapterV"
 tags={
 	"1.19 'Scribe'"
 }

@@ -100,19 +100,16 @@ skonester_seduce_shield_enforce_global_ai_fidelity_rules_effect = {
         }
         end_scheme = yes
       }
-      any_targeting_scheme = {
-        if = {
-          limit = {
-            OR = {
-              scheme_type = seduce
-              scheme_type = courting
-              scheme_type = elope
-            }
-            scheme_owner = { is_ai = yes }
-            scheme_target_character = scope:skonester_global_fid_ai
+      every_targeting_scheme = {
+        limit = {
+          OR = {
+            scheme_type = seduce
+            scheme_type = courting
+            scheme_type = elope
           }
-          end_scheme = yes
+          scheme_owner = { is_ai = yes }
         }
+        end_scheme = yes
       }
       if = {
         limit = { is_married = yes }

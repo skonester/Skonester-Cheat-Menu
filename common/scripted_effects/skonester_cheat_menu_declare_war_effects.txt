@@ -7,7 +7,7 @@ skonester_cheat_menu_break_truce_with_recipient_effect = {
         exists = scope:actor
         has_truce = scope:actor
       }
-      scope:actor = { break_truce = prev }
+      scope:actor = { cancel_truce_both_ways = prev }
     }
   }
 }

@@ -6,7 +6,7 @@ skonester_titular_break_all_truces_effect = {
       is_alive = yes
       has_truce = root
     }
-    root = { break_truce = prev }
+    root = { cancel_truce_both_ways = prev }
   }
 }
 

@@ -11,7 +11,7 @@ skonester_titular_start_county_war_on_defender_effect = {
     scope:skonester_war_defender = {
       if = {
         limit = { has_truce = scope:skonester_war_attacker }
-        scope:skonester_war_attacker = { break_truce = prev }
+        scope:skonester_war_attacker = { cancel_truce_both_ways = prev }
       }
       random_held_title = {
         limit = { tier = tier_county }
@@ -49,7 +49,7 @@ skonester_titular_ai_press_neighbour_wars_effect = {
       root = {
         if = {
           limit = { has_truce = prev }
-          break_truce = prev
+          cancel_truce_both_ways = prev
         }
         prev = {
           random_held_title = {

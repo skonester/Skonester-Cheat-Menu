@@ -3,16 +3,16 @@
 # 功能: 安全升级庄园、自动应用传统、防重复执行、DLC门控
 # ==========================================
 
-# 1. 传统配置池（按需增删）
-skonester_domicile_cheat_traditions = {
-  tradition_astronomy
-  tradition_scholarly_tradition
-  tradition_religious_studies
-  tradition_martial_admiration
-  tradition_war_poets
-  tradition_legalistic
-  tradition_castle_keepers
-  tradition_philosopher_culture
+# 1. 传统配置池（按需增删）：逐条显式判断 + 添加，避免依赖 every_in_list/variable_list 机制
+skonester_domicile_cheat_apply_traditions_effect = {
+  if = { limit = { NOT = { has_cultural_tradition = tradition_astronomy } } add_culture_tradition = tradition_astronomy }
+  if = { limit = { NOT = { has_cultural_tradition = tradition_scholarly_tradition } } add_culture_tradition = tradition_scholarly_tradition }
+  if = { limit = { NOT = { has_cultural_tradition = tradition_religious_studies } } add_culture_tradition = tradition_religious_studies }
+  if = { limit = { NOT = { has_cultural_tradition = tradition_martial_admiration } } add_culture_tradition = tradition_martial_admiration }
+  if = { limit = { NOT = { has_cultural_tradition = tradition_war_poets } } add_culture_tradition = tradition_war_poets }
+  if = { limit = { NOT = { has_cultural_tradition = tradition_legalistic } } add_culture_tradition = tradition_legalistic }
+  if = { limit = { NOT = { has_cultural_tradition = tradition_castle_keepers } } add_culture_tradition = tradition_castle_keepers }
+  if = { limit = { NOT = { has_cultural_tradition = tradition_philosopher_culture } } add_culture_tradition = tradition_philosopher_culture }
 }
 
 # 2. 单角色庄园升级执行器（Scope: Character）
@@ -40,11 +40,7 @@ skonester_domicile_cheat_upgrade_effect = {
     # 自动为所有者文化添加配置池中的传统（已去重防报错）
     owner = {
       culture = {
-        every_in_list = {
-          list = skonester_domicile_cheat_traditions
-          limit = { NOT = { has_cultural_tradition = this } }
-          add_cultural_tradition = this
-        }
+        skonester_domicile_cheat_apply_traditions_effect = yes
       }
     }
   }

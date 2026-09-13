@@ -653,7 +653,7 @@ skonester_cheat_menu_court_cabinet_effect = {
           }
           if = {
             limit = { exists = scope:skonester_pos_pick }
-            appoint_councillor = scope:skonester_pos_pick
+            assign_councillor_type = { type = councillor_chancellor target = scope:skonester_pos_pick remove_existing_councillor = yes }
           }
           every_vassal = {
             limit = { has_character_modifier = skonester_court_cabinet_chancellor_candidate }
@@ -688,7 +688,7 @@ skonester_cheat_menu_court_cabinet_effect = {
           }
           if = {
             limit = { exists = scope:skonester_pos_pick }
-            appoint_councillor = scope:skonester_pos_pick
+            assign_councillor_type = { type = councillor_marshal target = scope:skonester_pos_pick remove_existing_councillor = yes }
           }
           every_vassal = {
             limit = { has_character_modifier = skonester_court_cabinet_marshal_candidate }
@@ -723,7 +723,7 @@ skonester_cheat_menu_court_cabinet_effect = {
           }
           if = {
             limit = { exists = scope:skonester_pos_pick }
-            appoint_councillor = scope:skonester_pos_pick
+            assign_councillor_type = { type = councillor_steward target = scope:skonester_pos_pick remove_existing_councillor = yes }
           }
           every_vassal = {
             limit = { has_character_modifier = skonester_court_cabinet_steward_candidate }
@@ -758,7 +758,7 @@ skonester_cheat_menu_court_cabinet_effect = {
           }
           if = {
             limit = { exists = scope:skonester_pos_pick }
-            appoint_councillor = scope:skonester_pos_pick
+            assign_councillor_type = { type = councillor_spymaster target = scope:skonester_pos_pick remove_existing_councillor = yes }
           }
           every_vassal = {
             limit = { has_character_modifier = skonester_court_cabinet_spymaster_candidate }
@@ -793,7 +793,7 @@ skonester_cheat_menu_court_cabinet_effect = {
           }
           if = {
             limit = { exists = scope:skonester_pos_pick }
-            appoint_councillor = scope:skonester_pos_pick
+            assign_councillor_type = { type = councillor_court_chaplain target = scope:skonester_pos_pick remove_existing_councillor = yes }
           }
           every_vassal = {
             limit = { has_character_modifier = skonester_court_cabinet_chaplain_candidate }

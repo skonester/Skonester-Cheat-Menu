@@ -1,3 +1,3 @@
-# The former celestial-extra council adapter referenced council position IDs that
+﻿# The former celestial-extra council adapter referenced council position IDs that
 # are not registered by CK3 1.19. It is intentionally retired here. A compatibility
 # submod can restore it when it also supplies matching council-position definitions.

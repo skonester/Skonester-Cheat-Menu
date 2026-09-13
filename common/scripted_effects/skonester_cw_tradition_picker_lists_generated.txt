@@ -1,4 +1,4 @@
-# AUTO-GENERATED from CK3 and Skonester culture tradition definitions.
+﻿# AUTO-GENERATED from CK3 and Skonester culture tradition definitions.
 # Rebuild this file when a game update adds or removes traditions.
 
 skonester_cw_build_tradition_picker_lists_effect = {

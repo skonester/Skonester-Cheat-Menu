@@ -1,0 +1,44 @@
+﻿# Adapted from the Holy Grails artifact reward pattern by Pantheon.
+# Called by water_of_life.1008 while Clavius is still alive.
+skonester_receive_clavius_grail_effect = {
+    if = {
+        limit = {
+            exists = scope:hooded_old_man
+            NOT = { has_character_flag = skonester_clavius_grail_received }
+            NOT = {
+                any_character_artifact = {
+                    has_variable = skonester_clavius_grail
+                }
+            }
+        }
+        # Vanilla goblet material features resolve against scope:owner.
+        save_scope_as = owner
+        set_artifact_rarity_illustrious = yes
+        create_artifact = {
+            name = skonester_clavius_grail_name
+            description = skonester_clavius_grail_description
+            type = goblet
+            visuals = goblet
+            template = skonester_clavius_grail_template
+            modifier = skonester_clavius_grail_modifier
+            quality = scope:quality
+            wealth = scope:wealth
+            max_durability = 100
+            decaying = no
+            creator = scope:hooded_old_man
+            history = {
+                type = inherited
+                actor = scope:hooded_old_man
+                recipient = root
+                location = root.location
+            }
+            save_scope_as = skonester_clavius_grail_artifact
+        }
+        scope:skonester_clavius_grail_artifact = {
+            set_variable = { name = skonester_clavius_grail value = yes }
+            set_variable = { name = historical_unique_artifact value = yes }
+        }
+        add_character_flag = skonester_clavius_grail_received
+        create_character_memory = { type = skonester_clavius_handover_memory }
+    }
+}

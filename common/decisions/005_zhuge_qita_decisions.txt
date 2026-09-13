@@ -219,7 +219,7 @@ change_sansi_government = {
 
 start_searching_for_water_of_life_decision = {
     picture = {
-        reference = "gfx/interface/illustrations/decisions/barbara.dds"
+        reference = "gfx/interface/illustrations/decisions/skonester_clavius_grail.dds"
     }
     ai_check_interval = 0
 	decision_group_type = skonester_realm_tools
@@ -231,10 +231,7 @@ start_searching_for_water_of_life_decision = {
 	}
 
     cost = {
-        piety = {
-            add = 1
-            divide = learning
-        }
+        piety = 5000
     }
 
     cooldown = { years = 999 }
@@ -246,13 +243,15 @@ start_searching_for_water_of_life_decision = {
     }
 
     is_valid = {
+        NOT = { has_character_flag = skonester_water_of_life_in_progress }
         custom_description = {
             text = "start_searching_for_water_of_life_decision_start"
-            learning >= 25
+            learning >= 35
         }
     }
 
     effect = {
+        add_character_flag = skonester_water_of_life_in_progress
         trigger_event = {
             id = water_of_life.1001
             days = { 20 60 }

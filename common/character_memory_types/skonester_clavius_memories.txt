@@ -1,0 +1,14 @@
+﻿skonester_clavius_handover_memory = {
+    categories = { positive major }
+    icon = "legend.dds"
+    description = {
+        first_valid = { desc = skonester_clavius_handover_memory_desc }
+    }
+    second_perspective_description = {
+        first_valid = { desc = skonester_clavius_handover_memory_desc_second_perspective }
+    }
+    third_perspective_description = {
+        first_valid = { desc = skonester_clavius_handover_memory_desc_third_perspective }
+    }
+    duration = { years = memory_default_duration }
+}

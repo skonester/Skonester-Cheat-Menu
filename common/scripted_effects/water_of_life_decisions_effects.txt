@@ -18,4 +18,5 @@ water_of_life_effect_merchant = {
 
 water_of_life_effect = {
 	add_trait = water_of_life
+	skonester_water_of_life_restore_effect = yes
 }

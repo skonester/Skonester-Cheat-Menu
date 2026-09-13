@@ -8,7 +8,30 @@
 	no_prowess_loss_from_age = yes
 	inbreeding_chance = -1.0
 	ruler_designer_cost = 10000
-	remove_trait = incapable
+
+	# Current vanilla immortality flags and incompatible age ailments.
+	flag = is_immortal
+	flag = immortal_visuals
+	flag = immortal_fertility
+	flag = immortal_incapability
+	opposites = {
+		incapable infirm withering_mind clouded_eyes faltering_heart fragile_bones
+	}
+
+	# Clavius's successor retains a vigorous body and an ever-learning mind.
+	diplomacy = 20
+	martial = 20
+	stewardship = 20
+	intrigue = 20
+	learning = 30
+	prowess = 50
+	fertility = 0.5
+	epidemic_resistance = 100
+	stress_gain_mult = -1
+	stress_loss_mult = 1
+	monthly_lifestyle_xp_gain_mult = 1
+	general_opinion = 20
+	monthly_piety = 2
 
 
 	inherit_chance = 0

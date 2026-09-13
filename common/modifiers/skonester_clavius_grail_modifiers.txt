@@ -1,0 +1,5 @@
+﻿skonester_clavius_grail_modifier = {
+    monthly_piety = 1
+    learning = 2
+    general_opinion = 5
+}

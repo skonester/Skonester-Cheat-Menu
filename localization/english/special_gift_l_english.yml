@@ -16,6 +16,6 @@
  special_gift_interaction_tooltip_4:0 "Fellow soldier, [recipient.GetShortUINameNoTooltip]—drink. The war is long, and death is a sleep we can no longer afford. Hold the line with me."
 
  trait_water_of_life:0 "Sentinel of the Word"
- trait_water_of_life_desc:0 "This character has seen the Risen One and drank from the Cup. They have transcended the corruption of matter."
- trait_water_of_life_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] carries the secret of the Upper Room. [ROOT.GetCharacter.GetSheHe|U] is no longer bound by the laws of nature, but walks as a testiment to the #E Living Spirit#!"
+ trait_water_of_life_desc:0 "Having drunk from the cup guarded by Clavius Aquila, this character bears the duty of the Eternal Sentinel. Time cannot wither their body or dim their mind. Centuries of service promise wisdom, strength, and an unshakable spirit.\n\n#P Restoration:#! Existing age-related ailments, incapability, wounds, and illnesses are cleansed when the blessing is received, on game load, and during monthly upkeep."
+ trait_water_of_life_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has taken up Clavius Aquila's watch as the Sentinel of the Word. An ageless body, a tireless mind, and enduring faith sustain the keeper of the Grail.\n\n#P Restoration:#! Age-related ailments, incapability, wounds, and illnesses are cleansed on game load and during monthly upkeep."
 

@@ -11,14 +11,14 @@ water_of_life.1001 = {
 		animation = worry
 	}
 	immediate = {
-		# Stop characters from planning multiple activities at once.
-		add_character_flag = {
-			flag = planning_next_step
-			days = 100
-		}
+		# Track this quest until the homecoming, including delayed events.
+		add_character_flag = skonester_water_of_life_in_progress
+		remove_character_flag = skonester_water_of_life_martial_preparation
+		remove_character_flag = skonester_water_of_life_scholarly_preparation
 	}
 	option = {
 		name = water_of_life.1001.a
+		hidden_effect = { add_character_flag = skonester_water_of_life_martial_preparation }
 		add_martial_lifestyle_perk_points = 1
 		stress_impact = {
 			athletic = minor_stress_impact_loss
@@ -32,6 +32,7 @@ water_of_life.1001 = {
 	}
 	option = {
 		name = water_of_life.1001.b
+		hidden_effect = { add_character_flag = skonester_water_of_life_scholarly_preparation }
 		add_learning_lifestyle_perk_points = 1
 		stress_impact = {
 			patient = minor_stress_impact_loss
@@ -95,7 +96,17 @@ water_of_life.1002 = {
 water_of_life.1003 = {
 	type = character_event
 	title = water_of_life.1003.t
-	desc = water_of_life.1003.desc
+	desc = {
+		desc = water_of_life.1003.desc
+		triggered_desc = {
+			trigger = { has_character_flag = skonester_water_of_life_martial_preparation }
+			desc = water_of_life.1003.martial_preparation
+		}
+		triggered_desc = {
+			trigger = { has_character_flag = skonester_water_of_life_scholarly_preparation }
+			desc = water_of_life.1003.scholarly_preparation
+		}
+	}
 	theme = default
 	override_background = { reference = wilderness_mountains }
 	left_portrait = {
@@ -105,6 +116,14 @@ water_of_life.1003 = {
 	immediate = { }
 	option = {
 		name = water_of_life.1003.a
+		if = {
+			limit = { has_character_flag = skonester_water_of_life_martial_preparation }
+			add_martial_lifestyle_xp = minor_lifestyle_xp
+		}
+		else_if = {
+			limit = { has_character_flag = skonester_water_of_life_scholarly_preparation }
+			add_learning_lifestyle_xp = minor_lifestyle_xp
+		}
 		stress_impact = {
 			calm = medium_stress_impact_loss
 			brave = medium_stress_impact_loss
@@ -176,10 +195,23 @@ water_of_life.1005 = {
 	option = {
 		name = water_of_life.1005.a
 		water_of_life_effect_trophy = yes
-		stress_impact = {
-			hunter_1 = minor_stress_impact_loss
-			hunter_2 = medium_stress_impact_loss
-			hunter_3 = major_stress_impact_loss
+		if = {
+			limit = { has_trait = lifestyle_hunter }
+			if = {
+				limit = {
+					has_trait_xp = { trait = lifestyle_hunter track = hunter value >= 100 }
+				}
+				stress_impact = { base = major_stress_impact_loss }
+			}
+			else_if = {
+				limit = {
+					has_trait_xp = { trait = lifestyle_hunter track = hunter value >= 50 }
+				}
+				stress_impact = { base = medium_stress_impact_loss }
+			}
+			else = {
+				stress_impact = { base = minor_stress_impact_loss }
+			}
 		}
 	}
 	after = {
@@ -207,10 +239,6 @@ water_of_life.1006 = {
 	}
 	immediate = {
 		play_music_cue = "mx_cue_postive_effect"
-		add_character_flag = {
-			flag = the_hooded_old_man
-			days = 50
-		}
 		hidden_effect = {
 			create_character = {
 				location = root.location
@@ -260,7 +288,6 @@ water_of_life.1007 = {
 	immediate = { }
 	option = {
 		name = water_of_life.1007.a
-		water_of_life_effect_chosen_one = yes
 	}
 	after = {
 		trigger_event = {
@@ -287,10 +314,6 @@ water_of_life.1008 = {
 	}
 	immediate = {
 		play_music_cue = "mx_cue_epic_sacral_moment"
-		add_character_flag = {
-			flag = hooded_old_man
-			days = 150
-		}
 		hidden_effect = {
 			create_character = {
 				location = root.location
@@ -307,6 +330,8 @@ water_of_life.1008 = {
 	option = {
 		name = water_of_life.1008.a
 		water_of_life_effect = yes
+		skonester_receive_clavius_grail_effect = yes
+		water_of_life_effect_chosen_one = yes
 	}
 	after = {
 		trigger_event = {
@@ -327,7 +352,7 @@ water_of_life.1009 = {
 	title = water_of_life.1009.t
 	desc = water_of_life.1009.desc
 	theme = friend_relation
-	override_background = { reference = throne_room }
+	override_background = { reference = skonester_clavius_homecoming }
 	left_portrait = {
 		character = ROOT
 		animation = personality_bold
@@ -352,32 +377,32 @@ water_of_life.1009 = {
 		play_music_cue = "mx_cue_touching_moment"
 		hidden_effect = {
 			create_character = {
-				location = root.location
 				template = one_loyal_subject_character
+				employer = root
 				faith = ROOT.faith
 				culture = ROOT.culture
 				dynasty = random
 				save_scope_as = one_loyal_subject_character
 			}
 			create_character = {
-				location = root.location
 				template = second_loyal_subject_character
+				employer = root
 				faith = ROOT.faith
 				culture = ROOT.culture
 				dynasty = random
 				save_scope_as = second_loyal_subject_character
 			}
 			create_character = {
-				location = root.location
 				template = third_loyal_subject_character
+				employer = root
 				faith = ROOT.faith
 				culture = ROOT.culture
 				dynasty = random
 				save_scope_as = third_loyal_subject_character
 			}
 			create_character = {
-				location = root.location
 				template = fourth_loyal_subject_character
+				employer = root
 				faith = ROOT.faith
 				culture = ROOT.culture
 				dynasty = random
@@ -387,5 +412,10 @@ water_of_life.1009 = {
 	}
 	option = {
 		name = water_of_life.1009.a
+	}
+	after = {
+		remove_character_flag = skonester_water_of_life_in_progress
+		remove_character_flag = skonester_water_of_life_martial_preparation
+		remove_character_flag = skonester_water_of_life_scholarly_preparation
 	}
 }

@@ -1,0 +1,28 @@
+﻿# Character scope. Also used to update existing Sentinel characters on save load.
+skonester_water_of_life_restore_effect = {
+    if = {
+        limit = { has_trait = water_of_life }
+        remove_trait = incapable
+        remove_trait = infirm
+        remove_trait = withering_mind
+        remove_trait = clouded_eyes
+        remove_trait = faltering_heart
+        remove_trait = fragile_bones
+        remove_trait = wounded_1
+        remove_trait = wounded_2
+        remove_trait = wounded_3
+        # Use the game's illness flag so newly added diseases are covered too.
+        while = {
+            count = 32
+            limit = { has_trait_with_flag = illness }
+            random_character_trait = {
+                limit = { has_trait_flag = illness }
+                save_scope_as = skonester_water_of_life_illness
+            }
+            if = {
+                limit = { exists = scope:skonester_water_of_life_illness }
+                remove_trait = scope:skonester_water_of_life_illness
+            }
+        }
+    }
+}

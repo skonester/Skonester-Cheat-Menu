@@ -2552,9 +2552,6 @@ mt_clear_selection:0 "头衔选择将被清除"
  special_gift_interaction_4:0 "#bold #X 生#!#N 命#!#X 之#!#N 水#! #!"
  special_gift_interaction_desc_4:0 "授予[recipient.GetShortUINameNoTooltip]第十军团的活力——一种并非以黄金，而是以圣灵的永恒锻造的忠诚。"
  special_gift_interaction_tooltip_4:0 "战友[recipient.GetShortUINameNoTooltip]——饮下此杯。战争漫长，死亡是我们再也无法承受的沉睡。与我一起坚守战线。"
- trait_water_of_life:0 "圣言哨卫"
- trait_water_of_life_desc:0 "此角色已见过复活者并饮用了圣杯。他们已超越了物质的腐化。"
- trait_water_of_life_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] 携带着楼上房间的秘密。[ROOT.GetCharacter.GetSheHe|U] 不再受自然法则束缚，而是作为#E 永生之灵#！的见证者行走。"
 
  ### 来自：water_of_life_decisions_l_english.yml
  start_searching_for_water_of_life_decision:0 "无死之日"

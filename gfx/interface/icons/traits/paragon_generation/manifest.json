@@ -1,0 +1,40 @@
+{
+  "selected_trait_count": 3,
+  "jobs": [
+    {
+      "trait_id": "super_governor",
+      "name": "Steward of Wonders",
+      "description": "Prosperity, development, sound governance and effortless construction.",
+      "source_icon": "super_governor.dds",
+      "definition_file": "common/traits/pcm_traits.txt",
+      "input_png": "inputs/super_governor.png",
+      "proposed_output_dds": "super_governor.dds",
+      "requires_icon_reference_change": false,
+      "prompt": "Subject: (a silver stone keep and a large golden key:1.4), a compact castle tower with the ornate key laid diagonally across it, mounted on a square dark burgundy leather plaque with a thin aged brass rim and corner rivets, matching a medieval military trait badge. Use the supplied image for palette, painted materials and composition.",
+      "generation_input_png": "references/warlord_anointed.png"
+    },
+    {
+      "trait_id": "super",
+      "name": "Paragon",
+      "description": "Supreme ability, vigor, charm and mastery of all core attributes.",
+      "source_icon": "super.dds",
+      "definition_file": "common/traits/pcm_traits.txt",
+      "input_png": "inputs/super.png",
+      "proposed_output_dds": "super.dds",
+      "requires_icon_reference_change": false,
+      "prompt": "Subject: (a magnificent golden royal crown over a silver breastplate:1.4), a single royal crown above polished plate armor, mounted on a square dark burgundy leather plaque with a thin aged brass rim and corner rivets, matching a medieval military trait badge. Use the supplied image for palette, painted materials and composition.",
+      "generation_input_png": "references/warlord_anointed.png"
+    },
+    {
+      "trait_id": "goodguy_toc",
+      "name": "Grace of the Valar",
+      "description": "A gentle, peaceful disposition blessed by the powers of the West.",
+      "source_icon": "goodguy_toc.dds",
+      "definition_file": "common/traits/zzzzzzzz_realistoc_traits.txt",
+      "input_png": "inputs/goodguy_toc.png",
+      "proposed_output_dds": "goodguy_toc.dds",
+      "requires_icon_reference_change": false,
+      "prompt": "Subject: (a white dove carrying a fresh green olive branch:1.5), a graceful dove in silver-white painted relief, small restrained golden eight-pointed star above it, an emblem of peace and benevolence, isolated compact medieval heraldic emblem, no halo and no angel wings. Use the supplied image for palette, painted materials and composition."
+    }
+  ]
+}

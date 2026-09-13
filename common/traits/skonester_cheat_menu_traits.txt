@@ -9,7 +9,7 @@ skonester_trait_immortal_ageless = {
   genetic = no
   physical = yes
 
-  icon = "immortality.dds"
+  icon = "skonester_trait_immortal_ageless.dds"
 
   # 引擎支持的“不老/不衰/不无能”机制
   immortal = yes
@@ -32,7 +32,7 @@ skonester_trait_yannian_dan = {
   genetic = no
   physical = yes
 
-  icon = "water_of_life.dds"
+  icon = "skonester_trait_yannian_dan.dds"
 
   # 点一次：青春定格 + 寿命 +100 年 + 强抗病（基本不会死于疾病）
   immortal = yes
@@ -57,7 +57,7 @@ skonester_trait_yannian_dan_mid = {
   genetic = no
   physical = yes
 
-  icon = "zg_buxiu.dds"
+  icon = "skonester_trait_yannian_dan_mid.dds"
 
   # 中级延年丹：青春定格 + 寿命 +300 年 + 强抗病（基本不会死于疾病）
   immortal = yes
@@ -81,7 +81,7 @@ skonester_trait_yannian_dan_best = {
   genetic = no
   physical = yes
 
-  icon = "toc_immortal.dds"
+  icon = "skonester_trait_yannian_dan_best.dds"
 
   # 极品延年丹：青春定格 + 寿命 +500 年 + 强抗病（基本不会死于疾病）
   immortal = yes
@@ -188,5 +188,5 @@ skonester_trait_marriage_ban = {
 
   category = lifestyle
 
-  icon = "water_of_life.dds"
+  icon = "skonester_trait_marriage_ban.dds"
 }

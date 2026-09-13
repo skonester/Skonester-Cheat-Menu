@@ -1,6 +1,6 @@
 ﻿skonester_ai_yearly_pulse_toggle_decision = {
   picture = {
-    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+    reference = "gfx/interface/illustrations/decisions/8.dds"
   }
   decision_group_type = skonester_ai_automation
   sort_order = 81
@@ -93,7 +93,7 @@
 # å¼€å¯åŽ 9200 æœ«å°¾æ‰§è¡Œ skonester_one_click_transfer_direct_vassals_to_de_jure_liege_effectï¼›çŽ©å®¶å†³è®®ã€Œæ³•ç†è½¬å°ã€ä¸å—å½±å“ã€‚
 skonester_ai_yearly_de_jure_transfer_toggle_decision = {
   picture = {
-    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+    reference = "gfx/interface/illustrations/decisions/8.dds"
   }
   decision_group_type = skonester_ai_automation
   sort_order = 80
@@ -177,7 +177,7 @@ skonester_ai_yearly_de_jure_transfer_toggle_decision = {
 # å…³é—­åŽ skonester_ai_ruthless_governance_yearly_effect ä»æŠ¬å°è‡£ä¹‰åŠ¡ï¼Œä½†ä¸æ‰§è¡Œ EP3 è¡Œæ”¿è½¬æ¢ï¼›æ¸¸ç‰§/éƒ¨è½/ç‰§æ°‘å®—ä¸»ä¸æ‰¹é‡æ”¹å°è‡£æ”¿ä½“ã€‚
 skonester_ai_yearly_admin_conversion_toggle_decision = {
   picture = {
-    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+    reference = "gfx/interface/illustrations/decisions/8.dds"
   }
   decision_group_type = skonester_ai_automation
   sort_order = 79
@@ -271,7 +271,7 @@ skonester_ai_yearly_admin_conversion_toggle_decision = {
 # å¼€å¯åŽæ¯æœˆæŒ‰â€œçŽ©å®¶é¢†åœ°â†’é‚»æŽ¥çŽ©å®¶â†’å…¨å›¾â€åˆ†æ‰¹å¼ºåŒ–æœ‰åœ° AIï¼›å†æ¬¡ç‚¹å‡»å…³é—­ã€‚
 skonester_ai_boost_toggle_decision = {
   picture = {
-    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+    reference = "gfx/interface/illustrations/decisions/8.dds"
   }
   decision_group_type = skonester_ai_automation
   sort_order = 78
@@ -356,7 +356,7 @@ skonester_ai_boost_toggle_decision = {
 # â€”â€” æš‚åœï¼šæœ¬å±€ä¸å†æ˜¾ç¤º/æ‰§è¡Œã€Œå¼ºæœ‰åœ°AIå¼ºåŒ–ã€ï¼ˆå…¼å®¹æ—  TGPã€ç¥žå·ž/å¤§æ˜Žå˜èº«ç­‰ï¼‰â€”â€”
 skonester_world_ai_boost_pause_decision = {
   picture = {
-    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+    reference = "gfx/interface/illustrations/decisions/8.dds"
   }
   # å·²éšè—ï¼›ä¸æŒ‚ skonester_officials å†³è®®ç»„ï¼Œé¿å…åˆ—è¡¨ç©ºç™½å ä½è¡Œ
   sort_order = 77
@@ -407,7 +407,7 @@ skonester_world_ai_boost_pause_decision = {
 # â€”â€” æ¢å¤ï¼šé‡æ–°å…è®¸ä½¿ç”¨ã€Œå¼ºæœ‰åœ°AIå¼ºåŒ–ã€å†³è®® â€”â€”
 skonester_world_ai_boost_resume_decision = {
   picture = {
-    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+    reference = "gfx/interface/illustrations/decisions/8.dds"
   }
   # å·²éšè—ï¼›ä¸æŒ‚ skonester_officials å†³è®®ç»„ï¼Œé¿å…åˆ—è¡¨ç©ºç™½å ä½è¡Œ
   sort_order = 76
@@ -448,7 +448,7 @@ skonester_world_ai_boost_resume_decision = {
 
 skonester_boost_world_ai_rulers_decision = {
   picture = {
-    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+    reference = "gfx/interface/illustrations/decisions/8.dds"
   }
   # å·²ç”±ã€ŒAIå¼ºåŒ–ï¼ˆæœˆåº¦ï¼‰ã€å–ä»£å¹¶éšè—ï¼›ä¸æŒ‚ skonester_officials å†³è®®ç»„ï¼Œé¿å…åˆ—è¡¨ç©ºç™½å ä½è¡Œ
   sort_order = 75

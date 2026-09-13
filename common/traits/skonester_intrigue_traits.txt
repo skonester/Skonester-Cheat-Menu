@@ -12,7 +12,7 @@
   category = intrigue
 
   # 自定义图标（模组内提供）
-  icon = "savant_intrig.dds"
+  icon = "trait_ultimate_intrigue_master.dds"
 
   # 基础属性拉满
   intrigue = 25

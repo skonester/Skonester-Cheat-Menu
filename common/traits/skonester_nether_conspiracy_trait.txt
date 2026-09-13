@@ -14,7 +14,7 @@ trait_nether_conspiracy_lord = {
 
   category = fame
 
-  icon = "zhuge_kill_02.dds"
+  icon = "trait_nether_conspiracy_lord.dds"
 
   long_reign_bonus_mult = 150
 

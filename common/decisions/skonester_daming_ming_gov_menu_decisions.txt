@@ -1,6 +1,6 @@
 ﻿skonester_daming_ming_gov_menu_unlock_decision = {
   picture = {
-    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+    reference = "gfx/interface/illustrations/decisions/8.dds"
   }
   decision_group_type = skonester_officials
   sort_order = 5

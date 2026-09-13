@@ -15,7 +15,7 @@
   category = fame
 
   # 自定义图标（模组内提供）
-  icon = "super_general.dds"
+  icon = "trait_warlord_eternal.dds"
 
   # 角色个人军事属性
   martial = 15

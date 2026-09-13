@@ -1,0 +1,26 @@
+{
+  "generator": "Local ComfyUI image-to-image; no cloud image API",
+  "checkpoint": {
+    "repository": "https://huggingface.co/Lykon/dreamshaper-xl-v2-turbo",
+    "filename": "DreamShaperXL_Turbo_v2_1.safetensors",
+    "sha256": "4496b36d48bfd7cfe4e5dbce3485db567bcefa2bef7238d290dbd45612125083",
+    "size_bytes": 6939220250,
+    "license": "openrail++"
+  },
+  "background_removal": {
+    "source": "https://github.com/danielgatis/rembg",
+    "model_url": "https://github.com/danielgatis/rembg/releases/download/v0.0.0/u2net.onnx",
+    "md5": "60024c5c889badc19c04ad937298a77b",
+    "runtime": "onnxruntime CPU"
+  },
+  "comfyui_directory": "C:\\Users\\admin\\Downloads\\ComfyUI_windows_portable_nvidia\\ComfyUI_windows_portable\\ComfyUI",
+  "base_parameters": {
+    "size": 1024,
+    "steps": 8,
+    "cfg": 2,
+    "sampler": "dpmpp_sde",
+    "scheduler": "karras",
+    "denoise": 0.88
+  },
+  "finishing": "U2Net alpha extraction; centered 1024px transparent master; 120px preview; explicit gold tier pips and marriage-ban slash."
+}

@@ -1,7 +1,7 @@
 ﻿skonester_positions_mass_reshuffle_decision = {
   decision_group_type = skonester_officials
   picture = {
-    reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+    reference = "gfx/interface/illustrations/decisions/8.dds"
   }
   # åŠŸèƒ½å·²å¹¶å…¥å³é”®èœå•ï¼›ä¸æŒ‚ skonester_officials å†³è®®ç»„ï¼Œé¿å…åˆ—è¡¨å‡ºçŽ°ç©ºç™½å ä½è¡Œ
   sort_order = 85

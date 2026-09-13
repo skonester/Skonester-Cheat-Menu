@@ -1,0 +1,64 @@
+{
+  "skonester_trait_marriage_ban": {
+    "subject": "(two broken golden wedding rings:1.4), a heavy diagonal iron bar across the broken rings, symbolic prohibition of marriage, a single compact emblem, rings and iron bar only.",
+    "negative": ", shield, cross, crucifix, chalice, cup, bottle, potion, crown",
+    "denoise": 0.95
+  },
+  "skonester_trait_yannian_dan": {
+    "subject": "A simple green jade longevity potion bottle with a small gold stopper and one gold bead, Chinese alchemical elixir, a plain jade leaf emblem on the bottle.",
+    "negative": ", cross, crucifix, shield, scripture"
+  },
+  "skonester_trait_yannian_dan_mid": {
+    "subject": "An ornate green jade longevity potion bottle with a gold stopper and two prominent gold beads, Chinese alchemical elixir, a jade leaf emblem, refined middle tier.",
+    "negative": ", cross, crucifix, shield, scripture"
+  },
+  "skonester_trait_yannian_dan_best": {
+    "subject": "An imperial green jade longevity potion bottle with a carved gold stopper and three prominent gold beads, Chinese alchemical elixir, a jade leaf emblem and a subtle golden halo, highest tier.",
+    "negative": ", cross, crucifix, shield, scripture"
+  },
+  "build_speed_cheat": {
+    "subject": "A medieval stonemason hammer crossed with an iron compass above a small stone arch; master cathedral builder emblem.",
+    "negative": ", cross, crucifix, face"
+  },
+  "zg_buxiu": {
+    "subject": "A golden serpent biting its tail around a red peach of immortality and two green leaves; eternal life emblem.",
+    "negative": ", cross, crucifix"
+  },
+  "super_general": {
+    "subject": "A bronze commander helmet with a deep crimson horsehair crest over a single short sword; compact military leadership emblem.",
+    "negative": ", cross, crucifix, human face"
+  },
+  "savant_intrig": {
+    "subject": "A silver half-mask with a small concealed iron key, an emblem of exceptional cunning and espionage.",
+    "negative": ", human face, portrait, cross, crucifix"
+  },
+  "zhuge_kill_02": {
+    "subject": "A small royal gold wine goblet filled with dark ruby-red wine, a subtle serpent coiled around its stem; dangerous royal wine emblem.",
+    "negative": ", cross, crucifix"
+  },
+  "trait_great_builder_god": {
+    "subject": "(a heavy stonemason hammer and a stone archway:1.5), a single wooden-handled masonry hammer leaning against a small finely cut stone arch, divine master builder symbol.",
+    "negative": ", compass, compass rose, star, wheel, cross, crucifix, sword",
+    "denoise": 0.95
+  },
+  "skonester_trait_immortal_ageless": {
+    "subject": "(a golden hourglass:1.5), suspended glowing sand inside a clear glass hourglass, two green laurel sprigs curling around it, ageless life and timelessness.",
+    "negative": ", trophy, cup, chalice, compass, star, cross, crucifix",
+    "denoise": 0.95
+  },
+  "trait_ultimate_intrigue_master": {
+    "subject": "(a single open human eye inside an oval silver amulet:1.5), clear blue iris and dark pupil, mystical all-seeing eye, ornate silver frame, awareness of hidden secrets.",
+    "negative": ", compass, compass rose, star, wheel, cross, crucifix, full face, clock",
+    "denoise": 0.95
+  },
+  "greatest_lord_np": {
+    "subject": "(a large golden castle key:1.5), one ornate gold key leaning against a small grey stone keep, symbol of responsible realm stewardship.",
+    "negative": ", cross, crucifix, compass, compass rose, star, sword",
+    "denoise": 0.95
+  },
+  "insane_opinion_fv": {
+    "subject": "(a faceless black hood:1.5), empty darkness inside a sinister black hood, a small iron crown on the hood, symbol of terrifying dread.",
+    "negative": ", cross, crucifix, compass, compass rose, star, gold helmet, gold shield, human face",
+    "denoise": 0.95
+  }
+}

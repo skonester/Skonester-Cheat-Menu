@@ -13,7 +13,7 @@ trait_eternal_nether_lord = {
 
   category = fame
 
-  icon = "crazyminded_psycho.dds"
+  icon = "trait_eternal_nether_lord.dds"
 
   long_reign_bonus_mult = 150
 

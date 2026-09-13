@@ -12,7 +12,7 @@
   category = stewardship
 
   # 自定义图标（模组内提供）
-  icon = "boost_daiming.dds"
+  icon = "trait_wealth_sovereign_max.dds"
 
   # 个人管理属性顶配
   stewardship = 20

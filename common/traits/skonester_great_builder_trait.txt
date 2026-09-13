@@ -13,7 +13,7 @@ trait_great_builder_god = {
 
   category = fame
 
-  icon = "build_speed_cheat.dds"
+  icon = "trait_great_builder_god.dds"
 
   long_reign_bonus_mult = 500
 

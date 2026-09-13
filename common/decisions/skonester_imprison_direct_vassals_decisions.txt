@@ -1,6 +1,4 @@
-﻿# ä¸€é¡¹å†³è®®ï¼šæ‰“å¼€å¼¹çª—åœ¨ã€Œåªæ”¶ç›´å±ž / å…¨è¾–å†…å°è‡£ã€äºŒé€‰ä¸€ï¼Œé¿å…åˆ—è¡¨é‡Œå‡ºçŽ°ä¸¤æ¡åŒåŠŸèƒ½å†³è®®ã€‚
-
-skonester_imprison_vassals_decision = {
+﻿skonester_imprison_vassals_decision = {
   picture = {
     reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
   }

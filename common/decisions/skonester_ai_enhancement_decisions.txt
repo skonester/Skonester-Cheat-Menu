@@ -1,8 +1,4 @@
-﻿# å¼ºæœ‰åœ°AIå¼ºåŒ–ï¼šå¼€å…³ï¼ˆå…¨å±€å˜é‡ skonester_world_ai_boost_disabledï¼‰+ æ‰§è¡Œå†³è®®ï¼›æ— éœ€ TGPï¼›æ— å¨æœ›æ¶ˆè€—ï¼›æ•ˆæžœä»…æ–½åŠ äºŽæœ‰åœ° AIã€‚
-
-# â€”â€” å¹´è„‰å†²ï¼šæ€»å¼€å…³ï¼ˆé»˜è®¤å…³é—­ï¼‰â€”â€”
-# å…³é—­åŽä¸å†è§¦å‘ skonester_officials.9200 åŠæœ¬æ–‡ä»¶å†…å¹´åº¦åçŽ©å®¶åŽ‹åŠ›åˆ·æ–°ï¼›å­å†³è®®ã€Œæ³•ç†è½¬å°ã€ã€Œæ”¹è¡Œæ”¿ã€ä»…åœ¨æ€»å¼€å…³å¼€å¯æ—¶ç”Ÿæ•ˆã€‚
-skonester_ai_yearly_pulse_toggle_decision = {
+﻿skonester_ai_yearly_pulse_toggle_decision = {
   picture = {
     reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
   }

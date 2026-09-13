@@ -1,6 +1,4 @@
-﻿# å®˜å‘˜é™åœ°ï¼šä¼¯çˆµåŠä»¥ä¸Šæœ‰åœ°å°è‡£ã€Œä¸»è¡” + ä¸€çˆµã€ï¼ˆä¸€å—ä¼¯çˆµé¢†ï¼‰ï¼›ä½™è¡”å¢ƒå†…ä¼˜å…ˆä¸‹åˆ†ï¼Œç›´æŽ¥æŽˆäºˆä»–äººï¼ˆä¸å«çŽ©å®¶ï¼‰ï¼›å„æ”¿ä½“é€šç”¨
-
-skonester_official_land_cap_decision = {
+﻿skonester_official_land_cap_decision = {
   picture = {
     reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
   }

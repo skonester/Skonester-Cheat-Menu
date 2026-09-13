@@ -1,5 +1,4 @@
-﻿# å½“è‡ªåŠ¨æŽ¢æµ‹æœªå‘½ä¸­æ—¶ï¼Œæœ¬å±€å¯æ‰‹åŠ¨ä¸€æ¬¡å¼€å¯å¤§æ˜Žæ”¿ä½“èœå•ï¼›å·²å¼€å¯æ—¶ä¸å†æ˜¾ç¤º
-skonester_daming_ming_gov_menu_unlock_decision = {
+﻿skonester_daming_ming_gov_menu_unlock_decision = {
   picture = {
     reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
   }

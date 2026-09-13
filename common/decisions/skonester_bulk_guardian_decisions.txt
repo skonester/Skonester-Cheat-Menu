@@ -1,6 +1,4 @@
-﻿# æ‰¹é‡åˆ†é…ç›‘æŠ¤äººï¼šä»…å†³è®®æ‰‹åŠ¨æ‰§è¡Œä¸€æ¬¡ï¼ˆæ•™è‚²é‡å¿ƒ + æ»¡ 6 å²æŒ‡æ´¾ç›‘æŠ¤äººï¼‰ï¼Œä¸ŽåŽŸå…ˆè‡ªåŠ¨æ—¥è„‰å†²é€»è¾‘ç›¸åŒï¼Œä¸å†æ¯æ—¥è¿è¡Œã€‚
-
-skonester_bulk_guardian_run_decision = {
+﻿skonester_bulk_guardian_run_decision = {
   picture = {
     reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
   }

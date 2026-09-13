@@ -1,6 +1,4 @@
-﻿# å®˜åç»Ÿè¾– Â· å®«å»·èŒä½ä»»å…
-
-skonester_positions_mass_reshuffle_decision = {
+﻿skonester_positions_mass_reshuffle_decision = {
   decision_group_type = skonester_officials
   picture = {
     reference = "gfx/interface/illustrations/decisions/decision_realm.dds"

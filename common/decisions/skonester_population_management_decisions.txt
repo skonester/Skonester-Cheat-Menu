@@ -1,6 +1,4 @@
-﻿# äººå£ä¸Žç»Ÿè¾–ï¼šæ—å†…äººå£æ¸…ç†ï¼ˆæ— åœ°åŒå®—ã€16+ã€äº”ä¸»å±žæ€§ä¹‹å’Œ<50ï¼Œä¸å«å‹‡æ­¦ï¼‰/ ä¸–ç•Œæ— åœ°æ¸…ç†ï¼ˆä¸å«åº¦æ”¯å†…å¸‘ï¼‰
-
-skonester_population_management_hub_decision = {
+﻿skonester_population_management_hub_decision = {
   picture = {
     reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
   }

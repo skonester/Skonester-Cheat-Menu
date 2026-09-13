@@ -1,6 +1,4 @@
-﻿# å†³è®®ï¼šä¸€é”®çŸ¥ç§˜å¯†ã€é…å¶å¦¾å®¤å‹¾å¼•é˜²æŠ¤å¼€å…³
-
-skonester_learn_all_realm_officials_secrets_decision = {
+﻿skonester_learn_all_realm_officials_secrets_decision = {
   picture = {
     reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
   }

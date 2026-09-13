@@ -1,5 +1,5 @@
 ﻿X1_decision = {
-    decision_group_type = pcm
+    decision_group_type = skonester_realm_tools
     picture = { reference = "gfx/interface/illustrations/decisions/1.dds" }
     title = X1_decision_title
     confirm_text = X1_decision_confirm
@@ -13,7 +13,7 @@
 }
 
 X_build = {
-    decision_group_type = pcm
+    decision_group_type = skonester_realm_tools
     picture = { reference = "gfx/interface/illustrations/decisions/2.dds" }
     title = X_build_title
     confirm_text = X_build_confirm
@@ -133,7 +133,7 @@ X_build = {
 }
 
 X_city = {
-    decision_group_type = pcm
+    decision_group_type = skonester_realm_tools
     picture = { reference = "gfx/interface/illustrations/decisions/3.dds" }
     title = X_city_title
     confirm_text = X_city_confirm
@@ -223,7 +223,7 @@ X_city = {
 }
 
 X_temple = {
-    decision_group_type = pcm
+    decision_group_type = skonester_realm_tools
     picture = { reference = "gfx/interface/illustrations/decisions/4.dds" }
     title = X_temple_title
     confirm_text = X_temple_confirm
@@ -306,7 +306,7 @@ X_temple = {
 }
 
 X_castle = {
-    decision_group_type = pcm
+    decision_group_type = skonester_realm_tools
     picture = { reference = "gfx/interface/illustrations/decisions/5.dds" }
     title = X_castle_title
     confirm_text = X_castle_confirm
@@ -385,7 +385,7 @@ X_castle = {
 }
 
 X_unify = {
-    decision_group_type = pcm
+    decision_group_type = skonester_realm_tools
     picture = { reference = "gfx/interface/illustrations/decisions/6.dds" }
     title = X_unify_title
     confirm_text = X_unify_confirm

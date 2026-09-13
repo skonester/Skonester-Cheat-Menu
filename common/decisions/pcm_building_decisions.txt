@@ -2,7 +2,7 @@
 ## use pcm_b_ prefix
 
 pcm_b_add_building_slot_7_sub_realm_decision = {
-	decision_group_type = pcm
+	decision_group_type = skonester_economy_artifacts
 	picture = { reference = gfx/interface/illustrations/decisions/pcm_b_decision.dds }
 	sort_order = 312
 	title = pcm_b_add_building_slot_7_sub_realm_decision_title
@@ -80,7 +80,7 @@ pcm_b_add_building_slot_7_sub_realm_decision = {
 }
 
 pcm_b_max_all_buildings_sub_realm_decision = {
-	decision_group_type = pcm
+	decision_group_type = skonester_economy_artifacts
 	picture = {	reference = gfx/interface/illustrations/decisions/pcm_b_decision.dds }
 	sort_order = 310
 	title = pcm_b_max_all_buildings_sub_realm_decision_title
@@ -1234,7 +1234,7 @@ pcm_b_max_all_buildings_sub_realm_decision = {
 }
 
 pcm_b_lucky_7_sub_realm_decision = {
-	decision_group_type = pcm
+	decision_group_type = skonester_economy_artifacts
 	picture = {	reference = gfx/interface/illustrations/decisions/pcm_b_decision.dds }
 	sort_order = 311
 	title = pcm_b_lucky_7_sub_realm_decision_title
@@ -1787,7 +1787,7 @@ pcm_b_lucky_7_sub_realm_decision = {
 }
 
 pcm_b_show_decision = {
-    decision_group_type = pcm
+    decision_group_type = skonester_economy_artifacts
 	picture = {
 		reference=gfx/interface/illustrations/decisions/pcm_b_show_decision.dds
 	}
@@ -1810,7 +1810,7 @@ pcm_b_show_decision = {
 }
 
 pcm_b_hide_decision = {
-	decision_group_type = pcm
+	decision_group_type = skonester_economy_artifacts
 	picture = {
 		reference=gfx/interface/illustrations/decisions/pcm_b_hide_decision.dds
 	}

@@ -1,5 +1,5 @@
 ﻿ch_convert_holding_to_castle_decision = {
-    decision_group_type = pcm
+    decision_group_type = skonester_realm_tools
     picture = { reference = "gfx/interface/illustrations/decisions/castle.dds" }
     ai_check_interval = 0
     is_shown = {
@@ -66,7 +66,7 @@
 }
 
 ch_convert_holding_to_city_decision = {
-    decision_group_type = pcm
+    decision_group_type = skonester_realm_tools
     picture = { reference = "gfx/interface/illustrations/decisions/city.dds" }
     ai_check_interval = 0
     is_shown = {
@@ -125,7 +125,7 @@ ch_convert_holding_to_city_decision = {
 }
 
 ch_convert_holding_to_temple_decision = {
-    decision_group_type = pcm
+    decision_group_type = skonester_realm_tools
     picture = { reference = "gfx/interface/illustrations/decisions/temple.dds" }
     ai_check_interval = 0
     is_shown = {
@@ -191,7 +191,7 @@ ch_convert_holding_to_temple_decision = {
 }
 
 ch_convert_holding_to_nomad_decision = {
-	decision_group_type = pcm
+	decision_group_type = skonester_realm_tools
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/nomad.dds"
 	}
@@ -264,7 +264,7 @@ ch_convert_holding_to_tribal_decision = {
 		reference = "gfx/interface/illustrations/decisions/tribal.dds"
 	}
 	
-	decision_group_type = pcm
+	decision_group_type = skonester_realm_tools
 	
 	title = ch_convert_holding_to_tribal_title
 	desc = ch_convert_holding_to_tribal_desc
@@ -342,7 +342,7 @@ ch_convert_holding_to_temple_citadel_decision = {
 		reference = "gfx/interface/illustrations/decisions/citadel.dds"
 	}
 	
-	decision_group_type = pcm
+	decision_group_type = skonester_realm_tools
 	
 	title = ch_convert_holding_to_temple_citadel_title
 	desc = ch_convert_holding_to_temple_citadel_desc

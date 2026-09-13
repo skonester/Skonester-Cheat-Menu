@@ -6,7 +6,7 @@ skonester_ai_yearly_pulse_toggle_decision = {
   picture = {
     reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
   }
-  decision_group_type = pcm
+  decision_group_type = skonester_ai_automation
   sort_order = 81
   title = {
     first_valid = {
@@ -99,7 +99,7 @@ skonester_ai_yearly_de_jure_transfer_toggle_decision = {
   picture = {
     reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
   }
-  decision_group_type = pcm
+  decision_group_type = skonester_ai_automation
   sort_order = 80
   title = {
     first_valid = {
@@ -183,7 +183,7 @@ skonester_ai_yearly_admin_conversion_toggle_decision = {
   picture = {
     reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
   }
-  decision_group_type = pcm
+  decision_group_type = skonester_ai_automation
   sort_order = 79
   title = {
     first_valid = {
@@ -277,7 +277,7 @@ skonester_ai_boost_toggle_decision = {
   picture = {
     reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
   }
-  decision_group_type = pcm
+  decision_group_type = skonester_ai_automation
   sort_order = 78
   title = {
     first_valid = {

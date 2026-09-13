@@ -5,7 +5,7 @@
     selection_tooltip = gender_Succession_events_mod_decision_tt
     confirm_text = CONFIRM_OKAY
 
-    decision_group_type = pcm
+    decision_group_type = skonester_realm_tools
 
     is_shown = {
         is_player = yes
@@ -28,7 +28,7 @@ change_Realm_succession_law_mod_decision = {
     selection_tooltip = change_Realm_succession_law_mod_decision_tt
     confirm_text = CONFIRM_OKAY
 
-    decision_group_type = pcm
+    decision_group_type = skonester_realm_tools
 
     is_shown = {
         is_player = yes
@@ -67,7 +67,7 @@ change_succession_single = {
     selection_tooltip = change_suc_tt
     confirm_text = CONFIRM_OKAY
 
-	decision_group_type = pcm
+	decision_group_type = skonester_realm_tools
 
     is_shown = {
         NOR = {
@@ -104,7 +104,7 @@ change_succession_single_youngest = {
     selection_tooltip = change_suc_tt
     confirm_text = CONFIRM_OKAY
 
-	decision_group_type = pcm
+	decision_group_type = skonester_realm_tools
 
     is_shown = {
         NOR = {
@@ -141,7 +141,7 @@ convert_religion = {
     selection_tooltip = are_you_sure_tt
     confirm_text = "CONFIRM_OKAY"
 
-	decision_group_type = pcm
+	decision_group_type = skonester_realm_tools
 
     is_shown = {
         has_character_flag = daddy_pika_cheat_menu
@@ -170,7 +170,7 @@ convert_culture = {
     selection_tooltip = are_you_sure_tt
     confirm_text = "CONFIRM_OKAY"
 
-	decision_group_type = pcm
+	decision_group_type = skonester_realm_tools
 
     is_shown = {
         has_character_flag = daddy_pika_cheat_menu
@@ -199,7 +199,7 @@ realm_control = {
     selection_tooltip = are_you_sure_tt
     confirm_text = "CONFIRM_OKAY"
 
-	decision_group_type = pcm
+	decision_group_type = skonester_realm_tools
 
     is_shown = {
         has_character_flag = daddy_pika_cheat_menu
@@ -225,7 +225,7 @@ realm_development = {
     selection_tooltip = are_you_sure_tt
     confirm_text = "CONFIRM_OKAY"
 
-    decision_group_type = pcm
+    decision_group_type = skonester_realm_tools
 
     is_shown = {
         has_character_flag = daddy_pika_cheat_menu
@@ -246,7 +246,7 @@ dynasty_pope_0_decision = {
 		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
 	}
 
-	decision_group_type = pcm
+	decision_group_type = skonester_realm_tools
 
 	ai_goal = no
 
@@ -296,7 +296,7 @@ dynasty_grandmaster_0_decision = {
 		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
 	}
 
-	decision_group_type = pcm
+	decision_group_type = skonester_realm_tools
 
 	ai_goal = no
 

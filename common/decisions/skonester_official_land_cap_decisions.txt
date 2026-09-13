@@ -4,7 +4,7 @@ skonester_official_land_cap_decision = {
   picture = {
     reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
   }
-  decision_group_type = pcm
+  decision_group_type = skonester_officials
   sort_order = 25
   title = skonester_official_land_cap_decision
   desc = skonester_official_land_cap_decision_desc
@@ -41,7 +41,7 @@ skonester_one_click_strip_official_titles_decision = {
   picture = {
     reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
   }
-  decision_group_type = pcm
+  decision_group_type = skonester_officials
   sort_order = 26
   title = skonester_one_click_strip_official_titles_decision
   desc = skonester_one_click_strip_official_titles_decision_desc

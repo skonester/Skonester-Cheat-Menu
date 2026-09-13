@@ -2,7 +2,7 @@
   picture = {
     reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
   }
-  decision_group_type = pcm
+  decision_group_type = skonester_officials
   sort_order = 15
   title = skonester_dynasty_grant_titles_decision
   desc = skonester_dynasty_grant_titles_decision_desc
@@ -48,7 +48,7 @@ skonester_one_click_grant_titles_decision = {
   picture = {
     reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
   }
-  decision_group_type = pcm
+  decision_group_type = skonester_officials
   sort_order = 10
   title = skonester_one_click_grant_titles_decision
   desc = skonester_one_click_grant_titles_decision_desc

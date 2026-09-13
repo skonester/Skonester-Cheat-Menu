@@ -67,10 +67,10 @@
       add_trait = intellect_good_3
       # 设置合理属性加成
       add_martial_skill = 8
-      change_diplomacy = 8
-      change_stewardship = 8
-      change_intrigue = 8
-      change_learning = 8
+      add_diplomacy_skill = 8
+      add_stewardship_skill = 8
+      add_intrigue_skill = 8
+      add_learning_skill = 8
       add_prowess_skill = 8
 
       # 建立与父母的关系
@@ -163,10 +163,10 @@
       add_trait = intellect_good_3
       # 设置合理属性加成
       add_martial_skill = 8
-      change_diplomacy = 8
-      change_stewardship = 8
-      change_intrigue = 8
-      change_learning = 8
+      add_diplomacy_skill = 8
+      add_stewardship_skill = 8
+      add_intrigue_skill = 8
+      add_learning_skill = 8
       add_prowess_skill = 8
 
       # 建立与父母的关系
@@ -263,10 +263,10 @@ skonester_birth_cheat_add_female_1 = {
       add_trait = intellect_good_3
       # 设置合理属性加成
       add_martial_skill = 8
-      change_diplomacy = 8
-      change_stewardship = 8
-      change_intrigue = 8
-      change_learning = 8
+      add_diplomacy_skill = 8
+      add_stewardship_skill = 8
+      add_intrigue_skill = 8
+      add_learning_skill = 8
       add_prowess_skill = 8
 
       # 建立与父母的关系
@@ -359,10 +359,10 @@ skonester_birth_cheat_add_female_1 = {
       add_trait = intellect_good_3
       # 设置合理属性加成
       add_martial_skill = 8
-      change_diplomacy = 8
-      change_stewardship = 8
-      change_intrigue = 8
-      change_learning = 8
+      add_diplomacy_skill = 8
+      add_stewardship_skill = 8
+      add_intrigue_skill = 8
+      add_learning_skill = 8
       add_prowess_skill = 8
 
       # 建立与父母的关系

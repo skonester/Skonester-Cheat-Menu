@@ -10,6 +10,14 @@ skonester_acm_repair_gui_open_visible = {
   is_valid = { always = yes }
 }
 
+# gui/skonester_artifact_repair.gui 里用于判断是否已选中待修复宝物（GUI 数据函数没有直接的
+# "HasValue(character variable)"，因此用 scripted_gui 包一层真正的脚本触发器 has_variable）
+skonester_acm_repair_has_artifact_var = {
+  scope = character
+  is_shown = { has_variable = skonester_acm_repair_artifact_var }
+  is_valid = { always = yes }
+}
+
 skonester_acm_repair_gui_close = {
   scope = character
   is_shown = { always = yes }

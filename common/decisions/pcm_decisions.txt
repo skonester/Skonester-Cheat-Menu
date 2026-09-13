@@ -1,5 +1,5 @@
 ﻿pcm_money_decision = {
-	decision_group_type = pcm
+	decision_group_type = skonester_economy_artifacts
 	picture = { reference = gfx/interface/illustrations/decisions/pcm_decision.dds }
 	title = pcm_money_decision_title
     desc = pcm_money_decision_desc
@@ -24,7 +24,7 @@
 }
 
 pcm_convert_subrealm_to_culture_decision = {
-	decision_group_type = pcm
+	decision_group_type = skonester_economy_artifacts
 	picture = { reference = gfx/interface/illustrations/decisions/new1.dds }
 	title = pcm_subrealm_to_culture_decision_title
     desc = pcm_subrealm_to_culture_decision_desc
@@ -76,7 +76,7 @@ pcm_convert_subrealm_to_culture_decision = {
 }
 
 pcm_convert_subrealm_to_religion_decision = {
-	decision_group_type = pcm
+	decision_group_type = skonester_economy_artifacts
 	picture = { reference = gfx/interface/illustrations/decisions/new2.dds }
 	title = pcm_convert_subrealm_to_religion_decision_title
     desc = pcm_convert_subrealm_to_religion_decision_desc
@@ -121,7 +121,7 @@ pcm_convert_subrealm_to_religion_decision = {
 }
 
 pcm_show_decision = {
-    decision_group_type = pcm
+    decision_group_type = skonester_economy_artifacts
 	picture = { reference = gfx/interface/illustrations/decisions/pcm_show_decision.dds }
 	title = pcm_show_decision_title
     desc = pcm_show_decision_desc
@@ -142,7 +142,7 @@ pcm_show_decision = {
 }
 
 pcm_hide_decision = {
-    decision_group_type = pcm
+    decision_group_type = skonester_economy_artifacts
 	picture = { reference = gfx/interface/illustrations/decisions/pcm_hide_decision.dds }
 	title = pcm_hide_decision_title
     desc = pcm_hide_decision_desc
@@ -162,7 +162,7 @@ pcm_hide_decision = {
 }
 
 pcm_cure_pox_decision = {
-	decision_group_type = pcm
+	decision_group_type = skonester_economy_artifacts
 	picture = { reference = gfx/interface/illustrations/decisions/7.dds }
 	title = pcm_cure_pox_decision_title
     desc = pcm_cure_pox_decision_desc
@@ -256,7 +256,7 @@ pcm_cure_pox_decision = {
 }
 
 pcm_cure_all_decision = {
-	decision_group_type = pcm
+	decision_group_type = skonester_economy_artifacts
 	picture = { reference = gfx/interface/illustrations/decisions/7.dds }
 	title = pcm_cure_all_decision_title
     desc = pcm_cure_all_decision_desc
@@ -389,7 +389,7 @@ pcm_cure_all_decision = {
 }
 
 pcm_cure_inbred_decision = {
-	decision_group_type = pcm
+	decision_group_type = skonester_economy_artifacts
 	picture = { reference = "gfx/interface/illustrations/decisions/7.dds" }
 	title = pcm_cure_inbred_decision_title
 	desc = pcm_cure_inbred_decision_desc
@@ -458,7 +458,7 @@ pcm_cure_inbred_decision = {
 }
 
 yyz_open_menu_decision = {
-    decision_group_type = pcm
+    decision_group_type = skonester_talent_finder
     picture = { reference = "gfx/interface/illustrations/decisions/menu.dds" }
     
     is_shown = { 
@@ -480,7 +480,7 @@ yyz_open_menu_decision = {
 }
 
 Artifact_1000 = {
-	decision_group_type = pcm
+	decision_group_type = skonester_economy_artifacts
 	picture = { reference = "gfx/interface/illustrations/decisions/7.dds" }
 	title = cheat_decition_artifact
 	desc = cheat_description_artifact
@@ -710,7 +710,7 @@ Artifact_1000 = {
 }
 
 culture_cheat = {
-	decision_group_type = pcm
+	decision_group_type = skonester_economy_artifacts
 	picture = { reference = "gfx/interface/illustrations/decisions/7.dds" }
 	title = cheat_decition_tradition
 	desc = cheat_description_tradition

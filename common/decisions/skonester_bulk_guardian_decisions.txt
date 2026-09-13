@@ -4,7 +4,7 @@ skonester_bulk_guardian_run_decision = {
   picture = {
     reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
   }
-  decision_group_type = pcm
+  decision_group_type = skonester_officials
   sort_order = 100
   title = skonester_bulk_guardian_run_decision
   desc = skonester_bulk_guardian_run_decision_desc

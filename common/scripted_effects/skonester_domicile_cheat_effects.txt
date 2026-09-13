@@ -4,12 +4,15 @@
 # ==========================================
 
 # 1. 传统配置池（按需增删）：逐条显式判断 + 添加，避免依赖 every_in_list/variable_list 机制
+# 注：原池中 tradition_astronomy / tradition_scholarly_tradition / tradition_religious_studies /
+# tradition_war_poets 在当前版本游戏里并不是真实存在的传统 ID（PostValidate 会失败、且从不生效），
+# 已替换为主题相近的正版基础传统；如有别的偏好可自行替换。
 skonester_domicile_cheat_apply_traditions_effect = {
-  if = { limit = { NOT = { has_cultural_tradition = tradition_astronomy } } add_culture_tradition = tradition_astronomy }
-  if = { limit = { NOT = { has_cultural_tradition = tradition_scholarly_tradition } } add_culture_tradition = tradition_scholarly_tradition }
-  if = { limit = { NOT = { has_cultural_tradition = tradition_religious_studies } } add_culture_tradition = tradition_religious_studies }
+  if = { limit = { NOT = { has_cultural_tradition = tradition_music_theory } } add_culture_tradition = tradition_music_theory }
+  if = { limit = { NOT = { has_cultural_tradition = tradition_language_scholars } } add_culture_tradition = tradition_language_scholars }
+  if = { limit = { NOT = { has_cultural_tradition = tradition_religious_patronage } } add_culture_tradition = tradition_religious_patronage }
   if = { limit = { NOT = { has_cultural_tradition = tradition_martial_admiration } } add_culture_tradition = tradition_martial_admiration }
-  if = { limit = { NOT = { has_cultural_tradition = tradition_war_poets } } add_culture_tradition = tradition_war_poets }
+  if = { limit = { NOT = { has_cultural_tradition = tradition_poetry } } add_culture_tradition = tradition_poetry }
   if = { limit = { NOT = { has_cultural_tradition = tradition_legalistic } } add_culture_tradition = tradition_legalistic }
   if = { limit = { NOT = { has_cultural_tradition = tradition_castle_keepers } } add_culture_tradition = tradition_castle_keepers }
   if = { limit = { NOT = { has_cultural_tradition = tradition_philosopher_culture } } add_culture_tradition = tradition_philosopher_culture }

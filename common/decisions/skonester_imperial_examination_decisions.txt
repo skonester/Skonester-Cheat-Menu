@@ -2,7 +2,7 @@
   picture = {
     reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
   }
-  decision_group_type = pcm
+  decision_group_type = skonester_officials
   sort_order = 35
   title = skonester_one_click_imperial_examination_promote_decision
   desc = skonester_one_click_imperial_examination_promote_decision_desc

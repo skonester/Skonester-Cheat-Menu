@@ -5,3 +5,34 @@ pcm = {
 	sort_order = 301
 	gui_tags = { big_button }
 }
+
+############################################
+# Skonester Cheat Menu — split out of the old monolithic "pcm" tab so the
+# decision list isn't one giant undifferentiated scroll. Talent Finder is
+# pinned last within this cluster (still above vanilla's Major/Decisions/
+# Courtier/Debug groups, not pushed below the whole game's decision list).
+
+skonester_officials = { # Population/court/officials one-click tools
+	sort_order = 301
+	gui_tags = { big_button }
+}
+
+skonester_ai_automation = { # AI pulse/automation toggles and world-AI boosts
+	sort_order = 295
+	gui_tags = { big_button }
+}
+
+skonester_realm_tools = { # Government type, succession, culture/religion, holding conversion
+	sort_order = 290
+	gui_tags = { big_button }
+}
+
+skonester_economy_artifacts = { # Buildings, gold/cures, artifact spawning
+	sort_order = 285
+	gui_tags = { big_button }
+}
+
+skonester_talent_finder = { # Last of the skonester tabs, but still above vanilla's groups
+	sort_order = 284
+	gui_tags = { big_button }
+}

@@ -3,7 +3,7 @@ skonester_daming_ming_gov_menu_unlock_decision = {
   picture = {
     reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
   }
-  decision_group_type = pcm
+  decision_group_type = skonester_officials
   sort_order = 5
   title = skonester_daming_ming_gov_menu_unlock_decision
   desc = skonester_ui_no_hover_tooltip

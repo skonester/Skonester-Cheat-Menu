@@ -7804,7 +7804,7 @@ skonester_cheat_menu.0051 = {
 
   # 闂傚倷绀侀幉锟犮€冮崱妞曟椽寮介鐐叉優?濠电姷鏁搁崕鎴犵礊閳ь剚銇勯弴鍡楀閸欏繘鏌ｉ幇顔煎妺闁哄拋鍓氱换娑㈠箣閻忔椿浜鎻掆枎閹邦喚顔曢梺绯曟閸樺墽澹曢崸妤佺厱閻庯絽澧庣粔顔锯偓?缂傚倸鍊风粈渚€藝椤栫偐鈧箑鐣￠幍铏€洪柟鍏肩暘閸斿秹寮查鍕厱妞ゆ劦鍓涢幃鑲╃磼閻欌偓閸犳牠婀侀梺缁樻尭濞村嘲袙閻愮儤鐓冪憸婊堝礈濮樺崬鍨濋悘鐐垫櫕閺嗭箓鏌ｉ弮鍌氬付缂佲偓閸曨偀鏀介柣妯哄暱閻掑綊鏌涚€ｎ偅灏扮€垫澘瀚埀顒婄秵娴滆埖绂?闂傚倷绀侀幉锟犳偡閵夆晜鍤愭い鏍仜閸氳銇勯弴妤€浜鹃悗瑙勬穿缂嶄礁顕ｆ禒瀣╂い顒夊枔閸庣敻寮诲澶娢ㄩ柨鏂垮⒔椤斿洨绱?
   option = {
-    name = tradition_agrarian
+    name = tradition_agrarian_name
     scope:actor = {
       if = {
         limit = { has_cultural_tradition = tradition_agrarian }
@@ -7817,7 +7817,7 @@ skonester_cheat_menu.0051 = {
   }
 
   option = {
-    name = tradition_amharic_highlanders
+    name = tradition_amharic_highlanders_name
     scope:actor = {
       if = {
         limit = { has_cultural_tradition = tradition_amharic_highlanders }
@@ -7829,7 +7829,7 @@ skonester_cheat_menu.0051 = {
     }
   }
   option = {
-    name = tradition_ancient_miners
+    name = tradition_ancient_miners_name
     scope:actor = {
       if = {
         limit = { has_cultural_tradition = tradition_ancient_miners }
@@ -7841,7 +7841,7 @@ skonester_cheat_menu.0051 = {
     }
   }
   option = {
-    name = tradition_astute_diplomats
+    name = tradition_astute_diplomats_name
     scope:actor = {
       if = {
         limit = { has_cultural_tradition = tradition_astute_diplomats }
@@ -7853,7 +7853,7 @@ skonester_cheat_menu.0051 = {
     }
   }
   option = {
-    name = tradition_brewery
+    name = tradition_brewery_name
     scope:actor = {
       if = {
         limit = { has_cultural_tradition = tradition_brewery }
@@ -7865,7 +7865,7 @@ skonester_cheat_menu.0051 = {
     }
   }
   option = {
-    name = tradition_castle_keepers
+    name = tradition_castle_keepers_name
     scope:actor = {
       if = {
         limit = { has_cultural_tradition = tradition_castle_keepers }
@@ -7877,7 +7877,7 @@ skonester_cheat_menu.0051 = {
     }
   }
   option = {
-    name = tradition_city_keepers
+    name = tradition_city_keepers_name
     scope:actor = {
       if = {
         limit = { has_cultural_tradition = tradition_city_keepers }
@@ -7889,7 +7889,7 @@ skonester_cheat_menu.0051 = {
     }
   }
   option = {
-    name = tradition_collective_lands
+    name = tradition_collective_lands_name
     scope:actor = {
       if = {
         limit = { has_cultural_tradition = tradition_collective_lands }
@@ -7901,7 +7901,7 @@ skonester_cheat_menu.0051 = {
     }
   }
   option = {
-    name = tradition_court_eunuchs
+    name = tradition_court_eunuchs_name
     scope:actor = {
       if = {
         limit = { has_cultural_tradition = tradition_court_eunuchs }
@@ -7913,7 +7913,7 @@ skonester_cheat_menu.0051 = {
     }
   }
   option = {
-    name = tradition_culture_blending
+    name = tradition_culture_blending_name
     scope:actor = {
       if = {
         limit = { has_cultural_tradition = tradition_culture_blending }
@@ -7952,7 +7952,7 @@ skonester_cheat_menu.0052 = {
 
   option = {
 
-    name = tradition_adaptive_skirmishing
+    name = tradition_adaptive_skirmishing_name
 
     scope:actor = {
 
@@ -7976,7 +7976,7 @@ skonester_cheat_menu.0052 = {
 
   option = {
 
-    name = tradition_battlefield_looters
+    name = tradition_battlefield_looters_name
 
     scope:actor = {
 
@@ -8000,7 +8000,7 @@ skonester_cheat_menu.0052 = {
 
   option = {
 
-    name = tradition_forest_fighters
+    name = tradition_forest_fighters_name
 
     scope:actor = {
 
@@ -8024,7 +8024,7 @@ skonester_cheat_menu.0052 = {
 
   option = {
 
-    name = tradition_formation_fighting
+    name = tradition_formation_fighting_name
 
     scope:actor = {
 
@@ -8048,7 +8048,7 @@ skonester_cheat_menu.0052 = {
 
   option = {
 
-    name = tradition_fp1_coastal_warriors
+    name = tradition_fp1_coastal_warriors_name
 
     scope:actor = {
 
@@ -8072,7 +8072,7 @@ skonester_cheat_menu.0052 = {
 
   option = {
 
-    name = tradition_frugal_armorsmiths
+    name = tradition_frugal_armorsmiths_name
 
     scope:actor = {
 
@@ -8096,7 +8096,7 @@ skonester_cheat_menu.0052 = {
 
   option = {
 
-    name = tradition_highland_warriors
+    name = tradition_highland_warriors_name
 
     scope:actor = {
 
@@ -8120,7 +8120,7 @@ skonester_cheat_menu.0052 = {
 
   option = {
 
-    name = tradition_hit_and_run
+    name = tradition_hit_and_run_name
 
     scope:actor = {
 
@@ -8144,7 +8144,7 @@ skonester_cheat_menu.0052 = {
 
   option = {
 
-    name = tradition_horse_breeder
+    name = tradition_horse_breeder_name
 
     scope:actor = {
 
@@ -8168,7 +8168,7 @@ skonester_cheat_menu.0052 = {
 
   option = {
 
-    name = tradition_jungle_warriors
+    name = tradition_jungle_warriors_name
 
     scope:actor = {
 
@@ -8218,7 +8218,7 @@ skonester_cheat_menu.0053 = {
 
   # 闂傚倷绀侀幉锟犮€冮崱妞曟椽寮介鐐叉優?濠电姷鏁搁崕鎴犵礊閳ь剚銇勯弴鍡楀閸欏繘鏌ｉ幇顔煎妺闁哄拋鍓氱换娑㈠箣閻忔椿浜鎻掆枎閹邦喚顔曢梺绯曟閸樺墽澹曢崸妤佺厱閻庯絽澧庣粔顔锯偓?缂傚倸鍊风粈渚€藝椤栫偐鈧箑鐣￠幍铏€洪柟鍏肩暘閸斿秹寮查鍕厱妞ゆ劦鍓涢幃鑲╃磼閻欌偓閸犳牠婀侀梺缁樻尭濞村嘲袙閻愮儤鐓冪憸婊堝礈濮樺崬鍨濋悘鐐垫櫕閺嗭箓鏌ｉ弮鍌氬付缂佲偓閸曨偀鏀介柣妯哄暱閻掑綊鏌涚€ｎ偅灏扮€垫澘瀚埀顒婄秵娴滆埖绂?闂傚倷绀侀幉锟犳偡閵夆晜鍤愭い鏍仜閸氳銇勯弴妤€浜鹃悗瑙勬穿缂嶄礁顕ｆ禒瀣╂い顒夊枔閸庣敻寮诲澶娢ㄩ柨鏂垮⒔椤斿洨绱?
   option = {
-    name = tradition_artisans
+    name = tradition_artisans_name
     scope:actor = {
       if = {
         limit = { has_cultural_tradition = tradition_artisans }
@@ -8232,7 +8232,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_charitable
+    name = tradition_charitable_name
 
     scope:actor = {
 
@@ -8256,7 +8256,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_chivalry
+    name = tradition_chivalry_name
 
     scope:actor = {
 
@@ -8280,7 +8280,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_diasporic
+    name = tradition_diasporic_name
 
     scope:actor = {
 
@@ -8304,7 +8304,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_ep2_avid_falconers
+    name = tradition_ep2_avid_falconers_name
 
     scope:actor = {
 
@@ -8328,7 +8328,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_ep3_cultivated_sophistication
+    name = tradition_ep3_cultivated_sophistication_name
 
     scope:actor = {
 
@@ -8352,7 +8352,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_equitable
+    name = tradition_equitable_name
 
     scope:actor = {
 
@@ -8376,7 +8376,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_eye_for_an_eye
+    name = tradition_eye_for_an_eye_name
 
     scope:actor = {
 
@@ -8400,7 +8400,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_fishermen
+    name = tradition_fishermen_name
 
     scope:actor = {
 
@@ -8424,7 +8424,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_forbearing
+    name = tradition_forbearing_name
 
     scope:actor = {
 
@@ -8448,7 +8448,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_fp1_northern_stories
+    name = tradition_fp1_northern_stories_name
 
     scope:actor = {
 
@@ -8472,7 +8472,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_fp1_performative_honour
+    name = tradition_fp1_performative_honour_name
 
     scope:actor = {
 
@@ -8496,7 +8496,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_fp1_the_right_to_prove
+    name = tradition_fp1_the_right_to_prove_name
 
     scope:actor = {
 
@@ -8520,7 +8520,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_fp1_trials_by_combat
+    name = tradition_fp1_trials_by_combat_name
 
     scope:actor = {
 
@@ -8544,7 +8544,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_fp2_ritualised_friendship
+    name = tradition_fp2_ritualised_friendship_name
 
     scope:actor = {
 
@@ -8568,7 +8568,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_fp3_beacon_of_learning
+    name = tradition_fp3_beacon_of_learning_name
 
     scope:actor = {
 
@@ -8592,7 +8592,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_fp3_enlightened_magnates
+    name = tradition_fp3_enlightened_magnates_name
 
     scope:actor = {
 
@@ -8616,7 +8616,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_hard_working
+    name = tradition_hard_working_name
 
     scope:actor = {
 
@@ -8640,7 +8640,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_hunters
+    name = tradition_hunters_name
 
     scope:actor = {
 
@@ -8664,7 +8664,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_life_is_just_a_joke
+    name = tradition_life_is_just_a_joke_name
 
     scope:actor = {
 
@@ -8688,7 +8688,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_loyal_soldiers
+    name = tradition_loyal_soldiers_name
 
     scope:actor = {
 
@@ -8712,7 +8712,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_martial_admiration
+    name = tradition_martial_admiration_name
 
     scope:actor = {
 
@@ -8736,7 +8736,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_mendicant_mystics
+    name = tradition_mendicant_mystics_name
 
     scope:actor = {
 
@@ -8760,7 +8760,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_modest
+    name = tradition_modest_name
 
     scope:actor = {
 
@@ -8784,7 +8784,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_music_theory
+    name = tradition_music_theory_name
 
     scope:actor = {
 
@@ -8808,7 +8808,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_noble_adoption
+    name = tradition_noble_adoption_name
 
     scope:actor = {
 
@@ -8832,7 +8832,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_nudists
+    name = tradition_nudists_name
 
     scope:actor = {
 
@@ -8856,7 +8856,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_pacifism
+    name = tradition_pacifism_name
 
     scope:actor = {
 
@@ -8880,7 +8880,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_philosopher_culture
+    name = tradition_philosopher_culture_name
 
     scope:actor = {
 
@@ -8904,7 +8904,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_poetry
+    name = tradition_poetry_name
 
     scope:actor = {
 
@@ -8928,7 +8928,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_practiced_pirates
+    name = tradition_practiced_pirates_name
 
     scope:actor = {
 
@@ -8952,7 +8952,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_seafaring
+    name = tradition_seafaring_name
 
     scope:actor = {
 
@@ -8976,7 +8976,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_spartan
+    name = tradition_spartan_name
 
     scope:actor = {
 
@@ -9000,7 +9000,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_storytellers
+    name = tradition_storytellers_name
 
     scope:actor = {
 
@@ -9024,7 +9024,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_vegetarianism
+    name = tradition_vegetarianism_name
 
     scope:actor = {
 
@@ -9048,7 +9048,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_warrior_culture
+    name = tradition_warrior_culture_name
 
     scope:actor = {
 
@@ -9072,7 +9072,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_welcoming
+    name = tradition_welcoming_name
 
     scope:actor = {
 
@@ -9096,7 +9096,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_xenophilic
+    name = tradition_xenophilic_name
 
     scope:actor = {
 
@@ -9120,7 +9120,7 @@ skonester_cheat_menu.0053 = {
 
   option = {
 
-    name = tradition_zealous_people
+    name = tradition_zealous_people_name
 
     scope:actor = {
 
@@ -9166,7 +9166,7 @@ skonester_cheat_menu.0054 = {
 
   option = {
 
-    name = tradition_by_the_sword
+    name = tradition_by_the_sword_name
 
     scope:actor = {
 
@@ -9190,7 +9190,7 @@ skonester_cheat_menu.0054 = {
 
   option = {
 
-    name = tradition_ce1_ritual_washing
+    name = tradition_ce1_ritual_washing_name
 
     scope:actor = {
 
@@ -9214,7 +9214,7 @@ skonester_cheat_menu.0054 = {
 
   option = {
 
-    name = tradition_concubines
+    name = tradition_concubines_name
 
     scope:actor = {
 
@@ -9238,7 +9238,7 @@ skonester_cheat_menu.0054 = {
 
   option = {
 
-    name = tradition_culinary_art
+    name = tradition_culinary_art_name
 
     scope:actor = {
 
@@ -9262,7 +9262,7 @@ skonester_cheat_menu.0054 = {
 
   option = {
 
-    name = tradition_faith_bound
+    name = tradition_faith_bound_name
 
     scope:actor = {
 
@@ -9286,7 +9286,7 @@ skonester_cheat_menu.0054 = {
 
   option = {
 
-    name = tradition_festivities
+    name = tradition_festivities_name
 
     scope:actor = {
 
@@ -9310,7 +9310,7 @@ skonester_cheat_menu.0054 = {
 
   option = {
 
-    name = tradition_fp2_strategy_gamers
+    name = tradition_fp2_strategy_gamers_name
 
     scope:actor = {
 
@@ -9334,7 +9334,7 @@ skonester_cheat_menu.0054 = {
 
   option = {
 
-    name = tradition_language_scholars
+    name = tradition_language_scholars_name
 
     scope:actor = {
 
@@ -9358,7 +9358,7 @@ skonester_cheat_menu.0054 = {
 
   option = {
 
-    name = tradition_medicinal_plants
+    name = tradition_medicinal_plants_name
 
     scope:actor = {
 
@@ -9382,7 +9382,7 @@ skonester_cheat_menu.0054 = {
 
   option = {
 
-    name = tradition_merciful_blindings
+    name = tradition_merciful_blindings_name
 
     scope:actor = {
 
@@ -9406,7 +9406,7 @@ skonester_cheat_menu.0054 = {
 
   option = {
 
-    name = tradition_monogamous
+    name = tradition_monogamous_name
 
     scope:actor = {
 
@@ -9430,7 +9430,7 @@ skonester_cheat_menu.0054 = {
 
   option = {
 
-    name = tradition_mystical_ancestors
+    name = tradition_mystical_ancestors_name
 
     scope:actor = {
 
@@ -9454,7 +9454,7 @@ skonester_cheat_menu.0054 = {
 
   option = {
 
-    name = tradition_polygamous
+    name = tradition_polygamous_name
 
     scope:actor = {
 
@@ -9478,7 +9478,7 @@ skonester_cheat_menu.0054 = {
 
   option = {
 
-    name = tradition_religion_blending
+    name = tradition_religion_blending_name
 
     scope:actor = {
 
@@ -9502,7 +9502,7 @@ skonester_cheat_menu.0054 = {
 
   option = {
 
-    name = tradition_religious_patronage
+    name = tradition_religious_patronage_name
 
     scope:actor = {
 
@@ -9526,7 +9526,7 @@ skonester_cheat_menu.0054 = {
 
   option = {
 
-    name = tradition_runestones
+    name = tradition_runestones_name
 
     scope:actor = {
 
@@ -9550,7 +9550,7 @@ skonester_cheat_menu.0054 = {
 
   option = {
 
-    name = tradition_sacred_groves
+    name = tradition_sacred_groves_name
 
     scope:actor = {
 
@@ -9574,7 +9574,7 @@ skonester_cheat_menu.0054 = {
 
   option = {
 
-    name = tradition_sacred_hunts
+    name = tradition_sacred_hunts_name
 
     scope:actor = {
 
@@ -9598,7 +9598,7 @@ skonester_cheat_menu.0054 = {
 
   option = {
 
-    name = tradition_sacred_mountains
+    name = tradition_sacred_mountains_name
 
     scope:actor = {
 
@@ -9622,7 +9622,7 @@ skonester_cheat_menu.0054 = {
 
   option = {
 
-    name = tradition_sorcerous_metallurgy
+    name = tradition_sorcerous_metallurgy_name
 
     scope:actor = {
 
@@ -9668,7 +9668,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_african_tolerance
+    name = tradition_african_tolerance_name
 
     scope:actor = {
 
@@ -9692,7 +9692,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_burman_royal_army
+    name = tradition_burman_royal_army_name
 
     scope:actor = {
 
@@ -9716,7 +9716,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_bush_hunting
+    name = tradition_bush_hunting_name
 
     scope:actor = {
 
@@ -9740,7 +9740,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_byzantine_succession
+    name = tradition_byzantine_succession_name
 
     scope:actor = {
 
@@ -9764,7 +9764,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_caravaneers
+    name = tradition_caravaneers_name
 
     scope:actor = {
 
@@ -9788,7 +9788,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_caucasian_wolves
+    name = tradition_caucasian_wolves_name
 
     scope:actor = {
 
@@ -9812,7 +9812,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_chanson_de_geste
+    name = tradition_chanson_de_geste_name
 
     scope:actor = {
 
@@ -9836,7 +9836,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_cultivation
+    name = tradition_cultivation_name
 
     scope:actor = {
 
@@ -9860,7 +9860,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_cultural_primacy
+    name = tradition_cultural_primacy_name
 
     scope:actor = {
 
@@ -9884,7 +9884,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_debug
+    name = tradition_debug_name
 
     scope:actor = {
 
@@ -9908,7 +9908,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_desert_nomads
+    name = tradition_desert_nomads_name
 
     scope:actor = {
 
@@ -9932,7 +9932,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_desert_ribat
+    name = tradition_desert_ribat_name
 
     scope:actor = {
 
@@ -9956,7 +9956,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_devoted_horsemanship
+    name = tradition_devoted_horsemanship_name
 
     scope:actor = {
 
@@ -9980,7 +9980,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_druzhina
+    name = tradition_druzhina_name
 
     scope:actor = {
 
@@ -10004,7 +10004,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_ep3_audacious_cadets
+    name = tradition_ep3_audacious_cadets_name
 
     scope:actor = {
 
@@ -10028,7 +10028,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_ep3_imperial_tagmata
+    name = tradition_ep3_imperial_tagmata_name
 
     scope:actor = {
 
@@ -10052,7 +10052,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_ep3_indomitable_azatani
+    name = tradition_ep3_indomitable_azatani_name
 
     scope:actor = {
 
@@ -10076,7 +10076,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_ep3_palace_politics
+    name = tradition_ep3_palace_politics_name
 
     scope:actor = {
 
@@ -10100,7 +10100,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_ep3_roman_ceremonies
+    name = tradition_ep3_roman_ceremonies_name
 
     scope:actor = {
 
@@ -10124,7 +10124,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_forest_wardens
+    name = tradition_forest_wardens_name
 
     scope:actor = {
 
@@ -10148,7 +10148,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_fortress_mastery
+    name = tradition_fortress_mastery_name
 
     scope:actor = {
 
@@ -10172,7 +10172,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_fp3_fierce_independence
+    name = tradition_fp3_fierce_independence_name
 
     scope:actor = {
 
@@ -10196,7 +10196,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_fp3_frontier_warriors
+    name = tradition_fp3_frontier_warriors_name
 
     scope:actor = {
 
@@ -10220,7 +10220,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_fp3_jirga
+    name = tradition_fp3_jirga_name
 
     scope:actor = {
 
@@ -10244,7 +10244,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_fp3_pragmatic_creed
+    name = tradition_fp3_pragmatic_creed_name
 
     scope:actor = {
 
@@ -10268,7 +10268,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_futuwaa
+    name = tradition_futuwaa_name
 
     scope:actor = {
 
@@ -10292,7 +10292,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_garuda_warriors
+    name = tradition_garuda_warriors_name
 
     scope:actor = {
 
@@ -10316,7 +10316,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_himalayan_settlers
+    name = tradition_himalayan_settlers_name
 
     scope:actor = {
 
@@ -10340,7 +10340,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_hird
+    name = tradition_hird_name
 
     scope:actor = {
 
@@ -10364,7 +10364,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_horn_mountain_skirmishing
+    name = tradition_horn_mountain_skirmishing_name
 
     scope:actor = {
 
@@ -10388,7 +10388,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_horse_lords
+    name = tradition_horse_lords_name
 
     scope:actor = {
 
@@ -10412,7 +10412,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_hussar
+    name = tradition_hussar_name
 
     scope:actor = {
 
@@ -10436,7 +10436,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_intensive_farming
+    name = tradition_intensive_farming_name
 
     scope:actor = {
 
@@ -10460,7 +10460,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_khadga_puja
+    name = tradition_khadga_puja_name
 
     scope:actor = {
 
@@ -10484,7 +10484,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_land_of_the_bow
+    name = tradition_land_of_the_bow_name
 
     scope:actor = {
 
@@ -10508,7 +10508,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_lords_of_the_elephant
+    name = tradition_lords_of_the_elephant_name
 
     scope:actor = {
 
@@ -10532,7 +10532,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_maritime_way_of_life
+    name = tradition_maritime_way_of_life_name
 
     scope:actor = {
 
@@ -10556,7 +10556,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_mobile_guards
+    name = tradition_mobile_guards_name
 
     scope:actor = {
 
@@ -10580,7 +10580,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_mountain_herding
+    name = tradition_mountain_herding_name
 
     scope:actor = {
 
@@ -10604,7 +10604,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_mountaineer_ruralism
+    name = tradition_mountaineer_ruralism_name
 
     scope:actor = {
 
@@ -10628,7 +10628,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_mpo_iron_cavalry
+    name = tradition_mpo_iron_cavalry_name
 
     scope:actor = {
 
@@ -10652,7 +10652,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_mpo_northern_tribes
+    name = tradition_mpo_northern_tribes_name
 
     scope:actor = {
 
@@ -10676,7 +10676,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_mpo_wolves_of_the_deep_steppe
+    name = tradition_mpo_wolves_of_the_deep_steppe_name
 
     scope:actor = {
 
@@ -10700,7 +10700,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_mubarizuns
+    name = tradition_mubarizuns_name
 
     scope:actor = {
 
@@ -10724,7 +10724,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_nubian_warrior_kings
+    name = tradition_nubian_warrior_kings_name
 
     scope:actor = {
 
@@ -10748,7 +10748,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_nubian_warrior_queens
+    name = tradition_nubian_warrior_queens_name
 
     scope:actor = {
 
@@ -10772,7 +10772,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_republican_legacy
+    name = tradition_republican_legacy_name
 
     scope:actor = {
 
@@ -10796,7 +10796,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_saharan_nomads
+    name = tradition_saharan_nomads_name
 
     scope:actor = {
 
@@ -10820,7 +10820,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_scholar_officials
+    name = tradition_scholar_officials_name
 
     scope:actor = {
 
@@ -10844,7 +10844,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_sinophilic
+    name = tradition_sinophilic_name
 
     scope:actor = {
 
@@ -10868,7 +10868,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_steppe_tolerance
+    name = tradition_steppe_tolerance_name
 
     scope:actor = {
 
@@ -10892,7 +10892,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_stratified_society
+    name = tradition_stratified_society_name
 
     scope:actor = {
 
@@ -10916,7 +10916,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_strong_kinship
+    name = tradition_strong_kinship_name
 
     scope:actor = {
 
@@ -10940,7 +10940,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_tgp_art_of_war
+    name = tradition_tgp_art_of_war_name
 
     scope:actor = {
 
@@ -10964,7 +10964,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_tgp_barangay_confederations
+    name = tradition_tgp_barangay_confederations_name
 
     scope:actor = {
 
@@ -10988,7 +10988,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_tgp_court_machinations
+    name = tradition_tgp_court_machinations_name
 
     scope:actor = {
 
@@ -11012,7 +11012,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_tgp_defiant_ambushers
+    name = tradition_tgp_defiant_ambushers_name
 
     scope:actor = {
 
@@ -11036,7 +11036,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_tgp_ephemeral_grace
+    name = tradition_tgp_ephemeral_grace_name
 
     scope:actor = {
 
@@ -11060,7 +11060,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_tgp_esoteric_power
+    name = tradition_tgp_esoteric_power_name
 
     scope:actor = {
 
@@ -11084,7 +11084,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_tgp_fortified_strongholds
+    name = tradition_tgp_fortified_strongholds_name
 
     scope:actor = {
 
@@ -11108,7 +11108,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_tgp_hydraulic_builders
+    name = tradition_tgp_hydraulic_builders_name
 
     scope:actor = {
 
@@ -11132,7 +11132,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_tgp_imperial_peace
+    name = tradition_tgp_imperial_peace_name
 
     scope:actor = {
 
@@ -11156,7 +11156,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_tgp_inward_perfection
+    name = tradition_tgp_inward_perfection_name
 
     scope:actor = {
 
@@ -11180,7 +11180,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_tgp_japanese_houses
+    name = tradition_tgp_japanese_houses_name
 
     scope:actor = {
 
@@ -11204,7 +11204,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_tgp_mountain_island
+    name = tradition_tgp_mountain_island_name
 
     scope:actor = {
 
@@ -11228,7 +11228,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_tgp_religious_hospitality
+    name = tradition_tgp_religious_hospitality_name
 
     scope:actor = {
 
@@ -11252,7 +11252,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_tgp_warrior_monks
+    name = tradition_tgp_warrior_monks_name
 
     scope:actor = {
 
@@ -11276,7 +11276,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_the_witenagemot
+    name = tradition_the_witenagemot_name
 
     scope:actor = {
 
@@ -11300,7 +11300,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_things
+    name = tradition_things_name
 
     scope:actor = {
 
@@ -11324,7 +11324,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_upland_skirmishing
+    name = tradition_upland_skirmishing_name
 
     scope:actor = {
 
@@ -11348,7 +11348,7 @@ skonester_cheat_menu.0055 = {
 
   option = {
 
-    name = tradition_visigothic_codes
+    name = tradition_visigothic_codes_name
 
     scope:actor = {
 

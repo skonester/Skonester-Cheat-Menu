@@ -49,7 +49,7 @@ window = {
 
     widget = {
       layoutpolicy_horizontal = expanding
-      visible = "[GetPlayer.MakeScope.HasValue('skonester_acm_repair_artifact_var')]"
+      visible = "[GetScriptedGui('skonester_acm_repair_has_artifact_var').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
       datacontext = "[GetPlayer.MakeScope.Var('skonester_acm_repair_artifact_var').Artifact]"
       background = {
         using = Background_Area

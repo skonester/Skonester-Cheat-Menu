@@ -3,7 +3,7 @@
         reference = "gfx/interface/illustrations/decisions/new3.dds"
     }
 
-    decision_group_type = pcm
+    decision_group_type = skonester_realm_tools
 
     ai_check_interval_by_tier = {
         barony = 0
@@ -109,7 +109,7 @@ zhuge_huangzu_add = {
 	}
 	desc = zhuge_huangzu_add_desc
 	ai_check_interval = 0
-	decision_group_type = pcm
+	decision_group_type = skonester_realm_tools
 
 	is_shown = {
 		is_ai = no
@@ -193,7 +193,7 @@ change_sansi_government = {
     selection_tooltip = change_govt_tt
     confirm_text = CONFIRM_OKAY
 
-	decision_group_type = pcm
+	decision_group_type = skonester_realm_tools
 
     is_shown = {
 		is_ai = no
@@ -222,7 +222,7 @@ start_searching_for_water_of_life_decision = {
         reference = "gfx/interface/illustrations/decisions/barbara.dds"
     }
     ai_check_interval = 0
-	decision_group_type = pcm
+	decision_group_type = skonester_realm_tools
 	
 	is_shown = {
 		is_ai = no

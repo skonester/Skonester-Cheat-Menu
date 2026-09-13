@@ -4,7 +4,7 @@ skonester_learn_all_realm_officials_secrets_decision = {
   picture = {
     reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
   }
-  decision_group_type = pcm
+  decision_group_type = skonester_officials
   sort_order = 70
   title = skonester_learn_all_realm_officials_secrets_decision
   desc = skonester_learn_all_realm_officials_secrets_decision_desc
@@ -47,7 +47,7 @@ skonester_seduce_shield_for_consorts_decision = {
   picture = {
     reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
   }
-  decision_group_type = pcm
+  decision_group_type = skonester_officials
   sort_order = 72
   title = {
     first_valid = {

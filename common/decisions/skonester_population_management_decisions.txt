@@ -4,7 +4,7 @@ skonester_population_management_hub_decision = {
   picture = {
     reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
   }
-  decision_group_type = pcm
+  decision_group_type = skonester_officials
   sort_order = 105
   title = skonester_population_management_hub_decision
   desc = skonester_population_management_hub_decision_desc

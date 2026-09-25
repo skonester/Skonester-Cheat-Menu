@@ -7,8 +7,8 @@ Source images are preserved in inputs/. Prompts and original trait mappings are 
 ComfyUI model and tools are reused from ../distinct_generation. Run from this folder:
 
 ```powershell
-python pipeline.py generate --run-name v2 --seed-offset 1
-python pipeline.py finish --run-name v2
+v run pipeline.v generate --run-name v2 --seed-offset 1
+v run pipeline.v finish --run-name v2
 ```
 
 The selected collection is saved in results/: transparent 1024px masters, comparison gallery, 120px previews, and 100px DDS/PNG exports. DDS installation is recorded in results/installation.json, with backups under backups/.

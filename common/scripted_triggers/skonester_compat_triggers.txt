@@ -20,6 +20,15 @@ skonester_compat_agot_loaded_trigger = {
   has_global_variable = skonester_compat_agot_loaded
 }
 
+# TGP 大臣：原版 tgp_is_any_minister 定义在 10_tgp_triggers.txt，AGOT 以同名文件覆盖且不含此 trigger。
+# 调用处直接写它时，AGOT 下该 token 被丢弃，NOR/NOT/OR 结构被改写（候选人恒真或恒假）。
+# 这里先判天朝政体旗标（纯字符串，两端都能解析）：AGOT 无天朝 → 恒假，里面那行被丢弃也不影响结果；
+# 原版下与 tgp_is_any_minister 完全等价（其本身已要求宗主为天朝政体）。AGOT 下仅此处报 1 条加载错误。
+skonester_is_tgp_minister_trigger = {
+  liege ?= { government_has_flag = government_is_celestial }
+  tgp_is_any_minister = yes
+}
+
 # 文化兵种扩展（2846371321）；用其独有决议探测，避免存档残留变量误显示页签
 skonester_compat_orient_expansion_loaded_trigger = {
   exists = decision:dfbz_zfz_001_decision

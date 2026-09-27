@@ -1095,27 +1095,80 @@ daddy_pika_offer_vassal_inter = {
 	ignores_pending_interaction_block = yes
 	
 	desc = daddy_pika_offer_vassal_inter_desc
-	
+
+	# Works in vanilla and A Game of Thrones: only government flags are checked, never AGOT-only
+	# triggers/traits, so the file parses the same in both. AGOT dragons are never landed.
+	# AGOT flags: government_is_uninteractable (ruins/wilderness dummy holders), government_is_nw (Night's Watch).
 	is_shown = {
 		scope:actor = { has_character_flag = skonester_character_interaction_menu_open }
-		scope:recipient = {
-			NOT = { this = scope:actor }
-			NOT = { government_has_flag = can_not_be_vassal_or_liege }
-		}
 		scope:actor = {
 			is_ai = no
 			has_character_flag = bone_cheat_interactions_flag
+			is_landed = yes
+			NOR = {
+				government_has_flag = cannot_be_vassal_or_liege
+				government_has_flag = government_is_uninteractable
+				government_has_flag = government_is_nw
+			}
+			# The recipient cannot already be above the actor
+			NOT = { target_is_liege_or_above = scope:recipient }
+		}
+		scope:recipient = {
+			this != scope:actor
+			is_landed = yes
+			NOT = { is_vassal_of = scope:actor }
+			NOR = {
+				government_has_flag = cannot_be_vassal_or_liege
+				government_has_flag = government_is_herder
+				government_has_flag = government_is_uninteractable
+				government_has_flag = government_is_nw
+			}
 		}
 	}
 
 	is_valid_showing_failures_only = {
+		scope:recipient = {
+			trigger_if = {
+				limit = {
+					scope:actor = {
+						NOT = { government_has_flag = government_is_mandala }
+					}
+				}
+				highest_held_title_tier < scope:actor.highest_held_title_tier
+			}
+			NOT = { is_at_war_with = scope:actor }
+			is_confederation_member = no
+		}
 	}
 	ai_accept = {
 		base = 100
 	}
 
+	# Independent rulers, tributaries, and vassals of other realms (or of the actor's own vassals)
+	# all become direct vassals of the actor. Their own vassals come with them.
 	on_accept = {
-		offer_vassalization_interaction_effect = yes
+		scope:recipient = {
+			if = {
+				limit = { is_tributary = yes }
+				end_tributary = yes
+			}
+		}
+		create_title_and_vassal_change = {
+			type = swear_fealty
+			save_scope_as = change
+		}
+		scope:recipient = {
+			change_liege = {
+				liege = scope:actor
+				change = scope:change
+			}
+			add_opinion = {
+				modifier = became_vassal
+				target = scope:actor
+				opinion = 10
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
 	}
 
 	on_decline = {

@@ -111,7 +111,7 @@ skonester_land_cap_resolve_grantee_effect = {
               is_governor = yes
               AND = {
                 has_tgp_dlc_trigger = yes
-                tgp_is_any_minister = yes
+                skonester_is_tgp_minister_trigger = yes
               }
             }
             is_vassal_or_below_of = scope:skonester_off
@@ -132,7 +132,7 @@ skonester_land_cap_resolve_grantee_effect = {
               is_governor = yes
               AND = {
                 has_tgp_dlc_trigger = yes
-                tgp_is_any_minister = yes
+                skonester_is_tgp_minister_trigger = yes
               }
             }
             can_be_granted_titles_by = {
@@ -217,7 +217,7 @@ skonester_land_cap_resolve_grantee_effect = {
               is_governor = yes
               AND = {
                 has_tgp_dlc_trigger = yes
-                tgp_is_any_minister = yes
+                skonester_is_tgp_minister_trigger = yes
               }
             }
             is_vassal_or_below_of = scope:skonester_off
@@ -238,7 +238,7 @@ skonester_land_cap_resolve_grantee_effect = {
               is_governor = yes
               AND = {
                 has_tgp_dlc_trigger = yes
-                tgp_is_any_minister = yes
+                skonester_is_tgp_minister_trigger = yes
               }
             }
             can_be_granted_titles_by = {
@@ -323,7 +323,7 @@ skonester_land_cap_resolve_grantee_effect = {
               is_governor = yes
               AND = {
                 has_tgp_dlc_trigger = yes
-                tgp_is_any_minister = yes
+                skonester_is_tgp_minister_trigger = yes
               }
             }
             is_vassal_or_below_of = scope:skonester_off
@@ -344,7 +344,7 @@ skonester_land_cap_resolve_grantee_effect = {
               is_governor = yes
               AND = {
                 has_tgp_dlc_trigger = yes
-                tgp_is_any_minister = yes
+                skonester_is_tgp_minister_trigger = yes
               }
             }
             can_be_granted_titles_by = {

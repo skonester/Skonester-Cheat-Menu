@@ -8,6 +8,7 @@ skonester_enfeoffment_excess_held_title_grantable_trigger = {
   is_leased_out = no
   is_nomad_title = no
   is_landless_type_title = no
+  is_noble_family_title = no # 原版授予亦不可转让世族头衔
   trigger_if = {
     limit = {
       tier = tier_county
@@ -22,6 +23,10 @@ skonester_enfeoffment_excess_barony_grantable_trigger = {
   NOT = { tier = root.primary_title.tier }
   is_leased_out = no
   is_nomad_title = no
+  is_noble_family_title = no
+  # 与原版授予一致：首府男爵领随伯爵领走，不可单独授出（否则会拆走玩家居城）；空地块无领地不可授
+  is_capital_barony = no
+  title_province = { has_holding = yes }
   OR = {
     NOT = { exists = holder }
     holder = root

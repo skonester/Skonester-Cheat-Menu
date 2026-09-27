@@ -23,7 +23,7 @@ skonester_mass_gov_conversion_target_trigger = {
   NOR = {
     AND = {
       has_tgp_dlc_trigger = yes
-      tgp_is_any_minister = yes
+      skonester_is_tgp_minister_trigger = yes
     }
   }
 }
@@ -161,7 +161,7 @@ skonester_convert_vassal_government_recipient_trigger = {
   NOR = {
     AND = {
       has_tgp_dlc_trigger = yes
-      tgp_is_any_minister = yes
+      skonester_is_tgp_minister_trigger = yes
     }
   }
   is_vassal_or_below_of = scope:actor

@@ -1723,7 +1723,7 @@
  skonester_seduce_shield_for_consorts_decision_confirm_enable: "Enable Vigil"
 
  skonester_bulk_guardian_run_decision: "Bulk Assign Guardians"
- skonester_bulk_guardian_run_decision_desc: "Appoint qualified guardians for all children in your realm. It is recommended to run \"Immediate Rectification\" before using this function."
+ skonester_bulk_guardian_run_decision_desc: "Appoint qualified guardians for all children in your realm. Optional: run \"$skonester_court_management_decision$\" first so better-qualified courtiers are available as guardians."
  skonester_bulk_guardian_run_decision_tooltip: "At least one ward is eligible. Restricted to human players."
  skonester_bulk_guardian_run_decision_confirm: "Execute"
  skonester_bulk_guardian_strip_old_guardians_tt: "Remove outdated guardian ties for this child, including duplicate and invalid entries."

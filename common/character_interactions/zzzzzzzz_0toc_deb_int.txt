@@ -599,35 +599,6 @@ toc_uncelibate_interaction = {
 	auto_accept = yes
 }
 
-toc_aconvert_interaction = {
-	category = interaction_category_uncategorized
-	common_interaction = yes
-	use_diplomatic_range = no
-	ignores_pending_interaction_block = yes
-	icon = on
-	
-	interface_priority = 11765
-
-	is_shown = {
-		scope:actor = { has_character_flag = skonester_character_interaction_menu_open }
-		scope:actor = { is_ai = no has_character_flag = bone_cheat_interactions_flag }
-		NOT = { scope:recipient = scope:actor }
-		NOT = {
-			scope:recipient.faith = faith:adamites
-		}
-	}
-
-	on_accept = {
-		scope:recipient = {
-			set_character_faith = faith:adamites
-#yapaniya jain#
-#scope:actor.faith
-#set_character_faith_with_conversion	
-		}
-	}
-	auto_accept = yes
-}
-
 toc_religionconvert_interaction = {
 	category = interaction_debug_main
 	common_interaction = yes

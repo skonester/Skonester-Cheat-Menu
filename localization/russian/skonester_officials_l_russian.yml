@@ -1565,7 +1565,7 @@
  skonester_seduce_shield_for_consorts_decision_confirm_disable: "Выключить бдительность"
  skonester_seduce_shield_for_consorts_decision_confirm_enable: "Включить бдительность"
  skonester_bulk_guardian_run_decision: "Массовое назначение опекунов"
- skonester_bulk_guardian_run_decision_desc: "Назначает детям хороших опекунов. Рекомендуется использовать перед выполнением этой функции."
+ skonester_bulk_guardian_run_decision_desc: "Назначает детям хороших опекунов. Необязательно: сначала выполните «$skonester_court_management_decision$», чтобы в опекуны попали более способные придворные."
  skonester_bulk_guardian_run_decision_tooltip: "Требуется хотя бы один подходящий подопечный; только для игроков."
  skonester_bulk_guardian_run_decision_confirm: "Выполнить"
  skonester_bulk_guardian_strip_old_guardians_tt: "Очистка старых связей опекуна этого ребёнка."

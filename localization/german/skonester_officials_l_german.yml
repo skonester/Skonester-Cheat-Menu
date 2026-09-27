@@ -1560,7 +1560,7 @@
  skonester_seduce_shield_for_consorts_decision_confirm_disable: "Wachwache deaktivieren"
  skonester_seduce_shield_for_consorts_decision_confirm_enable: "Wachwache aktivieren"
  skonester_bulk_guardian_run_decision: "Massenweise Vormünder zuweisen"
- skonester_bulk_guardian_run_decision_desc: "Weist passende Vormünder für alle Kinder zu. Empfohlen: Zuerst „Sofort-Zuweisung“ verwenden."
+ skonester_bulk_guardian_run_decision_desc: "Weist passende Vormünder für alle Kinder zu. Optional: Zuerst „$skonester_court_management_decision$“ ausführen, damit besser geeignete Höflinge als Vormünder verfügbar sind."
  skonester_bulk_guardian_run_decision_tooltip: "Mindestens ein geeigneter Vormünder erforderlich; nur für menschliche Spieler nutzbar."
  skonester_bulk_guardian_run_decision_confirm: "Ausführen"
  skonester_bulk_guardian_strip_old_guardians_tt: "Entfernt alte, doppelte oder ungültige Vormundschaftsverhältnisse des Kindes."

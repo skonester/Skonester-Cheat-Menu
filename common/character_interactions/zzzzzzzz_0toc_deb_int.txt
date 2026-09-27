@@ -611,6 +611,7 @@ toc_aconvert_interaction = {
 	is_shown = {
 		scope:actor = { has_character_flag = skonester_character_interaction_menu_open }
 		scope:actor = { is_ai = no has_character_flag = bone_cheat_interactions_flag }
+		NOT = { scope:recipient = scope:actor }
 		NOT = {
 			scope:recipient.faith = faith:adamites
 		}

@@ -22,6 +22,15 @@ skonester_sand_show_orient_expansion_tab = {
   is_valid = { always = yes }
 }
 
+# AGOT 删除了部分原版兵种；GetMaA 取空后悬停 MAA 提示会崩溃，故在 AGOT 下隐藏这些按钮
+skonester_sand_show_non_agot_maa = {
+  scope = character
+  is_shown = {
+    NOT = { skonester_compat_agot_loaded_trigger = yes }
+  }
+  is_valid = { always = yes }
+}
+
 skonester_sand_window_init = {
   scope = character
   is_valid = { always = yes }

@@ -51,7 +51,12 @@ skonester_realm_authority_lock_yearly_pulse = {
   }
 }
 
+# 只挂接 on_actions 列表（可叠加），不直接写 effect，避免覆盖原版/AGOT 的开局 effect
 on_game_start_after_lobby = {
+  on_actions = { skonester_realm_authority_lock_after_lobby }
+}
+
+skonester_realm_authority_lock_after_lobby = {
   effect = {
     every_player = {
       if = {

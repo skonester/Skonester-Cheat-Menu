@@ -33,7 +33,16 @@ skonester_stealth_fp_birth_genes_pulse = {
   }
 }
 
+# 只挂接 on_actions 列表（可叠加），不直接写 effect，避免覆盖原版/AGOT 的开局 effect
 on_game_start = {
+  on_actions = { skonester_cheat_menu_game_start }
+}
+
+on_game_start_after_lobby = {
+  on_actions = { skonester_cheat_menu_after_lobby }
+}
+
+skonester_cheat_menu_game_start = {
   effect = {
     skonester_acm_faith_populate_doctrine_catalog_effect = yes
     # 回到主菜单/新开一局时清宝物制作 GUI 挂起（scripted_widget 在部分流程仍会挂载）
@@ -80,7 +89,7 @@ on_game_start = {
 }
 
 # 读档进入地图后再清一次（与 on_game_start 互补，覆盖读档路径）
-on_game_start_after_lobby = {
+skonester_cheat_menu_after_lobby = {
   effect = {
     every_player = {
       skonester_acm_gui_startup_cleanup_effect = yes

@@ -1,5 +1,10 @@
 ﻿# 开局探测可选依赖 mod，供宫廷任免 / 罢免庸官 / 大明政体菜单等使用（不修改对方变量）。
+# 只挂接 on_actions 列表（可叠加），不直接写 effect，避免覆盖原版/AGOT 的开局 effect
 on_game_start_after_lobby = {
+  on_actions = { skonester_compat_probe_after_lobby }
+}
+
+skonester_compat_probe_after_lobby = {
   effect = {
     if = {
       limit = {
@@ -40,6 +45,19 @@ on_game_start_after_lobby = {
     }
     else = {
       remove_global_variable = skonester_compat_orient_expansion_loaded
+    }
+    # A Game of Thrones（2962333032）：e_the_iron_islands 仅存在于 AGOT；GUI 只读此变量，避免逐帧查头衔
+    if = {
+      limit = {
+        exists = title:e_the_iron_islands
+      }
+      set_global_variable = {
+        name = skonester_compat_agot_loaded
+        value = 1
+      }
+    }
+    else = {
+      remove_global_variable = skonester_compat_agot_loaded
     }
   }
 }

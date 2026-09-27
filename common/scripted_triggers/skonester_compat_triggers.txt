@@ -15,6 +15,11 @@ skonester_compat_orient_loaded_trigger = {
   exists = global_var:orient_empires_loaded
 }
 
+# A Game of Thrones（2962333032）；由 zzz_skonester_compat_probe 开局写入
+skonester_compat_agot_loaded_trigger = {
+  has_global_variable = skonester_compat_agot_loaded
+}
+
 # 文化兵种扩展（2846371321）；用其独有决议探测，避免存档残留变量误显示页签
 skonester_compat_orient_expansion_loaded_trigger = {
   exists = decision:dfbz_zfz_001_decision

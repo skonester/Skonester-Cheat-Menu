@@ -1,6 +1,15 @@
 ﻿# 进入地图时清理 GUI 挂起（须在 scripted_widget 初始化前/后各清一次）
+# 只挂接 on_actions 列表（可叠加），不直接写 effect，避免覆盖原版/AGOT 的开局 effect
 
 on_game_start = {
+  on_actions = { skonester_acm_gui_startup_game_start }
+}
+
+on_game_start_after_lobby = {
+  on_actions = { skonester_acm_gui_startup_after_lobby }
+}
+
+skonester_acm_gui_startup_game_start = {
   effect = {
     every_player = {
       skonester_acm_gui_startup_cleanup_effect = yes
@@ -12,7 +21,7 @@ on_game_start = {
   }
 }
 
-on_game_start_after_lobby = {
+skonester_acm_gui_startup_after_lobby = {
   effect = {
     every_player = {
       skonester_acm_gui_startup_cleanup_effect = yes

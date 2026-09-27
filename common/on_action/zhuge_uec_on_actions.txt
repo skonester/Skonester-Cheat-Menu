@@ -28,7 +28,12 @@ on_tradition_added = {
 #大明兼容
 
     # 游戏开始或存档读入时立刻检查并移除
+    # 只挂接 on_actions 列表（可叠加），不直接写 effect，避免覆盖原版/AGOT 的开局 effect
     on_game_start = {
+      on_actions = { zhuge_uec_game_start }
+    }
+
+    zhuge_uec_game_start = {
       effect = {
       if = {
         limit = { exists = global_var:Data_tuiju }

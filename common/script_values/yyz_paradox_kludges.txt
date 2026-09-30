@@ -545,7 +545,7 @@ chief_qadi_aptitude = {
     }
     if = {
       limit = {
-        has_trait = scholar
+        has_trait = erudite
       }
       add = {
         value = 15
@@ -924,7 +924,7 @@ travel_leader_aptitude = {
   }
   if = {
     limit = {
-      has_trait = scholar
+      has_trait = erudite
     }
     add = {
       value = 5
@@ -1600,7 +1600,7 @@ court_jester_aptitude = {
   }
   if = {
     limit = {
-      has_trait = poet
+      has_trait = lifestyle_poet
     }
     add = { 
       value = 10
@@ -1623,7 +1623,7 @@ court_jester_aptitude = {
 court_poet_aptitude = {
   value = 0
   if = {
-    limit = { has_trait = poet }
+    limit = { has_trait = lifestyle_poet }
     add = 25 # base value
     add = {
       value = diplomacy
@@ -1679,7 +1679,7 @@ court_musician_aptitude = {
   }
   if = { #Being a poet helps a little bit
     limit = {
-      has_trait = poet
+      has_trait = lifestyle_poet
     }
     add = {
       value = 10

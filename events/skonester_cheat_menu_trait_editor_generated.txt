@@ -3661,7 +3661,7 @@ skonester_cheat_menu.9020 = {
   option = {
     name = skonester_cheat_menu_trait_opt_scholar
     skonester_cheat_menu_sync_trait_edit_target_effect = yes
-    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = scholar }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = erudite }
     scope:actor = { trigger_event = skonester_cheat_menu.9020 }
   }
   option = {

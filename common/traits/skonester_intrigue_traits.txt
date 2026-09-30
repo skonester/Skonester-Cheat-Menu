@@ -28,13 +28,16 @@
   enemy_hostile_scheme_success_chance_add = -1000
   enemy_hostile_scheme_success_chance_max_add = -100
   enemy_hostile_scheme_phase_duration_add = 999
-  scheme_resistance = 9999
+  enemy_hostile_scheme_success_chance_add = -9999 # was scheme_resistance (scheme-only modifier)
 
   # 3) 自己的阴谋：隐蔽拉满、必成功、无法被反制
-  scheme_secrecy = 999
-  scheme_success_chance = 999
-  scheme_success_chance_growth = 999
-  scheme_success_chance_max = 1000
+  owned_scheme_secrecy_add = 999 # was scheme_secrecy (scheme-only modifier)
+  owned_hostile_scheme_success_chance_add = 999
+  owned_personal_scheme_success_chance_add = 999 # was scheme_success_chance (scheme-only modifier)
+  owned_hostile_scheme_success_chance_growth_add = 999
+  owned_personal_scheme_success_chance_growth_add = 999 # was scheme_success_chance_growth (scheme-only modifier)
+  owned_hostile_scheme_success_chance_max_add = 1000
+  owned_personal_scheme_success_chance_max_add = 1000 # was scheme_success_chance_max (scheme-only modifier)
 
   # 敌人更难反制你（进一步加固）
   enemy_scheme_secrecy_add = -999

@@ -1747,8 +1747,8 @@ skonester_cheat_menu.3406 = {
   theme = default
   right_portrait = scope:recipient
 
-  option = { name = skonester_cast_faith_bon trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:bon } root = { trigger_event = skonester_cheat_menu.3406 } }
-  option = { name = skonester_cast_faith_old_bon trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:old_bon } root = { trigger_event = skonester_cheat_menu.3406 } }
+  option = { name = skonester_cast_faith_bon trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:bon } root = { trigger_event = skonester_cheat_menu.3406 } }
+  option = { name = skonester_cast_faith_old_bon trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:old_bon } root = { trigger_event = skonester_cheat_menu.3406 } }
 
   option = { name = skonester_cheat_menu.0185.back_hub trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3300 } }
   option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { if = { limit = { scope:recipient = { has_character_flag = skonester_companion_picking_culture } } scope:recipient = { remove_character_flag = skonester_companion_picking_culture } trigger_event = skonester_cheat_menu.0180 } } }
@@ -1761,13 +1761,13 @@ skonester_cheat_menu.3407 = {
   theme = default
   right_portrait = scope:recipient
 
-  option = { name = skonester_cast_faith_acharya trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:acharya } root = { trigger_event = skonester_cheat_menu.3407 } }
-  option = { name = skonester_cast_faith_ari trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:ari } root = { trigger_event = skonester_cheat_menu.3407 } }
-  option = { name = skonester_cast_faith_avatamsaka trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:avatamsaka } root = { trigger_event = skonester_cheat_menu.3407 } }
-  option = { name = skonester_cast_faith_dhyana trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:dhyana } root = { trigger_event = skonester_cheat_menu.3407 } }
-  option = { name = skonester_cast_faith_lamaism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:lamaism } root = { trigger_event = skonester_cheat_menu.3407 } }
-  option = { name = skonester_cast_faith_mahayana trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:mahayana } root = { trigger_event = skonester_cheat_menu.3407 } }
-  option = { name = skonester_cast_faith_maitreya trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:maitreya } root = { trigger_event = skonester_cheat_menu.3407 } }
+  option = { name = skonester_cast_faith_acharya trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:acharya } root = { trigger_event = skonester_cheat_menu.3407 } }
+  option = { name = skonester_cast_faith_ari trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:ari } root = { trigger_event = skonester_cheat_menu.3407 } }
+  option = { name = skonester_cast_faith_avatamsaka trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:avatamsaka } root = { trigger_event = skonester_cheat_menu.3407 } }
+  option = { name = skonester_cast_faith_dhyana trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:dhyana } root = { trigger_event = skonester_cheat_menu.3407 } }
+  option = { name = skonester_cast_faith_lamaism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:lamaism } root = { trigger_event = skonester_cheat_menu.3407 } }
+  option = { name = skonester_cast_faith_mahayana trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:mahayana } root = { trigger_event = skonester_cheat_menu.3407 } }
+  option = { name = skonester_cast_faith_maitreya trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:maitreya } root = { trigger_event = skonester_cheat_menu.3407 } }
 
   option = { name = skonester_cheat_menu.page_next trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3408 } }
   option = { name = skonester_cheat_menu.0185.back_hub trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3300 } }
@@ -1781,13 +1781,13 @@ skonester_cheat_menu.3408 = {
   theme = default
   right_portrait = scope:recipient
 
-  option = { name = skonester_cast_faith_mantrayana trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:mantrayana } root = { trigger_event = skonester_cheat_menu.3408 } }
-  option = { name = skonester_cast_faith_pundarika trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:pundarika } root = { trigger_event = skonester_cheat_menu.3408 } }
-  option = { name = skonester_cast_faith_sukhavati trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:sukhavati } root = { trigger_event = skonester_cheat_menu.3408 } }
-  option = { name = skonester_cast_faith_theravada trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:theravada } root = { trigger_event = skonester_cheat_menu.3408 } }
-  option = { name = skonester_cast_faith_vajrayana trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:vajrayana } root = { trigger_event = skonester_cheat_menu.3408 } }
-  option = { name = skonester_cast_faith_vinaya trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:vinaya } root = { trigger_event = skonester_cheat_menu.3408 } }
-  option = { name = skonester_cast_faith_yogacara trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:yogacara } root = { trigger_event = skonester_cheat_menu.3408 } }
+  option = { name = skonester_cast_faith_mantrayana trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:mantrayana } root = { trigger_event = skonester_cheat_menu.3408 } }
+  option = { name = skonester_cast_faith_pundarika trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:pundarika } root = { trigger_event = skonester_cheat_menu.3408 } }
+  option = { name = skonester_cast_faith_sukhavati trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:sukhavati } root = { trigger_event = skonester_cheat_menu.3408 } }
+  option = { name = skonester_cast_faith_theravada trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:theravada } root = { trigger_event = skonester_cheat_menu.3408 } }
+  option = { name = skonester_cast_faith_vajrayana trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:vajrayana } root = { trigger_event = skonester_cheat_menu.3408 } }
+  option = { name = skonester_cast_faith_vinaya trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:vinaya } root = { trigger_event = skonester_cheat_menu.3408 } }
+  option = { name = skonester_cast_faith_yogacara trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:yogacara } root = { trigger_event = skonester_cheat_menu.3408 } }
 
   option = { name = skonester_cheat_menu.page_prev trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3407 } }
   option = { name = skonester_cheat_menu.0185.back_hub trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3300 } }
@@ -1822,12 +1822,12 @@ skonester_cheat_menu.3410 = {
   right_portrait = scope:recipient
 
   option = { name = skonester_cast_faith_conversos trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:conversos } root = { trigger_event = skonester_cheat_menu.3410 } }
-  option = { name = skonester_cast_faith_coptic trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:coptic } root = { trigger_event = skonester_cheat_menu.3410 } }
+  option = { name = skonester_cast_faith_coptic trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:coptic_rite } root = { trigger_event = skonester_cheat_menu.3410 } }
   option = { name = skonester_cast_faith_iconoclast trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:iconoclast } root = { trigger_event = skonester_cheat_menu.3410 } }
-  option = { name = skonester_cast_faith_insular_celtic trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:insular_celtic } root = { trigger_event = skonester_cheat_menu.3410 } }
+  option = { name = skonester_cast_faith_insular_celtic trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:insular_celtic } root = { trigger_event = skonester_cheat_menu.3410 } }
   option = { name = skonester_cast_faith_lollard trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:lollard } root = { trigger_event = skonester_cheat_menu.3410 } }
   option = { name = skonester_cast_faith_messalian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:messalian } root = { trigger_event = skonester_cheat_menu.3410 } }
-  option = { name = skonester_cast_faith_mozarabic_church trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:mozarabic_church } root = { trigger_event = skonester_cheat_menu.3410 } }
+  option = { name = skonester_cast_faith_mozarabic_church trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:mozarabic_church } root = { trigger_event = skonester_cheat_menu.3410 } }
 
   option = { name = skonester_cheat_menu.page_prev trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3409 } }
   option = { name = skonester_cheat_menu.page_next trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3411 } }
@@ -1859,8 +1859,8 @@ skonester_cheat_menu.3412 = {
   theme = default
   right_portrait = scope:recipient
 
-  option = { name = skonester_cast_faith_daoxue trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:daoxue } root = { trigger_event = skonester_cheat_menu.3412 } }
-  option = { name = skonester_cast_faith_jingxue trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:jingxue } root = { trigger_event = skonester_cheat_menu.3412 } }
+  option = { name = skonester_cast_faith_daoxue trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { if = { limit = { exists = rite:daoxue } set_character_rite = rite:daoxue } } root = { trigger_event = skonester_cheat_menu.3412 } }
+  option = { name = skonester_cast_faith_jingxue trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:jingxue } root = { trigger_event = skonester_cheat_menu.3412 } }
 
   option = { name = skonester_cheat_menu.0185.back_hub trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3300 } }
   option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { if = { limit = { scope:recipient = { has_character_flag = skonester_companion_picking_culture } } scope:recipient = { remove_character_flag = skonester_companion_picking_culture } trigger_event = skonester_cheat_menu.0180 } } }
@@ -1899,12 +1899,12 @@ skonester_cheat_menu.3415 = {
   theme = default
   right_portrait = scope:recipient
 
-  option = { name = skonester_cast_faith_cainitism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:cainitism } root = { trigger_event = skonester_cheat_menu.3415 } }
-  option = { name = skonester_cast_faith_mandeaism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:mandeaism } root = { trigger_event = skonester_cheat_menu.3415 } }
-  option = { name = skonester_cast_faith_manichean trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:manichean } root = { trigger_event = skonester_cheat_menu.3415 } }
-  option = { name = skonester_cast_faith_mingism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:mingism } root = { trigger_event = skonester_cheat_menu.3415 } }
-  option = { name = skonester_cast_faith_priscillianism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:priscillianism } root = { trigger_event = skonester_cheat_menu.3415 } }
-  option = { name = skonester_cast_faith_sabianism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:sabianism } root = { trigger_event = skonester_cheat_menu.3415 } }
+  option = { name = skonester_cast_faith_cainitism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:cainitism } root = { trigger_event = skonester_cheat_menu.3415 } }
+  option = { name = skonester_cast_faith_mandeaism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:mandeaism } root = { trigger_event = skonester_cheat_menu.3415 } }
+  option = { name = skonester_cast_faith_manichean trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:manichean } root = { trigger_event = skonester_cheat_menu.3415 } }
+  option = { name = skonester_cast_faith_mingism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:mingism } root = { trigger_event = skonester_cheat_menu.3415 } }
+  option = { name = skonester_cast_faith_priscillianism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:priscillianism } root = { trigger_event = skonester_cheat_menu.3415 } }
+  option = { name = skonester_cast_faith_sabianism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:sabianism } root = { trigger_event = skonester_cheat_menu.3415 } }
   option = { name = skonester_cast_faith_sethianism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:sethianism } root = { trigger_event = skonester_cheat_menu.3415 } }
 
   option = { name = skonester_cheat_menu.page_next trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3416 } }
@@ -1919,7 +1919,7 @@ skonester_cheat_menu.3416 = {
   theme = default
   right_portrait = scope:recipient
 
-  option = { name = skonester_cast_faith_valentinianism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:valentinianism } root = { trigger_event = skonester_cheat_menu.3416 } }
+  option = { name = skonester_cast_faith_valentinianism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:valentinianism } root = { trigger_event = skonester_cheat_menu.3416 } }
 
   option = { name = skonester_cheat_menu.page_prev trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3415 } }
   option = { name = skonester_cheat_menu.0185.back_hub trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3300 } }
@@ -1985,13 +1985,13 @@ skonester_cheat_menu.3421 = {
   theme = default
   right_portrait = scope:recipient
 
-  option = { name = skonester_cast_faith_advaitism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:advaitism } root = { trigger_event = skonester_cheat_menu.3421 } }
-  option = { name = skonester_cast_faith_kalikula_shaktism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:kalikula_shaktism } root = { trigger_event = skonester_cheat_menu.3421 } }
-  option = { name = skonester_cast_faith_krishnaism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:krishnaism } root = { trigger_event = skonester_cheat_menu.3421 } }
+  option = { name = skonester_cast_faith_advaitism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:advaitism } root = { trigger_event = skonester_cheat_menu.3421 } }
+  option = { name = skonester_cast_faith_kalikula_shaktism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:kalikula_shaktism } root = { trigger_event = skonester_cheat_menu.3421 } }
+  option = { name = skonester_cast_faith_krishnaism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:krishnaism } root = { trigger_event = skonester_cheat_menu.3421 } }
   option = { name = skonester_cast_faith_saura trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:saura } root = { trigger_event = skonester_cheat_menu.3421 } }
-  option = { name = skonester_cast_faith_shaivism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:shaivism } root = { trigger_event = skonester_cheat_menu.3421 } }
+  option = { name = skonester_cast_faith_shaivism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:shaivism } root = { trigger_event = skonester_cheat_menu.3421 } }
   option = { name = skonester_cast_faith_smartism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:smartism } root = { trigger_event = skonester_cheat_menu.3421 } }
-  option = { name = skonester_cast_faith_srikula_shaktism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:srikula_shaktism } root = { trigger_event = skonester_cheat_menu.3421 } }
+  option = { name = skonester_cast_faith_srikula_shaktism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:srikula_shaktism } root = { trigger_event = skonester_cheat_menu.3421 } }
 
   option = { name = skonester_cheat_menu.page_next trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3422 } }
   option = { name = skonester_cheat_menu.0185.back_hub trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3300 } }
@@ -2005,7 +2005,7 @@ skonester_cheat_menu.3422 = {
   theme = default
   right_portrait = scope:recipient
 
-  option = { name = skonester_cast_faith_vaishnavism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:vaishnavism } root = { trigger_event = skonester_cheat_menu.3422 } }
+  option = { name = skonester_cast_faith_vaishnavism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:vaishnavism } root = { trigger_event = skonester_cheat_menu.3422 } }
 
   option = { name = skonester_cheat_menu.page_prev trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3421 } }
   option = { name = skonester_cheat_menu.0185.back_hub trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3300 } }
@@ -2019,13 +2019,13 @@ skonester_cheat_menu.3423 = {
   theme = default
   right_portrait = scope:recipient
 
-  option = { name = skonester_cast_faith_alawite trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:alawite } root = { trigger_event = skonester_cheat_menu.3423 } }
-  option = { name = skonester_cast_faith_alevi trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:alevi } root = { trigger_event = skonester_cheat_menu.3423 } }
-  option = { name = skonester_cast_faith_ashari trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:ashari } root = { trigger_event = skonester_cheat_menu.3423 } }
-  option = { name = skonester_cast_faith_azariqa trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:azariqa } root = { trigger_event = skonester_cheat_menu.3423 } }
+  option = { name = skonester_cast_faith_alawite trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:alawite } root = { trigger_event = skonester_cheat_menu.3423 } }
+  option = { name = skonester_cast_faith_alevi trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:alevi } root = { trigger_event = skonester_cheat_menu.3423 } }
+  option = { name = skonester_cast_faith_ashari trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:sunni } root = { trigger_event = skonester_cheat_menu.3423 } }
+  option = { name = skonester_cast_faith_azariqa trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:azariqa } root = { trigger_event = skonester_cheat_menu.3423 } }
   option = { name = skonester_cast_faith_druze trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:druze } root = { trigger_event = skonester_cheat_menu.3423 } }
-  option = { name = skonester_cast_faith_ghulat trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:ghulat } root = { trigger_event = skonester_cheat_menu.3423 } }
-  option = { name = skonester_cast_faith_hafizi trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:hafizi } root = { trigger_event = skonester_cheat_menu.3423 } }
+  option = { name = skonester_cast_faith_ghulat trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:ghulat } root = { trigger_event = skonester_cheat_menu.3423 } }
+  option = { name = skonester_cast_faith_hafizi trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { if = { limit = { exists = rite:hafizi } set_character_rite = rite:hafizi } } root = { trigger_event = skonester_cheat_menu.3423 } }
 
   option = { name = skonester_cheat_menu.page_next trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3424 } }
   option = { name = skonester_cheat_menu.0185.back_hub trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3300 } }
@@ -2039,13 +2039,13 @@ skonester_cheat_menu.3424 = {
   theme = default
   right_portrait = scope:recipient
 
-  option = { name = skonester_cast_faith_ibadi trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:ibadi } root = { trigger_event = skonester_cheat_menu.3424 } }
-  option = { name = skonester_cast_faith_imami trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:imami } root = { trigger_event = skonester_cheat_menu.3424 } }
-  option = { name = skonester_cast_faith_ismaili trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:ismaili } root = { trigger_event = skonester_cheat_menu.3424 } }
+  option = { name = skonester_cast_faith_ibadi trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:ibadi } root = { trigger_event = skonester_cheat_menu.3424 } }
+  option = { name = skonester_cast_faith_imami trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:imami } root = { trigger_event = skonester_cheat_menu.3424 } }
+  option = { name = skonester_cast_faith_ismaili trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:ismaili } root = { trigger_event = skonester_cheat_menu.3424 } }
   option = { name = skonester_cast_faith_masmudi trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:masmudi } root = { trigger_event = skonester_cheat_menu.3424 } }
-  option = { name = skonester_cast_faith_maturidi trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:maturidi } root = { trigger_event = skonester_cheat_menu.3424 } }
-  option = { name = skonester_cast_faith_mutazila trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:mutazila } root = { trigger_event = skonester_cheat_menu.3424 } }
-  option = { name = skonester_cast_faith_muwalladi trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:muwalladi } root = { trigger_event = skonester_cheat_menu.3424 } }
+  option = { name = skonester_cast_faith_maturidi trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:sunni } root = { trigger_event = skonester_cheat_menu.3424 } }
+  option = { name = skonester_cast_faith_mutazila trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:sunni } root = { trigger_event = skonester_cheat_menu.3424 } }
+  option = { name = skonester_cast_faith_muwalladi trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:sunni } root = { trigger_event = skonester_cheat_menu.3424 } }
 
   option = { name = skonester_cheat_menu.page_prev trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3423 } }
   option = { name = skonester_cheat_menu.page_next trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3425 } }
@@ -2060,12 +2060,12 @@ skonester_cheat_menu.3425 = {
   theme = default
   right_portrait = scope:recipient
 
-  option = { name = skonester_cast_faith_najdat trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:najdat } root = { trigger_event = skonester_cheat_menu.3425 } }
-  option = { name = skonester_cast_faith_nizari trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:nizari } root = { trigger_event = skonester_cheat_menu.3425 } }
+  option = { name = skonester_cast_faith_najdat trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:najdat } root = { trigger_event = skonester_cheat_menu.3425 } }
+  option = { name = skonester_cast_faith_nizari trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:nizari } root = { trigger_event = skonester_cheat_menu.3425 } }
   option = { name = skonester_cast_faith_qarmatian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:qarmatian } root = { trigger_event = skonester_cheat_menu.3425 } }
   option = { name = skonester_cast_faith_quranist trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:quranist } root = { trigger_event = skonester_cheat_menu.3425 } }
-  option = { name = skonester_cast_faith_sufri trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:sufri } root = { trigger_event = skonester_cheat_menu.3425 } }
-  option = { name = skonester_cast_faith_zayidi trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:zayidi } root = { trigger_event = skonester_cheat_menu.3425 } }
+  option = { name = skonester_cast_faith_sufri trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:sufri } root = { trigger_event = skonester_cheat_menu.3425 } }
+  option = { name = skonester_cast_faith_zayidi trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:zayidi } root = { trigger_event = skonester_cheat_menu.3425 } }
 
   option = { name = skonester_cheat_menu.page_prev trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3424 } }
   option = { name = skonester_cheat_menu.0185.back_hub trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3300 } }
@@ -2079,9 +2079,9 @@ skonester_cheat_menu.3426 = {
   theme = default
   right_portrait = scope:recipient
 
-  option = { name = skonester_cast_faith_digambara trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:digambara } root = { trigger_event = skonester_cheat_menu.3426 } }
-  option = { name = skonester_cast_faith_svetambara trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:svetambara } root = { trigger_event = skonester_cheat_menu.3426 } }
-  option = { name = skonester_cast_faith_yapaniya trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:yapaniya } root = { trigger_event = skonester_cheat_menu.3426 } }
+  option = { name = skonester_cast_faith_digambara trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:digambara } root = { trigger_event = skonester_cheat_menu.3426 } }
+  option = { name = skonester_cast_faith_svetambara trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:svetambara } root = { trigger_event = skonester_cheat_menu.3426 } }
+  option = { name = skonester_cast_faith_yapaniya trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:yapaniya } root = { trigger_event = skonester_cheat_menu.3426 } }
 
   option = { name = skonester_cheat_menu.0185.back_hub trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3300 } }
   option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { if = { limit = { scope:recipient = { has_character_flag = skonester_companion_picking_culture } } scope:recipient = { remove_character_flag = skonester_companion_picking_culture } trigger_event = skonester_cheat_menu.0180 } } }
@@ -2098,8 +2098,8 @@ skonester_cheat_menu.3427 = {
   option = { name = skonester_cast_faith_kabarism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:kabarism } root = { trigger_event = skonester_cheat_menu.3427 } }
   option = { name = skonester_cast_faith_karaism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:karaism } root = { trigger_event = skonester_cheat_menu.3427 } }
   option = { name = skonester_cast_faith_malabarism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:malabarism } root = { trigger_event = skonester_cheat_menu.3427 } }
-  option = { name = skonester_cast_faith_merkabah trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:merkabah } root = { trigger_event = skonester_cheat_menu.3427 } }
-  option = { name = skonester_cast_faith_rabbinism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:rabbinism } root = { trigger_event = skonester_cheat_menu.3427 } }
+  option = { name = skonester_cast_faith_merkabah trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:merkabah } root = { trigger_event = skonester_cheat_menu.3427 } }
+  option = { name = skonester_cast_faith_rabbinism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:rabbinism } root = { trigger_event = skonester_cheat_menu.3427 } }
   option = { name = skonester_cast_faith_samaritan trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:samaritan } root = { trigger_event = skonester_cheat_menu.3427 } }
 
   option = { name = skonester_cheat_menu.0185.back_hub trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3300 } }
@@ -2271,8 +2271,8 @@ skonester_cheat_menu.3440 = {
   theme = default
   right_portrait = scope:recipient
 
-  option = { name = skonester_cast_faith_shinto trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:shinto } root = { trigger_event = skonester_cheat_menu.3440 } }
-  option = { name = skonester_cast_faith_shugendo trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:shugendo } root = { trigger_event = skonester_cheat_menu.3440 } }
+  option = { name = skonester_cast_faith_shinto trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:shinto } root = { trigger_event = skonester_cheat_menu.3440 } }
+  option = { name = skonester_cast_faith_shugendo trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:shugendo } root = { trigger_event = skonester_cheat_menu.3440 } }
 
   option = { name = skonester_cheat_menu.0185.back_hub trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3300 } }
   option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { if = { limit = { scope:recipient = { has_character_flag = skonester_companion_picking_culture } } scope:recipient = { remove_character_flag = skonester_companion_picking_culture } trigger_event = skonester_cheat_menu.0180 } } }
@@ -2325,8 +2325,8 @@ skonester_cheat_menu.3444 = {
   theme = default
   right_portrait = scope:recipient
 
-  option = { name = skonester_cast_faith_quanzhen trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:quanzhen } root = { trigger_event = skonester_cheat_menu.3444 } }
-  option = { name = skonester_cast_faith_shangqing trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:shangqing } root = { trigger_event = skonester_cheat_menu.3444 } }
+  option = { name = skonester_cast_faith_quanzhen trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { if = { limit = { exists = rite:quanzhen } set_character_rite = rite:quanzhen } } root = { trigger_event = skonester_cheat_menu.3444 } }
+  option = { name = skonester_cast_faith_shangqing trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:shangqing } root = { trigger_event = skonester_cheat_menu.3444 } }
   option = { name = skonester_cast_faith_zhengyi trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:zhengyi } root = { trigger_event = skonester_cheat_menu.3444 } }
 
   option = { name = skonester_cheat_menu.0185.back_hub trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3300 } }
@@ -2446,9 +2446,9 @@ skonester_cheat_menu.3453 = {
   theme = default
   right_portrait = scope:recipient
 
-  option = { name = skonester_cast_faith_kitebacilweism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:kitebacilweism } root = { trigger_event = skonester_cheat_menu.3453 } }
-  option = { name = skonester_cast_faith_meshefaresism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:meshefaresism } root = { trigger_event = skonester_cheat_menu.3453 } }
-  option = { name = skonester_cast_faith_yazidi trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_faith = faith:yazidi } root = { trigger_event = skonester_cheat_menu.3453 } }
+  option = { name = skonester_cast_faith_kitebacilweism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:kitebacilweism } root = { trigger_event = skonester_cheat_menu.3453 } }
+  option = { name = skonester_cast_faith_meshefaresism trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:meshefaresism } root = { trigger_event = skonester_cheat_menu.3453 } }
+  option = { name = skonester_cast_faith_yazidi trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:recipient = { set_character_rite = rite:yazidi } root = { trigger_event = skonester_cheat_menu.3453 } }
 
   option = { name = skonester_cheat_menu.0185.back_hub trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { trigger_event = skonester_cheat_menu.3300 } }
   option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } root = { if = { limit = { scope:recipient = { has_character_flag = skonester_companion_picking_culture } } scope:recipient = { remove_character_flag = skonester_companion_picking_culture } trigger_event = skonester_cheat_menu.0180 } } }

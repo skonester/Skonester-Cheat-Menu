@@ -127,7 +127,7 @@ skonester_has_any_vassal_for_nomadic_conversion_trigger = {
 skonester_has_any_vassal_for_theocracy_conversion_trigger = {
   any_vassal_or_below = {
     skonester_mass_gov_conversion_target_trigger = yes
-    NOT = { has_government = theocracy_government }
+    NOT = { government_has_flag = government_is_theocracy }
   }
 }
 

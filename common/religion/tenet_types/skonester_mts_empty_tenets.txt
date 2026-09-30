@@ -1,4 +1,6 @@
 ﻿# More Tenets Slots 空槽信条（整合自 Workshop 2904268802）
+# CK3 1.20: tenets are their own database (common/religion/tenet_types). Moved here from doctrine_types.
+# Icon lives in gfx/interface/icons/faith_tenets (1.20 TENET_TYPE_ICON_PATH).
 
 tenet_zz_empty_1 = {
   icon = core_tenet_empty

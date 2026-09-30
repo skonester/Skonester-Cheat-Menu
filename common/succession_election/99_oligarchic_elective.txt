@@ -27,14 +27,20 @@ oligarchic_elective = { # Oligarchic Elective.
 	}
 	
 	electors = {
-		max = 6  #Seven Prince-Electors + 1 Emperor.
-		add = holder #The Emperor
-		add = {
-			type = holder_direct_vassals
-			limit = {
-				is_powerful_vassal = yes
+		character_sets = {
+			oligarchic_elective_electors_1 = {
+				type = holder
+
+			}
+			oligarchic_elective_electors_2 = {
+				type = holder_direct_vassals
+				limit = {
+					is_powerful_vassal = yes
+				}
+
 			}
 		}
+		max = 6  #Seven Prince-Electors + 1 Emperor.
 		priority = {
 			base = 1
 			modifier = { # The Emperor is always picked.
@@ -75,18 +81,22 @@ oligarchic_elective = { # Oligarchic Elective.
 	
 	#scope:candidate = Candidate, scope:title = Title, scope:holder_candidate = Candidate currently selected by ruler.
 	candidates = {
-		add = {
-			type = holder_direct_vassals
-			limit = {
-				feudal_elective_potential_landed_candidate_trigger = yes
-				is_powerful_vassal = yes
+		character_sets = {
+			oligarchic_elective_candidates_1 = {
+				type = holder_direct_vassals
+				limit = {
+					feudal_elective_potential_landed_candidate_trigger = yes
+					is_powerful_vassal = yes
+				}
+
 			}
-		}
-		add = {
-			type = holder_close_family
-			limit = {
-				is_close_family_of = scope:holder
-				feudal_elective_potential_landless_dynastic_candidate_trigger = yes
+			oligarchic_elective_candidates_2 = {
+				type = holder_close_family
+				limit = {
+					is_close_family_of = scope:holder
+					feudal_elective_potential_landless_dynastic_candidate_trigger = yes
+				}
+
 			}
 		}
 	}

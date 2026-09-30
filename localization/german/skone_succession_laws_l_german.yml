@@ -22,11 +22,11 @@
  peasant_elective_electors:0 "Herrscher und Vasallen"
  peasant_elective_electors_tooltip:0 "Um bei der Volkswahl ein gültiger [Wahlberechtigter|E] zu sein, muss ein Vasall alle folgenden Bedingungen erfüllen:\n$EFFECT_LIST_BULLET$Direkter Vasall des Titels sein.\n$EFFECT_LIST_BULLET$Mindestens den [Rang|E] eines [Barons|E] übertreffen."
 
- theocratic_elective_succession_law:1 "Theokratische Wahl"
- theocratic_elective_succession_law_effects:2 "Alle [de_jure|E]-[Vasallen|E] können unter sich selbst, den [engen_Familienmitgliedern|E] des Herrschers sowie [Anspruchstellern|E] einen [Titelerben|E] nominieren. Die [Stimmkraft|E] in diesem [Erbgesetz|E] wird von der [Titelstufe|E], der [Frömmigkeitsstufe|E] und den tugendhaften [Eigenschaften|E] des [Wahlberechtigten|E] beeinflusst. Wahlberechtigte bevorzugen Kandidaten mit hoher [Frömmigkeitsstufe|E] und tugendhaften [Eigenschaften|E]."
+ skone_theocratic_elective_succession_law:1 "Theokratische Wahl"
+ skone_theocratic_elective_succession_law_effects:2 "Alle [de_jure|E]-[Vasallen|E] können unter sich selbst, den [engen_Familienmitgliedern|E] des Herrschers sowie [Anspruchstellern|E] einen [Titelerben|E] nominieren. Die [Stimmkraft|E] in diesem [Erbgesetz|E] wird von der [Titelstufe|E], der [Frömmigkeitsstufe|E] und den tugendhaften [Eigenschaften|E] des [Wahlberechtigten|E] beeinflusst. Wahlberechtigte bevorzugen Kandidaten mit hoher [Frömmigkeitsstufe|E] und tugendhaften [Eigenschaften|E]."
 
- theocratic_elective_candidates:0 "Enge Familie, Anspruchsteller und De-jure-Vasallen"
- theocratic_elective_candidates_tooltip:1 "Um bei der theokratischen Wahl als gültiger Kandidat infrage zu kommen, muss ein Charakter eine der folgenden Bedingungen erfüllen:\n$EFFECT_LIST_BULLET$Ein legitimes [enges_Familienmitglied|E] des derzeitigen Herrschers sein, das keine Republik erbt. Kinder eines Kandidaten können nicht nominiert werden.\n$EFFECT_LIST_BULLET$Ein [Anspruchsteller|E] auf den Titel sein, der keine Republik erbt.\n$EFFECT_LIST_BULLET$Ein [de_jure|E]-[Vasall|E] des Titels sein."
+ skone_theocratic_elective_candidates:0 "Enge Familie, Anspruchsteller und De-jure-Vasallen"
+ skone_theocratic_elective_candidates_tooltip:1 "Um bei der theokratischen Wahl als gültiger Kandidat infrage zu kommen, muss ein Charakter eine der folgenden Bedingungen erfüllen:\n$EFFECT_LIST_BULLET$Ein legitimes [enges_Familienmitglied|E] des derzeitigen Herrschers sein, das keine Republik erbt. Kinder eines Kandidaten können nicht nominiert werden.\n$EFFECT_LIST_BULLET$Ein [Anspruchsteller|E] auf den Titel sein, der keine Republik erbt.\n$EFFECT_LIST_BULLET$Ein [de_jure|E]-[Vasall|E] des Titels sein."
 
- theocratic_elective_electors:0 "De-jure-Vasallen"
- theocratic_elective_electors_tooltip:0 "Um bei der theokratischen Wahl ein gültiger [Wahlberechtigter|E] zu sein, muss ein Vasall alle folgenden Bedingungen erfüllen:\n$EFFECT_LIST_BULLET$Ein [de_jure|E]-[Vasall|E] des Titels sein.\n$EFFECT_LIST_BULLET$Mindestens Graf sein."
+ skone_theocratic_elective_electors:0 "De-jure-Vasallen"
+ skone_theocratic_elective_electors_tooltip:0 "Um bei der theokratischen Wahl ein gültiger [Wahlberechtigter|E] zu sein, muss ein Vasall alle folgenden Bedingungen erfüllen:\n$EFFECT_LIST_BULLET$Ein [de_jure|E]-[Vasall|E] des Titels sein.\n$EFFECT_LIST_BULLET$Mindestens Graf sein."

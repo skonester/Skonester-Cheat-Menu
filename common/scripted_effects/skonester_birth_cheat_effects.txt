@@ -61,7 +61,7 @@
       random_list = { 10 = { add_trait = architect } 90 = { } }
       random_list = { 10 = { add_trait = lifestyle_herbalist } 90 = { } }
       random_list = { 10 = { add_trait = lifestyle_mystic } 90 = { } }
-      random_list = { 10 = { add_trait = scholar } 90 = { } }
+      random_list = { 10 = { add_trait = erudite } 90 = { } }
 
       # 强制添加聪慧特质
       add_trait = intellect_good_3
@@ -157,7 +157,7 @@
       random_list = { 10 = { add_trait = architect } 90 = { } }
       random_list = { 10 = { add_trait = lifestyle_herbalist } 90 = { } }
       random_list = { 10 = { add_trait = lifestyle_mystic } 90 = { } }
-      random_list = { 10 = { add_trait = scholar } 90 = { } }
+      random_list = { 10 = { add_trait = erudite } 90 = { } }
 
       # 强制添加聪慧特质
       add_trait = intellect_good_3
@@ -257,7 +257,7 @@ skonester_birth_cheat_add_female_1 = {
       random_list = { 10 = { add_trait = architect } 90 = { } }
       random_list = { 10 = { add_trait = lifestyle_herbalist } 90 = { } }
       random_list = { 10 = { add_trait = lifestyle_mystic } 90 = { } }
-      random_list = { 10 = { add_trait = scholar } 90 = { } }
+      random_list = { 10 = { add_trait = erudite } 90 = { } }
 
       # 强制添加聪慧特质
       add_trait = intellect_good_3
@@ -353,7 +353,7 @@ skonester_birth_cheat_add_female_1 = {
       random_list = { 10 = { add_trait = architect } 90 = { } }
       random_list = { 10 = { add_trait = lifestyle_herbalist } 90 = { } }
       random_list = { 10 = { add_trait = lifestyle_mystic } 90 = { } }
-      random_list = { 10 = { add_trait = scholar } 90 = { } }
+      random_list = { 10 = { add_trait = erudite } 90 = { } }
 
       # 强制添加聪慧特质
       add_trait = intellect_good_3

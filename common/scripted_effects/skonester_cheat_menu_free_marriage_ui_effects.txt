@@ -12,7 +12,7 @@ skonester_cheat_menu_clear_marriage_blockers_for_force_ui_effect = {
   }
   if = {
     limit = { is_concubine = yes }
-    remove_concubine = yes
+    concubinist ?= { remove_concubine = prev }
   }
 }
 

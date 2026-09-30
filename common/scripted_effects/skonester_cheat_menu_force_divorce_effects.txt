@@ -8,7 +8,7 @@ skonester_cheat_menu_force_divorce_recipient_effect = {
     skonester_cheat_menu_marriage_ban_strip_wedlocks_effect = yes
     if = {
       limit = { is_concubine = yes }
-      remove_concubine = yes
+      concubinist ?= { remove_concubine = prev }
     }
   }
 }

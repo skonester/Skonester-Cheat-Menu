@@ -482,8 +482,8 @@ skonester_trait_gui_has = {
       has_trait = schemer
     }
     trigger_if = {
-      limit = { scope:trait_flag = flag:scholar }
-      has_trait = scholar
+      limit = { scope:trait_flag = flag:erudite }
+      has_trait = erudite
     }
     trigger_if = {
       limit = { scope:trait_flag = flag:seducer }

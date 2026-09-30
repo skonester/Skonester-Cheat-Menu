@@ -56,9 +56,12 @@ skonester_authority_iron_fist_holder = {
   personal_scheme_resistance_add = 500
   max_hostile_schemes_add = 8
   max_personal_schemes_add = 8
-  scheme_success_chance = 200
-  scheme_success_chance_growth = 100
-  scheme_success_chance_max = 500
+  owned_hostile_scheme_success_chance_add = 200
+  owned_personal_scheme_success_chance_add = 200 # was scheme_success_chance (scheme-only modifier)
+  owned_hostile_scheme_success_chance_growth_add = 100
+  owned_personal_scheme_success_chance_growth_add = 100 # was scheme_success_chance_growth (scheme-only modifier)
+  owned_hostile_scheme_success_chance_max_add = 500
+  owned_personal_scheme_success_chance_max_add = 500 # was scheme_success_chance_max (scheme-only modifier)
 }
 
 skonester_authority_unbound_holder = {

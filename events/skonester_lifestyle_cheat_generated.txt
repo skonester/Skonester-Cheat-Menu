@@ -4130,11 +4130,11 @@ skonester_cheat_menu.0673 = {
     }
     scope:skonester_lifestyle_target = {
       if = {
-        limit = { has_perk = scholar_perk }
-        remove_perk = scholar_perk
+        limit = { has_perk = erudite_perk }
+        remove_perk = erudite_perk
       }
       else = {
-        add_perk = scholar_perk
+        add_perk = erudite_perk
       }
     }
     scope:actor = {

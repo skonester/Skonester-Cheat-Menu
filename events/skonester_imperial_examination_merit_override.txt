@@ -3,6 +3,8 @@
 # Mod: palace phase merit = 2000 base + skill-scaled bonus (skonester_imperial_exam_palace_total_merit_value)
 
 imperial_examination.9000 = {
+  # CK3 1.20: override the vanilla event with the same id without a duplicate-id error
+  id_override_priority = 1
   type = activity_event
   title = imperial_examination.9000.t
   desc = {
@@ -266,6 +268,8 @@ imperial_examination.9000 = {
 
 # Follow up event - Waiting for Palace Exam start (Entrant)
 imperial_examination.9001 = {
+  # CK3 1.20: override the vanilla event with the same id without a duplicate-id error
+  id_override_priority = 1
   type = activity_event
   title = imperial_examination.9001.t
   desc = {

@@ -16,7 +16,7 @@ db_tomb_ancestors_01 = { # Tomb of Ancestors
 				building_requirement_tribal = no
 				building_requirement_castle_city_church = { LEVEL = 01 }
 				scope:holder = {
-					faith = { has_doctrine = tenet_ancestor_worship }
+					faith = { has_tenet = tenet_ancestor_worship }
 				}
 			}
 		}
@@ -71,7 +71,7 @@ db_tomb_ancestors_02 = { # Tomb of Ancestors
 				building_requirement_tribal = no
 				building_requirement_castle_city_church = { LEVEL = 02 }
 				scope:holder = {
-					faith = { has_doctrine = tenet_ancestor_worship }
+					faith = { has_tenet = tenet_ancestor_worship }
 				}
 			}
 		}
@@ -269,10 +269,10 @@ db_hall_pillage_01 = { # Hall of Pillage
 		NOT = {
 			OR = {
 				scope:holder = {
-					faith = { has_doctrine = tenet_pacifism }
+					faith = { has_tenet = tenet_pacifism }
 				}
 				scope:holder = {
-					faith = { has_doctrine = tenet_dharmic_pacifism }
+					faith = { has_tenet = tenet_dharmic_pacifism }
 				}
 			}
 		}

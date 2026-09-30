@@ -23,11 +23,14 @@ trait_nether_conspiracy_lord = {
   # 发现率（被发现相关）
   scheme_discovery_chance_mult = 9999
 
-  scheme_secrecy = 999
+  owned_scheme_secrecy_add = 999 # was scheme_secrecy (scheme-only modifier)
   # 初始成功概率（基础成功率相关）
-  scheme_success_chance = 9999
-  scheme_success_chance_growth = 999
-  scheme_success_chance_max = 1000
+  owned_hostile_scheme_success_chance_add = 9999
+  owned_personal_scheme_success_chance_add = 9999 # was scheme_success_chance (scheme-only modifier)
+  owned_hostile_scheme_success_chance_growth_add = 999
+  owned_personal_scheme_success_chance_growth_add = 999 # was scheme_success_chance_growth (scheme-only modifier)
+  owned_hostile_scheme_success_chance_max_add = 1000
+  owned_personal_scheme_success_chance_max_add = 1000 # was scheme_success_chance_max (scheme-only modifier)
 
   owned_scheme_secrecy_add = 999
   owned_hostile_scheme_success_chance_add = 9999
@@ -40,7 +43,7 @@ trait_nether_conspiracy_lord = {
 
   # 计谋阻力
   intrigue_scheme_resistance = 999
-  scheme_resistance = 999
+  enemy_hostile_scheme_success_chance_add = -999 # was scheme_resistance (scheme-only modifier)
 
   max_hostile_schemes_add = 10
   max_personal_schemes_add = 10

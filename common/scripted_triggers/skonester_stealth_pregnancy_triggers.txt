@@ -12,42 +12,43 @@ skonester_stealth_has_assumed_father_trigger = {
   OR = {
     exists = primary_spouse
     AND = {
-      has_trait = concubine
-      exists = liege
+      is_concubine = yes
+      exists = concubinist
     }
     any_relation = { type = lover }
   }
 }
 
 # 获取假定父亲的作用域（这是效果，非触发器——用 scripted_effect 显式声明类型）
-scripted_effect skonester_stealth_get_assumed_father_trigger = {
-  # 已婚 - 返回主配偶
-  if = {
-    limit = {
-      exists = primary_spouse
-    }
-    primary_spouse = {
-      save_scope_as = skonester_stealth_assumed_father
-    }
-  }
-  # 侧室/小妾 - 返回领主
-  else_if = {
-    limit = {
-      has_trait = concubine
-      exists = liege
-    }
-    liege = {
-      save_scope_as = skonester_stealth_assumed_father
-    }
-  }
-  # 情人 - 返回情人
-  else_if = {
-    limit = {
-      any_relation = { type = lover }
-    }
-    random_relation = {
-      type = lover
-      save_scope_as = skonester_stealth_assumed_father
-    }
-  }
-}
+# Disabled: a scripted_effect cannot be defined in common/scripted_triggers (unused anyway)
+# scripted_effect skonester_stealth_get_assumed_father_trigger = {
+#   # 已婚 - 返回主配偶
+#   if = {
+#     limit = {
+#       exists = primary_spouse
+#     }
+#     primary_spouse = {
+#       save_scope_as = skonester_stealth_assumed_father
+#     }
+#   }
+#   # 侧室/小妾 - 返回领主
+#   else_if = {
+#     limit = {
+#       is_concubine = yes
+#       exists = concubinist
+#     }
+#     concubinist = {
+#       save_scope_as = skonester_stealth_assumed_father
+#     }
+#   }
+#   # 情人 - 返回情人
+#   else_if = {
+#     limit = {
+#       any_relation = { type = lover }
+#     }
+#     random_relation = {
+#       type = lover
+#       save_scope_as = skonester_stealth_assumed_father
+#     }
+#   }
+# }

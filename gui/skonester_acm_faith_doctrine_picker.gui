@@ -55,9 +55,10 @@ window = {
           flipdirection = yes
           item = {
             widget = {
-              datacontext = "[GetFaithDoctrine( Scope.GetFlagName )]"
+              datacontext = "[GetTenetType( Scope.GetFlagName )]"
               datacontext = "[GetPlayer.MakeScope.Var('skonester_selected_faith_var').Faith]"
-              skonester_acm_faith_doctrine_picker_tile = {}
+              datacontext = "[Faith.GetMainRite]"
+              skonester_acm_faith_doctrine_picker_tile_tenet = {}
             }
           }
         }
@@ -76,8 +77,9 @@ window = {
           flipdirection = yes
           item = {
             widget = {
-              datacontext = "[GetFaithDoctrine( Scope.GetFlagName )]"
+              datacontext = "[GetDoctrineType( Scope.GetFlagName )]"
               datacontext = "[GetPlayer.MakeScope.Var('skonester_selected_faith_var').Faith]"
+              datacontext = "[Faith.GetMainRite]"
               skonester_acm_faith_doctrine_picker_tile = {}
             }
           }
@@ -97,8 +99,9 @@ window = {
           flipdirection = yes
           item = {
             widget = {
-              datacontext = "[GetFaithDoctrine( Scope.GetFlagName )]"
+              datacontext = "[GetDoctrineType( Scope.GetFlagName )]"
               datacontext = "[GetPlayer.MakeScope.Var('skonester_selected_faith_var').Faith]"
+              datacontext = "[Faith.GetMainRite]"
               skonester_acm_faith_doctrine_picker_tile = {}
             }
           }
@@ -118,8 +121,9 @@ window = {
           flipdirection = yes
           item = {
             widget = {
-              datacontext = "[GetFaithDoctrine( Scope.GetFlagName )]"
+              datacontext = "[GetDoctrineType( Scope.GetFlagName )]"
               datacontext = "[GetPlayer.MakeScope.Var('skonester_selected_faith_var').Faith]"
+              datacontext = "[Faith.GetMainRite]"
               skonester_acm_faith_doctrine_picker_tile = {}
             }
           }
@@ -139,8 +143,9 @@ window = {
           flipdirection = yes
           item = {
             widget = {
-              datacontext = "[GetFaithDoctrine( Scope.GetFlagName )]"
+              datacontext = "[GetDoctrineType( Scope.GetFlagName )]"
               datacontext = "[GetPlayer.MakeScope.Var('skonester_selected_faith_var').Faith]"
+              datacontext = "[Faith.GetMainRite]"
               skonester_acm_faith_doctrine_picker_tile = {}
             }
           }
@@ -151,7 +156,7 @@ window = {
   }
 }
 
-types skonesterAcmFaithDoctrinePickerTypes
+types skonesterAcmDoctrineTypePickerTypes
 {
   type skonester_acm_faith_doctrine_picker_tile = button_standard_hover {
     size = { 320 52 }
@@ -165,12 +170,37 @@ types skonesterAcmFaithDoctrinePickerTypes
 
       icon_doctrine = {
         size = { 40 40 }
-        texture = "[FaithDoctrine.GetIcon]"
+        texture = "[DoctrineType.GetIcon]"
       }
 
       text_single = {
         layoutpolicy_horizontal = expanding
-        text = "[FaithDoctrine.GetNameNoTooltip(Faith.Self)]"
+        text = "[DoctrineType.GetNameNoTooltip(Faith.Self)]"
+        default_format = "#clickable"
+        autoresize = no
+      }
+    }
+  }
+
+  # CK3 1.20: tenet tile (tenets are TenetType, evaluated against the faith's main Rite)
+  type skonester_acm_faith_doctrine_picker_tile_tenet = button_standard_hover {
+    size = { 320 52 }
+    tooltip = "FAITH_WINDOW_TENET_TOOLTIP"
+
+    onclick = "[GetScriptedGui('skonester_acm_faith_editor_add_doctrine').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('pick_doctrine', MakeScopeFlag(Scope.GetFlagName)).End)]"
+
+    hbox = {
+      margin = { 8 0 }
+      spacing = 8
+
+      icon = {
+        size = { 40 40 }
+        texture = "[TenetType.GetIcon( Faith.Self )]"
+      }
+
+      text_single = {
+        layoutpolicy_horizontal = expanding
+        text = "[TenetType.GetNameNoTooltip( Rite.Self )]"
         default_format = "#clickable"
         autoresize = no
       }

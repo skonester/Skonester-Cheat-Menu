@@ -45,7 +45,7 @@ cheateb_stat20_modifier = {
 	county_opinion_add = 50
 	no_prowess_loss_from_age = yes
 
-	faith_creation_piety_cost_mult = -1
+	rite_creation_piety_cost_mult = -1
 
 	cultural_head_fascination_mult = 0.35
 

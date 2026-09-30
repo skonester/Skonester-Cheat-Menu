@@ -1,7 +1,7 @@
 ﻿l_simp_chinese:
- skonester_acm_faith_doctrine_change_tt: "#T [FaithDoctrine.GetNameNoTooltip( Faith.Self )]#!\n[FaithDoctrine.GetEffectsDescription( Faith.Self )]\n\n[FaithDoctrine.GetDescription( Faith.Self )|F]\n\n#I 点击替换#!"
- skonester_acm_faith_doctrine_picker_tt: "#T [FaithDoctrine.GetNameNoTooltip( Faith.Self )]#!\n[FaithDoctrine.GetEffectsDescription( Faith.Self )]\n\n[FaithDoctrine.GetDescription( Faith.Self )|F]\n\n#I 单击添加到当前信仰#!"
- skonester_acm_faith_doctrine_select_tt: "#T [FaithDoctrine.GetNameNoTooltip( Faith.Self )]#!\n[FaithDoctrine.GetEffectsDescription( Faith.Self )]\n\n[FaithDoctrine.GetDescription( Faith.Self )|F]\n\n#I 单击选择 [FaithDoctrine.GetName( Faith.Self )]#!"
+ skonester_acm_faith_doctrine_change_tt: "#T [DoctrineType.GetNameNoTooltip( Faith.Self )]#!\n[DoctrineType.GetEffectsDescription( Faith.GetMainRite )]\n\n[DoctrineType.GetDescription( Faith.Self )|F]\n\n#I 点击替换#!"
+ skonester_acm_faith_doctrine_picker_tt: "#T [DoctrineType.GetNameNoTooltip( Faith.Self )]#!\n[DoctrineType.GetEffectsDescription( Faith.GetMainRite )]\n\n[DoctrineType.GetDescription( Faith.Self )|F]\n\n#I 单击添加到当前信仰#!"
+ skonester_acm_faith_doctrine_select_tt: "#T [DoctrineType.GetNameNoTooltip( Faith.Self )]#!\n[DoctrineType.GetEffectsDescription( Faith.GetMainRite )]\n\n[DoctrineType.GetDescription( Faith.Self )|F]\n\n#I 单击选择 [DoctrineType.GetName( Faith.Self )]#!"
  skonester_acm_faith_editor_add_doctrine_tt: "從教義庫選擇教義"
  skonester_acm_faith_editor_add_label: "添加"
  skonester_acm_faith_editor_add_main_tt: "從教義庫選擇主要教義"

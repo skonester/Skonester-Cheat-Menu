@@ -42,10 +42,11 @@ skonester_acm_faith_populate_doctrine_catalog_effect = {
     name = skonester_acm_doctrine_list_core_tenets
     target = flag:tenet_mendicant_preachers
   }
-  add_to_global_variable_list = {
-    name = skonester_acm_doctrine_list_core_tenets
-    target = flag:tenet_monasticism
-  }
+  # CK3 1.20: tenet_monasticism removed (now the doctrine_monasticism_* doctrine group)
+  # add_to_global_variable_list = {
+    # name = skonester_acm_doctrine_list_core_tenets
+    # target = flag:tenet_monasticism
+  # }
   add_to_global_variable_list = {
     name = skonester_acm_doctrine_list_core_tenets
     target = flag:tenet_pacifism
@@ -66,10 +67,11 @@ skonester_acm_faith_populate_doctrine_catalog_effect = {
     name = skonester_acm_doctrine_list_core_tenets
     target = flag:tenet_pastoral_isolation
   }
-  add_to_global_variable_list = {
-    name = skonester_acm_doctrine_list_core_tenets
-    target = flag:tenet_rite
-  }
+  # CK3 1.20: tenet_rite removed (Rites are now a separate system)
+  # add_to_global_variable_list = {
+    # name = skonester_acm_doctrine_list_core_tenets
+    # target = flag:tenet_rite
+  # }
   add_to_global_variable_list = {
     name = skonester_acm_doctrine_list_core_tenets
     target = flag:tenet_adaptive
@@ -12733,7 +12735,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     limit = { has_variable = skonester_selected_faith_var }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_aniconism }
+        var:skonester_selected_faith_var = { has_tenet = tenet_aniconism }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12742,7 +12744,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_alexandrian_catechism }
+        var:skonester_selected_faith_var = { has_tenet = tenet_alexandrian_catechism }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12751,7 +12753,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_armed_pilgrimages }
+        var:skonester_selected_faith_var = { has_tenet = tenet_armed_pilgrimages }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12760,7 +12762,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_carnal_exaltation }
+        var:skonester_selected_faith_var = { has_tenet = tenet_carnal_exaltation }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12769,7 +12771,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_communal_identity }
+        var:skonester_selected_faith_var = { has_tenet = tenet_communal_identity }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12778,7 +12780,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_communion }
+        var:skonester_selected_faith_var = { has_tenet = tenet_communion }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12787,7 +12789,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_consolamentum }
+        var:skonester_selected_faith_var = { has_tenet = tenet_consolamentum }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12796,7 +12798,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_divine_marriage }
+        var:skonester_selected_faith_var = { has_tenet = tenet_divine_marriage }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12805,7 +12807,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_gnosticism }
+        var:skonester_selected_faith_var = { has_tenet = tenet_gnosticism }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12814,7 +12816,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_mendicant_preachers }
+        var:skonester_selected_faith_var = { has_tenet = tenet_mendicant_preachers }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12823,16 +12825,17 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_monasticism }
+        always = no # CK3 1.20: tenet_monasticism removed (now the doctrine_monasticism_* doctrine group)
       }
-      add_to_global_variable_list = {
-        name = skonester_acm_fe_active_tenet_list
-        target = flag:tenet_monasticism
-      }
+      # CK3 1.20: tenet_monasticism removed (now the doctrine_monasticism_* doctrine group)
+      # add_to_global_variable_list = {
+        # name = skonester_acm_fe_active_tenet_list
+        # target = flag:tenet_monasticism
+      # }
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_pacifism }
+        var:skonester_selected_faith_var = { has_tenet = tenet_pacifism }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12841,7 +12844,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_pentarchy }
+        var:skonester_selected_faith_var = { has_tenet = tenet_pentarchy }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12850,7 +12853,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_unrelenting_faith }
+        var:skonester_selected_faith_var = { has_tenet = tenet_unrelenting_faith }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12859,7 +12862,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_vows_of_poverty }
+        var:skonester_selected_faith_var = { has_tenet = tenet_vows_of_poverty }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12868,7 +12871,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_pastoral_isolation }
+        var:skonester_selected_faith_var = { has_tenet = tenet_pastoral_isolation }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12877,16 +12880,17 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_rite }
+        always = no # CK3 1.20: tenet_rite removed (Rites are now a separate system)
       }
-      add_to_global_variable_list = {
-        name = skonester_acm_fe_active_tenet_list
-        target = flag:tenet_rite
-      }
+      # CK3 1.20: tenet_rite removed (Rites are now a separate system)
+      # add_to_global_variable_list = {
+        # name = skonester_acm_fe_active_tenet_list
+        # target = flag:tenet_rite
+      # }
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_adaptive }
+        var:skonester_selected_faith_var = { has_tenet = tenet_adaptive }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12895,7 +12899,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_esotericism }
+        var:skonester_selected_faith_var = { has_tenet = tenet_esotericism }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12904,7 +12908,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_legalism }
+        var:skonester_selected_faith_var = { has_tenet = tenet_legalism }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12913,7 +12917,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_literalism }
+        var:skonester_selected_faith_var = { has_tenet = tenet_literalism }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12922,7 +12926,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_reincarnation }
+        var:skonester_selected_faith_var = { has_tenet = tenet_reincarnation }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12931,7 +12935,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_religious_legal_pronouncements }
+        var:skonester_selected_faith_var = { has_tenet = tenet_religious_legal_pronouncements }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12940,7 +12944,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_struggle_submission }
+        var:skonester_selected_faith_var = { has_tenet = tenet_struggle_submission }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12949,7 +12953,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_false_conversion_sanction }
+        var:skonester_selected_faith_var = { has_tenet = tenet_false_conversion_sanction }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12958,7 +12962,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_tax_nonbelievers }
+        var:skonester_selected_faith_var = { has_tenet = tenet_tax_nonbelievers }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12967,7 +12971,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_asceticism }
+        var:skonester_selected_faith_var = { has_tenet = tenet_asceticism }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12976,7 +12980,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_bhakti }
+        var:skonester_selected_faith_var = { has_tenet = tenet_bhakti }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12985,7 +12989,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_dharmic_pacifism }
+        var:skonester_selected_faith_var = { has_tenet = tenet_dharmic_pacifism }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -12994,7 +12998,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_inner_journey }
+        var:skonester_selected_faith_var = { has_tenet = tenet_inner_journey }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13003,7 +13007,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_ritual_hospitality }
+        var:skonester_selected_faith_var = { has_tenet = tenet_ritual_hospitality }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13012,7 +13016,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_adorcism }
+        var:skonester_selected_faith_var = { has_tenet = tenet_adorcism }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13021,7 +13025,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_ancestor_worship }
+        var:skonester_selected_faith_var = { has_tenet = tenet_ancestor_worship }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13030,7 +13034,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_astrology }
+        var:skonester_selected_faith_var = { has_tenet = tenet_astrology }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13039,7 +13043,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_hedonistic }
+        var:skonester_selected_faith_var = { has_tenet = tenet_hedonistic }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13048,7 +13052,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_human_sacrifice }
+        var:skonester_selected_faith_var = { has_tenet = tenet_human_sacrifice }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13057,7 +13061,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_mystical_birthright }
+        var:skonester_selected_faith_var = { has_tenet = tenet_mystical_birthright }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13066,7 +13070,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_ritual_celebrations }
+        var:skonester_selected_faith_var = { has_tenet = tenet_ritual_celebrations }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13075,7 +13079,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_sacred_childbirth }
+        var:skonester_selected_faith_var = { has_tenet = tenet_sacred_childbirth }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13084,7 +13088,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_sanctity_of_nature }
+        var:skonester_selected_faith_var = { has_tenet = tenet_sanctity_of_nature }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13093,7 +13097,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_sun_worship }
+        var:skonester_selected_faith_var = { has_tenet = tenet_sun_worship }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13102,7 +13106,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_warmonger }
+        var:skonester_selected_faith_var = { has_tenet = tenet_warmonger }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13111,7 +13115,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_gruesome_festivals }
+        var:skonester_selected_faith_var = { has_tenet = tenet_gruesome_festivals }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13120,7 +13124,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_cthonic_redoubts }
+        var:skonester_selected_faith_var = { has_tenet = tenet_cthonic_redoubts }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13129,7 +13133,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_household_gods }
+        var:skonester_selected_faith_var = { has_tenet = tenet_household_gods }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13138,7 +13142,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_sinitic_syncretism }
+        var:skonester_selected_faith_var = { has_tenet = tenet_sinitic_syncretism }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13147,7 +13151,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_eastern_syncretism }
+        var:skonester_selected_faith_var = { has_tenet = tenet_eastern_syncretism }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13156,7 +13160,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_unreformed_syncretism }
+        var:skonester_selected_faith_var = { has_tenet = tenet_unreformed_syncretism }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13165,7 +13169,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_christian_syncretism }
+        var:skonester_selected_faith_var = { has_tenet = tenet_christian_syncretism }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13174,7 +13178,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_islamic_syncretism }
+        var:skonester_selected_faith_var = { has_tenet = tenet_islamic_syncretism }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13183,7 +13187,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_jewish_syncretism }
+        var:skonester_selected_faith_var = { has_tenet = tenet_jewish_syncretism }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13192,7 +13196,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_exaltation_of_pain }
+        var:skonester_selected_faith_var = { has_tenet = tenet_exaltation_of_pain }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13201,7 +13205,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_natural_primitivism }
+        var:skonester_selected_faith_var = { has_tenet = tenet_natural_primitivism }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13210,7 +13214,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_pursuit_of_power }
+        var:skonester_selected_faith_var = { has_tenet = tenet_pursuit_of_power }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13219,7 +13223,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_ritual_cannibalism }
+        var:skonester_selected_faith_var = { has_tenet = tenet_ritual_cannibalism }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13228,7 +13232,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_sacred_shadows }
+        var:skonester_selected_faith_var = { has_tenet = tenet_sacred_shadows }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13237,7 +13241,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_polyamory }
+        var:skonester_selected_faith_var = { has_tenet = tenet_polyamory }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13246,7 +13250,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_sacrificial_ceremonies }
+        var:skonester_selected_faith_var = { has_tenet = tenet_sacrificial_ceremonies }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13255,7 +13259,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_megaliths }
+        var:skonester_selected_faith_var = { has_tenet = tenet_megaliths }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13264,7 +13268,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_fp3_fedayeen }
+        var:skonester_selected_faith_var = { has_tenet = tenet_fp3_fedayeen }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13273,7 +13277,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_communal_possessions }
+        var:skonester_selected_faith_var = { has_tenet = tenet_communal_possessions }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13282,7 +13286,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_pure_land }
+        var:skonester_selected_faith_var = { has_tenet = tenet_pure_land }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13291,7 +13295,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_no_mind }
+        var:skonester_selected_faith_var = { has_tenet = tenet_no_mind }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13300,7 +13304,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_mountain_worship }
+        var:skonester_selected_faith_var = { has_tenet = tenet_mountain_worship }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13309,7 +13313,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_extinction_of_dharma }
+        var:skonester_selected_faith_var = { has_tenet = tenet_extinction_of_dharma }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13318,7 +13322,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_cranial_trophies }
+        var:skonester_selected_faith_var = { has_tenet = tenet_cranial_trophies }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13327,7 +13331,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_pursuit_of_knowledge }
+        var:skonester_selected_faith_var = { has_tenet = tenet_pursuit_of_knowledge }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13336,7 +13340,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_benevolent_governance }
+        var:skonester_selected_faith_var = { has_tenet = tenet_benevolent_governance }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13345,7 +13349,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_filial_piety }
+        var:skonester_selected_faith_var = { has_tenet = tenet_filial_piety }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13354,7 +13358,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_harmonious_society }
+        var:skonester_selected_faith_var = { has_tenet = tenet_harmonious_society }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13363,7 +13367,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_sacred_destruction }
+        var:skonester_selected_faith_var = { has_tenet = tenet_sacred_destruction }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13372,7 +13376,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_preservation }
+        var:skonester_selected_faith_var = { has_tenet = tenet_preservation }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13381,7 +13385,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_takamin }
+        var:skonester_selected_faith_var = { has_tenet = tenet_takamin }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13390,7 +13394,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_zz_empty_1 }
+        var:skonester_selected_faith_var = { has_tenet = tenet_zz_empty_1 }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13399,7 +13403,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_zz_empty_2 }
+        var:skonester_selected_faith_var = { has_tenet = tenet_zz_empty_2 }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13408,7 +13412,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_zz_empty_3 }
+        var:skonester_selected_faith_var = { has_tenet = tenet_zz_empty_3 }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13417,7 +13421,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_zz_empty_4 }
+        var:skonester_selected_faith_var = { has_tenet = tenet_zz_empty_4 }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13426,7 +13430,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_zz_empty_5 }
+        var:skonester_selected_faith_var = { has_tenet = tenet_zz_empty_5 }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13435,7 +13439,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_zz_empty_6 }
+        var:skonester_selected_faith_var = { has_tenet = tenet_zz_empty_6 }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13444,7 +13448,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_zz_empty_7 }
+        var:skonester_selected_faith_var = { has_tenet = tenet_zz_empty_7 }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13453,7 +13457,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_zz_empty_8 }
+        var:skonester_selected_faith_var = { has_tenet = tenet_zz_empty_8 }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13462,7 +13466,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_zz_empty_9 }
+        var:skonester_selected_faith_var = { has_tenet = tenet_zz_empty_9 }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13471,7 +13475,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_zz_empty_10 }
+        var:skonester_selected_faith_var = { has_tenet = tenet_zz_empty_10 }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13480,7 +13484,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_zz_empty_11 }
+        var:skonester_selected_faith_var = { has_tenet = tenet_zz_empty_11 }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13489,7 +13493,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_zz_empty_12 }
+        var:skonester_selected_faith_var = { has_tenet = tenet_zz_empty_12 }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13498,7 +13502,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_zz_empty_13 }
+        var:skonester_selected_faith_var = { has_tenet = tenet_zz_empty_13 }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13507,7 +13511,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_zz_empty_14 }
+        var:skonester_selected_faith_var = { has_tenet = tenet_zz_empty_14 }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13516,7 +13520,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_zz_empty_15 }
+        var:skonester_selected_faith_var = { has_tenet = tenet_zz_empty_15 }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13525,7 +13529,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_zz_empty_16 }
+        var:skonester_selected_faith_var = { has_tenet = tenet_zz_empty_16 }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13534,7 +13538,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_zz_empty_17 }
+        var:skonester_selected_faith_var = { has_tenet = tenet_zz_empty_17 }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13543,7 +13547,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_zz_empty_18 }
+        var:skonester_selected_faith_var = { has_tenet = tenet_zz_empty_18 }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13552,7 +13556,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_zz_empty_19 }
+        var:skonester_selected_faith_var = { has_tenet = tenet_zz_empty_19 }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -13561,7 +13565,7 @@ skonester_acm_faith_refresh_active_doctrine_lists_effect = {
     }
     if = {
       limit = {
-        var:skonester_selected_faith_var = { has_doctrine = tenet_zz_empty_20 }
+        var:skonester_selected_faith_var = { has_tenet = tenet_zz_empty_20 }
       }
       add_to_global_variable_list = {
         name = skonester_acm_fe_active_tenet_list
@@ -40359,64 +40363,64 @@ skonester_acm_faith_fill_empty_tenet_slots_effect = {
   if = {
     limit = { has_variable = skonester_selected_faith_var }
     var:skonester_selected_faith_var = {
-      add_doctrine = tenet_zz_empty_1
+      add_tenet = tenet_zz_empty_1
     }
     var:skonester_selected_faith_var = {
-      add_doctrine = tenet_zz_empty_2
+      add_tenet = tenet_zz_empty_2
     }
     var:skonester_selected_faith_var = {
-      add_doctrine = tenet_zz_empty_3
+      add_tenet = tenet_zz_empty_3
     }
     var:skonester_selected_faith_var = {
-      add_doctrine = tenet_zz_empty_4
+      add_tenet = tenet_zz_empty_4
     }
     var:skonester_selected_faith_var = {
-      add_doctrine = tenet_zz_empty_5
+      add_tenet = tenet_zz_empty_5
     }
     var:skonester_selected_faith_var = {
-      add_doctrine = tenet_zz_empty_6
+      add_tenet = tenet_zz_empty_6
     }
     var:skonester_selected_faith_var = {
-      add_doctrine = tenet_zz_empty_7
+      add_tenet = tenet_zz_empty_7
     }
     var:skonester_selected_faith_var = {
-      add_doctrine = tenet_zz_empty_8
+      add_tenet = tenet_zz_empty_8
     }
     var:skonester_selected_faith_var = {
-      add_doctrine = tenet_zz_empty_9
+      add_tenet = tenet_zz_empty_9
     }
     var:skonester_selected_faith_var = {
-      add_doctrine = tenet_zz_empty_10
+      add_tenet = tenet_zz_empty_10
     }
     var:skonester_selected_faith_var = {
-      add_doctrine = tenet_zz_empty_11
+      add_tenet = tenet_zz_empty_11
     }
     var:skonester_selected_faith_var = {
-      add_doctrine = tenet_zz_empty_12
+      add_tenet = tenet_zz_empty_12
     }
     var:skonester_selected_faith_var = {
-      add_doctrine = tenet_zz_empty_13
+      add_tenet = tenet_zz_empty_13
     }
     var:skonester_selected_faith_var = {
-      add_doctrine = tenet_zz_empty_14
+      add_tenet = tenet_zz_empty_14
     }
     var:skonester_selected_faith_var = {
-      add_doctrine = tenet_zz_empty_15
+      add_tenet = tenet_zz_empty_15
     }
     var:skonester_selected_faith_var = {
-      add_doctrine = tenet_zz_empty_16
+      add_tenet = tenet_zz_empty_16
     }
     var:skonester_selected_faith_var = {
-      add_doctrine = tenet_zz_empty_17
+      add_tenet = tenet_zz_empty_17
     }
     var:skonester_selected_faith_var = {
-      add_doctrine = tenet_zz_empty_18
+      add_tenet = tenet_zz_empty_18
     }
     var:skonester_selected_faith_var = {
-      add_doctrine = tenet_zz_empty_19
+      add_tenet = tenet_zz_empty_19
     }
     var:skonester_selected_faith_var = {
-      add_doctrine = tenet_zz_empty_20
+      add_tenet = tenet_zz_empty_20
     }
   }
 }
@@ -40425,64 +40429,64 @@ skonester_acm_faith_clear_empty_tenet_slots_effect = {
   if = {
     limit = { has_variable = skonester_selected_faith_var }
     var:skonester_selected_faith_var = {
-      remove_doctrine = tenet_zz_empty_1
+      remove_tenet = tenet_zz_empty_1
     }
     var:skonester_selected_faith_var = {
-      remove_doctrine = tenet_zz_empty_2
+      remove_tenet = tenet_zz_empty_2
     }
     var:skonester_selected_faith_var = {
-      remove_doctrine = tenet_zz_empty_3
+      remove_tenet = tenet_zz_empty_3
     }
     var:skonester_selected_faith_var = {
-      remove_doctrine = tenet_zz_empty_4
+      remove_tenet = tenet_zz_empty_4
     }
     var:skonester_selected_faith_var = {
-      remove_doctrine = tenet_zz_empty_5
+      remove_tenet = tenet_zz_empty_5
     }
     var:skonester_selected_faith_var = {
-      remove_doctrine = tenet_zz_empty_6
+      remove_tenet = tenet_zz_empty_6
     }
     var:skonester_selected_faith_var = {
-      remove_doctrine = tenet_zz_empty_7
+      remove_tenet = tenet_zz_empty_7
     }
     var:skonester_selected_faith_var = {
-      remove_doctrine = tenet_zz_empty_8
+      remove_tenet = tenet_zz_empty_8
     }
     var:skonester_selected_faith_var = {
-      remove_doctrine = tenet_zz_empty_9
+      remove_tenet = tenet_zz_empty_9
     }
     var:skonester_selected_faith_var = {
-      remove_doctrine = tenet_zz_empty_10
+      remove_tenet = tenet_zz_empty_10
     }
     var:skonester_selected_faith_var = {
-      remove_doctrine = tenet_zz_empty_11
+      remove_tenet = tenet_zz_empty_11
     }
     var:skonester_selected_faith_var = {
-      remove_doctrine = tenet_zz_empty_12
+      remove_tenet = tenet_zz_empty_12
     }
     var:skonester_selected_faith_var = {
-      remove_doctrine = tenet_zz_empty_13
+      remove_tenet = tenet_zz_empty_13
     }
     var:skonester_selected_faith_var = {
-      remove_doctrine = tenet_zz_empty_14
+      remove_tenet = tenet_zz_empty_14
     }
     var:skonester_selected_faith_var = {
-      remove_doctrine = tenet_zz_empty_15
+      remove_tenet = tenet_zz_empty_15
     }
     var:skonester_selected_faith_var = {
-      remove_doctrine = tenet_zz_empty_16
+      remove_tenet = tenet_zz_empty_16
     }
     var:skonester_selected_faith_var = {
-      remove_doctrine = tenet_zz_empty_17
+      remove_tenet = tenet_zz_empty_17
     }
     var:skonester_selected_faith_var = {
-      remove_doctrine = tenet_zz_empty_18
+      remove_tenet = tenet_zz_empty_18
     }
     var:skonester_selected_faith_var = {
-      remove_doctrine = tenet_zz_empty_19
+      remove_tenet = tenet_zz_empty_19
     }
     var:skonester_selected_faith_var = {
-      remove_doctrine = tenet_zz_empty_20
+      remove_tenet = tenet_zz_empty_20
     }
   }
 }
@@ -52837,375 +52841,375 @@ skonester_acm_faith_remove_doctrine_from_selected_effect = {
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_adaptive }
-        remove_doctrine = tenet_adaptive
+        remove_tenet = tenet_adaptive
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_adorcism }
-        remove_doctrine = tenet_adorcism
+        remove_tenet = tenet_adorcism
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_alexandrian_catechism }
-        remove_doctrine = tenet_alexandrian_catechism
+        remove_tenet = tenet_alexandrian_catechism
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_ancestor_worship }
-        remove_doctrine = tenet_ancestor_worship
+        remove_tenet = tenet_ancestor_worship
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_aniconism }
-        remove_doctrine = tenet_aniconism
+        remove_tenet = tenet_aniconism
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_armed_pilgrimages }
-        remove_doctrine = tenet_armed_pilgrimages
+        remove_tenet = tenet_armed_pilgrimages
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_asceticism }
-        remove_doctrine = tenet_asceticism
+        remove_tenet = tenet_asceticism
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_astrology }
-        remove_doctrine = tenet_astrology
+        remove_tenet = tenet_astrology
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_benevolent_governance }
-        remove_doctrine = tenet_benevolent_governance
+        remove_tenet = tenet_benevolent_governance
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_bhakti }
-        remove_doctrine = tenet_bhakti
+        remove_tenet = tenet_bhakti
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_carnal_exaltation }
-        remove_doctrine = tenet_carnal_exaltation
+        remove_tenet = tenet_carnal_exaltation
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_christian_syncretism }
-        remove_doctrine = tenet_christian_syncretism
+        remove_tenet = tenet_christian_syncretism
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_communal_identity }
-        remove_doctrine = tenet_communal_identity
+        remove_tenet = tenet_communal_identity
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_communal_possessions }
-        remove_doctrine = tenet_communal_possessions
+        remove_tenet = tenet_communal_possessions
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_communion }
-        remove_doctrine = tenet_communion
+        remove_tenet = tenet_communion
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_consolamentum }
-        remove_doctrine = tenet_consolamentum
+        remove_tenet = tenet_consolamentum
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_cranial_trophies }
-        remove_doctrine = tenet_cranial_trophies
+        remove_tenet = tenet_cranial_trophies
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_cthonic_redoubts }
-        remove_doctrine = tenet_cthonic_redoubts
+        remove_tenet = tenet_cthonic_redoubts
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_dharmic_pacifism }
-        remove_doctrine = tenet_dharmic_pacifism
+        remove_tenet = tenet_dharmic_pacifism
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_divine_marriage }
-        remove_doctrine = tenet_divine_marriage
+        remove_tenet = tenet_divine_marriage
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_eastern_syncretism }
-        remove_doctrine = tenet_eastern_syncretism
+        remove_tenet = tenet_eastern_syncretism
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_esotericism }
-        remove_doctrine = tenet_esotericism
+        remove_tenet = tenet_esotericism
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_exaltation_of_pain }
-        remove_doctrine = tenet_exaltation_of_pain
+        remove_tenet = tenet_exaltation_of_pain
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_extinction_of_dharma }
-        remove_doctrine = tenet_extinction_of_dharma
+        remove_tenet = tenet_extinction_of_dharma
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_false_conversion_sanction }
-        remove_doctrine = tenet_false_conversion_sanction
+        remove_tenet = tenet_false_conversion_sanction
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_filial_piety }
-        remove_doctrine = tenet_filial_piety
+        remove_tenet = tenet_filial_piety
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_fp3_fedayeen }
-        remove_doctrine = tenet_fp3_fedayeen
+        remove_tenet = tenet_fp3_fedayeen
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_gnosticism }
-        remove_doctrine = tenet_gnosticism
+        remove_tenet = tenet_gnosticism
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_gruesome_festivals }
-        remove_doctrine = tenet_gruesome_festivals
+        remove_tenet = tenet_gruesome_festivals
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_harmonious_society }
-        remove_doctrine = tenet_harmonious_society
+        remove_tenet = tenet_harmonious_society
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_hedonistic }
-        remove_doctrine = tenet_hedonistic
+        remove_tenet = tenet_hedonistic
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_household_gods }
-        remove_doctrine = tenet_household_gods
+        remove_tenet = tenet_household_gods
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_human_sacrifice }
-        remove_doctrine = tenet_human_sacrifice
+        remove_tenet = tenet_human_sacrifice
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_inner_journey }
-        remove_doctrine = tenet_inner_journey
+        remove_tenet = tenet_inner_journey
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_islamic_syncretism }
-        remove_doctrine = tenet_islamic_syncretism
+        remove_tenet = tenet_islamic_syncretism
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_jewish_syncretism }
-        remove_doctrine = tenet_jewish_syncretism
+        remove_tenet = tenet_jewish_syncretism
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_legalism }
-        remove_doctrine = tenet_legalism
+        remove_tenet = tenet_legalism
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_literalism }
-        remove_doctrine = tenet_literalism
+        remove_tenet = tenet_literalism
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_megaliths }
-        remove_doctrine = tenet_megaliths
+        remove_tenet = tenet_megaliths
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_mendicant_preachers }
-        remove_doctrine = tenet_mendicant_preachers
+        remove_tenet = tenet_mendicant_preachers
       }
       if = {
-        limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_monasticism }
-        remove_doctrine = tenet_monasticism
+        limit = { always = no } # CK3 1.20: tenet_monasticism removed (was var:skonester_acm_pick_doctrine_key = flag:tenet_monasticism)
+        # remove_doctrine = tenet_monasticism # CK3 1.20: tenet_monasticism removed (now the doctrine_monasticism_* doctrine group)
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_mountain_worship }
-        remove_doctrine = tenet_mountain_worship
+        remove_tenet = tenet_mountain_worship
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_mystical_birthright }
-        remove_doctrine = tenet_mystical_birthright
+        remove_tenet = tenet_mystical_birthright
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_natural_primitivism }
-        remove_doctrine = tenet_natural_primitivism
+        remove_tenet = tenet_natural_primitivism
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_no_mind }
-        remove_doctrine = tenet_no_mind
+        remove_tenet = tenet_no_mind
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_pacifism }
-        remove_doctrine = tenet_pacifism
+        remove_tenet = tenet_pacifism
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_pastoral_isolation }
-        remove_doctrine = tenet_pastoral_isolation
+        remove_tenet = tenet_pastoral_isolation
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_pentarchy }
-        remove_doctrine = tenet_pentarchy
+        remove_tenet = tenet_pentarchy
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_polyamory }
-        remove_doctrine = tenet_polyamory
+        remove_tenet = tenet_polyamory
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_preservation }
-        remove_doctrine = tenet_preservation
+        remove_tenet = tenet_preservation
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_pure_land }
-        remove_doctrine = tenet_pure_land
+        remove_tenet = tenet_pure_land
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_pursuit_of_knowledge }
-        remove_doctrine = tenet_pursuit_of_knowledge
+        remove_tenet = tenet_pursuit_of_knowledge
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_pursuit_of_power }
-        remove_doctrine = tenet_pursuit_of_power
+        remove_tenet = tenet_pursuit_of_power
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_reincarnation }
-        remove_doctrine = tenet_reincarnation
+        remove_tenet = tenet_reincarnation
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_religious_legal_pronouncements }
-        remove_doctrine = tenet_religious_legal_pronouncements
+        remove_tenet = tenet_religious_legal_pronouncements
       }
       if = {
-        limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_rite }
-        remove_doctrine = tenet_rite
+        limit = { always = no } # CK3 1.20: tenet_rite removed (was var:skonester_acm_pick_doctrine_key = flag:tenet_rite)
+        # remove_doctrine = tenet_rite # CK3 1.20: tenet_rite removed (Rites are now a separate system)
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_ritual_cannibalism }
-        remove_doctrine = tenet_ritual_cannibalism
+        remove_tenet = tenet_ritual_cannibalism
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_ritual_celebrations }
-        remove_doctrine = tenet_ritual_celebrations
+        remove_tenet = tenet_ritual_celebrations
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_ritual_hospitality }
-        remove_doctrine = tenet_ritual_hospitality
+        remove_tenet = tenet_ritual_hospitality
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_sacred_childbirth }
-        remove_doctrine = tenet_sacred_childbirth
+        remove_tenet = tenet_sacred_childbirth
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_sacred_destruction }
-        remove_doctrine = tenet_sacred_destruction
+        remove_tenet = tenet_sacred_destruction
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_sacred_shadows }
-        remove_doctrine = tenet_sacred_shadows
+        remove_tenet = tenet_sacred_shadows
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_sacrificial_ceremonies }
-        remove_doctrine = tenet_sacrificial_ceremonies
+        remove_tenet = tenet_sacrificial_ceremonies
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_sanctity_of_nature }
-        remove_doctrine = tenet_sanctity_of_nature
+        remove_tenet = tenet_sanctity_of_nature
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_sinitic_syncretism }
-        remove_doctrine = tenet_sinitic_syncretism
+        remove_tenet = tenet_sinitic_syncretism
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_struggle_submission }
-        remove_doctrine = tenet_struggle_submission
+        remove_tenet = tenet_struggle_submission
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_sun_worship }
-        remove_doctrine = tenet_sun_worship
+        remove_tenet = tenet_sun_worship
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_takamin }
-        remove_doctrine = tenet_takamin
+        remove_tenet = tenet_takamin
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_tax_nonbelievers }
-        remove_doctrine = tenet_tax_nonbelievers
+        remove_tenet = tenet_tax_nonbelievers
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_unreformed_syncretism }
-        remove_doctrine = tenet_unreformed_syncretism
+        remove_tenet = tenet_unreformed_syncretism
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_unrelenting_faith }
-        remove_doctrine = tenet_unrelenting_faith
+        remove_tenet = tenet_unrelenting_faith
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_vows_of_poverty }
-        remove_doctrine = tenet_vows_of_poverty
+        remove_tenet = tenet_vows_of_poverty
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_warmonger }
-        remove_doctrine = tenet_warmonger
+        remove_tenet = tenet_warmonger
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_zz_empty_1 }
-        remove_doctrine = tenet_zz_empty_1
+        remove_tenet = tenet_zz_empty_1
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_zz_empty_10 }
-        remove_doctrine = tenet_zz_empty_10
+        remove_tenet = tenet_zz_empty_10
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_zz_empty_11 }
-        remove_doctrine = tenet_zz_empty_11
+        remove_tenet = tenet_zz_empty_11
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_zz_empty_12 }
-        remove_doctrine = tenet_zz_empty_12
+        remove_tenet = tenet_zz_empty_12
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_zz_empty_13 }
-        remove_doctrine = tenet_zz_empty_13
+        remove_tenet = tenet_zz_empty_13
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_zz_empty_14 }
-        remove_doctrine = tenet_zz_empty_14
+        remove_tenet = tenet_zz_empty_14
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_zz_empty_15 }
-        remove_doctrine = tenet_zz_empty_15
+        remove_tenet = tenet_zz_empty_15
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_zz_empty_16 }
-        remove_doctrine = tenet_zz_empty_16
+        remove_tenet = tenet_zz_empty_16
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_zz_empty_17 }
-        remove_doctrine = tenet_zz_empty_17
+        remove_tenet = tenet_zz_empty_17
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_zz_empty_18 }
-        remove_doctrine = tenet_zz_empty_18
+        remove_tenet = tenet_zz_empty_18
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_zz_empty_19 }
-        remove_doctrine = tenet_zz_empty_19
+        remove_tenet = tenet_zz_empty_19
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_zz_empty_2 }
-        remove_doctrine = tenet_zz_empty_2
+        remove_tenet = tenet_zz_empty_2
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_zz_empty_20 }
-        remove_doctrine = tenet_zz_empty_20
+        remove_tenet = tenet_zz_empty_20
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_zz_empty_3 }
-        remove_doctrine = tenet_zz_empty_3
+        remove_tenet = tenet_zz_empty_3
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_zz_empty_4 }
-        remove_doctrine = tenet_zz_empty_4
+        remove_tenet = tenet_zz_empty_4
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_zz_empty_5 }
-        remove_doctrine = tenet_zz_empty_5
+        remove_tenet = tenet_zz_empty_5
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_zz_empty_6 }
-        remove_doctrine = tenet_zz_empty_6
+        remove_tenet = tenet_zz_empty_6
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_zz_empty_7 }
-        remove_doctrine = tenet_zz_empty_7
+        remove_tenet = tenet_zz_empty_7
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_zz_empty_8 }
-        remove_doctrine = tenet_zz_empty_8
+        remove_tenet = tenet_zz_empty_8
       }
       if = {
         limit = { var:skonester_acm_pick_doctrine_key = flag:tenet_zz_empty_9 }
-        remove_doctrine = tenet_zz_empty_9
+        remove_tenet = tenet_zz_empty_9
       }
     }
   }

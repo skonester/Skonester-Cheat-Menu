@@ -4304,10 +4304,10 @@ window = {
               button_standard_hover = {
                 layoutpolicy_horizontal = expanding
                 size = { 0 38 }
-                datacontext = "[GetTrait('scholar')]"
+                datacontext = "[GetTrait('erudite')]"
                 datacontext = "[GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char]"
-                down = "[GetScriptedGui('skonester_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('scholar')).End)]"
-                onclick = "[GetScriptedGui('skonester_trait_gui_toggle').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('trait_flag', MakeScopeFlag('scholar')).End)]"
+                down = "[GetScriptedGui('skonester_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('erudite')).End)]"
+                onclick = "[GetScriptedGui('skonester_trait_gui_toggle').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('trait_flag', MakeScopeFlag('erudite')).End)]"
                 tooltipwidget = {
                   using = character_trait_tooltip
                 }
@@ -4316,21 +4316,21 @@ window = {
                   spacing = 8
                   icon = {
                     size = { 28 28 }
-                    texture = "[GetTrait('scholar').GetIcon(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                    texture = "[GetTrait('erudite').GetIcon(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
                   }
                   text_single = {
                     layoutpolicy_horizontal = expanding
-                    text = "[GetTrait('scholar').GetName(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
+                    text = "[GetTrait('erudite').GetName(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.Self)]"
                     default_format = "#clickable"
                     autoresize = no
                   }
                   text_single = {
-                    visible = "[GetScriptedGui('skonester_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('scholar')).End)]"
+                    visible = "[GetScriptedGui('skonester_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('erudite')).End)]"
                     text = "skonester_cheat_menu_trait_minus"
                     default_format = "#N"
                   }
                   text_single = {
-                    visible = "[Not(GetScriptedGui('skonester_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('scholar')).End))]"
+                    visible = "[Not(GetScriptedGui('skonester_trait_gui_has').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope.Var('skonester_trait_gui_target').Char.MakeScope).AddScope('trait_flag', MakeScopeFlag('erudite')).End))]"
                     text = "skonester_cheat_menu_trait_plus"
                     default_format = "#P"
                   }

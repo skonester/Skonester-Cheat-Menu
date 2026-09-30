@@ -48,16 +48,22 @@ skonester_vassal_contract_restore_opinion_effect = {
       limit = { has_variable = skonester_vassal_contract_opinion_saved }
       set_variable = {
         name = skonester_vassal_contract_opinion_delta
-        value = var:skonester_vassal_contract_opinion_saved
-        subtract = "opinion(scope:actor)"
+        value = {
+          value = var:skonester_vassal_contract_opinion_saved
+          subtract = "opinion(scope:actor)"
+        }
       }
       if = {
         limit = {
           NOT = { var:skonester_vassal_contract_opinion_delta = 0 }
         }
-        add_opinion = {
-          target = scope:actor
-          opinion = { value = var:skonester_vassal_contract_opinion_delta }
+        # add_opinion needs a modifier; generic vanilla modifiers by sign
+        if = {
+          limit = { var:skonester_vassal_contract_opinion_delta > 0 }
+          add_opinion = { target = scope:actor modifier = friendliness_opinion opinion = var:skonester_vassal_contract_opinion_delta }
+        }
+        else = {
+          add_opinion = { target = scope:actor modifier = contempt_opinion opinion = var:skonester_vassal_contract_opinion_delta }
         }
       }
       remove_variable = skonester_vassal_contract_opinion_saved

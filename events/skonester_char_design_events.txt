@@ -30977,7 +30977,7 @@ sarc_char_design.1052 = {
 	}
 	
 	option = {
-		name = outremer
+		name = outremer_name
 		trigger = {
 			var:sarc_custom_char_var = {
 				has_character_flag = frankish_culture_group
@@ -33764,7 +33764,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:bon
+			set_character_rite = rite:bon
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -33777,7 +33777,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:old_bon
+			set_character_rite = rite:old_bon
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -33790,7 +33790,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:theravada
+			set_character_rite = rite:theravada
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -33803,7 +33803,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:mahayana
+			set_character_rite = rite:mahayana
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -33816,7 +33816,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:vajrayana
+			set_character_rite = rite:vajrayana
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -33829,7 +33829,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:ari
+			set_character_rite = rite:ari
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -33842,7 +33842,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:lamaism
+			set_character_rite = rite:lamaism
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -33861,14 +33861,14 @@ sarc_char_design.1054 = {
 	}
 	
 	option = {
-		name = coptic
+		name = coptic_rite
 		trigger = {
 			var:sarc_custom_char_var = {
 				has_character_flag = christianity_religion_group
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:coptic
+			set_character_rite = rite:coptic_rite
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34037,7 +34037,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:insular_celtic
+			set_character_rite = rite:insular_celtic
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34063,7 +34063,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:manichean
+			set_character_rite = rite:manichean
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34076,7 +34076,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:mandeaism
+			set_character_rite = rite:mandeaism
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34089,7 +34089,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:sabianism
+			set_character_rite = rite:sabianism
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34102,7 +34102,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:valentinianism
+			set_character_rite = rite:valentinianism
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34128,7 +34128,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:priscillianism
+			set_character_rite = rite:priscillianism
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34141,7 +34141,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:cainitism
+			set_character_rite = rite:cainitism
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34180,7 +34180,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:vaishnavism
+			set_character_rite = rite:vaishnavism
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34193,7 +34193,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:advaitism
+			set_character_rite = rite:advaitism
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34206,7 +34206,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:shaivism
+			set_character_rite = rite:shaivism
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34219,7 +34219,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:srikula_shaktism
+			set_character_rite = rite:srikula_shaktism
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34232,7 +34232,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:kalikula_shaktism
+			set_character_rite = rite:kalikula_shaktism
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34258,7 +34258,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:krishnaism
+			set_character_rite = rite:krishnaism
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34271,7 +34271,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:ashari
+			set_character_faith = faith:sunni
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34284,7 +34284,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:muwalladi
+			set_character_faith = faith:sunni
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34297,7 +34297,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:maturidi
+			set_character_faith = faith:sunni
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34323,7 +34323,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:mutazila
+			set_character_faith = faith:sunni
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34349,7 +34349,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:ismaili
+			set_character_rite = rite:ismaili
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34375,7 +34375,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:nizari
+			set_character_rite = rite:nizari
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34388,7 +34388,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:zayidi
+			set_character_rite = rite:zayidi
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34401,7 +34401,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:imami
+			set_character_rite = rite:imami
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34414,7 +34414,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:ghulat
+			set_character_rite = rite:ghulat
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34427,7 +34427,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:alawite
+			set_character_rite = rite:alawite
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34440,7 +34440,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:alevi
+			set_character_rite = rite:alevi
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34466,7 +34466,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:ibadi
+			set_character_rite = rite:ibadi
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34479,7 +34479,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:azariqa
+			set_character_rite = rite:azariqa
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34492,7 +34492,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:najdat
+			set_character_rite = rite:najdat
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34505,7 +34505,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:sufri
+			set_character_rite = rite:sufri
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34518,7 +34518,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:digambara
+			set_character_rite = rite:digambara
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34531,7 +34531,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:svetambara
+			set_character_rite = rite:svetambara
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34544,7 +34544,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:yapaniya
+			set_character_rite = rite:yapaniya
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34557,7 +34557,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:rabbinism
+			set_character_rite = rite:rabbinism
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34687,7 +34687,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:quanzhen
+			if = { limit = { exists = rite:quanzhen } set_character_rite = rite:quanzhen }
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34700,7 +34700,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:shangqing
+			set_character_rite = rite:shangqing
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34752,7 +34752,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:kitebacilweism
+			set_character_rite = rite:kitebacilweism
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34765,7 +34765,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:meshefaresism
+			set_character_rite = rite:meshefaresism
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -34778,7 +34778,7 @@ sarc_char_design.1054 = {
 			}
 		}
 		var:sarc_custom_char_var = {
-			set_character_faith = faith:yazidi
+			set_character_rite = rite:yazidi
 		}
 		trigger_event = sarc_char_design.1054
 	}
@@ -36191,7 +36191,7 @@ sarc_char_design.3001 = {
 	}
 
 	option = {
-		name = trait_scholar
+		name = trait_erudite
 		trigger = {
 			var:sarc_custom_char_var = {
 				has_character_flag = lifestyle_trait_cycle_3
@@ -36199,7 +36199,7 @@ sarc_char_design.3001 = {
 			OR = {
 				has_game_rule = no_sarc_char_design_point_system
 				var:sarc_custom_char_var = {
-					has_trait = scholar
+					has_trait = erudite
 				}
 				AND = {
 					NOT = { has_game_rule = no_sarc_char_design_point_system } 
@@ -36210,9 +36210,9 @@ sarc_char_design.3001 = {
 		var:sarc_custom_char_var = {
 			if = {
 				limit = {
-					has_trait = scholar
+					has_trait = erudite
 				}
-				remove_trait = scholar
+				remove_trait = erudite
 				if = {
 					limit = {
 						NOT = { has_game_rule = no_sarc_char_design_point_system }
@@ -36227,7 +36227,7 @@ sarc_char_design.3001 = {
 				}
 			}
 			else = {
-				add_trait = scholar
+				add_trait = erudite
 				if = {
 					limit = {
 						NOT = { has_game_rule = no_sarc_char_design_point_system }

@@ -1,4 +1,10 @@
-﻿on_marriage = {
+﻿# CK3 1.20: chained via on_actions instead of a second `effect` block (only one effect per on-action survives;
+# the collision was dropping vanilla 1.20 logic or this mod logic).
+on_marriage = {
+  on_actions = { skonester_on_marriage_ban_check }
+}
+
+skonester_on_marriage_ban_check = {
   effect = {
     # 任一方带禁婚或旧版不婚誓约：立即拆散本段婚姻（多配偶则循环离婚）
     if = {

@@ -1,9 +1,33 @@
 ﻿# More Tenets Slots：创建信仰时清除占位空槽
+# CK3 1.20: on_faith_created now runs with ROOT = the new faith (in 1.19 ROOT was the creating character),
+# so the cleanup runs as an effect in faith scope instead of firing a character event.
+# (skonester_mts_faith_creation.001 is kept for reference but no longer hooked.)
 
 on_faith_created = {
   on_actions = { skonester_on_mts_faith_creation }
 }
 
 skonester_on_mts_faith_creation = {
-  events = { skonester_mts_faith_creation.001 }
+  effect = {
+    remove_tenet = tenet_zz_empty_1
+    remove_tenet = tenet_zz_empty_2
+    remove_tenet = tenet_zz_empty_3
+    remove_tenet = tenet_zz_empty_4
+    remove_tenet = tenet_zz_empty_5
+    remove_tenet = tenet_zz_empty_6
+    remove_tenet = tenet_zz_empty_7
+    remove_tenet = tenet_zz_empty_8
+    remove_tenet = tenet_zz_empty_9
+    remove_tenet = tenet_zz_empty_10
+    remove_tenet = tenet_zz_empty_11
+    remove_tenet = tenet_zz_empty_12
+    remove_tenet = tenet_zz_empty_13
+    remove_tenet = tenet_zz_empty_14
+    remove_tenet = tenet_zz_empty_15
+    remove_tenet = tenet_zz_empty_16
+    remove_tenet = tenet_zz_empty_17
+    remove_tenet = tenet_zz_empty_18
+    remove_tenet = tenet_zz_empty_19
+    remove_tenet = tenet_zz_empty_20
+  }
 }

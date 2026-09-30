@@ -1,12 +1,18 @@
 ﻿# Forces the new holder to become a theocracy if the title they just inherited uses the theocratic elective law
+# CK3 1.20: chained via on_actions instead of a second `effect` block (only one effect per on-action survives;
+# the collision was dropping vanilla 1.20 logic or this mod logic).
 on_title_gain_inheritance = {
+  on_actions = { skone_theocratic_inheritance_on_title_gain }
+}
+
+skone_theocratic_inheritance_on_title_gain = {
 	effect = {
 		if = {
 			limit = {
 				scope:title = {
-					has_title_law = theocratic_elective_succession_law
+					has_title_law = skone_theocratic_elective_succession_law
 				}
-				NOT = { has_government = theocracy_government }
+				NOT = { government_has_flag = government_is_theocracy }
 			}
 			change_government = theocracy_government
 		}

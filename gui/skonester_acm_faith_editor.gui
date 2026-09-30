@@ -141,14 +141,15 @@ window = {
 
             item = {
               button_group = {
-                datacontext = "[GetDoctrine( Scope.GetFlagName )]"
+                datacontext = "[GetTenetType( Scope.GetFlagName )]"
                 datacontext = "[Faith]"
-                tooltip = "skonester_acm_faith_doctrine_change_tt"
+                datacontext = "[Faith.GetMainRite]"
+                tooltip = "FAITH_WINDOW_TENET_TOOLTIP"
 
                 onclick = "[GetVariableSystem.Set( 'skonester_acm_faith_right_view', 'doctrine_selection' )]"
     onclick = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_show').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                 onclick = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_show').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                onclick = "[GetVariableSystem.Set( 'doctrine_group_name', FaithDoctrine.GetGroup.GetName( Faith.Self ) )]"
+                onclick = "[GetVariableSystem.Set( 'doctrine_group_name', Localize( 'FAITH_CORE_TENETS_HEADING' ) )]"
                 onclick = "[GetScriptedGui('skonester_acm_faith_begin_pick_core_tenets').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('pick_doctrine', MakeScopeFlag(Scope.GetFlagName)).End)]"
 
                 skonester_acm_faith_tenet_banner = {}
@@ -292,7 +293,7 @@ window = {
 
                   item = {
                     flowcontainer = {
-                      datacontext = "[GetDoctrine( Scope.GetFlagName )]"
+                      datacontext = "[GetDoctrineType( Scope.GetFlagName )]"
                       datacontext = "[Faith]"
                       skonester_acm_faith_main_doctrine_row = {}
                     }
@@ -320,7 +321,7 @@ window = {
 
                   item = {
                     flowcontainer = {
-                      datacontext = "[GetDoctrine( Scope.GetFlagName )]"
+                      datacontext = "[GetDoctrineType( Scope.GetFlagName )]"
                       datacontext = "[Faith]"
                       skonester_acm_faith_doctrine_row = {}
                     }
@@ -348,7 +349,7 @@ window = {
 
                   item = {
                     flowcontainer = {
-                      datacontext = "[GetDoctrine( Scope.GetFlagName )]"
+                      datacontext = "[GetDoctrineType( Scope.GetFlagName )]"
                       datacontext = "[Faith]"
                       skonester_acm_faith_doctrine_row = {}
                     }
@@ -376,7 +377,7 @@ window = {
 
                   item = {
                     flowcontainer = {
-                      datacontext = "[GetDoctrine( Scope.GetFlagName )]"
+                      datacontext = "[GetDoctrineType( Scope.GetFlagName )]"
                       datacontext = "[Faith]"
                       skonester_acm_faith_doctrine_row = {}
                     }
@@ -515,8 +516,10 @@ window = {
                   max_width = 420
                 }
 
+                # CK3 1.20: tenets and doctrines are different data types, so the pick list is split in two.
                 vbox = {
                   layoutpolicy_horizontal = expanding
+                  visible = "[Not( GetScriptedGui('skonester_acm_faith_pick_is_tenets').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) )]"
                   datamodel = "[GetGlobalList('skonester_acm_fe_pick_current')]"
 
                   state = {
@@ -530,10 +533,37 @@ window = {
                   item = {
                     flowcontainer = {
                       layoutpolicy_horizontal = expanding
-                      datacontext = "[GetDoctrine( Scope.GetFlagName )]"
+                      datacontext = "[GetDoctrineType( Scope.GetFlagName )]"
                       datacontext = "[Faith]"
 
                       skonester_acm_faith_creation_pick_row = {}
+
+                      divider_light = {
+                        layoutpolicy_horizontal = expanding
+                      }
+                    }
+                  }
+                }
+                vbox = {
+                  layoutpolicy_horizontal = expanding
+                  visible = "[GetScriptedGui('skonester_acm_faith_pick_is_tenets').IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                  datamodel = "[GetGlobalList('skonester_acm_fe_pick_current')]"
+
+                  state = {
+                    name = "faith_view_refresh"
+                    using = Animation_Refresh_FadeOut
+                  }
+                  state = {
+                    using = Animation_Refresh_FadeIn
+                  }
+
+                  item = {
+                    flowcontainer = {
+                      layoutpolicy_horizontal = expanding
+                      datacontext = "[GetTenetType( Scope.GetFlagName )]"
+                      datacontext = "[Faith]"
+
+                      skonester_acm_faith_creation_pick_row_tenet = {}
 
                       divider_light = {
                         layoutpolicy_horizontal = expanding
@@ -561,25 +591,27 @@ window = {
 
 types skonesterAcmFaithEditorTypes
 {
+  # CK3 1.20: tenets are TenetType; names are evaluated against the faith's main Rite.
   type skonester_acm_faith_tenet_banner = button_standard_hover {
     size = { 88 112 }
-    datacontext = "[FaithDoctrine]"
+    datacontext = "[TenetType]"
     datacontext = "[Faith]"
+    datacontext = "[Faith.GetMainRite]"
     using = tooltip_ne
-    tooltip = "FAITH_WINDOW_DOCTRINE_TOOLTIP_WITH_FAITH"
+    tooltip = "FAITH_WINDOW_TENET_TOOLTIP"
 
     alwaystransparent = yes
 
     highlight_icon = {
       size = { 88 112 }
       parentanchor = center
-      texture = "[Faith.GetDoctrineBackgroundIcon]"
+      texture = "[Faith.GetTenetBackgroundIcon( Rite.Self, TenetType.Self )]"
     }
 
     highlight_icon = {
       size = { 88 140 }
       parentanchor = center
-      texture = "[FaithDoctrine.GetIcon]"
+      texture = "[TenetType.GetIcon( Faith.Self )]"
       alpha = 0.85
     }
 
@@ -591,7 +623,7 @@ types skonesterAcmFaithEditorTypes
       fontsize_min = 12
       multiline = yes
       align = center
-      text = "[FaithDoctrine.GetNameNoTooltip( Faith.Self )]"
+      text = "[TenetType.GetNameNoTooltip( Rite.Self )]"
       default_format = "#high"
       using = Font_Size_Medium
     }
@@ -599,25 +631,26 @@ types skonesterAcmFaithEditorTypes
 
   type skonester_acm_faith_sin_virtue_icon = widget {
     size = { 40 40 }
-    datacontext = "[FaithDoctrine]"
+    datacontext = "[DoctrineType]"
 
     icon_doctrine = {
       size = { 40 40 }
-      texture = "[FaithDoctrine.GetIcon]"
+      texture = "[DoctrineType.GetIcon]"
       alwaystransparent = yes
     }
   }
 
   type skonester_acm_faith_main_doctrine_row = button_standard_hover {
     size = { 210 53 }
-    datacontext = "[FaithDoctrine]"
+    datacontext = "[DoctrineType]"
     datacontext = "[Faith]"
+    datacontext = "[Faith.GetMainRite]"
     using = tooltip_ne
     tooltip = "FAITH_WINDOW_DOCTRINE_TOOLTIP_WITH_FAITH"
 
     onclick = "[GetVariableSystem.Set( 'skonester_acm_faith_right_view', 'doctrine_selection' )]"
     onclick = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_show').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-    onclick = "[GetVariableSystem.Set( 'doctrine_group_name', FaithDoctrine.GetGroup.GetName( Faith.Self ) )]"
+    onclick = "[GetVariableSystem.Set( 'doctrine_group_name', DoctrineType.GetGroup.GetName( Faith.Self ) )]"
     onclick = "[GetScriptedGui('skonester_acm_faith_begin_pick_doctrine').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('pick_doctrine', MakeScopeFlag(Scope.GetFlagName)).End)]"
 
     background = {
@@ -632,7 +665,7 @@ types skonesterAcmFaithEditorTypes
 
       icon_doctrine = {
         size = { 50 50 }
-        texture = "[FaithDoctrine.GetIcon]"
+        texture = "[DoctrineType.GetIcon]"
       }
 
       vbox = {
@@ -643,7 +676,7 @@ types skonesterAcmFaithEditorTypes
           align = left
           autoresize = no
           fontsize_min = 12
-          text = "[FaithDoctrine.GetGroup.GetName( Faith.Self )]"
+          text = "[DoctrineType.GetGroup.GetName( Faith.Self )]"
         }
 
         text_single = {
@@ -653,7 +686,7 @@ types skonesterAcmFaithEditorTypes
           fontsize_min = 12
           align = left
           default_format = "#high"
-          text = "[FaithDoctrine.GetNameNoTooltip( Faith.Self )]"
+          text = "[DoctrineType.GetNameNoTooltip( Faith.Self )]"
         }
       }
     }
@@ -661,14 +694,15 @@ types skonesterAcmFaithEditorTypes
 
   type skonester_acm_faith_doctrine_row = button_standard_hover {
     size = { 210 53 }
-    datacontext = "[FaithDoctrine]"
+    datacontext = "[DoctrineType]"
     datacontext = "[Faith]"
+    datacontext = "[Faith.GetMainRite]"
     using = tooltip_ne
     tooltip = "FAITH_WINDOW_DOCTRINE_TOOLTIP_WITH_FAITH"
 
     onclick = "[GetVariableSystem.Set( 'skonester_acm_faith_right_view', 'doctrine_selection' )]"
     onclick = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_show').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-    onclick = "[GetVariableSystem.Set( 'doctrine_group_name', FaithDoctrine.GetGroup.GetName( Faith.Self ) )]"
+    onclick = "[GetVariableSystem.Set( 'doctrine_group_name', DoctrineType.GetGroup.GetName( Faith.Self ) )]"
     onclick = "[GetScriptedGui('skonester_acm_faith_begin_pick_doctrine').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('pick_doctrine', MakeScopeFlag(Scope.GetFlagName)).End)]"
 
     background = {
@@ -683,7 +717,7 @@ types skonesterAcmFaithEditorTypes
 
       icon_doctrine = {
         size = { 50 50 }
-        texture = "[FaithDoctrine.GetGroup.GetIcon]"
+        texture = "[DoctrineType.GetGroup.GetIcon]"
       }
 
       vbox = {
@@ -694,7 +728,7 @@ types skonesterAcmFaithEditorTypes
           align = left
           autoresize = no
           fontsize_min = 12
-          text = "[FaithDoctrine.GetGroup.GetName( Faith.Self )]"
+          text = "[DoctrineType.GetGroup.GetName( Faith.Self )]"
         }
 
         text_single = {
@@ -704,7 +738,7 @@ types skonesterAcmFaithEditorTypes
           fontsize_min = 12
           align = left
           default_format = "#high"
-          text = "[FaithDoctrine.GetNameNoTooltip( Faith.Self )]"
+          text = "[DoctrineType.GetNameNoTooltip( Faith.Self )]"
         }
       }
     }
@@ -717,7 +751,7 @@ types skonesterAcmFaithEditorTypes
 
     icon_doctrine = {
       size = { 50 50 }
-      texture = "[FaithDoctrine.GetIcon]"
+      texture = "[DoctrineType.GetIcon]"
     }
 
     vbox = {
@@ -727,7 +761,7 @@ types skonesterAcmFaithEditorTypes
         layoutpolicy_horizontal = expanding
         align = left
         fontsize_min = 12
-        text = "[FaithDoctrine.GetGroup.GetName( Faith.Self )]"
+        text = "[DoctrineType.GetGroup.GetName( Faith.Self )]"
       }
 
       text_single = {
@@ -735,7 +769,7 @@ types skonesterAcmFaithEditorTypes
         align = left
         default_format = "#high"
         fontsize_min = 12
-        text = "[FaithDoctrine.GetNameNoTooltip( Faith.Self )]"
+        text = "[DoctrineType.GetNameNoTooltip( Faith.Self )]"
       }
     }
   }
@@ -743,37 +777,65 @@ types skonesterAcmFaithEditorTypes
   type skonester_acm_faith_creation_pick_row = button_standard_hover {
     name = "faith_list_item"
     layoutpolicy_horizontal = expanding
-    datacontext = "[FaithDoctrine]"
+    datacontext = "[DoctrineType]"
     datacontext = "[Faith]"
+    datacontext = "[Faith.GetMainRite]"
     size = { 430 80 }
 
     onclick = "[GetScriptedGui('skonester_acm_faith_apply_pick_doctrine').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('pick_doctrine', MakeScopeFlag(Scope.GetFlagName)).End)]"
     onclick = "[GetVariableSystem.Clear( 'skonester_acm_faith_right_view' )]"
     onclick = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_hide').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
     onclick = "[PdxGuiTriggerAllAnimations('faith_view_refresh')]"
-    down = "[Faith.HasDoctrine( FaithDoctrine.Self )]"
+    down = "[Faith.HasDoctrine( DoctrineType.Self )]"
     using = tooltip_ne
     tooltip = "skonester_acm_faith_doctrine_select_tt"
 
     icon_doctrine = {
       name = "doctrine_icon_main"
-      visible = "[EqualTo_string( FaithDoctrine.GetGroup.GetCategory, 'main_group' )]"
-      texture = "[FaithDoctrine.GetIcon]"
+      visible = "[DoctrineType.GetGroup.GetCategory.HasTag( 'main' )]"
+      texture = "[DoctrineType.GetIcon]"
       size = { 60 60 }
       position = { 5 10 }
     }
 
     icon_doctrine = {
       name = "doctrine_icon_other"
-      visible = "[And( Not( EqualTo_string( FaithDoctrine.GetGroup.GetCategory, 'main_group' ) ), Not( EqualTo_string( FaithDoctrine.GetGroup.GetCategory, 'core_tenets' ) ) )]"
-      texture = "[FaithDoctrine.GetGroup.GetIcon]"
+      visible = "[Not( DoctrineType.GetGroup.GetCategory.HasTag( 'main' ) )]"
+      texture = "[DoctrineType.GetGroup.GetIcon]"
       size = { 60 60 }
       position = { 5 10 }
     }
 
+    text_single = {
+      name = "doctrine_name"
+      position = { 75 25 }
+      text = "[DoctrineType.GetNameNoTooltip( Faith.Self )]"
+      default_format = "#high"
+      using = Font_Size_Medium
+      max_width = 270
+    }
+    # CK3 1.20: CalcPietyCostWithFervorDiscount no longer exists (piety costs are computed during Rite creation).
+  }
+
+  # CK3 1.20: tenets are TenetType (no longer DoctrineType); names/effects are evaluated against the faith's main Rite.
+  type skonester_acm_faith_creation_pick_row_tenet = button_standard_hover {
+    name = "faith_list_item_tenet"
+    layoutpolicy_horizontal = expanding
+    datacontext = "[TenetType]"
+    datacontext = "[Faith]"
+    datacontext = "[Faith.GetMainRite]"
+    size = { 430 80 }
+
+    onclick = "[GetScriptedGui('skonester_acm_faith_apply_pick_doctrine').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('pick_doctrine', MakeScopeFlag(Scope.GetFlagName)).End)]"
+    onclick = "[GetVariableSystem.Clear( 'skonester_acm_faith_right_view' )]"
+    onclick = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_hide').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+    onclick = "[PdxGuiTriggerAllAnimations('faith_view_refresh')]"
+    down = "[Faith.GetMainRite.HasTenet( TenetType.Self )]"
+    using = tooltip_ne
+    tooltip = "FAITH_WINDOW_TENET_TOOLTIP"
+
     widget = {
       name = "doctrine_icon_core_bg"
-      visible = "[EqualTo_string( FaithDoctrine.GetGroup.GetCategory, 'core_tenets' )]"
 
       background = {
         using = Background_Area_Dark
@@ -786,8 +848,7 @@ types skonesterAcmFaithEditorTypes
 
     icon = {
       name = "doctrine_icon_core"
-      visible = "[EqualTo_string( FaithDoctrine.GetGroup.GetCategory, 'core_tenets' )]"
-      texture = "[FaithDoctrine.GetIcon]"
+      texture = "[TenetType.GetIcon( Faith.Self )]"
       size = { 45 70 }
       position = { 15 5 }
     }
@@ -795,17 +856,10 @@ types skonesterAcmFaithEditorTypes
     text_single = {
       name = "doctrine_name"
       position = { 75 25 }
-      text = "[FaithDoctrine.GetNameNoTooltip( Faith.Self )]"
+      text = "[TenetType.GetNameNoTooltip( Rite.Self )]"
       default_format = "#high"
       using = Font_Size_Medium
       max_width = 270
-    }
-
-    text_single = {
-      name = "piety_cost"
-      position = { 350 23 }
-      text = "[piety_i][FaithDoctrine.CalcPietyCostWithFervorDiscount( Faith.Self )]"
-      using = Font_Size_Medium
     }
   }
 }

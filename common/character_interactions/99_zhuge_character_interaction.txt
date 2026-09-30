@@ -750,7 +750,7 @@ zhuge_yixue_06 = {
                 remove_trait = education_diplomacy_4
                 add_trait = education_diplomacy_5
                 add_trait = lifestyle_reveler
-                add_trait = poet
+                add_trait = lifestyle_poet
             }
         }
         if = {
@@ -799,7 +799,7 @@ zhuge_yixue_06 = {
                 remove_trait = education_stewardship_4
                 add_trait = education_stewardship_5
                 add_trait = lifestyle_gardener
-                add_trait = poet
+                add_trait = lifestyle_poet
             }
         }
         if = {

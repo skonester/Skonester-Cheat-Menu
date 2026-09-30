@@ -9,10 +9,11 @@
 	background = {
 		using = Background_Area_Dark
 		alpha = 0.7
+		margin = { 5 0 }
 	}
 
 	background = {
-		texture = "gfx/interface/illustrations/frontend/pause_bg.dds"
+		texture = "gfx/interface/skinned/illustrations/frontend/pause_bg.dds"
 
 		modify_texture = {
 			texture = "gfx/interface/frontend/fade_bg_ingame_menu.dds"
@@ -23,6 +24,7 @@
 	state = {
 		name = _show
 		using = Animation_FadeIn_Quick
+		on_finish = "[GetVariableSystem.Clear('pause_submenu')]"
 
 		position = { 0 0 }
 
@@ -37,6 +39,7 @@
 
 	state = {
 		name = _hide
+		on_finish = "[GetVariableSystem.Clear('pause_submenu')]"
 		using = Animation_FadeOut_Quick
 		start_sound = { soundeffect = "event:/SFX/UI/Generic/sfx_ui_generic_tab"}
 		position_y = 10
@@ -215,17 +218,21 @@
 								name = "save_button"
 								size = { 325 58 }
 								text = "SAVE_GAME"
+								tooltip = "SAVE_GAME"
 								visible = "[Not( IsIronmanEnabled )]"
 								onclick = "[PauseMenu.Save]"
+								shortcut = "menu_save"
+								enabled = "[Not(GetVariableSystem.Exists('pause_submenu'))]"
 							}
 
 							button_frontend = {
 								name = "load_ingame_button"
 								size = { 325 58 }
 								text = "LOAD_GAME"
+								shortcut = "menu_load"
 
 								visible = "[Not( GameHasMultiplePlayers )]"
-								enabled = "[PauseMenu.CanLoadIngame]"
+								enabled = "[And(PauseMenu.CanLoadIngame, Not(GetVariableSystem.Exists('pause_submenu')))]"
 								onclick = "[PauseMenu.LoadIngame]"
 								tooltip = "[PauseMenu.LoadIngameTooltip]"
 							}
@@ -261,6 +268,8 @@
 								tooltip = "INGAME_MENU_SWITCH_CHARACTER"
 								size = { 325 58 }
 								text = "FRONTEND_SWITCH_CHARACTER"
+								shortcut = "menu_switch"
+								enabled = "[Not(GetVariableSystem.Exists('pause_submenu'))]"
 
 								onclick = "[PauseMenu.SwitchCharacter]"
 								visible = "[Not( Or( Or( PauseMenu.IsLobbyOpen, IsIronmanEnabled ), GameHasMultiplePlayers ) )]"
@@ -279,10 +288,33 @@
 						margin_top = 30
 						spacing = 60
 
+						sdk_login_accountwidget = {
+							size = { 35 35 }
+
+							blockoverride "properties" {
+								onclick = "[OnToggleLoginWindow]"
+							}
+
+							text_single = {
+								parentanchor = bottom|hcenter
+								position = { 0 20 }
+								max_width = 90
+								min_width = 90
+								align = center
+								fontsize = 13
+
+								text = "ACCOUNT"
+								default_format = "#clickable"
+							}
+						}
+
 						button_settings = {
 							name = "settings"
 							onclick = "[PauseMenu.OpenSettings]"
+							enabled = "[Not(GetVariableSystem.Exists('pause_submenu'))]"
 							size = { 35 35 }
+							shortcut = "menu_settings"
+							tooltip = "SETTINGS"
 
 							text_single = {
 								parentanchor = bottom|hcenter
@@ -300,7 +332,7 @@
 						button_achievements = {
 							name = "achievements"
 							onclick = "[OpenAchievements]"
-							enabled = "[AreAchievementsAvailable]"
+							enabled = "[And(AreAchievementsAvailable, Not(GetVariableSystem.Exists('pause_submenu')))]"
 							tooltip = "[GetAchievementsAvailableString]"
 							size = { 35 35 }
 
@@ -382,6 +414,15 @@ window = {
 
 	using = Animation_ShowHide_Quick
 	using = Background_Full_Dim
+	
+	state = {
+		name = _show
+		on_finish = "[GetVariableSystem.Set('pause_submenu', 'load')]"
+	}
+	state = {
+		name = _hide
+		on_finish = "[GetVariableSystem.Clear('pause_submenu')]"
+	}
 
 	button_normal = {
 		size = { 100% 100% }
@@ -430,6 +471,11 @@ window = {
 		blockoverride "layout_widget"
 		{
 			visible = "[Not(LoadIngameWindow.HasSelectedSavegame)]"
+		}
+
+		blockoverride "button_delete_all_saves"
+		{
+			onclick = "[LoadIngameWindow.OnDeleteAll]"
 		}
 	}
 }

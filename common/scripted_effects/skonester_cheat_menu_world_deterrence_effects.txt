@@ -34,14 +34,20 @@ skonester_cheat_menu_restore_world_deterrence_opinion_effect = {
     limit = { has_variable = skonester_world_deterrence_opinion_saved }
     set_variable = {
       name = skonester_world_deterrence_opinion_delta
-      value = var:skonester_world_deterrence_opinion_saved
-      subtract = "opinion(scope:skonester_deterrence_liege)"
+      value = {
+        value = var:skonester_world_deterrence_opinion_saved
+        subtract = "opinion(scope:skonester_deterrence_liege)"
+      }
     }
     if = {
       limit = { NOT = { var:skonester_world_deterrence_opinion_delta = 0 } }
-      add_opinion = {
-        target = scope:skonester_deterrence_liege
-        opinion = { value = var:skonester_world_deterrence_opinion_delta }
+      # add_opinion needs a modifier; generic vanilla modifiers by sign
+      if = {
+        limit = { var:skonester_world_deterrence_opinion_delta > 0 }
+        add_opinion = { target = scope:skonester_deterrence_liege modifier = friendliness_opinion opinion = var:skonester_world_deterrence_opinion_delta }
+      }
+      else = {
+        add_opinion = { target = scope:skonester_deterrence_liege modifier = contempt_opinion opinion = var:skonester_world_deterrence_opinion_delta }
       }
     }
     remove_variable = skonester_world_deterrence_opinion_delta

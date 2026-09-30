@@ -9,7 +9,7 @@ skonester_military_instant_replenish_modifier = {
   supply_duration = 9
   supply_capacity_mult = 9
   supply_capacity_add = 99999
-  supply_loss_winter = -99
+  # supply_loss_winter = -99 # province-only modifier; made this character modifier invalid
   # 军队维持费 ≈ 0（≈ set_army_upkeep_multiplier 0）
   army_maintenance_mult = -0.99
   men_at_arms_maintenance = -0.99

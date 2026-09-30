@@ -1,32 +1,40 @@
 ﻿# 文化加速
-on_tradition_added = {
-  effect = {
-    every_player = {
-      limit = {
-        culture = root
-      }
-      trigger_event = {
-        id = culture_notification.0011
-        days = 0
-      }
-    }
-
-    every_ruler = {
-      limit = {
-        is_ruler = yes
-        should_have_same_faith_succession_trigger = yes
-        NOT = {
-          has_realm_law = same_faith_only_law
-        }
-      }
-      add_realm_law_skip_effects = same_faith_only_law
-    }
-  }
-}
+# CK3 1.20: disabled - this was a verbatim copy of vanilla on_tradition_added `effect`, so it only replaced
+# (or was replaced by) the vanilla 1.20 effect. Vanilla already runs this logic.
+# on_tradition_added = {
+#   effect = {
+#     every_player = {
+#       limit = {
+#         culture = root
+#       }
+#       trigger_event = {
+#         id = culture_notification.0011
+#         days = 0
+#       }
+#     }
+#
+#     every_ruler = {
+#       limit = {
+#         is_ruler = yes
+#         should_have_same_faith_succession_trigger = yes
+#         NOT = {
+#           has_realm_law = same_faith_only_law
+#         }
+#       }
+#       add_realm_law_skip_effects = same_faith_only_law
+#     }
+#   }
+# }
 
 
 #大明兼容-备用（若见变身大明代设变量，则本局开启大明政体相关 UI，再按原样清理之）
+# CK3 1.20: chained via on_actions instead of a second `effect` block (only one effect per on-action survives;
+# the collision was dropping vanilla 1.20 logic or this mod logic).
 yearly_global_pulse = {
+  on_actions = { skonester_daming_compat_yearly_pulse }
+}
+
+skonester_daming_compat_yearly_pulse = {
     effect = {
         if = {
             limit = {

@@ -25,13 +25,13 @@ skonester_ultra_force_marry_effect = {
     }
     if = {
       limit = { is_concubine = yes }
-      remove_concubine = yes
+      concubinist ?= { remove_concubine = prev }
     }
     every_relation = {
       type = lover
       remove_relation_lover = this
     }
-    every_soulmate = {
+    every_relation = { type = soulmate
       remove_relation_soulmate = prev
     }
   }
@@ -56,13 +56,13 @@ skonester_ultra_force_marry_effect = {
     }
     if = {
       limit = { is_concubine = yes }
-      remove_concubine = yes
+      concubinist ?= { remove_concubine = prev }
     }
     every_relation = {
       type = lover
       remove_relation_lover = this
     }
-    every_soulmate = {
+    every_relation = { type = soulmate
       remove_relation_soulmate = prev
     }
   }

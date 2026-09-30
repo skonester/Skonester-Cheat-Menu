@@ -57,7 +57,7 @@ skonester_sand_maa_populate_catalog_effect = {
   }
   add_to_global_variable_list = {
     name = skonester_sand_maa_list_all
-    target = flag:teutonic_knights
+    target = flag:order_serjeants
   }
   add_to_global_variable_list = {
     name = skonester_sand_maa_list_all
@@ -634,7 +634,7 @@ skonester_sand_maa_populate_catalog_effect = {
   }
   add_to_global_variable_list = {
     name = skonester_sand_maa_list_infantry
-    target = flag:teutonic_knights
+    target = flag:order_serjeants
   }
   add_to_global_variable_list = {
     name = skonester_sand_maa_list_infantry

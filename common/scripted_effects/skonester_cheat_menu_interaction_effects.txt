@@ -42,7 +42,7 @@ skonester_cheat_menu_add_concubine_effect = {
     }
     else_if = {
       limit = { is_concubine = yes }
-      remove_concubine = yes
+      concubinist ?= { remove_concubine = prev }
     }
     while = {
       limit = { exists = primary_spouse }

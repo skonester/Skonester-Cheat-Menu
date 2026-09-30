@@ -39,14 +39,20 @@ peasant_elective = {
 	}
 	
 	electors = {
-		add = holder
-		add = {
-			type = holder_direct_vassals
-			limit = {
-				highest_held_title_tier > 1 #Barons excluded.
-				domain_size >= 1
-				is_vassal_of = scope:holder
-				exists = capital_county
+		character_sets = {
+			peasant_elective_electors_1 = {
+				type = holder
+
+			}
+			peasant_elective_electors_2 = {
+				type = holder_direct_vassals
+				limit = {
+					highest_held_title_tier > 1 #Barons excluded.
+					domain_size >= 1
+					is_vassal_of = scope:holder
+					exists = capital_county
+				}
+
 			}
 		}
 	}
@@ -79,23 +85,28 @@ peasant_elective = {
 	
 	#scope:candidate = Candidate, scope:title = Title, scope:holder_candidate = Candidate currently selected by ruler.
 	candidates = {
-		add = {
-			type = holder_direct_vassals
-			limit = {
-				feudal_elective_potential_landed_candidate_trigger = yes
+		character_sets = {
+			peasant_elective_candidates_1 = {
+				type = holder_direct_vassals
+				limit = {
+					feudal_elective_potential_landed_candidate_trigger = yes
+				}
+
 			}
-		}
-		add = {
-			type = title_claimants
-			limit = {
-				feudal_elective_potential_landless_claimant_candidate_trigger = yes
+			peasant_elective_candidates_2 = {
+				type = title_claimants
+				limit = {
+					feudal_elective_potential_landless_claimant_candidate_trigger = yes
+				}
+
 			}
-		}
-		add = {
-			type = holder_close_or_extended_family
-			limit = {
-				is_close_family_of = scope:holder
-				feudal_elective_potential_landless_dynastic_candidate_trigger = yes
+			peasant_elective_candidates_3 = {
+				type = holder_close_or_extended_family
+				limit = {
+					is_close_family_of = scope:holder
+					feudal_elective_potential_landless_dynastic_candidate_trigger = yes
+				}
+
 			}
 		}
 	}

@@ -577,7 +577,7 @@ tocmod.1003 = {
 		name = tocmod.1003.f
 
 		scope:toc_addchar = {
-								add_trait = eunuch
+								add_trait = eunuch_1
 								}
 		trigger_event = { id = tocmod.1004 }
 	}

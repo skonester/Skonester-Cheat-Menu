@@ -140,7 +140,7 @@ skonester_sand_set_stack_from_pick_effect = {
   }
   else_if = {
     limit = {
-      var:skonester_sand_maa_pick = flag:teutonic_knights
+      var:skonester_sand_maa_pick = flag:order_serjeants
     }
     set_variable = {
       name = skonester_sand_maa_stack
@@ -2262,10 +2262,10 @@ skonester_sand_spawn_from_player_pick_effect = {
     }
     else_if = {
       limit = {
-        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:teutonic_knights }
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:order_serjeants }
       }
       scope:skonester_sand_spawn_tgt = {
-        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = teutonic_knights }
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = order_serjeants }
       }
     }
     else_if = {

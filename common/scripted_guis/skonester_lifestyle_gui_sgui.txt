@@ -2128,7 +2128,7 @@ skonester_lsf_gui_has_scholar_perk = {
   scope = character
   is_valid = {
     has_variable = skonester_lsf_gui_target
-    var:skonester_lsf_gui_target = { has_perk = scholar_perk }
+    var:skonester_lsf_gui_target = { has_perk = erudite_perk }
   }
 }
 

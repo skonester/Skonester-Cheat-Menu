@@ -793,7 +793,7 @@ window = {
                         layoutpolicy_horizontal = fixed
                         minimumsize = { 248 58 }
                         maximumsize = { 248 58 }
-                        datacontext = "[GetMaA( 'teutonic_knights' )]"
+                        datacontext = "[GetMaA( 'order_serjeants' )]"
                         visible = "[GetScriptedGui('skonester_sand_show_non_agot_maa').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                         using = tooltip_es
                         tooltipwidget = {
@@ -803,12 +803,12 @@ window = {
                         }
                         }
                         }
-                        onclick = "[GetScriptedGui('skonester_sand_pick_maa').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('maa_flag', MakeScopeFlag('teutonic_knights')).End)]"
-                        down = "[GetScriptedGui('skonester_sand_is_picked_maa').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('maa_flag', MakeScopeFlag('teutonic_knights')).End)]"
+                        onclick = "[GetScriptedGui('skonester_sand_pick_maa').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('maa_flag', MakeScopeFlag('order_serjeants')).End)]"
+                        down = "[GetScriptedGui('skonester_sand_is_picked_maa').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('maa_flag', MakeScopeFlag('order_serjeants')).End)]"
                         background = {
                           using = Background_Area_Dark
                           alpha = 0.4
-                          visible = "[GetScriptedGui('skonester_sand_is_picked_maa').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('maa_flag', MakeScopeFlag('teutonic_knights')).End)]"
+                          visible = "[GetScriptedGui('skonester_sand_is_picked_maa').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('maa_flag', MakeScopeFlag('order_serjeants')).End)]"
                         }
                         hbox = {
                           margin = { 8 4 }
@@ -821,7 +821,7 @@ window = {
                           text_single = {
                             alwaystransparent = yes
                             layoutpolicy_horizontal = expanding
-                            text = teutonic_knights
+                            text = order_serjeants
                             default_format = "#clickable"
                             autoresize = no
                             max_width = 188
@@ -6603,7 +6603,7 @@ window = {
                     layoutpolicy_horizontal = fixed
                     minimumsize = { 248 58 }
                     maximumsize = { 248 58 }
-                    datacontext = "[GetMaA( 'teutonic_knights' )]"
+                    datacontext = "[GetMaA( 'order_serjeants' )]"
                     visible = "[GetScriptedGui('skonester_sand_show_non_agot_maa').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                     using = tooltip_es
                     tooltipwidget = {
@@ -6613,12 +6613,12 @@ window = {
                     }
                     }
                     }
-                    onclick = "[GetScriptedGui('skonester_sand_pick_maa').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('maa_flag', MakeScopeFlag('teutonic_knights')).End)]"
-                    down = "[GetScriptedGui('skonester_sand_is_picked_maa').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('maa_flag', MakeScopeFlag('teutonic_knights')).End)]"
+                    onclick = "[GetScriptedGui('skonester_sand_pick_maa').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('maa_flag', MakeScopeFlag('order_serjeants')).End)]"
+                    down = "[GetScriptedGui('skonester_sand_is_picked_maa').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('maa_flag', MakeScopeFlag('order_serjeants')).End)]"
                     background = {
                       using = Background_Area_Dark
                       alpha = 0.4
-                      visible = "[GetScriptedGui('skonester_sand_is_picked_maa').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('maa_flag', MakeScopeFlag('teutonic_knights')).End)]"
+                      visible = "[GetScriptedGui('skonester_sand_is_picked_maa').IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('maa_flag', MakeScopeFlag('order_serjeants')).End)]"
                     }
                     hbox = {
                       margin = { 8 4 }
@@ -6631,7 +6631,7 @@ window = {
                       text_single = {
                         alwaystransparent = yes
                         layoutpolicy_horizontal = expanding
-                        text = teutonic_knights
+                        text = order_serjeants
                         default_format = "#clickable"
                         autoresize = no
                         max_width = 188

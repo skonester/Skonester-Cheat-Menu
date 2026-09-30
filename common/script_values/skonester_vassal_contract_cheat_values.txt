@@ -1,11 +1,13 @@
 ﻿# 官吏统辖「修改封臣契约」：放宽单次改动上限；契约编辑期间不计暴君惩罚；行政类型上限/冷却
+# These override vanilla values that are also evaluated where scope:actor/liege/recipient do not exist,
+# so every scope check uses ?= (no error, false when unset).
 
 count_obligation_improvements_for_vassal = {
   if = {
     limit = {
       OR = {
-        scope:actor = { has_character_flag = skonester_cheat_vassal_contract_edit }
-        scope:liege = { has_character_flag = skonester_cheat_vassal_contract_edit }
+        scope:actor ?= { has_character_flag = skonester_cheat_vassal_contract_edit }
+        scope:liege ?= { has_character_flag = skonester_cheat_vassal_contract_edit }
       }
     }
     value = 0
@@ -30,9 +32,9 @@ admin_contract_cooldown_value = {
   if = {
     limit = {
       OR = {
-        scope:actor = { has_character_flag = skonester_cheat_vassal_contract_edit }
-        scope:recipient = { has_character_flag = skonester_cheat_vassal_contract_edit }
-        scope:liege = { has_character_flag = skonester_cheat_vassal_contract_edit }
+        scope:actor ?= { has_character_flag = skonester_cheat_vassal_contract_edit }
+        scope:recipient ?= { has_character_flag = skonester_cheat_vassal_contract_edit }
+        scope:liege ?= { has_character_flag = skonester_cheat_vassal_contract_edit }
       }
     }
     value = 0
@@ -48,8 +50,8 @@ celestial_province_military_max_value = {
   if = {
     limit = {
       OR = {
-        scope:actor = { has_character_flag = skonester_cheat_vassal_contract_edit }
-        scope:liege = { has_character_flag = skonester_cheat_vassal_contract_edit }
+        scope:actor ?= { has_character_flag = skonester_cheat_vassal_contract_edit }
+        scope:liege ?= { has_character_flag = skonester_cheat_vassal_contract_edit }
       }
     }
     value = skonester_celestial_province_cheat_max
@@ -63,8 +65,8 @@ celestial_province_industrial_max_value = {
   if = {
     limit = {
       OR = {
-        scope:actor = { has_character_flag = skonester_cheat_vassal_contract_edit }
-        scope:liege = { has_character_flag = skonester_cheat_vassal_contract_edit }
+        scope:actor ?= { has_character_flag = skonester_cheat_vassal_contract_edit }
+        scope:liege ?= { has_character_flag = skonester_cheat_vassal_contract_edit }
       }
     }
     value = skonester_celestial_province_cheat_max
@@ -78,8 +80,8 @@ celestial_province_metropolitan_max_value = {
   if = {
     limit = {
       OR = {
-        scope:actor = { has_character_flag = skonester_cheat_vassal_contract_edit }
-        scope:liege = { has_character_flag = skonester_cheat_vassal_contract_edit }
+        scope:actor ?= { has_character_flag = skonester_cheat_vassal_contract_edit }
+        scope:liege ?= { has_character_flag = skonester_cheat_vassal_contract_edit }
       }
     }
     value = skonester_celestial_province_cheat_max
@@ -93,8 +95,8 @@ celestial_province_protectorate_max_value = {
   if = {
     limit = {
       OR = {
-        scope:actor = { has_character_flag = skonester_cheat_vassal_contract_edit }
-        scope:liege = { has_character_flag = skonester_cheat_vassal_contract_edit }
+        scope:actor ?= { has_character_flag = skonester_cheat_vassal_contract_edit }
+        scope:liege ?= { has_character_flag = skonester_cheat_vassal_contract_edit }
       }
     }
     value = skonester_celestial_province_cheat_max
@@ -107,7 +109,7 @@ celestial_province_protectorate_max_value = {
 max_contract_changes = {
   if = {
     limit = {
-      scope:actor = {
+      scope:actor ?= {
         OR = {
           has_character_flag = skonester_cheat_vassal_contract_edit
           has_character_flag = skonester_cheat_menu_cheat_menu
@@ -124,7 +126,7 @@ max_contract_changes = {
 vassal_obligation_increase_tyranny_gain_multiplier = {
   if = {
     limit = {
-      scope:actor = {
+      scope:actor ?= {
         OR = {
           has_character_flag = skonester_cheat_vassal_contract_edit
           has_character_flag = skonester_cheat_menu_cheat_menu
@@ -146,7 +148,7 @@ vassal_obligation_increase_tyranny_gain_multiplier = {
 vassal_obligation_increase_tyranny_gain = {
   if = {
     limit = {
-      scope:actor = {
+      scope:actor ?= {
         OR = {
           has_character_flag = skonester_cheat_vassal_contract_edit
           has_character_flag = skonester_cheat_menu_cheat_menu

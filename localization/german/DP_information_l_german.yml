@@ -1,10 +1,10 @@
 ﻿l_german:
-  daddy_pika_information:0 "Skonester Cheat Menu Gold - Pre Chapter V"
-  information_desc:0 "Dies ist der GitHub-Testbuild von Skonester Cheat Menu Gold - Pre Chapter V. Funktionen können unfertig oder instabil sein. Bitte melde alle Fehler und Skriptfehler auf GitHub und füge deine CK3-Datei error.log, die Mod-Ladereihenfolge und Schritte zum Reproduzieren hinzu."
-  information_TT:0 "Klicken, um Informationen zum Pre-Chapter-V-GitHub-Testbuild anzuzeigen."
+  daddy_pika_information:0 "Skonester Cheat Menu Gold - By God Alone"
+  information_desc:0 "Dies ist der GitHub-Testbuild von Skonester Cheat Menu Gold - By God Alone. Funktionen können unfertig oder instabil sein. Bitte melde alle Fehler und Skriptfehler auf GitHub und füge deine CK3-Datei error.log, die Mod-Ladereihenfolge und Schritte zum Reproduzieren hinzu."
+  information_TT:0 "Klicken, um Informationen zum By-God-Alone-GitHub-Testbuild anzuzeigen."
 
-  dp_information.changelog.t:0 "Skonester Cheat Menu Gold - Pre Chapter V"
-  dp_information.changelog.d:0 "GitHub-Testbuild vor Chapter V. Diese Version ist für öffentliche Tests vor Chapter V bestimmt. Bitte melde fehlerhafte Menüs, fehlende Lokalisierungen, Ereignisfehler, Abstürze und unerwartetes Verhalten auf GitHub."
+  dp_information.changelog.t:0 "Skonester Cheat Menu Gold - By God Alone"
+  dp_information.changelog.d:0 "GitHub-Testbuild für By God Alone (CK3 1.20 Crozier). Aktualisiert für das neue Riten- und Glaubenssatzsystem, die neuen Gesetzes- und Wahlformate und das By-God-Alone-Interaktionsmenü. Bitte melde fehlerhafte Menüs, fehlende Lokalisierungen, Ereignisfehler, Abstürze und unerwartetes Verhalten auf GitHub."
 
   dp_information.useful_tips.t:0 "Nützliche Hinweise"
   dp_information.useful_tips.d:0 "Funktionsmenü\n- Einmal klicken zum Aktivieren, erneut klicken zum Deaktivieren.\n- Wenn eine Funktion nicht erscheint, bedeutet das nicht, dass der Mod fehlerhaft ist. Möglicherweise wird sie durch eine fest integrierte Paradox-Funktion überschrieben.\n- Aufgrund von DLC-Inhalten können einige Interaktionen bei bestimmten Charakteren nicht verfügbar sein.\n- Knightblood-Eigenschaften werden zu Beginn eines neuen Spiels in geringer Anzahl zufällig an NSCs vergeben, um interessante Werte zu erzeugen. Falls die Spieler damit nicht zufrieden sind, werde ich diese Funktion wieder entfernen.\n- Dieser Mod unterstützt auch ältere Spielversionen, falls du auf eine frühere Version zurückwechseln möchtest."

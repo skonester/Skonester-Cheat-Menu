@@ -1734,7 +1734,7 @@ dp_debug_start_era_of_crusades_interaction = {
 
 	on_accept = {
 		faith:catholic = {
-			change_fervor = { value = 200 }
+			change_fervor = { value = 200 desc = skonester_fervor_gain_cheat }
 			save_scope_as = awakening_faith
 
 			if = {
@@ -1777,14 +1777,14 @@ dp_debug_start_era_of_jihads_interaction = {
 			is_ai = no
 			has_character_flag = bone_cheat_interactions_flag
 		}
-		faith:ashari = {
+		faith:sunni = {
 			NOT = { religion = { exists = var:variable_ghw_unlocked } }
 		}
 	}
 	auto_accept = yes
 	on_accept = {
-		faith:ashari = {
-			change_fervor = { value = 200 }
+		faith:sunni = {
+			change_fervor = { value = 200 desc = skonester_fervor_gain_cheat }
 			save_scope_as = awakening_faith
 			if = {
 				limit = { exists = religious_head }

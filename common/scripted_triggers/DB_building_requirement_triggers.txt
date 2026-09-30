@@ -30,10 +30,10 @@ building_pillage_requirment = {
 		AND = {
 			OR = {
 				scope:holder = {
-					faith = { has_doctrine = tenet_pacifism }
+					faith = { has_tenet = tenet_pacifism }
 				}
 				scope:holder = {
-					faith = { has_doctrine = tenet_dharmic_pacifism }
+					faith = { has_tenet = tenet_dharmic_pacifism }
 				}
 			}
 			scope:holder = {

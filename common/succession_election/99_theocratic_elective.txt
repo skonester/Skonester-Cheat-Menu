@@ -1,4 +1,5 @@
-﻿theocratic_elective = {
+﻿# CK3 1.20: renamed from theocratic_elective (vanilla 1.20 now defines theocratic_elective for playable theocracies)
+skone_theocratic_elective = {
 	elector_vote_strength = {
 		base = 1  # Changed from 0 so vassals have a baseline voice
 		
@@ -29,14 +30,20 @@
 	}
 	
 	electors = {
-		add = holder
-		add = {
-			type = title_dejure_vassals
-			limit = {
-				# Removed government_is_theocracy check. 
-				# Now ANY count+ vassal can vote.
-				highest_held_title_tier > 1
-				domain_size > 0
+		character_sets = {
+			skone_theocratic_elective_electors_1 = {
+				type = holder
+
+			}
+			skone_theocratic_elective_electors_2 = {
+				type = title_dejure_vassals
+				limit = {
+					# Removed government_is_theocracy check.
+					# Now ANY count+ vassal can vote.
+					highest_held_title_tier > 1
+					domain_size > 0
+				}
+
 			}
 		}
 	}
@@ -68,24 +75,29 @@
 	}
 	
 	candidates = {
-		add = {
-			type = title_claimants
-			limit = {
-				feudal_elective_potential_landless_claimant_candidate_trigger = yes
+		character_sets = {
+			skone_theocratic_elective_candidates_1 = {
+				type = title_claimants
+				limit = {
+					feudal_elective_potential_landless_claimant_candidate_trigger = yes
+				}
+
 			}
-		}
-		add = {
-			type = holder_close_or_extended_family
-			limit = {
-				is_close_family_of = scope:holder
-				feudal_elective_potential_landless_dynastic_candidate_trigger = yes
+			skone_theocratic_elective_candidates_2 = {
+				type = holder_close_or_extended_family
+				limit = {
+					is_close_family_of = scope:holder
+					feudal_elective_potential_landless_dynastic_candidate_trigger = yes
+				}
+
 			}
-		}
-		add = {
-			type = title_dejure_vassals
-			limit = {
-				highest_held_title_tier > 1
-				domain_size > 0
+			skone_theocratic_elective_candidates_3 = {
+				type = title_dejure_vassals
+				limit = {
+					highest_held_title_tier > 1
+					domain_size > 0
+				}
+
 			}
 		}
 	}

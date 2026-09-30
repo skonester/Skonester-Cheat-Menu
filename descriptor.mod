@@ -1,6 +1,6 @@
-version="9.27.26-PreBGA"
+version="9.30.26-BGA1"
 tags={
-	"1.19 'Scribe'"
+	"1.20 'Crozier'"
 }
 name="Skonester Cheat Menu Gold"
-supported_version="1.19.*"
+supported_version="1.20.*"

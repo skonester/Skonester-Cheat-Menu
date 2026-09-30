@@ -6994,25 +6994,25 @@ skonester_cheat_menu.0041 = {
 
 
 
-  # 闂傚倷绀侀幉锛勬暜閹烘嚦娑樷攽鐎ｎ€儱顭块懜闈涘闁哄拋鍓氶幈銊ヮ潨閸℃绠诲┑鈥崇湴閸斿矂鈥旈崘顔嘉ч柛娑卞灟缁潧鈹戦悙瀛樺磩闁糕晜鐗曢?10 闂?  option = { name = heritage_ainuic scope:actor = { set_culture_pillar = heritage_ainuic } }
+  # 闂傚倷绀侀幉锛勬暜閹烘嚦娑樷攽鐎ｎ€儱顭块懜闈涘闁哄拋鍓氶幈銊ヮ潨閸℃绠诲┑鈥崇湴閸斿矂鈥旈崘顔嘉ч柛娑卞灟缁潧鈹戦悙瀛樺磩闁糕晜鐗曢?10 闂?  option = { name = heritage_ainuic_name scope:actor = { set_culture_pillar = heritage_ainuic } }
 
-  option = { name = heritage_albanian scope:actor = { set_culture_pillar = heritage_albanian } }
+  option = { name = heritage_albanian_name scope:actor = { set_culture_pillar = heritage_albanian } }
 
-  option = { name = heritage_ancient_greek scope:actor = { set_culture_pillar = heritage_ancient_greek } }
+  option = { name = heritage_ancient_greek_name scope:actor = { set_culture_pillar = heritage_ancient_greek } }
 
-  option = { name = heritage_arabic scope:actor = { set_culture_pillar = heritage_arabic } }
+  option = { name = heritage_arabic_name scope:actor = { set_culture_pillar = heritage_arabic } }
 
-  option = { name = heritage_austronesian scope:actor = { set_culture_pillar = heritage_austronesian } }
+  option = { name = heritage_austronesian_name scope:actor = { set_culture_pillar = heritage_austronesian } }
 
-  option = { name = heritage_baltic scope:actor = { set_culture_pillar = heritage_baltic } }
+  option = { name = heritage_baltic_name scope:actor = { set_culture_pillar = heritage_baltic } }
 
-  option = { name = heritage_balto_finnic scope:actor = { set_culture_pillar = heritage_balto_finnic } }
+  option = { name = heritage_balto_finnic_name scope:actor = { set_culture_pillar = heritage_balto_finnic } }
 
-  option = { name = heritage_bantu scope:actor = { set_culture_pillar = heritage_bantu } }
+  option = { name = heritage_bantu_name scope:actor = { set_culture_pillar = heritage_bantu } }
 
-  option = { name = heritage_berber scope:actor = { set_culture_pillar = heritage_berber } }
+  option = { name = heritage_berber_name scope:actor = { set_culture_pillar = heritage_berber } }
 
-  option = { name = heritage_brythonic scope:actor = { set_culture_pillar = heritage_brythonic } }
+  option = { name = heritage_brythonic_name scope:actor = { set_culture_pillar = heritage_brythonic } }
 
 
 
@@ -7040,25 +7040,25 @@ skonester_cheat_menu.0740 = {
 
 
 
-  option = { name = heritage_burman scope:actor = { set_culture_pillar = heritage_burman } }
+  option = { name = heritage_burman_name scope:actor = { set_culture_pillar = heritage_burman } }
 
-  option = { name = heritage_buyeo scope:actor = { set_culture_pillar = heritage_buyeo } }
+  option = { name = heritage_buyeo_name scope:actor = { set_culture_pillar = heritage_buyeo } }
 
-  option = { name = heritage_byzantine scope:actor = { set_culture_pillar = heritage_byzantine } }
+  option = { name = heritage_byzantine_name scope:actor = { set_culture_pillar = heritage_byzantine } }
 
-  option = { name = heritage_caucasian scope:actor = { set_culture_pillar = heritage_caucasian } }
+  option = { name = heritage_caucasian_name scope:actor = { set_culture_pillar = heritage_caucasian } }
 
-  option = { name = heritage_central_african scope:actor = { set_culture_pillar = heritage_central_african } }
+  option = { name = heritage_central_african_name scope:actor = { set_culture_pillar = heritage_central_african } }
 
-  option = { name = heritage_central_germanic scope:actor = { set_culture_pillar = heritage_central_germanic } }
+  option = { name = heritage_central_germanic_name scope:actor = { set_culture_pillar = heritage_central_germanic } }
 
-  option = { name = heritage_chinese scope:actor = { set_culture_pillar = heritage_chinese } }
+  option = { name = heritage_chinese_name scope:actor = { set_culture_pillar = heritage_chinese } }
 
-  option = { name = heritage_dravidian scope:actor = { set_culture_pillar = heritage_dravidian } }
+  option = { name = heritage_dravidian_name scope:actor = { set_culture_pillar = heritage_dravidian } }
 
-  option = { name = heritage_east_african scope:actor = { set_culture_pillar = heritage_east_african } }
+  option = { name = heritage_east_african_name scope:actor = { set_culture_pillar = heritage_east_african } }
 
-  option = { name = heritage_east_slavic scope:actor = { set_culture_pillar = heritage_east_slavic } }
+  option = { name = heritage_east_slavic_name scope:actor = { set_culture_pillar = heritage_east_slavic } }
 
 
 
@@ -7086,25 +7086,25 @@ skonester_cheat_menu.0741 = {
 
 
 
-  option = { name = heritage_egyptian scope:actor = { set_culture_pillar = heritage_egyptian } }
+  option = { name = heritage_egyptian_name scope:actor = { set_culture_pillar = heritage_egyptian } }
 
-  option = { name = heritage_frankish scope:actor = { set_culture_pillar = heritage_frankish } }
+  option = { name = heritage_frankish_name scope:actor = { set_culture_pillar = heritage_frankish } }
 
-  option = { name = heritage_goidelic scope:actor = { set_culture_pillar = heritage_goidelic } }
+  option = { name = heritage_goidelic_name scope:actor = { set_culture_pillar = heritage_goidelic } }
 
-  option = { name = heritage_gothic scope:actor = { set_culture_pillar = heritage_gothic } }
+  option = { name = heritage_gothic_name scope:actor = { set_culture_pillar = heritage_gothic } }
 
   option = { name = heritage_hmongic scope:actor = { set_culture_pillar = heritage_hmongic } }
 
-  option = { name = heritage_hunnic scope:actor = { set_culture_pillar = heritage_hunnic } }
+  option = { name = heritage_hunnic_name scope:actor = { set_culture_pillar = heritage_hunnic } }
 
-  option = { name = heritage_iberian scope:actor = { set_culture_pillar = heritage_iberian } }
+  option = { name = heritage_iberian_name scope:actor = { set_culture_pillar = heritage_iberian } }
 
-  option = { name = heritage_indo_aryan scope:actor = { set_culture_pillar = heritage_indo_aryan } }
+  option = { name = heritage_indo_aryan_name scope:actor = { set_culture_pillar = heritage_indo_aryan } }
 
-  option = { name = heritage_iranian scope:actor = { set_culture_pillar = heritage_iranian } }
+  option = { name = heritage_iranian_name scope:actor = { set_culture_pillar = heritage_iranian } }
 
-  option = { name = heritage_israelite scope:actor = { set_culture_pillar = heritage_israelite } }
+  option = { name = heritage_israelite_name scope:actor = { set_culture_pillar = heritage_israelite } }
 
 
 
@@ -7132,25 +7132,25 @@ skonester_cheat_menu.0742 = {
 
 
 
-  option = { name = heritage_japonic scope:actor = { set_culture_pillar = heritage_japonic } }
+  option = { name = heritage_japonic_name scope:actor = { set_culture_pillar = heritage_japonic } }
 
-  option = { name = heritage_korean scope:actor = { set_culture_pillar = heritage_korean } }
+  option = { name = heritage_korean_name scope:actor = { set_culture_pillar = heritage_korean } }
 
-  option = { name = heritage_latin scope:actor = { set_culture_pillar = heritage_latin } }
+  option = { name = heritage_latin_name scope:actor = { set_culture_pillar = heritage_latin } }
 
-  option = { name = heritage_magyar scope:actor = { set_culture_pillar = heritage_magyar } }
+  option = { name = heritage_magyar_name scope:actor = { set_culture_pillar = heritage_magyar } }
 
-  option = { name = heritage_mon_khmer scope:actor = { set_culture_pillar = heritage_mon_khmer } }
+  option = { name = heritage_mon_khmer_name scope:actor = { set_culture_pillar = heritage_mon_khmer } }
 
-  option = { name = heritage_mongolic scope:actor = { set_culture_pillar = heritage_mongolic } }
+  option = { name = heritage_mongolic_name scope:actor = { set_culture_pillar = heritage_mongolic } }
 
-  option = { name = heritage_nivkh scope:actor = { set_culture_pillar = heritage_nivkh } }
+  option = { name = heritage_nivkh_name scope:actor = { set_culture_pillar = heritage_nivkh } }
 
-  option = { name = heritage_north_germanic scope:actor = { set_culture_pillar = heritage_north_germanic } }
+  option = { name = heritage_north_germanic_name scope:actor = { set_culture_pillar = heritage_north_germanic } }
 
-  option = { name = heritage_phoenician scope:actor = { set_culture_pillar = heritage_phoenician } }
+  option = { name = heritage_phoenician_name scope:actor = { set_culture_pillar = heritage_phoenician } }
 
-  option = { name = heritage_qiangic scope:actor = { set_culture_pillar = heritage_qiangic } }
+  option = { name = heritage_qiangic_name scope:actor = { set_culture_pillar = heritage_qiangic } }
 
 
 
@@ -7178,25 +7178,25 @@ skonester_cheat_menu.0743 = {
 
 
 
-  option = { name = heritage_sahelian scope:actor = { set_culture_pillar = heritage_sahelian } }
+  option = { name = heritage_sahelian_name scope:actor = { set_culture_pillar = heritage_sahelian } }
 
-  option = { name = heritage_senegambian scope:actor = { set_culture_pillar = heritage_senegambian } }
+  option = { name = heritage_senegambian_name scope:actor = { set_culture_pillar = heritage_senegambian } }
 
-  option = { name = heritage_somalian scope:actor = { set_culture_pillar = heritage_somalian } }
+  option = { name = heritage_somalian_name scope:actor = { set_culture_pillar = heritage_somalian } }
 
-  option = { name = heritage_south_slavic scope:actor = { set_culture_pillar = heritage_south_slavic } }
+  option = { name = heritage_south_slavic_name scope:actor = { set_culture_pillar = heritage_south_slavic } }
 
-  option = { name = heritage_syriac scope:actor = { set_culture_pillar = heritage_syriac } }
+  option = { name = heritage_syriac_name scope:actor = { set_culture_pillar = heritage_syriac } }
 
   option = { name = heritage_tai scope:actor = { set_culture_pillar = heritage_tai } }
 
-  option = { name = heritage_tibetan scope:actor = { set_culture_pillar = heritage_tibetan } }
+  option = { name = heritage_tibetan_name scope:actor = { set_culture_pillar = heritage_tibetan } }
 
-  option = { name = heritage_tocharian scope:actor = { set_culture_pillar = heritage_tocharian } }
+  option = { name = heritage_tocharian_name scope:actor = { set_culture_pillar = heritage_tocharian } }
 
-  option = { name = heritage_tungusic scope:actor = { set_culture_pillar = heritage_tungusic } }
+  option = { name = heritage_tungusic_name scope:actor = { set_culture_pillar = heritage_tungusic } }
 
-  option = { name = heritage_turkic scope:actor = { set_culture_pillar = heritage_turkic } }
+  option = { name = heritage_turkic_name scope:actor = { set_culture_pillar = heritage_turkic } }
 
 
 
@@ -7224,21 +7224,21 @@ skonester_cheat_menu.0744 = {
 
 
 
-  option = { name = heritage_ugro_permian scope:actor = { set_culture_pillar = heritage_ugro_permian } }
+  option = { name = heritage_ugro_permian_name scope:actor = { set_culture_pillar = heritage_ugro_permian } }
 
-  option = { name = heritage_viet scope:actor = { set_culture_pillar = heritage_viet } }
+  option = { name = heritage_viet_name scope:actor = { set_culture_pillar = heritage_viet } }
 
-  option = { name = heritage_vlach scope:actor = { set_culture_pillar = heritage_vlach } }
+  option = { name = heritage_vlach_name scope:actor = { set_culture_pillar = heritage_vlach } }
 
-  option = { name = heritage_volga_finnic scope:actor = { set_culture_pillar = heritage_volga_finnic } }
+  option = { name = heritage_volga_finnic_name scope:actor = { set_culture_pillar = heritage_volga_finnic } }
 
-  option = { name = heritage_west_african scope:actor = { set_culture_pillar = heritage_west_african } }
+  option = { name = heritage_west_african_name scope:actor = { set_culture_pillar = heritage_west_african } }
 
-  option = { name = heritage_west_germanic scope:actor = { set_culture_pillar = heritage_west_germanic } }
+  option = { name = heritage_west_germanic_name scope:actor = { set_culture_pillar = heritage_west_germanic } }
 
-  option = { name = heritage_west_slavic scope:actor = { set_culture_pillar = heritage_west_slavic } }
+  option = { name = heritage_west_slavic_name scope:actor = { set_culture_pillar = heritage_west_slavic } }
 
-  option = { name = heritage_yoruba scope:actor = { set_culture_pillar = heritage_yoruba } }
+  option = { name = heritage_yoruba_name scope:actor = { set_culture_pillar = heritage_yoruba } }
 
 
 
@@ -7264,25 +7264,25 @@ skonester_cheat_menu.0042 = {
 
 
 
-  # 闂備浇宕垫慨鏉懨归崒鐐茬煑闁逞屽墴閺屽秶鎷犻懠顒€鈪甸悗娈垮枛閻栧ジ寮澶婄妞ゆ帒鍊诲畷鍫曟⒑閸濆嫷妲搁柣妤€妫濆畷顖烆敃浣嶉崶顒€閿ゆ俊銈勭劍濞呮牕鈹戦鐭亞澹曢鐘典笉鐟滅増甯楅埛鎴︽煙缂佹ê绗ч柣蹇氶哺缁绘盯骞撻幒鎾充淮濡ょ姷鍋炵敮鈩冧繆閻戣棄唯闁靛／鍌滄硦闂傚倷绀侀幉锟犲垂閻㈢绠规い鎰剁畱閻鐓崶銊р姇闁绘帡绠栭弻鏇熺箾閸喖濮庨柣鐘辩劍閻撯€愁潖濞差亶鏁冮柕蹇婃櫆姝囨俊鐐€栧ú蹇涘垂婵犳艾绠犳繛鎴欏灩閻掑灚銇勯幒鎴濐仾闁哄拋鍓熼弻娑㈩敃閻樿尙浠兼繛瀵稿閸ㄥ爼寮诲☉銏犵闁挎繂楠稿▓顓㈡倵鐟欏嫭灏俊顐ｇ箓閻ｅ嘲顫濈捄铏瑰€為梺闈涱焾閸庤京鑺遍妷鈺傜厽闁绘ê寮剁粊鈺呮煕濞嗗苯浜鹃梻浣哥枃椤曆囨偋閹炬剚鍤曢柕濞炬櫓閺佸秵绻涢幋鐐跺鐟滅増妞藉?  # 闂傚倷绀侀幉锛勬暜閹烘嚦娑樷攽鐎ｎ€儱顭块懜闈涘闁哄拋鍓氶幈銊ヮ潨閸℃绠诲┑鈥崇湴閸斿矂鈥旈崘顔嘉ч柛娑卞灟缁潧鈹戦悙瀛樺磩闁糕晜鐗曢?10 闂?  option = { name = language_ainu scope:actor = { set_culture_pillar = language_ainu } }
+  # 闂備浇宕垫慨鏉懨归崒鐐茬煑闁逞屽墴閺屽秶鎷犻懠顒€鈪甸悗娈垮枛閻栧ジ寮澶婄妞ゆ帒鍊诲畷鍫曟⒑閸濆嫷妲搁柣妤€妫濆畷顖烆敃浣嶉崶顒€閿ゆ俊銈勭劍濞呮牕鈹戦鐭亞澹曢鐘典笉鐟滅増甯楅埛鎴︽煙缂佹ê绗ч柣蹇氶哺缁绘盯骞撻幒鎾充淮濡ょ姷鍋炵敮鈩冧繆閻戣棄唯闁靛／鍌滄硦闂傚倷绀侀幉锟犲垂閻㈢绠规い鎰剁畱閻鐓崶銊р姇闁绘帡绠栭弻鏇熺箾閸喖濮庨柣鐘辩劍閻撯€愁潖濞差亶鏁冮柕蹇婃櫆姝囨俊鐐€栧ú蹇涘垂婵犳艾绠犳繛鎴欏灩閻掑灚銇勯幒鎴濐仾闁哄拋鍓熼弻娑㈩敃閻樿尙浠兼繛瀵稿閸ㄥ爼寮诲☉銏犵闁挎繂楠稿▓顓㈡倵鐟欏嫭灏俊顐ｇ箓閻ｅ嘲顫濈捄铏瑰€為梺闈涱焾閸庤京鑺遍妷鈺傜厽闁绘ê寮剁粊鈺呮煕濞嗗苯浜鹃梻浣哥枃椤曆囨偋閹炬剚鍤曢柕濞炬櫓閺佸秵绻涢幋鐐跺鐟滅増妞藉?  # 闂傚倷绀侀幉锛勬暜閹烘嚦娑樷攽鐎ｎ€儱顭块懜闈涘闁哄拋鍓氶幈銊ヮ潨閸℃绠诲┑鈥崇湴閸斿矂鈥旈崘顔嘉ч柛娑卞灟缁潧鈹戦悙瀛樺磩闁糕晜鐗曢?10 闂?  option = { name = language_ainu_name scope:actor = { set_culture_pillar = language_ainu } }
 
-  option = { name = language_albanian scope:actor = { set_culture_pillar = language_albanian } }
+  option = { name = language_albanian_name scope:actor = { set_culture_pillar = language_albanian } }
 
-  option = { name = language_ancient_greek scope:actor = { set_culture_pillar = language_ancient_greek } }
+  option = { name = language_ancient_greek_name scope:actor = { set_culture_pillar = language_ancient_greek } }
 
-  option = { name = language_arabic scope:actor = { set_culture_pillar = language_arabic } }
+  option = { name = language_arabic_name scope:actor = { set_culture_pillar = language_arabic } }
 
-  option = { name = language_aramaic scope:actor = { set_culture_pillar = language_aramaic } }
+  option = { name = language_aramaic_name scope:actor = { set_culture_pillar = language_aramaic } }
 
-  option = { name = language_armenian scope:actor = { set_culture_pillar = language_armenian } }
+  option = { name = language_armenian_name scope:actor = { set_culture_pillar = language_armenian } }
 
-  option = { name = language_asli scope:actor = { set_culture_pillar = language_asli } }
+  option = { name = language_asli_name scope:actor = { set_culture_pillar = language_asli } }
 
-  option = { name = language_austronesian scope:actor = { set_culture_pillar = language_austronesian } }
+  option = { name = language_austronesian_name scope:actor = { set_culture_pillar = language_austronesian } }
 
-  option = { name = language_ayneha scope:actor = { set_culture_pillar = language_ayneha } }
+  option = { name = language_ayneha_name scope:actor = { set_culture_pillar = language_ayneha } }
 
-  option = { name = language_baltic scope:actor = { set_culture_pillar = language_baltic } }
+  option = { name = language_baltic_name scope:actor = { set_culture_pillar = language_baltic } }
 
 
 
@@ -7310,25 +7310,25 @@ skonester_cheat_menu.0745 = {
 
 
 
-  option = { name = language_basque scope:actor = { set_culture_pillar = language_basque } }
+  option = { name = language_basque_name scope:actor = { set_culture_pillar = language_basque } }
 
-  option = { name = language_berber scope:actor = { set_culture_pillar = language_berber } }
+  option = { name = language_berber_name scope:actor = { set_culture_pillar = language_berber } }
 
-  option = { name = language_brythonic scope:actor = { set_culture_pillar = language_brythonic } }
+  option = { name = language_brythonic_name scope:actor = { set_culture_pillar = language_brythonic } }
 
-  option = { name = language_burmese scope:actor = { set_culture_pillar = language_burmese } }
+  option = { name = language_burmese_name scope:actor = { set_culture_pillar = language_burmese } }
 
-  option = { name = language_carthaginian scope:actor = { set_culture_pillar = language_carthaginian } }
+  option = { name = language_carthaginian_name scope:actor = { set_culture_pillar = language_carthaginian } }
 
-  option = { name = language_central_germanic scope:actor = { set_culture_pillar = language_central_germanic } }
+  option = { name = language_central_germanic_name scope:actor = { set_culture_pillar = language_central_germanic } }
 
-  option = { name = language_chadic scope:actor = { set_culture_pillar = language_chadic } }
+  option = { name = language_chadic_name scope:actor = { set_culture_pillar = language_chadic } }
 
-  option = { name = language_chamic scope:actor = { set_culture_pillar = language_chamic } }
+  option = { name = language_chamic_name scope:actor = { set_culture_pillar = language_chamic } }
 
-  option = { name = language_chinese scope:actor = { set_culture_pillar = language_chinese } }
+  option = { name = language_chinese_name scope:actor = { set_culture_pillar = language_chinese } }
 
-  option = { name = language_cushitic scope:actor = { set_culture_pillar = language_cushitic } }
+  option = { name = language_cushitic_name scope:actor = { set_culture_pillar = language_cushitic } }
 
 
 
@@ -7356,25 +7356,25 @@ skonester_cheat_menu.0746 = {
 
 
 
-  option = { name = language_czech_slovak scope:actor = { set_culture_pillar = language_czech_slovak } }
+  option = { name = language_czech_slovak_name scope:actor = { set_culture_pillar = language_czech_slovak } }
 
-  option = { name = language_dutch scope:actor = { set_culture_pillar = language_dutch } }
+  option = { name = language_dutch_name scope:actor = { set_culture_pillar = language_dutch } }
 
-  option = { name = language_east_slavic scope:actor = { set_culture_pillar = language_east_slavic } }
+  option = { name = language_east_slavic_name scope:actor = { set_culture_pillar = language_east_slavic } }
 
-  option = { name = language_egyptian scope:actor = { set_culture_pillar = language_egyptian } }
+  option = { name = language_egyptian_name scope:actor = { set_culture_pillar = language_egyptian } }
 
-  option = { name = language_ethiopic scope:actor = { set_culture_pillar = language_ethiopic } }
+  option = { name = language_ethiopic_name scope:actor = { set_culture_pillar = language_ethiopic } }
 
-  option = { name = language_finnic scope:actor = { set_culture_pillar = language_finnic } }
+  option = { name = language_finnic_name scope:actor = { set_culture_pillar = language_finnic } }
 
-  option = { name = language_frankish scope:actor = { set_culture_pillar = language_frankish } }
+  option = { name = language_frankish_name scope:actor = { set_culture_pillar = language_frankish } }
 
-  option = { name = language_french scope:actor = { set_culture_pillar = language_french } }
+  option = { name = language_french_name scope:actor = { set_culture_pillar = language_french } }
 
-  option = { name = language_georgian scope:actor = { set_culture_pillar = language_georgian } }
+  option = { name = language_georgian_name scope:actor = { set_culture_pillar = language_georgian } }
 
-  option = { name = language_goidelic scope:actor = { set_culture_pillar = language_goidelic } }
+  option = { name = language_goidelic_name scope:actor = { set_culture_pillar = language_goidelic } }
 
 
 
@@ -7402,25 +7402,25 @@ skonester_cheat_menu.0747 = {
 
 
 
-  option = { name = language_greek scope:actor = { set_culture_pillar = language_greek } }
+  option = { name = language_greek_name scope:actor = { set_culture_pillar = language_greek } }
 
-  option = { name = language_gur scope:actor = { set_culture_pillar = language_gur } }
+  option = { name = language_gur_name scope:actor = { set_culture_pillar = language_gur } }
 
-  option = { name = language_high_german scope:actor = { set_culture_pillar = language_high_german } }
+  option = { name = language_high_german_name scope:actor = { set_culture_pillar = language_high_german } }
 
-  option = { name = language_hmongic scope:actor = { set_culture_pillar = language_hmongic } }
+  option = { name = language_hmongic_name scope:actor = { set_culture_pillar = language_hmongic } }
 
-  option = { name = language_hunnic scope:actor = { set_culture_pillar = language_hunnic } }
+  option = { name = language_hunnic_name scope:actor = { set_culture_pillar = language_hunnic } }
 
-  option = { name = language_iberian scope:actor = { set_culture_pillar = language_iberian } }
+  option = { name = language_iberian_name scope:actor = { set_culture_pillar = language_iberian } }
 
-  option = { name = language_iranian scope:actor = { set_culture_pillar = language_iranian } }
+  option = { name = language_iranian_name scope:actor = { set_culture_pillar = language_iranian } }
 
-  option = { name = language_israelite scope:actor = { set_culture_pillar = language_israelite } }
+  option = { name = language_israelite_name scope:actor = { set_culture_pillar = language_israelite } }
 
-  option = { name = language_italian scope:actor = { set_culture_pillar = language_italian } }
+  option = { name = language_italian_name scope:actor = { set_culture_pillar = language_italian } }
 
-  option = { name = language_japonic scope:actor = { set_culture_pillar = language_japonic } }
+  option = { name = language_japonic_name scope:actor = { set_culture_pillar = language_japonic } }
 
 
 
@@ -7448,25 +7448,25 @@ skonester_cheat_menu.0748 = {
 
 
 
-  option = { name = language_kannada scope:actor = { set_culture_pillar = language_kannada } }
+  option = { name = language_kannada_name scope:actor = { set_culture_pillar = language_kannada } }
 
-  option = { name = language_kashmiri scope:actor = { set_culture_pillar = language_kashmiri } }
+  option = { name = language_kashmiri_name scope:actor = { set_culture_pillar = language_kashmiri } }
 
-  option = { name = language_khitan scope:actor = { set_culture_pillar = language_khitan } }
+  option = { name = language_khitan_name scope:actor = { set_culture_pillar = language_khitan } }
 
-  option = { name = language_korean scope:actor = { set_culture_pillar = language_korean } }
+  option = { name = language_korean_name scope:actor = { set_culture_pillar = language_korean } }
 
-  option = { name = language_kru scope:actor = { set_culture_pillar = language_kru } }
+  option = { name = language_kru_name scope:actor = { set_culture_pillar = language_kru } }
 
-  option = { name = language_kwa scope:actor = { set_culture_pillar = language_kwa } }
+  option = { name = language_kwa_name scope:actor = { set_culture_pillar = language_kwa } }
 
-  option = { name = language_latin scope:actor = { set_culture_pillar = language_latin } }
+  option = { name = language_latin_name scope:actor = { set_culture_pillar = language_latin } }
 
-  option = { name = language_lechitic scope:actor = { set_culture_pillar = language_lechitic } }
+  option = { name = language_lechitic_name scope:actor = { set_culture_pillar = language_lechitic } }
 
-  option = { name = language_magadhan scope:actor = { set_culture_pillar = language_magadhan } }
+  option = { name = language_magadhan_name scope:actor = { set_culture_pillar = language_magadhan } }
 
-  option = { name = language_magyar scope:actor = { set_culture_pillar = language_magyar } }
+  option = { name = language_magyar_name scope:actor = { set_culture_pillar = language_magyar } }
 
 
 
@@ -7494,25 +7494,25 @@ skonester_cheat_menu.0749 = {
 
 
 
-  option = { name = language_manding scope:actor = { set_culture_pillar = language_manding } }
+  option = { name = language_manding_name scope:actor = { set_culture_pillar = language_manding } }
 
-  option = { name = language_marathi scope:actor = { set_culture_pillar = language_marathi } }
+  option = { name = language_marathi_name scope:actor = { set_culture_pillar = language_marathi } }
 
-  option = { name = language_mon_khmer scope:actor = { set_culture_pillar = language_mon_khmer } }
+  option = { name = language_mon_khmer_name scope:actor = { set_culture_pillar = language_mon_khmer } }
 
-  option = { name = language_mongolic scope:actor = { set_culture_pillar = language_mongolic } }
+  option = { name = language_mongolic_name scope:actor = { set_culture_pillar = language_mongolic } }
 
-  option = { name = language_nivkh scope:actor = { set_culture_pillar = language_nivkh } }
+  option = { name = language_nivkh_name scope:actor = { set_culture_pillar = language_nivkh } }
 
-  option = { name = language_norse scope:actor = { set_culture_pillar = language_norse } }
+  option = { name = language_norse_name scope:actor = { set_culture_pillar = language_norse } }
 
-  option = { name = language_north_dravidian scope:actor = { set_culture_pillar = language_north_dravidian } }
+  option = { name = language_north_dravidian_name scope:actor = { set_culture_pillar = language_north_dravidian } }
 
-  option = { name = language_occitano_romance scope:actor = { set_culture_pillar = language_occitano_romance } }
+  option = { name = language_occitano_romance_name scope:actor = { set_culture_pillar = language_occitano_romance } }
 
-  option = { name = language_oghur scope:actor = { set_culture_pillar = language_oghur } }
+  option = { name = language_oghur_name scope:actor = { set_culture_pillar = language_oghur } }
 
-  option = { name = language_omotic scope:actor = { set_culture_pillar = language_omotic } }
+  option = { name = language_omotic_name scope:actor = { set_culture_pillar = language_omotic } }
 
 
 
@@ -7540,25 +7540,25 @@ skonester_cheat_menu.0750 = {
 
 
 
-  option = { name = language_pahari scope:actor = { set_culture_pillar = language_pahari } }
+  option = { name = language_pahari_name scope:actor = { set_culture_pillar = language_pahari } }
 
-  option = { name = language_papuan scope:actor = { set_culture_pillar = language_papuan } }
+  option = { name = language_papuan_name scope:actor = { set_culture_pillar = language_papuan } }
 
-  option = { name = language_qiangic scope:actor = { set_culture_pillar = language_qiangic } }
+  option = { name = language_qiangic_name scope:actor = { set_culture_pillar = language_qiangic } }
 
-  option = { name = language_rajasthani scope:actor = { set_culture_pillar = language_rajasthani } }
+  option = { name = language_rajasthani_name scope:actor = { set_culture_pillar = language_rajasthani } }
 
-  option = { name = language_sabaki scope:actor = { set_culture_pillar = language_sabaki } }
+  option = { name = language_sabaki_name scope:actor = { set_culture_pillar = language_sabaki } }
 
-  option = { name = language_sami scope:actor = { set_culture_pillar = language_sami } }
+  option = { name = language_sami_name scope:actor = { set_culture_pillar = language_sami } }
 
-  option = { name = language_sardinian scope:actor = { set_culture_pillar = language_sardinian } }
+  option = { name = language_sardinian_name scope:actor = { set_culture_pillar = language_sardinian } }
 
-  option = { name = language_sauraseni scope:actor = { set_culture_pillar = language_sauraseni } }
+  option = { name = language_sauraseni_name scope:actor = { set_culture_pillar = language_sauraseni } }
 
-  option = { name = language_saxon scope:actor = { set_culture_pillar = language_saxon } }
+  option = { name = language_saxon_name scope:actor = { set_culture_pillar = language_saxon } }
 
-  option = { name = language_scythian scope:actor = { set_culture_pillar = language_scythian } }
+  option = { name = language_scythian_name scope:actor = { set_culture_pillar = language_scythian } }
 
 
 
@@ -7586,25 +7586,25 @@ skonester_cheat_menu.0751 = {
 
 
 
-  option = { name = language_senegambian scope:actor = { set_culture_pillar = language_senegambian } }
+  option = { name = language_senegambian_name scope:actor = { set_culture_pillar = language_senegambian } }
 
-  option = { name = language_sinhalese scope:actor = { set_culture_pillar = language_sinhalese } }
+  option = { name = language_sinhalese_name scope:actor = { set_culture_pillar = language_sinhalese } }
 
-  option = { name = language_slavonic scope:actor = { set_culture_pillar = language_slavonic } }
+  option = { name = language_slavonic_name scope:actor = { set_culture_pillar = language_slavonic } }
 
-  option = { name = language_soninke scope:actor = { set_culture_pillar = language_soninke } }
+  option = { name = language_soninke_name scope:actor = { set_culture_pillar = language_soninke } }
 
-  option = { name = language_south_slavic scope:actor = { set_culture_pillar = language_south_slavic } }
+  option = { name = language_south_slavic_name scope:actor = { set_culture_pillar = language_south_slavic } }
 
-  option = { name = language_sudanic scope:actor = { set_culture_pillar = language_sudanic } }
+  option = { name = language_sudanic_name scope:actor = { set_culture_pillar = language_sudanic } }
 
-  option = { name = language_tai scope:actor = { set_culture_pillar = language_tai } }
+  option = { name = language_tai_name scope:actor = { set_culture_pillar = language_tai } }
 
-  option = { name = language_tamil scope:actor = { set_culture_pillar = language_tamil } }
+  option = { name = language_tamil_name scope:actor = { set_culture_pillar = language_tamil } }
 
-  option = { name = language_telugu scope:actor = { set_culture_pillar = language_telugu } }
+  option = { name = language_telugu_name scope:actor = { set_culture_pillar = language_telugu } }
 
-  option = { name = language_tibetan scope:actor = { set_culture_pillar = language_tibetan } }
+  option = { name = language_tibetan_name scope:actor = { set_culture_pillar = language_tibetan } }
 
 
 
@@ -7632,25 +7632,25 @@ skonester_cheat_menu.0752 = {
 
 
 
-  option = { name = language_tocharian scope:actor = { set_culture_pillar = language_tocharian } }
+  option = { name = language_tocharian_name scope:actor = { set_culture_pillar = language_tocharian } }
 
-  option = { name = language_tubu scope:actor = { set_culture_pillar = language_tubu } }
+  option = { name = language_tubu_name scope:actor = { set_culture_pillar = language_tubu } }
 
-  option = { name = language_tungusic scope:actor = { set_culture_pillar = language_tungusic } }
+  option = { name = language_tungusic_name scope:actor = { set_culture_pillar = language_tungusic } }
 
-  option = { name = language_turkic scope:actor = { set_culture_pillar = language_turkic } }
+  option = { name = language_turkic_name scope:actor = { set_culture_pillar = language_turkic } }
 
-  option = { name = language_ugro_permian scope:actor = { set_culture_pillar = language_ugro_permian } }
+  option = { name = language_ugro_permian_name scope:actor = { set_culture_pillar = language_ugro_permian } }
 
-  option = { name = language_vietnamese scope:actor = { set_culture_pillar = language_vietnamese } }
+  option = { name = language_vietnamese_name scope:actor = { set_culture_pillar = language_vietnamese } }
 
-  option = { name = language_volga_finnic scope:actor = { set_culture_pillar = language_volga_finnic } }
+  option = { name = language_volga_finnic_name scope:actor = { set_culture_pillar = language_volga_finnic } }
 
-  option = { name = language_vrachada scope:actor = { set_culture_pillar = language_vrachada } }
+  option = { name = language_vrachada_name scope:actor = { set_culture_pillar = language_vrachada } }
 
-  option = { name = language_wallachian scope:actor = { set_culture_pillar = language_wallachian } }
+  option = { name = language_wallachian_name scope:actor = { set_culture_pillar = language_wallachian } }
 
-  option = { name = language_yoruba scope:actor = { set_culture_pillar = language_yoruba } }
+  option = { name = language_yoruba_name scope:actor = { set_culture_pillar = language_yoruba } }
 
 
 
@@ -12425,7 +12425,7 @@ skonester_cheat_menu.0190 = {
 
         limit = { is_concubine = yes }
 
-        remove_concubine = yes
+        concubinist ?= { remove_concubine = prev }
 
       }
 
@@ -12578,7 +12578,7 @@ skonester_cheat_menu.0190 = {
 
         limit = { is_concubine = yes }
 
-        remove_concubine = yes
+        concubinist ?= { remove_concubine = prev }
 
       }
 

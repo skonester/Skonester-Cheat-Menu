@@ -569,7 +569,7 @@ skonester_mass_convert_vassals_to_nomadic_effect = {
 
 skonester_convert_character_to_theocracy_government_effect = {
   if = {
-    limit = { NOT = { has_government = theocracy_government } }
+    limit = { NOT = { government_has_flag = government_is_theocracy } }
     change_government = theocracy_government
   }
 }
@@ -578,7 +578,7 @@ skonester_mass_convert_vassals_to_theocracy_effect = {
   every_vassal_or_below = {
     limit = {
       skonester_mass_gov_conversion_target_trigger = yes
-      NOT = { has_government = theocracy_government }
+      NOT = { government_has_flag = government_is_theocracy }
       OR = {
         root = { has_character_flag = skonester_chenzhi_target_vassals }
         NOT = { skonester_protected_from_forced_feudal_conversion_trigger = yes }

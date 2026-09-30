@@ -500,8 +500,8 @@ skonester_trait_gui_toggle_from_flag_effect = {
     skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = schemer }
   }
   if = {
-    limit = { scope:trait_flag = flag:scholar }
-    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = scholar }
+    limit = { scope:trait_flag = flag:erudite }
+    skonester_cheat_menu_toggle_base_trait_effect = { TRAIT = erudite }
   }
   if = {
     limit = { scope:trait_flag = flag:seducer }

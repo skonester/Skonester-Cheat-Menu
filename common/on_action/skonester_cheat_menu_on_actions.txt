@@ -1,4 +1,10 @@
-﻿on_pregnancy_mother = {
+﻿# CK3 1.20: chained via on_actions instead of a second `effect` block (only one effect per on-action survives;
+# the collision was dropping vanilla 1.20 logic or this mod logic).
+on_pregnancy_mother = {
+  on_actions = { skonester_on_pregnancy_mother_clear_bgp }
+}
+
+skonester_on_pregnancy_mother_clear_bgp = {
   effect = {
     # 清理“Skonester胎儿性别”操作的挂起旗，避免跨胎残留
     remove_character_flag = skonester_bgp_pending
@@ -25,10 +31,12 @@ skonester_stealth_fp_birth_genes_pulse = {
       skonester_stealth_fp_birth_ensure_player_genes_effect = yes
     }
     scope:mother = {
-      limit = {
-        is_pregnant = no
+      if = {
+        limit = {
+          is_pregnant = no
+        }
+        remove_variable = skonester_stealth_fp_bio_dad
       }
-      remove_variable = skonester_stealth_fp_bio_dad
     }
   }
 }

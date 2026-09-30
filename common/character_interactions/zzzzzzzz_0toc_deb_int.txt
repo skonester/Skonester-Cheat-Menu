@@ -1129,7 +1129,7 @@ castrate_interaction = {
 
 		show_as_tooltip = {
 			scope:recipient = {
-				add_trait = eunuch
+				add_trait = eunuch_1
 				release_from_prison = yes
 			}
 		}

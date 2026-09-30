@@ -21,7 +21,7 @@ pcm_b_add_building_slot_7_sub_realm_decision = {
 	# widget copied from create_holy_order_decision
 	widget = {
 		controller = create_holy_order
-		barony_valid = {
+		title_valid = {
 			trigger_if = {
 				limit = { exists = this }
 				abs_barony_is_valid_trigger = { CHARACTER = scope:ruler }

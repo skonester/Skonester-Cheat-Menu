@@ -161,3 +161,12 @@ skonester_acm_faith_pick_open_clergy = {
   effect = { skonester_acm_faith_pick_open_clergy_effect = yes }
 }
 
+# CK3 1.20: tenets (TenetType) and doctrines (DoctrineType) are different GUI data types.
+# The pick sidebar shows the tenet list while the editor is picking core tenets.
+skonester_acm_faith_pick_is_tenets = {
+  scope = character
+  is_shown = {
+    has_variable = skonester_acm_pick_group_name
+    var:skonester_acm_pick_group_name = flag:doctrine_core_tenets
+  }
+}

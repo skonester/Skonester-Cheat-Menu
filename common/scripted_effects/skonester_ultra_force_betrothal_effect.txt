@@ -21,7 +21,7 @@ skonester_ultra_force_betrothal_effect = {
     }
     if = {
       limit = { is_concubine = yes }
-      remove_concubine = yes
+      concubinist ?= { remove_concubine = prev }
     }
   }
 
@@ -44,7 +44,7 @@ skonester_ultra_force_betrothal_effect = {
     }
     if = {
       limit = { is_concubine = yes }
-      remove_concubine = yes
+      concubinist ?= { remove_concubine = prev }
     }
   }
 

@@ -74,7 +74,13 @@ skonester_realm_authority_lock_after_lobby = {
   }
 }
 
+# CK3 1.20: chained via on_actions instead of a second `effect` block (only one effect per on-action survives;
+# the collision was dropping vanilla 1.20 logic or this mod logic).
 on_death = {
+  on_actions = { skonester_realm_authority_on_death }
+}
+
+skonester_realm_authority_on_death = {
   effect = {
     if = {
       limit = {

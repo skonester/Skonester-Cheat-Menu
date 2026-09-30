@@ -2305,11 +2305,11 @@ skonester_lsf_gui_toggle_scholar_perk_effect = {
     limit = { has_variable = skonester_lsf_gui_target }
     var:skonester_lsf_gui_target = {
       if = {
-        limit = { has_perk = scholar_perk }
-      remove_perk = scholar_perk
+        limit = { has_perk = erudite_perk }
+      remove_perk = erudite_perk
       }
       else = {
-      add_perk = scholar_perk
+      add_perk = erudite_perk
       }
     }
   }

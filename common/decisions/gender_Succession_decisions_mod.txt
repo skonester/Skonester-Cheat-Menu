@@ -71,7 +71,7 @@ change_succession_single = {
 
     is_shown = {
         NOR = {
-            has_government = theocracy_government
+            government_has_flag = government_is_theocracy
             has_government = republic_government
             has_government = mercenary_government
             has_government = tribal_government
@@ -108,7 +108,7 @@ change_succession_single_youngest = {
 
     is_shown = {
         NOR = {
-            has_government = theocracy_government
+            government_has_flag = government_is_theocracy
             has_government = republic_government
             has_government = mercenary_government
             has_government = tribal_government

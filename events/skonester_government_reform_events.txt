@@ -311,7 +311,7 @@ skonester_officials.0012 = {
       OR = {
         AND = {
                   has_character_flag = skonester_chenzhi_target_self
-                  NOT = { has_government = theocracy_government }
+                  NOT = { government_has_flag = government_is_theocracy }
         }
         AND = {
           has_character_flag = skonester_chenzhi_target_vassals

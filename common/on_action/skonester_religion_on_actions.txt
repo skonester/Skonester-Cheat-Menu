@@ -4,8 +4,8 @@
 
 ## On actions related to religion
 
-# Code on-action: character creates a faith
-# Root is the creator
+# Code on-action: a new faith is created
+# CK3 1.20: Root is now the new faith (was the creating character in 1.19)
 # scope:old_faith is the faith they used to have
 on_faith_created = {
 	on_actions = {
@@ -16,8 +16,11 @@ on_faith_created = {
 ## Called from 'on_game_start_after_lobby'
 
 # Clean Empty Doctrines
+# CK3 1.20: the character event faith_creation_clean.001 can no longer be fired here (ROOT is a faith).
+# The full empty-tenet cleanup runs in skonester_on_mts_faith_creation (skonester_mts_religion_on_actions.txt).
 on_mts_faith_creation = {
-	events = {
-		faith_creation_clean.001
+	effect = {
+		remove_tenet = tenet_zz_empty_1
+		remove_tenet = tenet_zz_empty_2
 	}
 }

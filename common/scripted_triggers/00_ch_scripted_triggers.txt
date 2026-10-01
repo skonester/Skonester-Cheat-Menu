@@ -57,3 +57,51 @@ ch_barony_is_valid_for_temple_trigger = {
 		holder.primary_title.tier = tier_barony
 	}
 }
+
+# CK3 1.20: nomad conversion is used by ch_minor_decisions.txt but its trigger was never defined.
+ch_barony_is_valid_for_nomad_trigger = {
+	title_province = {
+		NOT = { has_holding_type = nomad_holding }
+		has_ongoing_construction = no
+	}
+	trigger_if = {
+		limit = {
+			holder = $CHARACTER$
+		}
+	}
+	trigger_else = {
+		holder.primary_title.tier = tier_barony
+	}
+}
+
+# CK3 1.20: tribal conversion is used by ch_minor_decisions.txt but its trigger was never defined.
+ch_barony_is_valid_for_tribal_trigger = {
+	title_province = {
+		NOT = { has_holding_type = tribal_holding }
+		has_ongoing_construction = no
+	}
+	trigger_if = {
+		limit = {
+			holder = $CHARACTER$
+		}
+	}
+	trigger_else = {
+		holder.primary_title.tier = tier_barony
+	}
+}
+
+# CK3 1.20: temple_citadel conversion is used by ch_minor_decisions.txt but its trigger was never defined.
+ch_barony_is_valid_for_temple_citadel_trigger = {
+	title_province = {
+		NOT = { has_holding_type = temple_citadel_holding }
+		has_ongoing_construction = no
+	}
+	trigger_if = {
+		limit = {
+			holder = $CHARACTER$
+		}
+	}
+	trigger_else = {
+		holder.primary_title.tier = tier_barony
+	}
+}

@@ -7,8 +7,8 @@
 		4 = conversation.dds
 	}
 	can_pick = {
-		player = yes
-		ai = no
+		# CK3 1.20: `player` / `ai` are not triggers; scope:character is the one picking the tradition.
+		scope:character ?= { is_ai = no }
 	}
 	culture_modifier = {
 		culture_tradition_max_add = 200

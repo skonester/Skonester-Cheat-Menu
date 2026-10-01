@@ -65,16 +65,18 @@ skonester_craft_init_modifier_slot_defaults_effect = {
 
 # 按宝物品质决定每槽最低叠层（对齐 advcm_artifact_frame：普通1/大师2/名作3/卓越5）
 skonester_acm_sync_craft_layer_quality_body_effect = {
+  # CK3 1.20 cleanup: GUI tooltips evaluate this before the panel initialises the variables, so every
+  # comparison checks has_variable first (unset falls through to the 1-layer default).
   if = {
-    limit = { var:skonester_acm_craft_quality_wealth = 500 }
+    limit = { has_variable = skonester_acm_craft_quality_wealth var:skonester_acm_craft_quality_wealth = 500 }
     set_variable = { name = skonester_craft_quality_min_layers value = 5 }
   }
   else_if = {
-    limit = { var:skonester_acm_craft_quality_wealth = 250 }
+    limit = { has_variable = skonester_acm_craft_quality_wealth var:skonester_acm_craft_quality_wealth = 250 }
     set_variable = { name = skonester_craft_quality_min_layers value = 3 }
   }
   else_if = {
-    limit = { var:skonester_acm_craft_quality_wealth = 100 }
+    limit = { has_variable = skonester_acm_craft_quality_wealth var:skonester_acm_craft_quality_wealth = 100 }
     set_variable = { name = skonester_craft_quality_min_layers value = 2 }
   }
   else = {
@@ -98,7 +100,7 @@ skonester_acm_sync_craft_layer_quality_effect = {
 skonester_acm_clamp_craft_slot_layers_to_quality_effect = {
   skonester_acm_sync_craft_layer_quality_effect = yes
   if = {
-    limit = { NOT = { var:skonester_craft_m1 = 0 } }
+    limit = { has_variable = skonester_craft_m1 NOT = { var:skonester_craft_m1 = 0 } }
     if = {
       limit = {
         OR = {
@@ -114,7 +116,7 @@ skonester_acm_clamp_craft_slot_layers_to_quality_effect = {
     }
   }
   if = {
-    limit = { NOT = { var:skonester_craft_m2 = 0 } }
+    limit = { has_variable = skonester_craft_m2 NOT = { var:skonester_craft_m2 = 0 } }
     if = {
       limit = {
         OR = {
@@ -130,7 +132,7 @@ skonester_acm_clamp_craft_slot_layers_to_quality_effect = {
     }
   }
   if = {
-    limit = { NOT = { var:skonester_craft_m3 = 0 } }
+    limit = { has_variable = skonester_craft_m3 NOT = { var:skonester_craft_m3 = 0 } }
     if = {
       limit = {
         OR = {
@@ -146,7 +148,7 @@ skonester_acm_clamp_craft_slot_layers_to_quality_effect = {
     }
   }
   if = {
-    limit = { NOT = { var:skonester_craft_m4 = 0 } }
+    limit = { has_variable = skonester_craft_m4 NOT = { var:skonester_craft_m4 = 0 } }
     if = {
       limit = {
         OR = {
@@ -162,7 +164,7 @@ skonester_acm_clamp_craft_slot_layers_to_quality_effect = {
     }
   }
   if = {
-    limit = { NOT = { var:skonester_craft_m5 = 0 } }
+    limit = { has_variable = skonester_craft_m5 NOT = { var:skonester_craft_m5 = 0 } }
     if = {
       limit = {
         OR = {

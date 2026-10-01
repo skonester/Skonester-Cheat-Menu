@@ -96,7 +96,7 @@ window = {
                   layoutpolicy_horizontal = expanding
                   size = { 0 38 }
                   onclick = "[GetVariableSystem.Toggle(ConcatIfNeitherEmpty(Religion.GetNameNoTooltip,'children_visible'))]"
-                  tooltip = RULER_DESIGNER_LIST_FAITH_ENTRY_TOOLTIP
+                  tooltip = skonester_acm_religion_picker_expand_tt # CK3 1.20: RULER_DESIGNER_LIST_FAITH_ENTRY_TOOLTIP was removed
 
                   background = {
                     texture = "gfx/interface/component_tiles/tile_title_bg_01.dds"

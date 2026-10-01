@@ -5,9 +5,6 @@
     is_shown = {
 		has_character_flag = daddy_pika_cheat_menu
 		has_character_flag = covt_menu   
-        NOT = {
-            has_government = non_government
-        }
         is_landed = yes
     }
     widget = {
@@ -42,10 +39,6 @@
                 }
             }
         }
-        subject = root.culture
-        culture = {
-            
-        }
     }
     cost = {
         #gold = main_building_tier_1_cost
@@ -53,8 +46,9 @@
     effect = {
         scope:barony.title_province = {
             set_holding_type = castle_holding
-			add_character_flag = covt_menu    
         }
+        # CK3 1.20: the flag is a character flag; it was set on the province by mistake.
+        add_character_flag = covt_menu
         # custom_tooltip = ch_convert_holding_to_castle_decision_effect_message
     }
     ai_potential = {
@@ -72,9 +66,6 @@ ch_convert_holding_to_city_decision = {
     is_shown = {
 		has_character_flag = daddy_pika_cheat_menu
 		has_character_flag = covt_menu   
-        NOT = {
-            has_government = non_government
-        }
         is_landed = yes
     }
     widget = {
@@ -113,8 +104,9 @@ ch_convert_holding_to_city_decision = {
     effect = {
         scope:barony.title_province = {
             set_holding_type = city_holding
-			add_character_flag = covt_menu    
         }
+        # CK3 1.20: the flag is a character flag; it was set on the province by mistake.
+        add_character_flag = covt_menu
     }
     ai_potential = {
         always = no
@@ -131,9 +123,6 @@ ch_convert_holding_to_temple_decision = {
     is_shown = {
 		has_character_flag = daddy_pika_cheat_menu
 		has_character_flag = covt_menu   
-        NOT = {
-            has_government = non_government
-        }
         is_landed = yes
     }
     widget = {
@@ -167,10 +156,6 @@ ch_convert_holding_to_temple_decision = {
                     ch_barony_is_valid_for_temple_trigger = { CHARACTER = scope:ruler }
                 }
             }
-        }
-        subject = root.culture
-        culture = {
-            
         }
     }
     cost = {
@@ -253,8 +238,9 @@ ch_convert_holding_to_nomad_decision = {
 	effect = {
 		scope:barony.title_province = {
 			set_holding_type = nomad_holding
-			add_character_flag = covt_menu    
 		}
+		# CK3 1.20: the flag is a character flag; it was set on the province by mistake.
+		add_character_flag = covt_menu
 		custom_tooltip = ch_convert_holding_to_nomad_decision_effect_message
 	}
 }
@@ -321,8 +307,9 @@ ch_convert_holding_to_tribal_decision = {
 	
 		scope:barony.title_province = {
 			set_holding_type = tribal_holding
-			add_character_flag = covt_menu    
 		}
+		# CK3 1.20: the flag is a character flag; it was set on the province by mistake.
+		add_character_flag = covt_menu
 		
 		custom_tooltip = ch_convert_holding_to_tribal_decision_effect_message
 
@@ -399,8 +386,9 @@ ch_convert_holding_to_temple_citadel_decision = {
 	
 		scope:barony.title_province = {
 			set_holding_type = temple_citadel_holding
-			add_character_flag = covt_menu    
 		}
+		# CK3 1.20: the flag is a character flag; it was set on the province by mistake.
+		add_character_flag = covt_menu
 		
 		custom_tooltip = ch_convert_holding_to_temple_citadel_decision_effect_message
 

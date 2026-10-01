@@ -18,17 +18,9 @@
 	can_pick_for_hybridization = {
 		custom_tooltip = {
 			text = only_one_marriage_tradition_allowed
+			# CK3 1.20 cleanup: dropped checks for the four/five/nine-wives variants, which this mod never defines
 			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
 				culture_tradition:tradition_polygamous = { is_in_list = traits }
-			}
-			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
-				culture_tradition:tradition_zz_cultural_polygamy_nine_wives = { is_in_list = traits }
-			}
-			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
-				culture_tradition:tradition_zz_cultural_polygamy_five_wives = { is_in_list = traits }
-			}
-			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
-				culture_tradition:tradition_zz_cultural_polygamy_four_wives = { is_in_list = traits }
 			}
 			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
 				culture_tradition:tradition_zz_cultural_polygamy_three_wives = { is_in_list = traits }
@@ -75,17 +67,9 @@ tradition_zz_cultural_polygamy_three_wives = {
 	can_pick_for_hybridization = {
 		custom_tooltip = {
 			text = only_one_marriage_tradition_allowed
+			# CK3 1.20 cleanup: dropped checks for the four/five/nine-wives variants, which this mod never defines
 			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
 				culture_tradition:tradition_polygamous = { is_in_list = traits }
-			}
-			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
-				culture_tradition:tradition_zz_cultural_polygamy_nine_wives = { is_in_list = traits }
-			}
-			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
-				culture_tradition:tradition_zz_cultural_polygamy_five_wives = { is_in_list = traits }
-			}
-			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
-				culture_tradition:tradition_zz_cultural_polygamy_four_wives = { is_in_list = traits }
 			}
 			NOT = { # Only blocks polygamous to avoid duplicate warnings, but is blocked by concubines
 				culture_tradition:tradition_zz_cultural_polygamy_two_wives = { is_in_list = traits }

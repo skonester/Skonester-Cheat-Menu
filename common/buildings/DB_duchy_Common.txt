@@ -827,12 +827,12 @@ db_court_justice_01 = { # Court of Justice : Hundred Courts
 	character_modifier = {
 		general_opinion = 5
 		opinion_of_vassal = 5
-		hostile_scheme_resistance_mult = 0.05
-		personal_scheme_resistance_mult = 0.05
+		enemy_hostile_scheme_success_chance_add = -5 # CK3 1.20: was hostile_scheme_resistance_mult = 0.05
+		# CK3 1.20: no personal-scheme resistance modifier anymore. personal_scheme_resistance_mult = 0.05
 	}
 	
 	duchy_capital_county_modifier = {
-		monthly_county_control_change_factor = 0.05
+		monthly_county_control_growth_factor = 0.05
 	}
 	
 	is_enabled = {
@@ -876,13 +876,13 @@ db_court_justice_02 = { # Court of Justice : Shire Courts
 	character_modifier = {
 		general_opinion = 10
 		opinion_of_vassal = 10
-		hostile_scheme_resistance_mult = 0.15
-		personal_scheme_resistance_mult = 0.15
+		enemy_hostile_scheme_success_chance_add = -15 # CK3 1.20: was hostile_scheme_resistance_mult = 0.15
+		# CK3 1.20: no personal-scheme resistance modifier anymore. personal_scheme_resistance_mult = 0.15
 		monthly_dynasty_prestige = 0.5
 	}
 	
 	duchy_capital_county_modifier = {
-		monthly_county_control_change_factor = 0.15
+		monthly_county_control_growth_factor = 0.15
 	}
 	
 	is_enabled = {
@@ -926,13 +926,13 @@ db_court_justice_03 = { # Court of Justice : Court of King's Bench
 	character_modifier = {
 		general_opinion = 15
 		opinion_of_vassal = 15
-		hostile_scheme_resistance_mult = 0.25
-		personal_scheme_resistance_mult = 0.25
+		enemy_hostile_scheme_success_chance_add = -25 # CK3 1.20: was hostile_scheme_resistance_mult = 0.25
+		# CK3 1.20: no personal-scheme resistance modifier anymore. personal_scheme_resistance_mult = 0.25
 		monthly_dynasty_prestige = 0.8
 	}
 	
 	duchy_capital_county_modifier = {
-		monthly_county_control_change_factor = 0.25
+		monthly_county_control_growth_factor = 0.25
 	}
 	
 	is_enabled = {

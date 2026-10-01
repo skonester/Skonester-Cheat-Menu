@@ -15382,7 +15382,7 @@ dp_char_editor.1000 = {
 	}
 
 	option = {
-		name = "Dragon Birth"
+		name = dp_char_editor_dragon_birth
 		trigger_event = dp_char_editor.514
 	}
 

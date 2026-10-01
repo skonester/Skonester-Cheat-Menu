@@ -13,7 +13,7 @@ window = {
   movable = yes
 
   widget = {
-    parentanchor = fill
+    # CK3 1.20: "fill" is not an anchor; size = { 100% 100% } already fills the parent
     size = { 100% 100% }
     background = {
       using = Background_Area_Dark

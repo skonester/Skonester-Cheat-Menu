@@ -1,16 +1,15 @@
 ﻿l_russian:
  # Hotfix: generated localization file lacks ":0" and won't load in CK3.
  # Keep this file small and correct so UI never shows raw keys.
- # Culture heritage hub (3020-3028)
- skonester_cheat_menu.3020.desc: ""
- skonester_cheat_menu.3021.desc: ""
- skonester_cheat_menu.3022.desc: ""
- skonester_cheat_menu.3023.desc: ""
- skonester_cheat_menu.3024.desc: ""
- skonester_cheat_menu.3025.desc: ""
- skonester_cheat_menu.3026.desc: ""
- skonester_cheat_menu.3027.desc: ""
- skonester_cheat_menu.3028.desc: ""
+ # Culture heritage hub (3186-3194)
+ skonester_cheat_menu.3186.desc: ""
+ skonester_cheat_menu.3187.desc: ""
+ skonester_cheat_menu.3188.desc: ""
+ skonester_cheat_menu.3189.desc: ""
+ skonester_cheat_menu.3191.desc: ""
+ skonester_cheat_menu.3192.desc: ""
+ skonester_cheat_menu.3193.desc: ""
+ skonester_cheat_menu.3194.desc: ""
 
  skonester_cast_hf_ainuic: "Айнская группа"
  skonester_cast_hf_akan: "Аканская группа"

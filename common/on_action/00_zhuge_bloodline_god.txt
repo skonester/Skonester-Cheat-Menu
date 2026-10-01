@@ -1,7 +1,8 @@
-﻿# ç›‘å¬æ–°ç”Ÿå„¿
-on_character_born = {
+﻿# 监听新生儿
+# CK3 1.20: on_character_born is not an on_action; on_birth_child runs for the newborn (root = child).
+on_birth_child = {
     events = {
-        zhuge_bloodline_god.0001   # çˆ¶äº²æŒä¸‰çº§
-        zhuge_bloodline_god.0002   # çˆ¶äº²æŒäºŒçº§
+        zhuge_bloodline_god.0001   # 父亲持三级
+        zhuge_bloodline_god.0002   # 父亲持二级
     }
 }

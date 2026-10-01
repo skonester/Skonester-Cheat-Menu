@@ -1071,7 +1071,11 @@ debug_change_council_task_interaction = {
 	}
 }
 
-castrate_interaction = {
+# CK3 1.20: this used to be defined as `castrate_interaction`, the same key as the vanilla prison interaction.
+# This file loads last, so the debug-only copy replaced vanilla's for everyone and players lost the
+# normal interaction. Renamed so both exist; the effects now use vanilla 1.20's torture effects
+# (blind_and_castrate_actor_effect / torture_blind_castrate_opinion_effect / has_culture_group are gone).
+tocmod_castrate_interaction = {
 	interface_priority = 1999
 	category = interaction_debug_main
 	desc = castrate_interaction_desc
@@ -1082,18 +1086,10 @@ castrate_interaction = {
 		debug_only = yes
 		scope:recipient = {
 			is_imprisoned_by = scope:actor
-			NOT = { has_trait = eunuch }
+			is_eunuch_trigger = no
 			is_male = yes
 		}
-		scope:actor = {
-
-			#is_adult = yes
-			OR = {
-				has_culture_group = culture_group:byzantine_group
-				has_culture = culture:ethiopian
 		scope:actor = { is_ai = no }
-			}
-		}
 	}
 
 	is_valid_showing_failures_only = {
@@ -1125,7 +1121,7 @@ castrate_interaction = {
 			}
 		}
 
-		blind_and_castrate_actor_effect = yes #Stress & dread
+		blind_castrate_and_disfigure_effect = yes #Stress & dread
 
 		show_as_tooltip = {
 			scope:recipient = {
@@ -1134,7 +1130,7 @@ castrate_interaction = {
 			}
 		}
 
-		torture_blind_castrate_opinion_effect = { VERB = castrated }
+		torture_blind_castrate_disfigure_opinion_effect = { VERB = castrated }
 
 		scope:actor = {
 			trigger_event = {
@@ -1146,34 +1142,13 @@ castrate_interaction = {
 
 	auto_accept = yes
 
-	ai_targets = {
-		ai_recipients = prisoners
-	}
-
-	ai_potential = {
-		always = yes
-	}
-
-	ai_will_do = {
-		base = -20
-
-		modifier = {
-			has_trait = sadistic
-			add = 20
-		}
-		ai_value_modifier = {
-			ai_compassion = tiny_chance_impact_negative_ai_value #Adds +50 for highly uncompassionate characters, -50 for highly compassionate characters
-		}
-		opinion_modifier = {
-			opinion_target = scope:recipient
-			multiplier = -0.25
-		}
-	}
-
-	ai_frequency = 36
 }
 
-blind_interaction = {
+# CK3 1.20: this used to be defined as `blind_interaction`, the same key as the vanilla prison interaction.
+# This file loads last, so the debug-only copy replaced vanilla's for everyone and players lost the
+# normal interaction. Renamed so both exist; the effects now use vanilla 1.20's torture effects
+# (blind_and_castrate_actor_effect / torture_blind_castrate_opinion_effect / has_culture_group are gone).
+tocmod_blind_interaction = {
 	interface_priority = 2000
 	category = interaction_debug_main
 	desc = blind_interaction_desc
@@ -1186,14 +1161,7 @@ blind_interaction = {
 			is_imprisoned_by = scope:actor
 			NOT = { has_trait = blind }
 		}
-		scope:actor = {
-
-			#is_adult = yes
-			OR = {
-			has_culture_group = culture_group:byzantine_group
 		scope:actor = { is_ai = no }
-				}
-		}
 	}
 
 	is_valid_showing_failures_only = {
@@ -1225,7 +1193,7 @@ blind_interaction = {
 			}
 		}
 
-		blind_and_castrate_actor_effect = yes #Stress & dread
+		blind_castrate_and_disfigure_effect = yes #Stress & dread
 
 		show_as_tooltip = {
 			scope:recipient = {
@@ -1234,7 +1202,7 @@ blind_interaction = {
 			}
 		}
 
-		torture_blind_castrate_opinion_effect = { VERB = blinded }
+		torture_blind_castrate_disfigure_opinion_effect = { VERB = blinded }
 
 		scope:actor = {
 			trigger_event = {
@@ -1246,31 +1214,6 @@ blind_interaction = {
 
 	auto_accept = yes
 
-	ai_targets = {
-		ai_recipients = prisoners
-	}
-
-	ai_potential = {
-		always = yes
-	}
-
-	ai_will_do = {
-		base = -20
-
-		modifier = {
-			has_trait = sadistic
-			add = 20
-		}
-		ai_value_modifier = {
-			ai_compassion = tiny_chance_impact_negative_ai_value #Adds +50 for highly uncompassionate characters, -50 for highly compassionate characters
-		}
-		opinion_modifier = {
-			opinion_target = scope:recipient
-			multiplier = -0.25
-		}
-	}
-
-	ai_frequency = 36
 }
 
 toc_addwombmancourtier_interaction = {
@@ -1433,305 +1376,8 @@ toc_finishcounciltask_interaction = {
 	auto_accept = yes
 }
 
-marry_off_interaction = {
-	category = interaction_category_uncategorized
-	common_interaction = yes
-	desc = marry_off_interaction_desc
-	icon = on
-	send_name = marry_off_send
-	needs_recipient_to_open = no
-	special_interaction = arrange_marriage_interaction
-	interface = marriage
-	redirect = {
-		if = {
-			limit = {
-				exists = scope:secondary_actor
-			}
-			scope:recipient = {
-				save_scope_as = secondary_recipient
-				matchmaker = {
-					save_scope_as = recipient
-				}
-			}
+# CK3 1.20 cleanup: removed tocmod's copy of vanilla `marry_off_interaction` ("Find Spouse"). It used the same key,
+# so it replaced vanilla's for every player, was only shown while the Skonester interaction menu was open, and was a
+# pre-1.20 copy missing landless-adventurer and puppet handling. Vanilla's Find Spouse applies again; the cheat
+# version is Force Betrothal (daddy_pika_arrange_marriage_inter).
 
-		}
-		else_if = {
-			scope:recipient = {
-				save_scope_as = secondary_actor
-			}
-			clear_saved_scope = recipient
-		}
-	}
-
-	populate_recipient_list = {
-		scope:secondary_actor = {
-			every_spouse_candidate = {
-				limit = {
-					NAND = {
-						is_landless_ruler = yes
-						faith.religious_head = this
-						NOT = { scope:secondary_actor.faith = faith }
-					}
-				}
-				add_to_list = characters
-			}
-		}
-	}
-
-	interface_priority = 8991
-
-	# actor, recipient ... characters arranging the marriage
-	# secondary_actor, secondary_recipient ... characters that should marry
-
-	is_shown = {
-		scope:actor = { has_character_flag = skonester_character_interaction_menu_open }
-		scope:secondary_actor = {
-			#Is this someone I can marry off?
-			OR = {
-				is_courtier_of = scope:actor
-				AND = {
-					is_close_family_of = scope:actor # Only line that's changed
-					target_is_liege_or_above = scope:actor
-				}
-				scope:actor = this
-			}
-			#They can be married
-			can_marry_trigger = yes
-			#To account for a person marrying their concubines/consorts
-			trigger_if = {
-				limit = {
-					is_concubine = yes
-				}
-				is_concubine_of = scope:actor
-				can_marry_character_trigger = { CHARACTER = scope:actor }
-			}
-		}
-	}
-
-	is_valid_showing_failures_only = {
-		#Diplomatic availability & prison
-		scope:secondary_actor = {
-			is_diplomatically_available = yes
-			is_imprisoned = no
-		}
-	}
-
-	has_valid_target_showing_failures_only = {
-		marriage_interaction_valid_target_trigger = yes  #Checks marriage status, betrothed, gender, consanguinity, faith hostility etc.
-
-		#Diplomatic availability & prison (located here because these will never be set at the start)
-		scope:recipient = {
-			is_diplomatically_available = yes
-			is_imprisoned = no
-		}
-		NOT = {
-			scope:actor = {
-				is_at_war_with = scope:recipient
-			}
-		}
-		trigger_if = {
-			limit = { NOT = { scope:recipient = scope:secondary_recipient } }
-			scope:secondary_recipient = {
-				is_diplomatically_available = yes
-				is_imprisoned = no
-			}
-		}
-		#secondary_actor is checked above because they are always available
-
-		#Blocks AI from marrying player guests
-		scope:secondary_recipient = {
-			trigger_if = {
-				limit = {
-					is_pool_guest = yes
-					host = {
-						is_ai = no
-						NOT = { this = scope:actor }
-					}
-				}
-				NOT = { is_pool_guest_of = host }
-			}
-		}
-	}
-
-	on_accept = {
-		marriage_interaction_on_accept_effect = yes
-	}
-
-	on_decline = {
-		scope:actor = {
-			if = {	
-				limit = { NOT = { this = scope:recipient } }
-				trigger_event = marriage_interaction.0011	
-			}
-		}
-	}
-
-	auto_accept = {
-		marriage_interaction_auto_accept_trigger = yes #Strong hook conditions
-	}
-	
-	ai_accept = {
-		base = 0 # Should be 0 for all interactions
-		
-		marriage_ai_accept_modifier = yes
-	}
-	
-	send_option = {
-		flag = matrilineal
-		localization = "MATRILINEAL_OFFER"
-		starts_enabled = {
-			scope:actor = {
-				OR= {
-					faith = {
-						has_doctrine = doctrine_gender_female_dominated
-					}
-					AND = {
-						scope:secondary_actor = { is_female = yes }
-						faith = { has_doctrine = doctrine_gender_equal }
-					}
-					AND = {
-						exists = scope:secondary_actor
-						scope:actor = scope:secondary_actor
-						is_female = yes
-						is_ai = no
-					}
-				}
-			}
-		}
-	}
-	
-	send_option = {
-		is_valid = {
-			scope:actor = {
-				has_usable_hook = scope:recipient
-			}
-		}
-		flag = marriage_hook
-		localization = MARRIAGE_HOOK
-	}
-	#This option cannot be linked with the hook icon, because recipient isn't known in the right-click menu
-	
-	send_options_exclusive = no
-	
-	show_effects_in_notification = no
-	greeting = positive
-	
-	notification_text = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:secondary_actor = {
-						is_adult = yes
-					}
-					scope:secondary_recipient = {
-						is_adult = yes
-					}
-				}
-				desc = {
-					first_valid = {	
-						triggered_desc = {
-							trigger = {
-								scope:matrilineal = yes
-								scope:secondary_actor = scope:actor
-								scope:secondary_recipient = scope:recipient
-							}
-							desc = MARRIAGE_NOTIFICATION_BOTH_PERSONAL_MATRI
-						}
-						triggered_desc = {
-							trigger = {
-								scope:matrilineal = yes
-								scope:secondary_actor = scope:actor
-							}
-							desc = MARRIAGE_NOTIFICATION_ACTOR_PERSONAL_MATRI
-						}
-						triggered_desc = {
-							trigger = {
-								scope:matrilineal = yes
-								scope:secondary_recipient = scope:recipient
-							}
-							desc = MARRIAGE_NOTIFICATION_RECIPIENT_PERSONAL_MATRI
-						}
-						triggered_desc = {
-							trigger = {
-								scope:matrilineal = yes
-							}
-							desc = MARRIAGE_NOTIFICATION_MATRI
-						}
-						triggered_desc = {
-							trigger = {
-								scope:secondary_actor = scope:actor
-								scope:secondary_recipient = scope:recipient
-							}
-							desc = MARRIAGE_NOTIFICATION_BOTH_PERSONAL
-						}
-						triggered_desc = {
-							trigger = {
-								scope:secondary_actor = scope:actor
-							}
-							desc = MARRIAGE_NOTIFICATION_ACTOR_PERSONAL
-						}
-						triggered_desc = {
-							trigger = {
-								scope:secondary_recipient = scope:recipient
-							}
-							desc = MARRIAGE_NOTIFICATION_RECIPIENT_PERSONAL
-						}
-						desc = MARRIAGE_NOTIFICATION
-					}
-				}
-			}
-			desc = {
-				first_valid = {	
-					triggered_desc = {
-						trigger = {
-							scope:matrilineal = yes
-							scope:secondary_actor = scope:actor
-							scope:secondary_recipient = scope:recipient
-						}
-						desc = BETROTHAL_NOTIFICATION_BOTH_PERSONAL_MATRI
-					}
-					triggered_desc = {
-						trigger = {
-							scope:matrilineal = yes
-							scope:secondary_actor = scope:actor
-						}
-						desc = BETROTHAL_NOTIFICATION_ACTOR_PERSONAL_MATRI
-					}
-					triggered_desc = {
-						trigger = {
-							scope:matrilineal = yes
-							scope:secondary_recipient = scope:recipient
-						}
-						desc = BETROTHAL_NOTIFICATION_RECIPIENT_PERSONAL_MATRI
-					}
-					triggered_desc = {
-						trigger = {
-							scope:matrilineal = yes
-						}
-						desc = BETROTHAL_NOTIFICATION_MATRI
-					}
-					triggered_desc = {
-						trigger = {
-							scope:secondary_actor = scope:actor
-							scope:secondary_recipient = scope:recipient
-						}
-						desc = BETROTHAL_NOTIFICATION_BOTH_PERSONAL
-					}
-					triggered_desc = {
-						trigger = {
-							scope:secondary_actor = scope:actor
-						}
-						desc = BETROTHAL_NOTIFICATION_ACTOR_PERSONAL
-					}
-					triggered_desc = {
-						trigger = {
-							scope:secondary_recipient = scope:recipient
-						}
-						desc = BETROTHAL_NOTIFICATION_RECIPIENT_PERSONAL
-					}
-					desc = BETROTHAL_NOTIFICATION
-				}
-			}
-		}
-	}
-}

@@ -43,15 +43,9 @@ skonester_legend_master_clear_owned_legends_effect = {
       remove_character_modifier = skonester_legend_master_spread_cheat_modifier
       remove_character_modifier = legend_spread_debug_modifier
     }
-    while = {
-      limit = {
-        any_legend = { legend_owner = scope:skonester_legend_clear_victim }
-      }
-      random_legend = {
-        limit = { legend_owner = scope:skonester_legend_clear_victim }
-        destroy_legend = yes
-      }
-    }
+    # CK3 1.20: there is no effect that deletes a legend (destroy_legend never existed), so this loop could never
+    # finish and ran to the engine's iteration cap on every click. stop_promoting_legend above is what the game
+    # offers: the legend stops spreading from this character.
     scope:actor = {
       send_interface_toast = {
         type = event_toast_effect_good
@@ -432,7 +426,7 @@ skonester_legend_master_add_fate_weaver_effect = {
       quality = mythical
       chronicle = divine_intervention
       properties = {
-        god = scope:skonester_cheat_menu_target.faith.high_god_name
+        god = flag:the_angels # CK3 1.20: god takes a flag (loc key); faith.high_god_name is not a link
       }
     }
     skonester_legend_master_finalize_new_legend_effect = yes
@@ -444,9 +438,10 @@ skonester_legend_master_add_motion_divine_effect = {
     create_legend = {
       type = holy
       quality = mythical
-      chronicle = motion_divine
+      # CK3 1.20: there is no motion_divine chronicle; sacred_birth ("born under divine signs") fits Divine Avatar
+      chronicle = sacred_birth
       properties = {
-        god = scope:skonester_cheat_menu_target.faith.high_god_name
+        reason = flag:auspicious
       }
     }
     skonester_legend_master_finalize_new_legend_effect = yes
@@ -460,7 +455,7 @@ skonester_legend_master_add_divine_blood_effect = {
       quality = mythical
       chronicle = godly_descent
       properties = {
-        god = scope:skonester_cheat_menu_target.faith.high_god_name
+        god = flag:the_angels # CK3 1.20: god takes a flag (loc key); faith.high_god_name is not a link
         title = scope:skonester_cheat_menu_target.primary_title
       }
     }
@@ -578,7 +573,7 @@ skonester_legend_master_add_seed_red_hand_ulster_effect = {
       chronicle = ancestral_glory
       properties = {
         ancestor = character:7255
-        title = title:k_ulster
+        title = title:d_ulster # CK3 1.20: k_ulster no longer exists; the duchy does
       }
     }
     skonester_legend_master_finalize_new_legend_effect = yes

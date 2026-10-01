@@ -10,3 +10,10 @@ skonester_steal_next_page_min_total_value = {
   add = 1
   multiply = 3
 }
+
+# CK3 1.20 cleanup: the artifact modify picker (skonester_artifact_craft_gui.8001) pages through this value, but it
+# was never defined. Same shape as skonester_steal_page_offset_value: three artifacts per page.
+skonester_acm_modify_page_offset_value = {
+  value = var:skonester_acm_modify_page
+  multiply = 3
+}

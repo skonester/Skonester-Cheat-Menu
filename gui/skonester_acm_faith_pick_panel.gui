@@ -141,7 +141,7 @@ types skonesterAcmFaithPickPanelTypes
     onclick = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_hide').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
     onclick = "[PdxGuiTriggerAllAnimations('faith_view_refresh')]"
     down = "[Faith.HasDoctrine( DoctrineType.Self )]"
-    using = tooltip_ne
+    using = tooltip_es # this list sits left of the faith window; open the tooltip to its right, not over the choices
     tooltip = "skonester_acm_faith_doctrine_select_tt"
 
     icon_doctrine = {
@@ -185,7 +185,7 @@ types skonesterAcmFaithPickPanelTypes
     onclick = "[GetScriptedGui('skonester_acm_faith_pick_sidebar_hide').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
     onclick = "[PdxGuiTriggerAllAnimations('faith_view_refresh')]"
     down = "[Faith.GetMainRite.HasTenet( TenetType.Self )]"
-    using = tooltip_ne
+    using = tooltip_es # this list sits left of the faith window; open the tooltip to its right, not over the choices
     tooltip = "FAITH_WINDOW_TENET_TOOLTIP"
 
     widget = {

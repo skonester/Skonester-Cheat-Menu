@@ -14,7 +14,7 @@
         hegemony = 0
     }
 
-    major = no
+    # CK3 1.20: decisions have no `major` field (decision_group_type decides). major = no
 
     is_shown = {
         is_ai = no
@@ -117,7 +117,8 @@ zhuge_huangzu_add = {
 		has_character_flag = zhuge_juese_menu_01
 		NOT = { has_character_modifier = zhuge_huangzu }
 		NOT = { has_global_variable = zhuge_has_guoxi1 }
-		NOT = {has_artifact_modifier = zhuge_huangzu_baowu}
+		# CK3 1.20: has_artifact_modifier is an artifact trigger; check the character's artifacts.
+		NOT = { any_character_artifact = { has_artifact_modifier = zhuge_huangzu_baowu } }
 	}
 
 	effect = {
@@ -128,11 +129,13 @@ zhuge_huangzu_add = {
 			faith = faith:orthodox
 			age = 35 
 			dynasty = none
-			is_female = yes
-			09.08.19 = { birth = yes }
-			sexuality = heterosexual
+			# CK3 1.20: is_female, a history date block, sexuality and historical are character-history keys,
+			# not create_character parameters; gender_female_chance = 100 already makes her female.
+			# is_female = yes
+			# 09.08.19 = { birth = yes }
+			# sexuality = heterosexual
+			# historical = no
 			gender_female_chance = 100
-			historical = no
 			random_traits = no
 			trait = saint
 			martial = 5
@@ -214,7 +217,7 @@ change_sansi_government = {
 		}
     }
     ai_check_interval = 0
-    ai_will_do = 0
+    ai_will_do = { base = 0 }  # CK3 1.20: was `ai_will_do = 0`
 }
 
 start_searching_for_water_of_life_decision = {
@@ -224,10 +227,14 @@ start_searching_for_water_of_life_decision = {
     ai_check_interval = 0
 	decision_group_type = skonester_realm_tools
 	
+	# CK3 1.20: merged two is_shown blocks; only the first one was being read.
 	is_shown = {
 		is_ai = no
 		has_character_flag = daddy_pika_cheat_menu
 		has_character_flag = zhuge_juese_menu_01
+		is_landed = yes
+		is_available_adult = yes
+		NOT = { has_trait = water_of_life }
 	}
 
     cost = {
@@ -235,12 +242,6 @@ start_searching_for_water_of_life_decision = {
     }
 
     cooldown = { years = 999 }
-
-    is_shown = {
-        is_landed = yes
-        is_available_adult = yes
-        NOT = { has_trait = water_of_life }
-    }
 
     is_valid = {
         NOT = { has_character_flag = skonester_water_of_life_in_progress }
@@ -277,7 +278,7 @@ start_searching_for_water_of_life_decision = {
         custom_tooltip = start_searching_for_water_of_life_decision_proceed
     }
 
-    ai_potential = 0
+    ai_potential = { always = no }  # CK3 1.20: was `ai_potential = 0`
     ai_will_do = {
         base = 0
     }

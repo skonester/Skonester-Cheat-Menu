@@ -49,7 +49,7 @@ change_Realm_succession_law_mod.1001 = {
 		}
 	}
 	option = {
-		name = "Unlock Innovation"
+		name = rse_mod_unlock_innovation
 		trigger_event = change_Realm_succession_law_mod.1010
 		trigger = {
 			nand = {
@@ -523,10 +523,10 @@ change_Realm_succession_law_mod.1009 = {
 change_Realm_succession_law_mod.1010 = {
 	type = character_event
 	theme = default
-	title = "Innovation"
-	desc = "Unlock Innovation"
+	title = rse_mod_innovation_t
+	desc = rse_mod_unlock_innovation
 	option = {
-		name = "Hereditary Rule"
+		name = innovation_hereditary_rule
 		trigger = {
 			not = {
 				root.culture = {
@@ -539,7 +539,7 @@ change_Realm_succession_law_mod.1010 = {
 		}
 	}
 	option = {
-		name = "Heraldry"
+		name = innovation_heraldry
 		trigger = {
 			not = {
 				root.culture = {
@@ -552,7 +552,7 @@ change_Realm_succession_law_mod.1010 = {
 		}
 	}
 	option = {
-		name = "Primogeniture"
+		name = innovation_primogeniture
 		trigger = {
 			not = {
 				root.culture = {
@@ -565,7 +565,7 @@ change_Realm_succession_law_mod.1010 = {
 		}
 	}
 	option = {
-		name = "Theme System"
+		name = rse_mod_theme_system
 		trigger = {
 			not = {
 				root.culture = {
@@ -578,6 +578,6 @@ change_Realm_succession_law_mod.1010 = {
 		}
 	}
 	option = {
-		name = "Close"
+		name = rse_mod_close
 	}
 }

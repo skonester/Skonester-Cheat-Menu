@@ -1,0 +1,4 @@
+﻿l_russian:
+ # CK3 1.20: tocmod debug copies of the vanilla prison interactions, renamed so they no longer replace vanilla
+ tocmod_castrate_interaction:0 "$castrate_interaction$"
+ tocmod_blind_interaction:0 "$blind_interaction$"

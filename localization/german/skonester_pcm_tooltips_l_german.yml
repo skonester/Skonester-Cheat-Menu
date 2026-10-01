@@ -1,0 +1,4 @@
+﻿l_german:
+ # CK3 1.20: these were raw-text custom_tooltip strings in common/decisions/pcm_decisions.txt
+ pcm_artifact_cheat_tt:0 "Du erhältst Hof- und persönliche Artefakte, die dein Reich stärken."
+ pcm_culture_cheat_tt:0 "Deine Kultur übernimmt viele Traditionen. Widersprüchliche Traditionen werden zuerst entfernt."

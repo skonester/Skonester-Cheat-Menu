@@ -8,7 +8,7 @@
  CH_CONVERT_HOLDING_DECISION_SELECT_CAPITAL:1 "Выбрать владение"
  CH_SELECT_HOLDING_TITLE:1 "Выбор владения"
  CH_SELECT_HOLDING_NO_TITLES:0 "Нет доступных владений"
- CH_SELECT_HOLDING_TOOLTIP:0 "#T [Select_CString( DecisionViewWidgetCreateHolyOrder.HasValidBaronies, '$CH_SELECT_HOLDING_TITLE$', '$CH_SELECT_HOLDING_NO_TITLES$' )] #!"
+ CH_SELECT_HOLDING_TOOLTIP:0 "#T [Select_CString( DecisionViewWidgetSelectBarony.HasValidTitles, '$CH_SELECT_HOLDING_TITLE$', '$CH_SELECT_HOLDING_NO_TITLES$' )] #!"
  CH_SELECT_HOLDING_CONFIRM:0 "Выбрать"
 
  ch_convert_holding_to_castle_decision:0 "Преобразовать владение в замок"

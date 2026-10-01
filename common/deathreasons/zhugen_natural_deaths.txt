@@ -4,7 +4,7 @@
 	}
 	priority = 1
 	icon = "death_disease.dds"
-	death_reason = "$zhuge_boost_gy$"
+	# CK3 1.20: not a death-reason field; the loc key is the death reason's own key. death_reason = "$zhuge_boost_gy$"
 }
 
 death_zhuge_kill_02 = {
@@ -13,5 +13,5 @@ death_zhuge_kill_02 = {
 	}
 	priority = 2 
 	icon = "death_natural.dds"
-	death_reason = "$death_zhuge_kill_02$"
+	# CK3 1.20: not a death-reason field; the loc key is the death reason's own key. death_reason = "$death_zhuge_kill_02$"
 }

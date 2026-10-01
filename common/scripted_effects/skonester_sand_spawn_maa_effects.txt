@@ -149,6 +149,15 @@ skonester_sand_set_stack_from_pick_effect = {
   }
   else_if = {
     limit = {
+      var:skonester_sand_maa_pick = flag:order_knights
+    }
+    set_variable = {
+      name = skonester_sand_maa_stack
+      value = 50
+    }
+  }
+  else_if = {
+    limit = {
       var:skonester_sand_maa_pick = flag:warrior_monks
     }
     set_variable = {
@@ -2266,6 +2275,14 @@ skonester_sand_spawn_from_player_pick_effect = {
       }
       scope:skonester_sand_spawn_tgt = {
         skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = order_serjeants }
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_sand_player = { var:skonester_sand_maa_pick = flag:order_knights }
+      }
+      scope:skonester_sand_spawn_tgt = {
+        skonester_sand_spawn_maa_at_staged_scale_effect = { TYPE = order_knights }
       }
     }
     else_if = {

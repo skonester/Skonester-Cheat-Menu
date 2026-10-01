@@ -5,11 +5,12 @@
 # ───────────────────────────────────────────
 zhuge_bloodline_god.0001 = {
     type = character_event
-    hide_window = yes          # 不弹窗
+    hidden = yes          # 不弹窗 (CK3 1.20: was hide_window)
     trigger = {
-        is_baby = yes
+        # CK3 1.20: is_baby is not a trigger, and requiring is_male and is_female together meant this never fired.
+        # The bloodline traits pass only to sons (child_inheritance_sex / valid_sex = male).
+        age < 1
         is_male = yes
-		is_female = yes
         father = { has_trait = bloodline_god_3 }
         NOT = { has_trait = bloodline_god_3 }  # 避免重复赋值
     }
@@ -26,13 +27,14 @@ zhuge_bloodline_god.0001 = {
 # ───────────────────────────────────────────
 zhuge_bloodline_god.0002 = {
     type = character_event
-    hide_window = yes
+    hidden = yes          # CK3 1.20: was hide_window
     trigger = {
-        is_baby = yes
+        # CK3 1.20: is_baby is not a trigger, and requiring is_male and is_female together meant this never fired.
+        # The bloodline traits pass only to sons (child_inheritance_sex / valid_sex = male).
+        age < 1
         is_male = yes
-		is_female = yes
         father = { has_trait = bloodline_god_2 }
-        NOT = {
+        NOR = {  # CK3 1.20: was NOT, which only skipped characters holding both traits
             has_trait = bloodline_god_3   # 前面事件可能已赋
             has_trait = bloodline_god_2
         }

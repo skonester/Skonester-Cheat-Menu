@@ -9,8 +9,8 @@ trait_nether_conspiracy_lord = {
   birth = 0
   random_creation = 0
   genetic = no
-  congenital = no
-  education = no
+  # CK3 1.20: `congenital` is not a trait field (category decides). congenital = no
+  # CK3 1.20: `education` is not a trait field (category decides). education = no
 
   category = fame
 
@@ -42,7 +42,7 @@ trait_nether_conspiracy_lord = {
   enemy_scheme_secrecy_add = -999
 
   # 计谋阻力
-  intrigue_scheme_resistance = 999
+  enemy_hostile_scheme_success_chance_add = -999 # CK3 1.20: was intrigue_scheme_resistance = 999
   enemy_hostile_scheme_success_chance_add = -999 # was scheme_resistance (scheme-only modifier)
 
   max_hostile_schemes_add = 10

@@ -1,0 +1,4 @@
+﻿l_english:
+ # CK3 1.20: these were raw-text custom_tooltip strings in common/decisions/pcm_decisions.txt
+ pcm_artifact_cheat_tt:0 "You receive court and personal artifacts to bolster your realm."
+ pcm_culture_cheat_tt:0 "Your culture takes on a large set of traditions. Conflicting traditions are removed first."

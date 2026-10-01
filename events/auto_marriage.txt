@@ -70,7 +70,7 @@ auto_marriage.0001 = {
 							is_adult = yes
 							is_visibly_fertile = yes
 						}
-						is_child = yes #Don't want to prematurely marry off a 16 year old if a 15 year old relative is available
+						is_adult = no # CK3 1.20: was is_child = yes (not a trigger). Don't want to prematurely marry off a 16 year old if a 15 year old relative is available
 					}
 					OR = {
 						AND = {
@@ -190,7 +190,7 @@ auto_marriage.0002 = {
 							is_adult = yes
 							is_visibly_fertile = yes
 						}
-						is_child = yes #Don't want to prematurely marry off a 16 year old if a 15 year old relative is available
+						is_adult = no # CK3 1.20: was is_child = yes (not a trigger). Don't want to prematurely marry off a 16 year old if a 15 year old relative is available
 					}
 					OR = {
 						AND = {
@@ -511,7 +511,7 @@ auto_marriage.0006 = { #These are obviously very cheaty and make the already tri
 							is_adult = yes
 							is_visibly_fertile = yes
 						}
-						is_child = yes #Don't want to prematurely marry off a 16 year old if a 15 year old relative is available
+						is_adult = no # CK3 1.20: was is_child = yes (not a trigger). Don't want to prematurely marry off a 16 year old if a 15 year old relative is available
 					}
 					OR = {
 						AND = {
@@ -721,7 +721,7 @@ auto_marriage.0007 = {
 							is_adult = yes
 							is_visibly_fertile = yes
 						}
-						is_child = yes #Don't want to prematurely marry off a 16 year old if a 15 year old relative is available
+						is_adult = no # CK3 1.20: was is_child = yes (not a trigger). Don't want to prematurely marry off a 16 year old if a 15 year old relative is available
 					}
 					OR = {
 						AND = {

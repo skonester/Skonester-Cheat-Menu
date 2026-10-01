@@ -4,7 +4,7 @@ skonester_legend_master.0001 = {
   type = character_event
   title = skonester_legend_master.0001.t
   desc = skonester_legend_master.0001.desc
-  theme = fame
+  theme = legend
   override_background = { reference = study }
   immediate = { skonester_cheat_menu_sync_target_effect = yes }
   right_portrait = scope:skonester_cheat_menu_target
@@ -46,7 +46,7 @@ skonester_legend_master.0002 = {
   type = character_event
   title = skonester_legend_master.0001.t
   desc = skonester_legend_master.0002.desc
-  theme = fame
+  theme = legend
   override_background = { reference = study }
   immediate = { skonester_cheat_menu_sync_target_effect = yes }
   right_portrait = scope:skonester_cheat_menu_target
@@ -77,7 +77,7 @@ skonester_legend_master.0010 = {
   type = character_event
   title = skonester_legend_master.0010.t
   desc = skonester_legend_master.category_desc
-  theme = fame
+  theme = legend
   override_background = { reference = study }
   immediate = { skonester_cheat_menu_sync_target_effect = yes }
   right_portrait = scope:skonester_cheat_menu_target
@@ -120,7 +120,7 @@ skonester_legend_master.0020 = {
   type = character_event
   title = skonester_legend_master.0020.t
   desc = skonester_legend_master.category_desc
-  theme = fame
+  theme = legend
   override_background = { reference = study }
   immediate = { skonester_cheat_menu_sync_target_effect = yes }
   right_portrait = scope:skonester_cheat_menu_target
@@ -184,7 +184,7 @@ skonester_legend_master.0030 = {
   type = character_event
   title = skonester_legend_master.0030.t
   desc = skonester_legend_master.category_desc
-  theme = fame
+  theme = legend
   override_background = { reference = study }
   immediate = { skonester_cheat_menu_sync_target_effect = yes }
   right_portrait = scope:skonester_cheat_menu_target
@@ -234,7 +234,7 @@ skonester_legend_master.0040 = {
   type = character_event
   title = skonester_legend_master.0040.t
   desc = skonester_legend_master.category_desc
-  theme = fame
+  theme = legend
   override_background = { reference = study }
   immediate = { skonester_cheat_menu_sync_target_effect = yes }
   right_portrait = scope:skonester_cheat_menu_target
@@ -270,7 +270,7 @@ skonester_legend_master.0050 = {
   type = character_event
   title = skonester_legend_master.0050.t
   desc = skonester_legend_master.category_desc
-  theme = fame
+  theme = legend
   override_background = { reference = study }
   immediate = { skonester_cheat_menu_sync_target_effect = yes }
   right_portrait = scope:skonester_cheat_menu_target
@@ -334,7 +334,7 @@ skonester_legend_master.0060 = {
   type = character_event
   title = skonester_legend_master.0060.t
   desc = skonester_legend_master.category_desc
-  theme = fame
+  theme = legend
   override_background = { reference = study }
   immediate = { skonester_cheat_menu_sync_target_effect = yes }
   right_portrait = scope:skonester_cheat_menu_target
@@ -398,7 +398,7 @@ skonester_legend_master.0070 = {
   type = character_event
   title = skonester_legend_master.0070.t
   desc = skonester_legend_master.category_desc
-  theme = fame
+  theme = legend
   override_background = { reference = study }
   immediate = { skonester_cheat_menu_sync_target_effect = yes }
   right_portrait = scope:skonester_cheat_menu_target
@@ -466,7 +466,7 @@ skonester_legend_master.0071 = {
   type = character_event
   title = skonester_legend_master.0070.t
   desc = skonester_legend_master.category_desc
-  theme = fame
+  theme = legend
   override_background = { reference = study }
   immediate = { skonester_cheat_menu_sync_target_effect = yes }
   right_portrait = scope:skonester_cheat_menu_target
@@ -520,7 +520,7 @@ skonester_legend_master.0902 = {
   type = character_event
   title = skonester_legend_master.0902.t
   desc = skonester_legend_master.spread_speed_desc
-  theme = fame
+  theme = legend
   override_background = { reference = study }
   immediate = { skonester_cheat_menu_sync_target_effect = yes }
   right_portrait = scope:skonester_cheat_menu_target

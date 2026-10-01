@@ -1,15 +1,15 @@
 ﻿# Imperial Power Enhancement
 boost_hufu = {
     index = 601
-    charinfo = yes 
-    instabuild = yes
+    # CK3 1.20: `charinfo` is not a trait field or modifier. charinfo = yes
+    # CK3 1.20: `instabuild` is not a trait field or modifier. instabuild = yes
     category = fame
     shown_in_ruler_designer = no                            # Trait will not appear in the ruler designer
-    is_highlighted = no                                     # Trait will not appear in any events or suggestions
-    end_schemes = yes                                       # Prevents anyone from running schemes against the player
-    can_become_fluent_in_language = yes                     # Character can become fluent in languages
+    # CK3 1.20: `is_highlighted` is not a trait field or modifier. is_highlighted = no                                     # Trait will not appear in any events or suggestions
+    # CK3 1.20: `end_schemes` is not a trait field or modifier. end_schemes = yes                                       # Prevents anyone from running schemes against the player
+    # CK3 1.20: `can_become_fluent_in_language` is not a trait field or modifier. can_become_fluent_in_language = yes                     # Character can become fluent in languages
     no_water_crossing_penalty = yes                         # No water crossing penalty
-    set_absolute_country_control = yes                      # Absolute control over domain
+    # CK3 1.20: `set_absolute_country_control` is not a trait field or modifier. set_absolute_country_control = yes                      # Absolute control over domain
     flag = conqueror_bonuses_modifier                       # Conqueror buffs
     flag = blocks_getting_non_epidemic_disease              # Blocks non-epidemic diseases
     flag = never_gains_disease                              # Reduces chance of getting diseases
@@ -49,7 +49,7 @@ boost_hufu = {
     owned_hostile_scheme_success_chance_max_add = 1000      # Maximizes hostile scheme potential cap
 
     # Scheme Discovery and Progress Adjustments
-    scheme_discovery_chance_add = 0                         # Player's schemes will never be discovered
+    # CK3 1.20: `scheme_discovery_chance_add` is not a trait field or modifier. scheme_discovery_chance_add = 0                         # Player's schemes will never be discovered
     enemy_hostile_scheme_phase_duration_add = 666           # Increases enemy scheme duration
     enemy_hostile_scheme_success_chance_add = -666          # Reduces enemy scheme success chance
 
@@ -62,9 +62,9 @@ boost_hufu = {
     monthly_influence_mult = 10                             # Influence modifier
     provisions_gain_mult = 100                              # Provisions gain bonus
 
-    ai_will_do = {
-        factor = 0
-    }
+    # CK3 1.20: `ai_will_do` is not a trait field or modifier. ai_will_do = {
+#        factor = 0
+#    }
 
     desc = {
         first_valid = {
@@ -89,7 +89,7 @@ boost_dudu1 = {
     martial = 30                                            # Martial bonus
     stewardship = 10                                        # Stewardship bonus
     intrigue = -5                                           # Intrigue penalty
-    ruler_opinion = 10                                      # Other rulers' opinion of this character
+    # CK3 1.20: `ruler_opinion` is not a trait field or modifier. ruler_opinion = 10                                      # Other rulers' opinion of this character
     vassal_opinion = 20                                     # Vassals' opinion of this character
     epidemic_resistance = 100                               # Full plague immunity
 
@@ -103,10 +103,10 @@ boost_dudu1 = {
     defender_advantage = 99                                 # Extremely high defender advantage for player's holdings
     supply_capacity_mult = 3                                # Supply capacity increased
     hostile_county_attrition = -0.66                        # Attrition in enemy territory reduced
-    men_at_arms_muster_speed_mult = 6                       # Army muster speed increased
+    # CK3 1.20: `men_at_arms_muster_speed_mult` is not a trait field or modifier. men_at_arms_muster_speed_mult = 6                       # Army muster speed increased
 
     genetic = no
-    good = yes 
+    # CK3 1.20: `good` only applies to genetic traits. good = yes
 
     desc = {
         first_valid = {
@@ -125,12 +125,12 @@ boost_dudu1 = {
 boost_xueshi1 = {
     index = 603
     ruler_designer_cost = 66                                # Ruler designer cost
-    learning_gain_mult = 1.5                                # Learning gain multiplier
+    # CK3 1.20: `learning_gain_mult` is not a trait field or modifier. learning_gain_mult = 1.5                                # Learning gain multiplier
     diplomacy = 10                                          # Diplomacy bonus
     stewardship = 10                                        # Stewardship bonus
     intrigue = 10                                           # Intrigue bonus
     learning = 30                                           # Learning bonus
-    ruler_opinion = 20                                      # Other rulers' opinion of this character
+    # CK3 1.20: `ruler_opinion` is not a trait field or modifier. ruler_opinion = 20                                      # Other rulers' opinion of this character
     vassal_opinion = 25                                     # Vassals' opinion of this character
     max_contract_schemes_add = 20                           # Maximum contract schemes increased
     contract_scheme_phase_duration_add = -1000              # Contract scheme phase duration greatly reduced
@@ -141,7 +141,7 @@ boost_xueshi1 = {
     tyranny_gain_mult = -1                                  # Tyranny gain reduced
 
     genetic = no
-    good = yes
+    # CK3 1.20: `good` only applies to genetic traits. good = yes
 
     desc = {
         first_valid = {
@@ -160,11 +160,11 @@ boost_xueshi1 = {
 plague_immunity = { 
     index = 605
     genetic = no
-    good = yes
+    # CK3 1.20: `good` only applies to genetic traits. good = yes
 
     stewardship = 10	
-    inheritability = 0.8
-    male = yes                                              # Only inheritable by males
+    inherit_chance = 80  # CK3 1.20: was `inheritability = 0.8`
+    child_inheritance_sex = male  # CK3 1.20: was `male = yes`
     shown_in_ruler_designer = no
     epidemic_resistance = 100       
 
@@ -205,7 +205,7 @@ zhuge_kill_02 = {
     flag = blocks_getting_non_epidemic_disease
 
     genetic = no
-    good = yes
+    # CK3 1.20: `good` is not a trait field or modifier. good = yes
 
     desc = {
         first_valid = {
@@ -227,9 +227,9 @@ zhuge_ymbuff_01 = {
     domain_limit = 10
     domain_limit_min = 1
     domain_limit_max = 94
-    margin_right = 0
+    # CK3 1.20: `margin_right` is not a trait field or modifier. margin_right = 0
 
-    uses_county_fertility = yes
+    # CK3 1.20: `uses_county_fertility` is not a trait field or modifier. uses_county_fertility = yes
     county_fertility_growth_mult = 1
     county_fertility_growth_add = 666
     character_capital_monthly_county_fertility_growth_add = 100
@@ -242,7 +242,7 @@ zhuge_ymbuff_01 = {
     oasis_fertility_growth_mult = 1
     steppe_fertility_growth_mult = 1
 
-    good = yes
+    # CK3 1.20: `good` is not a trait field or modifier. good = yes
 
     desc = {
         first_valid = {

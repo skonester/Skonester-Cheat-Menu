@@ -31,3 +31,37 @@ skonester_on_mts_faith_creation = {
     remove_tenet = tenet_zz_empty_20
   }
 }
+
+# CK3 1.20: players can also create a new Rite inside an existing faith, which fires on_rite_created
+# (ROOT = the creating character, `rite` = the new rite) instead of on_faith_created. Clear the placeholder
+# tenets from that rite too. remove_rite_tenet is the rite-scope version of remove_tenet.
+on_rite_created = {
+  on_actions = { skonester_on_mts_rite_creation }
+}
+
+skonester_on_mts_rite_creation = {
+  effect = {
+    rite ?= {
+      if = { limit = { rite_has_tenet = tenet_zz_empty_1 } remove_rite_tenet = tenet:tenet_zz_empty_1 }
+      if = { limit = { rite_has_tenet = tenet_zz_empty_2 } remove_rite_tenet = tenet:tenet_zz_empty_2 }
+      if = { limit = { rite_has_tenet = tenet_zz_empty_3 } remove_rite_tenet = tenet:tenet_zz_empty_3 }
+      if = { limit = { rite_has_tenet = tenet_zz_empty_4 } remove_rite_tenet = tenet:tenet_zz_empty_4 }
+      if = { limit = { rite_has_tenet = tenet_zz_empty_5 } remove_rite_tenet = tenet:tenet_zz_empty_5 }
+      if = { limit = { rite_has_tenet = tenet_zz_empty_6 } remove_rite_tenet = tenet:tenet_zz_empty_6 }
+      if = { limit = { rite_has_tenet = tenet_zz_empty_7 } remove_rite_tenet = tenet:tenet_zz_empty_7 }
+      if = { limit = { rite_has_tenet = tenet_zz_empty_8 } remove_rite_tenet = tenet:tenet_zz_empty_8 }
+      if = { limit = { rite_has_tenet = tenet_zz_empty_9 } remove_rite_tenet = tenet:tenet_zz_empty_9 }
+      if = { limit = { rite_has_tenet = tenet_zz_empty_10 } remove_rite_tenet = tenet:tenet_zz_empty_10 }
+      if = { limit = { rite_has_tenet = tenet_zz_empty_11 } remove_rite_tenet = tenet:tenet_zz_empty_11 }
+      if = { limit = { rite_has_tenet = tenet_zz_empty_12 } remove_rite_tenet = tenet:tenet_zz_empty_12 }
+      if = { limit = { rite_has_tenet = tenet_zz_empty_13 } remove_rite_tenet = tenet:tenet_zz_empty_13 }
+      if = { limit = { rite_has_tenet = tenet_zz_empty_14 } remove_rite_tenet = tenet:tenet_zz_empty_14 }
+      if = { limit = { rite_has_tenet = tenet_zz_empty_15 } remove_rite_tenet = tenet:tenet_zz_empty_15 }
+      if = { limit = { rite_has_tenet = tenet_zz_empty_16 } remove_rite_tenet = tenet:tenet_zz_empty_16 }
+      if = { limit = { rite_has_tenet = tenet_zz_empty_17 } remove_rite_tenet = tenet:tenet_zz_empty_17 }
+      if = { limit = { rite_has_tenet = tenet_zz_empty_18 } remove_rite_tenet = tenet:tenet_zz_empty_18 }
+      if = { limit = { rite_has_tenet = tenet_zz_empty_19 } remove_rite_tenet = tenet:tenet_zz_empty_19 }
+      if = { limit = { rite_has_tenet = tenet_zz_empty_20 } remove_rite_tenet = tenet:tenet_zz_empty_20 }
+    }
+  }
+}

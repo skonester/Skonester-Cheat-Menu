@@ -1,0 +1,9 @@
+﻿l_russian:
+ # CK3 1.20: translated from the English file of the same name (template-based).
+ # CK3 1.20 removed these Sunni theological schools; the Cheat Menu faith pickers now convert to Sunni for them.
+ ashari:0 "Суннизм (Ash'ari)"
+ maturidi:0 "Суннизм (Maturidi)"
+ mutazila:0 "Суннизм (Mu'tazila)"
+ muwalladi:0 "Суннизм (Muwalladi)"
+ # change_fervor requires a desc (history/tooltip text)
+ skonester_fervor_gain_cheat:0 "Чит-меню"

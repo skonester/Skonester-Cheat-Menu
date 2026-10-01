@@ -3096,33 +3096,31 @@ skonester_domicile_finish_internals_after_preset_effect = {
 # --- 移除外槽（链式降级 + 原版随机拆除扫尾；不触碰主宅与内建）---
 skonester_domicile_clear_external_estate_buildings_effect = {
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = grain_field }
+  skonester_domicile_clear_external_branch_chain_fully_effect = { CHAIN = workshop_carpenter FIRST = 03 HELPER = 2_6 }
+  skonester_domicile_clear_external_branch_chain_fully_effect = { CHAIN = workshop_mason FIRST = 03 HELPER = 2_6 }
+  skonester_domicile_clear_external_branch_chain_fully_effect = { CHAIN = workshop_textile FIRST = 03 HELPER = 2_6 }
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = workshop }
-  skonester_domicile_clear_external_chain_fully_effect = { CHAIN = workshop_carpenter }
-  skonester_domicile_clear_external_chain_fully_effect = { CHAIN = workshop_mason }
-  skonester_domicile_clear_external_chain_fully_effect = { CHAIN = workshop_textile }
+  skonester_domicile_clear_external_branch_chain_fully_effect = { CHAIN = storage_warehouse FIRST = 03 HELPER = 2_4 }
+  skonester_domicile_clear_external_branch_chain_fully_effect = { CHAIN = storage_granary FIRST = 03 HELPER = 2_4 }
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = storage }
-  skonester_domicile_clear_external_chain_fully_effect = { CHAIN = storage_warehouse }
-  skonester_domicile_clear_external_chain_fully_effect = { CHAIN = storage_granary }
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = market }
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = tea }
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = vineyard }
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = olive }
+  skonester_domicile_clear_external_branch_chain_fully_effect = { CHAIN = stable_grand FIRST = 04 HELPER = 3_6 }
+  skonester_domicile_clear_external_branch_chain_fully_effect = { CHAIN = stable_kennel FIRST = 04 HELPER = 3_6 }
+  skonester_domicile_clear_external_branch_chain_fully_effect = { CHAIN = stable_chariot FIRST = 04 HELPER = 3_6 }
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = stable }
-  skonester_domicile_clear_external_chain_fully_effect = { CHAIN = stable_grand }
-  skonester_domicile_clear_external_chain_fully_effect = { CHAIN = stable_kennel }
-  skonester_domicile_clear_external_chain_fully_effect = { CHAIN = stable_chariot }
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = guardhouse }
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = barracks }
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = watchtower }
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = grazing_land }
+  skonester_domicile_clear_external_branch_chain_fully_effect = { CHAIN = garden_leisure FIRST = 04 HELPER = 3_6 }
+  skonester_domicile_clear_external_branch_chain_fully_effect = { CHAIN = garden_fruit FIRST = 04 HELPER = 3_6 }
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = garden }
-  skonester_domicile_clear_external_chain_fully_effect = { CHAIN = garden_leisure }
-  skonester_domicile_clear_external_chain_fully_effect = { CHAIN = garden_fruit }
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = rice_field }
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = silk }
-  skonester_domicile_clear_external_chain_fully_effect = { CHAIN = health }
-  skonester_domicile_clear_external_chain_fully_effect = { CHAIN = courier_posthouse }
-  skonester_domicile_clear_external_chain_fully_effect = { CHAIN = night_watch }
+  # CK3 1.20: health / courier_posthouse / night_watch only exist as east_asian_estate_* buildings
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = temple_small }
   skonester_domicile_clear_external_estate_sweep_effect = yes
 }
@@ -3168,19 +3166,19 @@ skonester_domicile_clear_external_east_asian_estate_buildings_effect = {
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = east_asian_estate_watchtower }
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = east_asian_estate_grazing_land }
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = east_asian_estate_gate }
+  skonester_domicile_clear_external_branch_chain_fully_effect = { CHAIN = east_asian_estate_garden_leisure FIRST = 04 HELPER = 3_6 }
+  skonester_domicile_clear_external_branch_chain_fully_effect = { CHAIN = east_asian_estate_garden_fruit FIRST = 04 HELPER = 3_6 }
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = east_asian_estate_garden }
-  skonester_domicile_clear_external_chain_fully_effect = { CHAIN = east_asian_estate_garden_leisure }
-  skonester_domicile_clear_external_chain_fully_effect = { CHAIN = east_asian_estate_garden_fruit }
+  skonester_domicile_clear_external_branch_chain_fully_effect = { CHAIN = east_asian_estate_stable_grand FIRST = 04 HELPER = 3_6 }
+  skonester_domicile_clear_external_branch_chain_fully_effect = { CHAIN = east_asian_estate_stable_kennel FIRST = 04 HELPER = 3_6 }
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = east_asian_estate_stable }
-  skonester_domicile_clear_external_chain_fully_effect = { CHAIN = east_asian_estate_stable_grand }
-  skonester_domicile_clear_external_chain_fully_effect = { CHAIN = east_asian_estate_stable_kennel }
+  skonester_domicile_clear_external_branch_chain_fully_effect = { CHAIN = east_asian_estate_workshop_carpenter FIRST = 03 HELPER = 2_6 }
+  skonester_domicile_clear_external_branch_chain_fully_effect = { CHAIN = east_asian_estate_workshop_mason FIRST = 03 HELPER = 2_6 }
+  skonester_domicile_clear_external_branch_chain_fully_effect = { CHAIN = east_asian_estate_workshop_textile FIRST = 03 HELPER = 2_6 }
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = east_asian_estate_workshop }
-  skonester_domicile_clear_external_chain_fully_effect = { CHAIN = east_asian_estate_workshop_carpenter }
-  skonester_domicile_clear_external_chain_fully_effect = { CHAIN = east_asian_estate_workshop_mason }
-  skonester_domicile_clear_external_chain_fully_effect = { CHAIN = east_asian_estate_workshop_textile }
+  skonester_domicile_clear_external_branch_chain_fully_effect = { CHAIN = east_asian_estate_storage_warehouse FIRST = 03 HELPER = 2_6 }
+  skonester_domicile_clear_external_branch_chain_fully_effect = { CHAIN = east_asian_estate_storage_granary FIRST = 03 HELPER = 2_6 }
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = east_asian_estate_storage }
-  skonester_domicile_clear_external_chain_fully_effect = { CHAIN = east_asian_estate_storage_warehouse }
-  skonester_domicile_clear_external_chain_fully_effect = { CHAIN = east_asian_estate_storage_granary }
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = east_asian_estate_courier_posthouse }
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = east_asian_estate_vintner_halls }
   skonester_domicile_clear_external_chain_fully_effect = { CHAIN = east_asian_estate_wine_press }
@@ -3262,6 +3260,18 @@ skonester_domicile_clear_external_chain_fully_effect = {
     count = 12
     limit = { has_domicile_building_or_higher = $CHAIN$_01 }
     destroy_or_downgrade_estate_building_6_effect = { BUILDING = $CHAIN$ }
+  }
+}
+
+# CK3 1.20: branch chains (e.g. workshop_textile, stable_kennel) start at tier 03 or 04, splitting off their
+# base chain, so there is no $CHAIN$_01. Step them down with vanilla's matching replacement helper
+# (2_4 = tiers 03-04, 2_6 = 03-06, 3_6 = 04-06); the last step reverts to the base chain, which the caller
+# clears next. Call these before the base chain.
+skonester_domicile_clear_external_branch_chain_fully_effect = {
+  while = {
+    count = 6
+    limit = { has_domicile_building_or_higher = $CHAIN$_$FIRST$ }
+    destroy_or_downgrade_estate_building_$HELPER$_replacement_effect = { BUILDING = $CHAIN$ }
   }
 }
 

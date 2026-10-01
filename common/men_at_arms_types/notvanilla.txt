@@ -16,7 +16,7 @@
 		hills = { damage = 30 toughness = 25 screen = 20 }
 		mountains = { damage = 20 toughness = 30 screen = 40 }
 		desert_mountains = { damage = 25 toughness = 25 screen = 30 }    
-		hills_with_terraces = { damage = 28 toughness = 28 screen = 25 } 
+		terraced_hills = { damage = 28 toughness = 28 screen = 25 } # CK3 1.20: was hills_with_terraces
 		forest = { damage = 25 screen = 30 pursuit = 20 }
 		jungle = { damage = 20 screen = 40 pursuit = 15 }
 		taiga = { screen = 25 toughness = 20 }
@@ -24,8 +24,8 @@
 		desert = { pursuit = 40 toughness = 15 }
 		oasis = { toughness = 30 screen = 20 }                           
 		floodplains = { pursuit = -20 screen = 25 }                      
-		floodplains_dry = { pursuit = 25 }                               
-		floodplains_wet = { pursuit = -25 screen = 30 }                  
+		# CK3 1.20: no such terrain. floodplains_dry = { pursuit = 25 }
+		# CK3 1.20: no such terrain. floodplains_wet = { pursuit = -25 screen = 30 }
 	}
 
 	counters = {
@@ -50,7 +50,7 @@
 	high_maintenance_cost = { gold = 0 }
 	max_sub_regiments = 40
 	stack = 500
-	ai_will_do = { factor = 0 }
+	# CK3 1.20: not an MAA field (ai_quality is); can_recruit already blocks the AI. ai_will_do = { factor = 0 }
 	icon = house_guard
 }
 
@@ -82,6 +82,6 @@ house_cavalry_type = {
 	high_maintenance_cost = { gold = 0 }
 	max_sub_regiments = 40
 	stack = 200
-	ai_will_do = { factor = 0 }
+	# CK3 1.20: not an MAA field (ai_quality is); can_recruit already blocks the AI. ai_will_do = { factor = 0 }
 	icon = house_cavalry
 }

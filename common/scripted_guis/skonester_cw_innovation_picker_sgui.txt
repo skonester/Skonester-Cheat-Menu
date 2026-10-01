@@ -250,7 +250,7 @@ skonester_cw_military_check = {
     }
     trigger_if = {
       limit = { scope:inno_flag = flag:_bombard}
-      has_innovation = innovation_bombard
+      has_innovation = innovation_bombards
     }
     trigger_if = {
       limit = { scope:inno_flag = flag:_royal_armory}
@@ -664,7 +664,7 @@ skonester_cw_add_innovation = {
       }
       if = {
         limit = { scope:inno_flag = flag:_bombard}
-        add_innovation = innovation_bombard
+        add_innovation = innovation_bombards
       }
       if = {
         limit = { scope:inno_flag = flag:_royal_armory}
@@ -1060,7 +1060,7 @@ skonester_cw_remove_innovation = {
       }
       if = {
         limit = { scope:inno_flag = flag:_bombard}
-        remove_innovation = innovation_bombard
+        remove_innovation = innovation_bombards
       }
       if = {
         limit = { scope:inno_flag = flag:_royal_armory}

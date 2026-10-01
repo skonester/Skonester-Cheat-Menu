@@ -6,8 +6,8 @@
   birth = 0
   random_creation = 0
   genetic = no
-  congenital = no
-  education = no
+  # CK3 1.20: `congenital` is not a trait field (category decides). congenital = no
+  # CK3 1.20: `education` is not a trait field (category decides). education = no
 
   category = intrigue
 

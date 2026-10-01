@@ -1,12 +1,17 @@
 ﻿# ==========================================
 # 你华官员模组 - 庄园魔改核心逻辑
-# 功能: 安全升级庄园、自动应用传统、防重复执行、DLC门控
+# 功能: 安全升级庄园、自动应用传统、防重复执行
+# CK3 1.20: rewritten on the main menu's working estate effects. The old version used effects that don't
+# exist (every_domicile, set_domicile_level, every_character, a bare limit) and a Tours & Tournaments
+# DLC gate that has nothing to do with estates. Reachable only through event skonester_domicile_cheat.0100
+# (console: event skonester_domicile_cheat.0100).
 # ==========================================
 
 # 1. 传统配置池（按需增删）：逐条显式判断 + 添加，避免依赖 every_in_list/variable_list 机制
 # 注：原池中 tradition_astronomy / tradition_scholarly_tradition / tradition_religious_studies /
 # tradition_war_poets 在当前版本游戏里并不是真实存在的传统 ID（PostValidate 会失败、且从不生效），
 # 已替换为主题相近的正版基础传统；如有别的偏好可自行替换。
+# Scope: culture
 skonester_domicile_cheat_apply_traditions_effect = {
   if = { limit = { NOT = { has_cultural_tradition = tradition_music_theory } } add_culture_tradition = tradition_music_theory }
   if = { limit = { NOT = { has_cultural_tradition = tradition_language_scholars } } add_culture_tradition = tradition_language_scholars }
@@ -19,32 +24,26 @@ skonester_domicile_cheat_apply_traditions_effect = {
 }
 
 # 2. 单角色庄园升级执行器（Scope: Character）
+# Maxes the character's estate through skonester_cheat_menu_estate_edit_full_effect (estate, Japanese manor
+# or East Asian estate) and gives the owner's culture the tradition pool. Runs once per character:
+# the full effect also grants 50,000 gold/treasury, so repeat runs would keep paying out.
 skonester_domicile_cheat_upgrade_effect = {
-  limit = { is_character = yes has_dlc = "Tours & Tournaments" }
-
-  every_domicile = {
-    limit = { NOT = { has_variable = skonester_domicile_cheat_done } }
-    set_variable = skonester_domicile_cheat_done
-
-    # 按类型强制升至满级
-    if = {
-      limit = { is_domicile_type = estate }
-      set_domicile_level = estate_level_5
-    }
-    else_if = {
-      limit = { is_domicile_type = japanese_manor }
-      set_domicile_level = japanese_manor_level_6
-    }
-    else_if = {
-      limit = { is_domicile_type = east_asian_estate }
-      set_domicile_level = east_asian_estate_level_5
-    }
-
-    # 自动为所有者文化添加配置池中的传统（已去重防报错）
-    owner = {
-      culture = {
-        skonester_domicile_cheat_apply_traditions_effect = yes
+  if = {
+    limit = {
+      is_alive = yes
+      NOT = { has_variable = skonester_domicile_cheat_done }
+      domicile ?= {
+        OR = {
+          is_domicile_type = estate
+          is_domicile_type = japanese_manor
+          is_domicile_type = east_asian_estate
+        }
       }
+    }
+    set_variable = skonester_domicile_cheat_done
+    skonester_cheat_menu_estate_edit_full_effect = yes
+    culture ?= {
+      skonester_domicile_cheat_apply_traditions_effect = yes
     }
   }
 }
@@ -52,15 +51,25 @@ skonester_domicile_cheat_upgrade_effect = {
 # 3. 玩家自身家族应用
 skonester_domicile_cheat_player_effect = {
   set_global_variable = { name = skonester_domicile_cheat_active value = yes }
-  skonester_domicile_cheat_upgrade_effect = yes
+  if = {
+    limit = { exists = dynasty }
+    dynasty = {
+      every_dynasty_member = {
+        skonester_domicile_cheat_upgrade_effect = yes
+      }
+    }
+  }
+  else = {
+    skonester_domicile_cheat_upgrade_effect = yes
+  }
   debug_log = "[skonester] 已升级玩家家族所有庄园并应用文化传统。"
 }
 
 # 4. 全局所有家族应用
 skonester_domicile_cheat_all_effect = {
   set_global_variable = { name = skonester_domicile_cheat_active value = yes }
-  every_character = {
-    limit = { is_alive = yes }
+  every_living_character = {
+    limit = { exists = domicile }
     skonester_domicile_cheat_upgrade_effect = yes
   }
   debug_log = "[skonester] 已全局扫描并升级所有庄园。大型存档可能需要数秒。"

@@ -15,7 +15,7 @@ window = {
   visible = "[GetScriptedGui( 'skonester_acm_repair_gui_open_visible' ).IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 
   widget = {
-    parentanchor = fill
+    # CK3 1.20: "fill" is not an anchor; size = { 100% 100% } already fills the parent
     position = { 0 0 }
     size = { 100% 100% }
     background = {

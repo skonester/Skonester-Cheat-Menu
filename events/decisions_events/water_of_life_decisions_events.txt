@@ -322,7 +322,7 @@ water_of_life.1008 = {
 				age = 80
 				culture = culture:roman
 				dynasty = salamas
-				add_trait = water_of_life 
+				trait = water_of_life  # CK3 1.20: create_character takes `trait`, not `add_trait`
 				save_scope_as = hooded_old_man
 			}
 		}

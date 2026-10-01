@@ -8,8 +8,8 @@ skonester_domicile_cheat.0100 = {
   theme = court
   left_portrait = root
 
-  # 无DLC时自动隐藏该事件
-  trigger = { has_dlc = "Tours & Tournaments" }
+  # CK3 1.20: the Tours & Tournaments gate was wrong (estates come from Roads to Power / All Under Heaven).
+  # The effects only touch characters that actually have an estate, so no DLC gate is needed.
 
   option = {
     name = skonester_domicile_cheat.0100.own

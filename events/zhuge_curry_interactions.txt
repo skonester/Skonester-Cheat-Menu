@@ -67,7 +67,6 @@ zhuge_curry_interactions.2 = {
 		scope:currency_scope = {
 			HQ_change = {
 				CHANGE = 2000
-				CHECK = 437639088
 			}
 			custom_tooltip = zhuge_hq_add_1.tooltip
 		}
@@ -79,7 +78,6 @@ zhuge_curry_interactions.2 = {
 		scope:currency_scope = {
 			HQ_change = {
 				CHANGE = 1000
-				CHECK = 437639088
 			}
 			custom_tooltip = zhuge_hq_add_2.tooltip
 		}
@@ -91,7 +89,6 @@ zhuge_curry_interactions.2 = {
 		scope:currency_scope = {
 			HQ_change = {
 				CHANGE = 100
-				CHECK = 437639088
 			}
 			custom_tooltip = zhuge_hq_add_3.tooltip
 		}
@@ -103,7 +100,6 @@ zhuge_curry_interactions.2 = {
 		scope:currency_scope = {
 			HQ_change = {
 				CHANGE = -100
-				CHECK = 437639088
 			}
 			custom_tooltip = zhuge_hq_rm_1.tooltip
 		}
@@ -115,7 +111,6 @@ zhuge_curry_interactions.2 = {
 		scope:currency_scope = {
 			HQ_change = {
 				CHANGE = -1000
-				CHECK = 437639088
 			}
 			custom_tooltip = zhuge_hq_rm_2.tooltip
 		}
@@ -127,7 +122,6 @@ zhuge_curry_interactions.2 = {
 		scope:currency_scope = {
 			HQ_change = {
 				CHANGE = -2000
-				CHECK = 437639088
 			}
 			custom_tooltip = zhuge_hq_rm_3.tooltip
 		}

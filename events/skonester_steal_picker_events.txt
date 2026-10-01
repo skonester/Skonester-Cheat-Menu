@@ -91,7 +91,7 @@ skonester_cheat_menu.3094 = {
         }
         ordered_in_list = {
           variable = skonester_steal_art_queue
-          order_by = artifact_wealth
+          order_by = artifact_rarity  # CK3 1.20: artifact_wealth is not a value; vanilla sorts by rarity
           position = 0
           save_scope_as = skonester_steal_pop_tmp
         }
@@ -113,7 +113,7 @@ skonester_cheat_menu.3094 = {
         }
         ordered_in_list = {
           variable = skonester_steal_art_queue
-          order_by = artifact_wealth
+          order_by = artifact_rarity  # CK3 1.20: artifact_wealth is not a value; vanilla sorts by rarity
           position = 0
           save_scope_as = skonester_steal_slot0
         }
@@ -127,7 +127,7 @@ skonester_cheat_menu.3094 = {
         }
         ordered_in_list = {
           variable = skonester_steal_art_queue
-          order_by = artifact_wealth
+          order_by = artifact_rarity  # CK3 1.20: artifact_wealth is not a value; vanilla sorts by rarity
           position = 1
           save_scope_as = skonester_steal_slot1
         }
@@ -141,7 +141,7 @@ skonester_cheat_menu.3094 = {
         }
         ordered_in_list = {
           variable = skonester_steal_art_queue
-          order_by = artifact_wealth
+          order_by = artifact_rarity  # CK3 1.20: artifact_wealth is not a value; vanilla sorts by rarity
           position = 2
           save_scope_as = skonester_steal_slot2
         }

@@ -855,7 +855,8 @@ daddy_pika_murder = {
 
                 scope:zhuge_kill_01 = {
                     add_trait = zhuge_kill_02
-					death_reason = "death_suicide"
+					# CK3 1.20: a bare death_reason is not an effect; zhuge_kill_02 (health -999) already kills
+					# with its own death reason. death_reason = "death_suicide"
                 }
             }
         }
@@ -1219,7 +1220,7 @@ daddy_pika_concubine_cheat = {
 	desc = daddy_pika_concubine_cheat_desc
 	common_interaction = no
 	icon = legend
-	sort_order = 10
+	# CK3 1.20: sort_order is not an interaction field (interface_priority orders them). sort_order = 10
 
 	auto_accept = yes
 	use_diplomatic_range = no
@@ -1384,7 +1385,7 @@ daddy_pika_remove_excommunication = {
 	desc = daddy_pika_remove_excommunication_desc
 	common_interaction = no
 	icon = off
-	sort_order = 10
+	# CK3 1.20: sort_order is not an interaction field (interface_priority orders them). sort_order = 10
 	
 	auto_accept = yes
 	use_diplomatic_range = no
@@ -1480,7 +1481,7 @@ daddy_pika_designate_survivors = {
 	interface_priority = 6994
 	desc = daddy_pika_designate_survivors_desc
 	common_interaction = no
-	sort_order = 10
+	# CK3 1.20: sort_order is not an interaction field (interface_priority orders them). sort_order = 10
 	
 	auto_accept = yes
 	use_diplomatic_range = no
@@ -1510,7 +1511,7 @@ daddy_pika_designate_survivors_remove = {
 	interface_priority = 6993
 	desc = daddy_pika_designate_survivors_remove_desc
 	common_interaction = no
-	sort_order = 10
+	# CK3 1.20: sort_order is not an interaction field (interface_priority orders them). sort_order = 10
 	
 	auto_accept = yes
 	use_diplomatic_range = no
@@ -1543,7 +1544,7 @@ daddy_pika_murder_off_dynasty = {
 	interface_priority = 1998
 	desc = daddy_pika_murder_off_dynasty_desc
 	common_interaction = no
-	sort_order = 10
+	# CK3 1.20: sort_order is not an interaction field (interface_priority orders them). sort_order = 10
 	
 	auto_accept = yes
 	use_diplomatic_range = no

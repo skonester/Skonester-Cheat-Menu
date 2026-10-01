@@ -59,6 +59,11 @@ skonester_sand_maa_populate_catalog_effect = {
     name = skonester_sand_maa_list_all
     target = flag:order_serjeants
   }
+  # CK3 1.20: order_knights is the knightly-order heavy cavalry (teutonic_knights was removed)
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_all
+    target = flag:order_knights
+  }
   add_to_global_variable_list = {
     name = skonester_sand_maa_list_all
     target = flag:warrior_monks
@@ -773,6 +778,10 @@ skonester_sand_maa_populate_catalog_effect = {
     target = flag:xia_qianjun
   }
   clear_global_variable_list = skonester_sand_maa_list_cavalry
+  add_to_global_variable_list = {
+    name = skonester_sand_maa_list_cavalry
+    target = flag:order_knights
+  }
   add_to_global_variable_list = {
     name = skonester_sand_maa_list_cavalry
     target = flag:tawashi

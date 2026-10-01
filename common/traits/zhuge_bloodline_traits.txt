@@ -3,9 +3,9 @@ bloodline_god_3 = { # Divine Bloodline (Highest Tier)
     index = 606
 
     shown_in_ruler_designer = no                    # Trait will not appear in the ruler designer
-    is_highlighted = no                             # Trait will not appear in any events or suggestions
-    end_schemes = yes                               # Prevents anyone from running schemes against the player
-    can_become_fluent_in_language = yes             # Character can become fluent in languages
+    # CK3 1.20: `is_highlighted` is not a trait field or modifier. is_highlighted = no                             # Trait will not appear in any events or suggestions
+    # CK3 1.20: `end_schemes` is not a trait field or modifier. end_schemes = yes                               # Prevents anyone from running schemes against the player
+    # CK3 1.20: `can_become_fluent_in_language` is not a trait field or modifier. can_become_fluent_in_language = yes             # Character can become fluent in languages
     
     opposites = {
         bloodline_god_2
@@ -19,7 +19,7 @@ bloodline_god_3 = { # Divine Bloodline (Highest Tier)
     flag = immortal_incapability                    # Cannot become incapable
     flag = is_immortal                              # Cannot die of old age
 
-    fertility_factor_male = 2                       # Fertility multiplier for male characters
+    # CK3 1.20: `fertility_factor_male` is not a trait field or modifier. fertility_factor_male = 2                       # Fertility multiplier for male characters
     diplomacy = 50                                  # Diplomacy
     stewardship = 50                                # Stewardship
     learning = 50                                   # Learning
@@ -46,13 +46,13 @@ bloodline_god_3 = { # Divine Bloodline (Highest Tier)
     monthly_legitimacy_add = 30                     # Adds 30 legitimacy per month
 
     genetic = yes                                   # Congenital/genetic trait
-    random = no                                     # Cannot be randomly assigned
-    inheritable = yes                               # Can be inherited
+    # CK3 1.20: `random` is not a trait field or modifier. random = no                                     # Cannot be randomly assigned
+    # CK3 1.20: `inheritable` is not a trait field or modifier. inheritable = yes                               # Can be inherited
     parent_inheritance_sex = male                   # Can only be inherited from the father's bloodline
     inherit_chance = 10                             # 10% inheritance chance
     child_inheritance_sex = male                    # Can only be passed to male children
     inherit_from_real_father = yes                  # Inherited from the biological father
-    ai_can_have = no                                # AI characters cannot have this trait
+    # CK3 1.20: `ai_can_have` is not a trait field or modifier. ai_can_have = no                                # AI characters cannot have this trait
     level = 3                                       # Highest tier
     group = bloodline_god                           # Belongs to the Divine Bloodline trait group
 
@@ -76,7 +76,7 @@ bloodline_god_2 = { # Diluted Bloodline (Mid Tier)
     index = 607
 
     shown_in_ruler_designer = no                    # Trait will not appear in the ruler designer
-    is_highlighted = no                             # Trait will not appear in any events or suggestions
+    # CK3 1.20: `is_highlighted` is not a trait field or modifier. is_highlighted = no                             # Trait will not appear in any events or suggestions
     flag = immortal_incapability                    # Cannot become incapable
     opposites = {
         bloodline_god_3
@@ -97,13 +97,13 @@ bloodline_god_2 = { # Diluted Bloodline (Mid Tier)
     herd_capacity_mult = 2                          # Herd capacity multiplier
 
     ai_war_cooldown = -0.5                          # Reduces AI war declaration cooldown by 30%
-    random = no                                     # Cannot be randomly assigned
+    # CK3 1.20: `random` is not a trait field or modifier. random = no                                     # Cannot be randomly assigned
     genetic = yes                                   # Congenital/genetic trait
-    inheritable = yes                               # Can be inherited
+    # CK3 1.20: `inheritable` is not a trait field or modifier. inheritable = yes                               # Can be inherited
     parent_inheritance_sex = male                   # Can only be inherited from the father's bloodline
     inherit_chance = 30                             # 30% inheritance chance
     child_inheritance_sex = male                    # Can only be passed to male children
-    male_only = yes                                 # Males only
+    valid_sex = male  # CK3 1.20: was `male_only = yes`
     inherit_from_real_father = yes                  # Inherited from the biological father
     level = 2                                       # Mid tier
     group = bloodline_god                           # Belongs to the Divine Bloodline trait group
@@ -126,8 +126,8 @@ bloodline_god_1 = { # Divine Bloodline (Tier 1)
     index = 605
 
     shown_in_ruler_designer = no                    # Trait will not appear in the ruler designer
-    is_highlighted = no                             # Trait will not appear in any events or suggestions
-    can_become_fluent_in_language = yes             # Character can become fluent in languages
+    # CK3 1.20: `is_highlighted` is not a trait field or modifier. is_highlighted = no                             # Trait will not appear in any events or suggestions
+    # CK3 1.20: `can_become_fluent_in_language` is not a trait field or modifier. can_become_fluent_in_language = yes             # Character can become fluent in languages
     flag = immortal_incapability                    # Cannot become incapable
 
     opposites = {
@@ -150,8 +150,8 @@ bloodline_god_1 = { # Divine Bloodline (Tier 1)
     herd_capacity_mult = 1                          # Herd capacity multiplier
 
     genetic = yes                                   # Congenital/genetic trait
-    random = no                                     # Cannot be randomly assigned
-    inheritable = yes                               # Can be inherited
+    # CK3 1.20: `random` is not a trait field or modifier. random = no                                     # Cannot be randomly assigned
+    # CK3 1.20: `inheritable` is not a trait field or modifier. inheritable = yes                               # Can be inherited
     inherit_chance = 60                             # 60% inheritance chance
     parent_inheritance_sex = male                   # Can only be inherited from the father's bloodline
     inherit_from_real_father = yes                  # Inherited from the biological father

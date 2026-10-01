@@ -1,0 +1,9 @@
+﻿l_simp_chinese:
+ # CK3 1.20: translated from the English file of the same name (template-based).
+ # CK3 1.20 removed these Sunni theological schools; the Cheat Menu faith pickers now convert to Sunni for them.
+ ashari:0 "逊尼派（艾什尔里派）"
+ maturidi:0 "逊尼派（马图里迪派）"
+ mutazila:0 "逊尼派（穆尔太齐赖派）"
+ muwalladi:0 "逊尼派（穆瓦拉德派）"
+ # change_fervor requires a desc (history/tooltip text)
+ skonester_fervor_gain_cheat:0 "作弊菜单"

@@ -6830,7 +6830,7 @@ skonester_cheat_menu.0021 = {
 
       add_character_flag = skonester_culture_reform_pick
 
-      trigger_event = skonester_cheat_menu.3020
+      trigger_event = skonester_cheat_menu.3186
 
     }
 

@@ -16,7 +16,7 @@
 zhuge_huangzu = {
 	icon = legitimacy_positive
 	legitimacy_gain_mult = 6
-	prestige = 0.1
+	monthly_prestige_gain_mult = 0.1  # CK3 1.20: was `prestige = 0.1`, which is not a modifier
 	martial = 10
 	diplomacy = 10
 	intrigue = 10

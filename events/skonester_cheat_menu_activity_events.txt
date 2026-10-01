@@ -301,7 +301,7 @@ skonester_cheat_menu.8922 = {
   option = {
     name = skonester_cheat_menu.3092.opt_hike
     custom_tooltip = skonester_cheat_menu.3092.opt_host_tt
-    skonester_activity_cheat_host_type_effect = { TYPE = activity_hike }
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_roaming } # CK3 1.20: was activity_hike
     scope:actor = {
     trigger_event = { id = skonester_cheat_menu.8922 days = 0 }
   }
@@ -543,7 +543,7 @@ skonester_cheat_menu.8974 = {
   option = {
     name = skonester_cheat_menu.3097.opt_inspection
     custom_tooltip = skonester_cheat_menu.3092.opt_host_tt
-    skonester_activity_cheat_host_type_effect = { TYPE = activity_inspection }
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_survey } # CK3 1.20: was activity_inspection
     scope:actor = {
     trigger_event = { id = skonester_cheat_menu.8974 days = 0 }
   }
@@ -552,7 +552,7 @@ skonester_cheat_menu.8974 = {
   option = {
     name = skonester_cheat_menu.3097.opt_university
     custom_tooltip = skonester_cheat_menu.3092.opt_host_tt
-    skonester_activity_cheat_host_type_effect = { TYPE = activity_university_visit }
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_adult_education } # CK3 1.20: was activity_university_visit
     scope:actor = {
     trigger_event = { id = skonester_cheat_menu.8974 days = 0 }
   }
@@ -599,7 +599,7 @@ skonester_cheat_menu.8975 = {
   option = {
     name = skonester_cheat_menu.3097.opt_monument
     custom_tooltip = skonester_cheat_menu.3092.opt_host_tt
-    skonester_activity_cheat_host_type_effect = { TYPE = activity_monument_expedition }
+    skonester_activity_cheat_host_type_effect = { TYPE = activity_journey } # CK3 1.20: was activity_monument_expedition
     scope:actor = {
     trigger_event = { id = skonester_cheat_menu.8975 days = 0 }
   }

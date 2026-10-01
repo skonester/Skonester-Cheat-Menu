@@ -14,7 +14,8 @@ skone_theocratic_inheritance_on_title_gain = {
 				}
 				NOT = { government_has_flag = government_is_theocracy }
 			}
-			change_government = theocracy_government
+			# CK3 1.20: the faith's own theocracy type (ecclesiastical for Christians), theocracy as fallback
+			skonester_convert_character_to_theocracy_government_effect = yes
 		}
 	}
 }

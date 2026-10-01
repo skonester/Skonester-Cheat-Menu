@@ -1176,7 +1176,7 @@ zhuge_set_authority_inter = {
             else_if = {
                 limit = {
                     OR = {
-                    \talways = no
+                        always = no  # CK3 1.20: was a literal backslash-t before "always"
                         # AGOT compatibility: has_realm_law = FACTION_DISCONTENT_CA_0
                         # AGOT compatibility: has_realm_law = FACTION_DISCONTENT_CA_1
                         # AGOT compatibility: has_realm_law = FACTION_DISCONTENT_CA_2
@@ -1243,12 +1243,14 @@ zhuge_set_artifact_interaction = {
     on_accept = {
         scope:actor = {
             trigger_event = debug.400 
-            if = {
-                limit = { exists = scope:created_artifact }
-                scope:created_artifact = {
-                    upgrade_artifact_rarity_effect = illustrious 
-                }
-            }
+            # CK3 1.20: upgrade_artifact_rarity_effect doesn't exist, and scope:created_artifact never exists here
+            # because debug.400 runs after this effect finishes. Kept for reference:
+            # if = {
+            #     limit = { exists = scope:created_artifact }
+            #     scope:created_artifact = {
+            #         upgrade_artifact_rarity_effect = illustrious
+            #     }
+            # }
         }
     }
 }

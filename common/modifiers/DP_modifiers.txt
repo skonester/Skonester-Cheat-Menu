@@ -1732,102 +1732,102 @@ happy_powerful_vassal_levy_contribution_mult_neg = {
 # } 
 hostile_scheme_power = {
 	icon = intrigue_positive
-	MOD_HOSTILE_SCHEME_POWER_ADD = 1.0
+	owned_hostile_scheme_success_chance_add = 1.0 # CK3 1.20: was MOD_HOSTILE_SCHEME_POWER_ADD
 	stacking = yes
 } 
 hostile_scheme_power_neg = {
 	icon = intrigue_negative
-	MOD_HOSTILE_SCHEME_POWER_ADD = -1
+	owned_hostile_scheme_success_chance_add = -1 # CK3 1.20: was MOD_HOSTILE_SCHEME_POWER_ADD
 	stacking = yes
 } 
 personal_scheme_power = {
 	icon = intrigue_positive
-	personal_scheme_power_add = 1
+	owned_personal_scheme_success_chance_add = 1 # CK3 1.20: was personal_scheme_power_add
 	stacking = yes
 } 
 personal_scheme_power_neg = {
 	icon = intrigue_negative
-	personal_scheme_power_add = -1
+	owned_personal_scheme_success_chance_add = -1 # CK3 1.20: was personal_scheme_power_add
 	stacking = yes
 } 
 hostile_scheme_resistance = {
 	icon = intrigue_positive
-	hostile_scheme_resistance_add = 1
+	enemy_hostile_scheme_success_chance_add = -1 # CK3 1.20: was hostile_scheme_resistance_add = 1
 	stacking = yes
 } 
 hostile_scheme_resistance_neg = {
 	icon = intrigue_negative
-	hostile_scheme_resistance_add = -1
+	enemy_hostile_scheme_success_chance_add = 1 # CK3 1.20: was hostile_scheme_resistance_add = -1
 	stacking = yes
 } 
 personal_scheme_resistance = {
 	icon = intrigue_positive
-	personal_scheme_resistance_add = 1
+	# CK3 1.20: scheme power/resistance modifiers were removed. personal_scheme_resistance_add = 1
 	stacking = yes
 } 
 personal_scheme_resistance_neg = {
 	icon = intrigue_negative
-	personal_scheme_resistance_add = -1
+	# CK3 1.20: scheme power/resistance modifiers were removed. personal_scheme_resistance_add = -1
 	stacking = yes
 } 
 diplomacy_scheme_power = {
 	icon = diplomacy_positive
-	diplomacy_scheme_power = 0.1
+	# CK3 1.20: scheme power/resistance modifiers were removed. diplomacy_scheme_power = 0.1
 	stacking = yes
 } 
 diplomacy_scheme_power_neg = {
 	icon = diplomacy_negative
-	diplomacy_scheme_power = -0.1
+	# CK3 1.20: scheme power/resistance modifiers were removed. diplomacy_scheme_power = -0.1
 	stacking = yes
 } 
 intrigue_scheme_power = {
 	icon = intrigue_positive
-	intrigue_scheme_power = 0.1
+	# CK3 1.20: scheme power/resistance modifiers were removed. intrigue_scheme_power = 0.1
 	stacking = yes
 } 
 intrigue_scheme_power_neg = {
 	icon = intrigue_negative
-	intrigue_scheme_power = -0.1
+	# CK3 1.20: scheme power/resistance modifiers were removed. intrigue_scheme_power = -0.1
 	stacking = yes
 } 
 stewardship_scheme_power = {
 	icon = stewardship_positive
-	stewardship_scheme_power = 0.1
+	# CK3 1.20: scheme power/resistance modifiers were removed. stewardship_scheme_power = 0.1
 	stacking = yes
 } 
 stewardship_scheme_power_neg = {
 	icon = stewardship_negative
-	stewardship_scheme_power = -0.1
+	# CK3 1.20: scheme power/resistance modifiers were removed. stewardship_scheme_power = -0.1
 	stacking = yes
 } 
 martial_scheme_power = {
 	icon = martial_positive
-	martial_scheme_power = 0.1
+	# CK3 1.20: scheme power/resistance modifiers were removed. martial_scheme_power = 0.1
 	stacking = yes
 } 
 martial_scheme_power_neg = {
 	icon = martial_negative
-	martial_scheme_power = -0.1
+	# CK3 1.20: scheme power/resistance modifiers were removed. martial_scheme_power = -0.1
 	stacking = yes
 } 
 prowess_scheme_power = {
 	icon = prowess_positive
-	prowess_scheme_power = 0.1
+	# CK3 1.20: scheme power/resistance modifiers were removed. prowess_scheme_power = 0.1
 	stacking = yes
 } 
 prowess_scheme_power_neg = {
 	icon = prowess_negative
-	prowess_scheme_power = -0.1
+	# CK3 1.20: scheme power/resistance modifiers were removed. prowess_scheme_power = -0.1
 	stacking = yes
 } 
 learning_scheme_power = {
 	icon = learning_positive
-	learning_scheme_power = 0.1
+	# CK3 1.20: scheme power/resistance modifiers were removed. learning_scheme_power = 0.1
 	stacking = yes
 } 
 learning_scheme_power_neg = {
 	icon = learning_negative
-	learning_scheme_power = -0.1
+	# CK3 1.20: scheme power/resistance modifiers were removed. learning_scheme_power = -0.1
 	stacking = yes
 } 
 diplomacy_scheme_resistance = {

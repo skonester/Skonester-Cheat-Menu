@@ -567,10 +567,18 @@ skonester_mass_convert_vassals_to_nomadic_effect = {
   }
 }
 
+# CK3 1.20: use the faith's own theocracy type (Christians get ecclesiastical_government with By God Alone),
+# the same way vanilla's pam_clergy_events do; plain theocracy_government is the fallback.
 skonester_convert_character_to_theocracy_government_effect = {
   if = {
     limit = { NOT = { government_has_flag = government_is_theocracy } }
-    change_government = theocracy_government
+    if = {
+      limit = { exists = faith.faith_theocratic_goverment_type }
+      change_government = faith.faith_theocratic_goverment_type
+    }
+    else = {
+      change_government = theocracy_government
+    }
   }
 }
 

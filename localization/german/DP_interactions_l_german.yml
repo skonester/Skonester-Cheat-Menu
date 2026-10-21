@@ -115,6 +115,8 @@
 
  daddy_pika_offer_vassal_inter:0 "Vasallenschaft erzwingen"
  daddy_pika_offer_vassal_inter_desc:0 "Unterwerfe diese Seele Eurer Herrschaft."
+ daddy_pika_offer_vassal_failed_toast_title:0 "Vasallenschaft verweigert"
+ daddy_pika_offer_vassal_failed_toast_desc:0 "Das Spiel selbst lässt diesen Charakter nicht Euer Vasall werden. Söldnerkompanien, Ritterorden und landlose Abenteurer können unabhängig von Cheats von der Engine geschützt sein."
 
  daddy_pika_character_spawner:0 "Charakter erschaffen"
  daddy_pika_character_spawner_desc:0 "Erschaffe neue Charaktere von großer Stärke für Euer Reich."

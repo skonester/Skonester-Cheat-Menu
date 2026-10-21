@@ -3,7 +3,7 @@
 	men_at_arms_cap = 0
 	men_at_arms_limit = 0
 	domain_limit = 0
-	monthly_county_control_change_add = 10
+	monthly_county_control_growth_add = 10
 	monthly_tyranny = 0
 
 	

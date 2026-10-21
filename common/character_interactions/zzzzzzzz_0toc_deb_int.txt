@@ -54,11 +54,11 @@ toc_pregnancy_interaction = {
 
 # 3. Add Custom Character Menu
 toc_spawn_character_interaction = {
-	category = interaction_debug_main
+	category = interaction_category_uncategorized
 	interface_priority = 9997
 	desc = toc_spawn_character_interaction_desc
 	icon = legend
-	
+
 	common_interaction = no
 	auto_accept = yes
 	use_diplomatic_range = no
@@ -66,8 +66,10 @@ toc_spawn_character_interaction = {
 
 	is_shown = {
 		scope:actor = { has_character_flag = skonester_character_interaction_menu_open }
-		debug_only = yes
-		scope:actor = { is_ai = no }
+		scope:actor = {
+			is_ai = no
+			has_character_flag = bone_cheat_interactions_flag
+		}
 	}
 
 	on_accept = {

@@ -1114,13 +1114,16 @@ daddy_pika_offer_vassal_inter = {
 			# The recipient cannot already be above the actor
 			NOT = { target_is_liege_or_above = scope:recipient }
 		}
+		# True cheat: any ruler, landed or landless. Heads of faith, holy/monastic orders,
+		# mercenary companies, herders and landless adventurers are all allowed here.
+		# cannot_be_vassal_or_liege is only a script flag (vanilla interactions check it),
+		# so it is ignored. The engine may still refuse some mechanic types; on_accept
+		# checks the result and reports a refusal.
 		scope:recipient = {
 			this != scope:actor
-			is_landed = yes
+			is_ruler = yes
 			NOT = { is_vassal_of = scope:actor }
 			NOR = {
-				government_has_flag = cannot_be_vassal_or_liege
-				government_has_flag = government_is_herder
 				government_has_flag = government_is_uninteractable
 				government_has_flag = government_is_nw
 			}
@@ -1129,13 +1132,15 @@ daddy_pika_offer_vassal_inter = {
 
 	is_valid_showing_failures_only = {
 		scope:recipient = {
+			# Same tier is allowed (e.g. a king vassalizing the Pope's k_papal_state);
+			# only a strictly higher tier than the actor is refused.
 			trigger_if = {
 				limit = {
 					scope:actor = {
 						NOT = { government_has_flag = government_is_mandala }
 					}
 				}
-				highest_held_title_tier < scope:actor.highest_held_title_tier
+				highest_held_title_tier <= scope:actor.highest_held_title_tier
 			}
 			NOT = { is_at_war_with = scope:actor }
 			is_confederation_member = no
@@ -1170,6 +1175,23 @@ daddy_pika_offer_vassal_inter = {
 			}
 		}
 		resolve_title_and_vassal_change = scope:change
+
+		# Some mechanic types (e.g. mercenary companies, landless adventurers) may be
+		# refused by the engine itself; tell the player instead of failing silently.
+		if = {
+			limit = {
+				scope:recipient = {
+					NOT = { is_vassal_of = scope:actor }
+				}
+			}
+			scope:actor = {
+				send_interface_toast = {
+					title = daddy_pika_offer_vassal_failed_toast_title
+					left_icon = scope:recipient
+					desc = daddy_pika_offer_vassal_failed_toast_desc
+				}
+			}
+		}
 	}
 
 	on_decline = {

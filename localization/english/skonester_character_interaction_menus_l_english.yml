@@ -147,7 +147,7 @@
  skonester_quick_modifications.government.page3.t:0 "Government Menu — Regional Governments (3/4)"
  skonester_quick_modifications.government.page4.t:0 "Government Menu — Special Governments (4/4)"
  skonester_quick_modifications.government.desc:0 "Select the government for [skonester_cheat_menu_target.GetShortUIName]. Government names come directly from the installed CK3 database."
- skonester_quick_modifications.government.special_desc:0 "These governments are intended for holy orders, mercenary companies, or landless adventurers. Applying one to an ordinary landed ruler can substantially change how that character and realm function."
+ skonester_quick_modifications.government.special_desc:0 "These governments are intended for holy orders, monastic orders, and the clergy. Applying one to an ordinary landed ruler can substantially change how that character and realm function."
  skonester_quick_modifications.next:0 "Next Page"
  skonester_quick_modifications.previous:0 "Previous Page"
  skonester_quick_modifications.back_realm:0 "Back to Realm Tools"

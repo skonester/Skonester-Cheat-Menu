@@ -147,7 +147,7 @@
  skonester_quick_modifications.government.page3.t:0 "Hükûmet Menüsü — Bölgesel Hükûmetler (3/4)"
  skonester_quick_modifications.government.page4.t:0 "Hükûmet Menüsü — Özel Hükûmetler (4/4)"
  skonester_quick_modifications.government.desc:0 "[skonester_cheat_menu_target.GetShortUIName] için hükûmet seç. Hükûmet adları kurulu CK3 veritabanından doğrudan alınır."
- skonester_quick_modifications.government.special_desc:0 "Bu hükûmetler kutsal tarikatlar, paralı asker birlikleri veya topraksız maceracılar içindir. Sıradan bir toprak sahibi hükümdara uygulamak karakterin ve diyarın işleyişini önemli ölçüde değiştirebilir."
+ skonester_quick_modifications.government.special_desc:0 "Bu hükûmetler kutsal tarikatlar, manastır tarikatları ve din adamları içindir. Sıradan bir toprak sahibi hükümdara uygulamak karakterin ve diyarın işleyişini önemli ölçüde değiştirebilir."
  skonester_quick_modifications.next:0 "Sonraki Sayfa"
  skonester_quick_modifications.previous:0 "Önceki Sayfa"
  skonester_quick_modifications.back_realm:0 "Diyar Araçlarına Dön"

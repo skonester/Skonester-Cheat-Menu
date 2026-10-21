@@ -48,6 +48,8 @@
 	valid_to_start = {
 		scope:attacker = {
 			is_ai = no
+			# Only offered when the war screen was opened via sol_war_without_bounds_interaction
+			has_character_flag = sol_war_without_bounds_open
 		}
 	}
 
@@ -80,6 +82,7 @@
 	on_declaration = {
 		on_declared_war = yes
 		scope:attacker = {
+			remove_character_flag = sol_war_without_bounds_open
 			#add_gold = 100
 			#add_piety = 50
 			#add_prestige = 50

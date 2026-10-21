@@ -323,7 +323,7 @@ skonester_cheat_menu.3097 = {
   type = character_event
   title = skonester_cheat_menu.3097.t
   desc = skonester_cheat_menu.3097.desc
-  theme = pilgrimage_activity
+  theme = pilgrimage_destination
   left_portrait = scope:actor
   right_portrait = scope:skonester_cheat_menu_target
 
@@ -371,7 +371,7 @@ skonester_cheat_menu.8971 = {
   type = character_event
   title = skonester_cheat_menu.8971.t
   desc = skonester_cheat_menu.3097.desc
-  theme = pilgrimage_activity
+  theme = pilgrimage_destination
   left_portrait = scope:actor
   right_portrait = scope:skonester_cheat_menu_target
 
@@ -418,7 +418,7 @@ skonester_cheat_menu.8972 = {
   type = character_event
   title = skonester_cheat_menu.8972.t
   desc = skonester_cheat_menu.3097.desc
-  theme = pilgrimage_activity
+  theme = pilgrimage_destination
   left_portrait = scope:actor
   right_portrait = scope:skonester_cheat_menu_target
 
@@ -477,7 +477,7 @@ skonester_cheat_menu.8973 = {
   type = character_event
   title = skonester_cheat_menu.8973.t
   desc = skonester_cheat_menu.3097.desc
-  theme = pilgrimage_activity
+  theme = pilgrimage_destination
   left_portrait = scope:actor
   right_portrait = scope:skonester_cheat_menu_target
 
@@ -524,7 +524,7 @@ skonester_cheat_menu.8974 = {
   type = character_event
   title = skonester_cheat_menu.8974.t
   desc = skonester_cheat_menu.3097.desc
-  theme = pilgrimage_activity
+  theme = pilgrimage_destination
   left_portrait = scope:actor
   right_portrait = scope:skonester_cheat_menu_target
 
@@ -571,7 +571,7 @@ skonester_cheat_menu.8975 = {
   type = character_event
   title = skonester_cheat_menu.8975.t
   desc = skonester_cheat_menu.3097.desc
-  theme = pilgrimage_activity
+  theme = pilgrimage_destination
   left_portrait = scope:actor
   right_portrait = scope:skonester_cheat_menu_target
 

@@ -3588,7 +3588,7 @@ skonester_cheat_menu.0010 = {
 
   desc = skonester_cheat_menu.0010.desc
 
-  theme = romance
+  theme = love
 
   override_background = { reference = bedchamber }
 
@@ -3730,7 +3730,7 @@ skonester_cheat_menu.0012 = {
 
   desc = skonester_cheat_menu.0012.desc
 
-  theme = romance
+  theme = love
 
   override_background = { reference = bedchamber }
 
@@ -12361,7 +12361,7 @@ skonester_cheat_menu.0190 = {
 
   desc = skonester_ui_no_hover_tooltip
 
-  theme = romance
+  theme = love
 
 
 

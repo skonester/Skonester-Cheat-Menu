@@ -149,7 +149,7 @@
  skonester_quick_modifications.government.page3.t:0 "政体菜单—地区政体（3/4）"
  skonester_quick_modifications.government.page4.t:0 "政体菜单—特殊政体（4/4）"
  skonester_quick_modifications.government.desc:0 "为[skonester_cheat_menu_target.GetShortUIName]选择政体。政体名称直接来自当前安装的CK3数据库。"
- skonester_quick_modifications.government.special_desc:0 "这些政体适用于骑士团、佣兵团或无地冒险者。将其用于普通有地统治者可能显著改变该角色和领地的运作方式。"
+ skonester_quick_modifications.government.special_desc:0 "这些政体适用于骑士团、隐修修会或神职人员。将其用于普通有地统治者可能显著改变该角色和领地的运作方式。"
  skonester_quick_modifications.next:0 "下一页"
  skonester_quick_modifications.previous:0 "上一页"
  skonester_quick_modifications.back_realm:0 "返回领地工具"

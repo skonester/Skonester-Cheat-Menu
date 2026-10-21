@@ -1,7 +1,58 @@
 ﻿#SOL UNRESTRICTED WARFARE DECLARATIONS
-sol_expansion_war_interaction = {
+
+# Menu entry. Sets a short-lived flag, then opens the declare-war window below.
+# The sol_expansion_war_* CBs require the flag in valid_to_start, so they only appear
+# on the war screen when it is opened through this interaction.
+sol_war_without_bounds_interaction = {
 	icon = on
-	category = interaction_debug_main
+	category = interaction_category_uncategorized
+	common_interaction = yes
+	interface_priority = 2998
+	desc = sol_expansion_war_interaction_desc
+
+	ignores_pending_interaction_block = yes
+	use_diplomatic_range = no
+
+	is_shown = {
+		scope:actor = { has_character_flag = skonester_character_interaction_menu_open }
+		NOT = {
+			scope:recipient = scope:actor
+		}
+		scope:recipient = {
+			is_playable_character = yes
+		}
+		scope:actor = {
+			is_ai = no
+			has_character_flag = bone_cheat_interactions_flag
+			NOT = {
+				is_at_war_with = scope:recipient
+			}
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			add_character_flag = {
+				flag = sol_war_without_bounds_open
+				days = 1
+			}
+		}
+		open_interaction_window = {
+			interaction = sol_expansion_war_interaction
+			actor = scope:actor
+			recipient = scope:recipient
+		}
+	}
+
+	auto_accept = yes
+}
+
+# Declare-war window. Never listed in the menu (hidden = yes); only opened by
+# sol_war_without_bounds_interaction via open_interaction_window.
+sol_expansion_war_interaction = {
+	hidden = yes
+	icon = on
+	category = interaction_category_uncategorized
 	common_interaction = yes
 	special_interaction = declare_war_interaction
 
@@ -15,8 +66,7 @@ sol_expansion_war_interaction = {
 	use_diplomatic_range = no
 
 	is_shown = {
-		scope:actor = { has_character_flag = skonester_character_interaction_menu_open }
-		debug_only = yes
+		scope:actor = { has_character_flag = sol_war_without_bounds_open }
 		NOT = {
 			scope:recipient = scope:actor
 		}
@@ -25,6 +75,8 @@ sol_expansion_war_interaction = {
 		}
 		scope:actor = {
 			is_ai = no
+			has_character_flag = skonester_character_interaction_menu_open
+			has_character_flag = bone_cheat_interactions_flag
 			NOT = {
 				is_at_war_with = scope:recipient
 			}

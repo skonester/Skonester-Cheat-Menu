@@ -146,7 +146,7 @@
  skonester_quick_modifications.government.page3.t:0 "Меню правительства — региональные типы (3/4)"
  skonester_quick_modifications.government.page4.t:0 "Меню правительства — особые типы (4/4)"
  skonester_quick_modifications.government.desc:0 "Выберите правительство для персонажа [skonester_cheat_menu_target.GetShortUIName]. Названия взяты непосредственно из установленной базы CK3."
- skonester_quick_modifications.government.special_desc:0 "Эти правительства предназначены для священных орденов, наёмных компаний и безземельных авантюристов. Их применение к обычному землевладельцу может значительно изменить работу персонажа и державы."
+ skonester_quick_modifications.government.special_desc:0 "Эти правительства предназначены для священных орденов, монашеских орденов и духовенства. Их применение к обычному землевладельцу может значительно изменить работу персонажа и державы."
  skonester_quick_modifications.next:0 "Следующая страница"
  skonester_quick_modifications.previous:0 "Предыдущая страница"
  skonester_quick_modifications.back_realm:0 "Назад к инструментам державы"

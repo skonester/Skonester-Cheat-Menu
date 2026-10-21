@@ -8,7 +8,6 @@
     decision_group_type = skonester_realm_tools
 
     is_shown = {
-        is_player = yes
         NOT = { is_ai = yes }
         has_character_flag = daddy_pika_cheat_menu
         has_character_flag = govt_menu
@@ -31,12 +30,10 @@ change_Realm_succession_law_mod_decision = {
     decision_group_type = skonester_realm_tools
 
     is_shown = {
-        is_player = yes
         NOT = { is_ai = yes }
         has_character_flag = daddy_pika_cheat_menu
         has_character_flag = govt_menu
         or = {
-            has_game_rule = change_Realm_succession_law_game_mod_on
             culture = {
                 or = {
                     has_innovation = innovation_heraldry
@@ -252,7 +249,7 @@ dynasty_pope_0_decision = {
 
 	is_shown = {
 		is_landed = yes
-		is_player = yes
+		is_ai = no
 		has_character_flag = daddy_pika_cheat_menu
         has_character_flag = govt_menu
 		NOT = {
@@ -302,7 +299,7 @@ dynasty_grandmaster_0_decision = {
 
 	is_shown = {
 		is_landed = yes
-		is_player = yes
+		is_ai = no
 		has_character_flag = daddy_pika_cheat_menu
         has_character_flag = govt_menu
 		NOT = {

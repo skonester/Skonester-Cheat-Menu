@@ -370,7 +370,7 @@ skonester_cheat_menu.3063 = {
   type = character_event
   title = skonester_cheat_menu.3063.t
   desc = skonester_ui_no_hover_tooltip
-  theme = health
+  theme = physical_health
 
   immediate = {
     skonester_cheat_menu_edit_resources_sync_recipient_effect = yes
@@ -1212,7 +1212,7 @@ skonester_cheat_menu.3061 = {
   type = character_event
   title = skonester_cheat_menu.3061.t
   desc = skonester_ui_no_hover_tooltip
-  theme = health
+  theme = physical_health
 
   immediate = {
     skonester_cheat_menu_edit_resources_sync_recipient_effect = yes

@@ -428,3 +428,97 @@ it on vanilla 1.20's version.
 - [ ] Decide task 2 (core-tenet cap).
 - [ ] Bump `version` in `descriptor.mod` (currently `9.30.26-BGA1`; `supported_version` is already `1.20.*`).
 - [ ] Commit.
+
+## Side work post BGA launch
+
+Changelog for the 2026-10-21 session (committed). Same format as the milestone log: what changed, files
+touched, what to check in-game. "Confirmed" means checked in a test run's `error.log` or reported working in
+game; everything else still needs a test.
+
+**S1: modifiers, event themes and `is_player` (done; confirmed in `error.log`).** Fixed the real errors the CK3
+Language Support extension reported. Most of its ~96,500 diagnostics are style hints, and its unbalanced-brace
+notices were false positives (every flagged file balances).
+- Modifier names that don't exist in 1.20: `monthly_county_control_change_add` → `monthly_county_control_growth_add`;
+  `hostile_scheme_resistance_add`, `personal_scheme_resistance_add` and `culture_conversion_speed` commented out
+  with `# CK3 1.20:` notes.
+- Event themes: `pilgrimage_activity` → `pilgrimage_destination` (6 events), `health` → `physical_health` (2),
+  `romance` → `love` (3).
+- `is_player` (not a CK3 trigger): removed where `NOT = { is_ai = yes }` already gates, otherwise `is_ai = no`.
+- Files: `common/modifiers/X_modifiers.txt`, `common/modifiers/skonester_cheat_modifiers.txt`,
+  `common/modifiers/skonester_authority_title_modifiers.txt`, `common/modifiers/skonester_expansion_title_modifiers.txt`,
+  `events/skonester_cheat_menu_activity_events.txt`, `events/skonester_cheat_menu_edit_resources_events.txt`,
+  `events/skonester_cheat_menu_events.txt`, `common/decisions/gender_Succession_decisions_mod.txt`.
+- Left alone on purpose: `liuguan_*` triggers and other Great Ming leftovers (gated on `title:e_greatming`, never
+  run in vanilla); the `gfx/.../distinct_generation/prompts/*.txt` image prompts (not game script).
+
+**S2: issues found in the game's own `error.log` (done; not yet re-tested).**
+- `e_skonester_authority_*`, `k_skonester_authority_regent`, `e_skonester_expansion_*` and
+  `k_skonester_expansion_predator` aren't defined anywhere (no `common/landed_titles/`), and nothing calls their
+  grant effects. Three `monthly_global_pulse` on_actions still ran `every_living_character` each month looking for
+  them. The hook is commented out; re-enable it if the titles are ever added.
+- The five `sol_unrestricted_warfare_expansion_cb_*` CBs used `group = sol_expansion`, which didn't exist. Added an
+  empty (unrestricted) `sol_expansion` group. Vanilla `conquest` was rejected: it bans theocracies, pacifists,
+  tributaries and herders.
+- Removed `has_game_rule = change_Realm_succession_law_game_mod_on` (rule doesn't exist) from the Realm Succession
+  decision.
+- Files: `common/on_action/skonester_expansion_title_monthly.txt`, `common/casus_belli_groups/sol_casus_belli_groups.txt`
+  (new), `common/decisions/gender_Succession_decisions_mod.txt`.
+- Verify: the next `error.log` has no `Failed to fetch a valid landed title 'e_skonester_…'`,
+  `Failed to read key reference sol_expansion` or `change_Realm_succession_law_game_mod_on` lines.
+
+**S3: War Without Bounds in the regular menu (done; not yet tested).** Split into two interactions:
+- `sol_war_without_bounds_interaction`: visible menu entry. Needs the Skonester tools menu open, Open Cheats used
+  (`bone_cheat_interactions_flag`) and a player actor. Sets `sol_war_without_bounds_open` for 1 day, then
+  `open_interaction_window` → `sol_expansion_war_interaction`.
+- `sol_expansion_war_interaction`: the declare-war window, now `hidden = yes` (never listed) and gated on the same
+  flags. No longer `debug_only`.
+- The five CBs require `sol_war_without_bounds_open` in `valid_to_start` (not `allowed_for_character`, which can be
+  re-checked mid-war and invalidate an heir's war), and `on_declaration` removes it. They don't appear in vanilla's
+  Declare War.
+- Known gap: cancelling the window while paused leaves the flag up to 1 game day, so vanilla Declare War also shows
+  these CBs until it expires.
+- Files: `common/character_interactions/99_sol_unrestricted_warfare.txt`,
+  `common/casus_belli_types/sol_unrestricted_warfare_expansion_cb_*.txt`,
+  `localization/english/zz_sol_unrestricted_warfare_l_english.yml`.
+- Verify: entry hidden before Open Cheats, listed once after; it opens the war screen with the CBs; vanilla
+  Declare War doesn't list them.
+
+**S4: Spawn Character in the regular menu (done; not yet tested).**
+- `toc_spawn_character_interaction` is no longer `debug_only`; it uses the regular-menu conditions (tools menu
+  open, `bone_cheat_interactions_flag`, player actor).
+- `tocmod.1000.i` is the menu's Close option, but EN/ZH/TR duplicated `.h` ("Spawn Male Sage (Age 100)"). Now
+  Close / 关闭 / Kapat. DE and RU were already right.
+- Files: `common/character_interactions/zzzzzzzz_0toc_deb_int.txt`, `localization/english/new_tocmod_l_english.yml`,
+  `localization/simp_chinese/fully_consolidated_l_simp_chinese.yml`, `localization/turkish/fully_consolidated_l_turkish.yml`.
+- Verify: listed without debug mode; the last option reads Close and closes the menu.
+
+**S5: Special Governments page uses the 1.20 governments (done; not yet tested).**
+- Government Menu page 4 (`skonester_quick_modifications.1413`): Mercenary Company and Adventurer (they need a
+  landless company/camp and do nothing on a landed ruler) replaced with `ecclesiastical_government` and
+  `monastic_holy_order_government`, the two governments 1.20 added. Every other 1.20 government was already on
+  pages 1–3.
+- Page description updated in EN/DE/RU/ZH/TR. Button names come from vanilla loc (none for Turkish, same as the
+  existing Holy Order button).
+- Both new types use `sticky_government`; choosing them turns the Skonester government lock off, as Theocracy and
+  Holy Order already do.
+- Files: `events/skonester_quick_modification_events.txt`,
+  `localization/*/skonester_character_interaction_menus_l_*.yml`.
+- Verify: apply each, let a few months pass, government unchanged.
+
+**S6: Force Vassal as a true cheat (done; reported working in game).**
+- `daddy_pika_offer_vassal_inter` now accepts any ruler (`is_ruler = yes`, landed or landless), including heads of
+  faith, holy/monastic orders, mercenary companies, herders and landless adventurers. `cannot_be_vassal_or_liege`
+  is only a script flag, so it's ignored. AGOT dummy holders, the Night's Watch, confederation members and enemies
+  at war are still excluded.
+- Tier rule relaxed from `<` to `<=`, so a king can vassalize the Pope (`k_papal_state`). Strictly higher tiers are
+  still refused.
+- After `resolve_title_and_vassal_change`, the interaction checks `is_vassal_of`; if the engine refused, it sends a
+  "Vassalization Refused" toast (EN/DE/RU/ZH/TR).
+- Files: `common/character_interactions/99_daddy_pika_character_interaction.txt`,
+  `localization/english/DP_interactions_l_english.yml`, `localization/german/DP_interactions_l_german.yml`,
+  `localization/russian/DP_interactions_l_russian.yml`,
+  `localization/simp_chinese/fully_consolidated_l_simp_chinese.yml`,
+  `localization/turkish/fully_consolidated_l_turkish.yml`.
+- Open question: which target types (mercenaries, adventurers, holy orders) still trigger the toast. If mercenaries
+  or adventurers are refused, the fallback is converting them to feudal first, which likely dissolves the
+  company/camp.

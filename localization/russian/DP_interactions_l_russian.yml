@@ -77,6 +77,8 @@
  daddy_pika_revoke_title_desc:0 "Лишить этого персонажа титула и чести."
  daddy_pika_offer_vassal_inter:0 "Принудить к вассалитету"
  daddy_pika_offer_vassal_inter_desc:0 "Принудить служить тебе в качестве вассала."
+ daddy_pika_offer_vassal_failed_toast_title:0 "Вассалитет отклонён"
+ daddy_pika_offer_vassal_failed_toast_desc:0 "Сама игра не позволяет этому персонажу стать вашим вассалом. Наёмные отряды, священные ордены и безземельные авантюристы могут быть защищены движком независимо от читов."
  daddy_pika_character_spawner:0 "Создать персонажа"
  daddy_pika_character_spawner_desc:0 "Призови новых сильных персонажей в своё владение."
  daddy_pika_arrange_marriage_inter:0 "Принудить к обручению"

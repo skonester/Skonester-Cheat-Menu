@@ -313,8 +313,10 @@ skonester_quick_modifications.1413 = {
 	theme = realm
 	immediate = { skonester_cheat_menu_sync_target_effect = yes }
 	option = { name = holy_order_government scope:skonester_cheat_menu_target = { change_government = holy_order_government skonester_player_government_lock_sync_from_character_effect = yes } trigger_event = skonester_quick_modifications.1413 }
-	option = { name = mercenary_government scope:skonester_cheat_menu_target = { change_government = mercenary_government skonester_player_government_lock_sync_from_character_effect = yes } trigger_event = skonester_quick_modifications.1413 }
-	option = { name = landless_adventurer_government scope:skonester_cheat_menu_target = { change_government = landless_adventurer_government skonester_player_government_lock_sync_from_character_effect = yes } trigger_event = skonester_quick_modifications.1413 }
+	# CK3 1.20 (By God Alone) governments. Mercenary/adventurer were removed: they need a landless
+	# mercenary company or adventurer domicile and do nothing when forced onto a landed ruler.
+	option = { name = ecclesiastical_government scope:skonester_cheat_menu_target = { change_government = ecclesiastical_government skonester_player_government_lock_sync_from_character_effect = yes } trigger_event = skonester_quick_modifications.1413 }
+	option = { name = monastic_holy_order_government scope:skonester_cheat_menu_target = { change_government = monastic_holy_order_government skonester_player_government_lock_sync_from_character_effect = yes } trigger_event = skonester_quick_modifications.1413 }
 	option = { name = skonester_quick_modifications.previous trigger_event = skonester_quick_modifications.1412 }
 	option = { name = skonester_quick_modifications.back_realm trigger_event = skonester_quick_modifications.1400 }
 	option = { name = skonester_quick_modifications.close }

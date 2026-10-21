@@ -8,11 +8,13 @@
 
 **Skonester Cheat Menu Gold** is a Crusader Kings III mod with character, realm, culture, faith, military, and artifact tools. It continues work from Daddy Pika's Cheat Menu and contributions by Zhuge and other CK3 modders. Most tools are available through character interactions or the Decisions menu.
 
-## By God Alone release status
+## By God Alone compatibility
 
-[Crusader Kings III: By God Alone](https://www.paradoxinteractive.com/games/crusader-kings-iii/add-ons/crusader-kings-iii-by-god-alone) is scheduled for **September 30, 2026**. This repository currently contains a **pre-release testing build** (`9.27.26-PreBGA`). Its `descriptor.mod` still declares support for CK3 `1.19.*` (Scribe). Compatibility with the By God Alone release and its accompanying game update has **not yet been verified**. Check the [Releases page](https://github.com/skonester/Skonester-Cheat-Menu/releases) for a build explicitly marked compatible after launch.
+This build (`10.21.26-BGA3`) supports **CK3 1.20 "Crozier"**, the update released with [Crusader Kings III: By God Alone](https://www.paradoxinteractive.com/games/crusader-kings-iii/add-ons/crusader-kings-iii-by-god-alone) on September 30, 2026. It has been tested in game on **CK3 1.20.1.1**, and its `descriptor.mod` declares support for `1.20.*`. Builds made for CK3 1.19 (Scribe) and the earlier pre-release `9.27.26-PreBGA` build do not work on 1.20.
 
-The repository checkout can be newer than the packaged releases. If you test this build around launch, please [report problems](#reporting-issues) with your exact game and mod versions.
+**A Game of Thrones (AGOT):** AGOT hasn't been updated to CK3 1.20.1 yet. Its current release targets 1.19 and crashes 1.20 at startup, even without this mod, so the two can't be used together for now. We're tracking AGOT's releases and will publish a compatible build once AGOT moves to 1.20.1.
+
+The repository checkout can be newer than the packaged releases. If something doesn't work, please [report problems](#reporting-issues) with your exact game and mod versions.
 
 ## Install and open the menu
 

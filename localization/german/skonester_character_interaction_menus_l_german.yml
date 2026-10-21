@@ -147,7 +147,7 @@
  skonester_quick_modifications.government.page3.t:0 "Regierungsmenü — Regionale Regierungen (3/4)"
  skonester_quick_modifications.government.page4.t:0 "Regierungsmenü — Sonderregierungen (4/4)"
  skonester_quick_modifications.government.desc:0 "Wählt die Regierung für [skonester_cheat_menu_target.GetShortUIName]. Die Regierungsnamen stammen direkt aus der installierten CK3-Datenbank."
- skonester_quick_modifications.government.special_desc:0 "Diese Regierungen sind für Ritterorden, Söldnerkompanien oder landlose Abenteurer bestimmt. Bei einem gewöhnlichen Landherrscher können sie die Funktionsweise von Charakter und Reich stark verändern."
+ skonester_quick_modifications.government.special_desc:0 "Diese Regierungen sind für Ritterorden, Klosterorden und den Klerus bestimmt. Bei einem gewöhnlichen Landherrscher können sie die Funktionsweise von Charakter und Reich stark verändern."
  skonester_quick_modifications.next:0 "Nächste Seite"
  skonester_quick_modifications.previous:0 "Vorherige Seite"
  skonester_quick_modifications.back_realm:0 "Zurück zu Reichswerkzeugen"

@@ -2,6 +2,8 @@
 # Unrestricted War Interaction
 sol_expansion_war_interaction:0 "War Without Bounds"
 sol_expansion_war_interaction_desc:0 "Proclaim open [war|E] upon [recipient.GetShortUINameNoTooltip], unshackled by [casus_belli|E] or claim."
+sol_war_without_bounds_interaction:0 "$sol_expansion_war_interaction$"
+sol_war_without_bounds_interaction_desc:0 "$sol_expansion_war_interaction_desc$"
 
 # Capture prisoners on victory
 sol_captive_war_cb_prisoners.tt_attacker:1 "Upon victory, many of [defender.GetShortUINamePossessive] [courtiers|E] shall become your captives, their number determined by [defender.GetHerHis] station."

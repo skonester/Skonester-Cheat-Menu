@@ -161,7 +161,7 @@
  tocmod.1000.f:0 "Spawn Female (Age 45)"
  tocmod.1000.g:0 "Spawn Female (Age 45, Dynastic)"
  tocmod.1000.h:0 "Spawn Male Sage (Age 100)"
- tocmod.1000.i:0 "Spawn Male Sage (Age 100)"
+ tocmod.1000.i:0 "Close"
 
  tocmod.1001.t:0 "Spawn Character: Positive Traits"
  tocmod.1001.desc:0 "Select congenital traits to add:"

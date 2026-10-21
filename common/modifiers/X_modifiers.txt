@@ -10,7 +10,7 @@
 	no_prowess_loss_from_age = yes
 
 	county_opinion_add = 200
-	monthly_county_control_change_add = 100
+	monthly_county_control_growth_add = 100
 
 	different_culture_opinion = 200
 	same_culture_opinion = 200

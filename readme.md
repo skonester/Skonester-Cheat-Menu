@@ -65,6 +65,6 @@ Release notes and older builds are on the [Releases page](https://github.com/sko
 
 ## Credits and license
 
-This project builds on **Daddy Pika's Cheat Menu** by DaddyPika and contributions by **Zhuge**. Thanks also to Pavel, Bone, Leech, Sol, Xorxidox, Gravity, x4077, and other community contributors.
+This project builds on **Daddy Pika's Cheat Menu** by DaddyPika and contributions by **Zhuge**. Thanks also to Pavel, Bone, Leech, Sol, Xorxidox, Gravity, x4077,jestelf and other community contributors.
 
 The repository is licensed under [Creative Commons Attribution 4.0 International](LICENSE). See [LICENSE](LICENSE) for the full text and attribution notice.

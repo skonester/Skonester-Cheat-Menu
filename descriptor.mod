@@ -1,4 +1,4 @@
-version="10.21.26-BGA3"
+version="10.22.26-BGA3"
 tags={
 	"1.20 'Crozier'"
 }

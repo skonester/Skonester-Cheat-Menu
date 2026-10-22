@@ -1,0 +1,1787 @@
+﻿skonester_crozier_cheats_sg_st_health = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_health }
+}
+
+skonester_crozier_cheats_sg_tog_health = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_health } skonester_crozier_cheats_off_health = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_health } } } else = { skonester_crozier_cheats_on_health = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_health } } } }
+}
+
+skonester_crozier_cheats_sg_st_stress = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_stress }
+}
+
+skonester_crozier_cheats_sg_tog_stress = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_stress } skonester_crozier_cheats_off_stress = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_stress } } } else = { skonester_crozier_cheats_on_stress = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_stress } } } }
+}
+
+skonester_crozier_cheats_sg_st_skills = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_skills }
+}
+
+skonester_crozier_cheats_sg_tog_skills = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_skills } skonester_crozier_cheats_off_skills = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_skills } } } else = { skonester_crozier_cheats_on_skills = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_skills } } } }
+}
+
+skonester_crozier_cheats_sg_st_income = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_income }
+}
+
+skonester_crozier_cheats_sg_tog_income = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_income } skonester_crozier_cheats_off_income = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_income } } } else = { skonester_crozier_cheats_on_income = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_income } } } }
+}
+
+skonester_crozier_cheats_sg_st_domain = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_domain }
+}
+
+skonester_crozier_cheats_sg_tog_domain = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_domain } skonester_crozier_cheats_off_domain = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_domain } } } else = { skonester_crozier_cheats_on_domain = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_domain } } } }
+}
+
+skonester_crozier_cheats_sg_st_vassals = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_vassals }
+}
+
+skonester_crozier_cheats_sg_tog_vassals = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_vassals } skonester_crozier_cheats_off_vassals = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_vassals } } } else = { skonester_crozier_cheats_on_vassals = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_vassals } } } }
+}
+
+skonester_crozier_cheats_sg_st_prestige = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_prestige }
+}
+
+skonester_crozier_cheats_sg_tog_prestige = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_prestige } skonester_crozier_cheats_off_prestige = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_prestige } } } else = { skonester_crozier_cheats_on_prestige = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_prestige } } } }
+}
+
+skonester_crozier_cheats_sg_st_piety = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_piety }
+}
+
+skonester_crozier_cheats_sg_tog_piety = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_piety } skonester_crozier_cheats_off_piety = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_piety } } } else = { skonester_crozier_cheats_on_piety = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_piety } } } }
+}
+
+skonester_crozier_cheats_sg_st_immortal_player = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_immortal_player }
+}
+
+skonester_crozier_cheats_sg_tog_immortal_player = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_immortal_player } skonester_crozier_cheats_off_immortal_player = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_immortal_player } } } else = { skonester_crozier_cheats_on_immortal_player = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_immortal_player } } } }
+}
+
+skonester_crozier_cheats_sg_st_disease_player = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_disease_player }
+}
+
+skonester_crozier_cheats_sg_tog_disease_player = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_disease_player } skonester_crozier_cheats_off_disease_player = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_disease_player } } } else = { skonester_crozier_cheats_on_disease_player = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_disease_player } } } }
+}
+
+skonester_crozier_cheats_sg_st_monthly_gold = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_monthly_gold }
+}
+
+skonester_crozier_cheats_sg_tog_monthly_gold = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_monthly_gold } skonester_crozier_cheats_off_monthly_gold = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_monthly_gold } } } else = { skonester_crozier_cheats_on_monthly_gold = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_monthly_gold } } } }
+}
+
+skonester_crozier_cheats_sg_st_renown = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_renown }
+}
+
+skonester_crozier_cheats_sg_tog_renown = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_renown } skonester_crozier_cheats_off_renown = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_renown } } } else = { skonester_crozier_cheats_on_renown = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_renown } } } }
+}
+
+skonester_crozier_cheats_sg_st_slots = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_slots }
+}
+
+skonester_crozier_cheats_sg_tog_slots = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_slots } skonester_crozier_cheats_off_slots = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_slots } } } else = { skonester_crozier_cheats_on_slots = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_slots } } } }
+}
+
+skonester_crozier_cheats_sg_st_influence = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_influence }
+}
+
+skonester_crozier_cheats_sg_tog_influence = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_influence } skonester_crozier_cheats_off_influence = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_influence } } } else = { skonester_crozier_cheats_on_influence = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_influence } } } }
+}
+
+skonester_crozier_cheats_sg_st_lifestyle_xp = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_lifestyle_xp }
+}
+
+skonester_crozier_cheats_sg_tog_lifestyle_xp = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_lifestyle_xp } skonester_crozier_cheats_off_lifestyle_xp = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_lifestyle_xp } } } else = { skonester_crozier_cheats_on_lifestyle_xp = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_lifestyle_xp } } } }
+}
+
+skonester_crozier_cheats_sg_st_levy = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_levy }
+}
+
+skonester_crozier_cheats_sg_tog_levy = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_levy } skonester_crozier_cheats_off_levy = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_levy } } } else = { skonester_crozier_cheats_on_levy = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_levy } } } }
+}
+
+skonester_crozier_cheats_sg_st_life = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_life }
+}
+
+skonester_crozier_cheats_sg_tog_life = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_life } skonester_crozier_cheats_off_life = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_life } } } else = { skonester_crozier_cheats_on_life = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_life } } } }
+}
+
+skonester_crozier_cheats_sg_st_prestige_mult = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_prestige_mult }
+}
+
+skonester_crozier_cheats_sg_tog_prestige_mult = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_prestige_mult } skonester_crozier_cheats_off_prestige_mult = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_prestige_mult } } } else = { skonester_crozier_cheats_on_prestige_mult = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_prestige_mult } } } }
+}
+
+skonester_crozier_cheats_sg_st_renown_mult = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_renown_mult }
+}
+
+skonester_crozier_cheats_sg_tog_renown_mult = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_renown_mult } skonester_crozier_cheats_off_renown_mult = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_renown_mult } } } else = { skonester_crozier_cheats_on_renown_mult = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_renown_mult } } } }
+}
+
+skonester_crozier_cheats_sg_st_innovation = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_innovation }
+}
+
+skonester_crozier_cheats_sg_tog_innovation = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_innovation } skonester_crozier_cheats_off_innovation = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_innovation } } } else = { skonester_crozier_cheats_on_innovation = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_innovation } } } }
+}
+
+skonester_crozier_cheats_sg_st_legit_gain = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_legit_gain }
+}
+
+skonester_crozier_cheats_sg_tog_legit_gain = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_legit_gain } skonester_crozier_cheats_off_legit_gain = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_legit_gain } } } else = { skonester_crozier_cheats_on_legit_gain = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_legit_gain } } } }
+}
+
+skonester_crozier_cheats_sg_st_travel_safe = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_travel_safe }
+}
+
+skonester_crozier_cheats_sg_tog_travel_safe = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_travel_safe } skonester_crozier_cheats_off_travel_safe = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_travel_safe } } } else = { skonester_crozier_cheats_on_travel_safe = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_travel_safe } } } }
+}
+
+skonester_crozier_cheats_sg_st_merit_gain = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_merit_gain }
+}
+
+skonester_crozier_cheats_sg_tog_merit_gain = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_merit_gain } skonester_crozier_cheats_off_merit_gain = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_merit_gain } } } else = { skonester_crozier_cheats_on_merit_gain = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_merit_gain } } } }
+}
+
+skonester_crozier_cheats_sg_st_skills_mult = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_skills_mult }
+}
+
+skonester_crozier_cheats_sg_tog_skills_mult = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_skills_mult } skonester_crozier_cheats_off_skills_mult = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_skills_mult } } } else = { skonester_crozier_cheats_on_skills_mult = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_skills_mult } } } }
+}
+
+skonester_crozier_cheats_sg_st_long_reign = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_long_reign }
+}
+
+skonester_crozier_cheats_sg_tog_long_reign = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_long_reign } skonester_crozier_cheats_off_long_reign = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_long_reign } } } else = { skonester_crozier_cheats_on_long_reign = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_long_reign } } } }
+}
+
+skonester_crozier_cheats_sg_st_legend_spread = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_legend_spread }
+}
+
+skonester_crozier_cheats_sg_tog_legend_spread = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_legend_spread } skonester_crozier_cheats_off_legend_spread = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_legend_spread } } } else = { skonester_crozier_cheats_on_legend_spread = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_legend_spread } } } }
+}
+
+skonester_crozier_cheats_sg_st_auto_gold_floor = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_auto_gold_floor }
+}
+
+skonester_crozier_cheats_sg_tog_auto_gold_floor = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_auto_gold_floor } skonester_crozier_cheats_off_auto_gold_floor = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_auto_gold_floor } } } else = { skonester_crozier_cheats_on_auto_gold_floor = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_auto_gold_floor } } } }
+}
+
+skonester_crozier_cheats_sg_st_auto_prestige_floor = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_auto_prestige_floor }
+}
+
+skonester_crozier_cheats_sg_tog_auto_prestige_floor = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_auto_prestige_floor } skonester_crozier_cheats_off_auto_prestige_floor = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_auto_prestige_floor } } } else = { skonester_crozier_cheats_on_auto_prestige_floor = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_auto_prestige_floor } } } }
+}
+
+skonester_crozier_cheats_sg_st_auto_no_prison = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_auto_no_prison }
+}
+
+skonester_crozier_cheats_sg_tog_auto_no_prison = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_auto_no_prison } skonester_crozier_cheats_off_auto_no_prison = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_auto_no_prison } } } else = { skonester_crozier_cheats_on_auto_no_prison = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_auto_no_prison } } } }
+}
+
+skonester_crozier_cheats_sg_st_auto_ascension = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_auto_ascension }
+}
+
+skonester_crozier_cheats_sg_tog_auto_ascension = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_auto_ascension } skonester_crozier_cheats_off_auto_ascension = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_auto_ascension } } } else = { skonester_crozier_cheats_on_auto_ascension = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_auto_ascension } } } }
+}
+
+skonester_crozier_cheats_sg_st_auto_forever_young = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_on_auto_forever_young }
+}
+
+skonester_crozier_cheats_sg_tog_auto_forever_young = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_auto_forever_young } skonester_crozier_cheats_off_auto_forever_young = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_off_auto_forever_young } } } else = { skonester_crozier_cheats_on_auto_forever_young = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_on_auto_forever_young } } } }
+}
+
+skonester_crozier_cheats_sg_do_prestige_add = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_prestige_add } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_prestige_add = yes }
+}
+
+skonester_crozier_cheats_sg_do_piety_add = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_piety_add } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_piety_add = yes }
+}
+
+skonester_crozier_cheats_sg_do_stress_zero = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_stress_zero } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_stress_zero = yes }
+}
+
+skonester_crozier_cheats_sg_do_gold = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_gold } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_gold = yes }
+}
+
+skonester_crozier_cheats_sg_do_good_traits_me = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_good_traits_me } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_good_traits_me = yes }
+}
+
+skonester_crozier_cheats_sg_do_me_immortal_trait = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_me_immortal_trait } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_me_immortal_trait = yes }
+}
+
+skonester_crozier_cheats_sg_do_me_cure = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_me_cure } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_me_cure = yes }
+}
+
+skonester_crozier_cheats_sg_do_me_young = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_me_young } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_me_young = yes }
+}
+
+skonester_crozier_cheats_sg_do_lifestyle_xp_all = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_lifestyle_xp_all } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_lifestyle_xp_all = yes }
+}
+
+skonester_crozier_cheats_sg_do_legit_level = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_legit_level } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_legit_level = yes }
+}
+
+skonester_crozier_cheats_sg_do_gold_double = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_gold_double } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_gold_double = yes }
+}
+
+skonester_crozier_cheats_sg_do_play_prev = {
+	scope = character
+	is_valid = { exists = global_var:skonester_crozier_cheats_prev_char global_var:skonester_crozier_cheats_prev_char = { is_alive = yes is_ai = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_play_prev } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_play_prev = yes }
+}
+
+skonester_crozier_cheats_sg_do_play_heir = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_play_heir } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_play_heir = yes }
+}
+
+skonester_crozier_cheats_sg_do_gp_complete = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_gp_complete } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_gp_complete = yes }
+}
+
+skonester_crozier_cheats_sg_do_forge_crown = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_forge_crown } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_forge_crown = yes }
+}
+
+skonester_crozier_cheats_sg_do_trait_tracks_max = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_trait_tracks_max } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_trait_tracks_max = yes }
+}
+
+skonester_crozier_cheats_sg_do_travel_arrive = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_travel_arrive } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_travel_arrive = yes }
+}
+
+skonester_crozier_cheats_sg_do_piety_level_max = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_piety_level_max } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_piety_level_max = yes }
+}
+
+skonester_crozier_cheats_sg_do_toasts_toggle = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_toasts_toggle = yes }
+}
+
+skonester_crozier_cheats_sg_do_child_now = {
+	scope = character
+	is_valid = { root = { any_spouse = { count >= 1 } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_child_now } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_child_now = yes }
+}
+
+skonester_crozier_cheats_sg_do_me_heal_all = {
+	scope = character
+	is_valid = { root = { OR = { has_trait = ill has_trait = pneumonic has_trait = bubonic_plague has_trait = smallpox has_trait = cancer has_trait = consumption has_trait = great_pox has_trait = early_great_pox has_trait = lovers_pox has_trait = typhus has_trait = dysentery has_trait = ergotism has_trait = leper has_trait = measles has_trait = gout_ridden has_trait = wounded_1 has_trait = wounded_2 has_trait = wounded_3 has_trait = incapable } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_me_heal_all } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_me_heal_all = yes }
+}
+
+skonester_crozier_cheats_sg_do_prestige_level_max = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_prestige_level_max } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_prestige_level_max = yes }
+}
+
+skonester_crozier_cheats_sg_do_grandeur_max = {
+	scope = character
+	is_valid = { root = { has_royal_court = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_grandeur_max } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_grandeur_max = yes }
+}
+
+skonester_crozier_cheats_sg_do_levels_max_all = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_levels_max_all } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_levels_max_all = yes }
+}
+
+skonester_crozier_cheats_sg_do_cooldowns_reset = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_cooldowns_reset } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_cooldowns_reset = yes }
+}
+
+skonester_crozier_cheats_sg_do_instant_empire = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_instant_empire } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_instant_empire = yes }
+}
+
+skonester_crozier_cheats_sg_do_combo_golden_age = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_combo_golden_age } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_combo_golden_age = yes }
+}
+
+skonester_crozier_cheats_sg_do_combo_family = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_combo_family } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_combo_family = yes }
+}
+
+skonester_crozier_cheats_sg_do_combo_army = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_combo_army } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_combo_army = yes }
+}
+
+skonester_crozier_cheats_sg_do_me_fit = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_me_fit } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_me_fit = yes }
+}
+
+skonester_crozier_cheats_sg_do_combo_emergency = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_combo_emergency } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_combo_emergency = yes }
+}
+
+skonester_crozier_cheats_sg_do_income_year = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_income_year } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_income_year = yes }
+}
+
+skonester_crozier_cheats_sg_do_combo_throne = {
+	scope = character
+	is_valid = { root = { is_independent_ruler = no } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_combo_throne } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_combo_throne = yes }
+}
+
+skonester_crozier_cheats_sg_do_combo_rise = {
+	scope = character
+	is_valid = { root = { is_landed = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_combo_rise } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_combo_rise = yes }
+}
+
+skonester_crozier_cheats_sg_do_freq_week = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_freq_week } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_freq_week = yes }
+}
+
+skonester_crozier_cheats_sg_do_freq_month = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_freq_month } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_freq_month = yes }
+}
+
+skonester_crozier_cheats_sg_do_freq_quarter = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_freq_quarter } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_freq_quarter = yes }
+}
+
+skonester_crozier_cheats_sg_do_perks_all = {
+	scope = character
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_perks_all } } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_perks_all = yes }
+}
+
+skonester_crozier_cheats_sg_pow_1 = {
+	scope = character
+	is_shown = { OR = { global_var:skonester_crozier_cheats_power ?= 1 NOT = { exists = global_var:skonester_crozier_cheats_power } } }
+	effect = { set_global_variable = { name = skonester_crozier_cheats_power value = 1 } }
+}
+
+skonester_crozier_cheats_sg_pow_2 = {
+	scope = character
+	is_shown = { OR = { global_var:skonester_crozier_cheats_power ?= 2 always = no } }
+	effect = { set_global_variable = { name = skonester_crozier_cheats_power value = 2 } }
+}
+
+skonester_crozier_cheats_sg_pow_3 = {
+	scope = character
+	is_shown = { OR = { global_var:skonester_crozier_cheats_power ?= 3 always = no } }
+	effect = { set_global_variable = { name = skonester_crozier_cheats_power value = 3 } }
+}
+
+skonester_crozier_cheats_sg_pow_4 = {
+	scope = character
+	is_shown = { OR = { global_var:skonester_crozier_cheats_power ?= 4 always = no } }
+	effect = { set_global_variable = { name = skonester_crozier_cheats_power value = 4 } }
+}
+
+skonester_crozier_cheats_sg_pow_5 = {
+	scope = character
+	is_shown = { OR = { global_var:skonester_crozier_cheats_power ?= 5 always = no } }
+	effect = { set_global_variable = { name = skonester_crozier_cheats_power value = 5 } }
+}
+
+skonester_crozier_cheats_sg_pow_6 = {
+	scope = character
+	is_shown = { OR = { global_var:skonester_crozier_cheats_power ?= 6 always = no } }
+	effect = { set_global_variable = { name = skonester_crozier_cheats_power value = 6 } }
+}
+
+skonester_crozier_cheats_sg_pow_7 = {
+	scope = character
+	is_shown = { OR = { global_var:skonester_crozier_cheats_power ?= 7 always = no } }
+	effect = { set_global_variable = { name = skonester_crozier_cheats_power value = 7 } }
+}
+
+skonester_crozier_cheats_sg_tier_1 = {
+	scope = character
+	is_shown = { OR = { global_var:skonester_crozier_cheats_tier ?= 1 always = no } }
+	effect = { set_global_variable = { name = skonester_crozier_cheats_tier value = 1 } }
+}
+
+skonester_crozier_cheats_sg_tier_2 = {
+	scope = character
+	is_shown = { OR = { global_var:skonester_crozier_cheats_tier ?= 2 NOT = { exists = global_var:skonester_crozier_cheats_tier } } }
+	effect = { set_global_variable = { name = skonester_crozier_cheats_tier value = 2 } }
+}
+
+skonester_crozier_cheats_sg_tier_3 = {
+	scope = character
+	is_shown = { OR = { global_var:skonester_crozier_cheats_tier ?= 3 always = no } }
+	effect = { set_global_variable = { name = skonester_crozier_cheats_tier value = 3 } }
+}
+
+skonester_crozier_cheats_sg_realm_on = {
+	scope = character
+	is_shown = { has_global_variable = skonester_crozier_cheats_realm }
+	effect = { set_global_variable = { name = skonester_crozier_cheats_realm value = yes } }
+}
+
+skonester_crozier_cheats_sg_realm_off = {
+	scope = character
+	is_shown = { NOT = { has_global_variable = skonester_crozier_cheats_realm } }
+	effect = { remove_global_variable = skonester_crozier_cheats_realm }
+}
+
+skonester_crozier_cheats_sg_t_t_crush = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { NOT = { scope:skonester_crozier_cheats_char = root } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_crush } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_crush = yes }
+}
+
+skonester_crozier_cheats_sg_t_target_kill = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_target_kill } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_target_kill = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_execute = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_execute } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_execute = yes }
+}
+
+skonester_crozier_cheats_sg_t_target_imprison = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_target_imprison } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_target_imprison = yes }
+}
+
+skonester_crozier_cheats_sg_t_target_release = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_target_release } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_target_release = yes }
+}
+
+skonester_crozier_cheats_sg_t_target_weak = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_target_weak } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_target_weak = yes }
+}
+
+skonester_crozier_cheats_sg_t_target_stress = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_target_stress } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_target_stress = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_ill = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_ill } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_ill = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_pneumonic = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_pneumonic } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_pneumonic = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_incapable = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_incapable } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_incapable = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_blind = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_blind } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_blind = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_infertile = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_infertile } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_infertile = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_disfigure = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_disfigure } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_disfigure = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_prestige_zero = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_prestige_zero } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_prestige_zero = yes }
+}
+
+skonester_crozier_cheats_sg_t_target_gold_take = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_target_gold_take } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_target_gold_take = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_old = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_old } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_old = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_mortal = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_mortal } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_mortal = yes }
+}
+
+skonester_crozier_cheats_sg_t_tt_enemy_health = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { NOT = { has_character_modifier = skonester_crozier_cheats_enemy_health } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_tt_enemy_health } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_tt_on_enemy_health = yes }
+}
+
+skonester_crozier_cheats_sg_t_tt_off_enemy_health = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { has_character_modifier = skonester_crozier_cheats_enemy_health } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_tt_off_enemy_health } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_tt_off_enemy_health = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_rob_gold = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_rob_gold } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_rob_gold = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_rob_artifacts = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_rob_artifacts } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_rob_artifacts = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_skills_down = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_skills_down } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_skills_down = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_knight_off = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_knight_off } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_knight_off = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_epidemic_bubonic_plague = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_landed = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_epidemic_bubonic_plague } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_epidemic_bubonic_plague = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_epidemic_smallpox = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_landed = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_epidemic_smallpox } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_epidemic_smallpox = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_epidemic_typhus = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_landed = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_epidemic_typhus } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_epidemic_typhus = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_epidemic_consumption = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_landed = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_epidemic_consumption } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_epidemic_consumption = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_epidemic_measles = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_landed = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_epidemic_measles } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_epidemic_measles = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_epidemic_dysentery = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_landed = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_epidemic_dysentery } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_epidemic_dysentery = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_epidemic_ergotism = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_landed = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_epidemic_ergotism } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_epidemic_ergotism = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_excommunicate = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { NOT = { has_trait = excommunicated } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_excommunicate } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_excommunicate = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_schemes_expose = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_schemes_expose } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_schemes_expose = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_schemes_end = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_schemes_end } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_schemes_end = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_depose = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_ruler = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_depose } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_depose = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_banish = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { employer ?= root } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_banish } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_banish = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_lowborn = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { NOT = { scope:skonester_crozier_cheats_char = root } exists = scope:skonester_crozier_cheats_char.dynasty }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_lowborn } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_lowborn = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_elevate = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { NOT = { scope:skonester_crozier_cheats_char = root } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_elevate } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_elevate = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_play_as = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_alive = yes is_ai = yes } NOT = { scope:skonester_crozier_cheats_char = { this = root } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_play_as } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_play_as = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_marry_me = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { NOT = { scope:skonester_crozier_cheats_char = { this = root } } NOT = { scope:skonester_crozier_cheats_char = { is_spouse_of = root } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_marry_me } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_marry_me = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_child_me = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { NOT = { scope:skonester_crozier_cheats_char = { this = root } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_child_me } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_child_me = yes }
+}
+
+skonester_crozier_cheats_sg_t_target_marry = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { exists = global_var:skonester_crozier_cheats_other global_var:skonester_crozier_cheats_other = { is_alive = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_target_marry } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_target_marry = yes }
+}
+
+skonester_crozier_cheats_sg_t_target_matrilineal = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { exists = global_var:skonester_crozier_cheats_other global_var:skonester_crozier_cheats_other = { is_alive = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_target_matrilineal } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_target_matrilineal = yes }
+}
+
+skonester_crozier_cheats_sg_t_target_divorce = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_target_divorce } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_target_divorce = yes }
+}
+
+skonester_crozier_cheats_sg_t_target_pregnancy = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { exists = global_var:skonester_crozier_cheats_other global_var:skonester_crozier_cheats_other = { is_alive = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_target_pregnancy } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_target_pregnancy = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_remember = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_remember } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_remember = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_forget = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { exists = global_var:skonester_crozier_cheats_other }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_forget } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_forget = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_rel_friend = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { NOT = { scope:skonester_crozier_cheats_char = { this = root } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_rel_friend } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_rel_friend = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_rel_best_friend = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { NOT = { scope:skonester_crozier_cheats_char = { this = root } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_rel_best_friend } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_rel_best_friend = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_rel_lover = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { NOT = { scope:skonester_crozier_cheats_char = { this = root } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_rel_lover } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_rel_lover = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_rel_soulmate = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { NOT = { scope:skonester_crozier_cheats_char = { this = root } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_rel_soulmate } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_rel_soulmate = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_rel_rival = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { NOT = { scope:skonester_crozier_cheats_char = { this = root } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_rel_rival } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_rel_rival = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_rel_peace = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_rel_peace } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_rel_peace = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_opinion = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_opinion } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_opinion = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_hook = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_hook } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_hook = yes }
+}
+
+skonester_crozier_cheats_sg_t_target_heir = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_target_heir } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_target_heir = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_legitimize = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { has_trait = bastard } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_legitimize } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_legitimize = yes }
+}
+
+skonester_crozier_cheats_sg_t_target_court = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_target_court } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_target_court = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_adopt = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { NOT = { scope:skonester_crozier_cheats_char = { this = root } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_adopt } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_adopt = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_copy_look = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { NOT = { scope:skonester_crozier_cheats_char = { this = root } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_copy_look } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_copy_look = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_rel_blood_brother = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { NOT = { scope:skonester_crozier_cheats_char = { this = root } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_rel_blood_brother } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_rel_blood_brother = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_rel_mentor = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { NOT = { scope:skonester_crozier_cheats_char = { this = root } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_rel_mentor } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_rel_mentor = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_unrel_friend = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_unrel_friend } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_unrel_friend = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_unrel_lover = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_unrel_lover } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_unrel_lover = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_unrel_soulmate = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_unrel_soulmate } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_unrel_soulmate = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_unrel_best_friend = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_unrel_best_friend } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_unrel_best_friend = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_sex_heterosexual = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_sex_heterosexual } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_sex_heterosexual = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_sex_homosexual = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_sex_homosexual } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_sex_homosexual = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_sex_bisexual = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_sex_bisexual } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_sex_bisexual = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_sex_asexual = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_sex_asexual } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_sex_asexual = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_trait_tracks_max = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_trait_tracks_max } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_trait_tracks_max = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_concubine = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_imprisoned = no is_married = no is_adult = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_concubine } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_concubine = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_hybrid_culture = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { NOT = { scope:skonester_crozier_cheats_char.culture = root.culture } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_hybrid_culture } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_hybrid_culture = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_child_now = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { OR = { AND = { scope:skonester_crozier_cheats_char = { is_female = yes } root = { is_female = no } } AND = { scope:skonester_crozier_cheats_char = { is_female = no } root = { is_female = yes } } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_child_now } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_child_now = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_unexcommunicate = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { has_trait = excommunicated } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_unexcommunicate } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_unexcommunicate = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_saint = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { NOT = { has_trait = saint } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_saint } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_saint = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_heal_all = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { OR = { has_trait = ill has_trait = pneumonic has_trait = bubonic_plague has_trait = smallpox has_trait = cancer has_trait = consumption has_trait = great_pox has_trait = early_great_pox has_trait = lovers_pox has_trait = typhus has_trait = dysentery has_trait = ergotism has_trait = leper has_trait = measles has_trait = gout_ridden has_trait = wounded_1 has_trait = wounded_2 has_trait = wounded_3 has_trait = incapable } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_heal_all } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_heal_all = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_house_name = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { exists = scope:skonester_crozier_cheats_char.house NOT = { scope:skonester_crozier_cheats_char.house = root.house } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_house_name } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_house_name = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_secrets_erase = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_secrets_erase } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_secrets_erase = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_primary_spouse = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { root = { is_spouse_of = scope:skonester_crozier_cheats_char } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_primary_spouse } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_primary_spouse = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_guest = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_ruler = no NOT = { employer ?= root } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_guest } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_guest = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_bind = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { NOT = { scope:skonester_crozier_cheats_char = root } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_bind } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_bind = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_vassalize = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_landed = yes NOT = { this = root } } NOT = { scope:skonester_crozier_cheats_char = { is_vassal_of = root } } NOT = { root = { is_vassal_or_below_of = scope:skonester_crozier_cheats_char } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_vassalize } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_vassalize = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_independent = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_landed = yes NOT = { this = root } } scope:skonester_crozier_cheats_char = { is_independent_ruler = no } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_independent } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_independent = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_take_primary = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_landed = yes NOT = { this = root } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_take_primary } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_take_primary = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_take_all = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_landed = yes NOT = { this = root } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_take_all } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_take_all = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_claim_primary = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_landed = yes NOT = { this = root } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_claim_primary } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_claim_primary = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_claim_all = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_landed = yes NOT = { this = root } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_claim_all } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_claim_all = yes }
+}
+
+skonester_crozier_cheats_sg_t_target_alliance = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_target_alliance } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_target_alliance = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_secrets = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_secrets } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_secrets = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_truce = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_truce } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_truce = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_truce_break = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_truce_break } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_truce_break = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_secret_deviant = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_adult = yes NOT = { has_trait = deviant } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_secret_deviant } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_secret_deviant = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_secret_cannibal = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { NOT = { has_trait = cannibal } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_secret_cannibal } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_secret_cannibal = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_secret_witch = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { NOT = { has_trait = witch } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_secret_witch } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_secret_witch = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_secret_homosexual = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_adult = yes is_male = yes NOT = { has_trait = sodomite } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_secret_homosexual } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_secret_homosexual = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_blackmail_all = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_blackmail_all } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_blackmail_all = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_tributary = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_independent_ruler = yes NOT = { is_tributary_of = root } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_tributary } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_tributary = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_tributary_free = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_tributary = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_tributary_free } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_tributary_free = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_hostage = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_hostage = no is_ruler = no } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_hostage } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_hostage = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_hostage_free = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_hostage = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_hostage_free } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_hostage_free = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_family_hostages = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_family_hostages } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_family_hostages = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_councillor_chancellor = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { OR = { employer ?= root is_vassal_of = root } is_adult = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_councillor_chancellor } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_councillor_chancellor = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_councillor_steward = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { OR = { employer ?= root is_vassal_of = root } is_adult = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_councillor_steward } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_councillor_steward = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_councillor_marshal = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { OR = { employer ?= root is_vassal_of = root } is_adult = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_councillor_marshal } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_councillor_marshal = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_councillor_spymaster = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { OR = { employer ?= root is_vassal_of = root } is_adult = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_councillor_spymaster } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_councillor_spymaster = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_councillor_court_chaplain = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { OR = { employer ?= root is_vassal_of = root } is_adult = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_councillor_court_chaplain } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_councillor_court_chaplain = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_cp_court_physician = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { employer ?= root is_adult = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_cp_court_physician } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_cp_court_physician = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_cp_bodyguard = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { employer ?= root is_adult = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_cp_bodyguard } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_cp_bodyguard = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_cp_champion = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { employer ?= root is_adult = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_cp_champion } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_cp_champion = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_cp_court_tutor = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { employer ?= root is_adult = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_cp_court_tutor } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_cp_court_tutor = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_cp_master_assassin = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { employer ?= root is_adult = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_cp_master_assassin } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_cp_master_assassin = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_cp_royal_architect = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { employer ?= root is_adult = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_cp_royal_architect } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_cp_royal_architect = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_war_claim = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_landed = yes NOT = { this = root } NOT = { is_at_war_with = root } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_war_claim } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_war_claim = yes }
+}
+
+skonester_crozier_cheats_sg_t_target_maa_resize = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_target_maa_resize } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_target_maa_resize = yes }
+}
+
+skonester_crozier_cheats_sg_t_target_maa_empty = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_target_maa_empty } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_target_maa_empty = yes }
+}
+
+skonester_crozier_cheats_sg_t_target_garrison = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_target_garrison } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_target_garrison = yes }
+}
+
+skonester_crozier_cheats_sg_t_enemy_deplete = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_enemy_deplete } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_enemy_deplete = yes }
+}
+
+skonester_crozier_cheats_sg_t_enemy_supply = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_enemy_supply } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_enemy_supply = yes }
+}
+
+skonester_crozier_cheats_sg_t_enemy_commander = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_enemy_commander } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_enemy_commander = yes }
+}
+
+skonester_crozier_cheats_sg_t_tt_enemy_army = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { NOT = { has_character_modifier = skonester_crozier_cheats_enemy_army } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_tt_enemy_army } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_tt_on_enemy_army = yes }
+}
+
+skonester_crozier_cheats_sg_t_tt_off_enemy_army = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { has_character_modifier = skonester_crozier_cheats_enemy_army } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_tt_off_enemy_army } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_tt_off_enemy_army = yes }
+}
+
+skonester_crozier_cheats_sg_t_tt_enemy_speed = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { NOT = { has_character_modifier = skonester_crozier_cheats_enemy_speed } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_tt_enemy_speed } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_tt_on_enemy_speed = yes }
+}
+
+skonester_crozier_cheats_sg_t_tt_off_enemy_speed = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { has_character_modifier = skonester_crozier_cheats_enemy_speed } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_tt_off_enemy_speed } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_tt_off_enemy_speed = yes }
+}
+
+skonester_crozier_cheats_sg_t_tt_enemy_money = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { NOT = { has_character_modifier = skonester_crozier_cheats_enemy_money } } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_tt_enemy_money } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_tt_on_enemy_money = yes }
+}
+
+skonester_crozier_cheats_sg_t_tt_off_enemy_money = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { has_character_modifier = skonester_crozier_cheats_enemy_money } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_tt_off_enemy_money } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_tt_off_enemy_money = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_armies_to = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { exists = capital_province } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_armies_to } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_armies_to = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_ghw = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_landed = yes NOT = { faith = root.faith } } NOT = { exists = root.faith.great_holy_war } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_ghw } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_ghw = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_culture_innovations = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { NOT = { scope:skonester_crozier_cheats_char.culture = root.culture } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_culture_innovations } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_culture_innovations = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_culture_traditions = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { NOT = { scope:skonester_crozier_cheats_char.culture = root.culture } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_culture_traditions } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_culture_traditions = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_faith_holy_sites = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { NOT = { scope:skonester_crozier_cheats_char.faith = root.faith } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_faith_holy_sites } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_faith_holy_sites = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_faith_fervor_down = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { NOT = { scope:skonester_crozier_cheats_char.faith = root.faith } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_faith_fervor_down } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_faith_fervor_down = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_faith_fervor_up = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_faith_fervor_up } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_faith_fervor_up = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_artifact_claims = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_artifact_claims } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_artifact_claims = yes }
+}
+
+skonester_crozier_cheats_sg_t_target_heal = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_target_heal } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_target_heal = yes }
+}
+
+skonester_crozier_cheats_sg_t_target_culture = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_target_culture } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_target_culture = yes }
+}
+
+skonester_crozier_cheats_sg_t_target_faith = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_target_faith } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_target_faith = yes }
+}
+
+skonester_crozier_cheats_sg_t_target_gold_add = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_target_gold_add } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_target_gold_add = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_good_traits = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_good_traits } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_good_traits = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_immortal = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_immortal } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_immortal = yes }
+}
+
+skonester_crozier_cheats_sg_t_me_take_faith = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_me_take_faith } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_me_take_faith = yes }
+}
+
+skonester_crozier_cheats_sg_t_me_take_culture = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_me_take_culture } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_me_take_culture = yes }
+}
+
+skonester_crozier_cheats_sg_t_realm_take_faith = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_realm_take_faith } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_realm_take_faith = yes }
+}
+
+skonester_crozier_cheats_sg_t_realm_take_culture = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_realm_take_culture } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_realm_take_culture = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_cure = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_cure } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_cure = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_young = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_young } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_young = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_language = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_language } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_language = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_lands_faith = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	is_valid = { scope:skonester_crozier_cheats_char = { is_landed = yes } }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_lands_faith } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_lands_faith = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_knight_force = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_knight_force } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_knight_force = yes }
+}
+
+skonester_crozier_cheats_sg_t_t_skills_up = {
+	scope = character
+	saved_scopes = { skonester_crozier_cheats_char }
+	effect = { if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_no_toast } } send_interface_toast = { title = skonester_crozier_cheats_toast_t_skills_up } } set_variable = { name = skonester_crozier_cheats_target value = scope:skonester_crozier_cheats_char } skonester_crozier_cheats_setup = yes skonester_crozier_cheats_do_t_skills_up = yes }
+}
+
+skonester_crozier_cheats_sg_pon_char_self = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_monthly_gold } } skonester_crozier_cheats_on_monthly_gold = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_income } } skonester_crozier_cheats_on_income = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_renown } } skonester_crozier_cheats_on_renown = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_health } } skonester_crozier_cheats_on_health = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_stress } } skonester_crozier_cheats_on_stress = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_skills } } skonester_crozier_cheats_on_skills = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_domain } } skonester_crozier_cheats_on_domain = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_vassals } } skonester_crozier_cheats_on_vassals = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_prestige } } skonester_crozier_cheats_on_prestige = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_piety } } skonester_crozier_cheats_on_piety = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_immortal_player } } skonester_crozier_cheats_on_immortal_player = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_disease_player } } skonester_crozier_cheats_on_disease_player = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_slots } } skonester_crozier_cheats_on_slots = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_influence } } skonester_crozier_cheats_on_influence = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_lifestyle_xp } } skonester_crozier_cheats_on_lifestyle_xp = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_levy } } skonester_crozier_cheats_on_levy = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_life } } skonester_crozier_cheats_on_life = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_prestige_mult } } skonester_crozier_cheats_on_prestige_mult = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_renown_mult } } skonester_crozier_cheats_on_renown_mult = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_innovation } } skonester_crozier_cheats_on_innovation = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_travel_safe } } skonester_crozier_cheats_on_travel_safe = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_merit_gain } } skonester_crozier_cheats_on_merit_gain = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_skills_mult } } skonester_crozier_cheats_on_skills_mult = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_long_reign } } skonester_crozier_cheats_on_long_reign = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_legend_spread } } skonester_crozier_cheats_on_legend_spread = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_legit_gain } } skonester_crozier_cheats_on_legit_gain = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_auto_gold_floor } } skonester_crozier_cheats_on_auto_gold_floor = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_auto_prestige_floor } } skonester_crozier_cheats_on_auto_prestige_floor = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_auto_forever_young } } skonester_crozier_cheats_on_auto_forever_young = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_auto_ascension } } skonester_crozier_cheats_on_auto_ascension = yes } if = { limit = { NOT = { has_global_variable = skonester_crozier_cheats_on_auto_no_prison } } skonester_crozier_cheats_on_auto_no_prison = yes } }
+}
+
+skonester_crozier_cheats_sg_poff_char_self = {
+	scope = character
+	effect = { skonester_crozier_cheats_setup = yes if = { limit = { has_global_variable = skonester_crozier_cheats_on_monthly_gold } skonester_crozier_cheats_off_monthly_gold = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_income } skonester_crozier_cheats_off_income = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_renown } skonester_crozier_cheats_off_renown = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_health } skonester_crozier_cheats_off_health = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_stress } skonester_crozier_cheats_off_stress = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_skills } skonester_crozier_cheats_off_skills = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_domain } skonester_crozier_cheats_off_domain = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_vassals } skonester_crozier_cheats_off_vassals = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_prestige } skonester_crozier_cheats_off_prestige = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_piety } skonester_crozier_cheats_off_piety = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_immortal_player } skonester_crozier_cheats_off_immortal_player = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_disease_player } skonester_crozier_cheats_off_disease_player = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_slots } skonester_crozier_cheats_off_slots = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_influence } skonester_crozier_cheats_off_influence = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_lifestyle_xp } skonester_crozier_cheats_off_lifestyle_xp = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_levy } skonester_crozier_cheats_off_levy = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_life } skonester_crozier_cheats_off_life = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_prestige_mult } skonester_crozier_cheats_off_prestige_mult = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_renown_mult } skonester_crozier_cheats_off_renown_mult = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_innovation } skonester_crozier_cheats_off_innovation = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_travel_safe } skonester_crozier_cheats_off_travel_safe = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_merit_gain } skonester_crozier_cheats_off_merit_gain = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_skills_mult } skonester_crozier_cheats_off_skills_mult = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_long_reign } skonester_crozier_cheats_off_long_reign = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_legend_spread } skonester_crozier_cheats_off_legend_spread = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_legit_gain } skonester_crozier_cheats_off_legit_gain = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_auto_gold_floor } skonester_crozier_cheats_off_auto_gold_floor = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_auto_prestige_floor } skonester_crozier_cheats_off_auto_prestige_floor = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_auto_forever_young } skonester_crozier_cheats_off_auto_forever_young = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_auto_ascension } skonester_crozier_cheats_off_auto_ascension = yes } if = { limit = { has_global_variable = skonester_crozier_cheats_on_auto_no_prison } skonester_crozier_cheats_off_auto_no_prison = yes } }
+}
+
+skonester_crozier_cheats_sg_xr_father_same = {
+	scope = character
+	is_shown = { exists = real_father real_father = { save_temporary_scope_as = skonester_crozier_cheats_rf } father ?= scope:skonester_crozier_cheats_rf }
+}
+
+skonester_crozier_cheats_sg_xr_father_hidden = {
+	scope = character
+	is_shown = { exists = real_father real_father = { save_temporary_scope_as = skonester_crozier_cheats_rf } exists = father NOT = { father = scope:skonester_crozier_cheats_rf } }
+}
+
+skonester_crozier_cheats_sg_xr_father_hidden_noofficial = {
+	scope = character
+	is_shown = { exists = real_father real_father = { save_temporary_scope_as = skonester_crozier_cheats_rf } NOT = { exists = father } }
+}
+
+skonester_crozier_cheats_sg_xr_father_none = {
+	scope = character
+	is_shown = { NOT = { exists = real_father } }
+}
+
+skonester_crozier_cheats_sg_xr_mother = {
+	scope = character
+	is_shown = { exists = mother }
+}
+
+skonester_crozier_cheats_sg_xr_secret_faith = {
+	scope = character
+	is_shown = { exists = secret_faith }
+}
+
+skonester_crozier_cheats_sg_xr_no_secrets = {
+	scope = character
+	is_shown = { NOT = { any_secret = { always = yes } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_murder_k = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_murder OR = { is_known_by = scope:skonester_crozier_cheats_viewer root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_murder_u = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_murder NOT = { is_known_by = scope:skonester_crozier_cheats_viewer } NOT = { root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_murder_attempt_k = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_murder_attempt OR = { is_known_by = scope:skonester_crozier_cheats_viewer root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_murder_attempt_u = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_murder_attempt NOT = { is_known_by = scope:skonester_crozier_cheats_viewer } NOT = { root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_lover_k = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_lover OR = { is_known_by = scope:skonester_crozier_cheats_viewer root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_lover_u = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_lover NOT = { is_known_by = scope:skonester_crozier_cheats_viewer } NOT = { root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_disputed_heritage_k = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_disputed_heritage OR = { is_known_by = scope:skonester_crozier_cheats_viewer root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_disputed_heritage_u = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_disputed_heritage NOT = { is_known_by = scope:skonester_crozier_cheats_viewer } NOT = { root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_unmarried_illegitimate_child_k = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_unmarried_illegitimate_child OR = { is_known_by = scope:skonester_crozier_cheats_viewer root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_unmarried_illegitimate_child_u = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_unmarried_illegitimate_child NOT = { is_known_by = scope:skonester_crozier_cheats_viewer } NOT = { root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_incest_k = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_incest OR = { is_known_by = scope:skonester_crozier_cheats_viewer root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_incest_u = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_incest NOT = { is_known_by = scope:skonester_crozier_cheats_viewer } NOT = { root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_deviant_k = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_deviant OR = { is_known_by = scope:skonester_crozier_cheats_viewer root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_deviant_u = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_deviant NOT = { is_known_by = scope:skonester_crozier_cheats_viewer } NOT = { root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_homosexual_k = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_homosexual OR = { is_known_by = scope:skonester_crozier_cheats_viewer root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_homosexual_u = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_homosexual NOT = { is_known_by = scope:skonester_crozier_cheats_viewer } NOT = { root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_cannibal_k = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_cannibal OR = { is_known_by = scope:skonester_crozier_cheats_viewer root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_cannibal_u = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_cannibal NOT = { is_known_by = scope:skonester_crozier_cheats_viewer } NOT = { root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_witch_k = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_witch OR = { is_known_by = scope:skonester_crozier_cheats_viewer root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_witch_u = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_witch NOT = { is_known_by = scope:skonester_crozier_cheats_viewer } NOT = { root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_non_believer_k = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_non_believer OR = { is_known_by = scope:skonester_crozier_cheats_viewer root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_non_believer_u = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_non_believer NOT = { is_known_by = scope:skonester_crozier_cheats_viewer } NOT = { root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_crypto_religionist_k = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_crypto_religionist OR = { is_known_by = scope:skonester_crozier_cheats_viewer root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_crypto_religionist_u = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_crypto_religionist NOT = { is_known_by = scope:skonester_crozier_cheats_viewer } NOT = { root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_embezzler_k = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_embezzler OR = { is_known_by = scope:skonester_crozier_cheats_viewer root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_embezzler_u = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_embezzler NOT = { is_known_by = scope:skonester_crozier_cheats_viewer } NOT = { root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_coup_plotter_k = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_coup_plotter OR = { is_known_by = scope:skonester_crozier_cheats_viewer root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_coup_plotter_u = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_coup_plotter NOT = { is_known_by = scope:skonester_crozier_cheats_viewer } NOT = { root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_raid_estate_k = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_raid_estate OR = { is_known_by = scope:skonester_crozier_cheats_viewer root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_raid_estate_u = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_raid_estate NOT = { is_known_by = scope:skonester_crozier_cheats_viewer } NOT = { root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_forbidden_personal_tenet_k = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_forbidden_personal_tenet OR = { is_known_by = scope:skonester_crozier_cheats_viewer root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_forbidden_personal_tenet_u = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_forbidden_personal_tenet NOT = { is_known_by = scope:skonester_crozier_cheats_viewer } NOT = { root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_siphoned_treasury_k = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_siphoned_treasury OR = { is_known_by = scope:skonester_crozier_cheats_viewer root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_siphoned_treasury_u = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_siphoned_treasury NOT = { is_known_by = scope:skonester_crozier_cheats_viewer } NOT = { root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_request_incursion_k = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_request_incursion OR = { is_known_by = scope:skonester_crozier_cheats_viewer root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_request_incursion_u = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_request_incursion NOT = { is_known_by = scope:skonester_crozier_cheats_viewer } NOT = { root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_exam_cheater_k = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_exam_cheater OR = { is_known_by = scope:skonester_crozier_cheats_viewer root = scope:skonester_crozier_cheats_viewer } } }
+}
+
+skonester_crozier_cheats_sg_xr_s_exam_cheater_u = {
+	scope = character
+	is_shown = { any_secret = { secret_type = secret_exam_cheater NOT = { is_known_by = scope:skonester_crozier_cheats_viewer } NOT = { root = scope:skonester_crozier_cheats_viewer } } }
+}

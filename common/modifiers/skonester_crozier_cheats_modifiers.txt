@@ -1,0 +1,930 @@
+﻿skonester_crozier_cheats_health_l1 = {
+	icon = positive
+	health = 50
+}
+
+skonester_crozier_cheats_health_l2 = {
+	icon = positive
+	health = 100
+}
+
+skonester_crozier_cheats_health_l3 = {
+	icon = positive
+	health = 250
+}
+
+skonester_crozier_cheats_health_l4 = {
+	icon = positive
+	health = 500
+}
+
+skonester_crozier_cheats_health_l5 = {
+	icon = positive
+	health = 1250
+}
+
+skonester_crozier_cheats_health_l6 = {
+	icon = positive
+	health = 5000
+}
+
+skonester_crozier_cheats_health_l7 = {
+	icon = positive
+	health = 50000
+}
+
+skonester_crozier_cheats_stress = {
+	icon = positive
+	stress_gain_mult = -0.99
+}
+
+skonester_crozier_cheats_skills_l1 = {
+	icon = positive
+	diplomacy = 50
+	martial = 50
+	stewardship = 50
+	intrigue = 50
+	learning = 50
+	prowess = 50
+}
+
+skonester_crozier_cheats_skills_l2 = {
+	icon = positive
+	diplomacy = 100
+	martial = 100
+	stewardship = 100
+	intrigue = 100
+	learning = 100
+	prowess = 100
+}
+
+skonester_crozier_cheats_skills_l3 = {
+	icon = positive
+	diplomacy = 250
+	martial = 250
+	stewardship = 250
+	intrigue = 250
+	learning = 250
+	prowess = 250
+}
+
+skonester_crozier_cheats_skills_l4 = {
+	icon = positive
+	diplomacy = 500
+	martial = 500
+	stewardship = 500
+	intrigue = 500
+	learning = 500
+	prowess = 500
+}
+
+skonester_crozier_cheats_skills_l5 = {
+	icon = positive
+	diplomacy = 1250
+	martial = 1250
+	stewardship = 1250
+	intrigue = 1250
+	learning = 1250
+	prowess = 1250
+}
+
+skonester_crozier_cheats_skills_l6 = {
+	icon = positive
+	diplomacy = 5000
+	martial = 5000
+	stewardship = 5000
+	intrigue = 5000
+	learning = 5000
+	prowess = 5000
+}
+
+skonester_crozier_cheats_skills_l7 = {
+	icon = positive
+	diplomacy = 50000
+	martial = 50000
+	stewardship = 50000
+	intrigue = 50000
+	learning = 50000
+	prowess = 50000
+}
+
+skonester_crozier_cheats_income_l1 = {
+	icon = positive
+	monthly_income_mult = 4
+}
+
+skonester_crozier_cheats_income_l2 = {
+	icon = positive
+	monthly_income_mult = 8
+}
+
+skonester_crozier_cheats_income_l3 = {
+	icon = positive
+	monthly_income_mult = 20
+}
+
+skonester_crozier_cheats_income_l4 = {
+	icon = positive
+	monthly_income_mult = 40
+}
+
+skonester_crozier_cheats_income_l5 = {
+	icon = positive
+	monthly_income_mult = 100
+}
+
+skonester_crozier_cheats_income_l6 = {
+	icon = positive
+	monthly_income_mult = 400
+}
+
+skonester_crozier_cheats_income_l7 = {
+	icon = positive
+	monthly_income_mult = 4000
+}
+
+skonester_crozier_cheats_domain_l1 = {
+	icon = positive
+	domain_limit = 50
+}
+
+skonester_crozier_cheats_domain_l2 = {
+	icon = positive
+	domain_limit = 100
+}
+
+skonester_crozier_cheats_domain_l3 = {
+	icon = positive
+	domain_limit = 250
+}
+
+skonester_crozier_cheats_domain_l4 = {
+	icon = positive
+	domain_limit = 500
+}
+
+skonester_crozier_cheats_domain_l5 = {
+	icon = positive
+	domain_limit = 1250
+}
+
+skonester_crozier_cheats_domain_l6 = {
+	icon = positive
+	domain_limit = 5000
+}
+
+skonester_crozier_cheats_domain_l7 = {
+	icon = positive
+	domain_limit = 50000
+}
+
+skonester_crozier_cheats_vassals_l1 = {
+	icon = positive
+	vassal_limit = 100
+}
+
+skonester_crozier_cheats_vassals_l2 = {
+	icon = positive
+	vassal_limit = 200
+}
+
+skonester_crozier_cheats_vassals_l3 = {
+	icon = positive
+	vassal_limit = 500
+}
+
+skonester_crozier_cheats_vassals_l4 = {
+	icon = positive
+	vassal_limit = 1000
+}
+
+skonester_crozier_cheats_vassals_l5 = {
+	icon = positive
+	vassal_limit = 2500
+}
+
+skonester_crozier_cheats_vassals_l6 = {
+	icon = positive
+	vassal_limit = 10000
+}
+
+skonester_crozier_cheats_vassals_l7 = {
+	icon = positive
+	vassal_limit = 100000
+}
+
+skonester_crozier_cheats_prestige_l1 = {
+	icon = positive
+	monthly_prestige = 100
+}
+
+skonester_crozier_cheats_prestige_l2 = {
+	icon = positive
+	monthly_prestige = 200
+}
+
+skonester_crozier_cheats_prestige_l3 = {
+	icon = positive
+	monthly_prestige = 500
+}
+
+skonester_crozier_cheats_prestige_l4 = {
+	icon = positive
+	monthly_prestige = 1000
+}
+
+skonester_crozier_cheats_prestige_l5 = {
+	icon = positive
+	monthly_prestige = 2500
+}
+
+skonester_crozier_cheats_prestige_l6 = {
+	icon = positive
+	monthly_prestige = 10000
+}
+
+skonester_crozier_cheats_prestige_l7 = {
+	icon = positive
+	monthly_prestige = 100000
+}
+
+skonester_crozier_cheats_piety_l1 = {
+	icon = positive
+	monthly_piety = 100
+}
+
+skonester_crozier_cheats_piety_l2 = {
+	icon = positive
+	monthly_piety = 200
+}
+
+skonester_crozier_cheats_piety_l3 = {
+	icon = positive
+	monthly_piety = 500
+}
+
+skonester_crozier_cheats_piety_l4 = {
+	icon = positive
+	monthly_piety = 1000
+}
+
+skonester_crozier_cheats_piety_l5 = {
+	icon = positive
+	monthly_piety = 2500
+}
+
+skonester_crozier_cheats_piety_l6 = {
+	icon = positive
+	monthly_piety = 10000
+}
+
+skonester_crozier_cheats_piety_l7 = {
+	icon = positive
+	monthly_piety = 100000
+}
+
+skonester_crozier_cheats_enemy_army = {
+	icon = positive
+	army_damage_mult = -0.95
+	army_toughness_mult = -0.95
+	advantage = -100
+}
+
+skonester_crozier_cheats_enemy_speed = {
+	icon = positive
+	movement_speed = -0.9
+}
+
+skonester_crozier_cheats_enemy_money = {
+	icon = positive
+	monthly_income_mult = -0.95
+}
+
+skonester_crozier_cheats_enemy_health = {
+	icon = positive
+	health = -3
+}
+
+skonester_crozier_cheats_monthly_gold_l1 = {
+	icon = positive
+	monthly_income = 10
+}
+
+skonester_crozier_cheats_monthly_gold_l2 = {
+	icon = positive
+	monthly_income = 20
+}
+
+skonester_crozier_cheats_monthly_gold_l3 = {
+	icon = positive
+	monthly_income = 50
+}
+
+skonester_crozier_cheats_monthly_gold_l4 = {
+	icon = positive
+	monthly_income = 100
+}
+
+skonester_crozier_cheats_monthly_gold_l5 = {
+	icon = positive
+	monthly_income = 250
+}
+
+skonester_crozier_cheats_monthly_gold_l6 = {
+	icon = positive
+	monthly_income = 1000
+}
+
+skonester_crozier_cheats_monthly_gold_l7 = {
+	icon = positive
+	monthly_income = 10000
+}
+
+skonester_crozier_cheats_renown_l1 = {
+	icon = positive
+	monthly_dynasty_prestige = 5
+}
+
+skonester_crozier_cheats_renown_l2 = {
+	icon = positive
+	monthly_dynasty_prestige = 10
+}
+
+skonester_crozier_cheats_renown_l3 = {
+	icon = positive
+	monthly_dynasty_prestige = 25
+}
+
+skonester_crozier_cheats_renown_l4 = {
+	icon = positive
+	monthly_dynasty_prestige = 50
+}
+
+skonester_crozier_cheats_renown_l5 = {
+	icon = positive
+	monthly_dynasty_prestige = 125
+}
+
+skonester_crozier_cheats_renown_l6 = {
+	icon = positive
+	monthly_dynasty_prestige = 500
+}
+
+skonester_crozier_cheats_renown_l7 = {
+	icon = positive
+	monthly_dynasty_prestige = 5000
+}
+
+skonester_crozier_cheats_slots_l1 = {
+	icon = positive
+	building_slot_add = 1
+}
+
+skonester_crozier_cheats_slots_l2 = {
+	icon = positive
+	building_slot_add = 2
+}
+
+skonester_crozier_cheats_slots_l3 = {
+	icon = positive
+	building_slot_add = 5
+}
+
+skonester_crozier_cheats_slots_l4 = {
+	icon = positive
+	building_slot_add = 10
+}
+
+skonester_crozier_cheats_slots_l5 = {
+	icon = positive
+	building_slot_add = 25
+}
+
+skonester_crozier_cheats_slots_l6 = {
+	icon = positive
+	building_slot_add = 100
+}
+
+skonester_crozier_cheats_slots_l7 = {
+	icon = positive
+	building_slot_add = 1000
+}
+
+skonester_crozier_cheats_influence_l1 = {
+	icon = positive
+	monthly_influence = 5
+}
+
+skonester_crozier_cheats_influence_l2 = {
+	icon = positive
+	monthly_influence = 10
+}
+
+skonester_crozier_cheats_influence_l3 = {
+	icon = positive
+	monthly_influence = 25
+}
+
+skonester_crozier_cheats_influence_l4 = {
+	icon = positive
+	monthly_influence = 50
+}
+
+skonester_crozier_cheats_influence_l5 = {
+	icon = positive
+	monthly_influence = 125
+}
+
+skonester_crozier_cheats_influence_l6 = {
+	icon = positive
+	monthly_influence = 500
+}
+
+skonester_crozier_cheats_influence_l7 = {
+	icon = positive
+	monthly_influence = 5000
+}
+
+skonester_crozier_cheats_lifestyle_xp_l1 = {
+	icon = positive
+	monthly_lifestyle_xp_gain_mult = 1
+}
+
+skonester_crozier_cheats_lifestyle_xp_l2 = {
+	icon = positive
+	monthly_lifestyle_xp_gain_mult = 2
+}
+
+skonester_crozier_cheats_lifestyle_xp_l3 = {
+	icon = positive
+	monthly_lifestyle_xp_gain_mult = 5
+}
+
+skonester_crozier_cheats_lifestyle_xp_l4 = {
+	icon = positive
+	monthly_lifestyle_xp_gain_mult = 10
+}
+
+skonester_crozier_cheats_lifestyle_xp_l5 = {
+	icon = positive
+	monthly_lifestyle_xp_gain_mult = 25
+}
+
+skonester_crozier_cheats_lifestyle_xp_l6 = {
+	icon = positive
+	monthly_lifestyle_xp_gain_mult = 100
+}
+
+skonester_crozier_cheats_lifestyle_xp_l7 = {
+	icon = positive
+	monthly_lifestyle_xp_gain_mult = 1000
+}
+
+skonester_crozier_cheats_levy_l1 = {
+	icon = positive
+	levy_size = 1
+}
+
+skonester_crozier_cheats_levy_l2 = {
+	icon = positive
+	levy_size = 2
+}
+
+skonester_crozier_cheats_levy_l3 = {
+	icon = positive
+	levy_size = 5
+}
+
+skonester_crozier_cheats_levy_l4 = {
+	icon = positive
+	levy_size = 10
+}
+
+skonester_crozier_cheats_levy_l5 = {
+	icon = positive
+	levy_size = 25
+}
+
+skonester_crozier_cheats_levy_l6 = {
+	icon = positive
+	levy_size = 100
+}
+
+skonester_crozier_cheats_levy_l7 = {
+	icon = positive
+	levy_size = 1000
+}
+
+skonester_crozier_cheats_life_l1 = {
+	icon = positive
+	life_expectancy = 10
+}
+
+skonester_crozier_cheats_life_l2 = {
+	icon = positive
+	life_expectancy = 20
+}
+
+skonester_crozier_cheats_life_l3 = {
+	icon = positive
+	life_expectancy = 50
+}
+
+skonester_crozier_cheats_life_l4 = {
+	icon = positive
+	life_expectancy = 100
+}
+
+skonester_crozier_cheats_life_l5 = {
+	icon = positive
+	life_expectancy = 250
+}
+
+skonester_crozier_cheats_life_l6 = {
+	icon = positive
+	life_expectancy = 1000
+}
+
+skonester_crozier_cheats_life_l7 = {
+	icon = positive
+	life_expectancy = 10000
+}
+
+skonester_crozier_cheats_prestige_mult_l1 = {
+	icon = positive
+	monthly_prestige_gain_mult = 1
+	monthly_piety_gain_mult = 1
+}
+
+skonester_crozier_cheats_prestige_mult_l2 = {
+	icon = positive
+	monthly_prestige_gain_mult = 2
+	monthly_piety_gain_mult = 2
+}
+
+skonester_crozier_cheats_prestige_mult_l3 = {
+	icon = positive
+	monthly_prestige_gain_mult = 5
+	monthly_piety_gain_mult = 5
+}
+
+skonester_crozier_cheats_prestige_mult_l4 = {
+	icon = positive
+	monthly_prestige_gain_mult = 10
+	monthly_piety_gain_mult = 10
+}
+
+skonester_crozier_cheats_prestige_mult_l5 = {
+	icon = positive
+	monthly_prestige_gain_mult = 25
+	monthly_piety_gain_mult = 25
+}
+
+skonester_crozier_cheats_prestige_mult_l6 = {
+	icon = positive
+	monthly_prestige_gain_mult = 100
+	monthly_piety_gain_mult = 100
+}
+
+skonester_crozier_cheats_prestige_mult_l7 = {
+	icon = positive
+	monthly_prestige_gain_mult = 1000
+	monthly_piety_gain_mult = 1000
+}
+
+skonester_crozier_cheats_renown_mult_l1 = {
+	icon = positive
+	monthly_dynasty_prestige_mult = 1
+}
+
+skonester_crozier_cheats_renown_mult_l2 = {
+	icon = positive
+	monthly_dynasty_prestige_mult = 2
+}
+
+skonester_crozier_cheats_renown_mult_l3 = {
+	icon = positive
+	monthly_dynasty_prestige_mult = 5
+}
+
+skonester_crozier_cheats_renown_mult_l4 = {
+	icon = positive
+	monthly_dynasty_prestige_mult = 10
+}
+
+skonester_crozier_cheats_renown_mult_l5 = {
+	icon = positive
+	monthly_dynasty_prestige_mult = 25
+}
+
+skonester_crozier_cheats_renown_mult_l6 = {
+	icon = positive
+	monthly_dynasty_prestige_mult = 100
+}
+
+skonester_crozier_cheats_renown_mult_l7 = {
+	icon = positive
+	monthly_dynasty_prestige_mult = 1000
+}
+
+skonester_crozier_cheats_innovation_l1 = {
+	icon = positive
+	cultural_head_fascination_mult = 1
+}
+
+skonester_crozier_cheats_innovation_l2 = {
+	icon = positive
+	cultural_head_fascination_mult = 2
+}
+
+skonester_crozier_cheats_innovation_l3 = {
+	icon = positive
+	cultural_head_fascination_mult = 5
+}
+
+skonester_crozier_cheats_innovation_l4 = {
+	icon = positive
+	cultural_head_fascination_mult = 10
+}
+
+skonester_crozier_cheats_innovation_l5 = {
+	icon = positive
+	cultural_head_fascination_mult = 25
+}
+
+skonester_crozier_cheats_innovation_l6 = {
+	icon = positive
+	cultural_head_fascination_mult = 100
+}
+
+skonester_crozier_cheats_innovation_l7 = {
+	icon = positive
+	cultural_head_fascination_mult = 1000
+}
+
+skonester_crozier_cheats_legit_gain_l1 = {
+	icon = positive
+	monthly_legitimacy_add = 1
+	legitimacy_gain_mult = 1
+}
+
+skonester_crozier_cheats_legit_gain_l2 = {
+	icon = positive
+	monthly_legitimacy_add = 2
+	legitimacy_gain_mult = 2
+}
+
+skonester_crozier_cheats_legit_gain_l3 = {
+	icon = positive
+	monthly_legitimacy_add = 5
+	legitimacy_gain_mult = 5
+}
+
+skonester_crozier_cheats_legit_gain_l4 = {
+	icon = positive
+	monthly_legitimacy_add = 10
+	legitimacy_gain_mult = 10
+}
+
+skonester_crozier_cheats_legit_gain_l5 = {
+	icon = positive
+	monthly_legitimacy_add = 25
+	legitimacy_gain_mult = 25
+}
+
+skonester_crozier_cheats_legit_gain_l6 = {
+	icon = positive
+	monthly_legitimacy_add = 100
+	legitimacy_gain_mult = 100
+}
+
+skonester_crozier_cheats_legit_gain_l7 = {
+	icon = positive
+	monthly_legitimacy_add = 1000
+	legitimacy_gain_mult = 1000
+}
+
+skonester_crozier_cheats_travel_safe_l1 = {
+	icon = positive
+	character_travel_safety_mult = 1
+	character_travel_speed_mult = 1
+}
+
+skonester_crozier_cheats_travel_safe_l2 = {
+	icon = positive
+	character_travel_safety_mult = 2
+	character_travel_speed_mult = 2
+}
+
+skonester_crozier_cheats_travel_safe_l3 = {
+	icon = positive
+	character_travel_safety_mult = 5
+	character_travel_speed_mult = 5
+}
+
+skonester_crozier_cheats_travel_safe_l4 = {
+	icon = positive
+	character_travel_safety_mult = 10
+	character_travel_speed_mult = 10
+}
+
+skonester_crozier_cheats_travel_safe_l5 = {
+	icon = positive
+	character_travel_safety_mult = 25
+	character_travel_speed_mult = 25
+}
+
+skonester_crozier_cheats_travel_safe_l6 = {
+	icon = positive
+	character_travel_safety_mult = 100
+	character_travel_speed_mult = 100
+}
+
+skonester_crozier_cheats_travel_safe_l7 = {
+	icon = positive
+	character_travel_safety_mult = 1000
+	character_travel_speed_mult = 1000
+}
+
+skonester_crozier_cheats_merit_gain_l1 = {
+	icon = positive
+	monthly_merit_mult = 1
+}
+
+skonester_crozier_cheats_merit_gain_l2 = {
+	icon = positive
+	monthly_merit_mult = 2
+}
+
+skonester_crozier_cheats_merit_gain_l3 = {
+	icon = positive
+	monthly_merit_mult = 5
+}
+
+skonester_crozier_cheats_merit_gain_l4 = {
+	icon = positive
+	monthly_merit_mult = 10
+}
+
+skonester_crozier_cheats_merit_gain_l5 = {
+	icon = positive
+	monthly_merit_mult = 25
+}
+
+skonester_crozier_cheats_merit_gain_l6 = {
+	icon = positive
+	monthly_merit_mult = 100
+}
+
+skonester_crozier_cheats_merit_gain_l7 = {
+	icon = positive
+	monthly_merit_mult = 1000
+}
+
+skonester_crozier_cheats_skills_mult_l1 = {
+	icon = positive
+	diplomacy_mult = 0.5
+	martial_mult = 0.5
+	stewardship_mult = 0.5
+	intrigue_mult = 0.5
+	learning_mult = 0.5
+	prowess_mult = 0.5
+}
+
+skonester_crozier_cheats_skills_mult_l2 = {
+	icon = positive
+	diplomacy_mult = 1
+	martial_mult = 1
+	stewardship_mult = 1
+	intrigue_mult = 1
+	learning_mult = 1
+	prowess_mult = 1
+}
+
+skonester_crozier_cheats_skills_mult_l3 = {
+	icon = positive
+	diplomacy_mult = 2.5
+	martial_mult = 2.5
+	stewardship_mult = 2.5
+	intrigue_mult = 2.5
+	learning_mult = 2.5
+	prowess_mult = 2.5
+}
+
+skonester_crozier_cheats_skills_mult_l4 = {
+	icon = positive
+	diplomacy_mult = 5
+	martial_mult = 5
+	stewardship_mult = 5
+	intrigue_mult = 5
+	learning_mult = 5
+	prowess_mult = 5
+}
+
+skonester_crozier_cheats_skills_mult_l5 = {
+	icon = positive
+	diplomacy_mult = 12.5
+	martial_mult = 12.5
+	stewardship_mult = 12.5
+	intrigue_mult = 12.5
+	learning_mult = 12.5
+	prowess_mult = 12.5
+}
+
+skonester_crozier_cheats_skills_mult_l6 = {
+	icon = positive
+	diplomacy_mult = 50
+	martial_mult = 50
+	stewardship_mult = 50
+	intrigue_mult = 50
+	learning_mult = 50
+	prowess_mult = 50
+}
+
+skonester_crozier_cheats_skills_mult_l7 = {
+	icon = positive
+	diplomacy_mult = 500
+	martial_mult = 500
+	stewardship_mult = 500
+	intrigue_mult = 500
+	learning_mult = 500
+	prowess_mult = 500
+}
+
+skonester_crozier_cheats_long_reign_l1 = {
+	icon = positive
+	long_reign_bonus_mult = 1
+}
+
+skonester_crozier_cheats_long_reign_l2 = {
+	icon = positive
+	long_reign_bonus_mult = 2
+}
+
+skonester_crozier_cheats_long_reign_l3 = {
+	icon = positive
+	long_reign_bonus_mult = 5
+}
+
+skonester_crozier_cheats_long_reign_l4 = {
+	icon = positive
+	long_reign_bonus_mult = 10
+}
+
+skonester_crozier_cheats_long_reign_l5 = {
+	icon = positive
+	long_reign_bonus_mult = 25
+}
+
+skonester_crozier_cheats_long_reign_l6 = {
+	icon = positive
+	long_reign_bonus_mult = 100
+}
+
+skonester_crozier_cheats_long_reign_l7 = {
+	icon = positive
+	long_reign_bonus_mult = 1000
+}
+
+skonester_crozier_cheats_legend_spread_l1 = {
+	icon = positive
+	owned_legend_spread_mult = 1
+}
+
+skonester_crozier_cheats_legend_spread_l2 = {
+	icon = positive
+	owned_legend_spread_mult = 2
+}
+
+skonester_crozier_cheats_legend_spread_l3 = {
+	icon = positive
+	owned_legend_spread_mult = 5
+}
+
+skonester_crozier_cheats_legend_spread_l4 = {
+	icon = positive
+	owned_legend_spread_mult = 10
+}
+
+skonester_crozier_cheats_legend_spread_l5 = {
+	icon = positive
+	owned_legend_spread_mult = 25
+}
+
+skonester_crozier_cheats_legend_spread_l6 = {
+	icon = positive
+	owned_legend_spread_mult = 100
+}
+
+skonester_crozier_cheats_legend_spread_l7 = {
+	icon = positive
+	owned_legend_spread_mult = 1000
+}
+
+skonester_crozier_cheats_art_crown = {
+	icon = positive
+	diplomacy = 10
+	monthly_prestige = 5
+	vassal_opinion = 25
+	general_opinion = 10
+}

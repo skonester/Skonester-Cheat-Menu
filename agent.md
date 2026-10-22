@@ -522,3 +522,7 @@ notices were false positives (every flagged file balances).
 - Open question: which target types (mercenaries, adventurers, holy orders) still trigger the toast. If mercenaries
   or adventurers are refused, the fallback is converting them to feudal first, which likely dissolves the
   company/camp.
+
+10-22-26
+
+Add GUI Portrait Cheat Menu, if using EPE have this mod loaded underneath it or it won't show

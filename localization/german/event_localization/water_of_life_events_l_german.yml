@@ -1,0 +1,48 @@
+﻿l_german:
+ water_of_life_header:0 "Das Tagebuch des Zenturios:"
+ water_of_life.1001.t:0 "$water_of_life_header$ Der Mann, der nicht starb."
+ water_of_life.1001.desc:0 "Die Schriftrolle war nicht in einer Bibliothek verborgen, sondern im Griff eines verrosteten Gladius, der in Judäa gefunden wurde. Das Latein ist grob und militärisch – der Bericht eines Tribuns namens Clavius. Er schreibt von einem Leichnam, der aus einem versiegelten Grab verschwunden war, von einer rothaarigen Frau, die die Wahrheit kannte, und von einem Kelch, der die Uhr des Lebens zum Stillstand bringt.\n\nDer letzte Eintrag enthält kein Datum, sondern einen Schwur: #'Ich kann nicht töten, was nicht sterben kann. Ich kann ihm nur dienen. Ich gehe in die Wildnis, um Wache zu halten.'#!\n\nLegenden besagen, dass er noch immer dort ist. Ein Soldat, der auf seine Ablösung wartet. Finde ich ihn, finde ich den Gral."
+ water_of_life.1001.a:0 "Der Tribun wartet. Ich werde ihn finden."
+ water_of_life.1001.b:0 "Wer einen römischen Soldaten jagt, muss vorbereitet sein."
+
+ water_of_life_header_1:0 "Die Verfolgung:"
+ water_of_life.1002.t:1 "$water_of_life_header_1$ Der Schatten des Adlers."
+ water_of_life.1002.desc:0 "Ich lasse meine Krone zurück. Um Clavius zu finden, muss ich den Weg eines Verbannten beschreiten. Ich tausche Samt gegen Wolle und mein Zepter gegen einen Wanderstab. Die Hinweise in seinem Tagebuch führen fort von den Städten der Menschen, hin zu jenen stillen Orten, an denen die Reichweite des Imperiums zerfiel. Ich verfolge einen Geist, der Jahrhunderte Zeit hatte, seine Spuren zu verwischen."
+ water_of_life.1002.a:0 "Der Weg ist lang, doch mein Wille ist aus Eisen."
+ water_of_life.1002.b:0 "Ein letzter Blick auf mein Reich, dann verschwinde ich."
+
+ water_of_life_header_2:0 "Die Wildnis:"
+ water_of_life.1003.t:1 "$water_of_life_header_2$ Die Sieben Mächte."
+ water_of_life.1003.desc:0 "Die Wildnis entblößt jeden Menschen bis auf die Knochen. Wie das *Evangelium der Maria* warnt, wird die Seele von den Sieben Mächten des Zorns heimgesucht: Dunkelheit, Begierde und Unwissenheit. Allein am Feuer kämpfe ich gegen sie an. Ich fürchte keine Banditen; ich fürchte die Stille, in der Clavius seinen Gott fand. Mein Geist – der *Nous* – muss still werden wie ein Grab, bevor der Stein fortgerollt wird."
+ water_of_life.1003.a:0 "Ich bezwinge den Drang umzukehren."
+
+ water_of_life_header_3:0 "Prüfung der Ausdauer:"
+ water_of_life.1004.t:1 "$water_of_life_header_3$ Die Ration des Soldaten."
+ water_of_life.1004.desc:0 "Meine Vorräte gehen zur Neige. Die Landschaft besteht aus unerbittlichem Fels und Dornen. Nun verstehe ich, warum er diesen Ort wählte: Er ist eine von der Natur geschaffene Festung. Der Hunger nagt an meinem Magen. Soll ich wie ein Herrscher jagen oder wie ein Pilger betteln? Der Tribun würde Disziplin achten, doch die Magdalena lehrte Demut."
+ water_of_life.1004.a:0 "Ich werde jagen. Disziplin erhält den Körper."
+ water_of_life.1004.b:0 "Ich werde die Einheimischen aufsuchen. Demut erhält die Seele."
+
+ water_of_life_header_4:0 "Die Jagd:"
+ water_of_life.1005.t:1 "$water_of_life_header_4$ Zeichen der Legion."
+ water_of_life.1005.desc:0 "Ich finde eine Markierung – einen Steinhügel, mit militärischer Präzision aufgeschichtet. Dann einen weiteren. Ich irre nicht umher; ich werde geführt. Oder vielleicht ... getrieben. An einem Bach entdecke ich einen Hirsch. Er flieht nicht. Furchtlos beobachtet er mich, als stünde er unter dem Schutz eines mächtigen Wächters. Ich schieße nicht. Hier zu töten fühlt sich wie ein Bruch des Waffenstillstands an."
+ water_of_life.1005.a:0 "Ich senke meinen Bogen. Ich bin hier zu Gast."
+
+ water_of_life_header_5:0 "Das Dorf:"
+ water_of_life.1006.t:1 "$water_of_life_header_5$ Der alte Mann aus den Bergen."
+ water_of_life.1006.desc:0 "Ein kleiner Weiler klammert sich an den Berghang. Als ich nach dem Römer frage, schlagen die Dorfbewohner das Zeichen des Fisches. Ein Ältester flüstert: 'Der Fremde? Er ist schon seit den Tagen des Großvaters meines Großvaters hier. Er trägt das Eisen der alten Welt. Er beschützt uns vor Wölfen und Banditen, doch er spricht nie. Er wartet auf jemanden.' Der Älteste sieht mich an. 'Vielleicht auf Euch.'"
+ water_of_life.1006.a:0 "Er weiß, dass ich komme."
+
+ water_of_life_header_6:0 "Die Annäherung:"
+ water_of_life.1007.t:1 "$water_of_life_header_6$ Die Zehnte Legion."
+ water_of_life.1007.desc:0 "Der Pfad verengt sich zu einem Ziegensteig, der zu einer mit uralten Steinen befestigten Höhlenöffnung führt. Ich spüre Augen auf mir – das Gewicht eines Blickes, der Reiche aufsteigen und zu Staub zerfallen sah. Ich bleibe stehen und hebe meine leeren Hände. 'Tribun!', rufe ich. 'Ich suche den Lebendigen!' \n\nSchweigen antwortet. Dann ertönt das Schaben von Stein."
+ water_of_life.1007.a:0 "Betritt die Höhle des Löwen."
+
+ water_of_life_header_8:0 "Der Tribun:"
+ water_of_life.1008.t:1 "$water_of_life_header_8$ Clavius Aquila."
+ water_of_life.1008.desc:0 "Er sitzt an einem einfachen Feuer und reinigt einen Gladius, der noch immer wie neu glänzt. Er trägt die Tunika eines römischen Tribuns, doch das Leder wurde von Äonen glatt geschliffen. Clavius blickt auf, seine Augen schwer von den Erinnerungen tausender Jahre.\n\n'Ich habe zwei Dinge gesehen, die nicht miteinander zu vereinen sind', sagt er mit einer Stimme wie Kies. 'Einen Mann, der ohne jeden Zweifel tot war, und denselben Mann wieder lebendig. Ich versprach Maria, Wache zu halten, bis ein würdiger Erbe eintrifft.'\n\nEr blickt tief in die Flammen. 'Ich habe viele Könige beraten. Ich stand an der Seite des Aussätzigen Königs Balduin, als er befahl: #P *'Misshandelt weder den Juden noch den Muslim. In diesem Königreich gibt es keine Völker, sondern nur Untertanen Gottes.'*#! Nun müsst Ihr diese Gerechtigkeit weitertragen.'\n\nEr hält mir einen schlichten Tonbecher entgegen, der im Laufe der Jahrhunderte mit Edelsteinen überzogen wurde. 'Das *Evangelium* sagt: *Die Materie gebar eine Leidenschaft, die ihresgleichen sucht.* Trink, und die Leidenschaft stirbt. Nur die Pflicht bleibt. Seid Ihr bereit, meine Wache zu übernehmen, [ROOT.GetCharacter.GetTitledFirstNameNoTooltip]?'"
+ water_of_life.1008.a:0 "'Ich löse Euch ab, Tribun. Begebt Euch zur Ruhe.'"
+
+ water_of_life_header_9:0 "Die Rückkehr:"
+ water_of_life.1009.t:1 "$water_of_life_header_9$ Der neue Wächter."
+ water_of_life.1009.desc:0 "Clavius zerfiel in dem Augenblick zu Staub, als der Kelch meine Lippen berührte – endlich hatte er Frieden gefunden. Ich kehre in mein Reich zurück und trage nun seine Bürde und Sein Blut. Meine Untertanen jubeln, doch sie verstehen nicht. Sie sehen einen Herrscher; ich sehe die Vergänglichkeit des Fleisches. \n\n[one_loyal_subject_character.GetFirstNameNoTooltip]: Ihr seid zurückgekehrt, [ROOT.Char.GetLadyLord]! \n\n[second_loyal_subject_character.GetFirstNameNoTooltip]: Wir fürchteten, die Wildnis hätte Euch verschlungen! \n\n[third_loyal_subject_character.GetFirstNameNoTooltip]: Ihr wirkt ... erschreckend ruhig. \n\n[fourth_loyal_subject_character.GetFirstNameNoTooltip]: Willkommen daheim, Wächter."
+ water_of_life.1009.a:0 "Ich werde nie wieder derselbe sein."

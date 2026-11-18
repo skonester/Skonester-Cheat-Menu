@@ -1,0 +1,249 @@
+﻿l_russian:
+
+# Tomb of Ancestors
+building_type_db_tomb_ancestors_01:0 "Гробница предков"
+building_type_db_tomb_ancestors_01_desc:0 "#F Строительство Гробницы предков может сплотить племена и повысить авторитет вождей.#!"
+building_db_tomb_ancestors_01:0 "Гробница предков"
+building_db_tomb_ancestors_01_desc:0 "$building_type_db_tomb_ancestors_01_desc$"
+building_db_tomb_ancestors_02:0 "Гробница легендарных предков"
+building_db_tomb_ancestors_02_desc:0 "Строительство Гробницы легендарных предков станет отличным способом сплотить племя и повысить его репутацию."
+
+# Hall of Pillager
+building_type_db_hall_pillage_01:0 "Зал налетчиков"
+building_type_db_hall_pillage_01_desc:0 "#F Это место, где налетчики нашего племени готовятся к грабежам. Здесь они делят добычу, перебирают оружие и готовятся к следующему набегу.#!"
+building_db_hall_pillage_01:0 "Зал налетчиков"
+building_db_hall_pillage_01_desc:0 "$building_type_db_hall_pillage_01_desc$"
+building_db_hall_pillage_02:0 "Зал налетчиков"
+building_db_hall_pillage_02_desc:0 "$building_type_db_hall_pillage_01_desc$"
+
+# Hall of Pillager(for Steppe)
+building_type_db_steppe_pillage_01:0 "Зал налетчиков"
+building_type_db_steppe_pillage_01_desc:0 "#F Это место, где налетчики нашего племени готовятся к грабежам. Здесь они делят добычу, перебирают оружие и готовятся к следующему набегу.#!"
+building_db_steppe_pillage_01:0 "Зал налетчиков"
+building_db_steppe_pillage_01_desc:0 "$building_type_db_hall_pillage_01_desc$"
+building_db_steppe_pillage_02:0 "Зал налетчиков"
+building_db_steppe_pillage_02_desc:0 "$building_type_db_hall_pillage_01_desc$"
+
+# Gigantic Idol
+building_type_db_gigantic_idol_01:0 "Гигантский идол"
+building_type_db_gigantic_idol_01_desc:0 "#F Гигантский идол, которому поклоняется племя. Он устремляется в небо, словно дерево, и вокруг него разложено множество подношений.#!"
+building_db_gigantic_idol_01:0 "Гигантский идол"
+building_db_gigantic_idol_01_desc:0 "$building_type_db_gigantic_idol_01_desc$"
+building_db_gigantic_idol_02:0 "Гигантский идол"
+building_db_gigantic_idol_02_desc:0 "$building_type_db_gigantic_idol_01_desc$"
+
+# Tribal Assembly
+building_type_db_tribal_assembly_01:0 "Племенное собрание"
+building_type_db_tribal_assembly_01_desc:0 "#F Это собрание для решения важных дел племени. На собрании обсуждаются грядущие войны, вопросы веры и прочее.#!"
+building_db_tribal_assembly_01:0 "Племенное собрание"
+building_db_tribal_assembly_01_desc:0 "Это собрание для решения важных дел племени. На собрании обсуждаются грядущие войны, вопросы веры и прочее."
+building_db_tribal_assembly_02:0 "Расширенное племенное собрание"
+building_db_tribal_assembly_02_desc:0 "Каждый раз созывать собрание для принятия важных решений утомительно. Если при вожде будет совет из опытных воинов и шамана, вождь сможет вовремя справляться с надвигающимися проблемами."
+
+# Shura Council
+building_type_db_shura_council_01:0 "Совет Шуры"
+building_type_db_shura_council_01_desc:0 "#F Шура — арабское слово, означающее «совещание». В ранних исламских общинах оно использовалось для поощрения взаимных консультаций перед принятием важных решений.#!"
+building_db_shura_council_01:0 "Временный совет Шуры"
+building_db_shura_council_01_desc:0 "Учрежден совет Шуры. Хоть он и временный, султан сможет обратиться за советом по политическим вопросам, когда это необходимо."
+building_db_shura_council_02:0 "Постоянный совет Шуры"
+building_db_shura_council_02_desc:0 "Реорганизовав совет Шуры, султан обеспечил себе возможность всегда получать надлежащие советы."
+building_db_shura_council_03:0 "Расширенный совет Шуры"
+building_db_shura_council_03_desc:0 "Расширив совет Шуры, султан получил возможность пользоваться профессиональными советами в большем числе областей."
+
+# Royal Mosque
+building_type_db_royal_mosque_01:0 "Королевская мечеть"
+building_type_db_royal_mosque_01_desc:0 "#F Мечеть, которую посещает королевская семья для молитвы.#!"
+building_db_royal_mosque_01:0 "Королевская мечеть"
+building_db_royal_mosque_01_desc:0 "$building_type_db_royal_mosque_01_desc$"
+building_db_royal_mosque_02:0 "Королевское медресе"
+building_db_royal_mosque_02_desc:0 "При Королевской мечети построено медресе для обучения различным наукам, включая богословие."
+building_db_royal_mosque_03:0 "Королевская усыпальница"
+building_db_royal_mosque_03_desc:0 "Под Королевской мечетью построена усыпальница, позволяющая членам королевской семьи покоиться с миром."
+
+# Royal Chapel
+building_type_db_royal_chapel_01:0 "Королевская часовня"
+building_type_db_royal_chapel_01_desc:0 "#F Часовня, которую посещает королевская семья для молитвы.#!"
+building_db_royal_chapel_01:0 "Королевская часовня"
+building_db_royal_chapel_01_desc:0 "$building_type_db_royal_chapel_01_desc$"
+building_db_royal_chapel_02:0 "Расширенная королевская часовня"
+building_db_royal_chapel_02_desc:0 "Благодаря расширению Королевской часовни были увеличены образовательные помещения, чтобы студенты могли изучать такие науки, как богословие."
+building_db_royal_chapel_03:0 "Королевская усыпальница"
+building_db_royal_chapel_03_desc:0 "Под Королевской часовней построена усыпальница, позволяющая членам королевской семьи покоиться с миром."
+
+# Insular Monastery
+building_type_db_insular_monas_01:0 "Островной монастырь"
+building_type_db_insular_monas_01_desc:0 "#F В обычной западной церкви основной единицей организации является епархия, но в Ирландии было иначе. Там церкви организовывались на основе монастырей, созданных вождями племен и управляемых их потомками. Эти монастыри были не большими каменными зданиями, как обычные средневековые обители, а группами хижин с соломенными крышами вокруг небольшой церкви.#!"
+building_db_insular_monas_01:0 "Островной монастырь"
+building_db_insular_monas_01_desc:0 "$building_type_db_insular_monas_01_desc$"
+building_db_insular_monas_02:0 "Расширенный островной монастырь"
+building_db_insular_monas_02_desc:0 "Монастырь расширен благодаря вложениям местного вождя племени. Здесь больше монахов, чем когда-либо, живут чрезвычайно благочестивой жизнью и со страстью стремятся к знаниям."
+
+# local Parliament
+building_type_db_local_parliament_01:0 "Местный парламент"
+building_type_db_local_parliament_01_desc:0 "#F Местный парламент — это место, где монархи ищут совета по управлению или получают согласие народа.#!"
+building_db_local_parliament_01:0 "Временный местный парламент"
+building_db_local_parliament_01_desc:0 "Учрежден Местный парламент. Хоть он и временный, монарх сможет проконсультироваться по вопросам политики, когда это необходимо."
+building_db_local_parliament_02:0 "Постоянный местный парламент"
+building_db_local_parliament_02_desc:0 "Реорганизовав Местный парламент, монарх обеспечил себе возможность всегда получать надлежащие советы."
+building_db_local_parliament_03:0 "Расширенный местный парламент"
+building_db_local_parliament_03_desc:0 "Расширив Местный парламент, монарх получил возможность пользоваться профессиональными советами в большем числе областей."
+
+# Library
+building_type_db_local_library_01:0 "Библиотека"
+building_type_db_local_library_01_desc:0 "#F Место, где хранится множество книг.#!"
+building_db_local_library_01:0 "Малая библиотека"
+building_db_local_library_01_desc:0 "Это небольшая библиотека. Хотя книг немного, сюда приходят люди, желающие учиться по ним."
+building_db_local_library_02:0 "Знаменитая местная библиотека"
+building_db_local_library_02_desc:0 "Благодаря вложениям местных правителей мы смогли увеличить книжный фонд и нанять писцов для копирования книг."
+building_db_local_library_03:0 "Великая библиотека"
+building_db_local_library_03_desc:0 "Библиотека с огромным количеством книг. Множество людей приезжает сюда издалека, чтобы учиться."
+
+# Artificial Forest
+building_type_db_artificial_forest_01:0 "Рукотворный лес"
+building_type_db_artificial_forest_01_desc:0 "#F Из-за нехватки лесов в наших землях мы покупаем древесину у соседей. Искусственное создание лесов не только сократит эти траты, но и обеспечит стабильную поставку сырья для строительства, кораблестроения и изготовления луков.#!"
+building_db_artificial_forest_01:0 "Малый рукотворный лес"
+building_db_artificial_forest_01_desc:0 "Мы посадили деревья, чтобы создать небольшие искусственные леса."
+building_db_artificial_forest_02:0 "Назначение лесничего"
+building_db_artificial_forest_02_desc:0 "Мы назначаем лесничего для управления рукотворными лесами."
+building_db_artificial_forest_03:0 "Большой рукотворный лес"
+building_db_artificial_forest_03_desc:0 "Наш план по созданию рукотворного леса удался. Теперь мы можем проводить тренировки в лесу и легко получать сырье для строительства, кораблестроения, изготовления луков и прочего."
+
+# Caravan Sarai
+building_type_db_caravan_sarai_01:0 "Караван-сарай"
+building_type_db_caravan_sarai_01_desc:0 "#F Караван-сарай был придорожной гостиницей, где путешественники могли отдохнуть и восстановить силы после дневного перехода. Караван-сараи поддерживали торговлю, обмен информацией и перемещение людей по сети торговых путей Азии, Северной Африки и Юго-Восточной Европы, особенно на Шелковом пути.#!"
+building_db_caravan_sarai_01:0 "Караван-сарай"
+building_db_caravan_sarai_01_desc:0 "$building_type_db_caravan_sarai_01_desc$"
+building_db_caravan_sarai_02:0 "Караван-сарай"
+building_db_caravan_sarai_02_desc:0 "$building_type_db_caravan_sarai_01_desc$"
+building_db_caravan_sarai_03:0 "Караван-сарай"
+building_db_caravan_sarai_03_desc:0 "$building_type_db_caravan_sarai_01_desc$"
+
+# Prison Tower
+building_type_db_prison_cell_01:0 "Тюремная башня"
+building_type_db_prison_cell_01_desc:0 "#F Место для «надлежащего» обращения с заключенными.#!"
+building_db_prison_cell_01:0 "Расширенная тюрьма"
+building_db_prison_cell_01_desc:0 "Расширение тюрем поможет сделать жизнь заключенных еще более мучительной."
+building_db_prison_cell_02:0 "Место казни"
+building_db_prison_cell_02_desc:0 "Не лучше ли покончить со всем сразу, чем влачить жалкое существование?"
+building_db_prison_cell_03:0 "Укрепленная тюремная башня"
+building_db_prison_cell_03_desc:0 "Укрепление тюремной башни предотвратит проблемы с безопасностью из-за вражеских вторжений."
+
+# Court of Justice
+building_type_db_court_justice_01:0 "Судебный двор"
+building_type_db_court_justice_01_desc:0 "#F Место, где судят о наличии греха согласно закону и выносят приговор грешнику.#!"
+building_db_court_justice_01:0 "Суд сотни"
+building_db_court_justice_01_desc:0 "В некоторых сотнях суды проводились в установленном месте, в других — перемещались с каждым заседанием. Основной обязанностью суда сотни было поддержание системы круговой поруки. Суд состоял из двенадцати фригольдеров или свободных людей."
+building_db_court_justice_02:0 "Суд графства"
+building_db_court_justice_02_desc:0 "Суд графства был правовым институтом, используемым для поддержания законности и порядка на местном уровне, а также для выполнения различных административных функций, включая сбор налогов для центрального правительства."
+building_db_court_justice_03:0 "Суд королевской скамьи"
+building_db_court_justice_03_desc:0 "Суд королевской скамьи был судом общего права. Созданный в конце XII — начале XIII века из Королевского совета (Curia Regis), этот суд изначально следовал за монархом в его путешествиях. В 1318 году Суд королевской скамьи окончательно присоединился к Суду общих тяжб и Суду казначейства в Вестминстерском зале, совершив свои последние переезды в 1421 году."
+
+# Statue of Horse
+building_type_db_statue_horse_01:0 "Статуя коня"
+building_type_db_statue_horse_01_desc:0 "#F Статуя в честь легендарного коня по имени «Глиттерхуф».#!"
+building_db_statue_horse_01:0 "Статуя коня"
+building_db_statue_horse_01_desc:0 "$building_type_db_statue_horse_01_desc$"
+building_db_statue_horse_02:0 "Позолота"
+building_db_statue_horse_02_desc:0 "Позолотить статую «Глиттерхуфа» было бы хорошим способом проявить к нему чуть больше уважения."
+building_db_statue_horse_03:0 "Дополнительные статуи животных"
+building_db_statue_horse_03_desc:0 "Если добавить маленькую статую животного рядом со статуей «Глиттерхуфа», композиция станет идеальной."
+
+# Kurultai
+building_type_db_kurultai_01:0 "Курултай"
+building_type_db_kurultai_01_desc:0 "#F Курултай был политическим и военным советом древних монгольских и тюркских вождей и ханов. Все великие ханы Монгольской империи, например, Чингисхан и Угэдей, избирались официально на курултае. Ханы подчиненных монгольских государств, таких как Золотая Орда, избирались на аналогичных региональных курултаях.#!"
+building_db_kurultai_01:0 "Курултай"
+building_db_kurultai_01_desc:0 "Курултай созван. Хоть он и временный, хан сможет проконсультироваться по вопросам политики, когда это необходимо."
+building_db_kurultai_02:0 "Постоянный курултай"
+building_db_kurultai_02_desc:0 "Реорганизовав курултай, хан обеспечил себе возможность всегда получать надлежащие советы."
+building_db_kurultai_03:0 "Расширенный курултай"
+building_db_kurultai_03_desc:0 "Расширив курултай, хан получил возможность пользоваться профессиональными советами в большем числе областей."
+
+# Lighthouse
+building_type_db_lighthouse_01:0 "Маяк"
+building_type_db_lighthouse_01_desc:0 "#F Высокая башня, обеспечивающая безопасность кораблей, плывущих в ночи.#!"
+building_db_lighthouse_01:0 "Маяк"
+building_db_lighthouse_01_desc:0 "$building_type_db_lighthouse_01_desc$"
+building_db_lighthouse_02:0 "Гигантские знамена"
+building_db_lighthouse_02_desc:0 "Если мы установим на маяке гигантское знамя, моряки смогут опознать наш маяк даже из далекого моря."
+building_db_lighthouse_03:0 "Великий маяк"
+building_db_lighthouse_03_desc:0 "Наш маяк хорошо известен морякам, плавающим в близлежащих морях. После его постройки множество кораблей благополучно прибывает в наш порт."
+
+# Mercenary Camp
+building_type_db_mercenary_camp_01:0 "Лагерь наемников"
+building_type_db_mercenary_camp_01_desc:0 "#F Место, где собираются люди, готовые расстаться с жизнью ради денег.#!"
+building_db_mercenary_camp_01:0 "Лагерь наемников"
+building_db_mercenary_camp_01_desc:0 "$building_type_db_mercenary_camp_01_desc$"
+building_db_mercenary_camp_02:0 "Расширенный лагерь наемников"
+building_db_mercenary_camp_02_desc:0 "Больше наемников, почуявших запах крови из наших земель, собралось в лагере. Наемники соперничают за найм и закупают товары для следующей битвы в местных лавках. Конечно, драк между пьяными наемниками и местными жителями стало больше."
+
+# Thing
+building_type_db_things_01:0 "Тинг"
+building_type_db_things_01_desc:0 "#F Тинг — это правительственное собрание в раннем германском обществе, состоящее из свободных людей общины под председательством законоговорителей.\n\nВ дохристианской клановой культуре Скандинавии члены клана были обязаны мстить за увечья или смерть своих родственников. В результате кровная месть часто рассматривается как самый распространенный способ разрешения конфликтов у викингов. Однако тинги в более общем смысле служили балансирующими структурами для уменьшения племенной вражды и предотвращения социального хаоса в северогерманских культурах. Они играли важную роль в обществе викингов как форумы для разрешения конфликтов, брачных союзов, демонстрации власти, защиты чести и вопросов наследования.#!"
+building_db_things_01:0 "Тинг"
+building_db_things_01_desc:0 "$building_type_db_things_01_desc$"
+building_db_things_02:0 "Постоянный тинг"
+building_db_things_02_desc:0 "Реорганизовав тинг, лорд обеспечил себе возможность всегда получать надлежащие советы."
+building_db_things_03:0 "Расширенный тинг"
+building_db_things_03_desc:0 "Расширив тинг, лорд получил возможность пользоваться профессиональными советами в большем числе областей."
+
+# Fair
+building_type_db_fair_01:0 "Ярмарка"
+building_type_db_fair_01_desc:0 "#F Ярмарка — это собрание людей для развлечений и торговли. Суть ярмарки в том, что она временная и проводится в определенное время, от одного дня до нескольких недель.\n\nВ Средние века многие ярмарки развивались как временные рынки и были особенно важны для международной торговли и торговли на дальние расстояния, так как оптовые торговцы путешествовали, иногда по многу дней, чтобы попасть на ярмарки, где они могли встретить нужных покупателей или продавцов.#!"
+building_db_fair_01:0 "Малая ярмарка"
+building_db_fair_01_desc:0 "$building_type_db_fair_01_desc$"
+building_db_fair_02:0 "Ярмарка"
+building_db_fair_02_desc:0 "$building_type_db_fair_01_desc$"
+building_db_fair_03:0 "Региональная ярмарка"
+building_db_fair_03_desc:0 "Все больше людей прибывает к нам с тех пор, как в наших землях стала проводиться ярмарка."
+building_db_fair_04:0 "Великая ярмарка"
+building_db_fair_04_desc:0 "Все больше людей прибывает к нам с тех пор, как в наших землях стала проводиться ярмарка. Здесь есть на что посмотреть и что поесть, и продаются самые разные товары из наших владений."
+
+# Royal Synagogue
+building_type_db_royal_cynagogue_01:0 "Королевская синагога"
+building_type_db_royal_cynagogue_01_desc:0 "#F Синагога, которую посещает королевская семья для молитвы.#!"
+building_db_royal_cynagogue_01:0 "Королевская синагога"
+building_db_royal_cynagogue_01_desc:0 "$building_type_db_royal_cynagogue_01_desc$"
+building_db_royal_cynagogue_02:0 "Расширенная королевская синагога"
+building_db_royal_cynagogue_02_desc:0 "Благодаря расширению синагоги, её может посещать больше верующих."
+building_db_royal_cynagogue_03:0 "Ковчег Торы"
+building_db_royal_cynagogue_03_desc:0 "Ковчег Торы — это шкаф, в котором хранятся свитки Торы. Ковчег в синагоге почти всегда расположен так, чтобы стоящие лицом к нему были обращены в сторону Иерусалима."
+
+# Royal Mandir
+building_type_db_royal_hindu_01:0 "Королевский мандир"
+building_type_db_royal_hindu_01_desc:0 "#F Индуистский храм, который посещает королевская семья для молитвы.#!"
+building_db_royal_hindu_01:0 "Королевский мандир"
+building_db_royal_hindu_01_desc:0 "$building_type_db_royal_cynagogue_01_desc$"
+building_db_royal_hindu_02:0 "Чалай"
+building_db_royal_hindu_02_desc:0 "Установите Чалай, где студенты смогут изучать ведические писания в мандире. В Чалае ученые и студенты будут читать и изучать санскрит и Веды."
+building_db_royal_hindu_03:0 "Лечебница"
+building_db_royal_hindu_03_desc:0 "Внутри мандира устроена лечебница для оказания медицинской помощи больным и бедным."
+
+# Statue of Hero
+building_type_db_statue_ruler_01:0 "Статуя героя"
+building_type_db_statue_ruler_01_desc:0 "#F Статуя в честь легендарного героя.#!"
+building_db_statue_ruler_01:0 "Статуя героя"
+building_db_statue_ruler_01_desc:0 "$building_type_db_statue_ruler_01_desc$"
+building_db_statue_ruler_02:0 "Позолота"
+building_db_statue_ruler_02_desc:0 "Позолотить статую было бы хорошим способом проявить к нему чуть больше уважения."
+building_db_statue_ruler_03:0 "Дополнительные статуи"
+building_db_statue_ruler_03_desc:0 "Если добавить маленькую статую рядом с основной, композиция станет идеальной."
+
+# Royal Menagerie
+building_type_db_menagerie_01:0 "Королевский зверинец"
+building_type_db_menagerie_01_desc:0 "#F Зверинец — это коллекция содержащихся в неволе животных, часто экзотических, выставленных напоказ. Зверинец обычно был связан с аристократическим или королевским двором и располагался в саду или парке дворца. Аристократы хотели продемонстрировать свою власть и богатство, так как живые и активные экзотические животные встречались реже, их было труднее достать и дороже содержать.#!"
+building_db_menagerie_01:0 "Королевский зверинец"
+building_db_menagerie_01_desc:0 "$building_type_db_menagerie_01_desc$"
+building_db_menagerie_02:0 "Расширенный королевский зверинец"
+building_db_menagerie_02_desc:0 "Благодаря расширению, в зверинце можно содержать больше животных, чем раньше. Теперь еще больше аристократов будут завидовать нашему богатству и власти. Однако местные священники начали открыто осуждать нашу роскошь в проповедях."
+building_db_menagerie_03:0 "Экзотический зверинец"
+building_db_menagerie_03_desc:0 "Наши усилия по сбору экзотических животных издалека, похоже, наконец окупились. Теперь мы содержим множество диковинных зверей, таких как слоны, верблюды, львы, леопарды и белые олени."
+
+# Rabbi Council
+building_type_db_rabbi_council_01:0 "Совет раввинов"
+building_type_db_rabbi_council_01_desc:0 "#F После изгнания евреев из Иерусалима раввины руководили жизнью иудеев согласно Торе. Приглашение выдающихся раввинов, чтобы выслушать их советы, поможет нашему двору двигаться в правильном направлении в соответствии с Торой.#!"
+building_db_rabbi_council_01:0 "Совет раввинов"
+building_db_rabbi_council_01_desc:0 "$building_type_db_rabbi_council_01_desc$"
+building_db_rabbi_council_02:0 "Постоянный совет раввинов"
+building_db_rabbi_council_02_desc:0 "Реорганизовав совет, лорд обеспечил себе возможность всегда получать надлежащие советы."
+building_db_rabbi_council_03:0 "Расширенный совет раввинов"
+building_db_rabbi_council_03_desc:0 "Расширив совет, лорд получил возможность пользоваться профессиональными советами в большем числе областей."

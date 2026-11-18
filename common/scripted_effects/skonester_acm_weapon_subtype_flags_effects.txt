@@ -1,0 +1,339 @@
+﻿# AUTO-GENERATED — tools/gen_acm_weapons.py
+
+skonester_acm_clear_weapon_subtype_flags_effect = {
+  remove_character_flag = skonester_acm_wpn_longsword
+  remove_character_flag = skonester_acm_wpn_greatsword
+  remove_character_flag = skonester_acm_wpn_dagger
+  remove_character_flag = skonester_acm_wpn_battleaxe
+  remove_character_flag = skonester_acm_wpn_greataxe
+  remove_character_flag = skonester_acm_wpn_mace
+  remove_character_flag = skonester_acm_wpn_flail
+  remove_character_flag = skonester_acm_wpn_spear
+  remove_character_flag = skonester_acm_wpn_halberd
+  remove_character_flag = skonester_acm_wpn_staff
+  remove_character_flag = skonester_acm_wpn_fistblade
+  remove_character_flag = skonester_acm_wpn_longbow
+  remove_character_flag = skonester_acm_wpn_crossbow
+  remove_character_flag = skonester_acm_wpn_shortbow
+}
+
+skonester_acm_pick_wpn_longsword_effect = {
+  skonester_acm_clear_weapon_subtype_flags_effect = yes
+  remove_character_flag = skonester_acm_wpn_greatsword
+  remove_character_flag = skonester_acm_wpn_dagger
+  remove_character_flag = skonester_acm_wpn_battleaxe
+  remove_character_flag = skonester_acm_wpn_greataxe
+  remove_character_flag = skonester_acm_wpn_mace
+  remove_character_flag = skonester_acm_wpn_flail
+  remove_character_flag = skonester_acm_wpn_spear
+  remove_character_flag = skonester_acm_wpn_halberd
+  remove_character_flag = skonester_acm_wpn_staff
+  remove_character_flag = skonester_acm_wpn_fistblade
+  remove_character_flag = skonester_acm_wpn_longbow
+  remove_character_flag = skonester_acm_wpn_crossbow
+  remove_character_flag = skonester_acm_wpn_shortbow
+  add_character_flag = skonester_acm_wpn_longsword
+  remove_character_flag = skonester_artifact_subtype_sword
+  remove_character_flag = skonester_artifact_subtype_axe
+  remove_character_flag = skonester_artifact_subtype_spear
+  add_character_flag = skonester_artifact_subtype_set
+}
+
+skonester_acm_pick_wpn_greatsword_effect = {
+  skonester_acm_clear_weapon_subtype_flags_effect = yes
+  remove_character_flag = skonester_acm_wpn_longsword
+  remove_character_flag = skonester_acm_wpn_dagger
+  remove_character_flag = skonester_acm_wpn_battleaxe
+  remove_character_flag = skonester_acm_wpn_greataxe
+  remove_character_flag = skonester_acm_wpn_mace
+  remove_character_flag = skonester_acm_wpn_flail
+  remove_character_flag = skonester_acm_wpn_spear
+  remove_character_flag = skonester_acm_wpn_halberd
+  remove_character_flag = skonester_acm_wpn_staff
+  remove_character_flag = skonester_acm_wpn_fistblade
+  remove_character_flag = skonester_acm_wpn_longbow
+  remove_character_flag = skonester_acm_wpn_crossbow
+  remove_character_flag = skonester_acm_wpn_shortbow
+  add_character_flag = skonester_acm_wpn_greatsword
+  remove_character_flag = skonester_artifact_subtype_sword
+  remove_character_flag = skonester_artifact_subtype_axe
+  remove_character_flag = skonester_artifact_subtype_spear
+  add_character_flag = skonester_artifact_subtype_set
+}
+
+skonester_acm_pick_wpn_dagger_effect = {
+  skonester_acm_clear_weapon_subtype_flags_effect = yes
+  remove_character_flag = skonester_acm_wpn_longsword
+  remove_character_flag = skonester_acm_wpn_greatsword
+  remove_character_flag = skonester_acm_wpn_battleaxe
+  remove_character_flag = skonester_acm_wpn_greataxe
+  remove_character_flag = skonester_acm_wpn_mace
+  remove_character_flag = skonester_acm_wpn_flail
+  remove_character_flag = skonester_acm_wpn_spear
+  remove_character_flag = skonester_acm_wpn_halberd
+  remove_character_flag = skonester_acm_wpn_staff
+  remove_character_flag = skonester_acm_wpn_fistblade
+  remove_character_flag = skonester_acm_wpn_longbow
+  remove_character_flag = skonester_acm_wpn_crossbow
+  remove_character_flag = skonester_acm_wpn_shortbow
+  add_character_flag = skonester_acm_wpn_dagger
+  remove_character_flag = skonester_artifact_subtype_sword
+  remove_character_flag = skonester_artifact_subtype_axe
+  remove_character_flag = skonester_artifact_subtype_spear
+  add_character_flag = skonester_artifact_subtype_set
+}
+
+skonester_acm_pick_wpn_battleaxe_effect = {
+  skonester_acm_clear_weapon_subtype_flags_effect = yes
+  remove_character_flag = skonester_acm_wpn_longsword
+  remove_character_flag = skonester_acm_wpn_greatsword
+  remove_character_flag = skonester_acm_wpn_dagger
+  remove_character_flag = skonester_acm_wpn_greataxe
+  remove_character_flag = skonester_acm_wpn_mace
+  remove_character_flag = skonester_acm_wpn_flail
+  remove_character_flag = skonester_acm_wpn_spear
+  remove_character_flag = skonester_acm_wpn_halberd
+  remove_character_flag = skonester_acm_wpn_staff
+  remove_character_flag = skonester_acm_wpn_fistblade
+  remove_character_flag = skonester_acm_wpn_longbow
+  remove_character_flag = skonester_acm_wpn_crossbow
+  remove_character_flag = skonester_acm_wpn_shortbow
+  add_character_flag = skonester_acm_wpn_battleaxe
+  remove_character_flag = skonester_artifact_subtype_sword
+  remove_character_flag = skonester_artifact_subtype_axe
+  remove_character_flag = skonester_artifact_subtype_spear
+  add_character_flag = skonester_artifact_subtype_set
+}
+
+skonester_acm_pick_wpn_greataxe_effect = {
+  skonester_acm_clear_weapon_subtype_flags_effect = yes
+  remove_character_flag = skonester_acm_wpn_longsword
+  remove_character_flag = skonester_acm_wpn_greatsword
+  remove_character_flag = skonester_acm_wpn_dagger
+  remove_character_flag = skonester_acm_wpn_battleaxe
+  remove_character_flag = skonester_acm_wpn_mace
+  remove_character_flag = skonester_acm_wpn_flail
+  remove_character_flag = skonester_acm_wpn_spear
+  remove_character_flag = skonester_acm_wpn_halberd
+  remove_character_flag = skonester_acm_wpn_staff
+  remove_character_flag = skonester_acm_wpn_fistblade
+  remove_character_flag = skonester_acm_wpn_longbow
+  remove_character_flag = skonester_acm_wpn_crossbow
+  remove_character_flag = skonester_acm_wpn_shortbow
+  add_character_flag = skonester_acm_wpn_greataxe
+  remove_character_flag = skonester_artifact_subtype_sword
+  remove_character_flag = skonester_artifact_subtype_axe
+  remove_character_flag = skonester_artifact_subtype_spear
+  add_character_flag = skonester_artifact_subtype_set
+}
+
+skonester_acm_pick_wpn_mace_effect = {
+  skonester_acm_clear_weapon_subtype_flags_effect = yes
+  remove_character_flag = skonester_acm_wpn_longsword
+  remove_character_flag = skonester_acm_wpn_greatsword
+  remove_character_flag = skonester_acm_wpn_dagger
+  remove_character_flag = skonester_acm_wpn_battleaxe
+  remove_character_flag = skonester_acm_wpn_greataxe
+  remove_character_flag = skonester_acm_wpn_flail
+  remove_character_flag = skonester_acm_wpn_spear
+  remove_character_flag = skonester_acm_wpn_halberd
+  remove_character_flag = skonester_acm_wpn_staff
+  remove_character_flag = skonester_acm_wpn_fistblade
+  remove_character_flag = skonester_acm_wpn_longbow
+  remove_character_flag = skonester_acm_wpn_crossbow
+  remove_character_flag = skonester_acm_wpn_shortbow
+  add_character_flag = skonester_acm_wpn_mace
+  remove_character_flag = skonester_artifact_subtype_sword
+  remove_character_flag = skonester_artifact_subtype_axe
+  remove_character_flag = skonester_artifact_subtype_spear
+  add_character_flag = skonester_artifact_subtype_set
+}
+
+skonester_acm_pick_wpn_flail_effect = {
+  skonester_acm_clear_weapon_subtype_flags_effect = yes
+  remove_character_flag = skonester_acm_wpn_longsword
+  remove_character_flag = skonester_acm_wpn_greatsword
+  remove_character_flag = skonester_acm_wpn_dagger
+  remove_character_flag = skonester_acm_wpn_battleaxe
+  remove_character_flag = skonester_acm_wpn_greataxe
+  remove_character_flag = skonester_acm_wpn_mace
+  remove_character_flag = skonester_acm_wpn_spear
+  remove_character_flag = skonester_acm_wpn_halberd
+  remove_character_flag = skonester_acm_wpn_staff
+  remove_character_flag = skonester_acm_wpn_fistblade
+  remove_character_flag = skonester_acm_wpn_longbow
+  remove_character_flag = skonester_acm_wpn_crossbow
+  remove_character_flag = skonester_acm_wpn_shortbow
+  add_character_flag = skonester_acm_wpn_flail
+  remove_character_flag = skonester_artifact_subtype_sword
+  remove_character_flag = skonester_artifact_subtype_axe
+  remove_character_flag = skonester_artifact_subtype_spear
+  add_character_flag = skonester_artifact_subtype_set
+}
+
+skonester_acm_pick_wpn_spear_effect = {
+  skonester_acm_clear_weapon_subtype_flags_effect = yes
+  remove_character_flag = skonester_acm_wpn_longsword
+  remove_character_flag = skonester_acm_wpn_greatsword
+  remove_character_flag = skonester_acm_wpn_dagger
+  remove_character_flag = skonester_acm_wpn_battleaxe
+  remove_character_flag = skonester_acm_wpn_greataxe
+  remove_character_flag = skonester_acm_wpn_mace
+  remove_character_flag = skonester_acm_wpn_flail
+  remove_character_flag = skonester_acm_wpn_halberd
+  remove_character_flag = skonester_acm_wpn_staff
+  remove_character_flag = skonester_acm_wpn_fistblade
+  remove_character_flag = skonester_acm_wpn_longbow
+  remove_character_flag = skonester_acm_wpn_crossbow
+  remove_character_flag = skonester_acm_wpn_shortbow
+  add_character_flag = skonester_acm_wpn_spear
+  remove_character_flag = skonester_artifact_subtype_sword
+  remove_character_flag = skonester_artifact_subtype_axe
+  remove_character_flag = skonester_artifact_subtype_spear
+  add_character_flag = skonester_artifact_subtype_set
+}
+
+skonester_acm_pick_wpn_halberd_effect = {
+  skonester_acm_clear_weapon_subtype_flags_effect = yes
+  remove_character_flag = skonester_acm_wpn_longsword
+  remove_character_flag = skonester_acm_wpn_greatsword
+  remove_character_flag = skonester_acm_wpn_dagger
+  remove_character_flag = skonester_acm_wpn_battleaxe
+  remove_character_flag = skonester_acm_wpn_greataxe
+  remove_character_flag = skonester_acm_wpn_mace
+  remove_character_flag = skonester_acm_wpn_flail
+  remove_character_flag = skonester_acm_wpn_spear
+  remove_character_flag = skonester_acm_wpn_staff
+  remove_character_flag = skonester_acm_wpn_fistblade
+  remove_character_flag = skonester_acm_wpn_longbow
+  remove_character_flag = skonester_acm_wpn_crossbow
+  remove_character_flag = skonester_acm_wpn_shortbow
+  add_character_flag = skonester_acm_wpn_halberd
+  remove_character_flag = skonester_artifact_subtype_sword
+  remove_character_flag = skonester_artifact_subtype_axe
+  remove_character_flag = skonester_artifact_subtype_spear
+  add_character_flag = skonester_artifact_subtype_set
+}
+
+skonester_acm_pick_wpn_staff_effect = {
+  skonester_acm_clear_weapon_subtype_flags_effect = yes
+  remove_character_flag = skonester_acm_wpn_longsword
+  remove_character_flag = skonester_acm_wpn_greatsword
+  remove_character_flag = skonester_acm_wpn_dagger
+  remove_character_flag = skonester_acm_wpn_battleaxe
+  remove_character_flag = skonester_acm_wpn_greataxe
+  remove_character_flag = skonester_acm_wpn_mace
+  remove_character_flag = skonester_acm_wpn_flail
+  remove_character_flag = skonester_acm_wpn_spear
+  remove_character_flag = skonester_acm_wpn_halberd
+  remove_character_flag = skonester_acm_wpn_fistblade
+  remove_character_flag = skonester_acm_wpn_longbow
+  remove_character_flag = skonester_acm_wpn_crossbow
+  remove_character_flag = skonester_acm_wpn_shortbow
+  add_character_flag = skonester_acm_wpn_staff
+  remove_character_flag = skonester_artifact_subtype_sword
+  remove_character_flag = skonester_artifact_subtype_axe
+  remove_character_flag = skonester_artifact_subtype_spear
+  add_character_flag = skonester_artifact_subtype_set
+}
+
+skonester_acm_pick_wpn_fistblade_effect = {
+  skonester_acm_clear_weapon_subtype_flags_effect = yes
+  remove_character_flag = skonester_acm_wpn_longsword
+  remove_character_flag = skonester_acm_wpn_greatsword
+  remove_character_flag = skonester_acm_wpn_dagger
+  remove_character_flag = skonester_acm_wpn_battleaxe
+  remove_character_flag = skonester_acm_wpn_greataxe
+  remove_character_flag = skonester_acm_wpn_mace
+  remove_character_flag = skonester_acm_wpn_flail
+  remove_character_flag = skonester_acm_wpn_spear
+  remove_character_flag = skonester_acm_wpn_halberd
+  remove_character_flag = skonester_acm_wpn_staff
+  remove_character_flag = skonester_acm_wpn_longbow
+  remove_character_flag = skonester_acm_wpn_crossbow
+  remove_character_flag = skonester_acm_wpn_shortbow
+  add_character_flag = skonester_acm_wpn_fistblade
+  remove_character_flag = skonester_artifact_subtype_sword
+  remove_character_flag = skonester_artifact_subtype_axe
+  remove_character_flag = skonester_artifact_subtype_spear
+  add_character_flag = skonester_artifact_subtype_set
+}
+
+skonester_acm_pick_wpn_longbow_effect = {
+  skonester_acm_clear_weapon_subtype_flags_effect = yes
+  remove_character_flag = skonester_acm_wpn_longsword
+  remove_character_flag = skonester_acm_wpn_greatsword
+  remove_character_flag = skonester_acm_wpn_dagger
+  remove_character_flag = skonester_acm_wpn_battleaxe
+  remove_character_flag = skonester_acm_wpn_greataxe
+  remove_character_flag = skonester_acm_wpn_mace
+  remove_character_flag = skonester_acm_wpn_flail
+  remove_character_flag = skonester_acm_wpn_spear
+  remove_character_flag = skonester_acm_wpn_halberd
+  remove_character_flag = skonester_acm_wpn_staff
+  remove_character_flag = skonester_acm_wpn_fistblade
+  remove_character_flag = skonester_acm_wpn_crossbow
+  remove_character_flag = skonester_acm_wpn_shortbow
+  add_character_flag = skonester_acm_wpn_longbow
+  remove_character_flag = skonester_artifact_subtype_sword
+  remove_character_flag = skonester_artifact_subtype_axe
+  remove_character_flag = skonester_artifact_subtype_spear
+  add_character_flag = skonester_artifact_subtype_set
+}
+
+skonester_acm_pick_wpn_crossbow_effect = {
+  skonester_acm_clear_weapon_subtype_flags_effect = yes
+  remove_character_flag = skonester_acm_wpn_longsword
+  remove_character_flag = skonester_acm_wpn_greatsword
+  remove_character_flag = skonester_acm_wpn_dagger
+  remove_character_flag = skonester_acm_wpn_battleaxe
+  remove_character_flag = skonester_acm_wpn_greataxe
+  remove_character_flag = skonester_acm_wpn_mace
+  remove_character_flag = skonester_acm_wpn_flail
+  remove_character_flag = skonester_acm_wpn_spear
+  remove_character_flag = skonester_acm_wpn_halberd
+  remove_character_flag = skonester_acm_wpn_staff
+  remove_character_flag = skonester_acm_wpn_fistblade
+  remove_character_flag = skonester_acm_wpn_longbow
+  remove_character_flag = skonester_acm_wpn_shortbow
+  add_character_flag = skonester_acm_wpn_crossbow
+  remove_character_flag = skonester_artifact_subtype_sword
+  remove_character_flag = skonester_artifact_subtype_axe
+  remove_character_flag = skonester_artifact_subtype_spear
+  add_character_flag = skonester_artifact_subtype_set
+}
+
+skonester_acm_pick_wpn_shortbow_effect = {
+  skonester_acm_clear_weapon_subtype_flags_effect = yes
+  remove_character_flag = skonester_acm_wpn_longsword
+  remove_character_flag = skonester_acm_wpn_greatsword
+  remove_character_flag = skonester_acm_wpn_dagger
+  remove_character_flag = skonester_acm_wpn_battleaxe
+  remove_character_flag = skonester_acm_wpn_greataxe
+  remove_character_flag = skonester_acm_wpn_mace
+  remove_character_flag = skonester_acm_wpn_flail
+  remove_character_flag = skonester_acm_wpn_spear
+  remove_character_flag = skonester_acm_wpn_halberd
+  remove_character_flag = skonester_acm_wpn_staff
+  remove_character_flag = skonester_acm_wpn_fistblade
+  remove_character_flag = skonester_acm_wpn_longbow
+  remove_character_flag = skonester_acm_wpn_crossbow
+  add_character_flag = skonester_acm_wpn_shortbow
+  remove_character_flag = skonester_artifact_subtype_sword
+  remove_character_flag = skonester_artifact_subtype_axe
+  remove_character_flag = skonester_artifact_subtype_spear
+  add_character_flag = skonester_artifact_subtype_set
+}
+
+skonester_acm_set_kind_weapon_effect = {
+  skonester_acm_clear_all_craft_subtype_flags_effect = yes
+  remove_character_flag = skonester_artifact_kind_armor
+  remove_character_flag = skonester_artifact_kind_crown
+  remove_character_flag = skonester_artifact_kind_regalia
+  remove_character_flag = skonester_artifact_kind_trinket
+  remove_character_flag = skonester_artifact_kind_book
+  remove_character_flag = skonester_artifact_kind_court
+  add_character_flag = skonester_artifact_kind_weapon
+  add_character_flag = skonester_artifact_kind_set
+  skonester_acm_pick_wpn_longsword_effect = yes
+}

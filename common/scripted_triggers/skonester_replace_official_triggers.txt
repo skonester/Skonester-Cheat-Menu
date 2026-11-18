@@ -1,0 +1,596 @@
+﻿# Skonester菜单 · 更换官员：右击封臣 → 家人 / 同族 / 廷臣 / 超高属性无地 AI（最多 50）
+
+skonester_replace_official_transferable_title_trigger = {
+  is_noble_family_title = no
+  is_landless_type_title = no
+  is_leased_out = no
+}
+
+# 新官交接后允许保留：主头衔、唯一指定伯爵领（skonester_ro_kept_county）、该领下男爵
+skonester_replace_official_replacement_may_keep_title_trigger = {
+  OR = {
+    AND = {
+      exists = scope:skonester_ro_replacement.primary_title
+      this = scope:skonester_ro_replacement.primary_title
+    }
+    AND = {
+      tier = tier_county
+      exists = scope:skonester_ro_kept_county
+      this = scope:skonester_ro_kept_county
+      scope:skonester_ro_kept_county = {
+        holder = scope:skonester_ro_replacement
+      }
+    }
+    AND = {
+      tier = tier_barony
+      exists = scope:skonester_ro_kept_county
+      de_jure_liege = scope:skonester_ro_kept_county
+      scope:skonester_ro_kept_county = {
+        holder = scope:skonester_ro_replacement
+      }
+    }
+  }
+}
+
+# 封臣主衔或持有伯爵领之法理仍属新官主衔（用于法理转封后选择性挂回）
+skonester_replace_official_vassal_de_jure_under_replacement_trigger = {
+  exists = scope:skonester_ro_replacement.primary_title
+  OR = {
+    AND = {
+      exists = primary_title
+      primary_title = {
+        target_is_de_jure_liege_or_above = scope:skonester_ro_replacement.primary_title
+      }
+    }
+    any_held_title = {
+      tier = tier_county
+      is_noble_family_title = no
+      target_is_de_jure_liege_or_above = scope:skonester_ro_replacement.primary_title
+    }
+  }
+}
+
+# 统一交接：一律优先由旧官直属领主 resolve（含玩家直属封建/氏族等），不再由旧官本人 resolve
+
+skonester_replace_official_handover_via_liege_preferred_trigger = {
+  exists = scope:skonester_ro_evt_victim
+  exists = scope:skonester_ro_victim_liege
+  NOT = {
+    scope:skonester_ro_victim_liege = scope:skonester_ro_evt_victim
+  }
+}
+
+# 已废弃：统一路径下恒不成立（保留键名以免旧引用报错）
+skonester_replace_official_use_victim_as_handover_granter_trigger = {
+  always = no
+}
+
+skonester_replace_official_feudal_style_handover_trigger = {
+  always = no
+}
+
+# 旧官缓存封臣：新官有地则一律尝试挂回（不再按政体区分）
+skonester_replace_official_should_reattach_all_cached_vassals_trigger = {
+  exists = scope:skonester_ro_replacement
+  scope:skonester_ro_replacement = {
+    is_landed = yes
+    exists = primary_title
+  }
+}
+
+skonester_replace_official_victim_valid_trigger = {
+  NOT = { this = root }
+  is_alive = yes
+  is_adult = yes
+  is_landed = yes
+  is_vassal_or_below_of = root
+  NOR = {
+    is_imprisoned = yes
+    has_trait = incapable
+  }
+}
+
+skonester_replace_official_victim_valid_for_interaction_trigger = {
+  NOT = { this = scope:actor }
+  is_alive = yes
+  is_adult = yes
+  is_landed = yes
+  is_vassal_or_below_of = scope:actor
+  NOR = {
+    is_imprisoned = yes
+    has_trait = incapable
+  }
+}
+
+# 轻量预筛（populate / has_any 扫描用，不含 can_be_granted 与才能判定）
+skonester_replace_official_ui_candidate_prefilter_base_trigger = {
+  is_alive = yes
+  is_adult = yes
+  is_imprisoned = no
+  NOT = { has_trait = incapable }
+  NOT = { this = scope:actor }
+  OR = {
+    AND = {
+      scope:actor = {
+        has_variable = skonester_ro_victim
+      }
+      NOT = {
+        this = scope:actor.var:skonester_ro_victim
+      }
+    }
+    AND = {
+      scope:actor = {
+        NOT = { has_variable = skonester_ro_victim }
+      }
+      exists = scope:recipient
+      NOT = { this = scope:recipient }
+    }
+  }
+}
+
+skonester_replace_official_ui_courtier_prefilter_trigger = {
+  skonester_replace_official_ui_candidate_prefilter_base_trigger = yes
+  is_courtier_of = scope:actor
+}
+
+# 家人：近亲 / 远亲（须在玩家顶层领地内）
+skonester_replace_official_ui_close_family_prefilter_trigger = {
+  skonester_replace_official_ui_candidate_prefilter_base_trigger = yes
+  is_close_or_extended_family_of = scope:actor
+  top_liege = scope:actor
+}
+
+skonester_replace_official_ui_dynasty_kin_prefilter_trigger = {
+  skonester_replace_official_ui_candidate_prefilter_base_trigger = yes
+  exists = dynasty
+  scope:actor = { exists = dynasty }
+  dynasty = scope:actor.dynasty
+  top_liege = scope:actor
+}
+
+skonester_replace_official_ui_landless_pool_prefilter_trigger = {
+  skonester_replace_official_ui_candidate_prefilter_base_trigger = yes
+  is_ai = yes
+  is_landed = no
+  NOR = {
+    has_trait = devoted
+    has_trait = gallivanter
+  }
+}
+
+skonester_replace_official_ui_landless_high_skill_prefilter_trigger = {
+  skonester_replace_official_ui_landless_pool_prefilter_trigger = yes
+  skonester_is_excellent_talent_for_grant_trigger = yes
+}
+
+skonester_replace_official_ui_landless_talent_candidate_trigger = {
+  skonester_replace_official_ui_landless_high_skill_prefilter_trigger = yes
+  OR = {
+    skonester_replace_official_can_be_granted_by_office_authority_trigger = yes
+    AND = {
+      scope:actor = {
+        is_ai = no
+      }
+      skonester_replace_official_cheat_grantee_base_trigger = yes
+    }
+  }
+}
+
+# Skonester cheat：各政体 can_be_granted 门槛不一；玩家操作时放宽基础人格条件，执行阶段走 revoke→grant 兜底
+skonester_replace_official_cheat_grantee_base_trigger = {
+  is_adult = yes
+  is_imprisoned = no
+  NOT = { has_trait = incapable }
+  NOR = {
+    has_trait = devoted
+    has_trait = gallivanter
+  }
+}
+
+skonester_replace_official_can_be_granted_by_office_authority_trigger = {
+  OR = {
+    can_be_granted_titles_by = { RULER = scope:actor }
+    AND = {
+      exists = scope:recipient
+      scope:recipient = {
+        exists = liege
+      }
+      can_be_granted_titles_by = { RULER = scope:recipient.liege }
+    }
+    AND = {
+      scope:actor = {
+        is_ai = no
+      }
+      skonester_replace_official_cheat_grantee_base_trigger = yes
+      OR = {
+        is_courtier_of = scope:actor
+        top_liege = scope:actor
+        AND = {
+          exists = scope:recipient
+          scope:recipient = {
+            exists = liege
+          }
+          is_vassal_or_below_of = scope:recipient.liege
+        }
+      }
+    }
+  }
+}
+
+# 剥余衔/转封授权：直属封臣=玩家 granter；深层封臣=旧官直属领主
+skonester_replace_official_can_be_granted_by_regrant_authority_trigger = {
+  OR = {
+    AND = {
+      exists = scope:skonester_ro_regrant_authority
+      can_be_granted_titles_by = { RULER = scope:skonester_ro_regrant_authority }
+    }
+    AND = {
+      exists = scope:skonester_ro_granter
+      can_be_granted_titles_by = { RULER = scope:skonester_ro_granter }
+    }
+    AND = {
+      exists = scope:skonester_ro_granter
+      scope:skonester_ro_granter = {
+        is_ai = no
+      }
+      skonester_replace_official_cheat_grantee_base_trigger = yes
+    }
+  }
+}
+
+# 转封后应挂到新官旗下：法理属新官主衔，且当前误挂在玩家/旧官直属
+skonester_replace_official_grantee_should_serve_replacement_trigger = {
+  exists = scope:skonester_ro_replacement
+  scope:skonester_ro_replacement = {
+    is_landed = yes
+    exists = primary_title
+  }
+  NOT = { this = scope:skonester_ro_replacement }
+  NOT = { liege = scope:skonester_ro_replacement }
+  top_liege = scope:skonester_ro_replacement.top_liege
+  OR = {
+    AND = {
+      exists = scope:skonester_ro_granter
+      liege = scope:skonester_ro_granter
+    }
+    AND = {
+      exists = scope:skonester_ro_evt_victim
+      liege = scope:skonester_ro_evt_victim
+    }
+    AND = {
+      exists = scope:skonester_ro_victim_liege
+      liege = scope:skonester_ro_victim_liege
+    }
+  }
+  OR = {
+    AND = {
+      exists = primary_title
+      primary_title = {
+        tier = tier_county
+        target_is_de_jure_liege_or_above = scope:skonester_ro_replacement.primary_title
+      }
+    }
+    AND = {
+      highest_held_title_tier = tier_barony
+      any_held_title = {
+        tier = tier_barony
+        de_jure_liege = {
+          holder = scope:skonester_ro_replacement
+        }
+      }
+    }
+    any_held_title = {
+      tier = tier_county
+      target_is_de_jure_liege_or_above = scope:skonester_ro_replacement.primary_title
+    }
+    any_held_title = {
+      tier = tier_county
+      de_jure_liege = {
+        holder = scope:skonester_ro_replacement
+      }
+    }
+  }
+}
+
+# 阶段5：新官子树内错挂封臣（含旧官缓存名单）
+skonester_replace_official_scoped_de_jure_vassal_trigger = {
+  is_landed = yes
+  exists = primary_title
+  exists = scope:skonester_ro_granter
+  NOT = { is_at_war_with = scope:skonester_ro_granter }
+  is_vassal_or_below_of = scope:skonester_ro_granter
+  exists = scope:skonester_ro_replacement
+  scope:skonester_ro_replacement = {
+    is_landed = yes
+    exists = primary_title
+  }
+  OR = {
+    primary_title = {
+      target_is_de_jure_liege_or_above = scope:skonester_ro_replacement.primary_title
+    }
+    any_held_title = {
+      tier = tier_county
+      target_is_de_jure_liege_or_above = scope:skonester_ro_replacement.primary_title
+    }
+    AND = {
+      scope:skonester_ro_granter = {
+        has_variable_list = skonester_ro_victim_vassal_queue
+        is_target_in_variable_list = {
+          name = skonester_ro_victim_vassal_queue
+          target = this
+        }
+      }
+    }
+  }
+  OR = {
+    AND = {
+      exists = primary_title.de_jure_liege
+      exists = primary_title.de_jure_liege.holder
+      primary_title.de_jure_liege.holder = {
+        NOT = { this = scope:skonester_ro_granter }
+        is_vassal_or_below_of = scope:skonester_ro_granter
+        NOT = { is_at_war_with = scope:skonester_ro_granter }
+      }
+      NOT = { liege = primary_title.de_jure_liege.holder }
+    }
+    AND = {
+      exists = primary_title.de_jure_liege.de_jure_liege
+      exists = primary_title.de_jure_liege.de_jure_liege.holder
+      OR = {
+        NOT = { exists = primary_title.de_jure_liege.holder }
+        primary_title.de_jure_liege.holder = scope:skonester_ro_granter
+      }
+      primary_title.de_jure_liege.de_jure_liege.holder = {
+        NOT = { this = scope:skonester_ro_granter }
+        is_vassal_or_below_of = scope:skonester_ro_granter
+        NOT = { is_at_war_with = scope:skonester_ro_granter }
+      }
+      NOT = { liege = primary_title.de_jure_liege.de_jure_liege.holder }
+    }
+    AND = {
+      exists = primary_title.de_jure_liege.de_jure_liege.de_jure_liege
+      exists = primary_title.de_jure_liege.de_jure_liege.de_jure_liege.holder
+      OR = {
+        NOT = { exists = primary_title.de_jure_liege.holder }
+        primary_title.de_jure_liege.holder = scope:skonester_ro_granter
+      }
+      OR = {
+        NOT = { exists = primary_title.de_jure_liege.de_jure_liege.holder }
+        primary_title.de_jure_liege.de_jure_liege.holder = scope:skonester_ro_granter
+      }
+      primary_title.de_jure_liege.de_jure_liege.de_jure_liege.holder = {
+        NOT = { this = scope:skonester_ro_granter }
+        is_vassal_or_below_of = scope:skonester_ro_granter
+        NOT = { is_at_war_with = scope:skonester_ro_granter }
+      }
+      NOT = { liege = primary_title.de_jure_liege.de_jure_liege.de_jure_liege.holder }
+    }
+  }
+}
+
+# 转封对象须能承接 strip 衔级（limit 内不可用 trigger_else_if）
+skonester_replace_official_strip_title_grantee_tier_ok_trigger = {
+  OR = {
+    AND = {
+      exists = scope:skonester_strip_title
+      scope:skonester_strip_title = {
+        tier = tier_kingdom
+      }
+      highest_held_title_tier >= tier_kingdom
+    }
+    AND = {
+      exists = scope:skonester_strip_title
+      scope:skonester_strip_title = {
+        tier = tier_duchy
+      }
+      highest_held_title_tier >= tier_duchy
+    }
+    AND = {
+      OR = {
+        NOT = { exists = scope:skonester_strip_title }
+        scope:skonester_strip_title = {
+          NOR = {
+            tier = tier_kingdom
+            tier = tier_duchy
+          }
+        }
+      }
+    }
+  }
+}
+
+# 旧官余衔转封：不得动主衔/计划交接郡/与主衔同级者；须低于顶层领主阶（防授出后销毁或独立）
+
+skonester_replace_official_victim_regrantable_excess_title_trigger = {
+  skonester_replace_official_transferable_title_trigger = yes
+  exists = scope:skonester_ro_evt_victim
+  NOT = { this = scope:skonester_ro_evt_victim.primary_title }
+  trigger_if = {
+    limit = {
+      scope:skonester_ro_evt_victim = {
+        exists = primary_title
+        primary_title = {
+          tier >= tier_duchy
+        }
+      }
+    }
+    NOT = { tier = scope:skonester_ro_evt_victim.primary_title.tier }
+  }
+  trigger_if = {
+    limit = {
+      exists = scope:skonester_ro_victim_main_title
+    }
+    NOT = { this = scope:skonester_ro_victim_main_title }
+  }
+  trigger_if = {
+    limit = {
+      exists = scope:skonester_ro_handover_county
+    }
+    NOT = { this = scope:skonester_ro_handover_county }
+  }
+  scope:skonester_ro_evt_victim = {
+    exists = top_liege
+    top_liege = {
+      exists = primary_title
+      primary_title.tier > tier
+    }
+  }
+}
+
+# 剥余衔转封前：受封后阶位仍须低于顶层领主
+
+skonester_replace_official_grant_safe_for_realm_trigger = {
+  exists = scope:skonester_strip_title
+  exists = scope:skonester_land_cap_grantee
+  exists = scope:skonester_off
+  scope:skonester_off = {
+    exists = top_liege
+    top_liege = {
+      exists = primary_title
+      primary_title.tier > scope:skonester_strip_title.tier
+    }
+  }
+}
+
+# 剥余衔 absorb 兜底：仅郡/男或已尝试安全授衔；不得动旧官主衔/计划交接郡
+
+skonester_replace_official_may_absorb_strip_title_trigger = {
+  exists = scope:skonester_strip_title
+  exists = scope:skonester_ro_strip_holder
+  scope:skonester_strip_title = {
+    holder = scope:skonester_ro_strip_holder
+  }
+  OR = {
+    scope:skonester_strip_title = {
+      OR = {
+        tier = tier_county
+        tier = tier_barony
+      }
+    }
+    AND = {
+      exists = scope:skonester_land_cap_grantee
+      skonester_replace_official_grant_safe_for_realm_trigger = yes
+    }
+  }
+  NOR = {
+    AND = {
+      exists = scope:skonester_ro_evt_victim
+      scope:skonester_ro_strip_holder = scope:skonester_ro_evt_victim
+      exists = scope:skonester_ro_evt_victim.primary_title
+      scope:skonester_strip_title = scope:skonester_ro_evt_victim.primary_title
+    }
+    AND = {
+      exists = scope:skonester_ro_evt_victim
+      scope:skonester_ro_strip_holder = scope:skonester_ro_evt_victim
+      exists = scope:skonester_ro_victim_main_title
+      scope:skonester_strip_title = scope:skonester_ro_victim_main_title
+    }
+    AND = {
+      exists = scope:skonester_ro_evt_victim
+      scope:skonester_ro_strip_holder = scope:skonester_ro_evt_victim
+      exists = scope:skonester_ro_handover_county
+      scope:skonester_strip_title = scope:skonester_ro_handover_county
+    }
+  }
+}
+
+skonester_replace_official_ui_candidate_trigger = {
+  OR = {
+    skonester_replace_official_can_be_granted_by_office_authority_trigger = yes
+    AND = {
+      scope:actor = {
+        is_ai = no
+      }
+      skonester_replace_official_cheat_grantee_base_trigger = yes
+    }
+  }
+  OR = {
+    skonester_replace_official_ui_courtier_prefilter_trigger = yes
+    skonester_replace_official_ui_close_family_prefilter_trigger = yes
+    skonester_replace_official_ui_dynasty_kin_prefilter_trigger = yes
+    skonester_replace_official_ui_landless_talent_candidate_trigger = yes
+  }
+}
+
+skonester_replace_official_candidate_trigger = {
+  is_alive = yes
+  is_adult = yes
+  is_imprisoned = no
+  NOT = { has_trait = incapable }
+  NOT = { this = root }
+  trigger_if = {
+    limit = { exists = scope:skonester_ro_evt_victim }
+    NOT = { this = scope:skonester_ro_evt_victim }
+  }
+  can_be_granted_titles_by = { RULER = root }
+  OR = {
+    is_courtier_of = root
+    AND = {
+      is_close_or_extended_family_of = root
+      top_liege = root
+    }
+    AND = {
+      exists = dynasty
+      root = { exists = dynasty }
+      dynasty = root.dynasty
+      top_liege = root
+    }
+    AND = {
+      is_ai = yes
+      skonester_is_excellent_talent_for_grant_trigger = yes
+      skonester_grant_recipient_candidate_trigger = yes
+    }
+  }
+}
+
+skonester_replace_official_picker_enabled_trigger = {
+  OR = {
+    skonester_cheat_menu_menu_enabled_trigger = yes
+    has_character_flag = skonester_ro_picker_active
+  }
+}
+
+skonester_replace_official_has_any_candidate_trigger = {
+  skonester_replace_official_has_any_candidate_body_trigger = yes
+}
+
+skonester_replace_official_has_any_candidate_body_trigger = {
+  OR = {
+    scope:actor = {
+      any_courtier = {
+        skonester_replace_official_ui_courtier_prefilter_trigger = yes
+      }
+    }
+    scope:actor = {
+      any_close_or_extended_family_member = {
+        skonester_replace_official_ui_candidate_prefilter_base_trigger = yes
+        top_liege = scope:actor
+      }
+    }
+    scope:actor = {
+      AND = {
+        exists = dynasty
+        dynasty = {
+          any_dynasty_member = {
+            skonester_replace_official_ui_candidate_prefilter_base_trigger = yes
+            top_liege = scope:actor
+          }
+        }
+      }
+    }
+    scope:actor = {
+      any_vassal = {
+        NOT = { this = scope:actor }
+        any_courtier = {
+          skonester_replace_official_ui_landless_high_skill_prefilter_trigger = yes
+        }
+      }
+    }
+    scope:actor = {
+      any_pool_character = {
+        province = capital_province
+        skonester_replace_official_ui_landless_high_skill_prefilter_trigger = yes
+      }
+    }
+  }
+}

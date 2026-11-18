@@ -1,0 +1,18 @@
+﻿l_german:
+  # Entscheidung: Amulett des Kreuzzugs
+  zhuge_huangzu_add:0 "Das Amulett des Kreuzzugs"
+  zhuge_huangzu_add_desc:0 "Als der Himmel leise flüsterte, trat Barbara die Gesalbte sanft zurück. Ihre Gestalt schimmerte wie das letzte Flackern einer Kerze im Morgengrauen. Ihre Gewänder wurden leichter, ihr Haar löste sich in weiche silberne Strähnen, und der gütige Ausdruck ihres Gesichts erblühte aufs Neue. Als dein Blick sich klärte, stand vor dir nicht länger die entschlossene Prophetin, sondern eine sanfte Gestalt – strahlend, voller Hoffnung und Güte.\n„Auserwählter Pilger“, sprach Barbara die Gesalbte leise, „ich bin durch viele Ströme der Zeit gereist. Die Bürde ruht nicht länger auf meinen Schultern. Das Licht muss nun in einem anderen wohnen – geboren aus der Erde und doch bereit zu leuchten.“\n„Jahwe ist das ewige Licht. Jeschua ist die nie verlöschende Flamme“, sagte sie sanft. „Nun gehe ich über euer Zeitalter hinaus, denn in einem anderen Strom der Zeit ruft mich eine weitere stille Nacht.“\nSie lächelte – warm und rein, ihr Lachen erklang wie zarte Glockenspiele im Wind. „Das Feuer gehört nun dir. Ich bin frei, zu den ewigen Strömen zurückzukehren und muss nicht länger jedes Leid der Welt mit ansehen. Hüte das Licht mit Sorgfalt, und es wird auch dich behüten.“\nDann trat ihre Gestalt in einen Glanz, sanfter als die Sonne, und löste sich in Licht ohne Schatten auf, in Freude ohne Abschied. An der Stelle, an der sie gestanden hatte, spürtest du die Wärme des Lebens in deinen Adern und das Amulett, das sanft gegen dein Herz schlug.\nBarbara die Gesalbte war fort. Doch ihr Licht lebte weiter – in dir."
+
+  zhuge_jinyong_huangzu_tt:0 ""
+
+  # Tooltip
+  zhuge_huangzu_add_tooltip:0 "#P Ihr erhaltet:#!\n#Y $chuanguoyuxi_cn$#!\n$chuanguoyuxi_cn_description$"
+  zhuge_huangzu_add_confirm:0 "Vom Himmel auserwählt"
+
+  # Erbstück
+  chuanguoyuxi_cn:0 "Amulett des Kreuzzugs"
+  chuanguoyuxi_cn_description:0 "Geschmiedet von einer Frau an den Ufern des Sees Genezareth im alten Judäa, zum Gedenken an ihre eigene Erlösung. Dieses wundersame Amulett wurde mit einer Kunstfertigkeit geschaffen, die das Vermögen gewöhnlicher Sterblicher überstieg. Es wurde durch viele Länder getragen, bis es schließlich den Dienern der Heiligen Kirche übergeben wurde. Diese erkannten darin eine Reliquie verborgener göttlicher Vorsehung und spendeten ihr ihren feierlichen Segen. Von da an galt es nicht länger als bloßes Schmuckstück, sondern als Gefäß göttlicher Autorität.\n\nDie Chronisten berichten, dass seine Oberfläche mit geheimnisvollen Zeichen bedeckt sei, deren Bedeutung allein den Weisen bekannt ist, und dass es in einem sanften Licht schimmerte, als atme der Himmel selbst in seinem Inneren. So wurde das Amulett zum Sinnbild dafür, dass das #YHimmlische Mandat#! auf jenen Herrschern ruht, die berufen sind, Priester und Könige gleichermaßen zu schützen und Ost wie West unter dem Schatten des heiligen Rechts zu vereinen."
+
+  # Modifikator
+  zhuge_huangzu:0 "Kaiserliche Blutlinie"
+  zhuge_huangzu_desc:0 "Diese Dynastie gilt als #Ygöttlich auserwähltes Kaiserhaus#! und rechtmäßiger Träger des Himmlischen Mandats.\nIhre Blutlinie gebietet über alles unter dem Himmel und steht über allen anderen Adelsgeschlechtern des Ostens wie des Westens."

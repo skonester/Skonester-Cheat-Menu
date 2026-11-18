@@ -1,0 +1,1 @@
+﻿# 旧版「耐久修复」已移除；请使用 skonester_cheat_menu_apply_max_artifact_durability_effect（宝物编辑 → 耐久度）

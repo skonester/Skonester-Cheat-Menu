@@ -1,0 +1,29 @@
+﻿# 宝物耐久度：将目标个人宝物栏 + 宫廷陈列宝物耐久恢复至满（reforge_artifact，不改品质/修饰）
+
+skonester_max_artifact_durability_on_character_effect = {
+  every_character_artifact = {
+    add_durability = 10000
+  }
+  every_equipped_character_artifact = {
+    limit = {
+      ep1_artifact_is_court_artifact_trigger = yes
+    }
+    add_durability = 10000
+  }
+}
+
+skonester_cheat_menu_apply_max_artifact_durability_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  skonester_cheat_menu_sync_target_effect = yes
+  scope:skonester_cheat_menu_target = {
+    skonester_max_artifact_durability_on_character_effect = yes
+  }
+  scope:actor = {
+    send_interface_toast = {
+      type = event_toast_effect_good
+      title = skonester_artifact_max_durability_toast_t
+      left_icon = scope:actor
+      right_icon = scope:skonester_cheat_menu_target
+    }
+  }
+}

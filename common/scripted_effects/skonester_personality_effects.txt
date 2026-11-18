@@ -1,0 +1,92 @@
+﻿# Auto-generated from base game traits.
+# Personality traits are capped to 3 by resetting all personality traits, then adding 3 good ones.
+
+skonester_reset_personality_traits_effect = {
+  if = { limit = { has_trait = ambitious } remove_trait = ambitious }
+  if = { limit = { has_trait = arbitrary } remove_trait = arbitrary }
+  if = { limit = { has_trait = arrogant } remove_trait = arrogant }
+  if = { limit = { has_trait = brave } remove_trait = brave }
+  if = { limit = { has_trait = callous } remove_trait = callous }
+  if = { limit = { has_trait = calm } remove_trait = calm }
+  if = { limit = { has_trait = chaste } remove_trait = chaste }
+  if = { limit = { has_trait = compassionate } remove_trait = compassionate }
+  if = { limit = { has_trait = content } remove_trait = content }
+  if = { limit = { has_trait = craven } remove_trait = craven }
+  if = { limit = { has_trait = cynical } remove_trait = cynical }
+  if = { limit = { has_trait = deceitful } remove_trait = deceitful }
+  if = { limit = { has_trait = diligent } remove_trait = diligent }
+  if = { limit = { has_trait = eccentric } remove_trait = eccentric }
+  if = { limit = { has_trait = fickle } remove_trait = fickle }
+  if = { limit = { has_trait = forgiving } remove_trait = forgiving }
+  if = { limit = { has_trait = generous } remove_trait = generous }
+  if = { limit = { has_trait = gluttonous } remove_trait = gluttonous }
+  if = { limit = { has_trait = greedy } remove_trait = greedy }
+  if = { limit = { has_trait = gregarious } remove_trait = gregarious }
+  if = { limit = { has_trait = honest } remove_trait = honest }
+  if = { limit = { has_trait = humble } remove_trait = humble }
+  if = { limit = { has_trait = impatient } remove_trait = impatient }
+  if = { limit = { has_trait = just } remove_trait = just }
+  if = { limit = { has_trait = lazy } remove_trait = lazy }
+  if = { limit = { has_trait = lustful } remove_trait = lustful }
+  if = { limit = { has_trait = paranoid } remove_trait = paranoid }
+  if = { limit = { has_trait = patient } remove_trait = patient }
+  if = { limit = { has_trait = sadistic } remove_trait = sadistic }
+  if = { limit = { has_trait = shy } remove_trait = shy }
+  if = { limit = { has_trait = stubborn } remove_trait = stubborn }
+  if = { limit = { has_trait = temperate } remove_trait = temperate }
+  if = { limit = { has_trait = trusting } remove_trait = trusting }
+  if = { limit = { has_trait = vengeful } remove_trait = vengeful }
+  if = { limit = { has_trait = wrathful } remove_trait = wrathful }
+  if = { limit = { has_trait = zealous } remove_trait = zealous }
+}
+
+skonester_add_three_good_personality_traits_effect = {
+  random_list = {
+    10 = { if = { limit = { NOT = { has_trait = diligent } } add_trait = diligent } }
+    10 = { if = { limit = { NOT = { has_trait = brave } } add_trait = brave } }
+    10 = { if = { limit = { NOT = { has_trait = honest } } add_trait = honest } }
+    10 = { if = { limit = { NOT = { has_trait = just } } add_trait = just } }
+    10 = { if = { limit = { NOT = { has_trait = compassionate } } add_trait = compassionate } }
+    10 = { if = { limit = { NOT = { has_trait = temperate } } add_trait = temperate } }
+    10 = { if = { limit = { NOT = { has_trait = generous } } add_trait = generous } }
+    10 = { if = { limit = { NOT = { has_trait = patient } } add_trait = patient } }
+    10 = { if = { limit = { NOT = { has_trait = humble } } add_trait = humble } }
+    10 = { if = { limit = { NOT = { has_trait = calm } } add_trait = calm } }
+    10 = { if = { limit = { NOT = { has_trait = forgiving } } add_trait = forgiving } }
+    10 = { if = { limit = { NOT = { has_trait = gregarious } } add_trait = gregarious } }
+  }
+  random_list = {
+    10 = { if = { limit = { NOT = { has_trait = diligent } } add_trait = diligent } }
+    10 = { if = { limit = { NOT = { has_trait = brave } } add_trait = brave } }
+    10 = { if = { limit = { NOT = { has_trait = honest } } add_trait = honest } }
+    10 = { if = { limit = { NOT = { has_trait = just } } add_trait = just } }
+    10 = { if = { limit = { NOT = { has_trait = compassionate } } add_trait = compassionate } }
+    10 = { if = { limit = { NOT = { has_trait = temperate } } add_trait = temperate } }
+    10 = { if = { limit = { NOT = { has_trait = generous } } add_trait = generous } }
+    10 = { if = { limit = { NOT = { has_trait = patient } } add_trait = patient } }
+    10 = { if = { limit = { NOT = { has_trait = humble } } add_trait = humble } }
+    10 = { if = { limit = { NOT = { has_trait = calm } } add_trait = calm } }
+    10 = { if = { limit = { NOT = { has_trait = forgiving } } add_trait = forgiving } }
+    10 = { if = { limit = { NOT = { has_trait = gregarious } } add_trait = gregarious } }
+  }
+  random_list = {
+    10 = { if = { limit = { NOT = { has_trait = diligent } } add_trait = diligent } }
+    10 = { if = { limit = { NOT = { has_trait = brave } } add_trait = brave } }
+    10 = { if = { limit = { NOT = { has_trait = honest } } add_trait = honest } }
+    10 = { if = { limit = { NOT = { has_trait = just } } add_trait = just } }
+    10 = { if = { limit = { NOT = { has_trait = compassionate } } add_trait = compassionate } }
+    10 = { if = { limit = { NOT = { has_trait = temperate } } add_trait = temperate } }
+    10 = { if = { limit = { NOT = { has_trait = generous } } add_trait = generous } }
+    10 = { if = { limit = { NOT = { has_trait = patient } } add_trait = patient } }
+    10 = { if = { limit = { NOT = { has_trait = humble } } add_trait = humble } }
+    10 = { if = { limit = { NOT = { has_trait = calm } } add_trait = calm } }
+    10 = { if = { limit = { NOT = { has_trait = forgiving } } add_trait = forgiving } }
+    10 = { if = { limit = { NOT = { has_trait = gregarious } } add_trait = gregarious } }
+  }
+}
+
+skonester_cheat_menu_randomize_good_personality_effect = {
+  skonester_reset_personality_traits_effect = yes
+  skonester_add_three_good_personality_traits_effect = yes
+}
+

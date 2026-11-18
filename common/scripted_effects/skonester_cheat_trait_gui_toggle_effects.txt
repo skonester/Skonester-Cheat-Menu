@@ -1,0 +1,258 @@
+﻿# 自制特质 GUI：与 skonester_cheat_menu.0110 / 0111 事件选项逻辑对齐
+
+skonester_cheat_trait_gui_toggle_immortal_effect = {
+  scope:skonester_trait_edit_target = {
+    if = {
+      limit = { has_trait = skonester_trait_immortal_ageless }
+      remove_trait = skonester_trait_immortal_ageless
+    }
+    else = {
+      set_age = 25
+      if = {
+        limit = { has_trait = incapable }
+        remove_trait = incapable
+      }
+      skonester_cheat_menu_grant_cheat_trait_effect = { TRAIT = skonester_trait_immortal_ageless }
+    }
+  }
+}
+
+skonester_cheat_trait_gui_toggle_warlord_effect = {
+  scope:skonester_trait_edit_target = {
+    if = {
+      limit = { has_trait = trait_warlord_eternal }
+      remove_trait = trait_warlord_eternal
+    }
+    else = {
+      skonester_cheat_menu_grant_cheat_trait_effect = { TRAIT = trait_warlord_eternal }
+    }
+  }
+}
+
+skonester_cheat_trait_gui_toggle_wealth_effect = {
+  scope:skonester_trait_edit_target = {
+    if = {
+      limit = { has_trait = trait_wealth_sovereign_max }
+      remove_trait = trait_wealth_sovereign_max
+    }
+    else = {
+      skonester_cheat_menu_grant_cheat_trait_effect = { TRAIT = trait_wealth_sovereign_max }
+    }
+  }
+}
+
+skonester_cheat_trait_gui_toggle_intrigue_effect = {
+  scope:skonester_trait_edit_target = {
+    if = {
+      limit = { has_trait = trait_ultimate_intrigue_master }
+      remove_trait = trait_ultimate_intrigue_master
+    }
+    else = {
+      skonester_cheat_menu_grant_cheat_trait_effect = { TRAIT = trait_ultimate_intrigue_master }
+    }
+  }
+}
+
+skonester_cheat_trait_gui_toggle_great_builder_effect = {
+  scope:skonester_trait_edit_target = {
+    if = {
+      limit = { has_trait = trait_great_builder_god }
+      remove_trait = trait_great_builder_god
+    }
+    else = {
+      skonester_cheat_menu_grant_cheat_trait_effect = { TRAIT = trait_great_builder_god }
+    }
+  }
+}
+
+skonester_cheat_trait_gui_toggle_nether_lord_effect = {
+  scope:skonester_trait_edit_target = {
+    if = {
+      limit = { has_trait = trait_nether_conspiracy_lord }
+      remove_trait = trait_nether_conspiracy_lord
+    }
+    else = {
+      skonester_cheat_menu_grant_cheat_trait_effect = { TRAIT = trait_nether_conspiracy_lord }
+    }
+  }
+}
+
+skonester_cheat_trait_gui_toggle_eternal_nether_effect = {
+  scope:skonester_trait_edit_target = {
+    if = {
+      limit = { has_trait = trait_eternal_nether_lord }
+      remove_trait = trait_eternal_nether_lord
+    }
+    else = {
+      skonester_cheat_menu_grant_cheat_trait_effect = { TRAIT = trait_eternal_nether_lord }
+    }
+  }
+}
+
+skonester_cheat_trait_gui_toggle_yannian_dan_effect = {
+  scope:skonester_trait_edit_target = {
+    if = {
+      limit = { has_character_flag = skonester_yannian_dan_active }
+      remove_character_flag = skonester_yannian_dan_active
+      if = {
+        limit = { has_variable = skonester_yannian_dan_original_age }
+        set_age = var:skonester_yannian_dan_original_age
+      }
+      if = {
+        limit = { has_variable = skonester_yannian_dan_original_age }
+        remove_variable = skonester_yannian_dan_original_age
+      }
+      if = {
+        limit = { has_trait = skonester_trait_yannian_dan }
+        remove_trait = skonester_trait_yannian_dan
+      }
+    }
+    else = {
+      add_character_flag = skonester_yannian_dan_active
+      if = {
+        limit = { NOT = { has_variable = skonester_yannian_dan_original_age } }
+        set_variable = {
+          name = skonester_yannian_dan_original_age
+          value = age
+        }
+      }
+      set_age = 25
+      if = {
+        limit = { has_trait = incapable }
+        remove_trait = incapable
+      }
+      add_trait = skonester_trait_yannian_dan
+    }
+  }
+  skonester_traits_authorize_recipient_if_player_actor_effect = yes
+}
+
+skonester_cheat_trait_gui_toggle_yannian_dan_mid_effect = {
+  scope:skonester_trait_edit_target = {
+    if = {
+      limit = { has_character_flag = skonester_yannian_dan_mid_active }
+      remove_character_flag = skonester_yannian_dan_mid_active
+      if = {
+        limit = { has_variable = skonester_yannian_dan_mid_original_age }
+        set_age = var:skonester_yannian_dan_mid_original_age
+      }
+      if = {
+        limit = { has_variable = skonester_yannian_dan_mid_original_age }
+        remove_variable = skonester_yannian_dan_mid_original_age
+      }
+      if = {
+        limit = { has_trait = skonester_trait_yannian_dan_mid }
+        remove_trait = skonester_trait_yannian_dan_mid
+      }
+    }
+    else = {
+      add_character_flag = skonester_yannian_dan_mid_active
+      if = {
+        limit = { NOT = { has_variable = skonester_yannian_dan_mid_original_age } }
+        set_variable = {
+          name = skonester_yannian_dan_mid_original_age
+          value = age
+        }
+      }
+      set_age = 25
+      if = {
+        limit = { has_trait = incapable }
+        remove_trait = incapable
+      }
+      add_trait = skonester_trait_yannian_dan_mid
+    }
+  }
+  skonester_traits_authorize_recipient_if_player_actor_effect = yes
+}
+
+skonester_cheat_trait_gui_toggle_yannian_dan_best_effect = {
+  scope:skonester_trait_edit_target = {
+    if = {
+      limit = { has_character_flag = skonester_yannian_dan_best_active }
+      remove_character_flag = skonester_yannian_dan_best_active
+      if = {
+        limit = { has_variable = skonester_yannian_dan_best_original_age }
+        set_age = var:skonester_yannian_dan_best_original_age
+      }
+      if = {
+        limit = { has_variable = skonester_yannian_dan_best_original_age }
+        remove_variable = skonester_yannian_dan_best_original_age
+      }
+      if = {
+        limit = { has_trait = skonester_trait_yannian_dan_best }
+        remove_trait = skonester_trait_yannian_dan_best
+      }
+    }
+    else = {
+      add_character_flag = skonester_yannian_dan_best_active
+      if = {
+        limit = { NOT = { has_variable = skonester_yannian_dan_best_original_age } }
+        set_variable = {
+          name = skonester_yannian_dan_best_original_age
+          value = age
+        }
+      }
+      set_age = 25
+      if = {
+        limit = { has_trait = incapable }
+        remove_trait = incapable
+      }
+      add_trait = skonester_trait_yannian_dan_best
+    }
+  }
+  skonester_traits_authorize_recipient_if_player_actor_effect = yes
+}
+
+skonester_cheat_trait_gui_toggle_baidubuqin_effect = {
+  scope:skonester_trait_edit_target = {
+    if = {
+      limit = { has_trait = skonester_trait_baidubuqin }
+      skonester_trait_baidubuqin_revoke_effect = yes
+      remove_trait = skonester_trait_baidubuqin
+    }
+    else = {
+      skonester_cheat_menu_grant_cheat_trait_effect = { TRAIT = skonester_trait_baidubuqin }
+    }
+  }
+}
+
+skonester_cheat_trait_gui_toggle_xinwuguai_effect = {
+  scope:skonester_trait_edit_target = {
+    if = {
+      limit = { has_trait = skonester_trait_xinwuguai }
+      remove_trait = skonester_trait_xinwuguai
+    }
+    else = {
+      skonester_cheat_menu_grant_cheat_trait_effect = { TRAIT = skonester_trait_xinwuguai }
+    }
+  }
+}
+
+skonester_cheat_trait_gui_toggle_stats_100_effect = {
+  scope:skonester_trait_edit_target = {
+    if = {
+      limit = { has_trait = skonester_trait_stats_100_locked }
+      remove_trait = skonester_trait_stats_100_locked
+    }
+    else = {
+      skonester_cheat_menu_grant_cheat_trait_effect = { TRAIT = skonester_trait_stats_100_locked }
+      if = {
+        limit = { has_trait = skonester_trait_stats_100_locked }
+        skonester_stats_100_clamp_all_skills_effect = yes
+      }
+    }
+  }
+}
+
+skonester_cheat_trait_gui_toggle_marriage_ban_effect = {
+  scope:skonester_trait_edit_target = {
+    if = {
+      limit = { has_trait = skonester_trait_marriage_ban }
+      remove_trait = skonester_trait_marriage_ban
+    }
+    else = {
+      skonester_cheat_menu_marriage_ban_strip_wedlocks_effect = yes
+      skonester_cheat_menu_grant_cheat_trait_effect = { TRAIT = skonester_trait_marriage_ban }
+    }
+  }
+}

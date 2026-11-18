@@ -1,0 +1,146 @@
+﻿# 覆盖 AUTO-GENERATED skonester_sand_spawn_maa_at_staged_scale_effect
+# 逐 stack：先扩编同类型常备，再 personal create，再尝试 title:h_china / e_great_liao 头衔兵
+
+skonester_sand_try_add_one_maa_stack_effect = {
+  remove_variable = skonester_sand_spawn_stack_ok
+  set_variable = {
+    name = skonester_sand_spawn_iter_before
+    value = maa_regiments_count
+  }
+  if = {
+    limit = {
+      any_maa_regiment = {
+        is_maa_type = $TYPE$
+        can_upgrade_maa = yes
+      }
+    }
+    random_maa_regiment = {
+      limit = {
+        is_maa_type = $TYPE$
+        can_upgrade_maa = yes
+      }
+      change_maa_regiment_size = {
+        size = 1
+        reinforce = yes
+      }
+    }
+    set_variable = {
+      name = skonester_sand_spawn_stack_ok
+      value = 1
+    }
+  }
+  else = {
+    create_maa_regiment = {
+      type = $TYPE$
+      check_can_recruit = no
+      size = 1
+    }
+    if = {
+      limit = {
+        maa_regiments_count > var:skonester_sand_spawn_iter_before
+      }
+      set_variable = {
+        name = skonester_sand_spawn_stack_ok
+        value = 1
+      }
+    }
+    else_if = {
+      limit = {
+        has_title = title:h_china
+      }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        title = title:h_china
+        size = 1
+      }
+      if = {
+        limit = {
+          maa_regiments_count > var:skonester_sand_spawn_iter_before
+        }
+        set_variable = {
+          name = skonester_sand_spawn_stack_ok
+          value = 1
+        }
+      }
+    }
+    else_if = {
+      limit = {
+        has_title = title:e_great_liao
+      }
+      create_maa_regiment = {
+        type = $TYPE$
+        check_can_recruit = no
+        title = title:e_great_liao
+        size = 1
+      }
+      if = {
+        limit = {
+          maa_regiments_count > var:skonester_sand_spawn_iter_before
+        }
+        set_variable = {
+          name = skonester_sand_spawn_stack_ok
+          value = 1
+        }
+      }
+    }
+  }
+  remove_variable = skonester_sand_spawn_iter_before
+}
+
+skonester_sand_spawn_maa_at_staged_scale_effect = {
+  remove_variable = skonester_sand_spawn_ok
+  remove_variable = skonester_sand_spawn_stacks_added
+  if = {
+    limit = {
+      has_variable = skonester_sand_staged_scale
+      var:skonester_sand_staged_scale >= 1
+    }
+    set_variable = {
+      name = skonester_sand_spawn_add_left
+      value = var:skonester_sand_staged_scale
+    }
+    set_variable = {
+      name = skonester_sand_spawn_stacks_added
+      value = 0
+    }
+    while = {
+      limit = {
+        var:skonester_sand_spawn_add_left > 0
+      }
+      skonester_sand_try_add_one_maa_stack_effect = { TYPE = $TYPE$ }
+      if = {
+        limit = {
+          has_variable = skonester_sand_spawn_stack_ok
+        }
+        remove_variable = skonester_sand_spawn_stack_ok
+        change_variable = {
+          name = skonester_sand_spawn_add_left
+          subtract = 1
+        }
+        change_variable = {
+          name = skonester_sand_spawn_stacks_added
+          add = 1
+        }
+      }
+      else = {
+        set_variable = {
+          name = skonester_sand_spawn_add_left
+          value = 0
+        }
+      }
+    }
+    if = {
+      limit = {
+        var:skonester_sand_spawn_add_left = 0
+        var:skonester_sand_spawn_stacks_added >= 1
+      }
+      set_variable = {
+        name = skonester_sand_spawn_ok
+        value = 1
+      }
+    }
+    remove_variable = skonester_sand_spawn_add_left
+    remove_variable = skonester_sand_spawn_stacks_added
+  }
+}

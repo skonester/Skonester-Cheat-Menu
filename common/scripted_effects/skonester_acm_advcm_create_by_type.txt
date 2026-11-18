@@ -1,0 +1,1992 @@
+﻿# AUTO-GENERATED — tools/gen_acm_advcm_align.py
+
+skonester_acm_create_type_axe_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_axe_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = axe template = unique_artifact_template visuals = axe wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_axe_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = axe template = unique_artifact_template visuals = axe wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_axe_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = axe template = unique_artifact_template visuals = axe wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_axe_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = axe template = unique_artifact_template visuals = axe wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_axe_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = axe template = unique_artifact_template visuals = axe wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_dagger_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_dagger_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = dagger template = unique_artifact_template visuals = dagger wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_dagger_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = dagger template = unique_artifact_template visuals = dagger wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_dagger_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = dagger template = unique_artifact_template visuals = dagger wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_dagger_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = dagger template = unique_artifact_template visuals = dagger wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_dagger_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = dagger template = unique_artifact_template visuals = dagger wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_hammer_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_hammer_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = hammer template = unique_artifact_template visuals = hammer wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_hammer_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = hammer template = unique_artifact_template visuals = hammer wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_hammer_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = hammer template = unique_artifact_template visuals = hammer wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_hammer_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = hammer template = unique_artifact_template visuals = hammer wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_hammer_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = hammer template = unique_artifact_template visuals = hammer wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_mace_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_mace_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = mace template = unique_artifact_template visuals = mace wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_mace_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = mace template = unique_artifact_template visuals = mace wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_mace_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = mace template = unique_artifact_template visuals = mace wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_mace_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = mace template = unique_artifact_template visuals = mace wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_mace_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = mace template = unique_artifact_template visuals = mace wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_spear_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_spear_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = spear template = unique_artifact_template visuals = spear wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_spear_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = spear template = unique_artifact_template visuals = spear wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_spear_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = spear template = unique_artifact_template visuals = spear wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_spear_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = spear template = unique_artifact_template visuals = spear wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_spear_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = spear template = unique_artifact_template visuals = spear wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_sword_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_sword_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = sword template = unique_artifact_template visuals = sword wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_sword_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = sword template = unique_artifact_template visuals = sword wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_sword_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = sword template = unique_artifact_template visuals = sword wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_sword_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = sword template = unique_artifact_template visuals = sword wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_sword_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = sword template = unique_artifact_template visuals = sword wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_longsword_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_sword_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = sword template = unique_artifact_template visuals = longsword wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_sword_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = sword template = unique_artifact_template visuals = longsword wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_sword_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = sword template = unique_artifact_template visuals = longsword wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_sword_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = sword template = unique_artifact_template visuals = longsword wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_sword_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = sword template = unique_artifact_template visuals = longsword wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_sassanian_sword_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_sword_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = sword template = unique_artifact_template visuals = sassanian_sword wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_sword_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = sword template = unique_artifact_template visuals = sassanian_sword wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_sword_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = sword template = unique_artifact_template visuals = sassanian_sword wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_sword_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = sword template = unique_artifact_template visuals = sassanian_sword wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_sword_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = sword template = unique_artifact_template visuals = sassanian_sword wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_bow_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_bow_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = bow template = unique_artifact_template visuals = bow wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_bow_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = bow template = unique_artifact_template visuals = bow wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_bow_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = bow template = unique_artifact_template visuals = bow wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_bow_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = bow template = unique_artifact_template visuals = bow wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_bow_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = bow template = unique_artifact_template visuals = bow wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_longbow_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_longbow_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = longbow template = unique_artifact_template visuals = longbow wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_longbow_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = longbow template = unique_artifact_template visuals = longbow wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_longbow_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = longbow template = unique_artifact_template visuals = longbow wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_longbow_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = longbow template = unique_artifact_template visuals = longbow wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_longbow_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = longbow template = unique_artifact_template visuals = longbow wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_composite_bow_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_composite_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = composite template = unique_artifact_template visuals = composite wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_composite_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = composite template = unique_artifact_template visuals = composite wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_composite_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = composite template = unique_artifact_template visuals = composite wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_composite_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = composite template = unique_artifact_template visuals = composite wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_composite_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = composite template = unique_artifact_template visuals = composite wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_crossbow_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_crossbow_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = crossbow template = unique_artifact_template visuals = crossbow wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_crossbow_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = crossbow template = unique_artifact_template visuals = crossbow wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_crossbow_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = crossbow template = unique_artifact_template visuals = crossbow wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_crossbow_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = crossbow template = unique_artifact_template visuals = crossbow wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_crossbow_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = crossbow template = unique_artifact_template visuals = crossbow wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_armor_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_armor_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = armor_plate template = unique_artifact_template visuals = armor wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_armor_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = armor_plate template = unique_artifact_template visuals = armor wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_armor_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = armor_plate template = unique_artifact_template visuals = armor wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_armor_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = armor_plate template = unique_artifact_template visuals = armor wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_armor_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = armor_plate template = unique_artifact_template visuals = armor wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_crown_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_crown_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = helmet template = unique_artifact_template visuals = crown wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_crown_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = helmet template = unique_artifact_template visuals = crown wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_crown_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = helmet template = unique_artifact_template visuals = crown wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_crown_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = helmet template = unique_artifact_template visuals = crown wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_crown_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = helmet template = unique_artifact_template visuals = crown wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_regalia_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_regalia_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = regalia template = unique_artifact_template visuals = regalia wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_regalia_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = regalia template = unique_artifact_template visuals = regalia wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_regalia_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = regalia template = unique_artifact_template visuals = regalia wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_regalia_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = regalia template = unique_artifact_template visuals = regalia wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_regalia_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = regalia template = unique_artifact_template visuals = regalia wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_necklace_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_necklace_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = necklace template = unique_artifact_template visuals = necklace wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_necklace_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = necklace template = unique_artifact_template visuals = necklace wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_necklace_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = necklace template = unique_artifact_template visuals = necklace wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_necklace_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = necklace template = unique_artifact_template visuals = necklace wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_necklace_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = necklace template = unique_artifact_template visuals = necklace wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_brooch_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_brooch_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = brooch template = unique_artifact_template visuals = brooch wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_brooch_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = brooch template = unique_artifact_template visuals = brooch wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_brooch_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = brooch template = unique_artifact_template visuals = brooch wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_brooch_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = brooch template = unique_artifact_template visuals = brooch wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_brooch_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = brooch template = unique_artifact_template visuals = brooch wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_small_shield_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_wall_shield_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = wall_shield template = unique_artifact_template visuals = wall_shield visuals_source = scope:actor.primary_title wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_wall_shield_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = wall_shield template = unique_artifact_template visuals = wall_shield visuals_source = scope:actor.primary_title wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_wall_shield_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = wall_shield template = unique_artifact_template visuals = wall_shield visuals_source = scope:actor.primary_title wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_wall_shield_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = wall_shield template = unique_artifact_template visuals = wall_shield visuals_source = scope:actor.primary_title wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_wall_shield_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = wall_shield template = unique_artifact_template visuals = wall_shield visuals_source = scope:actor.primary_title wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_large_shield_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_wall_shield_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = wall_shield_special template = unique_artifact_template visuals = wall_shield_medi visuals_source = scope:actor.primary_title wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_wall_shield_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = wall_shield_special template = unique_artifact_template visuals = wall_shield_medi visuals_source = scope:actor.primary_title wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_wall_shield_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = wall_shield_special template = unique_artifact_template visuals = wall_shield_medi visuals_source = scope:actor.primary_title wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_wall_shield_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = wall_shield_special template = unique_artifact_template visuals = wall_shield_medi visuals_source = scope:actor.primary_title wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_wall_shield_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = wall_shield_special template = unique_artifact_template visuals = wall_shield_medi visuals_source = scope:actor.primary_title wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_tapestry_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_wall_tapestry_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = tapestry template = unique_artifact_template visuals = tapestry wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_wall_tapestry_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = tapestry template = unique_artifact_template visuals = tapestry wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_wall_tapestry_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = tapestry template = unique_artifact_template visuals = tapestry wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_wall_tapestry_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = tapestry template = unique_artifact_template visuals = tapestry wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_wall_tapestry_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = tapestry template = unique_artifact_template visuals = tapestry wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_throne_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_throne_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = throne template = unique_artifact_template visuals = throne wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_throne_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = throne template = unique_artifact_template visuals = throne wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_throne_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = throne template = unique_artifact_template visuals = throne wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_throne_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = throne template = unique_artifact_template visuals = throne wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_throne_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = throne template = unique_artifact_template visuals = throne wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_small_box_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_box_small_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = box template = unique_artifact_template visuals = small_box wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_box_small_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = box template = unique_artifact_template visuals = small_box wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_box_small_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = box template = unique_artifact_template visuals = small_box wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_box_small_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = box template = unique_artifact_template visuals = small_box wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_box_small_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = box template = unique_artifact_template visuals = small_box wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_medium_box_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_box_medium_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = box template = unique_artifact_template visuals = medium_box wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_box_medium_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = box template = unique_artifact_template visuals = medium_box wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_box_medium_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = box template = unique_artifact_template visuals = medium_box wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_box_medium_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = box template = unique_artifact_template visuals = medium_box wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_box_medium_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = box template = unique_artifact_template visuals = medium_box wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_goblet_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_goblet_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = goblet template = unique_artifact_template visuals = goblet wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_goblet_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = goblet template = unique_artifact_template visuals = goblet wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_goblet_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = goblet template = unique_artifact_template visuals = goblet wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_goblet_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = goblet template = unique_artifact_template visuals = goblet wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_goblet_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = goblet template = unique_artifact_template visuals = goblet wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_cabinet_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_cabinet_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = cabinet template = unique_artifact_template visuals = cabinet wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_cabinet_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = cabinet template = unique_artifact_template visuals = cabinet wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_cabinet_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = cabinet template = unique_artifact_template visuals = cabinet wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_cabinet_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = cabinet template = unique_artifact_template visuals = cabinet wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_cabinet_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = cabinet template = unique_artifact_template visuals = cabinet wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_chest_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_chest_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = chest template = unique_artifact_template visuals = chest wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_chest_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = chest template = unique_artifact_template visuals = chest wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_chest_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = chest template = unique_artifact_template visuals = chest wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_chest_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = chest template = unique_artifact_template visuals = chest wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_chest_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = chest template = unique_artifact_template visuals = chest wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_divan_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_diwan_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = cabinet template = unique_artifact_template visuals = diwan wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_diwan_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = cabinet template = unique_artifact_template visuals = diwan wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_diwan_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = cabinet template = unique_artifact_template visuals = diwan wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_diwan_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = cabinet template = unique_artifact_template visuals = diwan wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_diwan_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = cabinet template = unique_artifact_template visuals = diwan wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_create_type_table_effect = {
+  if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 500 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 500 }
+        }
+      } }
+    create_artifact = { name = artifact_table_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = cabinet template = unique_artifact_template visuals = table wealth = 500 quality = 500 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 250 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 250 }
+        }
+      } }
+    create_artifact = { name = artifact_table_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = cabinet template = unique_artifact_template visuals = table wealth = 250 quality = 250 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 100 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 100 }
+        }
+      } }
+    create_artifact = { name = artifact_table_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = cabinet template = unique_artifact_template visuals = table wealth = 100 quality = 100 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else_if = {
+    limit = { OR = {
+        scope:skonester_acm_craft_creator = { var:skonester_acm_craft_quality_wealth = 10 }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          scope:root = { var:skonester_acm_craft_quality_wealth = 10 }
+        }
+      } }
+    create_artifact = { name = artifact_table_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = cabinet template = unique_artifact_template visuals = table wealth = 10 quality = 10 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+  else = {
+    create_artifact = { name = artifact_table_name description = skonester_cheat_menu_artifact_generic_desc creator = scope:skonester_acm_craft_creator type = cabinet template = unique_artifact_template visuals = table wealth = 80 quality = 80 decaying = no modifier = artifact_placeholder_modifier generate_history = no save_scope_as = skonester_new_crafted_artifact }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_finalize_crafted_artifact_effect = yes
+    }
+  }
+}
+
+skonester_acm_artifact_craft_body_on_owner_effect = {
+  if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_axe }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_axe }
+      }
+    } }
+    skonester_acm_create_type_axe_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_dagger }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_dagger }
+      }
+    } }
+    skonester_acm_create_type_dagger_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_hammer }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_hammer }
+      }
+    } }
+    skonester_acm_create_type_hammer_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_mace }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_mace }
+      }
+    } }
+    skonester_acm_create_type_mace_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_spear }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_spear }
+      }
+    } }
+    skonester_acm_create_type_spear_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_sword }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_sword }
+      }
+    } }
+    skonester_acm_create_type_sword_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_longsword }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_longsword }
+      }
+    } }
+    skonester_acm_create_type_longsword_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_sassanian_sword }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_sassanian_sword }
+      }
+    } }
+    skonester_acm_create_type_sassanian_sword_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_bow }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_bow }
+      }
+    } }
+    skonester_acm_create_type_bow_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_longbow }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_longbow }
+      }
+    } }
+    skonester_acm_create_type_longbow_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_composite_bow }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_composite_bow }
+      }
+    } }
+    skonester_acm_create_type_composite_bow_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_crossbow }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_crossbow }
+      }
+    } }
+    skonester_acm_create_type_crossbow_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_armor }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_armor }
+      }
+    } }
+    skonester_acm_create_type_armor_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_crown }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_crown }
+      }
+    } }
+    skonester_acm_create_type_crown_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_regalia }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_regalia }
+      }
+    } }
+    skonester_acm_create_type_regalia_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_necklace }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_necklace }
+      }
+    } }
+    skonester_acm_create_type_necklace_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_brooch }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_brooch }
+      }
+    } }
+    skonester_acm_create_type_brooch_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_small_shield }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_small_shield }
+      }
+    } }
+    skonester_acm_create_type_small_shield_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_large_shield }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_large_shield }
+      }
+    } }
+    skonester_acm_create_type_large_shield_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_tapestry }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_tapestry }
+      }
+    } }
+    skonester_acm_create_type_tapestry_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_throne }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_throne }
+      }
+    } }
+    skonester_acm_create_type_throne_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_small_box }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_small_box }
+      }
+    } }
+    skonester_acm_create_type_small_box_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_medium_box }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_medium_box }
+      }
+    } }
+    skonester_acm_create_type_medium_box_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_goblet }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_goblet }
+      }
+    } }
+    skonester_acm_create_type_goblet_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_cabinet }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_cabinet }
+      }
+    } }
+    skonester_acm_create_type_cabinet_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_chest }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_chest }
+      }
+    } }
+    skonester_acm_create_type_chest_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_divan }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_divan }
+      }
+    } }
+    skonester_acm_create_type_divan_effect = yes
+  }
+  else_if = {
+    limit = { OR = {
+      scope:skonester_acm_craft_creator = { var:skonester_acm_artifact_type = flag:skonester_acm_table }
+      AND = {
+        NOT = { exists = scope:skonester_acm_craft_creator }
+        scope:root = { var:skonester_acm_artifact_type = flag:skonester_acm_table }
+      }
+    } }
+    skonester_acm_create_type_table_effect = yes
+  }
+}

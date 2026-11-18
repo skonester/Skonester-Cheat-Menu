@@ -1,0 +1,32 @@
+﻿l_german:
+ 
+# PCM-Lokalisierung
+ set_immortal_interaction:0 "Unsterblichkeit verleihen"
+ set_immortal_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] wird mit ewigem Leben gesegnet und behält auf immer das Antlitz eines Fünfundzwanzigjährigen."
+
+ set_mortal_interaction:0 "Unsterblichkeit entziehen"
+ set_mortal_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] wird von den Ketten des ewigen Lebens befreit. Vielleicht sehnt sich [recipient.GetSheHe] nach der Ruhe des Grabes."
+
+ set_super_interaction:0 "Zum Vorbild erheben"
+ set_super_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] wird weit über die Sterblichen erhoben: unübertroffen an Weisheit, Stärke, Fruchtbarkeit, Kraft, Ruhm, Reichtum und Schrecken. Wahrlich ein Vorbild unter den Herrschern."
+
+ set_unsuper_interaction:0 "Segnungen des Vorbilds entziehen"
+ set_unsuper_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] werden sämtliche erhabenen Gaben genommen. [recipient.GetSheHe|U] dürfte diesen Verlust schwer ertragen."
+
+ set_super_governor_interaction:0 "Verwaltersegen verleihen"
+ set_super_governor_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] erhält vollkommene Meisterschaft über die Reichsverwaltung: größere Aufgebote, weise Verwaltung, raschen Ausbau von Besitzungen, wachsenden Wohlstand und die Gunst des Volkes."
+
+ set_unsuper_governor_interaction:0 "Verwaltersegen entziehen"
+ set_unsuper_governor_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] verliert diese Segnungen der Verwaltung und kehrt zu den Grenzen eines Sterblichen zurück."
+
+ set_super_general_interaction:0 "Zum Kriegsherrn segnen"
+ set_super_general_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] wird zu einem unvergleichlichen Heerführer: unübertroffen an Tapferkeit, Kriegskunst, Strategie und Ausdauer, gefürchtet auf dem Schlachtfeld und schnell bei Belagerungen."
+
+ set_unsuper_general_interaction:0 "Segen des Kriegsherrn entziehen"
+ set_unsuper_general_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] verliert jeglichen göttlichen Beistand im Krieg und mag scheitern, wo [recipient.GetSheHe] einst triumphierte."
+
+ set_all_in_one_interaction:0 "Zum vollkommenen Herrscher krönen"
+ set_all_in_one_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] erhält sämtliche Segnungen zugleich: die Gaben des Vorbilds, den Verwaltersegen und die Macht des Kriegsherrn. Wahrlich ein Wunder der Mysterien Skonesters."
+
+ set_unall_in_one_interaction:0 "Zum Sterblichen zurückführen"
+ set_unall_in_one_interaction_desc:0 "[recipient.GetShortUINameNoTooltip|U] verliert sämtliche Gaben des Vorbilds, des Verwalters und des Kriegsherrn und wandelt fortan wieder als gewöhnlicher Sterblicher."

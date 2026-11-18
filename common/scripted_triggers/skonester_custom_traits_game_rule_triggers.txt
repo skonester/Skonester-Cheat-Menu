@@ -1,0 +1,4 @@
+﻿# Missing settings in older saves retain the enabled default.
+skonester_custom_traits_enabled_trigger = {
+  NOT = { has_game_rule = skonester_custom_traits_disabled }
+}

@@ -1,0 +1,28 @@
+﻿# 庄园编辑：目标是否可解析到带 domicile 的角色（帝国/公国/伯爵等行政总督常无本人 domicile）
+
+skonester_cheat_menu_estate_edit_target_valid_trigger = {
+  is_alive = yes
+  OR = {
+    has_domicile = yes
+    AND = {
+      exists = house.house_head
+      house.house_head = {
+        is_alive = yes
+        has_domicile = yes
+      }
+    }
+    AND = {
+      exists = house
+      house = {
+        any_house_member = {
+          is_alive = yes
+          has_domicile = yes
+          OR = {
+            is_house_head = yes
+            any_held_title = { is_noble_family_title = yes }
+          }
+        }
+      }
+    }
+  }
+}

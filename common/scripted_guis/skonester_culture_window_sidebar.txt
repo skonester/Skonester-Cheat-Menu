@@ -1,0 +1,213 @@
+﻿# 原版文化侧栏（window_culture.gui）上的「模组编辑」入口：从 GUI 传入 scope:culture（当前侧栏文化）
+# 须写 is_valid = { always = yes }，否则部分版本下 GetScriptedGui(...).Execute 不触发 effect。
+
+skonester_cw_edit_heritage = {
+  scope = character
+  saved_scopes = { culture }
+  is_shown = {
+    is_ai = no
+  }
+  is_valid = {
+    always = yes
+  }
+  effect = {
+    save_scope_as = actor
+    if = {
+      limit = { exists = scope:culture }
+      scope:culture = {
+        save_scope_as = skonester_selected_culture
+      }
+      set_variable = {
+        name = skonester_selected_culture_var
+        value = scope:culture
+      }
+    }
+    add_character_flag = skonester_culture_vanilla_edit_toolbar
+    trigger_event = {
+      id = skonester_cheat_menu.2680
+      days = 0
+    }
+  }
+}
+
+skonester_cw_edit_language = {
+  scope = character
+  saved_scopes = { culture }
+  is_shown = {
+    is_ai = no
+  }
+  is_valid = {
+    always = yes
+  }
+  effect = {
+    save_scope_as = actor
+    if = {
+      limit = { exists = scope:culture }
+      scope:culture = {
+        save_scope_as = skonester_selected_culture
+      }
+      set_variable = {
+        name = skonester_selected_culture_var
+        value = scope:culture
+      }
+    }
+    add_character_flag = skonester_culture_vanilla_edit_toolbar
+    trigger_event = {
+      id = skonester_cheat_menu.2750
+      days = 0
+    }
+  }
+}
+
+skonester_cw_edit_martial = {
+  scope = character
+  saved_scopes = { culture }
+  is_shown = {
+    is_ai = no
+  }
+  is_valid = {
+    always = yes
+  }
+  effect = {
+    save_scope_as = actor
+    if = {
+      limit = { exists = scope:culture }
+      scope:culture = {
+        save_scope_as = skonester_selected_culture
+      }
+      set_variable = {
+        name = skonester_selected_culture_var
+        value = scope:culture
+      }
+    }
+    add_character_flag = skonester_culture_vanilla_edit_toolbar
+    trigger_event = {
+      id = skonester_cheat_menu.2730
+      days = 0
+    }
+  }
+}
+
+skonester_cw_edit_ethos = {
+  scope = character
+  saved_scopes = { culture }
+  is_shown = {
+    is_ai = no
+  }
+  is_valid = {
+    always = yes
+  }
+  effect = {
+    save_scope_as = actor
+    if = {
+      limit = { exists = scope:culture }
+      scope:culture = {
+        save_scope_as = skonester_selected_culture
+      }
+      set_variable = {
+        name = skonester_selected_culture_var
+        value = scope:culture
+      }
+    }
+    add_character_flag = skonester_culture_vanilla_edit_toolbar
+    trigger_event = {
+      id = skonester_cheat_menu.2731
+      days = 0
+    }
+  }
+}
+
+# 美学无独立支柱列表：与中枢「美学」一致，仅刷新原版文化窗口（已选文化）
+skonester_cw_edit_aesthetics = {
+  scope = character
+  saved_scopes = { culture }
+  is_shown = {
+    is_ai = no
+  }
+  is_valid = {
+    always = yes
+  }
+  effect = {
+    save_scope_as = actor
+    if = {
+      limit = { exists = scope:culture }
+      scope:culture = {
+        save_scope_as = skonester_selected_culture
+      }
+      set_variable = {
+        name = skonester_selected_culture_var
+        value = scope:culture
+      }
+    }
+    add_character_flag = skonester_culture_vanilla_edit_toolbar
+    skonester_open_selected_culture_vanilla_window_effect = yes
+  }
+}
+
+skonester_cw_open_tradition_picker = {
+  scope = character
+  saved_scopes = { culture }
+  is_shown = {
+    is_ai = no
+  }
+  is_valid = {
+    always = yes
+  }
+  effect = {
+    if = {
+      limit = { exists = scope:culture }
+      scope:culture = {
+        save_scope_as = skonester_selected_culture
+      }
+      set_variable = {
+        name = skonester_selected_culture_var
+        value = scope:culture
+      }
+    }
+    add_character_flag = skonester_cw_tradition_picker_open
+    add_character_flag = skonester_culture_vanilla_edit_toolbar
+    skonester_cw_build_tradition_picker_lists_effect = yes
+    # 与 advcm 一致：由 VariableSystem 控制窗口显隐（GUI _show 会 Set）
+  }
+}
+
+# 原版文化侧栏底部：玩家文化改为当前侧栏显示的文化
+skonester_cw_adopt_culture = {
+  scope = character
+  saved_scopes = { culture }
+  is_shown = {
+    is_ai = no
+  }
+  is_valid = {
+    always = yes
+  }
+  effect = {
+    if = {
+      limit = {
+        exists = scope:culture
+        exists = global_var:skonester_cheat_menu_recipient
+      }
+      global_var:skonester_cheat_menu_recipient = {
+        if = {
+          limit = { NOT = { culture = scope:culture } }
+          set_culture = scope:culture
+        }
+      }
+      set_variable = {
+        name = skonester_selected_culture_var
+        value = scope:culture
+      }
+    }
+    else_if = {
+      limit = {
+        exists = scope:culture
+        NOT = { culture = scope:culture }
+      }
+      set_culture = scope:culture
+      set_variable = {
+        name = skonester_selected_culture_var
+        value = scope:culture
+      }
+    }
+  }
+}

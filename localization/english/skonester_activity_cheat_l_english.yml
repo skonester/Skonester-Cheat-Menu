@@ -1,0 +1,73 @@
+﻿l_english:
+
+ skonester_cheat_menu_activity_cheat_menu_interaction: "Activities / Lifestyle"
+
+ skonester_cheat_menu_activity_cheat_menu_interaction_desc: "Force host feasts, hunts, tournaments; skip feast costs; skip or instantly finish activity phases."
+
+ skonester_cheat_menu.3091.t: "Activity Cheats"
+
+ skonester_cheat_menu.3091.desc: "Control lifestyle activities for [skonester_cheat_menu_target.GetShortUIName] (feasts, hunts, tournaments, etc.). Hosting injects gold and prestige first; vanilla requirements (rank, culture, DLC) may still block some types."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ skonester_cheat_menu.3092.t: "Host entertainment activities"
+
+ skonester_cheat_menu.3092.desc: "Host as [skonester_cheat_menu_target.GetShortUIName] via ai_attempt_to_host_activity with resources injected first. If the planner does not open, check notifications or the activity list; try toggling skip feast costs."
+
+
+
+
+
+
+
+
+
+
+
+ skonester_cheat_menu.3097.t: "Host other activities"
+
+ skonester_cheat_menu.3097.desc: "Tours, weddings, pilgrimages, and other special activities; stricter vanilla gates may still apply."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ skonester_activity_cheat_toast_toggle_title: "Activity cheat · Feast cost"
+
+ skonester_activity_cheat_toast_toggle_desc: "Toggled feast_ai_override on the locked character."
+
+ skonester_activity_cheat_toast_host_title: "Activity cheat · Host attempt"
+
+ skonester_activity_cheat_toast_host_desc: "Injected resources and ran spawn_activity at capital/location; check activities or notifications."
+
+ skonester_activity_cheat_toast_skip_phase_title: "Skipped current activity phase"
+
+
+ skonester_activity_cheat_toast_complete_title: "Activity completed"
+
+ skonester_activity_cheat_toast_cancel_title: "Activity invalidated"
+
+ skonester_activity_cheat_toast_Fast_phase_title: ""
+

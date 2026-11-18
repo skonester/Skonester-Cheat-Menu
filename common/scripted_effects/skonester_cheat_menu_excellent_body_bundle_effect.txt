@@ -1,0 +1,46 @@
+﻿# 与 skonester_cheat_menu_gain_good_physique_interaction 目标逻辑一致，供Skonester特质事件等复用
+skonester_cheat_menu_toggle_excellent_body_bundle_effect = {
+  if = {
+    limit = { has_character_flag = skonester_excellent_body_bundle_active }
+    remove_character_flag = skonester_excellent_body_bundle_active
+
+    if = { limit = { has_trait = beauty_good_3 } remove_trait = beauty_good_3 }
+    if = { limit = { has_trait = intellect_good_3 } remove_trait = intellect_good_3 }
+    if = { limit = { has_trait = physique_good_3 } remove_trait = physique_good_3 }
+    if = { limit = { has_trait = pure_blooded } remove_trait = pure_blooded }
+    if = { limit = { has_trait = fecund } remove_trait = fecund }
+    if = { limit = { has_trait = strong } remove_trait = strong }
+    if = { limit = { has_trait = shrewd } remove_trait = shrewd }
+  }
+  else = {
+    add_character_flag = skonester_excellent_body_bundle_active
+
+    if = { limit = { has_trait = beauty_bad_1 } remove_trait = beauty_bad_1 }
+    if = { limit = { has_trait = beauty_bad_2 } remove_trait = beauty_bad_2 }
+    if = { limit = { has_trait = beauty_bad_3 } remove_trait = beauty_bad_3 }
+    if = { limit = { has_trait = beauty_good_1 } remove_trait = beauty_good_1 }
+    if = { limit = { has_trait = beauty_good_2 } remove_trait = beauty_good_2 }
+    add_trait = beauty_good_3
+
+    if = { limit = { has_trait = intellect_bad_1 } remove_trait = intellect_bad_1 }
+    if = { limit = { has_trait = intellect_bad_2 } remove_trait = intellect_bad_2 }
+    if = { limit = { has_trait = intellect_bad_3 } remove_trait = intellect_bad_3 }
+    if = { limit = { has_trait = intellect_good_1 } remove_trait = intellect_good_1 }
+    if = { limit = { has_trait = intellect_good_2 } remove_trait = intellect_good_2 }
+    add_trait = intellect_good_3
+
+    if = { limit = { has_trait = physique_bad_1 } remove_trait = physique_bad_1 }
+    if = { limit = { has_trait = physique_bad_2 } remove_trait = physique_bad_2 }
+    if = { limit = { has_trait = physique_bad_3 } remove_trait = physique_bad_3 }
+    if = { limit = { has_trait = physique_good_1 } remove_trait = physique_good_1 }
+    if = { limit = { has_trait = physique_good_2 } remove_trait = physique_good_2 }
+    if = { limit = { has_trait = weak } remove_trait = weak }
+    if = { limit = { has_trait = spindly } remove_trait = spindly }
+    add_trait = physique_good_3
+
+    add_trait = pure_blooded
+    add_trait = fecund
+    add_trait = strong
+    add_trait = shrewd
+  }
+}

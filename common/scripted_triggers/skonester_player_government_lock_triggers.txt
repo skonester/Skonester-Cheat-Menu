@@ -1,0 +1,5 @@
+﻿# 人类玩家政体锁定：开局仅对易遭工具箱/脉冲误改的特殊政体启用
+
+skonester_player_government_lock_eligible_trigger = {
+  skonester_protected_from_forced_feudal_conversion_trigger = yes
+}

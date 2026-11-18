@@ -1,0 +1,13 @@
+﻿gui/skonester_console_helper.gui = skonester_console_helper_window
+gui/skonester_artifact_craft.gui = skonester_artifact_craft_window
+gui/skonester_artifact_repair.gui = skonester_artifact_repair_window
+gui/skonester_acm_culture_picker.gui = skonester_acm_culture_picker_window
+gui/skonester_acm_religion_picker.gui = skonester_acm_religion_picker_window
+gui/skonester_acm_faith_editor.gui = skonester_acm_faith_editor_window
+# faith_editor_bridge / pick_panel 仅用于劫持本体信仰窗，已停用
+gui/skonester_acm_faith_doctrine_picker.gui = skonester_acm_faith_doctrine_picker_window
+gui/skonester_culture_tradition_picker.gui = skonester_culture_tradition_picker_window
+gui/skonester_sand_soldiers.gui = skonester_sand_soldiers_window
+gui/skonester_trait_editor.gui = skonester_trait_editor_window
+gui/skonester_cheat_trait_editor.gui = skonester_cheat_trait_editor_window
+gui/skonester_lifestyle.gui = skonester_lifestyle_gui_window

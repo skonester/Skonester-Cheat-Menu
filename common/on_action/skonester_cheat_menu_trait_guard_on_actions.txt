@@ -1,0 +1,92 @@
+﻿# Skonester特质防护：月度全图 + 出生/每年补扫 + 开局清一次
+# 每日全局分批 / AI 逐人脉冲 / 获封补刀 → zzz_skonester_trait_guard_pulses.txt
+# 仅玩家Skonester菜单授予（skonester_traits_player_authorized）可保留；AI 亦同
+
+on_birth_child = {
+  on_actions = {
+    skonester_trait_ai_guard_on_birth_pulse
+  }
+}
+
+skonester_trait_ai_guard_on_birth_pulse = {
+  effect = {
+    if = {
+      limit = {
+        skonester_cheat_menu_must_strip_skonester_traits_trigger = yes
+      }
+      skonester_cheat_menu_strip_oob_skonester_traits_on_this_character_effect = yes
+    }
+  }
+}
+
+monthly_global_pulse = {
+  on_actions = {
+    skonester_trait_ai_guard_monthly_pulse
+    skonester_trait_baidubuqin_monthly_upkeep_pulse
+    skonester_trait_xinwuguai_monthly_upkeep_pulse
+  }
+}
+
+skonester_trait_baidubuqin_monthly_upkeep_pulse = {
+  effect = {
+    every_living_character = {
+      limit = {
+        has_trait = skonester_trait_baidubuqin
+      }
+      skonester_trait_baidubuqin_upkeep_effect = yes
+    }
+  }
+}
+
+skonester_trait_xinwuguai_monthly_upkeep_pulse = {
+  effect = {
+    every_living_character = {
+      limit = {
+        has_trait = skonester_trait_xinwuguai
+      }
+      skonester_trait_xinwuguai_upkeep_effect = yes
+    }
+  }
+}
+
+random_yearly_everyone_pulse = {
+  on_actions = {
+    skonester_trait_ai_guard_yearly_spot_pulse
+  }
+}
+
+skonester_trait_ai_guard_monthly_pulse = {
+  effect = {
+    skonester_cheat_menu_strip_all_unauthorized_skonester_traits_effect = yes
+  }
+}
+
+# 每年对每名角色随机触发一次，兜底月度漏网
+skonester_trait_ai_guard_yearly_spot_pulse = {
+  effect = {
+    if = {
+      limit = {
+        skonester_cheat_menu_must_strip_skonester_traits_trigger = yes
+      }
+      skonester_cheat_menu_strip_oob_skonester_traits_on_this_character_effect = yes
+    }
+  }
+}
+
+on_game_start = {
+  on_actions = {
+    skonester_trait_ai_guard_startup_pulse
+  }
+}
+
+on_game_start_after_lobby = {
+  on_actions = {
+    skonester_trait_ai_guard_startup_pulse
+  }
+}
+
+skonester_trait_ai_guard_startup_pulse = {
+  effect = {
+    skonester_cheat_menu_strip_all_unauthorized_skonester_traits_effect = yes
+  }
+}

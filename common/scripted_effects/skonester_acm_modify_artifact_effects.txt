@@ -1,0 +1,23 @@
+﻿# 宝物制作 GUI：选择已有宝物并重新套用修饰
+
+# 与宝物修复共用同一目标与编辑窗（skonester_artifact_repair.gui）
+skonester_acm_register_modify_target_effect = {
+  skonester_acm_register_repair_target_effect = yes
+}
+
+skonester_acm_after_modify_pick_effect = {
+  skonester_acm_after_repair_pick_effect = yes
+}
+
+skonester_acm_gui_open_modify_picker_effect = {
+  skonester_acm_gui_open_repair_picker_effect = yes
+}
+
+# 旧「制作窗内修改」入口已并入 repair GUI；保留别名以免旧事件引用失效
+skonester_acm_apply_modify_to_selected_artifact_effect = {
+  skonester_acm_apply_repair_to_selected_artifact_effect = yes
+}
+
+skonester_acm_gui_finish_modify_effect = {
+  skonester_acm_gui_finish_repair_effect = yes
+}

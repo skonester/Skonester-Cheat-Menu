@@ -1,0 +1,350 @@
+﻿namespace = skonester_create_titular
+
+skonester_create_titular.1000 = {
+	type = character_event
+	title = skonester_create_titular.1000.t
+	desc = skonester_create_titular.1000.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = war_defender
+	}
+	right_portrait = {
+		character = scope:recipient
+		animation = love
+	}
+
+	option = {
+		name = skonester_create_titular.1000.me
+		trigger_event = skonester_create_titular.1001
+	}
+	option = {
+		trigger = {
+			scope:recipient = {
+				primary_title.tier >= tier_county
+			}
+		}
+		name = skonester_create_titular.1000.recipient
+		trigger_event = skonester_create_titular.1010
+	}
+	option = {
+		name = skonester_create_titular.back
+	}
+}
+
+######## Take it for myself
+
+skonester_create_titular.1001 = {
+	type = character_event
+	title = skonester_create_titular.1001.t
+	desc = skonester_create_titular.1001.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = war_defender
+	}
+
+	option = {
+		name = skonester_create_titular.1001.duchy
+		trigger_event = skonester_create_titular.1002
+	}
+	option = {
+		name = skonester_create_titular.1001.kingdom
+		trigger_event = skonester_create_titular.1003
+	}
+	option = {
+		name = skonester_create_titular.1001.empire
+		trigger_event = skonester_create_titular.1004
+	}
+	option = {
+		name = skonester_create_titular.1001.hegemony
+		trigger_event = skonester_create_titular.1005
+	}
+	option = {
+		name = skonester_create_titular.back
+		trigger_event = skonester_create_titular.1000
+	}
+}
+
+skonester_create_titular.1002 = {
+	hidden = yes
+		
+	immediate = {
+		create_dynamic_title = {
+			tier = duchy
+			name = GET_TARGET_TITLE_NAME
+		}
+
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		scope:new_title = {
+			set_color_from_title = scope:target
+			set_coa = scope:target
+			change_title_holder = {
+				holder = root
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+	}
+}
+skonester_create_titular.1003 = {
+	hidden = yes
+		
+	immediate = {
+		create_dynamic_title = {
+			tier = kingdom
+			name = GET_TARGET_TITLE_NAME
+			adjective = GET_TARGET_TITLE_ADJECTIVE
+		}
+
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		scope:new_title = {
+			set_color_from_title = scope:target
+			set_coa = scope:target
+			change_title_holder = {
+				holder = root
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+	}
+}
+skonester_create_titular.1004 = {
+	hidden = yes
+		
+	immediate = {
+		create_dynamic_title = {
+			tier = empire
+			name = GET_TARGET_TITLE_NAME
+			adjective = GET_TARGET_TITLE_ADJECTIVE
+		}
+
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		scope:new_title = {
+			set_color_from_title = scope:target
+			set_coa = scope:target
+			change_title_holder = {
+				holder = root
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+	}
+}
+skonester_create_titular.1005 = {
+	hidden = yes
+		
+	immediate = {
+		create_dynamic_title = {
+			tier = hegemony
+			name = GET_TARGET_TITLE_NAME
+			adjective = GET_TARGET_TITLE_ADJECTIVE
+		}
+
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		scope:new_title = {
+			set_color_from_title = scope:target
+			set_coa = scope:target
+			change_title_holder = {
+				holder = root
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+	}
+}
+
+#######################################
+###### grant it to the recipient ######
+#######################################
+
+skonester_create_titular.1010 = {
+	type = character_event
+	title = skonester_create_titular.1001.t
+	desc = skonester_create_titular.1001.desc
+	theme = realm
+	left_portrait = {
+		character = scope:recipient
+		animation = war_defender
+	}
+
+	desc = skonester_create_titular.1001.desc
+
+	option = {
+		name = skonester_create_titular.1001.duchy
+		trigger_event = skonester_create_titular.1011
+	}
+	option = {
+		name = skonester_create_titular.1001.kingdom
+		trigger_event = skonester_create_titular.1012
+	}
+	option = {
+		name = skonester_create_titular.1001.empire
+		trigger_event = skonester_create_titular.1013
+	}
+	option = {
+		name = skonester_create_titular.1001.hegemony
+		trigger_event = skonester_create_titular.1014
+	}
+	option = {
+		name = skonester_create_titular.back
+		trigger_event = skonester_create_titular.1000
+	}
+}
+
+skonester_create_titular.1011 = {
+	hidden = yes
+		
+	immediate = {
+		create_dynamic_title = {
+			tier = duchy
+			name = GET_TARGET_TITLE_NAME
+		}
+
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		scope:new_title = {
+			set_color_from_title = scope:target
+			set_coa = scope:target
+			change_title_holder = {
+				holder = scope:recipient
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+	}
+}
+skonester_create_titular.1012 = {
+	hidden = yes
+		
+	immediate = {
+		create_dynamic_title = {
+			tier = kingdom
+			name = GET_TARGET_TITLE_NAME
+			adjective = GET_TARGET_TITLE_ADJECTIVE
+		}
+
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		scope:new_title = {
+			set_color_from_title = scope:target
+			set_coa = scope:target
+			change_title_holder = {
+				holder = scope:recipient
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+	}
+}
+skonester_create_titular.1013 = {
+	hidden = yes
+		
+	immediate = {
+		create_dynamic_title = {
+			tier = empire
+			name = GET_TARGET_TITLE_NAME
+			adjective = GET_TARGET_TITLE_ADJECTIVE
+		}
+
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		scope:new_title = {
+			set_color_from_title = scope:target
+			set_coa = scope:target
+			change_title_holder = {
+				holder = scope:recipient
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+	}
+}
+skonester_create_titular.1014 = {
+	hidden = yes
+		
+	immediate = {
+		create_dynamic_title = {
+			tier = hegemony
+			name = GET_TARGET_TITLE_NAME
+			adjective = GET_TARGET_TITLE_ADJECTIVE
+		}
+
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		scope:new_title = {
+			set_color_from_title = scope:target
+			set_coa = scope:target
+			change_title_holder = {
+				holder = scope:recipient
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+	}
+}
+
+#######################################
+######### select from myself ##########
+#######################################
+
+skonester_create_titular.1020 = {
+	type = character_event
+	title = skonester_create_titular.1001.t
+	desc = skonester_create_titular.1001.desc
+	theme = realm
+	left_portrait = {
+		character = scope:recipient
+		animation = war_defender
+	}
+
+	desc = skonester_create_titular.1001.desc
+
+	option = {
+		name = skonester_create_titular.1001.duchy
+		trigger_event = skonester_create_titular.1011
+	}
+	option = {
+		name = skonester_create_titular.1001.kingdom
+		trigger_event = skonester_create_titular.1012
+	}
+	option = {
+		name = skonester_create_titular.1001.empire
+		trigger_event = skonester_create_titular.1013
+	}
+	option = {
+		name = skonester_create_titular.1001.hegemony
+		trigger_event = skonester_create_titular.1014
+	}
+	option = {
+		name = skonester_create_titular.back
+	}
+}

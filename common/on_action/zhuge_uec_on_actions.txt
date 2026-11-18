@@ -1,0 +1,55 @@
+﻿# 文化加速
+# CK3 1.20: disabled - this was a verbatim copy of vanilla on_tradition_added `effect`, so it only replaced
+# (or was replaced by) the vanilla 1.20 effect. Vanilla already runs this logic.
+# on_tradition_added = {
+# 	effect = {
+# 		every_player = {
+# 			limit = {
+# 				culture = root
+# 			}
+# 			trigger_event = {
+# 				id = culture_notification.0011
+# 				days = 0
+# 			}
+# 		}
+#
+# 		every_ruler = {
+# 			limit = {
+# 				is_ruler = yes
+# 				should_have_same_faith_succession_trigger = yes
+# 				NOT = {
+# 					has_realm_law = same_faith_only_law
+# 				}
+# 			}
+# 			add_realm_law_skip_effects = same_faith_only_law
+# 		}		
+# 	}
+# }
+
+
+#大明兼容
+
+    # 游戏开始或存档读入时立刻检查并移除
+    # 只挂接 on_actions 列表（可叠加），不直接写 effect，避免覆盖原版/AGOT 的开局 effect
+    on_game_start = {
+      on_actions = { zhuge_uec_game_start }
+    }
+
+    zhuge_uec_game_start = {
+      effect = {
+      if = {
+        limit = { exists = global_var:Data_tuiju }
+        remove_global_variable = Data_tuiju
+      }
+      }
+    }
+  
+    # 每年1月1日定时检查并移除
+    on_yearly_pulse = {
+      effect = {
+      if = {
+        limit = { exists = global_var:Data_tuiju }
+        remove_global_variable = Data_tuiju
+      }
+      }
+    }

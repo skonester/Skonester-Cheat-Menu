@@ -1,0 +1,4 @@
+﻿l_simp_chinese:
+ trait_water_of_life:0 "圣言哨卫"
+ trait_water_of_life_desc:0 "此角色饮下克拉维乌斯·阿奎拉守护的圣杯之水，肩负起永恒守卫的职责。岁月无法侵蚀其躯体，也无法蒙蔽其心智。漫长的守望将带来智慧、力量与不屈的意志。\n\n#P 复原：#! 获得祝福、载入存档及每月维护时，会清除已有的衰老病症、无能状态、伤势与疾病。"
+ trait_water_of_life_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip]作为圣言哨卫，接替了克拉维乌斯·阿奎拉的守望。不老的躯体、不倦的心智与坚定的信仰，支撑着这位圣杯的守护者。\n\n#P 复原：#! 载入存档及每月维护时，会清除衰老病症、无能状态、伤势与疾病。"

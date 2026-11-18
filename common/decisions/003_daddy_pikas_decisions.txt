@@ -1,0 +1,636 @@
+﻿change_government_japan_administrative_government_backup = {
+    picture = { reference = "gfx/interface/illustrations/decisions/cheat_tab.dds" }
+
+    title = change_govt_japan_administrative_government
+    desc = change_govt_japan_administrative_government_desc
+    selection_tooltip = change_govt_tt
+    confirm_text = CONFIRM_OKAY
+
+    decision_group_type = skonester_realm_tools
+
+    is_shown = {
+		NOT = { has_government = celestial_government }
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+
+        skonester_121_prepare_government_domicile_effect = {
+            NEW_DOMICILE_TYPE = japanese_manor
+            NEW_GOVERNMENT_TYPE = japan_administrative_government
+        }
+
+        skonester_121_transition_to_japan_administrative_government_effect = yes
+
+        every_vassal_or_below = {
+            skonester_121_transition_to_japan_administrative_government_effect = yes
+        }
+    }
+
+    ai_check_interval = 0
+    ai_will_do = 0
+}
+
+change_government_celestial = {
+    picture = {
+		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+	}
+
+    title = change_govt_celestial
+    desc = change_govt_celestial_desc
+    selection_tooltip = change_govt_tt
+    confirm_text = CONFIRM_OKAY
+
+	decision_group_type = skonester_realm_tools
+
+    is_shown = {
+        # CRITICAL FIX MISSING: You must add 'is_player = yes' here for visibility.
+        NOT = { has_government = celestial_government }
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        # Prepare the target's current native primary holding before changing government.
+        every_sub_realm_county = {
+            title_province = {
+                if = {
+                    limit = { NOT = { has_holding_type = castle_holding } }
+                    set_holding_type = castle_holding
+                    skonester_ensure_castle_holding_base_castle_building = yes
+                }
+            }
+        }
+
+        # Custom mod effect to clean up landless status (requires third-party mod)
+
+		skonester_121_prepare_government_domicile_effect = {
+            NEW_DOMICILE_TYPE = east_asian_estate
+            NEW_GOVERNMENT_TYPE = celestial_government
+        }
+        # Change player's government
+		skonester_121_transition_to_celestial_government_effect = yes
+
+        # WARNING: This mass converts holdings and is highly disruptive/game-breaking
+		
+
+        # Change vassals' government
+		every_vassal_or_below = {
+			skonester_121_transition_to_celestial_government_effect = yes
+		}
+    }
+    ai_check_interval = 0
+    ai_will_do = 0
+}
+
+change_government_mandala = {
+    picture = {
+		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+	}
+
+    title = change_govt_mandala
+    desc = change_govt_mandala_desc
+    selection_tooltip = change_govt_tt
+    confirm_text = CONFIRM_OKAY
+
+	decision_group_type = skonester_realm_tools
+
+    is_shown = {
+        # CRITICAL FIX MISSING: You must add 'is_player = yes' here for visibility.
+        NOT = { has_government = mandala_government }
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        # Prepare the target's current native primary holding before changing government.
+        every_sub_realm_county = {
+            title_province = {
+                if = {
+                    limit = { NOT = { has_holding_type = temple_citadel_holding } }
+                    set_holding_type = temple_citadel_holding
+                }
+            }
+        }
+
+        # Custom mod effect to clean up landless status (requires third-party mod)
+
+		# This native government has no noble-family domicile to create.
+        # Change player's government
+		skonester_121_transition_to_mandala_government_effect = yes
+
+        # WARNING: This mass converts holdings and is highly disruptive/game-breaking
+		
+
+        # Change vassals' government
+		every_vassal_or_below = {
+			skonester_121_transition_to_mandala_government_effect = yes
+		}
+    }
+    ai_check_interval = 0
+    ai_will_do = 0
+}
+
+change_government_wanua = {
+    picture = {
+		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+	}
+
+    title = change_govt_wanua
+    desc = change_govt_wanua_desc
+    selection_tooltip = change_govt_tt
+    confirm_text = CONFIRM_OKAY
+
+	decision_group_type = skonester_realm_tools
+
+    is_shown = {
+        # CRITICAL FIX MISSING: You must add 'is_player = yes' here for visibility.
+        NOT = { has_government = wanua_government }
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        # Prepare the target's current native primary holding before changing government.
+        every_sub_realm_county = {
+            title_province = {
+                if = {
+                    limit = { NOT = { has_holding_type = tribal_holding } }
+                    set_holding_type = tribal_holding
+                    skonester_ensure_tribal_holding_base_tribe_building = yes
+                }
+            }
+        }
+
+        # Custom mod effect to clean up landless status (requires third-party mod)
+
+		# This native government has no noble-family domicile to create.
+        # Change player's government
+		skonester_121_transition_to_wanua_government_effect = yes
+
+        # WARNING: This mass converts holdings and is highly disruptive/game-breaking
+		
+
+        # Change vassals' government
+		every_vassal_or_below = {
+			skonester_121_transition_to_wanua_government_effect = yes
+		}
+    }
+    ai_check_interval = 0
+    ai_will_do = 0
+}
+
+change_government_feudal = {
+    picture = {
+		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+	}
+
+    title = change_govt_feudal
+    desc = change_govt_desc
+    selection_tooltip = change_govt_tt
+    confirm_text = CONFIRM_OKAY
+
+	decision_group_type = skonester_realm_tools
+
+    is_shown = {
+        NOT = { has_government = feudal_government }
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        # Prepare the target's current native primary holding before changing government.
+        every_sub_realm_county = {
+            title_province = {
+                if = {
+                    limit = { NOT = { has_holding_type = castle_holding } }
+                    set_holding_type = castle_holding
+                    skonester_ensure_castle_holding_base_castle_building = yes
+                }
+            }
+        }
+
+        skonester_121_transition_to_feudal_government_effect = yes
+        
+        every_vassal_or_below = {
+			skonester_121_transition_to_feudal_government_effect = yes
+		}
+    }
+    ai_check_interval = 0
+
+    ai_will_do = 0
+}
+
+change_government_meritocratic = {
+    picture = {
+		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+	}
+
+    title = change_govt_meritocratic
+    desc = change_govt_desc
+    selection_tooltip = change_govt_tt
+    confirm_text = CONFIRM_OKAY
+
+	decision_group_type = skonester_realm_tools
+
+    is_shown = {
+        NOT = { has_government = meritocratic_government }
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        # Prepare the target's current native primary holding before changing government.
+        every_sub_realm_county = {
+            title_province = {
+                if = {
+                    limit = { NOT = { has_holding_type = castle_holding } }
+                    set_holding_type = castle_holding
+                    skonester_ensure_castle_holding_base_castle_building = yes
+                }
+            }
+        }
+
+		skonester_121_prepare_government_domicile_effect = {
+            NEW_DOMICILE_TYPE = east_asian_estate
+            NEW_GOVERNMENT_TYPE = meritocratic_government
+        }
+		skonester_121_transition_to_meritocratic_government_effect = yes
+		
+		every_vassal_or_below = {
+			skonester_121_transition_to_meritocratic_government_effect = yes
+		}
+    }
+    ai_check_interval = 0
+    ai_will_do = 0
+}
+
+change_government_clan = {
+    picture = {
+		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+	}
+
+    title = change_govt_clan
+    desc = change_govt_desc
+    selection_tooltip = change_govt_tt
+    confirm_text = CONFIRM_OKAY
+
+	decision_group_type = skonester_realm_tools
+
+    is_shown = {
+        NOT = { has_government = clan_government }
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        # Prepare the target's current native primary holding before changing government.
+        every_sub_realm_county = {
+            title_province = {
+                if = {
+                    limit = { NOT = { has_holding_type = castle_holding } }
+                    set_holding_type = castle_holding
+                    skonester_ensure_castle_holding_base_castle_building = yes
+                }
+            }
+        }
+
+        skonester_121_transition_to_clan_government_effect = yes
+        
+        every_vassal_or_below = {
+			skonester_121_transition_to_clan_government_effect = yes
+		}
+    }
+    ai_check_interval = 0
+
+    ai_will_do = 0
+}
+
+change_govt_tribe = {
+    picture = {
+		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+	}
+
+    title = change_govt_tribe
+    desc = change_govt_desc
+    selection_tooltip = change_govt_tt
+    confirm_text = CONFIRM_OKAY
+
+	decision_group_type = skonester_realm_tools
+
+    is_shown = {
+        NOT = { has_government = tribal_government }
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        # Prepare the target's current native primary holding before changing government.
+        every_sub_realm_county = {
+            title_province = {
+                if = {
+                    limit = { NOT = { has_holding_type = tribal_holding } }
+                    set_holding_type = tribal_holding
+                    skonester_ensure_tribal_holding_base_tribe_building = yes
+                }
+            }
+        }
+
+        skonester_121_transition_to_tribal_government_effect = yes
+        
+        every_vassal_or_below = {
+			skonester_121_transition_to_tribal_government_effect = yes
+		}
+    }
+    ai_check_interval = 0
+
+    ai_will_do = 0
+}
+
+change_govt_nomad = {
+    picture = {
+		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+	}
+
+    title = change_govt_nomad
+    desc = change_govt_desc
+    selection_tooltip = change_govt_tt
+    confirm_text = CONFIRM_OKAY
+
+	decision_group_type = skonester_realm_tools
+
+    is_shown = {
+        NOT = { has_government = nomad_government }
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        # Prepare the target's current native primary holding before changing government.
+        every_sub_realm_county = {
+            title_province = {
+                if = {
+                    limit = { NOT = { has_holding_type = nomad_holding } }
+                    set_holding_type = nomad_holding
+                }
+            }
+        }
+
+        skonester_121_transition_to_nomad_government_effect = yes
+        
+        every_vassal_or_below = {
+			skonester_121_transition_to_nomad_government_effect = yes
+		}
+    }
+    ai_check_interval = 0
+
+    ai_will_do = 0
+}
+
+change_government_administrative = {
+	picture = { reference = "gfx/interface/illustrations/decisions/cheat_tab.dds" }
+
+	title = change_govt_administrative
+	desc = change_govt_desc
+	selection_tooltip = change_govt_tt
+	confirm_text = CONFIRM_OKAY
+
+	decision_group_type = skonester_realm_tools
+
+	is_shown = {
+		NOT = { has_government = administrative_government }   # ← 修正拼写
+		has_character_flag = daddy_pika_cheat_menu
+		has_character_flag = govt_menu
+	}
+
+	effect = {
+        # Prepare the target's current native primary holding before changing government.
+        every_sub_realm_county = {
+            title_province = {
+                if = {
+                    limit = { NOT = { has_holding_type = castle_holding } }
+                    set_holding_type = castle_holding
+                    skonester_ensure_castle_holding_base_castle_building = yes
+                }
+            }
+        }
+
+		skonester_121_prepare_government_domicile_effect = {
+            NEW_DOMICILE_TYPE = estate
+            NEW_GOVERNMENT_TYPE = administrative_government
+        }
+		skonester_121_transition_to_administrative_government_effect = yes
+		
+		every_vassal_or_below = {
+			skonester_121_transition_to_administrative_government_effect = yes
+		}
+	}
+
+	ai_check_interval = 0
+	ai_will_do = 0
+}
+
+change_government_landless_adventurer = {
+    picture = { reference = "gfx/interface/illustrations/decisions/cheat_tab.dds" }
+
+    title = change_govt_landless_adventurer
+    desc = change_govt_desc
+    selection_tooltip = change_govt_tt
+    confirm_text = CONFIRM_OKAY
+
+    decision_group_type = skonester_realm_tools
+
+    is_shown = {
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        # Required scope the event reads from
+        save_scope_as = adventurer
+
+        # Determine who gets the titles — mirrors vanilla logic
+        if = {
+            limit = {
+                player_heir ?= {
+                    this != root
+                    is_adult = yes
+                }
+            }
+            player_heir = {
+                save_scope_as = laamp_heir
+                save_scope_as = laamp_inheritor
+            }
+        }
+        else_if = {
+            limit = { top_liege != this }
+            liege = {
+                save_scope_as = laamp_liege
+                save_scope_as = laamp_inheritor
+            }
+        }
+        else = {
+            # No valid heir or liege — generate a throwaway inheritor character
+            hidden_effect_new_object = {
+                create_character = {
+                    template = laamp_inheritor_template
+                    culture = root.capital_county.culture
+                    faith = root.capital_county.faith
+                    dynasty = generate
+                    location = root.capital_province
+                    after_creation = {
+                        save_scope_as = laamp_inheritor
+                        add_character_flag = new_laamp_inheritor
+                    }
+                }
+            }
+        }
+
+        # Create the adventurer camp title
+        create_landless_adventurer_title_tooltip_effect = yes
+
+        # This event does the actual government change, title handoff, and full setup
+        trigger_event = { id = ep3_laamps.0030 }
+    }
+
+    ai_check_interval = 0
+    ai_will_do = 0
+}
+
+change_government_steppe_admin = {
+    picture = { reference = "gfx/interface/illustrations/decisions/cheat_tab.dds" }
+
+    title = change_govt_steppe_admin
+    desc = change_govt_desc
+    selection_tooltip = change_govt_tt
+    confirm_text = CONFIRM_OKAY
+
+    decision_group_type = skonester_realm_tools
+
+    is_shown = {
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+
+        skonester_121_prepare_government_domicile_effect = {
+            NEW_DOMICILE_TYPE = east_asian_estate
+            NEW_GOVERNMENT_TYPE = steppe_admin_government
+        }
+
+        skonester_121_transition_to_steppe_admin_government_effect = yes
+
+        every_vassal_or_below = {
+            skonester_121_transition_to_steppe_admin_government_effect = yes
+        }
+    }
+
+    ai_check_interval = 0
+    ai_will_do = 0
+}
+
+change_government_japan_feudal_government = {
+    picture = {
+		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+	}
+
+    title = change_govt_japan_feudal_government
+    desc = change_govt_japan_feudal_government_desc
+    selection_tooltip = change_govt_tt
+    confirm_text = CONFIRM_OKAY
+
+	decision_group_type = skonester_realm_tools
+
+    is_shown = {
+        # CRITICAL FIX MISSING: You must add 'is_player = yes' here for visibility.
+        NOT = { has_government = japan_feudal_government }
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        # Prepare the target's current native primary holding before changing government.
+        every_sub_realm_county = {
+            title_province = {
+                if = {
+                    limit = { NOT = { has_holding_type = castle_holding } }
+                    set_holding_type = castle_holding
+                    skonester_ensure_castle_holding_base_castle_building = yes
+                }
+            }
+        }
+
+        # Custom mod effect to clean up landless status (requires third-party mod)
+
+		skonester_121_prepare_government_domicile_effect = {
+            NEW_DOMICILE_TYPE = japanese_manor
+            NEW_GOVERNMENT_TYPE = japan_feudal_government
+        }
+        # Change player's government
+		skonester_121_transition_to_japan_feudal_government_effect = yes
+
+        # WARNING: This mass converts holdings and is highly disruptive/game-breaking
+		
+
+        # Change vassals' government
+		every_vassal_or_below = {
+			skonester_121_transition_to_japan_feudal_government_effect = yes
+		}
+    }
+    ai_check_interval = 0
+    ai_will_do = 0
+}
+
+change_government_japan_administrative_government = {
+    picture = {
+		reference = "gfx/interface/illustrations/decisions/cheat_tab.dds"
+	}
+
+    title = change_govt_japan_administrative_government
+    desc = change_govt_japan_administrative_government_desc
+    selection_tooltip = change_govt_tt
+    confirm_text = CONFIRM_OKAY
+
+	decision_group_type = skonester_realm_tools
+
+    is_shown = {
+        is_ai = no # CK3 1.20: was is_player = yes, which is not a trigger
+        NOT = { has_government = japan_administrative_government }
+        has_character_flag = daddy_pika_cheat_menu
+        has_character_flag = govt_menu
+    }
+
+    effect = {
+        # Prepare the target's current native primary holding before changing government.
+        every_sub_realm_county = {
+            title_province = {
+                if = {
+                    limit = { NOT = { has_holding_type = castle_holding } }
+                    set_holding_type = castle_holding
+                    skonester_ensure_castle_holding_base_castle_building = yes
+                }
+            }
+        }
+
+        # Custom mod effect to clean up landless status (requires third-party mod)
+
+		skonester_121_prepare_government_domicile_effect = {
+            NEW_DOMICILE_TYPE = japanese_manor
+            NEW_GOVERNMENT_TYPE = japan_administrative_government
+        }
+        # Change player's government
+		skonester_121_transition_to_japan_administrative_government_effect = yes
+
+        # WARNING: This mass converts holdings and is highly disruptive/game-breaking
+		
+
+        # Change vassals' government
+		every_vassal_or_below = {
+			skonester_121_transition_to_japan_administrative_government_effect = yes
+		}
+    }
+    ai_check_interval = 0
+    ai_will_do = 0
+}

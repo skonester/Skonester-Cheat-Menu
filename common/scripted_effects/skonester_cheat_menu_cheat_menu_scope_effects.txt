@@ -1,0 +1,418 @@
+﻿# Skonester右键作弊菜单：统一用 global_var 锁定右击对象（与 skonester_acm_recipient 同套路）。
+# interaction 的 save_scope_as 不会随 trigger_event 传入事件，导致「点了没反应」。
+
+skonester_cheat_menu_lock_recipient_effect = {
+  if = {
+    limit = { exists = scope:recipient }
+    set_global_variable = {
+      name = skonester_cheat_menu_recipient
+      value = scope:recipient
+    }
+  }
+  else_if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    set_global_variable = {
+      name = skonester_cheat_menu_recipient
+      value = scope:skonester_cheat_menu_target
+    }
+  }
+  else_if = {
+    limit = { exists = scope:actor }
+    set_global_variable = {
+      name = skonester_cheat_menu_recipient
+      value = scope:actor
+    }
+  }
+  else_if = {
+    limit = { has_global_variable = skonester_cheat_menu_recipient }
+  }
+}
+
+skonester_cheat_menu_sync_target_effect = {
+  if = {
+    limit = { exists = global_var:skonester_cheat_menu_recipient }
+    global_var:skonester_cheat_menu_recipient = {
+      save_scope_as = skonester_cheat_menu_target
+    }
+  }
+  else_if = {
+    limit = { exists = scope:recipient }
+    scope:recipient = {
+      save_scope_as = skonester_cheat_menu_target
+    }
+  }
+  else_if = {
+    limit = {
+      exists = root
+      root = { has_variable = skonester_military_menu_victim }
+    }
+    root = {
+      var:skonester_military_menu_victim = { save_scope_as = skonester_cheat_menu_target }
+    }
+  }
+  else_if = {
+    limit = { exists = scope:actor }
+    scope:actor = {
+      save_scope_as = skonester_cheat_menu_target
+    }
+  }
+}
+
+skonester_cheat_menu_clear_recipient_effect = {
+  if = {
+    limit = { has_global_variable = skonester_cheat_menu_recipient }
+    remove_global_variable = skonester_cheat_menu_recipient
+  }
+  if = {
+    limit = {
+      exists = root
+      root = { has_variable = skonester_military_menu_victim }
+    }
+    root = { remove_variable = skonester_military_menu_victim }
+  }
+}
+
+skonester_cheat_menu_sync_trait_edit_target_effect = {
+  skonester_cheat_menu_sync_target_effect = yes
+  scope:skonester_cheat_menu_target = {
+    save_scope_as = skonester_trait_edit_target
+  }
+}
+
+skonester_cheat_menu_sync_relation_target_effect = {
+  skonester_cheat_menu_sync_target_effect = yes
+  scope:skonester_cheat_menu_target = {
+    save_scope_as = skonester_relation_target
+  }
+}
+
+skonester_cheat_menu_sync_lifestyle_target_effect = {
+  skonester_cheat_menu_sync_target_effect = yes
+  scope:skonester_cheat_menu_target = {
+    save_scope_as = skonester_lifestyle_target
+  }
+}
+
+skonester_cheat_menu_sync_pregnancy_target_effect = {
+  skonester_cheat_menu_sync_target_effect = yes
+  scope:skonester_cheat_menu_target = {
+    save_scope_as = skonester_pregnancy_target
+  }
+}
+
+skonester_cheat_menu_sync_switch_target_effect = {
+  skonester_cheat_menu_sync_target_effect = yes
+  scope:skonester_cheat_menu_target = {
+    save_scope_as = skonester_switch_target
+  }
+}
+
+skonester_cheat_menu_sync_county_edit_target_effect = {
+  skonester_cheat_menu_sync_target_effect = yes
+  scope:skonester_cheat_menu_target = {
+    save_scope_as = skonester_cnt_edit_target
+  }
+}
+
+skonester_cheat_menu_open_kill_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  scope:actor = { trigger_event = skonester_cheat_menu.0002 }
+}
+
+skonester_cheat_menu_open_exterminate_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  scope:actor = { trigger_event = skonester_cheat_menu.0003 }
+}
+
+# 灭族：目标宗族所有在世成员（不杀右键发起者 scope:actor）
+skonester_cheat_menu_exterminate_dynasty_effect = {
+  skonester_cheat_menu_sync_target_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      dynasty = {
+        every_dynasty_member = {
+          limit = {
+            is_alive = yes
+            NOT = { this = scope:actor }
+          }
+          death = {
+            death_reason = death_natural_causes
+          }
+        }
+      }
+    }
+  }
+}
+
+skonester_cheat_menu_open_age_edit_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  scope:actor = { trigger_event = skonester_cheat_menu.0075 }
+}
+
+skonester_cheat_menu_open_ability_edit_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  scope:actor = { trigger_event = skonester_cheat_menu.0080 }
+}
+
+skonester_cheat_menu_open_plant_secret_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  scope:actor = {
+    set_variable = { name = skonester_plant_secret_page value = 0 }
+    trigger_event = { id = skonester_cheat_menu.0097 days = 0 }
+  }
+}
+
+skonester_cheat_menu_open_ai_ai_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  scope:actor = { trigger_event = skonester_cheat_menu.0010 }
+}
+
+skonester_cheat_menu_open_pregnancy_manage_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  skonester_cheat_menu_sync_pregnancy_target_effect = yes
+  scope:actor = {
+    trigger_event = {
+      id = skonester_cheat_menu.0001
+      days = 0
+    }
+  }
+}
+
+skonester_cheat_menu_open_switch_player_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  skonester_cheat_menu_sync_switch_target_effect = yes
+  scope:actor = {
+    trigger_event = {
+      id = skonester_cheat_menu.0099
+      days = 0
+    }
+  }
+}
+
+skonester_cheat_menu_open_relation_confirm_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  skonester_cheat_menu_sync_relation_target_effect = yes
+  scope:actor = {
+    trigger_event = {
+      id = skonester_cheat_menu.0096
+      days = 0
+    }
+  }
+}
+
+skonester_cheat_menu_open_culture_edit_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  scope:actor = {
+    skonester_cheat_menu_sync_target_effect = yes
+    skonester_open_acm_culture_picker_effect = yes
+  }
+}
+
+skonester_cheat_menu_open_religion_edit_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  scope:actor = {
+    skonester_open_acm_religion_picker_effect = yes
+  }
+}
+
+skonester_cheat_menu_open_military_manage_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  scope:actor = {
+    if = {
+      limit = { exists = scope:recipient }
+      set_variable = {
+        name = skonester_military_menu_victim
+        value = scope:recipient
+      }
+    }
+    trigger_event = { id = skonester_cheat_menu.3080 days = 0 }
+  }
+}
+
+skonester_cheat_menu_open_sand_soldiers_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  scope:actor = {
+    if = {
+      limit = { exists = scope:recipient }
+      set_variable = {
+        name = skonester_military_menu_victim
+        value = scope:recipient
+      }
+    }
+    skonester_military_ensure_target_effect = yes
+    skonester_sand_soldiers_request_open_effect = yes
+    trigger_event = { id = skonester_cheat_menu.3082 days = 0 }
+  }
+}
+
+skonester_cheat_menu_open_new_traits_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  scope:actor = {
+    skonester_open_cheat_trait_editor_gui_effect = yes
+  }
+}
+
+skonester_cheat_menu_open_base_game_traits_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  scope:actor = {
+    skonester_open_trait_editor_gui_effect = yes
+  }
+}
+
+skonester_cheat_menu_open_trait_edit_menu_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  skonester_cheat_menu_sync_trait_edit_target_effect = yes
+  scope:actor = { trigger_event = skonester_cheat_menu.7200 }
+}
+
+skonester_cheat_menu_open_lifestyle_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  skonester_cheat_menu_sync_lifestyle_target_effect = yes
+  scope:actor = {
+    skonester_open_lifestyle_gui_effect = yes
+  }
+}
+
+skonester_cheat_menu_open_edit_resources_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  scope:actor = {
+    add_character_flag = skonester_edit_resources_active
+    trigger_event = skonester_cheat_menu.3050
+  }
+}
+
+skonester_cheat_menu_open_county_cheat_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  scope:actor = { trigger_event = skonester_cheat_menu.3070 }
+}
+
+skonester_cheat_menu_open_artifact_edit_menu_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  scope:actor = { trigger_event = skonester_cheat_menu.3093 }
+}
+
+skonester_cheat_menu_open_steal_artifact_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  scope:actor = {
+    skonester_cheat_menu_sync_target_effect = yes
+    add_character_flag = skonester_steal_picker_active
+    set_variable = { name = skonester_steal_victim value = scope:skonester_cheat_menu_target }
+    set_variable = { name = skonester_steal_page value = 0 }
+    trigger_event = skonester_cheat_menu.3094
+  }
+}
+
+skonester_cheat_menu_open_estate_edit_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  scope:actor = {
+    skonester_cheat_menu_sync_target_effect = yes
+    trigger_event = skonester_cheat_menu.3095
+  }
+}
+
+skonester_cheat_menu_open_get_primary_title_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  scope:actor = {
+    skonester_cheat_menu_sync_target_effect = yes
+    add_character_flag = skonester_title_pick_picker_active
+    set_variable = { name = skonester_title_victim value = scope:skonester_cheat_menu_target }
+    set_variable = { name = skonester_title_pick_page value = 0 }
+    trigger_event = skonester_cheat_menu.3096
+  }
+}
+
+skonester_cheat_menu_open_legend_master_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  scope:actor = { trigger_event = skonester_legend_master.0001 }
+}
+
+skonester_cheat_menu_open_artifact_craft_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  if = {
+    limit = {
+      exists = scope:actor
+      scope:actor = { skonester_player_may_use_artifact_craft_trigger = yes }
+    }
+  scope:actor = {
+    save_scope_as = skonester_acm_craft_creator
+    remove_character_flag = skonester_acm_modify_session
+    skonester_cheat_menu_sync_target_effect = yes
+    if = {
+      limit = { exists = scope:skonester_cheat_menu_target }
+      set_global_variable = {
+        name = skonester_acm_recipient
+        value = scope:skonester_cheat_menu_target
+      }
+    }
+    else_if = {
+      limit = { exists = scope:recipient }
+      set_global_variable = {
+        name = skonester_acm_recipient
+        value = scope:recipient
+      }
+    }
+    add_character_flag = skonester_craft_give_to_recipient
+    skonester_craft_init_modifier_slot_defaults_effect = yes
+    if = {
+      limit = { NOT = { has_variable = skonester_acm_artifact_type } }
+      skonester_acm_init_artifact_type_defaults_effect = yes
+    }
+    if = {
+      limit = { NOT = { has_character_flag = skonester_artifact_quality_set } }
+      skonester_acm_set_quality_common_effect = yes
+    }
+    add_character_flag = skonester_acm_gui_open
+  }
+  }
+}
+
+# Skonester菜单 0030：打开 advcm 式宝物制作窗（与右键「宝物制作」共用变量/修饰列表）
+skonester_cheat_menu_open_artifact_craft_gui_effect = {
+  if = {
+    limit = {
+      exists = scope:actor
+      scope:actor = { skonester_player_may_use_artifact_craft_trigger = yes }
+    }
+  scope:actor = {
+    save_scope_as = skonester_acm_craft_creator
+    skonester_craft_init_modifier_slot_defaults_effect = yes
+    if = {
+      limit = { NOT = { has_variable = skonester_acm_artifact_type } }
+      skonester_acm_init_artifact_type_defaults_effect = yes
+    }
+    if = {
+      limit = { NOT = { has_character_flag = skonester_artifact_quality_set } }
+      skonester_acm_set_quality_common_effect = yes
+    }
+    if = {
+      limit = {
+        has_character_flag = skonester_craft_give_to_recipient
+        exists = scope:recipient
+        NOT = { has_global_variable = skonester_acm_recipient }
+      }
+      set_global_variable = {
+        name = skonester_acm_recipient
+        value = scope:recipient
+      }
+    }
+    add_character_flag = skonester_acm_gui_open
+  }
+  }
+}
+
+skonester_cheat_menu_sync_plant_scopes_effect = {
+  skonester_cheat_menu_sync_target_effect = yes
+  scope:skonester_cheat_menu_target = {
+    save_scope_as = skonester_plant_menu_recipient
+  }
+  scope:actor = {
+    save_scope_as = skonester_plant_menu_actor
+  }
+}
+
+skonester_cheat_menu_open_force_marriage_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  skonester_cheat_menu_sync_force_marriage_scopes_effect = yes
+  scope:actor = { trigger_event = skonester_cheat_menu.0190 }
+}

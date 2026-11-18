@@ -1,0 +1,6 @@
+﻿# 囚犯酷刑：受害者对施刑者（永久 −100，不叠加多条同 key）
+skonester_tortured_me_execution_style_opinion = {
+  opinion = -100
+  decaying = no
+  stacking = no
+}

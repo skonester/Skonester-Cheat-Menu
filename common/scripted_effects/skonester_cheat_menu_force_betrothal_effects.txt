@@ -1,0 +1,143 @@
+﻿# Skonester「强制订婚」：DI #2986538297 双槽复制/粘贴 + skonester_ultra_force_betrothal_effect
+# 第一次右击：skonester_di_select_betrothal_primary_effect
+# 第二次右击：写入第三角色槽并强制订婚
+
+skonester_cheat_menu_prepare_char_for_force_betrothal_effect = {
+  if = {
+    limit = { is_imprisoned = yes }
+    release_from_prison = yes
+  }
+  if = {
+    limit = { has_trait = skonester_trait_marriage_ban }
+    add_character_flag = skonester_force_betrothal_had_ban
+    remove_trait = skonester_trait_marriage_ban
+  }
+}
+
+skonester_cheat_menu_restore_char_after_force_betrothal_effect = {
+  if = {
+    limit = { has_character_flag = skonester_force_betrothal_had_ban }
+    remove_character_flag = skonester_force_betrothal_had_ban
+    add_trait = skonester_trait_marriage_ban
+  }
+}
+
+skonester_cheat_menu_force_betrothal_resolve_pick_char_effect = {
+  if = {
+    limit = {
+      exists = scope:recipient
+      scope:recipient = { is_alive = yes }
+    }
+    scope:recipient = {
+      save_scope_as = skonester_betrothal_pick_char
+      save_scope_as = skonester_ultra_betrothal_charB
+    }
+  }
+  else_if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      save_scope_as = skonester_betrothal_pick_char
+      save_scope_as = skonester_ultra_betrothal_charB
+    }
+  }
+}
+
+skonester_cheat_menu_force_betrothal_copy_to_slot_effect = {
+  skonester_cheat_menu_force_betrothal_resolve_pick_char_effect = yes
+  skonester_di_select_betrothal_primary_effect = yes
+  scope:actor = {
+    send_interface_toast = {
+      type = event_toast_effect_neutral
+      title = skonester_cheat_menu_force_betrothal_copy_toast_title
+      desc = skonester_cheat_menu_force_betrothal_copy_toast_desc
+      left_icon = scope:actor
+      right_icon = scope:skonester_betrothal_pick_char
+    }
+  }
+}
+
+skonester_cheat_menu_force_betrothal_clear_slot_effect = {
+  scope:actor = {
+    skonester_di_clear_betrothal_primary_effect = yes
+    skonester_di_clear_betrothal_tertiary_effect = yes
+  }
+}
+
+skonester_cheat_menu_force_betrothal_paste_from_slot_effect = {
+  skonester_cheat_menu_force_betrothal_resolve_pick_char_effect = yes
+  skonester_di_select_betrothal_tertiary_effect = yes
+  scope:actor = {
+    var:skonester_betrothal_slot_primary = {
+      save_scope_as = skonester_ultra_betrothal_charA
+    }
+    var:skonester_betrothal_slot_tertiary = {
+      save_scope_as = skonester_ultra_betrothal_charB
+    }
+  }
+  scope:skonester_ultra_betrothal_charA = {
+    skonester_cheat_menu_prepare_char_for_force_betrothal_effect = yes
+  }
+  scope:skonester_ultra_betrothal_charB = {
+    skonester_cheat_menu_prepare_char_for_force_betrothal_effect = yes
+  }
+  skonester_ultra_force_betrothal_effect = yes
+  scope:skonester_ultra_betrothal_charA = {
+    skonester_cheat_menu_restore_char_after_force_betrothal_effect = yes
+    remove_character_flag = skonester_ultra_betrothal_use_matrilineal
+  }
+  scope:skonester_ultra_betrothal_charB = {
+    skonester_cheat_menu_restore_char_after_force_betrothal_effect = yes
+  }
+  scope:actor = {
+    skonester_cheat_menu_force_betrothal_clear_slot_effect = yes
+    send_interface_toast = {
+      type = event_toast_effect_good
+      title = skonester_cheat_menu_force_betrothal_toast_title
+      desc = skonester_cheat_menu_force_betrothal_toast_desc
+      left_icon = scope:skonester_ultra_betrothal_charA
+      right_icon = scope:skonester_ultra_betrothal_charB
+    }
+  }
+}
+
+skonester_cheat_menu_force_betrothal_execute_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  skonester_cheat_menu_sync_target_effect = yes
+  skonester_cheat_menu_force_betrothal_resolve_pick_char_effect = yes
+  if = {
+    limit = {
+      exists = scope:skonester_betrothal_pick_char
+      scope:skonester_betrothal_pick_char = { is_alive = yes }
+    }
+    if = {
+      limit = {
+        scope:actor = {
+          NOT = { has_variable = skonester_betrothal_slot_primary }
+        }
+      }
+      skonester_cheat_menu_force_betrothal_copy_to_slot_effect = yes
+    }
+    else_if = {
+      limit = {
+        scope:actor = {
+          var:skonester_betrothal_slot_primary = {
+            this = scope:skonester_betrothal_pick_char
+          }
+        }
+      }
+      skonester_cheat_menu_force_betrothal_copy_to_slot_effect = yes
+    }
+    else_if = {
+      limit = {
+        scope:actor = {
+          has_variable = skonester_betrothal_slot_primary
+          var:skonester_betrothal_slot_primary = {
+            is_alive = yes
+            NOT = { this = scope:skonester_betrothal_pick_char }
+          }
+        }
+      }
+      skonester_cheat_menu_force_betrothal_paste_from_slot_effect = yes
+    }
+  }
+}

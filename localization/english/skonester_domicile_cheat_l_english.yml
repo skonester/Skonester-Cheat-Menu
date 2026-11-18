@@ -1,0 +1,13 @@
+﻿l_english:
+ skonester_domicile_preset_economy_bonus_modifier: "Estate Preset · Economic Bonus"
+ skonester_domicile_preset_military_bonus_modifier: "Estate Preset · Military Bonus"
+ skonester_domicile_preset_balanced_bonus_modifier: "Estate Preset · Balanced Bonus"
+ skonester_domicile_cheat.0100.t: "Manor System Modification Panel"
+ skonester_domicile_cheat.0100.desc: "Select the range for estate upgrades.\nAutomatically syncs cultural traditions and prevents duplicate applications."
+ skonester_domicile_cheat.0100.own: "Upgrade All Family Estates"
+ skonester_domicile_cheat.0100.own_tt: "Only applies to estates belonging to your family and adds preset cultural traditions."
+ skonester_domicile_cheat.0100.global: "Upgrade All Estates Worldwide"
+ skonester_domicile_cheat.0100.global_tt: "Scans all living characters across the map and upgrades every estate they own. (Only available to independent rulers)"
+ skonester_domicile_cheat.0100.close: "@cross_icon! Close Panel"
+ skonester_domicile_cheat_done: "Processed"
+ skonester_domicile_cheat_active: "Reform System Activated"

@@ -1,0 +1,46 @@
+﻿# Skonester菜单：针对「以右击对象（recipient）为派系目标」的国内派系
+
+# 一键解散：所有以 recipient 为目标的派系；若正在派系战争中则先白和再销毁。
+skonester_cheat_menu_dissolve_all_factions_targeting_recipient_effect = {
+  scope:recipient = {
+    every_targeting_faction = {
+      if = {
+        limit = { exists = faction_war }
+        faction_war = { end_war = white_peace }
+      }
+      destroy_faction = yes
+    }
+  }
+}
+
+# 一键遣散成员：领地内封臣链与宫廷中，凡加入「以 recipient 为目标」的派系者一律退出（不处于派系战时；仍在战中的请用解散）。
+skonester_cheat_menu_realm_leave_factions_targeting_recipient_effect = {
+  scope:recipient = {
+    every_vassal_or_below = {
+      limit = {
+        exists = joined_faction
+        joined_faction = {
+          faction_target = scope:recipient
+          faction_is_at_war = no
+        }
+      }
+      leave_faction = joined_faction
+    }
+    every_courtier = {
+      limit = {
+        exists = joined_faction
+        joined_faction = {
+          faction_target = scope:recipient
+          faction_is_at_war = no
+        }
+      }
+      leave_faction = joined_faction
+    }
+  }
+}
+
+# 左栏「解除国内派系」单项：先解散以 recipient 为目标的派系，再令领内封臣/廷臣退出仍针对该目标的非战派系。
+skonester_cheat_menu_dissolve_domestic_factions_combined_for_recipient_effect = {
+  skonester_cheat_menu_dissolve_all_factions_targeting_recipient_effect = yes
+  skonester_cheat_menu_realm_leave_factions_targeting_recipient_effect = yes
+}

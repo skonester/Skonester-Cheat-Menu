@@ -1,0 +1,246 @@
+﻿# Guard state-rite target evaluation when the top ruler is not allowed to use state faith.
+# This is the current native decision with a short-circuiting is_shown condition only.
+adopt_state_faith = {
+	picture = {
+		trigger = {
+			NOR = {
+				government_has_flag = government_is_tribal
+				government_has_flag = government_is_theocracy
+				top_liege ?= { government_has_flag = government_is_tribal }
+				top_liege ?= { government_has_flag = government_is_theocracy }
+			}
+			OR = {
+				culture = { has_cultural_pillar = heritage_byzantine }
+				top_liege ?= {
+					OR = {
+						culture = { has_cultural_pillar = heritage_byzantine }
+						capital_barony ?= title:b_constantinople
+						is_roman_emperor_primary_title_trigger = yes
+					}
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/decisions/ep3_cerimonial_decision.dds"
+	}
+	picture = {
+		trigger = {
+			top_liege.primary_title.state_rite.faith.religion = religion:islam_religion
+		}
+		reference = "gfx/interface/illustrations/activity_header_backgrounds/activity_pilgrimage.dds"
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	}
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 60
+		duchy = 60
+		kingdom = 60
+		empire = 60
+		hegemony = 0
+	}
+	sort_order = 110
+	decision_group_type = admin
+
+	desc = adopt_state_faith_decision_desc
+	selection_tooltip = adopt_state_faith_decision_selection_tooltip
+
+	is_shown = {
+        has_ep3_dlc_trigger = yes
+        top_liege ?= {
+            trigger_if = {
+                limit = { government_allows = state_faith }
+                primary_title = {
+                    trigger_if = {
+                        limit = { holder = { government_allows = state_faith } }
+                        exists = state_rite
+                        state_rite ?= { NOT = { this = root.rite } }
+                    }
+                    trigger_else = { always = no }
+                }
+            }
+            trigger_else = { always = no }
+        }
+    }
+
+	is_valid = {
+		top_liege = { government_allows = state_faith }
+		NOT = { rite ?= top_liege.primary_title.state_rite }
+	}
+
+	is_valid_showing_failures_only = {
+		is_physically_able = yes
+		is_in_activity = no
+		NOT = { faith.religious_head ?= root }
+		custom_tooltip = {
+			text = adopt_state_faith_heresy_cooldown_tt
+			NOT = { has_character_flag = embraced_heresy_recently }
+		}
+	}
+
+	cost = {}
+
+	effect = {
+		hidden_effect = {
+			rite = { save_scope_as = old_rite }
+			top_liege.primary_title.state_rite = { save_scope_as = new_rite }
+			create_character_memory = { type = adopted_state_faith_memory }
+			scope:new_memory = {
+				set_variable = {
+					name = old_rite
+					value = scope:old_rite
+				}
+				set_variable = {
+					name = new_rite
+					value = scope:new_rite
+				}
+				# Savegame and non-English loc compatibility; do not rename or remove
+				set_variable = {
+					name = old_faith
+					value = scope:old_rite.faith
+				}
+				set_variable = {
+					name = new_faith
+					value = scope:new_rite.faith
+				}
+				set_variable = {
+					name = title
+					value = root.top_liege.primary_title
+				}
+			}
+		}
+
+		# Changing rite into another faith costs piety and can fail silently, so we change the faith first
+		if = {
+			limit = { NOT = { faith = top_liege.primary_title.state_rite.faith } }
+			set_character_faith_with_conversion = top_liege.primary_title.state_rite.faith
+		}
+		if = {
+			limit = { NOT = { rite = top_liege.primary_title.state_rite } }
+			set_character_rite_with_conversion = top_liege.primary_title.state_rite
+		}
+
+		if = {
+			limit = { NOT = { has_character_flag = adopted_state_faith } }
+			if = {
+				limit = { government_has_flag = government_has_influence }
+				change_influence = monumental_influence_gain
+			}
+			add_piety = massive_piety_gain
+			top_liege = {
+				if = {
+					limit = {
+						rite = primary_title.state_rite
+						this != root
+					}
+					add_opinion = {
+						target = root
+						modifier = converted_to_state_faith_opinion
+						opinion = 30
+					}
+				}
+				every_vassal = {
+					custom = every_governor_of_state_faith
+					limit = {
+						rite = top_liege.primary_title.state_rite
+						this != root
+					}
+					add_opinion = {
+						target = root
+						modifier = converted_to_state_faith_opinion
+						opinion = 30
+					}
+				}
+			}
+			add_character_flag = adopted_state_faith
+		}
+	}
+
+	ai_potential = {
+		NOT = { has_trait = zealous } # A zealous vassal would presumably not want to change their faith
+		exists = top_liege.primary_title.state_rite
+		rite != top_liege.primary_title.state_rite
+	}
+
+	ai_will_do = {
+		base = 20
+		modifier = {
+			is_governor = yes
+			add = 40
+		}
+
+		# Personality
+		modifier = {
+			is_governor = yes
+			has_trait = ambitious
+			add = 20
+		}
+		modifier = {
+			has_trait = fickle
+			add = 30
+		}
+		modifier = {
+			has_trait = arbitrary
+			add = 10
+		}
+		modifier = {
+			has_trait = ambitious
+			add = -15
+		}
+		modifier = {
+			has_trait = arrogant
+			add = -15
+		}
+		modifier = {
+			has_trait = content
+			add = -20
+		}
+		modifier = {
+			has_trait = cynical
+			add = -30
+		}
+		modifier = {
+			has_trait = stubborn
+			add = -50
+		}
+
+		# Faith
+		modifier = { # More likely to switch away from an unreformed faith
+			faith ?= { has_doctrine_parameter = unreformed }
+			add = 20
+		}
+		modifier = { # Communal Identity make it more likely to adopt faith if they share same culture with the top liege
+			rite ?= { rite_has_parameter = same_culture_conversion_bonus_active }
+			culture ?= top_liege.culture
+			add = 10
+		}
+		modifier = { # Some faith are more likely to be abandoned
+			rite ?= { rite_has_parameter = unattractive_for_character_conversions }
+			add = 10
+		}
+		modifier = { # Don't adopt the state faith if you have the same rite as the top liege (if the emperor can have this rite, so can we!)
+			rite = top_liege.rite
+			top_liege != this
+			factor = 0
+		}
+
+		# Other
+		modifier = {
+			has_vassal_stance = zealot
+			factor = 0.3
+		}
+
+		# Non-admin vassals only consider converting if their rite hostility is low enough
+		modifier = {
+			NOT = { government_has_flag = government_is_administrative }
+			rite ?= {
+				rite_hostility_level = {
+					target = root.top_liege.primary_title.state_rite
+					value >= faith_hostile_level
+				}
+			}
+			factor = 0
+		}
+	}
+}

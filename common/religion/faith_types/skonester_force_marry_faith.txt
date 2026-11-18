@@ -1,0 +1,24 @@
+﻿# 油画「强制结婚」用临时信仰（原先嵌在 religion 的 faiths = { } 中）。
+# CK3 1.20: faiths are their own database. No scripted Rite is defined, so the game creates a dynamic
+# main Rite with the same key, seeded from the tenets/doctrines below.
+skonester_force_marry_faith = {
+  faith_details = {
+    religion = skonester_force_marry_religion
+    color = { 0.22 0.2 0.24 }
+    icon = christianity_messalian
+    reformed_icon = christianity_messalian
+  }
+
+  # 神职人员婚姻 can_marry_common_trigger 依赖
+  doctrines = {
+    doctrine_clerical_marriage_allowed
+    doctrine_clerical_gender_either
+    unreformed_faith_doctrine
+  }
+
+  tenets = {
+    tenet_divine_marriage
+    tenet_ritual_celebrations
+    tenet_natural_primitivism
+  }
+}

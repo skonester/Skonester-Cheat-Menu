@@ -1,0 +1,40 @@
+﻿# 头衔选择列表翻页：每页 8 项
+
+skonester_title_pick_page_offset_value = {
+  value = var:skonester_title_pick_page
+  multiply = 8
+}
+
+skonester_title_pick_next_page_min_total_value = {
+  value = var:skonester_title_pick_page
+  add = 1
+  multiply = 8
+}
+
+skonester_title_pick_sort_key = {
+  value = 0
+  if = {
+    limit = { tier = tier_hegemony }
+    add = 60
+  }
+  if = {
+    limit = { tier = tier_empire }
+    add = 50
+  }
+  if = {
+    limit = { tier = tier_kingdom }
+    add = 40
+  }
+  if = {
+    limit = { tier = tier_duchy }
+    add = 30
+  }
+  if = {
+    limit = { tier = tier_county }
+    add = 20
+  }
+  if = {
+    limit = { tier = tier_barony }
+    add = 10
+  }
+}

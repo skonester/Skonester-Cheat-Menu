@@ -1,0 +1,82 @@
+﻿# 宝物窃取：窃后若对方仍有宝物则重开选择窗，否则清理变量并关闭
+
+# 目标角色存于 actor.var:skonester_steal_victim（互动 on_accept 写入），勿依赖 scope:recipient（trigger_event 后丢失）
+
+skonester_steal_picker_close_effect = {
+  remove_character_flag = skonester_steal_picker_active
+  clear_variable_list = skonester_steal_art_queue
+  if = {
+    limit = { has_variable = skonester_steal_page }
+    remove_variable = skonester_steal_page
+  }
+  if = {
+    limit = { has_variable = skonester_steal_art_total }
+    remove_variable = skonester_steal_art_total
+  }
+  if = {
+    limit = { has_variable = skonester_steal_skip }
+    remove_variable = skonester_steal_skip
+  }
+  if = {
+    limit = { has_variable = skonester_steal_victim }
+    remove_variable = skonester_steal_victim
+  }
+}
+
+skonester_steal_picker_reopen_effect = {
+  trigger_event = {
+    id = skonester_cheat_menu.3094
+    days = 0
+  }
+}
+
+skonester_steal_after_pick_effect = {
+  # 须用 root：从互动打开时曾有 scope:actor，链式 trigger_event 后 scope:actor 常丢失，导致列表建不起来、窃取无反应、界面卡住。
+  root = {
+    if = {
+      limit = {
+        has_variable = skonester_steal_victim
+      }
+      var:skonester_steal_victim = {
+        if = {
+          limit = {
+            has_any_artifact = yes
+          }
+          root = {
+            skonester_steal_picker_reopen_effect = yes
+          }
+        }
+        else = {
+          skonester_steal_picker_close_effect = yes
+        }
+      }
+    }
+    else = {
+      skonester_steal_picker_close_effect = yes
+    }
+  }
+}
+
+# 从 scope:recipient 随机取一件宝物转给 scope:actor（历史为被盗）。须对方仍有宝物，否则勿调用。
+skonester_steal_transfer_one_random_to_actor_effect = {
+  scope:recipient = {
+    if = {
+      limit = {
+        has_any_artifact = yes
+      }
+      random_character_artifact = {
+        set_owner = scope:actor
+      }
+    }
+  }
+}
+
+# 将 scope:recipient 持有的全部宝物转给 scope:actor（同上）。
+skonester_steal_transfer_all_to_actor_effect = {
+  scope:recipient = {
+    every_character_artifact = {
+      set_owner = scope:actor
+    }
+  }
+}
+

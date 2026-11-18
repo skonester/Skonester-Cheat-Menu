@@ -1,0 +1,11 @@
+﻿# 读档/开局后补清宗教编辑 GUI 挂起（主菜单 VariableSystem 与存档旗标残留）
+
+namespace = skonester_acm_faith_gui
+
+skonester_acm_faith_gui.0001 = {
+  type = character_event
+  hidden = yes
+  immediate = {
+    skonester_acm_gui_startup_cleanup_effect = yes
+  }
+}

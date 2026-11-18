@@ -1,0 +1,4 @@
+﻿l_turkish:
+ # CK3 1.20: these were raw-text custom_tooltip strings in common/decisions/pcm_decisions.txt
+ pcm_artifact_cheat_tt:0 "Diyarını güçlendirmek için saray ve kişisel eserler alırsın."
+ pcm_culture_cheat_tt:0 "Kültürün çok sayıda gelenek edinir. Çelişen gelenekler önce kaldırılır."

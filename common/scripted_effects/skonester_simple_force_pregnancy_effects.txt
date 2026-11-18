@@ -1,0 +1,12 @@
+﻿# 修复版强制怀孕效果 - 生父不再隐藏
+
+skonester_simple_force_pregnancy_effect = {
+  scope:recipient = {
+    make_pregnant = {
+      father = scope:actor
+      known_bastard = yes
+    }
+
+    set_pregnancy_assumed_father = scope:actor
+  }
+}

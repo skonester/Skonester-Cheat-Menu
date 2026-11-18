@@ -1,0 +1,10 @@
+﻿l_german:
+ dp_debug_start_era_of_crusades_interaction:0 "Start: Zeitalter der Kreuzzüge"
+ dp_debug_launch_natural_crusade_interaction:0 "Natürlichen Kreuzzug starten (Debug)"
+ dp_debug_start_era_of_jihads_interaction:0 "Start: Zeitalter der Dschihads"
+ dp_debug_start_great_holy_war_interaction:0 "Großen Heiligen Krieg starten (Kriegsziel ändern)"
+
+ dp_debug_start_era_of_crusades_interaction_desc:0 "Beginnt zu Testzwecken das Zeitalter der Kreuzzüge."
+ dp_debug_launch_natural_crusade_interaction_desc:0 "Debug-Auslöser zum Starten eines natürlichen Kreuzzugs."
+ dp_debug_start_era_of_jihads_interaction_desc:0 "Beginnt zu Testzwecken das Zeitalter der Dschihads."
+ dp_debug_start_great_holy_war_interaction_desc:0 "Debug-Auslöser zum Starten eines Großen Heiligen Krieges gegen einen beliebigen zulässigen Empfänger."

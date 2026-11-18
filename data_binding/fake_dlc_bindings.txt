@@ -1,0 +1,11 @@
+﻿macro = {
+	description = "is Dlc a mod?"
+	definition = "IsFakeDlc"
+	replace_with = "EqualTo_string(Dlc.GetFeatures, '• fake_dlc')"
+}
+
+macro = {
+	description = "icon & text should not be highlighted(dlc disabled or mod not loaded)"
+	definition = "DlcIconDisabled"
+	replace_with = "And(Not( Dlc.IsEnabled ), Not(IsFakeDlc))"
+}

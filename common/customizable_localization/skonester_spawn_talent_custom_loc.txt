@@ -1,0 +1,22 @@
+﻿# 生成廷臣菜单：性别一行随 recipient 的 skonester_spawn_talent_female_chance 显示「当前女/男，点击切换」
+skonester_spawn_talent_hub_gender_btn = {
+  type = character
+  random_valid = no
+  text = {
+    trigger = {
+      OR = {
+        NOT = { has_variable = skonester_spawn_talent_female_chance }
+        var:skonester_spawn_talent_female_chance >= 50
+      }
+    }
+    localization_key = skonester_cheat_menu.0155.gender_line_female
+  }
+  text = {
+    trigger = {
+      has_variable = skonester_spawn_talent_female_chance
+      var:skonester_spawn_talent_female_chance < 50
+    }
+    localization_key = skonester_cheat_menu.0155.gender_line_male
+    fallback = yes
+  }
+}

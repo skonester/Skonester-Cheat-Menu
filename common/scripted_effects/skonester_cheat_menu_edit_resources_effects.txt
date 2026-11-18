@@ -1,0 +1,549 @@
+﻿# 官吏统辖「修改资源」：子事件链中 scope:recipient 会丢失，须从 global_var:skonester_cheat_menu_recipient 恢复。
+
+skonester_cheat_menu_edit_resources_sync_recipient_effect = {
+  skonester_cheat_menu_sync_target_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = { save_scope_as = recipient }
+  }
+  else_if = {
+    limit = { has_global_variable = skonester_cheat_menu_recipient }
+    global_var:skonester_cheat_menu_recipient = { save_scope_as = recipient }
+  }
+}
+
+# 压力：作用于 scope:recipient（与选项 show_as_tooltip 数值一致）
+skonester_cheat_menu_recipient_add_stress_effect = {
+  scope:recipient = {
+    add_stress = $AMOUNT$
+  }
+}
+
+# 金钱：个人 gold（与国库 treasury 分开）
+skonester_cheat_menu_recipient_add_gold_effect = {
+  scope:recipient = {
+    add_gold = $AMOUNT$
+  }
+}
+
+skonester_cheat_menu_recipient_remove_gold_effect = {
+  skonester_cheat_menu_edit_resources_sync_recipient_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      remove_short_term_gold = $AMOUNT$
+    }
+  }
+  else_if = {
+    limit = { has_global_variable = skonester_cheat_menu_recipient }
+    global_var:skonester_cheat_menu_recipient = {
+      remove_short_term_gold = $AMOUNT$
+    }
+  }
+  else_if = {
+    limit = { exists = scope:recipient }
+    scope:recipient = {
+      remove_short_term_gold = $AMOUNT$
+    }
+  }
+}
+
+# 国库：政府金库池（has_treasury 政体）
+skonester_cheat_menu_recipient_add_treasury_effect = {
+  scope:recipient = {
+    add_treasury = $AMOUNT$
+  }
+}
+
+skonester_cheat_menu_recipient_remove_treasury_effect = {
+  scope:recipient = {
+    remove_treasury = $AMOUNT$
+  }
+}
+
+# 贤能值：子事件链中须从 global_var 恢复目标再 change_merit
+skonester_cheat_menu_recipient_change_merit_effect = {
+  skonester_cheat_menu_edit_resources_sync_recipient_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      change_merit = $AMOUNT$
+    }
+  }
+  else_if = {
+    limit = { has_global_variable = skonester_cheat_menu_recipient }
+    global_var:skonester_cheat_menu_recipient = {
+      change_merit = $AMOUNT$
+    }
+  }
+}
+
+# 官吏统辖「修改资源」：恐怖值（dread）增量须与按钮标注一致。
+# 原版 add_dread = N 会按角色的 dread_gain_mult（偏执、冷酷等）缩放，导致「+40」实际只加约 10。
+# 本效果将目标设为当前 dread + $DELTA$（再按政体夹在 0～100 或 0～150），再以 ±1 步进直至到达或步数上限。
+
+# 直辖上限：先同步 global_var 锁定目标再改 modifier（子事件链里 scope:recipient 易丢）
+skonester_cheat_menu_recipient_add_domain_modifier_effect = {
+  skonester_cheat_menu_edit_resources_sync_recipient_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      add_character_modifier = $MODIFIER$
+    }
+  }
+  else_if = {
+    limit = { has_global_variable = skonester_cheat_menu_recipient }
+    global_var:skonester_cheat_menu_recipient = {
+      add_character_modifier = $MODIFIER$
+    }
+  }
+}
+
+# 清除官吏统辖「修改资源」施加的全部直辖上限修正
+skonester_cheat_menu_recipient_clear_domain_limit_mods_effect = {
+  skonester_cheat_menu_edit_resources_sync_recipient_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      remove_character_modifier = skonester_edit_res_domain_p10
+      remove_character_modifier = skonester_edit_res_domain_p20
+      remove_character_modifier = skonester_edit_res_domain_p40
+      remove_character_modifier = skonester_edit_res_domain_p100
+      remove_character_modifier = skonester_edit_res_domain_unlimited
+      remove_character_modifier = skonester_edit_res_domain_m10
+      remove_character_modifier = skonester_edit_res_domain_m20
+      remove_character_modifier = skonester_edit_res_domain_m40
+    }
+  }
+  else_if = {
+    limit = { has_global_variable = skonester_cheat_menu_recipient }
+    global_var:skonester_cheat_menu_recipient = {
+      remove_character_modifier = skonester_edit_res_domain_p10
+      remove_character_modifier = skonester_edit_res_domain_p20
+      remove_character_modifier = skonester_edit_res_domain_p40
+      remove_character_modifier = skonester_edit_res_domain_p100
+      remove_character_modifier = skonester_edit_res_domain_unlimited
+      remove_character_modifier = skonester_edit_res_domain_m10
+      remove_character_modifier = skonester_edit_res_domain_m20
+      remove_character_modifier = skonester_edit_res_domain_m40
+    }
+  }
+}
+
+# 直辖上限无上限：先清叠层再挂 +999（可重复点击刷新）
+skonester_cheat_menu_recipient_apply_domain_unlimited_effect = {
+  skonester_cheat_menu_recipient_clear_domain_limit_mods_effect = yes
+  skonester_cheat_menu_recipient_add_domain_modifier_effect = {
+    MODIFIER = skonester_edit_res_domain_unlimited
+  }
+}
+
+skonester_cheat_menu_recipient_add_flat_dread_effect = {
+  scope:recipient = {
+    set_variable = {
+      name = skonester_flat_dread_target
+      value = {
+        value = dread
+        add = $DELTA$
+        min = 0
+      }
+    }
+    if = {
+      limit = {
+        NOT = { skonester_cheat_menu_dread_cap_150_trigger = yes }
+      }
+      if = {
+        limit = { var:skonester_flat_dread_target > 100 }
+        set_variable = {
+          name = skonester_flat_dread_target
+          value = 100
+        }
+      }
+    }
+    else = {
+      if = {
+        limit = { var:skonester_flat_dread_target > 150 }
+        set_variable = {
+          name = skonester_flat_dread_target
+          value = 150
+        }
+      }
+    }
+    if = {
+      limit = { var:skonester_flat_dread_target > dread }
+      while = {
+        count = 600
+        limit = {
+          dread < var:skonester_flat_dread_target
+        }
+        add_dread = 1
+      }
+    }
+    else_if = {
+      limit = { var:skonester_flat_dread_target < dread }
+      while = {
+        count = 600
+        limit = {
+          dread > var:skonester_flat_dread_target
+        }
+        add_dread = -1
+      }
+    }
+    remove_variable = skonester_flat_dread_target
+  }
+}
+
+# 归零：各资源立即设为 0（直辖上限为清除本菜单施加的修正）
+
+skonester_cheat_menu_recipient_set_gold_zero_effect = {
+  skonester_cheat_menu_edit_resources_sync_recipient_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      remove_short_term_gold = { value = gold }
+      remove_long_term_gold = { value = gold }
+      remove_reserved_gold = { value = gold }
+    }
+  }
+  else_if = {
+    limit = { has_global_variable = skonester_cheat_menu_recipient }
+    global_var:skonester_cheat_menu_recipient = {
+      remove_short_term_gold = { value = gold }
+      remove_long_term_gold = { value = gold }
+      remove_reserved_gold = { value = gold }
+    }
+  }
+  else_if = {
+    limit = { exists = scope:recipient }
+    scope:recipient = {
+      remove_short_term_gold = { value = gold }
+      remove_long_term_gold = { value = gold }
+      remove_reserved_gold = { value = gold }
+    }
+  }
+}
+
+skonester_cheat_menu_recipient_set_treasury_zero_effect = {
+  skonester_cheat_menu_edit_resources_sync_recipient_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      remove_treasury = {
+        value = treasury
+      }
+    }
+  }
+  else_if = {
+    limit = { has_global_variable = skonester_cheat_menu_recipient }
+    global_var:skonester_cheat_menu_recipient = {
+      remove_treasury = {
+        value = treasury
+      }
+    }
+  }
+  else_if = {
+    limit = { exists = scope:recipient }
+    scope:recipient = {
+      remove_treasury = {
+        value = treasury
+      }
+    }
+  }
+}
+
+skonester_cheat_menu_recipient_set_prestige_zero_effect = {
+  skonester_cheat_menu_edit_resources_sync_recipient_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      add_prestige = {
+        value = prestige
+        multiply = -1
+      }
+    }
+  }
+  else_if = {
+    limit = { has_global_variable = skonester_cheat_menu_recipient }
+    global_var:skonester_cheat_menu_recipient = {
+      add_prestige = {
+        value = prestige
+        multiply = -1
+      }
+    }
+  }
+  else_if = {
+    limit = { exists = scope:recipient }
+    scope:recipient = {
+      add_prestige = {
+        value = prestige
+        multiply = -1
+      }
+    }
+  }
+}
+
+skonester_cheat_menu_recipient_set_piety_zero_effect = {
+  skonester_cheat_menu_edit_resources_sync_recipient_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      add_piety = {
+        value = piety
+        multiply = -1
+      }
+    }
+  }
+  else_if = {
+    limit = { has_global_variable = skonester_cheat_menu_recipient }
+    global_var:skonester_cheat_menu_recipient = {
+      add_piety = {
+        value = piety
+        multiply = -1
+      }
+    }
+  }
+  else_if = {
+    limit = { exists = scope:recipient }
+    scope:recipient = {
+      add_piety = {
+        value = piety
+        multiply = -1
+      }
+    }
+  }
+}
+
+skonester_cheat_menu_recipient_set_influence_zero_effect = {
+  skonester_cheat_menu_edit_resources_sync_recipient_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      change_influence = {
+        value = influence
+        multiply = -1
+      }
+    }
+  }
+  else_if = {
+    limit = { has_global_variable = skonester_cheat_menu_recipient }
+    global_var:skonester_cheat_menu_recipient = {
+      change_influence = {
+        value = influence
+        multiply = -1
+      }
+    }
+  }
+  else_if = {
+    limit = { exists = scope:recipient }
+    scope:recipient = {
+      change_influence = {
+        value = influence
+        multiply = -1
+      }
+    }
+  }
+}
+
+skonester_cheat_menu_recipient_set_dynasty_prestige_zero_effect = {
+  skonester_cheat_menu_edit_resources_sync_recipient_effect = yes
+  if = {
+    limit = {
+      exists = scope:skonester_cheat_menu_target
+      scope:skonester_cheat_menu_target = { has_dynasty = yes }
+    }
+    scope:skonester_cheat_menu_target = {
+      dynasty = {
+        add_dynasty_prestige = {
+          value = dynasty_prestige
+          multiply = -1
+        }
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      has_global_variable = skonester_cheat_menu_recipient
+      global_var:skonester_cheat_menu_recipient = { has_dynasty = yes }
+    }
+    global_var:skonester_cheat_menu_recipient = {
+      dynasty = {
+        add_dynasty_prestige = {
+          value = dynasty_prestige
+          multiply = -1
+        }
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      exists = scope:recipient
+      scope:recipient = { has_dynasty = yes }
+    }
+    scope:recipient = {
+      dynasty = {
+        add_dynasty_prestige = {
+          value = dynasty_prestige
+          multiply = -1
+        }
+      }
+    }
+  }
+}
+
+skonester_cheat_menu_recipient_set_merit_zero_effect = {
+  skonester_cheat_menu_edit_resources_sync_recipient_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      change_merit = {
+        value = merit
+        multiply = -1
+      }
+    }
+  }
+  else_if = {
+    limit = { has_global_variable = skonester_cheat_menu_recipient }
+    global_var:skonester_cheat_menu_recipient = {
+      change_merit = {
+        value = merit
+        multiply = -1
+      }
+    }
+  }
+}
+
+skonester_cheat_menu_recipient_set_dread_zero_effect = {
+  skonester_cheat_menu_edit_resources_sync_recipient_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      while = {
+        count = 600
+        limit = { dread > 0 }
+        add_dread = -1
+      }
+    }
+  }
+  else_if = {
+    limit = { has_global_variable = skonester_cheat_menu_recipient }
+    global_var:skonester_cheat_menu_recipient = {
+      while = {
+        count = 600
+        limit = { dread > 0 }
+        add_dread = -1
+      }
+    }
+  }
+  else_if = {
+    limit = { exists = scope:recipient }
+    scope:recipient = {
+      while = {
+        count = 600
+        limit = { dread > 0 }
+        add_dread = -1
+      }
+    }
+  }
+}
+
+skonester_cheat_menu_recipient_set_tyranny_zero_effect = {
+  skonester_cheat_menu_edit_resources_sync_recipient_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      add_tyranny = {
+        value = tyranny
+        multiply = -1
+      }
+    }
+  }
+  else_if = {
+    limit = { has_global_variable = skonester_cheat_menu_recipient }
+    global_var:skonester_cheat_menu_recipient = {
+      add_tyranny = {
+        value = tyranny
+        multiply = -1
+      }
+    }
+  }
+  else_if = {
+    limit = { exists = scope:recipient }
+    scope:recipient = {
+      add_tyranny = {
+        value = tyranny
+        multiply = -1
+      }
+    }
+  }
+}
+
+skonester_cheat_menu_recipient_set_legitimacy_zero_effect = {
+  skonester_cheat_menu_edit_resources_sync_recipient_effect = yes
+  if = {
+    limit = {
+      exists = scope:skonester_cheat_menu_target
+      scope:skonester_cheat_menu_target = { has_legitimacy = yes }
+    }
+    scope:skonester_cheat_menu_target = {
+      add_legitimacy = {
+        value = legitimacy
+        multiply = -1
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      has_global_variable = skonester_cheat_menu_recipient
+      global_var:skonester_cheat_menu_recipient = { has_legitimacy = yes }
+    }
+    global_var:skonester_cheat_menu_recipient = {
+      add_legitimacy = {
+        value = legitimacy
+        multiply = -1
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      exists = scope:recipient
+      scope:recipient = { has_legitimacy = yes }
+    }
+    scope:recipient = {
+      add_legitimacy = {
+        value = legitimacy
+        multiply = -1
+      }
+    }
+  }
+}
+
+skonester_cheat_menu_recipient_set_stress_zero_effect = {
+  skonester_cheat_menu_edit_resources_sync_recipient_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      add_stress = {
+        value = stress
+        multiply = -1
+      }
+    }
+  }
+  else_if = {
+    limit = { has_global_variable = skonester_cheat_menu_recipient }
+    global_var:skonester_cheat_menu_recipient = {
+      add_stress = {
+        value = stress
+        multiply = -1
+      }
+    }
+  }
+  else_if = {
+    limit = { exists = scope:recipient }
+    scope:recipient = {
+      add_stress = {
+        value = stress
+        multiply = -1
+      }
+    }
+  }
+}

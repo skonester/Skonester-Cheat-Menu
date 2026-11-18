@@ -1,0 +1,120 @@
+﻿# 自 Divine Intervention #2986538297 移植
+# 源文件：common/scripted_guis/DI_diplomacy_sgui.txt
+# 变量映射：DI_primary_character → skonester_marriage_slot_primary
+#          DI_tertiary_character → skonester_marriage_slot_tertiary
+# 使用前须设置 scope:skonester_marriage_pick_char = 被选中角色；scope:actor = 玩家。
+
+skonester_di_select_primary_character_effect = {
+  scope:skonester_marriage_pick_char = {
+    save_scope_as = select_char
+  }
+  scope:actor = {
+    set_variable = {
+      name = skonester_marriage_slot_primary
+      value = scope:select_char
+    }
+    if = {
+      limit = {
+        scope:select_char = {
+          exists = primary_partner
+        }
+      }
+      scope:select_char = {
+        primary_partner = {
+          save_scope_as = skonester_di_auto_tertiary_pick
+        }
+      }
+      set_variable = {
+        name = skonester_marriage_slot_tertiary
+        value = scope:skonester_di_auto_tertiary_pick
+      }
+    }
+    else = {
+      remove_variable ?= skonester_marriage_slot_tertiary
+    }
+  }
+}
+
+skonester_di_clear_primary_character_effect = {
+  scope:actor = {
+    remove_variable ?= skonester_marriage_slot_primary
+  }
+}
+
+skonester_di_select_tertiary_character_effect = {
+  scope:skonester_marriage_pick_char = {
+    save_scope_as = select_char
+  }
+  scope:actor = {
+    set_variable = {
+      name = skonester_marriage_slot_tertiary
+      value = scope:select_char
+    }
+  }
+}
+
+skonester_di_clear_tertiary_character_effect = {
+  scope:actor = {
+    remove_variable ?= skonester_marriage_slot_tertiary
+  }
+}
+
+# DI_dip_marry
+skonester_di_dip_marry_effect = {
+  scope:actor = {
+    var:skonester_marriage_slot_primary = {
+      marry = scope:actor.var:skonester_marriage_slot_tertiary
+    }
+  }
+}
+
+# DI_dip_marry_matrilineal
+skonester_di_dip_marry_matrilineal_effect = {
+  scope:actor = {
+    if = {
+      limit = {
+        has_variable = skonester_marriage_slot_primary
+        has_variable = skonester_marriage_slot_tertiary
+      }
+      var:skonester_marriage_slot_primary = {
+        marry_matrilineal = scope:actor.var:skonester_marriage_slot_tertiary
+      }
+    }
+  }
+}
+
+# DI_dip_divorce
+skonester_di_dip_divorce_effect = {
+  scope:actor = {
+    var:skonester_marriage_slot_primary = {
+      divorce = scope:actor.var:skonester_marriage_slot_tertiary
+    }
+  }
+}
+
+# DI_dip_arrange_betrothal
+skonester_di_dip_arrange_betrothal_effect = {
+  scope:actor = {
+    var:skonester_marriage_slot_primary = {
+      create_betrothal = scope:actor.var:skonester_marriage_slot_tertiary
+    }
+  }
+}
+
+# DI_dip_arrange_betrothal_matrilineal
+skonester_di_dip_arrange_betrothal_matrilineal_effect = {
+  scope:actor = {
+    var:skonester_marriage_slot_primary = {
+      create_betrothal_matrilineal = scope:actor.var:skonester_marriage_slot_tertiary
+    }
+  }
+}
+
+# DI_dip_break_betrothal
+skonester_di_dip_break_betrothal_effect = {
+  scope:actor = {
+    var:skonester_marriage_slot_primary = {
+      break_betrothal = betrothed
+    }
+  }
+}

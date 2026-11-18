@@ -1,0 +1,24 @@
+﻿# 绝育（右击目标 = recipient）：永久修正 + 原版「不孕/不育」特质，引擎级禁止怀孕；再次点击关闭时移除修正，并仅在由本功能授予时移除特质。
+skonester_cheat_menu_sterilize_toggle_recipient_effect = {
+  scope:recipient = {
+    if = {
+      limit = { has_character_modifier = skonester_cheat_menu_sterilized_modifier }
+      remove_character_modifier = skonester_cheat_menu_sterilized_modifier
+      if = {
+        limit = { has_character_flag = skonester_cheat_menu_sterilize_granted_infertile }
+        remove_trait = infertile
+        remove_character_flag = skonester_cheat_menu_sterilize_granted_infertile
+      }
+    }
+    else = {
+      add_character_modifier = {
+        modifier = skonester_cheat_menu_sterilized_modifier
+      }
+      if = {
+        limit = { NOT = { has_trait = infertile } }
+        add_trait = infertile
+        add_character_flag = skonester_cheat_menu_sterilize_granted_infertile
+      }
+    }
+  }
+}

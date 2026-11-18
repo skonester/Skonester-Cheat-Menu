@@ -1,0 +1,376 @@
+﻿# Skonester：君权/行政 — 逐步写入累积法条、清冷却、固化防回弹
+
+skonester_clear_realm_authority_cooldown_variables_effect = {
+  if = {
+    limit = { has_variable = crown_authority_cooldown }
+    remove_variable = crown_authority_cooldown
+  }
+  if = {
+    limit = { has_variable = tribal_authority_cooldown }
+    remove_variable = tribal_authority_cooldown
+  }
+  if = {
+    limit = { has_variable = nomadic_authority_cooldown }
+    remove_variable = nomadic_authority_cooldown
+  }
+  if = {
+    limit = { has_variable = imperial_bureaucracy_cooldown }
+    remove_variable = imperial_bureaucracy_cooldown
+  }
+}
+
+# 清除易导致「显示满级、实际失效/回弹」的辅助变量
+skonester_clear_authority_rollback_variables_effect = {
+  skonester_clear_realm_authority_cooldown_variables_effect = yes
+  if = {
+    limit = { has_variable = authority_cooldown_break_tally }
+    remove_variable = authority_cooldown_break_tally
+  }
+}
+
+# 文化革新：满足君权/行政最高档 can_pass / can_keep 硬性条件
+skonester_cheat_menu_grant_realm_authority_innovations_effect = {
+  culture = {
+    if = {
+      limit = { NOT = { has_innovation = innovation_plenary_assemblies } }
+      add_innovation = innovation_plenary_assemblies
+    }
+    if = {
+      limit = { NOT = { has_innovation = innovation_royal_prerogative } }
+      add_innovation = innovation_royal_prerogative
+    }
+    if = {
+      limit = { NOT = { has_innovation = innovation_all_things } }
+      add_innovation = innovation_all_things
+    }
+  }
+}
+
+# 解散针对本角色的自由权派系（防派系战争强制降级）
+skonester_dissolve_liberty_factions_targeting_root_effect = {
+  every_targeting_faction = {
+    limit = { faction_is_type = liberty_faction }
+    if = {
+      limit = { exists = faction_war }
+      faction_war = { end_war = white_peace }
+    }
+    destroy_faction = yes
+  }
+}
+
+# 仅取消「固化绝对君权」标记，保留玩家选定的目标档位变量
+skonester_cheat_menu_clear_authority_lock_flag_only_effect = {
+  remove_character_flag = skonester_realm_authority_locked
+  if = {
+    limit = { has_variable = skonester_realm_authority_lock_level }
+    remove_variable = skonester_realm_authority_lock_level
+  }
+  remove_character_modifier = skonester_realm_authority_locked_holder
+}
+
+# $LEVEL$ = 1|2|3|4：按政体从最低档逐步 skip 写入至目标档（修复只改 UI 不改底层状态）
+skonester_cheat_menu_apply_realm_authority_level_effect = {
+  skonester_cheat_menu_grant_realm_authority_innovations_effect = yes
+  skonester_clear_authority_rollback_variables_effect = yes
+
+  if = {
+    limit = {
+      OR = {
+        $LEVEL$ = 1
+        $LEVEL$ = 2
+        $LEVEL$ = 3
+      }
+    }
+    skonester_cheat_menu_clear_authority_lock_flag_only_effect = yes
+  }
+
+  if = {
+    limit = { realm_law_use_celestial_bureaucracy = yes }
+    if = {
+      limit = { $LEVEL$ = 1 }
+      add_realm_law_skip_effects = celestial_bureaucracy_0
+    }
+    else_if = {
+      limit = { $LEVEL$ = 2 }
+      add_realm_law_skip_effects = celestial_bureaucracy_0
+      add_realm_law_skip_effects = celestial_bureaucracy_1
+    }
+    else_if = {
+      limit = { $LEVEL$ = 3 }
+      add_realm_law_skip_effects = celestial_bureaucracy_0
+      add_realm_law_skip_effects = celestial_bureaucracy_1
+      add_realm_law_skip_effects = celestial_bureaucracy_2
+    }
+    else_if = {
+      limit = { $LEVEL$ = 4 }
+      add_realm_law_skip_effects = celestial_bureaucracy_0
+      add_realm_law_skip_effects = celestial_bureaucracy_1
+      add_realm_law_skip_effects = celestial_bureaucracy_2
+      add_realm_law_skip_effects = celestial_bureaucracy_3
+    }
+  }
+  else_if = {
+    limit = { realm_law_use_meritocratic_bureaucracy = yes }
+    if = {
+      limit = { $LEVEL$ = 1 }
+      add_realm_law_skip_effects = meritocratic_bureaucracy_0
+    }
+    else_if = {
+      limit = { $LEVEL$ = 2 }
+      add_realm_law_skip_effects = meritocratic_bureaucracy_0
+      add_realm_law_skip_effects = meritocratic_bureaucracy_1
+    }
+    else_if = {
+      limit = { $LEVEL$ = 3 }
+      add_realm_law_skip_effects = meritocratic_bureaucracy_0
+      add_realm_law_skip_effects = meritocratic_bureaucracy_1
+      add_realm_law_skip_effects = meritocratic_bureaucracy_2
+    }
+    else_if = {
+      limit = { $LEVEL$ = 4 }
+      add_realm_law_skip_effects = meritocratic_bureaucracy_0
+      add_realm_law_skip_effects = meritocratic_bureaucracy_1
+      add_realm_law_skip_effects = meritocratic_bureaucracy_2
+      add_realm_law_skip_effects = meritocratic_bureaucracy_3
+    }
+  }
+  else_if = {
+    limit = { realm_law_use_japanese_bureaucracy = yes }
+    if = {
+      limit = { $LEVEL$ = 1 }
+      add_realm_law_skip_effects = japanese_bureaucracy_0
+    }
+    else_if = {
+      limit = { $LEVEL$ = 2 }
+      add_realm_law_skip_effects = japanese_bureaucracy_0
+      add_realm_law_skip_effects = japanese_bureaucracy_1
+    }
+    else_if = {
+      limit = { $LEVEL$ = 3 }
+      add_realm_law_skip_effects = japanese_bureaucracy_0
+      add_realm_law_skip_effects = japanese_bureaucracy_1
+      add_realm_law_skip_effects = japanese_bureaucracy_2
+    }
+    else_if = {
+      limit = { $LEVEL$ = 4 }
+      add_realm_law_skip_effects = japanese_bureaucracy_0
+      add_realm_law_skip_effects = japanese_bureaucracy_1
+      add_realm_law_skip_effects = japanese_bureaucracy_2
+      add_realm_law_skip_effects = japanese_bureaucracy_3
+    }
+  }
+  else_if = {
+    limit = { realm_law_use_imperial_bureaucracy = yes }
+    if = {
+      limit = { $LEVEL$ = 1 }
+      add_realm_law_skip_effects = imperial_bureaucracy_0
+    }
+    else_if = {
+      limit = { $LEVEL$ = 2 }
+      add_realm_law_skip_effects = imperial_bureaucracy_0
+      add_realm_law_skip_effects = imperial_bureaucracy_1
+    }
+    else_if = {
+      limit = { $LEVEL$ = 3 }
+      add_realm_law_skip_effects = imperial_bureaucracy_0
+      add_realm_law_skip_effects = imperial_bureaucracy_1
+      add_realm_law_skip_effects = imperial_bureaucracy_2
+    }
+    else_if = {
+      limit = { $LEVEL$ = 4 }
+      add_realm_law_skip_effects = imperial_bureaucracy_0
+      add_realm_law_skip_effects = imperial_bureaucracy_1
+      add_realm_law_skip_effects = imperial_bureaucracy_2
+      add_realm_law_skip_effects = imperial_bureaucracy_3
+    }
+  }
+  else_if = {
+    limit = { realm_law_use_crown_authority = yes }
+    if = {
+      limit = { $LEVEL$ = 1 }
+      add_realm_law_skip_effects = crown_authority_0
+    }
+    else_if = {
+      limit = { $LEVEL$ = 2 }
+      add_realm_law_skip_effects = crown_authority_0
+      add_realm_law_skip_effects = crown_authority_1
+    }
+    else_if = {
+      limit = { $LEVEL$ = 3 }
+      add_realm_law_skip_effects = crown_authority_0
+      add_realm_law_skip_effects = crown_authority_1
+      add_realm_law_skip_effects = crown_authority_2
+    }
+    else_if = {
+      limit = { $LEVEL$ = 4 }
+      add_realm_law_skip_effects = crown_authority_0
+      add_realm_law_skip_effects = crown_authority_1
+      add_realm_law_skip_effects = crown_authority_2
+      add_realm_law_skip_effects = crown_authority_3
+    }
+  }
+  else_if = {
+    limit = { realm_law_use_tribal_authority = yes }
+    if = {
+      limit = { $LEVEL$ = 1 }
+      add_realm_law_skip_effects = tribal_authority_0
+    }
+    else_if = {
+      limit = { $LEVEL$ = 2 }
+      add_realm_law_skip_effects = tribal_authority_0
+      add_realm_law_skip_effects = tribal_authority_1
+    }
+    else_if = {
+      limit = { $LEVEL$ = 3 }
+      add_realm_law_skip_effects = tribal_authority_0
+      add_realm_law_skip_effects = tribal_authority_1
+      add_realm_law_skip_effects = tribal_authority_2
+    }
+    else_if = {
+      limit = { $LEVEL$ = 4 }
+      add_realm_law_skip_effects = tribal_authority_0
+      add_realm_law_skip_effects = tribal_authority_1
+      add_realm_law_skip_effects = tribal_authority_2
+      add_realm_law_skip_effects = tribal_authority_3
+    }
+  }
+  else_if = {
+    limit = { realm_law_use_nomadic_authority = yes }
+    if = {
+      limit = { $LEVEL$ = 1 }
+      add_realm_law_skip_effects = nomadic_authority_1
+    }
+    else_if = {
+      limit = { $LEVEL$ = 2 }
+      add_realm_law_skip_effects = nomadic_authority_1
+      add_realm_law_skip_effects = nomadic_authority_2
+    }
+    else_if = {
+      limit = { $LEVEL$ = 3 }
+      add_realm_law_skip_effects = nomadic_authority_1
+      add_realm_law_skip_effects = nomadic_authority_2
+      add_realm_law_skip_effects = nomadic_authority_3
+    }
+    else_if = {
+      limit = { $LEVEL$ = 4 }
+      add_realm_law_skip_effects = nomadic_authority_1
+      add_realm_law_skip_effects = nomadic_authority_2
+      add_realm_law_skip_effects = nomadic_authority_3
+      add_realm_law_skip_effects = nomadic_authority_5
+    }
+  }
+
+  set_variable = {
+    name = skonester_realm_authority_desired_level
+    value = $LEVEL$
+  }
+}
+
+skonester_apply_max_realm_authority_effect = {
+  skonester_cheat_menu_apply_realm_authority_level_effect = { LEVEL = 4 }
+}
+
+# 固化：拉满 + 标记 + 兜底修正 + 清自由权派系
+skonester_cheat_menu_lock_absolute_realm_authority_effect = {
+  skonester_cheat_menu_apply_realm_authority_level_effect = { LEVEL = 4 }
+  add_character_flag = skonester_realm_authority_locked
+  set_variable = {
+    name = skonester_realm_authority_lock_level
+    value = 4
+  }
+  if = {
+    limit = { NOT = { has_character_modifier = skonester_realm_authority_locked_holder } }
+    add_character_modifier = {
+      modifier = skonester_realm_authority_locked_holder
+    }
+  }
+  skonester_dissolve_liberty_factions_targeting_root_effect = yes
+}
+
+# 按已记录的目标档位重写君权（非「固化」时防引擎/派系/冷却回弹）
+skonester_cheat_menu_maintain_desired_realm_authority_effect = {
+  if = {
+    limit = {
+      is_independent_ruler = yes
+      has_variable = skonester_realm_authority_desired_level
+      NOT = { has_character_flag = skonester_realm_authority_locked }
+    }
+    skonester_clear_authority_rollback_variables_effect = yes
+    if = {
+      limit = { var:skonester_realm_authority_desired_level = 1 }
+      skonester_cheat_menu_apply_realm_authority_level_effect = { LEVEL = 1 }
+    }
+    else_if = {
+      limit = { var:skonester_realm_authority_desired_level = 2 }
+      skonester_cheat_menu_apply_realm_authority_level_effect = { LEVEL = 2 }
+    }
+    else_if = {
+      limit = { var:skonester_realm_authority_desired_level = 3 }
+      skonester_cheat_menu_apply_realm_authority_level_effect = { LEVEL = 3 }
+    }
+    else_if = {
+      limit = { var:skonester_realm_authority_desired_level = 4 }
+      skonester_cheat_menu_apply_realm_authority_level_effect = { LEVEL = 4 }
+    }
+    if = {
+      limit = {
+        OR = {
+          var:skonester_realm_authority_desired_level = 3
+          var:skonester_realm_authority_desired_level = 4
+        }
+      }
+      skonester_dissolve_liberty_factions_targeting_root_effect = yes
+    }
+  }
+}
+
+# 维护脉冲/读档/继位：若已固化但法条被引擎洗掉则重写
+skonester_cheat_menu_maintain_locked_realm_authority_effect = {
+  if = {
+    limit = { skonester_needs_realm_authority_lock_reapply_trigger = yes }
+    skonester_cheat_menu_lock_absolute_realm_authority_effect = yes
+  }
+  else_if = {
+    limit = {
+      has_character_flag = skonester_realm_authority_locked
+      NOT = { has_character_modifier = skonester_realm_authority_locked_holder }
+    }
+    add_character_modifier = {
+      modifier = skonester_realm_authority_locked_holder
+    }
+  }
+}
+
+# 取消固化并清理回弹相关状态
+skonester_cheat_menu_clear_authority_rollback_state_effect = {
+  skonester_cheat_menu_clear_authority_lock_flag_only_effect = yes
+  if = {
+    limit = { has_variable = skonester_realm_authority_desired_level }
+    remove_variable = skonester_realm_authority_desired_level
+  }
+  skonester_clear_authority_rollback_variables_effect = yes
+}
+
+# 权限帝号授予后：直接拉满当前政体可用的最高君权/行政档。
+skonester_authority_title_post_grant_bootstrap_effect = {
+  if = {
+    limit = { is_independent_ruler = yes }
+    skonester_apply_max_realm_authority_effect = yes
+  }
+  if = {
+    limit = { is_ruler = yes }
+    skonester_maximize_direct_vassal_contract_obligations_effect = yes
+  }
+}
+
+# 尽可能抬高直属封臣契约义务（可修改者连升多档）。
+skonester_maximize_direct_vassal_contract_obligations_effect = {
+  every_vassal = {
+    limit = { vassal_contract_has_modifiable_obligations = yes }
+    while = {
+      count = 15
+      limit = { vassal_contract_has_modifiable_obligations = yes }
+      vassal_contract_increase_obligation_level = feudal_government_taxes
+    }
+  }
+}

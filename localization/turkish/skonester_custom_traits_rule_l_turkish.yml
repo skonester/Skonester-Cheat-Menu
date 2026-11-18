@@ -1,0 +1,6 @@
+﻿l_turkish:
+ rule_skonester_custom_traits: "Skonester Özel Özellikleri"
+ setting_skonester_custom_traits_enabled: "Açık"
+ setting_skonester_custom_traits_enabled_desc: "Skonester özel özellik menüsündeki özelliklere izin ver."
+ setting_skonester_custom_traits_disabled: "Kapalı"
+ setting_skonester_custom_traits_disabled_desc: "Menüyü ve özelliklerini devre dışı bırak."

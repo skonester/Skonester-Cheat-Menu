@@ -1,0 +1,131 @@
+﻿# Skonester菜单 · 强牵制：5 年内禁止入派系、禁止对宗主（玩家）宣战
+
+skonester_cheat_menu_strong_deterrence_leave_factions_vs_liege_effect = {
+  if = {
+    limit = {
+      exists = joined_faction
+      joined_faction = {
+        faction_target = scope:skonester_deterrence_liege
+      }
+    }
+    if = {
+      limit = {
+        joined_faction = { exists = faction_war }
+      }
+      joined_faction = {
+        faction_war = { end_war = white_peace }
+      }
+    }
+    leave_faction = joined_faction
+  }
+  every_targeting_faction = {
+    limit = { faction_target = scope:skonester_deterrence_liege }
+    if = {
+      limit = { exists = faction_war }
+      faction_war = { end_war = white_peace }
+    }
+    destroy_faction = yes
+  }
+}
+
+skonester_cheat_menu_strong_deterrence_end_wars_vs_liege_effect = {
+  every_character_war = {
+    limit = {
+      OR = {
+        AND = {
+          primary_attacker = scope:skonester_deterrence_vassal
+          primary_defender = scope:skonester_deterrence_liege
+        }
+        AND = {
+          primary_attacker = scope:skonester_deterrence_liege
+          primary_defender = scope:skonester_deterrence_vassal
+        }
+      }
+    }
+    end_war = white_peace
+  }
+}
+
+skonester_cheat_menu_strong_deterrence_apply_blocks_effect = {
+  add_character_flag = {
+    flag = skonester_strong_deterrence_active
+    years = 5
+  }
+  add_character_flag = {
+    flag = joining_faction_block
+    years = 5
+  }
+  set_variable = {
+    name = skonester_strong_deterrence_liege
+    value = scope:skonester_deterrence_liege
+  }
+}
+
+skonester_cheat_menu_strong_deterrence_give_liege_hook_effect = {
+  if = {
+    limit = {
+      can_add_hook = {
+        target = scope:skonester_deterrence_vassal
+        type = strong_obligation_hook
+      }
+    }
+    add_hook = {
+      target = scope:skonester_deterrence_vassal
+      type = strong_obligation_hook
+    }
+  }
+}
+
+skonester_cheat_menu_strong_deterrence_remove_liege_hook_effect = {
+  if = {
+    limit = { has_strong_hook = scope:skonester_deterrence_vassal }
+    remove_hook = {
+      target = scope:skonester_deterrence_vassal
+      type = strong_obligation_hook
+    }
+  }
+}
+
+# 对 scope:skonester_deterrence_vassal 施加；scope:skonester_deterrence_liege 须已存在
+skonester_cheat_menu_apply_strong_deterrence_on_vassal_effect = {
+  scope:skonester_deterrence_vassal = {
+    skonester_cheat_menu_strong_deterrence_leave_factions_vs_liege_effect = yes
+    skonester_cheat_menu_strong_deterrence_end_wars_vs_liege_effect = yes
+    skonester_cheat_menu_strong_deterrence_apply_blocks_effect = yes
+  }
+  scope:skonester_deterrence_liege = {
+    skonester_cheat_menu_strong_deterrence_give_liege_hook_effect = yes
+  }
+}
+
+# 维护 / 到期清理（root = 宗主，在 monthly_playable_pulse 中执行）
+skonester_cheat_menu_strong_deterrence_monthly_on_liege_effect = {
+  root = { save_scope_as = skonester_deterrence_liege }
+  every_vassal_or_below = {
+    limit = { is_alive = yes }
+    save_scope_as = skonester_deterrence_vassal
+    if = {
+      limit = {
+        has_character_flag = skonester_strong_deterrence_active
+        var:skonester_strong_deterrence_liege ?= scope:skonester_deterrence_liege
+      }
+      skonester_cheat_menu_strong_deterrence_leave_factions_vs_liege_effect = yes
+      skonester_cheat_menu_strong_deterrence_end_wars_vs_liege_effect = yes
+      scope:skonester_deterrence_liege = {
+        skonester_cheat_menu_strong_deterrence_give_liege_hook_effect = yes
+      }
+    }
+    else_if = {
+      limit = {
+        scope:skonester_deterrence_liege = { has_strong_hook = scope:skonester_deterrence_vassal }
+      }
+      scope:skonester_deterrence_liege = {
+        skonester_cheat_menu_strong_deterrence_remove_liege_hook_effect = yes
+      }
+      if = {
+        limit = { has_variable = skonester_strong_deterrence_liege }
+        remove_variable = skonester_strong_deterrence_liege
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+﻿zhuge_chuanguo_template = {
+	can_equip = {
+		always = yes
+	}
+	unique = yes
+}

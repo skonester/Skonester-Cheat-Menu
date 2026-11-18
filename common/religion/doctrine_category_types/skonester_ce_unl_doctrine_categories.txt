@@ -1,0 +1,12 @@
+﻿# CK3 1.20: doctrine categories are a database. The CE ethics groups used the free-form
+# categories "sins" and "virtues" in 1.19. Hidden from the vanilla Rite creation UI;
+# the Cheat Menu faith editor handles these picks.
+sins = {
+  visible = no
+  sort_order = 0
+}
+
+virtues = {
+  visible = no
+  sort_order = 0
+}

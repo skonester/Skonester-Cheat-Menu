@@ -1,0 +1,23 @@
+﻿l_german:
+
+ leech_mc_event.common.exit:0 "Schließen"
+
+ leech_mc_event.truce.t:0 "Verhandlungen zum Kriegsende"
+ leech_mc_event.truce.desc:0 "Verhandelt ein Ende des Krieges zwischen [recipient.GetShortUIName] und [secondary_recipient.GetShortUIName]"
+ leech_mc_event.truce.attacker:0 "Angreifer siegt"
+ leech_mc_event.truce.white_peace:0 "Weißer Frieden"
+ leech_mc_event.truce.defender:0 "Verteidiger siegt"
+
+ leech_mc_event.simple_action.t:0 "Skonester: Untermenü"
+ leech_mc_event.simple_action.desc:0 "Lass [recipient.GetShortUIName] folgende Aktion gegenüber [secondary_recipient.GetShortUIName] ausführen"
+ leech_mc_event.simple_action.vassalize:0 "[recipient.GetShortUIName] macht [secondary_recipient.GetShortUIName] zum Vasallen"
+ leech_mc_event.simple_action.marry:0 "[recipient.GetShortUIName] heiratet [secondary_recipient.GetShortUIName]"
+ leech_mc_event.simple_action.marry_mat:0 "[recipient.GetShortUIName] schließt eine matrilineare Ehe mit [secondary_recipient.GetShortUIName]"
+ leech_mc_event.simple_action.divorce:0 "[recipient.GetShortUIName] lässt sich von [secondary_recipient.GetShortUIName] scheiden"
+ leech_mc_event.simple_action.end_lover:0 "[recipient.GetShortUIName] beendet die Beziehung zu [secondary_recipient.GetShortUIName]"
+ leech_mc_event.simple_action.impregnate:0 "[recipient.GetShortUIName] schwängert [secondary_recipient.GetShortUIName]"
+ leech_mc_event.simple_action.copy_dna:0 "[secondary_recipient.GetShortUIName] erhält das Aussehen von [recipient.GetShortUIName]"
+ leech_mc_event.simple_action.cancel_truce:0 "[recipient.GetShortUIName] bricht den Waffenstillstand mit [secondary_recipient.GetShortUIName]"
+ leech_mc_event.simple_action.like:0 "[recipient.GetShortUIName] beginnt [secondary_recipient.GetShortUIName] zu mögen"
+ leech_mc_event.simple_action.hate:0 "[recipient.GetShortUIName] beginnt [secondary_recipient.GetShortUIName] zu hassen"
+ leech_mc_event.simple_action.adopt:0 "[recipient.GetShortUIName] adoptiert [secondary_recipient.GetShortUIName]"

@@ -1,0 +1,27 @@
+﻿cheateb_editmenu_interaction = {
+	category = interaction_category_uncategorized
+	interface_priority = 11994
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	desc = cheateb_editmenu_interaction_desc
+	icon = legend
+
+	is_shown = {
+		scope:actor = {
+			has_character_flag = skonester_character_interaction_menu_open
+			is_ai = no
+		}
+		scope:recipient = { is_alive = yes }
+	}
+	is_valid = { always = yes }
+	can_send = { always = yes }
+
+	on_accept = {
+		skonester_cheat_menu_lock_recipient_effect = yes
+		scope:actor = { trigger_event = skonester_quick_modifications.1000 }
+	}
+
+	ai_will_do = 0
+}

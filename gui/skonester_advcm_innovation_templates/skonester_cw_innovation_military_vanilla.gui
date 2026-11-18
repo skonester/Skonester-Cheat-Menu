@@ -1,0 +1,80 @@
+﻿template skonesterCw_Innovation_Military_Vanilla
+{
+  hbox = {
+    layoutpolicy_horizontal = expanding
+    layoutpolicy_vertical = expanding
+    dynamicgridbox = {
+      datamodel = "[GetGlobalList(Concatenate('innovation_menu_', Concatenate(GetVariableSystem.Get('skonester_cw_culture_era_tab'), '_military_list')))]"
+      flipdirection = yes
+      datamodel_wrap = 2
+
+      item = {
+        button_standard_hover = {
+          size = { 256 66 }
+          onclick = "[GetScriptedGui(Select_CString(GetScriptedGui('skonester_cw_military_check').IsValid(GuiScope.SetRoot(Culture.MakeScope).AddScope('inno_flag', MakeScopeFlag(Scope.GetFlagName)).End), 'skonester_cw_remove_innovation', 'skonester_cw_add_innovation')).Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('inno_flag', MakeScopeFlag(Scope.GetFlagName)).End)]"
+
+          hbox = {
+            margin = { 3 3 }
+            margin_right = 8
+            spacing = 5
+            allow_outside = yes
+            ignoreinvisible = yes
+
+            background = {
+              using = Background_Area
+            }
+
+            widget = {
+              size = { 90 60 }
+
+              icon_innovation_no_context = {
+                parentanchor = center
+                datacontext = "[GetCultureInnovationType(InnovationConcatenate)]"
+
+                icon = {
+                  visible = "[Not(GetScriptedGui('skonester_cw_military_check').IsValid(GuiScope.SetRoot(Culture.MakeScope).AddScope('inno_flag', MakeScopeFlag(Scope.GetFlagName)).End))]"
+                  size = { 100% 100% }
+                  texture = "[CultureInnovationType.GetIcon]"
+                  tintcolor = { 0 0 0 0.5 }
+                }
+              }
+            }
+
+            widget = {
+              size = { 150 60 }
+              alwaystransparent = yes
+
+              vbox = {
+                position = {0 -1}
+
+                ignoreinvisible = yes
+
+                text_multi = {
+                  name = "name_clickable"
+                  visible = "[Not(GetScriptedGui('skonester_cw_military_check').IsValid(GuiScope.SetRoot(Culture.MakeScope).AddScope('inno_flag', MakeScopeFlag(Scope.GetFlagName)).End))]"
+                  layoutpolicy_horizontal = expanding
+                  text = "[Localize(InnovationConcatenate)]"
+                  align = nobaseline
+                  margin = { 3 0 }
+                  default_format = "#clickable"
+                }
+
+                text_multi = {
+                  name = "name_unlocked"
+                  visible = "[GetScriptedGui('skonester_cw_military_check').IsValid(GuiScope.SetRoot(Culture.MakeScope).AddScope('inno_flag', MakeScopeFlag(Scope.GetFlagName)).End)]"
+                  layoutpolicy_horizontal = expanding
+                  text = "[Localize(InnovationConcatenate)]"
+                  max_width = 150
+                  align = nobaseline
+                  margin = { 3 0 }
+                  default_format = "#P"
+                  alpha = 0.7
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

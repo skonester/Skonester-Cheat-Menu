@@ -1,0 +1,192 @@
+﻿# 制作/修改共用：编辑缓冲 skonester_acm_edit_artifact_* → 复制到宝物 → set_artifact_name（对齐 EP2 + Province 存文本）
+# 桥接键在 custom_localization/*_custom_loc_l_*.yml，须带 :0，用 ROOT.GetLocalizedText
+
+skonester_acm_copy_custom_artifact_name_to_artifact_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_acm_craft_creator
+      scope:skonester_acm_craft_creator = {
+        has_character_flag = skonester_acm_edit_name_confirmed
+      }
+    }
+    if = {
+      limit = { exists = owner }
+      owner = {
+        copy_localized_text = {
+          key = skonester_acm_edit_artifact_name
+          target = scope:skonester_acm_craft_creator
+        }
+      }
+    }
+    else = {
+      copy_localized_text = {
+        key = skonester_acm_edit_artifact_name
+        target = scope:skonester_acm_craft_creator
+      }
+    }
+    copy_localized_text = {
+      key = skonester_acm_edit_artifact_name
+      target = scope:skonester_acm_craft_creator
+    }
+    set_variable = { name = skonester_acm_has_custom_name value = 1 }
+  }
+}
+
+skonester_acm_copy_custom_artifact_desc_to_artifact_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_acm_craft_creator
+      scope:skonester_acm_craft_creator = {
+        has_character_flag = skonester_acm_edit_desc_confirmed
+      }
+    }
+    if = {
+      limit = { exists = owner }
+      owner = {
+        copy_localized_text = {
+          key = skonester_acm_edit_artifact_desc
+          target = scope:skonester_acm_craft_creator
+        }
+      }
+    }
+    else = {
+      copy_localized_text = {
+        key = skonester_acm_edit_artifact_desc
+        target = scope:skonester_acm_craft_creator
+      }
+    }
+    copy_localized_text = {
+      key = skonester_acm_edit_artifact_desc
+      target = scope:skonester_acm_craft_creator
+    }
+    set_variable = { name = skonester_acm_has_custom_desc value = 1 }
+  }
+}
+
+skonester_acm_apply_custom_artifact_text_effect = {
+  skonester_acm_ensure_craft_creator_scope_effect = yes
+  if = {
+    limit = {
+      exists = scope:skonester_new_crafted_artifact
+      exists = scope:skonester_acm_craft_creator
+      scope:skonester_acm_craft_creator = {
+        has_character_flag = skonester_acm_edit_name_confirmed
+      }
+    }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_copy_custom_artifact_name_to_artifact_effect = yes
+      set_artifact_name = skonester_acm_craft_artifact_name
+    }
+  }
+  if = {
+    limit = {
+      exists = scope:skonester_new_crafted_artifact
+      exists = scope:skonester_acm_craft_creator
+      scope:skonester_acm_craft_creator = {
+        has_character_flag = skonester_acm_edit_desc_confirmed
+      }
+    }
+    scope:skonester_new_crafted_artifact = {
+      skonester_acm_copy_custom_artifact_desc_to_artifact_effect = yes
+      set_artifact_description = skonester_acm_craft_artifact_desc
+    }
+  }
+}
+
+# 制作/修改保存后清理临时变量（保留 localized text 供再次编辑；宝物上已有副本）
+skonester_acm_cleanup_artifact_edit_buffer_effect = {
+  skonester_acm_ensure_craft_creator_scope_effect = yes
+  scope:skonester_acm_craft_creator = {
+    remove_character_flag = skonester_acm_edit_name_confirmed
+    remove_character_flag = skonester_acm_edit_desc_confirmed
+    if = {
+      limit = { has_variable = skonester_acm_edit_artifact_name }
+      remove_variable = skonester_acm_edit_artifact_name
+    }
+    if = {
+      limit = { has_variable = skonester_acm_edit_artifact_desc }
+      remove_variable = skonester_acm_edit_artifact_desc
+    }
+  }
+}
+
+skonester_acm_open_artifact_name_editor_effect = {
+  if = {
+    limit = { has_character_flag = skonester_acm_repair_gui_open }
+    add_character_flag = skonester_acm_edit_from_repair_gui
+  }
+  else = {
+    add_character_flag = skonester_acm_edit_from_craft_gui
+  }
+  add_character_flag = skonester_acm_gui_text_edit_active
+  trigger_event = { id = skonester_artifact_repair.9012 days = 0 }
+}
+
+skonester_acm_open_artifact_desc_editor_effect = {
+  if = {
+    limit = { has_character_flag = skonester_acm_repair_gui_open }
+    add_character_flag = skonester_acm_edit_from_repair_gui
+  }
+  else = {
+    add_character_flag = skonester_acm_edit_from_craft_gui
+  }
+  add_character_flag = skonester_acm_gui_text_edit_active
+  trigger_event = { id = skonester_artifact_repair.9013 days = 0 }
+}
+
+skonester_acm_open_repair_artifact_name_editor_effect = {
+  skonester_acm_open_artifact_name_editor_effect = yes
+}
+
+skonester_acm_open_repair_artifact_desc_editor_effect = {
+  skonester_acm_open_artifact_desc_editor_effect = yes
+}
+
+skonester_acm_refresh_artifact_text_preview_effect = {
+  if = {
+    limit = { NOT = { has_variable = skonester_acm_gui_preview_tick } }
+    set_variable = {
+      name = skonester_acm_gui_preview_tick
+      value = 1
+    }
+  }
+  else = {
+    change_variable = {
+      name = skonester_acm_gui_preview_tick
+      add = 1
+    }
+  }
+}
+
+skonester_acm_clear_custom_artifact_name_effect = {
+  remove_localized_text = skonester_acm_edit_artifact_name
+  if = {
+    limit = { has_variable = skonester_acm_edit_artifact_name }
+    remove_variable = skonester_acm_edit_artifact_name
+  }
+  remove_character_flag = skonester_acm_edit_name_confirmed
+  skonester_acm_refresh_artifact_text_preview_effect = yes
+}
+
+skonester_acm_clear_custom_artifact_desc_effect = {
+  remove_localized_text = skonester_acm_edit_artifact_desc
+  if = {
+    limit = { has_variable = skonester_acm_edit_artifact_desc }
+    remove_variable = skonester_acm_edit_artifact_desc
+  }
+  remove_character_flag = skonester_acm_edit_desc_confirmed
+  skonester_acm_refresh_artifact_text_preview_effect = yes
+}
+
+skonester_acm_reopen_artifact_text_editor_gui_effect = {
+  remove_character_flag = skonester_acm_gui_text_edit_active
+  if = {
+    limit = { has_character_flag = skonester_acm_edit_from_repair_gui }
+    remove_character_flag = skonester_acm_edit_from_repair_gui
+    skonester_acm_reopen_repair_gui_effect = yes
+  }
+  else = {
+    remove_character_flag = skonester_acm_edit_from_craft_gui
+    add_character_flag = skonester_acm_gui_open
+  }
+}

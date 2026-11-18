@@ -1,0 +1,13 @@
+﻿# 控制台助手：弹出可点击「切换调试模式」的小窗（GUI 内 ExecuteConsoleCommand）
+
+skonester_cheat_menu_open_console_helper_effect = {
+  scope:actor = {
+    add_character_flag = skonester_console_helper_open
+  }
+}
+
+skonester_cheat_menu_close_console_helper_effect = {
+  scope:actor = {
+    remove_character_flag = skonester_console_helper_open
+  }
+}

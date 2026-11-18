@@ -1,0 +1,15 @@
+﻿# Skonester军事管理「增益加成」modifier 列表（不含 AI 强化、庄园预设等其它修正）
+
+skonester_has_any_military_cheat_modifier_trigger = {
+  OR = {
+    has_character_modifier = skonester_military_instant_replenish_modifier
+    has_character_modifier = skonester_military_supply_overflow_modifier
+    has_character_modifier = skonester_military_levy_overflow_modifier
+    has_character_modifier = skonester_military_maintenance_waive_a_modifier
+    has_character_modifier = skonester_military_maintenance_waive_b_modifier
+    has_character_modifier = skonester_military_maintenance_waive_c_modifier
+    has_character_modifier = skonester_military_knight_limit_modifier
+    has_character_modifier = skonester_military_knight_power_modifier
+    has_character_modifier = skonester_military_god_mode_modifier
+  }
+}

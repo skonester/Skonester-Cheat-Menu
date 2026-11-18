@@ -1,0 +1,6 @@
+﻿# 法理转封队列：低档位优先（先伯爵再公国），便于跨法理下属先剥离
+
+skonester_de_jure_transfer_bottom_up_order_value = {
+  value = highest_held_title_tier
+  multiply = -1
+}

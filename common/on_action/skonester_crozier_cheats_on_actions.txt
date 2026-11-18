@@ -1,0 +1,21 @@
+﻿quarterly_playable_pulse = {
+	on_actions = { skonester_crozier_cheats_quarterly }
+}
+
+skonester_crozier_cheats_quarterly = {
+	trigger = { is_ai = no }
+	effect = {
+		skonester_crozier_cheats_setup = yes
+		skonester_crozier_cheats_maintenance = yes
+		if = { limit = { skonester_crozier_cheats_any_toggle = yes } skonester_crozier_cheats_schedule = yes }
+	}
+}
+
+on_imprison = {
+	on_actions = { skonester_crozier_cheats_on_imprison }
+}
+
+skonester_crozier_cheats_on_imprison = {
+	trigger = { is_ai = no has_global_variable = skonester_crozier_cheats_on_auto_no_prison }
+	effect = { release_from_prison = yes }
+}

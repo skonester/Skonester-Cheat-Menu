@@ -1,0 +1,37 @@
+﻿# standard costs
+#maa_buy_cost = 150
+#maa_low_maintenance_cost = 1.0
+#maa_high_maintenance_cost = 5.0
+
+# Special
+#toc_elite_guards = {
+#	type = heavy_cavalry
+#	
+#	damage = 140
+#	toughness = 40
+#	pursuit = 34
+#	screen = 40
+#
+#	siege_tier = 4
+#	siege_value = 1
+#	
+#	counters = {
+#		pikemen = 2
+#		archers = 2
+#		heavy_infantry = 1
+#		heavy_cavalry = 1
+#		light_cavalry = 1
+#		skirmishers = 1
+#
+#	}
+#	
+#	buy_cost = { gold = 10 }
+#	low_maintenance_cost = { gold = 0 }
+#	high_maintenance_cost = { gold = 1 }
+#
+#	
+#	stack = 100
+#	ai_quality = { value = 100 }
+#	allowed_in_hired_troops = no
+#	icon = heavy_cavalry
+#}

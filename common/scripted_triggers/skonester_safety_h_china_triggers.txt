@@ -1,0 +1,17 @@
+﻿# 神州皇帝头衔：未随 DLC/加载注册时，直接 has_title = title:h_china 在部分环境下可能 C 层异常；右键菜单会大量预检。
+# 先 exists = title:h_china，再判断持有关系。
+
+skonester_is_h_china_emperor_title_holder_trigger = {
+  exists = title:h_china
+  has_title = title:h_china
+}
+
+skonester_is_not_h_china_emperor_title_holder_trigger = {
+  OR = {
+    NOT = { exists = title:h_china }
+    AND = {
+      exists = title:h_china
+      NOT = { has_title = title:h_china }
+    }
+  }
+}

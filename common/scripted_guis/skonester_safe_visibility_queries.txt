@@ -1,0 +1,131 @@
+﻿# Rootless visibility queries keep the original character conditions behind an optional named player.
+
+skonester_lsf_gui_visible_safe_query = {
+  # No character root: the frontend can ask before a player exists.
+  is_shown = {
+    exists = scope:skonester_gui_player
+    scope:skonester_gui_player ?= { has_character_flag = skonester_lsf_gui_open 
+    }
+  }
+}
+
+skonester_cheat_trait_gui_visible_safe_query = {
+  # No character root: the frontend can ask before a player exists.
+  is_shown = {
+    skonester_custom_traits_enabled_trigger = yes
+    exists = scope:skonester_gui_player
+    scope:skonester_gui_player ?= { has_character_flag = skonester_cheat_trait_gui_open 
+    }
+  }
+}
+
+skonester_trait_gui_visible_safe_query = {
+  # No character root: the frontend can ask before a player exists.
+  is_shown = {
+    exists = scope:skonester_gui_player
+    scope:skonester_gui_player ?= { has_character_flag = skonester_trait_gui_open 
+    }
+  }
+}
+
+skonester_acm_repair_gui_open_visible_safe_query = {
+  # No character root: the frontend can ask before a player exists.
+  is_shown = {
+    exists = scope:skonester_gui_player
+    scope:skonester_gui_player ?= {
+    has_character_flag = skonester_acm_repair_gui_open
+    NOT = { has_character_flag = skonester_acm_gui_text_edit_active }
+  
+    }
+  }
+}
+
+skonester_acm_gui_open_visible_safe_query = {
+  # No character root: the frontend can ask before a player exists.
+  is_shown = {
+    exists = scope:skonester_gui_player
+    scope:skonester_gui_player ?= {
+    has_character_flag = skonester_acm_gui_open
+    NOT = { has_character_flag = skonester_acm_gui_text_edit_active }
+  
+    }
+  }
+}
+
+skonester_console_helper_open_visible_safe_query = {
+  # No character root: the frontend can ask before a player exists.
+  is_shown = {
+    exists = scope:skonester_gui_player
+    scope:skonester_gui_player ?= { has_character_flag = skonester_console_helper_open 
+    }
+  }
+}
+
+yyz_clear_list_safe_query = {
+  # No character root: the frontend can ask before a player exists.
+  is_shown = {
+    exists = scope:skonester_gui_player
+    scope:skonester_gui_player ?= { yyz_listGenerated = 1 
+    }
+  }
+}
+
+skonester_acm_faith_editor_visible_safe_query = {
+  # No character root: the frontend can ask before a player exists.
+  is_shown = {
+    exists = scope:skonester_gui_player
+    scope:skonester_gui_player ?= {
+    NOT = { has_character_flag = skonester_acm_faith_gui_locked }
+    has_character_flag = skonester_acm_faith_editor_open
+  
+    }
+  }
+}
+
+skonester_sand_soldiers_visible_safe_query = {
+  # No character root: the frontend can ask before a player exists.
+  is_shown = {
+    exists = scope:skonester_gui_player
+    scope:skonester_gui_player ?= { has_character_flag = skonester_sand_soldiers_open 
+    }
+  }
+}
+
+skonester_cw_tradition_picker_visible_safe_query = {
+  # No character root: the frontend can ask before a player exists.
+  is_shown = {
+    exists = scope:skonester_gui_player
+    scope:skonester_gui_player ?= { has_character_flag = skonester_cw_tradition_picker_open 
+    }
+  }
+}
+
+skonester_acm_faith_doctrine_picker_visible_safe_query = {
+  # No character root: the frontend can ask before a player exists.
+  is_shown = {
+    exists = scope:skonester_gui_player
+    scope:skonester_gui_player ?= {
+    NOT = { has_character_flag = skonester_acm_faith_gui_locked }
+    has_character_flag = skonester_acm_faith_doctrine_picker_open
+  
+    }
+  }
+}
+
+skonester_acm_religion_picker_visible_safe_query = {
+  # No character root: the frontend can ask before a player exists.
+  is_shown = {
+    exists = scope:skonester_gui_player
+    scope:skonester_gui_player ?= { has_character_flag = skonester_acm_religion_picker_open 
+    }
+  }
+}
+
+skonester_acm_culture_picker_visible_safe_query = {
+  # No character root: the frontend can ask before a player exists.
+  is_shown = {
+    exists = scope:skonester_gui_player
+    scope:skonester_gui_player ?= { has_character_flag = skonester_acm_culture_picker_open 
+    }
+  }
+}

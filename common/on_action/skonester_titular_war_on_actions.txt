@@ -1,0 +1,19 @@
+﻿# 帝号 AI：每月对邻国强制开战（配合专用 CB + 极高 ai_war_chance）
+
+monthly_global_pulse = {
+  on_actions = {
+    skonester_titular_ai_war_monthly_pulse
+  }
+}
+
+skonester_titular_ai_war_monthly_pulse = {
+  effect = {
+    every_living_character = {
+      limit = {
+        is_alive = yes
+        skonester_holds_any_cheat_titular_title_trigger = yes
+      }
+      skonester_titular_ai_press_neighbour_wars_effect = yes
+    }
+  }
+}

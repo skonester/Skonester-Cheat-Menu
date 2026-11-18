@@ -1,0 +1,299 @@
+﻿# Copied from workshop #2752613114 (advcm) — advcm_generated_modifiers.txt
+# Each +1 stack uses *_1; negative stacks use *_neg_1 (see skonester_acm_modifier_inject_*).
+# 减负类（维护/建造花费/压力等）已按 tools/modifier_sign_rules.py 交换 *_1/*_neg_1 符号：点 + 即减负。
+
+advcm_knight_effectiveness_mult_neg_1 = {knight_effectiveness_mult = -0.01 stacking = yes}
+
+advcm_knight_effectiveness_mult_1 = {knight_effectiveness_mult = 0.01 stacking = yes}
+
+advcm_levy_reinforcement_rate_neg_1 = {levy_reinforcement_rate = -0.01 stacking = yes}
+
+advcm_levy_reinforcement_rate_1 = {levy_reinforcement_rate = 0.01 stacking = yes}
+
+advcm_levy_reinforcement_rate_same_faith_neg_1 = {levy_reinforcement_rate_same_faith = -0.01 stacking = yes}
+
+advcm_levy_reinforcement_rate_same_faith_1 = {levy_reinforcement_rate_same_faith = 0.01 stacking = yes}
+
+advcm_raid_speed_neg_1 = {raid_speed = -0.01 stacking = yes}
+
+advcm_raid_speed_1 = {raid_speed = 0.01 stacking = yes}
+
+advcm_enemy_hard_casualty_modifier_neg_1 = {enemy_hard_casualty_modifier = -0.01 stacking = yes}
+
+advcm_enemy_hard_casualty_modifier_1 = {enemy_hard_casualty_modifier = 0.01 stacking = yes}
+
+advcm_hard_casualty_modifier_neg_1 = {hard_casualty_modifier = 0.01 stacking = yes}
+
+advcm_hard_casualty_modifier_1 = {hard_casualty_modifier = -0.01 stacking = yes}
+
+advcm_heavy_cavalry_toughness_mult_neg_1 = {heavy_cavalry_toughness_mult = -0.01 stacking = yes}
+
+advcm_heavy_cavalry_toughness_mult_1 = {heavy_cavalry_toughness_mult = 0.01 stacking = yes}
+
+advcm_heavy_infantry_toughness_mult_neg_1 = {heavy_infantry_toughness_mult = -0.01 stacking = yes}
+
+advcm_heavy_infantry_toughness_mult_1 = {heavy_infantry_toughness_mult = 0.01 stacking = yes}
+
+advcm_retreat_losses_neg_1 = {retreat_losses = 0.01 stacking = yes}
+
+advcm_retreat_losses_1 = {retreat_losses = -0.01 stacking = yes}
+
+advcm_pursue_efficiency_neg_1 = {pursue_efficiency = -0.01 stacking = yes}
+
+advcm_pursue_efficiency_1 = {pursue_efficiency = 0.01 stacking = yes}
+
+advcm_monthly_prestige_neg_1 = {monthly_prestige = -0.01 stacking = yes}
+
+advcm_monthly_prestige_1 = {monthly_prestige = 0.01 stacking = yes}
+
+advcm_short_reign_duration_mult_neg_1 = {short_reign_duration_mult = 0.01 stacking = yes}
+
+advcm_short_reign_duration_mult_1 = {short_reign_duration_mult = -0.01 stacking = yes}
+
+advcm_monthly_dynasty_prestige_mult_neg_1 = {monthly_dynasty_prestige_mult = -0.01 stacking = yes}
+
+advcm_monthly_dynasty_prestige_mult_1 = {monthly_dynasty_prestige_mult = 0.01 stacking = yes}
+
+advcm_monthly_dynasty_prestige_neg_1 = {monthly_dynasty_prestige = -0.01 stacking = yes}
+
+advcm_monthly_dynasty_prestige_1 = {monthly_dynasty_prestige = 0.01 stacking = yes}
+
+advcm_tyranny_loss_mult_neg_1 = {tyranny_loss_mult = -0.01 stacking = yes}
+
+advcm_tyranny_loss_mult_1 = {tyranny_loss_mult = 0.01 stacking = yes}
+
+advcm_dread_gain_mult_neg_1 = {dread_gain_mult = -0.01 stacking = yes}
+
+advcm_dread_gain_mult_1 = {dread_gain_mult = 0.01 stacking = yes}
+
+advcm_mercenary_hire_cost_mult_neg_1 = {mercenary_hire_cost_mult = 0.01 stacking = yes}
+
+advcm_mercenary_hire_cost_mult_1 = {mercenary_hire_cost_mult = -0.01 stacking = yes}
+
+advcm_vassal_tax_contribution_mult_neg_1 = {vassal_tax_contribution_mult = -0.01 stacking = yes}
+
+advcm_vassal_tax_contribution_mult_1 = {vassal_tax_contribution_mult = 0.01 stacking = yes}
+
+advcm_men_at_arms_maintenance_neg_1 = {men_at_arms_maintenance = 0.01 stacking = yes}
+
+advcm_men_at_arms_maintenance_1 = {men_at_arms_maintenance = -0.01 stacking = yes}
+
+advcm_domain_tax_mult_neg_1 = {domain_tax_mult = -0.01 stacking = yes}
+
+advcm_domain_tax_mult_1 = {domain_tax_mult = 0.01 stacking = yes}
+
+advcm_build_gold_cost_neg_1 = {build_gold_cost = 0.01 stacking = yes}
+
+advcm_build_gold_cost_1 = {build_gold_cost = -0.01 stacking = yes}
+
+advcm_build_speed_neg_1 = {build_speed = -0.01 stacking = yes}
+
+advcm_build_speed_1 = {build_speed = 0.01 stacking = yes}
+
+advcm_monthly_income_mult_neg_1 = {monthly_income_mult = -0.01 stacking = yes}
+
+advcm_monthly_income_mult_1 = {monthly_income_mult = 0.01 stacking = yes}
+
+advcm_monthly_piety_neg_1 = {monthly_piety = -0.01 stacking = yes}
+
+advcm_monthly_piety_1 = {monthly_piety = 0.01 stacking = yes}
+
+advcm_monthly_piety_gain_mult_neg_1 = {monthly_piety_gain_mult = -0.01 stacking = yes}
+
+advcm_monthly_piety_gain_mult_1 = {monthly_piety_gain_mult = 0.01 stacking = yes}
+
+advcm_fertility_neg_1 = {fertility = -0.01 stacking = yes}
+
+advcm_fertility_1 = {fertility = 0.01 stacking = yes}
+
+advcm_stress_gain_mult_neg_1 = {stress_gain_mult = 0.01 stacking = yes}
+
+advcm_stress_gain_mult_1 = {stress_gain_mult = -0.01 stacking = yes}
+
+advcm_health_neg_1 = {health = -0.01 stacking = yes}
+
+advcm_health_1 = {health = 0.01 stacking = yes}
+
+advcm_diplomacy_neg_1 = {diplomacy = -1 stacking = yes}
+
+advcm_diplomacy_1 = {diplomacy = 1 stacking = yes}
+
+advcm_martial_neg_1 = {martial = -1 stacking = yes}
+
+advcm_martial_1 = {martial = 1 stacking = yes}
+
+advcm_stewardship_neg_1 = {stewardship = -1 stacking = yes}
+
+advcm_stewardship_1 = {stewardship = 1 stacking = yes}
+
+advcm_intrigue_neg_1 = {intrigue = -1 stacking = yes}
+
+advcm_intrigue_1 = {intrigue = 1 stacking = yes}
+
+advcm_learning_neg_1 = {learning = -1 stacking = yes}
+
+advcm_learning_1 = {learning = 1 stacking = yes}
+
+advcm_prowess_neg_1 = {prowess_no_portrait = -1 stacking = yes}
+
+advcm_prowess_1 = {prowess_no_portrait = 1 stacking = yes}
+
+advcm_knight_limit_neg_1 = {knight_limit = -1 stacking = yes}
+
+advcm_knight_limit_1 = {knight_limit = 1 stacking = yes}
+
+advcm_tolerance_advantage_mod_neg_1 = {tolerance_advantage_mod = -1 stacking = yes}
+
+advcm_tolerance_advantage_mod_1 = {tolerance_advantage_mod = 1 stacking = yes}
+
+advcm_controlled_province_advantage_neg_1 = {controlled_province_advantage = -1 stacking = yes}
+
+advcm_controlled_province_advantage_1 = {controlled_province_advantage = 1 stacking = yes}
+
+advcm_plains_advantage_neg_1 = {plains_advantage = -1 stacking = yes}
+
+advcm_plains_advantage_1 = {plains_advantage = 1 stacking = yes}
+
+advcm_farmlands_advantage_neg_1 = {farmlands_advantage = -1 stacking = yes}
+
+advcm_farmlands_advantage_1 = {farmlands_advantage = 1 stacking = yes}
+
+advcm_hills_advantage_neg_1 = {hills_advantage = -1 stacking = yes}
+
+advcm_hills_advantage_1 = {hills_advantage = 1 stacking = yes}
+
+advcm_mountains_advantage_neg_1 = {mountains_advantage = -1 stacking = yes}
+
+advcm_mountains_advantage_1 = {mountains_advantage = 1 stacking = yes}
+
+advcm_desert_advantage_neg_1 = {desert_advantage = -1 stacking = yes}
+
+advcm_desert_advantage_1 = {desert_advantage = 1 stacking = yes}
+
+advcm_desert_mountains_advantage_neg_1 = {desert_mountains_advantage = -1 stacking = yes}
+
+advcm_desert_mountains_advantage_1 = {desert_mountains_advantage = 1 stacking = yes}
+
+advcm_oasis_advantage_neg_1 = {oasis_advantage = -1 stacking = yes}
+
+advcm_oasis_advantage_1 = {oasis_advantage = 1 stacking = yes}
+
+advcm_jungle_advantage_neg_1 = {jungle_advantage = -1 stacking = yes}
+
+advcm_jungle_advantage_1 = {jungle_advantage = 1 stacking = yes}
+
+advcm_forest_advantage_neg_1 = {forest_advantage = -1 stacking = yes}
+
+advcm_forest_advantage_1 = {forest_advantage = 1 stacking = yes}
+
+advcm_taiga_advantage_neg_1 = {taiga_advantage = -1 stacking = yes}
+
+advcm_taiga_advantage_1 = {taiga_advantage = 1 stacking = yes}
+
+advcm_wetlands_advantage_neg_1 = {wetlands_advantage = -1 stacking = yes}
+
+advcm_wetlands_advantage_1 = {wetlands_advantage = 1 stacking = yes}
+
+advcm_steppe_advantage_neg_1 = {steppe_advantage = -1 stacking = yes}
+
+advcm_steppe_advantage_1 = {steppe_advantage = 1 stacking = yes}
+
+advcm_floodplains_advantage_neg_1 = {floodplains_advantage = -1 stacking = yes}
+
+advcm_floodplains_advantage_1 = {floodplains_advantage = 1 stacking = yes}
+
+advcm_drylands_advantage_neg_1 = {drylands_advantage = -1 stacking = yes}
+
+advcm_drylands_advantage_1 = {drylands_advantage = 1 stacking = yes}
+
+advcm_court_grandeur_baseline_add_neg_1 = {court_grandeur_baseline_add = -1 stacking = yes}
+
+advcm_court_grandeur_baseline_add_1 = {court_grandeur_baseline_add = 1 stacking = yes}
+
+advcm_dynasty_opinion_neg_1 = {dynasty_opinion = -1 stacking = yes}
+
+advcm_dynasty_opinion_1 = {dynasty_opinion = 1 stacking = yes}
+
+advcm_dread_baseline_add_neg_1 = {dread_baseline_add = -1 stacking = yes}
+
+advcm_dread_baseline_add_1 = {dread_baseline_add = 1 stacking = yes}
+
+advcm_child_opinion_neg_1 = {child_opinion = -1 stacking = yes}
+
+advcm_child_opinion_1 = {child_opinion = 1 stacking = yes}
+
+advcm_general_opinion_neg_1 = {general_opinion = -1 stacking = yes}
+
+advcm_general_opinion_1 = {general_opinion = 1 stacking = yes}
+
+advcm_vassal_limit_neg_1 = {vassal_limit = -1 stacking = yes}
+
+advcm_vassal_limit_1 = {vassal_limit = 1 stacking = yes}
+
+advcm_vassal_opinion_neg_1 = {vassal_opinion = -1 stacking = yes}
+
+advcm_vassal_opinion_1 = {vassal_opinion = 1 stacking = yes}
+
+advcm_attraction_opinion_neg_1 = {attraction_opinion = -1 stacking = yes}
+
+advcm_attraction_opinion_1 = {attraction_opinion = 1 stacking = yes}
+
+advcm_courtier_and_guest_opinion_neg_1 = {courtier_and_guest_opinion = -1 stacking = yes}
+
+advcm_courtier_and_guest_opinion_1 = {courtier_and_guest_opinion = 1 stacking = yes}
+
+advcm_domain_limit_neg_1 = {domain_limit = -1 stacking = yes}
+
+advcm_domain_limit_1 = {domain_limit = 1 stacking = yes}
+
+advcm_same_faith_opinion_neg_1 = {same_faith_opinion = -1 stacking = yes}
+
+advcm_same_faith_opinion_1 = {same_faith_opinion = 1 stacking = yes}
+
+advcm_owned_hostile_scheme_success_chance_add_neg_1 = {owned_hostile_scheme_success_chance_add = -1 stacking = yes}
+
+advcm_owned_hostile_scheme_success_chance_add_1 = {owned_hostile_scheme_success_chance_add = 1 stacking = yes}
+
+advcm_owned_personal_scheme_success_chance_add_neg_1 = {owned_personal_scheme_success_chance_add = -1 stacking = yes}
+
+advcm_owned_personal_scheme_success_chance_add_1 = {owned_personal_scheme_success_chance_add = 1 stacking = yes}
+
+advcm_owned_scheme_secrecy_add_neg_1 = {owned_scheme_secrecy_add = -1 stacking = yes}
+
+advcm_owned_scheme_secrecy_add_1 = {owned_scheme_secrecy_add = 1 stacking = yes}
+
+advcm_spouse_opinion_neg_1 = {spouse_opinion = -1 stacking = yes}
+
+advcm_spouse_opinion_1 = {spouse_opinion = 1 stacking = yes}
+
+advcm_monthly_diplomacy_lifestyle_xp_gain_mult_neg_1 = {monthly_diplomacy_lifestyle_xp_gain_mult = -0.01 stacking = yes}
+
+advcm_monthly_diplomacy_lifestyle_xp_gain_mult_1 = {monthly_diplomacy_lifestyle_xp_gain_mult = 0.01 stacking = yes}
+
+advcm_monthly_martial_lifestyle_xp_gain_mult_neg_1 = {monthly_martial_lifestyle_xp_gain_mult = -0.01 stacking = yes}
+
+advcm_monthly_martial_lifestyle_xp_gain_mult_1 = {monthly_martial_lifestyle_xp_gain_mult = 0.01 stacking = yes}
+
+advcm_monthly_stewardship_lifestyle_xp_gain_mult_neg_1 = {monthly_stewardship_lifestyle_xp_gain_mult = -0.01 stacking = yes}
+
+advcm_monthly_stewardship_lifestyle_xp_gain_mult_1 = {monthly_stewardship_lifestyle_xp_gain_mult = 0.01 stacking = yes}
+
+advcm_monthly_intrigue_lifestyle_xp_gain_mult_neg_1 = {monthly_intrigue_lifestyle_xp_gain_mult = -0.01 stacking = yes}
+
+advcm_monthly_intrigue_lifestyle_xp_gain_mult_1 = {monthly_intrigue_lifestyle_xp_gain_mult = 0.01 stacking = yes}
+
+advcm_monthly_learning_lifestyle_xp_gain_mult_neg_1 = {monthly_learning_lifestyle_xp_gain_mult = -0.01 stacking = yes}
+
+advcm_monthly_learning_lifestyle_xp_gain_mult_1 = {monthly_learning_lifestyle_xp_gain_mult = 0.01 stacking = yes}
+
+advcm_years_of_fertility_neg_1 = {years_of_fertility = -1 stacking = yes}
+
+advcm_years_of_fertility_1 = {years_of_fertility = 1 stacking = yes}
+
+advcm_life_expectancy_neg_1 = {life_expectancy = -1 stacking = yes}
+
+advcm_life_expectancy_1 = {life_expectancy = 1 stacking = yes}
+
+advcm_epidemic_resistance_neg_1 = { epidemic_resistance = -1 stacking = yes}
+
+advcm_epidemic_resistance_1 = { epidemic_resistance = 1 stacking = yes}

@@ -1,0 +1,4 @@
+﻿l_russian:
+ # CK3 1.20: these were raw-text custom_tooltip strings in common/decisions/pcm_decisions.txt
+ pcm_artifact_cheat_tt:0 "Вы получаете придворные и личные артефакты, укрепляющие ваше государство."
+ pcm_culture_cheat_tt:0 "Ваша культура получает множество традиций. Конфликтующие традиции сначала удаляются."

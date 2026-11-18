@@ -1,0 +1,49 @@
+﻿# 军事管理增益：月度全图 + 每日分批 + 每年补扫 + 开局清一次（仅 skonester_military_* Skonester修正）
+
+monthly_global_pulse = {
+  on_actions = {
+    skonester_military_cheat_guard_monthly_pulse
+  }
+}
+
+skonester_military_cheat_guard_monthly_pulse = {
+  effect = {
+    skonester_military_cheat_strip_all_unauthorized_effect = yes
+  }
+}
+
+random_yearly_everyone_pulse = {
+  on_actions = {
+    skonester_military_cheat_guard_yearly_spot_pulse
+  }
+}
+
+skonester_military_cheat_guard_yearly_spot_pulse = {
+  effect = {
+    if = {
+      limit = {
+        skonester_has_any_military_cheat_modifier_trigger = yes
+        NOT = { has_character_flag = skonester_military_cheat_player_authorized }
+      }
+      skonester_military_cheat_strip_on_character_effect = yes
+    }
+  }
+}
+
+on_game_start = {
+  on_actions = {
+    skonester_military_cheat_guard_startup_pulse
+  }
+}
+
+on_game_start_after_lobby = {
+  on_actions = {
+    skonester_military_cheat_guard_startup_pulse
+  }
+}
+
+skonester_military_cheat_guard_startup_pulse = {
+  effect = {
+    skonester_military_cheat_strip_all_unauthorized_effect = yes
+  }
+}

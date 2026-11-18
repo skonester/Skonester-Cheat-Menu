@@ -1,0 +1,24 @@
+﻿# 自定义宝物制作：唯一模板（create_artifact 使用 template = unique_artifact_template）
+
+unique_artifact_template = {
+  can_equip = {
+    always = yes
+  }
+
+  can_reforge = {
+    always = yes
+  }
+
+  can_repair = {
+    always = yes
+  }
+
+  fallback = {
+  }
+
+  ai_score = {
+    value = 100
+  }
+
+  unique = yes
+}

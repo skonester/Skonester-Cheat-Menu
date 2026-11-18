@@ -1,0 +1,63 @@
+﻿# 殿试阶段：原版 2000 + 按本场考试类型与角色属性折算的额外贤能（武：军事+勇武；其余：外交+管理+学识）
+skonester_imperial_exam_activity_scaled_bonus_merit_value = {
+  value = 0
+  if = {
+    limit = {
+      scope:activity = {
+        has_activity_option = {
+          category = special_type
+          option = imperial_examination_focus_martial
+        }
+      }
+    }
+    add = martial
+    add = prowess
+  }
+  else = {
+    add = diplomacy
+    add = stewardship
+    add = learning
+  }
+  multiply = 18
+  min = 0
+  max = 1500
+}
+
+skonester_imperial_exam_palace_total_merit_value = {
+  value = 2000
+  add = skonester_imperial_exam_activity_scaled_bonus_merit_value
+}
+
+# 一键科举：与契约分支一致（武：军事任命；文：文职任命；其余按文官三项）
+skonester_one_click_exam_bonus_merit_value = {
+  value = 0
+  if = {
+    limit = {
+      OR = {
+        vassal_contract_has_flag = celestial_military_appointment
+        vassal_contract_has_flag = meritocratic_military_appointment
+      }
+    }
+    add = martial
+    add = prowess
+  }
+  else_if = {
+    limit = {
+      OR = {
+        vassal_contract_has_flag = celestial_civil_appointment
+        vassal_contract_has_flag = meritocratic_civil_appointment
+      }
+    }
+    add = diplomacy
+    add = stewardship
+    add = learning
+  }
+  else = {
+    add = diplomacy
+    add = stewardship
+    add = learning
+  }
+  multiply = 20
+  min = 0
+  max = 1200
+}

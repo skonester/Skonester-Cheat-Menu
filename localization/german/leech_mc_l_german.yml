@@ -1,0 +1,43 @@
+﻿l_german:
+ interaction_category_leech:0 "Skonester-Untermenü"
+ leech_mind_control_interaction:0 "Werkzeuge/DNA-Übertragung: Start"
+ leech_mind_control_interaction_desc:0 "Bereitet [recipient.GetShortUIName] für die folgenden Interaktionen vor."
+ recipient_secondary_leech_mind_control_interaction:0 ""
+ leech_mc_end_control_interaction:0 "Interaktion beenden"
+ leech_mc_end_control_interaction_desc:0 "Beendet die Interaktion mit [recipient.GetShortUIName]."
+
+ leech_mc_give_title_interaction:0 "Titel übertragen"
+ leech_mc_give_title_interaction_desc:0 "Kontrolliert den Geist von [recipient.GetShortUIName], damit [recipient.GetSheHe] einen Titel an [secondary_recipient.GetShortUIName] überträgt."
+ recipient_secondary_leech_mc_give_title_interaction:0 "Ziel"
+
+ leech_mc_truce_interaction:0 "Waffenstillstand erzwingen"
+ leech_mc_truce_interaction_desc:0 "Kontrolliert den Geist von [recipient.GetShortUIName], um einen Waffenstillstand mit [secondary_recipient.GetShortUIName] zu schließen."
+ recipient_secondary_leech_mc_truce_interaction:0 "Verteidiger"
+
+ leech_mc_declare_war_interaction:0 "Krieg erklären"
+ leech_mc_declare_war_interaction_desc:0 "Kontrolliert den Geist von [secondary_actor.GetShortUIName], damit [secondary_actor.GetSheHe] [recipient.GetShortUIName] den Krieg erklärt."
+ leech_mc_declare_war_interaction.take_claim:0 "[secondary_actor.GetShortUIName] erhält automatisch einen Anspruch auf [target.GetName]."
+
+ leech_mc_simple_action_interaction:0 "Szene vorbereiten: DNA-Übertragung"
+ leech_mc_simple_action_interaction_desc:0 "Kontrolliert den Geist von [recipient.GetShortUIName], damit [recipient.GetSheHe] einfache Aktionen gegenüber [secondary_recipient.GetShortUIName] ausführt."
+ recipient_secondary_leech_mc_simple_action_interaction:0 "Ziel"
+
+ leech_mc_impregnate_interaction:0 "Schwängerung erzwingen"
+ leech_mc_impregnate_interaction_desc:0 "Zwingt [recipient.GetShortUIName], [secondary_recipient.GetShortUIName] zu schwängern."
+ recipient_secondary_leech_mc_impregnate_interaction:0 "Mutter"
+
+ leech_mc_marry_interaction:0 "Heirat erzwingen"
+ leech_mc_marry_interaction_desc:0 "Kontrolliert den Geist von [recipient.GetShortUIName], damit [recipient.GetSheHe] [secondary_recipient.GetShortUIName] [marry|E]t."
+ recipient_secondary_leech_mc_marry_interaction:0 "[spouse|E]"
+
+ leech_mc_divorce_interaction:0 "Scheidung erzwingen"
+ leech_mc_divorce_interaction_desc:0 "Zwingt [recipient.GetShortUIName], sich von [secondary_recipient.GetShortUIName] scheiden zu lassen."
+ recipient_secondary_leech_mc_divorce_interaction:0 "Ehemaliger [spouse|E]"
+
+ leech_mc_end_lover_interaction:0 "Geliebte Beziehung beenden"
+ leech_mc_end_lover_interaction_desc:0 "Zwingt [recipient.GetShortUIName], die Beziehung zu [secondary_recipient.GetShortUIName] als [lover|E] zu beenden."
+ recipient_secondary_leech_mc_end_lover_interaction:0 "Ehemaliger [lover|E]"
+
+ leech_mc_face_off_interaction:0 "DNA übertragen"
+ leech_mc_face_off_interaction_desc:0 "Zwingt [secondary_recipient.GetShortUIName], das Aussehen von [recipient.GetShortUIName] anzunehmen."
+ recipient_secondary_leech_mc_face_off_interaction:0 "Ziel"

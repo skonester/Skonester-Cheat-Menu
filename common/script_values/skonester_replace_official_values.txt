@@ -1,0 +1,52 @@
+﻿# 更换官员列表：每页 8 人，按五维+勇武排序
+
+skonester_ro_page_offset_value = {
+  value = var:skonester_ro_page
+  multiply = 8
+}
+
+skonester_ro_next_page_min_total_value = {
+  value = var:skonester_ro_page
+  add = 1
+  multiply = 8
+}
+
+skonester_replace_official_pick_sort_value = {
+  value = 0
+  add = diplomacy
+  add = stewardship
+  add = learning
+  add = martial
+  add = prowess
+  if = {
+    limit = {
+      skonester_is_excellent_talent_for_grant_trigger = yes
+    }
+    add = 50
+  }
+  if = {
+    limit = {
+      exists = dynasty
+      root = { exists = dynasty }
+      dynasty = root.dynasty
+    }
+    add = 25
+  }
+  if = {
+    limit = {
+      is_courtier_of = root
+    }
+    add = 15
+  }
+}
+
+# 无地超高属性池：纯五维+勇武排序（取前 50 用）
+
+skonester_replace_official_landless_pick_sort_value = {
+  value = 0
+  add = diplomacy
+  add = stewardship
+  add = learning
+  add = martial
+  add = prowess
+}

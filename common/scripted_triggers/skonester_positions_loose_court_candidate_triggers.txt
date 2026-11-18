@@ -1,0 +1,31 @@
+﻿# 一键任免宫廷职、吏部「管理人才」选候选人用：不按原版 would_be_valid（内含信仰/性别等）筛选。
+# 允许同一人兼任多个宫廷职（仅排除已担任「当前要任命的那一职」者）。任命仍走 appoint_court_position；
+# 若引擎职位定义禁止兼任（如部分职位 cannot have another position）则该次会静默无效果。
+
+skonester_positions_loose_court_appointment_candidate_trigger = {
+  is_adult = yes
+  is_imprisoned = no
+  NOT = { is_incapable = yes }
+}
+
+# 在 scope:skonester_pos_reshuffle_liege 存在时使用（skonester_positions_mass_reshuffle_liege_effect）
+skonester_positions_loose_court_appointment_candidate_for_reshuffle_trigger = {
+  skonester_positions_loose_court_appointment_candidate_trigger = yes
+  NOT = { this = scope:skonester_pos_reshuffle_liege }
+}
+
+# 一键任免：领主直属封臣，可作内阁或（宽松）宫廷职二选路径的封臣候选
+skonester_positions_council_reshuffle_vassal_candidate_trigger = {
+  is_adult = yes
+  is_imprisoned = no
+  NOT = { is_incapable = yes }
+  NOT = { this = scope:skonester_pos_reshuffle_liege }
+  NOT = { is_councillor_of = scope:skonester_pos_reshuffle_liege }
+  is_vassal_of = scope:skonester_pos_reshuffle_liege
+}
+
+# 宫廷职封臣候选：在 loose 廷臣规则上要求为领主直属封臣
+skonester_positions_court_reshuffle_vassal_loose_candidate_trigger = {
+  skonester_positions_loose_court_appointment_candidate_for_reshuffle_trigger = yes
+  is_vassal_of = scope:skonester_pos_reshuffle_liege
+}

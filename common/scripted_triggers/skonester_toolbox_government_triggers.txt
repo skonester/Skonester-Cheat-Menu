@@ -1,0 +1,11 @@
+﻿# 模组「神州工具箱」类决议/互动：不在政体上做限制，以便官吏统辖等条目在所有政体下条数一致。
+
+skonester_toolbox_supported_player_government_trigger = {
+  always = yes
+}
+
+# 「官吏统辖」分组：人类可扮演角色一律列出条目；原 DLC/独立/品级/有地等限制改到各决议 is_valid，避免封臣、非帝国、无地冒险家等界面缺项。
+skonester_officials_decision_visible_for_player_trigger = {
+  is_playable_character = yes
+  is_ai = no
+}

@@ -1,0 +1,78 @@
+﻿# Skonester / 宗教编辑：宗教大类 → 教派选择 → 信仰详情
+
+skonester_restore_skonester_selected_faith_scope_effect = {
+  if = {
+    limit = { has_variable = skonester_selected_faith_var }
+    var:skonester_selected_faith_var = {
+      save_scope_as = skonester_selected_faith
+    }
+  }
+}
+
+skonester_save_skonester_selected_faith_effect = {
+  scope:selected_faith = {
+    save_scope_as = skonester_selected_faith
+  }
+  set_variable = {
+    name = skonester_selected_faith_var
+    value = scope:selected_faith
+  }
+}
+
+# Apply the currently selected faith to the character whose interaction menu
+# opened this GUI. GUI callbacks run on the player, so the locked global target
+# must be used instead of root.
+skonester_acm_apply_selected_faith_to_target_effect = {
+  if = {
+    limit = { NOT = { exists = scope:selected_faith } }
+    skonester_restore_skonester_selected_faith_scope_effect = yes
+  }
+  if = {
+    limit = {
+      exists = scope:selected_faith
+      exists = global_var:skonester_cheat_menu_recipient
+    }
+    global_var:skonester_cheat_menu_recipient = {
+      if = {
+        limit = { NOT = { faith = scope:selected_faith } }
+        set_character_faith = scope:selected_faith
+      }
+    }
+    send_interface_toast = {
+      type = event_toast_effect_good
+      title = skonester_acm_faith_applied_toast
+      left_icon = root
+      right_icon = global_var:skonester_cheat_menu_recipient
+    }
+  }
+  else_if = {
+    limit = { exists = scope:selected_faith }
+    set_character_faith = scope:selected_faith
+    send_interface_toast = {
+      type = event_toast_effect_good
+      title = skonester_acm_faith_applied_toast
+      left_icon = root
+      right_icon = root
+    }
+  }
+}
+
+skonester_open_acm_religion_picker_effect = {
+  skonester_acm_religion_picker_refresh_all_lists_effect = yes
+  add_character_flag = skonester_acm_religion_picker_open
+}
+
+skonester_close_acm_religion_picker_effect = {
+  remove_character_flag = skonester_acm_religion_picker_open
+}
+
+skonester_acm_open_custom_faith_editor_effect = {
+  skonester_restore_skonester_selected_faith_scope_effect = yes
+  skonester_open_acm_faith_editor_effect = yes
+}
+
+skonester_acm_apply_selected_faith_and_open_editor_effect = {
+  skonester_save_skonester_selected_faith_effect = yes
+  skonester_close_acm_religion_picker_effect = yes
+  skonester_acm_open_custom_faith_editor_effect = yes
+}

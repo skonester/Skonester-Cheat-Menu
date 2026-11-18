@@ -1,0 +1,40 @@
+﻿# 君权/行政固化：是否已达当前政体可用的最高档
+
+skonester_has_max_realm_authority_for_government_trigger = {
+  OR = {
+    AND = {
+      realm_law_use_celestial_bureaucracy = yes
+      has_realm_law = celestial_bureaucracy_3
+    }
+    AND = {
+      realm_law_use_meritocratic_bureaucracy = yes
+      has_realm_law = meritocratic_bureaucracy_3
+    }
+    AND = {
+      realm_law_use_japanese_bureaucracy = yes
+      has_realm_law = japanese_bureaucracy_3
+    }
+    AND = {
+      realm_law_use_imperial_bureaucracy = yes
+      has_realm_law = imperial_bureaucracy_3
+    }
+    AND = {
+      realm_law_use_crown_authority = yes
+      has_realm_law = crown_authority_3
+    }
+    AND = {
+      realm_law_use_tribal_authority = yes
+      has_realm_law = tribal_authority_3
+    }
+    AND = {
+      realm_law_use_nomadic_authority = yes
+      has_realm_law = nomadic_authority_5
+    }
+  }
+}
+
+skonester_needs_realm_authority_lock_reapply_trigger = {
+  has_character_flag = skonester_realm_authority_locked
+  is_independent_ruler = yes
+  NOT = { skonester_has_max_realm_authority_for_government_trigger = yes }
+}

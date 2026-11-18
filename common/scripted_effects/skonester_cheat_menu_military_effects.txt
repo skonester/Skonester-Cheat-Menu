@@ -1,0 +1,453 @@
+﻿# Skonester · 军事管理（效果一律作用在右击目标 skonester_cheat_menu_target，含 AI/玩家/廷臣）
+
+# 同步右击目标；优先 global_var，其次玩家身上的 skonester_military_menu_victim
+skonester_military_ensure_target_effect = {
+  skonester_cheat_menu_sync_target_effect = yes
+  if = {
+    limit = { NOT = { exists = scope:skonester_cheat_menu_target } }
+    root = {
+      if = {
+        limit = { has_variable = skonester_military_menu_victim }
+        var:skonester_military_menu_victim = {
+          save_scope_as = skonester_cheat_menu_target
+          set_global_variable = {
+            name = skonester_cheat_menu_recipient
+            value = this
+          }
+        }
+      }
+    }
+  }
+}
+
+skonester_military_event_immediate_effect = {
+  skonester_military_ensure_target_effect = yes
+}
+
+skonester_military_reopen_3080_effect = {
+  skonester_military_ensure_target_effect = yes
+  trigger_event = { id = skonester_cheat_menu.3080 days = 0 }
+}
+
+skonester_military_reopen_3085_effect = {
+  skonester_military_ensure_target_effect = yes
+  trigger_event = { id = skonester_cheat_menu.3085 days = 0 }
+}
+
+skonester_military_reopen_3086_effect = {
+  skonester_military_ensure_target_effect = yes
+  trigger_event = { id = skonester_cheat_menu.3086 days = 0 }
+}
+
+skonester_military_send_supply_toggle_toast_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_military_toggle_char
+      scope:skonester_military_toggle_char = { var:skonester_military_toggle_on = 1 }
+    }
+    root = {
+      send_interface_toast = {
+        type = event_toast_effect_good
+        title = skonester_military_supply_on_toast
+        desc = skonester_military_supply_on_toast_desc
+        left_icon = scope:skonester_military_toggle_char
+      }
+    }
+  }
+  else_if = {
+    limit = { exists = scope:skonester_military_toggle_char }
+    root = {
+      send_interface_toast = {
+        type = event_toast_effect_neutral
+        title = skonester_military_supply_off_toast
+        left_icon = scope:skonester_military_toggle_char
+      }
+    }
+  }
+}
+
+skonester_military_send_levy_toggle_toast_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_military_toggle_char
+      scope:skonester_military_toggle_char = { var:skonester_military_toggle_on = 1 }
+    }
+    root = {
+      send_interface_toast = {
+        type = event_toast_effect_good
+        title = skonester_military_levy_on_toast
+        desc = skonester_military_levy_on_toast_desc
+        left_icon = scope:skonester_military_toggle_char
+      }
+    }
+  }
+  else_if = {
+    limit = { exists = scope:skonester_military_toggle_char }
+    root = {
+      send_interface_toast = {
+        type = event_toast_effect_neutral
+        title = skonester_military_levy_off_toast
+        left_icon = scope:skonester_military_toggle_char
+      }
+    }
+  }
+}
+
+skonester_military_send_god_mode_toggle_toast_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_military_toggle_char
+      scope:skonester_military_toggle_char = { var:skonester_military_toggle_on = 1 }
+    }
+    root = {
+      send_interface_toast = {
+        type = event_toast_effect_good
+        title = skonester_military_god_on_toast
+        desc = skonester_military_god_on_toast_desc
+        left_icon = scope:skonester_military_toggle_char
+      }
+    }
+  }
+  else_if = {
+    limit = { exists = scope:skonester_military_toggle_char }
+    root = {
+      send_interface_toast = {
+        type = event_toast_effect_neutral
+        title = skonester_military_god_off_toast
+        left_icon = scope:skonester_military_toggle_char
+      }
+    }
+  }
+}
+
+skonester_cheat_menu_create_maa_stacks_effect = {
+  while = {
+    count = $COUNT$
+    create_maa_regiment = {
+      type = $TYPE$
+      check_can_recruit = no
+      size = 1
+    }
+  }
+}
+
+skonester_cheat_menu_raise_all_levies_effect = {
+  skonester_military_ensure_target_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      skonester_cheat_menu_raise_all_levies_on_character_effect = yes
+      save_scope_as = skonester_military_toast_char
+    }
+    root = {
+      send_interface_toast = {
+        type = event_toast_effect_good
+        title = skonester_military_raise_levies_toast
+        desc = skonester_military_raise_levies_toast_desc
+        left_icon = scope:skonester_military_toast_char
+      }
+    }
+  }
+}
+
+skonester_cheat_menu_raise_all_levies_on_character_effect = {
+  if = {
+    limit = {
+      is_alive = yes
+      exists = capital_province
+    }
+    capital_province = { save_scope_as = skonester_military_spawn_loc }
+  }
+  else_if = {
+    limit = {
+      is_alive = yes
+      exists = location
+    }
+    location = { save_scope_as = skonester_military_spawn_loc }
+  }
+  if = {
+    limit = { exists = scope:skonester_military_spawn_loc }
+    spawn_army = {
+      name = skonester_military_raise_levies_army_name
+      levies = {
+        add = max_military_strength
+        min = 1000
+      }
+      location = scope:skonester_military_spawn_loc
+      inheritable = no
+    }
+  }
+}
+
+skonester_cheat_menu_add_elite_maa_effect = {
+  skonester_military_ensure_target_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      skonester_cheat_menu_create_maa_stacks_effect = { TYPE = $TYPE$ COUNT = 5 }
+      save_scope_as = skonester_military_toast_char
+    }
+    root = {
+      send_interface_toast = {
+        type = event_toast_effect_good
+        title = skonester_military_add_maa_toast
+        desc = skonester_military_add_maa_toast_desc
+        left_icon = scope:skonester_military_toast_char
+      }
+    }
+  }
+}
+
+skonester_cheat_menu_add_all_elite_maa_effect = {
+  skonester_military_ensure_target_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      skonester_cheat_menu_create_maa_stacks_effect = { TYPE = armored_footmen COUNT = 5 }
+      skonester_cheat_menu_create_maa_stacks_effect = { TYPE = armored_horsemen COUNT = 5 }
+      skonester_cheat_menu_create_maa_stacks_effect = { TYPE = horse_archers COUNT = 5 }
+      skonester_cheat_menu_create_maa_stacks_effect = { TYPE = war_elephant COUNT = 5 }
+      skonester_cheat_menu_create_maa_stacks_effect = { TYPE = crossbowmen COUNT = 5 }
+      save_scope_as = skonester_military_toast_char
+    }
+    root = {
+      send_interface_toast = {
+        type = event_toast_effect_good
+        title = skonester_military_add_maa_all_toast
+        desc = skonester_military_add_maa_toast_desc
+        left_icon = scope:skonester_military_toast_char
+      }
+    }
+  }
+}
+
+skonester_cheat_menu_instant_army_replenish_effect = {
+  skonester_military_ensure_target_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      skonester_cheat_menu_instant_army_replenish_on_character_effect = yes
+    }
+    skonester_military_send_supply_toggle_toast_effect = yes
+  }
+}
+
+skonester_cheat_menu_refill_all_army_supply_on_character_effect = {
+  every_army = {
+    add_supply = 999999
+  }
+}
+
+skonester_cheat_menu_apply_supply_overflow_stacks_effect = {
+  remove_all_character_modifier_instances = skonester_military_supply_overflow_modifier
+  while = {
+    count = 11
+    add_character_modifier = skonester_military_supply_overflow_modifier
+  }
+}
+
+skonester_cheat_menu_start_supply_war_loop_effect = {
+  if = {
+    limit = {
+      is_alive = yes
+      is_at_war = yes
+      has_character_modifier = skonester_military_instant_replenish_modifier
+    }
+    trigger_event = { id = skonester_cheat_menu.3099 days = 1 }
+  }
+}
+
+skonester_cheat_menu_instant_army_replenish_on_character_effect = {
+  # 不修改士兵/常备人数；切换军需修正 + stacking，并拉满当前军团补给
+  if = {
+    limit = { NOT = { has_character_modifier = skonester_military_instant_replenish_modifier } }
+    skonester_cheat_menu_refill_all_army_supply_on_character_effect = yes
+    skonester_cheat_menu_apply_supply_overflow_stacks_effect = yes
+    add_character_modifier = skonester_military_instant_replenish_modifier
+    skonester_cheat_menu_start_supply_war_loop_effect = yes
+    skonester_military_cheat_authorize_target_if_player_actor_effect = yes
+    save_scope_as = skonester_military_toggle_char
+    set_variable = { name = skonester_military_toggle_on value = 1 }
+  }
+  else = {
+    remove_character_modifier = skonester_military_instant_replenish_modifier
+    remove_all_character_modifier_instances = skonester_military_supply_overflow_modifier
+    save_scope_as = skonester_military_toggle_char
+    set_variable = { name = skonester_military_toggle_on value = 0 }
+  }
+}
+
+skonester_cheat_menu_set_levy_size_multiplier_effect = {
+  skonester_military_ensure_target_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      skonester_cheat_menu_set_levy_size_multiplier_on_character_effect = yes
+    }
+    skonester_military_send_levy_toggle_toast_effect = yes
+  }
+}
+
+skonester_cheat_menu_apply_levy_overflow_stacks_effect = {
+  remove_all_character_modifier_instances = skonester_military_levy_overflow_modifier
+  while = {
+    count = 11
+    add_character_modifier = skonester_military_levy_overflow_modifier
+  }
+}
+
+skonester_cheat_menu_remove_maintenance_waive_stacks_effect = {
+  remove_all_character_modifier_instances = skonester_military_maintenance_waive_a_modifier
+  remove_all_character_modifier_instances = skonester_military_maintenance_waive_b_modifier
+  remove_all_character_modifier_instances = skonester_military_maintenance_waive_c_modifier
+}
+
+skonester_cheat_menu_apply_maintenance_waive_stacks_effect = {
+  skonester_cheat_menu_remove_maintenance_waive_stacks_effect = yes
+  while = {
+    count = 11
+    add_character_modifier = skonester_military_maintenance_waive_a_modifier
+  }
+  while = {
+    count = 11
+    add_character_modifier = skonester_military_maintenance_waive_b_modifier
+  }
+  while = {
+    count = 11
+    add_character_modifier = skonester_military_maintenance_waive_c_modifier
+  }
+}
+
+skonester_cheat_menu_apply_levy_overflow_full_effect = {
+  skonester_cheat_menu_apply_levy_overflow_stacks_effect = yes
+  skonester_cheat_menu_apply_maintenance_waive_stacks_effect = yes
+}
+
+skonester_cheat_menu_set_levy_size_multiplier_on_character_effect = {
+  if = {
+    limit = { NOT = { has_character_modifier = skonester_military_levy_overflow_modifier } }
+    skonester_cheat_menu_apply_levy_overflow_full_effect = yes
+    skonester_military_cheat_authorize_target_if_player_actor_effect = yes
+    save_scope_as = skonester_military_toggle_char
+    set_variable = { name = skonester_military_toggle_on value = 1 }
+  }
+  else = {
+    remove_all_character_modifier_instances = skonester_military_levy_overflow_modifier
+    skonester_cheat_menu_remove_maintenance_waive_stacks_effect = yes
+    save_scope_as = skonester_military_toggle_char
+    set_variable = { name = skonester_military_toggle_on value = 0 }
+  }
+}
+
+skonester_cheat_menu_army_god_mode_effect = {
+  skonester_military_ensure_target_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      skonester_cheat_menu_army_god_mode_on_character_effect = yes
+    }
+    skonester_military_send_god_mode_toggle_toast_effect = yes
+  }
+}
+
+skonester_cheat_menu_army_god_mode_on_character_effect = {
+  if = {
+    limit = { NOT = { has_character_modifier = skonester_military_god_mode_modifier } }
+    add_character_modifier = skonester_military_god_mode_modifier
+    skonester_military_cheat_authorize_target_if_player_actor_effect = yes
+    save_scope_as = skonester_military_toggle_char
+    set_variable = { name = skonester_military_toggle_on value = 1 }
+  }
+  else = {
+    remove_character_modifier = skonester_military_god_mode_modifier
+    save_scope_as = skonester_military_toggle_char
+    set_variable = { name = skonester_military_toggle_on value = 0 }
+  }
+}
+
+# --- 勇士与勋号（目标 = skonester_cheat_menu_target）---
+
+skonester_cheat_menu_apply_knight_limit_stacks_effect = {
+  remove_all_character_modifier_instances = skonester_military_knight_limit_modifier
+  while = {
+    count = 11
+    add_character_modifier = skonester_military_knight_limit_modifier
+  }
+}
+
+skonester_cheat_menu_knight_limit_boost_effect = {
+  skonester_military_ensure_target_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      skonester_cheat_menu_knight_limit_boost_on_character_effect = yes
+    }
+  }
+}
+
+skonester_cheat_menu_knight_limit_boost_on_character_effect = {
+  if = {
+    limit = { NOT = { has_character_modifier = skonester_military_knight_limit_modifier } }
+    skonester_cheat_menu_apply_knight_limit_stacks_effect = yes
+    skonester_military_cheat_authorize_target_if_player_actor_effect = yes
+  }
+  else = {
+    remove_all_character_modifier_instances = skonester_military_knight_limit_modifier
+  }
+}
+
+skonester_cheat_menu_knight_power_boost_effect = {
+  skonester_military_ensure_target_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      skonester_cheat_menu_knight_power_boost_on_character_effect = yes
+    }
+  }
+}
+
+skonester_cheat_menu_knight_power_boost_on_character_effect = {
+  if = {
+    limit = { NOT = { has_character_modifier = skonester_military_knight_power_modifier } }
+    add_character_modifier = skonester_military_knight_power_modifier
+    skonester_military_cheat_authorize_target_if_player_actor_effect = yes
+  }
+  else = {
+    remove_character_modifier = skonester_military_knight_power_modifier
+  }
+}
+
+skonester_cheat_menu_fill_knights_effect = {
+  skonester_military_ensure_target_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      skonester_cheat_menu_fill_knights_on_character_effect = yes
+    }
+  }
+}
+
+skonester_cheat_menu_fill_knights_on_character_effect = {
+  save_scope_as = skonester_knight_fill_owner
+  if = {
+    limit = { number_of_knights < max_number_of_knights }
+    every_courtier_or_guest = {
+      limit = {
+        is_knight = no
+        prowess >= 8
+        can_be_knight_trigger = { ARMY_OWNER = scope:skonester_knight_fill_owner }
+      }
+      set_knight_status = force
+    }
+  }
+}
+
+skonester_cheat_menu_buff_all_knights_prowess_effect = {
+  skonester_military_ensure_target_effect = yes
+  if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      every_knight = { add_prowess_skill = 3 }
+    }
+  }
+}

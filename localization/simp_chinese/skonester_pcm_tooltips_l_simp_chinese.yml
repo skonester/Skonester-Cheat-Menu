@@ -1,0 +1,4 @@
+﻿l_simp_chinese:
+ # CK3 1.20: these were raw-text custom_tooltip strings in common/decisions/pcm_decisions.txt
+ pcm_artifact_cheat_tt:0 "你将获得宫廷与个人文物，以巩固你的国度。"
+ pcm_culture_cheat_tt:0 "你的文化将获得大量传统。相互冲突的传统会先被移除。"

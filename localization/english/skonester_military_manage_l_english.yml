@@ -1,0 +1,57 @@
+﻿l_english:
+ skonester_cheat_menu_military_manage_menu_interaction: "Military Management"
+ skonester_cheat_menu_military_manage_menu_interaction_desc: "Manage levies, elite Men-at-Arms, expand regiments, reinforce troops, unlimited levies and army god mode"
+ skonester_military_raise_levies_army_name: "Skonester Levy Host"
+ skonester_military_raise_levies_toast: "Levies Raised"
+ skonester_military_raise_levies_toast_desc: "[skonester_military_toast_char.GetShortUIName] has raised levies at maximum military strength."
+ skonester_military_add_maa_toast: "Men-at-Arms Added"
+ skonester_military_add_maa_toast_desc: "New Men-at-Arms regiments have been added for [skonester_military_toast_char.GetShortUIName]."
+ skonester_military_add_maa_all_toast: "All Elite Men-at-Arms Added"
+ skonester_military_supply_on_toast: "Infinite Supplies Enabled"
+ skonester_military_supply_on_toast_desc: "[skonester_military_toggle_char.GetShortUIName]: endless supplies, near-zero upkeep and attrition."
+ skonester_military_supply_off_toast: "Infinite Supplies Disabled"
+ skonester_military_levy_on_toast: "Unlimited Levies Enabled"
+ skonester_military_levy_on_toast_desc: "[skonester_military_toggle_char.GetShortUIName]: levy size ×100, near-zero upkeep for unraised troops."
+ skonester_military_levy_off_toast: "Unlimited Levies Disabled"
+ skonester_military_god_on_toast: "Army God Mode Enabled"
+ skonester_military_god_on_toast_desc: "[skonester_military_toggle_char.GetShortUIName]: near-zero casualties, maximum march speed."
+ skonester_military_god_off_toast: "Army God Mode Disabled"
+
+ skonester_military_expand_maa_toast: "Men-at-Arms Expanded"
+ skonester_military_expand_maa_toast_desc: "Every regiment belonging to [skonester_military_expand_toast_char.GetShortUIName] has gained +5 stacks and been fully reinforced."
+ skonester_military_instant_replenish_modifier: "Skonester · Endless Supplies (War supplies never deplete, near-zero upkeep)"
+ skonester_military_supply_overflow_modifier: "Skonester · Surplus Supplies"
+ skonester_military_levy_overflow_modifier: "Skonester · Unlimited Levies"
+ skonester_military_maintenance_waive_a_modifier: "Skonester · Zero Upkeep (A)"
+ skonester_military_maintenance_waive_b_modifier: "Skonester · Zero Upkeep (B)"
+ skonester_military_maintenance_waive_c_modifier: "Skonester · Zero Upkeep (C)"
+ skonester_military_god_mode_modifier: "Skonester · Army God Mode (Maximum March Speed)"
+
+ skonester_cheat_menu.3080.t: "Military Management"
+ skonester_cheat_menu.3080.desc: "Adjust armies and levies for [skonester_cheat_menu_target.GetShortUIName]."
+
+
+ skonester_cheat_menu.3085.t: "Levies & Men-at-Arms"
+ skonester_cheat_menu.3085.desc: "Manage levies and Men-at-Arms for [skonester_cheat_menu_target.GetShortUIName]."
+ skonester_cheat_menu.3086.t: "Army Bonuses"
+ skonester_cheat_menu.3086.desc: "Toggle supply, levy and god mode cheats for [skonester_cheat_menu_target.GetShortUIName]."
+
+
+
+ skonester_cheat_menu.3081.t: "Add Elite Men-at-Arms"
+ skonester_cheat_menu.3081.desc: "Add Men-at-Arms regiments for [skonester_cheat_menu_target.GetShortUIName]. Each click adds roughly 5 stacks of 100 men."
+
+ skonester_cheat_menu.3090.t: "Additional Elite Units"
+ skonester_cheat_menu.3090.desc: "Add war elephants, crossbowmen or all five elite unit types."
+
+ skonester_military_knight_limit_modifier: "Skonester · Knight Capacity"
+ skonester_military_knight_power_modifier: "Skonester · Knight Combat Power"
+ skonester_military_accolade_glory_modifier: "Skonester · Increased Accolade Glory"
+
+ skonester_cheat_menu.3190.opt_custom_accolade: "@accolade_icon! Custom Accolades"
+ skonester_cheat_menu.3190.opt_custom_accolade_tt: "Use the creation tool, manage existing accolades or create virtual accolades (no DLC required)."
+ skonester_cheat_menu.3190.t: "Custom Accolades"
+ skonester_cheat_menu.3190.desc: "Configure accolades for [skonester_cheat_menu_target.GetShortUIName]."
+ skonester_cheat_menu.3190.opt_wizard: "Creation Tool"
+ skonester_cheat_menu.3190.opt_manage: "Manage Existing"
+ skonester_cheat_menu.3190.opt_virtual: "Virtual Accolade"

@@ -1,0 +1,6 @@
+﻿l_english:
+ rule_skonester_custom_traits: "Skonester Custom Traits"
+ setting_skonester_custom_traits_enabled: "Enabled"
+ setting_skonester_custom_traits_enabled_desc: "Allow traits from the Skonester Custom Traits menu."
+ setting_skonester_custom_traits_disabled: "Disabled"
+ setting_skonester_custom_traits_disabled_desc: "Disable the menu and its traits."

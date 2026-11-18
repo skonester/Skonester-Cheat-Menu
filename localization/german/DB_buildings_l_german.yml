@@ -1,0 +1,249 @@
+﻿l_german:
+
+# Grabmal der Ahnen
+ building_type_db_tomb_ancestors_01:0 "Grabmal der Ahnen"
+ building_type_db_tomb_ancestors_01_desc:0 "#F Der Bau eines Grabmals der Ahnen kann die Stämme einen und die Autorität der Stammeshäuptlinge stärken.#!"
+ building_db_tomb_ancestors_01:0 "Grabmal der Ahnen"
+ building_db_tomb_ancestors_01_desc:0 "$building_type_db_tomb_ancestors_01_desc$"
+ building_db_tomb_ancestors_02:0 "Grabmal der legendären Ahnen"
+ building_db_tomb_ancestors_02_desc:0 "Der Bau eines Grabmals der legendären Ahnen wäre eine hervorragende Möglichkeit, den Stamm zu einen und seinen Ruhm zu mehren."
+
+# Halle der Plünderer
+ building_type_db_hall_pillage_01:0 "Halle der Plünderer"
+ building_type_db_hall_pillage_01_desc:0 "#F Hier bereiten sich die Plünderer unseres Stammes auf ihre Raubzüge vor. Sie teilen ihre Beute, ordnen ihre Waffen und bereiten sich auf den nächsten Überfall vor.#!"
+ building_db_hall_pillage_01:0 "Halle der Plünderer"
+ building_db_hall_pillage_01_desc:0 "$building_type_db_hall_pillage_01_desc$"
+ building_db_hall_pillage_02:0 "Halle der Plünderer"
+ building_db_hall_pillage_02_desc:0 "$building_type_db_hall_pillage_01_desc$"
+
+# Halle der Plünderer (Steppe)
+ building_type_db_steppe_pillage_01:0 "Halle der Plünderer"
+ building_type_db_steppe_pillage_01_desc:0 "#F Hier bereiten sich die Plünderer unseres Stammes auf ihre Raubzüge vor. Sie teilen ihre Beute, ordnen ihre Waffen und bereiten sich auf den nächsten Überfall vor.#!"
+ building_db_steppe_pillage_01:0 "Halle der Plünderer"
+ building_db_steppe_pillage_01_desc:0 "$building_type_db_hall_pillage_01_desc$"
+ building_db_steppe_pillage_02:0 "Halle der Plünderer"
+ building_db_steppe_pillage_02_desc:0 "$building_type_db_hall_pillage_01_desc$"
+
+# Gigantisches Götzenbild
+ building_type_db_gigantic_idol_01:0 "Gigantisches Götzenbild"
+ building_type_db_gigantic_idol_01_desc:0 "#F Ein gewaltiges Götzenbild, das vom Stamm verehrt wird. Es ragt wie ein mächtiger Baum in den Himmel empor und ist von zahlreichen Opfergaben umgeben.#!"
+ building_db_gigantic_idol_01:0 "Gigantisches Götzenbild"
+ building_db_gigantic_idol_01_desc:0 "$building_type_db_gigantic_idol_01_desc$"
+ building_db_gigantic_idol_02:0 "Gigantisches Götzenbild"
+ building_db_gigantic_idol_02_desc:0 "$building_type_db_gigantic_idol_01_desc$"
+
+# Stammesversammlung
+ building_type_db_tribal_assembly_01:0 "Stammesversammlung"
+ building_type_db_tribal_assembly_01_desc:0 "#F Hier werden die wichtigsten Angelegenheiten des Stammes entschieden. In der Versammlung wird über Krieg, Glauben und andere bedeutende Themen beraten.#!"
+ building_db_tribal_assembly_01:0 "Stammesversammlung"
+ building_db_tribal_assembly_01_desc:0 "Hier werden die wichtigsten Angelegenheiten des Stammes entschieden. In der Versammlung wird über Krieg, Glauben und andere bedeutende Themen beraten."
+ building_db_tribal_assembly_02:0 "Erweiterte Stammesversammlung"
+ building_db_tribal_assembly_02_desc:0 "Jede wichtige Entscheidung des Stammes in einer großen Versammlung zu treffen, ist mühsam. Ein Beraterkreis aus erfahrenen Kriegern und Schamanen an der Seite des Häuptlings ermöglicht es, auf drohende Probleme schneller zu reagieren."
+
+# Schura-Rat
+ building_type_db_shura_council_01:0 "Schura-Rat"
+ building_type_db_shura_council_01_desc:0 "#F Schura ist ein arabisches Wort für »Beratung«. In den frühen islamischen Gemeinschaften bezeichnete es die gemeinsame Beratung vor wichtigen Entscheidungen.#!"
+ building_db_shura_council_01:0 "Nichtständiger Schura-Rat"
+ building_db_shura_council_01_desc:0 "Ein Schura-Rat wurde eingerichtet. Obwohl er nicht dauerhaft tagt, kann der Sultan bei Bedarf politischen Rat einholen."
+ building_db_shura_council_02:0 "Ständiger Schura-Rat"
+ building_db_shura_council_02_desc:0 "Durch die Neuorganisation des Schura-Rates kann der Sultan jederzeit angemessenen Rat erhalten."
+ building_db_shura_council_03:0 "Erweiterter Schura-Rat"
+ building_db_shura_council_03_desc:0 "Durch die Erweiterung des Schura-Rates erhält der Sultan fachkundige Beratung in deutlich mehr Bereichen."
+
+# Königliche Moschee
+ building_type_db_royal_mosque_01:0 "Königliche Moschee"
+ building_type_db_royal_mosque_01_desc:0 "#F Eine Moschee, die von der Königsfamilie für ihre Gebete besucht wird.#!"
+ building_db_royal_mosque_01:0 "Königliche Moschee"
+ building_db_royal_mosque_01_desc:0 "$building_type_db_royal_mosque_01_desc$"
+ building_db_royal_mosque_02:0 "Königliche Madrasa"
+ building_db_royal_mosque_02_desc:0 "Unter der Königlichen Moschee wurde eine Madrasa errichtet, in der Theologie und zahlreiche weitere Wissenschaften gelehrt werden."
+ building_db_royal_mosque_03:0 "Königliche Gruft"
+ building_db_royal_mosque_03_desc:0 "Unter der Königlichen Moschee wurde eine Gruft errichtet, in der die Mitglieder der Königsfamilie ihre letzte Ruhe finden."
+
+# Königliche Kapelle
+ building_type_db_royal_chapel_01:0 "Königliche Kapelle"
+ building_type_db_royal_chapel_01_desc:0 "#F Eine Kapelle, die von der Königsfamilie für ihre Gottesdienste besucht wird.#!"
+ building_db_royal_chapel_01:0 "Königliche Kapelle"
+ building_db_royal_chapel_01_desc:0 "$building_type_db_royal_chapel_01_desc$"
+ building_db_royal_chapel_02:0 "Erweiterte Königliche Kapelle"
+ building_db_royal_chapel_02_desc:0 "Durch den Ausbau der Königlichen Kapelle wurden zahlreiche Lehrstätten geschaffen, an denen unter anderem Theologie gelehrt wird."
+ building_db_royal_chapel_03:0 "Königliche Gruft"
+ building_db_royal_chapel_03_desc:0 "Unter der Königlichen Kapelle wurde eine Gruft errichtet, in der die Mitglieder der Königsfamilie ihre letzte Ruhe finden."
+
+# Inselkloster
+ building_type_db_insular_monas_01:0 "Inselkloster"
+ building_type_db_insular_monas_01_desc:0 "#F Anders als in den meisten westlichen Kirchen war die Diözese in Irland nicht die grundlegende Organisationseinheit. Stattdessen entstanden Klöster, die von Stammeshäuptlingen gegründet und von deren Nachkommen verwaltet wurden. Diese Klöster bestanden nicht aus großen steinernen Anlagen, sondern aus Gruppen strohgedeckter Häuser rund um eine kleine Kirche.#!"
+ building_db_insular_monas_01:0 "Inselkloster"
+ building_db_insular_monas_01_desc:0 "$building_type_db_insular_monas_01_desc$"
+ building_db_insular_monas_02:0 "Erweitertes Inselkloster"
+ building_db_insular_monas_02_desc:0 "Dank der Unterstützung des örtlichen Stammeshäuptlings wurde das Kloster erweitert. Mehr Mönche denn je widmen sich hier einem frommen Leben und dem eifrigen Studium."
+
+# Regionales Parlament
+ building_type_db_local_parliament_01:0 "Regionales Parlament"
+ building_type_db_local_parliament_01_desc:0 "#F Das Regionale Parlament dient dem Herrscher als Ort, um Rat in Regierungsangelegenheiten einzuholen oder die Zustimmung seines Volkes zu gewinnen.#!"
+ building_db_local_parliament_01:0 "Nichtständiges Regionales Parlament"
+ building_db_local_parliament_01_desc:0 "Ein Regionales Parlament wurde eingerichtet. Obwohl es nicht dauerhaft tagt, kann der Herrscher bei Bedarf politischen Rat einholen."
+ building_db_local_parliament_02:0 "Ständiges Regionales Parlament"
+ building_db_local_parliament_02_desc:0 "Durch die Neuorganisation des Regionalen Parlaments kann der Herrscher jederzeit angemessenen Rat erhalten."
+ building_db_local_parliament_03:0 "Erweitertes Regionales Parlament"
+ building_db_local_parliament_03_desc:0 "Durch die Erweiterung des Regionalen Parlaments erhält der Herrscher fachkundige Beratung in deutlich mehr Bereichen."
+
+# Bibliothek
+ building_type_db_local_library_01:0 "Bibliothek"
+ building_type_db_local_library_01_desc:0 "#F Ein Ort, an dem Bücher aller Art gesammelt und aufbewahrt werden.#!"
+ building_db_local_library_01:0 "Kleine Bibliothek"
+ building_db_local_library_01_desc:0 "Eine kleine Bibliothek. Zwar ist ihre Sammlung noch überschaubar, doch bereits jetzt kommen Gelehrte und Wissbegierige hierher."
+ building_db_local_library_02:0 "Berühmte Bibliothek"
+ building_db_local_library_02_desc:0 "Dank der Unterstützung der örtlichen Herrscher konnten neue Bücher angeschafft und Schreiber mit dem Anfertigen von Abschriften beauftragt werden."
+ building_db_local_library_03:0 "Große Bibliothek"
+ building_db_local_library_03_desc:0 "Eine gewaltige Bibliothek mit einer beeindruckenden Büchersammlung. Gelehrte reisen selbst aus fernen Ländern an, um hier zu studieren."
+
+# Künstlicher Wald
+ building_type_db_artificial_forest_01:0 "Künstlicher Wald"
+ building_type_db_artificial_forest_01_desc:0 "#F Da es unserem Reich an Wäldern mangelt, müssen wir Holz aus benachbarten Ländern beziehen. Durch die künstliche Aufforstung sichern wir langfristig Bauholz, Schiffsmaterial und Holz für den Bogenbau.#!"
+ building_db_artificial_forest_01:0 "Kleiner künstlicher Wald"
+ building_db_artificial_forest_01_desc:0 "Durch gezielte Aufforstung wurde ein kleiner Wald angelegt."
+ building_db_artificial_forest_02:0 "Ernennung eines Forstmeisters"
+ building_db_artificial_forest_02_desc:0 "Ein Forstmeister überwacht und verwaltet die künstlich angelegten Wälder."
+ building_db_artificial_forest_03:0 "Großer künstlicher Wald"
+ building_db_artificial_forest_03_desc:0 "Die Aufforstung war ein voller Erfolg. Nun stehen reichlich Rohstoffe für Bauwesen, Schiffsbau, Bogenherstellung und militärische Übungen zur Verfügung."
+
+# Karawanserei
+ building_type_db_caravan_sarai_01:0 "Karawanserei"
+ building_type_db_caravan_sarai_01_desc:0 "#F Eine Karawanserei ist ein Rasthaus entlang wichtiger Handelswege, in dem Reisende und Händler Schutz finden und neue Kräfte sammeln können. Sie fördert Handel, Wissensaustausch und den Verkehr entlang der großen Handelsrouten, insbesondere der Seidenstraße.#!"
+ building_db_caravan_sarai_01:0 "Karawanserei"
+ building_db_caravan_sarai_01_desc:0 "$building_type_db_caravan_sarai_01_desc$"
+ building_db_caravan_sarai_02:0 "Karawanserei"
+ building_db_caravan_sarai_02_desc:0 "$building_type_db_caravan_sarai_01_desc$"
+ building_db_caravan_sarai_03:0 "Karawanserei"
+ building_db_caravan_sarai_03_desc:0 "$building_type_db_caravan_sarai_01_desc$"
+
+# Gefängnisturm
+ building_type_db_prison_cell_01:0 "Gefängnisturm"
+ building_type_db_prison_cell_01_desc:0 "#F Ein Ort, an dem Gefangene auf angemessene Weise verwahrt werden.#!"
+ building_db_prison_cell_01:0 "Erweitertes Gefängnis"
+ building_db_prison_cell_01_desc:0 "Der Ausbau des Gefängnisses erschwert den Insassen das Leben erheblich."
+ building_db_prison_cell_02:0 "Hinrichtungsplatz"
+ building_db_prison_cell_02_desc:0 "Manch einer würde behaupten, ein schnelles Ende sei gnädiger als ein Leben voller Leid."
+ building_db_prison_cell_03:0 "Verstärkter Gefängnisturm"
+ building_db_prison_cell_03_desc:0 "Die Verstärkung des Gefängnisturms erhöht die Sicherheit und erschwert feindliche Befreiungsversuche."
+
+# Gerichtshof
+ building_type_db_court_justice_01:0 "Gerichtshof"
+ building_type_db_court_justice_01_desc:0 "#F Hier wird nach Recht und Gesetz über Schuld und Unschuld entschieden und das Urteil über Straftäter gesprochen.#!"
+ building_db_court_justice_01:0 "Hundertschaftsgericht"
+ building_db_court_justice_01_desc:0 "In manchen Hundertschaften tagte das Gericht an einem festen Ort, andernorts wechselte der Versammlungsplatz. Seine wichtigste Aufgabe war die Aufrechterhaltung des Frankpledge-Systems. Das Gericht bestand aus zwölf freien Männern."
+ building_db_court_justice_02:0 "Grafschaftsgericht"
+ building_db_court_justice_02_desc:0 "Das Grafschaftsgericht war eine rechtliche Institution zur Wahrung von Recht und Ordnung sowie zur Erfüllung verschiedener Verwaltungsaufgaben, darunter die Erhebung von Steuern."
+ building_db_court_justice_03:0 "Königliche Gerichtsbank"
+ building_db_court_justice_03_desc:0 "Die Königliche Gerichtsbank war ein Gericht des Gewohnheitsrechts. Sie entstand aus der Curia Regis und begleitete den Monarchen zunächst auf seinen Reisen. Seit 1318 tagte sie dauerhaft in der Westminster Hall."
+
+# Pferdestatue
+ building_type_db_statue_horse_01:0 "Pferdestatue"
+ building_type_db_statue_horse_01_desc:0 "#F Eine Statue zu Ehren des legendären Pferdes »Glitterhoof«.#!"
+ building_db_statue_horse_01:0 "Pferdestatue"
+ building_db_statue_horse_01_desc:0 "$building_type_db_statue_horse_01_desc$"
+ building_db_statue_horse_02:0 "Vergoldung"
+ building_db_statue_horse_02_desc:0 "Eine Vergoldung der Statue von »Glitterhoof« wäre eine würdige Ehrung seiner Verdienste."
+ building_db_statue_horse_03:0 "Zusätzliche Tierstatuen"
+ building_db_statue_horse_03_desc:0 "Weitere Tierstatuen neben »Glitterhoof« verleihen dem Denkmal ein noch eindrucksvolleres Erscheinungsbild."
+
+# Kurultai
+ building_type_db_kurultai_01:0 "Kurultai"
+ building_type_db_kurultai_01_desc:0 "#F Der Kurultai war die politische und militärische Versammlung der mongolischen und türkischen Khane und Stammesführer. Selbst Großkhane wie Dschingis Khan oder Ögedei Khan wurden auf einem Kurultai gewählt.#!"
+ building_db_kurultai_01:0 "Kurultai"
+ building_db_kurultai_01_desc:0 "Ein Kurultai wurde einberufen. Auch wenn er nicht dauerhaft tagt, kann der Khan hier bei Bedarf Rat einholen."
+ building_db_kurultai_02:0 "Ständiger Kurultai"
+ building_db_kurultai_02_desc:0 "Durch die Neuorganisation des Kurultai kann der Khan jederzeit auf geeignete Berater zurückgreifen."
+ building_db_kurultai_03:0 "Erweiterter Kurultai"
+ building_db_kurultai_03_desc:0 "Die Erweiterung des Kurultai ermöglicht dem Khan fachkundige Beratung in deutlich mehr Angelegenheiten."
+
+# Leuchtturm
+ building_type_db_lighthouse_01:0 "Leuchtturm"
+ building_type_db_lighthouse_01_desc:0 "#F Ein hoher Turm, der Schiffen auch bei Nacht den sicheren Weg weist.#!"
+ building_db_lighthouse_01:0 "Leuchtturm"
+ building_db_lighthouse_01_desc:0 "$building_type_db_lighthouse_01_desc$"
+ building_db_lighthouse_02:0 "Gewaltige Banner"
+ building_db_lighthouse_02_desc:0 "Große Banner am Leuchtturm ermöglichen es Seeleuten, ihn bereits aus weiter Entfernung zu erkennen."
+ building_db_lighthouse_03:0 "Großer Leuchtturm"
+ building_db_lighthouse_03_desc:0 "Unser Leuchtturm ist weit über die umliegenden Meere hinaus bekannt. Seit seiner Errichtung erreichen deutlich mehr Schiffe sicher unseren Hafen."
+
+# Söldnerlager
+ building_type_db_mercenary_camp_01:0 "Söldnerlager"
+ building_type_db_mercenary_camp_01_desc:0 "#F Ein Ort, an dem sich Menschen versammeln, die bereit sind, ihr Leben für Gold zu riskieren.#!"
+ building_db_mercenary_camp_01:0 "Söldnerlager"
+ building_db_mercenary_camp_01_desc:0 "$building_type_db_mercenary_camp_01_desc$"
+ building_db_mercenary_camp_02:0 "Erweitertes Söldnerlager"
+ building_db_mercenary_camp_02_desc:0 "Der Ruf unseres Reiches lockt immer mehr Söldner an. Sie konkurrieren um Aufträge, kaufen Ausrüstung bei örtlichen Händlern und sorgen leider auch häufiger für Schlägereien mit der Bevölkerung."
+
+# Thing
+ building_type_db_things_01:0 "Thing"
+ building_type_db_things_01_desc:0 "#F Ein Thing ist eine Versammlung der freien Mitglieder einer Gemeinschaft in frühgermanischen Gesellschaften, die unter dem Vorsitz von Gesetzessprechern tagt.\n\nIn der vorchristlichen Sippenkultur Skandinaviens waren die Angehörigen einer Sippe verpflichtet, Verletzungen und den Tod ihrer Verwandten zu rächen. Daher galt die Fehde als eine der häufigsten Formen der Konfliktlösung in der Wikingerzeit. Das Thing diente jedoch zugleich als übergeordnete Institution, um Stammesfehden einzudämmen und soziale Unordnung in nordgermanischen Gesellschaften zu verhindern. Es spielte eine wichtige Rolle bei der Beilegung von Streitigkeiten, dem Schließen von Heiratsbündnissen, der Demonstration von Macht und Ehre sowie bei Erbschaftsfragen.#!"
+ building_db_things_01:0 "Thing"
+ building_db_things_01_desc:0 "$building_type_db_things_01_desc$"
+ building_db_things_02:0 "Ständiges Thing"
+ building_db_things_02_desc:0 "Durch die Neuorganisation des Things kann der Herrscher jederzeit angemessenen Rat erhalten."
+ building_db_things_03:0 "Erweitertes Thing"
+ building_db_things_03_desc:0 "Durch die Erweiterung des Things erhält der Herrscher fachkundige Beratung in deutlich mehr Bereichen."
+
+# Jahrmarkt
+ building_type_db_fair_01:0 "Jahrmarkt"
+ building_type_db_fair_01_desc:0 "#F Ein Jahrmarkt ist eine zeitlich begrenzte Zusammenkunft für Handel und Unterhaltung, die von einem Nachmittag bis zu mehreren Wochen dauern kann.\n\nIm Mittelalter entwickelten sich viele Jahrmärkte zu bedeutenden Handelsplätzen. Besonders für den Fern- und internationalen Handel waren sie von großer Bedeutung, da Großhändler teils tagelang anreisten, um dort verlässlich Käufer und Verkäufer anzutreffen.#!"
+ building_db_fair_01:0 "Kleiner Jahrmarkt"
+ building_db_fair_01_desc:0 "$building_type_db_fair_01_desc$"
+ building_db_fair_02:0 "Jahrmarkt"
+ building_db_fair_02_desc:0 "$building_type_db_fair_01_desc$"
+ building_db_fair_03:0 "Regionaler Jahrmarkt"
+ building_db_fair_03_desc:0 "Seit im Reich ein Jahrmarkt abgehalten wird, strömen immer mehr Menschen hierher."
+ building_db_fair_04:0 "Großer Jahrmarkt"
+ building_db_fair_04_desc:0 "Seit im Reich ein Jahrmarkt abgehalten wird, kommen immer mehr Menschen. Zahlreiche Waren, Speisen und Unterhaltungen locken Besucher aus nah und fern an."
+
+# Königliche Synagoge
+ building_type_db_royal_cynagogue_01:0 "Königliche Synagoge"
+ building_type_db_royal_cynagogue_01_desc:0 "#F Eine Synagoge, die von der Königsfamilie zum Gebet besucht wird.#!"
+ building_db_royal_cynagogue_01:0 "Königliche Synagoge"
+ building_db_royal_cynagogue_01_desc:0 "$building_type_db_royal_cynagogue_01_desc$"
+ building_db_royal_cynagogue_02:0 "Erweiterte Königliche Synagoge"
+ building_db_royal_cynagogue_02_desc:0 "Durch die Erweiterung der Synagoge können nun mehr Gläubige an den Gottesdiensten teilnehmen."
+ building_db_royal_cynagogue_03:0 "Toraschrein"
+ building_db_royal_cynagogue_03_desc:0 "Der Toraschrein ist ein Schrank, in dem die Torarollen aufbewahrt werden. Er ist gewöhnlich so ausgerichtet, dass die Betenden beim Blick auf ihn zugleich in Richtung Jerusalem schauen."
+
+# Königlicher Mandir
+ building_type_db_royal_hindu_01:0 "Königlicher Mandir"
+ building_type_db_royal_hindu_01_desc:0 "#F Ein hinduistischer Tempel, der von der Königsfamilie zum Gebet besucht wird.#!"
+ building_db_royal_hindu_01:0 "Königlicher Mandir"
+ building_db_royal_hindu_01_desc:0 "$building_type_db_royal_hindu_01_desc$"
+ building_db_royal_hindu_02:0 "Kalai"
+ building_db_royal_hindu_02_desc:0 "Im Mandir wurde eine Kalai eingerichtet, in der Gelehrte und Schüler Sanskrit sowie die vedischen Schriften rezitieren und studieren."
+ building_db_royal_hindu_03:0 "Hospital"
+ building_db_royal_hindu_03_desc:0 "Im Mandir wurde ein Hospital eingerichtet, das Kranke und Arme medizinisch versorgt."
+
+# Heldenstatue
+ building_type_db_statue_ruler_01:0 "Heldenstatue"
+ building_type_db_statue_ruler_01_desc:0 "#F Eine Statue zu Ehren eines legendären Helden.#!"
+ building_db_statue_ruler_01:0 "Heldenstatue"
+ building_db_statue_ruler_01_desc:0 "$building_type_db_statue_ruler_01_desc$"
+ building_db_statue_ruler_02:0 "Vergoldung"
+ building_db_statue_ruler_02_desc:0 "Eine Vergoldung der Statue wäre eine würdige Ehrung seiner Verdienste."
+ building_db_statue_ruler_03:0 "Zusätzliche Statuen"
+ building_db_statue_ruler_03_desc:0 "Weitere kleine Statuen neben dem Denkmal verleihen der Anlage ein noch eindrucksvolleres Erscheinungsbild."
+
+# Königliche Menagerie
+ building_type_db_menagerie_01:0 "Königliche Menagerie"
+ building_type_db_menagerie_01_desc:0 "#F Eine Menagerie ist eine Sammlung gefangener, häufig exotischer Tiere, die zur Schau gestellt werden. Solche Anlagen waren meist mit einem adeligen oder königlichen Hof verbunden und befanden sich in Gärten oder Parks eines Palastes. Exotische Tiere dienten als sichtbarer Beweis von Macht und Reichtum, da sie selten, schwer zu beschaffen und teuer zu unterhalten waren.#!"
+ building_db_menagerie_01:0 "Königliche Menagerie"
+ building_db_menagerie_01_desc:0 "$building_type_db_menagerie_01_desc$"
+ building_db_menagerie_02:0 "Erweiterte Königliche Menagerie"
+ building_db_menagerie_02_desc:0 "Durch den Ausbau können nun noch mehr Tiere gehalten werden. Adel und Besucher bestaunen unseren Reichtum und unsere Macht, doch örtliche Geistliche prangern den offen zur Schau gestellten Luxus immer häufiger an."
+ building_db_menagerie_03:0 "Exotische Menagerie"
+ building_db_menagerie_03_desc:0 "Unsere langjährigen Bemühungen um seltene Tiere aus fernen Ländern haben sich ausgezahlt. Nun beherbergen wir Elefanten, Kamele, Löwen, Leoparden, weiße Hirsche und viele weitere exotische Tiere."
+
+# Rabbinerrat
+ building_type_db_rabbi_council_01:0 "Rabbinerrat"
+ building_type_db_rabbi_council_01_desc:0 "#F Nach der Vertreibung der Juden aus Jerusalem übernahmen Rabbiner eine zentrale Rolle bei der Bewahrung eines Lebens nach den Geboten der Tora. Die Einladung angesehener Rabbiner an unseren Hof hilft uns, gerechte Entscheidungen im Einklang mit der Tora zu treffen.#!"
+ building_db_rabbi_council_01:0 "Rabbinerrat"
+ building_db_rabbi_council_01_desc:0 "$building_type_db_rabbi_council_01_desc$"
+ building_db_rabbi_council_02:0 "Ständiger Rabbinerrat"
+ building_db_rabbi_council_02_desc:0 "Durch die Neuorganisation des Rates kann der Herrscher jederzeit angemessenen Rat erhalten."
+ building_db_rabbi_council_03:0 "Erweiterter Rabbinerrat"
+ building_db_rabbi_council_03_desc:0 "Durch die Erweiterung des Rates erhält der Herrscher fachkundige Beratung in deutlich mehr Bereichen."

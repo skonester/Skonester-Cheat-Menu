@@ -1,0 +1,82 @@
+{
+  "blood_ancester_1": {
+    "subject": "(an elegant heraldic cat head:1.4), silver feline profile with alert ears and emerald eyes, dark emerald enamel backing, feline grace and predator instincts, compact medieval animal emblem.",
+    "denoise": 0.93,
+    "negative": ", compass, compass rose, unrelated cross, science fiction, cartoon"
+  },
+  "blood_ancester_2": {
+    "subject": "(a noble heraldic hound head:1.4), a loyal hunting hound in silver relief with floppy ears, burgundy enamel backing, guardian devotion, compact medieval animal emblem.",
+    "denoise": 0.93,
+    "negative": ", compass, compass rose, unrelated cross, science fiction, cartoon"
+  },
+  "blood_ancester_4": {
+    "subject": "(a luminous silver crescent moon:1.4), a single clear sapphire droplet suspended inside the crescent, moonlit clarity and calm, restrained midnight-blue enamel.",
+    "denoise": 0.93,
+    "negative": ", compass, compass rose, unrelated cross, science fiction, cartoon"
+  },
+  "blood_ancester_5": {
+    "subject": "(a heraldic wild boar head in side profile:1.5), long bristly pig snout, one prominent curved ivory tusk rising from the lower jaw, small triangular pig ear, silver metal relief and burgundy enamel, powerful wild pig.",
+    "denoise": 0.95,
+    "negative": ", horns, bull, cow, bison, buffalo, goat, antlers, human, compass, cross"
+  },
+  "blood_ancester_6": {
+    "subject": "(a black bat with spread wings:1.4), silver-edged bat wings enclosing a dark purple blood gem, shadow ancestry and silent movement, compact heraldic emblem.",
+    "denoise": 0.93,
+    "negative": ", compass, compass rose, unrelated cross, science fiction, cartoon"
+  },
+  "blood_ancester_7": {
+    "subject": "(a silver horse head with a flowing windswept mane:1.4), a few blue enamel wind curls, swiftness and inherited speed, compact heraldic emblem.",
+    "denoise": 0.93,
+    "negative": ", compass, compass rose, unrelated cross, science fiction, cartoon"
+  },
+  "blood_ancester_8": {
+    "subject": "(a radiant eight-pointed morning star:1.4), a warm golden star surrounding a pearl-white center, restrained silver rays, innate hope and resilience.",
+    "denoise": 0.93,
+    "negative": ", compass, compass rose, unrelated cross, science fiction, cartoon"
+  },
+  "blood_ancester_9": {
+    "subject": "(a medieval jester cap with three curled points and tiny bells:1.4), burgundy and emerald enamel panels with gold edging, clever trickster wit, compact emblem.",
+    "denoise": 0.93,
+    "negative": ", compass, compass rose, unrelated cross, science fiction, cartoon"
+  },
+  "blood_ancester_10": {
+    "subject": "(a single black raven in profile:1.4), folded wings, alert silver eye, perched on a short weathered branch, watchful ancestral intuition, silver highlights on dark feathers.",
+    "denoise": 0.93,
+    "negative": ", compass, compass rose, unrelated cross, science fiction, cartoon"
+  },
+  "blood_ancester_11": {
+    "subject": "(a coiled silver dragon with a raised head:1.4), one folded wing and a deep red ruby blood gem at its chest, restrained ember accents, draconic ancestral power.",
+    "denoise": 0.93,
+    "negative": ", compass, compass rose, unrelated cross, science fiction, cartoon"
+  },
+  "skonester_trait_xinwuguai": {
+    "subject": "(a single ivory lotus blossom:1.5), an open ivory lotus with thick soft petals and two jade-green leaves, floating isolated emblem of peace and tranquility, plain dark charcoal surroundings.",
+    "negative": ", frame, border, card, tile, rectangle, square, plaque, panel, paper, background scenery, text",
+    "denoise": 0.95
+  },
+  "skonester_trait_stats_100_locked": {
+    "subject": "(a heavy ornate golden padlock:1.5), a broad blank dark enamel faceplate on the padlock body, thick closed gold shackle, restrained medieval decoration, permanent mastery of all attributes, no lettering.",
+    "denoise": 0.93,
+    "negative": ", compass, compass rose, unrelated cross, science fiction, cartoon"
+  },
+  "skonester_trait_baidubuqin": {
+    "subject": "(a jade-green shield with a silver serpent curled around a healing staff:1.4), a compact protective medicinal emblem, immunity to poison and disease.",
+    "denoise": 0.93,
+    "negative": ", compass, compass rose, unrelated cross, science fiction, cartoon"
+  },
+  "plague_immunity": {
+    "subject": "(a steel shield enclosing an ivory plague-doctor mask:1.4), a small green healing leaf beneath the beaked mask, protective gold rim, immunity to plague, compact emblem.",
+    "denoise": 0.93,
+    "negative": ", compass, compass rose, unrelated cross, science fiction, cartoon"
+  },
+  "sneed_seed": {
+    "subject": "(a silver heraldic tree with a single red ruby at its roots:1.4), dark forest-green enamel and a modest silver frame, noble ranger ancestry, Blood of the Dunedain.",
+    "denoise": 0.93,
+    "negative": ", compass, compass rose, unrelated cross, science fiction, cartoon"
+  },
+  "gigasuperseed": {
+    "subject": "(a royal-blue heraldic shield with a bold silver tree:1.5), a large golden royal crown resting on top of the shield, a single ruby-red blood gem at the roots, broad clear silver branches, compact single emblem of royal Numenorean ancestry.",
+    "negative": ", tiny details, thin twigs, delicate lace, detached branches, compass, cross, full body",
+    "denoise": 0.95
+  }
+}

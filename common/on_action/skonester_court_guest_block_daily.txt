@@ -1,0 +1,12 @@
+﻿# 子 on_action 由 zzz_skonester_fidelity_affair_sweep_daily.txt 的 daily_playable_pulse 掛載；勿在此重複定義 daily_playable_pulse，以免被 zzz 覆蓋丟失。
+
+skonester_court_guest_kick_playable = {
+  effect = {
+    if = {
+      limit = {
+        is_ai = no
+      }
+      skonester_court_mgmt_kick_all_guests_effect = yes
+    }
+  }
+}

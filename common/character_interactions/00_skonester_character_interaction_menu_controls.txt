@@ -1,0 +1,50 @@
+﻿skonester_open_character_interaction_menu = {
+	category = interaction_category_uncategorized
+	interface_priority = 12000
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = on
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			NOT = { has_character_flag = skonester_character_interaction_menu_open }
+		}
+	}
+
+	on_send = {
+		scope:actor = { add_character_flag = skonester_character_interaction_menu_open }
+	}
+
+	ai_will_do = 0
+}
+
+skonester_close_character_interaction_menu = {
+	category = interaction_category_uncategorized
+	interface_priority = 12000
+	common_interaction = yes
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	icon = off
+
+	is_shown = {
+		scope:actor = {
+			is_ai = no
+			has_character_flag = skonester_character_interaction_menu_open
+		}
+	}
+
+	on_send = {
+		scope:actor = {
+			remove_character_flag = skonester_character_interaction_menu_open
+			remove_character_flag = toc_showdebsflag
+			remove_character_flag = toc_showspecsflag
+			remove_character_flag = toc_showtextrasflag
+		}
+	}
+
+	ai_will_do = 0
+}

@@ -1,0 +1,49 @@
+﻿# Mod-local replacements for the PCM reward calls to three incomplete historical sword helpers.
+# Preserve the rewards without overriding vanilla's same-named effects or importing its whole file.
+# Current personal sword visual/modifier are used; original unavailable visual: chinese_sword.
+skonester_121_create_legendary_sword_effect = {
+	$OWNER$ = { save_scope_as = owner }
+	set_artifact_rarity_famed = yes
+	create_artifact = {
+		name = $NAME$
+		description = $DESC$
+		type = sword
+		visuals = sword
+		wealth = scope:wealth
+		quality = scope:quality
+		history = { type = created_before_history }
+		modifier = artifact_duel_weapon_4_modifier
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+	}
+}
+
+# Original unavailable modifier: zhanlu_sword_modifier.
+skonester_121_create_artifact_zhanlu_sword_effect = {
+	skonester_121_create_legendary_sword_effect = {
+		OWNER = $OWNER$
+		NAME = skonester_121_zhanlu_sword_name
+		DESC = skonester_121_zhanlu_sword_desc
+	}
+}
+
+# Original unavailable modifier: chunjun_sword_modifier.
+skonester_121_create_artifact_chunjun_sword_effect = {
+	skonester_121_create_legendary_sword_effect = {
+		OWNER = $OWNER$
+		NAME = skonester_121_chunjun_sword_name
+		DESC = skonester_121_chunjun_sword_desc
+	}
+}
+
+# Original unavailable modifier: yuchang_sword_modifier.
+skonester_121_create_artifact_yuchang_sword_effect = {
+	skonester_121_create_legendary_sword_effect = {
+		OWNER = $OWNER$
+		NAME = skonester_121_yuchang_sword_name
+		DESC = skonester_121_yuchang_sword_desc
+	}
+}

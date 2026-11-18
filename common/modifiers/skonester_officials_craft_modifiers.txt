@@ -1,0 +1,25 @@
+﻿# 宝物制作：固定数值修饰符（备用；主路径为 advcm_* 叠层，见 skonester_acm_advcm_slot_apply_effects.txt）
+skonester_craft_mod_diplomacy_10 = {
+  diplomacy = 10
+  stacking = yes
+}
+
+skonester_craft_mod_martial_10 = {
+  martial = 10
+  stacking = yes
+}
+
+skonester_craft_mod_stewardship_10 = {
+  stewardship = 10
+  stacking = yes
+}
+
+skonester_craft_mod_intrigue_10 = {
+  intrigue = 10
+  stacking = yes
+}
+
+skonester_craft_mod_learning_10 = {
+  learning = 10
+  stacking = yes
+}

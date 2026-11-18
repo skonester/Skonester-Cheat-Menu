@@ -1,0 +1,139 @@
+﻿# 强有地AI强化（决议 skonester_boost_world_ai_rulers_decision）附带人物修正
+# 军事/经济/战争 + 敛财/直辖/铁腕（与年度 9200 脚本叠加）；年脉冲见 skonester_ai_de_jure_transfer_yearly
+
+skonester_ai_realm_governance_support = {
+  icon = stewardship_positive
+  stewardship = 3
+  diplomacy = 2
+  martial = 3
+  domain_limit = 2
+  monthly_income_mult = 0.40
+  monthly_prestige_gain_mult = 0.05
+  # 建设/发展：让 AI 更能把钱转化为地产与军力（键名在本模组已被其它 modifier 使用）
+  build_speed = -0.25
+  holding_build_speed = -0.25
+  men_at_arms_cap = 150
+  men_at_arms_limit = 6
+  army_maintenance_mult = -0.50
+  levy_maintenance = -0.35
+  men_at_arms_maintenance = -0.35
+  mercenary_hire_cost_mult = -0.30
+  faith_conversion_piety_cost_mult = -0.12
+  levy_reinforcement_rate_same_faith = 0.10
+  levy_reinforcement_rate_different_faith = 0.10
+  ai_energy = 35
+  ai_rationality = 34
+  ai_sociability = 28
+  ai_boldness = 42
+  diplomatic_range_mult = 0.15
+  ai_war_chance = 0.672
+  ai_vengefulness = 28
+  ai_war_cooldown = -0.65
+  monthly_war_income_mult = 0.40
+  dread_gain_mult = 0.45
+  dread_baseline_add = 15
+  vassal_opinion = 10
+  legitimacy_gain_mult = 0.15
+  ai_greed = 28
+  ai_compassion = 8
+  ai_honor = 8
+  ai_zeal = 22
+}
+
+# 年度 AI 脉冲 · 常备：压低「坐拥宣称却不开战」——略抬开战/鲁莽/理性权重（11 个月刷新）
+
+skonester_ai_expansion_push = {
+  icon = stewardship_positive
+  build_speed = -0.60
+  holding_build_speed = -0.60
+  men_at_arms_maintenance = -0.70
+  ai_war_chance = 0.192
+  ai_boldness = 14
+  ai_rationality = 16
+  ai_energy = 15
+  ai_war_cooldown = -0.25
+  mercenary_hire_cost_mult = -0.15
+  monthly_war_income_mult = 0.15
+}
+
+# 年度事件始终叠加：额外开战/鲁莽/理性权重（与常备脉冲叠）
+
+skonester_ai_stable_surge = {
+  icon = stewardship_positive
+  ai_war_chance = 0.352
+  ai_boldness = 28
+  ai_rationality = 28
+  ai_energy = 20
+  ai_war_cooldown = -0.15
+}
+
+# 人类玩家版图过大时：全 AI 独立统治者短期叠加以利结盟、理性评估、谍报与对联姻/外交的偏重（非强制宣战或绑架）
+
+skonester_ai_counter_player_pressure = {
+  icon = stewardship_positive
+  ai_war_chance = 0.32
+  ai_rationality = 26
+  ai_boldness = 24
+  ai_sociability = 35
+  ai_vengefulness = 16
+  diplomatic_range_mult = 0.35
+  intrigue = 5
+  diplomacy = 4
+}
+
+# 玩家版图进一步膨胀（≥120 郡或帝国且 ≥100 郡）：叠加强一档反制压力
+skonester_ai_counter_player_pressure_heavy = {
+  icon = stewardship_positive
+  ai_war_chance = 0.45
+  ai_rationality = 34
+  ai_boldness = 32
+  ai_sociability = 48
+  ai_vengefulness = 26
+  diplomatic_range_mult = 0.50
+  intrigue = 7
+  diplomacy = 6
+  monthly_war_income_mult = 0.12
+}
+
+# —— AI「玩家式打仗思维」姿态：由 9210 战略审计按条件短期赋予 ——
+
+# 进攻姿态：有优势/有宣称/有软柿子时，主动出手且连续作战
+skonester_ai_war_planner_offensive = {
+  icon = stewardship_positive
+  ai_war_chance = 0.28
+  ai_war_cooldown = -0.25
+  ai_boldness = 18
+  ai_rationality = 10
+  ai_energy = 18
+  men_at_arms_maintenance = -0.15
+}
+
+# 防守姿态：明显劣势/多线/内乱时，优先稳住与拉盟友（仍保留反击能力）
+skonester_ai_war_planner_defensive = {
+  icon = stewardship_positive
+  # “猛宣猛打”取向：即使处于防守姿态也不彻底停战，只是更重视拉盟友与恢复节奏
+  ai_war_chance = 0.08
+  ai_war_cooldown = -0.05
+  ai_rationality = 18
+  ai_sociability = 22
+  diplomatic_range_mult = 0.12
+  monthly_income_mult = 0.10
+  build_speed = -0.15
+  holding_build_speed = -0.15
+}
+
+# 玩家领国内：AI 封臣反对压力（更爱结党/搞破坏/趁乱夺权）
+skonester_ai_anti_player_vassal_pressure = {
+  icon = stewardship_positive
+  intrigue = 3
+  diplomacy = 1
+  ai_vengefulness = 22
+  ai_boldness = 16
+  ai_rationality = 12
+  ai_sociability = 18
+  ai_war_chance = 0.12
+  ai_honor = -12
+  ai_compassion = -12
+  diplomatic_range_mult = 0.10
+}
+

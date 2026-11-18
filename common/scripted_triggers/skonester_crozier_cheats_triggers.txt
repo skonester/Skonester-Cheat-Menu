@@ -1,0 +1,35 @@
+﻿skonester_crozier_cheats_any_toggle = {
+	OR = {
+		has_global_variable = skonester_crozier_cheats_on_health
+		has_global_variable = skonester_crozier_cheats_on_stress
+		has_global_variable = skonester_crozier_cheats_on_skills
+		has_global_variable = skonester_crozier_cheats_on_income
+		has_global_variable = skonester_crozier_cheats_on_domain
+		has_global_variable = skonester_crozier_cheats_on_vassals
+		has_global_variable = skonester_crozier_cheats_on_prestige
+		has_global_variable = skonester_crozier_cheats_on_piety
+		has_global_variable = skonester_crozier_cheats_on_immortal_player
+		has_global_variable = skonester_crozier_cheats_on_disease_player
+		has_global_variable = skonester_crozier_cheats_on_monthly_gold
+		has_global_variable = skonester_crozier_cheats_on_renown
+		has_global_variable = skonester_crozier_cheats_on_slots
+		has_global_variable = skonester_crozier_cheats_on_influence
+		has_global_variable = skonester_crozier_cheats_on_lifestyle_xp
+		has_global_variable = skonester_crozier_cheats_on_levy
+		has_global_variable = skonester_crozier_cheats_on_life
+		has_global_variable = skonester_crozier_cheats_on_prestige_mult
+		has_global_variable = skonester_crozier_cheats_on_renown_mult
+		has_global_variable = skonester_crozier_cheats_on_innovation
+		has_global_variable = skonester_crozier_cheats_on_legit_gain
+		has_global_variable = skonester_crozier_cheats_on_travel_safe
+		has_global_variable = skonester_crozier_cheats_on_merit_gain
+		has_global_variable = skonester_crozier_cheats_on_skills_mult
+		has_global_variable = skonester_crozier_cheats_on_long_reign
+		has_global_variable = skonester_crozier_cheats_on_legend_spread
+		has_global_variable = skonester_crozier_cheats_on_auto_gold_floor
+		has_global_variable = skonester_crozier_cheats_on_auto_prestige_floor
+		has_global_variable = skonester_crozier_cheats_on_auto_no_prison
+		has_global_variable = skonester_crozier_cheats_on_auto_ascension
+		has_global_variable = skonester_crozier_cheats_on_auto_forever_young
+	}
+}

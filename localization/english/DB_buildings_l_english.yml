@@ -1,0 +1,249 @@
+﻿l_english:
+
+# Tomb of Ancestors
+building_type_db_tomb_ancestors_01:0 "Tomb of Ancestors"
+building_type_db_tomb_ancestors_01_desc:0 "#F Building a Tomb of Ancestors can unite tribes and raise the authority of tribal chiefs.#!"
+building_db_tomb_ancestors_01:0 "Tomb of Ancestors"
+building_db_tomb_ancestors_01_desc:0 "$building_type_db_tomb_ancestors_01_desc$"
+building_db_tomb_ancestors_02:0 "Tomb of Legendary Ancestors"
+building_db_tomb_ancestors_02_desc:0 "Building a Tomb of Legendary Ancestors would be a good way to unite the tribe and raise its reputation."
+
+# Hall of Pillager
+building_type_db_hall_pillage_01:0 "Hall of Pillager"
+building_type_db_hall_pillage_01_desc:0 "#F It's a place where the Pillagers of our tribe prepare for pillaging. Here they share looting, rearrange their weapons, and prepare for the next pillage.#!"
+building_db_hall_pillage_01:0 "Hall of Pillager"
+building_db_hall_pillage_01_desc:0 "$building_type_db_hall_pillage_01_desc$"
+building_db_hall_pillage_02:0 "Hall of Pillager"
+building_db_hall_pillage_02_desc:0 "$building_type_db_hall_pillage_01_desc$"
+
+# Hall of Pillager(for Steppe)
+building_type_db_steppe_pillage_01:0 "Hall of Pillager"
+building_type_db_steppe_pillage_01_desc:0 "#F It's a place where the Pillagers of our tribe prepare for pillaging. Here they share looting, rearrange their weapons, and prepare for the next pillage.#!"
+building_db_steppe_pillage_01:0 "Hall of Pillager"
+building_db_steppe_pillage_01_desc:0 "$building_type_db_hall_pillage_01_desc$"
+building_db_steppe_pillage_02:0 "Hall of Pillager"
+building_db_steppe_pillage_02_desc:0 "$building_type_db_hall_pillage_01_desc$"
+
+# Gigantic Idol
+building_type_db_gigantic_idol_01:0 "Gigantic Idol"
+building_type_db_gigantic_idol_01_desc:0 "#F A Gigantic Idol worshipped by the tribe. A Gigantic idol stretches into the sky like a tree, and there are many items dedicated to the idol around it.#!"
+building_db_gigantic_idol_01:0 "Gigantic Idol"
+building_db_gigantic_idol_01_desc:0 "$building_type_db_gigantic_idol_01_desc$"
+building_db_gigantic_idol_02:0 "Gigantic Idol"
+building_db_gigantic_idol_02_desc:0 "$building_type_db_gigantic_idol_01_desc$"
+
+# Tribal Assembly
+building_type_db_tribal_assembly_01:0 "Tribal Assembly"
+building_type_db_tribal_assembly_01_desc:0 "#F It's a Assembly to decide important work for the tribe. At the Assembly, there will be discussions about the upcoming war, faith, etc.#!"
+building_db_tribal_assembly_01:0 "Tribal Assembly"
+building_db_tribal_assembly_01_desc:0 "It's a Assembly to decide important work for the tribe. At the Assembly, there will be discussions about the upcoming war, faith, etc."
+building_db_tribal_assembly_02:0 "Expanded Tribal Assembly"
+building_db_tribal_assembly_02_desc:0 "Whenever Tribe decide something important, holding a assembly is exhausting. If there is an advisory group consisting of skilled warriors, Shaman next to the chief, The Chief will be able to deal with the impending problems in time."
+
+# Shura Council
+building_type_db_shura_council_01:0 "Shura Council"
+building_type_db_shura_council_01_desc:0 "#F Shura is an Arabic word meaning 'consultation'. It is used in early Islamic communities to encourage mutual consultation before making significant decisions.#!"
+building_db_shura_council_01:0 "Non-Permanent Shura Council"
+building_db_shura_council_01_desc:0 "The Shura Council has been established. Although Non-Permanent, the Sultan will be able to seek policy advice when necessary."
+building_db_shura_council_02:0 "Permanent Shura Council"
+building_db_shura_council_02_desc:0 "By reorganizing the Shura Council, the Sultan has always been able to get appropriate advice."
+building_db_shura_council_03:0 "Expanded Shura Council"
+building_db_shura_council_03_desc:0 "By expanding the Shura Council, the Sultan has been able to get professional advice in more areas."
+
+# Royal Mosque
+building_type_db_royal_mosque_01:0 "Royal Mosque"
+building_type_db_royal_mosque_01_desc:0 "#F A mosque visited by the royal family to worship.#!"
+building_db_royal_mosque_01:0 "Royal Mosque"
+building_db_royal_mosque_01_desc:0 "$building_type_db_royal_mosque_01_desc$"
+building_db_royal_mosque_02:0 "Royal Madrasa"
+building_db_royal_mosque_02_desc:0 "Madrasa was built under the Royal Mosque to teach various studies including theology."
+building_db_royal_mosque_03:0 "Royal Crypt"
+building_db_royal_mosque_03_desc:0 "A Crypt was built under the Royal Mosque, allowing members of the royal family to rest in peace."
+
+# Royal Chapel
+building_type_db_royal_chapel_01:0 "Royal Chapel"
+building_type_db_royal_chapel_01_desc:0 "#F A Chapel visited by the royal family to worship.#!"
+building_db_royal_chapel_01:0 "Royal Chapel"
+building_db_royal_chapel_01_desc:0 "$building_type_db_royal_chapel_01_desc$"
+building_db_royal_chapel_02:0 "Expanded Royal Chapel"
+building_db_royal_chapel_02_desc:0 "By expanding the Royal Chapel, various educational facilities have been expanded so that students can study studies such as theology."
+building_db_royal_chapel_03:0 "Royal Crypt"
+building_db_royal_chapel_03_desc:0 "A Crypt was built under the Royal Chapel, allowing members of the royal family to rest in peace."
+
+# Insular Monastery
+building_type_db_insular_monas_01:0 "Insular Monastery"
+building_type_db_insular_monas_01_desc:0 "#F In a typical Western church, the basic unit of church organization is the diocese, but Ireland was not. In Ireland, churches were organized based on monasteries established by tribal chiefs of each tribe and controlled by descendants of tribal chiefs. These monasteries were not large stone buildings like ordinary medieval monasteries, but a group of thatched houses surrounding a small church.#!"
+building_db_insular_monas_01:0 "Insular Monastery"
+building_db_insular_monas_01_desc:0 "$building_type_db_insular_monas_01_desc$"
+building_db_insular_monas_02:0 "Expanded Insular Monastery"
+building_db_insular_monas_02_desc:0 "Monastery expanded with the investment of the local tribal chief. More monks will live extremely godly lives here than ever before, and will strive to learn with passion."
+
+# local Parliament
+building_type_db_local_parliament_01:0 "Local Parliament"
+building_type_db_local_parliament_01_desc:0 "#F Local Parliament is a place where Monarchs seek advice on governance or get consent from the people.#!"
+building_db_local_parliament_01:0 "Non-Permanent Local Parliament"
+building_db_local_parliament_01_desc:0 "A Local Parliament has been established. Although Non-Permanent, the Monarch will be able to consult policy when necessary."
+building_db_local_parliament_02:0 "Permanent Local Parliament"
+building_db_local_parliament_02_desc:0 "By reorganizing the Local Parliament, the Monarch has always been able to get appropriate advice"
+building_db_local_parliament_03:0 "Extended Local Parliament"
+building_db_local_parliament_03_desc:0 "By expanding the Local Parliament, the Monarch has been able to get professional advice in more areas"
+
+# Library
+building_type_db_local_library_01:0 "Library"
+building_type_db_local_library_01_desc:0 "#F It's a place where many kinds of books are stored.#!"
+building_db_local_library_01:0 "Small Library"
+building_db_local_library_01_desc:0 "It's a small library. Although the number of books is small, people who want to learn from books come."
+building_db_local_library_02:0 "Famous Local Library"
+building_db_local_library_02_desc:0 "Thanks to the investment of local rulers, we were able to expand books and hire scribes to copy books."
+building_db_local_library_03:0 "Grand Library"
+building_db_local_library_03_desc:0 "It's a library with a lot of books. Many people from far away come here to learn."
+
+# Artificial Forest
+building_type_db_artificial_forest_01:0 "Artificial Forest"
+building_type_db_artificial_forest_01_desc:0 "#F Due to the lack of forests in our realm, we are buying trees from neighboring realms. Creating forests artificially will not only reduce this waste, but also enable a stable supply of raw materials for construction, shipbuilding, and archery.#!"
+building_db_artificial_forest_01:0 "Small Artificial Forest"
+building_db_artificial_forest_01_desc:0 "We planted trees to create Small forests artificially."
+building_db_artificial_forest_02:0 "Appointment of Forest Keeper"
+building_db_artificial_forest_02_desc:0 "We appoint a forest keeper to manage artificially created forests."
+building_db_artificial_forest_03:0 "Large Artificial Forest"
+building_db_artificial_forest_03_desc:0 "Our plan to create a forest artificially succeeded. Now we can train using forests and easily obtain raw materials for construction, shipbuilding, bow making, etc."
+
+# Caravan Sarai
+building_type_db_caravan_sarai_01:0 "Caravanserai"
+building_type_db_caravan_sarai_01_desc:0 "#F A Caravanserai was a roadside inn where travelers could rest and recover from the day's journey. Caravanserais supported the flow of commerce, information and people across the network of trade routes covering Asia, North Africa and Southeast Europe, most notably the Silk Road.#!"
+building_db_caravan_sarai_01:0 "Caravan Sarai"
+building_db_caravan_sarai_01_desc:0 "$building_type_db_caravan_sarai_01_desc$"
+building_db_caravan_sarai_02:0 "Caravan Sarai"
+building_db_caravan_sarai_02_desc:0 "$building_type_db_caravan_sarai_01_desc$"
+building_db_caravan_sarai_03:0 "Caravan Sarai"
+building_db_caravan_sarai_03_desc:0 "$building_type_db_caravan_sarai_01_desc$"
+
+# Prison Tower
+building_type_db_prison_cell_01:0 "Prison Tower"
+building_type_db_prison_cell_01_desc:0 "#F It's a place to 'properly' treat prisoners.#!"
+building_db_prison_cell_01:0 "Expanded Prison"
+building_db_prison_cell_01_desc:0 "Expanding prisons will help make life more painful for inmates."
+building_db_prison_cell_02:0 "Excution Ground"
+building_db_prison_cell_02_desc:0 "Wouldn't it be better to end it at once than a painful life?"
+building_db_prison_cell_03:0 "Reinforced Prison Tower"
+building_db_prison_cell_03_desc:0 "Strengthening the prison tower will prevent the security from deteriorating due to enemy intrusion."
+
+# Court of Justice
+building_type_db_court_justice_01:0 "Court of Justice"
+building_type_db_court_justice_01_desc:0 "#F It's a place where you judge the existence of sin according to the law and sentence the sinner.#!"
+building_db_court_justice_01:0 "Hundred Court"
+building_db_court_justice_01_desc:0 "In some hundreds, courts were held at a fixed place; while in others, courts moved with each sitting to a different location. The main duty of the hundred court was the maintenance of the frankpledge system. The court was formed of twelve freeholders, or freemen"
+building_db_court_justice_02:0 "Shire Court"
+building_db_court_justice_02_desc:0 "A Shire court was an legal institution, used to maintain law and order at a local level, and perform various administrative functions, including the collection of taxes for the central government."
+building_db_court_justice_03:0 "Court of King's Bench"
+building_db_court_justice_03_desc:0 "The Court of King's Bench was a court of common law. Created in the late 12th to early 13th century from the curia regis, the King's Bench initially followed the monarch on his travels. The King's Bench finally joined the Court of Common Pleas and Exchequer of Pleas in Westminster Hall in 1318, making its last travels in 1421. "
+
+# Statue of Horse
+building_type_db_statue_horse_01:0 "Statue of Horse"
+building_type_db_statue_horse_01_desc:0 "#F It is a statue in honor of a legendary horse named 'Glitterhoof'.#!"
+building_db_statue_horse_01:0 "Statue of Horse"
+building_db_statue_horse_01_desc:0 "$building_type_db_statue_horse_01_desc$"
+building_db_statue_horse_02:0 "Gold Plating"
+building_db_statue_horse_02_desc:0 "Golding the 'Glitterhoof' statue would be a good way to pay him a little more respect."
+building_db_statue_horse_03:0 "Additional Animal Statues"
+building_db_statue_horse_03_desc:0 "If you add a small animal statue next to the 'Glitterhoof' statue, it will be a more perfect shape."
+
+# Kurultai
+building_type_db_kurultai_01:0 "Kurultai"
+building_type_db_kurultai_01_desc:0 "#F Kurultai was a political and military council of ancient Mongol and Turkic chiefs and khans. All Great Khans of the Mongol Empire, for example Genghis Khan and Ögedei Khan, were formally elected in a Kurultai; khans of subordinate Mongol states, such as the Golden Horde, were elected by a similar regional Kurultai.#!"
+building_db_kurultai_01:0 "Kurultai"
+building_db_kurultai_01_desc:0 "Kurultai was held. Although Non-Permanent, the Khan will be able to consult policy when necessary."
+building_db_kurultai_02:0 "Permanent Kurultai"
+building_db_kurultai_02_desc:0 "By reorganizing the Kurultai, the Khan has always been able to get appropriate advice."
+building_db_kurultai_03:0 "Extended Kurultai"
+building_db_kurultai_03_desc:0 "By expanding the Kurultai, the khan has been able to get professional advice in more areas."
+
+# Lighthouse
+building_type_db_lighthouse_01:0 "Lighthouse"
+building_type_db_lighthouse_01_desc:0 "#F It's a tall tower that guarantees the safety of ships sailing at night.#!"
+building_db_lighthouse_01:0 "Lighthouse"
+building_db_lighthouse_01_desc:0 "$building_type_db_lighthouse_01_desc$"
+building_db_lighthouse_02:0 "Giant Banners"
+building_db_lighthouse_02_desc:0 "If we install a Giant Banner on the lighthouse, Sailers will be able to identify our lighthouse even in the distant sea."
+building_db_lighthouse_03:0 "Great Lighthouse"
+building_db_lighthouse_03_desc:0 "Our lighthouse is well known to sailors sailing in the nearby sea. After the lighthouse was installed, many ships are safely coming to our port."
+
+# Mercenary Camp
+building_type_db_mercenary_camp_01:0 "Mercenary Camp"
+building_type_db_mercenary_camp_01_desc:0 "#F It's a place where people who are willing to give up their lives gather for money.#!"
+building_db_mercenary_camp_01:0 "Mercenary Camp"
+building_db_mercenary_camp_01_desc:0 "$building_type_db_mercenary_camp_01_desc$"
+building_db_mercenary_camp_02:0 "Expanded Mercenary Camp"
+building_db_mercenary_camp_02_desc:0 "More Mercenaries who smelled blood coming from Realm gathered at the Camp. More mercenaries are vying for employment and purchasing goods for the next battle from local shops. Of course, the fight between drunk mercenaries and locals increased."
+
+# Thing
+building_type_db_things_01:0 "Thing"
+building_type_db_things_01_desc:0 "#F A Thing is a governing assembly in early Germanic society, made up of the free people of the community presided over by lawspeakers.\n\nIn the pre-Christian clan-culture of Scandinavia, the members of a clan were obliged to avenge injuries against their dead and mutilated relatives. As a result, feuding is often seen as the most common form of conflict resolution used in Viking society. However, things are in a more general sense balancing structures used to reduce tribal feuds and avoid social disorder in North-Germanic cultures. They played an important role in Viking society as forums for conflict resolution, marriage alliances, power display, honor, and inheritance settlements.#!"
+building_db_things_01:0 "Thing"
+building_db_things_01_desc:0 "$building_type_db_things_01_desc$"
+building_db_things_02:0 "Permanent Thing"
+building_db_things_02_desc:0 "By reorganizing the Thing, the Lord has always been able to get appropriate advice."
+building_db_things_03:0 "Expanded Thing"
+building_db_things_03_desc:0 "By expanding the Thing, the Lord has been able to get professional advice in more areas."
+
+# Fair
+building_type_db_fair_01:0 "Fair"
+building_type_db_fair_01_desc:0 "#F A fair is a gathering of people for a variety of entertainment or commercial activities. It is normally of the essence of a fair that it is temporary with scheduled times lasting from an afternoon to several weeks.\n\nIn the Middle Ages, many fairs developed as temporary markets and were especially important for long-distance and international trade, as wholesale traders travelled, sometimes for many days, to fairs where they could be sure to meet those they needed to buy from or sell to.#!"
+building_db_fair_01:0 "Small Fair"
+building_db_fair_01_desc:0 "$building_type_db_fair_01_desc$"
+building_db_fair_02:0 "Fair"
+building_db_fair_02_desc:0 "$building_type_db_fair_01_desc$"
+building_db_fair_03:0 "Regional Fair"
+building_db_fair_03_desc:0 "More and more people have been coming since the fair was held in the Realm."
+building_db_fair_04:0 "Grand Fair"
+building_db_fair_04_desc:0 "More and more people have been coming since the fair was held in the Realm. There are various things to see and eat at the fair, and various items from the Realm are sold."
+
+# Royal Synagogue
+building_type_db_royal_cynagogue_01:0 "Royal Synagogue"
+building_type_db_royal_cynagogue_01_desc:0 "#F A synagogue visited by the royal family to worship.#!"
+building_db_royal_cynagogue_01:0 "Royal Synagogue"
+building_db_royal_cynagogue_01_desc:0 "$building_type_db_royal_cynagogue_01_desc$"
+building_db_royal_cynagogue_02:0 "Expanded Royal Synagogue"
+building_db_royal_cynagogue_02_desc:0 "By expanding the synagogue, more believers were allowed to visit."
+building_db_royal_cynagogue_03:0 "Torah Ark"
+building_db_royal_cynagogue_03_desc:0 "The Torah Ark is a cabient in which the Torah scrolls are kept. The ark in a synagogue is almost always positioned in such a way such that those who face it are facing towards Jerusalem."
+
+# Royal Mandir
+building_type_db_royal_hindu_01:0 "Royal Mandir"
+building_type_db_royal_hindu_01_desc:0 "#F A Hindu Temple visited by the royal family to worship.#!"
+building_db_royal_hindu_01:0 "Royal Mandir"
+building_db_royal_hindu_01_desc:0 "$building_type_db_royal_cynagogue_01_desc$"
+building_db_royal_hindu_02:0 "Calai"
+building_db_royal_hindu_02_desc:0 "Install Calai, where students can learn the Vedic scriptures in Mandir. In Calai, scholars and students will recite and study Sanskrit and Vedic scriptures."
+building_db_royal_hindu_03:0 "Hospital"
+building_db_royal_hindu_03_desc:0 "A hospital is set up inside Mandir to provide medical care for the sick and the poor."
+
+# Statue of Hero
+building_type_db_statue_ruler_01:0 "Statue of Hero"
+building_type_db_statue_ruler_01_desc:0 "#F It is a statue in honor of a legendary hero.#!"
+building_db_statue_ruler_01:0 "Statue of Hero"
+building_db_statue_ruler_01_desc:0 "$building_type_db_statue_ruler_01_desc$"
+building_db_statue_ruler_02:0 "Gold Plating"
+building_db_statue_ruler_02_desc:0 "Golding the statue would be a good way to pay him a little more respect."
+building_db_statue_ruler_03:0 "Additional Statues"
+building_db_statue_ruler_03_desc:0 "If you add a small statue next to the statue, it will be a more perfect shape."
+
+# Royal Menagerie
+building_type_db_menagerie_01:0 "Royal Menagerie"
+building_type_db_menagerie_01_desc:0 "#F A menagerie is a collection of captive animals, frequently exotic, kept for display. A menagerie was mostly connected with an aristocratic or royal court and was situated within a garden or park of a palace. These aristocrats wanted to illustrate their power and wealth, because exotic animals, alive and active, were less common, more difficult to acquire, and more expensive to maintain.#!"
+building_db_menagerie_01:0 "Royal Menagerie"
+building_db_menagerie_01_desc:0 "$building_type_db_menagerie_01_desc$"
+building_db_menagerie_02:0 "Expanded Royal Menagerie"
+building_db_menagerie_02_desc:0 "By expanding the menagerie, more animals can be raised in the menagerie than before. Now, more aristocrats will envy our wealth and power. However, local priests began to preach openly about our luxury in preaching."
+building_db_menagerie_03:0 "Exotic Menagerie"
+building_db_menagerie_03_desc:0 "Our efforts to continue collecting exotic animals far away seem to have finally paid off. Now, we manage a variety of exotic animals such as elephants, camels, lions, leopards, and white deer."
+
+# Rabbi Council
+building_type_db_rabbi_council_01:0 "Rabbi Council"
+building_type_db_rabbi_council_01_desc:0 "#F After the Jews were expelled from Jerusalem, Rabbi led the Jewish life to live a life in accordance with the Torah. Inviting prominent rabbis to listen to their advice will help our court move in the right direction in accordance with the Torah.#!"
+building_db_rabbi_council_01:0 "Rabbi Council"
+building_db_rabbi_council_01_desc:0 "$building_type_db_rabbi_council_01_desc$"
+building_db_rabbi_council_02:0 "Permanent Rabbi Council"
+building_db_rabbi_council_02_desc:0 "By reorganizing the Council, the Lord has always been able to get appropriate advice."
+building_db_rabbi_council_03:0 "Expanded Rabbi Council"
+building_db_rabbi_council_03_desc:0 "By expanding the Council, the Lord has been able to get professional advice in more areas."

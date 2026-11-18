@@ -1,0 +1,57 @@
+﻿l_german:
+ skonester_cheat_menu_military_manage_menu_interaction: "Militärverwaltung"
+ skonester_cheat_menu_military_manage_menu_interaction_desc: "Heerbann, Elite-Berittene Soldaten, bestehende Einheiten verstärken, Soldaten generieren, Nachschub auffüllen, unbegrenzter Heerbann & Gottesmodus"
+ skonester_military_raise_levies_army_name: "Skonester-Heerbann"
+ skonester_military_raise_levies_toast: "Heerbann ausgehoben"
+ skonester_military_raise_levies_toast_desc: "[skonester_military_toast_char.GetShortUIName] hat Heerbann bis zur maximalen Militärstärke ausgehoben."
+ skonester_military_add_maa_toast: "Berittene Soldaten hinzugefügt"
+ skonester_military_add_maa_toast_desc: "Neue Berittene-Soldaten-Regimenter wurden für [skonester_military_toast_char.GetShortUIName] hinzugefügt."
+ skonester_military_add_maa_all_toast: "Alle Elite-Berittene hinzugefügt"
+ skonester_military_supply_on_toast: "Unendlicher Nachschub aktiviert"
+ skonester_military_supply_on_toast_desc: "[skonester_military_toggle_char.GetShortUIName]: endloser Nachschub, nahezu keine Unterhaltskosten."
+ skonester_military_supply_off_toast: "Unendlicher Nachschub deaktiviert"
+ skonester_military_levy_on_toast: "Unbegrenzter Heerbann aktiviert"
+ skonester_military_levy_on_toast_desc: "[skonester_military_toggle_char.GetShortUIName]: Heerbanngröße ×100, nahezu keine Unterhaltskosten."
+ skonester_military_levy_off_toast: "Unbegrenzter Heerbann deaktiviert"
+ skonester_military_god_on_toast: "Armeegottesmodus aktiviert"
+ skonester_military_god_on_toast_desc: "[skonester_military_toggle_char.GetShortUIName]: nahezu keine Verluste, maximale Marschgeschwindigkeit."
+ skonester_military_god_off_toast: "Armeegottesmodus deaktiviert"
+
+ skonester_military_expand_maa_toast: "Berittene Soldaten verstärkt"
+ skonester_military_expand_maa_toast_desc: "Jedes bestehende Regiment von [skonester_military_expand_toast_char.GetShortUIName] erhielt +5 Einheiten und wurde aufgefüllt."
+ skonester_military_instant_replenish_modifier: "Skonester · Unendlicher Nachschub (Kriegsvorräte gehen nie zur Neige, nahezu keine Unterhaltskosten)"
+ skonester_military_supply_overflow_modifier: "Skonester · Vorratsstapel"
+ skonester_military_levy_overflow_modifier: "Skonester · Unbegrenzter Heerbann"
+ skonester_military_maintenance_waive_a_modifier: "Skonester · Keine Unterhaltskosten (A)"
+ skonester_military_maintenance_waive_b_modifier: "Skonester · Keine Unterhaltskosten (B)"
+ skonester_military_maintenance_waive_c_modifier: "Skonester · Keine Unterhaltskosten (C)"
+ skonester_military_god_mode_modifier: "Skonester · Armeegottesmodus (Maximale Marschgeschwindigkeit)"
+
+ skonester_cheat_menu.3080.t: "Militärverwaltung"
+ skonester_cheat_menu.3080.desc: "Armeen und Heerbann von [skonester_cheat_menu_target.GetShortUIName] anpassen."
+
+
+ skonester_cheat_menu.3085.t: "Heerbann & Berittene Soldaten"
+ skonester_cheat_menu.3085.desc: "Heerbann und Berittene Soldaten von [skonester_cheat_menu_target.GetShortUIName]."
+ skonester_cheat_menu.3086.t: "Armeeverbesserungen"
+ skonester_cheat_menu.3086.desc: "Cheats für Vorräte, Heerbann und Gottesmodus bei [skonester_cheat_menu_target.GetShortUIName] ein- oder ausschalten."
+
+
+
+ skonester_cheat_menu.3081.t: "Elite-Berittene Soldaten hinzufügen"
+ skonester_cheat_menu.3081.desc: "Regimenter für [skonester_cheat_menu_target.GetShortUIName] hinzufügen (pro Klick ~5 Einheiten à 100 Mann)."
+
+ skonester_cheat_menu.3090.t: "Weitere Elite-Einheiten"
+ skonester_cheat_menu.3090.desc: "Kriegselefanten, Armbrustschützen oder alle fünf Elite-Typen."
+
+ skonester_military_knight_limit_modifier: "Skonester · Ritterplätze"
+ skonester_military_knight_power_modifier: "Skonester · Ritterstärke"
+ skonester_military_accolade_glory_modifier: "Skonester · Mehr Ruhm durch Auszeichnungen"
+
+ skonester_cheat_menu.3190.opt_custom_accolade: "@accolade_icon! Benutzerdefinierte Auszeichnungen"
+ skonester_cheat_menu.3190.opt_custom_accolade_tt: "Assistent zum Erstellen, Verwalten vorhandener Auszeichnungen oder virtuelle Auszeichnung (kein DLC erforderlich)."
+ skonester_cheat_menu.3190.t: "Benutzerdefinierte Auszeichnungen"
+ skonester_cheat_menu.3190.desc: "Auszeichnungen für [skonester_cheat_menu_target.GetShortUIName] konfigurieren."
+ skonester_cheat_menu.3190.opt_wizard: "Erstellungsassistent"
+ skonester_cheat_menu.3190.opt_manage: "Vorhandene verwalten"
+ skonester_cheat_menu.3190.opt_virtual: "Virtuelle Auszeichnung"

@@ -1,0 +1,20 @@
+﻿template skonesterCw_Tradition_Picker_Header
+{
+  restrictparent_min = yes
+  using = Window_Margins
+
+  header_pattern = {
+    layoutpolicy_horizontal = expanding
+
+    blockoverride "header_text"
+    {
+      text = skonester_cw_tradition_menu_title
+    }
+
+    blockoverride "button_close"
+    {
+      onclick = "[GetVariableSystem.Clear('skonester_cw_tradition_picker_visible')]"
+      onclick = "[GetScriptedGui('skonester_cw_close_tradition_picker_window').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+    }
+  }
+}

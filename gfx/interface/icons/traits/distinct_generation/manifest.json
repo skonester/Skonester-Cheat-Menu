@@ -1,0 +1,1259 @@
+{
+  "scope": "Exact decoded RGBA duplicates and shared icon references within this mod; not a visual near-duplicate or vanilla-asset audit.",
+  "source_png_count": 73,
+  "mapped_trait_count": 79,
+  "selected_trait_count": 42,
+  "duplicate_file_groups": [
+    [
+      "bloodline_god_1",
+      "bloodline_god_2",
+      "borntorule_seed",
+      "crazyminded_psycho",
+      "fifth_bloodline5",
+      "first_bloodline1",
+      "immortality",
+      "insane_generale",
+      "insane_opinion_fa",
+      "insane_opinion_fv",
+      "toc_immortal",
+      "toc_immortalblood"
+    ],
+    [
+      "boost_daiming",
+      "tyranny_gain_remove"
+    ],
+    [
+      "fourth_bloodline4",
+      "second_bloodline2",
+      "third_bloodline3",
+      "toc_gamer0",
+      "toc_gamerblood0"
+    ],
+    [
+      "greatest_lord_np",
+      "greatest_lord_t"
+    ],
+    [
+      "pantokratorus_a",
+      "pantokratorus_ablood"
+    ],
+    [
+      "toc_patrilinealblood",
+      "toc_patrilinealblood2",
+      "toc_patrilinealblood3"
+    ]
+  ],
+  "jobs": [
+    {
+      "trait_id": "build_speed_cheat",
+      "name": "Reincarnation of Villard de Honnecourt",
+      "description": "Only Barbara the Anointed could bless a mortal with the speed and vision of Villard de Honnecourt.",
+      "source_icon": "build_speed_cheat.dds",
+      "definition_file": "common/traits/daddy_pika_traits.txt",
+      "same_artwork_files": [
+        "build_speed_cheat.dds"
+      ],
+      "same_artwork_traits": [
+        "build_speed_cheat",
+        "trait_great_builder_god"
+      ],
+      "input_png": "inputs/build_speed_cheat.png",
+      "proposed_output_dds": "build_speed_cheat.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Reincarnation of Villard de Honnecourt. Trait meaning: Only Barbara the Anointed could bless a mortal with the speed and vision of Villard de Honnecourt. Subject: Choose a unique medieval emblem expressing this specific trait meaning. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "tyranny_gain_remove",
+      "name": "Team of Top Lawyers",
+      "description": "Barbara the Anointed shields this character with unseen advocates, defending against all accusations.",
+      "source_icon": "tyranny_gain_remove.dds",
+      "definition_file": "common/traits/daddy_pika_traits.txt",
+      "same_artwork_files": [
+        "boost_daiming.dds",
+        "tyranny_gain_remove.dds"
+      ],
+      "same_artwork_traits": [
+        "tyranny_gain_remove",
+        "trait_wealth_sovereign_max"
+      ],
+      "input_png": "inputs/tyranny_gain_remove.png",
+      "proposed_output_dds": "tyranny_gain_remove.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Team of Top Lawyers. Trait meaning: Barbara the Anointed shields this character with unseen advocates, defending against all accusations. Subject: Balanced justice scales over a sealed legal parchment. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "zg_buxiu",
+      "name": "Immortal",
+      "description": "Your character is immortal.",
+      "source_icon": "zg_buxiu.dds",
+      "definition_file": "common/traits/daddy_pika_traits.txt",
+      "same_artwork_files": [
+        "zg_buxiu.dds"
+      ],
+      "same_artwork_traits": [
+        "zg_buxiu",
+        "skonester_trait_yannian_dan_mid"
+      ],
+      "input_png": "inputs/zg_buxiu.png",
+      "proposed_output_dds": "zg_buxiu.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Immortal. Trait meaning: Your character is immortal. Subject: Choose a unique medieval emblem expressing this specific trait meaning. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "immortality",
+      "name": "Immortal",
+      "description": "This character has partaken of the Sacred Gift of Immortality. Their visage shall remain ever youthful, and they are proof against the grasp of natural death.",
+      "source_icon": "immortality.dds",
+      "definition_file": "common/traits/pcm_traits.txt",
+      "same_artwork_files": [
+        "bloodline_god_1.dds",
+        "bloodline_god_2.dds",
+        "borntorule_seed.dds",
+        "crazyminded_psycho.dds",
+        "fifth_bloodline5.dds",
+        "first_bloodline1.dds",
+        "immortality.dds",
+        "insane_generale.dds",
+        "insane_opinion_fa.dds",
+        "insane_opinion_fv.dds",
+        "toc_immortal.dds",
+        "toc_immortalblood.dds"
+      ],
+      "same_artwork_traits": [
+        "immortality",
+        "skonester_trait_immortal_ageless",
+        "skonester_trait_yannian_dan_best",
+        "trait_eternal_nether_lord",
+        "bloodline_god_2",
+        "bloodline_god_1",
+        "insane_generale",
+        "insane_opinion_fv",
+        "insane_opinion_fa",
+        "crazyminded_psycho",
+        "borntorule_seed",
+        "first_bloodline1",
+        "fifth_bloodline5",
+        "toc_immortalblood",
+        "toc_immortal"
+      ],
+      "input_png": "inputs/immortality.png",
+      "proposed_output_dds": "immortality.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Immortal. Trait meaning: This character has partaken of the Sacred Gift of Immortality. Their visage shall remain ever youthful, and they are proof against the grasp of natural death. Subject: A golden infinity knot surrounding a living green leaf. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "super_general",
+      "name": "Warlord Anointed",
+      "description": "This character leads armies as though guided by the hand of destiny itself. Their hosts fight with unshakable valor and achieve victory after victory.",
+      "source_icon": "super_general.dds",
+      "definition_file": "common/traits/pcm_traits.txt",
+      "same_artwork_files": [
+        "super_general.dds"
+      ],
+      "same_artwork_traits": [
+        "super_general",
+        "trait_warlord_eternal"
+      ],
+      "input_png": "inputs/super_general.png",
+      "proposed_output_dds": "super_general.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Warlord Anointed. Trait meaning: This character leads armies as though guided by the hand of destiny itself. Their hosts fight with unshakable valor and achieve victory after victory. Subject: Choose a unique medieval emblem expressing this specific trait meaning. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "savant_intrig",
+      "name": "Savant (Intrigue)",
+      "description": "This character demonstrates exceptional, obsessive aptitude in the arts of subterfuge, despite significant impairment in other social or intellectual domains.",
+      "source_icon": "savant_intrig.dds",
+      "definition_file": "common/traits/savant_traits.txt",
+      "same_artwork_files": [
+        "savant_intrig.dds"
+      ],
+      "same_artwork_traits": [
+        "savant_intrig",
+        "trait_ultimate_intrigue_master"
+      ],
+      "input_png": "inputs/savant_intrig.png",
+      "proposed_output_dds": "savant_intrig.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Savant (Intrigue). Trait meaning: This character demonstrates exceptional, obsessive aptitude in the arts of subterfuge, despite significant impairment in other social or intellectual domains. Subject: Choose a unique medieval emblem expressing this specific trait meaning. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "skonester_trait_immortal_ageless",
+      "name": "Ageless Immortal",
+      "description": "Time cannot touch you. You do not age, cannot become infirm, possess strong disease resistance, and are nearly immune to murder and hostile plots.",
+      "source_icon": "immortality.dds",
+      "definition_file": "common/traits/skonester_cheat_menu_traits.txt",
+      "same_artwork_files": [
+        "bloodline_god_1.dds",
+        "bloodline_god_2.dds",
+        "borntorule_seed.dds",
+        "crazyminded_psycho.dds",
+        "fifth_bloodline5.dds",
+        "first_bloodline1.dds",
+        "immortality.dds",
+        "insane_generale.dds",
+        "insane_opinion_fa.dds",
+        "insane_opinion_fv.dds",
+        "toc_immortal.dds",
+        "toc_immortalblood.dds"
+      ],
+      "same_artwork_traits": [
+        "immortality",
+        "skonester_trait_immortal_ageless",
+        "skonester_trait_yannian_dan_best",
+        "trait_eternal_nether_lord",
+        "bloodline_god_2",
+        "bloodline_god_1",
+        "insane_generale",
+        "insane_opinion_fv",
+        "insane_opinion_fa",
+        "crazyminded_psycho",
+        "borntorule_seed",
+        "first_bloodline1",
+        "fifth_bloodline5",
+        "toc_immortalblood",
+        "toc_immortal"
+      ],
+      "input_png": "inputs/skonester_trait_immortal_ageless.png",
+      "proposed_output_dds": "skonester_trait_immortal_ageless.dds",
+      "requires_icon_reference_change": true,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Ageless Immortal. Trait meaning: Time cannot touch you. You do not age, cannot become infirm, possess strong disease resistance, and are nearly immune to murder and hostile plots. Subject: An unbroken golden ring enclosing an evergreen sprig and a still hourglass. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "skonester_trait_yannian_dan",
+      "name": "Longevity Elixir",
+      "description": "A potent elixir that preserves youth, extends lifespan and wards off illness.",
+      "source_icon": "water_of_life.dds",
+      "definition_file": "common/traits/skonester_cheat_menu_traits.txt",
+      "same_artwork_files": [
+        "water_of_life.dds"
+      ],
+      "same_artwork_traits": [
+        "skonester_trait_yannian_dan",
+        "skonester_trait_marriage_ban",
+        "water_of_life"
+      ],
+      "input_png": "inputs/skonester_trait_yannian_dan.png",
+      "proposed_output_dds": "skonester_trait_yannian_dan.dds",
+      "requires_icon_reference_change": true,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Longevity Elixir. Trait meaning: A potent elixir that preserves youth, extends lifespan and wards off illness. Subject: A simple jade elixir bottle with one small gold bead. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "skonester_trait_yannian_dan_mid",
+      "name": "Refined Longevity Elixir",
+      "description": "A refined elixir that preserves youth, greatly extends lifespan and wards off illness.",
+      "source_icon": "zg_buxiu.dds",
+      "definition_file": "common/traits/skonester_cheat_menu_traits.txt",
+      "same_artwork_files": [
+        "zg_buxiu.dds"
+      ],
+      "same_artwork_traits": [
+        "zg_buxiu",
+        "skonester_trait_yannian_dan_mid"
+      ],
+      "input_png": "inputs/skonester_trait_yannian_dan_mid.png",
+      "proposed_output_dds": "skonester_trait_yannian_dan_mid.dds",
+      "requires_icon_reference_change": true,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Refined Longevity Elixir. Trait meaning: A refined elixir that preserves youth, greatly extends lifespan and wards off illness. Subject: An ornate jade elixir bottle with two gold beads; same silhouette as the basic longevity elixir. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "skonester_trait_yannian_dan_best",
+      "name": "Supreme Longevity Elixir",
+      "description": "A peerless elixir that defies mortal aging, grants an extended life and full protection from sickness.",
+      "source_icon": "toc_immortal.dds",
+      "definition_file": "common/traits/skonester_cheat_menu_traits.txt",
+      "same_artwork_files": [
+        "bloodline_god_1.dds",
+        "bloodline_god_2.dds",
+        "borntorule_seed.dds",
+        "crazyminded_psycho.dds",
+        "fifth_bloodline5.dds",
+        "first_bloodline1.dds",
+        "immortality.dds",
+        "insane_generale.dds",
+        "insane_opinion_fa.dds",
+        "insane_opinion_fv.dds",
+        "toc_immortal.dds",
+        "toc_immortalblood.dds"
+      ],
+      "same_artwork_traits": [
+        "immortality",
+        "skonester_trait_immortal_ageless",
+        "skonester_trait_yannian_dan_best",
+        "trait_eternal_nether_lord",
+        "bloodline_god_2",
+        "bloodline_god_1",
+        "insane_generale",
+        "insane_opinion_fv",
+        "insane_opinion_fa",
+        "crazyminded_psycho",
+        "borntorule_seed",
+        "first_bloodline1",
+        "fifth_bloodline5",
+        "toc_immortalblood",
+        "toc_immortal"
+      ],
+      "input_png": "inputs/skonester_trait_yannian_dan_best.png",
+      "proposed_output_dds": "skonester_trait_yannian_dan_best.dds",
+      "requires_icon_reference_change": true,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Supreme Longevity Elixir. Trait meaning: A peerless elixir that defies mortal aging, grants an extended life and full protection from sickness. Subject: An imperial jade elixir bottle with three gold beads and a restrained golden halo; same family as the lesser elixirs. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "skonester_trait_marriage_ban",
+      "name": "Marriage Restricted",
+      "description": "Cannot marry or be betrothed. All existing marriages and betrothals are dissolved. Toggle this trait again to remove the restriction.",
+      "source_icon": "water_of_life.dds",
+      "definition_file": "common/traits/skonester_cheat_menu_traits.txt",
+      "same_artwork_files": [
+        "water_of_life.dds"
+      ],
+      "same_artwork_traits": [
+        "skonester_trait_yannian_dan",
+        "skonester_trait_marriage_ban",
+        "water_of_life"
+      ],
+      "input_png": "inputs/skonester_trait_marriage_ban.png",
+      "proposed_output_dds": "skonester_trait_marriage_ban.dds",
+      "requires_icon_reference_change": true,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Marriage Restricted. Trait meaning: Cannot marry or be betrothed. All existing marriages and betrothals are dissolved. Toggle this trait again to remove the restriction. Subject: Two separated wedding rings divided by a stern iron seal; no chalice or potion. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "trait_eternal_nether_lord",
+      "name": "Eternal Nether Lord",
+      "description": "An undying presence of shadow. Stress has little effect, dread is immense, intrigue power is heightened. Hostile plots rarely succeed, and vassals and courtiers hold you in awe.",
+      "source_icon": "crazyminded_psycho.dds",
+      "definition_file": "common/traits/skonester_eternal_nether_trait.txt",
+      "same_artwork_files": [
+        "bloodline_god_1.dds",
+        "bloodline_god_2.dds",
+        "borntorule_seed.dds",
+        "crazyminded_psycho.dds",
+        "fifth_bloodline5.dds",
+        "first_bloodline1.dds",
+        "immortality.dds",
+        "insane_generale.dds",
+        "insane_opinion_fa.dds",
+        "insane_opinion_fv.dds",
+        "toc_immortal.dds",
+        "toc_immortalblood.dds"
+      ],
+      "same_artwork_traits": [
+        "immortality",
+        "skonester_trait_immortal_ageless",
+        "skonester_trait_yannian_dan_best",
+        "trait_eternal_nether_lord",
+        "bloodline_god_2",
+        "bloodline_god_1",
+        "insane_generale",
+        "insane_opinion_fv",
+        "insane_opinion_fa",
+        "crazyminded_psycho",
+        "borntorule_seed",
+        "first_bloodline1",
+        "fifth_bloodline5",
+        "toc_immortalblood",
+        "toc_immortal"
+      ],
+      "input_png": "inputs/trait_eternal_nether_lord.png",
+      "proposed_output_dds": "trait_eternal_nether_lord.dds",
+      "requires_icon_reference_change": true,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Eternal Nether Lord. Trait meaning: An undying presence of shadow. Stress has little effect, dread is immense, intrigue power is heightened. Hostile plots rarely succeed, and vassals and courtiers hold you in awe. Subject: A dark sovereign crown enclosing a cold violet flame, imposing and composed. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "trait_great_builder_god",
+      "name": "Divine Builder",
+      "description": "Supreme mastery of construction. Realm buildings and holdings are built for minimal cost and time. Stewardship, taxes, development, fortifications and levies all receive massive boosts.",
+      "source_icon": "build_speed_cheat.dds",
+      "definition_file": "common/traits/skonester_great_builder_trait.txt",
+      "same_artwork_files": [
+        "build_speed_cheat.dds"
+      ],
+      "same_artwork_traits": [
+        "build_speed_cheat",
+        "trait_great_builder_god"
+      ],
+      "input_png": "inputs/trait_great_builder_god.png",
+      "proposed_output_dds": "trait_great_builder_god.dds",
+      "requires_icon_reference_change": true,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Divine Builder. Trait meaning: Supreme mastery of construction. Realm buildings and holdings are built for minimal cost and time. Stewardship, taxes, development, fortifications and levies all receive massive boosts. Subject: A golden mason compass over a precisely cut stone arch, with restrained divine light. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "trait_ultimate_intrigue_master",
+      "name": "Mystic Seer",
+      "description": "Unmatched in shadowy plots. Enemy schemes against you fail easily, while your own plots remain hidden and nearly guaranteed to succeed.",
+      "source_icon": "savant_intrig.dds",
+      "definition_file": "common/traits/skonester_intrigue_traits.txt",
+      "same_artwork_files": [
+        "savant_intrig.dds"
+      ],
+      "same_artwork_traits": [
+        "savant_intrig",
+        "trait_ultimate_intrigue_master"
+      ],
+      "input_png": "inputs/trait_ultimate_intrigue_master.png",
+      "proposed_output_dds": "trait_ultimate_intrigue_master.dds",
+      "requires_icon_reference_change": true,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Mystic Seer. Trait meaning: Unmatched in shadowy plots. Enemy schemes against you fail easily, while your own plots remain hidden and nearly guaranteed to succeed. Subject: An open watchful eye inside a silver divination mirror, with a concealed dagger below. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "trait_nether_conspiracy_lord",
+      "name": "Nether Conspiracy Lord",
+      "description": "A grand master of intrigue. Your plots are stealthier and more effective, while enemy plots are slowed and weakened. Dread rises and court opinion leans in your favor.",
+      "source_icon": "zhuge_kill_02.dds",
+      "definition_file": "common/traits/skonester_nether_conspiracy_trait.txt",
+      "same_artwork_files": [
+        "zhuge_kill_02.dds"
+      ],
+      "same_artwork_traits": [
+        "trait_nether_conspiracy_lord",
+        "zhuge_kill_02"
+      ],
+      "input_png": "inputs/trait_nether_conspiracy_lord.png",
+      "proposed_output_dds": "trait_nether_conspiracy_lord.dds",
+      "requires_icon_reference_change": true,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Nether Conspiracy Lord. Trait meaning: A grand master of intrigue. Your plots are stealthier and more effective, while enemy plots are slowed and weakened. Dread rises and court opinion leans in your favor. Subject: A black dagger passing behind a veiled crown, with a subtle violet shadow. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "trait_warlord_eternal",
+      "name": "Eternal Warlord",
+      "description": "A master of warfare. Troops fight harder, movement speed is greatly increased, terrain penalties are negated, and sieges end swiftly.",
+      "source_icon": "super_general.dds",
+      "definition_file": "common/traits/skonester_warlord_traits.txt",
+      "same_artwork_files": [
+        "super_general.dds"
+      ],
+      "same_artwork_traits": [
+        "super_general",
+        "trait_warlord_eternal"
+      ],
+      "input_png": "inputs/trait_warlord_eternal.png",
+      "proposed_output_dds": "trait_warlord_eternal.dds",
+      "requires_icon_reference_change": true,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Eternal Warlord. Trait meaning: A master of warfare. Troops fight harder, movement speed is greatly increased, terrain penalties are negated, and sieges end swiftly. Subject: A crowned steel helmet before crossed war banners, with a restrained golden halo. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "trait_wealth_sovereign_max",
+      "name": "Wealth Sovereign",
+      "description": "Master of commerce and taxation. Income, vassal contributions and treasury reserves are vastly improved.",
+      "source_icon": "boost_daiming.dds",
+      "definition_file": "common/traits/skonester_wealth_traits.txt",
+      "same_artwork_files": [
+        "boost_daiming.dds",
+        "tyranny_gain_remove.dds"
+      ],
+      "same_artwork_traits": [
+        "tyranny_gain_remove",
+        "trait_wealth_sovereign_max"
+      ],
+      "input_png": "inputs/trait_wealth_sovereign_max.png",
+      "proposed_output_dds": "trait_wealth_sovereign_max.dds",
+      "requires_icon_reference_change": true,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Wealth Sovereign. Trait meaning: Master of commerce and taxation. Income, vassal contributions and treasury reserves are vastly improved. Subject: A royal treasury chest overflowing with a few large gold coins beneath a small crown. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "water_of_life",
+      "name": "Sentinel of the Word",
+      "description": "This character has seen the Risen One and drank from the Cup. They have transcended the corruption of matter.",
+      "source_icon": "water_of_life.dds",
+      "definition_file": "common/traits/water_of_life.txt",
+      "same_artwork_files": [
+        "water_of_life.dds"
+      ],
+      "same_artwork_traits": [
+        "skonester_trait_yannian_dan",
+        "skonester_trait_marriage_ban",
+        "water_of_life"
+      ],
+      "input_png": "inputs/water_of_life.png",
+      "proposed_output_dds": "water_of_life.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Sentinel of the Word. Trait meaning: This character has seen the Risen One and drank from the Cup. They have transcended the corruption of matter. Subject: A sacred chalice before an open illuminated scripture, with soft holy light. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "bloodline_god_2",
+      "name": "Barbara's Royal Blood",
+      "description": "[ROOT.GetCharacter.GetFirstNameNoTooltip] carries the royal vein of Barbara.",
+      "source_icon": "bloodline_god_2.dds",
+      "definition_file": "common/traits/zhuge_bloodline_traits.txt",
+      "same_artwork_files": [
+        "bloodline_god_1.dds",
+        "bloodline_god_2.dds",
+        "borntorule_seed.dds",
+        "crazyminded_psycho.dds",
+        "fifth_bloodline5.dds",
+        "first_bloodline1.dds",
+        "immortality.dds",
+        "insane_generale.dds",
+        "insane_opinion_fa.dds",
+        "insane_opinion_fv.dds",
+        "toc_immortal.dds",
+        "toc_immortalblood.dds"
+      ],
+      "same_artwork_traits": [
+        "immortality",
+        "skonester_trait_immortal_ageless",
+        "skonester_trait_yannian_dan_best",
+        "trait_eternal_nether_lord",
+        "bloodline_god_2",
+        "bloodline_god_1",
+        "insane_generale",
+        "insane_opinion_fv",
+        "insane_opinion_fa",
+        "crazyminded_psycho",
+        "borntorule_seed",
+        "first_bloodline1",
+        "fifth_bloodline5",
+        "toc_immortalblood",
+        "toc_immortal"
+      ],
+      "input_png": "inputs/bloodline_god_2.png",
+      "proposed_output_dds": "bloodline_god_2.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Barbara's Royal Blood. Trait meaning: [ROOT.GetCharacter.GetFirstNameNoTooltip] carries the royal vein of Barbara. Subject: A sacred blood droplet inside a radiant ancestral crest, rank 2 of the Barbara bloodline; 2 clear gold rank studs. Preserve family resemblance while making the rank readable. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "bloodline_god_1",
+      "name": "Barbara's Spirit Blood",
+      "description": "[ROOT.GetCharacter.GetFirstNameNoTooltip] bears the remnants of the Barbara divine line.",
+      "source_icon": "bloodline_god_1.dds",
+      "definition_file": "common/traits/zhuge_bloodline_traits.txt",
+      "same_artwork_files": [
+        "bloodline_god_1.dds",
+        "bloodline_god_2.dds",
+        "borntorule_seed.dds",
+        "crazyminded_psycho.dds",
+        "fifth_bloodline5.dds",
+        "first_bloodline1.dds",
+        "immortality.dds",
+        "insane_generale.dds",
+        "insane_opinion_fa.dds",
+        "insane_opinion_fv.dds",
+        "toc_immortal.dds",
+        "toc_immortalblood.dds"
+      ],
+      "same_artwork_traits": [
+        "immortality",
+        "skonester_trait_immortal_ageless",
+        "skonester_trait_yannian_dan_best",
+        "trait_eternal_nether_lord",
+        "bloodline_god_2",
+        "bloodline_god_1",
+        "insane_generale",
+        "insane_opinion_fv",
+        "insane_opinion_fa",
+        "crazyminded_psycho",
+        "borntorule_seed",
+        "first_bloodline1",
+        "fifth_bloodline5",
+        "toc_immortalblood",
+        "toc_immortal"
+      ],
+      "input_png": "inputs/bloodline_god_1.png",
+      "proposed_output_dds": "bloodline_god_1.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Barbara's Spirit Blood. Trait meaning: [ROOT.GetCharacter.GetFirstNameNoTooltip] bears the remnants of the Barbara divine line. Subject: A sacred blood droplet inside a radiant ancestral crest, rank 1 of the Barbara bloodline; 1 clear gold rank studs. Preserve family resemblance while making the rank readable. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "zhuge_kill_02",
+      "name": "King's Wine",
+      "description": "[ROOT.GetCharacter.GetFirstNameNoTooltip] was executed by the chosen one of destiny\\nWhen a king dies, the state perishes; loyal ministers fall by the king's decree.",
+      "source_icon": "zhuge_kill_02.dds",
+      "definition_file": "common/traits/zhuge_traits.txt",
+      "same_artwork_files": [
+        "zhuge_kill_02.dds"
+      ],
+      "same_artwork_traits": [
+        "trait_nether_conspiracy_lord",
+        "zhuge_kill_02"
+      ],
+      "input_png": "inputs/zhuge_kill_02.png",
+      "proposed_output_dds": "zhuge_kill_02.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for King's Wine. Trait meaning: [ROOT.GetCharacter.GetFirstNameNoTooltip] was executed by the chosen one of destiny\\nWhen a king dies, the state perishes; loyal ministers fall by the king's decree. Subject: Choose a unique medieval emblem expressing this specific trait meaning. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "greatest_lord_np",
+      "name": "Steward of the Realm",
+      "description": "This character holds the authority of a High Steward, ruling with the mandate of the Free Peoples.",
+      "source_icon": "greatest_lord_np.dds",
+      "definition_file": "common/traits/zzzzzzzz_realistoc_traits.txt",
+      "same_artwork_files": [
+        "greatest_lord_np.dds",
+        "greatest_lord_t.dds"
+      ],
+      "same_artwork_traits": [
+        "greatest_lord_np",
+        "greatest_lord_t"
+      ],
+      "input_png": "inputs/greatest_lord_np.png",
+      "proposed_output_dds": "greatest_lord_np.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Steward of the Realm. Trait meaning: This character holds the authority of a High Steward, ruling with the mandate of the Free Peoples. Subject: A stewardship key laid across a stone keep. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "greatest_lord_t",
+      "name": "Lord of the High Houses",
+      "description": "This character is descended from the Great Houses of the Edain, commandng respect from all Men.",
+      "source_icon": "greatest_lord_t.dds",
+      "definition_file": "common/traits/zzzzzzzz_realistoc_traits.txt",
+      "same_artwork_files": [
+        "greatest_lord_np.dds",
+        "greatest_lord_t.dds"
+      ],
+      "same_artwork_traits": [
+        "greatest_lord_np",
+        "greatest_lord_t"
+      ],
+      "input_png": "inputs/greatest_lord_t.png",
+      "proposed_output_dds": "greatest_lord_t.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Lord of the High Houses. Trait meaning: This character is descended from the Great Houses of the Edain, commandng respect from all Men. Subject: A noble coronet above three small heraldic shields. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "insane_generale",
+      "name": "Captain of the West",
+      "description": "A legendary war-leader whose tactical brilliance is whispered of in both Gondor and the Shadow-lands.",
+      "source_icon": "insane_generale.dds",
+      "definition_file": "common/traits/zzzzzzzz_realistoc_traits.txt",
+      "same_artwork_files": [
+        "bloodline_god_1.dds",
+        "bloodline_god_2.dds",
+        "borntorule_seed.dds",
+        "crazyminded_psycho.dds",
+        "fifth_bloodline5.dds",
+        "first_bloodline1.dds",
+        "immortality.dds",
+        "insane_generale.dds",
+        "insane_opinion_fa.dds",
+        "insane_opinion_fv.dds",
+        "toc_immortal.dds",
+        "toc_immortalblood.dds"
+      ],
+      "same_artwork_traits": [
+        "immortality",
+        "skonester_trait_immortal_ageless",
+        "skonester_trait_yannian_dan_best",
+        "trait_eternal_nether_lord",
+        "bloodline_god_2",
+        "bloodline_god_1",
+        "insane_generale",
+        "insane_opinion_fv",
+        "insane_opinion_fa",
+        "crazyminded_psycho",
+        "borntorule_seed",
+        "first_bloodline1",
+        "fifth_bloodline5",
+        "toc_immortalblood",
+        "toc_immortal"
+      ],
+      "input_png": "inputs/insane_generale.png",
+      "proposed_output_dds": "insane_generale.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Captain of the West. Trait meaning: A legendary war-leader whose tactical brilliance is whispered of in both Gondor and the Shadow-lands. Subject: A western captain helmet above a sword and a small white-tree heraldic motif. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "insane_opinion_fv",
+      "name": "Terror of the Nine",
+      "description": "This character’s reputation is so formidable it strikes a chill into the hearts of both friend and foe.",
+      "source_icon": "insane_opinion_fv.dds",
+      "definition_file": "common/traits/zzzzzzzz_realistoc_traits.txt",
+      "same_artwork_files": [
+        "bloodline_god_1.dds",
+        "bloodline_god_2.dds",
+        "borntorule_seed.dds",
+        "crazyminded_psycho.dds",
+        "fifth_bloodline5.dds",
+        "first_bloodline1.dds",
+        "immortality.dds",
+        "insane_generale.dds",
+        "insane_opinion_fa.dds",
+        "insane_opinion_fv.dds",
+        "toc_immortal.dds",
+        "toc_immortalblood.dds"
+      ],
+      "same_artwork_traits": [
+        "immortality",
+        "skonester_trait_immortal_ageless",
+        "skonester_trait_yannian_dan_best",
+        "trait_eternal_nether_lord",
+        "bloodline_god_2",
+        "bloodline_god_1",
+        "insane_generale",
+        "insane_opinion_fv",
+        "insane_opinion_fa",
+        "crazyminded_psycho",
+        "borntorule_seed",
+        "first_bloodline1",
+        "fifth_bloodline5",
+        "toc_immortalblood",
+        "toc_immortal"
+      ],
+      "input_png": "inputs/insane_opinion_fv.png",
+      "proposed_output_dds": "insane_opinion_fv.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Terror of the Nine. Trait meaning: This character’s reputation is so formidable it strikes a chill into the hearts of both friend and foe. Subject: A faceless black hood beneath nine small iron crown points. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "insane_opinion_fa",
+      "name": "Shadow of the Unseen",
+      "description": "A presence that demands total obedience through sheer, overwhelming dread and iron will.",
+      "source_icon": "insane_opinion_fa.dds",
+      "definition_file": "common/traits/zzzzzzzz_realistoc_traits.txt",
+      "same_artwork_files": [
+        "bloodline_god_1.dds",
+        "bloodline_god_2.dds",
+        "borntorule_seed.dds",
+        "crazyminded_psycho.dds",
+        "fifth_bloodline5.dds",
+        "first_bloodline1.dds",
+        "immortality.dds",
+        "insane_generale.dds",
+        "insane_opinion_fa.dds",
+        "insane_opinion_fv.dds",
+        "toc_immortal.dds",
+        "toc_immortalblood.dds"
+      ],
+      "same_artwork_traits": [
+        "immortality",
+        "skonester_trait_immortal_ageless",
+        "skonester_trait_yannian_dan_best",
+        "trait_eternal_nether_lord",
+        "bloodline_god_2",
+        "bloodline_god_1",
+        "insane_generale",
+        "insane_opinion_fv",
+        "insane_opinion_fa",
+        "crazyminded_psycho",
+        "borntorule_seed",
+        "first_bloodline1",
+        "fifth_bloodline5",
+        "toc_immortalblood",
+        "toc_immortal"
+      ],
+      "input_png": "inputs/insane_opinion_fa.png",
+      "proposed_output_dds": "insane_opinion_fa.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Shadow of the Unseen. Trait meaning: A presence that demands total obedience through sheer, overwhelming dread and iron will. Subject: A shadowed iron gauntlet gripping an oath chain. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "crazyminded_psycho",
+      "name": "Morgoth's Taint",
+      "description": "The character's spirit is marred by an ancient darkness, leading to acts of extreme cruelty and madness.",
+      "source_icon": "crazyminded_psycho.dds",
+      "definition_file": "common/traits/zzzzzzzz_realistoc_traits.txt",
+      "same_artwork_files": [
+        "bloodline_god_1.dds",
+        "bloodline_god_2.dds",
+        "borntorule_seed.dds",
+        "crazyminded_psycho.dds",
+        "fifth_bloodline5.dds",
+        "first_bloodline1.dds",
+        "immortality.dds",
+        "insane_generale.dds",
+        "insane_opinion_fa.dds",
+        "insane_opinion_fv.dds",
+        "toc_immortal.dds",
+        "toc_immortalblood.dds"
+      ],
+      "same_artwork_traits": [
+        "immortality",
+        "skonester_trait_immortal_ageless",
+        "skonester_trait_yannian_dan_best",
+        "trait_eternal_nether_lord",
+        "bloodline_god_2",
+        "bloodline_god_1",
+        "insane_generale",
+        "insane_opinion_fv",
+        "insane_opinion_fa",
+        "crazyminded_psycho",
+        "borntorule_seed",
+        "first_bloodline1",
+        "fifth_bloodline5",
+        "toc_immortalblood",
+        "toc_immortal"
+      ],
+      "input_png": "inputs/crazyminded_psycho.png",
+      "proposed_output_dds": "crazyminded_psycho.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Morgoth's Taint. Trait meaning: The character's spirit is marred by an ancient darkness, leading to acts of extreme cruelty and madness. Subject: A cracked dark heart pierced by an iron thorn, with a restrained ember glow. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "pantokratorus_a",
+      "name": "High King",
+      "description": "This character is marked as a Great Conqueror and High King of the age.",
+      "source_icon": "pantokratorus_a.dds",
+      "definition_file": "common/traits/zzzzzzzz_realistoc_traits.txt",
+      "same_artwork_files": [
+        "pantokratorus_a.dds",
+        "pantokratorus_ablood.dds"
+      ],
+      "same_artwork_traits": [
+        "pantokratorus_a",
+        "pantokratorus_ablood"
+      ],
+      "input_png": "inputs/pantokratorus_a.png",
+      "proposed_output_dds": "pantokratorus_a.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for High King. Trait meaning: This character is marked as a Great Conqueror and High King of the age. Subject: A single high king crown above a royal sceptre. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "pantokratorus_ablood",
+      "name": "Lineage of Kings",
+      "description": "This character possesses the bloodline of the ancient kings who first defied the Shadow.",
+      "source_icon": "pantokratorus_ablood.dds",
+      "definition_file": "common/traits/zzzzzzzz_realistoc_traits.txt",
+      "same_artwork_files": [
+        "pantokratorus_a.dds",
+        "pantokratorus_ablood.dds"
+      ],
+      "same_artwork_traits": [
+        "pantokratorus_a",
+        "pantokratorus_ablood"
+      ],
+      "input_png": "inputs/pantokratorus_ablood.png",
+      "proposed_output_dds": "pantokratorus_ablood.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Lineage of Kings. Trait meaning: This character possesses the bloodline of the ancient kings who first defied the Shadow. Subject: A royal crown above a blood gem with branching ancestral roots. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "borntorule_seed",
+      "name": "True Heir of Isildur",
+      "description": "This character is recognized as the rightful heir to the kingdoms of old.",
+      "source_icon": "borntorule_seed.dds",
+      "definition_file": "common/traits/zzzzzzzz_realistoc_traits.txt",
+      "same_artwork_files": [
+        "bloodline_god_1.dds",
+        "bloodline_god_2.dds",
+        "borntorule_seed.dds",
+        "crazyminded_psycho.dds",
+        "fifth_bloodline5.dds",
+        "first_bloodline1.dds",
+        "immortality.dds",
+        "insane_generale.dds",
+        "insane_opinion_fa.dds",
+        "insane_opinion_fv.dds",
+        "toc_immortal.dds",
+        "toc_immortalblood.dds"
+      ],
+      "same_artwork_traits": [
+        "immortality",
+        "skonester_trait_immortal_ageless",
+        "skonester_trait_yannian_dan_best",
+        "trait_eternal_nether_lord",
+        "bloodline_god_2",
+        "bloodline_god_1",
+        "insane_generale",
+        "insane_opinion_fv",
+        "insane_opinion_fa",
+        "crazyminded_psycho",
+        "borntorule_seed",
+        "first_bloodline1",
+        "fifth_bloodline5",
+        "toc_immortalblood",
+        "toc_immortal"
+      ],
+      "input_png": "inputs/borntorule_seed.png",
+      "proposed_output_dds": "borntorule_seed.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for True Heir of Isildur. Trait meaning: This character is recognized as the rightful heir to the kingdoms of old. Subject: A reforged sword beneath a seven-pointed star and a small heir coronet. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "first_bloodline1",
+      "name": "Kin of the Free Peoples",
+      "description": "A faint inherited legacy from the common folk of Middle-earth, granting a modest increase to status and legitimacy.",
+      "source_icon": "first_bloodline1.dds",
+      "definition_file": "common/traits/zzzzzzzz_realistoc_traits.txt",
+      "same_artwork_files": [
+        "bloodline_god_1.dds",
+        "bloodline_god_2.dds",
+        "borntorule_seed.dds",
+        "crazyminded_psycho.dds",
+        "fifth_bloodline5.dds",
+        "first_bloodline1.dds",
+        "immortality.dds",
+        "insane_generale.dds",
+        "insane_opinion_fa.dds",
+        "insane_opinion_fv.dds",
+        "toc_immortal.dds",
+        "toc_immortalblood.dds"
+      ],
+      "same_artwork_traits": [
+        "immortality",
+        "skonester_trait_immortal_ageless",
+        "skonester_trait_yannian_dan_best",
+        "trait_eternal_nether_lord",
+        "bloodline_god_2",
+        "bloodline_god_1",
+        "insane_generale",
+        "insane_opinion_fv",
+        "insane_opinion_fa",
+        "crazyminded_psycho",
+        "borntorule_seed",
+        "first_bloodline1",
+        "fifth_bloodline5",
+        "toc_immortalblood",
+        "toc_immortal"
+      ],
+      "input_png": "inputs/first_bloodline1.png",
+      "proposed_output_dds": "first_bloodline1.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Kin of the Free Peoples. Trait meaning: A faint inherited legacy from the common folk of Middle-earth, granting a modest increase to status and legitimacy. Subject: A western heraldic tree with a blood-red gem, tier 1 of five; use 1 clear gold rank studs and progressively richer branches. Keep the family silhouette consistent. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "second_bloodline2",
+      "name": "Scion of the High Houses",
+      "description": "A recognized bloodline carrying the strength and vitality of the noble houses of Men.",
+      "source_icon": "second_bloodline2.dds",
+      "definition_file": "common/traits/zzzzzzzz_realistoc_traits.txt",
+      "same_artwork_files": [
+        "fourth_bloodline4.dds",
+        "second_bloodline2.dds",
+        "third_bloodline3.dds",
+        "toc_gamer0.dds",
+        "toc_gamerblood0.dds"
+      ],
+      "same_artwork_traits": [
+        "second_bloodline2",
+        "third_bloodline3",
+        "fourth_bloodline4",
+        "toc_gamerblood0",
+        "toc_gamer0"
+      ],
+      "input_png": "inputs/second_bloodline2.png",
+      "proposed_output_dds": "second_bloodline2.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Scion of the High Houses. Trait meaning: A recognized bloodline carrying the strength and vitality of the noble houses of Men. Subject: A western heraldic tree with a blood-red gem, tier 2 of five; use 2 clear gold rank studs and progressively richer branches. Keep the family silhouette consistent. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "third_bloodline3",
+      "name": "Legacy of Arnor",
+      "description": "A respected lineage whose blood carries the meaningful skill and renown of the Northern Kingdom.",
+      "source_icon": "third_bloodline3.dds",
+      "definition_file": "common/traits/zzzzzzzz_realistoc_traits.txt",
+      "same_artwork_files": [
+        "fourth_bloodline4.dds",
+        "second_bloodline2.dds",
+        "third_bloodline3.dds",
+        "toc_gamer0.dds",
+        "toc_gamerblood0.dds"
+      ],
+      "same_artwork_traits": [
+        "second_bloodline2",
+        "third_bloodline3",
+        "fourth_bloodline4",
+        "toc_gamerblood0",
+        "toc_gamer0"
+      ],
+      "input_png": "inputs/third_bloodline3.png",
+      "proposed_output_dds": "third_bloodline3.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Legacy of Arnor. Trait meaning: A respected lineage whose blood carries the meaningful skill and renown of the Northern Kingdom. Subject: A western heraldic tree with a blood-red gem, tier 3 of five; use 3 clear gold rank studs and progressively richer branches. Keep the family silhouette consistent. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "fourth_bloodline4",
+      "name": "Heir of Westernesse",
+      "description": "A powerful inherited legacy of the Sea-kings, admired by kin and vassals alike for its inherent authority.",
+      "source_icon": "fourth_bloodline4.dds",
+      "definition_file": "common/traits/zzzzzzzz_realistoc_traits.txt",
+      "same_artwork_files": [
+        "fourth_bloodline4.dds",
+        "second_bloodline2.dds",
+        "third_bloodline3.dds",
+        "toc_gamer0.dds",
+        "toc_gamerblood0.dds"
+      ],
+      "same_artwork_traits": [
+        "second_bloodline2",
+        "third_bloodline3",
+        "fourth_bloodline4",
+        "toc_gamerblood0",
+        "toc_gamer0"
+      ],
+      "input_png": "inputs/fourth_bloodline4.png",
+      "proposed_output_dds": "fourth_bloodline4.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Heir of Westernesse. Trait meaning: A powerful inherited legacy of the Sea-kings, admired by kin and vassals alike for its inherent authority. Subject: A western heraldic tree with a blood-red gem, tier 4 of five; use 4 clear gold rank studs and progressively richer branches. Keep the family silhouette consistent. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "fifth_bloodline5",
+      "name": "Blood of Elendil",
+      "description": "An exalted bloodline of the highest order, granting overwhelming bonuses to ability, vitality, and dynastic renown.",
+      "source_icon": "fifth_bloodline5.dds",
+      "definition_file": "common/traits/zzzzzzzz_realistoc_traits.txt",
+      "same_artwork_files": [
+        "bloodline_god_1.dds",
+        "bloodline_god_2.dds",
+        "borntorule_seed.dds",
+        "crazyminded_psycho.dds",
+        "fifth_bloodline5.dds",
+        "first_bloodline1.dds",
+        "immortality.dds",
+        "insane_generale.dds",
+        "insane_opinion_fa.dds",
+        "insane_opinion_fv.dds",
+        "toc_immortal.dds",
+        "toc_immortalblood.dds"
+      ],
+      "same_artwork_traits": [
+        "immortality",
+        "skonester_trait_immortal_ageless",
+        "skonester_trait_yannian_dan_best",
+        "trait_eternal_nether_lord",
+        "bloodline_god_2",
+        "bloodline_god_1",
+        "insane_generale",
+        "insane_opinion_fv",
+        "insane_opinion_fa",
+        "crazyminded_psycho",
+        "borntorule_seed",
+        "first_bloodline1",
+        "fifth_bloodline5",
+        "toc_immortalblood",
+        "toc_immortal"
+      ],
+      "input_png": "inputs/fifth_bloodline5.png",
+      "proposed_output_dds": "fifth_bloodline5.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Blood of Elendil. Trait meaning: An exalted bloodline of the highest order, granting overwhelming bonuses to ability, vitality, and dynastic renown. Subject: A western heraldic tree with a blood-red gem, tier 5 of five; use 5 clear gold rank studs and progressively richer branches. Keep the family silhouette consistent. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "toc_gamerblood0",
+      "name": "Whispers of Orthanc",
+      "description": "This character possesses a bloodline marked by the cunning and manipulation of the great schemers.",
+      "source_icon": "toc_gamerblood0.dds",
+      "definition_file": "common/traits/zzzzzzzz_realistoc_traits.txt",
+      "same_artwork_files": [
+        "fourth_bloodline4.dds",
+        "second_bloodline2.dds",
+        "third_bloodline3.dds",
+        "toc_gamer0.dds",
+        "toc_gamerblood0.dds"
+      ],
+      "same_artwork_traits": [
+        "second_bloodline2",
+        "third_bloodline3",
+        "fourth_bloodline4",
+        "toc_gamerblood0",
+        "toc_gamer0"
+      ],
+      "input_png": "inputs/toc_gamerblood0.png",
+      "proposed_output_dds": "toc_gamerblood0.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Whispers of Orthanc. Trait meaning: This character possesses a bloodline marked by the cunning and manipulation of the great schemers. Subject: A dark tower enclosing a crimson blood gem and faint whispering wisps. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "toc_gamer0",
+      "name": "Master of Deceit",
+      "description": "Grants massive intrigue and scheme success bonuses, rivaling the subtle tongue of Saruman.",
+      "source_icon": "toc_gamer0.dds",
+      "definition_file": "common/traits/zzzzzzzz_realistoc_traits.txt",
+      "same_artwork_files": [
+        "fourth_bloodline4.dds",
+        "second_bloodline2.dds",
+        "third_bloodline3.dds",
+        "toc_gamer0.dds",
+        "toc_gamerblood0.dds"
+      ],
+      "same_artwork_traits": [
+        "second_bloodline2",
+        "third_bloodline3",
+        "fourth_bloodline4",
+        "toc_gamerblood0",
+        "toc_gamer0"
+      ],
+      "input_png": "inputs/toc_gamer0.png",
+      "proposed_output_dds": "toc_gamer0.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Master of Deceit. Trait meaning: Grants massive intrigue and scheme success bonuses, rivaling the subtle tongue of Saruman. Subject: A deceptive half-mask with a concealed dagger. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "toc_patrilinealblood",
+      "name": "Ancestral Line of the Fathers",
+      "description": "A paternal lineage recognized by blood and the authority of the ancient houses.",
+      "source_icon": "toc_patrilinealblood.dds",
+      "definition_file": "common/traits/zzzzzzzz_realistoc_traits.txt",
+      "same_artwork_files": [
+        "toc_patrilinealblood.dds",
+        "toc_patrilinealblood2.dds",
+        "toc_patrilinealblood3.dds"
+      ],
+      "same_artwork_traits": [
+        "toc_patrilinealblood",
+        "toc_patrilinealblood2",
+        "toc_patrilinealblood3"
+      ],
+      "input_png": "inputs/toc_patrilinealblood.png",
+      "proposed_output_dds": "toc_patrilinealblood.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Ancestral Line of the Fathers. Trait meaning: A paternal lineage recognized by blood and the authority of the ancient houses. Subject: A paternal ancestral tree growing from a signet ring, tier 1 of three, with 1 prominent silver rank studs and progressively richer heraldry. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "toc_patrilinealblood2",
+      "name": "Sovereign Paternal Legacy",
+      "description": "A stronger paternal lineage, carrying the prestige and authority of a ruling dynasty.",
+      "source_icon": "toc_patrilinealblood2.dds",
+      "definition_file": "common/traits/zzzzzzzz_realistoc_traits.txt",
+      "same_artwork_files": [
+        "toc_patrilinealblood.dds",
+        "toc_patrilinealblood2.dds",
+        "toc_patrilinealblood3.dds"
+      ],
+      "same_artwork_traits": [
+        "toc_patrilinealblood",
+        "toc_patrilinealblood2",
+        "toc_patrilinealblood3"
+      ],
+      "input_png": "inputs/toc_patrilinealblood2.png",
+      "proposed_output_dds": "toc_patrilinealblood2.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Sovereign Paternal Legacy. Trait meaning: A stronger paternal lineage, carrying the prestige and authority of a ruling dynasty. Subject: A paternal ancestral tree growing from a signet ring, tier 2 of three, with 2 prominent silver rank studs and progressively richer heraldry. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "toc_patrilinealblood3",
+      "name": "Eternal House of the West",
+      "description": "A dominant paternal lineage, granting lasting vitality and the right of legitimate rule through the ages.",
+      "source_icon": "toc_patrilinealblood3.dds",
+      "definition_file": "common/traits/zzzzzzzz_realistoc_traits.txt",
+      "same_artwork_files": [
+        "toc_patrilinealblood.dds",
+        "toc_patrilinealblood2.dds",
+        "toc_patrilinealblood3.dds"
+      ],
+      "same_artwork_traits": [
+        "toc_patrilinealblood",
+        "toc_patrilinealblood2",
+        "toc_patrilinealblood3"
+      ],
+      "input_png": "inputs/toc_patrilinealblood3.png",
+      "proposed_output_dds": "toc_patrilinealblood3.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Eternal House of the West. Trait meaning: A dominant paternal lineage, granting lasting vitality and the right of legitimate rule through the ages. Subject: A paternal ancestral tree growing from a signet ring, tier 3 of three, with 3 prominent silver rank studs and progressively richer heraldry. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "toc_immortalblood",
+      "name": "Spark of the Ainur",
+      "description": "This character possesses the bloodline of the Immortals, a bridge between the seen and unseen worlds.",
+      "source_icon": "toc_immortalblood.dds",
+      "definition_file": "common/traits/zzzzzzzz_realistoc_traits.txt",
+      "same_artwork_files": [
+        "bloodline_god_1.dds",
+        "bloodline_god_2.dds",
+        "borntorule_seed.dds",
+        "crazyminded_psycho.dds",
+        "fifth_bloodline5.dds",
+        "first_bloodline1.dds",
+        "immortality.dds",
+        "insane_generale.dds",
+        "insane_opinion_fa.dds",
+        "insane_opinion_fv.dds",
+        "toc_immortal.dds",
+        "toc_immortalblood.dds"
+      ],
+      "same_artwork_traits": [
+        "immortality",
+        "skonester_trait_immortal_ageless",
+        "skonester_trait_yannian_dan_best",
+        "trait_eternal_nether_lord",
+        "bloodline_god_2",
+        "bloodline_god_1",
+        "insane_generale",
+        "insane_opinion_fv",
+        "insane_opinion_fa",
+        "crazyminded_psycho",
+        "borntorule_seed",
+        "first_bloodline1",
+        "fifth_bloodline5",
+        "toc_immortalblood",
+        "toc_immortal"
+      ],
+      "input_png": "inputs/toc_immortalblood.png",
+      "proposed_output_dds": "toc_immortalblood.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Spark of the Ainur. Trait meaning: This character possesses the bloodline of the Immortals, a bridge between the seen and unseen worlds. Subject: A luminous blood droplet enclosing a tiny star, framed by ancestral branches. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    },
+    {
+      "trait_id": "toc_immortal",
+      "name": "Undying Spirit",
+      "description": "This character is bound to the circles of the world and cannot die of old age or disease.",
+      "source_icon": "toc_immortal.dds",
+      "definition_file": "common/traits/zzzzzzzz_realistoc_traits.txt",
+      "same_artwork_files": [
+        "bloodline_god_1.dds",
+        "bloodline_god_2.dds",
+        "borntorule_seed.dds",
+        "crazyminded_psycho.dds",
+        "fifth_bloodline5.dds",
+        "first_bloodline1.dds",
+        "immortality.dds",
+        "insane_generale.dds",
+        "insane_opinion_fa.dds",
+        "insane_opinion_fv.dds",
+        "toc_immortal.dds",
+        "toc_immortalblood.dds"
+      ],
+      "same_artwork_traits": [
+        "immortality",
+        "skonester_trait_immortal_ageless",
+        "skonester_trait_yannian_dan_best",
+        "trait_eternal_nether_lord",
+        "bloodline_god_2",
+        "bloodline_god_1",
+        "insane_generale",
+        "insane_opinion_fv",
+        "insane_opinion_fa",
+        "crazyminded_psycho",
+        "borntorule_seed",
+        "first_bloodline1",
+        "fifth_bloodline5",
+        "toc_immortalblood",
+        "toc_immortal"
+      ],
+      "input_png": "inputs/toc_immortal.png",
+      "proposed_output_dds": "toc_immortal.dds",
+      "requires_icon_reference_change": false,
+      "reason": "Multiple traits resolve to identical decoded RGBA artwork.",
+      "prompt": "Create a distinct Crusader Kings III style trait icon for Undying Spirit. Trait meaning: This character is bound to the circles of the world and cannot die of old age or disease. Subject: A pale undying flame inside a silver ring. Use the supplied image as a reference for icon format, palette and painted finish; replace its borrowed subject where it conflicts with this trait. One clear centered emblem, refined hand-painted shading, restrained highlights, strong silhouette and generous edge padding, readable at small game UI size. No lettering, no watermark, no scenery, no checkerboard pattern. Keep related bloodline and elixir tiers visually related but visibly distinguishable."
+    }
+  ]
+}

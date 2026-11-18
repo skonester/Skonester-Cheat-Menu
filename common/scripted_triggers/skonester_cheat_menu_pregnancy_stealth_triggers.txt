@@ -1,0 +1,8 @@
+﻿# Skonester「强制怀孕 / 爱爱」：与 scope:actor 无正式亲密关系时，走「不被发现」分支（须在女方 scope:recipient 下求值）。
+# 配偶含主婚与多配偶；妾为 actor 之妾；情人/灵魂伴侣亦视为自愿亲密关系，不套用隐匿分娩。
+skonester_stealth_cheat_pregnancy_trigger = {
+  NOT = { is_spouse_of = scope:actor }
+  NOT = { has_relation_lover = scope:actor }
+  NOT = { has_relation_soulmate = scope:actor }
+  NOT = { is_concubine_of = scope:actor }
+}

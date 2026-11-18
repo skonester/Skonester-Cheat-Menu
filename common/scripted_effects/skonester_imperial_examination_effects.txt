@@ -1,0 +1,99 @@
+﻿# 武官：总督契约军事任命；文官：文职任命（含标准/工业等省）。其余功勋有地臣按文官处理。
+
+skonester_imperial_examination_promote_all_officials_effect = {
+  every_vassal_or_below = {
+    limit = {
+      is_adult = yes
+      NOT = { has_trait = incapable }
+      is_imprisoned = no
+      NOT = { is_at_war_with_liege = yes }
+      is_landed = yes
+      skonester_is_not_h_china_emperor_title_holder_trigger = yes
+      OR = {
+        NOT = { government_has_flag = government_has_merit }
+        AND = {
+          government_has_flag = government_has_merit
+          merit_level < maximum_merit_level
+        }
+      }
+    }
+    if = {
+      limit = {
+        government_has_flag = government_has_merit
+        merit_level < maximum_merit_level
+      }
+      change_merit_level = 1
+    }
+    if = {
+      limit = {
+        OR = {
+          vassal_contract_has_flag = celestial_military_appointment
+          vassal_contract_has_flag = meritocratic_military_appointment
+        }
+      }
+      add_martial_skill = 2
+      add_prowess_skill = 2
+    }
+    else_if = {
+      limit = {
+        OR = {
+          vassal_contract_has_flag = celestial_civil_appointment
+          vassal_contract_has_flag = meritocratic_civil_appointment
+        }
+      }
+      add_diplomacy_skill = 2
+      add_stewardship_skill = 2
+      add_learning_skill = 2
+    }
+    else = {
+      add_diplomacy_skill = 2
+      add_stewardship_skill = 2
+      add_learning_skill = 2
+    }
+    if = {
+      limit = { government_has_flag = government_has_merit }
+      change_merit = {
+        value = skonester_one_click_exam_bonus_merit_value
+      }
+    }
+  }
+}
+# Current CK3 keeps imperial_examination_fetch_examiner_effect as a file-local
+# inline effect. Mods cannot call it directly, so keep an equivalent namespaced
+# implementation here for Skonester's examination override.
+skonester_imperial_examination_fetch_examiner_effect = {
+  if = {
+    limit = {
+      scope:activity = {
+        any_guest_subset = {
+          name = imperial_examiners
+          count >= 1
+          is_ai = yes
+        }
+      }
+    }
+    scope:activity = {
+      random_guest_subset = {
+        name = imperial_examiners
+        limit = { is_ai = yes }
+        save_scope_as = examiner
+      }
+    }
+  }
+  else = {
+    create_character = {
+      template = tgp_examiner_learning_template
+      location = root.location
+      save_scope_as = examiner
+    }
+    scope:examiner = {
+      add_to_activity = scope:activity
+    }
+    scope:activity = {
+      add_to_guest_subset = {
+        name = imperial_examiners
+        target = scope:examiner
+      }
+    }
+  }
+}

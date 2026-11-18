@@ -1,0 +1,20 @@
+﻿l_english:
+# interactions
+mt_merge_titles_interaction:0 "Merge Titles"
+mt_clear_selection_interaction:0 "Clear Title Selection"
+
+# interaction picks
+MERGE_KINGDOMS_MERGE_LOC:0 "Merge / Select"
+MERGE_KINGDOMS_BACK_LOC:0 "Clear Selection"
+
+# custom tooltips
+mt_req_no_county_and_kingdom:0 "Counties cannot be merged into kingdoms"
+mt_req_no_county_and_empire:0 "Counties cannot be merged into empires"
+mt_req_no_duchy_and_empire:0 "Duchies cannot be merged into empires"
+mt_req_not_the_same:0 "The title is the as the selected"
+mt_req_no_higher_marked_title:0 "The selected title cannot have a higher tier than this one"
+mt_req_no_two_counties:0 "You cannot merge two counties"
+mt_req_already_dejure_liege:0 "This title is already the de-jure liege of the selected one"
+
+mt_select_title:0 "[target.GetName] will be selected for merging"
+mt_clear_selection:0 "The title selection will be cleared"

@@ -1,0 +1,39 @@
+﻿namespace = skonester_cheat_menu
+
+# 角色生成合并菜单（独立文件）
+skonester_cheat_menu.0245 = {
+  type = character_event
+  title = skonester_cheat_menu.3088.t
+  desc = skonester_cheat_menu.3088.desc
+  theme = family
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+
+  right_portrait = scope:skonester_char_gen_target
+
+  option = {
+    name = skonester_cheat_menu.00x.close
+    skonester_char_gen_clear_recipient_global_effect = yes
+  }
+
+  option = {
+    name = skonester_cheat_menu.3088.opt_spawn_talent
+    skonester_char_gen_hub_open_spawn_talent_effect = yes
+  }
+
+  option = {
+    name = skonester_cheat_menu.3088.opt_beauty
+    skonester_char_gen_hub_open_beauty_effect = yes
+  }
+
+  option = {
+    name = skonester_cheat_menu.3088.opt_children
+    trigger = {
+      scope:skonester_char_gen_target = { is_alive = yes is_adult = yes }
+      scope:actor = { is_alive = yes is_adult = yes }
+    }
+    skonester_char_gen_hub_open_children_effect = yes
+  }
+}

@@ -1,0 +1,53 @@
+﻿namespace = skonester_court_positions
+
+# 宫廷职位任免主菜单
+skonester_court_positions.8001 = {
+  type = character_event
+  title = skonester_court_positions.8001.t
+  desc = skonester_court_positions.8001.desc
+  theme = stewardship
+  left_portrait = root
+  right_portrait = scope:skonester_pos_reshuffle_liege
+
+  immediate = {
+    skonester_positions_sync_liege_from_cheat_menu_effect = yes
+  }
+
+  option = {
+    name = skonester_court_positions.8001.opt_mass_player
+    custom_tooltip = skonester_court_positions.8001.opt_mass_player_tt
+    scope:actor = {
+      skonester_positions_sync_liege_player_effect = yes
+      skonester_positions_mass_reshuffle_court_only_liege_effect = yes
+      send_interface_toast = {
+        type = event_toast_effect_good
+        title = skonester_court_positions.toast_mass_done_t
+        left_icon = scope:actor
+      }
+    }
+  }
+
+  option = {
+    name = skonester_court_positions.8001.opt_mass_target
+    custom_tooltip = skonester_court_positions.8001.opt_mass_target_tt
+    trigger = {
+      exists = scope:skonester_pos_reshuffle_liege
+      scope:skonester_pos_reshuffle_liege = {
+        NOT = { this = scope:actor }
+      }
+    }
+    skonester_positions_mass_reshuffle_court_only_liege_effect = yes
+    scope:actor = {
+      send_interface_toast = {
+        type = event_toast_effect_good
+        title = skonester_court_positions.toast_mass_done_t
+        left_icon = scope:actor
+        right_icon = scope:skonester_pos_reshuffle_liege
+      }
+    }
+  }
+
+  option = {
+    name = skonester_cheat_menu.00x.close
+  }
+}

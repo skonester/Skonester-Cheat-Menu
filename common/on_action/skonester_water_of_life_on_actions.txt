@@ -1,0 +1,18 @@
+﻿# Append scoped upkeep to the existing engine hooks; no vanilla overrides.
+on_game_start = {
+    on_actions = { skonester_water_of_life_restore_all }
+}
+on_game_start_after_lobby = {
+    on_actions = { skonester_water_of_life_restore_all }
+}
+monthly_global_pulse = {
+    on_actions = { skonester_water_of_life_restore_all }
+}
+skonester_water_of_life_restore_all = {
+    effect = {
+        every_living_character = {
+            limit = { has_trait = water_of_life }
+            skonester_water_of_life_restore_effect = yes
+        }
+    }
+}

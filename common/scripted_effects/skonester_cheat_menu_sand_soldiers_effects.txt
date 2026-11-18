@@ -1,0 +1,4 @@
+﻿# Skonester「撒豆成兵」：逻辑见 skonester_sand_soldiers_effects.txt（工作台）
+skonester_cheat_menu_sand_soldiers_effect = {
+  skonester_open_sand_soldiers_effect = yes
+}

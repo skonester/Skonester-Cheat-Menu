@@ -1,0 +1,17 @@
+{
+  "super_governor": {
+    "subject": "(a silver stone keep and a large golden key:1.4), a compact castle tower with the ornate key laid diagonally across it, mounted on a square dark burgundy leather plaque with a thin aged brass rim and corner rivets, matching a medieval military trait badge.",
+    "denoise": 0.93,
+    "negative": ", saint, angel, halo, religious cross, human face, portrait, helmet, sword, compass"
+  },
+  "super": {
+    "subject": "(a square dark burgundy leather badge with a thin aged brass frame and four corner rivets:1.5), a magnificent golden royal crown above a polished silver breastplate centered on the red square plaque, medieval paragon emblem, front view, matching military trait badge.",
+    "denoise": 0.88,
+    "negative": ", shield shape, triangular shield, escutcheon, portrait, face, head, helmet, halo, religious cross, circle, round medallion"
+  },
+  "goodguy_toc": {
+    "subject": "(a white dove carrying a fresh green olive branch:1.5), a graceful dove in silver-white painted relief, small restrained golden eight-pointed star above it, an emblem of peace and benevolence, isolated compact medieval heraldic emblem, no halo and no angel wings.",
+    "denoise": 0.93,
+    "negative": ", saint, angel, halo, religious cross, human face, portrait"
+  }
+}

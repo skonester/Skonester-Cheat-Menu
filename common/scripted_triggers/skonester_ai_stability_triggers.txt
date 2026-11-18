@@ -1,0 +1,5 @@
+﻿# 保留触发器 ID 供旧存档/外部引用；已不再用于 AI 年脉冲门槛（铁腕改革与扩张猛攻改为始终执行）。
+
+skonester_ai_realm_stable_for_reforms_trigger = {
+  always = yes
+}

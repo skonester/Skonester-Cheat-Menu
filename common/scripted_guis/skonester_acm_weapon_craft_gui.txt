@@ -1,0 +1,232 @@
+﻿# AUTO-GENERATED — tools/gen_acm_weapons.py
+
+skonester_acm_gui_sel_wpn_longsword = {
+  scope = character
+  is_shown = {
+    has_character_flag = skonester_artifact_kind_weapon
+    has_character_flag = skonester_acm_wpn_longsword
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_wpn_longsword = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_wpn_longsword_effect = yes }
+}
+
+skonester_acm_gui_sel_wpn_greatsword = {
+  scope = character
+  is_shown = {
+    has_character_flag = skonester_artifact_kind_weapon
+    has_character_flag = skonester_acm_wpn_greatsword
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_wpn_greatsword = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_wpn_greatsword_effect = yes }
+}
+
+skonester_acm_gui_sel_wpn_dagger = {
+  scope = character
+  is_shown = {
+    has_character_flag = skonester_artifact_kind_weapon
+    has_character_flag = skonester_acm_wpn_dagger
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_wpn_dagger = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_wpn_dagger_effect = yes }
+}
+
+skonester_acm_gui_sel_wpn_battleaxe = {
+  scope = character
+  is_shown = {
+    has_character_flag = skonester_artifact_kind_weapon
+    has_character_flag = skonester_acm_wpn_battleaxe
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_wpn_battleaxe = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_wpn_battleaxe_effect = yes }
+}
+
+skonester_acm_gui_sel_wpn_greataxe = {
+  scope = character
+  is_shown = {
+    has_character_flag = skonester_artifact_kind_weapon
+    has_character_flag = skonester_acm_wpn_greataxe
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_wpn_greataxe = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_wpn_greataxe_effect = yes }
+}
+
+skonester_acm_gui_sel_wpn_mace = {
+  scope = character
+  is_shown = {
+    has_character_flag = skonester_artifact_kind_weapon
+    has_character_flag = skonester_acm_wpn_mace
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_wpn_mace = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_wpn_mace_effect = yes }
+}
+
+skonester_acm_gui_sel_wpn_flail = {
+  scope = character
+  is_shown = {
+    has_character_flag = skonester_artifact_kind_weapon
+    has_character_flag = skonester_acm_wpn_flail
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_wpn_flail = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_wpn_flail_effect = yes }
+}
+
+skonester_acm_gui_sel_wpn_spear = {
+  scope = character
+  is_shown = {
+    has_character_flag = skonester_artifact_kind_weapon
+    has_character_flag = skonester_acm_wpn_spear
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_wpn_spear = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_wpn_spear_effect = yes }
+}
+
+skonester_acm_gui_sel_wpn_halberd = {
+  scope = character
+  is_shown = {
+    has_character_flag = skonester_artifact_kind_weapon
+    has_character_flag = skonester_acm_wpn_halberd
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_wpn_halberd = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_wpn_halberd_effect = yes }
+}
+
+skonester_acm_gui_sel_wpn_staff = {
+  scope = character
+  is_shown = {
+    has_character_flag = skonester_artifact_kind_weapon
+    has_character_flag = skonester_acm_wpn_staff
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_wpn_staff = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_wpn_staff_effect = yes }
+}
+
+skonester_acm_gui_sel_wpn_fistblade = {
+  scope = character
+  is_shown = {
+    has_character_flag = skonester_artifact_kind_weapon
+    has_character_flag = skonester_acm_wpn_fistblade
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_wpn_fistblade = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_wpn_fistblade_effect = yes }
+}
+
+skonester_acm_gui_sel_wpn_longbow = {
+  scope = character
+  is_shown = {
+    has_character_flag = skonester_artifact_kind_weapon
+    has_character_flag = skonester_acm_wpn_longbow
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_wpn_longbow = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_wpn_longbow_effect = yes }
+}
+
+skonester_acm_gui_sel_wpn_crossbow = {
+  scope = character
+  is_shown = {
+    has_character_flag = skonester_artifact_kind_weapon
+    has_character_flag = skonester_acm_wpn_crossbow
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_wpn_crossbow = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_wpn_crossbow_effect = yes }
+}
+
+skonester_acm_gui_sel_wpn_shortbow = {
+  scope = character
+  is_shown = {
+    has_character_flag = skonester_artifact_kind_weapon
+    has_character_flag = skonester_acm_wpn_shortbow
+  }
+  is_valid = { always = yes }
+}
+
+skonester_acm_gui_pick_wpn_shortbow = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_pick_wpn_shortbow_effect = yes }
+}
+
+skonester_acm_gui_kind_weapon = {
+  scope = character
+  is_shown = { always = yes }
+  is_valid = { always = yes }
+  effect = { skonester_acm_set_kind_weapon_effect = yes }
+}

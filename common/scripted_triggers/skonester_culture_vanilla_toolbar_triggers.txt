@@ -1,0 +1,11 @@
+﻿# 文化侧栏快捷条(0181)：事件 root 为玩家/actor 时，判断其文化是否与已保存的 skonester_selected_culture 相同
+
+skonester_root_culture_matches_saved_selected_culture_trigger = {
+  exists = scope:skonester_selected_culture
+  culture = scope:skonester_selected_culture
+}
+
+skonester_root_culture_differs_from_saved_selected_culture_trigger = {
+  exists = scope:skonester_selected_culture
+  NOT = { culture = scope:skonester_selected_culture }
+}

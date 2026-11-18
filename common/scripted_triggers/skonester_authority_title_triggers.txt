@@ -1,0 +1,19 @@
+﻿skonester_holds_any_authority_titular_title_trigger = {
+  OR = {
+    has_title = title:e_skonester_authority_absolute
+    has_title = title:e_skonester_authority_overlord
+    has_title = title:e_skonester_authority_iron_fist
+    has_title = title:e_skonester_authority_unbound
+    has_title = title:k_skonester_authority_regent
+  }
+}
+
+skonester_is_authority_titular_title_trigger = {
+  OR = {
+    this = title:e_skonester_authority_absolute
+    this = title:e_skonester_authority_overlord
+    this = title:e_skonester_authority_iron_fist
+    this = title:e_skonester_authority_unbound
+    this = title:k_skonester_authority_regent
+  }
+}

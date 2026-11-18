@@ -1,0 +1,6 @@
+﻿l_simp_chinese:
+ rule_skonester_custom_traits: "Skonester 自定义特质"
+ setting_skonester_custom_traits_enabled: "启用"
+ setting_skonester_custom_traits_enabled_desc: "允许使用 Skonester 自定义特质菜单中的特质。"
+ setting_skonester_custom_traits_disabled: "禁用"
+ setting_skonester_custom_traits_disabled_desc: "禁用此菜单及其特质。"

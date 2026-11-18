@@ -1,0 +1,58 @@
+﻿# 从Skonester事件链点「返回」
+skonester_cheat_menu_open_main_hub_window_effect = {
+}
+
+skonester_cf_culture_faith_quick_hub_back_or_main_effect = {
+  skonester_cheat_menu_open_main_hub_window_effect = yes
+}
+
+# Culture innovation page return routing.
+skonester_cheat_menu_culture_innovation_era_menu_back_effect = {
+  if = {
+    limit = { has_character_flag = skonester_quick_modifications_innovation_entry }
+    trigger_event = skonester_cheat_menu.0130
+  }
+  else_if = {
+    limit = { has_character_flag = skonester_culture_innov_from_0120 }
+    trigger_event = skonester_cheat_menu.0130
+  }
+  else_if = {
+    limit = { has_character_flag = skonester_culture_innov_from_global_selected }
+    trigger_event = skonester_cheat_menu.0130
+  }
+  else = {
+    trigger_event = skonester_cheat_menu.0130
+  }
+}
+
+skonester_quick_modifications_innovation_close_effect = {
+  remove_character_flag = skonester_quick_modifications_innovation_entry
+}
+
+# 打开当前角色的原版文化窗口
+skonester_open_selected_culture_vanilla_window_effect = {
+  if = {
+    limit = { exists = scope:skonester_selected_culture }
+    set_variable = {
+      name = skonester_selected_culture_var
+      value = scope:skonester_selected_culture
+    }
+    skonester_acm_open_culture_vanilla_editor_effect = yes
+  }
+}
+
+# 与 HUD 左下角点击「文化」相同：打开当前角色文化的原版侧栏（须在角色 scope 内调用）
+# 同步 save_scope_as = skonester_selected_culture，便于支柱/传统分页对「当前侧栏文化」生效
+skonester_open_actor_culture_vanilla_window_effect = {
+  culture = {
+    save_scope_as = skonester_selected_culture
+    open_view_data = {
+      view = culture_window
+    }
+  }
+}
+
+# 从文化子菜单返回主面板
+skonester_cheat_menu_culture_editor_hub_return_effect = {
+  trigger_event = skonester_cheat_menu.0120
+}

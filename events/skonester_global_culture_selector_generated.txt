@@ -1,0 +1,1817 @@
+﻿namespace = skonester_cheat_menu
+
+## AUTO-GENERATED (global culture browser: macro region → heritage → culture)
+## cultures_dir = C:\SteamLibrary\steamapps\common\Crusader Kings III\game\common\culture\cultures
+
+skonester_cheat_menu.1800 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.ainu hidden_effect = { culture:ainu = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.emishi hidden_effect = { culture:emishi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1420 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1801 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.akan hidden_effect = { culture:akan = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.guan hidden_effect = { culture:guan = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.kru hidden_effect = { culture:kru = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1420 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1802 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.albanian hidden_effect = { culture:albanian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1420 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1803 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.macedonian hidden_effect = { culture:macedonian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.trojan hidden_effect = { culture:trojan = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1420 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1804 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.bedouin hidden_effect = { culture:bedouin = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.egyptian hidden_effect = { culture:egyptian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.levantine hidden_effect = { culture:levantine = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.maghrebi hidden_effect = { culture:maghrebi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.yemeni hidden_effect = { culture:yemeni = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1420 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1805 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.acehnese hidden_effect = { culture:acehnese = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.amis hidden_effect = { culture:amis = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.bisayan hidden_effect = { culture:bisayan = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.bugis hidden_effect = { culture:bugis = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.cham hidden_effect = { culture:cham = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.dayak hidden_effect = { culture:dayak = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1420 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1806 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1806 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.iloko hidden_effect = { culture:iloko = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.javanese hidden_effect = { culture:javanese = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.malay hidden_effect = { culture:malay = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.maluku hidden_effect = { culture:maluku = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.nakkavaram hidden_effect = { culture:nakkavaram = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.papuan hidden_effect = { culture:papuan = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1420 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1805 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1807 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1807 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.senoi hidden_effect = { culture:senoi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.tagalog hidden_effect = { culture:tagalog = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.toraja hidden_effect = { culture:toraja = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1420 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1806 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1808 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.latgalian hidden_effect = { culture:latgalian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.lithuanian hidden_effect = { culture:lithuanian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.prussian hidden_effect = { culture:prussian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1420 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1809 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.estonian hidden_effect = { culture:estonian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.finnish hidden_effect = { culture:finnish = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.karelian hidden_effect = { culture:karelian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.sami hidden_effect = { culture:sami = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.vepsian hidden_effect = { culture:vepsian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1420 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1810 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.east_bantu hidden_effect = { culture:east_bantu = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.swahili hidden_effect = { culture:swahili = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1420 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1811 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.baranis hidden_effect = { culture:baranis = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.butr hidden_effect = { culture:butr = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.guanches hidden_effect = { culture:guanches = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.zaghawa hidden_effect = { culture:zaghawa = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1420 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1812 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.breton hidden_effect = { culture:breton = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.cornish hidden_effect = { culture:cornish = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.cumbrian hidden_effect = { culture:cumbrian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.pictish hidden_effect = { culture:pictish = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.welsh hidden_effect = { culture:welsh = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1420 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1813 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.burmese hidden_effect = { culture:burmese = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.kachin hidden_effect = { culture:kachin = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.karen hidden_effect = { culture:karen = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1420 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1814 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.baekje hidden_effect = { culture:baekje = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.balhae hidden_effect = { culture:balhae = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.goguryeo hidden_effect = { culture:goguryeo = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1815 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.greek hidden_effect = { culture:greek = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1816 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.armenian hidden_effect = { culture:armenian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.georgian hidden_effect = { culture:georgian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1817 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.hausa hidden_effect = { culture:hausa = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.kanuri hidden_effect = { culture:kanuri = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.nupe hidden_effect = { culture:nupe = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.sao hidden_effect = { culture:sao = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1818 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.bavarian hidden_effect = { culture:bavarian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.dutch hidden_effect = { culture:dutch = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.franconian hidden_effect = { culture:franconian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.frisian hidden_effect = { culture:frisian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.german hidden_effect = { culture:german = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.langobard hidden_effect = { culture:langobard = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1819 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1819 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.saxon hidden_effect = { culture:saxon = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.swabian hidden_effect = { culture:swabian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1818 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1820 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.bai hidden_effect = { culture:bai = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.han hidden_effect = { culture:han = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.yi hidden_effect = { culture:yi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1821 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.gond hidden_effect = { culture:gond = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.kannada hidden_effect = { culture:kannada = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.tamil hidden_effect = { culture:tamil = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.telugu hidden_effect = { culture:telugu = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1822 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.beja hidden_effect = { culture:beja = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.daju hidden_effect = { culture:daju = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.ethiopian hidden_effect = { culture:ethiopian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.nubian hidden_effect = { culture:nubian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.welayta hidden_effect = { culture:welayta = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1823 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.ilmenian hidden_effect = { culture:ilmenian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.russian hidden_effect = { culture:russian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.severian hidden_effect = { culture:severian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.volhynian hidden_effect = { culture:volhynian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1824 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.ancient_egyptian hidden_effect = { culture:ancient_egyptian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1825 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.frankish hidden_effect = { culture:frankish = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.french hidden_effect = { culture:french = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.norman hidden_effect = { culture:norman = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.occitan hidden_effect = { culture:occitan = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1826 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.gaelic hidden_effect = { culture:gaelic = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.irish hidden_effect = { culture:irish = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1827 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.gothic hidden_effect = { culture:gothic = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1828 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.hmong hidden_effect = { culture:hmong = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.yao hidden_effect = { culture:yao = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1829 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.hunnic hidden_effect = { culture:hunnic = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1830 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.andalusian hidden_effect = { culture:andalusian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.aragonese hidden_effect = { culture:aragonese = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.asturleonese hidden_effect = { culture:asturleonese = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.basque hidden_effect = { culture:basque = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.castilian hidden_effect = { culture:castilian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.catalan hidden_effect = { culture:catalan = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1831 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1831 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.galician hidden_effect = { culture:galician = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.portuguese hidden_effect = { culture:portuguese = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.suebi hidden_effect = { culture:suebi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.visigothic hidden_effect = { culture:visigothic = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1830 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1832 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.assamese hidden_effect = { culture:assamese = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.bengali hidden_effect = { culture:bengali = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.brahui hidden_effect = { culture:brahui = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.gujarati hidden_effect = { culture:gujarati = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.hindustani hidden_effect = { culture:hindustani = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.kashmiri hidden_effect = { culture:kashmiri = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1833 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1833 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.malvi hidden_effect = { culture:malvi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.marathi hidden_effect = { culture:marathi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.nepali hidden_effect = { culture:nepali = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.oriya hidden_effect = { culture:oriya = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.punjabi hidden_effect = { culture:punjabi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.rajput hidden_effect = { culture:rajput = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1832 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1834 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1834 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.sindhi hidden_effect = { culture:sindhi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.sinhala hidden_effect = { culture:sinhala = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1833 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1835 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.afghan hidden_effect = { culture:afghan = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.alan hidden_effect = { culture:alan = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.baloch hidden_effect = { culture:baloch = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.daylamite hidden_effect = { culture:daylamite = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.khwarezmian hidden_effect = { culture:khwarezmian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.kurdish hidden_effect = { culture:kurdish = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1836 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1836 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.persian hidden_effect = { culture:persian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.saka hidden_effect = { culture:saka = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.sogdian hidden_effect = { culture:sogdian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.tajik hidden_effect = { culture:tajik = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1835 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1837 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.ashkenazi hidden_effect = { culture:ashkenazi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.bavlim hidden_effect = { culture:bavlim = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.hebrew hidden_effect = { culture:hebrew = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.kochinim hidden_effect = { culture:kochinim = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.radhanite hidden_effect = { culture:radhanite = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.sephardi hidden_effect = { culture:sephardi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1838 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.japanese hidden_effect = { culture:japanese = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.ryukyuan hidden_effect = { culture:ryukyuan = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1839 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.goryeo hidden_effect = { culture:goryeo = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.silla hidden_effect = { culture:silla = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1840 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.cisalpine hidden_effect = { culture:cisalpine = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.italian hidden_effect = { culture:italian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.lombard hidden_effect = { culture:lombard = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.roman hidden_effect = { culture:roman = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.sardinian hidden_effect = { culture:sardinian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.sicilian hidden_effect = { culture:sicilian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1841 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.hungarian hidden_effect = { culture:hungarian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.mogyer hidden_effect = { culture:mogyer = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1842 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.khmer hidden_effect = { culture:khmer = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.khmu hidden_effect = { culture:khmu = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.mon hidden_effect = { culture:mon = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1843 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.buryat hidden_effect = { culture:buryat = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.kerait hidden_effect = { culture:kerait = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.khitan hidden_effect = { culture:khitan = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.mongol hidden_effect = { culture:mongol = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.naiman hidden_effect = { culture:naiman = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.oirat hidden_effect = { culture:oirat = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1844 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1844 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.ongud hidden_effect = { culture:ongud = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.shiwei hidden_effect = { culture:shiwei = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.tuyuhun hidden_effect = { culture:tuyuhun = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1843 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1845 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.nivkh hidden_effect = { culture:nivkh = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1846 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.danish hidden_effect = { culture:danish = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.norse hidden_effect = { culture:norse = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.norwegian hidden_effect = { culture:norwegian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.swedish hidden_effect = { culture:swedish = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1847 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.qiang hidden_effect = { culture:qiang = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.tangut hidden_effect = { culture:tangut = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1848 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.bozo hidden_effect = { culture:bozo = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.gaw hidden_effect = { culture:gaw = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.mossi hidden_effect = { culture:mossi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.songhai hidden_effect = { culture:songhai = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.soninke hidden_effect = { culture:soninke = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.sorko hidden_effect = { culture:sorko = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1849 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.pulaar hidden_effect = { culture:pulaar = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.serer hidden_effect = { culture:serer = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.wolof hidden_effect = { culture:wolof = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1850 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.afar hidden_effect = { culture:afar = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.somali hidden_effect = { culture:somali = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1851 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.bosnian hidden_effect = { culture:bosnian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.bulgarian hidden_effect = { culture:bulgarian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.croatian hidden_effect = { culture:croatian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.serbian hidden_effect = { culture:serbian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1852 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.assyrian hidden_effect = { culture:assyrian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1853 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.bouxcuengh hidden_effect = { culture:bouxcuengh = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.hlai hidden_effect = { culture:hlai = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.tai hidden_effect = { culture:tai = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.tujia hidden_effect = { culture:tujia = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1854 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.bodpa hidden_effect = { culture:bodpa = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.kirati hidden_effect = { culture:kirati = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.lhomon hidden_effect = { culture:lhomon = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.sumpa hidden_effect = { culture:sumpa = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.tsangpa hidden_effect = { culture:tsangpa = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.zhangzhung hidden_effect = { culture:zhangzhung = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1855 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.tocharian hidden_effect = { culture:tocharian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1856 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.jurchen hidden_effect = { culture:jurchen = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.mohe hidden_effect = { culture:mohe = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1857 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.avar hidden_effect = { culture:avar = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.bashkir hidden_effect = { culture:bashkir = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.bolghar hidden_effect = { culture:bolghar = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.chuvash hidden_effect = { culture:chuvash = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.cuman hidden_effect = { culture:cuman = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.karluk hidden_effect = { culture:karluk = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1858 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1858 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.khazar hidden_effect = { culture:khazar = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.kimek hidden_effect = { culture:kimek = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.kipchak hidden_effect = { culture:kipchak = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.kirghiz hidden_effect = { culture:kirghiz = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.laktan hidden_effect = { culture:laktan = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.pecheneg hidden_effect = { culture:pecheneg = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1857 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1859 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1859 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.shatuo hidden_effect = { culture:shatuo = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.turkish hidden_effect = { culture:turkish = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.turkmen hidden_effect = { culture:turkmen = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.uriankhai hidden_effect = { culture:uriankhai = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.uyghur hidden_effect = { culture:uyghur = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.yughur hidden_effect = { culture:yughur = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1858 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1860 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.khanty hidden_effect = { culture:khanty = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.komi hidden_effect = { culture:komi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.samoyed hidden_effect = { culture:samoyed = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1861 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.viet hidden_effect = { culture:viet = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1862 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.vlach hidden_effect = { culture:vlach = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1863 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.mari hidden_effect = { culture:mari = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.merya hidden_effect = { culture:merya = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.meshchera hidden_effect = { culture:meshchera = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.mordvin hidden_effect = { culture:mordvin = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.muroma hidden_effect = { culture:muroma = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1864 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.bobo hidden_effect = { culture:bobo = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.gur hidden_effect = { culture:gur = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.malinke hidden_effect = { culture:malinke = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.marka hidden_effect = { culture:marka = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.mel hidden_effect = { culture:mel = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1865 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.anglo_saxon hidden_effect = { culture:anglo_saxon = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.english hidden_effect = { culture:english = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.old_saxon hidden_effect = { culture:old_saxon = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.scottish hidden_effect = { culture:scottish = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1866 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.carantanian hidden_effect = { culture:carantanian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.czech hidden_effect = { culture:czech = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.polabian hidden_effect = { culture:polabian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.polish hidden_effect = { culture:polish = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.pommeranian hidden_effect = { culture:pommeranian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.slovien hidden_effect = { culture:slovien = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1867 = {
+  type = character_event
+  title = skonester_cheat_menu.1420.t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.edo hidden_effect = { culture:edo = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.ewe hidden_effect = { culture:ewe = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.igbo hidden_effect = { culture:igbo = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.yoruba hidden_effect = { culture:yoruba = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## AUTO-GENERATED (flat list: all base-game cultures, name — modify → vanilla culture_window)
+
+skonester_cheat_menu.1900 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.acehnese hidden_effect = { culture:acehnese = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.afar hidden_effect = { culture:afar = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.afghan hidden_effect = { culture:afghan = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.ainu hidden_effect = { culture:ainu = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.akan hidden_effect = { culture:akan = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.alan hidden_effect = { culture:alan = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1901 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1901 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.albanian hidden_effect = { culture:albanian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.amis hidden_effect = { culture:amis = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.ancient_egyptian hidden_effect = { culture:ancient_egyptian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.andalusian hidden_effect = { culture:andalusian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.anglo_saxon hidden_effect = { culture:anglo_saxon = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.aragonese hidden_effect = { culture:aragonese = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1900 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1902 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1902 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.armenian hidden_effect = { culture:armenian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.ashkenazi hidden_effect = { culture:ashkenazi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.assamese hidden_effect = { culture:assamese = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.assyrian hidden_effect = { culture:assyrian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.asturleonese hidden_effect = { culture:asturleonese = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.avar hidden_effect = { culture:avar = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1901 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1903 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1903 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.baekje hidden_effect = { culture:baekje = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.bai hidden_effect = { culture:bai = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.balhae hidden_effect = { culture:balhae = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.baloch hidden_effect = { culture:baloch = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.baranis hidden_effect = { culture:baranis = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.bashkir hidden_effect = { culture:bashkir = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1902 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1904 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1904 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.basque hidden_effect = { culture:basque = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.bavarian hidden_effect = { culture:bavarian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.bavlim hidden_effect = { culture:bavlim = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.bedouin hidden_effect = { culture:bedouin = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.beja hidden_effect = { culture:beja = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.bengali hidden_effect = { culture:bengali = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1903 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1905 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1905 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.bisayan hidden_effect = { culture:bisayan = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.bobo hidden_effect = { culture:bobo = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.bodpa hidden_effect = { culture:bodpa = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.bolghar hidden_effect = { culture:bolghar = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.bosnian hidden_effect = { culture:bosnian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.bouxcuengh hidden_effect = { culture:bouxcuengh = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1904 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1906 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1906 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.bozo hidden_effect = { culture:bozo = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.brahui hidden_effect = { culture:brahui = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.breton hidden_effect = { culture:breton = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.bugis hidden_effect = { culture:bugis = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.bulgarian hidden_effect = { culture:bulgarian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.burmese hidden_effect = { culture:burmese = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1905 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1907 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1907 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.buryat hidden_effect = { culture:buryat = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.butr hidden_effect = { culture:butr = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.carantanian hidden_effect = { culture:carantanian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.castilian hidden_effect = { culture:castilian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.catalan hidden_effect = { culture:catalan = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.cham hidden_effect = { culture:cham = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1906 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1908 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1908 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.chuvash hidden_effect = { culture:chuvash = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.cisalpine hidden_effect = { culture:cisalpine = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.cornish hidden_effect = { culture:cornish = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.croatian hidden_effect = { culture:croatian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.cuman hidden_effect = { culture:cuman = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.cumbrian hidden_effect = { culture:cumbrian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1907 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1909 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1909 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.czech hidden_effect = { culture:czech = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.daju hidden_effect = { culture:daju = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.danish hidden_effect = { culture:danish = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.dayak hidden_effect = { culture:dayak = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.daylamite hidden_effect = { culture:daylamite = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.dutch hidden_effect = { culture:dutch = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1908 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1910 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1910 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.east_bantu hidden_effect = { culture:east_bantu = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.edo hidden_effect = { culture:edo = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.egyptian hidden_effect = { culture:egyptian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.emishi hidden_effect = { culture:emishi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.english hidden_effect = { culture:english = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.estonian hidden_effect = { culture:estonian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1909 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1911 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1911 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.ethiopian hidden_effect = { culture:ethiopian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.ewe hidden_effect = { culture:ewe = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.finnish hidden_effect = { culture:finnish = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.franconian hidden_effect = { culture:franconian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.frankish hidden_effect = { culture:frankish = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.french hidden_effect = { culture:french = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1910 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1912 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1912 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.frisian hidden_effect = { culture:frisian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.gaelic hidden_effect = { culture:gaelic = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.galician hidden_effect = { culture:galician = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.gaw hidden_effect = { culture:gaw = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.georgian hidden_effect = { culture:georgian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.german hidden_effect = { culture:german = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1911 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1913 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1913 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.goguryeo hidden_effect = { culture:goguryeo = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.gond hidden_effect = { culture:gond = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.goryeo hidden_effect = { culture:goryeo = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.gothic hidden_effect = { culture:gothic = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.greek hidden_effect = { culture:greek = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.guan hidden_effect = { culture:guan = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1912 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1914 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1914 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.guanches hidden_effect = { culture:guanches = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.gujarati hidden_effect = { culture:gujarati = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.gur hidden_effect = { culture:gur = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.han hidden_effect = { culture:han = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.hausa hidden_effect = { culture:hausa = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.hebrew hidden_effect = { culture:hebrew = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1913 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1915 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1915 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.hindustani hidden_effect = { culture:hindustani = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.hlai hidden_effect = { culture:hlai = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.hmong hidden_effect = { culture:hmong = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.hungarian hidden_effect = { culture:hungarian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.hunnic hidden_effect = { culture:hunnic = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.igbo hidden_effect = { culture:igbo = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1914 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1916 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1916 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.ilmenian hidden_effect = { culture:ilmenian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.iloko hidden_effect = { culture:iloko = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.irish hidden_effect = { culture:irish = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.italian hidden_effect = { culture:italian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.japanese hidden_effect = { culture:japanese = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.javanese hidden_effect = { culture:javanese = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1915 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1917 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1917 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.jurchen hidden_effect = { culture:jurchen = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.kachin hidden_effect = { culture:kachin = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.kannada hidden_effect = { culture:kannada = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.kanuri hidden_effect = { culture:kanuri = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.karelian hidden_effect = { culture:karelian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.karen hidden_effect = { culture:karen = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1916 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1918 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1918 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.karluk hidden_effect = { culture:karluk = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.kashmiri hidden_effect = { culture:kashmiri = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.kerait hidden_effect = { culture:kerait = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.khanty hidden_effect = { culture:khanty = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.khazar hidden_effect = { culture:khazar = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.khitan hidden_effect = { culture:khitan = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1917 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1919 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1919 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.khmer hidden_effect = { culture:khmer = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.khmu hidden_effect = { culture:khmu = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.khwarezmian hidden_effect = { culture:khwarezmian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.kimek hidden_effect = { culture:kimek = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.kipchak hidden_effect = { culture:kipchak = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.kirati hidden_effect = { culture:kirati = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1918 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1920 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1920 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.kirghiz hidden_effect = { culture:kirghiz = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.kochinim hidden_effect = { culture:kochinim = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.komi hidden_effect = { culture:komi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.kru hidden_effect = { culture:kru = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.kurdish hidden_effect = { culture:kurdish = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.laktan hidden_effect = { culture:laktan = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1919 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1921 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1921 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.langobard hidden_effect = { culture:langobard = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.latgalian hidden_effect = { culture:latgalian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.levantine hidden_effect = { culture:levantine = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.lhomon hidden_effect = { culture:lhomon = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.lithuanian hidden_effect = { culture:lithuanian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.lombard hidden_effect = { culture:lombard = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1920 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1922 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1922 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.macedonian hidden_effect = { culture:macedonian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.maghrebi hidden_effect = { culture:maghrebi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.malay hidden_effect = { culture:malay = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.malinke hidden_effect = { culture:malinke = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.maluku hidden_effect = { culture:maluku = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.malvi hidden_effect = { culture:malvi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1921 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1923 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1923 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.marathi hidden_effect = { culture:marathi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.mari hidden_effect = { culture:mari = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.marka hidden_effect = { culture:marka = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.mel hidden_effect = { culture:mel = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.merya hidden_effect = { culture:merya = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.meshchera hidden_effect = { culture:meshchera = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1922 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1924 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1924 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.mogyer hidden_effect = { culture:mogyer = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.mohe hidden_effect = { culture:mohe = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.mon hidden_effect = { culture:mon = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.mongol hidden_effect = { culture:mongol = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.mordvin hidden_effect = { culture:mordvin = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.mossi hidden_effect = { culture:mossi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1923 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1925 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1925 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.muroma hidden_effect = { culture:muroma = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.naiman hidden_effect = { culture:naiman = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.nakkavaram hidden_effect = { culture:nakkavaram = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.nepali hidden_effect = { culture:nepali = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.nivkh hidden_effect = { culture:nivkh = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.norman hidden_effect = { culture:norman = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1924 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1926 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1926 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.norse hidden_effect = { culture:norse = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.norwegian hidden_effect = { culture:norwegian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.nubian hidden_effect = { culture:nubian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.nupe hidden_effect = { culture:nupe = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.occitan hidden_effect = { culture:occitan = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.oirat hidden_effect = { culture:oirat = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1925 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1927 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1927 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.old_saxon hidden_effect = { culture:old_saxon = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.ongud hidden_effect = { culture:ongud = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.oriya hidden_effect = { culture:oriya = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.papuan hidden_effect = { culture:papuan = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.pecheneg hidden_effect = { culture:pecheneg = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.persian hidden_effect = { culture:persian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1926 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1928 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1928 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.pictish hidden_effect = { culture:pictish = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.polabian hidden_effect = { culture:polabian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.polish hidden_effect = { culture:polish = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.pommeranian hidden_effect = { culture:pommeranian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.portuguese hidden_effect = { culture:portuguese = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.prussian hidden_effect = { culture:prussian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1927 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1929 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1929 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.pulaar hidden_effect = { culture:pulaar = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.punjabi hidden_effect = { culture:punjabi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.qiang hidden_effect = { culture:qiang = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.radhanite hidden_effect = { culture:radhanite = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.rajput hidden_effect = { culture:rajput = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.roman hidden_effect = { culture:roman = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1928 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1930 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1930 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.russian hidden_effect = { culture:russian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.ryukyuan hidden_effect = { culture:ryukyuan = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.saka hidden_effect = { culture:saka = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.sami hidden_effect = { culture:sami = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.samoyed hidden_effect = { culture:samoyed = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.sao hidden_effect = { culture:sao = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1929 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1931 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1931 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.sardinian hidden_effect = { culture:sardinian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.saxon hidden_effect = { culture:saxon = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.scottish hidden_effect = { culture:scottish = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.senoi hidden_effect = { culture:senoi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.sephardi hidden_effect = { culture:sephardi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.serbian hidden_effect = { culture:serbian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1930 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1932 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1932 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.serer hidden_effect = { culture:serer = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.severian hidden_effect = { culture:severian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.shatuo hidden_effect = { culture:shatuo = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.shiwei hidden_effect = { culture:shiwei = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.sicilian hidden_effect = { culture:sicilian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.silla hidden_effect = { culture:silla = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1931 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1933 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1933 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.sindhi hidden_effect = { culture:sindhi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.sinhala hidden_effect = { culture:sinhala = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.slovien hidden_effect = { culture:slovien = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.sogdian hidden_effect = { culture:sogdian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.somali hidden_effect = { culture:somali = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.songhai hidden_effect = { culture:songhai = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1932 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1934 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1934 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.soninke hidden_effect = { culture:soninke = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.sorko hidden_effect = { culture:sorko = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.suebi hidden_effect = { culture:suebi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.sumpa hidden_effect = { culture:sumpa = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.swabian hidden_effect = { culture:swabian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.swahili hidden_effect = { culture:swahili = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1933 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1935 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1935 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.swedish hidden_effect = { culture:swedish = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.tagalog hidden_effect = { culture:tagalog = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.tai hidden_effect = { culture:tai = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.tajik hidden_effect = { culture:tajik = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.tamil hidden_effect = { culture:tamil = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.tangut hidden_effect = { culture:tangut = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1934 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1936 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1936 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.telugu hidden_effect = { culture:telugu = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.tocharian hidden_effect = { culture:tocharian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.toraja hidden_effect = { culture:toraja = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.trojan hidden_effect = { culture:trojan = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.tsangpa hidden_effect = { culture:tsangpa = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.tujia hidden_effect = { culture:tujia = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1935 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1937 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1937 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.turkish hidden_effect = { culture:turkish = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.turkmen hidden_effect = { culture:turkmen = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.tuyuhun hidden_effect = { culture:tuyuhun = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.uriankhai hidden_effect = { culture:uriankhai = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.uyghur hidden_effect = { culture:uyghur = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.vepsian hidden_effect = { culture:vepsian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1936 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1938 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1938 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.viet hidden_effect = { culture:viet = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.visigothic hidden_effect = { culture:visigothic = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.vlach hidden_effect = { culture:vlach = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.volhynian hidden_effect = { culture:volhynian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.welayta hidden_effect = { culture:welayta = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.welsh hidden_effect = { culture:welsh = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1937 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1939 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1939 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.wolof hidden_effect = { culture:wolof = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.yao hidden_effect = { culture:yao = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.yemeni hidden_effect = { culture:yemeni = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.yi hidden_effect = { culture:yi = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.yoruba hidden_effect = { culture:yoruba = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.yughur hidden_effect = { culture:yughur = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1938 } }
+  option = { name = skonester_cheat_menu.page_next root = { trigger_event = skonester_cheat_menu.1940 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}
+
+skonester_cheat_menu.1940 = {
+  type = character_event
+  title = skonester_cheat_menu.1900.t
+  desc = skonester_cheat_menu.1900.desc
+  theme = default
+
+  option = { name = skonester_cheat_menu.gc_modify.zaghawa hidden_effect = { culture:zaghawa = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = skonester_cheat_menu.gc_modify.zhangzhung hidden_effect = { culture:zhangzhung = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  # Current CK3 cultures missing from the legacy generated catalog. Base-game
+  # localization keys are used so every supported language resolves the name.
+  option = { name = carthaginian hidden_effect = { culture:carthaginian = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+  option = { name = kazak hidden_effect = { culture:kazak = { save_scope_as = skonester_selected_culture } } root = { skonester_open_selected_culture_vanilla_window_effect = yes } }
+
+  option = { name = skonester_cheat_menu.1420.back_groups root = { trigger_event = skonester_cheat_menu.1360 } }
+  option = { name = skonester_cheat_menu.page_prev root = { trigger_event = skonester_cheat_menu.1939 } }
+  option = { name = skonester_cheat_menu.00x.close }
+}

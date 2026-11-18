@@ -1,0 +1,56 @@
+﻿# 宫廷职位任免菜单（Skonester右键 / 官吏统辖决议）
+
+skonester_positions_sync_liege_from_cheat_menu_effect = {
+  skonester_cheat_menu_sync_target_effect = yes
+  if = {
+    limit = {
+      exists = scope:skonester_cheat_menu_target
+      scope:skonester_cheat_menu_target = {
+        is_alive = yes
+        is_ruler = yes
+        highest_held_title_tier >= tier_barony
+      }
+    }
+    scope:skonester_cheat_menu_target = {
+      save_scope_as = skonester_pos_reshuffle_liege
+    }
+  }
+  else = {
+    scope:actor = {
+      save_scope_as = skonester_pos_reshuffle_liege
+    }
+  }
+}
+
+skonester_positions_sync_liege_player_effect = {
+  scope:actor = {
+    save_scope_as = skonester_pos_reshuffle_liege
+  }
+}
+
+# 仅宫廷职：先全部撤职，再按称职度补任（不触动内阁）；可重复点击以重新任免
+skonester_positions_mass_reshuffle_court_only_liege_effect = {
+  if = {
+    limit = { NOT = { exists = scope:skonester_pos_reshuffle_liege } }
+    scope:actor = {
+      save_scope_as = skonester_pos_reshuffle_liege
+    }
+  }
+  scope:skonester_pos_reshuffle_liege = {
+    skonester_positions_revoke_all_named_court_positions_effect = yes
+    skonester_positions_appoint_all_named_court_positions_strict_loose_spawn_effect = yes
+  }
+}
+
+# 自动任免单次 tick（仅测试事件调用）
+skonester_auto_court_positions_15day_tick_effect = {
+  scope:skonester_pos_reshuffle_liege = {
+    skonester_positions_fill_all_named_court_vacancies_best_effect = yes
+    skonester_positions_upgrade_all_named_court_positions_if_better_effect = yes
+  }
+}
+
+skonester_cheat_menu_open_court_positions_menu_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  scope:actor = { trigger_event = skonester_court_positions.8001 }
+}

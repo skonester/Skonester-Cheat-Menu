@@ -1,0 +1,121 @@
+﻿# 宝物制作 GUI：盔甲/冠冕/礼器/饰品/典籍/宫廷子类旗帜（与武器剑斧矛互不混用）
+
+skonester_acm_clear_armor_subtype_flags_effect = {
+  remove_character_flag = skonester_acm_arm_leather
+  remove_character_flag = skonester_acm_arm_chain
+  remove_character_flag = skonester_acm_arm_scale
+  remove_character_flag = skonester_acm_arm_plate
+  remove_character_flag = skonester_acm_arm_halfplate
+  remove_character_flag = skonester_acm_arm_fullplate
+  remove_character_flag = skonester_acm_arm_sacred
+}
+
+skonester_acm_clear_crown_subtype_flags_effect = {
+  remove_character_flag = skonester_acm_crown_noble
+  remove_character_flag = skonester_acm_crown_royal
+  remove_character_flag = skonester_acm_crown_kingdom
+  remove_character_flag = skonester_acm_crown_empire
+  remove_character_flag = skonester_acm_crown_holy
+  remove_character_flag = skonester_acm_crown_war
+  remove_character_flag = skonester_acm_crown_tribal
+}
+
+skonester_acm_clear_regalia_subtype_flags_effect = {
+  remove_character_flag = skonester_acm_reg_scepter
+  remove_character_flag = skonester_acm_reg_orb
+  remove_character_flag = skonester_acm_reg_seal
+  remove_character_flag = skonester_acm_reg_stole
+  remove_character_flag = skonester_acm_reg_cloak
+  remove_character_flag = skonester_acm_reg_oil
+  remove_character_flag = skonester_acm_reg_chalice
+}
+
+skonester_acm_clear_trinket_subtype_flags_effect = {
+  remove_character_flag = skonester_acm_trink_ring
+  remove_character_flag = skonester_acm_trink_necklace
+  remove_character_flag = skonester_acm_trink_brooch
+  remove_character_flag = skonester_acm_trink_earring
+  remove_character_flag = skonester_acm_trink_charm
+  remove_character_flag = skonester_acm_trink_perfume
+  remove_character_flag = skonester_acm_trink_relic
+  remove_character_flag = skonester_acm_trink_figurine
+}
+
+skonester_acm_clear_book_subtype_flags_effect = {
+  remove_character_flag = skonester_acm_book_martial
+  remove_character_flag = skonester_acm_book_steward
+  remove_character_flag = skonester_acm_book_dynasty
+  remove_character_flag = skonester_acm_book_diplo
+}
+
+skonester_acm_clear_court_subtype_flags_effect = {
+  remove_character_flag = skonester_acm_crt_throne_gold
+  remove_character_flag = skonester_acm_crt_throne_empire
+  remove_character_flag = skonester_acm_crt_banner_gratitude
+  remove_character_flag = skonester_acm_crt_family_tree
+  remove_character_flag = skonester_acm_crt_tapestry
+  remove_character_flag = skonester_acm_crt_banner_crusade
+  remove_character_flag = skonester_acm_crt_banner_dragon
+  remove_character_flag = skonester_acm_crt_divan_persian
+  remove_character_flag = skonester_acm_crt_ivory_cabinet
+  remove_character_flag = skonester_acm_crt_ring_angelica
+}
+
+skonester_acm_clear_all_craft_subtype_flags_effect = {
+  skonester_acm_clear_weapon_subtype_flags_effect = yes
+  skonester_acm_clear_armor_subtype_flags_effect = yes
+  skonester_acm_clear_crown_subtype_flags_effect = yes
+  skonester_acm_clear_regalia_subtype_flags_effect = yes
+  skonester_acm_clear_trinket_subtype_flags_effect = yes
+  skonester_acm_clear_book_subtype_flags_effect = yes
+  skonester_acm_clear_court_subtype_flags_effect = yes
+}
+
+skonester_acm_pick_armor_leather_effect = { skonester_acm_clear_armor_subtype_flags_effect = yes add_character_flag = skonester_acm_arm_leather }
+skonester_acm_pick_armor_chain_effect = { skonester_acm_clear_armor_subtype_flags_effect = yes add_character_flag = skonester_acm_arm_chain }
+skonester_acm_pick_armor_scale_effect = { skonester_acm_clear_armor_subtype_flags_effect = yes add_character_flag = skonester_acm_arm_scale }
+skonester_acm_pick_armor_plate_effect = { skonester_acm_clear_armor_subtype_flags_effect = yes add_character_flag = skonester_acm_arm_plate }
+skonester_acm_pick_armor_halfplate_effect = { skonester_acm_clear_armor_subtype_flags_effect = yes add_character_flag = skonester_acm_arm_halfplate }
+skonester_acm_pick_armor_fullplate_effect = { skonester_acm_clear_armor_subtype_flags_effect = yes add_character_flag = skonester_acm_arm_fullplate }
+skonester_acm_pick_armor_sacred_effect = { skonester_acm_clear_armor_subtype_flags_effect = yes add_character_flag = skonester_acm_arm_sacred }
+
+skonester_acm_pick_crown_noble_effect = { skonester_acm_clear_crown_subtype_flags_effect = yes add_character_flag = skonester_acm_crown_noble }
+skonester_acm_pick_crown_royal_effect = { skonester_acm_clear_crown_subtype_flags_effect = yes add_character_flag = skonester_acm_crown_royal }
+skonester_acm_pick_crown_kingdom_effect = { skonester_acm_clear_crown_subtype_flags_effect = yes add_character_flag = skonester_acm_crown_kingdom }
+skonester_acm_pick_crown_empire_effect = { skonester_acm_clear_crown_subtype_flags_effect = yes add_character_flag = skonester_acm_crown_empire }
+skonester_acm_pick_crown_holy_effect = { skonester_acm_clear_crown_subtype_flags_effect = yes add_character_flag = skonester_acm_crown_holy }
+skonester_acm_pick_crown_war_effect = { skonester_acm_clear_crown_subtype_flags_effect = yes add_character_flag = skonester_acm_crown_war }
+skonester_acm_pick_crown_tribal_effect = { skonester_acm_clear_crown_subtype_flags_effect = yes add_character_flag = skonester_acm_crown_tribal }
+
+skonester_acm_pick_reg_scepter_effect = { skonester_acm_clear_regalia_subtype_flags_effect = yes add_character_flag = skonester_acm_reg_scepter }
+skonester_acm_pick_reg_orb_effect = { skonester_acm_clear_regalia_subtype_flags_effect = yes add_character_flag = skonester_acm_reg_orb }
+skonester_acm_pick_reg_seal_effect = { skonester_acm_clear_regalia_subtype_flags_effect = yes add_character_flag = skonester_acm_reg_seal }
+skonester_acm_pick_reg_stole_effect = { skonester_acm_clear_regalia_subtype_flags_effect = yes add_character_flag = skonester_acm_reg_stole }
+skonester_acm_pick_reg_cloak_effect = { skonester_acm_clear_regalia_subtype_flags_effect = yes add_character_flag = skonester_acm_reg_cloak }
+skonester_acm_pick_reg_oil_effect = { skonester_acm_clear_regalia_subtype_flags_effect = yes add_character_flag = skonester_acm_reg_oil }
+skonester_acm_pick_reg_chalice_effect = { skonester_acm_clear_regalia_subtype_flags_effect = yes add_character_flag = skonester_acm_reg_chalice }
+
+skonester_acm_pick_trink_ring_effect = { skonester_acm_clear_trinket_subtype_flags_effect = yes add_character_flag = skonester_acm_trink_ring }
+skonester_acm_pick_trink_necklace_effect = { skonester_acm_clear_trinket_subtype_flags_effect = yes add_character_flag = skonester_acm_trink_necklace }
+skonester_acm_pick_trink_brooch_effect = { skonester_acm_clear_trinket_subtype_flags_effect = yes add_character_flag = skonester_acm_trink_brooch }
+skonester_acm_pick_trink_earring_effect = { skonester_acm_clear_trinket_subtype_flags_effect = yes add_character_flag = skonester_acm_trink_earring }
+skonester_acm_pick_trink_charm_effect = { skonester_acm_clear_trinket_subtype_flags_effect = yes add_character_flag = skonester_acm_trink_charm }
+skonester_acm_pick_trink_perfume_effect = { skonester_acm_clear_trinket_subtype_flags_effect = yes add_character_flag = skonester_acm_trink_perfume }
+skonester_acm_pick_trink_relic_effect = { skonester_acm_clear_trinket_subtype_flags_effect = yes add_character_flag = skonester_acm_trink_relic }
+skonester_acm_pick_trink_figurine_effect = { skonester_acm_clear_trinket_subtype_flags_effect = yes add_character_flag = skonester_acm_trink_figurine }
+
+skonester_acm_pick_book_martial_effect = { skonester_acm_clear_book_subtype_flags_effect = yes add_character_flag = skonester_acm_book_martial }
+skonester_acm_pick_book_steward_effect = { skonester_acm_clear_book_subtype_flags_effect = yes add_character_flag = skonester_acm_book_steward }
+skonester_acm_pick_book_dynasty_effect = { skonester_acm_clear_book_subtype_flags_effect = yes add_character_flag = skonester_acm_book_dynasty }
+skonester_acm_pick_book_diplo_effect = { skonester_acm_clear_book_subtype_flags_effect = yes add_character_flag = skonester_acm_book_diplo }
+
+skonester_acm_pick_crt_throne_gold_effect = { skonester_acm_clear_court_subtype_flags_effect = yes add_character_flag = skonester_acm_crt_throne_gold }
+skonester_acm_pick_crt_throne_empire_effect = { skonester_acm_clear_court_subtype_flags_effect = yes add_character_flag = skonester_acm_crt_throne_empire }
+skonester_acm_pick_crt_banner_gratitude_effect = { skonester_acm_clear_court_subtype_flags_effect = yes add_character_flag = skonester_acm_crt_banner_gratitude }
+skonester_acm_pick_crt_family_tree_effect = { skonester_acm_clear_court_subtype_flags_effect = yes add_character_flag = skonester_acm_crt_family_tree }
+skonester_acm_pick_crt_tapestry_effect = { skonester_acm_clear_court_subtype_flags_effect = yes add_character_flag = skonester_acm_crt_tapestry }
+skonester_acm_pick_crt_banner_crusade_effect = { skonester_acm_clear_court_subtype_flags_effect = yes add_character_flag = skonester_acm_crt_banner_crusade }
+skonester_acm_pick_crt_banner_dragon_effect = { skonester_acm_clear_court_subtype_flags_effect = yes add_character_flag = skonester_acm_crt_banner_dragon }
+skonester_acm_pick_crt_divan_persian_effect = { skonester_acm_clear_court_subtype_flags_effect = yes add_character_flag = skonester_acm_crt_divan_persian }
+skonester_acm_pick_crt_ivory_cabinet_effect = { skonester_acm_clear_court_subtype_flags_effect = yes add_character_flag = skonester_acm_crt_ivory_cabinet }
+skonester_acm_pick_crt_ring_angelica_effect = { skonester_acm_clear_court_subtype_flags_effect = yes add_character_flag = skonester_acm_crt_ring_angelica }

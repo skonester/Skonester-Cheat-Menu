@@ -1,0 +1,39 @@
+﻿# 世界无地清理：基础池（不含「本轮剩余名额」判断）
+# 不清理：玩家本人、人类玩家、玩家宗族、子女、孙辈、配偶与侍妾
+
+skonester_world_purge_landless_base_eligible_trigger = {
+  is_alive = yes
+  is_landed = no
+  is_ruler = no # Required by native silent_disappearance_effect.
+  is_ai = yes
+  is_pool_character = yes
+  is_lowborn = yes
+  age >= 16
+  NOT = { this = root }
+  NOR = {
+    AND = {
+      is_playable_character = yes
+      is_ai = no
+    }
+  }
+  NOR = {
+    AND = {
+      root = {
+        exists = dynasty
+      }
+      exists = dynasty
+      dynasty = root.dynasty
+    }
+  }
+  # Native checks also cover characters with unknown parents.
+  NOR = {
+    is_child_of = root
+    is_grandchild_of = root
+  }
+  NOT = {
+    is_spouse_of = root
+  }
+  NOT = {
+    is_concubine_of = root
+  }
+}

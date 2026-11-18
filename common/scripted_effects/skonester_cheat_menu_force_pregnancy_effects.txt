@@ -1,0 +1,545 @@
+﻿# Skonester「强制怀孕 / 亲密」：保证怀孕（先结束旧孕期再用 make_pregnant）；不检查生育力。
+# 非配偶/情人/灵魂伴侣/己方妾：隐匿私生 + 假定父亲（配偶优先，其次侧室妾主 concubinist）。
+
+skonester_force_pregnancy_assumed_father_stealth_fallback_effect = {
+  if = {
+    limit = {
+      exists = father
+      father = {
+        is_alive = yes
+        is_male = yes
+        NOT = { this = scope:actor }
+      }
+    }
+    father = {
+      save_scope_as = skonester_stealth_assumed_father
+    }
+    set_pregnancy_assumed_father = scope:skonester_stealth_assumed_father
+    clear_saved_scope = skonester_stealth_assumed_father
+  }
+  else_if = {
+    limit = {
+      exists = liege
+      liege = {
+        is_alive = yes
+        is_male = yes
+        NOT = { this = scope:actor }
+        NOT = { this = root }
+      }
+    }
+    liege = {
+      save_scope_as = skonester_stealth_assumed_father
+    }
+    set_pregnancy_assumed_father = scope:skonester_stealth_assumed_father
+    clear_saved_scope = skonester_stealth_assumed_father
+  }
+  else_if = {
+    limit = {
+      exists = top_liege
+      top_liege = {
+        is_alive = yes
+        is_male = yes
+        NOT = { this = scope:actor }
+        NOT = { this = root }
+      }
+    }
+    top_liege = {
+      save_scope_as = skonester_stealth_assumed_father
+    }
+    set_pregnancy_assumed_father = scope:skonester_stealth_assumed_father
+    clear_saved_scope = skonester_stealth_assumed_father
+  }
+  else_if = {
+    limit = {
+      any_courtier = {
+        is_male = yes
+        is_adult = yes
+        NOT = { this = scope:actor }
+        NOT = { this = root }
+      }
+    }
+    random_courtier = {
+      limit = {
+        is_male = yes
+        is_adult = yes
+        NOT = { this = scope:actor }
+        NOT = { this = root }
+      }
+      save_scope_as = skonester_stealth_assumed_father
+    }
+    set_pregnancy_assumed_father = scope:skonester_stealth_assumed_father
+    clear_saved_scope = skonester_stealth_assumed_father
+  }
+}
+
+skonester_force_pregnancy_set_stealth_assumed_father_effect = {
+  if = {
+    limit = {
+      exists = primary_spouse
+      primary_spouse = {
+        is_male = yes
+        NOT = { this = scope:actor }
+      }
+    }
+    primary_spouse = {
+      save_scope_as = skonester_stealth_assumed_father
+    }
+    set_pregnancy_assumed_father = scope:skonester_stealth_assumed_father
+    clear_saved_scope = skonester_stealth_assumed_father
+  }
+  else_if = {
+    limit = {
+      is_concubine = yes
+      exists = concubinist
+      concubinist = {
+        is_male = yes
+        NOT = { this = scope:actor }
+      }
+    }
+    concubinist = {
+      save_scope_as = skonester_stealth_assumed_father
+    }
+    set_pregnancy_assumed_father = scope:skonester_stealth_assumed_father
+    clear_saved_scope = skonester_stealth_assumed_father
+  }
+  else = {
+    skonester_force_pregnancy_assumed_father_stealth_fallback_effect = yes
+  }
+}
+
+# 亲密 / 强制怀孕共用：必定进入怀孕状态
+skonester_guaranteed_pregnancy_effect = {
+  if = {
+    limit = {
+      is_female = yes
+      is_adult = yes
+    }
+    if = {
+      limit = { is_pregnant = yes }
+      end_pregnancy = yes
+    }
+    if = {
+      limit = {
+        skonester_stealth_cheat_pregnancy_trigger = yes
+      }
+      make_pregnant = {
+        father = scope:actor
+        known_bastard = no
+      }
+      set_variable = {
+        name = skonester_stealth_fp_bio_dad
+        value = scope:actor
+      }
+      skonester_force_pregnancy_set_stealth_assumed_father_effect = yes
+    }
+    else = {
+      make_pregnant = {
+        father = scope:actor
+      }
+      set_pregnancy_assumed_father = scope:actor
+    }
+    if = {
+      limit = { is_pregnant = no }
+      make_pregnant = {
+        father = scope:actor
+      }
+      if = {
+        limit = {
+          skonester_stealth_cheat_pregnancy_trigger = yes
+        }
+        set_variable = {
+          name = skonester_stealth_fp_bio_dad
+          value = scope:actor
+        }
+        skonester_force_pregnancy_set_stealth_assumed_father_effect = yes
+      }
+      else = {
+        set_pregnancy_assumed_father = scope:actor
+      }
+    }
+  }
+}
+
+# 子女 scope：自 scope:skonester_trait_inherit_donor 复制可遗传先天特质（须先 save_scope_as）
+skonester_cheat_menu_copy_inheritable_congenital_traits_from_donor_effect = {
+  if = {
+    limit = { exists = scope:skonester_trait_inherit_donor }
+    if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = beauty_good_3 } }
+      if = { limit = { has_trait = beauty_good_1 } remove_trait = beauty_good_1 }
+      if = { limit = { has_trait = beauty_good_2 } remove_trait = beauty_good_2 }
+      if = { limit = { has_trait = beauty_bad_1 } remove_trait = beauty_bad_1 }
+      if = { limit = { has_trait = beauty_bad_2 } remove_trait = beauty_bad_2 }
+      if = { limit = { has_trait = beauty_bad_3 } remove_trait = beauty_bad_3 }
+      add_trait = beauty_good_3
+    }
+    else_if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = beauty_good_2 } }
+      if = { limit = { has_trait = beauty_good_1 } remove_trait = beauty_good_1 }
+      if = { limit = { has_trait = beauty_bad_1 } remove_trait = beauty_bad_1 }
+      if = { limit = { has_trait = beauty_bad_2 } remove_trait = beauty_bad_2 }
+      if = { limit = { has_trait = beauty_bad_3 } remove_trait = beauty_bad_3 }
+      add_trait = beauty_good_2
+    }
+    else_if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = beauty_good_1 } }
+      if = { limit = { has_trait = beauty_bad_1 } remove_trait = beauty_bad_1 }
+      if = { limit = { has_trait = beauty_bad_2 } remove_trait = beauty_bad_2 }
+      if = { limit = { has_trait = beauty_bad_3 } remove_trait = beauty_bad_3 }
+      add_trait = beauty_good_1
+    }
+    else_if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = beauty_bad_3 } }
+      if = { limit = { has_trait = beauty_good_1 } remove_trait = beauty_good_1 }
+      if = { limit = { has_trait = beauty_good_2 } remove_trait = beauty_good_2 }
+      if = { limit = { has_trait = beauty_good_3 } remove_trait = beauty_good_3 }
+      if = { limit = { has_trait = beauty_bad_1 } remove_trait = beauty_bad_1 }
+      if = { limit = { has_trait = beauty_bad_2 } remove_trait = beauty_bad_2 }
+      add_trait = beauty_bad_3
+    }
+    else_if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = beauty_bad_2 } }
+      if = { limit = { has_trait = beauty_good_1 } remove_trait = beauty_good_1 }
+      if = { limit = { has_trait = beauty_good_2 } remove_trait = beauty_good_2 }
+      if = { limit = { has_trait = beauty_good_3 } remove_trait = beauty_good_3 }
+      if = { limit = { has_trait = beauty_bad_1 } remove_trait = beauty_bad_1 }
+      add_trait = beauty_bad_2
+    }
+    else_if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = beauty_bad_1 } }
+      if = { limit = { has_trait = beauty_good_1 } remove_trait = beauty_good_1 }
+      if = { limit = { has_trait = beauty_good_2 } remove_trait = beauty_good_2 }
+      if = { limit = { has_trait = beauty_good_3 } remove_trait = beauty_good_3 }
+      add_trait = beauty_bad_1
+    }
+    if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = intellect_good_3 } }
+      if = { limit = { has_trait = intellect_good_1 } remove_trait = intellect_good_1 }
+      if = { limit = { has_trait = intellect_good_2 } remove_trait = intellect_good_2 }
+      if = { limit = { has_trait = intellect_bad_1 } remove_trait = intellect_bad_1 }
+      if = { limit = { has_trait = intellect_bad_2 } remove_trait = intellect_bad_2 }
+      if = { limit = { has_trait = intellect_bad_3 } remove_trait = intellect_bad_3 }
+      add_trait = intellect_good_3
+    }
+    else_if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = intellect_good_2 } }
+      if = { limit = { has_trait = intellect_good_1 } remove_trait = intellect_good_1 }
+      if = { limit = { has_trait = intellect_bad_1 } remove_trait = intellect_bad_1 }
+      if = { limit = { has_trait = intellect_bad_2 } remove_trait = intellect_bad_2 }
+      if = { limit = { has_trait = intellect_bad_3 } remove_trait = intellect_bad_3 }
+      add_trait = intellect_good_2
+    }
+    else_if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = intellect_good_1 } }
+      if = { limit = { has_trait = intellect_bad_1 } remove_trait = intellect_bad_1 }
+      if = { limit = { has_trait = intellect_bad_2 } remove_trait = intellect_bad_2 }
+      if = { limit = { has_trait = intellect_bad_3 } remove_trait = intellect_bad_3 }
+      add_trait = intellect_good_1
+    }
+    else_if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = intellect_bad_3 } }
+      if = { limit = { has_trait = intellect_good_1 } remove_trait = intellect_good_1 }
+      if = { limit = { has_trait = intellect_good_2 } remove_trait = intellect_good_2 }
+      if = { limit = { has_trait = intellect_good_3 } remove_trait = intellect_good_3 }
+      if = { limit = { has_trait = intellect_bad_1 } remove_trait = intellect_bad_1 }
+      if = { limit = { has_trait = intellect_bad_2 } remove_trait = intellect_bad_2 }
+      add_trait = intellect_bad_3
+    }
+    else_if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = intellect_bad_2 } }
+      if = { limit = { has_trait = intellect_good_1 } remove_trait = intellect_good_1 }
+      if = { limit = { has_trait = intellect_good_2 } remove_trait = intellect_good_2 }
+      if = { limit = { has_trait = intellect_good_3 } remove_trait = intellect_good_3 }
+      if = { limit = { has_trait = intellect_bad_1 } remove_trait = intellect_bad_1 }
+      add_trait = intellect_bad_2
+    }
+    else_if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = intellect_bad_1 } }
+      if = { limit = { has_trait = intellect_good_1 } remove_trait = intellect_good_1 }
+      if = { limit = { has_trait = intellect_good_2 } remove_trait = intellect_good_2 }
+      if = { limit = { has_trait = intellect_good_3 } remove_trait = intellect_good_3 }
+      add_trait = intellect_bad_1
+    }
+    if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = physique_good_3 } }
+      if = { limit = { has_trait = physique_good_1 } remove_trait = physique_good_1 }
+      if = { limit = { has_trait = physique_good_2 } remove_trait = physique_good_2 }
+      if = { limit = { has_trait = physique_bad_1 } remove_trait = physique_bad_1 }
+      if = { limit = { has_trait = physique_bad_2 } remove_trait = physique_bad_2 }
+      if = { limit = { has_trait = physique_bad_3 } remove_trait = physique_bad_3 }
+      if = { limit = { has_trait = weak } remove_trait = weak }
+      if = { limit = { has_trait = spindly } remove_trait = spindly }
+      add_trait = physique_good_3
+    }
+    else_if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = physique_good_2 } }
+      if = { limit = { has_trait = physique_good_1 } remove_trait = physique_good_1 }
+      if = { limit = { has_trait = physique_bad_1 } remove_trait = physique_bad_1 }
+      if = { limit = { has_trait = physique_bad_2 } remove_trait = physique_bad_2 }
+      if = { limit = { has_trait = physique_bad_3 } remove_trait = physique_bad_3 }
+      if = { limit = { has_trait = weak } remove_trait = weak }
+      if = { limit = { has_trait = spindly } remove_trait = spindly }
+      add_trait = physique_good_2
+    }
+    else_if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = physique_good_1 } }
+      if = { limit = { has_trait = physique_bad_1 } remove_trait = physique_bad_1 }
+      if = { limit = { has_trait = physique_bad_2 } remove_trait = physique_bad_2 }
+      if = { limit = { has_trait = physique_bad_3 } remove_trait = physique_bad_3 }
+      if = { limit = { has_trait = weak } remove_trait = weak }
+      if = { limit = { has_trait = spindly } remove_trait = spindly }
+      add_trait = physique_good_1
+    }
+    else_if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = physique_bad_3 } }
+      if = { limit = { has_trait = physique_good_1 } remove_trait = physique_good_1 }
+      if = { limit = { has_trait = physique_good_2 } remove_trait = physique_good_2 }
+      if = { limit = { has_trait = physique_good_3 } remove_trait = physique_good_3 }
+      if = { limit = { has_trait = physique_bad_1 } remove_trait = physique_bad_1 }
+      if = { limit = { has_trait = physique_bad_2 } remove_trait = physique_bad_2 }
+      add_trait = physique_bad_3
+    }
+    else_if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = physique_bad_2 } }
+      if = { limit = { has_trait = physique_good_1 } remove_trait = physique_good_1 }
+      if = { limit = { has_trait = physique_good_2 } remove_trait = physique_good_2 }
+      if = { limit = { has_trait = physique_good_3 } remove_trait = physique_good_3 }
+      if = { limit = { has_trait = physique_bad_1 } remove_trait = physique_bad_1 }
+      add_trait = physique_bad_2
+    }
+    else_if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = physique_bad_1 } }
+      if = { limit = { has_trait = physique_good_1 } remove_trait = physique_good_1 }
+      if = { limit = { has_trait = physique_good_2 } remove_trait = physique_good_2 }
+      if = { limit = { has_trait = physique_good_3 } remove_trait = physique_good_3 }
+      add_trait = physique_bad_1
+    }
+    if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = pure_blooded } }
+      add_trait = pure_blooded
+    }
+    if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = fecund } }
+      add_trait = fecund
+    }
+    if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = strong } }
+      if = { limit = { has_trait = weak } remove_trait = weak }
+      add_trait = strong
+    }
+    if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = weak } }
+      if = { limit = { has_trait = strong } remove_trait = strong }
+      add_trait = weak
+    }
+    if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = shrewd } }
+      if = { limit = { has_trait = dull } remove_trait = dull }
+      add_trait = shrewd
+    }
+    if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = dull } }
+      if = { limit = { has_trait = shrewd } remove_trait = shrewd }
+      add_trait = dull
+    }
+    if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = albino } }
+      add_trait = albino
+    }
+    if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = clubfooted } }
+      add_trait = clubfooted
+    }
+    if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = dwarf } }
+      add_trait = dwarf
+    }
+    if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = giant } }
+      add_trait = giant
+    }
+    if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = hunchbacked } }
+      add_trait = hunchbacked
+    }
+    if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = lisping } }
+      add_trait = lisping
+    }
+    if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = stuttering } }
+      add_trait = stuttering
+    }
+    if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = scaly } }
+      add_trait = scaly
+    }
+    if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = spindly } }
+      add_trait = spindly
+    }
+    if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = wheezing } }
+      add_trait = wheezing
+    }
+    if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = depressed_genetic } }
+      add_trait = depressed_genetic
+    }
+    if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = lunatic_genetic } }
+      add_trait = lunatic_genetic
+    }
+    if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = possessed_genetic } }
+      add_trait = possessed_genetic
+    }
+    if = {
+      limit = { scope:skonester_trait_inherit_donor = { has_trait = bleeder } }
+      add_trait = bleeder
+    }
+  }
+}
+
+# 隐匿分娩：create_character 用真实生父（玩家）遗传；合法父亲另设；外貌与先天特质从玩家复制（set_father 会冲掉 blend）
+skonester_cheat_menu_stealth_birth_child_father_fixup_effect = {
+  if = {
+    limit = {
+      exists = scope:skonester_inst_legal_dad
+      exists = scope:skonester_inst_bio_dad
+      NOT = { scope:skonester_inst_legal_dad = scope:skonester_inst_bio_dad }
+    }
+    set_real_father = scope:skonester_inst_bio_dad
+    set_father = scope:skonester_inst_legal_dad
+    copy_inheritable_appearance_from = scope:skonester_inst_bio_dad
+    scope:skonester_inst_bio_dad = {
+      save_scope_as = skonester_trait_inherit_donor
+    }
+    skonester_cheat_menu_copy_inheritable_congenital_traits_from_donor_effect = yes
+  }
+}
+
+# 自然分娩兜底：隐匿强制怀孕仍确保真实生父=玩家，并复制玩家可遗传外貌与先天特质
+skonester_stealth_fp_birth_ensure_player_genes_effect = {
+  if = {
+    limit = {
+      scope:mother = {
+        has_variable = skonester_stealth_fp_bio_dad
+      }
+    }
+    scope:mother = {
+      var:skonester_stealth_fp_bio_dad = {
+        save_scope_as = skonester_fp_bio_dad
+      }
+    }
+    if = {
+      limit = {
+        exists = scope:skonester_fp_bio_dad
+      }
+      set_real_father = scope:skonester_fp_bio_dad
+      copy_inheritable_appearance_from = scope:skonester_fp_bio_dad
+      scope:skonester_fp_bio_dad = {
+        save_scope_as = skonester_trait_inherit_donor
+      }
+      skonester_cheat_menu_copy_inheritable_congenital_traits_from_donor_effect = yes
+    }
+  }
+}
+
+# 当日分娩：登记生父（隐匿时 bio=真实父亲/玩家，legal=假定父亲/配偶等）
+skonester_cheat_menu_resolve_delivery_father_effect = {
+  clear_saved_scope = skonester_inst_bio_dad
+  clear_saved_scope = skonester_inst_legal_dad
+  clear_saved_scope = skonester_deliv_real
+  clear_saved_scope = skonester_deliv_assumed
+  if = {
+    limit = {
+      pregnancy_real_father = { always = yes }
+      pregnancy_assumed_father = { always = yes }
+    }
+    pregnancy_real_father = { save_scope_as = skonester_deliv_real }
+    pregnancy_assumed_father = { save_scope_as = skonester_deliv_assumed }
+    scope:skonester_deliv_real = { save_scope_as = skonester_inst_bio_dad }
+    if = {
+      limit = {
+        NOT = { scope:skonester_deliv_real = scope:skonester_deliv_assumed }
+      }
+      scope:skonester_deliv_assumed = { save_scope_as = skonester_inst_legal_dad }
+    }
+  }
+  else_if = {
+    limit = { pregnancy_real_father = { always = yes } }
+    pregnancy_real_father = { save_scope_as = skonester_inst_bio_dad }
+  }
+  else_if = {
+    limit = { pregnancy_assumed_father = { always = yes } }
+    pregnancy_assumed_father = { save_scope_as = skonester_inst_bio_dad }
+  }
+  else_if = {
+    limit = {
+      exists = primary_spouse
+      primary_spouse = { is_male = yes }
+    }
+    primary_spouse = { save_scope_as = skonester_inst_bio_dad }
+  }
+}
+
+# 当日分娩 create_character：隐匿私生用假定父亲/母亲文化，避免子女并入玩家宗族
+skonester_cheat_menu_resolve_delivery_create_scopes_effect = {
+  clear_saved_scope = skonester_inst_create_father
+  clear_saved_scope = skonester_inst_culture_src
+  if = {
+    limit = {
+      exists = scope:skonester_inst_legal_dad
+      exists = scope:skonester_inst_bio_dad
+      NOT = { scope:skonester_inst_legal_dad = scope:skonester_inst_bio_dad }
+    }
+    scope:skonester_inst_legal_dad = { save_scope_as = skonester_inst_create_father }
+    scope:mother = { save_scope_as = skonester_inst_culture_src }
+  }
+  else_if = {
+    limit = { exists = scope:skonester_inst_bio_dad }
+    scope:skonester_inst_bio_dad = { save_scope_as = skonester_inst_create_father }
+    scope:skonester_inst_bio_dad = { save_scope_as = skonester_inst_culture_src }
+  }
+  else = {
+    scope:mother = { save_scope_as = skonester_inst_culture_src }
+  }
+}
+
+skonester_cheat_menu_instant_deliver_today_effect = {
+  if = {
+    limit = {
+      has_trait = pregnant
+    }
+    if = {
+      limit = {
+        NOR = {
+          has_character_flag = birth_will_go_smoothly
+          has_character_flag = birth_child_will_become_sickly
+          has_character_flag = birth_mother_will_become_ill
+        }
+      }
+      add_character_flag = {
+        flag = birth_will_go_smoothly
+        days = 270
+      }
+    }
+    if = {
+      limit = {
+        has_character_flag = birth_mother_will_die
+      }
+      remove_character_flag = birth_mother_will_die
+    }
+    trigger_event = {
+      id = skonester_cheat_menu.8010
+      days = 0
+    }
+  }
+}
+
+skonester_cheat_menu_force_pregnancy_on_recipient_effect = {
+  scope:recipient = {
+    skonester_guaranteed_pregnancy_effect = yes
+  }
+}

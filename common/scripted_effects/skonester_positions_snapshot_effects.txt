@@ -1,0 +1,619 @@
+﻿# 任免前先「读取」：把当前内阁成员与各已知宫廷职位持有者写入 variable_list，并统计人数（供提示或后续扩展）。
+# 须已存在 scope:skonester_pos_reshuffle_liege（领主）。互动路径可另存 scope:skonester_pos_msg_player = 发起人以接收界面消息。
+
+skonester_positions_snapshot_clear_lists_effect = {
+  scope:skonester_pos_reshuffle_liege = {
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_council }
+      clear_variable_list = skonester_pos_snap_council
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_court_physician }
+      clear_variable_list = skonester_pos_snap_cp_court_physician
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_travel_leader }
+      clear_variable_list = skonester_pos_snap_cp_travel_leader
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_grand_mentor }
+      clear_variable_list = skonester_pos_snap_cp_grand_mentor
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_grand_preceptor }
+      clear_variable_list = skonester_pos_snap_cp_grand_preceptor
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_court_tutor }
+      clear_variable_list = skonester_pos_snap_cp_court_tutor
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_keeper_harem }
+      clear_variable_list = skonester_pos_snap_cp_keeper_harem
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_chief_eunuch }
+      clear_variable_list = skonester_pos_snap_cp_chief_eunuch
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_royal_architect }
+      clear_variable_list = skonester_pos_snap_cp_royal_architect
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_seneschal }
+      clear_variable_list = skonester_pos_snap_cp_seneschal
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_court_poet }
+      clear_variable_list = skonester_pos_snap_cp_court_poet
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_grand_guardian }
+      clear_variable_list = skonester_pos_snap_cp_grand_guardian
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_fire_dragon }
+      clear_variable_list = skonester_pos_snap_cp_fire_dragon
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_chronicler }
+      clear_variable_list = skonester_pos_snap_cp_chronicler
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_court_artificer }
+      clear_variable_list = skonester_pos_snap_cp_court_artificer
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_court_jester }
+      clear_variable_list = skonester_pos_snap_cp_court_jester
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_antiquarian }
+      clear_variable_list = skonester_pos_snap_cp_antiquarian
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_master_hunt }
+      clear_variable_list = skonester_pos_snap_cp_master_hunt
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_master_horse }
+      clear_variable_list = skonester_pos_snap_cp_master_horse
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_court_gardener }
+      clear_variable_list = skonester_pos_snap_cp_court_gardener
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_bodyguard }
+      clear_variable_list = skonester_pos_snap_cp_bodyguard
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_executioner }
+      clear_variable_list = skonester_pos_snap_cp_executioner
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_wet_nurse }
+      clear_variable_list = skonester_pos_snap_cp_wet_nurse
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_brewmaster }
+      clear_variable_list = skonester_pos_snap_cp_brewmaster
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_lady_waiting }
+      clear_variable_list = skonester_pos_snap_cp_lady_waiting
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_cupbearer }
+      clear_variable_list = skonester_pos_snap_cp_cupbearer
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_court_music }
+      clear_variable_list = skonester_pos_snap_cp_court_music
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_food_taster }
+      clear_variable_list = skonester_pos_snap_cp_food_taster
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_high_almoner }
+      clear_variable_list = skonester_pos_snap_cp_high_almoner
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_personal_champion }
+      clear_variable_list = skonester_pos_snap_cp_personal_champion
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_court_scholar }
+      clear_variable_list = skonester_pos_snap_cp_court_scholar
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_court_guru }
+      clear_variable_list = skonester_pos_snap_cp_court_guru
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_minister_bureaucrat }
+      clear_variable_list = skonester_pos_snap_cp_minister_bureaucrat
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_foreign_emissary }
+      clear_variable_list = skonester_pos_snap_cp_foreign_emissary
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_bookmaker }
+      clear_variable_list = skonester_pos_snap_cp_bookmaker
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_siege_engineer }
+      clear_variable_list = skonester_pos_snap_cp_siege_engineer
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_stargazer }
+      clear_variable_list = skonester_pos_snap_cp_stargazer
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_court_brahmin }
+      clear_variable_list = skonester_pos_snap_cp_court_brahmin
+    }
+    if = {
+      limit = { has_variable_list = skonester_pos_snap_cp_champion_charioteer }
+      clear_variable_list = skonester_pos_snap_cp_champion_charioteer
+    }
+  }
+}
+
+# 若该职在任，把在任者加入 $LIST_NAME$（每职至多一人）
+skonester_positions_snapshot_one_court_holder_effect = {
+  if = {
+    limit = { exists = scope:skonester_pos_snap_tmp_holder }
+    clear_saved_scope = skonester_pos_snap_tmp_holder
+  }
+  scope:skonester_pos_reshuffle_liege = {
+    if = {
+      limit = { employs_court_position = $COURT_POS$ }
+      random_court_position_holder = {
+        type = $COURT_POS$
+        limit = { always = yes }
+        save_scope_as = skonester_pos_snap_tmp_holder
+      }
+    }
+    if = {
+      limit = { exists = scope:skonester_pos_snap_tmp_holder }
+      add_to_variable_list = {
+        name = $LIST_NAME$
+        target = scope:skonester_pos_snap_tmp_holder
+      }
+      clear_saved_scope = skonester_pos_snap_tmp_holder
+    }
+  }
+}
+
+skonester_positions_snapshot_before_reshuffle_effect = {
+  skonester_positions_snapshot_clear_lists_effect = yes
+  scope:skonester_pos_reshuffle_liege = {
+    set_variable = {
+      name = skonester_pos_snap_cnt_council
+      value = 0
+    }
+    set_variable = {
+      name = skonester_pos_snap_cnt_court
+      value = 0
+    }
+    every_councillor = {
+      scope:skonester_pos_reshuffle_liege = {
+        change_variable = {
+          name = skonester_pos_snap_cnt_council
+          add = 1
+        }
+      }
+      save_scope_as = skonester_pos_snap_tmp_holder
+      scope:skonester_pos_reshuffle_liege = {
+        add_to_variable_list = {
+          name = skonester_pos_snap_council
+          target = scope:skonester_pos_snap_tmp_holder
+        }
+      }
+      clear_saved_scope = skonester_pos_snap_tmp_holder
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = court_physician_court_position
+      LIST_NAME = skonester_pos_snap_cp_court_physician
+    }
+    if = {
+      limit = { employs_court_position = court_physician_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = travel_leader_court_position
+      LIST_NAME = skonester_pos_snap_cp_travel_leader
+    }
+    if = {
+      limit = { employs_court_position = travel_leader_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = grand_mentor_court_position
+      LIST_NAME = skonester_pos_snap_cp_grand_mentor
+    }
+    if = {
+      limit = { employs_court_position = grand_mentor_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = grand_preceptor_court_position
+      LIST_NAME = skonester_pos_snap_cp_grand_preceptor
+    }
+    if = {
+      limit = { employs_court_position = grand_preceptor_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = court_tutor_court_position
+      LIST_NAME = skonester_pos_snap_cp_court_tutor
+    }
+    if = {
+      limit = { employs_court_position = court_tutor_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = keeper_of_the_harem_court_position
+      LIST_NAME = skonester_pos_snap_cp_keeper_harem
+    }
+    if = {
+      limit = { employs_court_position = keeper_of_the_harem_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = chief_eunuch_court_position
+      LIST_NAME = skonester_pos_snap_cp_chief_eunuch
+    }
+    if = {
+      limit = { employs_court_position = chief_eunuch_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = royal_architect_court_position
+      LIST_NAME = skonester_pos_snap_cp_royal_architect
+    }
+    if = {
+      limit = { employs_court_position = royal_architect_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = seneschal_court_position
+      LIST_NAME = skonester_pos_snap_cp_seneschal
+    }
+    if = {
+      limit = { employs_court_position = seneschal_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = court_poet_court_position
+      LIST_NAME = skonester_pos_snap_cp_court_poet
+    }
+    if = {
+      limit = { employs_court_position = court_poet_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = grand_guardian_court_position
+      LIST_NAME = skonester_pos_snap_cp_grand_guardian
+    }
+    if = {
+      limit = { employs_court_position = grand_guardian_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = fire_dragon_engineer_court_position
+      LIST_NAME = skonester_pos_snap_cp_fire_dragon
+    }
+    if = {
+      limit = { employs_court_position = fire_dragon_engineer_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = chronicler_court_position
+      LIST_NAME = skonester_pos_snap_cp_chronicler
+    }
+    if = {
+      limit = { employs_court_position = chronicler_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = court_artificer_court_position
+      LIST_NAME = skonester_pos_snap_cp_court_artificer
+    }
+    if = {
+      limit = { employs_court_position = court_artificer_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = court_jester_court_position
+      LIST_NAME = skonester_pos_snap_cp_court_jester
+    }
+    if = {
+      limit = { employs_court_position = court_jester_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = antiquarian_court_position
+      LIST_NAME = skonester_pos_snap_cp_antiquarian
+    }
+    if = {
+      limit = { employs_court_position = antiquarian_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = master_of_hunt_court_position
+      LIST_NAME = skonester_pos_snap_cp_master_hunt
+    }
+    if = {
+      limit = { employs_court_position = master_of_hunt_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = master_of_horse_court_position
+      LIST_NAME = skonester_pos_snap_cp_master_horse
+    }
+    if = {
+      limit = { employs_court_position = master_of_horse_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = court_gardener_court_position
+      LIST_NAME = skonester_pos_snap_cp_court_gardener
+    }
+    if = {
+      limit = { employs_court_position = court_gardener_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = bodyguard_court_position
+      LIST_NAME = skonester_pos_snap_cp_bodyguard
+    }
+    if = {
+      limit = { employs_court_position = bodyguard_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = executioner_court_position
+      LIST_NAME = skonester_pos_snap_cp_executioner
+    }
+    if = {
+      limit = { employs_court_position = executioner_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = wet_nurse_court_position
+      LIST_NAME = skonester_pos_snap_cp_wet_nurse
+    }
+    if = {
+      limit = { employs_court_position = wet_nurse_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = court_brewmaster_court_position
+      LIST_NAME = skonester_pos_snap_cp_brewmaster
+    }
+    if = {
+      limit = { employs_court_position = court_brewmaster_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = lady_in_waiting_court_position
+      LIST_NAME = skonester_pos_snap_cp_lady_waiting
+    }
+    if = {
+      limit = { employs_court_position = lady_in_waiting_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = cupbearer_court_position
+      LIST_NAME = skonester_pos_snap_cp_cupbearer
+    }
+    if = {
+      limit = { employs_court_position = cupbearer_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = food_taster_court_position
+      LIST_NAME = skonester_pos_snap_cp_food_taster
+    }
+    if = {
+      limit = { employs_court_position = food_taster_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = high_almoner_court_position
+      LIST_NAME = skonester_pos_snap_cp_high_almoner
+    }
+    if = {
+      limit = { employs_court_position = high_almoner_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = court_scholar_court_position
+      LIST_NAME = skonester_pos_snap_cp_court_scholar
+    }
+    if = {
+      limit = { employs_court_position = court_scholar_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = court_guru_court_position
+      LIST_NAME = skonester_pos_snap_cp_court_guru
+    }
+    if = {
+      limit = { employs_court_position = court_guru_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = minister_bureaucrat_court_position
+      LIST_NAME = skonester_pos_snap_cp_minister_bureaucrat
+    }
+    if = {
+      limit = { employs_court_position = minister_bureaucrat_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = foreign_emissary_court_position
+      LIST_NAME = skonester_pos_snap_cp_foreign_emissary
+    }
+    if = {
+      limit = { employs_court_position = foreign_emissary_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = bookmaker_court_position
+      LIST_NAME = skonester_pos_snap_cp_bookmaker
+    }
+    if = {
+      limit = { employs_court_position = bookmaker_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = siege_engineer_court_position
+      LIST_NAME = skonester_pos_snap_cp_siege_engineer
+    }
+    if = {
+      limit = { employs_court_position = siege_engineer_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+    skonester_positions_snapshot_one_court_holder_effect = {
+      COURT_POS = court_brahmin_court_position
+      LIST_NAME = skonester_pos_snap_cp_court_brahmin
+    }
+    if = {
+      limit = { employs_court_position = court_brahmin_court_position }
+      change_variable = {
+        name = skonester_pos_snap_cnt_court
+        add = 1
+      }
+    }
+  }
+  if = {
+    limit = { exists = scope:skonester_pos_msg_player }
+    scope:skonester_pos_msg_player = {
+      send_interface_toast = {
+        type = event_toast_effect_neutral
+        title = skonester_positions_snapshot_read_t
+        desc = skonester_positions_snapshot_read_desc
+        right_icon = scope:skonester_pos_reshuffle_liege
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      scope:skonester_pos_reshuffle_liege = {
+        is_ai = no
+      }
+    }
+    scope:skonester_pos_reshuffle_liege = {
+      send_interface_toast = {
+        type = event_toast_effect_neutral
+        title = skonester_positions_snapshot_read_t
+        desc = skonester_positions_snapshot_read_desc
+        right_icon = scope:skonester_pos_reshuffle_liege
+      }
+    }
+  }
+}

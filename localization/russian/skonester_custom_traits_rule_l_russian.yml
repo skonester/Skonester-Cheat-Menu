@@ -1,0 +1,6 @@
+﻿l_russian:
+ rule_skonester_custom_traits: "Особые свойства Skonester"
+ setting_skonester_custom_traits_enabled: "Включено"
+ setting_skonester_custom_traits_enabled_desc: "Разрешить свойства из меню особых свойств Skonester."
+ setting_skonester_custom_traits_disabled: "Выключено"
+ setting_skonester_custom_traits_disabled_desc: "Отключить меню и его свойства."

@@ -1,0 +1,33 @@
+﻿namespace = skonester_artifact_craft_gui
+
+# 官吏「宝物制作管理」独立 GUI：点「创建宝物」后执行（与 skonester_cheat_menu.0030 确认制作相同逻辑）
+skonester_artifact_craft_gui.9001 = {
+  type = character_event
+  hidden = yes
+
+  immediate = {
+    if = {
+      limit = { root = { skonester_player_may_use_artifact_craft_trigger = yes } }
+      root = {
+        save_scope_as = actor
+        save_scope_as = skonester_acm_craft_creator
+        skonester_acm_sync_artifact_owner_scopes_effect = yes
+      }
+      skonester_acm_gui_finish_create_effect = yes
+    }
+  }
+}
+
+# 宝物制作窗：对所选宝物重新套用当前修饰
+skonester_artifact_craft_gui.9002 = {
+  type = character_event
+  hidden = yes
+
+  immediate = {
+    root = {
+      save_scope_as = actor
+      save_scope_as = skonester_acm_craft_creator
+    }
+    skonester_acm_gui_finish_modify_effect = yes
+  }
+}

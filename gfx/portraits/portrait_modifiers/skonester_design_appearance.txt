@@ -1,0 +1,802 @@
+﻿sarc_design_weight = {
+	usage = game
+
+	sarc_overweight_1 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_bs_body_type
+				value = 0.1
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_overweight_flag_1
+			}
+		}
+	}
+
+	sarc_overweight_2 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_bs_body_type
+				value = 0.2
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_overweight_flag_2
+			}
+		}
+	}
+
+	sarc_overweight_3 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_bs_body_type
+				value = 0.3
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_overweight_flag_3
+			}
+		}
+	}
+
+	sarc_overweight_4 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_bs_body_type
+				value = 0.4
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_overweight_flag_4
+			}
+		}
+	}
+
+	sarc_overweight_5 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_bs_body_type
+				value = 0.5
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_overweight_flag_5
+			}
+		}
+	}
+
+	sarc_overweight_6 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_bs_body_type
+				value = 0.6
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_overweight_flag_6
+			}
+		}
+	}
+
+	sarc_underweight_1 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_bs_body_type
+				# template = body_fat_head_fat_low
+				value = -0.1
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_underweight_flag_1
+			}
+		}
+	}
+
+	sarc_underweight_2 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_bs_body_type
+				# template = body_fat_head_fat_low
+				value = -0.2
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_underweight_flag_2
+			}
+		}
+	}
+
+	sarc_underweight_3 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_bs_body_type
+				# template = body_fat_head_fat_low
+				value = -0.3
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_underweight_flag_3
+			}
+		}
+	}
+
+	sarc_underweight_4 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_bs_body_type
+				# template = body_fat_head_fat_low
+				value = -0.4
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_underweight_flag_4
+			}
+		}
+	}
+
+	sarc_underweight_5 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_bs_body_type
+				# template = body_fat_head_fat_low
+				value = -0.5
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_underweight_flag_5
+			}
+		}
+	}
+
+	sarc_underweight_6 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_bs_body_type
+				# template = body_fat_head_fat_low
+				value = -0.6
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_underweight_flag_6
+			}
+		}
+	}
+}
+
+sarc_design_height = {
+	usage = game
+	
+	sarc_height_up_1 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_height
+				value = 0.04
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_height_up_flag_1
+			}
+		}
+	}
+	
+	sarc_height_up_2 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_height
+				value = 0.08
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_height_up_flag_2
+			}
+		}
+	}
+	
+	sarc_height_up_3 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_height
+				value = 0.12
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_height_up_flag_3
+			}
+		}
+	}
+	
+	sarc_height_up_4 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_height
+				value = 0.16
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_height_up_flag_4
+			}
+		}
+	}
+	
+	sarc_height_up_5 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_height
+				value = 0.2
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_height_up_flag_5
+			}
+		}
+	}
+	
+	sarc_height_up_6 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_height
+				value = 0.24
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_height_up_flag_6
+			}
+		}
+	}
+	
+	sarc_height_up_7 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_height
+				value = 0.28
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_height_up_flag_7
+			}
+		}
+	}
+	
+	sarc_height_up_8 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_height
+				value = 0.32
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_height_up_flag_8
+			}
+		}
+	}
+	
+	sarc_height_up_9 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_height
+				value = 0.36
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_height_up_flag_9
+			}
+		}
+	}
+	
+	sarc_height_up_10 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_height
+				value = 0.40
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_height_up_flag_10
+			}
+		}
+	}
+	
+	sarc_height_down_1 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_height
+				value = -0.05
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_height_down_flag_1
+			}
+		}
+	}
+	
+	sarc_height_down_2 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_height
+				value = -0.1
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_height_down_flag_2
+			}
+		}
+	}
+	
+	sarc_height_down_3 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_height
+				value = -0.15
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_height_down_flag_3
+			}
+		}
+	}
+	
+	sarc_height_down_4 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_height
+				value = -0.2
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_height_down_flag_4
+			}
+		}
+	}
+	
+	sarc_height_down_5 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_height
+				value = -0.25
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_height_down_flag_5
+			}
+		}
+	}
+	
+	sarc_height_down_6 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_height
+				value = -0.3
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_height_down_flag_6
+			}
+		}
+	}
+	
+	sarc_height_down_7 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_height
+				value = -0.35
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_height_down_flag_7
+			}
+		}
+	}
+	
+	sarc_height_down_8 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_height
+				value = -0.4
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_height_down_flag_8
+			}
+		}
+	}
+	
+	sarc_height_down_9 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_height
+				value = -0.45
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_height_down_flag_9
+			}
+		}
+	}
+	
+	sarc_height_down_10 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_height
+				value = -0.50
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_height_down_flag_10
+			}
+		}
+	}
+	
+	sarc_height_down_11 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_height
+				value = -0.55
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_height_down_flag_11
+			}
+		}
+	}
+}
+
+sarc_design_head_top = {
+	usage = game
+	
+	sarc_head_top_1 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_mouth_height
+				value = 0.1
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_head_top_width_flag_1
+			}
+		}
+	}
+
+	sarc_head_top_2 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_mouth_height
+				value = 0.2
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_head_top_width_flag_2
+			}
+		}
+	}
+
+	sarc_head_top_3 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_mouth_height
+				value = 0.3
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_head_top_width_flag_3
+			}
+		}
+	}
+
+	sarc_head_top_4 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_mouth_height
+				value = 0.4
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_head_top_width_flag_4
+			}
+		}
+	}
+
+	sarc_head_top_5 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_mouth_height
+				value = 0.5
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_head_top_width_flag_5
+			}
+		}
+	}
+
+	sarc_head_top_down_1 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_mouth_height
+				value = -0.1
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_head_top_width_down_flag_1
+			}
+		}
+	}
+
+	sarc_head_top_down_2 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_mouth_height
+				value = -0.2
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_head_top_width_down_flag_2
+			}
+		}
+	}
+
+	sarc_head_top_down_3 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_mouth_height
+				value = -0.3
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_head_top_width_down_flag_3
+			}
+		}
+	}
+
+	sarc_head_top_down_4 = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_mouth_height
+				value = -0.4
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = sarc_head_top_width_down_flag_4
+			}
+		}
+	}
+}
+
+#				gene = gene_bs_forehead_brow_forward
+#				gene = gene_forehead_height big changes
+#				gene = gene_forehead_width big changes
+#				gene = gene_mouth_height
+#				gene = gene_bs_nose_size
+# 				gene = gene_bs_nose_forward
+#				gene = gene_bs_nose_height
+# 				gene = gene_bs_nose_length
+#				gene = gene_bs_nose_tip_width
+# 				gene = gene_bs_nose_tip_forward
+#				gene = gene_bs_nose_tip_angle
+#				gene = gene_bs_nose_ridge_width
+#				gene = gene_bs_nose_ridge_angle
+# 				gene = gene_bs_nose_profile
+#				gene = gene_bs_nose_nostril_width
+#				gene = gene_bs_nose_nostril_height
+#				gene = gene_chin_forward
+#				gene = gene_head_height
+#				gene = gene_head_width
+#				gene = gene_jaw_height
+#				gene = gene_jaw_forward
+#				gene = gene_eye_shut
+# 				gene = gene_bs_cheek_forward
+# 				gene = gene_bs_cheek_height
+# 				gene = gene_bs_cheek_width
+# 				gene = gene_bs_jaw_def
+# 				gene = gene_bs_eye_size
+#				gene = gene_bs_eye_upper_lid_size

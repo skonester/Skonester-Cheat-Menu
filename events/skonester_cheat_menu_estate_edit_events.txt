@@ -1,0 +1,76 @@
+﻿namespace = skonester_cheat_menu
+
+# 庄园编辑子菜单（目标 = global_var:skonester_cheat_menu_recipient / scope:skonester_cheat_menu_target）
+skonester_cheat_menu.3095 = {
+  type = character_event
+  title = skonester_cheat_menu.3095.t
+  desc = skonester_cheat_menu.3095.desc
+  theme = stewardship
+  left_portrait = root
+  right_portrait = scope:skonester_cheat_menu_target
+
+  immediate = {
+    root = { save_scope_as = actor }
+    skonester_cheat_menu_sync_target_effect = yes
+  }
+
+  option = {
+    name = skonester_cheat_menu.00x.close
+  }
+
+  option = {
+    name = skonester_cheat_menu.3095.opt_preset_economy
+    custom_tooltip = skonester_cheat_menu.3095.opt_preset_economy_tt
+    skonester_cheat_menu_sync_target_effect = yes skonester_cheat_menu_domicile_preset_economy_apply_effect = yes
+    scope:actor = {
+    if = { limit = { exists =
+    scope:skonester_domicile_holder }
+    send_interface_toast = { type = event_toast_effect_good title =
+    skonester_cheat_menu_domicile_preset_economy_toast_title left_icon =
+    scope:actor right_icon =
+    scope:skonester_domicile_holder
+    trigger_event = skonester_cheat_menu.3095 } } }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3095.opt_preset_military
+    custom_tooltip = skonester_cheat_menu.3095.opt_preset_military_tt
+    skonester_cheat_menu_sync_target_effect = yes skonester_cheat_menu_domicile_preset_military_apply_effect = yes
+    scope:actor = {
+    if = { limit = { exists =
+    scope:skonester_domicile_holder }
+    send_interface_toast = { type = event_toast_effect_good title =
+    skonester_cheat_menu_domicile_preset_military_toast_title left_icon =
+    scope:actor right_icon =
+    scope:skonester_domicile_holder
+    trigger_event = skonester_cheat_menu.3095 } } }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3095.opt_preset_balanced
+    custom_tooltip = skonester_cheat_menu.3095.opt_preset_balanced_tt
+    skonester_cheat_menu_sync_target_effect = yes skonester_cheat_menu_domicile_preset_balanced_apply_effect = yes
+    scope:actor = {
+    if = { limit = { exists =
+    scope:skonester_domicile_holder }
+    send_interface_toast = { type = event_toast_effect_good title =
+    skonester_cheat_menu_domicile_preset_balanced_toast_title left_icon =
+    scope:actor right_icon =
+    scope:skonester_domicile_holder
+    trigger_event = skonester_cheat_menu.3095 } } }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3095.opt_clear_external
+    custom_tooltip = skonester_cheat_menu.3095.opt_clear_external_tt
+    skonester_cheat_menu_sync_target_effect = yes skonester_cheat_menu_domicile_clear_external_apply_effect = yes
+    scope:actor = {
+    if = { limit = { exists =
+    scope:skonester_domicile_holder }
+    send_interface_toast = { type = event_toast_effect_neutral title =
+    skonester_cheat_menu_domicile_clear_external_toast_title left_icon =
+    scope:actor right_icon =
+    scope:skonester_domicile_holder
+    trigger_event = skonester_cheat_menu.3095 } } }
+  }
+}

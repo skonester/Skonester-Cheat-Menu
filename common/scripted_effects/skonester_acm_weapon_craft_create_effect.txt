@@ -1,0 +1,98 @@
+﻿# Weapon crafting dispatcher. Type-specific effects create and finalize the artifact
+# in the current recipient scope.
+
+skonester_acm_create_weapon_artifact_effect = {
+  if = {
+    limit = {
+      OR = {
+        scope:skonester_acm_craft_creator = {
+          OR = {
+            has_character_flag = skonester_acm_wpn_battleaxe
+            has_character_flag = skonester_acm_wpn_greataxe
+          }
+        }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          root = {
+            OR = {
+              has_character_flag = skonester_acm_wpn_battleaxe
+              has_character_flag = skonester_acm_wpn_greataxe
+            }
+          }
+        }
+      }
+    }
+    skonester_acm_create_type_axe_effect = yes
+  }
+  else_if = {
+    limit = {
+      OR = {
+        scope:skonester_acm_craft_creator = {
+          OR = {
+            has_character_flag = skonester_acm_wpn_mace
+            has_character_flag = skonester_acm_wpn_flail
+          }
+        }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          root = {
+            OR = {
+              has_character_flag = skonester_acm_wpn_mace
+              has_character_flag = skonester_acm_wpn_flail
+            }
+          }
+        }
+      }
+    }
+    skonester_acm_create_type_hammer_effect = yes
+  }
+  else_if = {
+    limit = {
+      OR = {
+        scope:skonester_acm_craft_creator = {
+          OR = {
+            has_character_flag = skonester_acm_wpn_spear
+            has_character_flag = skonester_acm_wpn_halberd
+          }
+        }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          root = {
+            OR = {
+              has_character_flag = skonester_acm_wpn_spear
+              has_character_flag = skonester_acm_wpn_halberd
+            }
+          }
+        }
+      }
+    }
+    skonester_acm_create_type_spear_effect = yes
+  }
+  else_if = {
+    limit = {
+      OR = {
+        scope:skonester_acm_craft_creator = {
+          OR = {
+            has_character_flag = skonester_acm_wpn_shortbow
+            has_character_flag = skonester_acm_wpn_longbow
+            has_character_flag = skonester_acm_wpn_crossbow
+          }
+        }
+        AND = {
+          NOT = { exists = scope:skonester_acm_craft_creator }
+          root = {
+            OR = {
+              has_character_flag = skonester_acm_wpn_shortbow
+              has_character_flag = skonester_acm_wpn_longbow
+              has_character_flag = skonester_acm_wpn_crossbow
+            }
+          }
+        }
+      }
+    }
+    skonester_acm_create_type_bow_effect = yes
+  }
+  else = {
+    skonester_acm_create_type_sword_effect = yes
+  }
+}

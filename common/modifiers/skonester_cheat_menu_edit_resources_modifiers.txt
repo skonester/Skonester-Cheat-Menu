@@ -1,0 +1,58 @@
+﻿# 官吏统辖「修改资源」：直辖上限增减（可叠加以同名修正刷新）。
+# 封建/天朝等 government_uses_domain_limit 政体看 domain_limit；
+# 变身大明布政司/宗藩/卫所等无该 flag 的政体看 domain_limit_max（与日本令制类似）。
+
+skonester_edit_res_domain_p10 = {
+  icon = stewardship_positive
+  stacking = yes
+  domain_limit = 10
+  domain_limit_max = 10
+}
+
+skonester_edit_res_domain_p20 = {
+  icon = stewardship_positive
+  stacking = yes
+  domain_limit = 20
+  domain_limit_max = 20
+}
+
+skonester_edit_res_domain_p40 = {
+  icon = stewardship_positive
+  stacking = yes
+  domain_limit = 40
+  domain_limit_max = 40
+}
+
+skonester_edit_res_domain_p100 = {
+  icon = stewardship_positive
+  stacking = yes
+  domain_limit = 100
+  domain_limit_max = 100
+}
+
+skonester_edit_res_domain_unlimited = {
+  icon = stewardship_positive
+  domain_limit = 999
+  domain_limit_max = 999
+}
+
+skonester_edit_res_domain_m10 = {
+  icon = stewardship
+  stacking = yes
+  domain_limit = -10
+  domain_limit_max = -10
+}
+
+skonester_edit_res_domain_m20 = {
+  icon = stewardship
+  stacking = yes
+  domain_limit = -20
+  domain_limit_max = -20
+}
+
+skonester_edit_res_domain_m40 = {
+  icon = stewardship
+  stacking = yes
+  domain_limit = -40
+  domain_limit_max = -40
+}

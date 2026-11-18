@@ -1,0 +1,157 @@
+﻿# 获得头衔：将 scope:skonester_title_xfer_title 从 scope:skonester_title_xfer_holder 转给 scope:skonester_title_xfer_actor（须先 save_scope）
+
+# 获得头衔：仅本功能临时拉高直辖上限（打开窗 + 确认 + 转移前各刷一次，超上限仍可夺取）
+skonester_get_title_apply_domain_cap_bypass_effect = {
+  add_character_modifier = {
+    modifier = skonester_edit_res_domain_unlimited
+    days = 1
+  }
+}
+
+# 获得头衔：interaction 确认窗内选中的 target_titles 列表
+skonester_cheat_menu_get_primary_title_from_target_titles_effect = {
+  scope:actor = {
+    save_scope_as = skonester_title_xfer_actor
+    skonester_get_title_apply_domain_cap_bypass_effect = yes
+  }
+  every_in_list = {
+    list = target_titles
+    save_scope_as = skonester_title_xfer_title
+    holder = {
+      save_scope_as = skonester_title_xfer_holder
+    }
+    skonester_cheat_menu_transfer_one_held_title_to_actor_effect = yes
+  }
+}
+
+skonester_cheat_menu_transfer_one_held_title_to_actor_effect = {
+  scope:skonester_title_xfer_actor = {
+    create_title_and_vassal_change = {
+      type = granted
+      save_scope_as = skonester_title_xfer_change
+    }
+  }
+  scope:skonester_title_xfer_title = {
+    change_title_holder = {
+      holder = scope:skonester_title_xfer_actor
+      change = scope:skonester_title_xfer_change
+    }
+  }
+  scope:skonester_title_xfer_actor = {
+    resolve_title_and_vassal_change = scope:skonester_title_xfer_change
+  }
+}
+
+# 恢复右击目标到 scope:skonester_title_pick_evt_recipient
+skonester_title_pick_sync_recipient_effect = {
+  if = {
+    limit = {
+      root = { has_variable = skonester_title_victim }
+    }
+    root = {
+      var:skonester_title_victim = {
+        save_scope_as = skonester_title_pick_evt_recipient
+      }
+    }
+  }
+  else_if = {
+    limit = { exists = global_var:skonester_cheat_menu_recipient }
+    global_var:skonester_cheat_menu_recipient = {
+      save_scope_as = skonester_title_pick_evt_recipient
+    }
+  }
+  else_if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      save_scope_as = skonester_title_pick_evt_recipient
+    }
+  }
+}
+
+# 右击者本人 + 全封臣树持有的领地头衔（排除无地/名门）
+skonester_title_pick_populate_queue_effect = {
+  root = {
+    clear_variable_list = skonester_title_pick_queue
+  }
+  if = {
+    limit = { exists = scope:skonester_title_pick_evt_recipient }
+    scope:skonester_title_pick_evt_recipient = {
+      every_held_title = {
+        limit = {
+          is_landless_type_title = no
+          is_noble_family_title = no
+        }
+        save_scope_as = skonester_tp_iter
+        root = {
+          add_to_variable_list = {
+            name = skonester_title_pick_queue
+            target = scope:skonester_tp_iter
+          }
+        }
+        clear_saved_scope = skonester_tp_iter
+      }
+      every_vassal_or_below = {
+        every_held_title = {
+          limit = {
+            is_landless_type_title = no
+            is_noble_family_title = no
+          }
+          save_scope_as = skonester_tp_iter
+          root = {
+            add_to_variable_list = {
+              name = skonester_title_pick_queue
+              target = scope:skonester_tp_iter
+            }
+          }
+          clear_saved_scope = skonester_tp_iter
+        }
+      }
+    }
+  }
+}
+
+skonester_title_pick_reopen_effect = {
+  scope:actor = {
+    trigger_event = { id = skonester_cheat_menu.3096 days = 0 }
+  }
+}
+
+# 选完一个头衔后清理（不循环重开列表）
+skonester_title_pick_after_pick_effect = {
+  scope:actor = {
+    remove_character_flag = skonester_title_pick_picker_active
+  }
+  root = {
+    clear_variable_list = skonester_title_pick_queue
+    if = {
+      limit = { has_variable = skonester_title_pick_page }
+      remove_variable = skonester_title_pick_page
+    }
+    if = {
+      limit = { has_variable = skonester_title_pick_total }
+      remove_variable = skonester_title_pick_total
+    }
+    if = {
+      limit = { has_variable = skonester_title_pick_skip }
+      remove_variable = skonester_title_pick_skip
+    }
+    if = {
+      limit = { has_variable = skonester_title_victim }
+      remove_variable = skonester_title_victim
+    }
+  }
+  clear_saved_scope = skonester_title_xfer_actor
+  clear_saved_scope = skonester_title_xfer_holder
+  clear_saved_scope = skonester_title_xfer_title
+  clear_saved_scope = skonester_title_pick_evt_recipient
+  clear_saved_scope = skonester_tp_iter
+  clear_saved_scope = skonester_tp_slot0
+  clear_saved_scope = skonester_tp_slot1
+  clear_saved_scope = skonester_tp_slot2
+  clear_saved_scope = skonester_tp_slot3
+  clear_saved_scope = skonester_tp_slot4
+  clear_saved_scope = skonester_tp_slot5
+  clear_saved_scope = skonester_tp_slot6
+  clear_saved_scope = skonester_tp_slot7
+  clear_saved_scope = skonester_tp_pop_tmp
+}

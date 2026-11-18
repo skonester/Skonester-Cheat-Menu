@@ -1,0 +1,6 @@
+﻿l_german:
+ rule_skonester_custom_traits: "Skonester-Sondereigenschaften"
+ setting_skonester_custom_traits_enabled: "Aktiviert"
+ setting_skonester_custom_traits_enabled_desc: "Eigenschaften aus dem Skonester-Spezialmenü erlauben."
+ setting_skonester_custom_traits_disabled: "Deaktiviert"
+ setting_skonester_custom_traits_disabled_desc: "Das Menü und seine Eigenschaften deaktivieren."

@@ -1,0 +1,10 @@
+﻿# 君权固化兜底修正（法律标志无法由 modifier 替代；本项仅补强税收/征召/好感）
+
+skonester_realm_authority_locked_holder = {
+  icon = stewardship_positive
+  vassal_tax_contribution_mult = 0.25
+  vassal_levy_contribution_mult = 0.25
+  vassal_opinion = 40
+  tyranny_loss_mult = 2.0
+  tyranny_gain_mult = -0.5
+}

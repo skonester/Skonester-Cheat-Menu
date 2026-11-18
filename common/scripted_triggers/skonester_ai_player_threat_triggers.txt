@@ -1,0 +1,43 @@
+﻿# 玩家威胁（用于「反玩家包围圈」压力修正）：人类统治者辖内伯爵格数量 ≥80，
+# 或帝国主衔。军事 1.5 倍对比属引擎黑箱，此处仅用版图规模近似。
+
+skonester_ai_player_realm_overwhelming_trigger = {
+  any_player = {
+    is_ai = no
+    is_independent_ruler = yes
+    OR = {
+      primary_title.tier >= tier_empire
+      calc_true_if = {
+        amount >= 80
+        any_sub_realm_county = {
+          always = yes
+        }
+      }
+    }
+  }
+}
+
+# 超大规模人类版图：反制压力再升一档
+skonester_ai_player_realm_critical_trigger = {
+  any_player = {
+    is_ai = no
+    is_independent_ruler = yes
+    OR = {
+      calc_true_if = {
+        amount >= 120
+        any_sub_realm_county = {
+          always = yes
+        }
+      }
+      AND = {
+        primary_title.tier >= tier_empire
+        calc_true_if = {
+          amount >= 100
+          any_sub_realm_county = {
+            always = yes
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+﻿skonester_create_titular = {
+	icon = on
+	category = interaction_category_uncategorized
+	desc = skonester_create_titular
+	common_interaction = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	target_type = title
+	target_filter = recipient_domain_titles
+	interface_priority = 11720
+	
+	is_shown = {
+		scope:actor = { has_character_flag = skonester_character_interaction_menu_open }
+		scope:recipient = {
+			is_ruler = yes
+		}
+		scope:actor = {
+			is_ai = no
+			has_character_flag = bone_cheat_interactions_flag
+		}
+	}
+	
+	is_valid_showing_failures_only = {
+		scope:actor = { is_ai = no }
+	}
+	
+	can_be_picked_title = {
+		scope:target = {
+			holder = scope:recipient
+		}
+	}
+	
+	ai_will_do = {
+		base = -999999
+	}
+
+	auto_accept = yes
+	
+	on_auto_accept = {
+	}
+	
+	on_accept = {
+		scope:actor = {
+			if = {
+				limit = {scope:recipient = scope:actor}
+				trigger_event = skonester_create_titular.1020
+			}
+			else_if = {
+				limit = {
+					scope:recipient = {
+						primary_title.tier = tier_barony
+					}
+				}
+				trigger_event = skonester_create_titular.1001
+			}
+			else = {
+				trigger_event = skonester_create_titular.1000
+			}
+				
+		}
+	}
+}

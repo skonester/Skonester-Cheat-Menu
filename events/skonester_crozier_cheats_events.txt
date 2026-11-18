@@ -1,0 +1,13 @@
+﻿namespace = skonester_crozier_cheats
+
+skonester_crozier_cheats.9000 = {
+	type = character_event
+	hidden = yes
+	trigger = { is_ai = no }
+	immediate = {
+		remove_global_variable = skonester_crozier_cheats_tick_pending
+		skonester_crozier_cheats_setup = yes
+		skonester_crozier_cheats_maintenance = yes
+		if = { limit = { skonester_crozier_cheats_any_toggle = yes } skonester_crozier_cheats_schedule = yes }
+	}
+}

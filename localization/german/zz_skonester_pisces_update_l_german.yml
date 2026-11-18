@@ -1,0 +1,42 @@
+﻿l_german:
+ cheat_decition_tradition:0 "Kulturelle Vorherrschaft errichten"
+ cheat_description_tradition:0 "Durch unseren Erlass werden wir uns die Weisheit aller Enden der Welt zu eigen machen. Von den Reisfeldern des Ostens bis zu den Langbogenschützen des Westens – unserem Volk wird niemand ebenbürtig sein."
+ cheat_decition_accept:0 "Unsere Kultur ist nun unvergänglich."
+ culture_cheat_tooltip:0 "Über 100 Traditionen werden eingeführt."
+
+ # Modifikatoren
+ culture_acceptance_gain_mult:0 "Kulturelle Offenheit"
+
+ # Entscheidungsmenü
+ yyz_open_menu_decision:0 "Menü: Talentsuche"
+ yyz_open_menu_decision_desc:0 "Unsere Vorhaben erfordern außergewöhnliche Fachkenntnisse. Indem wir gezielt nach Talenten suchen, stellen wir sicher, dass unser Hof ein Anziehungspunkt für die Besten bleibt und uns stets die nötigen Fähigkeiten zur Verfügung stehen."
+ yyz_open_menu_decision_confirm:0 "Menü öffnen"
+ yyz_open_menu_decision_tooltip:0 "Liste initialisieren."
+
+ # Traditionen
+ tradition_zz_cultural_polygamy_three_wives_name:0 "Kulturelle Polygamie"
+ tradition_zz_cultural_polygamy_three_wives_desc:0 "In dieser Kultur ist es Brauch, dass die ranghöchsten Herrscher mehrere Ehefrauen und Konkubinen haben, um eine große und beständige Blutlinie zu sichern."
+
+ tenet_zz_empty_1_name:0 "Vierter Glaubensgrundsatz"
+ tenet_zz_empty_1_desc:0 "Zusätzlicher Glaubensgrundsatz."
+ tenet_zz_empty_2_name:0 "Fünfter Glaubensgrundsatz"
+ tenet_zz_empty_2_desc:0 "Zusätzlicher Glaubensgrundsatz."
+
+ skonester_change_age_interaction:0 "Alter des Charakters ändern"
+ flag_age_6:0 "6 Jahre"
+ flag_age_16:0 "16 Jahre"
+ flag_age_25:0 "25 Jahre"
+ flag_age_42:0 "42 Jahre"
+ flag_age_64:0 "64 Jahre"
+
+ siege_weapon_max_size_mult:0 "Maximale Belagerungswaffengröße"
+
+ change_govt_steppe_admin:0 "Meritokratischer Khagan werden"
+ change_govt_steppe_admin_desc:0 "Lege die alten Traditionen ab und übernimm die meritokratischen Bräuche der Steppe. Herrsche durch Verdienste und Reichtum statt durch Geburt und Aufgebote."
+ change_govt_steppe_admin_tt:0 "Verwandle dein Reich in ein meritokratisches Khanat."
+
+ change_govt_japan_administrative_government:0 "Das Ritsuryō-System einführen"
+ change_govt_japan_administrative_government_desc:0 "Ordne dein Reich nach dem Ritsuryō-Verwaltungssystem neu und regiere durch Adelsfamilien sowie Provinzbeamte."
+
+ game_concept_wanderer:0 "Wanderer"
+ game_concept_wanderer_desc:0 "Ein Charakter, der ohne Landtitel lebt und frei durch die Welt zieht."

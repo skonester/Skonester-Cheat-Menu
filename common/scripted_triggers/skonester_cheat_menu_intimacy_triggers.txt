@@ -1,0 +1,10 @@
+﻿# Skonester「亲密」：仅对配偶、情人、灵魂伴侣、己方侧室/小妾显示
+
+skonester_intimacy_recipient_trigger = {
+  OR = {
+    is_spouse_of = scope:actor
+    has_relation_lover = scope:actor
+    has_relation_soulmate = scope:actor
+    is_concubine_of = scope:actor
+  }
+}

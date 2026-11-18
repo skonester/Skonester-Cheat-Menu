@@ -1,0 +1,78 @@
+﻿# 椒房护持：以家主（配偶或妾主）身负 skonester_seduce_shield_active 为准，覆盖其配偶/妾/侧室（is_concubine）
+# 不再兼用 is_playable_character（未封爵配偶等会漏网）；人类家主 = is_ai = no，AI 不持此旗标。
+
+# 当前角色是「家主护持下」的配偶或妾：其任一配偶、或其妾主持有护持旗标
+skonester_seduce_shield_active_for_target_trigger = {
+  OR = {
+    any_spouse = { has_character_flag = skonester_seduce_shield_active }
+    AND = {
+      is_concubine = yes
+      exists = concubinist
+      concubinist = { has_character_flag = skonester_seduce_shield_active }
+    }
+  }
+}
+
+# 与上同义，便于在 fidelity 日更里与旧名并存
+skonester_is_seduce_protected_consort_of_human_player_trigger = {
+  skonester_seduce_shield_active_for_target_trigger = yes
+}
+
+# 家眷作为勾引目标、且出密谋者非其配偶/非其妾主：拦截（含所有 AI 与人类，除非家主/配偶本人对家眷）
+skonester_seduce_scheme_blocked_on_player_consort_trigger = {
+  AND = {
+    scope:target = {
+      skonester_seduce_shield_active_for_target_trigger = yes
+    }
+    scope:owner = {
+      NOR = {
+        is_spouse_of = scope:target
+        AND = {
+          scope:target = { is_concubine = yes }
+          this = scope:target.concubinist
+        }
+      }
+    }
+  }
+}
+
+# 家眷本人发动勾引：出向拦截（除对家主本人）
+# 出密谋者 = 家眷 且 家眷在护持覆盖下
+skonester_seduce_owner_under_spouse_shield_patron_trigger = {
+  scope:owner = { skonester_seduce_shield_active_for_target_trigger = yes }
+}
+
+skonester_seduce_scheme_blocked_outgoing_for_shielded_consort_trigger = {
+  AND = {
+    skonester_seduce_owner_under_spouse_shield_patron_trigger = yes
+    NOR = {
+      scope:owner = {
+        is_spouse_of = scope:target
+      }
+      scope:owner = {
+        is_concubine_of = scope:target
+      }
+    }
+  }
+}
+
+# 日度清理入向/出向密谋：以家眷为 root
+skonester_fidelity_ward_is_shielded_harem_of_patron_trigger = {
+  skonester_seduce_shield_active_for_target_trigger = yes
+}
+
+# 任一人类家主开启椒房护持时，启用「全局 AI 禁欲/禁出轨」规则（等同篡改游戏规则）
+skonester_seduce_shield_global_ai_rules_active_trigger = {
+  any_player = {
+    is_ai = no
+    has_character_flag = skonester_seduce_shield_active
+  }
+}
+
+# 密谋 scope：AI 拥有者在全局规则下禁止发动勾引/求爱/私奔类密谋
+skonester_ai_romantic_scheme_forbidden_by_shield_rules_trigger = {
+  AND = {
+    skonester_seduce_shield_global_ai_rules_active_trigger = yes
+    scope:owner = { is_ai = yes }
+  }
+}

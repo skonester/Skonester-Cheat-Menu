@@ -1,0 +1,11 @@
+﻿# Restore the missing setting referenced by Realm_Succession_events_mod.txt.
+# The default preserves the normal culture/innovation gates.
+change_Realm_succession_law_game_mod = {
+    categories = { game_modes }
+    default = change_Realm_succession_law_game_mod_off
+
+    change_Realm_succession_law_game_mod_off = {
+    }
+    change_Realm_succession_law_game_mod_on = {
+    }
+}

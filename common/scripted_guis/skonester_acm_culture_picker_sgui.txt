@@ -1,0 +1,69 @@
+﻿# 文化选择窗：打开时填充全部大区列表；左栏仅切换 VariableSystem（GUI 换 datamodel）
+
+skonester_acm_culture_picker_visible = {
+  scope = character
+  is_shown = { has_character_flag = skonester_acm_culture_picker_open }
+  is_valid = { always = yes }
+}
+
+skonester_acm_culture_list_load = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_acm_culture_picker_refresh_all_region_lists_effect = yes
+  }
+}
+
+skonester_acm_culture_picker_close = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_close_acm_culture_picker_effect = yes
+  }
+}
+
+# Click a culture name: save it and apply it to the locked character target.
+skonester_acm_culture_pick = {
+  scope = character
+  saved_scopes = { selected_culture }
+  is_valid = {
+    exists = scope:selected_culture
+  }
+  effect = {
+    skonester_save_skonester_selected_culture_effect = yes
+    skonester_acm_apply_selected_culture_to_target_effect = yes
+  }
+}
+
+# »：保存并打开原版文化侧栏
+skonester_acm_culture_pick_vanilla = {
+  scope = character
+  saved_scopes = { selected_culture }
+  is_valid = {
+    exists = scope:selected_culture
+  }
+  effect = {
+    skonester_acm_apply_selected_culture_and_open_vanilla_effect = yes
+  }
+}
+
+skonester_acm_culture_picker_region_wizard = {
+  scope = character
+  is_valid = { always = yes }
+  effect = {
+    skonester_close_acm_culture_picker_effect = yes
+    trigger_event = skonester_cheat_menu.1360
+  }
+}
+
+skonester_acm_culture_picker_continue_edit = {
+  scope = character
+  is_valid = {
+    has_variable = skonester_selected_culture_var
+  }
+  effect = {
+    skonester_restore_skonester_selected_culture_scope_effect = yes
+    skonester_close_acm_culture_picker_effect = yes
+    trigger_event = skonester_cheat_menu.2900
+  }
+}

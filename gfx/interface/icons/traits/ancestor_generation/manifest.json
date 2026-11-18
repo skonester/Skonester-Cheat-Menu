@@ -1,0 +1,182 @@
+{
+  "scope": "User-requested blood ancestor and additional trait redraws",
+  "selected_trait_count": 16,
+  "jobs": [
+    {
+      "trait_id": "blood_ancester_1",
+      "name": "Feline Instincts",
+      "description": "This character was born with the uncanny balance and predatory reflexes of a great feline. It is a biological legacy that manifests in every graceful movement.",
+      "source_icon": "blood_ancester_1.dds",
+      "definition_file": "common/traits/knightBlood.txt",
+      "input_png": "inputs/blood_ancester_1.png",
+      "proposed_output_dds": "blood_ancester_1.dds",
+      "requires_icon_reference_change": false,
+      "prompt": "Subject: (an elegant heraldic cat head:1.4), silver feline profile with alert ears and emerald eyes, dark emerald enamel backing, feline grace and predator instincts, compact medieval animal emblem. Use the supplied image as a reference for its central symbol, palette and painted finish."
+    },
+    {
+      "trait_id": "blood_ancester_2",
+      "name": "Hound’s Devotion",
+      "description": "A deep-seated instinct for loyalty and protection is hard-coded into this character's nature. They possess a natural affinity for group cohesion and unwavering persistence.",
+      "source_icon": "blood_ancester_2.dds",
+      "definition_file": "common/traits/knightBlood.txt",
+      "input_png": "inputs/blood_ancester_2.png",
+      "proposed_output_dds": "blood_ancester_2.dds",
+      "requires_icon_reference_change": false,
+      "prompt": "Subject: (a noble heraldic hound head:1.4), a loyal hunting hound in silver relief with floppy ears, burgundy enamel backing, guardian devotion, compact medieval animal emblem. Use the supplied image as a reference for its central symbol, palette and painted finish."
+    },
+    {
+      "trait_id": "blood_ancester_4",
+      "name": "Lunar Lucidity",
+      "description": "Born under a specific lunar resonance, this character possesses a mind of crystalline clarity. Their thoughts are as sharp and cold as starlight, unclouded by common distractions.",
+      "source_icon": "blood_ancester_4.dds",
+      "definition_file": "common/traits/knightBlood.txt",
+      "input_png": "inputs/blood_ancester_4.png",
+      "proposed_output_dds": "blood_ancester_4.dds",
+      "requires_icon_reference_change": false,
+      "prompt": "Subject: (a luminous silver crescent moon:1.4), a single clear sapphire droplet suspended inside the crescent, moonlit clarity and calm, restrained midnight-blue enamel. Use the supplied image as a reference for its central symbol, palette and painted finish."
+    },
+    {
+      "trait_id": "blood_ancester_5",
+      "name": "Boar-Heart Vigor",
+      "description": "A congenital predispostion for physical mass and aggressive adrenaline. This character’s body is built for the charge, possessing a thick-skinned resilience to pain.",
+      "source_icon": "blood_ancester_5.dds",
+      "definition_file": "common/traits/knightBlood.txt",
+      "input_png": "inputs/blood_ancester_5.png",
+      "proposed_output_dds": "blood_ancester_5.dds",
+      "requires_icon_reference_change": false,
+      "prompt": "Subject: (a powerful heraldic wild boar head:1.4), heavy silver snout with two curved ivory tusks, burgundy enamel and aged gold details, vigor and resilience. Use the supplied image as a reference for its central symbol, palette and painted finish."
+    },
+    {
+      "trait_id": "blood_ancester_6",
+      "name": "Shadow-Veined",
+      "description": "This character’s physiology is naturally adapted to the dark. Their movements are silent, and their presence seems to bleed into the shadows even in broad daylight.",
+      "source_icon": "blood_ancester_6.dds",
+      "definition_file": "common/traits/knightBlood.txt",
+      "input_png": "inputs/blood_ancester_6.png",
+      "proposed_output_dds": "blood_ancester_6.dds",
+      "requires_icon_reference_change": false,
+      "prompt": "Subject: (a black bat with spread wings:1.4), silver-edged bat wings enclosing a dark purple blood gem, shadow ancestry and silent movement, compact heraldic emblem. Use the supplied image as a reference for its central symbol, palette and painted finish."
+    },
+    {
+      "trait_id": "blood_ancester_7",
+      "name": "Gale-Strider Blood",
+      "description": "This character possesses an unusually lightweight frame and a metabolism built for bursts of extreme speed. They seem to move with the effortless momentum of the wind itself.",
+      "source_icon": "blood_ancester_7.dds",
+      "definition_file": "common/traits/knightBlood.txt",
+      "input_png": "inputs/blood_ancester_7.png",
+      "proposed_output_dds": "blood_ancester_7.dds",
+      "requires_icon_reference_change": false,
+      "prompt": "Subject: (a silver horse head with a flowing windswept mane:1.4), a few blue enamel wind curls, swiftness and inherited speed, compact heraldic emblem. Use the supplied image as a reference for its central symbol, palette and painted finish."
+    },
+    {
+      "trait_id": "blood_ancester_8",
+      "name": "Morningstar Aura",
+      "description": "There is an inborn radiance to this character that inspires hope in others. This congenital magnetism makes them a natural focal point for morale and resilience.",
+      "source_icon": "blood_ancester_8.dds",
+      "definition_file": "common/traits/knightBlood.txt",
+      "input_png": "inputs/blood_ancester_8.png",
+      "proposed_output_dds": "blood_ancester_8.dds",
+      "requires_icon_reference_change": false,
+      "prompt": "Subject: (a radiant eight-pointed morning star:1.4), a warm golden star surrounding a pearl-white center, restrained silver rays, innate hope and resilience. Use the supplied image as a reference for its central symbol, palette and painted finish."
+    },
+    {
+      "trait_id": "blood_ancester_9",
+      "name": "Trickster’s Spark",
+      "description": "A neurological predisposition for lateral thinking and linguistic gymnastics. This character sees the absurdity in all things, making them as unpredictable as they are clever.",
+      "source_icon": "blood_ancester_9.dds",
+      "definition_file": "common/traits/knightBlood.txt",
+      "input_png": "inputs/blood_ancester_9.png",
+      "proposed_output_dds": "blood_ancester_9.dds",
+      "requires_icon_reference_change": false,
+      "prompt": "Subject: (a medieval jester cap with three curled points and tiny bells:1.4), burgundy and emerald enamel panels with gold edging, clever trickster wit, compact emblem. Use the supplied image as a reference for its central symbol, palette and painted finish."
+    },
+    {
+      "trait_id": "blood_ancester_10",
+      "name": "Carrion-Sense",
+      "description": "This character possesses a heightened, almost supernatural intuition regarding mortality and change. They sense the coming of disaster with the instinct of a scavenger.",
+      "source_icon": "blood_ancester_10.dds",
+      "definition_file": "common/traits/knightBlood.txt",
+      "input_png": "inputs/blood_ancester_10.png",
+      "proposed_output_dds": "blood_ancester_10.dds",
+      "requires_icon_reference_change": false,
+      "prompt": "Subject: (a single black raven in profile:1.4), folded wings, alert silver eye, perched on a short weathered branch, watchful ancestral intuition, silver highlights on dark feathers. Use the supplied image as a reference for its central symbol, palette and painted finish."
+    },
+    {
+      "trait_id": "blood_ancester_11",
+      "name": "Draconic Potency",
+      "description": "The character's blood runs hot with an ancient power. They possess a natural resistance to heat and a physical presence that commands immediate, instinctive submission.",
+      "source_icon": "blood_ancester_11.dds",
+      "definition_file": "common/traits/knightBlood.txt",
+      "input_png": "inputs/blood_ancester_11.png",
+      "proposed_output_dds": "blood_ancester_11.dds",
+      "requires_icon_reference_change": false,
+      "prompt": "Subject: (a coiled silver dragon with a raised head:1.4), one folded wing and a deep red ruby blood gem at its chest, restrained ember accents, draconic ancestral power. Use the supplied image as a reference for its central symbol, palette and painted finish."
+    },
+    {
+      "trait_id": "skonester_trait_xinwuguai",
+      "name": "Peace of Mind",
+      "description": "Your mind is free of burden. Stress remains at zero and accumulates almost never. All current stress is removed when obtained.",
+      "source_icon": "skonester_trait_xinwuguai.dds",
+      "definition_file": "common/traits/skonester_cheat_menu_traits.txt",
+      "input_png": "inputs/skonester_trait_xinwuguai.png",
+      "proposed_output_dds": "skonester_trait_xinwuguai.dds",
+      "requires_icon_reference_change": false,
+      "prompt": "Subject: (a serene ivory lotus blossom:1.4), a single open lotus flower with soft jade-green leaves, restrained aged gold edging, calm mind and freedom from stress. Use the supplied image as a reference for its central symbol, palette and painted finish."
+    },
+    {
+      "trait_id": "skonester_trait_stats_100_locked",
+      "name": "Maxed Attributes (Locked)",
+      "description": "All core attributes and Prowess are locked at 100. No event, aging or effect can alter them.",
+      "source_icon": "skonester_trait_stats_100_locked.dds",
+      "definition_file": "common/traits/skonester_cheat_menu_traits.txt",
+      "input_png": "inputs/skonester_trait_stats_100_locked.png",
+      "proposed_output_dds": "skonester_trait_stats_100_locked.dds",
+      "requires_icon_reference_change": false,
+      "prompt": "Subject: (a heavy ornate golden padlock:1.5), a broad blank dark enamel faceplate on the padlock body, thick closed gold shackle, restrained medieval decoration, permanent mastery of all attributes, no lettering. Use the supplied image as a reference for its central symbol, palette and painted finish."
+    },
+    {
+      "trait_id": "skonester_trait_baidubuqin",
+      "name": "Poison Immunity",
+      "description": "Immune to disease and plague. All existing illnesses are cured upon gaining this trait.",
+      "source_icon": "skonester_trait_baidubuqin.dds",
+      "definition_file": "common/traits/skonester_cheat_menu_traits.txt",
+      "input_png": "inputs/skonester_trait_baidubuqin.png",
+      "proposed_output_dds": "skonester_trait_baidubuqin.dds",
+      "requires_icon_reference_change": false,
+      "prompt": "Subject: (a jade-green shield with a silver serpent curled around a healing staff:1.4), a compact protective medicinal emblem, immunity to poison and disease. Use the supplied image as a reference for its central symbol, palette and painted finish."
+    },
+    {
+      "trait_id": "plague_immunity",
+      "name": "Plague Immunity",
+      "description": "This character, blessed by 'Barbara', will not contract the plague.",
+      "source_icon": "plague_immunity.dds",
+      "definition_file": "common/traits/zhuge_traits.txt",
+      "input_png": "inputs/plague_immunity.png",
+      "proposed_output_dds": "plague_immunity.dds",
+      "requires_icon_reference_change": false,
+      "prompt": "Subject: (a steel shield enclosing an ivory plague-doctor mask:1.4), a small green healing leaf beneath the beaked mask, protective gold rim, immunity to plague, compact emblem. Use the supplied image as a reference for its central symbol, palette and painted finish."
+    },
+    {
+      "trait_id": "sneed_seed",
+      "name": "Blood of the Dúnedain",
+      "description": "This character possesses the noble blood of the Men of the West, granting them longevity and wisdom beyond their peers.",
+      "source_icon": "sneed_seed.dds",
+      "definition_file": "common/traits/zzzzzzzz_realistoc_traits.txt",
+      "input_png": "inputs/sneed_seed.png",
+      "proposed_output_dds": "sneed_seed.dds",
+      "requires_icon_reference_change": false,
+      "prompt": "Subject: (a silver heraldic tree with a single red ruby at its roots:1.4), dark forest-green enamel and a modest silver frame, noble ranger ancestry, Blood of the Dunedain. Use the supplied image as a reference for its central symbol, palette and painted finish."
+    },
+    {
+      "trait_id": "gigasuperseed",
+      "name": "Blood of Númenor",
+      "description": "This character is a scion of the High Númenóreans, carrying the pure lineage of Westernesse from the days of old.",
+      "source_icon": "gigasuperseed.dds",
+      "definition_file": "common/traits/zzzzzzzz_realistoc_traits.txt",
+      "input_png": "inputs/gigasuperseed.png",
+      "proposed_output_dds": "gigasuperseed.dds",
+      "requires_icon_reference_change": false,
+      "prompt": "Subject: (a crowned silver heraldic tree with a large red ruby at its roots:1.4), a regal gold crown and royal blue enamel within a gold frame, ancient royal lineage of Numenor. Use the supplied image as a reference for its central symbol, palette and painted finish."
+    }
+  ]
+}

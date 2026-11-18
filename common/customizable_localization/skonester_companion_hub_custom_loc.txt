@@ -1,0 +1,97 @@
+﻿skonester_companion_hub_culture_btn = {
+
+  type = character
+
+  text = {
+
+    trigger = {
+
+      has_variable = skonester_companion_stored_culture
+
+    }
+
+    localization_key = skonester_cheat_menu.0180.culture_btn_fmt
+
+  }
+
+  text = {
+
+    trigger = {
+
+      NOT = { has_variable = skonester_companion_stored_culture }
+
+    }
+
+    localization_key = skonester_cheat_menu.0180.culture_btn_placeholder
+
+  }
+
+}
+
+# 生成帅哥美女首项：未选变量时显示「选择文化」；有变量时显示「选择文化（当前文化名）」
+skonester_companion_hub_culture_option_line = {
+
+  type = character
+
+  text = {
+
+    trigger = {
+
+      has_variable = skonester_companion_stored_culture
+
+    }
+
+    localization_key = skonester_cheat_menu.0180.opt_culture_line_named
+
+  }
+
+  text = {
+
+    fallback = yes
+
+    localization_key = skonester_cheat_menu.0180.opt_culture_line_placeholder
+
+  }
+
+}
+
+
+
+skonester_companion_hub_gender_btn = {
+
+  type = character
+
+  text = {
+
+    trigger = {
+
+      OR = {
+
+        NOT = { has_variable = skonester_companion_female_chance }
+
+        var:skonester_companion_female_chance >= 50
+
+      }
+
+    }
+
+    localization_key = skonester_cheat_menu.0180.gender_line_female
+
+  }
+
+  text = {
+
+    trigger = {
+
+      has_variable = skonester_companion_female_chance
+
+      var:skonester_companion_female_chance < 50
+
+    }
+
+    localization_key = skonester_cheat_menu.0180.gender_line_male
+
+  }
+
+}
+

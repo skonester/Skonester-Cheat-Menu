@@ -1,0 +1,56 @@
+﻿# 百毒不侵：授予时设免疫标记并清除已有疾病；持有期间月度维护；移除特质时撤销标记。
+
+skonester_trait_baidubuqin_purge_illness_traits_effect = {
+  while = {
+    count = 24
+    limit = {
+      has_trait_with_flag = illness
+    }
+    random_character_trait = {
+      limit = {
+        has_trait_flag = illness
+      }
+      save_scope_as = skonester_baidubuqin_cure_trait
+    }
+    if = {
+      limit = {
+        exists = scope:skonester_baidubuqin_cure_trait
+      }
+      remove_trait = scope:skonester_baidubuqin_cure_trait
+    }
+  }
+}
+
+skonester_trait_baidubuqin_apply_effect = {
+  add_character_flag = immune_to_disease
+  add_character_flag = smallpox_immunity
+  add_character_flag = measles_immunity
+  add_character_flag = bubonic_immunity
+  add_character_flag = skonester_baidubuqin_immunity_managed
+  skonester_trait_baidubuqin_purge_illness_traits_effect = yes
+}
+
+skonester_trait_baidubuqin_revoke_effect = {
+  if = {
+    limit = {
+      has_character_flag = skonester_baidubuqin_immunity_managed
+    }
+    remove_character_flag = immune_to_disease
+    remove_character_flag = smallpox_immunity
+    remove_character_flag = measles_immunity
+    remove_character_flag = bubonic_immunity
+    remove_character_flag = skonester_baidubuqin_immunity_managed
+  }
+}
+
+skonester_trait_baidubuqin_upkeep_effect = {
+  if = {
+    limit = {
+      NOT = { has_character_flag = skonester_baidubuqin_immunity_managed }
+    }
+    skonester_trait_baidubuqin_apply_effect = yes
+  }
+  else = {
+    skonester_trait_baidubuqin_purge_illness_traits_effect = yes
+  }
+}

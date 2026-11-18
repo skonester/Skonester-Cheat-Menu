@@ -1,0 +1,213 @@
+﻿# Skonester「强制结婚」：DI #2986538297 双槽复制/粘贴 + skonester_ultra_force_marry 无视规则
+# 第一次右击：skonester_di_select_primary_character_effect（复制主角色槽）
+# 第二次右击：写入第三角色槽并 ultra 强制成婚
+
+skonester_cheat_menu_prepare_char_for_force_marriage_effect = {
+  if = {
+    limit = { is_imprisoned = yes }
+    release_from_prison = yes
+  }
+  if = {
+    limit = { has_trait = skonester_trait_marriage_ban }
+    add_character_flag = skonester_force_marry_had_ban
+    remove_trait = skonester_trait_marriage_ban
+  }
+}
+
+skonester_cheat_menu_restore_char_after_force_marriage_effect = {
+  if = {
+    limit = { has_character_flag = skonester_force_marry_had_ban }
+    remove_character_flag = skonester_force_marry_had_ban
+    add_trait = skonester_trait_marriage_ban
+  }
+}
+
+skonester_cheat_menu_force_marriage_resolve_pick_char_effect = {
+  if = {
+    limit = {
+      exists = scope:recipient
+      scope:recipient = { is_alive = yes }
+    }
+    scope:recipient = {
+      save_scope_as = skonester_marriage_pick_char
+      save_scope_as = skonester_ultra_marry_charB
+    }
+  }
+  else_if = {
+    limit = { exists = scope:skonester_cheat_menu_target }
+    scope:skonester_cheat_menu_target = {
+      save_scope_as = skonester_marriage_pick_char
+      save_scope_as = skonester_ultra_marry_charB
+    }
+  }
+}
+
+skonester_cheat_menu_force_marriage_copy_to_slot_effect = {
+  skonester_cheat_menu_force_marriage_resolve_pick_char_effect = yes
+  skonester_di_select_primary_character_effect = yes
+  scope:actor = {
+    send_interface_toast = {
+      type = event_toast_effect_neutral
+      title = skonester_cheat_menu_force_marriage_copy_toast_title
+      desc = skonester_cheat_menu_force_marriage_copy_toast_desc
+      left_icon = scope:actor
+      right_icon = scope:skonester_marriage_pick_char
+    }
+  }
+}
+
+skonester_cheat_menu_force_marriage_clear_slot_effect = {
+  scope:actor = {
+    skonester_di_clear_primary_character_effect = yes
+    skonester_di_clear_tertiary_character_effect = yes
+  }
+}
+
+skonester_cheat_menu_force_marriage_paste_from_slot_effect = {
+  skonester_cheat_menu_force_marriage_resolve_pick_char_effect = yes
+  skonester_di_select_tertiary_character_effect = yes
+  scope:actor = {
+    var:skonester_marriage_slot_primary = {
+      save_scope_as = skonester_ultra_marry_charA
+    }
+    var:skonester_marriage_slot_tertiary = {
+      save_scope_as = skonester_ultra_marry_charB
+    }
+  }
+  scope:skonester_ultra_marry_charA = {
+    skonester_cheat_menu_prepare_char_for_force_marriage_effect = yes
+  }
+  scope:skonester_ultra_marry_charB = {
+    skonester_cheat_menu_prepare_char_for_force_marriage_effect = yes
+  }
+  skonester_ultra_force_marry_effect = yes
+  scope:skonester_ultra_marry_charA = {
+    skonester_cheat_menu_restore_char_after_force_marriage_effect = yes
+    remove_character_flag = skonester_ultra_marry_use_matrilineal
+  }
+  scope:skonester_ultra_marry_charB = {
+    skonester_cheat_menu_restore_char_after_force_marriage_effect = yes
+  }
+  scope:actor = {
+    skonester_cheat_menu_force_marriage_clear_slot_effect = yes
+    send_interface_toast = {
+      type = event_toast_effect_good
+      title = skonester_cheat_menu_force_marriage_toast_title
+      desc = skonester_cheat_menu_force_marriage_toast_desc
+      left_icon = scope:skonester_ultra_marry_charA
+      right_icon = scope:skonester_ultra_marry_charB
+    }
+  }
+}
+
+# 子菜单：仅执行 DI 原版 marry（受配偶名额等规则限制）
+skonester_cheat_menu_force_marriage_di_marry_only_effect = {
+  skonester_cheat_menu_force_marriage_resolve_pick_char_effect = yes
+  skonester_di_select_tertiary_character_effect = yes
+  skonester_di_dip_marry_effect = yes
+}
+
+skonester_cheat_menu_force_marriage_di_marry_matrilineal_only_effect = {
+  skonester_cheat_menu_force_marriage_resolve_pick_char_effect = yes
+  skonester_di_select_tertiary_character_effect = yes
+  skonester_di_dip_marry_matrilineal_effect = yes
+}
+
+skonester_cheat_menu_force_marriage_execute_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  skonester_cheat_menu_sync_target_effect = yes
+  skonester_cheat_menu_force_marriage_resolve_pick_char_effect = yes
+  if = {
+    limit = {
+      exists = scope:skonester_marriage_pick_char
+      scope:skonester_marriage_pick_char = { is_alive = yes }
+    }
+    if = {
+      limit = {
+        scope:actor = {
+          NOT = { has_variable = skonester_marriage_slot_primary }
+        }
+      }
+      skonester_cheat_menu_force_marriage_copy_to_slot_effect = yes
+    }
+    else_if = {
+      limit = {
+        scope:actor = {
+          var:skonester_marriage_slot_primary = {
+            this = scope:skonester_marriage_pick_char
+          }
+        }
+      }
+      skonester_cheat_menu_force_marriage_copy_to_slot_effect = yes
+    }
+    else_if = {
+      limit = {
+        scope:actor = {
+          has_variable = skonester_marriage_slot_primary
+          var:skonester_marriage_slot_primary = {
+            is_alive = yes
+            NOT = { this = scope:skonester_marriage_pick_char }
+          }
+        }
+      }
+      skonester_cheat_menu_force_marriage_paste_from_slot_effect = yes
+    }
+  }
+}
+
+skonester_cheat_menu_force_marriage_paste_matrilineal_effect = {
+  skonester_cheat_menu_lock_recipient_effect = yes
+  skonester_cheat_menu_sync_target_effect = yes
+  skonester_cheat_menu_force_marriage_resolve_pick_char_effect = yes
+  if = {
+    limit = {
+      exists = scope:skonester_marriage_pick_char
+      scope:skonester_marriage_pick_char = { is_alive = yes }
+    }
+    if = {
+      limit = {
+        scope:actor = {
+          NOT = { has_variable = skonester_marriage_slot_primary }
+        }
+      }
+      skonester_cheat_menu_force_marriage_copy_to_slot_effect = yes
+    }
+    else_if = {
+      limit = {
+        scope:actor = {
+          var:skonester_marriage_slot_primary = {
+            this = scope:skonester_marriage_pick_char
+          }
+        }
+      }
+      skonester_cheat_menu_force_marriage_copy_to_slot_effect = yes
+    }
+    else_if = {
+      limit = {
+        scope:actor = {
+          has_variable = skonester_marriage_slot_primary
+          var:skonester_marriage_slot_primary = {
+            is_alive = yes
+            NOT = { this = scope:skonester_marriage_pick_char }
+          }
+        }
+      }
+      scope:actor = {
+        var:skonester_marriage_slot_primary = {
+          add_character_flag = skonester_ultra_marry_use_matrilineal
+        }
+      }
+      skonester_cheat_menu_force_marriage_paste_from_slot_effect = yes
+    }
+  }
+}
+
+skonester_cheat_menu_sync_force_marriage_scopes_effect = {
+  skonester_cheat_menu_sync_target_effect = yes
+  scope:actor = {
+    save_scope_as = skonester_force_betrothal_actor
+  }
+  scope:skonester_cheat_menu_target = {
+    save_scope_as = skonester_force_betrothal_recipient
+  }
+}

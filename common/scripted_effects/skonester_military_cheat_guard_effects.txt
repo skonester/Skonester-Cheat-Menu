@@ -1,0 +1,89 @@
+﻿# 军事管理增益：仅人类玩家通过Skonester军事菜单开启时打 skonester_military_cheat_player_authorized；其它来源一律脉冲剥除。
+
+skonester_military_cheat_authorize_target_if_player_actor_effect = {
+  if = {
+    limit = {
+      scope:actor = {
+        is_ai = no
+      }
+      exists = scope:skonester_cheat_menu_target
+    }
+    scope:skonester_cheat_menu_target = {
+      add_character_flag = skonester_military_cheat_player_authorized
+    }
+  }
+  else_if = {
+    limit = {
+      scope:actor = {
+        is_ai = no
+      }
+      exists = scope:recipient
+    }
+    scope:recipient = {
+      add_character_flag = skonester_military_cheat_player_authorized
+    }
+  }
+}
+
+skonester_military_cheat_strip_on_character_effect = {
+  if = {
+    limit = {
+      has_character_modifier = skonester_military_instant_replenish_modifier
+    }
+    remove_character_modifier = skonester_military_instant_replenish_modifier
+  }
+  remove_all_character_modifier_instances = skonester_military_supply_overflow_modifier
+  remove_all_character_modifier_instances = skonester_military_levy_overflow_modifier
+  remove_all_character_modifier_instances = skonester_military_maintenance_waive_a_modifier
+  remove_all_character_modifier_instances = skonester_military_maintenance_waive_b_modifier
+  remove_all_character_modifier_instances = skonester_military_maintenance_waive_c_modifier
+  remove_all_character_modifier_instances = skonester_military_knight_limit_modifier
+  if = {
+    limit = {
+      has_character_modifier = skonester_military_knight_power_modifier
+    }
+    remove_character_modifier = skonester_military_knight_power_modifier
+  }
+  if = {
+    limit = {
+      has_character_modifier = skonester_military_god_mode_modifier
+    }
+    remove_character_modifier = skonester_military_god_mode_modifier
+  }
+  if = {
+    limit = {
+      NOT = { skonester_has_any_military_cheat_modifier_trigger = yes }
+    }
+    remove_character_flag = skonester_military_cheat_player_authorized
+  }
+}
+
+skonester_military_cheat_strip_all_unauthorized_effect = {
+  every_living_character = {
+    limit = {
+      skonester_has_any_military_cheat_modifier_trigger = yes
+      NOT = { has_character_flag = skonester_military_cheat_player_authorized }
+    }
+    skonester_military_cheat_strip_on_character_effect = yes
+  }
+}
+
+skonester_military_cheat_strip_unauthorized_batch_effect = {
+  while = {
+    count = 250
+    limit = {
+      any_living_character = {
+        skonester_has_any_military_cheat_modifier_trigger = yes
+        NOT = { has_character_flag = skonester_military_cheat_player_authorized }
+      }
+    }
+    random_living_character = {
+      limit = {
+        skonester_has_any_military_cheat_modifier_trigger = yes
+        NOT = { has_character_flag = skonester_military_cheat_player_authorized }
+      }
+      weight = { base = 1 }
+      skonester_military_cheat_strip_on_character_effect = yes
+    }
+  }
+}

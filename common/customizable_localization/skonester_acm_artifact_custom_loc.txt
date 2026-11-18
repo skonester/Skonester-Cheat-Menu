@@ -1,0 +1,77 @@
+﻿# 宝物名称/描述：优先玩家自定义文本，否则保留原版（系统）名称与描述
+
+skonester_acm_artifact_display_name = {
+  type = artifact
+
+  text = {
+    trigger = { has_variable = skonester_acm_has_custom_name }
+    localization_key = skonester_acm_artifact_name_on_self
+  }
+
+  text = {
+    trigger = {
+      exists = creator
+      creator = { has_character_flag = skonester_acm_edit_name_confirmed }
+    }
+    localization_key = skonester_acm_artifact_display_name_from_creator
+  }
+
+  text = {
+    fallback = yes
+    localization_key = skonester_acm_repair_preserve_artifact_name
+  }
+}
+
+skonester_acm_artifact_display_desc = {
+  type = artifact
+
+  text = {
+    trigger = { has_variable = skonester_acm_has_custom_desc }
+    localization_key = skonester_acm_artifact_desc_on_self
+  }
+
+  text = {
+    trigger = {
+      exists = creator
+      creator = { has_character_flag = skonester_acm_edit_desc_confirmed }
+    }
+    localization_key = skonester_acm_artifact_display_desc_from_creator
+  }
+
+  text = {
+    fallback = yes
+    localization_key = skonester_acm_repair_preserve_artifact_desc
+  }
+}
+
+skonester_acm_edit_name_preview_display = {
+  type = character
+
+  text = {
+    trigger = {
+      has_character_flag = skonester_acm_edit_name_confirmed
+    }
+    localization_key = skonester_acm_edit_name_preview_custom
+  }
+
+  text = {
+    fallback = yes
+    localization_key = skonester_acm_edit_name_preview_artifact
+  }
+}
+
+skonester_acm_edit_desc_preview_display = {
+  type = character
+
+  text = {
+    trigger = {
+      has_character_flag = skonester_acm_edit_desc_confirmed
+    }
+    localization_key = skonester_acm_edit_desc_preview_custom
+  }
+
+  text = {
+    fallback = yes
+    localization_key = skonester_acm_edit_desc_preview_artifact
+  }
+}

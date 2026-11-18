@@ -1,0 +1,11 @@
+﻿# 一键任免：TGP 天朝政体下「神州尚书 / 枢密」等额外御前会议席是否应尝试补人；assign 对当前政体无效的席位会静默失败。
+# 霸权领主（tier_hegemony）或神州皇帝头衔持有者才打开本段，避免在仅有天朝制而无上述席位时出现无效脚本键（类型名须与原版 council_positions 一致）。
+
+skonester_positions_tgp_celestial_extra_council_reshuffle_applicable_trigger = {
+  has_tgp_dlc_trigger = yes
+  government_has_flag = government_is_celestial
+  OR = {
+    highest_held_title_tier = tier_hegemony
+    skonester_is_h_china_emperor_title_holder_trigger = yes
+  }
+}

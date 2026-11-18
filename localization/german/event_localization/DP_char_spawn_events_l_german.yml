@@ -1,0 +1,66 @@
+﻿l_german:
+  char_spawner.t:1 "Charaktergenerator"
+  char_spawner.d:0 "Erzeuge beliebige Charaktere. Die gewünschte Anzahl kannst du oben auswählen."
+
+  char_spawner.numb.t:1 "Anzahl auswählen"
+  char_spawner.numb.d:0 "Wähle die Anzahl der zu erzeugenden Charaktere. Gilt für alle Menüpunkte außer Ratsmitgliedern."
+
+  char_spawner.councillors.t:1 "Ratsmitglieder erzeugen"
+  char_spawner.councillors.d:0 "Diese Ratsmitglieder werden direkt auf ihren jeweiligen Ratspositionen eingesetzt."
+
+  char_spawner.heirs.t:1 "Erben erzeugen"
+  char_spawner.heirs.d:0 "Hier kannst du zwischen drei Arten von Erben wählen: Hervorragend, Normal und Schlecht. Außerdem lassen sich Geschlecht und Alter des Kindes festlegen."
+
+  char_spawner.courtiers.t:1 "Höflinge erzeugen"
+  char_spawner.courtiers.d:0 "Füge deinem Hof neue Höflinge hinzu."
+
+  char_spawner.numb1:0 "1"
+  char_spawner.numb2:0 "2"
+  char_spawner.numb5:0 "5"
+  char_spawner.numb10:0 "10"
+
+  char_spawner.add_immortal:0 "Unsterblich: Ein"
+  char_spawner.remove_immortal:0 "Unsterblich: Aus"
+
+  char_spawner.add_100_stat_man:0 "Allmächtige Eigenschaft: Ein"
+  char_spawner.remove_100_stat_man:0 "Allmächtige Eigenschaft: Aus"
+
+  char_spawner.switch_m:0 "Geschlecht: Männlich"
+  char_spawner.switch_f:0 "Geschlecht: Weiblich"
+
+  char_spawner.diplo_councillor:0 "Diplomatie-Ratsmitglied"
+  char_spawner.martial_councillor:0 "Kriegsführungs-Ratsmitglied"
+  char_spawner.steward_councillor:0 "Verwaltungs-Ratsmitglied"
+  char_spawner.intrigue_councillor:0 "Intrigen-Ratsmitglied"
+  char_spawner.learning_councillor:0 "Bildungs-Ratsmitglied"
+
+  char_spawner.norm_heir:0 "Normal"
+  char_spawner.great_heir:0 "Hervorragend"
+  char_spawner.shitty_heir:0 "Schlecht"
+
+  char_spawner.heir_age_0:0 "Alter des Erben: 0"
+  char_spawner.heir_age_3:0 "Alter des Erben: 3"
+  char_spawner.heir_age_6:0 "Alter des Erben: 6"
+  char_spawner.heir_age_9:0 "Alter des Erben: 9"
+  char_spawner.heir_age_12:0 "Alter des Erben: 12"
+  char_spawner.heir_age_15:0 "Alter des Erben: 15"
+  char_spawner.heir_age_18:0 "Alter des Erben: 18"
+
+  char_spawner.m_vassal:0 "Männlicher Vasall"
+  char_spawner.f_vassal:0 "Weiblicher Vasall"
+
+  char_spawner.m_dyn_vassal:0 "Männlicher Vasall (Blutsverwandt)"
+  char_spawner.f_dyn_vassal:0 "Weiblicher Vasall (Blutsverwandt)"
+
+  char_spawner.courtiers.m_courtier:0 "Gewöhnlicher männlicher Höfling"
+  char_spawner.courtiers.f_courtier:0 "Gewöhnliche weibliche Höflingin"
+
+  char_spawner.courtiers.m_courtier_good:0 "Perfekter männlicher Höfling"
+  char_spawner.courtiers.f_courtier_good:0 "Perfekte weibliche Höflingin"
+
+  char_numb_1_TT:0 "Es wird entsprechend der aktuellen Auswahl ein Charakter erzeugt."
+  char_numb_2_TT:0 "Es werden entsprechend der aktuellen Auswahl zwei Charaktere erzeugt."
+  char_numb_5_TT:0 "Es werden entsprechend der aktuellen Auswahl fünf Charaktere erzeugt."
+  char_numb_10_TT:0 "Es werden entsprechend der aktuellen Auswahl zehn Charaktere erzeugt."
+
+  improved_stats_effect_TT:0 "Die Werte deines Hofpriesters werden verbessert. Dies ist aufgrund von Einschränkungen des Spielsystems erforderlich."

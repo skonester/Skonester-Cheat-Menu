@@ -1,0 +1,7 @@
+﻿# Only the traits in the Skonester Custom Traits menu are controlled here.
+skonester_custom_traits = {
+  categories = { game_modes }
+  default = skonester_custom_traits_enabled
+  skonester_custom_traits_enabled = { }
+  skonester_custom_traits_disabled = { }
+}

@@ -1,0 +1,47 @@
+﻿l_russian:
+  trait_boost_stats:0 "Усиление всех характеристик"
+  trait_boost_stats_desc:0 "Увеличивает все параметры на 50."
+  trait_boost_stats_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] — легендарная личность, одарённая исключительными качествами."
+
+  trait_boost_hufu:0 "Подъём императорской власти"
+  trait_boost_hufu_desc:0 "Ценой собственной жизни этот персонаж обуздал силы неба и земли, чтобы сделать решения императора мудрее, обеспечив порядок, стабильность и процветание государства."
+  trait_boost_hufu_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] — великий император, пожертвовавший собой ради процветания и блага державы."
+
+  trait_boost_dudu1:0 "Военный командир"
+  trait_boost_dudu1_desc:0 "Генерал пяти армий, ответственный за приграничные и региональные военные дела."
+  trait_boost_dudu1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] — прямой военачальник императора, стойкий оплот императорской власти."
+
+  trait_boost_xueshi1:0 "Почётный учёный"
+  trait_boost_xueshi1_desc:0 "Учёный Академии Ханьлинь и советник императора."
+  trait_boost_xueshi1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] — один из доверенных литературных советников императора."
+
+  trait_plague_immunity:0 "Иммунитет к чуме"
+  trait_plague_immunity_desc:0 "Этот персонаж, благословлённый «Барбарой», никогда не заболеет чумой."
+  trait_plague_immunity_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] полностью невосприимчив к чуме."
+
+  trait_zg_buxiu:0 "Бессмертный"
+  trait_zg_buxiu_desc:0 "Этот персонаж обрёл бессмертие."
+  trait_zg_buxiu_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] бессмертен."
+
+  trait_bloodline_god_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] принадлежит к божественной линии Барбары."
+
+  trait_bloodline_god_3:0 "Помазанная кровь Барбары"
+  trait_bloodline_god_3_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] стоит близко к божественному."
+  trait_bloodline_god_3_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] — потомок #Y императорской#! #bold чистокровной#! линии Барбары, несущий священное наследие Небесного царства."
+
+  trait_bloodline_god_2:0 "Королевская кровь Барбары"
+  trait_bloodline_god_2_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] носит в жилах королевскую ветвь Барбары."
+  trait_bloodline_god_2_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] наследует #bold королевскую#! кровь Барбары. Пусть она и не чистокровна, но отмечена Мандатом Небес."
+
+  trait_bloodline_god_1:0 "Духовная кровь Барбары"
+  trait_bloodline_god_1_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] несёт остатки божественной линии Барбары."
+  trait_bloodline_god_1_character_desc:0 "Слабая искра крови Барбары течёт в жилах [ROOT.GetCharacter.GetFirstNameNoTooltip]. Пусть она и далека от источника, но божественное наследие всё ещё отзывается в его душе."
+
+
+  trait_zhuge_kill_02:0 "Королевское вино"
+  trait_zhuge_kill_02_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] был казнён избранным судьбой.\nКогда умирает король — гибнет держава; верные слуги падают по воле короля."
+  trait_zhuge_kill_02_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] был казнён избранным судьбой."
+
+  trait_zhuge_ymbuff_01:0 "Кочевой мандат"
+  trait_zhuge_ymbuff_01_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] — повелитель народа, отмеченный мандатом."
+  trait_zhuge_ymbuff_01_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] — повелитель народа, отмеченный мандатом."

@@ -1,0 +1,28 @@
+﻿# called for the newborn child
+# scope:child is the new born character
+# scope:mother is the pregnant mother
+# scope:father is the family father (not the biological)
+# scope:real_father is the biological father
+# scope:is_bastard, true if a known bastard
+#
+# CK3 1.20: this file used to redefine on_birth_child with a stale (pre-1.19) copy of the vanilla events list and
+# effect. Because only one `effect` survives per on-action it replaced vanilla's birth logic, and the copied
+# `events` list made those vanilla birth events fire twice. Only the PCM addition is kept, chained below.
+on_birth_child = {
+	on_actions = { pcm_on_birth_child_super_trait }
+}
+
+pcm_on_birth_child_super_trait = {
+	effect = {
+		# Children of a house with the PCM "super" house modifier inherit the super trait
+		if = {
+			limit = {
+				exists = real_father.house
+				scope:real_father.house = {
+					has_house_modifier = pcm_house_super_modifier
+				}
+			}
+			add_trait = super
+		}
+	}
+}

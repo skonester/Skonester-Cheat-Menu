@@ -1,0 +1,16 @@
+﻿# vgl. game > events > _events.info
+# vgl. https://github.com/Gr770/UnifiedUICK3/wiki/Global-Variables#getting-rid-of-startup-errors
+
+# With this event, the game will consider the global variable set for 'Unified UI' as being used.
+# This will stop throwing that error everytime the mod is loaded without UniUI. 'orphan = yes' 
+# also prevents the event itself from throwing an "is orphaned" error.
+
+namespace = mts_error_suppression
+
+mts_error_suppression.0001 = {
+	hidden = yes
+	orphan = yes
+	trigger = {
+		exists = global_var:MTS_is_loaded
+	}
+}

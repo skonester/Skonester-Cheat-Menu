@@ -1,0 +1,71 @@
+﻿namespace = skonester_cheat_menu
+
+# 宝物编辑子菜单：制作 / 修改 / 窃取 / 耐久度
+skonester_cheat_menu.3093 = {
+  type = character_event
+  title = skonester_cheat_menu.3093.t
+  desc = skonester_cheat_menu.3093.desc
+  theme = stewardship
+  left_portrait = root
+  right_portrait = scope:skonester_cheat_menu_target
+
+  immediate = {
+    skonester_cheat_menu_sync_target_effect = yes
+  }
+
+  option = {
+    name = skonester_cheat_menu.00x.close
+  }
+
+  option = {
+    name = skonester_cheat_menu.3093.opt_craft
+    custom_tooltip = skonester_cheat_menu_artifact_craft_menu_interaction_desc
+    scope:actor = {
+    skonester_cheat_menu_open_artifact_craft_effect = yes }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3093.opt_modify
+    custom_tooltip = skonester_cheat_menu.3093.opt_modify_tt
+    trigger = {
+      scope:skonester_cheat_menu_target = {
+        is_alive = yes
+        OR = {
+          has_any_artifact = yes
+          ep1_character_has_court_artifact_trigger = yes
+        }
+      }
+    }
+    scope:actor = {
+      skonester_cheat_menu_open_artifact_modify_effect = yes
+    }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3093.opt_steal
+    custom_tooltip = skonester_cheat_menu_steal_artifact_interaction_desc
+    trigger = {
+      scope:skonester_cheat_menu_target = {
+        NOT = { this = scope:actor }
+      }
+    }
+    scope:actor = {
+      skonester_cheat_menu_open_steal_artifact_effect = yes
+    }
+  }
+
+  option = {
+    name = skonester_cheat_menu.3093.opt_durability
+    custom_tooltip = skonester_cheat_menu.3093.opt_durability_tt
+    trigger = {
+      scope:skonester_cheat_menu_target = {
+        is_alive = yes
+        OR = {
+          has_any_artifact = yes
+          ep1_character_has_court_artifact_trigger = yes
+        }
+      }
+    }
+    skonester_cheat_menu_apply_max_artifact_durability_effect = yes
+  }
+}

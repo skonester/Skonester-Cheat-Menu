@@ -1,0 +1,748 @@
+﻿namespace = skonester_cheat_menu
+
+## AUTO-GENERATED START (beauty_companion_culture_classified)
+## python tools/generate_beauty_companion_culture_classified.py
+
+skonester_cheat_menu.3500 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_reg_europe trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3501 } }
+  option = { name = skonester_bc_reg_west_asia trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3502 } }
+  option = { name = skonester_bc_reg_central_steppe trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3503 } }
+  option = { name = skonester_bc_reg_east_asia trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3504 } }
+  option = { name = skonester_bc_reg_south_asia trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3505 } }
+  option = { name = skonester_bc_reg_se_asia trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3506 } }
+  option = { name = skonester_bc_reg_africa trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3507 } }
+  option = { name = skonester_cheat_menu.0180.back_to_hub trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3501 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_sub_eu_germanic trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3508 } }
+  option = { name = skonester_bc_sub_eu_slavic trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3510 } }
+  option = { name = skonester_bc_sub_eu_latin trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3512 } }
+  option = { name = skonester_bc_sub_eu_celtic trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3514 } }
+  option = { name = skonester_bc_sub_eu_baltic trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3515 } }
+  option = { name = skonester_bc_sub_eu_balto_finnic trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3516 } }
+  option = { name = skonester_bc_sub_eu_balkan trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3517 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_regions trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3500 } }
+  option = { name = skonester_cheat_menu.0180.back_to_hub trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3508 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_anglo_saxon trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:anglo_saxon } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_english trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:english } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_old_saxon trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:old_saxon } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_frisian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:frisian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_dutch trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:dutch } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_frankish trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:frankish } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_swabian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:swabian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.page_next trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3509 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3501 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3509 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_bavarian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:bavarian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_saxon trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:saxon } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_norse trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:norse } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_swedish trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:swedish } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_norwegian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:norwegian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_danish trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:danish } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_icelandic trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:icelandic } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.page_prev trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3508 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3501 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3510 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_russian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:russian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_volhynian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:volhynian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_severian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:severian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_polish trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:polish } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_czech trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:czech } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_pommeranian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:pommeranian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_serbian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:serbian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.page_next trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3511 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3501 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3511 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_croatian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:croatian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_bulgarian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:bulgarian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.page_prev trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3510 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3501 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3512 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_roman trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:roman } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_italian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:italian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_cisalpine trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:cisalpine } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_lombard trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:lombard } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_sicilian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:sicilian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_occitan trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:occitan } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_french trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:french } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.page_next trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3513 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3501 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3513 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_catalan trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:catalan } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_castilian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:castilian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_portuguese trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:portuguese } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_andalusian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:andalusian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.page_prev trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3512 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3501 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3514 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_welsh trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:welsh } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_cornish trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:cornish } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_breton trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:breton } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_irish trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:irish } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_gaelic trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:gaelic } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3501 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3515 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_lithuanian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:lithuanian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_latgalian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:latgalian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_prussian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:prussian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3501 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3516 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_finnish trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:finnish } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_estonian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:estonian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_karelian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:karelian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3501 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3517 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_greek trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:greek } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_vlach trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:vlach } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_albanian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:albanian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3501 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3502 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_sub_wa_arabic trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3518 } }
+  option = { name = skonester_bc_sub_wa_iranian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3519 } }
+  option = { name = skonester_bc_sub_wa_turkic trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3520 } }
+  option = { name = skonester_bc_sub_wa_berber trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3521 } }
+  option = { name = skonester_bc_sub_wa_jewish trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3522 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_regions trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3500 } }
+  option = { name = skonester_cheat_menu.0180.back_to_hub trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3518 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_yemeni trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:yemeni } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_bedouin trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:bedouin } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_egyptian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:egyptian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_levantine trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:levantine } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3502 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3519 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_persian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:persian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_tajik trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:tajik } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_khwarezmian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:khwarezmian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_kurdish trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:kurdish } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3502 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3520 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_turkish trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:turkish } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_turkmen trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:turkmen } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_pecheneg trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:pecheneg } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_khazar trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:khazar } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3502 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3521 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_baranis trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:baranis } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_maghrebi trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:maghrebi } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_butr trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:butr } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3502 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3522 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_ashkenazi trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:ashkenazi } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3502 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3503 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_sub_cs_mongolic trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3523 } }
+  option = { name = skonester_bc_sub_cs_tungusic trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3524 } }
+  option = { name = skonester_bc_sub_cs_other trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3525 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_regions trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3500 } }
+  option = { name = skonester_cheat_menu.0180.back_to_hub trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3523 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_mongol trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:mongol } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_kipchak trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:kipchak } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3503 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3524 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_jurchen trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:jurchen } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_mohe trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:mohe } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3503 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3525 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_sogdian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:sogdian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_tocharian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:tocharian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3503 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3504 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_sub_ea_chinese trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3526 } }
+  option = { name = skonester_bc_sub_ea_northeast trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3528 } }
+  option = { name = skonester_bc_sub_ea_tibet trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3529 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_regions trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3500 } }
+  option = { name = skonester_cheat_menu.0180.back_to_hub trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3526 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_han trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:han } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_hexi trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:hexi } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_heshuo trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:heshuo } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_bashu trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:bashu } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_wuyue trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:wuyue } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_min trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:min } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_chu trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:chu } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.page_next trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3527 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3504 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3527 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_lingnan trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:lingnan } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.page_prev trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3526 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3504 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3528 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_goryeo trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:goryeo } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_japanese trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:japanese } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_ainu trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:ainu } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3504 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3529 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_bodpa trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:bodpa } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_zhangzhung trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:zhangzhung } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3504 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3505 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_sub_sa_indo_aryan trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3530 } }
+  option = { name = skonester_bc_sub_sa_dravidian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3531 } }
+  option = { name = skonester_bc_sub_sa_lanka trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3532 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_regions trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3500 } }
+  option = { name = skonester_cheat_menu.0180.back_to_hub trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3530 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_marathi trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:marathi } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_hindustani trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:hindustani } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_rajput trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:rajput } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_bengali trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:bengali } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3505 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3531 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_tamil trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:tamil } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_telugu trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:telugu } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_kannada trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:kannada } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3505 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3532 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_sinhala trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:sinhala } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3505 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3506 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_sub_sea_mon_khmer trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3533 } }
+  option = { name = skonester_bc_sub_sea_tai trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3534 } }
+  option = { name = skonester_bc_sub_sea_malay_poly trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3535 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_regions trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3500 } }
+  option = { name = skonester_cheat_menu.0180.back_to_hub trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3533 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_khmer trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:khmer } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_mon trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:mon } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3506 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3534 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_tai trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:tai } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_khmu trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:khmu } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3506 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3535 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_malay trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:malay } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_javanese trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:javanese } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_bisayan trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:bisayan } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_tagalog trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:tagalog } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3506 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3507 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_sub_af_west trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3536 } }
+  option = { name = skonester_bc_sub_af_east trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3537 } }
+  option = { name = skonester_bc_sub_af_bantu trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3538 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_regions trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3500 } }
+  option = { name = skonester_cheat_menu.0180.back_to_hub trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3536 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_soninke trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:soninke } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_malinke trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:malinke } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_songhai trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:songhai } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_yoruba trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:yoruba } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_akan trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:akan } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3507 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3537 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_ethiopian trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:ethiopian } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_somali trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:somali } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3507 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+skonester_cheat_menu.3538 = {
+  type = character_event
+  title = skonester_cheat_menu.0180.culture_picker_t
+  desc = skonester_ui_no_hover_tooltip
+  theme = default
+
+  immediate = {
+    skonester_char_gen_sync_recipient_to_scope_effect = yes
+  }
+  right_portrait = scope:skonester_char_gen_target
+
+  option = { name = skonester_bc_pick_east_bantu trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:east_bantu } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_bc_pick_laktan trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { set_variable = { name = skonester_companion_stored_culture value = culture:laktan } remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+  option = { name = skonester_cheat_menu.0180.bc_back_region trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:actor = { trigger_event = skonester_cheat_menu.3507 } }
+  option = { name = skonester_cheat_menu.00x.close trigger = { skonester_cheat_menu_menu_enabled_trigger = yes } scope:skonester_char_gen_target = { remove_character_flag = skonester_companion_picking_culture } scope:actor = { trigger_event = skonester_cheat_menu.0180 } }
+}
+
+## AUTO-GENERATED END (beauty_companion_culture_classified)

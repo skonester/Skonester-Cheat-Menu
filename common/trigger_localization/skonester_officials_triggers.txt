@@ -1,0 +1,278 @@
+﻿skonester_has_grantable_title_for_one_click_trigger = {
+  global = skonester_officials_requirement_grantable_titles
+  global_not = skonester_tt_has_grantable_title_for_one_click_fail
+  first = skonester_officials_requirement_grantable_titles
+  first_not = skonester_tt_has_grantable_title_for_one_click_fail
+  third = skonester_officials_requirement_grantable_titles
+  third_not = skonester_tt_has_grantable_title_for_one_click_fail
+}
+
+skonester_has_grant_recipient_available_trigger = {
+  global = skonester_officials_requirement_grant_recipient
+  global_not = skonester_tt_has_grant_recipient_available_fail
+  first = skonester_officials_requirement_grant_recipient
+  first_not = skonester_tt_has_grant_recipient_available_fail
+  third = skonester_officials_requirement_grant_recipient
+  third_not = skonester_tt_has_grant_recipient_available_fail
+}
+
+skonester_has_dynasty_grant_recipient_available_trigger = {
+  global = skonester_officials_requirement_dynasty_recipient
+  global_not = skonester_tt_has_dynasty_grant_recipient_available_fail
+  first = skonester_officials_requirement_dynasty_recipient
+  first_not = skonester_tt_has_dynasty_grant_recipient_available_fail
+  third = skonester_officials_requirement_dynasty_recipient
+  third_not = skonester_tt_has_dynasty_grant_recipient_available_fail
+}
+
+skonester_has_anyone_to_purge_trigger = {
+  global = skonester_officials_requirement_purge_target
+  global_not = skonester_tt_has_anyone_to_purge_fail
+  first = skonester_officials_requirement_purge_target
+  first_not = skonester_tt_has_anyone_to_purge_fail
+  third = skonester_officials_requirement_purge_target
+  third_not = skonester_tt_has_anyone_to_purge_fail
+}
+
+skonester_has_de_jure_transferable_direct_vassals_trigger = {
+  global = skonester_officials_requirement_de_jure_vassal
+  global_not = skonester_tt_has_de_jure_transferable_direct_vassals_fail
+  first = skonester_officials_requirement_de_jure_vassal
+  first_not = skonester_tt_has_de_jure_transferable_direct_vassals_fail
+  third = skonester_officials_requirement_de_jure_vassal
+  third_not = skonester_tt_has_de_jure_transferable_direct_vassals_fail
+}
+
+skonester_de_jure_transfer_batch_not_active_trigger = {
+  global = skonester_officials_requirement_de_jure_idle
+  global_not = skonester_de_jure_transfer_batch_in_progress_tt
+  first = skonester_officials_requirement_de_jure_idle
+  first_not = skonester_de_jure_transfer_batch_in_progress_tt
+  third = skonester_officials_requirement_de_jure_idle
+  third_not = skonester_de_jure_transfer_batch_in_progress_tt
+}
+
+skonester_has_any_official_for_land_cap_decision_trigger = {
+  global = skonester_officials_requirement_land_cap_target
+  global_not = skonester_tt_no_official_for_land_cap_fail
+  first = skonester_officials_requirement_land_cap_target
+  first_not = skonester_tt_no_official_for_land_cap_fail
+  third = skonester_officials_requirement_land_cap_target
+  third_not = skonester_tt_no_official_for_land_cap_fail
+}
+
+skonester_land_cap_batch_not_active_trigger = {
+  global = skonester_officials_requirement_land_cap_idle
+  global_not = skonester_land_cap_batch_in_progress_tt
+  first = skonester_officials_requirement_land_cap_idle
+  first_not = skonester_land_cap_batch_in_progress_tt
+  third = skonester_officials_requirement_land_cap_idle
+  third_not = skonester_land_cap_batch_in_progress_tt
+}
+
+skonester_has_any_landed_vassal_for_strip_decision_trigger = {
+  global = skonester_officials_requirement_reclaim_target
+  global_not = skonester_tt_no_landed_vassal_for_strip_fail
+  first = skonester_officials_requirement_reclaim_target
+  first_not = skonester_tt_no_landed_vassal_for_strip_fail
+  third = skonester_officials_requirement_reclaim_target
+  third_not = skonester_tt_no_landed_vassal_for_strip_fail
+}
+
+skonester_has_tribal_holding_in_realm_trigger = {
+  global = skonester_officials_requirement_convertible_holding
+  global_not = skonester_tt_no_tribal_holding_to_feudalize_fail
+  first = skonester_officials_requirement_convertible_holding
+  first_not = skonester_tt_no_tribal_holding_to_feudalize_fail
+  third = skonester_officials_requirement_convertible_holding
+  third_not = skonester_tt_no_tribal_holding_to_feudalize_fail
+}
+
+skonester_has_any_merit_official_to_promote_trigger = {
+  global = skonester_officials_requirement_promotion_target
+  global_not = skonester_tt_no_merit_official_to_promote_fail
+  first = skonester_officials_requirement_promotion_target
+  first_not = skonester_tt_no_merit_official_to_promote_fail
+  third = skonester_officials_requirement_promotion_target
+  third_not = skonester_tt_no_merit_official_to_promote_fail
+}
+
+skonester_has_any_official_gold_to_exploit_trigger = {
+  global = skonester_officials_requirement_gold_target
+  global_not = skonester_tt_no_official_gold_to_exploit_fail
+  first = skonester_officials_requirement_gold_target
+  first_not = skonester_tt_no_official_gold_to_exploit_fail
+  third = skonester_officials_requirement_gold_target
+  third_not = skonester_tt_no_official_gold_to_exploit_fail
+}
+
+skonester_has_any_vassal_for_celestial_conversion_trigger = {
+  global = skonester_officials_requirement_government_target
+  global_not = skonester_tt_no_vassal_for_mass_gov_fail
+  first = skonester_officials_requirement_government_target
+  first_not = skonester_tt_no_vassal_for_mass_gov_fail
+  third = skonester_officials_requirement_government_target
+  third_not = skonester_tt_no_vassal_for_mass_gov_fail
+}
+
+skonester_has_any_vassal_for_administrative_conversion_trigger = {
+  global = skonester_officials_requirement_government_target
+  global_not = skonester_tt_no_vassal_for_mass_gov_fail
+  first = skonester_officials_requirement_government_target
+  first_not = skonester_tt_no_vassal_for_mass_gov_fail
+  third = skonester_officials_requirement_government_target
+  third_not = skonester_tt_no_vassal_for_mass_gov_fail
+}
+
+skonester_has_any_vassal_for_meritocratic_conversion_trigger = {
+  global = skonester_officials_requirement_government_target
+  global_not = skonester_tt_no_vassal_for_mass_gov_fail
+  first = skonester_officials_requirement_government_target
+  first_not = skonester_tt_no_vassal_for_mass_gov_fail
+  third = skonester_officials_requirement_government_target
+  third_not = skonester_tt_no_vassal_for_mass_gov_fail
+}
+
+skonester_has_any_vassal_for_japan_administrative_conversion_trigger = {
+  global = skonester_officials_requirement_government_target
+  global_not = skonester_tt_no_vassal_for_mass_gov_fail
+  first = skonester_officials_requirement_government_target
+  first_not = skonester_tt_no_vassal_for_mass_gov_fail
+  third = skonester_officials_requirement_government_target
+  third_not = skonester_tt_no_vassal_for_mass_gov_fail
+}
+
+skonester_has_any_vassal_for_steppe_admin_conversion_trigger = {
+  global = skonester_officials_requirement_government_target
+  global_not = skonester_tt_no_vassal_for_mass_gov_fail
+  first = skonester_officials_requirement_government_target
+  first_not = skonester_tt_no_vassal_for_mass_gov_fail
+  third = skonester_officials_requirement_government_target
+  third_not = skonester_tt_no_vassal_for_mass_gov_fail
+}
+
+skonester_official_has_secret_not_known_by_actor_trigger = {
+  global = skonester_officials_requirement_unknown_secret
+  global_not = skonester_tt_learn_secrets_none_unknown_fail
+  first = skonester_officials_requirement_unknown_secret
+  first_not = skonester_tt_learn_secrets_none_unknown_fail
+  third = skonester_officials_requirement_unknown_secret
+  third_not = skonester_tt_learn_secrets_none_unknown_fail
+}
+
+skonester_has_imprisonable_direct_vassal_trigger = {
+  global = skonester_officials_requirement_imprison_direct
+  global_not = skonester_tt_no_imprisonable_direct_vassal_fail
+  first = skonester_officials_requirement_imprison_direct
+  first_not = skonester_tt_no_imprisonable_direct_vassal_fail
+  third = skonester_officials_requirement_imprison_direct
+  third_not = skonester_tt_no_imprisonable_direct_vassal_fail
+}
+
+skonester_has_imprisonable_realm_vassal_trigger = {
+  global = skonester_officials_requirement_imprison_realm
+  global_not = skonester_tt_no_imprisonable_realm_vassal_fail
+  first = skonester_officials_requirement_imprison_realm
+  first_not = skonester_tt_no_imprisonable_realm_vassal_fail
+  third = skonester_officials_requirement_imprison_realm
+  third_not = skonester_tt_no_imprisonable_realm_vassal_fail
+}
+
+skonester_has_any_vassal_for_gm_zongfan_conversion_trigger = {
+  global = skonester_officials_requirement_government_target
+  global_not = skonester_tt_no_vassal_for_mass_gov_fail
+  first = skonester_officials_requirement_government_target
+  first_not = skonester_tt_no_vassal_for_mass_gov_fail
+  third = skonester_officials_requirement_government_target
+  third_not = skonester_tt_no_vassal_for_mass_gov_fail
+}
+
+skonester_has_any_vassal_for_gm_sansizhi_conversion_trigger = {
+  global = skonester_officials_requirement_government_target
+  global_not = skonester_tt_no_vassal_for_mass_gov_fail
+  first = skonester_officials_requirement_government_target
+  first_not = skonester_tt_no_vassal_for_mass_gov_fail
+  third = skonester_officials_requirement_government_target
+  third_not = skonester_tt_no_vassal_for_mass_gov_fail
+}
+
+skonester_has_any_vassal_for_gm_weisuozhi_conversion_trigger = {
+  global = skonester_officials_requirement_government_target
+  global_not = skonester_tt_no_vassal_for_mass_gov_fail
+  first = skonester_officials_requirement_government_target
+  first_not = skonester_tt_no_vassal_for_mass_gov_fail
+  third = skonester_officials_requirement_government_target
+  third_not = skonester_tt_no_vassal_for_mass_gov_fail
+}
+
+skonester_has_any_vassal_for_gm_tusizhi_conversion_trigger = {
+  global = skonester_officials_requirement_government_target
+  global_not = skonester_tt_no_vassal_for_mass_gov_fail
+  first = skonester_officials_requirement_government_target
+  first_not = skonester_tt_no_vassal_for_mass_gov_fail
+  third = skonester_officials_requirement_government_target
+  third_not = skonester_tt_no_vassal_for_mass_gov_fail
+}
+
+skonester_has_any_vassal_for_gm_neige_conversion_trigger = {
+  global = skonester_officials_requirement_government_target
+  global_not = skonester_tt_no_vassal_for_mass_gov_fail
+  first = skonester_officials_requirement_government_target
+  first_not = skonester_tt_no_vassal_for_mass_gov_fail
+  third = skonester_officials_requirement_government_target
+  third_not = skonester_tt_no_vassal_for_mass_gov_fail
+}
+
+skonester_has_any_vassal_for_gm_baqizhi_conversion_trigger = {
+  global = skonester_officials_requirement_government_target
+  global_not = skonester_tt_no_vassal_for_mass_gov_fail
+  first = skonester_officials_requirement_government_target
+  first_not = skonester_tt_no_vassal_for_mass_gov_fail
+  third = skonester_officials_requirement_government_target
+  third_not = skonester_tt_no_vassal_for_mass_gov_fail
+}
+
+skonester_has_any_vassal_for_gm_daiyizhi_conversion_trigger = {
+  global = skonester_officials_requirement_government_target
+  global_not = skonester_tt_no_vassal_for_mass_gov_fail
+  first = skonester_officials_requirement_government_target
+  first_not = skonester_tt_no_vassal_for_mass_gov_fail
+  third = skonester_officials_requirement_government_target
+  third_not = skonester_tt_no_vassal_for_mass_gov_fail
+}
+
+skonester_has_any_vassal_for_gm_zhimin_conversion_trigger = {
+  global = skonester_officials_requirement_government_target
+  global_not = skonester_tt_no_vassal_for_mass_gov_fail
+  first = skonester_officials_requirement_government_target
+  first_not = skonester_tt_no_vassal_for_mass_gov_fail
+  third = skonester_officials_requirement_government_target
+  third_not = skonester_tt_no_vassal_for_mass_gov_fail
+}
+
+skonester_has_any_vassal_for_gm_zuzhi_conversion_trigger = {
+  global = skonester_officials_requirement_government_target
+  global_not = skonester_tt_no_vassal_for_mass_gov_fail
+  first = skonester_officials_requirement_government_target
+  first_not = skonester_tt_no_vassal_for_mass_gov_fail
+  third = skonester_officials_requirement_government_target
+  third_not = skonester_tt_no_vassal_for_mass_gov_fail
+}
+
+skonester_has_any_vassal_for_gm_pirate_conversion_trigger = {
+  global = skonester_officials_requirement_government_target
+  global_not = skonester_tt_no_vassal_for_mass_gov_fail
+  first = skonester_officials_requirement_government_target
+  first_not = skonester_tt_no_vassal_for_mass_gov_fail
+  third = skonester_officials_requirement_government_target
+  third_not = skonester_tt_no_vassal_for_mass_gov_fail
+}
+
+skonester_replace_official_has_any_candidate_trigger = {
+  global = skonester_officials_requirement_replacement_candidate
+  global_not = skonester_cheat_menu_replace_official_no_candidate_tt
+  first = skonester_officials_requirement_replacement_candidate
+  first_not = skonester_cheat_menu_replace_official_no_candidate_tt
+  third = skonester_officials_requirement_replacement_candidate
+  third_not = skonester_cheat_menu_replace_official_no_candidate_tt
+}

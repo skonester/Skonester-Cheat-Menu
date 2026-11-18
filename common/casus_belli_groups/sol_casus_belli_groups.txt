@@ -1,0 +1,4 @@
+# Group for the Unrestricted Warfare expansion CBs (common/casus_belli_types/sol_unrestricted_warfare_expansion_cb_*.txt).
+# Intentionally empty: no group-level restrictions, so the CBs' own allowed_for_character decides.
+sol_expansion = {
+}

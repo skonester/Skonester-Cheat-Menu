@@ -1,0 +1,84 @@
+﻿# 强有地 AI 强化：分批发放 skonester_ai_realm_governance_support（供月度脉冲与决议即时调用）
+
+skonester_ai_world_ai_boost_spread_batch_effect = {
+  if = {
+    limit = {
+      any_player = {
+        is_ai = no
+        is_independent_ruler = yes
+        is_landed = yes
+      }
+    }
+    random_player = {
+      limit = {
+        is_ai = no
+        is_independent_ruler = yes
+        is_landed = yes
+      }
+      save_scope_as = skonester_ai_boost_player_center
+    }
+  }
+
+  while = {
+    count = 600
+    limit = {
+      any_living_character = {
+        is_ai = yes
+        is_landed = yes
+        NOT = { has_character_modifier = skonester_ai_realm_governance_support }
+      }
+    }
+    if = {
+      limit = {
+        exists = scope:skonester_ai_boost_player_center
+        any_living_character = {
+          is_ai = yes
+          is_landed = yes
+          top_liege = scope:skonester_ai_boost_player_center.top_liege
+          NOT = { has_character_modifier = skonester_ai_realm_governance_support }
+        }
+      }
+      random_living_character = {
+        limit = {
+          is_ai = yes
+          is_landed = yes
+          top_liege = scope:skonester_ai_boost_player_center.top_liege
+          NOT = { has_character_modifier = skonester_ai_realm_governance_support }
+        }
+        weight = { base = 1 }
+        add_character_modifier = { modifier = skonester_ai_realm_governance_support years = 15 }
+      }
+    }
+    else_if = {
+      limit = {
+        any_independent_ruler = {
+          is_ai = yes
+          is_landed = yes
+          NOT = { has_character_modifier = skonester_ai_realm_governance_support }
+          skonester_ai_boost_human_neighbor_any_trigger = yes
+        }
+      }
+      random_independent_ruler = {
+        limit = {
+          is_ai = yes
+          is_landed = yes
+          NOT = { has_character_modifier = skonester_ai_realm_governance_support }
+          skonester_ai_boost_human_neighbor_any_trigger = yes
+        }
+        weight = { base = 1 }
+        add_character_modifier = { modifier = skonester_ai_realm_governance_support years = 15 }
+      }
+    }
+    else = {
+      random_living_character = {
+        limit = {
+          is_ai = yes
+          is_landed = yes
+          NOT = { has_character_modifier = skonester_ai_realm_governance_support }
+        }
+        weight = { base = 1 }
+        add_character_modifier = { modifier = skonester_ai_realm_governance_support years = 15 }
+      }
+    }
+  }
+}

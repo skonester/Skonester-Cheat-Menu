@@ -1,0 +1,5 @@
+﻿l_german:
+ cxa_tip: "Rechtsklick, um alle [Select_CString(PdxGuiFoldOut.IsFolded, 'einzuklappen', 'auszuklappen')]"
+ xa_height: "Maximale Höhe:"
+ xa_change_height: "Maximale Höhe ändern"
+ xa_update: "Wird beim erneuten Öffnen des Menüs aktualisiert"

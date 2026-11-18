@@ -1,6 +1,0 @@
-﻿l_german:
-  become_conqueror_interaction:0 "Legendäre Titel verleihen"
-  become_conqueror_interaction_desc:0 "Verleiht dieser Person die legendären Titel und Eigenschaften der größten Herrscher in CK3. Sie wird fortan bekannt sein als:\n\n- Eroberer\n- Größter aller Khane\n- Chakravarti\n- Kreuzfahrerkönig\n- Erlöser\n- Lebende Legende\n- Goldene Abstammung\n- Campeador\n- Saoshyant"
-
-  remove_conqueror_interaction:0 "Legendäre Titel entziehen"
-  remove_conqueror_interaction_desc:0 "Entzieht dieser Person sämtliche legendären Titel und Eigenschaften und versetzt sie wieder in einen gewöhnlichen Stand. Sie trägt fortan nicht länger die Titel:\n\n- Eroberer\n- Größter aller Khane\n- Chakravarti\n- Kreuzfahrerkönig\n- Erlöser\n- Lebende Legende\n- Goldene Abstammung\n- Campeador\n- Saoshyant"

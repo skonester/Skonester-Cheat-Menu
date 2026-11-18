@@ -1,5 +1,0 @@
-﻿zhuge_hufu_modifier = {
-	icon = health_negative
-	health = -1
-    # CK3 1.20: disease_resistance is not a modifier. disease_resistance = -20
-}
